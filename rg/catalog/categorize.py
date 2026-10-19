@@ -61,3 +61,10 @@ def doc_type(title):
         if folded == prefix or folded.startswith(prefix + ' ') or folded.startswith(prefix + ','):
             return label
     return 'OTRO'
+
+
+def clean_text(text):
+    """Remove invisible characters (Unicode Cc except tab/newline, and Cf: zero-width, bidi, BOM) found in source text.
+    Deterministic and counted; nothing else changes. Returns (clean, removed)."""
+    kept = [c for c in text if c in '\t\n' or unicodedata.category(c) not in ('Cc', 'Cf')]
+    return ''.join(kept), len(text) - len(kept)

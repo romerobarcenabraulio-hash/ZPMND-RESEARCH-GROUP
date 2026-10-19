@@ -44,6 +44,11 @@ def state_name(page_html):
     return _text(m.group(1)) if m else None
 
 
+def count_rows(page_html):
+    """Rows on the page that link a record sheet, duplicates included (the source repeats some rows verbatim)."""
+    return sum(1 for row in _ROW.findall(page_html) if _FICHA.search(row))
+
+
 def parse_list(page_html):
     out, seen = [], set()
     for row in _ROW.findall(page_html):

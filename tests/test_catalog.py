@@ -134,6 +134,18 @@ class Decoding(unittest.TestCase):
         self.assertNotRegex(decode_html(bytes(range(0x80, 0xa0)), 'iso-8859-1'), '[\x80-\x9f]')
 
 
+class Normalization(unittest.TestCase):
+    def test_invisible_characters_removed_and_counted(self):
+        # Regression 2026-10-19: an OJN title (CDMX) carries U+FEFF inside the text at the source.
+        from rg.catalog.run import normalize_strings
+        n = [0]
+        out = normalize_strings({'title': 'de la \ufeffProcuraduría', 'x': ['a\u200bb', 'ok\n'], 'n': 3}, n)
+        self.assertEqual(out, {'title': 'de la Procuraduría', 'x': ['ab', 'ok\n'], 'n': 3})
+        self.assertEqual(n[0], 2)
+        from rg.schemas import validate
+        self.assertTrue(validate('research_request', {'question': 'a\ufeffb'}))  # the schema guard itself stays strict
+
+
 class Categorize(unittest.TestCase):
     def test_table_and_longest_prefix(self):
         cases = {
@@ -292,6 +304,15 @@ class OjnParser(unittest.TestCase):
             self.assertEqual(ojn.state_name(page), state)
             self.assertTrue(all(i['published'] and re.fullmatch(r'\d+', i['native_id']) for i in items))
 
+    def test_source_repeated_rows_are_accounted(self):
+        # Regression 2026-10-19: 21 of 128 listings 'missed' 1-10 rows; the source repeats rows (same idArchivo).
+        from rg.catalog import ojn
+        page = self._page('ojn_list_edo24_poder2.html')
+        first_row = re.search(r'<tr>\s*<td bgcolor="[^"]*" align=left>.*?</tr>', page, re.S).group(0)
+        doubled = page.replace(first_row, first_row + first_row, 1)
+        self.assertEqual(ojn.count_rows(doubled), 203)
+        self.assertEqual(len(ojn.parse_list(doubled)), 202)
+
     def test_row_values_are_verbatim(self):
         from rg.catalog import ojn
         first = ojn.parse_list(self._page('ojn_list_edo24_poder2.html'))[0]
@@ -323,3 +344,18 @@ class DofWindow(unittest.TestCase):
         self.assertEqual(dof_window_start(indexed, today, 30), date(2026, 10, 20))
         self.assertEqual(dof_window_start({'2026-10-10': {}}, today, 30), date(2026, 10, 11))
         self.assertEqual(dof_window_start({}, today, 30), date(2026, 9, 22))
+
+
+class HostGroups(unittest.TestCase):
+    def test_sources_sharing_a_host_never_run_in_parallel(self):
+        # Politeness is per host: leyes-federales and reglamentos-federales share www.diputados.gob.mx.
+        from rg.catalog.run import host_groups
+        reg = json.loads((Path(__file__).resolve().parent.parent / 'sources' / 'mx.json').read_text(encoding='utf-8'))
+        active = [s for s in reg['sources'] if s['status'] == 'active']
+        groups = host_groups(active)
+        hosts = [set(h for s in g for h in s['allowed_hosts']) for g in groups]
+        for i, a in enumerate(hosts):
+            for b in hosts[i + 1:]:
+                self.assertFalse(a & b)
+        dip = [g for g in groups if any(s['source_id'] == 'mx.leyes-federales' for s in g)][0]
+        self.assertIn('mx.reglamentos-federales', [s['source_id'] for s in dip])

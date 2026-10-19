@@ -3,18 +3,21 @@
   python -m rg.catalog.run --country mx --out work/catalog --raw work/raw [--budget 3000] [--bundle work/raw-mx.tar]
 
 Exit codes: 0 ok; 3 a coverage reconciliation failed (data is still written, the failure is in the manifest);
-4 an entry fails the catalog_entry schema (nothing is written).
+4 some entries fail the catalog_entry schema (they are quarantined: listed in the manifest, never written).
 """
 import argparse
 import json
 import re
 import sys
 import tarfile
+import threading
+from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from . import leyesbiblio, ojn, sidof
-from .categorize import doc_type, fold
+from .categorize import clean_text, doc_type, fold
 from .fetch import BudgetExhausted, Fetcher, FetchRefused, decode_html
 from .store import Catalog, RawStore
 from ..schemas import validate
@@ -29,6 +32,27 @@ def dof_window_start(days, today, forward_days, reread=2):
     if not days:
         return today - timedelta(days=forward_days)
     return min(date.fromisoformat(max(days)) + timedelta(days=1), today - timedelta(days=reread))
+
+
+def host_groups(sources):
+    """Group sources by the hosts they hit; groups run in parallel, members of a group run in sequence."""
+    groups = defaultdict(list)
+    for src in sources:
+        groups[tuple(sorted(h.lower() for h in src['allowed_hosts']))].append(src)
+    return list(groups.values())
+
+
+def normalize_strings(obj, counter):
+    """Apply clean_text to every string in an entry, counting removed invisible characters."""
+    if isinstance(obj, dict):
+        return {k: normalize_strings(v, counter) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [normalize_strings(v, counter) for v in obj]
+    if isinstance(obj, str):
+        clean, removed = clean_text(obj)
+        counter[0] += removed
+        return clean
+    return obj
 
 
 def now_iso():
@@ -47,7 +71,7 @@ def _artifact(src, url, sha, body, media_type, rel):
 
 
 class Run:
-    def __init__(self, country, out, raw, budget, today, forward_days, index_days):
+    def __init__(self, country, out, raw, budget, today, forward_days, index_days, parallel=True):
         self.registry = json.loads((REPO / 'sources' / f'{country.lower()}.json').read_text(encoding='utf-8'))
         self.country = self.registry['country']
         self.catalog = Catalog(out, self.country)
@@ -55,12 +79,14 @@ class Run:
         self.budget, self.today = budget, today
         self.forward_days, self.index_days = forward_days, index_days
         self.used = 0
+        self.parallel = parallel
+        self._lock = threading.Lock()
         self.manifest = {'run_id': now_iso().replace(':', ''), 'country': self.country, 'started_at': now_iso(),
                          'sources': {}, 'coverage': [], 'errors': []}
 
     def _fetcher(self, src):
-        remaining = max(self.budget - self.used, 0)
-        return Fetcher(src['allowed_hosts'], budget=min(remaining, src.get('max_requests', remaining)))
+        # Per-source budget: --budget when given, else the source's max_requests from the registry.
+        return Fetcher(src['allowed_hosts'], budget=self.budget if self.budget is not None else src.get('max_requests', 1500))
 
     def _cover(self, source_id, scope, expected, got):
         ok = expected == got
@@ -142,7 +168,8 @@ class Run:
         stats['raw_skipped_metadata_only'] = sum(1 for e in self.catalog.entries.values()
                                                  if e['source_id'] == src['source_id'] and e['raw_status'] == 'metadata_only')
         stats['requests'] = f.used
-        self.used += f.used
+        with self._lock:
+            self.used += f.used
         return stats
 
     # ---- Laws and regulations (LeyesBiblio) -------------------------------------------------------
@@ -198,7 +225,8 @@ class Run:
         except BudgetExhausted:
             self.manifest['errors'].append(f"{src['source_id']}: request budget reached (continues next run)")
         stats['requests'] = f.used
-        self.used += f.used
+        with self._lock:
+            self.used += f.used
         return stats
 
 
@@ -219,10 +247,13 @@ class Run:
                         continue
                     page = decode_html(r.body, r.charset if 'charset' in r.headers.get('content-type', '').lower() else 'iso-8859-1')
                     items, state = ojn.parse_list(page), ojn.state_name(page)
-                    total = ojn.printed_total(page)
-                    self._cover(src['source_id'], f'edo {edo} poder {power} (total impreso)', -1 if total is None else total, len(items))
+                    total, rows = ojn.printed_total(page), ojn.count_rows(page)
+                    # The printed total counts rows; the source repeats some rows verbatim (same idArchivo), so the
+                    # accounting is: printed == rows read, and rows == unique + repeated-in-source.
+                    self._cover(src['source_id'], f'edo {edo} poder {power} (filas leídas vs total impreso)', -1 if total is None else total, rows)
                     stats['listings'] += 1
                     stats['listed'] += len(items)
+                    stats['source_repeated_rows'] = stats.get('source_repeated_rows', 0) + rows - len(items)
                     for order, it in enumerate(items, 1):
                         entry_id = f"{src['source_id']}:{it['native_id']}"
                         old = self.catalog.entries.get(entry_id)
@@ -288,14 +319,23 @@ class Run:
         except BudgetExhausted:
             self.manifest['errors'].append(f"{src['source_id']}: request budget reached (continues next run)")
         stats['requests'] = f.used
-        self.used += f.used
+        with self._lock:
+            self.used += f.used
         return stats
 
     def execute(self, only=None):
         active = [s for s in self.registry['sources'] if s['status'] == 'active' and (not only or s['source_id'] in only)]
-        for src in sorted(active, key=lambda s: s['adapter'] == 'sidof'):  # bounded sources first, the DOF takes the rest
-            runner = {'sidof': self.run_sidof, 'leyesbiblio': self.run_leyesbiblio, 'ojn': self.run_ojn}[src['adapter']]
-            self.manifest['sources'][src['source_id']] = runner(src)
+        runners = {'sidof': self.run_sidof, 'leyesbiblio': self.run_leyesbiblio, 'ojn': self.run_ojn}
+        def run_group(srcs):  # sources sharing a host run one after another: politeness is per host
+            for src in srcs:
+                self.manifest['sources'][src['source_id']] = runners[src['adapter']](src)
+        groups = host_groups(active)
+        if self.parallel and len(groups) > 1:
+            with ThreadPoolExecutor(max_workers=len(groups)) as pool:
+                list(pool.map(run_group, groups))
+        else:
+            for g in groups:
+                run_group(g)
         self.manifest['planned_sources'] = {s['source_id']: s.get('blocked_by') for s in self.registry['sources'] if s['status'] != 'active'}
         self.manifest['requests_total'] = self.used
         self.manifest['raw_new_files'] = len(self.raw.new_files)
@@ -308,7 +348,8 @@ def main(argv=None):
     a.add_argument('--country', required=True)
     a.add_argument('--out', required=True, help='catalog root (data branch checkout)')
     a.add_argument('--raw', required=True, help='raw corpus root (never committed)')
-    a.add_argument('--budget', type=int, default=3000, help='max HTTP requests this run')
+    a.add_argument('--budget', type=int, help='max HTTP requests per source this run (default: each source max_requests)')
+    a.add_argument('--sequential', action='store_true', help='run host groups one after another')
     a.add_argument('--today', help='YYYY-MM-DD (default: today in Mexico City)')
     a.add_argument('--forward-days', type=int, default=30, help='first run: days back from today to index')
     a.add_argument('--index-days', type=int, default=120, help='older days to index per run, toward the floor')
@@ -316,26 +357,31 @@ def main(argv=None):
     a.add_argument('--bundle', help='write a tar of the raw files new in this run')
     x = a.parse_args(argv)
     today = date.fromisoformat(x.today) if x.today else datetime.now(CDMX).date()
-    run = Run(x.country, x.out, x.raw, x.budget, today, x.forward_days, x.index_days)
+    run = Run(x.country, x.out, x.raw, x.budget, today, x.forward_days, x.index_days, parallel=not x.sequential)
     manifest = run.execute(set(x.sources.split(',')) if x.sources else None)
     if x.bundle and run.raw.new_files:
         with tarfile.open(x.bundle, 'w') as tar:
             for rel in sorted(run.raw.new_files):
                 tar.add(Path(x.raw) / rel, arcname=rel)
         manifest['raw_bundle'] = Path(x.bundle).name
+    removed = [0]
+    run.catalog.entries = {eid: normalize_strings(e, removed) for eid, e in run.catalog.entries.items()}
+    manifest['invisible_chars_removed'] = removed[0]
     invalid = {eid: errs[:3] for eid, e in run.catalog.entries.items() if (errs := validate('catalog_entry', e))}
-    manifest['invalid_entries'] = len(invalid)
+    for eid in invalid:  # quarantine: never written, listed in the manifest; the valid rest is written
+        del run.catalog.entries[eid]
+    manifest['quarantined'] = invalid
     if invalid:
-        manifest['errors'].append(f'{len(invalid)} entries fail the catalog_entry schema; nothing written')
-        print(json.dumps(dict(list(invalid.items())[:5]), ensure_ascii=False, indent=1))
-        return 4
+        manifest['errors'].append(f'{len(invalid)} entries quarantined (fail the catalog_entry schema), see quarantined')
     run.catalog.write()
     run.catalog.write_run(manifest)
     bad = [c for c in manifest['coverage'] if not c['ok']]
+    if invalid:
+        print(json.dumps({'quarantined': dict(list(invalid.items())[:5])}, ensure_ascii=False, indent=1))
     print(json.dumps({'run_id': manifest['run_id'], 'sources': manifest['sources'], 'coverage_checks': len(manifest['coverage']),
                       'coverage_failures': bad, 'errors': manifest['errors'][:10], 'requests': manifest['requests_total'],
                       'raw_new_files': manifest['raw_new_files'], 'catalog_total': len(run.catalog.entries)}, ensure_ascii=False, indent=1))
-    return 3 if bad else 0
+    return 4 if invalid else (3 if bad else 0)
 
 
 if __name__ == '__main__':

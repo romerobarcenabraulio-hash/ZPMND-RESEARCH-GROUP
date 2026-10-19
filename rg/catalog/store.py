@@ -8,6 +8,8 @@ Layout under <catalog_root>/<cc>/:
 """
 import hashlib
 import json
+import os
+import threading
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -27,7 +29,7 @@ class RawStore:
         path = self.root / rel
         if not path.exists():
             path.parent.mkdir(parents=True, exist_ok=True)
-            tmp = path.with_suffix(path.suffix + '.part')
+            tmp = path.with_suffix(f'{path.suffix}.{os.getpid()}.{threading.get_ident()}.part')
             tmp.write_bytes(body)
             tmp.replace(path)
             self.new_files.append(rel)
