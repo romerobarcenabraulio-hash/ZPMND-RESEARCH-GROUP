@@ -1,0 +1,8 @@
+# Local only: raw corpus, agent workspace, run outputs. Raw files enter git only when redistribution is allowed.
+work/
+.venv/
+__pycache__/
+*.pyc
+*.tgz
+.DS_Store
+substrate/runtime/squid.conf.orig

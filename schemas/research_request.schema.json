@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zpmnd-research-group/schemas/research_request.schema.json",
+  "title": "ResearchRequest (ZPMND or owner -> RESEARCH GROUP)",
+  "description": "The only way a research need enters RESEARCH GROUP. Material must be safe to disclose: privacy_class PUBLIC or ABSTRACTED; anything private stays in ZPMND.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["request_id", "issued_by", "issued_at", "question", "why_needed", "affected_component", "desired_evidence", "priority", "risk_if_wrong", "privacy_class"],
+  "properties": {
+    "request_id": { "$ref": "common.schema.json#/$defs/request_id" },
+    "issued_by": { "enum": ["ZPMND", "OWNER"] },
+    "issued_at": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "question": { "$ref": "common.schema.json#/$defs/text" },
+    "why_needed": { "$ref": "common.schema.json#/$defs/text" },
+    "affected_component": { "$ref": "common.schema.json#/$defs/short_text" },
+    "desired_evidence": { "$ref": "common.schema.json#/$defs/text_list", "minItems": 1 },
+    "priority": { "enum": ["P0", "P1", "P2", "P3"] },
+    "risk_if_wrong": { "$ref": "common.schema.json#/$defs/text" },
+    "privacy_class": { "enum": ["PUBLIC", "ABSTRACTED"] }
+  }
+}

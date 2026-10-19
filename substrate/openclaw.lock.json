@@ -1,0 +1,23 @@
+{
+  "package": "openclaw",
+  "version": "2026.10.5",
+  "advisory_source": "openclaw/openclaw",
+  "advisory_packages": ["openclaw", "openclaw/openclaw"],
+  "source": {
+    "repository": "https://github.com/openclaw/openclaw",
+    "tag": "v2026.10.5",
+    "tag_object": "9171d0a427738902efd811c648325cf54116743c",
+    "commit": "1b58cb9a1b4f4353e1add63c8506db4d890962e8",
+    "tag_signature": "GitHub verification: verified (reason valid), tagger Dallin Romney, 2026-10-18T20:11:05Z"
+  },
+  "npm": {
+    "tarball": "https://registry.npmjs.org/openclaw/-/openclaw-2026.10.5.tgz",
+    "sha256": "dbb1bdcf2346292e25f672822b6a9928c234909abe6fee0df5fc4556e769d40e",
+    "integrity": "sha512-9rCuXMweqVKZIK3KBtGcLzesz9G6+FmQ30lvwomRhmcNWDcOtlBoqdLbPditoJMuTP55jPqXpt1AA0L8tSzFHg==",
+    "bound_by": "release asset openclaw-2026.10.5-release-manifest.json lists openclaw-2026.10.5.tgz with this sha256 and sourceSha = commit",
+    "release_manifest_sha256": "a17eeb0974ef3bb0f7a43707771c9e709a0e95d5d742e9cbbc5a15a2702b8691",
+    "transitive": "substrate/runtime/package-lock.json (564 packages, sha512 each or bundled in a pinned parent); installed with npm ci --ignore-scripts"
+  },
+  "base_image": "docker.io/library/node:24-bookworm-slim@sha256:0e0ff40c39bc087845bfb27465a0df4ea419520094bc35842ff83dd8cbe6f9b6",
+  "verified_at": "2026-10-19T16:40:00Z"
+}

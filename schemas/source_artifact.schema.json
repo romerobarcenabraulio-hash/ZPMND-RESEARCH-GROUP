@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zpmnd-research-group/schemas/source_artifact.schema.json",
+  "title": "SourceArtifact",
+  "description": "Provenance of one retrieved source. Raw bytes are committed to the repo only when redistribution is allowed; otherwise only this metadata.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifact_id", "url", "retrieved_at", "sha256", "bytes", "media_type", "source_type", "publisher", "license", "redistribution", "stored_at"],
+  "properties": {
+    "artifact_id": { "$ref": "common.schema.json#/$defs/artifact_id" },
+    "url": { "$ref": "common.schema.json#/$defs/url" },
+    "retrieved_at": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "sha256": { "$ref": "common.schema.json#/$defs/sha256" },
+    "bytes": { "type": "integer", "minimum": 0 },
+    "media_type": { "type": "string", "pattern": "^[a-z0-9.+-]+/[a-z0-9.+-]+$", "maxLength": 100 },
+    "source_type": { "enum": ["primary_official", "standard", "peer_reviewed", "preprint", "vendor_doc", "attack_evidence", "dataset", "code", "news", "blog", "other"] },
+    "publisher": { "$ref": "common.schema.json#/$defs/short_text" },
+    "title": { "$ref": "common.schema.json#/$defs/short_text" },
+    "version": { "$ref": "common.schema.json#/$defs/short_text" },
+    "published_at": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "license": { "$ref": "common.schema.json#/$defs/short_text" },
+    "redistribution": { "enum": ["allowed", "metadata_only", "unknown"] },
+    "stored_at": { "enum": ["none", "local_corpus", "repo"] }
+  },
+  "if": { "properties": { "stored_at": { "const": "repo" } } },
+  "then": { "properties": { "redistribution": { "const": "allowed" } } }
+}

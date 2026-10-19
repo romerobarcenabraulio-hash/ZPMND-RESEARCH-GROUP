@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zpmnd-research-group/schemas/knowledge_demand.schema.json",
+  "title": "KnowledgeDemand (one entry of the Knowledge Demand Map)",
+  "description": "A demand comes from an explicit ResearchRequest, or is RG_PROPOSED and stays a proposal until ZPMND issues a request for it. RESEARCH GROUP never marks knowledge as verified.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "origin", "domain", "question", "why_needed", "affected_zpmnd_capabilities", "known_sources", "knowledge_status", "research_priority", "risk_if_wrong", "current_evidence"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^KD-[A-Za-z0-9._-]{3,64}$" },
+    "origin": { "enum": ["RESEARCH_REQUEST", "RG_PROPOSED"] },
+    "request_id": { "$ref": "common.schema.json#/$defs/request_id" },
+    "domain": { "enum": ["zpmnd_heritage", "agentic_ai", "ai_security", "governance_alignment", "knowledge_engineering", "laws_standards", "organizational_intelligence", "human_development", "decision_science", "verification", "model_ecosystem", "app_ecosystem"] },
+    "question": { "$ref": "common.schema.json#/$defs/text" },
+    "why_needed": { "$ref": "common.schema.json#/$defs/text" },
+    "affected_zpmnd_capabilities": { "$ref": "common.schema.json#/$defs/text_list", "minItems": 1 },
+    "known_sources": { "$ref": "common.schema.json#/$defs/text_list" },
+    "knowledge_status": { "enum": ["UNKNOWN", "PARTIAL", "CANDIDATE_AVAILABLE", "CONFLICTED"] },
+    "research_priority": { "enum": ["P0", "P1", "P2", "P3"] },
+    "risk_if_wrong": { "$ref": "common.schema.json#/$defs/text" },
+    "current_evidence": { "$ref": "common.schema.json#/$defs/text_list" }
+  },
+  "if": { "properties": { "origin": { "const": "RESEARCH_REQUEST" } } },
+  "then": { "required": ["request_id"] }
+}
