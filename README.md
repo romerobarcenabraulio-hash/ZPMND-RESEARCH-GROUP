@@ -11,6 +11,8 @@ ResearchRequest (from ZPMND or Braulio) ──► RESEARCH GROUP ──► Resea
   enters and leaves.
 - **Security:** [SECURITY.md](SECURITY.md) maps each threat to its control and its check.
 - **Substrate:** [docs/OPENCLAW_EVALUATION.md](docs/OPENCLAW_EVALUATION.md) has what we found in OpenClaw so far.
+- **Catalog:** [docs/CATALOGO.md](docs/CATALOGO.md) covers the per-country catalog: official sources raw, categorized and
+  ordered, never summarized. Mexico comes first and runs every 3 days.
 
 ## Layout
 
@@ -18,7 +20,9 @@ ResearchRequest (from ZPMND or Braulio) ──► RESEARCH GROUP ──► Resea
 |---|---|
 | `schemas/` | ResearchRequest, ResearchPacket, SourceArtifact, KnowledgeDemand (JSON Schema 2020-12) |
 | `rg/` | validator (`rg.schemas`), OpenClaw advisory gate (`rg.advisories`), effective-policy check (`rg.openclaw_policy`) |
-| `substrate/` | pinned OpenClaw (`openclaw.lock.json`), hardened profile (`openclaw.json`), isolated runtime (`runtime/`) |
+| `substrate/` | pinned OpenClaw (`openclaw.lock.json`), hardened profile (`openclaw.json`), isolated runtime (`runtime/`), catalog runner (`runtime/Dockerfile.catalog`) |
+| `sources/` | per-country source registry (data, not code): active sources and planned ones with their observed blocker |
+| `rg/catalog/` | guarded fetcher, site adapters (SIDOF/DOF, LeyesBiblio, OJN), fixed doc-type table, store, run with coverage reconciliation |
 | `tests/` | one failing case per guard |
 | `requests/`, `knowledge-demand/`, `research-packets/`, `manifests/`, `hooks/research-goodware/` | next steps; see the contract, section 5 |
 

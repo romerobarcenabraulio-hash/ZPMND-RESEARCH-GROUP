@@ -26,6 +26,20 @@ services:
       - rg-workspace:/workspace   # a Docker volume, not a host folder: no path from the container to the host
     environment:
       - OPENCLAW_GATEWAY_TOKEN   # random per run; the model key is added at pilot time (RG-only, spend-capped)
+  catalog:
+    build: { context: ../.., dockerfile: substrate/runtime/Dockerfile.catalog }
+    profiles: [catalog]
+    depends_on: [egress]
+    networks: [research]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    pids_limit: 256
+    mem_limit: 2g
+    volumes:
+      - ../..:/repo:ro          # code, read-only
+      - ../../work:/work        # catalog and raw corpus output (git-ignored)
   probe:
     image: docker.io/curlimages/curl@sha256:a134550be58ab783810e613ae96fd253c38f7bdd16d9bf9be350700c7a29ac06
     profiles: [verify]

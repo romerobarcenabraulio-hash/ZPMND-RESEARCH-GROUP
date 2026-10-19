@@ -1,0 +1,63 @@
+name: catalog-mx
+# Every 3 days: index what is new in Mexico's tier-1 sources, fetch raw within budget, reconcile coverage.
+# Code comes from the default branch; the catalog lives on the data branch `catalog`; raw bytes go to release `raw-mx`.
+# The bot never writes code. Deterministic acquisition only: no model, no agent, no credentials beyond GITHUB_TOKEN.
+on:
+  schedule:
+    - cron: '0 11 */3 * *'   # 05:00 America/Mexico_City on days 1, 4, 7, ... 31 (day 31 -> 1 is one day apart)
+  workflow_dispatch:
+    inputs:
+      budget:
+        description: max HTTP requests for this run
+        default: '3000'
+permissions:
+  contents: read
+concurrency:
+  group: catalog-mx
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    permissions:
+      contents: write   # push to the data branch and upload release assets; nothing else
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { ref: catalog, path: data }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - name: Tests before touching any source
+        run: python -m unittest discover -s tests -t .
+      - name: Catalog run (Mexico)
+        id: catalog
+        run: |
+          set +e
+          day=$(date -u +%F)
+          python -m rg.catalog.run --country mx --out data --raw raw --budget "${{ inputs.budget || '3000' }}" \
+            --bundle "raw-mx-${day}-${{ github.run_id }}.tar"
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+      - name: Commit catalog to the data branch
+        run: |
+          cd data
+          git config user.name "rg-catalog-bot"
+          git config user.email "rg-catalog-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -q -m "catalog mx: run ${{ github.run_id }} (exit ${{ steps.catalog.outputs.rc }})"
+          git push -q origin HEAD:catalog
+      - name: Upload raw bundle
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          shopt -s nullglob
+          for f in raw-mx-*.tar; do
+            gh release view raw-mx >/dev/null 2>&1 || gh release create raw-mx --target catalog --title "Raw corpus MX" \
+              --notes "Content-addressed raw files (sha256/<2>/<sha256>.<ext>) from each catalog run; see catalog/mx/runs."
+            if [ "$(stat -c %s "$f")" -gt 1900000000 ]; then split -b 1900m -d "$f" "$f.part"; gh release upload raw-mx "$f".part*; else gh release upload raw-mx "$f"; fi
+          done
+      - name: Fail on coverage or schema problems
+        if: steps.catalog.outputs.rc != '0'
+        run: |
+          echo "catalog run exited ${{ steps.catalog.outputs.rc }} (3 = coverage mismatch, 4 = schema). See the run manifest on branch catalog."
+          exit 1
