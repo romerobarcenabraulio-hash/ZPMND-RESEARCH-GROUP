@@ -1,0 +1,146 @@
+[
+ {
+  "artifact_id": "SA-hf-bge-m3",
+  "url": "https://huggingface.co/BAAI/bge-m3/raw/main/README.md",
+  "source_type": "vendor_doc",
+  "publisher": "BAAI",
+  "license": "mit",
+  "redistribution": "metadata_only",
+  "title": "Model card BAAI/bge-m3"
+ },
+ {
+  "artifact_id": "SA-hf-bge-m3-api",
+  "url": "https://huggingface.co/api/models/BAAI/bge-m3",
+  "source_type": "vendor_doc",
+  "publisher": "Hugging Face Hub API",
+  "license": "Hugging Face terms of service (metadata)",
+  "redistribution": "metadata_only",
+  "title": "Hub metadata BAAI/bge-m3"
+ },
+ {
+  "artifact_id": "SA-hf-me5-large",
+  "url": "https://huggingface.co/intfloat/multilingual-e5-large/raw/main/README.md",
+  "source_type": "vendor_doc",
+  "publisher": "intfloat",
+  "license": "mit",
+  "redistribution": "metadata_only",
+  "title": "Model card intfloat/multilingual-e5-large"
+ },
+ {
+  "artifact_id": "SA-hf-me5-large-api",
+  "url": "https://huggingface.co/api/models/intfloat/multilingual-e5-large",
+  "source_type": "vendor_doc",
+  "publisher": "Hugging Face Hub API",
+  "license": "Hugging Face terms of service (metadata)",
+  "redistribution": "metadata_only",
+  "title": "Hub metadata intfloat/multilingual-e5-large"
+ },
+ {
+  "artifact_id": "SA-hf-gte-multi",
+  "url": "https://huggingface.co/Alibaba-NLP/gte-multilingual-base/raw/main/README.md",
+  "source_type": "vendor_doc",
+  "publisher": "Alibaba-NLP",
+  "license": "apache-2.0",
+  "redistribution": "metadata_only",
+  "title": "Model card Alibaba-NLP/gte-multilingual-base"
+ },
+ {
+  "artifact_id": "SA-hf-gte-multi-api",
+  "url": "https://huggingface.co/api/models/Alibaba-NLP/gte-multilingual-base",
+  "source_type": "vendor_doc",
+  "publisher": "Hugging Face Hub API",
+  "license": "Hugging Face terms of service (metadata)",
+  "redistribution": "metadata_only",
+  "title": "Hub metadata Alibaba-NLP/gte-multilingual-base"
+ },
+ {
+  "artifact_id": "SA-hf-jina-v3",
+  "url": "https://huggingface.co/jinaai/jina-embeddings-v3/raw/main/README.md",
+  "source_type": "vendor_doc",
+  "publisher": "Jina AI",
+  "license": "cc-by-nc-4.0",
+  "redistribution": "metadata_only",
+  "title": "Model card jinaai/jina-embeddings-v3"
+ },
+ {
+  "artifact_id": "SA-hf-jina-v3-api",
+  "url": "https://huggingface.co/api/models/jinaai/jina-embeddings-v3",
+  "source_type": "vendor_doc",
+  "publisher": "Hugging Face Hub API",
+  "license": "Hugging Face terms of service (metadata)",
+  "redistribution": "metadata_only",
+  "title": "Hub metadata jinaai/jina-embeddings-v3"
+ },
+ {
+  "artifact_id": "SA-hf-bge-reranker",
+  "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3/raw/main/README.md",
+  "source_type": "vendor_doc",
+  "publisher": "BAAI",
+  "license": "apache-2.0",
+  "redistribution": "metadata_only",
+  "title": "Model card BAAI/bge-reranker-v2-m3"
+ },
+ {
+  "artifact_id": "SA-hf-bge-reranker-api",
+  "url": "https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3",
+  "source_type": "vendor_doc",
+  "publisher": "Hugging Face Hub API",
+  "license": "Hugging Face terms of service (metadata)",
+  "redistribution": "metadata_only",
+  "title": "Hub metadata BAAI/bge-reranker-v2-m3"
+ },
+ {
+  "artifact_id": "SA-hf-pi-protectai",
+  "url": "https://huggingface.co/protectai/deberta-v3-base-prompt-injection-v2/raw/main/README.md",
+  "source_type": "vendor_doc",
+  "publisher": "Protect AI",
+  "license": "apache-2.0",
+  "redistribution": "metadata_only",
+  "title": "Model card protectai/deberta-v3-base-prompt-injection-v2"
+ },
+ {
+  "artifact_id": "SA-hf-pi-protectai-api",
+  "url": "https://huggingface.co/api/models/protectai/deberta-v3-base-prompt-injection-v2",
+  "source_type": "vendor_doc",
+  "publisher": "Hugging Face Hub API",
+  "license": "Hugging Face terms of service (metadata)",
+  "redistribution": "metadata_only",
+  "title": "Hub metadata protectai/deberta-v3-base-prompt-injection-v2"
+ },
+ {
+  "artifact_id": "SA-hf-pi-mdeberta",
+  "url": "https://huggingface.co/proventra/mdeberta-v3-base-prompt-injection/raw/main/README.md",
+  "source_type": "vendor_doc",
+  "publisher": "proventra",
+  "license": "mit",
+  "redistribution": "metadata_only",
+  "title": "Model card proventra/mdeberta-v3-base-prompt-injection"
+ },
+ {
+  "artifact_id": "SA-hf-pi-mdeberta-api",
+  "url": "https://huggingface.co/api/models/proventra/mdeberta-v3-base-prompt-injection",
+  "source_type": "vendor_doc",
+  "publisher": "Hugging Face Hub API",
+  "license": "Hugging Face terms of service (metadata)",
+  "redistribution": "metadata_only",
+  "title": "Hub metadata proventra/mdeberta-v3-base-prompt-injection"
+ },
+ {
+  "artifact_id": "SA-hf-mx-bench",
+  "url": "https://huggingface.co/datasets/Echo9k/mexican-legal-benchmarks/raw/main/README.md",
+  "source_type": "dataset",
+  "publisher": "Guillermo Alcantara Gonzalez (IUAC)",
+  "license": "cc-by-4.0",
+  "redistribution": "metadata_only",
+  "title": "Dataset card Echo9k/mexican-legal-benchmarks"
+ },
+ {
+  "artifact_id": "SA-hf-tesis-scjn-api",
+  "url": "https://huggingface.co/api/datasets/ayaxrojo/tesis_scjn_v5_complete",
+  "source_type": "dataset",
+  "publisher": "Hugging Face Hub API",
+  "license": "Hugging Face terms of service (metadata)",
+  "redistribution": "metadata_only",
+  "title": "Hub metadata ayaxrojo/tesis_scjn_v5_complete"
+ }
+]
