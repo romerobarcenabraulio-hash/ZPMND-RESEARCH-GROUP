@@ -15,12 +15,20 @@ from pathlib import Path
 
 from . import leyesbiblio, ojn, sidof
 from .categorize import doc_type, fold
-from .fetch import BudgetExhausted, Fetcher, FetchRefused
+from .fetch import BudgetExhausted, Fetcher, FetchRefused, decode_html
 from .store import Catalog, RawStore
 from ..schemas import validate
 
 REPO = Path(__file__).resolve().parents[2]
 CDMX = timezone(timedelta(hours=-6))  # central zone has no DST since 2022 (Ley de los Husos Horarios)
+
+
+def dof_window_start(days, today, forward_days, reread=2):
+    """First day to (re)index: the last `reread` days are always read again for notes published late; a first run
+    starts `forward_days` back."""
+    if not days:
+        return today - timedelta(days=forward_days)
+    return min(date.fromisoformat(max(days)) + timedelta(days=1), today - timedelta(days=reread))
 
 
 def now_iso():
@@ -65,7 +73,7 @@ class Run:
         st = self.catalog.state.setdefault(src['source_id'], {'days': {}})
         days = st['days']
         floor = date.fromisoformat(src['backfill_floor'])
-        start = date.fromisoformat(max(days)) + timedelta(days=1) if days else self.today - timedelta(days=self.forward_days)
+        start = dof_window_start(days, self.today, self.forward_days)
         forward = [start + timedelta(days=i) for i in range((self.today - start).days + 1)]
         oldest = date.fromisoformat(min(days)) if days else start
         backfill = [oldest - timedelta(days=i) for i in range(1, self.index_days + 1) if oldest - timedelta(days=i) >= floor]
@@ -147,7 +155,7 @@ class Run:
             if r.status != 200:
                 self.manifest['errors'].append(f"{src['source_id']}: listing HTTP {r.status}")
                 return stats
-            page = r.body.decode('iso-8859-1') if 'iso-8859-1' in r.headers.get('content-type', '').lower() else r.text()
+            page = r.text()
             rows = leyesbiblio.parse_listing(page, src['base_url'])
             self._cover(src['source_id'], src['listing'] + ' (every PDF on the page accounted for)',
                         leyesbiblio.count_text_pdfs(page), len(leyesbiblio.accounted_pdfs(rows, src['base_url'])))
@@ -209,7 +217,7 @@ class Run:
                     if r.status != 200:
                         self.manifest['errors'].append(f"{src['source_id']} edo {edo} poder {power}: HTTP {r.status}")
                         continue
-                    page = r.body.decode('iso-8859-1')
+                    page = decode_html(r.body, r.charset if 'charset' in r.headers.get('content-type', '').lower() else 'iso-8859-1')
                     items, state = ojn.parse_list(page), ojn.state_name(page)
                     total = ojn.printed_total(page)
                     self._cover(src['source_id'], f'edo {edo} poder {power} (total impreso)', -1 if total is None else total, len(items))
@@ -248,7 +256,7 @@ class Run:
                     e['raw_status'] = 'failed'
                     stats['raw_failed'] += 1
                     continue
-                sheet = ojn.parse_ficha(r.body.decode('iso-8859-1'), src['base_url'])
+                sheet = ojn.parse_ficha(decode_html(r.body, 'iso-8859-1'), src['base_url'])
                 if sheet['status_printed']:
                     e['category']['status_printed'] = sheet['status_printed'].upper()
                 if sheet['locality']:

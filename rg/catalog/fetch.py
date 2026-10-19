@@ -14,6 +14,19 @@ from dataclasses import dataclass, field
 from urllib.parse import urljoin, urlsplit
 
 USER_AGENT = 'ZPMND-RESEARCH-GROUP-catalog/0.1 (deterministic catalog; honors robots.txt)'
+_LATIN1_LABELS = {'iso-8859-1', 'iso8859-1', 'latin1', 'latin-1', 'l1', 'us-ascii', 'ascii', 'windows-1252', 'cp1252'}
+
+
+def decode_html(body, charset):
+    """WHATWG Encoding Standard: the label 'iso-8859-1' (and ascii) means windows-1252. Official Mexican sites declare
+    ISO-8859-1 and send 0x93/0x94 curly quotes; decoding them as Latin-1 yields invisible C1 control characters."""
+    label = (charset or 'utf-8').strip().lower()
+    if label in _LATIN1_LABELS:
+        return body.decode('cp1252', errors='replace')
+    try:
+        return body.decode(label, errors='replace')
+    except LookupError:
+        return body.decode('utf-8', errors='replace')
 
 
 class FetchRefused(Exception):
@@ -40,7 +53,7 @@ class Response:
         return 'utf-8'
 
     def text(self):
-        return self.body.decode(self.charset, errors='replace')
+        return decode_html(self.body, self.charset)
 
 
 class _NoRedirect(urllib.request.HTTPRedirectHandler):

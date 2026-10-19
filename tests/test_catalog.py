@@ -123,6 +123,17 @@ class FetchGuards(unittest.TestCase):
         self.assertEqual(headers.get('If-none-match'), '"abc"')
 
 
+class Decoding(unittest.TestCase):
+    def test_iso_8859_1_label_means_windows_1252(self):
+        # Regression 2026-10-19: OJN titles carried 0x93/0x94 quotes that Latin-1 turned into invisible C1 controls;
+        # the catalog_entry schema rejected them (exit 4) before anything was written.
+        from rg.catalog.fetch import decode_html
+        self.assertEqual(decode_html(b'\x93Gigante de los Arellano\x94', 'ISO-8859-1'), '\u201cGigante de los Arellano\u201d')
+        self.assertEqual(decode_html('Régimen'.encode('latin-1'), 'iso-8859-1'), 'Régimen')
+        self.assertEqual(decode_html('ñ'.encode('utf-8'), 'utf-8'), 'ñ')
+        self.assertNotRegex(decode_html(bytes(range(0x80, 0xa0)), 'iso-8859-1'), '[\x80-\x9f]')
+
+
 class Categorize(unittest.TestCase):
     def test_table_and_longest_prefix(self):
         cases = {
@@ -267,7 +278,8 @@ class OjnParser(unittest.TestCase):
     OJN = 'https://www.ordenjuridico.gob.mx/'
 
     def _page(self, name):
-        return (FIX / name).read_bytes().decode('iso-8859-1')
+        from rg.catalog.fetch import decode_html
+        return decode_html((FIX / name).read_bytes(), 'iso-8859-1')
 
     def test_listing_matches_printed_total(self):
         for name, total, state in (('ojn_list_edo24_poder2.html', 202, 'San Luis Potosí'),
@@ -299,3 +311,15 @@ class OjnParser(unittest.TestCase):
         from rg.catalog import ojn
         page = self._page('ojn_ficha_95983.html').replace('http://www.ordenjuridico.gob.mx/./Documentos', 'http://evil.example/./Documentos')
         self.assertIsNone(ojn.parse_ficha(page, self.OJN)['doc_url'])
+
+
+class DofWindow(unittest.TestCase):
+    def test_last_days_are_reread_for_late_notes(self):
+        # Regression: the window started after the last indexed day, so the promised re-read never happened.
+        from datetime import date
+        from rg.catalog.run import dof_window_start
+        today = date(2026, 10, 22)
+        indexed = {'2026-10-19': {}, '2026-10-22': {}}
+        self.assertEqual(dof_window_start(indexed, today, 30), date(2026, 10, 20))
+        self.assertEqual(dof_window_start({'2026-10-10': {}}, today, 30), date(2026, 10, 11))
+        self.assertEqual(dof_window_start({}, today, 30), date(2026, 9, 22))

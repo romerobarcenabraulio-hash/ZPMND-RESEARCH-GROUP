@@ -195,7 +195,43 @@
       "status": "planned",
       "tier": 2,
       "title": "Tratados internacionales celebrados por México (SRE, Consultoría Jurídica)",
-      "blocked_by": "aplicaciones.sre.gob.mx/tratados redirects to cja.sre.gob.mx/tratadosmexico (JavaScript app); robots and data endpoints not yet reviewed. The OJN treaty list is a 2012 compilation (stale) and is not used as primary."
+      "blocked_by": "cja.sre.gob.mx/tratadosmexico serves a Radware bot-protection challenge page (2026-10-19); bot protection is never bypassed. Needs an official export or operator permission. The OJN treaty list is a 2012 compilation (stale), not used as primary."
+    }
+  ],
+  "secondary_sources": [
+    {
+      "source_id": "mx.hf-tesis-scjn",
+      "status": "blocked_owner",
+      "kind": "dataset",
+      "host": "huggingface.co",
+      "dataset": "ayaxrojo/tesis_scjn_v5_complete",
+      "revision": "f233341df3b9",
+      "license": "cc-by-4.0",
+      "declared_size": "59,678 tesis (100K<n<1M rows bucket)",
+      "last_modified": "2026-03-21",
+      "covers": "SCJN tesis y jurisprudencia (mx.scjn-sjf, blocked at the primary)",
+      "use": "secondary: catalogued with its own provenance, never as the primary; each tesis is cross-checked against the SCJN when the primary opens",
+      "blocked_by": "gated=auto: requires a logged-in Hugging Face account that accepts the dataset's access conditions. Owner action (Braulio's account); RG does not log in or accept terms."
+    },
+    {
+      "source_id": "mx.hf-legal-benchmarks",
+      "status": "candidate",
+      "kind": "evaluation-dataset",
+      "host": "huggingface.co",
+      "dataset": "Echo9k/mexican-legal-benchmarks",
+      "revision": "96992b7179ac",
+      "license": "cc-by-4.0",
+      "declared_size": "n<1K; configs: federal statute interpretation, IRAC reasoning, cross-jurisdiction",
+      "last_modified": "2026-05-01",
+      "use": "not catalog: evaluation material for ZPMND (verification domain), to be offered as a ResearchPacket candidate"
+    },
+    {
+      "source_id": "mx.hf-diario-oficial-clasificacion",
+      "status": "rejected",
+      "kind": "dataset",
+      "host": "huggingface.co",
+      "dataset": "andrewmos/diario-oficial-clasificacion",
+      "reason": "no license declared; empty card"
     }
   ]
 }
