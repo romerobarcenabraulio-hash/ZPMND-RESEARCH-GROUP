@@ -38,6 +38,9 @@ El catálogo extrae información oficial pública por país. La guarda **cruda**
 - Catálogo: rama `catalog` del repo, carpeta `mx/`:
   - `dof/<año>.jsonl`, `leyes-federales.jsonl`, `reglamentos-federales.jsonl`, `ojn-estatal/<clave INEGI>.jsonl`;
   - `INDEX.md` e `index.json` con conteos por categoría;
+  - `ARBOL.md` y `arbol.json`: la vista para navegar, **país → ámbito → estado → municipio → poder → dependencia → tipo**,
+    con conteos. Un nivel que la fuente no publica aparece como "(sin dato en la fuente)": el OJN no da la dependencia
+    estatal y los municipios todavía no se recolectan;
   - `runs/<id>.json` con el manifiesto de cada corrida;
   - `_state.json` con lo ya indexado, para que cada corrida sea incremental.
 - Crudos: release `raw-mx`, un `.tar` por corrida con los archivos nuevos. Las rutas son direcciones por contenido (`sha256/<2>/<sha256>.<ext>`), así que el hash es la ruta.

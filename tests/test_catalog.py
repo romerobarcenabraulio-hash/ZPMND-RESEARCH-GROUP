@@ -359,3 +359,19 @@ class HostGroups(unittest.TestCase):
                 self.assertFalse(a & b)
         dip = [g for g in groups if any(s['source_id'] == 'mx.leyes-federales' for s in g)][0]
         self.assertIn('mx.reglamentos-federales', [s['source_id'] for s in dip])
+
+
+class Tree(unittest.TestCase):
+    def test_hierarchy_and_missing_levels(self):
+        from rg.catalog.store import build_tree, NO_DATA
+        fed = {'country': 'MX', 'category': {'jurisdiction': 'federal', 'branch': 'PODER EJECUTIVO',
+                                             'issuer': 'SECRETARIA DE ECONOMIA', 'doc_type': 'ACUERDO'}}
+        est = {'country': 'MX', 'category': {'jurisdiction': 'estatal', 'locality': 'San Luis Potosí',
+                                             'branch': 'PODER LEGISLATIVO', 'doc_type': 'LEY'}}
+        t = build_tree([fed, est, est])
+        mx = t['children']['país: MX']
+        self.assertEqual(mx['n'], 3)
+        fed_node = mx['children']['ámbito: federal']['children']['poder: PODER EJECUTIVO']
+        self.assertIn('dependencia: SECRETARIA DE ECONOMIA', fed_node['children'])
+        slp = mx['children']['ámbito: estatal']['children']['estado: San Luis Potosí']['children']['poder: PODER LEGISLATIVO']
+        self.assertEqual(slp['children'][f'dependencia: {NO_DATA}']['children']['tipo: LEY']['n'], 2)

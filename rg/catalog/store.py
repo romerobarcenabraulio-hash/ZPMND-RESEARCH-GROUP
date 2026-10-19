@@ -18,6 +18,40 @@ def _dump(obj):
     return json.dumps(obj, ensure_ascii=False, sort_keys=True)
 
 
+TREE_LEVELS = (('país', lambda e: e['country']),
+               ('ámbito', lambda e: e['category']['jurisdiction']),
+               ('estado', lambda e: e['category'].get('locality') if e['category']['jurisdiction'] != 'federal' else None),
+               ('municipio', lambda e: e['category'].get('municipality')),
+               ('poder', lambda e: e['category'].get('branch')),
+               ('dependencia', lambda e: e['category'].get('issuer')),
+               ('tipo', lambda e: e['category']['doc_type']))
+NO_DATA = '(sin dato en la fuente)'
+
+
+def build_tree(entries):
+    """País → ámbito → estado → municipio → poder → dependencia → tipo, with counts. A level the source does not give
+    is shown as NO_DATA (never inferred); levels that do not apply (estado for federal) are skipped."""
+    root = {'n': 0, 'children': {}}
+    for e in entries:
+        node = root
+        node['n'] += 1
+        for name, get in TREE_LEVELS:
+            if name == 'estado' and e['category']['jurisdiction'] == 'federal':
+                continue
+            if name == 'municipio' and e['category']['jurisdiction'] != 'municipal':
+                continue
+            key = get(e) or NO_DATA
+            node = node['children'].setdefault(f'{name}: {key}', {'n': 0, 'children': {}})
+            node['n'] += 1
+    return root
+
+
+def _tree_lines(node, depth=0):
+    for key, child in sorted(node['children'].items(), key=lambda kv: (-kv[1]['n'], kv[0])):
+        yield f"{'  ' * depth}- {key} — {child['n']}"
+        yield from _tree_lines(child, depth + 1)
+
+
 class RawStore:
     def __init__(self, root):
         self.root = Path(root)
@@ -113,6 +147,12 @@ class Catalog:
             lines += [f'| {k} | {n} |' for k, n in sorted(facets[key].items(), key=lambda kv: (-kv[1], kv[0]))]
             lines.append('')
         (self.dir / 'INDEX.md').write_text('\n'.join(lines), encoding='utf-8')
+        tree = build_tree(self.entries.values())
+        (self.dir / 'arbol.json').write_text(json.dumps(tree, ensure_ascii=False, sort_keys=True) + '\n', encoding='utf-8')
+        (self.dir / 'ARBOL.md').write_text('\n'.join([f'# Árbol del catálogo {self.dir.name.upper()}', '',
+            'País → ámbito → estado → municipio → poder → dependencia → tipo. Conteos de los registros; '
+            f'"{NO_DATA}" marca un nivel que la fuente no publica (nunca se infiere).', ''] + list(_tree_lines(tree))) + '\n',
+            encoding='utf-8')
 
     def write_run(self, manifest):
         runs = self.dir / 'runs'
