@@ -178,6 +178,11 @@ def parse_day(page_html):
     return out
 
 
+def listed_ids(page_html):
+    """Independent of the parser: distinct note ids carrying the official 'sumario-nota' class, in page order."""
+    return list(dict.fromkeys(re.findall(r'<a[^>]*class="sumario-nota"[^>]*href="/notas/(\d+)"', page_html)))
+
+
 def count_listed(page_html):
-    """Independent count for reconciliation: distinct note ids carrying the official 'sumario-nota' class."""
-    return len(set(re.findall(r'<a[^>]*class="sumario-nota"[^>]*href="/notas/(\d+)"', page_html)))
+    """Independent count for reconciliation."""
+    return len(listed_ids(page_html))

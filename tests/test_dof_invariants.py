@@ -159,6 +159,8 @@ READS = {
     'drop_one': lambda d: OK(drop_one(page_for(d))),
     'withdrawn': lambda d: OK(re.sub(r'<a[^>]*class="sumario-nota"[^>]*>.*?</a>', '', page_for(d), count=1, flags=re.S)),
     'empty': lambda d: OK('<html><body>Alta demanda</body></html>'),
+    # a label the schema rejects: every note it heads is quarantined and its previous row restored
+    'invalid_label': lambda d: OK(page_for(d).replace('SECRETARIA DE HACIENDA Y CREDITO PUBLICO', 'X' * 400)),
     'fail': lambda d: (503, b'', {}),
 }
 
@@ -205,6 +207,7 @@ def legacy_world(root):
         for e in cat.snapshot('mx.dof'):
             listing = [k for k in sorted(days) if e['native_id'] in days[k]['ids']]
             e['dates']['published'] = listing[-1]
+            e.pop('date_source', None)  # legacy rows carry no provenance
         cat.state['mx.dof']['days'] = {k: {'notes': v['notes'], 'indexed_at': v['indexed_at']} for k, v in days.items()}
         cat.write()
     shutil.copytree(LEGACY, root, dirs_exist_ok=True)
@@ -241,6 +244,24 @@ class PersistentInvariants(unittest.TestCase):
                 self.check(w, rcs[-1], set(), f'good {today}')
                 today += timedelta(days=3)
             self.assertEqual(rcs[-1], 0)
+            fri = {e['dates']['published'] for e in w.catalog().snapshot('mx.dof') if e['native_id'] in ids_for(date(2026, 10, 16))}
+            self.assertEqual(fri, {'2026-10-16'})
+
+    def test_quarantine_restoring_a_legacy_row_never_launders_its_date(self):
+        # Audit of #6 round 4, blocking: legacy Sunday-dated notes; a read whose labels fail the schema quarantines
+        # them and restores the legacy rows; every later run exited 0 with the Sunday dates still there.
+        with tempfile.TemporaryDirectory() as tmp:
+            w = legacy_world(tmp)
+            bad = lambda d: READS['invalid_label'](d) if d >= date(2026, 10, 16) else READS['good'](d)  # noqa: E731
+            rc = w.run(date(2026, 10, 19), bad)
+            self.assertNotEqual(rc, 0)
+            self.check(w, rc, set(), 'invalid labels')
+            today, rc = date(2026, 10, 22), None
+            for _ in range(4):
+                rc = w.run(today, READS['good'])
+                self.check(w, rc, set(), f'good {today}')
+                today += timedelta(days=3)
+            self.assertEqual(rc, 0)
             fri = {e['dates']['published'] for e in w.catalog().snapshot('mx.dof') if e['native_id'] in ids_for(date(2026, 10, 16))}
             self.assertEqual(fri, {'2026-10-16'})
 

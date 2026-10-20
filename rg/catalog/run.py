@@ -56,27 +56,24 @@ MAX_BACKOFF_DAYS = 30
 
 
 def short_days(days, entries, source_id, today=None):
-    """Days whose page listed a note that is not in the catalog (a quarantined note, a lost write). Returns
-    (requeue, stuck); the state is never modified, so a re-read that fails leaves the day short and the next run asks
-    again. A row keeps the ids its page listed, so the check needs no date. Rows written before 2026-10-20 have only
-    a count and are judged by the notes dated that day (a weekend mirror of another day's edition is never short). A
-    day re-read MAX_REREADS times and still short (a note failing the schema the same way every run) is 'stuck': it
-    is reported every run and re-read only from its retry_after date (spaced retries), never abandoned."""
-    have_ids, have_dated = set(), {}
-    for e in entries:
-        if e['source_id'] == source_id:
-            have_ids.add(e['native_id'])
-            d = e['dates'].get('published')
-            have_dated[d] = have_dated.get(d, 0) + 1
+    """Days that still owe something. Returns (requeue, stuck); the state is never modified, so a re-read that fails
+    leaves the day owed and the next run asks again.
+
+    Trust comes from provenance, not from counts: a day is owed while
+    - it is a row from before 2026-10-20 (no 'ids'): read once more under today's code;
+    - a note its page listed (independent count, so a note the parser cannot read is listed too) is not in the
+      catalog, unless a person marked it 'withdrawn' with evidence;
+    - a listed note's date has no 'date_source' (a legacy date, or a legacy row brought back by quarantine).
+    A day re-read MAX_REREADS times and still owed is 'stuck': reported every run and re-read only from its
+    retry_after date (spaced retries), never abandoned."""
+    have = {e['native_id']: e for e in entries if e['source_id'] == source_id}
     requeue, stuck = [], []
     for d, info in sorted(days.items()):
-        if 'ids' in info:
-            owed = [i for i in info['ids'] if i not in info.get('withdrawn', [])]
-            short = (len(info['ids']) < info.get('notes', 0) or any(i not in have_ids for i in owed)
-                     or info.get('undated', False))  # read without its own official date: owed until a dated read
+        if 'ids' not in info:
+            short = True
         else:
-            # a count of 0 is never a real DOF day (0 of 392 indexed): an old soft error page, read again
-            short = info.get('notes', 0) == 0 or (info.get('edition', d) == d and have_dated.get(d, 0) < info.get('notes', 0))
+            withdrawn = set(info.get('withdrawn') or [])
+            short = any(i not in have or not have[i].get('date_source') for i in info['ids'] if i not in withdrawn)
         if short:
             if info.get('rereads', 0) >= MAX_REREADS:
                 stuck.append(d)
@@ -200,27 +197,34 @@ class Run:
                     meta_only = fold(branch) in {fold(b) for b in src.get('metadata_only_branches', [])}
                     entry_id = f"{src['source_id']}:{it['native_id']}"
                     old = self.catalog.entries.get(entry_id)
+                    # The official date and where it came from: the edition's own PDF link, else the page's own date,
+                    # else the date an earlier read under this code already took from one of those. A date with no
+                    # provenance is never reused: None fails the schema (quarantine) and the day stays owed.
+                    published = it['published']
+                    source = 'edition' if it['edition_date'] else ('page' if published else None)
+                    if not published and old and old.get('date_source'):
+                        published, source = old['dates'].get('published'), old['date_source']
                     entry = {
                         'entry_id': entry_id, 'country': self.country, 'source_id': src['source_id'],
                         'native_id': it['native_id'], 'title': it['title'],
                         'url': sidof.note_url(src['base_url'], it['native_id']),
                         'category': {**src['category'], 'edition': it['edition'], 'section': it['section'],
                                      'branch': it['branch'], 'issuer': it['issuer'], 'doc_type': dof_doc_type(it['title'], it['branch'])},
-                        # The official date: of the edition, else of the page, else the one already read from the
-                        # edition's own page in an earlier read; None fails the schema (quarantine), never guessed.
-                        'dates': {'published': it['published'] or ((old or {}).get('dates') or {}).get('published')},
+                        'dates': {'published': published},
                         'raw_status': old['raw_status'] if old else ('metadata_only' if meta_only else 'pending'),
                         'first_seen': now_iso(),
                     }
+                    if source:
+                        entry['date_source'] = source
                     for k in ('artifact', 'raw_path'):
                         if old and k in old:
                             entry[k] = old[k]
                     stats['notes_new'] += self.catalog.upsert(entry)
                 prev = days.get(key, {})
-                ids = list(dict.fromkeys(prev.get('ids', []) + [it['native_id'] for it in items]))  # once listed, always owed
-                days[key] = {'ids': ids, 'notes': max(len(ids), sidof.count_listed(page), prev.get('notes', 0)), 'indexed_at': now_iso(),
-                             'rereads': prev.get('rereads', 0) + 1 if key in again else 0,
-                             'undated': any(not it['published'] for it in items)}
+                # once listed, always owed; the independent list also names notes the parser could not read
+                ids = list(dict.fromkeys(prev.get('ids', []) + sidof.listed_ids(page) + [it['native_id'] for it in items]))
+                days[key] = {'ids': ids, 'notes': len(ids), 'indexed_at': now_iso(),
+                             'rereads': prev.get('rereads', 0) + 1 if key in again else 0}
                 if prev.get('withdrawn'):  # set only by a person, with evidence that the source no longer lists them
                     days[key]['withdrawn'] = prev['withdrawn']
                 if days[key]['rereads'] >= MAX_REREADS:  # spaced retries: 3, 6, 12, 24, 30, 30... days

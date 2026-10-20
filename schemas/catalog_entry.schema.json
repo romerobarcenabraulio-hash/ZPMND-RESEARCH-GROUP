@@ -135,6 +135,10 @@
         }
       }
     },
+    "date_source": {
+      "description": "Where the official publication date came from, set only by the current code: the edition's own PDF link, or the page's own date. A date without it is not trusted (legacy) and its day is read again.",
+      "enum": ["edition", "page"]
+    },
     "raw_status": {
       "enum": [
         "stored",

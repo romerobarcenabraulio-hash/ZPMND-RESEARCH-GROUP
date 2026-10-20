@@ -470,18 +470,21 @@ class Requeue(unittest.TestCase):
     def test_short_days_never_modifies_state(self):
         # 2026-10-19: 3 DOF notes were quarantined; their days stayed 'indexed', so the notes would never come back.
         # Audit of #6 (2026-10-20): deleting the row before the re-read lost the day when the re-read failed.
+        # Round 4: trust comes from provenance, not counts: a date without date_source keeps its day owed.
         from rg.catalog.run import short_days
-        days = {'2026-10-01': {'notes': 2}, '2026-10-02': {'notes': 1}, '2026-10-03': {'notes': 5, 'edition': '2026-10-02'},
-                '2026-10-04': {'ids': ['1', '2'], 'notes': 2}, '2026-10-05': {'ids': ['1'], 'notes': 1},
-                '2026-10-06': {'ids': ['1'], 'notes': 3}, '2026-10-07': {'ids': ['9'], 'notes': 1, 'rereads': 3},
-                '2026-10-08': {'notes': 0}}  # a count-only row of 0: an old soft error page
-        entries = [{'source_id': 'mx.dof', 'native_id': '1', 'dates': {'published': '2026-10-01'}},
-                   {'source_id': 'mx.dof', 'native_id': '5', 'dates': {'published': '2026-10-02'}}]
+        days = {'2026-10-01': {'notes': 2}, '2026-10-03': {'notes': 5, 'edition': '2026-10-02'},  # legacy rows: re-read once
+                '2026-10-04': {'ids': ['1', '2']},                    # note 2 missing
+                '2026-10-05': {'ids': ['1']},                         # whole
+                '2026-10-06': {'ids': ['3']},                         # note 3 dated, but with no provenance (legacy)
+                '2026-10-07': {'ids': ['9'], 'rereads': 3},           # stuck, no retry date yet
+                '2026-10-08': {'ids': ['1', '9'], 'withdrawn': ['9']},  # a person withdrew 9 with evidence
+                '2026-10-09': {'ids': ['1'], 'withdrawn': None}}       # hand-edited null: no crash
+        entries = [{'source_id': 'mx.dof', 'native_id': '1', 'dates': {'published': '2026-10-04'}, 'date_source': 'edition'},
+                   {'source_id': 'mx.dof', 'native_id': '3', 'dates': {'published': '2026-10-06'}}]
         before = json.dumps(days, sort_keys=True)
-        # 10-01 legacy count short; 10-03 legacy mirror never short; 10-04 id '2' missing; 10-06 fewer ids than its count
-        self.assertEqual(short_days(days, entries, 'mx.dof'), (['2026-10-01', '2026-10-04', '2026-10-06', '2026-10-08'], ['2026-10-07']))
+        self.assertEqual(short_days(days, entries, 'mx.dof'),
+                         (['2026-10-01', '2026-10-03', '2026-10-04', '2026-10-06'], ['2026-10-07']))
         self.assertEqual(json.dumps(days, sort_keys=True), before)
-
 
 class SidofRun(unittest.TestCase):
     """run_sidof wiring with a fake site (no network): the audit of #6 showed four mutations of it passing the suite."""
@@ -565,7 +568,9 @@ class SidofRun(unittest.TestCase):
         run.catalog.state['mx.dof'] = {'days': days}
         self.run_once(run)
         self.assertIn('X1', days['2026-10-14']['ids'])
-        self.assertEqual(days['2026-10-15']['notes'], 999)
+        self.assertIn('ids', days['2026-10-15'])  # the legacy row was read again and now lists its notes
+        from rg.catalog.run import short_days
+        self.assertIn('2026-10-14', short_days(days, run.catalog.snapshot('mx.dof'), 'mx.dof')[0])
 
     def test_requeued_day_in_the_reread_window_is_fetched_once(self):
         from datetime import date
