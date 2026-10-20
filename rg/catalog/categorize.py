@@ -55,6 +55,19 @@ def fold(text):
     return ' '.join(plain.upper().split())
 
 
+# Official DOF sections whose notes are all of one kind: the section decides, not the title (whose first words are
+# the convening institution's name). Keys are folded section names as printed by SIDOF.
+DOF_SECTION_TYPES = {
+    'CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO': 'CONVOCATORIA DE ADQUISICIONES',
+    'CONVOCATORIAS PARA CONCURSOS DE PLAZAS VACANTES DEL SERVICIO PROFESIONAL DE CARRERA EN LA ADMINISTRACION PUBLICA FEDERAL': 'CONVOCATORIA DE PLAZAS',
+}
+
+
+def dof_doc_type(title, branch):
+    """DOF note type: from the official section when the section is single-kind, else from the title table."""
+    return DOF_SECTION_TYPES.get(fold(branch or '')) or doc_type(title)
+
+
 def doc_type(title):
     folded = fold(title)
     for prefix, label in _TABLE:

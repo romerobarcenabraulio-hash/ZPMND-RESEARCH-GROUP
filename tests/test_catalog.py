@@ -178,6 +178,13 @@ class Categorize(unittest.TestCase):
         for title, want in cases.items():
             self.assertEqual(doc_type(title), want, title)
 
+    def test_dof_single_kind_sections_decide_the_type(self):
+        # 2026-10-19: 3,233 procurement calls fell to OTRO because their titles start with the institution's name.
+        from rg.catalog.categorize import dof_doc_type
+        branch = 'CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO'
+        self.assertEqual(dof_doc_type('INSTITUTO MEXICANO DEL SEGURO SOCIAL Convocatoria 12', branch), 'CONVOCATORIA DE ADQUISICIONES')
+        self.assertEqual(dof_doc_type('Acuerdo por el que...', 'PODER EJECUTIVO'), 'ACUERDO')
+
     def test_no_match_is_otro_never_a_guess(self):
         for title in ('Leyenda de un mapa', 'Segundo Convenio Modificatorio', 'IMPUESTO sobre Servicios', ''):
             self.assertEqual(doc_type(title), 'OTRO', title)
