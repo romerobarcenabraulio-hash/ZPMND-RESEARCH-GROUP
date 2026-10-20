@@ -6,7 +6,7 @@ Se ordena en dimensiones, y la última son las relaciones entre piezas.
 
 | # | Dimensión | Qué responde | Qué ya captura RG |
 |---|---|---|---|
-| 1 | **Territorio** | ¿Dónde aplica? | País → estado → municipio (`mx/ARBOL.md`; 32 estados, 1,052 municipios) |
+| 1 | **Territorio** | ¿Dónde aplica? | País → estado → municipio (`mx/ARBOL.md`; registros de 32 estados y 892 municipios) |
 | 2 | **Jerarquía normativa** | ¿Qué tanto manda? | Constitución → tratados → leyes → reglamentos → NOM → acuerdos y lineamientos (`doc_type`, tipo oficial del OJN) |
 | 3 | **Tiempo** | ¿Desde cuándo y hasta cuándo? | Publicación con la fecha oficial de su edición (o la fecha impresa de la página; nunca el día pedido); reformas impresas; 468 instrumentos federales con versión hasheada. Las notas indexadas antes del 2026-10-20 se corrigen al releerse |
 | 4 | **Materia o rubro** | ¿De qué trata? | Emisor y sección oficial; el mapa de demanda agrupa por rubro (fiscal, banca, laboral…) |
@@ -15,8 +15,9 @@ Se ordena en dimensiones, y la última son las relaciones entre piezas.
 ## Lo que ya se puede extraer sin inferir
 
 Medido con `scripts/medir_dimensiones.py` (coincidencia exacta de títulos, sin inferencia) sobre el catálogo local de la
-corrida 2026-10-20T152357Z (62,239 registros; entra a la rama `catalog` con la siguiente publicación). Recibo
-`ev:46a91165a1dc28a63aa3d00b13ed625b0e39cf962e34332d2d1f07d3b112c1ae`.
+corrida 2026-10-20T152357Z (62,239 registros; entra a la rama `catalog` con la siguiente publicación). Todas las cifras de este documento
+salen de ese script. Recibo de Goodware `ev:349b7f6b6cec1d38aa30e9653b52aa114972d63ff7250189100cfac1a5da1f34`: ejecución
+del script con salida (stdout) de sha256 `8407af1cdccfe59d9c2180e06fc9409ec46317222ceff87d1031ae2868d02036`.
 
 - **Reglamenta a:** 122 de 150 reglamentos federales contienen el título exacto de una ley vigente.
 - **Reforma a / menciona a:** 310 de 25,140 notas del DOF nombran una ley vigente por su título exacto. La más nombrada es
@@ -90,7 +91,7 @@ STATE; el DELTA lo calcula ZPMND.
 | (falta) | ChangeEvent `effective_at` | FALTA: transitorios del texto completo |
 | `versions[]` (sha256 por corrida) | ChangeEvent `before_ref` / `after_ref` | Existe; el primer cambio aparece en la siguiente corrida |
 | `status_printed` (VIGENTE, ABROGADA…) | evidencia para el ciclo de vida | Existe. RG no asigna el estado |
-| Aristas *reglamenta*, *reforma*, *abroga* y *cita*, cada una con su cita | DependencyGraph | 121 *reglamenta* por título exacto; el resto necesita el texto completo |
+| Aristas *reglamenta*, *reforma*, *abroga* y *cita*, cada una con su cita | DependencyGraph | 122 *reglamenta* por título exacto; el resto necesita el texto completo |
 | `retrieved_at` | `knowledge_freshness` de la capability | Existe |
 | "(sin dato en la fuente)" y `blocked_by` | Unknown Registry | Existe |
 | (no aplica) | ChangeEvent `semantic_delta` | **No es de RG**: es razonamiento y lo hace ZPMND |

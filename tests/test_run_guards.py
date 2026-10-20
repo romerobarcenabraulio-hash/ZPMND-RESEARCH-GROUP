@@ -299,5 +299,79 @@ class OjnCount(unittest.TestCase):
         self.assertLess(len({i['native_id'] for i in ojn.parse_list(broken)}), ojn.count_ids(broken))
 
 
+class Main(unittest.TestCase):
+    """main(): exit codes, writing after a crash, and the deadline reaching every Fetcher (audit of #5, round 2)."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.argv = ['--country', 'mx', '--out', self.tmp.name + '/out', '--raw', self.tmp.name + '/raw',
+                     '--sources', 'mx.dof', '--sequential', '--today', '2026-10-22']
+
+    def test_crash_still_writes_and_exits_1(self):
+        from unittest import mock
+        from rg.catalog import run as runmod
+        with mock.patch.object(runmod.Run, 'execute', side_effect=RuntimeError('boom')):
+            self.assertEqual(runmod.main(self.argv), 1)
+        runs = list((Path(self.tmp.name) / 'out' / 'mx' / 'runs').glob('*.json'))
+        self.assertEqual(len(runs), 1)
+        self.assertIn('run crashed: RuntimeError: boom', runs[0].read_text(encoding='utf-8'))
+
+    def test_coverage_failure_exits_3(self):
+        from unittest import mock
+        from rg.catalog import run as runmod
+
+        def execute(self_, sources):
+            self_.manifest.update({'coverage': [{'source_id': 'mx.dof', 'scope': 'x', 'expected': 1, 'extracted': 0, 'ok': False}],
+                                   'requests_total': 0, 'raw_new_files': 0, 'finished_at': 'x'})
+            return self_.manifest
+        with mock.patch.object(runmod.Run, 'execute', execute):
+            self.assertEqual(runmod.main(self.argv), 3)
+
+    def test_deadline_reaches_the_fetcher_before_any_request(self):
+        from unittest import mock
+        from rg.catalog import fetch, run as runmod
+
+        class NoNetwork:
+            def open(self, req, timeout=None):
+                raise AssertionError(f'request sent after the deadline: {req.full_url}')
+        with mock.patch.object(fetch.urllib.request, 'build_opener', lambda *a: NoNetwork()):
+            self.assertEqual(runmod.main(self.argv + ['--deadline-minutes', '0']), 0)
+        runs = list((Path(self.tmp.name) / 'out' / 'mx' / 'runs').glob('*.json'))
+        self.assertIn('request budget reached', runs[0].read_text(encoding='utf-8'))
+
+
+class QuarantineEtag(unittest.TestCase):
+    def test_restored_row_forgets_the_validators_of_the_text_not_kept(self):
+        # Round 2: the old row came back but the new ETag stayed; the next 304 hid the new version forever.
+        from rg.catalog.run import quarantine
+        from rg.catalog.store import Catalog
+        with tempfile.TemporaryDirectory() as tmp:
+            good = json.loads((FIX / 'catalog_row_ley.json').read_text(encoding='utf-8'))
+            (Path(tmp) / 'mx').mkdir()
+            (Path(tmp) / 'mx' / 'leyes-federales.jsonl').write_text(json.dumps(good) + '\n', encoding='utf-8')
+            cat = Catalog(tmp, 'MX')
+            url = good['artifact']['url']
+            cat.state[good['source_id']] = {'etags': {url: {'etag': '"nuevo"'}, 'https://otra/': {'etag': '"x"'}}}
+            cat.entries[good['entry_id']] = {**good, 'title': None}
+            quarantine(cat, {good['entry_id']: ['title']})
+            self.assertEqual(list(cat.state[good['source_id']]['etags']), ['https://otra/'])
+
+
+class OjnMunicipal(Site):
+    def test_municipal_listing_is_reconciled_against_distinct_sheets(self):
+        from rg.catalog import ojn
+        run = self.make_run(date(2026, 10, 22))
+        src = next(s for s in run.registry['sources'] if s['source_id'] == 'mx.ojn-municipal')
+        robots = src['base_url'].split('/', 3)[0] + '//' + src['base_url'].split('/', 3)[2] + '/robots.txt'
+        mun = (FIX / 'ojn_mun_edo24_1847.html').read_bytes().replace(b'align=left>', b'align="left">', 1)  # one row drifts
+        self.routes.update({robots: ROBOTS_ALL,
+                            ojn.state_page_url(src['base_url'], 24, src['liberado']): (200, (FIX / 'ojn_state_page_edo24.html').read_bytes(), {}),
+                            ojn.municipal_url(src['base_url'], 24, 1847): (200, mun, {})})
+        self.go(run, 'mx.ojn-municipal', 'run_ojn_municipal', src['allowed_hosts'], states=[24])
+        checks = [(c['expected'], c['extracted'], c['ok']) for c in run.manifest['coverage'] if 'mun 1847 (fichas' in c['scope']]
+        self.assertEqual(checks, [(3, 2, False)])
+
+
 if __name__ == '__main__':
     unittest.main()

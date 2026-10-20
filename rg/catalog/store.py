@@ -130,6 +130,7 @@ class Catalog:
         return (entry['dates'].get('published') or '', listing.get('page_order', 0), entry['native_id'])
 
     def write(self):
+        self.dir.mkdir(parents=True, exist_ok=True)  # a new country or a clean checkout has no folder yet
         groups = defaultdict(list)
         for e in self.entries.values():
             groups[self._file_for(e)].append(e)

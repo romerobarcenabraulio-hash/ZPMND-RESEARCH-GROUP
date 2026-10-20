@@ -39,6 +39,7 @@ class _DayParser(HTMLParser):
         self._in_printed = False
         self.section = self.branch = self.issuer = None
         self.items = []
+        self.inputs = {}           # every <input id=... value=...>, whatever the attribute order
         self._depth = 0            # div depth, to know when a tab pane ends
         self._pane_depth = None
         self._capture = None       # ('section'|'issuer'|'note', buffer, note_id)
@@ -59,6 +60,8 @@ class _DayParser(HTMLParser):
                 self.section = self.branch = self.issuer = None
             if 'click-to-collapse' in cls.split() and 'panel-heading' in cls.split():
                 self._in_issuer_heading = True
+        if tag == 'input' and a.get('id'):
+            self.inputs.setdefault(a['id'], a.get('value') or '')
         if tag == 'span' and 'edition-date' in cls.split():
             self._in_printed = True
         if self._pane_depth is None:
@@ -127,10 +130,10 @@ def _iso(d, m, y):
     return f'{y}-{m}-{d}'
 
 
-def edition_dates(page_html):
+def edition_dates(page_html, values=None):
     """Official date of each edition shown on the page, from its own PDF link (/showPDF/DD-MM-YYYY/...). A weekend
     page with no edition of its own shows the last edition, so the requested day is NOT the publication date."""
-    values, out = _inputs(page_html), {}
+    values, out = values if values is not None else _inputs(page_html), {}
     for edition, input_id in _PDF_INPUT.items():
         m = re.search(r'/showPDF/(\d{2})-(\d{2})-(\d{4})/', values.get(input_id, ''))
         if m:
@@ -138,10 +141,11 @@ def edition_dates(page_html):
     return out
 
 
-def page_date(page_html):
+def page_date(page_html, values=None):
     """The page's own publication date (<input id="fechaPub" value="DD-MM-YYYY">); on a weekend mirror it is the
     mirrored edition's date. None when the page does not give it: never replaced by the requested day."""
-    m = re.fullmatch(r'(\d{2})-(\d{2})-(\d{4})', _inputs(page_html).get('fechaPub', '').strip())
+    values = values if values is not None else _inputs(page_html)
+    m = re.fullmatch(r'(\d{2})-(\d{2})-(\d{4})', values.get('fechaPub', '').strip())
     return _iso(*m.groups()) if m else None
 
 
@@ -159,7 +163,7 @@ def parse_day(page_html):
             i['edition'] = EDITIONS[words[0]]
     for i in p.items:
         del i['pane']
-    dates, fallback = edition_dates(page_html), page_date(page_html)
+    dates, fallback = edition_dates(page_html, p.inputs), page_date(page_html, p.inputs)  # one parse of the page
     seen, out = set(), []
     for item in p.items:
         if item['native_id'] not in seen:

@@ -473,12 +473,13 @@ class Requeue(unittest.TestCase):
         from rg.catalog.run import short_days
         days = {'2026-10-01': {'notes': 2}, '2026-10-02': {'notes': 1}, '2026-10-03': {'notes': 5, 'edition': '2026-10-02'},
                 '2026-10-04': {'ids': ['1', '2'], 'notes': 2}, '2026-10-05': {'ids': ['1'], 'notes': 1},
-                '2026-10-06': {'ids': ['1'], 'notes': 3}, '2026-10-07': {'ids': ['9'], 'notes': 1, 'rereads': 3}}
+                '2026-10-06': {'ids': ['1'], 'notes': 3}, '2026-10-07': {'ids': ['9'], 'notes': 1, 'rereads': 3},
+                '2026-10-08': {'notes': 0}}  # a count-only row of 0: an old soft error page
         entries = [{'source_id': 'mx.dof', 'native_id': '1', 'dates': {'published': '2026-10-01'}},
                    {'source_id': 'mx.dof', 'native_id': '5', 'dates': {'published': '2026-10-02'}}]
         before = json.dumps(days, sort_keys=True)
         # 10-01 legacy count short; 10-03 legacy mirror never short; 10-04 id '2' missing; 10-06 fewer ids than its count
-        self.assertEqual(short_days(days, entries, 'mx.dof'), (['2026-10-01', '2026-10-04', '2026-10-06'], ['2026-10-07']))
+        self.assertEqual(short_days(days, entries, 'mx.dof'), (['2026-10-01', '2026-10-04', '2026-10-06', '2026-10-08'], ['2026-10-07']))
         self.assertEqual(json.dumps(days, sort_keys=True), before)
 
 

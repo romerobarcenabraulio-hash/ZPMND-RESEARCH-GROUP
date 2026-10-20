@@ -5,6 +5,7 @@ Usage: python -m rg.schemas <kind> <file.json>   kinds: research_request, resear
 """
 import json
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 from jsonschema import Draft202012Validator
@@ -26,6 +27,12 @@ def _registry():
 
 def _schema(kind):
     return json.loads((SCHEMAS / f'{kind}.schema.json').read_text(encoding='utf-8'))
+
+
+@lru_cache(maxsize=None)
+def _validator(kind):
+    """Schemas are read once per process (a catalog run validates ~60,000 entries)."""
+    return Draft202012Validator(_schema(kind), registry=_registry())
 
 
 def _packet_references(packet):
@@ -56,7 +63,7 @@ def validate(kind, obj):
         return [f'unknown kind {kind}']
     if len(json.dumps(obj, ensure_ascii=False).encode('utf-8')) > MAX_BYTES:
         return [f'document larger than {MAX_BYTES} bytes']
-    validator = Draft202012Validator(_schema(kind), registry=_registry())
+    validator = _validator(kind)
     errors = [f"{'/'.join(map(str, e.absolute_path)) or '<root>'}: {e.message}" for e in validator.iter_errors(obj)]
     if not errors and kind == 'research_packet':
         errors += _packet_references(obj)

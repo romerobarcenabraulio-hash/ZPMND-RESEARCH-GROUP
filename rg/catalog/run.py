@@ -51,16 +51,17 @@ def recategorize(entries):
             e['category']['doc_type'] = doc_type(e['title'])
 
 
-MAX_REREADS = 3  # a day still short after this many successful re-reads is reported every run instead of re-read
+MAX_REREADS = 3  # after this many successful re-reads a still-short day is 'stuck': reported every run, retried spaced
+MAX_BACKOFF_DAYS = 30
 
 
-def short_days(days, entries, source_id):
+def short_days(days, entries, source_id, today=None):
     """Days whose page listed a note that is not in the catalog (a quarantined note, a lost write). Returns
     (requeue, stuck); the state is never modified, so a re-read that fails leaves the day short and the next run asks
     again. A row keeps the ids its page listed, so the check needs no date. Rows written before 2026-10-20 have only
     a count and are judged by the notes dated that day (a weekend mirror of another day's edition is never short). A
     day re-read MAX_REREADS times and still short (a note failing the schema the same way every run) is 'stuck': it
-    is reported, not re-read forever."""
+    is reported every run and re-read only from its retry_after date (spaced retries), never abandoned."""
     have_ids, have_dated = set(), {}
     for e in entries:
         if e['source_id'] == source_id:
@@ -72,9 +73,15 @@ def short_days(days, entries, source_id):
         if 'ids' in info:
             short = len(info['ids']) < info.get('notes', 0) or any(i not in have_ids for i in info['ids'])
         else:
-            short = info.get('edition', d) == d and have_dated.get(d, 0) < info.get('notes', 0)
+            # a count of 0 is never a real DOF day (0 of 392 indexed): an old soft error page, read again
+            short = info.get('notes', 0) == 0 or (info.get('edition', d) == d and have_dated.get(d, 0) < info.get('notes', 0))
         if short:
-            (stuck if info.get('rereads', 0) >= MAX_REREADS else requeue).append(d)
+            if info.get('rereads', 0) >= MAX_REREADS:
+                stuck.append(d)
+                if today is not None and today.isoformat() >= info.get('retry_after', ''):
+                    requeue.append(d)
+            else:
+                requeue.append(d)
     return requeue, stuck
 
 
@@ -154,9 +161,10 @@ class Run:
         f = self._fetcher(src)
         st = self.catalog.state.setdefault(src['source_id'], {'days': {}})
         days = st['days']
-        requeued, stuck = short_days(days, self.catalog.snapshot(src['source_id']), src['source_id'])
-        for d in stuck:
+        requeued, stuck = short_days(days, self.catalog.snapshot(src['source_id']), src['source_id'], self.today)
+        for d in stuck:  # still owed: the run is not whole (exit 3) until the notes are in the catalog
             self.manifest['errors'].append(f'{src["source_id"]} {d}: listed notes still missing after {MAX_REREADS} re-reads (see quarantined)')
+            self._cover(src['source_id'], f'{d} notas debidas tras {MAX_REREADS} relecturas', days[d].get('notes', 0), None)
         floor = date.fromisoformat(src['backfill_floor'])
         start = dof_window_start(days, self.today, self.forward_days)
         forward = [start + timedelta(days=i) for i in range((self.today - start).days + 1)]
@@ -199,7 +207,9 @@ class Run:
                         'url': sidof.note_url(src['base_url'], it['native_id']),
                         'category': {**src['category'], 'edition': it['edition'], 'section': it['section'],
                                      'branch': it['branch'], 'issuer': it['issuer'], 'doc_type': dof_doc_type(it['title'], it['branch'])},
-                        'dates': {'published': it['published']},  # None fails the schema: quarantined, never guessed
+                        # The official date: of the edition, else of the page, else the one already read from the
+                        # edition's own page in an earlier read; None fails the schema (quarantine), never guessed.
+                        'dates': {'published': it['published'] or ((old or {}).get('dates') or {}).get('published')},
                         'raw_status': old['raw_status'] if old else ('metadata_only' if meta_only else 'pending'),
                         'first_seen': now_iso(),
                     }
@@ -209,12 +219,15 @@ class Run:
                     stats['notes_new'] += self.catalog.upsert(entry)
                 prev = days.get(key, {})
                 ids = list(dict.fromkeys(prev.get('ids', []) + [it['native_id'] for it in items]))  # once listed, always owed
-                days[key] = {'ids': ids, 'notes': max(len(ids), prev.get('notes', 0)), 'indexed_at': now_iso(),
+                days[key] = {'ids': ids, 'notes': max(len(ids), sidof.count_listed(page), prev.get('notes', 0)), 'indexed_at': now_iso(),
                              'rereads': prev.get('rereads', 0) + 1 if key in again else 0}
+                if days[key]['rereads'] >= MAX_REREADS:  # spaced retries: 3, 6, 12, 24, 30, 30... days
+                    wait = min(MAX_BACKOFF_DAYS, 3 * 2 ** (days[key]['rereads'] - MAX_REREADS))
+                    days[key]['retry_after'] = (self.today + timedelta(days=wait)).isoformat()
                 stats['days_indexed'] += 1
             # robots_disallowed is checked again against today's robots.txt (cached: no request per note).
             pending = sorted((e for e in self.catalog.snapshot(src['source_id']) if e['raw_status'] in ('pending', 'failed', 'robots_disallowed')),
-                             key=lambda e: (e['dates']['published'], e['native_id']), reverse=True)
+                             key=lambda e: (e['dates'].get('published') or '', e['native_id']), reverse=True)
             for e in pending:
                 url = sidof.raw_url(src['base_url'], e['native_id'])
                 try:
@@ -227,6 +240,7 @@ class Run:
                     if isinstance(exc, BudgetExhausted):
                         raise
                     e['raw_status'] = 'robots_disallowed' if f.disallowed_by_rule(url) else 'failed'
+                    stats['raw_robots_disallowed' if e['raw_status'] == 'robots_disallowed' else 'raw_failed'] += 1
                     continue
                 if r.status != 200 or not r.body:
                     e['raw_status'] = 'failed'
@@ -497,6 +511,10 @@ def quarantine(catalog, invalid):
     previous = catalog.previous(invalid)
     for eid in invalid:
         if eid in previous and not validate('catalog_entry', previous[eid]):
+            # the new text was fetched but is not kept: forget its validators, or the next run gets 304 and never adds it
+            etags = catalog.state.get(previous[eid]['source_id'], {}).get('etags', {})
+            for row in (catalog.entries[eid], previous[eid]):
+                etags.pop((row.get('artifact') or {}).get('url'), None)
             catalog.entries[eid] = previous[eid]
         else:
             del catalog.entries[eid]
@@ -518,7 +536,7 @@ def main(argv=None):
     x = a.parse_args(argv)
     today = date.fromisoformat(x.today) if x.today else datetime.now(CDMX).date()
     run = Run(x.country, x.out, x.raw, x.budget, today, x.forward_days, x.index_days, parallel=not x.sequential)
-    if x.deadline_minutes:
+    if x.deadline_minutes is not None:
         run.deadline = time.monotonic() + 60 * x.deadline_minutes
     crashed = None
     try:

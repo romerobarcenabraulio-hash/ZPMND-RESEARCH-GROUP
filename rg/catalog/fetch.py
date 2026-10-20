@@ -1,10 +1,12 @@
 """Polite, fail-closed HTTP fetcher for deterministic acquisition (no agent, no model).
 
-Guards, each with a test in tests/test_catalog_fetch.py:
-- only http(s) URLs whose host is in the source's allowlist; redirects are re-checked the same way;
-- robots.txt is honored for every URL (404 = allowed, unreachable/5xx = everything disallowed);
+Guards, each with a test in tests/test_catalog.py (FetchGuards) or tests/test_run_guards.py:
+- only https URLs whose host is in the source's allowlist; redirects are re-checked the same way;
+- robots.txt is honored for every URL (other 4xx = allowed; 401/403/429, 3xx, 5xx or unreachable = everything
+  disallowed; only a rule read from a 200 robots.txt is recorded as 'disallowed');
 - at least `min_interval` seconds between requests to one host (or the site's Crawl-delay if larger);
-- TLS is always verified; responses larger than `max_bytes` are refused; a per-run request budget stops the run.
+- TLS is always verified; responses larger than `max_bytes` are refused; a per-run request budget and an optional
+  deadline stop the run (BudgetExhausted); network errors, including a non-ASCII URL, are status 0, never a crash.
 """
 import http.client
 import time
