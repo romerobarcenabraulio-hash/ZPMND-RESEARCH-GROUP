@@ -1,0 +1,6707 @@
+# Árbol del catálogo MX
+
+País → ámbito → estado → municipio → poder → dependencia → tipo. Conteos de los registros; "(sin dato en la fuente)" marca un nivel que la fuente no publica (nunca se infiere).
+
+- país: MX — 47014
+  - ámbito: estatal — 29944
+    - estado: Ciudad de México — 5647
+      - poder: PODER EJECUTIVO — 4709
+        - dependencia: (sin dato en la fuente) — 4709
+          - tipo: AVISO — 904
+          - tipo: ACUERDO — 684
+          - tipo: PROGRAMA — 509
+          - tipo: REGLA — 437
+          - tipo: MANUAL — 421
+          - tipo: LINEAMIENTO — 319
+          - tipo: NOTA ACLARATORIA — 224
+          - tipo: RESOLUCION — 222
+          - tipo: DECRETO ADMINISTRATIVO — 168
+          - tipo: CONVENIO — 120
+          - tipo: REGLAMENTO — 112
+          - tipo: DECRETO — 76
+          - tipo: CONVOCATORIA — 47
+          - tipo: NORMA — 47
+          - tipo: CIRCULAR — 40
+          - tipo: LISTADO — 33
+          - tipo: FE DE ERRATAS — 31
+          - tipo: OFICIO CIRCULAR — 30
+          - tipo: DISPOSICIONES DIVERSAS — 28
+          - tipo: MODIFICACION — 26
+          - tipo: DECLARATORIA — 20
+          - tipo: ESTATUTO — 18
+          - tipo: LEY — 18
+          - tipo: ACLARACION — 13
+          - tipo: JURISPRUDENCIA — 13
+          - tipo: INFORME — 12
+          - tipo: PROCEDIMIENTO — 12
+          - tipo: PROTOCOLO — 10
+          - tipo: CRITERIO — 8
+          - tipo: RELACION — 8
+          - tipo: REFORMA — 7
+          - tipo: CODIGO — 6
+          - tipo: MECANISMO — 6
+          - tipo: OFICIO — 6
+          - tipo: PLAN — 6
+          - tipo: BASE — 5
+          - tipo: CUOTA — 5
+          - tipo: DECRETO LEGISLATIVO — 5
+          - tipo: FORMATO — 5
+          - tipo: ADICION — 4
+          - tipo: ANEXO — 4
+          - tipo: GUIA — 4
+          - tipo: LISTA — 4
+          - tipo: ACUERDO DE COORDINACION — 3
+          - tipo: CATALOGO — 3
+          - tipo: DISPOSICION GENERAL — 3
+          - tipo: RESULTADO — 3
+          - tipo: TASA — 3
+          - tipo: CORRECCION — 2
+          - tipo: EXTRACTO — 2
+          - tipo: PADRON — 2
+          - tipo: TESIS — 2
+          - tipo: ADENDA — 1
+          - tipo: ARANCEL — 1
+          - tipo: CONDICION GENERAL — 1
+          - tipo: DECLARACION — 1
+          - tipo: DISPOSICION INTERNA — 1
+          - tipo: ESTADO — 1
+          - tipo: FIDEICOMISO — 1
+          - tipo: NORMA TECNICA — 1
+          - tipo: PRESUPUESTO — 1
+      - poder: PODER LEGISLATIVO — 587
+        - dependencia: (sin dato en la fuente) — 587
+          - tipo: DECRETO LEGISLATIVO — 341
+          - tipo: LEY — 161
+          - tipo: DECRETO — 20
+          - tipo: REGLAMENTO — 20
+          - tipo: ACUERDO — 13
+          - tipo: CODIGO — 10
+          - tipo: AVISO — 5
+          - tipo: PRESUPUESTO — 3
+          - tipo: PROGRAMA — 3
+          - tipo: LINEAMIENTO — 2
+          - tipo: ADICION — 1
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DECRETO ADMINISTRATIVO — 1
+          - tipo: DISPOSICIONES DIVERSAS — 1
+          - tipo: ESTATUTO — 1
+          - tipo: FE DE ERRATAS — 1
+          - tipo: GUIA — 1
+          - tipo: MODIFICACION — 1
+          - tipo: REGLA — 1
+      - poder: ORGANOS AUTONOMOS — 291
+        - dependencia: (sin dato en la fuente) — 291
+          - tipo: ACUERDO — 98
+          - tipo: AVISO — 27
+          - tipo: RESOLUCION — 27
+          - tipo: MANUAL — 21
+          - tipo: REFORMA — 13
+          - tipo: REGLAMENTO — 12
+          - tipo: CIRCULAR — 11
+          - tipo: DISPOSICIONES DIVERSAS — 10
+          - tipo: LINEAMIENTO — 9
+          - tipo: TESIS — 9
+          - tipo: INFORME — 8
+          - tipo: EXTRACTO — 7
+          - tipo: MODIFICACION — 7
+          - tipo: PUNTO RESOLUTIVO — 7
+          - tipo: PROCEDIMIENTO — 4
+          - tipo: PROGRAMA — 4
+          - tipo: ESTATUTO — 3
+          - tipo: JURISPRUDENCIA — 3
+          - tipo: CATALOGO — 2
+          - tipo: ACLARACION — 1
+          - tipo: CODIGO — 1
+          - tipo: CONVENIO — 1
+          - tipo: DECRETO LEGISLATIVO — 1
+          - tipo: DISPOSICION INTERNA — 1
+          - tipo: GUIA — 1
+          - tipo: NOTA ACLARATORIA — 1
+          - tipo: OFICIO CIRCULAR — 1
+          - tipo: REGLA — 1
+      - poder: PODER JUDICIAL — 60
+        - dependencia: (sin dato en la fuente) — 60
+          - tipo: ACUERDO — 36
+          - tipo: AVISO — 8
+          - tipo: CIRCULAR — 6
+          - tipo: REGLAMENTO — 5
+          - tipo: CODIGO — 1
+          - tipo: DISPOSICIONES DIVERSAS — 1
+          - tipo: FE DE ERRATAS — 1
+          - tipo: NOTA ACLARATORIA — 1
+          - tipo: RESOLUCION — 1
+    - estado: Veracruz — 2860
+      - poder: PODER LEGISLATIVO — 1372
+        - dependencia: (sin dato en la fuente) — 1372
+          - tipo: ACUERDO — 883
+          - tipo: DECRETO LEGISLATIVO — 257
+          - tipo: LEY — 173
+          - tipo: CODIGO — 14
+          - tipo: DECRETO ADMINISTRATIVO — 10
+          - tipo: LINEAMIENTO — 9
+          - tipo: DECRETO — 5
+          - tipo: OFICIO CIRCULAR — 5
+          - tipo: FE DE ERRATAS — 4
+          - tipo: ACTUALIZACION — 2
+          - tipo: ACTA — 1
+          - tipo: ACUERDO DE COORDINACION — 1
+          - tipo: ANEXO — 1
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DISPOSICIONES DIVERSAS — 1
+          - tipo: GUIA — 1
+          - tipo: NORMA — 1
+          - tipo: PRESUPUESTO — 1
+          - tipo: PROGRAMA — 1
+          - tipo: REGLA — 1
+      - poder: PODER EJECUTIVO — 1304
+        - dependencia: (sin dato en la fuente) — 1304
+          - tipo: ACUERDO — 720
+          - tipo: REGLAMENTO — 227
+          - tipo: DECRETO ADMINISTRATIVO — 149
+          - tipo: CONVENIO — 52
+          - tipo: FE DE ERRATAS — 29
+          - tipo: REGLA — 24
+          - tipo: MANUAL — 17
+          - tipo: DISPOSICIONES DIVERSAS — 13
+          - tipo: PROGRAMA — 9
+          - tipo: DECRETO LEGISLATIVO — 8
+          - tipo: LINEAMIENTO — 7
+          - tipo: CIRCULAR — 6
+          - tipo: NORMA — 6
+          - tipo: OFICIO — 5
+          - tipo: FONDO — 4
+          - tipo: AVISO — 3
+          - tipo: PLAN — 3
+          - tipo: RESOLUCION — 3
+          - tipo: CODIGO — 2
+          - tipo: CONVOCATORIA — 2
+          - tipo: OFICIO CIRCULAR — 2
+          - tipo: ACTA — 1
+          - tipo: ACTUALIZACION — 1
+          - tipo: ACUERDO DE COORDINACION — 1
+          - tipo: ANEXO — 1
+          - tipo: CATALOGO — 1
+          - tipo: DECRETO — 1
+          - tipo: ESTADO — 1
+          - tipo: ESTATUTO — 1
+          - tipo: LEY — 1
+          - tipo: NOTA ACLARATORIA — 1
+          - tipo: POLITICAS, BASES Y LINEAMIENTOS — 1
+          - tipo: REFORMA — 1
+          - tipo: REGIMEN — 1
+      - poder: ORGANOS AUTONOMOS — 104
+        - dependencia: (sin dato en la fuente) — 104
+          - tipo: ACUERDO — 74
+          - tipo: DISPOSICIONES DIVERSAS — 9
+          - tipo: REGLAMENTO — 9
+          - tipo: FE DE ERRATAS — 3
+          - tipo: CONVENIO — 2
+          - tipo: PROGRAMA — 2
+          - tipo: ACLARACION — 1
+          - tipo: ANEXO — 1
+          - tipo: AVISO — 1
+          - tipo: ESTATUTO — 1
+          - tipo: RESOLUCION — 1
+      - poder: PODER JUDICIAL — 80
+        - dependencia: (sin dato en la fuente) — 80
+          - tipo: ACUERDO — 45
+          - tipo: CRITERIO — 12
+          - tipo: REGLAMENTO — 12
+          - tipo: CIRCULAR — 5
+          - tipo: MODIFICACION — 2
+          - tipo: FE DE ERRATAS — 1
+          - tipo: OFICIO — 1
+          - tipo: PROGRAMA — 1
+          - tipo: REFORMA — 1
+    - estado: Coahuila de Zaragoza — 2665
+      - poder: PODER EJECUTIVO — 1631
+        - dependencia: (sin dato en la fuente) — 1631
+          - tipo: ACUERDO — 473
+          - tipo: DECRETO ADMINISTRATIVO — 334
+          - tipo: REGLAMENTO — 181
+          - tipo: CONVENIO — 157
+          - tipo: DISPOSICIONES DIVERSAS — 94
+          - tipo: ESTADO — 78
+          - tipo: FE DE ERRATAS — 47
+          - tipo: INFORME — 42
+          - tipo: PRESUPUESTO — 40
+          - tipo: REGLA — 36
+          - tipo: PROGRAMA — 19
+          - tipo: ANEXO — 14
+          - tipo: DECRETO — 13
+          - tipo: LINEAMIENTO — 13
+          - tipo: CODIGO — 10
+          - tipo: ADENDA — 9
+          - tipo: REFORMA — 9
+          - tipo: DECLARATORIA — 8
+          - tipo: PLAN — 8
+          - tipo: DECRETO LEGISLATIVO — 5
+          - tipo: NORMA — 5
+          - tipo: PROTOCOLO — 5
+          - tipo: AVISO — 4
+          - tipo: INFORMACION — 4
+          - tipo: DISPOSICION GENERAL — 3
+          - tipo: MODIFICACION — 3
+          - tipo: ACTA — 2
+          - tipo: LISTA — 2
+          - tipo: RELACION — 2
+          - tipo: RESOLUCION — 2
+          - tipo: ADICION — 1
+          - tipo: APROBACION — 1
+          - tipo: CIRCULAR — 1
+          - tipo: CONVENCION — 1
+          - tipo: DISPOSICION INTERNA — 1
+          - tipo: ESTATUTO — 1
+          - tipo: MANUAL — 1
+          - tipo: OFICIO — 1
+          - tipo: PADRON — 1
+      - poder: PODER LEGISLATIVO — 623
+        - dependencia: (sin dato en la fuente) — 623
+          - tipo: DECRETO LEGISLATIVO — 381
+          - tipo: LEY — 167
+          - tipo: DECRETO — 37
+          - tipo: ACUERDO — 13
+          - tipo: CODIGO — 8
+          - tipo: FE DE ERRATAS — 8
+          - tipo: ADENDA — 1
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DECLARATORIA — 1
+          - tipo: DISPOSICIONES DIVERSAS — 1
+          - tipo: INFORMACION — 1
+          - tipo: LINEAMIENTO — 1
+          - tipo: PRESUPUESTO — 1
+          - tipo: REGLA — 1
+          - tipo: REGLAMENTO — 1
+      - poder: ORGANOS AUTONOMOS — 374
+        - dependencia: (sin dato en la fuente) — 374
+          - tipo: ACUERDO — 330
+          - tipo: INFORME — 14
+          - tipo: REGLAMENTO — 8
+          - tipo: LINEAMIENTO — 6
+          - tipo: LISTA — 4
+          - tipo: ESTATUTO — 2
+          - tipo: ACTA — 1
+          - tipo: ACUERDO DE COORDINACION — 1
+          - tipo: AVISO — 1
+          - tipo: CONVENIO — 1
+          - tipo: DISPOSICIONES DIVERSAS — 1
+          - tipo: LEY — 1
+          - tipo: MANUAL — 1
+          - tipo: PROGRAMA — 1
+          - tipo: REFORMA — 1
+          - tipo: RELACION — 1
+      - poder: PODER JUDICIAL — 37
+        - dependencia: (sin dato en la fuente) — 37
+          - tipo: ACUERDO — 19
+          - tipo: RESOLUCION — 11
+          - tipo: REGLAMENTO — 3
+          - tipo: ACTA — 1
+          - tipo: ESTATUTO — 1
+          - tipo: INFORME — 1
+          - tipo: SENTENCIA — 1
+    - estado: Jalisco — 2131
+      - poder: PODER EJECUTIVO — 1215
+        - dependencia: (sin dato en la fuente) — 1215
+          - tipo: ACUERDO — 567
+          - tipo: REGLAMENTO — 208
+          - tipo: CONVENIO — 100
+          - tipo: MANUAL — 95
+          - tipo: REGLA — 90
+          - tipo: FE DE ERRATAS — 34
+          - tipo: DECRETO ADMINISTRATIVO — 23
+          - tipo: PROGRAMA — 15
+          - tipo: PLAN — 12
+          - tipo: ESTADO — 10
+          - tipo: DISPOSICIONES DIVERSAS — 6
+          - tipo: REPORTE — 6
+          - tipo: CONVOCATORIA — 4
+          - tipo: LINEAMIENTO — 4
+          - tipo: PROTOCOLO — 4
+          - tipo: PUNTO RESOLUTIVO — 4
+          - tipo: ADENDA — 3
+          - tipo: AVISO — 3
+          - tipo: MODIFICACION — 3
+          - tipo: PARTICIPACIONES — 3
+          - tipo: DECLARATORIA — 2
+          - tipo: DECRETO LEGISLATIVO — 2
+          - tipo: INFORME — 2
+          - tipo: NOTA ACLARATORIA — 2
+          - tipo: ACLARACION — 1
+          - tipo: ACUERDO DE COORDINACION — 1
+          - tipo: CRITERIO — 1
+          - tipo: DECRETO — 1
+          - tipo: DISPOSICION GENERAL — 1
+          - tipo: ESTATUTO — 1
+          - tipo: LEY — 1
+          - tipo: LISTADO — 1
+          - tipo: NORMA — 1
+          - tipo: NORMA TECNICA — 1
+          - tipo: REFORMA — 1
+          - tipo: RELACION — 1
+          - tipo: RESOLUCION — 1
+      - poder: PODER LEGISLATIVO — 688
+        - dependencia: (sin dato en la fuente) — 688
+          - tipo: DECRETO LEGISLATIVO — 352
+          - tipo: LEY — 218
+          - tipo: REGLAMENTO — 51
+          - tipo: ACUERDO — 24
+          - tipo: DECRETO ADMINISTRATIVO — 18
+          - tipo: CODIGO — 10
+          - tipo: PRESUPUESTO — 5
+          - tipo: DECRETO — 3
+          - tipo: CONVENIO — 2
+          - tipo: REGLA — 2
+          - tipo: ARANCEL — 1
+          - tipo: DECLARATORIA — 1
+          - tipo: MANUAL — 1
+      - poder: ORGANOS AUTONOMOS — 172
+        - dependencia: (sin dato en la fuente) — 172
+          - tipo: ACUERDO — 111
+          - tipo: REGLAMENTO — 18
+          - tipo: CONVENIO — 13
+          - tipo: LINEAMIENTO — 10
+          - tipo: RESOLUCION — 8
+          - tipo: ESTADO — 4
+          - tipo: AVISO — 2
+          - tipo: PROGRAMA — 2
+          - tipo: ACTUALIZACION — 1
+          - tipo: ANEXO — 1
+          - tipo: REFORMA — 1
+          - tipo: REGLA — 1
+      - poder: PODER JUDICIAL — 56
+        - dependencia: (sin dato en la fuente) — 56
+          - tipo: ACUERDO — 30
+          - tipo: AVISO — 15
+          - tipo: PROTOCOLO — 6
+          - tipo: CODIGO — 1
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DECRETO LEGISLATIVO — 1
+          - tipo: ESTADO — 1
+          - tipo: REGLAMENTO — 1
+    - estado: Estado de México — 1795
+      - poder: PODER EJECUTIVO — 1245
+        - dependencia: (sin dato en la fuente) — 1245
+          - tipo: REGLAMENTO — 476
+          - tipo: ACUERDO — 219
+          - tipo: CONVENIO — 160
+          - tipo: MANUAL — 137
+          - tipo: ACTA — 30
+          - tipo: REGLA — 27
+          - tipo: DISPOSICIONES DIVERSAS — 19
+          - tipo: DECRETO ADMINISTRATIVO — 17
+          - tipo: FE DE ERRATAS — 17
+          - tipo: LINEAMIENTO — 15
+          - tipo: INFORME — 14
+          - tipo: CIRCULAR — 13
+          - tipo: RESOLUCION — 13
+          - tipo: PROCEDIMIENTO — 8
+          - tipo: PROGRAMA — 7
+          - tipo: CONVOCATORIA — 6
+          - tipo: MODIFICACION — 6
+          - tipo: NORMA — 6
+          - tipo: ACUERDO DE COORDINACION — 5
+          - tipo: CODIGO — 4
+          - tipo: CONTRATO — 4
+          - tipo: CRITERIO — 4
+          - tipo: DECLARATORIA — 4
+          - tipo: MECANISMO — 4
+          - tipo: ANEXO — 3
+          - tipo: GUIA — 3
+          - tipo: NORMA TECNICA — 3
+          - tipo: AVISO — 2
+          - tipo: DISPOSICION INTERNA — 2
+          - tipo: LISTADO — 2
+          - tipo: REFORMA — 2
+          - tipo: RELACION — 2
+          - tipo: RESULTADO — 2
+          - tipo: ADICION — 1
+          - tipo: BASE — 1
+          - tipo: CATALOGO — 1
+          - tipo: DECRETO LEGISLATIVO — 1
+          - tipo: ESTATUTO — 1
+          - tipo: FIDEICOMISO — 1
+          - tipo: FONDO — 1
+          - tipo: NOTA ACLARATORIA — 1
+          - tipo: PLAN — 1
+      - poder: PODER LEGISLATIVO — 361
+        - dependencia: (sin dato en la fuente) — 361
+          - tipo: DECRETO LEGISLATIVO — 116
+          - tipo: LEY — 104
+          - tipo: REGLAMENTO — 77
+          - tipo: ACUERDO — 34
+          - tipo: CODIGO — 21
+          - tipo: DECRETO ADMINISTRATIVO — 4
+          - tipo: CONVENIO — 2
+          - tipo: FE DE ERRATAS — 2
+          - tipo: MANUAL — 1
+      - poder: ORGANOS AUTONOMOS — 135
+        - dependencia: (sin dato en la fuente) — 135
+          - tipo: ACUERDO — 97
+          - tipo: REGLAMENTO — 20
+          - tipo: FE DE ERRATAS — 3
+          - tipo: LEY — 3
+          - tipo: DECLARACION — 2
+          - tipo: LINEAMIENTO — 2
+          - tipo: LISTADO — 2
+          - tipo: ACTA — 1
+          - tipo: CODIGO — 1
+          - tipo: CONDICION GENERAL — 1
+          - tipo: REFORMA — 1
+          - tipo: RESOLUCION — 1
+          - tipo: SENTENCIA — 1
+      - poder: PODER JUDICIAL — 54
+        - dependencia: (sin dato en la fuente) — 54
+          - tipo: ACUERDO — 38
+          - tipo: REGLAMENTO — 5
+          - tipo: LEY — 3
+          - tipo: CONVENIO — 2
+          - tipo: MANUAL — 2
+          - tipo: CIRCULAR — 1
+          - tipo: CODIGO — 1
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: FE DE ERRATAS — 1
+    - estado: Aguascalientes — 1558
+      - poder: PODER EJECUTIVO — 922
+        - dependencia: (sin dato en la fuente) — 922
+          - tipo: ACUERDO — 202
+          - tipo: REGLAMENTO — 139
+          - tipo: CONVENIO — 109
+          - tipo: MANUAL — 68
+          - tipo: DECRETO ADMINISTRATIVO — 58
+          - tipo: REFORMA — 40
+          - tipo: RESOLUCION — 36
+          - tipo: REGLA — 32
+          - tipo: DISPOSICIONES DIVERSAS — 29
+          - tipo: LINEAMIENTO — 27
+          - tipo: PROGRAMA — 23
+          - tipo: AVISO — 22
+          - tipo: ANEXO — 18
+          - tipo: INFORME — 17
+          - tipo: FE DE ERRATAS — 13
+          - tipo: DECRETO — 12
+          - tipo: MODIFICACION — 8
+          - tipo: REPORTE — 8
+          - tipo: CODIGO — 7
+          - tipo: ACTA — 6
+          - tipo: CIRCULAR — 5
+          - tipo: ESTATUTO — 5
+          - tipo: PLAN — 5
+          - tipo: PROTOCOLO — 4
+          - tipo: BASE — 3
+          - tipo: LEY — 3
+          - tipo: NORMA — 3
+          - tipo: ADICION — 2
+          - tipo: CATALOGO — 2
+          - tipo: DISPOSICION GENERAL — 2
+          - tipo: DISPOSICION INTERNA — 2
+          - tipo: FORMATO — 2
+          - tipo: PRESUPUESTO — 2
+          - tipo: ACLARACION — 1
+          - tipo: CONVENCION — 1
+          - tipo: DECLARATORIA — 1
+          - tipo: DECRETO LEGISLATIVO — 1
+          - tipo: FIDEICOMISO — 1
+          - tipo: IMPORTE — 1
+          - tipo: OFICIO — 1
+          - tipo: RESULTADO — 1
+      - poder: PODER LEGISLATIVO — 458
+        - dependencia: (sin dato en la fuente) — 458
+          - tipo: DECRETO LEGISLATIVO — 236
+          - tipo: LEY — 139
+          - tipo: DECRETO — 27
+          - tipo: ACUERDO — 9
+          - tipo: DECLARATORIA — 8
+          - tipo: CODIGO — 7
+          - tipo: REFORMA — 7
+          - tipo: REGLA — 4
+          - tipo: REGLAMENTO — 4
+          - tipo: FE DE ERRATAS — 3
+          - tipo: LINEAMIENTO — 3
+          - tipo: DISPOSICIONES DIVERSAS — 2
+          - tipo: ARANCEL — 1
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: CONVENIO — 1
+          - tipo: DECLARACION — 1
+          - tipo: DECRETO ADMINISTRATIVO — 1
+          - tipo: ESTATUTO — 1
+          - tipo: JURISPRUDENCIA — 1
+          - tipo: MANUAL — 1
+          - tipo: MODIFICACION — 1
+      - poder: ORGANOS AUTONOMOS — 141
+        - dependencia: (sin dato en la fuente) — 141
+          - tipo: ACUERDO — 70
+          - tipo: RESOLUCION — 43
+          - tipo: CONVENIO — 8
+          - tipo: REGLAMENTO — 7
+          - tipo: MANUAL — 4
+          - tipo: ANEXO — 3
+          - tipo: BASE — 2
+          - tipo: PROCEDIMIENTO — 2
+          - tipo: AVISO — 1
+          - tipo: ESTATUTO — 1
+      - poder: PODER JUDICIAL — 37
+        - dependencia: (sin dato en la fuente) — 37
+          - tipo: ACUERDO — 11
+          - tipo: CIRCULAR — 8
+          - tipo: REGLAMENTO — 6
+          - tipo: JURISPRUDENCIA — 4
+          - tipo: REFORMA — 3
+          - tipo: CODIGO — 2
+          - tipo: LINEAMIENTO — 2
+          - tipo: DECLARATORIA — 1
+    - estado: Chihuahua — 1493
+      - poder: PODER LEGISLATIVO — 650
+        - dependencia: (sin dato en la fuente) — 650
+          - tipo: DECRETO LEGISLATIVO — 469
+          - tipo: LEY — 145
+          - tipo: CODIGO — 8
+          - tipo: DECRETO — 8
+          - tipo: DECRETO ADMINISTRATIVO — 5
+          - tipo: FE DE ERRATAS — 4
+          - tipo: ACUERDO — 3
+          - tipo: PRESUPUESTO — 2
+          - tipo: REGLAMENTO — 2
+          - tipo: ANEXO — 1
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: CONVENIO — 1
+          - tipo: REGLA — 1
+      - poder: PODER EJECUTIVO — 637
+        - dependencia: (sin dato en la fuente) — 637
+          - tipo: ACUERDO — 205
+          - tipo: ANEXO — 116
+          - tipo: REGLAMENTO — 92
+          - tipo: CONVENIO — 79
+          - tipo: AVISO — 35
+          - tipo: CONVOCATORIA — 14
+          - tipo: PROGRAMA — 14
+          - tipo: REGLA — 11
+          - tipo: DECRETO ADMINISTRATIVO — 10
+          - tipo: DISPOSICIONES DIVERSAS — 10
+          - tipo: FE DE ERRATAS — 9
+          - tipo: LINEAMIENTO — 7
+          - tipo: RESOLUCION — 6
+          - tipo: DECRETO LEGISLATIVO — 5
+          - tipo: INFORME — 4
+          - tipo: MANUAL — 3
+          - tipo: PLAN — 3
+          - tipo: CIRCULAR — 2
+          - tipo: CODIGO — 2
+          - tipo: IMPORTE — 2
+          - tipo: LEY — 2
+          - tipo: ACTA — 1
+          - tipo: CONDICION GENERAL — 1
+          - tipo: DECRETO — 1
+          - tipo: DISPOSICION GENERAL — 1
+          - tipo: OFICIO — 1
+          - tipo: PROTOCOLO — 1
+      - poder: ORGANOS AUTONOMOS — 167
+        - dependencia: (sin dato en la fuente) — 167
+          - tipo: ANEXO — 80
+          - tipo: ACUERDO — 62
+          - tipo: REGLAMENTO — 10
+          - tipo: RESOLUCION — 9
+          - tipo: ACTA — 2
+          - tipo: LINEAMIENTO — 2
+          - tipo: AVISO — 1
+          - tipo: CODIGO — 1
+      - poder: PODER JUDICIAL — 39
+        - dependencia: (sin dato en la fuente) — 39
+          - tipo: ACUERDO — 36
+          - tipo: REGLAMENTO — 2
+          - tipo: LINEAMIENTO — 1
+    - estado: Guanajuato — 1110
+      - poder: PODER EJECUTIVO — 615
+        - dependencia: (sin dato en la fuente) — 615
+          - tipo: ACUERDO — 180
+          - tipo: RESOLUCION — 115
+          - tipo: CONVENIO — 80
+          - tipo: REGLAMENTO — 50
+          - tipo: DECRETO ADMINISTRATIVO — 33
+          - tipo: PUNTO RESOLUTIVO — 31
+          - tipo: REGLA — 23
+          - tipo: DISPOSICIONES DIVERSAS — 14
+          - tipo: INFORME — 13
+          - tipo: PROGRAMA — 12
+          - tipo: LINEAMIENTO — 11
+          - tipo: DECRETO — 9
+          - tipo: DISPOSICION GENERAL — 8
+          - tipo: AVISO — 6
+          - tipo: DECLARATORIA — 5
+          - tipo: FE DE ERRATAS — 4
+          - tipo: NORMA — 4
+          - tipo: DECRETO LEGISLATIVO — 3
+          - tipo: ANEXO — 2
+          - tipo: FORMATO — 2
+          - tipo: POLITICA — 2
+          - tipo: CONCESION — 1
+          - tipo: CONVOCATORIA — 1
+          - tipo: ESTATUTO — 1
+          - tipo: LEY — 1
+          - tipo: MANUAL — 1
+          - tipo: MODIFICACION — 1
+          - tipo: OFICIO CIRCULAR — 1
+          - tipo: PROCEDIMIENTO — 1
+      - poder: PODER LEGISLATIVO — 305
+        - dependencia: (sin dato en la fuente) — 305
+          - tipo: ACUERDO — 135
+          - tipo: DECRETO LEGISLATIVO — 70
+          - tipo: LEY — 60
+          - tipo: DECRETO — 24
+          - tipo: REGLAMENTO — 4
+          - tipo: DECRETO ADMINISTRATIVO — 3
+          - tipo: DISPOSICIONES DIVERSAS — 3
+          - tipo: CODIGO — 2
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: CONVENIO — 1
+          - tipo: DISPOSICION INTERNA — 1
+          - tipo: REGLA — 1
+      - poder: ORGANOS AUTONOMOS — 154
+        - dependencia: (sin dato en la fuente) — 154
+          - tipo: ACUERDO — 95
+          - tipo: AVISO — 18
+          - tipo: RESOLUCION — 15
+          - tipo: REGLAMENTO — 11
+          - tipo: LINEAMIENTO — 5
+          - tipo: LEY — 3
+          - tipo: CONVENIO — 2
+          - tipo: ESTATUTO — 2
+          - tipo: CODIGO — 1
+          - tipo: DISPOSICION GENERAL — 1
+          - tipo: DISPOSICIONES DIVERSAS — 1
+      - poder: PODER JUDICIAL — 36
+        - dependencia: (sin dato en la fuente) — 36
+          - tipo: REGLAMENTO — 10
+          - tipo: ACUERDO — 8
+          - tipo: LEY — 6
+          - tipo: LINEAMIENTO — 6
+          - tipo: CODIGO — 4
+          - tipo: BASE — 1
+          - tipo: INFORME — 1
+    - estado: Colima — 1080
+      - poder: PODER LEGISLATIVO — 535
+        - dependencia: (sin dato en la fuente) — 535
+          - tipo: DECRETO LEGISLATIVO — 175
+          - tipo: LEY — 142
+          - tipo: DECRETO — 133
+          - tipo: ACTA — 47
+          - tipo: DECRETO ADMINISTRATIVO — 14
+          - tipo: CODIGO — 9
+          - tipo: ACUERDO — 7
+          - tipo: FE DE ERRATAS — 5
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: CONVENIO — 1
+          - tipo: REGLAMENTO — 1
+      - poder: PODER EJECUTIVO — 442
+        - dependencia: (sin dato en la fuente) — 442
+          - tipo: ACUERDO — 114
+          - tipo: REGLAMENTO — 94
+          - tipo: DECRETO ADMINISTRATIVO — 72
+          - tipo: CONVENIO — 54
+          - tipo: DECRETO — 22
+          - tipo: FE DE ERRATAS — 12
+          - tipo: PROGRAMA — 8
+          - tipo: LINEAMIENTO — 7
+          - tipo: INFORME — 6
+          - tipo: PLAN — 6
+          - tipo: PROTOCOLO — 6
+          - tipo: REFORMA — 6
+          - tipo: REGLA — 6
+          - tipo: CONVOCATORIA — 5
+          - tipo: CIRCULAR — 4
+          - tipo: DISPOSICION GENERAL — 4
+          - tipo: DECRETO LEGISLATIVO — 3
+          - tipo: ANEXO — 2
+          - tipo: DECLARATORIA — 2
+          - tipo: DISPOSICIONES DIVERSAS — 2
+          - tipo: MODIFICACION — 2
+          - tipo: ADICION — 1
+          - tipo: CRITERIO — 1
+          - tipo: LISTA — 1
+          - tipo: LISTADO — 1
+          - tipo: POLITICA — 1
+      - poder: ORGANOS AUTONOMOS — 74
+        - dependencia: (sin dato en la fuente) — 74
+          - tipo: ACUERDO — 60
+          - tipo: REGLAMENTO — 7
+          - tipo: RESOLUCION — 3
+          - tipo: ACTUALIZACION — 1
+          - tipo: DECRETO LEGISLATIVO — 1
+          - tipo: ESTATUTO — 1
+          - tipo: NORMA — 1
+      - poder: PODER JUDICIAL — 29
+        - dependencia: (sin dato en la fuente) — 29
+          - tipo: ACUERDO — 11
+          - tipo: CIRCULAR — 11
+          - tipo: REGLAMENTO — 3
+          - tipo: CONVOCATORIA — 1
+          - tipo: DISPOSICIONES DIVERSAS — 1
+          - tipo: LINEAMIENTO — 1
+          - tipo: MANUAL — 1
+    - estado: Michoacán — 970
+      - poder: PODER EJECUTIVO — 475
+        - dependencia: (sin dato en la fuente) — 475
+          - tipo: REGLAMENTO — 107
+          - tipo: ACUERDO — 91
+          - tipo: CONVENIO — 85
+          - tipo: PROGRAMA — 60
+          - tipo: MANUAL — 50
+          - tipo: DECRETO ADMINISTRATIVO — 22
+          - tipo: DECRETO — 21
+          - tipo: DISPOSICIONES DIVERSAS — 11
+          - tipo: REGLA — 9
+          - tipo: LINEAMIENTO — 7
+          - tipo: DECRETO LEGISLATIVO — 2
+          - tipo: FE DE ERRATAS — 2
+          - tipo: PLAN — 2
+          - tipo: REFORMA — 2
+          - tipo: CONVOCATORIA — 1
+          - tipo: ESTATUTO — 1
+          - tipo: FORMATO — 1
+          - tipo: INFORME — 1
+      - poder: PODER LEGISLATIVO — 284
+        - dependencia: (sin dato en la fuente) — 284
+          - tipo: DECRETO LEGISLATIVO — 117
+          - tipo: LEY — 117
+          - tipo: ACUERDO — 10
+          - tipo: DECRETO ADMINISTRATIVO — 9
+          - tipo: CODIGO — 7
+          - tipo: DECRETO — 7
+          - tipo: REGLAMENTO — 5
+          - tipo: FE DE ERRATAS — 4
+          - tipo: REGLA — 3
+          - tipo: CONVENIO — 2
+          - tipo: LINEAMIENTO — 2
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+      - poder: ORGANOS AUTONOMOS — 172
+        - dependencia: (sin dato en la fuente) — 172
+          - tipo: ACUERDO — 159
+          - tipo: CONVENIO — 4
+          - tipo: DISPOSICIONES DIVERSAS — 3
+          - tipo: REGLAMENTO — 3
+          - tipo: BANDO SOLEMNE — 1
+          - tipo: FE DE ERRATAS — 1
+          - tipo: MANUAL — 1
+      - poder: PODER JUDICIAL — 39
+        - dependencia: (sin dato en la fuente) — 39
+          - tipo: ACUERDO — 24
+          - tipo: REGLAMENTO — 5
+          - tipo: DISPOSICIONES DIVERSAS — 4
+          - tipo: CODIGO — 3
+          - tipo: CONVENIO — 1
+          - tipo: DECRETO — 1
+          - tipo: LEY — 1
+    - estado: Hidalgo — 953
+      - poder: PODER EJECUTIVO — 706
+        - dependencia: (sin dato en la fuente) — 706
+          - tipo: ACUERDO — 502
+          - tipo: REGLAMENTO — 127
+          - tipo: DECRETO — 38
+          - tipo: CIRCULAR — 8
+          - tipo: DECRETO ADMINISTRATIVO — 8
+          - tipo: ACUERDO DE COORDINACION — 3
+          - tipo: LEY — 3
+          - tipo: PROGRAMA — 3
+          - tipo: ACTUALIZACION — 2
+          - tipo: CODIGO — 2
+          - tipo: CONVENIO — 2
+          - tipo: NORMA — 2
+          - tipo: REGLA — 2
+          - tipo: DISPOSICIONES DIVERSAS — 1
+          - tipo: ESTATUTO — 1
+          - tipo: LINEAMIENTO — 1
+          - tipo: PLAN — 1
+      - poder: PODER LEGISLATIVO — 204
+        - dependencia: (sin dato en la fuente) — 204
+          - tipo: LEY — 138
+          - tipo: DECRETO LEGISLATIVO — 42
+          - tipo: CODIGO — 10
+          - tipo: REGLAMENTO — 4
+          - tipo: ACUERDO — 3
+          - tipo: PRESUPUESTO — 3
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DECLARATORIA — 1
+          - tipo: DECRETO ADMINISTRATIVO — 1
+          - tipo: REFORMA — 1
+      - poder: PODER JUDICIAL — 26
+        - dependencia: (sin dato en la fuente) — 26
+          - tipo: ACUERDO — 22
+          - tipo: REGLAMENTO — 2
+          - tipo: LINEAMIENTO — 1
+          - tipo: PROTOCOLO — 1
+      - poder: ORGANOS AUTONOMOS — 17
+        - dependencia: (sin dato en la fuente) — 17
+          - tipo: REGLAMENTO — 8
+          - tipo: ACUERDO — 6
+          - tipo: CODIGO — 2
+          - tipo: LEY — 1
+    - estado: Tamaulipas — 797
+      - poder: PODER EJECUTIVO — 386
+        - dependencia: (sin dato en la fuente) — 386
+          - tipo: ACUERDO — 103
+          - tipo: DECRETO ADMINISTRATIVO — 83
+          - tipo: REGLAMENTO — 56
+          - tipo: CONVOCATORIA — 45
+          - tipo: CONVENIO — 38
+          - tipo: DISPOSICIONES DIVERSAS — 21
+          - tipo: FE DE ERRATAS — 13
+          - tipo: INFORME — 7
+          - tipo: RESOLUCION — 5
+          - tipo: ESTATUTO — 3
+          - tipo: DECLARATORIA — 2
+          - tipo: LEY — 2
+          - tipo: LINEAMIENTO — 2
+          - tipo: MANUAL — 2
+          - tipo: ANEXO — 1
+          - tipo: PLAN — 1
+          - tipo: PROGRAMA — 1
+          - tipo: REGLA — 1
+      - poder: PODER LEGISLATIVO — 249
+        - dependencia: (sin dato en la fuente) — 249
+          - tipo: LEY — 95
+          - tipo: DECRETO LEGISLATIVO — 87
+          - tipo: DECRETO — 25
+          - tipo: ACUERDO — 22
+          - tipo: DECRETO ADMINISTRATIVO — 8
+          - tipo: CODIGO — 5
+          - tipo: REGLAMENTO — 3
+          - tipo: DISPOSICIONES DIVERSAS — 2
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: CONVOCATORIA — 1
+      - poder: ORGANOS AUTONOMOS — 119
+        - dependencia: (sin dato en la fuente) — 119
+          - tipo: ACUERDO — 95
+          - tipo: REGLAMENTO — 8
+          - tipo: LEY — 7
+          - tipo: DISPOSICIONES DIVERSAS — 4
+          - tipo: CONVENIO — 2
+          - tipo: CONVOCATORIA — 2
+          - tipo: LINEAMIENTO — 1
+      - poder: PODER JUDICIAL — 43
+        - dependencia: (sin dato en la fuente) — 43
+          - tipo: ACUERDO — 28
+          - tipo: CODIGO — 5
+          - tipo: REGLAMENTO — 4
+          - tipo: DISPOSICIONES DIVERSAS — 3
+          - tipo: LEY — 2
+          - tipo: FE DE ERRATAS — 1
+    - estado: Sinaloa — 711
+      - poder: PODER EJECUTIVO — 342
+        - dependencia: (sin dato en la fuente) — 342
+          - tipo: REGLAMENTO — 126
+          - tipo: ACUERDO — 76
+          - tipo: CONVENIO — 44
+          - tipo: DECRETO ADMINISTRATIVO — 29
+          - tipo: MANUAL — 18
+          - tipo: PROCEDIMIENTO — 16
+          - tipo: DISPOSICIONES DIVERSAS — 9
+          - tipo: REGLA — 9
+          - tipo: CODIGO — 4
+          - tipo: PLAN — 3
+          - tipo: DECRETO — 2
+          - tipo: LINEAMIENTO — 2
+          - tipo: ANEXO — 1
+          - tipo: CIRCULAR — 1
+          - tipo: DECRETO LEGISLATIVO — 1
+          - tipo: INFORME — 1
+      - poder: PODER LEGISLATIVO — 264
+        - dependencia: (sin dato en la fuente) — 264
+          - tipo: LEY — 136
+          - tipo: DECRETO LEGISLATIVO — 86
+          - tipo: ACUERDO — 14
+          - tipo: CODIGO — 12
+          - tipo: DECRETO — 5
+          - tipo: MANUAL — 4
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: CONVENIO — 1
+          - tipo: DECLARATORIA — 1
+          - tipo: FE DE ERRATAS — 1
+          - tipo: LINEAMIENTO — 1
+          - tipo: REFORMA — 1
+          - tipo: REGLAMENTO — 1
+      - poder: ORGANOS AUTONOMOS — 59
+        - dependencia: (sin dato en la fuente) — 59
+          - tipo: ACUERDO — 32
+          - tipo: REGLAMENTO — 9
+          - tipo: DISPOSICIONES DIVERSAS — 7
+          - tipo: LINEAMIENTO — 6
+          - tipo: CONVENIO — 1
+          - tipo: CRITERIO — 1
+          - tipo: DISPOSICION GENERAL — 1
+          - tipo: FE DE ERRATAS — 1
+          - tipo: PUNTO RESOLUTIVO — 1
+      - poder: PODER JUDICIAL — 46
+        - dependencia: (sin dato en la fuente) — 46
+          - tipo: ACUERDO — 36
+          - tipo: REGLAMENTO — 8
+          - tipo: CODIGO — 1
+          - tipo: DISPOSICIONES DIVERSAS — 1
+    - estado: Nayarit — 630
+      - poder: PODER EJECUTIVO — 338
+        - dependencia: (sin dato en la fuente) — 338
+          - tipo: ACUERDO — 119
+          - tipo: REGLAMENTO — 112
+          - tipo: CONVENIO — 56
+          - tipo: INFORME — 9
+          - tipo: DECRETO ADMINISTRATIVO — 7
+          - tipo: PROGRAMA — 6
+          - tipo: RESOLUCION — 5
+          - tipo: ANEXO — 4
+          - tipo: FE DE ERRATAS — 4
+          - tipo: ACUERDO DE COORDINACION — 2
+          - tipo: CODIGO — 2
+          - tipo: DECRETO — 2
+          - tipo: LINEAMIENTO — 2
+          - tipo: NORMA — 2
+          - tipo: AUTORIZACION — 1
+          - tipo: AVISO — 1
+          - tipo: CANCELACION — 1
+          - tipo: DECLARACION — 1
+          - tipo: DISPOSICIONES DIVERSAS — 1
+          - tipo: REGLA — 1
+      - poder: PODER LEGISLATIVO — 246
+        - dependencia: (sin dato en la fuente) — 246
+          - tipo: LEY — 121
+          - tipo: DECRETO LEGISLATIVO — 59
+          - tipo: DECRETO — 40
+          - tipo: ACUERDO — 12
+          - tipo: CODIGO — 7
+          - tipo: INFORME — 4
+          - tipo: REGLAMENTO — 2
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+      - poder: PODER JUDICIAL — 24
+        - dependencia: (sin dato en la fuente) — 24
+          - tipo: ACUERDO — 10
+          - tipo: REGLAMENTO — 10
+          - tipo: CONVENIO — 1
+          - tipo: DECRETO — 1
+          - tipo: DECRETO ADMINISTRATIVO — 1
+          - tipo: PROGRAMA — 1
+      - poder: ORGANOS AUTONOMOS — 22
+        - dependencia: (sin dato en la fuente) — 22
+          - tipo: REGLAMENTO — 8
+          - tipo: ACUERDO — 6
+          - tipo: AVISO — 3
+          - tipo: BASE — 2
+          - tipo: ESTATUTO — 1
+          - tipo: LINEAMIENTO — 1
+          - tipo: NORMA — 1
+    - estado: Quintana Roo — 577
+      - poder: PODER EJECUTIVO — 303
+        - dependencia: (sin dato en la fuente) — 303
+          - tipo: ACUERDO — 152
+          - tipo: REGLAMENTO — 137
+          - tipo: CIRCULAR — 4
+          - tipo: OFICIO CIRCULAR — 4
+          - tipo: DECRETO ADMINISTRATIVO — 1
+          - tipo: LINEAMIENTO — 1
+          - tipo: OFICIO — 1
+          - tipo: PROGRAMA — 1
+          - tipo: PROTOCOLO — 1
+          - tipo: REGLA — 1
+      - poder: PODER LEGISLATIVO — 226
+        - dependencia: (sin dato en la fuente) — 226
+          - tipo: LEY — 146
+          - tipo: DECRETO LEGISLATIVO — 44
+          - tipo: DECRETO — 24
+          - tipo: CODIGO — 7
+          - tipo: ACUERDO — 3
+          - tipo: PRESUPUESTO — 1
+          - tipo: REGLAMENTO — 1
+      - poder: PODER JUDICIAL — 33
+        - dependencia: (sin dato en la fuente) — 33
+          - tipo: ACUERDO — 31
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: REGLAMENTO — 1
+      - poder: ORGANOS AUTONOMOS — 15
+        - dependencia: (sin dato en la fuente) — 15
+          - tipo: REGLAMENTO — 14
+          - tipo: ACUERDO — 1
+    - estado: Chiapas — 547
+      - poder: PODER EJECUTIVO — 376
+        - dependencia: (sin dato en la fuente) — 376
+          - tipo: REGLAMENTO — 242
+          - tipo: MANUAL — 54
+          - tipo: DECRETO ADMINISTRATIVO — 48
+          - tipo: CONVENIO — 7
+          - tipo: PROGRAMA — 6
+          - tipo: LINEAMIENTO — 5
+          - tipo: LEY — 4
+          - tipo: NORMA — 2
+          - tipo: TASA — 2
+          - tipo: DISPOSICIONES DIVERSAS — 1
+          - tipo: FE DE ERRATAS — 1
+          - tipo: NOTIFICACION — 1
+          - tipo: PLAN — 1
+          - tipo: REGLA — 1
+          - tipo: RELACION — 1
+      - poder: PODER LEGISLATIVO — 146
+        - dependencia: (sin dato en la fuente) — 146
+          - tipo: LEY — 132
+          - tipo: CODIGO — 7
+          - tipo: DECRETO LEGISLATIVO — 3
+          - tipo: REGLAMENTO — 3
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+      - poder: ORGANOS AUTONOMOS — 16
+        - dependencia: (sin dato en la fuente) — 16
+          - tipo: REGLAMENTO — 13
+          - tipo: CODIGO — 1
+          - tipo: LINEAMIENTO — 1
+          - tipo: REFORMA — 1
+      - poder: PODER JUDICIAL — 9
+        - dependencia: (sin dato en la fuente) — 9
+          - tipo: REGLAMENTO — 8
+          - tipo: CODIGO — 1
+    - estado: Puebla — 479
+      - poder: PODER LEGISLATIVO — 248
+        - dependencia: (sin dato en la fuente) — 248
+          - tipo: LEY — 135
+          - tipo: DECRETO LEGISLATIVO — 47
+          - tipo: REGLAMENTO — 46
+          - tipo: CODIGO — 18
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DECLARATORIA — 1
+      - poder: PODER EJECUTIVO — 209
+        - dependencia: (sin dato en la fuente) — 209
+          - tipo: REGLAMENTO — 127
+          - tipo: ACUERDO — 42
+          - tipo: DECRETO ADMINISTRATIVO — 36
+          - tipo: LINEAMIENTO — 1
+          - tipo: NOTA ACLARATORIA — 1
+          - tipo: PROTOCOLO — 1
+          - tipo: RESOLUCION — 1
+      - poder: ORGANOS AUTONOMOS — 11
+        - dependencia: (sin dato en la fuente) — 11
+          - tipo: REGLAMENTO — 10
+          - tipo: ACUERDO — 1
+      - poder: PODER JUDICIAL — 11
+        - dependencia: (sin dato en la fuente) — 11
+          - tipo: ACUERDO — 6
+          - tipo: REGLAMENTO — 5
+    - estado: Oaxaca — 466
+      - poder: PODER EJECUTIVO — 235
+        - dependencia: (sin dato en la fuente) — 235
+          - tipo: REGLAMENTO — 148
+          - tipo: ACUERDO — 39
+          - tipo: DECRETO ADMINISTRATIVO — 26
+          - tipo: PLAN — 7
+          - tipo: CONVENIO — 5
+          - tipo: MANUAL — 4
+          - tipo: REGLA — 2
+          - tipo: ACUERDO DE COORDINACION — 1
+          - tipo: CODIGO — 1
+          - tipo: ESTATUTO — 1
+          - tipo: PRESUPUESTO — 1
+      - poder: PODER LEGISLATIVO — 213
+        - dependencia: (sin dato en la fuente) — 213
+          - tipo: LEY — 154
+          - tipo: DECRETO LEGISLATIVO — 30
+          - tipo: DECRETO — 15
+          - tipo: CODIGO — 12
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DECRETO ADMINISTRATIVO — 1
+      - poder: PODER JUDICIAL — 11
+        - dependencia: (sin dato en la fuente) — 11
+          - tipo: REGLAMENTO — 6
+          - tipo: LEY — 3
+          - tipo: ACUERDO — 2
+      - poder: ORGANOS AUTONOMOS — 7
+        - dependencia: (sin dato en la fuente) — 7
+          - tipo: REGLAMENTO — 7
+    - estado: San Luis Potosí — 411
+      - poder: PODER LEGISLATIVO — 202
+        - dependencia: (sin dato en la fuente) — 202
+          - tipo: LEY — 145
+          - tipo: DECRETO LEGISLATIVO — 45
+          - tipo: CODIGO — 9
+          - tipo: ACUERDO — 1
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: REGLAMENTO — 1
+      - poder: PODER EJECUTIVO — 182
+        - dependencia: (sin dato en la fuente) — 182
+          - tipo: REGLAMENTO — 120
+          - tipo: ACUERDO — 52
+          - tipo: DECRETO — 6
+          - tipo: CONVENIO — 2
+          - tipo: DECRETO ADMINISTRATIVO — 2
+      - poder: ORGANOS AUTONOMOS — 15
+        - dependencia: (sin dato en la fuente) — 15
+          - tipo: ACUERDO — 9
+          - tipo: REGLAMENTO — 6
+      - poder: PODER JUDICIAL — 12
+        - dependencia: (sin dato en la fuente) — 12
+          - tipo: ACUERDO — 9
+          - tipo: REGLAMENTO — 2
+          - tipo: AVISO — 1
+    - estado: Durango — 410
+      - poder: PODER LEGISLATIVO — 192
+        - dependencia: (sin dato en la fuente) — 192
+          - tipo: LEY — 139
+          - tipo: DECRETO LEGISLATIVO — 43
+          - tipo: CODIGO — 5
+          - tipo: INFORME — 2
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DECRETO — 1
+          - tipo: DECRETO ADMINISTRATIVO — 1
+      - poder: PODER EJECUTIVO — 183
+        - dependencia: (sin dato en la fuente) — 183
+          - tipo: REGLAMENTO — 91
+          - tipo: ACUERDO — 38
+          - tipo: REGLA — 13
+          - tipo: CONVENIO — 8
+          - tipo: DECRETO ADMINISTRATIVO — 8
+          - tipo: CODIGO — 6
+          - tipo: DECRETO — 4
+          - tipo: CIRCULAR — 3
+          - tipo: DISPOSICION GENERAL — 2
+          - tipo: MANUAL — 2
+          - tipo: PROGRAMA — 2
+          - tipo: ANEXO — 1
+          - tipo: DECRETO LEGISLATIVO — 1
+          - tipo: DISPOSICIONES DIVERSAS — 1
+          - tipo: PARTICIPACIONES — 1
+          - tipo: PLAN — 1
+          - tipo: RESOLUCION — 1
+      - poder: ORGANOS AUTONOMOS — 19
+        - dependencia: (sin dato en la fuente) — 19
+          - tipo: ACUERDO — 9
+          - tipo: REGLAMENTO — 8
+          - tipo: CODIGO — 2
+      - poder: PODER JUDICIAL — 16
+        - dependencia: (sin dato en la fuente) — 16
+          - tipo: MANUAL — 6
+          - tipo: REGLAMENTO — 5
+          - tipo: ACTA — 1
+          - tipo: ACUERDO — 1
+          - tipo: CODIGO — 1
+          - tipo: LEY — 1
+          - tipo: RESOLUCION — 1
+    - estado: Zacatecas — 396
+      - poder: PODER LEGISLATIVO — 196
+        - dependencia: (sin dato en la fuente) — 196
+          - tipo: LEY — 120
+          - tipo: DECRETO LEGISLATIVO — 35
+          - tipo: ACUERDO — 24
+          - tipo: CODIGO — 11
+          - tipo: DECRETO — 3
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: PRESUPUESTO — 1
+          - tipo: RESOLUCION — 1
+      - poder: PODER EJECUTIVO — 166
+        - dependencia: (sin dato en la fuente) — 166
+          - tipo: REGLAMENTO — 126
+          - tipo: ACUERDO — 19
+          - tipo: MANUAL — 6
+          - tipo: ADENDA — 3
+          - tipo: LINEAMIENTO — 3
+          - tipo: DECRETO ADMINISTRATIVO — 2
+          - tipo: ESTATUTO — 2
+          - tipo: DECRETO — 1
+          - tipo: PLAN — 1
+          - tipo: PROGRAMA — 1
+          - tipo: PROTOCOLO — 1
+          - tipo: REGLA — 1
+      - poder: ORGANOS AUTONOMOS — 17
+        - dependencia: (sin dato en la fuente) — 17
+          - tipo: REGLAMENTO — 12
+          - tipo: ACUERDO — 3
+          - tipo: MANUAL — 2
+      - poder: PODER JUDICIAL — 17
+        - dependencia: (sin dato en la fuente) — 17
+          - tipo: REGLAMENTO — 10
+          - tipo: ACUERDO — 7
+    - estado: Yucatán — 391
+      - poder: PODER EJECUTIVO — 181
+        - dependencia: (sin dato en la fuente) — 181
+          - tipo: REGLAMENTO — 109
+          - tipo: ACUERDO — 38
+          - tipo: CONVENIO — 11
+          - tipo: DECRETO ADMINISTRATIVO — 10
+          - tipo: DECRETO LEGISLATIVO — 8
+          - tipo: ESTATUTO — 2
+          - tipo: AVISO — 1
+          - tipo: LEY — 1
+          - tipo: PRESUPUESTO — 1
+      - poder: PODER LEGISLATIVO — 163
+        - dependencia: (sin dato en la fuente) — 163
+          - tipo: LEY — 129
+          - tipo: DECRETO LEGISLATIVO — 24
+          - tipo: CODIGO — 7
+          - tipo: ACUERDO — 1
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DECLARATORIA — 1
+      - poder: PODER JUDICIAL — 33
+        - dependencia: (sin dato en la fuente) — 33
+          - tipo: ACUERDO — 25
+          - tipo: REGLAMENTO — 8
+      - poder: ORGANOS AUTONOMOS — 14
+        - dependencia: (sin dato en la fuente) — 14
+          - tipo: REGLAMENTO — 13
+          - tipo: ACUERDO — 1
+    - estado: Tabasco — 355
+      - poder: PODER EJECUTIVO — 188
+        - dependencia: (sin dato en la fuente) — 188
+          - tipo: REGLAMENTO — 137
+          - tipo: ACUERDO — 12
+          - tipo: MANUAL — 11
+          - tipo: CONVENIO — 10
+          - tipo: DECRETO — 4
+          - tipo: PROGRAMA — 3
+          - tipo: CODIGO — 2
+          - tipo: DECRETO ADMINISTRATIVO — 2
+          - tipo: LEY — 2
+          - tipo: ESTATUTO — 1
+          - tipo: LINEAMIENTO — 1
+          - tipo: PLAN — 1
+          - tipo: REFORMA — 1
+          - tipo: REGLA — 1
+      - poder: PODER LEGISLATIVO — 142
+        - dependencia: (sin dato en la fuente) — 142
+          - tipo: LEY — 101
+          - tipo: DECRETO LEGISLATIVO — 15
+          - tipo: DECRETO — 13
+          - tipo: CODIGO — 8
+          - tipo: REGLAMENTO — 2
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DECLARATORIA — 1
+          - tipo: FE DE ERRATAS — 1
+      - poder: ORGANOS AUTONOMOS — 20
+        - dependencia: (sin dato en la fuente) — 20
+          - tipo: CONVENIO — 9
+          - tipo: REGLAMENTO — 8
+          - tipo: ESTATUTO — 1
+          - tipo: MANUAL — 1
+          - tipo: PLAN — 1
+      - poder: PODER JUDICIAL — 5
+        - dependencia: (sin dato en la fuente) — 5
+          - tipo: REGLAMENTO — 3
+          - tipo: CODIGO — 2
+    - estado: Querétaro — 317
+      - poder: PODER EJECUTIVO — 141
+        - dependencia: (sin dato en la fuente) — 141
+          - tipo: CONVENIO — 32
+          - tipo: REGLAMENTO — 30
+          - tipo: ACUERDO — 27
+          - tipo: LEY — 16
+          - tipo: DECRETO — 15
+          - tipo: DISPOSICION GENERAL — 8
+          - tipo: DECLARATORIA — 3
+          - tipo: DECRETO ADMINISTRATIVO — 3
+          - tipo: PROGRAMA — 3
+          - tipo: FIDEICOMISO — 1
+          - tipo: LINEAMIENTO — 1
+          - tipo: NORMA — 1
+          - tipo: PLAN — 1
+      - poder: PODER LEGISLATIVO — 140
+        - dependencia: (sin dato en la fuente) — 140
+          - tipo: LEY — 108
+          - tipo: DECRETO — 15
+          - tipo: ACUERDO — 10
+          - tipo: CODIGO — 2
+          - tipo: DECRETO LEGISLATIVO — 2
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: OFICIO CIRCULAR — 1
+          - tipo: REGLA — 1
+      - poder: ORGANOS AUTONOMOS — 19
+        - dependencia: (sin dato en la fuente) — 19
+          - tipo: LEY — 9
+          - tipo: REGLAMENTO — 9
+          - tipo: LINEAMIENTO — 1
+      - poder: PODER JUDICIAL — 17
+        - dependencia: (sin dato en la fuente) — 17
+          - tipo: CODIGO — 5
+          - tipo: LEY — 5
+          - tipo: REGLAMENTO — 5
+          - tipo: ACUERDO — 1
+          - tipo: DISPOSICION GENERAL — 1
+    - estado: Baja California Sur — 260
+      - poder: PODER LEGISLATIVO — 146
+        - dependencia: (sin dato en la fuente) — 146
+          - tipo: LEY — 121
+          - tipo: DECRETO LEGISLATIVO — 21
+          - tipo: ACUERDO — 1
+          - tipo: CODIGO — 1
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DECRETO ADMINISTRATIVO — 1
+      - poder: PODER EJECUTIVO — 80
+        - dependencia: (sin dato en la fuente) — 80
+          - tipo: REGLAMENTO — 55
+          - tipo: ACUERDO — 6
+          - tipo: DECRETO ADMINISTRATIVO — 4
+          - tipo: CONVENIO — 3
+          - tipo: FE DE ERRATAS — 2
+          - tipo: ACUERDO DE COORDINACION — 1
+          - tipo: AVISO — 1
+          - tipo: DECRETO — 1
+          - tipo: FORMATO — 1
+          - tipo: INFORME — 1
+          - tipo: LEY — 1
+          - tipo: MANUAL — 1
+          - tipo: NORMA — 1
+          - tipo: PLAN — 1
+          - tipo: PROGRAMA — 1
+      - poder: ORGANOS AUTONOMOS — 24
+        - dependencia: (sin dato en la fuente) — 24
+          - tipo: REGLAMENTO — 15
+          - tipo: PROGRAMA — 7
+          - tipo: ESTATUTO — 2
+      - poder: PODER JUDICIAL — 10
+        - dependencia: (sin dato en la fuente) — 10
+          - tipo: CODIGO — 5
+          - tipo: LEY — 3
+          - tipo: ACUERDO — 1
+          - tipo: REGLAMENTO — 1
+    - estado: Guerrero — 252
+      - poder: PODER EJECUTIVO — 128
+        - dependencia: (sin dato en la fuente) — 128
+          - tipo: ACUERDO — 83
+          - tipo: DECRETO — 43
+          - tipo: LINEAMIENTO — 2
+      - poder: PODER LEGISLATIVO — 100
+        - dependencia: (sin dato en la fuente) — 100
+          - tipo: LEY — 95
+          - tipo: CODIGO — 4
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+      - poder: ORGANOS AUTONOMOS — 14
+        - dependencia: (sin dato en la fuente) — 14
+          - tipo: LEY — 9
+          - tipo: CODIGO — 3
+          - tipo: ESTATUTO — 1
+          - tipo: REGLAMENTO — 1
+      - poder: PODER JUDICIAL — 10
+        - dependencia: (sin dato en la fuente) — 10
+          - tipo: REGLAMENTO — 5
+          - tipo: LEY — 3
+          - tipo: ACUERDO — 2
+    - estado: Campeche — 218
+      - poder: PODER LEGISLATIVO — 188
+        - dependencia: (sin dato en la fuente) — 188
+          - tipo: LEY — 176
+          - tipo: CODIGO — 10
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: REGLAMENTO — 1
+      - poder: PODER EJECUTIVO — 28
+        - dependencia: (sin dato en la fuente) — 28
+          - tipo: REGLAMENTO — 24
+          - tipo: CODIGO — 2
+          - tipo: CONVENIO — 2
+      - poder: ORGANOS AUTONOMOS — 1
+        - dependencia: (sin dato en la fuente) — 1
+          - tipo: CODIGO — 1
+      - poder: PODER JUDICIAL — 1
+        - dependencia: (sin dato en la fuente) — 1
+          - tipo: CODIGO — 1
+    - estado: Baja California — 201
+      - poder: PODER LEGISLATIVO — 160
+        - dependencia: (sin dato en la fuente) — 160
+          - tipo: LEY — 151
+          - tipo: CODIGO — 4
+          - tipo: REGLAMENTO — 4
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+      - poder: PODER EJECUTIVO — 38
+        - dependencia: (sin dato en la fuente) — 38
+          - tipo: REGLAMENTO — 32
+          - tipo: LEY — 4
+          - tipo: CODIGO — 1
+          - tipo: CONVENIO — 1
+      - poder: PODER JUDICIAL — 3
+        - dependencia: (sin dato en la fuente) — 3
+          - tipo: CODIGO — 2
+          - tipo: REGLAMENTO — 1
+    - estado: Tlaxcala — 175
+      - poder: PODER LEGISLATIVO — 89
+        - dependencia: (sin dato en la fuente) — 89
+          - tipo: LEY — 80
+          - tipo: CODIGO — 2
+          - tipo: REGLAMENTO — 2
+          - tipo: ACUERDO — 1
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+          - tipo: DECRETO LEGISLATIVO — 1
+          - tipo: PLAN — 1
+          - tipo: PRESUPUESTO — 1
+      - poder: PODER EJECUTIVO — 60
+        - dependencia: (sin dato en la fuente) — 60
+          - tipo: REGLAMENTO — 56
+          - tipo: LINEAMIENTO — 3
+          - tipo: PLAN — 1
+      - poder: ORGANOS AUTONOMOS — 17
+        - dependencia: (sin dato en la fuente) — 17
+          - tipo: LEY — 8
+          - tipo: REGLAMENTO — 6
+          - tipo: CODIGO — 2
+          - tipo: ACUERDO — 1
+      - poder: PODER JUDICIAL — 9
+        - dependencia: (sin dato en la fuente) — 9
+          - tipo: LEY — 5
+          - tipo: CODIGO — 3
+          - tipo: REGLAMENTO — 1
+    - estado: Sonora — 84
+      - poder: PODER EJECUTIVO — 73
+        - dependencia: (sin dato en la fuente) — 73
+          - tipo: RESOLUCION — 21
+          - tipo: ACUERDO — 17
+          - tipo: DECRETO ADMINISTRATIVO — 9
+          - tipo: CONVENIO — 5
+          - tipo: AVISO — 4
+          - tipo: CONVOCATORIA — 4
+          - tipo: REGLA — 3
+          - tipo: ACTA — 2
+          - tipo: DISPOSICIONES DIVERSAS — 2
+          - tipo: ADICION — 1
+          - tipo: AUTORIZACION — 1
+          - tipo: LINEAMIENTO — 1
+          - tipo: OFICIO — 1
+          - tipo: PROTOCOLO — 1
+          - tipo: REGLAMENTO — 1
+      - poder: ORGANOS AUTONOMOS — 4
+        - dependencia: (sin dato en la fuente) — 4
+          - tipo: ACUERDO — 3
+          - tipo: CONVOCATORIA — 1
+      - poder: PODER JUDICIAL — 4
+        - dependencia: (sin dato en la fuente) — 4
+          - tipo: ACUERDO — 4
+      - poder: PODER LEGISLATIVO — 3
+        - dependencia: (sin dato en la fuente) — 3
+          - tipo: LEY — 2
+          - tipo: REGLAMENTO — 1
+    - estado: Morelos — 4
+      - poder: PODER LEGISLATIVO — 4
+        - dependencia: (sin dato en la fuente) — 4
+          - tipo: DECRETO LEGISLATIVO — 3
+          - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
+    - estado: Nuevo León — 1
+      - poder: PODER EJECUTIVO — 1
+        - dependencia: (sin dato en la fuente) — 1
+          - tipo: LEY — 1
+  - ámbito: federal — 10383
+    - poder: AVISOS JUDICIALES Y GENERALES — 4068
+      - dependencia: AVISOS — 4067
+        - tipo: AVISO — 4067
+      - dependencia: NULLS — 1
+        - tipo: AVISO — 1
+    - poder: CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO — 3233
+      - dependencia: AVISOS — 3233
+        - tipo: OTRO — 3233
+    - poder: PODER EJECUTIVO — 1412
+      - dependencia: SECRETARIA DE HACIENDA Y CREDITO PUBLICO — 225
+        - tipo: ACUERDO — 120
+        - tipo: OFICIO — 51
+        - tipo: RESOLUCION — 26
+        - tipo: OTRO — 18
+        - tipo: CONVOCATORIA — 4
+        - tipo: CIRCULAR — 2
+        - tipo: ACLARACION — 1
+        - tipo: DECLARATORIA — 1
+        - tipo: LINEAMIENTOS — 1
+        - tipo: REGLAS — 1
+      - dependencia: SECRETARIA DE LAS MUJERES — 218
+        - tipo: CONVENIO — 217
+        - tipo: ACUERDO — 1
+      - dependencia: SECRETARIA DE GOBERNACION — 171
+        - tipo: AVISO — 93
+        - tipo: CONVENIO — 45
+        - tipo: OTRO — 31
+        - tipo: ACUERDO — 1
+        - tipo: CODIGO — 1
+      - dependencia: SECRETARIA DE SALUD — 160
+        - tipo: CONVENIO — 90
+        - tipo: OTRO — 41
+        - tipo: AVISO — 13
+        - tipo: ACUERDO — 10
+        - tipo: ACLARACION — 2
+        - tipo: NORMA OFICIAL MEXICANA — 2
+        - tipo: REGLAS — 1
+        - tipo: RESPUESTA A COMENTARIOS — 1
+      - dependencia: SECRETARIA ANTICORRUPCION Y BUEN GOBIERNO — 73
+        - tipo: CIRCULAR — 61
+        - tipo: ACUERDO — 8
+        - tipo: OFICIO — 2
+        - tipo: AVISO — 1
+        - tipo: MANUAL — 1
+      - dependencia: PRESIDENCIA DE LA REPUBLICA — 70
+        - tipo: DECRETO — 66
+        - tipo: ACUERDO — 2
+        - tipo: ACLARACION — 1
+        - tipo: ESTATUTO — 1
+      - dependencia: SECRETARIA DE MEDIO AMBIENTE Y RECURSOS NATURALES — 65
+        - tipo: CONVENIO — 32
+        - tipo: ACUERDO — 23
+        - tipo: NORMA OFICIAL MEXICANA — 4
+        - tipo: AVISO — 2
+        - tipo: OFICIO — 2
+        - tipo: ACLARACION — 1
+        - tipo: PROYECTO DE NORMA OFICIAL MEXICANA — 1
+      - dependencia: SECRETARIA DE DESARROLLO AGRARIO, TERRITORIAL Y URBANO — 62
+        - tipo: CONVENIO — 26
+        - tipo: AVISO — 15
+        - tipo: RESOLUCION — 6
+        - tipo: ACUERDO — 5
+        - tipo: DECLARATORIA — 5
+        - tipo: OTRO — 2
+        - tipo: ACLARACION — 1
+        - tipo: CODIGO — 1
+        - tipo: MANUAL — 1
+      - dependencia: SECRETARIA DEL TRABAJO Y PREVISION SOCIAL — 60
+        - tipo: CONVENIO — 38
+        - tipo: ACUERDO — 12
+        - tipo: ACLARACION — 4
+        - tipo: OTRO — 4
+        - tipo: AVISO — 1
+        - tipo: LINEAMIENTOS — 1
+      - dependencia: SECRETARIA DE ECONOMIA — 48
+        - tipo: RESOLUCION — 22
+        - tipo: ACUERDO — 15
+        - tipo: AVISO — 7
+        - tipo: OTRO — 2
+        - tipo: MANUAL — 1
+        - tipo: PROGRAMA — 1
+      - dependencia: SECRETARIA DE INFRAESTRUCTURA, COMUNICACIONES Y TRANSPORTES — 45
+        - tipo: CONVENIO — 16
+        - tipo: ACUERDO — 9
+        - tipo: AVISO — 9
+        - tipo: OTRO — 5
+        - tipo: DECLARATORIA — 2
+        - tipo: ACLARACION — 1
+        - tipo: CIRCULAR — 1
+        - tipo: LINEAMIENTOS — 1
+        - tipo: MANUAL — 1
+      - dependencia: SECRETARIA DE MARINA — 40
+        - tipo: AVISO — 23
+        - tipo: OTRO — 7
+        - tipo: ACUERDO — 6
+        - tipo: ACLARACION — 1
+        - tipo: CODIGO — 1
+        - tipo: LINEAMIENTOS — 1
+        - tipo: PROGRAMA — 1
+      - dependencia: SECRETARIA DE ENERGIA — 39
+        - tipo: ACUERDO — 21
+        - tipo: AVISO — 10
+        - tipo: OFICIO — 3
+        - tipo: NORMA OFICIAL MEXICANA — 2
+        - tipo: ACLARACION — 1
+        - tipo: ESTATUTO — 1
+        - tipo: PROGRAMA — 1
+      - dependencia: SECRETARIA DE RELACIONES EXTERIORES — 23
+        - tipo: OTRO — 18
+        - tipo: ACUERDO — 3
+        - tipo: CONVENIO — 1
+        - tipo: LINEAMIENTOS — 1
+      - dependencia: SECRETARIA DE AGRICULTURA Y DESARROLLO RURAL — 22
+        - tipo: OTRO — 12
+        - tipo: ACUERDO — 8
+        - tipo: AVISO — 1
+        - tipo: CONVENIO — 1
+      - dependencia: SECRETARIA DE SEGURIDAD Y PROTECCION CIUDADANA — 19
+        - tipo: CONVENIO — 11
+        - tipo: ACUERDO — 3
+        - tipo: AVISO — 2
+        - tipo: LINEAMIENTOS — 2
+        - tipo: OTRO — 1
+      - dependencia: SECRETARIA DE CULTURA — 15
+        - tipo: AVISO — 9
+        - tipo: ACUERDO — 6
+      - dependencia: SECRETARIA DE EDUCACION PUBLICA — 14
+        - tipo: ACUERDO — 10
+        - tipo: PROGRAMA — 3
+        - tipo: AVISO — 1
+      - dependencia: SECRETARIA DE CIENCIA, HUMANIDADES, TECNOLOGIA E INNOVACION — 12
+        - tipo: ACUERDO — 7
+        - tipo: AVISO — 3
+        - tipo: PROGRAMA — 2
+      - dependencia: SECRETARIA DE TURISMO — 9
+        - tipo: CONVENIO — 7
+        - tipo: ACUERDO — 1
+        - tipo: AVISO — 1
+      - dependencia: CONSEJO DE SALUBRIDAD GENERAL — 7
+        - tipo: ACUERDO — 5
+        - tipo: AVISO — 2
+      - dependencia: AGENCIA DE TRANSFORMACION DIGITAL Y TELECOMUNICACIONES — 6
+        - tipo: ACUERDO — 2
+        - tipo: LINEAMIENTOS — 2
+        - tipo: AVISO — 1
+        - tipo: PROGRAMA — 1
+      - dependencia: SECRETARIA DE LA DEFENSA NACIONAL — 6
+        - tipo: ACUERDO — 2
+        - tipo: MANUAL — 2
+        - tipo: AVISO — 1
+        - tipo: CODIGO — 1
+      - dependencia: FIDEICOMISOS INSTITUIDOS EN RELACION CON LA AGRICULTURA — 1
+        - tipo: OTRO — 1
+      - dependencia: PROCURADURIA GENERAL DE LA REPUBLICA — 1
+        - tipo: ACUERDO — 1
+      - dependencia: SECRETARIA DE BIENESTAR — 1
+        - tipo: ACUERDO — 1
+    - poder: ORGANISMOS AUTONOMOS — 530
+      - dependencia: BANCO DE MEXICO — 358
+        - tipo: INDICADOR ECONOMICO — 323
+        - tipo: OTRO — 30
+        - tipo: CIRCULAR — 5
+      - dependencia: INSTITUTO NACIONAL ELECTORAL — 79
+        - tipo: ACUERDO — 40
+        - tipo: RESOLUCION — 15
+        - tipo: OTRO — 14
+        - tipo: EXTRACTO — 8
+        - tipo: AVISO — 1
+        - tipo: CIRCULAR — 1
+      - dependencia: TRIBUNAL FEDERAL DE JUSTICIA ADMINISTRATIVA — 44
+        - tipo: EXTRACTO — 33
+        - tipo: ACUERDO — 9
+        - tipo: CIRCULAR — 1
+        - tipo: OTRO — 1
+      - dependencia: INSTITUTO NACIONAL DE ESTADISTICA Y GEOGRAFIA — 31
+        - tipo: INDICADOR ECONOMICO — 16
+        - tipo: OTRO — 9
+        - tipo: ACUERDO — 5
+        - tipo: CIRCULAR — 1
+      - dependencia: FISCALIA GENERAL DE LA REPUBLICA — 9
+        - tipo: ACUERDO — 3
+        - tipo: AVISO — 3
+        - tipo: OTRO — 2
+        - tipo: REGLAS — 1
+      - dependencia: TRIBUNAL SUPERIOR AGRARIO — 9
+        - tipo: ACUERDO — 5
+        - tipo: SENTENCIA — 4
+    - poder: Poder Legislativo — 318
+      - dependencia: CONGRESO DE LA UNION — 318
+        - tipo: LEY — 301
+        - tipo: CODIGO — 9
+        - tipo: REGLAMENTO — 3
+        - tipo: CONSTITUCION — 1
+        - tipo: ESTATUTO — 1
+        - tipo: ORDENANZA — 1
+        - tipo: OTRO — 1
+        - tipo: PRESUPUESTO — 1
+    - poder: ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS — 299
+      - dependencia: SISTEMA NACIONAL PARA EL DESARROLLO INTEGRAL DE LA FAMILIA — 173
+        - tipo: CONVENIO — 171
+        - tipo: ACUERDO — 1
+        - tipo: AVISO — 1
+      - dependencia: INSTITUTO MEXICANO DE LA PROPIEDAD INDUSTRIAL — 29
+        - tipo: ACUERDO — 17
+        - tipo: OTRO — 11
+        - tipo: AVISO — 1
+      - dependencia: INSTITUTO MEXICANO DEL SEGURO SOCIAL — 18
+        - tipo: AVISO — 11
+        - tipo: ACUERDO — 7
+      - dependencia: COMISION REGULADORA DE TELECOMUNICACIONES — 11
+        - tipo: ACUERDO — 11
+      - dependencia: CENTRO FEDERAL DE CONCILIACION Y REGISTRO LABORAL — 6
+        - tipo: AVISO — 3
+        - tipo: CONVOCATORIA — 2
+        - tipo: ACUERDO — 1
+      - dependencia: SERVICIOS DE SALUD DEL INSTITUTO MEXICANO DEL SEGURO SOCIAL PARA EL BIENESTAR (IMSS-BIENESTAR) — 6
+        - tipo: OTRO — 3
+        - tipo: ACUERDO — 1
+        - tipo: AVISO — 1
+        - tipo: CONVENIO — 1
+      - dependencia: CAMINOS Y PUENTES FEDERALES DE INGRESOS Y SERVICIOS CONEXOS — 5
+        - tipo: AVISO — 5
+      - dependencia: COMISION NACIONAL PARA LA PROTECCION Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS — 5
+        - tipo: ACUERDO — 4
+        - tipo: OFICIO — 1
+      - dependencia: INSTITUTO PARA LA PROTECCION AL AHORRO BANCARIO — 5
+        - tipo: ACUERDO — 3
+        - tipo: OTRO — 2
+      - dependencia: COMISION NACIONAL ANTIMONOPOLIO — 4
+        - tipo: ACUERDO — 1
+        - tipo: AVISO — 1
+        - tipo: MANUAL — 1
+        - tipo: PROGRAMA — 1
+      - dependencia: INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO — 4
+        - tipo: ACUERDO — 2
+        - tipo: LINEAMIENTOS — 1
+        - tipo: MANUAL — 1
+      - dependencia: INSTITUTO DEL FONDO NACIONAL DE LA VIVIENDA PARA LOS TRABAJADORES — 3
+        - tipo: AVISO — 1
+        - tipo: DISPOSICIONES — 1
+        - tipo: OTRO — 1
+      - dependencia: INSTITUTO PARA DEVOLVER AL PUEBLO LO ROBADO — 3
+        - tipo: ACUERDO — 3
+      - dependencia: PROCURADURIA AGRARIA — 3
+        - tipo: ACUERDO — 2
+        - tipo: AVISO — 1
+      - dependencia: PROCURADURIA FEDERAL DEL CONSUMIDOR — 3
+        - tipo: ACUERDO — 3
+      - dependencia: CENTRO NACIONAL DE CONTROL DEL GAS NATURAL — 2
+        - tipo: CONVOCATORIA — 1
+        - tipo: PROGRAMA — 1
+      - dependencia: COMISION NACIONAL FORESTAL — 2
+        - tipo: ACUERDO — 2
+      - dependencia: CONSEJO NACIONAL DE NORMALIZACION Y CERTIFICACION DE COMPETENCIAS LABORALES — 2
+        - tipo: ACUERDO — 2
+      - dependencia: CORREDOR INTEROCEANICO DEL ISTMO DE TEHUANTEPEC — 2
+        - tipo: ACUERDO — 2
+      - dependencia: INSTITUTO NACIONAL DE LOS PUEBLOS INDIGENAS — 2
+        - tipo: ACUERDO — 2
+      - dependencia: PROCURADURIA DE LA DEFENSA DEL CONTRIBUYENTE — 2
+        - tipo: ACUERDO — 2
+      - dependencia: ARCHIVO GENERAL DE LA NACION — 1
+        - tipo: ACUERDO — 1
+      - dependencia: COMISION NACIONAL DE VIVIENDA — 1
+        - tipo: MANUAL — 1
+      - dependencia: CONSEJO NACIONAL PARA PREVENIR LA DISCRIMINACION — 1
+        - tipo: ACUERDO — 1
+      - dependencia: INSTITUTO DE SEGURIDAD SOCIAL PARA LAS FUERZAS ARMADAS MEXICANAS — 1
+        - tipo: ACUERDO — 1
+      - dependencia: INSTITUTO MEXICANO DE LA RADIO — 1
+        - tipo: AVISO — 1
+      - dependencia: INSTITUTO MEXICANO DE TECNOLOGIA DEL AGUA — 1
+        - tipo: ACUERDO — 1
+      - dependencia: INSTITUTO POLITECNICO NACIONAL — 1
+        - tipo: ACUERDO — 1
+      - dependencia: LITIO PARA MEXICO — 1
+        - tipo: AVISO — 1
+      - dependencia: LOTERIA NACIONAL — 1
+        - tipo: OTRO — 1
+    - poder: CONVOCATORIAS PARA CONCURSOS DE PLAZAS VACANTES DEL SERVICIO PROFESIONAL DE CARRERA EN LA ADMINISTRACION PUBLICA FEDERAL — 234
+      - dependencia: AVISOS — 234
+        - tipo: OTRO — 234
+    - poder: Poder Ejecutivo — 150
+      - dependencia: PRESIDENCIA DE LA REPUBLICA — 150
+        - tipo: REGLAMENTO — 150
+    - poder: PODER JUDICIAL — 120
+      - dependencia: SUPREMA CORTE DE JUSTICIA DE LA NACION — 85
+        - tipo: SENTENCIA — 72
+        - tipo: ACUERDO — 7
+        - tipo: OTRO — 6
+      - dependencia: ORGANO DE ADMINISTRACION JUDICIAL — 33
+        - tipo: ACUERDO — 24
+        - tipo: AVISO — 5
+        - tipo: OTRO — 3
+        - tipo: DECLARATORIA — 1
+      - dependencia: TRIBUNAL DE DISCIPLINA JUDICIAL — 1
+        - tipo: REGLAMENTO — 1
+      - dependencia: TRIBUNAL ELECTORAL DEL PODER JUDICIAL DE LA FEDERACION — 1
+        - tipo: AVISO — 1
+    - poder: EMPRESAS PUBLICAS DEL ESTADO MEXICANO — 10
+      - dependencia: COMISION FEDERAL DE ELECTRICIDAD — 8
+        - tipo: OTRO — 7
+        - tipo: DISPOSICIONES — 1
+      - dependencia: PETROLEOS MEXICANOS — 2
+        - tipo: ACUERDO — 1
+        - tipo: ESTATUTO — 1
+    - poder: PODER LEGISLATIVO — 6
+      - dependencia: AUDITORIA SUPERIOR DE LA FEDERACION — 3
+        - tipo: OTRO — 2
+        - tipo: REGLAMENTO — 1
+      - dependencia: CAMARA DE DIPUTADOS — 1
+        - tipo: DECRETO — 1
+      - dependencia: CAMARA DE SENADORES — 1
+        - tipo: DECRETO — 1
+      - dependencia: CONGRESO DE LA UNION — 1
+        - tipo: DECRETO — 1
+    - poder: OTROS — 2
+      - dependencia: INSTITUTO NACIONAL DE LOS PUEBLOS — 2
+        - tipo: CONVOCATORIA — 1
+        - tipo: OTRO — 1
+    - poder: ENTIDADES FEDERATIVAS — 1
+      - dependencia: CONGRESO DE LA CIUDAD DE MEXICO — 1
+        - tipo: DECRETO — 1
+  - ámbito: municipal — 6687
+    - estado: Veracruz — 1556
+      - municipio: Xalapa — 77
+        - poder: (sin dato en la fuente) — 77
+          - dependencia: (sin dato en la fuente) — 77
+            - tipo: ACUERDO — 43
+            - tipo: REGLAMENTO — 27
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: CODIGO — 1
+            - tipo: DECRETO — 1
+            - tipo: PROGRAMA — 1
+            - tipo: REFORMA — 1
+      - municipio: Veracruz — 61
+        - poder: (sin dato en la fuente) — 61
+          - dependencia: (sin dato en la fuente) — 61
+            - tipo: ACUERDO — 28
+            - tipo: REGLAMENTO — 18
+            - tipo: BANDO — 8
+            - tipo: LEY — 2
+            - tipo: PROGRAMA — 2
+            - tipo: CODIGO — 1
+            - tipo: DECRETO — 1
+            - tipo: REGLA — 1
+      - municipio: Orizaba — 33
+        - poder: (sin dato en la fuente) — 33
+          - dependencia: (sin dato en la fuente) — 33
+            - tipo: REGLAMENTO — 19
+            - tipo: ACUERDO — 7
+            - tipo: LEY — 2
+            - tipo: REFORMA — 2
+            - tipo: BANDO — 1
+            - tipo: CODIGO — 1
+            - tipo: FE DE ERRATAS — 1
+      - municipio: Boca del Río — 31
+        - poder: (sin dato en la fuente) — 31
+          - dependencia: (sin dato en la fuente) — 31
+            - tipo: REGLAMENTO — 14
+            - tipo: ACUERDO — 13
+            - tipo: PROGRAMA — 2
+            - tipo: CODIGO — 1
+            - tipo: LEY — 1
+      - municipio: Cosoleacaque — 30
+        - poder: (sin dato en la fuente) — 30
+          - dependencia: (sin dato en la fuente) — 30
+            - tipo: REGLAMENTO — 20
+            - tipo: ACUERDO — 7
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Poza Rica de Hidalgo — 24
+        - poder: (sin dato en la fuente) — 24
+          - dependencia: (sin dato en la fuente) — 24
+            - tipo: REGLAMENTO — 13
+            - tipo: ACUERDO — 9
+            - tipo: LEY — 2
+      - municipio: Minatitlán — 22
+        - poder: (sin dato en la fuente) — 22
+          - dependencia: (sin dato en la fuente) — 22
+            - tipo: REGLAMENTO — 11
+            - tipo: ACUERDO — 8
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Córdoba — 18
+        - poder: (sin dato en la fuente) — 18
+          - dependencia: (sin dato en la fuente) — 18
+            - tipo: ACUERDO — 11
+            - tipo: REGLAMENTO — 3
+            - tipo: DECRETO — 2
+            - tipo: CODIGO — 1
+            - tipo: LEY — 1
+      - municipio: Papantla — 18
+        - poder: (sin dato en la fuente) — 18
+          - dependencia: (sin dato en la fuente) — 18
+            - tipo: ACUERDO — 10
+            - tipo: REGLAMENTO — 4
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: OFICIO CIRCULAR — 1
+      - municipio: Camerino Z. Mendoza — 17
+        - poder: (sin dato en la fuente) — 17
+          - dependencia: (sin dato en la fuente) — 17
+            - tipo: REGLAMENTO — 14
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Coatzacoalcos — 16
+        - poder: (sin dato en la fuente) — 16
+          - dependencia: (sin dato en la fuente) — 16
+            - tipo: ACUERDO — 12
+            - tipo: CODIGO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Coscomatepec — 16
+        - poder: (sin dato en la fuente) — 16
+          - dependencia: (sin dato en la fuente) — 16
+            - tipo: ACUERDO — 9
+            - tipo: REGLAMENTO — 6
+            - tipo: BANDO — 1
+      - municipio: Acayucan — 15
+        - poder: (sin dato en la fuente) — 15
+          - dependencia: (sin dato en la fuente) — 15
+            - tipo: ACUERDO — 6
+            - tipo: REGLAMENTO — 4
+            - tipo: DECRETO — 2
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Alvarado — 14
+        - poder: (sin dato en la fuente) — 14
+          - dependencia: (sin dato en la fuente) — 14
+            - tipo: ACUERDO — 7
+            - tipo: LEY — 2
+            - tipo: PROGRAMA — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: CODIGO — 1
+      - municipio: Coatepec — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: REGLAMENTO — 6
+            - tipo: ACUERDO — 4
+            - tipo: BANDO — 1
+            - tipo: CODIGO — 1
+            - tipo: LEY — 1
+      - municipio: Emiliano Zapata — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: ACUERDO — 11
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Huatusco — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: ACUERDO — 7
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Río Blanco — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: ACUERDO — 11
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: San Andrés Tuxtla — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: ACUERDO — 8
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Teocelo — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: REGLAMENTO — 4
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: FIDEICOMISO — 1
+            - tipo: FONDO — 1
+            - tipo: INFORMACION — 1
+      - municipio: Álamo Temapache — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: ACUERDO — 10
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Actopan — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: ACUERDO — 7
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+      - municipio: Alto Lucero de Gutiérrez Barrios — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: REGLAMENTO — 6
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Antigua, La — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: ACUERDO — 7
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+            - tipo: PROGRAMA — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Medellín — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: ACUERDO — 7
+            - tipo: PROGRAMA — 2
+            - tipo: CODIGO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Chocamán — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: ACUERDO — 6
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: REFORMA — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Ixhuatlán del Café — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: ACUERDO — 5
+            - tipo: DECRETO — 2
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Jáltipan — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: ACUERDO — 8
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Martínez de la Torre — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: ACUERDO — 8
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Todos los Municipios — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: LEY — 7
+            - tipo: CODIGO — 2
+            - tipo: ACUERDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tuxpan — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: ACUERDO — 8
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Acajete — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Citlaltépetl — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: DECRETO — 1
+      - municipio: Isla — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: ACUERDO — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Nogales — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: ACUERDO — 8
+            - tipo: LEY — 2
+      - municipio: Paso de Ovejas — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: ACUERDO — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 2
+            - tipo: PROGRAMA — 1
+      - municipio: Puente Nacional — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: ACUERDO — 4
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Pánuco — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: ACUERDO — 7
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Acatlán — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: PROGRAMA — 1
+      - municipio: Chalma — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: ACUERDO — 8
+            - tipo: LEY — 1
+      - municipio: Chiconquiaco — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: ACUERDO — 7
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Choapas, Las — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: ACUERDO — 7
+            - tipo: LEY — 2
+      - municipio: Coacoatzintla — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: ACUERDO — 7
+            - tipo: LEY — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Huiloapan de Cuauhtemoc — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: ACUERDO — 7
+            - tipo: LEY — 2
+      - municipio: Ixhuacán de los Reyes — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: REGLAMENTO — 4
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Ixtaczoquitlán — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: DECRETO — 1
+      - municipio: Nautla — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Soledad Atzompa — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 2
+            - tipo: REGLA — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tantima — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: ACUERDO — 7
+            - tipo: LEY — 2
+      - municipio: Tihuatlán — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: ACUERDO — 6
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Castillo de Teayo — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: José Azueta — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: ACUERDO — 6
+            - tipo: LEY — 2
+      - municipio: Misantla — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Nanchital de Lázaro Cárdenas del Río — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Tepetzintla — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: ACUERDO — 6
+            - tipo: LEY — 2
+      - municipio: Tlapacoyan — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Banderilla — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Coatzintla — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Ilamatlán — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 2
+      - municipio: Ixhuatlán de Madero — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Jesús Carranza — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Juan Rodríguez Clara — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Lerdo de Tejada — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 2
+      - municipio: Manlio Fabio Altamirano — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: PROGRAMA — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Mariano Escobedo — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 2
+      - municipio: Mecayapan — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Omealca — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+      - municipio: Santiago Tuxtla — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Sayula de Alemán — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tatahuicapan de Juárez — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Tatatila — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+      - municipio: Tezonapa — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+      - municipio: Tierra Blanca — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: CODIGO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tlalixcoyan — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: PROGRAMA — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tlalnelhuayocan — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+      - municipio: Uxpanapa — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Alpatláhuac — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Altotonga — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Atlahuilco — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Benito Juárez — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Catemaco — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Chontla — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 1
+            - tipo: REGLA — 1
+      - municipio: Coahuitlán — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 5
+            - tipo: LEY — 1
+      - municipio: Cosamaloapan — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 3
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+      - municipio: Cuitlahuac — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Ixcatepec — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Ixhuatlancillo — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 2
+            - tipo: DECRETO — 2
+            - tipo: LEY — 2
+      - municipio: Landero y Coss — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 2
+            - tipo: DECRETO — 2
+            - tipo: LEY — 2
+      - municipio: Naolinco — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Naranjos Amatlán — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Perla, La — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Tampico Alto — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 3
+      - municipio: Tantoyuca — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 2
+            - tipo: DECRETO — 2
+            - tipo: AVISO — 1
+            - tipo: LEY — 1
+      - municipio: Tlaltetela — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: ACTA — 1
+      - municipio: Tlilapan — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Tonayán — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Totutla — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Vega de Alatorre — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Yecuatla — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Zentla — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Zontecomatlán — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Zozocolco de Hidalgo — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 2
+      - municipio: Acultzingo — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Amatlán de los Reyes — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Angel R. Cabada — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: LEY — 3
+            - tipo: ACUERDO — 2
+      - municipio: Astacinga — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Atzalan — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: LEY — 2
+            - tipo: ACTA — 1
+            - tipo: ACUERDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Ayahualulco — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Carrillo Puerto — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Comapa — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 1
+      - municipio: Cuichapa — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Espinal — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 1
+      - municipio: Fortín — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Huayacocotla — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 1
+      - municipio: Ignacio de la Llave — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Ixmatlahuacan — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Jilotepec — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Juchique de Ferrer — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Magdalena — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Oluta — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Oteapan — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Paso del Macho — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Platón Sánchez — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Playa Vicente — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Pueblo Viejo — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Rafael Delgado — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: San Juan Evangelista — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: San Rafael — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Sochiapa — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Soledad de Doblado — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Tamiahua — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Tancoco — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Tempoal — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 1
+      - municipio: Tenampa — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Tepetlán — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Tequila — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Texistepec — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Tlacotalpan — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Tlacotepec de Mejía — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Ursulo Galván — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: PROGRAMA — 1
+      - municipio: Villa Aldama — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Xico — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: PROGRAMA — 1
+      - municipio: Yanga — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 2
+      - municipio: Zongolica — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: DECRETO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Acula — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Agua Dulce — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Apazapan — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: PLAN — 1
+      - municipio: Atoyac — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Calcahualco — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 1
+      - municipio: Camarón de Tejeda — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Carlos A. Carrillo — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Cerro Azul — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Chacaltianguis — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 1
+      - municipio: Chicontepec — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Chinampa de Gorostiza — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 1
+      - municipio: Coetzala — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Higo, El — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 1
+      - municipio: Ixhuatlán del Sureste — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 3
+            - tipo: REGLAMENTO — 1
+      - municipio: Jalcomulco — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Mixtla de Altamirano — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Ozuluama — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Pajapan — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Saltabarranca — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 1
+      - municipio: San Andrés Tenejapan — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 3
+            - tipo: LEY — 1
+      - municipio: Soteapan — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Tecolutla — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: OFICIO CIRCULAR — 1
+      - municipio: Tehuipango — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: MANUAL — 1
+      - municipio: Tenochtitlán — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tepatlaxco — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Texcatepec — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Tlachichilco — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Tlaquilpa — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Tres Valles — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Vigas de Ramírez, Las — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Zacualpan — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Zaragoza — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+      - municipio: Amatitlán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Aquila — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Cazones de Herrera — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Chiconamel — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 1
+      - municipio: Chinameca — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 1
+      - municipio: Chumatlán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 1
+      - municipio: Gutiérrez Zamora — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 1
+      - municipio: Hueyapan de Ocampo — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Jalacingo — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Jamapa — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: PROGRAMA — 1
+      - municipio: Maltrata — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Mecatlán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Miahuatlán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Minas, Las — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Naranjal — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Perote — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Rafael Lucio — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 1
+      - municipio: Reyes, Los — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Santiago Sochiapan — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Tamalín — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 1
+      - municipio: Texhuacán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Tlacojalpan — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Tomatlán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Tuxtilla — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Xoxocotla — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Atzacan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Colipa — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: ACUERDO — 1
+            - tipo: LEY — 1
+      - municipio: Cosautlán de Carvajal — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: ACUERDO — 1
+            - tipo: LEY — 1
+      - municipio: Cotaxtla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Coxquihui — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: ACUERDO — 1
+            - tipo: LEY — 1
+      - municipio: Coyutla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: ACUERDO — 1
+            - tipo: LEY — 1
+      - municipio: Hidalgotitlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Moloacán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: ACUERDO — 1
+            - tipo: LEY — 1
+      - municipio: Otatitlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Soconusco — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Tlacolulan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: ACUERDO — 1
+            - tipo: LEY — 1
+      - municipio: Filomeno Mata — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Papaloapan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+    - estado: Jalisco — 1438
+      - municipio: Guadalajara — 132
+        - poder: (sin dato en la fuente) — 132
+          - dependencia: (sin dato en la fuente) — 132
+            - tipo: REGLAMENTO — 113
+            - tipo: DISPOSICION GENERAL — 6
+            - tipo: DECRETO — 5
+            - tipo: LEY — 2
+            - tipo: REFORMA — 2
+            - tipo: ACUERDO — 1
+            - tipo: CONDICION GENERAL — 1
+            - tipo: DECRETO LEGISLATIVO — 1
+            - tipo: MANUAL — 1
+      - municipio: Zapopan — 96
+        - poder: (sin dato en la fuente) — 96
+          - dependencia: (sin dato en la fuente) — 96
+            - tipo: REGLAMENTO — 44
+            - tipo: PLAN — 27
+            - tipo: ACUERDO — 7
+            - tipo: MANUAL — 5
+            - tipo: LINEAMIENTO — 4
+            - tipo: CONDICION GENERAL — 3
+            - tipo: DECRETO — 2
+            - tipo: CONVENIO — 1
+            - tipo: DISPOSICION GENERAL — 1
+            - tipo: DISPOSICION INTERNA — 1
+            - tipo: LEY — 1
+      - municipio: Tlaquepaque — 77
+        - poder: (sin dato en la fuente) — 77
+          - dependencia: (sin dato en la fuente) — 77
+            - tipo: REGLAMENTO — 71
+            - tipo: PLAN — 2
+            - tipo: DECRETO — 1
+            - tipo: DECRETO LEGISLATIVO — 1
+            - tipo: LEY — 1
+            - tipo: MANUAL — 1
+      - municipio: Puerto Vallarta — 65
+        - poder: (sin dato en la fuente) — 65
+          - dependencia: (sin dato en la fuente) — 65
+            - tipo: REGLAMENTO — 51
+            - tipo: ACUERDO — 4
+            - tipo: LEY — 3
+            - tipo: PLAN — 2
+            - tipo: REFORMA — 2
+            - tipo: CONVENIO — 1
+            - tipo: INFORMACION — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Tepatitlán de Morelos — 43
+        - poder: (sin dato en la fuente) — 43
+          - dependencia: (sin dato en la fuente) — 43
+            - tipo: REGLAMENTO — 35
+            - tipo: REFORMA — 3
+            - tipo: CONVENIO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Todos los Municipios — 41
+        - poder: (sin dato en la fuente) — 41
+          - dependencia: (sin dato en la fuente) — 41
+            - tipo: LEY — 17
+            - tipo: DECRETO — 10
+            - tipo: ACUERDO — 4
+            - tipo: CONVENIO — 4
+            - tipo: REGLAMENTO — 4
+            - tipo: ESTATUTO — 1
+            - tipo: FE DE ERRATAS — 1
+      - municipio: Autlán de Navarro — 39
+        - poder: (sin dato en la fuente) — 39
+          - dependencia: (sin dato en la fuente) — 39
+            - tipo: REGLAMENTO — 32
+            - tipo: LEY — 2
+            - tipo: CONVENIO — 1
+            - tipo: DECRETO — 1
+            - tipo: MANUAL — 1
+            - tipo: NORMA — 1
+            - tipo: PLAN — 1
+      - municipio: San Julián — 38
+        - poder: (sin dato en la fuente) — 38
+          - dependencia: (sin dato en la fuente) — 38
+            - tipo: REGLAMENTO — 28
+            - tipo: ACUERDO — 6
+            - tipo: INFORMACION — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: REFORMA — 1
+      - municipio: Zapotlán el Grande — 37
+        - poder: (sin dato en la fuente) — 37
+          - dependencia: (sin dato en la fuente) — 37
+            - tipo: REGLAMENTO — 30
+            - tipo: CONVENIO — 2
+            - tipo: DECRETO — 2
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+      - municipio: Tamazula de Gordiano — 33
+        - poder: (sin dato en la fuente) — 33
+          - dependencia: (sin dato en la fuente) — 33
+            - tipo: REGLAMENTO — 29
+            - tipo: DECRETO — 1
+            - tipo: EDICTO — 1
+            - tipo: ESTATUTO — 1
+            - tipo: LEY — 1
+      - municipio: Tlajomulco de Zúñiga — 31
+        - poder: (sin dato en la fuente) — 31
+          - dependencia: (sin dato en la fuente) — 31
+            - tipo: REGLAMENTO — 25
+            - tipo: NORMA — 2
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Ocotlán — 28
+        - poder: (sin dato en la fuente) — 28
+          - dependencia: (sin dato en la fuente) — 28
+            - tipo: REGLAMENTO — 22
+            - tipo: DECRETO — 2
+            - tipo: PLAN — 2
+            - tipo: LEY — 1
+            - tipo: REFORMA — 1
+      - municipio: Tecalitlán — 28
+        - poder: (sin dato en la fuente) — 28
+          - dependencia: (sin dato en la fuente) — 28
+            - tipo: REGLAMENTO — 23
+            - tipo: PLAN — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: LINEAMIENTO — 1
+      - municipio: Ameca — 26
+        - poder: (sin dato en la fuente) — 26
+          - dependencia: (sin dato en la fuente) — 26
+            - tipo: REGLAMENTO — 19
+            - tipo: DECRETO — 2
+            - tipo: LEY — 2
+            - tipo: PLAN — 2
+            - tipo: ESTATUTO — 1
+      - municipio: Chapala — 26
+        - poder: (sin dato en la fuente) — 26
+          - dependencia: (sin dato en la fuente) — 26
+            - tipo: REGLAMENTO — 19
+            - tipo: PLAN — 3
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: DECRETO — 1
+      - municipio: Tonalá — 24
+        - poder: (sin dato en la fuente) — 24
+          - dependencia: (sin dato en la fuente) — 24
+            - tipo: REGLAMENTO — 21
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Salto, El — 22
+        - poder: (sin dato en la fuente) — 22
+          - dependencia: (sin dato en la fuente) — 22
+            - tipo: REGLAMENTO — 13
+            - tipo: PLAN — 3
+            - tipo: ACUERDO — 2
+            - tipo: DECRETO — 1
+            - tipo: DECRETO LEGISLATIVO — 1
+            - tipo: LEY — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Talpa de Allende — 22
+        - poder: (sin dato en la fuente) — 22
+          - dependencia: (sin dato en la fuente) — 22
+            - tipo: REGLAMENTO — 20
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Unión de San Antonio — 22
+        - poder: (sin dato en la fuente) — 22
+          - dependencia: (sin dato en la fuente) — 22
+            - tipo: REGLAMENTO — 21
+            - tipo: LEY — 1
+      - municipio: San Diego de Alejandría — 21
+        - poder: (sin dato en la fuente) — 21
+          - dependencia: (sin dato en la fuente) — 21
+            - tipo: REGLAMENTO — 17
+            - tipo: PLAN — 3
+            - tipo: LEY — 1
+      - municipio: Mexticacán — 20
+        - poder: (sin dato en la fuente) — 20
+          - dependencia: (sin dato en la fuente) — 20
+            - tipo: REGLAMENTO — 18
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Tala — 20
+        - poder: (sin dato en la fuente) — 20
+          - dependencia: (sin dato en la fuente) — 20
+            - tipo: REGLAMENTO — 13
+            - tipo: PLAN — 4
+            - tipo: CONVENIO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Mazamitla — 19
+        - poder: (sin dato en la fuente) — 19
+          - dependencia: (sin dato en la fuente) — 19
+            - tipo: REGLAMENTO — 13
+            - tipo: BANDO — 2
+            - tipo: CONVENIO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Concepción de Buenos Aires — 18
+        - poder: (sin dato en la fuente) — 18
+          - dependencia: (sin dato en la fuente) — 18
+            - tipo: REGLAMENTO — 16
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: San Ignacio Cerro Gordo — 18
+        - poder: (sin dato en la fuente) — 18
+          - dependencia: (sin dato en la fuente) — 18
+            - tipo: REGLAMENTO — 16
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Acatic — 17
+        - poder: (sin dato en la fuente) — 17
+          - dependencia: (sin dato en la fuente) — 17
+            - tipo: REGLAMENTO — 15
+            - tipo: LEY — 2
+      - municipio: Ahualulco de Mercado — 16
+        - poder: (sin dato en la fuente) — 16
+          - dependencia: (sin dato en la fuente) — 16
+            - tipo: REGLAMENTO — 13
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+      - municipio: Tomatlán — 16
+        - poder: (sin dato en la fuente) — 16
+          - dependencia: (sin dato en la fuente) — 16
+            - tipo: REGLAMENTO — 15
+            - tipo: ACUERDO — 1
+      - municipio: Yahualica de González Gallo — 16
+        - poder: (sin dato en la fuente) — 16
+          - dependencia: (sin dato en la fuente) — 16
+            - tipo: REGLAMENTO — 12
+            - tipo: CONVENIO — 1
+            - tipo: ESTATUTO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Colotlán — 15
+        - poder: (sin dato en la fuente) — 15
+          - dependencia: (sin dato en la fuente) — 15
+            - tipo: REGLAMENTO — 13
+            - tipo: CONTRATO — 1
+            - tipo: LEY — 1
+      - municipio: Tequila — 15
+        - poder: (sin dato en la fuente) — 15
+          - dependencia: (sin dato en la fuente) — 15
+            - tipo: REGLAMENTO — 12
+            - tipo: ACUERDO — 1
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+      - municipio: Zapotlanejo — 15
+        - poder: (sin dato en la fuente) — 15
+          - dependencia: (sin dato en la fuente) — 15
+            - tipo: REGLAMENTO — 13
+            - tipo: LEY — 2
+      - municipio: Arenal — 14
+        - poder: (sin dato en la fuente) — 14
+          - dependencia: (sin dato en la fuente) — 14
+            - tipo: REGLAMENTO — 12
+            - tipo: LEY — 2
+      - municipio: Casimiro Castillo — 14
+        - poder: (sin dato en la fuente) — 14
+          - dependencia: (sin dato en la fuente) — 14
+            - tipo: REGLAMENTO — 12
+            - tipo: LEY — 2
+      - municipio: Atoyac — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: REGLAMENTO — 9
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+            - tipo: PLAN — 1
+      - municipio: Cabo Corrientes — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: REGLAMENTO — 11
+            - tipo: LEY — 2
+      - municipio: Tuxpan — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: REGLAMENTO — 11
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Zapotiltic — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: REGLAMENTO — 12
+            - tipo: ACUERDO — 1
+      - municipio: Atotonilco el Alto — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: REGLAMENTO — 7
+            - tipo: LEY — 2
+            - tipo: CONVENIO — 1
+            - tipo: DECRETO — 1
+            - tipo: PLAN — 1
+      - municipio: Etzatlán — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: REGLAMENTO — 9
+            - tipo: DECRETO — 1
+            - tipo: INFORMACION — 1
+            - tipo: LEY — 1
+      - municipio: Limón, El — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: REGLAMENTO — 11
+            - tipo: LEY — 1
+      - municipio: San Miguel el Alto — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: REGLAMENTO — 9
+            - tipo: PLAN — 2
+            - tipo: LEY — 1
+      - municipio: Huejúcar — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: REGLAMENTO — 10
+            - tipo: LEY — 1
+      - municipio: San Gabriel — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: REGLAMENTO — 7
+            - tipo: CONVENIO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Villa Hidalgo — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: REGLAMENTO — 7
+            - tipo: MANUAL — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Mascota — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: REGLAMENTO — 8
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Amacueca — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: REGLAMENTO — 6
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Cocula — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: REGLAMENTO — 8
+            - tipo: PLAN — 1
+      - municipio: Gómez Farías — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 5
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Zacoalco de Torres — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 6
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Acatlán de Juárez — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: LEY — 2
+            - tipo: PLAN — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: DECRETO — 1
+      - municipio: Arandas — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 4
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Jesús María — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 4
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Barca, La — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: PLAN — 5
+            - tipo: LEY — 1
+      - municipio: Encarnación de Díaz — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 5
+            - tipo: DECRETO — 1
+      - municipio: Unión de Tula — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 4
+            - tipo: LEY — 2
+      - municipio: Ojuelos de Jalisco — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Huejuquilla el Alto — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: PLAN — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Jamay — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Manzanilla de la Paz, La — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 1
+      - municipio: San Juan de los Lagos — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: PROGRAMA — 1
+      - municipio: San Marcos — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Atemajac de Brizuela — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: DECRETO — 1
+      - municipio: Cañadas de Obregón — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Chiquilistlán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: DECRETO — 2
+            - tipo: ADENDA — 1
+      - municipio: Lagos de Moreno — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: PLAN — 2
+            - tipo: LEY — 1
+      - municipio: San Martín Hidalgo — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: San Sebastián del Oeste — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 2
+            - tipo: LEY — 1
+      - municipio: Tapalpa — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: CONVENIO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Tolimán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: CONVENIO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Tonaya — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ADENDA — 1
+            - tipo: CONVENIO — 1
+            - tipo: DECRETO — 1
+      - municipio: Totatiche — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Villa Corona — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+      - municipio: Zapotitlán de Vadillo — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Amatitán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Atengo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: AUTORIZACION — 1
+            - tipo: LEY — 1
+      - municipio: Atenguillo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Ayotlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Ayutla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Bolaños — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Cuautitlán de García Barragán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Cuautla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Cuquío — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+      - municipio: Degollado — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Guachinango — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Huerta, La — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Jilotlán de los Dolores — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Juchitlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Mixtlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Pihuamo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Poncitlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: San Juanito de Escobedo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Santa María de los Angeles — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Santa María del Oro — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Techaluta de Montenegro — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Tenamaxtlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+      - municipio: Teuchitlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Tonila — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Tuxcacuesco — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+      - municipio: Valle de Juárez — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: ADENDA — 1
+            - tipo: PLAN — 1
+      - municipio: Villa Purificación — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Zapotlán del Rey — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Chimaltitán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Grullo, El — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Hostotipaquillo — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Ixtlahuacán de los Membrillos — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Ixtlahuacán del Río — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Jalostotitlán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Jocotepec — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Juanacatlán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Magdalena — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Mezquitic — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Quitupan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: San Cristóbal de la Barranca — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: San Martín de Bolaños — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: DECRETO — 1
+      - municipio: Sayula — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tecolotlán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Teocaltiche — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Teocuitatlán de Corona — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tizapán el Alto — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tototlán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tuxcueca — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Valle de Guadalupe — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+    - estado: Sinaloa — 720
+      - municipio: Culiacán — 105
+        - poder: (sin dato en la fuente) — 105
+          - dependencia: (sin dato en la fuente) — 105
+            - tipo: REGLAMENTO — 63
+            - tipo: DECRETO — 28
+            - tipo: ACUERDO — 7
+            - tipo: BANDO — 1
+            - tipo: DECRETO LEGISLATIVO — 1
+            - tipo: FE DE ERRATAS — 1
+            - tipo: LEY — 1
+            - tipo: MANUAL — 1
+            - tipo: NORMA — 1
+            - tipo: REFORMA — 1
+      - municipio: Ahome — 76
+        - poder: (sin dato en la fuente) — 76
+          - dependencia: (sin dato en la fuente) — 76
+            - tipo: REGLAMENTO — 46
+            - tipo: DECRETO — 21
+            - tipo: ACUERDO — 3
+            - tipo: CONVENIO — 2
+            - tipo: BANDO — 1
+            - tipo: CODIGO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Mazatlán — 74
+        - poder: (sin dato en la fuente) — 74
+          - dependencia: (sin dato en la fuente) — 74
+            - tipo: REGLAMENTO — 43
+            - tipo: DECRETO — 24
+            - tipo: ACUERDO — 4
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Navolato — 54
+        - poder: (sin dato en la fuente) — 54
+          - dependencia: (sin dato en la fuente) — 54
+            - tipo: REGLAMENTO — 33
+            - tipo: DECRETO — 9
+            - tipo: ACUERDO — 8
+            - tipo: BANDO — 1
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Escuinapa — 39
+        - poder: (sin dato en la fuente) — 39
+          - dependencia: (sin dato en la fuente) — 39
+            - tipo: REGLAMENTO — 19
+            - tipo: DECRETO — 15
+            - tipo: PLAN — 2
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Cosalá — 38
+        - poder: (sin dato en la fuente) — 38
+          - dependencia: (sin dato en la fuente) — 38
+            - tipo: REGLAMENTO — 27
+            - tipo: DECRETO — 7
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Salvador Alvarado — 38
+        - poder: (sin dato en la fuente) — 38
+          - dependencia: (sin dato en la fuente) — 38
+            - tipo: REGLAMENTO — 23
+            - tipo: DECRETO — 11
+            - tipo: ACUERDO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Badiraguato — 35
+        - poder: (sin dato en la fuente) — 35
+          - dependencia: (sin dato en la fuente) — 35
+            - tipo: REGLAMENTO — 21
+            - tipo: DECRETO — 10
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Guasave — 34
+        - poder: (sin dato en la fuente) — 34
+          - dependencia: (sin dato en la fuente) — 34
+            - tipo: REGLAMENTO — 24
+            - tipo: DECRETO — 5
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Mocorito — 31
+        - poder: (sin dato en la fuente) — 31
+          - dependencia: (sin dato en la fuente) — 31
+            - tipo: DECRETO — 17
+            - tipo: REGLAMENTO — 10
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Rosario — 30
+        - poder: (sin dato en la fuente) — 30
+          - dependencia: (sin dato en la fuente) — 30
+            - tipo: REGLAMENTO — 24
+            - tipo: DECRETO — 3
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Fuerte, El — 29
+        - poder: (sin dato en la fuente) — 29
+          - dependencia: (sin dato en la fuente) — 29
+            - tipo: REGLAMENTO — 21
+            - tipo: DECRETO — 4
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Angostura — 28
+        - poder: (sin dato en la fuente) — 28
+          - dependencia: (sin dato en la fuente) — 28
+            - tipo: REGLAMENTO — 13
+            - tipo: DECRETO — 9
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: MANUAL — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Choix — 24
+        - poder: (sin dato en la fuente) — 24
+          - dependencia: (sin dato en la fuente) — 24
+            - tipo: REGLAMENTO — 16
+            - tipo: DECRETO — 4
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Elota — 24
+        - poder: (sin dato en la fuente) — 24
+          - dependencia: (sin dato en la fuente) — 24
+            - tipo: REGLAMENTO — 18
+            - tipo: ACUERDO — 2
+            - tipo: DECRETO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Sinaloa — 22
+        - poder: (sin dato en la fuente) — 22
+          - dependencia: (sin dato en la fuente) — 22
+            - tipo: REGLAMENTO — 15
+            - tipo: DECRETO — 3
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: San Ignacio — 21
+        - poder: (sin dato en la fuente) — 21
+          - dependencia: (sin dato en la fuente) — 21
+            - tipo: REGLAMENTO — 14
+            - tipo: ACUERDO — 2
+            - tipo: DECRETO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Concordia — 15
+        - poder: (sin dato en la fuente) — 15
+          - dependencia: (sin dato en la fuente) — 15
+            - tipo: REGLAMENTO — 10
+            - tipo: DECRETO — 3
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+      - municipio: Todos los Municipios — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 3
+    - estado: Zacatecas — 397
+      - municipio: Zacatecas — 35
+        - poder: (sin dato en la fuente) — 35
+          - dependencia: (sin dato en la fuente) — 35
+            - tipo: REGLAMENTO — 30
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Guadalupe — 31
+        - poder: (sin dato en la fuente) — 31
+          - dependencia: (sin dato en la fuente) — 31
+            - tipo: REGLAMENTO — 26
+            - tipo: LEY — 2
+            - tipo: CODIGO — 1
+            - tipo: PLAN — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Calera — 24
+        - poder: (sin dato en la fuente) — 24
+          - dependencia: (sin dato en la fuente) — 24
+            - tipo: REGLAMENTO — 20
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+      - municipio: Jerez — 19
+        - poder: (sin dato en la fuente) — 19
+          - dependencia: (sin dato en la fuente) — 19
+            - tipo: REGLAMENTO — 13
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: EXEQUATUR — 1
+            - tipo: PLAN — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Fresnillo — 17
+        - poder: (sin dato en la fuente) — 17
+          - dependencia: (sin dato en la fuente) — 17
+            - tipo: REGLAMENTO — 9
+            - tipo: LEY — 2
+            - tipo: PLAN — 2
+            - tipo: CODIGO — 1
+            - tipo: ESTATUTO — 1
+            - tipo: MANUAL — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Téul de González Ortega — 14
+        - poder: (sin dato en la fuente) — 14
+          - dependencia: (sin dato en la fuente) — 14
+            - tipo: REGLAMENTO — 10
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+      - municipio: Jalpa — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: REGLAMENTO — 7
+            - tipo: LEY — 2
+            - tipo: PLAN — 2
+            - tipo: BANDO — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Juchipila — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: REGLAMENTO — 9
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+      - municipio: Nochistlán de Mejía — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: CONVENIO — 5
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+            - tipo: MANUAL — 1
+            - tipo: PLAN — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Miguel Auza — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: REGLAMENTO — 7
+            - tipo: LEY — 2
+            - tipo: PLAN — 2
+            - tipo: BANDO — 1
+      - municipio: Loreto — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: REGLAMENTO — 6
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: MANUAL — 1
+            - tipo: PLAN — 1
+      - municipio: Sombrerete — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: REGLAMENTO — 7
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+      - municipio: Villanueva — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: REGLAMENTO — 6
+            - tipo: BANDO — 2
+            - tipo: LEY — 2
+            - tipo: PRESUPUESTO — 1
+      - municipio: Morelos — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: REGLAMENTO — 5
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+      - municipio: Tabasco — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: REGLAMENTO — 5
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Moyahua de Estrada — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 2
+            - tipo: PLAN — 2
+            - tipo: BANDO — 1
+      - municipio: Río Grande — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+            - tipo: PRESUPUESTO — 1
+            - tipo: REGLA — 1
+      - municipio: Tepechitlán — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 4
+            - tipo: BANDO — 2
+            - tipo: LEY — 2
+      - municipio: Mazapil — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: MANUAL — 1
+            - tipo: PLAN — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Ojocaliente — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Chalchihuites — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+      - municipio: Valparaíso — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+            - tipo: PRESUPUESTO — 1
+            - tipo: PROGRAMA — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Pinos — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Villa de Cos — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+      - municipio: Apozol — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+      - municipio: Atolinga — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Noria de Angeles — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Pánuco — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Tlaltenango de Sánchez Román — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Todos los Municipios — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 4
+      - municipio: Benito Juárez — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+      - municipio: Cañitas de Felipe Pescador — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Concepción del Oro — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Cuauhtémoc — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+      - municipio: El Plateado de Joaquín Amaro — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Genaro Codina — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: General Enrique Estrada — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 3
+      - municipio: General Francisco R. Murguía — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: General Pánfilo Natera — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+      - municipio: Jiménez del Téul — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Luis Moya — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+      - municipio: Sain Alto — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Tepetongo — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+      - municipio: Apulco — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Huanusco — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Juan Aldama — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Melchor Ocampo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Mezquital del Oro — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Momax — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Monte Escobedo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Salvador, El — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Susticacán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Trancoso — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Trinidad García de la Cadena — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Vetagrande — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Villa García — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Villa González Ortega — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Villa Hidalgo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Santa María de la Paz — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+    - estado: Chiapas — 357
+      - municipio: Tapachula — 30
+        - poder: (sin dato en la fuente) — 30
+          - dependencia: (sin dato en la fuente) — 30
+            - tipo: REGLAMENTO — 29
+            - tipo: LEY — 1
+      - municipio: Tuxtla Gutiérrez — 23
+        - poder: (sin dato en la fuente) — 23
+          - dependencia: (sin dato en la fuente) — 23
+            - tipo: REGLAMENTO — 22
+            - tipo: LEY — 1
+      - municipio: Chilón — 21
+        - poder: (sin dato en la fuente) — 21
+          - dependencia: (sin dato en la fuente) — 21
+            - tipo: REGLAMENTO — 20
+            - tipo: LEY — 1
+      - municipio: San Cristóbal de las Casas — 14
+        - poder: (sin dato en la fuente) — 14
+          - dependencia: (sin dato en la fuente) — 14
+            - tipo: REGLAMENTO — 12
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Comitán de Domínguez — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: REGLAMENTO — 12
+            - tipo: LEY — 1
+      - municipio: Margaritas, Las — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: REGLAMENTO — 10
+            - tipo: LEY — 1
+      - municipio: Ocosingo — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: REGLAMENTO — 8
+            - tipo: LEY — 1
+      - municipio: Chiapa de Corzo — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 6
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Motozintla — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 6
+            - tipo: BANDO — 1
+      - municipio: Cacahoatán — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 5
+            - tipo: LEY — 1
+      - municipio: Pijijiapan — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 5
+            - tipo: LEY — 1
+      - municipio: Suchiapa — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PUNTO RESOLUTIVO — 1
+      - municipio: Tuzantán — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 4
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Berriozábal — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 4
+            - tipo: LEY — 1
+      - municipio: Escuintla — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Huixtla — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 4
+            - tipo: LEY — 1
+      - municipio: Nicolás Ruiz — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Villaflores — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 4
+            - tipo: LEY — 1
+      - municipio: Arriaga — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 1
+      - municipio: Frontera Comalapa — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 1
+      - municipio: Ixtapangajoya — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Ocozocoautla de Espinosa — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 1
+      - municipio: Palenque — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 1
+      - municipio: Pichucalco — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 1
+      - municipio: Rosas, Las — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+      - municipio: Salto de Agua — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 1
+      - municipio: Simojovel — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Tuxtla Chico — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+      - municipio: Tzimol — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Villa Comaltitlán — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Amatenango de la Frontera — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 2
+            - tipo: LEY — 1
+      - municipio: Benemérito de las Américas — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Bosque, El — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Chicoasén — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Cintalapa — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 2
+            - tipo: LEY — 1
+      - municipio: Ocotepec — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Ostuacán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Osumacinta — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Rayón — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Sunuapa — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tapalapa — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Teopisca — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 2
+            - tipo: LEY — 1
+      - municipio: Tonalá — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Totolapa — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 2
+            - tipo: LEY — 1
+      - municipio: Trinitaria, La — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Venustiano Carranza — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Acala — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: REGLAMENTO — 2
+      - municipio: Altamirano — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Amatán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Chapultenango — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Chicomuselo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Coapilla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Concordia, La — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Jiquipilas — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Mapastepec — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Marqués de Comillas — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Mazatán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Pueblo Nuevo Solistahuacán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: San Fernando — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Socoltenango — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Solosuchiapa — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Soyaló — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: REGLAMENTO — 2
+      - municipio: Tapilula — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Yajalón — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Acacoyagua — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Acapetahua — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Amatenango del Valle — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Angel Albino Corzo — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Bella Vista — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: BANDO — 1
+      - municipio: Catazajá — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Chalchihuitán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Chenalhó — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Chiapilla — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Copainalá — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Emiliano Zapata — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Francisco León — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Frontera Hidalgo — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Grandeza, La — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huehuetán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huitiupan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huixtán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Independencia, La — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Ixhuatán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Ixtacomitán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Ixtapa — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Jitotol — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Juárez — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: BANDO — 1
+      - municipio: Libertad, La — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Maravilla de Tenejapa — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Mazapa de Madero — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Mitontic — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Montecristo de Guerrero — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Oxchuc — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Pantepec — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Porvenir, El — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Sabanilla — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: San Andrés Duraznal — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Sitalá — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Suchiate — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tecpatán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tenejapa — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tila — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tumbalá — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Villa Corzo — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+    - estado: Hidalgo — 332
+      - municipio: Pachuca de Soto — 57
+        - poder: (sin dato en la fuente) — 57
+          - dependencia: (sin dato en la fuente) — 57
+            - tipo: REGLAMENTO — 38
+            - tipo: DECRETO — 12
+            - tipo: LEY — 2
+            - tipo: PROGRAMA — 2
+            - tipo: BANDO — 1
+            - tipo: CODIGO — 1
+            - tipo: PLAN — 1
+      - municipio: Tulancingo de Bravo — 25
+        - poder: (sin dato en la fuente) — 25
+          - dependencia: (sin dato en la fuente) — 25
+            - tipo: REGLAMENTO — 20
+            - tipo: PLAN — 2
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Cuautepec de Hinojosa — 21
+        - poder: (sin dato en la fuente) — 21
+          - dependencia: (sin dato en la fuente) — 21
+            - tipo: REGLAMENTO — 19
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Mineral de la Reforma — 16
+        - poder: (sin dato en la fuente) — 16
+          - dependencia: (sin dato en la fuente) — 16
+            - tipo: REGLAMENTO — 11
+            - tipo: CONVENIO — 2
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Tizayuca — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: REGLAMENTO — 9
+            - tipo: BANDO — 1
+            - tipo: CONVENIO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Huichapan — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: REGLAMENTO — 9
+            - tipo: DECRETO — 2
+            - tipo: LEY — 1
+      - municipio: Zimapán — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: REGLAMENTO — 8
+            - tipo: BANDO — 2
+            - tipo: CODIGO — 1
+            - tipo: LEY — 1
+      - municipio: Tula de Allende — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: REGLAMENTO — 7
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+      - municipio: Nopala de Villagrán — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 7
+            - tipo: LEY — 1
+      - municipio: Tlanchinol — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 6
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Tepeji del Río de Ocampo — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 5
+            - tipo: FE DE ERRATAS — 1
+            - tipo: LEY — 1
+      - municipio: Villa de Tezontepec — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 6
+            - tipo: LEY — 1
+      - municipio: Huasca de Ocampo — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 5
+            - tipo: LEY — 1
+      - municipio: Mineral del Chico — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 4
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Tasquillo — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: ACUERDO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PROGRAMA — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Chilcuautla — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Ixmiquilpan — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Tepetitlán — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 4
+            - tipo: LEY — 1
+      - municipio: Xochicoatlán — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Acaxochitlán — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Tecozautla — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 1
+      - municipio: Todos los Municipios — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 3
+            - tipo: CODIGO — 1
+      - municipio: Acatlán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Apan — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 1
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+      - municipio: Metztitlán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Agua Blanca de Iturbide — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Arenal, El — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Atotonilco de Tula — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: ACUERDO — 1
+            - tipo: LEY — 1
+      - municipio: Chapantongo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Chapulhuacán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Epazoyucan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Huejutla de Reyes — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Metepec — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Misión, La — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Nicolás Flores — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: San Agustín Tlaxiaca — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: San Bartolo Tutotepec — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Tenango de Doria — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tepeapulco — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Tepehuacán de Guerrero — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Yahualica — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Zempoala — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Actopan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Ajacuba — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Alfajayucan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Almoloya — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Atitalaquia — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Atlapexco — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Atotonilco el Grande — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Calnali — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Cardonal — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Eloxochitlán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Emiliano Zapata — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Francisco I. Madero — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huautla — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huazalingo — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huehuetla — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Jacala de Ledezma — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Jaltocán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Juárez Hidalgo — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Lolotla — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Mineral del Monte — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Mixquiahuala de Juárez — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Molango de Escamilla — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Omitlán de Juárez — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Pacula — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Pisaflores — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: San Agustín Metzquititlán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: San Felipe Orizatlán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: San Salvador — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Santiago Tulantepec de Lugo Guerrero — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Santiago de Anaya — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Singuilucan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tetepango — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tezontepec de Aldama — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tianguistengo — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tlahuelilpan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tlahuiltepa — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tlanalapa — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tlaxcoapan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tolcayuca — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Xochiatipan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Zacualtipán de Angeles — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Zapotlán de Juárez — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+    - estado: Nayarit — 329
+      - municipio: Tepic — 40
+        - poder: (sin dato en la fuente) — 40
+          - dependencia: (sin dato en la fuente) — 40
+            - tipo: REGLAMENTO — 31
+            - tipo: ACUERDO — 3
+            - tipo: DECRETO — 2
+            - tipo: DECRETO ADMINISTRATIVO — 2
+            - tipo: CONVENIO — 1
+            - tipo: PLAN — 1
+      - municipio: Bahía de Banderas — 34
+        - poder: (sin dato en la fuente) — 34
+          - dependencia: (sin dato en la fuente) — 34
+            - tipo: REGLAMENTO — 23
+            - tipo: CONVENIO — 4
+            - tipo: PROGRAMA — 2
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: DECRETO ADMINISTRATIVO — 1
+            - tipo: PLAN — 1
+            - tipo: REFORMA — 1
+      - municipio: Santiago Ixcuintla — 21
+        - poder: (sin dato en la fuente) — 21
+          - dependencia: (sin dato en la fuente) — 21
+            - tipo: REGLAMENTO — 11
+            - tipo: CONVENIO — 7
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+      - municipio: Tecuala — 21
+        - poder: (sin dato en la fuente) — 21
+          - dependencia: (sin dato en la fuente) — 21
+            - tipo: REGLAMENTO — 14
+            - tipo: CONVENIO — 5
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+      - municipio: Xalisco — 21
+        - poder: (sin dato en la fuente) — 21
+          - dependencia: (sin dato en la fuente) — 21
+            - tipo: REGLAMENTO — 17
+            - tipo: CONVENIO — 2
+            - tipo: ACUERDO — 1
+            - tipo: PLAN — 1
+      - municipio: Compostela — 20
+        - poder: (sin dato en la fuente) — 20
+          - dependencia: (sin dato en la fuente) — 20
+            - tipo: REGLAMENTO — 13
+            - tipo: CONVENIO — 3
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: PLAN — 1
+      - municipio: Ahuacatlán — 19
+        - poder: (sin dato en la fuente) — 19
+          - dependencia: (sin dato en la fuente) — 19
+            - tipo: REGLAMENTO — 15
+            - tipo: CONVENIO — 3
+            - tipo: BANDO — 1
+      - municipio: Tuxpan — 19
+        - poder: (sin dato en la fuente) — 19
+          - dependencia: (sin dato en la fuente) — 19
+            - tipo: REGLAMENTO — 15
+            - tipo: ACUERDO — 2
+            - tipo: CODIGO — 1
+            - tipo: CONVENIO — 1
+      - municipio: Ixtlán del Río — 17
+        - poder: (sin dato en la fuente) — 17
+          - dependencia: (sin dato en la fuente) — 17
+            - tipo: REGLAMENTO — 9
+            - tipo: CONVENIO — 5
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Acaponeta — 16
+        - poder: (sin dato en la fuente) — 16
+          - dependencia: (sin dato en la fuente) — 16
+            - tipo: REGLAMENTO — 8
+            - tipo: CONVENIO — 4
+            - tipo: ACUERDO — 2
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+      - municipio: Huajicori — 15
+        - poder: (sin dato en la fuente) — 15
+          - dependencia: (sin dato en la fuente) — 15
+            - tipo: REGLAMENTO — 8
+            - tipo: CONVENIO — 5
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+      - municipio: San Blas — 14
+        - poder: (sin dato en la fuente) — 14
+          - dependencia: (sin dato en la fuente) — 14
+            - tipo: REGLAMENTO — 10
+            - tipo: CONVENIO — 3
+            - tipo: ACUERDO — 1
+      - municipio: San Pedro Lagunillas — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: REGLAMENTO — 8
+            - tipo: CONVENIO — 3
+      - municipio: Todos los Municipios — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: LEY — 3
+            - tipo: CONVENIO — 2
+            - tipo: DECRETO — 2
+            - tipo: ACUERDO — 1
+            - tipo: ESTATUTO — 1
+            - tipo: MANUAL — 1
+      - municipio: Yesca, La — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: REGLAMENTO — 4
+            - tipo: ACUERDO — 3
+            - tipo: CONVENIO — 2
+            - tipo: DECRETO — 1
+      - municipio: Rosamorada — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: REGLAMENTO — 6
+            - tipo: CONVENIO — 3
+      - municipio: Santa María del Oro — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: CONVENIO — 4
+            - tipo: REGLAMENTO — 2
+            - tipo: ACUERDO — 1
+            - tipo: DECRETO — 1
+            - tipo: PLAN — 1
+      - municipio: Ruíz — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: ACUERDO — 2
+            - tipo: CONVENIO — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+      - municipio: Nayar, El — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 6
+      - municipio: Jala — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 3
+            - tipo: ACUERDO — 1
+            - tipo: CONVENIO — 1
+      - municipio: Amatlán de Cañas — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: CONVENIO — 3
+            - tipo: REGLAMENTO — 1
+    - estado: Quintana Roo — 303
+      - municipio: Benito Juárez — 65
+        - poder: (sin dato en la fuente) — 65
+          - dependencia: (sin dato en la fuente) — 65
+            - tipo: REGLAMENTO — 57
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: CODIGO — 1
+            - tipo: EDICTO — 1
+            - tipo: ESCUDO — 1
+            - tipo: LINEAMIENTO — 1
+      - municipio: Othón P. Blanco — 59
+        - poder: (sin dato en la fuente) — 59
+          - dependencia: (sin dato en la fuente) — 59
+            - tipo: REGLAMENTO — 52
+            - tipo: ACUERDO — 2
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: PLAN — 1
+      - municipio: Solidaridad — 51
+        - poder: (sin dato en la fuente) — 51
+          - dependencia: (sin dato en la fuente) — 51
+            - tipo: REGLAMENTO — 44
+            - tipo: BANDO — 2
+            - tipo: EDICTO — 2
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Tulum — 41
+        - poder: (sin dato en la fuente) — 41
+          - dependencia: (sin dato en la fuente) — 41
+            - tipo: REGLAMENTO — 29
+            - tipo: ACUERDO — 7
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: CONDICION GENERAL — 1
+            - tipo: PLAN — 1
+      - municipio: Isla Mujeres — 39
+        - poder: (sin dato en la fuente) — 39
+          - dependencia: (sin dato en la fuente) — 39
+            - tipo: REGLAMENTO — 19
+            - tipo: MANUAL — 14
+            - tipo: DECRETO — 2
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: INFORMACION — 1
+      - municipio: Cozumel — 26
+        - poder: (sin dato en la fuente) — 26
+          - dependencia: (sin dato en la fuente) — 26
+            - tipo: REGLAMENTO — 21
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: PROGRAMA — 1
+      - municipio: Felipe Carrillo Puerto — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 4
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: José María Morelos — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 2
+            - tipo: BANDO — 1
+      - municipio: Lázaro Cárdenas — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+      - municipio: Todos los Municipios — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 4
+    - estado: Durango — 282
+      - municipio: Gómez Palacio — 56
+        - poder: (sin dato en la fuente) — 56
+          - dependencia: (sin dato en la fuente) — 56
+            - tipo: REGLAMENTO — 40
+            - tipo: DECRETO — 5
+            - tipo: REFORMA — 5
+            - tipo: ACUERDO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: MANUAL — 1
+            - tipo: PLAN — 1
+      - municipio: Durango — 52
+        - poder: (sin dato en la fuente) — 52
+          - dependencia: (sin dato en la fuente) — 52
+            - tipo: REGLAMENTO — 41
+            - tipo: DECRETO — 4
+            - tipo: ACUERDO — 2
+            - tipo: BANDO — 1
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: REGLA — 1
+      - municipio: Lerdo — 25
+        - poder: (sin dato en la fuente) — 25
+          - dependencia: (sin dato en la fuente) — 25
+            - tipo: REGLAMENTO — 21
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: MANUAL — 1
+      - municipio: Santiago Papasquiaro — 14
+        - poder: (sin dato en la fuente) — 14
+          - dependencia: (sin dato en la fuente) — 14
+            - tipo: REGLAMENTO — 10
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Todos los Municipios — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: LEY — 9
+            - tipo: DECRETO — 2
+            - tipo: CODIGO — 1
+            - tipo: DISPOSICION GENERAL — 1
+      - municipio: Canatlán — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: REGLAMENTO — 6
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+      - municipio: Tepehuanes — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: REGLAMENTO — 6
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Ocampo — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Peñón Blanco — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 4
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Cuencamé — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Mezquital — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: BANDO — 1
+            - tipo: CONVENIO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Nombre de Dios — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Poanas — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Mapimí — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Nuevo Ideal — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 1
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Rodeo — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: DECRETO — 1
+            - tipo: INFORMACION — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Súchil — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: ACUERDO — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Guadalupe Victoria — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Guanaceví — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Hidalgo — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Nazas — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ADENDA — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Oro, El — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Pueblo Nuevo — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Pánuco de Coronado — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: San Dimas — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Santa Clara — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+            - tipo: RESOLUCION — 1
+      - municipio: Tamazula — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Canelas — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Coneto de Comonfort — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: General Simón Bolívar — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: DECRETO — 1
+      - municipio: Indé — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Otáez — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: San Bernardo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: San Juan de Guadalupe — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: San Luis del Cordero — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Tlahualilo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Topia — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: Vicente Guerrero — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: DECRETO — 1
+            - tipo: LEY — 1
+      - municipio: San Juan del Río — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: San Pedro del Gallo — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: DECRETO — 1
+    - estado: San Luis Potosí — 224
+      - municipio: San Luis Potosí — 33
+        - poder: (sin dato en la fuente) — 33
+          - dependencia: (sin dato en la fuente) — 33
+            - tipo: REGLAMENTO — 31
+            - tipo: BANDO — 1
+            - tipo: MANUAL — 1
+      - municipio: Tamuín — 24
+        - poder: (sin dato en la fuente) — 24
+          - dependencia: (sin dato en la fuente) — 24
+            - tipo: REGLAMENTO — 22
+            - tipo: BANDO — 1
+            - tipo: PLAN — 1
+      - municipio: Ciudad Valles — 14
+        - poder: (sin dato en la fuente) — 14
+          - dependencia: (sin dato en la fuente) — 14
+            - tipo: REGLAMENTO — 12
+            - tipo: BANDO — 2
+      - municipio: Todos los Municipios — 11
+        - poder: (sin dato en la fuente) — 11
+          - dependencia: (sin dato en la fuente) — 11
+            - tipo: LEY — 11
+      - municipio: Ebano — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: REGLAMENTO — 10
+      - municipio: Villa de Reyes — 9
+        - poder: (sin dato en la fuente) — 9
+          - dependencia: (sin dato en la fuente) — 9
+            - tipo: REGLAMENTO — 9
+      - municipio: Cerritos — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 8
+      - municipio: Cárdenas — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 5
+            - tipo: BANDO — 1
+      - municipio: Soledad de Graciano Sánchez — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 6
+      - municipio: Tamazunchale — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 6
+      - municipio: Ciudad Fernández — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 5
+      - municipio: Rioverde — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 4
+            - tipo: BANDO — 1
+      - municipio: Matehuala — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: REFORMA — 1
+      - municipio: Mexquitic de Carmona — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 4
+      - municipio: Santa María del Río — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 3
+            - tipo: BANDO — 1
+      - municipio: Venado — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 4
+      - municipio: Alaquines — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: Armadillo de los Infante — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: Catorce — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: Cerro de San Pedro — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: Matlapa — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: Naranjo, El — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: Rayón — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: San Ciro de Acosta — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: San Martín Chalchicuautla — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: Tampamolón Corona — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: Vanegas — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: Villa Hidalgo — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: REGLAMENTO — 3
+      - municipio: Ahualulco — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: REGLAMENTO — 2
+      - municipio: Coxcatlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: REGLAMENTO — 2
+      - municipio: Moctezuma — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: San Antonio — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: REGLAMENTO — 2
+      - municipio: San Nicolás Tolentino — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Santo Domingo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: REGLAMENTO — 2
+      - municipio: Tanlajás — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tanquián de Escobedo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: REGLAMENTO — 2
+      - municipio: Xilitla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: REGLAMENTO — 2
+      - municipio: Zaragoza — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: REGLAMENTO — 2
+      - municipio: Aquismón — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Axtla de Terrazas — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Cedral — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Charcas — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Ciudad del Maíz — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: BANDO — 1
+      - municipio: Guadalcázar — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: BANDO — 1
+      - municipio: Huehuetlán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Santa Catarina — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: BANDO — 1
+      - municipio: Tampacán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: BANDO — 1
+      - municipio: Tierranueva — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Villa Juárez — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: BANDO — 1
+      - municipio: Villa de Arriaga — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Villa de Guadalupe — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: BANDO — 1
+      - municipio: Villa de La Paz — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Villa de Ramos — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+    - estado: Coahuila de Zaragoza — 219
+      - municipio: Zaragoza — 22
+        - poder: (sin dato en la fuente) — 22
+          - dependencia: (sin dato en la fuente) — 22
+            - tipo: REGLAMENTO — 21
+            - tipo: LEY — 1
+      - municipio: Torreón — 15
+        - poder: (sin dato en la fuente) — 15
+          - dependencia: (sin dato en la fuente) — 15
+            - tipo: REGLAMENTO — 9
+            - tipo: LEY — 3
+            - tipo: PLAN — 2
+            - tipo: DECRETO LEGISLATIVO — 1
+      - municipio: Múzquiz — 14
+        - poder: (sin dato en la fuente) — 14
+          - dependencia: (sin dato en la fuente) — 14
+            - tipo: REGLAMENTO — 6
+            - tipo: PLAN — 2
+            - tipo: PROGRAMA — 2
+            - tipo: CONVENIO — 1
+            - tipo: DISPOSICION GENERAL — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Saltillo — 13
+        - poder: (sin dato en la fuente) — 13
+          - dependencia: (sin dato en la fuente) — 13
+            - tipo: REGLAMENTO — 8
+            - tipo: LEY — 2
+            - tipo: CODIGO — 1
+            - tipo: DECRETO LEGISLATIVO — 1
+            - tipo: PLAN — 1
+      - municipio: Cuatro Ciénegas — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: REGLAMENTO — 6
+            - tipo: BANDO — 1
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Matamoros — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 4
+            - tipo: PLAN — 2
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Ramos Arizpe — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 2
+            - tipo: CONVENIO — 1
+            - tipo: PLAN — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: San Juan de Sabinas — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 5
+            - tipo: PLAN — 2
+            - tipo: LEY — 1
+      - municipio: Monclova — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 4
+            - tipo: PLAN — 2
+            - tipo: LEY — 1
+      - municipio: Nava — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 4
+            - tipo: PLAN — 2
+            - tipo: CONVENIO — 1
+      - municipio: Abasolo — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 5
+            - tipo: LEY — 1
+      - municipio: Acuña — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+      - municipio: Castaños — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: LEY — 2
+            - tipo: PLAN — 2
+            - tipo: PRESUPUESTO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Piedras Negras — 6
+        - poder: (sin dato en la fuente) — 6
+          - dependencia: (sin dato en la fuente) — 6
+            - tipo: REGLAMENTO — 3
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Candela — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 4
+            - tipo: LEY — 1
+      - municipio: Frontera — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: PLAN — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: LEY — 1
+      - municipio: Guerrero — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: PLAN — 2
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Sabinas — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: PLAN — 2
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Sacramento — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 2
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: San Buenaventura — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 3
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Arteaga — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Francisco I. Madero — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: General Cepeda — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Parras — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: CONVENIO — 1
+            - tipo: PLAN — 1
+            - tipo: PRESUPUESTO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Progreso — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: PLAN — 2
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+      - municipio: San Pedro — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: REGLAMENTO — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Allende — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Escobedo — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Hidalgo — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Juárez — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Lamadrid — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: ACUERDO — 1
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+      - municipio: Sierra Mojada — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Villa Unión — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: CONVENIO — 1
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Nadadores — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Ocampo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Viesca — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Jiménez — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Morelos — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+    - estado: Baja California — 197
+      - municipio: Ensenada — 49
+        - poder: (sin dato en la fuente) — 49
+          - dependencia: (sin dato en la fuente) — 49
+            - tipo: REGLAMENTO — 44
+            - tipo: LEY — 2
+            - tipo: CONVENIO — 1
+            - tipo: PLAN — 1
+            - tipo: REFORMA — 1
+      - municipio: Tijuana — 49
+        - poder: (sin dato en la fuente) — 49
+          - dependencia: (sin dato en la fuente) — 49
+            - tipo: REGLAMENTO — 47
+            - tipo: LEY — 1
+            - tipo: PLAN — 1
+      - municipio: Mexicali — 45
+        - poder: (sin dato en la fuente) — 45
+          - dependencia: (sin dato en la fuente) — 45
+            - tipo: REGLAMENTO — 42
+            - tipo: LEY — 2
+            - tipo: PLAN — 1
+      - municipio: Tecate — 28
+        - poder: (sin dato en la fuente) — 28
+          - dependencia: (sin dato en la fuente) — 28
+            - tipo: REGLAMENTO — 22
+            - tipo: LEY — 3
+            - tipo: ACUERDO — 1
+            - tipo: CODIGO — 1
+            - tipo: PLAN — 1
+      - municipio: Playas de Rosarito — 26
+        - poder: (sin dato en la fuente) — 26
+          - dependencia: (sin dato en la fuente) — 26
+            - tipo: REGLAMENTO — 22
+            - tipo: LEY — 2
+            - tipo: CODIGO — 1
+            - tipo: PLAN — 1
+    - estado: Puebla — 187
+      - municipio: Puebla — 16
+        - poder: (sin dato en la fuente) — 16
+          - dependencia: (sin dato en la fuente) — 16
+            - tipo: REGLAMENTO — 14
+            - tipo: LEY — 2
+      - municipio: Acajete — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 2
+            - tipo: BANDO — 1
+      - municipio: Atlixco — 4
+        - poder: (sin dato en la fuente) — 4
+          - dependencia: (sin dato en la fuente) — 4
+            - tipo: LEY — 3
+            - tipo: REGLAMENTO — 1
+      - municipio: Ajalpan — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: DECRETO ADMINISTRATIVO — 1
+      - municipio: Altepexi — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Coxcatlán — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Cuetzalan del Progreso — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: LEY — 2
+            - tipo: REGLAMENTO — 1
+      - municipio: Acateno — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Acatlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Acatzingo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Acteopan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Ahuacatlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Ahuatlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Ahuazotepec — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Ahuehuetitla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Albino Zertuche — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Aljojuca — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Amixtlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Amozoc — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Aquixtla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Atempan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Atexcal — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Atlequizayan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Atzala — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Atzitzihuacán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Atzitzintla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Axutla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Ayotoxco de Guerrero — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Calpan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Caltepec — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Camocuautla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Caxhuacan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Cañada Morelos — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chalchicomula de Sesma (Ciudad Serdán) — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chapulco — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chiautla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chiautzingo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chichiquila — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chiconcuautla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chietla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chigmecatitlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chignahuapan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chignautla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chila — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chila de la Sal — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chilchotla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Chinantla — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Coatepec — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Coatzingo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Cohetzala — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Cohuecan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Coronango — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Coyomeapan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Coyotepec — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Cuapiaxtla de Madero — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Cuautempan — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Cuautinchán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Cuautlancingo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Cuayuca de Andrade — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Cuyoaco — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: INSTRUCTIVO — 1
+            - tipo: LEY — 1
+      - municipio: Domingo Arenas — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Eloxochitlán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 2
+      - municipio: Huauchinango — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Atoyatempan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Epatlán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Esperanza — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Francisco Z. Mena — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: General Felipe Angeles — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Guadalupe — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Guadalupe Victoria — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Hermenegildo Galeana — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Honey — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huaquechula — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huatlatlauca — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huehuetla — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huehuetlán El Chico — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huehuetlán El Grande — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huejotzingo — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Hueyapan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Hueytamalco — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Hueytlalpan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huitzilan de Serdán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Huitziltepec — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Ixcamilpa de Guerrero — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Ixcaquixtla — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Ixtacamaxtitlán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Ixtepec — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Izúcar de Matamoros — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Jalpan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Jolalpan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Jonotla — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Jopala — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Juan C. Bonilla — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Juan Galindo — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Juan N. Méndez — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Mazapiltepec de Juárez — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: San José Chiapa — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: DECRETO LEGISLATIVO — 1
+      - municipio: Tecali de Herrera — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tehuacán — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: LEY — 1
+      - municipio: Tepatlaxco de Hidalgo — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tlahuapan — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+    - estado: Colima — 108
+      - municipio: Manzanillo — 17
+        - poder: (sin dato en la fuente) — 17
+          - dependencia: (sin dato en la fuente) — 17
+            - tipo: REGLAMENTO — 11
+            - tipo: LEY — 4
+            - tipo: DECRETO LEGISLATIVO — 2
+      - municipio: Cuauhtémoc — 16
+        - poder: (sin dato en la fuente) — 16
+          - dependencia: (sin dato en la fuente) — 16
+            - tipo: REGLAMENTO — 12
+            - tipo: LEY — 3
+            - tipo: MANUAL — 1
+      - municipio: Villa de Álvarez — 16
+        - poder: (sin dato en la fuente) — 16
+          - dependencia: (sin dato en la fuente) — 16
+            - tipo: REGLAMENTO — 9
+            - tipo: DECRETO LEGISLATIVO — 4
+            - tipo: LEY — 2
+            - tipo: ACUERDO — 1
+      - municipio: Colima — 12
+        - poder: (sin dato en la fuente) — 12
+          - dependencia: (sin dato en la fuente) — 12
+            - tipo: REGLAMENTO — 9
+            - tipo: LEY — 3
+      - municipio: Tecomán — 10
+        - poder: (sin dato en la fuente) — 10
+          - dependencia: (sin dato en la fuente) — 10
+            - tipo: REGLAMENTO — 7
+            - tipo: LEY — 3
+      - municipio: Armería — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: LEY — 4
+            - tipo: REGLAMENTO — 4
+      - municipio: Comala — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 5
+            - tipo: LEY — 3
+      - municipio: Coquimatlán — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: LEY — 4
+            - tipo: REGLAMENTO — 3
+      - municipio: Ixtlahuacán — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: LEY — 3
+            - tipo: REGLAMENTO — 3
+            - tipo: DECRETO — 1
+      - municipio: Minatitlán — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: LEY — 4
+            - tipo: REGLAMENTO — 3
+    - estado: Campeche — 38
+      - municipio: Calkiní — 8
+        - poder: (sin dato en la fuente) — 8
+          - dependencia: (sin dato en la fuente) — 8
+            - tipo: REGLAMENTO — 5
+            - tipo: LEY — 2
+            - tipo: CODIGO — 1
+      - municipio: Escárcega — 7
+        - poder: (sin dato en la fuente) — 7
+          - dependencia: (sin dato en la fuente) — 7
+            - tipo: REGLAMENTO — 7
+      - municipio: Calakmul — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 4
+            - tipo: BANDO — 1
+      - municipio: Champotón — 5
+        - poder: (sin dato en la fuente) — 5
+          - dependencia: (sin dato en la fuente) — 5
+            - tipo: REGLAMENTO — 3
+            - tipo: CODIGO — 1
+            - tipo: LEY — 1
+      - municipio: Campeche — 3
+        - poder: (sin dato en la fuente) — 3
+          - dependencia: (sin dato en la fuente) — 3
+            - tipo: CODIGO — 1
+            - tipo: LEY — 1
+            - tipo: PRESUPUESTO — 1
+      - municipio: Candelaria — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: LEY — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Carmen — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: CODIGO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Hecelchakán — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Tenabo — 2
+        - poder: (sin dato en la fuente) — 2
+          - dependencia: (sin dato en la fuente) — 2
+            - tipo: BANDO — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Hopelchén — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
+      - municipio: Palizada — 1
+        - poder: (sin dato en la fuente) — 1
+          - dependencia: (sin dato en la fuente) — 1
+            - tipo: REGLAMENTO — 1
