@@ -588,7 +588,8 @@ class SidofRun(unittest.TestCase):
             self.run_once(run)
             run.catalog.entries.pop('mx.dof:' + lost, None)
         self.assertEqual(self.fetched(sat), MAX)
-        self.assertTrue(any('2026-10-17' in e and 're-reads' in e for e in run.manifest['errors']))
+        self.assertIn('2026-10-17 notas o fecha oficial pendientes al cerrar',
+                      [c['scope'] for c in run.manifest['coverage'] if not c['ok']])
 
     def test_note_without_any_official_date_fails_coverage(self):
         from datetime import date

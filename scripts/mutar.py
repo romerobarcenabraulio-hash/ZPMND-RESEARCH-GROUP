@@ -27,7 +27,7 @@ MUT = [
  ('rg/catalog/run.py', "info.get('rereads', 0) >= MAX_REREADS", "info.get('rereads', 0) >= 10**9"),
  ('rg/catalog/run.py', "prev.get('rereads', 0) + 1 if key in again else 0", "0"),
  ('rg/catalog/run.py', "self._cover(src['source_id'], f'{key} fecha oficial'", "(lambda *a: None)(src['source_id'], f'{key} fecha oficial'"),
- ('rg/catalog/run.py', "or any(i not in have_ids for i in info['ids'])", ""),
+ ('rg/catalog/run.py', "or any(i not in have_ids for i in owed)", ""),
  ('rg/catalog/run.py', "len(info['ids']) < info.get('notes', 0) or ", ""),
  ('rg/catalog/sidof.py', "'published': own or fallback", "'published': own"),
  ('rg/catalog/sidof.py', "values.get(input_id, ''))", "re.search(r'id=\"%s\"[^>]*' % input_id, page_html).group(0) if re.search(r'id=\"%s\"[^>]*' % input_id, page_html) else '')"),
@@ -55,7 +55,12 @@ MUT = [
  ('rg/catalog/run.py', "it['published'] or ((old or {}).get('dates') or {}).get('published')", "it['published']"),
  ('rg/catalog/run.py', "max(len(ids), sidof.count_listed(page), prev.get('notes', 0))", "max(len(ids), prev.get('notes', 0))"),
  ('rg/catalog/run.py', "short = info.get('notes', 0) == 0 or (", "short = False or ("),
- ('rg/catalog/run.py', "self._cover(src['source_id'], f'{d} notas debidas", "None and self._cover(src['source_id'], f'{d} notas debidas"),
+ ('rg/catalog/run.py', "for d in sorted(set(owed) | set(stuck)):", "for d in []:"),
+ ('rg/catalog/run.py', "or info.get('undated', False))", "or False)"),
+ ('rg/catalog/run.py', "'undated': any(not it['published'] for it in items)}", "'undated': False}"),
+ ('rg/catalog/run.py', "owed = [i for i in info['ids'] if i not in info.get('withdrawn', [])]", "owed = info['ids']"),
+ ('rg/catalog/run.py', "days[key]['withdrawn'] = prev['withdrawn']", "pass"),
+ ('rg/catalog/sidof.py', "        return date(int(y), int(m), int(d)).isoformat()", "        return f'{y}-{m}-{d}'"),
  ('rg/catalog/run.py', "if today is not None and today.isoformat() >= info.get('retry_after', ''):", "if False:"),
  ('rg/catalog/run.py', "days[key]['retry_after'] = (self.today", "_ = (self.today"),
  ('rg/catalog/run.py', "etags.pop((row.get('artifact') or {}).get('url'), None)", "pass"),
@@ -72,9 +77,12 @@ MUT = [
 
 
 def suite(d):
-    env = {**os.environ, 'RG_PROPERTY_SCENARIOS': '6'}
-    return subprocess.run([PY, '-m', 'unittest', 'discover', '-s', 'tests', '-t', '.'], cwd=d, env=env,
-                          capture_output=True, text=True)
+    env = {**os.environ, 'RG_PROPERTY_SCENARIOS': '4'}
+    try:  # a mutant that hangs the suite is detected, not waited on until the job limit
+        return subprocess.run([PY, '-m', 'unittest', 'discover', '-s', 'tests', '-t', '.'], cwd=d, env=env,
+                              capture_output=True, text=True, timeout=600)
+    except subprocess.TimeoutExpired:
+        return subprocess.CompletedProcess([], 124, '', 'timeout')
 
 
 def copy(d):

@@ -71,7 +71,9 @@ def short_days(days, entries, source_id, today=None):
     requeue, stuck = [], []
     for d, info in sorted(days.items()):
         if 'ids' in info:
-            short = len(info['ids']) < info.get('notes', 0) or any(i not in have_ids for i in info['ids'])
+            owed = [i for i in info['ids'] if i not in info.get('withdrawn', [])]
+            short = (len(info['ids']) < info.get('notes', 0) or any(i not in have_ids for i in owed)
+                     or info.get('undated', False))  # read without its own official date: owed until a dated read
         else:
             # a count of 0 is never a real DOF day (0 of 392 indexed): an old soft error page, read again
             short = info.get('notes', 0) == 0 or (info.get('edition', d) == d and have_dated.get(d, 0) < info.get('notes', 0))
@@ -162,9 +164,6 @@ class Run:
         st = self.catalog.state.setdefault(src['source_id'], {'days': {}})
         days = st['days']
         requeued, stuck = short_days(days, self.catalog.snapshot(src['source_id']), src['source_id'], self.today)
-        for d in stuck:  # still owed: the run is not whole (exit 3) until the notes are in the catalog
-            self.manifest['errors'].append(f'{src["source_id"]} {d}: listed notes still missing after {MAX_REREADS} re-reads (see quarantined)')
-            self._cover(src['source_id'], f'{d} notas debidas tras {MAX_REREADS} relecturas', days[d].get('notes', 0), None)
         floor = date.fromisoformat(src['backfill_floor'])
         start = dof_window_start(days, self.today, self.forward_days)
         forward = [start + timedelta(days=i) for i in range((self.today - start).days + 1)]
@@ -220,7 +219,10 @@ class Run:
                 prev = days.get(key, {})
                 ids = list(dict.fromkeys(prev.get('ids', []) + [it['native_id'] for it in items]))  # once listed, always owed
                 days[key] = {'ids': ids, 'notes': max(len(ids), sidof.count_listed(page), prev.get('notes', 0)), 'indexed_at': now_iso(),
-                             'rereads': prev.get('rereads', 0) + 1 if key in again else 0}
+                             'rereads': prev.get('rereads', 0) + 1 if key in again else 0,
+                             'undated': any(not it['published'] for it in items)}
+                if prev.get('withdrawn'):  # set only by a person, with evidence that the source no longer lists them
+                    days[key]['withdrawn'] = prev['withdrawn']
                 if days[key]['rereads'] >= MAX_REREADS:  # spaced retries: 3, 6, 12, 24, 30, 30... days
                     wait = min(MAX_BACKOFF_DAYS, 3 * 2 ** (days[key]['rereads'] - MAX_REREADS))
                     days[key]['retry_after'] = (self.today + timedelta(days=wait)).isoformat()
@@ -253,6 +255,12 @@ class Run:
                 stats['raw_stored'] += 1
         except BudgetExhausted:
             self.manifest['errors'].append(f'{src["source_id"]}: request budget reached (continues next run)')
+        # Exit 0 only when nothing is owed: every day whose notes or official date are still missing at the end of
+        # the run (failed, degraded, unread for lack of budget, or stuck) fails the run, every run, until resolved.
+        owed, stuck = short_days(days, self.catalog.snapshot(src['source_id']), src['source_id'])
+        for d in sorted(set(owed) | set(stuck)):
+            self._cover(src['source_id'], f'{d} notas o fecha oficial pendientes al cerrar', days[d].get('notes', 0), None)
+        stats['days_owed_at_end'] = len(set(owed) | set(stuck))
         stats['raw_skipped_metadata_only'] = sum(1 for e in self.catalog.snapshot(src['source_id']) if e['raw_status'] == 'metadata_only')
         stats['requests'] = f.used
         with self._lock:

@@ -6,6 +6,7 @@ Categories are the DOF's own structure, copied verbatim: edition (tab), section,
 """
 import html
 import re
+from datetime import date
 from html.parser import HTMLParser
 
 from .categorize import fold
@@ -127,7 +128,11 @@ def _inputs(page_html):
 
 
 def _iso(d, m, y):
-    return f'{y}-{m}-{d}'
+    """A printed date that is not a real date (00-00-0000) is no date: None, never a string the run would trust."""
+    try:
+        return date(int(y), int(m), int(d)).isoformat()
+    except ValueError:
+        return None
 
 
 def edition_dates(page_html, values=None):
