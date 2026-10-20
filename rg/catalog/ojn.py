@@ -6,6 +6,7 @@ locality and the link to the document. Pages are ISO-8859-1. Every value is copi
 """
 import html
 import re
+from datetime import date
 from urllib.parse import quote, urlsplit, urlunsplit
 
 POWERS = {1: 'PODER EJECUTIVO', 2: 'PODER LEGISLATIVO', 3: 'PODER JUDICIAL', 4: 'ORGANOS AUTONOMOS'}
@@ -20,8 +21,15 @@ def _text(fragment):
 
 
 def _iso(dmy):
+    """DD-MM-YYYY as printed -> ISO date. The OJN prints 00-00-0000 when it has no date: that is 'no data' (None),
+    never a date; the printed text stays verbatim in listing_text."""
     m = re.fullmatch(r'(\d{2})-(\d{2})-(\d{4})', dmy or '')
-    return f'{m.group(3)}-{m.group(2)}-{m.group(1)}' if m else None
+    if not m:
+        return None
+    try:
+        return date(int(m.group(3)), int(m.group(2)), int(m.group(1))).isoformat()
+    except ValueError:
+        return None
 
 
 def list_url(base, edo, power, liberado):
@@ -65,6 +73,11 @@ def state_name(page_html):
 def count_rows(page_html):
     """Rows on the page that link a record sheet, duplicates included (the source repeats some rows verbatim)."""
     return sum(1 for row in _ROW.findall(page_html) if _FICHA.search(row))
+
+
+def count_ids(page_html):
+    """Independent of the row parser: distinct record sheets linked anywhere on the page."""
+    return len({m[0] for m in _FICHA.findall(page_html)})
 
 
 def parse_list(page_html):

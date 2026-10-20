@@ -38,7 +38,9 @@ services:
     pids_limit: 256
     mem_limit: 2g
     volumes:
-      - ../..:/repo:ro          # code, read-only
+      - ../../rg:/repo/rg:ro            # only the code, schemas and source registry, read-only
+      - ../../schemas:/repo/schemas:ro
+      - ../../sources:/repo/sources:ro
       - ../../work:/work        # catalog and raw corpus output (git-ignored)
   index:
     build: { context: ../.., dockerfile: substrate/runtime/Dockerfile.index }
@@ -52,7 +54,9 @@ services:
     pids_limit: 512
     mem_limit: 6g
     volumes:
-      - ../..:/repo:ro
+      - ../../rg:/repo/rg:ro            # only the code, schemas and source registry, read-only
+      - ../../schemas:/repo/schemas:ro
+      - ../../sources:/repo/sources:ro
       - ../../work:/work
   probe:
     image: docker.io/curlimages/curl@sha256:a134550be58ab783810e613ae96fd253c38f7bdd16d9bf9be350700c7a29ac06

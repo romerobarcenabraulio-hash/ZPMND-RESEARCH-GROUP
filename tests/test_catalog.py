@@ -324,7 +324,9 @@ class OjnParser(unittest.TestCase):
             self.assertEqual(ojn.printed_total(page), total)
             self.assertEqual(len(items), total)
             self.assertEqual(ojn.state_name(page), state)
-            self.assertTrue(all(i['published'] and re.fullmatch(r'\d+', i['native_id']) for i in items))
+            self.assertTrue(all(re.fullmatch(r'\d+', i['native_id']) for i in items))
+            # no date exactly where the source prints 00-00-0000 ('no date'), never a fake 0000-00-00
+            self.assertTrue(all((i['published'] is None) == (i['published_printed'] == '00-00-0000') for i in items))
 
     def test_source_repeated_rows_are_accounted(self):
         # Regression 2026-10-19: 21 of 128 listings 'missed' 1-10 rows; the source repeats rows (same idArchivo).

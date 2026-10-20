@@ -83,6 +83,19 @@ class Catalog:
         state = self.dir / '_state.json'
         self.state = json.loads(state.read_text(encoding='utf-8')) if state.exists() else {}
 
+    def previous(self, entry_ids):
+        """The rows of these entries as last written to disk (before this run), for the ones that exist."""
+        out, want = {}, set(entry_ids)
+        if not want:
+            return out
+        for f in sorted(self.dir.rglob('*.jsonl')):
+            for line in f.read_text(encoding='utf-8').splitlines():
+                if line.strip():
+                    e = json.loads(line)
+                    if e['entry_id'] in want:
+                        out[e['entry_id']] = e
+        return out
+
     def snapshot(self, source_id=None):
         """A list copy of the entries (optionally of one source), safe to iterate while other threads upsert."""
         with self.lock:

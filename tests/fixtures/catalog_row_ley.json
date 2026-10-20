@@ -1,0 +1,53 @@
+{
+ "artifact": {
+  "artifact_id": "SA-cefb525ae8dfc97a7da40597",
+  "bytes": 3146661,
+  "license": "LFDA art. 14 fr. VIII (official texts)",
+  "media_type": "application/pdf",
+  "publisher": "Cámara de Diputados del H. Congreso de la Unión",
+  "redistribution": "allowed",
+  "retrieved_at": "2026-10-19T21:58:49Z",
+  "sha256": "cefb525ae8dfc97a7da40597d2ee918fe254d4bfce88301ff3c9959ced9e6e65",
+  "source_type": "primary_official",
+  "stored_at": "local_corpus",
+  "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+ },
+ "category": {
+  "branch": "Poder Legislativo",
+  "collection": "LEYES FEDERALES VIGENTES",
+  "doc_type": "CONSTITUCION",
+  "issuer": "CONGRESO DE LA UNION",
+  "jurisdiction": "federal",
+  "status_printed": "VIGENTE"
+ },
+ "country": "MX",
+ "dates": {
+  "last_reform_printed": "2026-10-07",
+  "original_publication": "1917-02-05"
+ },
+ "entry_id": "mx.leyes-federales:CPEUM",
+ "first_seen": "2026-10-19T21:58:45Z",
+ "listing": {
+  "history_urls": [
+   "https://www.diputados.gob.mx/LeyesBiblio/ref/cpeum.htm"
+  ],
+  "list_marker": "001",
+  "listing_text": "CONSTITUCIÓN Política de los Estados Unidos Mexicanos DOF 05/02/1917 Nueva reforma",
+  "page_order": 1,
+  "related_urls": []
+ },
+ "native_id": "CPEUM",
+ "raw_path": "sha256/ce/cefb525ae8dfc97a7da40597d2ee918fe254d4bfce88301ff3c9959ced9e6e65.pdf",
+ "raw_status": "stored",
+ "source_id": "mx.leyes-federales",
+ "title": "CONSTITUCIÓN Política de los Estados Unidos Mexicanos",
+ "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+ "versions": [
+  {
+   "last_modified": "Fri, 09 Oct 2026 01:47:49 GMT",
+   "raw_path": "sha256/ce/cefb525ae8dfc97a7da40597d2ee918fe254d4bfce88301ff3c9959ced9e6e65.pdf",
+   "retrieved_at": "2026-10-19T21:58:49Z",
+   "sha256": "cefb525ae8dfc97a7da40597d2ee918fe254d4bfce88301ff3c9959ced9e6e65"
+  }
+ ]
+}

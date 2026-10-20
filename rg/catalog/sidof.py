@@ -8,10 +8,9 @@ import html
 import re
 from html.parser import HTMLParser
 
+from .categorize import fold
+
 EDITIONS = {'matutina': 'MATUTINA', 'vespertina': 'VESPERTINA', 'extraordinaria': 'EXTRAORDINARIA'}
-# Used only when a day has a single edition and the page omits the tab navigation (seen 2026-10-15).
-# Observed: resp-tab3 = matutina (2026-10-15, 2026-10-16), resp-tab2 = vespertina (2026-10-16). Anything else stays null.
-PANE_FALLBACK = {'resp-tab3': 'MATUTINA', 'resp-tab2': 'VESPERTINA'}
 
 
 def day_url(base, day):
@@ -35,6 +34,9 @@ class _DayParser(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.tab_edition = {}      # '#resp-tab2' -> 'VESPERTINA'
         self.edition = None
+        self.pane = None
+        self.printed = []          # text of span.edition-date ('Edición Matutina del 15 de octubre de 2026')
+        self._in_printed = False
         self.section = self.branch = self.issuer = None
         self.items = []
         self._depth = 0            # div depth, to know when a tab pane ends
@@ -52,11 +54,13 @@ class _DayParser(HTMLParser):
         if tag == 'div':
             self._depth += 1
             if 'tab-pane' in cls.split() and (a.get('id') or '').startswith('resp-tab'):
-                self.edition = self.tab_edition.get(a['id']) or PANE_FALLBACK.get(a['id'])
+                self.edition, self.pane = self.tab_edition.get(a['id']), a['id']
                 self._pane_depth = self._depth
                 self.section = self.branch = self.issuer = None
             if 'click-to-collapse' in cls.split() and 'panel-heading' in cls.split():
                 self._in_issuer_heading = True
+        if tag == 'span' and 'edition-date' in cls.split():
+            self._in_printed = True
         if self._pane_depth is None:
             return  # outside the edition panes (menus, 'top notes' carousel of other days)
         if tag == 'h4' and 'power' in cls.split():
@@ -73,9 +77,11 @@ class _DayParser(HTMLParser):
     def handle_endtag(self, tag):
         if tag == 'div':
             if self._pane_depth is not None and self._depth == self._pane_depth:
-                self.edition, self._pane_depth = None, None
+                self.edition, self.pane, self._pane_depth = None, None, None
             self._depth -= 1
             self._in_issuer_heading = False
+        if tag == 'span':
+            self._in_printed = False
         if self._capture and ((tag == 'h4' and self._capture[0] == 'section') or
                               (tag == 'a' and self._capture[0] in ('issuer', 'note'))):
             kind, buf, note_id = self._capture
@@ -85,11 +91,13 @@ class _DayParser(HTMLParser):
             elif kind == 'issuer':
                 self.issuer = text.upper() or None
             elif text:
-                self.items.append({'native_id': note_id, 'title': text, 'edition': self.edition,
+                self.items.append({'native_id': note_id, 'title': text, 'edition': self.edition, 'pane': self.pane,
                                    'section': self.section, 'branch': self.branch, 'issuer': self.issuer})
             self._capture = None
 
     def handle_data(self, data):
+        if self._in_printed:
+            self.printed.append(data)
         if self._capture:
             self._capture[1].append(data)
 
@@ -98,6 +106,14 @@ def parse_day(page_html):
     """Notes of one DOF day in page order; a note listed twice keeps its first position."""
     p = _DayParser()
     p.feed(page_html)
+    # A page without tab navigation (seen 2026-10-15) names its single edition only in its printed heading. Copied
+    # when the page has exactly one pane and the heading names an edition; otherwise the edition stays null.
+    words = [w for w in fold(' '.join(p.printed)).lower().split() if w in EDITIONS]
+    if not p.tab_edition and len({i['pane'] for i in p.items}) == 1 and len(set(words)) == 1:
+        for i in p.items:
+            i['edition'] = EDITIONS[words[0]]
+    for i in p.items:
+        del i['pane']
     seen, out = set(), []
     for item in p.items:
         if item['native_id'] not in seen:

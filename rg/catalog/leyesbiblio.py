@@ -56,7 +56,7 @@ def parse_listing(page_html, base_url):
         name_cell = cells[1]
         cut = _CUT.search(name_cell)
         title = (name_cell[:cut.start()] if cut else name_cell).strip()
-        is_regla = 'regley/' in ' '.join(text_links) or not re.fullmatch(r'\d{3}', cells[0])
+        is_regla = 'regley/' in ' '.join(text_links)  # abrogated laws are marked 'A' in the number cell: still laws
         if current:
             native_id = _stem(current)
         elif docs:
