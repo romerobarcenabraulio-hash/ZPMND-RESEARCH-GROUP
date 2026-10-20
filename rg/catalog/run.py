@@ -17,7 +17,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from . import leyesbiblio, ojn, sidof
-from .categorize import clean_text, doc_type, fold
+from .categorize import clean_text, doc_type, dof_doc_type, fold
 from .fetch import BudgetExhausted, Fetcher, FetchRefused, Response, decode_html
 from .store import Catalog, RawStore
 from ..schemas import validate
@@ -32,6 +32,16 @@ def dof_window_start(days, today, forward_days, reread=2):
     if not days:
         return today - timedelta(days=forward_days)
     return min(date.fromisoformat(max(days)) + timedelta(days=1), today - timedelta(days=reread))
+
+
+def recategorize(entries):
+    """Derived categories are recomputed every run from the verbatim fields kept in each entry, so an improved fixed
+    table applies to the whole catalog, not only to new rows. Source-printed types (OJN) are never recomputed."""
+    for e in entries:
+        if e['source_id'].endswith('.dof'):
+            e['category']['doc_type'] = dof_doc_type(e['title'], e['category'].get('branch'))
+        elif e['source_id'].endswith(('leyes-federales', 'reglamentos-federales')):
+            e['category']['doc_type'] = doc_type(e['title'])
 
 
 def host_groups(sources):
@@ -137,7 +147,7 @@ class Run:
                         'native_id': it['native_id'], 'title': it['title'],
                         'url': sidof.note_url(src['base_url'], it['native_id']),
                         'category': {**src['category'], 'edition': it['edition'], 'section': it['section'],
-                                     'branch': it['branch'], 'issuer': it['issuer'], 'doc_type': doc_type(it['title'])},
+                                     'branch': it['branch'], 'issuer': it['issuer'], 'doc_type': dof_doc_type(it['title'], it['branch'])},
                         'dates': {'published': key},
                         'raw_status': old['raw_status'] if old else ('metadata_only' if meta_only else 'pending'),
                         'first_seen': now_iso(),
@@ -444,6 +454,7 @@ def main(argv=None):
             for rel in sorted(run.raw.new_files):
                 tar.add(Path(x.raw) / rel, arcname=rel)
         manifest['raw_bundle'] = Path(x.bundle).name
+    recategorize(run.catalog.entries.values())
     removed = [0]
     run.catalog.entries = {eid: normalize_strings(e, removed) for eid, e in run.catalog.entries.items()}
     manifest['invisible_chars_removed'] = removed[0]

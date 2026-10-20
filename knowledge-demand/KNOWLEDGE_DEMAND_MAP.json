@@ -1,0 +1,307 @@
+{
+ "note": "Mapa de demanda de conocimiento de RG para ZPMND. Todo origin RG_PROPOSED: propuestas hasta que ZPMND emita un ResearchRequest. Evidencia calculada del catálogo; prioridad P0 = primero.",
+ "generated": "2026-10-19",
+ "demands": [
+  {
+   "id": "KD-mx-indicadores-calculo",
+   "origin": "RG_PROPOSED",
+   "domain": "decision_science",
+   "question": "¿Cuáles son los valores oficiales vigentes e históricos para calcular (tipo de cambio FIX, TIIE, UDIS, INPC, UMA, salarios mínimos) y cuál es su fuente primaria y fecha de publicación?",
+   "why_needed": "Todo cálculo fiscal, laboral o financiero de ZPMND depende de estos valores; un valor equivocado o de otra fecha invalida el resultado.",
+   "affected_zpmnd_capabilities": [
+    "cálculo",
+    "respuesta citada",
+    "criterio profesional"
+   ],
+   "known_sources": [
+    "DOF vía SIDOF (activo)",
+    "Banxico SIE (requiere token: SOLICITUDES #5)",
+    "INEGI API (requiere token: SOLICITUDES #6)"
+   ],
+   "knowledge_status": "PARTIAL",
+   "research_priority": "P0",
+   "risk_if_wrong": "Cálculos con un índice o tipo de cambio de la fecha equivocada.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19 (DOF 107 días, 2026-05-22 a 2026-10-19): 339 notas tipo INDICADOR ECONOMICO; Banco de México emitió 358 notas."
+   ]
+  },
+  {
+   "id": "KD-mx-banca-financiero",
+   "origin": "RG_PROPOSED",
+   "domain": "laws_standards",
+   "question": "¿Qué regulación bancaria y financiera está vigente (leyes, circulares de Banxico, disposiciones de la CNBV, reglas de la SHCP) y qué cambió en cada publicación?",
+   "why_needed": "Banca y finanzas son el rubro con más volumen regulatorio en el DOF observado y el más exigente en cumplimiento.",
+   "affected_zpmnd_capabilities": [
+    "cumplimiento por rubro",
+    "criterio profesional"
+   ],
+   "known_sources": [
+    "Leyes federales (LIC, LMV, LRAF, Ley del Banco de México en catálogo)",
+    "DOF (activo)",
+    "CNBV: compilación de disposiciones (por explorar)",
+    "Banxico: circulares (por explorar)"
+   ],
+   "knowledge_status": "PARTIAL",
+   "research_priority": "P0",
+   "risk_if_wrong": "Recomendar o automatizar con una disposición derogada o sin su última reforma.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19 (DOF 107 días, 2026-05-22 a 2026-10-19): Banco de México 358 y SHCP 225 notas; LIC, LMV y LRAF con texto vigente almacenado."
+   ]
+  },
+  {
+   "id": "KD-mx-fiscal",
+   "origin": "RG_PROPOSED",
+   "domain": "laws_standards",
+   "question": "¿Qué dice hoy el marco fiscal federal (CFF, LISR, LIVA, LIF, Resolución Miscelánea y sus anexos) y qué reformas y criterios se publicaron?",
+   "why_needed": "El cumplimiento fiscal toca a toda organización; la Resolución Miscelánea cambia varias veces al año.",
+   "affected_zpmnd_capabilities": [
+    "cumplimiento por rubro",
+    "cálculo",
+    "respuesta citada"
+   ],
+   "known_sources": [
+    "Leyes federales (CFF, LISR, LIVA, LIF 2026 en catálogo)",
+    "DOF (Resolución Miscelánea y anexos, activo)",
+    "SAT (por explorar)"
+   ],
+   "knowledge_status": "PARTIAL",
+   "research_priority": "P0",
+   "risk_if_wrong": "Aplicar una regla miscelánea vencida o una tasa de otro ejercicio.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19 (DOF 107 días, 2026-05-22 a 2026-10-19): SHCP 225 notas; CFF, LISR y LIVA con texto vigente almacenado."
+   ]
+  },
+  {
+   "id": "KD-mx-normas-nom",
+   "origin": "RG_PROPOSED",
+   "domain": "laws_standards",
+   "question": "¿Qué Normas Oficiales Mexicanas están vigentes por rubro, cuáles están en proyecto y cuál es la cadena de publicación (proyecto, respuesta a comentarios, norma, modificación, cancelación)?",
+   "why_needed": "El cumplimiento por rubro se mide contra NOM; el catálogo oficial consolidado (SINEC) ya no responde.",
+   "affected_zpmnd_capabilities": [
+    "cumplimiento por rubro",
+    "verificación"
+   ],
+   "known_sources": [
+    "DOF (activo)",
+    "Ley de Infraestructura de la Calidad (en catálogo)",
+    "Catálogo de NOM de la Secretaría de Economía (dominio sin resolver)"
+   ],
+   "knowledge_status": "PARTIAL",
+   "research_priority": "P0",
+   "risk_if_wrong": "Exigir una NOM cancelada o ignorar una vigente.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19 (DOF 107 días, 2026-05-22 a 2026-10-19): Notas por tipo: NORMA OFICIAL MEXICANA 8, PROYECTO 1, RESPUESTA A COMENTARIOS 1."
+   ]
+  },
+  {
+   "id": "KD-mx-laboral-seguridad-social",
+   "origin": "RG_PROPOSED",
+   "domain": "laws_standards",
+   "question": "¿Qué obligaciones laborales y de seguridad social aplican (LFT, LSS, Infonavit, NOM-STPS) y qué cambió?",
+   "why_needed": "Toda organización con empleados; cálculos de cuotas y prestaciones.",
+   "affected_zpmnd_capabilities": [
+    "cumplimiento por rubro",
+    "cálculo"
+   ],
+   "known_sources": [
+    "Leyes federales (LFT, LSS, Ley del Infonavit en catálogo)",
+    "DOF (activo)"
+   ],
+   "knowledge_status": "PARTIAL",
+   "research_priority": "P1",
+   "risk_if_wrong": "Cálculo de cuotas o prestaciones con una regla anterior a la reforma.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19 (DOF 107 días, 2026-05-22 a 2026-10-19): STPS 60 y IMSS 18 notas; LFT reformada 2026-05-14."
+   ]
+  },
+  {
+   "id": "KD-mx-datos-personales",
+   "origin": "RG_PROPOSED",
+   "domain": "governance_alignment",
+   "question": "¿Qué exige la LFPDPPP vigente a quien trata datos personales (como ZPMND al conocer personas y organizaciones)?",
+   "why_needed": "ZPMND guarda conocimiento de humanos y organizaciones; la ley de datos personales gobierna ese tratamiento.",
+   "affected_zpmnd_capabilities": [
+    "gobernanza",
+    "memoria",
+    "conocimiento del humano"
+   ],
+   "known_sources": [
+    "Leyes federales (LFPDPPP en catálogo, última reforma impresa 2025-11-14)",
+    "DOF (activo)"
+   ],
+   "knowledge_status": "PARTIAL",
+   "research_priority": "P1",
+   "risk_if_wrong": "Diseñar memoria o perfiles que violen la ley de datos personales.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19: LFPDPPP con texto vigente almacenado."
+   ]
+  },
+  {
+   "id": "KD-mx-adquisiciones-publicas",
+   "origin": "RG_PROPOSED",
+   "domain": "organizational_intelligence",
+   "question": "¿Cómo compra el sector público (convocatorias, LAASSP, reglas de obra pública) y qué oportunidades y plazos publica?",
+   "why_needed": "El DOF publica miles de convocatorias de compras públicas; es conocimiento operativo para organizaciones proveedoras.",
+   "affected_zpmnd_capabilities": [
+    "oportunidades",
+    "anticipación"
+   ],
+   "known_sources": [
+    "DOF (activo)",
+    "LAASSP (en catálogo)"
+   ],
+   "knowledge_status": "CANDIDATE_AVAILABLE",
+   "research_priority": "P1",
+   "risk_if_wrong": "Perder plazos o requisitos de una licitación.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19 (DOF 107 días, 2026-05-22 a 2026-10-19): 3233 convocatorias de adquisiciones y 234 de plazas."
+   ]
+  },
+  {
+   "id": "KD-mx-ambiental",
+   "origin": "RG_PROPOSED",
+   "domain": "laws_standards",
+   "question": "¿Qué obligaciones ambientales aplican por rubro (LGEEPA, NOM-SEMARNAT, residuos, agua)?",
+   "why_needed": "Cumplimiento ambiental por rubro; proyectos de Braulio en residuos y agua.",
+   "affected_zpmnd_capabilities": [
+    "cumplimiento por rubro"
+   ],
+   "known_sources": [
+    "LGEEPA (en catálogo)",
+    "DOF (activo)",
+    "Legislación estatal OJN (activa)"
+   ],
+   "knowledge_status": "PARTIAL",
+   "research_priority": "P1",
+   "risk_if_wrong": "Omitir un permiso o norma ambiental aplicable.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19 (DOF 107 días, 2026-05-22 a 2026-10-19): SEMARNAT 65 notas."
+   ]
+  },
+  {
+   "id": "KD-mx-salud-sanitario",
+   "origin": "RG_PROPOSED",
+   "domain": "laws_standards",
+   "question": "¿Qué regulación sanitaria aplica (Ley General de Salud, reglamentos, NOM-SSA, COFEPRIS)?",
+   "why_needed": "Rubros de alimentos, medicamentos y servicios de salud.",
+   "affected_zpmnd_capabilities": [
+    "cumplimiento por rubro"
+   ],
+   "known_sources": [
+    "Leyes y reglamentos federales (en catálogo)",
+    "DOF (activo)"
+   ],
+   "knowledge_status": "PARTIAL",
+   "research_priority": "P1",
+   "risk_if_wrong": "Exigir o permitir un producto o servicio contra la norma sanitaria.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19 (DOF 107 días, 2026-05-22 a 2026-10-19): Secretaría de Salud 160 notas."
+   ]
+  },
+  {
+   "id": "KD-mx-jurisprudencia",
+   "origin": "RG_PROPOSED",
+   "domain": "laws_standards",
+   "question": "¿Qué tesis y jurisprudencias de la SCJN interpretan las leyes que ZPMND usa?",
+   "why_needed": "La interpretación obligatoria cambia el alcance de una ley.",
+   "affected_zpmnd_capabilities": [
+    "criterio profesional",
+    "respuesta citada"
+   ],
+   "known_sources": [
+    "SCJN (robots responde 403)",
+    "Hugging Face ayaxrojo/tesis_scjn_v5_complete (requiere cuenta: SOLICITUDES #2)",
+    "Sentencias en el DOF (activo)"
+   ],
+   "knowledge_status": "UNKNOWN",
+   "research_priority": "P1",
+   "risk_if_wrong": "Aplicar una lectura de la ley que la jurisprudencia ya descartó.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19 (DOF 107 días, 2026-05-22 a 2026-10-19): 76 sentencias en el DOF; SCJN emitió 85 notas."
+   ]
+  },
+  {
+   "id": "KD-mx-estatal-municipal",
+   "origin": "RG_PROPOSED",
+   "domain": "laws_standards",
+   "question": "¿Qué leyes, códigos y reglamentos estatales y municipales aplican a una organización según su ubicación (impuestos estatales, licencias, desarrollo urbano)?",
+   "why_needed": "El cumplimiento real es local: impuesto sobre nóminas, licencias de funcionamiento, uso de suelo.",
+   "affected_zpmnd_capabilities": [
+    "cumplimiento por rubro",
+    "conocimiento de la organización"
+   ],
+   "known_sources": [
+    "OJN estatal y municipal (activos)",
+    "Periódicos oficiales y congresos estatales (por explorar)"
+   ],
+   "knowledge_status": "PARTIAL",
+   "research_priority": "P1",
+   "risk_if_wrong": "Obligación local omitida o derogada.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19: 29944 ordenamientos estatales y 6687 municipales indexados; documentos en descarga progresiva."
+   ]
+  },
+  {
+   "id": "KD-mx-tratados",
+   "origin": "RG_PROPOSED",
+   "domain": "laws_standards",
+   "question": "¿Qué tratados internacionales vigentes obligan a México en comercio, impuestos y derechos humanos?",
+   "why_needed": "Los tratados son Ley Suprema junto con la Constitución (art. 133).",
+   "affected_zpmnd_capabilities": [
+    "criterio profesional"
+   ],
+   "known_sources": [
+    "SRE (reto anti-bots: petición al operador)",
+    "OJN (compilación 2012, desactualizada)"
+   ],
+   "knowledge_status": "UNKNOWN",
+   "research_priority": "P2",
+   "risk_if_wrong": "Ignorar un tratado de doble tributación o comercial aplicable.",
+   "current_evidence": [
+    "SRE bloqueada por protección anti-bots (2026-10-19)."
+   ]
+  },
+  {
+   "id": "KD-mx-energia-telecom-competencia",
+   "origin": "RG_PROPOSED",
+   "domain": "laws_standards",
+   "question": "¿Qué regulación sectorial aplica tras la reorganización de reguladores (energía, telecomunicaciones, competencia)?",
+   "why_needed": "Rubros regulados con autoridades nuevas o reorganizadas.",
+   "affected_zpmnd_capabilities": [
+    "cumplimiento por rubro"
+   ],
+   "known_sources": [
+    "DOF (activo)",
+    "Leyes federales (en catálogo)"
+   ],
+   "knowledge_status": "PARTIAL",
+   "research_priority": "P2",
+   "risk_if_wrong": "Citar a una autoridad extinta o una regla reemplazada.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19 (DOF 107 días, 2026-05-22 a 2026-10-19): SENER 39 y Comisión Reguladora de Telecomunicaciones 11 notas."
+   ]
+  },
+  {
+   "id": "KD-mx-estadistica-economica",
+   "origin": "RG_PROPOSED",
+   "domain": "decision_science",
+   "question": "¿Qué series oficiales describen la economía de una región o rubro (empleo, producción, precios) para contextualizar a una organización?",
+   "why_needed": "Contexto económico para criterio y anticipación.",
+   "affected_zpmnd_capabilities": [
+    "anticipación",
+    "conocimiento de la organización"
+   ],
+   "known_sources": [
+    "INEGI (token: SOLICITUDES #6)",
+    "Banxico SIE (token: SOLICITUDES #5)",
+    "datos.gob.mx (robots prohíbe API)"
+   ],
+   "knowledge_status": "UNKNOWN",
+   "research_priority": "P2",
+   "risk_if_wrong": "Decisiones con contexto económico equivocado.",
+   "current_evidence": [
+    "Catálogo RG 2026-10-19: INEGI emitió 31 notas en el DOF."
+   ]
+  }
+ ]
+}
