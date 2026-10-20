@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Orden Jur&iacute;dico Nacional - &Aacute;mbito Local y Municipal</title>
+<link href="./scripts/estilos2013.css" rel="stylesheet" type="text/css" />
+<script src="lenguas/jquery.js" type="text/javascript"></script>
+<script type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function SubmiteFede(seleccion,form1){
+
+//alert(seleccion);
+ if(seleccion == "titulo"){
+  document.form2.ordenar.value=seleccion;
+  }
+else
+{
+  document.form2.catTipo.value=seleccion;
+} 
+  document.form2.method="get";
+  document.form2.action="despliegaedo2.php?edo=24";
+  document.form2.submit();	 
+ }
+ 
+ function SubmiteFede2(seleccion,form1){
+//alert(seleccion);
+ if(seleccion == "titulo"){
+  document.form3.orderSelectionado.value=seleccion;
+  }
+else
+{
+  document.form3.orderSelectionado.value=seleccion;
+} 
+  document.form3.method="get";
+  document.form3.action="despliegaedo3.php?edo=24";
+  document.form3.submit();	 
+ }
+
+ 
+ var lengua="";
+function mostrarLeng(){
+	$('#idioma').show(4500);
+	
+}
+
+function mostrarArt(lengua){
+		
+		
+		
+			
+	
+	if(lengua === 1){
+		$('#audio2').hide(4500);
+		$('#audio3').hide(4500);
+		setTimeout("darVal(1)",1000) 		
+	}else if(lengua === 2){
+		$('#audio1').hide(4500);
+		$('#audio3').hide(4500);
+		setTimeout("darVal(2)",1000) 
+	}else{
+		$('#audio1').hide(4500);
+		$('#audio2').hide(4500);
+		setTimeout("darVal(3)",1000) 
+	}			
+							
+		
+		
+		$('#audio'+lengua).show(4500);		
+	 
+}
+
+
+
+function darVal(lengua2){
+	if(lengua2 === 1){
+		document.getElementById('reslen1').innerHTML= "TSOTSIL";	
+	}else if(lengua2 === 2){
+		document.getElementById('reslen2').innerHTML= "TZELTAL";
+	}else{
+		document.getElementById('reslen3').innerHTML= "ZOQUE";		
+	}
+
+}
+
+//-->
+</script>
+<style title="text/css">
+.cuadro{
+color:#0099FF;
+font-family:Arial, Helvetica, sans-serif;
+font-size:10px;
+background-color:#FFFFFF;
+}
+
+.cuadro:hover{
+color:#FFFFFF;
+font-weight:bold;
+text-decoration:none;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+background-color:#0099FF;
+}
+
+</style>
+</head>
+<body onload="MM_preloadImages('./imagenes/btns/const_over.gif','./imagenes/btns/p_ejec_over_01.gif','./imagenes/btns/p_legis_over_03.gif','imagenes/btns/p_jud_over_02.gif','imagenes/btns/o_autonomos_over.gif')">
+
+<table width="781" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+		 <style type="text/css">
+<!--
+@import url("scripts/estilos2013.css");
+body,td,th {
+	
+}
+
+-->
+</style>
+<table  width="880" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td ROWSPAN="3" width="295" valign="top"><img  width='200' height="56" src="./imagenes2016/SEG.png" id="Image28"   /></td>
+		  
+	<tr>
+    <th  width="35"  bgcolor="#621132" scope="col">&nbsp;</th>
+    <th width="121"  valign="middle" bgcolor="#621132" class="inicio" scope="col"><span class="menu"><span class="menu"><a href="./index.php" class="inicio">INICIO</a></span></span></th>
+	<th width="35"  bgcolor="#621132" class="inicio" scope="col"><span class="menu"><span class="menu"><font color="#FFFFFF">/</font></span></span></th>
+    <th width="135"  bgcolor="#621132" class="inicio" scope="col"><span class="menu"><span class="menu"><a href="./contacto.php" class="inicio">CONTACTO</a></span></span></th>
+    <th width="35"  bgcolor="#621132" class="inicio" scope="col"><span class="menu"><span class="menu"><font color="#FFFFFF">/</font></span></span></th>
+    <th width="147"  bgcolor="#621132" class="inicio" scope="col"><span class="menu"><span class="menu"><a href="./directorio.php" class="inicio">DIRECTORIO</a></span></span></th>
+    <th width="35" bgcolor="#621132" class="inicio" scope="col">&nbsp;</th>
+	</tr>
+	
+      </tr>
+</table>
+<table width="780" border="0" cellpadding="2" cellspacing="0" class="inicio">
+	<div align="center">
+	
+<script async src="https://cse.google.com/cse.js?cx=017199474815952306676:0-vbmhlrml0"></script>
+<div class="gcse-search"></div>
+		
+
+	</div>
+         <span class="menu">&nbsp;&nbsp;&nbsp;&nbsp; </span></th>
+  </tr>
+</table>
+<table width="780" border="0" cellspacing="0" cellpadding="0">
+  <tr></tr>
+</table>
+	</td>
+  </tr>
+  <tr>
+    <td>
+	
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="17%" valign="top"><img src="imagenes/spacer_blanco.gif" width="10" height="19" /></td>
+    <td width="83%" valign="top"><img src="imagenes/spacer_blanco.gif" width="10" height="19" /></td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><link href="scripts/estilos2013.css" rel="stylesheet" type="text/css" />
+<table width="130" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="130"><div class="menu_principal">
+                      <ul>
+                        <dt id="saladeprensa"><a href="./acerca.php" target="_blank"><img src="../Imagenes/acerca.jpg" title="Acerca de" name="Image46" width="130" height="46" border="0" id="Image46" /></a> </dt>
+					<!--	  <li id="saladeprensa"><a href="./creacion.php">ACERCA DE</a></li> -->
+          <!--              <dt id="directorio"><a href="./constitucion.php"><img src="../Imagenes/aconst.jpg" title="&Aacute;MBITO CONSTITUCIONAL" name="Image46" width="130" height="46" border="0" id="Image46" /></a> </dt> -->
+          <!--              <dt id="transparencia"><a href="./ambinter.php"><img src="../Imagenes/aint.jpg" title="&Aacute;MBITO INTERNACIONAL" name="Image46" width="130" height="46" border="0" id="Image46" /></a> </dt> -->
+                        <dt id="contacto"><a href="./ambfed.php"><img src="../Imagenes/afed.jpg" title="&Aacute;MBITO FEDERAL" name="Image46" width="130" height="46" border="0" id="Image46" /></a> </dt>						  
+                        <dt id="area6"><a href="./ambest.php"><img src="../Imagenes/aest.jpg" title="&Aacute;MBITO ESTATAL Y DE LA CIUDAD DE M&Eacute;XICO" name="Image46" width="130" height="46" border="0" id="Image46" /></a> </dt>
+                        <dt id="area7"><a href="./ambmun.php"><img src="../Imagenes/amun.jpg" title="&Aacute;MBITO MUNICIPAL" name="Image46" width="130" height="46" border="0" id="Image46" /></a> </dt>
+          <!--              <dt id="area8"><a href="./normsapf.php"><img src="../Imagenes/napf.jpg" title="NORMAS DE LA ADMINISTRACI&Oacute;N P&Uacute;BLICA FEDERAL" name="Image46" width="130" height="46" border="0" id="Image46" /></a> </dt> -->
+                      </ul>
+                  </div></td>
+                </tr>
+              </table> </td>
+    <td  valign="top" >
+			
+		<table width="640" border="0" cellpadding="0" cellspacing="0" class="tabla_gral" align="right">
+		<tr class="txt_gral">
+			<td >
+			  <table width="640" border="0" cellpadding="0" cellspacing="0" class="td_titulo_federal">
+                <tr>
+                  <td width="72"><img src="./imagenes/escudos/24.gif" width="52" height="62" class="img_estatal" /></td>
+                  <td width="728" class="td_titulo_federal"><font size="+1"><b>San Luis Potosí</b></font></td>
+                </tr>
+              </table>
+			  <table width="640" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="235" class="td_buscador_estatal">Buscar por:</td>
+    <td width="405" class="td_titulosub_estatal">&Aacute;mbito Local </td>
+  </tr>
+  <tr>
+    <td width="235">
+	<form name="busqueda" action="busqueda.php" method="get">
+ <p align="center" class="minititulo">T&iacute;tulo o Palabra Clave:</span><br>
+   <br>
+   <input type="text" name="frase" class="lista">
+   <input  type="image"  src="./imagenes/btns/lupa.gif" id="lupa" border="0" onMouseOver="MM_swapImage('lupa','','./imagenes/btns/lupa_over.gif',1)" onMouseOut="MM_swapImgRestore()">
+   <input type="hidden" name="edo" value="24">  
+ </p>
+</form>
+<br /><br />
+<div id="tipo" align="center">
+	<form name="form2" id="form2" method="get" action="despliegaedo.php">
+	<input type="hidden" name="ordenar" value="" />
+	<input type="hidden" name="edo" value="24"/>
+    <input type="hidden" name="idi" value=""/>
+
+Mostrar por tipo de ordenamientos:<br /><br />
+
+<select name="catTipo" style="width:180px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color: #FFFFFF; background-color:#999; border: #000000; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px " onchange="SubmiteFede(this.value,form2)" >
+	<option selected value="">--Seleccione--</option>
+	<option value="0">Todos los ordenamientos</option>
+	<OPTION value="15" title='Acuerdo'> Acuerdo (72)</OPTION>
+<OPTION value="40" title='Aviso'> Aviso (1)</OPTION>
+<OPTION value="5" title='Código'> Código (10)</OPTION>
+<OPTION value="2" title='Constitución Política del Estado / Estatuto de Gobierno'> Constitución Política del Estado / Estatuto de Gobierno (1)</OPTION>
+<OPTION value="14" title='Convenio'> Convenio (2)</OPTION>
+<OPTION value="10" title='Decreto'> Decreto (6)</OPTION>
+<OPTION value="11" title='Decreto Administrativo'> Decreto Administrativo (2)</OPTION>
+<OPTION value="8" title='Decreto Legislativo'> Decreto Legislativo (45)</OPTION>
+<OPTION value="4" title='Ley'> Ley (145)</OPTION>
+<OPTION value="6" title='Reglamento'> Reglamento (129)</OPTION>
+  </select>
+  </form>
+</div>
+<br /><br />
+<div id="tipo" align="center">
+	<form name="form3" id="form3" method="get" action="despliegaedo.php">
+    <input type="hidden" name="edo" value="24" />
+    <input type="hidden" name="orderSelectionado" value="" />
+			<span class="txt_gral">Municipios:</span>    
+    <br /><br /> 
+<select name="catTipo" style="width:180px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color: #FFFFFF; background-color:#999; border: #000000; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px " onChange="SubmiteFede2(this.value,form3)" >
+	<option selected value="">--Seleccione--</option>
+    <OPTION value="2487" title=' Todos los Municipios'>  Todos los Municipios</OPTION>
+<OPTION value="1797" title='Ahualulco'> Ahualulco</OPTION>
+<OPTION value="1798" title='Alaquines'> Alaquines</OPTION>
+<OPTION value="1799" title='Aquismón'> Aquismón</OPTION>
+<OPTION value="1800" title='Armadillo de los Infante'> Armadillo de los Infante</OPTION>
+<OPTION value="1849" title='Axtla de Terrazas'> Axtla de Terrazas</OPTION>
+<OPTION value="1801" title='Cárdenas'> Cárdenas</OPTION>
+<OPTION value="1802" title='Catorce'> Catorce</OPTION>
+<OPTION value="1803" title='Cedral'> Cedral</OPTION>
+<OPTION value="1804" title='Cerritos'> Cerritos</OPTION>
+<OPTION value="1805" title='Cerro de San Pedro'> Cerro de San Pedro</OPTION>
+<OPTION value="1811" title='Charcas'> Charcas</OPTION>
+<OPTION value="1806" title='Ciudad del Maíz'> Ciudad del Maíz</OPTION>
+<OPTION value="1807" title='Ciudad Fernández'> Ciudad Fernández</OPTION>
+<OPTION value="1809" title='Ciudad Valles'> Ciudad Valles</OPTION>
+<OPTION value="1810" title='Coxcatlán'> Coxcatlán</OPTION>
+<OPTION value="1812" title='Ebano'> Ebano</OPTION>
+<OPTION value="1813" title='Guadalcázar'> Guadalcázar</OPTION>
+<OPTION value="1814" title='Huehuetlán'> Huehuetlán</OPTION>
+<OPTION value="1815" title='Lagunillas'> Lagunillas</OPTION>
+<OPTION value="1816" title='Matehuala'> Matehuala</OPTION>
+<OPTION value="1853" title='Matlapa'> Matlapa</OPTION>
+<OPTION value="1817" title='Mexquitic de Carmona'> Mexquitic de Carmona</OPTION>
+<OPTION value="1818" title='Moctezuma'> Moctezuma</OPTION>
+<OPTION value="1854" title='Naranjo, El'> Naranjo, El</OPTION>
+<OPTION value="1819" title='Rayón'> Rayón</OPTION>
+<OPTION value="1820" title='Rioverde'> Rioverde</OPTION>
+<OPTION value="1821" title='Salinas'> Salinas</OPTION>
+<OPTION value="1822" title='San Antonio'> San Antonio</OPTION>
+<OPTION value="1823" title='San Ciro de Acosta'> San Ciro de Acosta</OPTION>
+<OPTION value="1824" title='San Luis Potosí'> San Luis Potosí</OPTION>
+<OPTION value="1825" title='San Martín Chalchicuautla'> San Martín Chalchicuautla</OPTION>
+<OPTION value="1826" title='San Nicolás Tolentino'> San Nicolás Tolentino</OPTION>
+<OPTION value="1830" title='San Vicente Tancuayalab'> San Vicente Tancuayalab</OPTION>
+<OPTION value="1827" title='Santa Catarina'> Santa Catarina</OPTION>
+<OPTION value="1828" title='Santa María del Río'> Santa María del Río</OPTION>
+<OPTION value="1829" title='Santo Domingo'> Santo Domingo</OPTION>
+<OPTION value="1831" title='Soledad de Graciano Sánchez'> Soledad de Graciano Sánchez</OPTION>
+<OPTION value="1832" title='Tamasopo'> Tamasopo</OPTION>
+<OPTION value="1833" title='Tamazunchale'> Tamazunchale</OPTION>
+<OPTION value="1834" title='Tampacán'> Tampacán</OPTION>
+<OPTION value="1835" title='Tampamolón Corona'> Tampamolón Corona</OPTION>
+<OPTION value="1836" title='Tamuín'> Tamuín</OPTION>
+<OPTION value="1808" title='Tancanhuitz de Santos'> Tancanhuitz de Santos</OPTION>
+<OPTION value="1837" title='Tanlajás'> Tanlajás</OPTION>
+<OPTION value="1838" title='Tanquián de Escobedo'> Tanquián de Escobedo</OPTION>
+<OPTION value="1839" title='Tierranueva'> Tierranueva</OPTION>
+<OPTION value="1840" title='Vanegas'> Vanegas</OPTION>
+<OPTION value="1841" title='Venado'> Venado</OPTION>
+<OPTION value="1852" title='Villa de Arista'> Villa de Arista</OPTION>
+<OPTION value="1842" title='Villa de Arriaga'> Villa de Arriaga</OPTION>
+<OPTION value="1843" title='Villa de Guadalupe'> Villa de Guadalupe</OPTION>
+<OPTION value="1844" title='Villa de La Paz'> Villa de La Paz</OPTION>
+<OPTION value="1845" title='Villa de Ramos'> Villa de Ramos</OPTION>
+<OPTION value="1846" title='Villa de Reyes'> Villa de Reyes</OPTION>
+<OPTION value="1847" title='Villa Hidalgo'> Villa Hidalgo</OPTION>
+<OPTION value="1848" title='Villa Juárez'> Villa Juárez</OPTION>
+<OPTION value="1850" title='Xilitla'> Xilitla</OPTION>
+<OPTION value="1851" title='Zaragoza'> Zaragoza</OPTION>
+  	</select>
+    </form>
+</div>
+<br /><br /> 
+</td>
+    <td>
+	<table width="56%" border="0" id="estatalbtn">
+   
+    <td width="35" valign="top"><img src="./imagenes/poderes/consti.gif" width="35" height="35" align="top" style="vertical-align:top;"/></td>
+    <td >
+    
+
+         	
+              <a href=javascript:void(window.open("fichaOrdenamiento.php?idArchivo=95710&ambito=ESTATAL","","width=480,height=370,left=50,top=50"))>
+              Constitución Política del Estado              
+              </a><br>
+		          </td>		<tr> <td width="35"><img src="./imagenes/poderes/1.gif" width="35" height="35" /></td>
+      
+    <td > <a href=despliegaedo.php?edo=24&idPoder=1&liberado=No>
+	 Poder Ejecutivo 	
+	</a></td></tr>
+	  	  <tr> <td width="35"><img src="./imagenes/poderes/2.gif" width="35" height="35" /></td>
+      
+    <td ><a href=despliegaedo.php?edo=24&idPoder=2&liberado=No>
+	  Poder Legislativo  	  
+	  </a></td></tr>
+	  	 <tr> <td width="35"><img src="./imagenes/poderes/3.gif" width="35" height="35" /></td>
+      
+    <td ><a href=despliegaedo.php?edo=24&idPoder=3&liberado=No>
+	 Poder Judicial</a></td></tr>
+		   
+	<tr> <td width="35"><img src="./imagenes/poderes/4.gif" width="35" height="35" /></td>
+      
+    <td ><a href=despliegaedo.php?edo=24&idPoder=4&liberado=No>Órganos Autónomos</a></td>
+    </tr>
+    
+    
+  </table></td>
+  </tr>
+</table>
+
+			  
+              <br>
+
+
+</div>            </td>
+			</tr>
+		</table>
+    		
+		</td>
+		</tr>
+	<tr>
+		<td valign="top"><img src="imagenes/spacer_blanco.gif" width="10" height="10" /></td>
+		<td valign="top"><img src="imagenes/spacer_blanco.gif" width="10" height="10" /></td>
+	  </tr>
+	</table>
+	
+	</td>
+  </tr>
+  <tr>
+    <td >
+		 <!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+		body{width:960px; margin: 0px auto;background:#FAFAFA}
+		#headerEPN{clear: both; background-color: #fafafa; padding: 4px 0 4px 4px;}
+		.logoSEGOB,.UAnombre{float:left;}
+		.clear{clear:both; width:100%;}
+		.formBusqueda{float:right; background-color: #f1f1f1; margin-top:34px; padding: 6px 8px; box-shadow: inset 0px 2px 3px rgba(255,255,255,0.8), 1px 1px 3px rgba(245,245,245,0.2)}
+		.formAbajo{margin-top:0}
+		.inputBusqueda{float:right; border:1px solid #d6d6d6; padding: 2px 4px; width:234px; height: 25px; background: url(../../../plantilla_SEGOB/images/search.png) no-repeat right #fff;}
+        #footerEPN{
+	clear:both;
+	margin-top: 10px;
+}
+		.lineaArriba{clear: both; width: 100%;border-top-style: double; border-top-width: 3px ; color:#dedede; margin-bottom: 1px;}
+		.lineaAbajo{clear: both; width: 100%; border-top-style: double; border-top-width: 3px ; color:#dedede; margin-top: 1px;}
+		.identificadorFooter{
+        font-family: Geomanist;
+	color: #666666;
+	text-align: center;
+	padding: 2px 0px;
+	font-size: 12px;
+}
+        .separadorFtr{clear:both; margin-top: 48px; margin-bottom: 0px;}
+
+#social{width:242px; float: left; height: 34px;}
+		.margenIzq{margin-right: 6px;}
+		.footerInfo{clear:both; width: 100%;}
+        .mediaLinea{
+	float: left;
+	border-top-style: double; border-top-width: 3px ;
+	color:#dedede;
+	width: 100%;
+}
+        .logoFooter{float:left; margin: 0px 3%; width: 22%}
+		.infoblock{margin: 32px auto 42px auto; text-align: center; font-family: 'Geomanist'; font-weight: normal; font-size: 13px;color: #808080; line-height: 10px;}
+        .infoblock a{text-decoration: none; color: #808080;}
+        body,td,th {
+	font-size: 12px;
+	color: #000;
+}
+        </style>
+    </head>
+    <body>
+        
+        <!-- Header --><!-- // Fin Header -->
+        
+        
+        <!-- Footer -->
+<div id="footerEPN">        
+<table width="108%" height="100%" border="0" cellpadding="0" cellspacing="0">
+
+    <tr><td><div class="lineaArriba"></div></td></tr>
+    <tr>
+    	<td>
+			<div class="identificadorFooter">
+        	    	<!--<p>ORDEN JUR&Iacute;DICO NACIONAL<br> -->
+                    <p>UNIDAD GENERAL DE ASUNTOS JUR&Iacute;DICOS<br>
+					<!-- Cambio 14 30/10/2024 
+                    <a href="https://www.gob.mx/privacidadintegral" style="text-decoration: none; color:#808080;">AVISO DE PRIVACIDAD INTEGRAL</a></p>
+                     -->
+				<br>
+				<p align="justify">La compilaci&oacute;n de los tratados internacionales, leyes, reglamentos, decretos, acuerdos y disposiciones federales, estatales y municipales que aqu&iacute; se muestran, son de car&aacute;cter informativo y con el prop&oacute;sito de facilitar su consulta; lo anterior, en cumplimiento a lo establecido en la fracci&oacute;n XVIII, del art&iacute;culo 27 de la Ley Org&aacute;nica de la Administraci&oacute;n P&uacute;blica Federal; en relaci&oacute;n con los art&iacute;culos 2&deg;; 3&deg;; 4&deg; y 5&deg;  de la Ley del Diario Oficial de la Federaci&oacute;n y Gacetas Gubernamentales; y 3&deg; del C&oacute;digo Civil Federal.
+                El &oacute;rgano de publicaci&oacute;n con car&aacute;cter oficial de los ordenamientos a nivel federal, es el Diario Oficial de la Federaci&oacute;n; y para efectos de la normatividad estatal y municipal, lo es el Peri&oacute;dico Oficial del Estado, Gaceta o Bolet&iacuten de cada entidad federativa, por lo cual se sugiere consultar el medio oficial de difusi&oacute;n correspondiente.
+					<br>
+			  	</div>    
+	    </td>
+    </tr>
+    <tr><td><div class="lineaAbajo"></div></td></tr>
+    <tr>
+        <td width="100%">
+        	<div class="footerInfo">
+            <table width="100%" border="0">
+            	<tr>
+                    <td width="35%"><div class="mediaLinea"></div></td>
+                    <td  align="center"><img width='240' height='70' src="./imagenes2016/SEGOB.png"  /></td>
+                    <td width="35%"><div class="mediaLinea"></div></td>
+              </tr>
+            </table>
+            </div>
+        </td>
+    </tr>
+    <tr><td><div class="infoblock">
+              <p>Abraham Gonz&aacute;lez 48, Edificio Anexo, Planta Baja, Col. Ju&aacute;rez, Cuauht&eacute;moc,</p> 
+                <p>Ciudad de M&eacute;xico, CP. 06600, Tel. (55) 5728-7300 (conmutador), ext. 33532 y 33500</p> 
+                
+                <p>Comentarios sobre este Sitio de Internet <a href= "mailto:ojn@segob.gob.mx"><mark>ojn@segob.gob.mx</mark></a></p>   
+                <!--<p><a href="./mapa.php" title="Mapa del Sitio OJN"><span><u>Mapa del Sitio</u></span></a></p>-->
+
+  </div></td></tr>
+</table>
+</div>
+<!--
+ <tr><td><div class="infoblock">
+              <p>Dinamarca 84, Planta Baja, Col. Ju&aacute;rez, Del. Cuauht&eacute;moc, C.P. 06600, M&eacute;xico, DF. Tel: 5209-88-00 (conmutador), ext. 30694 a 30699</p> 
+                <p><a href="http://www.gobernacion.gob.mx/en/SEGOB/Contacto">Comentarios sobre este Sitio de Internet</a>: ojn@segob.gob.mx</p>
+  </div></td></tr>
+
+<div id="footerEPN">
+            <div class="lineaArriba"></div>
+  <div class="identificadorFooter">
+              <p>DIRECCI&Oacute;N GENERAL DE COMPILACI&Oacute;N Y CONSULTA DEL ORDEN JUR&Iacute;DICO NACIONAL<br>
+- ALGUNOS DERECHOS RESERVADOS &copy; 2012 - <a href="http://www.gobernacion.gob.mx/es/SEGOB/Politicas_de_privacidad" style="text-decoration: none; color:#808080;">POL&Iacute;TICAS DE PRIVACIDAD</a></p>
+    <p>&nbsp;</p>
+  </div>
+    <div class="lineaAbajo"></div>
+	<div class="footerInfo">
+    <div class="mediaLinea">
+     
+    </div>
+          <img src="imagenes2013/images-logoSEGOB_hoz.png"  class="logoFooter" />
+    <div class="mediaLinea"></div>
+                <div class="clear"></div>
+  </div>
+            
+            <div class="infoblock">
+              <p>Hamburgo 135, piso 8, Col. Ju&aacute;rez, Del. Cuauht&eacute;moc,</p> 
+                <p>Distrito Federal, CP. 06600, Tel. (55) 5209-8800 (conmutador), ext. 30694 a 30699</p>
+                <p><a href="http://www.gobernacion.gob.mx/en/SEGOB/Contacto">Comentarios sobre este Sitio de Internet</a>: ojn@segob.gob.mx</p>
+  </div>
+            <div class="clear"></div>
+        </div>
+        <!-- // Fin Footer -->
+        
+        
+    </body>
+</html>
+	</td>
+  </tr>
+</table>
+
+</body>
+</html>

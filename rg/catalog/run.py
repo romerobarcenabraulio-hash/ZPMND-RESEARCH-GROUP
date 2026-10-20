@@ -18,7 +18,7 @@ from pathlib import Path
 
 from . import leyesbiblio, ojn, sidof
 from .categorize import clean_text, doc_type, fold
-from .fetch import BudgetExhausted, Fetcher, FetchRefused, decode_html
+from .fetch import BudgetExhausted, Fetcher, FetchRefused, Response, decode_html
 from .store import Catalog, RawStore
 from ..schemas import validate
 
@@ -88,6 +88,16 @@ class Run:
         # Per-source budget: --budget when given, else the source's max_requests from the registry.
         return Fetcher(src['allowed_hosts'], budget=self.budget if self.budget is not None else src.get('max_requests', 1500))
 
+    def _get(self, f, url, **kw):
+        """Fetch one URL; a guard refusal (robots, host, size) skips only that URL and is recorded. Budget ends the run."""
+        try:
+            return f.get(url, **kw)
+        except BudgetExhausted:
+            raise
+        except FetchRefused as exc:
+            self.manifest['errors'].append(f'refused {url}: {exc}')
+            return Response(0, b'', url, {'x-rg-refused': str(exc)[:200]})
+
     def _cover(self, source_id, scope, expected, got):
         ok = expected == got
         self.manifest['coverage'].append({'source_id': source_id, 'scope': scope, 'expected': expected, 'extracted': got, 'ok': ok})
@@ -110,7 +120,7 @@ class Run:
                 key = day.isoformat()
                 if key in days and day < self.today - timedelta(days=2):
                     continue  # closed day already indexed; the last 3 days are re-read for late notes
-                r = f.get(sidof.day_url(src['base_url'], day))
+                r = self._get(f, sidof.day_url(src['base_url'], day))
                 if r.status != 200:
                     self.manifest['errors'].append(f'{src["source_id"]} {key}: HTTP {r.status}')
                     continue
@@ -138,8 +148,7 @@ class Run:
                     stats['notes_new'] += self.catalog.upsert(entry)
                 days[key] = {'notes': len(items), 'indexed_at': now_iso()}
                 stats['days_indexed'] += 1
-            pending = sorted((e for e in self.catalog.entries.values()
-                              if e['source_id'] == src['source_id'] and e['raw_status'] in ('pending', 'failed')),
+            pending = sorted((e for e in self.catalog.snapshot(src['source_id']) if e['raw_status'] in ('pending', 'failed')),
                              key=lambda e: (e['dates']['published'], e['native_id']), reverse=True)
             for e in pending:
                 url = sidof.raw_url(src['base_url'], e['native_id'])
@@ -148,7 +157,7 @@ class Run:
                         e['raw_status'] = 'robots_disallowed'
                         stats['raw_robots_disallowed'] += 1
                         continue
-                    r = f.get(url)
+                    r = self._get(f, url)
                 except FetchRefused as exc:
                     if isinstance(exc, BudgetExhausted):
                         raise
@@ -165,8 +174,7 @@ class Run:
                 stats['raw_stored'] += 1
         except BudgetExhausted:
             self.manifest['errors'].append(f'{src["source_id"]}: request budget reached (continues next run)')
-        stats['raw_skipped_metadata_only'] = sum(1 for e in self.catalog.entries.values()
-                                                 if e['source_id'] == src['source_id'] and e['raw_status'] == 'metadata_only')
+        stats['raw_skipped_metadata_only'] = sum(1 for e in self.catalog.snapshot(src['source_id']) if e['raw_status'] == 'metadata_only')
         stats['requests'] = f.used
         with self._lock:
             self.used += f.used
@@ -178,7 +186,7 @@ class Run:
         st = self.catalog.state.setdefault(src['source_id'], {'etags': {}})
         stats = {'listed': 0, 'new_instruments': 0, 'new_versions': 0, 'unchanged': 0, 'raw_failed': 0}
         try:
-            r = f.get(src['base_url'] + src['listing'])
+            r = self._get(f, src['base_url'] + src['listing'])
             if r.status != 200:
                 self.manifest['errors'].append(f"{src['source_id']}: listing HTTP {r.status}")
                 return stats
@@ -206,7 +214,7 @@ class Run:
                 if not row['raw_url']:
                     continue
                 cached = st['etags'].get(row['raw_url'], {})
-                resp = f.get(row['raw_url'], etag=cached.get('etag'), last_modified=cached.get('last_modified'))
+                resp = self._get(f, row['raw_url'], etag=cached.get('etag'), last_modified=cached.get('last_modified'))
                 if resp.status == 304:
                     stats['unchanged'] += 1
                     continue
@@ -241,7 +249,7 @@ class Run:
         try:
             for edo in src['states']:
                 for power in src['powers']:
-                    r = f.get(ojn.list_url(src['base_url'], edo, power, src['liberado']))
+                    r = self._get(f, ojn.list_url(src['base_url'], edo, power, src['liberado']))
                     if r.status != 200:
                         self.manifest['errors'].append(f"{src['source_id']} edo {edo} poder {power}: HTTP {r.status}")
                         continue
@@ -278,44 +286,107 @@ class Run:
                                 entry[k] = old[k]
                         stats['reform_changed'] += reform_changed
                         stats['new_instruments'] += self.catalog.upsert(entry)
-            pending = sorted((e for e in self.catalog.entries.values()
-                              if e['source_id'] == src['source_id'] and e['raw_status'] in ('pending', 'failed')),
-                             key=lambda e: (not e['category']['doc_type'].startswith(self.PRIORITY), e['listing']['state_code'], int(e['native_id'])))
-            for e in pending:
-                r = f.get(e['url'])
+            self._ojn_fetch_pending(src, f, st, stats)
+        except BudgetExhausted:
+            self.manifest['errors'].append(f"{src['source_id']}: request budget reached (continues next run)")
+        stats['requests'] = f.used
+        with self._lock:
+            self.used += f.used
+        return stats
+
+    def _ojn_fetch_pending(self, src, f, st, stats):
+        """Record sheet + document for every pending entry of an OJN source, laws first. BudgetExhausted propagates."""
+        pending = sorted((e for e in self.catalog.snapshot(src['source_id']) if e['raw_status'] in ('pending', 'failed')),
+                         key=lambda e: (not e['category']['doc_type'].startswith(self.PRIORITY), e['listing']['state_code'], int(e['native_id'])))
+        for e in pending:
+            r = self._get(f, e['url'])
+            if r.status != 200:
+                e['raw_status'] = 'failed'
+                stats['raw_failed'] += 1
+                continue
+            sheet = ojn.parse_ficha(decode_html(r.body, 'iso-8859-1'), src['base_url'])
+            if sheet['status_printed']:
+                e['category']['status_printed'] = sheet['status_printed'].upper()
+            if sheet['locality'] and e['category']['jurisdiction'] == 'estatal':
+                e['category']['locality'] = sheet['locality']
+            if not sheet['doc_url']:
+                e['raw_status'] = 'no_text_link'
+                stats['no_document_link'] += 1
+                continue
+            cached = st['etags'].get(sheet['doc_url'], {})
+            d = self._get(f, sheet['doc_url'], etag=cached.get('etag'), last_modified=cached.get('last_modified'))
+            if d.status == 304 and e.get('raw_path'):
+                e['raw_status'] = 'stored'
+                stats['raw_unchanged'] += 1
+                continue
+            if d.status != 200 or not d.body:
+                e['raw_status'] = 'failed'
+                stats['raw_failed'] += 1
+                continue
+            ext = sheet['doc_url'].rsplit('.', 1)[-1].lower()
+            ext = ext if ext in ('doc', 'docx', 'pdf', 'htm', 'html', 'rtf') else 'bin'
+            sha, rel = self.raw.put(d.body, ext)
+            st['etags'][sheet['doc_url']] = {'etag': d.headers.get('etag'), 'last_modified': d.headers.get('last-modified')}
+            if not any(v['sha256'] == sha for v in e['versions']):
+                e['versions'] = e['versions'] + [{'sha256': sha, 'retrieved_at': now_iso(), 'raw_path': rel,
+                                                  'last_modified': d.headers.get('last-modified')}]
+            e['artifact'] = _artifact(src, sheet['doc_url'], sha, d.body, _media_type(d, 'application/octet-stream'), rel)
+            e['raw_path'], e['raw_status'] = rel, 'stored'
+            stats['raw_stored'] += 1
+
+    def run_ojn_municipal(self, src):
+        """Municipal instruments per municipality, from each state's own selector. Listings refresh every
+        src['relist_days'] days (about 2,500 municipalities, rarely changing); pending documents are fetched every run."""
+        f = self._fetcher(src)
+        st = self.catalog.state.setdefault(src['source_id'], {'etags': {}, 'listed_at': {}})
+        stats = {'states': 0, 'municipalities_listed': 0, 'listed': 0, 'new_instruments': 0, 'raw_stored': 0,
+                 'raw_unchanged': 0, 'raw_failed': 0, 'no_document_link': 0}
+        try:
+            for edo in src['states']:
+                last = st['listed_at'].get(str(edo))
+                if last and (self.today - date.fromisoformat(last)).days < src.get('relist_days', 30):
+                    continue
+                r = self._get(f, ojn.state_page_url(src['base_url'], edo, src['liberado']))
                 if r.status != 200:
-                    e['raw_status'] = 'failed'
-                    stats['raw_failed'] += 1
+                    self.manifest['errors'].append(f"{src['source_id']} edo {edo}: state page HTTP {r.status}")
                     continue
-                sheet = ojn.parse_ficha(decode_html(r.body, 'iso-8859-1'), src['base_url'])
-                if sheet['status_printed']:
-                    e['category']['status_printed'] = sheet['status_printed'].upper()
-                if sheet['locality']:
-                    e['category']['locality'] = sheet['locality']
-                if not sheet['doc_url']:
-                    e['raw_status'] = 'no_text_link'
-                    stats['no_document_link'] += 1
-                    continue
-                cached = st['etags'].get(sheet['doc_url'], {})
-                d = f.get(sheet['doc_url'], etag=cached.get('etag'), last_modified=cached.get('last_modified'))
-                if d.status == 304 and e.get('raw_path'):
-                    e['raw_status'] = 'stored'
-                    stats['raw_unchanged'] += 1
-                    continue
-                if d.status != 200 or not d.body:
-                    e['raw_status'] = 'failed'
-                    stats['raw_failed'] += 1
-                    continue
-                ext = sheet['doc_url'].rsplit('.', 1)[-1].lower()
-                ext = ext if ext in ('doc', 'docx', 'pdf', 'htm', 'html', 'rtf') else 'bin'
-                sha, rel = self.raw.put(d.body, ext)
-                st['etags'][sheet['doc_url']] = {'etag': d.headers.get('etag'), 'last_modified': d.headers.get('last-modified')}
-                if not any(v['sha256'] == sha for v in e['versions']):
-                    e['versions'] = e['versions'] + [{'sha256': sha, 'retrieved_at': now_iso(), 'raw_path': rel,
-                                                      'last_modified': d.headers.get('last-modified')}]
-                e['artifact'] = _artifact(src, sheet['doc_url'], sha, d.body, _media_type(d, 'application/octet-stream'), rel)
-                e['raw_path'], e['raw_status'] = rel, 'stored'
-                stats['raw_stored'] += 1
+                state_page = decode_html(r.body, 'iso-8859-1')
+                state = ojn.state_name(state_page)
+                stats['states'] += 1
+                for mun_id, mun_name in ojn.parse_municipalities(state_page):
+                    pr = self._get(f, ojn.municipal_url(src['base_url'], edo, mun_id))
+                    if pr.status != 200:
+                        self.manifest['errors'].append(f"{src['source_id']} edo {edo} mun {mun_id}: HTTP {pr.status}")
+                        continue
+                    page = decode_html(pr.body, 'iso-8859-1')
+                    state = state or ojn.state_name(page)
+                    items, total = ojn.parse_list(page), ojn.printed_total(page)
+                    self._cover(src['source_id'], f'edo {edo} mun {mun_id} (filas leídas vs total impreso)',
+                                -1 if total is None else total, ojn.count_rows(page))
+                    stats['municipalities_listed'] += 1
+                    stats['listed'] += len(items)
+                    for order, it in enumerate(items, 1):
+                        entry_id = f"{src['source_id']}:{it['native_id']}"
+                        old = self.catalog.entries.get(entry_id)
+                        entry = {
+                            'entry_id': entry_id, 'country': self.country, 'source_id': src['source_id'],
+                            'native_id': it['native_id'], 'title': it['title'],
+                            'url': ojn.ficha_url(src['base_url'], it['native_id'], it['ambito']),
+                            'category': {**src['category'], 'locality': state, 'municipality': mun_name,
+                                         'doc_type': fold(it['type_printed']) or 'OTRO'},
+                            'dates': {}, 'listing': {'state_code': edo, 'page_order': order,
+                                                     'listing_text': ' | '.join((it['title'], it['type_printed']))},
+                            'raw_status': old['raw_status'] if old else 'pending',
+                            'versions': old.get('versions', []) if old else [], 'first_seen': now_iso(),
+                        }
+                        if old and old['category'].get('status_printed'):
+                            entry['category']['status_printed'] = old['category']['status_printed']
+                        for k in ('artifact', 'raw_path'):
+                            if old and k in old:
+                                entry[k] = old[k]
+                        stats['new_instruments'] += self.catalog.upsert(entry)
+                st['listed_at'][str(edo)] = self.today.isoformat()
+            self._ojn_fetch_pending(src, f, st, stats)
         except BudgetExhausted:
             self.manifest['errors'].append(f"{src['source_id']}: request budget reached (continues next run)")
         stats['requests'] = f.used
@@ -325,7 +396,8 @@ class Run:
 
     def execute(self, only=None):
         active = [s for s in self.registry['sources'] if s['status'] == 'active' and (not only or s['source_id'] in only)]
-        runners = {'sidof': self.run_sidof, 'leyesbiblio': self.run_leyesbiblio, 'ojn': self.run_ojn}
+        runners = {'sidof': self.run_sidof, 'leyesbiblio': self.run_leyesbiblio, 'ojn': self.run_ojn,
+                   'ojn-municipal': self.run_ojn_municipal}
         def run_group(srcs):  # sources sharing a host run one after another: politeness is per host
             for src in srcs:
                 self.manifest['sources'][src['source_id']] = runners[src['adapter']](src)
@@ -358,7 +430,15 @@ def main(argv=None):
     x = a.parse_args(argv)
     today = date.fromisoformat(x.today) if x.today else datetime.now(CDMX).date()
     run = Run(x.country, x.out, x.raw, x.budget, today, x.forward_days, x.index_days, parallel=not x.sequential)
-    manifest = run.execute(set(x.sources.split(',')) if x.sources else None)
+    crashed = None
+    try:
+        manifest = run.execute(set(x.sources.split(',')) if x.sources else None)
+    except Exception as exc:  # never lose what was gathered: write it, record the crash, exit 1
+        crashed = f'{type(exc).__name__}: {exc}'
+        manifest = run.manifest
+        manifest['errors'].append(f'run crashed: {crashed}')
+        manifest['requests_total'], manifest['raw_new_files'] = run.used, len(run.raw.new_files)
+        manifest['finished_at'] = now_iso()
     if x.bundle and run.raw.new_files:
         with tarfile.open(x.bundle, 'w') as tar:
             for rel in sorted(run.raw.new_files):
@@ -381,6 +461,8 @@ def main(argv=None):
     print(json.dumps({'run_id': manifest['run_id'], 'sources': manifest['sources'], 'coverage_checks': len(manifest['coverage']),
                       'coverage_failures': bad, 'errors': manifest['errors'][:10], 'requests': manifest['requests_total'],
                       'raw_new_files': manifest['raw_new_files'], 'catalog_total': len(run.catalog.entries)}, ensure_ascii=False, indent=1))
+    if crashed:
+        return 1
     return 4 if invalid else (3 if bad else 0)
 
 

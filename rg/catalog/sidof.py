@@ -62,7 +62,7 @@ class _DayParser(HTMLParser):
         if tag == 'h4' and 'power' in cls.split():
             self._capture = ('section', [], None)
         elif tag == 'h4' and 'ElipsisText' in cls.split() and a.get('title'):
-            self.branch, self.issuer = _clean(a['title']).upper(), None
+            self.branch, self.issuer = _clean(a['title']).upper() or None, None
         elif tag == 'a' and 'accordion-toggle' in cls.split() and self._in_issuer_heading:
             self._capture = ('issuer', [], None)
         elif tag == 'a' and 'sumario-nota' in cls.split():
@@ -80,10 +80,10 @@ class _DayParser(HTMLParser):
                               (tag == 'a' and self._capture[0] in ('issuer', 'note'))):
             kind, buf, note_id = self._capture
             text = _clean(''.join(buf))
-            if kind == 'section':
-                self.section, self.branch, self.issuer = text.upper(), None, None
+            if kind == 'section':  # an empty heading in the source is 'no data' (None), never an empty label
+                self.section, self.branch, self.issuer = text.upper() or None, None, None
             elif kind == 'issuer':
-                self.issuer = text.upper()
+                self.issuer = text.upper() or None
             elif text:
                 self.items.append({'native_id': note_id, 'title': text, 'edition': self.edition,
                                    'section': self.section, 'branch': self.branch, 'issuer': self.issuer})

@@ -6,6 +6,7 @@ Guards, each with a test in tests/test_catalog_fetch.py:
 - at least `min_interval` seconds between requests to one host (or the site's Crawl-delay if larger);
 - TLS is always verified; responses larger than `max_bytes` are refused; a per-run request budget stops the run.
 """
+import http.client
 import time
 import urllib.error
 import urllib.request
@@ -63,13 +64,14 @@ class _NoRedirect(urllib.request.HTTPRedirectHandler):
 
 class Fetcher:
     def __init__(self, allowed_hosts, budget=3000, min_interval=1.0, max_bytes=60_000_000, timeout=60,
-                 opener=None, clock=time.monotonic, sleep=time.sleep):
+                 opener=None, clock=time.monotonic, sleep=time.sleep, retries=2):
         self.allowed_hosts = {h.lower() for h in allowed_hosts}
         self.budget = budget
         self.used = 0
         self.min_interval = min_interval
         self.max_bytes = max_bytes
         self.timeout = timeout
+        self.retries = retries  # network errors and 5xx are retried with growing pauses; 4xx is final
         self._opener = opener or urllib.request.build_opener(_NoRedirect)  # env proxies (HTTPS_PROXY) apply
         self._clock, self._sleep = clock, sleep
         self._last = {}
@@ -103,6 +105,10 @@ class Fetcher:
         except urllib.error.HTTPError as e:
             with e:
                 status, hdrs, body = e.code, e.headers, e.read(self.max_bytes + 1) if e.fp else b''
+        except (http.client.HTTPException, urllib.error.URLError, OSError) as e:
+            # Transient network failure (cut response, reset, timeout): status 0, the caller marks it failed and
+            # the run goes on. Seen 2026-10-19: one IncompleteRead killed a 1.5 h run before this existed.
+            return Response(0, b'', url, {'x-rg-network-error': type(e).__name__})
         if len(body) > self.max_bytes:
             raise FetchRefused(f'response larger than {self.max_bytes} bytes: {url}')
         return Response(status, body, url, {k.lower(): v for k, v in (hdrs or {}).items()})
@@ -111,8 +117,11 @@ class Fetcher:
         key = f'{parts.scheme}://{parts.netloc}'
         if key not in self._robots:
             rp = urllib.robotparser.RobotFileParser()
-            self._pace(parts.hostname, self.min_interval)
-            r = self._send(key + '/robots.txt', {})
+            for attempt in range(self.retries + 1):
+                self._pace(parts.hostname, self.min_interval * (attempt + 1))
+                r = self._send(key + '/robots.txt', {})
+                if r.status != 0 and r.status < 500:
+                    break
             if r.status == 200:
                 rp.parse(r.text().splitlines())
             elif 400 <= r.status < 500:
@@ -139,8 +148,11 @@ class Fetcher:
                 headers['If-None-Match'] = etag
             if last_modified:
                 headers['If-Modified-Since'] = last_modified
-            self._pace(parts.hostname, delay)
-            r = self._send(url, headers)
+            for attempt in range(self.retries + 1):
+                self._pace(parts.hostname, delay * (attempt + 1))
+                r = self._send(url, headers)
+                if r.status != 0 and r.status < 500:
+                    break
             if r.status in (301, 302, 303, 307, 308) and r.headers.get('location'):
                 url = urljoin(url, r.headers['location'])
                 continue

@@ -79,6 +79,9 @@
         },
         "locality": {
           "$ref": "#/$defs/label_or_null"
+        },
+        "municipality": {
+          "$ref": "#/$defs/label_or_null"
         }
       }
     },

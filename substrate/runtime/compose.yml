@@ -40,6 +40,20 @@ services:
     volumes:
       - ../..:/repo:ro          # code, read-only
       - ../../work:/work        # catalog and raw corpus output (git-ignored)
+  index:
+    build: { context: ../.., dockerfile: substrate/runtime/Dockerfile.index }
+    profiles: [index]
+    depends_on: [egress]
+    networks: [research]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    pids_limit: 512
+    mem_limit: 6g
+    volumes:
+      - ../..:/repo:ro
+      - ../../work:/work
   probe:
     image: docker.io/curlimages/curl@sha256:a134550be58ab783810e613ae96fd253c38f7bdd16d9bf9be350700c7a29ac06
     profiles: [verify]

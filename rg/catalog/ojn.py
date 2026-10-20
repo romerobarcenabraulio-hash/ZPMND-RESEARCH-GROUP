@@ -11,7 +11,7 @@ from urllib.parse import quote, urlsplit, urlunsplit
 POWERS = {1: 'PODER EJECUTIVO', 2: 'PODER LEGISLATIVO', 3: 'PODER JUDICIAL', 4: 'ORGANOS AUTONOMOS'}
 _ROW = re.compile(r'<tr>\s*<td bgcolor="[^"]*" align=left>(.*?)</tr>', re.S | re.I)
 _TD = re.compile(r'<td[^>]*>(.*?)</td>', re.S | re.I)
-_FICHA = re.compile(r'fichaOrdenamiento\.php\?idArchivo=(\d+)&ambito=ESTATAL')
+_FICHA = re.compile(r'fichaOrdenamiento\.php\?idArchivo=(\d+)&ambito=(\w*)')
 _TOTAL = re.compile(r'Existen un total de\s*(?:&nbsp;)?\s*(?:<strong>)?\s*(\d+)')
 
 
@@ -28,8 +28,26 @@ def list_url(base, edo, power, liberado):
     return f'{base}despliegaedo.php?edo={edo}&idPoder={power}&liberado={liberado}'
 
 
-def ficha_url(base, native_id):
-    return f'{base}fichaOrdenamiento.php?idArchivo={native_id}&ambito=ESTATAL'
+def ficha_url(base, native_id, ambito='ESTATAL'):
+    return f'{base}fichaOrdenamiento.php?idArchivo={native_id}&ambito={ambito}'
+
+
+def state_page_url(base, edo, liberado):
+    return f'{base}estatal.php?liberado={liberado}&edo={edo}'
+
+
+def municipal_url(base, edo, mun_id):
+    return f'{base}despliegaedo3.php?edo={edo}&orderSelectionado={mun_id}&catTipo={mun_id}'
+
+
+def parse_municipalities(state_page_html):
+    """(id, name) of the municipalities offered by the state's own selector, verbatim, in page order."""
+    i = state_page_html.find('Municipios:')
+    if i < 0:
+        return []
+    m = re.search(r'<select[^>]*>(.*?)</select>', state_page_html[i:], re.S | re.I)
+    opts = re.findall(r'<option[^>]*value="?(\d+)"?[^>]*>([^<]*)</option>', m.group(1) if m else '', re.I)
+    return [(oid, _text(name)) for oid, name in opts]
 
 
 def printed_total(page_html):
@@ -50,16 +68,21 @@ def count_rows(page_html):
 
 
 def parse_list(page_html):
+    """Rows in page order, one per record sheet (the source repeats some rows; the first is kept). State listings have
+    4 columns (title, published, last reform, type); municipal listings have 2 (title, type)."""
     out, seen = [], set()
     for row in _ROW.findall(page_html):
         m = _FICHA.search(row)
         cells = [_text(c) for c in _TD.findall('<td>' + row)]
-        if not m or len(cells) < 4 or m.group(1) in seen:
+        if not m or m.group(1) in seen or len(cells) < 2:
             continue
         seen.add(m.group(1))
-        out.append({'native_id': m.group(1), 'title': cells[0], 'published_printed': cells[1],
-                    'last_reform_printed': cells[2], 'type_printed': cells[3],
-                    'published': _iso(cells[1]), 'last_reform': _iso(cells[2])})
+        if len(cells) >= 4:
+            item = {'published_printed': cells[1], 'last_reform_printed': cells[2], 'type_printed': cells[3]}
+        else:
+            item = {'published_printed': '', 'last_reform_printed': '', 'type_printed': cells[1]}
+        out.append({'native_id': m.group(1), 'ambito': m.group(2), 'title': cells[0], **item,
+                    'published': _iso(item['published_printed']), 'last_reform': _iso(item['last_reform_printed'])})
     return out
 
 

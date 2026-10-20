@@ -115,6 +115,21 @@ class FetchGuards(unittest.TestCase):
         f.get('https://a.gob.mx/x')
         self.assertTrue(sleeps and max(sleeps) >= 5 - 1e-9, sleeps)
 
+    def test_network_failure_is_retried_then_reported_not_raised(self):
+        # Regression 2026-10-19: one IncompleteRead (cut chunked response) killed a whole run.
+        import http.client
+
+        class Flaky(FakeOpener):
+            def open(self, req, timeout=None):
+                if req.full_url.endswith('/x'):
+                    self.calls.append((req.full_url, {}))
+                    raise http.client.IncompleteRead(b'partial')
+                return super().open(req, timeout)
+        f = Fetcher(['a.gob.mx'], opener=Flaky({'https://a.gob.mx/robots.txt': ROBOTS_OK}), clock=lambda: 0.0, sleep=lambda s: None)
+        r = f.get('https://a.gob.mx/x')
+        self.assertEqual(r.status, 0)
+        self.assertEqual(sum(1 for c in f._opener.calls if c[0].endswith('/x')), 3)  # 1 try + 2 retries
+
     def test_conditional_headers_sent(self):
         f, _ = fetcher({'https://a.gob.mx/robots.txt': ROBOTS_OK, 'https://a.gob.mx/x': (304, b'', {})})
         r = f.get('https://a.gob.mx/x', etag='"abc"', last_modified='Fri, 09 Oct 2026 01:47:49 GMT')
@@ -316,9 +331,22 @@ class OjnParser(unittest.TestCase):
     def test_row_values_are_verbatim(self):
         from rg.catalog import ojn
         first = ojn.parse_list(self._page('ojn_list_edo24_poder2.html'))[0]
-        self.assertEqual(first, {'native_id': '95983', 'title': 'Ley Sobre El Régimen De Propiedad En Condominio Para El Estado De San Luis Potosí',
+        self.assertEqual(first, {'native_id': '95983', 'ambito': 'ESTATAL', 'title': 'Ley Sobre El Régimen De Propiedad En Condominio Para El Estado De San Luis Potosí',
                                  'published_printed': '09-04-2015', 'last_reform_printed': '27-06-2024', 'type_printed': 'Ley',
                                  'published': '2015-04-09', 'last_reform': '2024-06-27'})
+
+    def test_municipal_listing_and_selector(self):
+        from rg.catalog import ojn
+        muns = ojn.parse_municipalities(self._page('ojn_state_page_edo24.html'))
+        self.assertEqual(muns[0], ('2487', 'Todos los Municipios'))
+        self.assertIn(('1847', 'Villa Hidalgo'), muns)
+        self.assertEqual(len(muns), 59)
+        page = self._page('ojn_mun_edo24_1847.html')
+        items = ojn.parse_list(page)
+        self.assertEqual(ojn.printed_total(page), 3)
+        self.assertEqual(ojn.count_rows(page), 3)
+        self.assertEqual(items[0]['title'], 'Reglamento Interior de la Administración Municipal del Municipio de Villa Hidalgo, S.L.P.')
+        self.assertEqual((items[0]['type_printed'], items[0]['published'], items[0]['ambito']), ('Reglamento', None, ''))
 
     def test_ficha_fields_and_document_link(self):
         from rg.catalog import ojn
@@ -375,3 +403,31 @@ class Tree(unittest.TestCase):
         self.assertIn('dependencia: SECRETARIA DE ECONOMIA', fed_node['children'])
         slp = mx['children']['ámbito: estatal']['children']['estado: San Luis Potosí']['children']['poder: PODER LEGISLATIVO']
         self.assertEqual(slp['children'][f'dependencia: {NO_DATA}']['children']['tipo: LEY']['n'], 2)
+
+
+class Concurrency(unittest.TestCase):
+    def test_snapshot_is_safe_while_another_thread_upserts(self):
+        # Regression 2026-10-19: iterating catalog.entries while another source thread upserted raised
+        # 'dictionary changed size during iteration' and stopped the DOF thread.
+        import threading
+        with tempfile.TemporaryDirectory() as d:
+            c = Catalog(d, 'MX')
+            base = {'country': 'MX', 'source_id': 'mx.dof', 'title': 't', 'url': 'https://x.gob.mx/', 'raw_status': 'pending',
+                    'first_seen': '2026-10-19T00:00:00Z', 'category': {'jurisdiction': 'federal', 'collection': 'DOF', 'doc_type': 'OTRO'},
+                    'dates': {'published': '2026-10-01'}}
+            def writer():
+                for i in range(20000):
+                    c.upsert({**base, 'entry_id': f'mx.dof:{i}', 'native_id': str(i)})
+            t = threading.Thread(target=writer)
+            t.start()
+            reads = 0
+            while t.is_alive() or reads == 0:
+                sum(1 for e in c.snapshot('mx.dof') if e['raw_status'] == 'pending')
+                reads += 1
+            t.join()
+            self.assertEqual(len(c.snapshot('mx.dof')), 20000)
+
+    def test_empty_official_heading_becomes_none(self):
+        page = (FIX / 'sidof_day_2026-10-16_two_editions.html').read_text(encoding='utf-8')
+        page = page.replace('SECRETARIA DE HACIENDA Y CREDITO PUBLICO </span>', ' </span>', 1)
+        self.assertIsNone(sidof.parse_day(page)[0]['issuer'])

@@ -74,6 +74,7 @@ class Catalog:
     def __init__(self, root, country):
         self.dir = Path(root) / country.lower()
         self.entries = {}
+        self.lock = threading.RLock()  # sources run in parallel threads; every read-for-iteration and write takes it
         for f in sorted(self.dir.rglob('*.jsonl')):
             for line in f.read_text(encoding='utf-8').splitlines():
                 if line.strip():
@@ -82,7 +83,16 @@ class Catalog:
         state = self.dir / '_state.json'
         self.state = json.loads(state.read_text(encoding='utf-8')) if state.exists() else {}
 
+    def snapshot(self, source_id=None):
+        """A list copy of the entries (optionally of one source), safe to iterate while other threads upsert."""
+        with self.lock:
+            return [e for e in self.entries.values() if source_id is None or e['source_id'] == source_id]
+
     def upsert(self, entry):
+        with self.lock:
+            return self._upsert(entry)
+
+    def _upsert(self, entry):
         old = self.entries.get(entry['entry_id'])
         if old:
             entry['first_seen'] = old['first_seen']
