@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       budget:
-        description: 'catch-up: max HTTP requests PER SOURCE (empty = registry max_requests). ~1 request/s per host; 12000 fits the 5 h limit'
+        description: 'catch-up: max HTTP requests PER SOURCE (empty = registry max_requests). ~1 request/s per host; the run stops sending at 270 min and writes what it gathered'
         default: ''
 permissions:
   contents: read
@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { persist-credentials: false }
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
-        with: { ref: catalog, path: data }
+        with: { ref: catalog, path: data, persist-credentials: false }  # no write token on disk while hostile pages are parsed
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with: { python-version: '3.12' }
       - run: pip install -r requirements-dev.txt
@@ -40,18 +40,9 @@ jobs:
           set +e
           day=$(date -u +%F)
           python -m rg.catalog.run --country mx --out data --raw raw ${BUDGET:+--budget "$BUDGET"} \
-            --bundle "raw-mx-${day}-${GITHUB_RUN_ID}.tar"
+            --bundle "raw-mx-${day}-${GITHUB_RUN_ID}.tar" --deadline-minutes 270
           echo "rc=$?" >> "$GITHUB_OUTPUT"
-      - name: Commit catalog to the data branch
-        env: { RC: '${{ steps.catalog.outputs.rc }}' }
-        run: |
-          cd data
-          git config user.name "rg-catalog-bot"
-          git config user.email "rg-catalog-bot@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet || git commit -q -m "catalog mx: run ${GITHUB_RUN_ID} (exit ${RC})"
-          git push -q origin HEAD:catalog
-      - name: Upload raw bundle
+      - name: Upload raw bundle (before the commit: an entry marked stored always has its bytes published)
         env: { GH_TOKEN: '${{ github.token }}' }
         run: |
           shopt -s nullglob
@@ -60,6 +51,16 @@ jobs:
               --notes "Content-addressed raw files (sha256/<2>/<sha256>.<ext>) from each catalog run; see catalog/mx/runs."
             if [ "$(stat -c %s "$f")" -gt 1900000000 ]; then split -b 1900m -d "$f" "$f.part"; gh release upload raw-mx "$f".part*; else gh release upload raw-mx "$f"; fi
           done
+      - name: Commit catalog to the data branch
+        env: { RC: '${{ steps.catalog.outputs.rc }}', GH_TOKEN: '${{ github.token }}' }
+        run: |
+          cd data
+          git config user.name "rg-catalog-bot"
+          git config user.email "rg-catalog-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -q -m "catalog mx: run ${GITHUB_RUN_ID} (exit ${RC})"
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c http.https://github.com/.extraheader="AUTHORIZATION: basic ${auth}" push -q origin HEAD:catalog  # token only for this command
       - name: Fail on coverage or schema problems
         if: steps.catalog.outputs.rc != '0'
         env: { RC: '${{ steps.catalog.outputs.rc }}' }

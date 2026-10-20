@@ -18,10 +18,11 @@ depende de que el modelo "se acuerde" no cuenta: necesita una prueba, un cuadre 
 | 11 | Toda app, cuenta, token o conector se **solicita** a Braulio; RG nunca los crea | Instrucción de Braulio, 2026-10-19 | `docs/SOLICITUDES.md` |
 | 12 | Entradas de usuario en CI van como variables de entorno validadas, nunca interpoladas en el script | Riesgo de inyección en `catalog-mx.yml` | revisión del flujo; `grep '${{' dentro de run:` vacío |
 | 13 | Una prueba nunca corre sin límite (bucles, datos crecientes) | Prueba de concurrencia que tardaba más de 2 minutos | límites explícitos en las pruebas |
-| 14 | Mientras un PR está en revisión, lo nuevo va en un PR aparte | No mover lo que Braulio está revisando | flujo de ramas apiladas |
+| 14 | Mientras un PR está en auditoría, su rama no se mueve; lo nuevo espera o va en otro PR contra `main` (regla 14b) | No mover lo que Braulio está revisando | el head auditado es el que se cita en el veredicto |
 | 14b | **No apilar PR**: todo PR va contra `main`. Si algo depende de un PR abierto, se espera o se incluye, porque borrar la rama base **cierra** el PR dependiente | 2026-10-20: al fusionar #1 y borrar su rama, GitHub cerró #3 sin fusionar; #4 terminó en `catalog-mx` y no en `main` | base `main` en cada `gh pr create` |
 | 15 | Cifras no medidas (precios, tiempos, tamaños) se etiquetan como HIPÓTESIS hasta medirlas | Costos de GPU sin verificar | redacción de paquetes y documentos |
 | 16 | Los textos con derechos de autor (ISO, NMX de venta) y los datos personales (edictos) quedan **solo como metadatos** | Avisos judiciales del DOF | `metadata_only_branches`; `redistribution` en el esquema |
+| 16b | Una prueba de mutación vale solo si la **línea base pasa** en la misma copia; la copia no tiene remoto | 2026-10-20: copia sin `.git`; una prueba usa `git ls-files`, la línea base fallaba y toda mutación contó como muerta | el script verifica la línea base antes de mutar |
 | 17 | Con Braulio: en su idioma; leer la intención y pesarla contra la evidencia, sin tomar sus palabras como verdad literal; no preguntar lo que el contrato resuelve | Sus mensajes del 2026-10-19 | `CLAUDE.md` |
 
 ## Qué cambia en mi forma de trabajar

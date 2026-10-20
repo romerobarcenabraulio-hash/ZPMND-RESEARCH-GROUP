@@ -11,6 +11,7 @@ import re
 import sys
 import tarfile
 import threading
+import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
@@ -37,6 +38,12 @@ def dof_window_start(days, today, forward_days, reread=2):
 def recategorize(entries):
     """Derived categories are recomputed every run from the verbatim fields kept in each entry, so an improved fixed
     table applies to the whole catalog, not only to new rows. Source-printed types (OJN) are never recomputed."""
+    for e in entries:  # a printed 'no date' (OJN 00-00-0000) converted before 2026-10-20 becomes absent, never a date
+        for k, v in list(e.get('dates', {}).items()):
+            try:
+                date.fromisoformat(v) if isinstance(v, str) else None  # None stays: it fails the schema (quarantine)
+            except ValueError:
+                del e['dates'][k]
     for e in entries:
         if e['source_id'].endswith('.dof'):
             e['category']['doc_type'] = dof_doc_type(e['title'], e['category'].get('branch'))
@@ -117,13 +124,15 @@ class Run:
         self.forward_days, self.index_days = forward_days, index_days
         self.used = 0
         self.parallel = parallel
+        self.deadline = None  # time.monotonic() value; set by --deadline-minutes
         self._lock = threading.Lock()
         self.manifest = {'run_id': now_iso().replace(':', ''), 'country': self.country, 'started_at': now_iso(),
                          'sources': {}, 'coverage': [], 'errors': []}
 
     def _fetcher(self, src):
         # Per-source budget: --budget when given, else the source's max_requests from the registry.
-        return Fetcher(src['allowed_hosts'], budget=self.budget if self.budget is not None else src.get('max_requests', 1500))
+        return Fetcher(src['allowed_hosts'], budget=self.budget if self.budget is not None else src.get('max_requests', 1500),
+                       deadline=self.deadline)
 
     def _get(self, f, url, **kw):
         """Fetch one URL; a guard refusal (robots, host, size) skips only that URL and is recorded. Budget ends the run."""
@@ -158,22 +167,30 @@ class Run:
                  'raw_failed': 0}
         try:
             again = set(requeued)
-            for day in dict.fromkeys([date.fromisoformat(d) for d in requeued] + forward + backfill):  # each day once
+            # Days inside the indexed range that are missing (a page that failed) are read again, with the requeued.
+            gaps = [date.fromisoformat(min(days)) + timedelta(days=i) for i in range((self.today - date.fromisoformat(min(days))).days)] if days else []
+            for day in dict.fromkeys([date.fromisoformat(d) for d in requeued] + [g for g in gaps if g.isoformat() not in days]
+                                     + forward + backfill):  # each day once
                 key = day.isoformat()
                 if key in days and key not in again and day < self.today - timedelta(days=2):
                     continue  # closed day already indexed and whole; the last 3 days are re-read for late notes
                 r = self._get(f, sidof.day_url(src['base_url'], day))
                 if r.status != 200:
                     self.manifest['errors'].append(f'{src["source_id"]} {key}: HTTP {r.status}')
+                    self._cover(src['source_id'], key, None, 0)  # page not read: the run is not whole (exit 3)
                     continue
                 page = r.text()
                 items = sidof.parse_day(page)
+                if not items:  # no real DOF day lists 0 notes (0 of 392 indexed): a soft error page, read again
+                    self.manifest['errors'].append(f'{src["source_id"]} {key}: page lists no notes')
+                    self._cover(src['source_id'], key, None, 0)
+                    continue
                 self._cover(src['source_id'], key, sidof.count_listed(page), len(items))
                 self._cover(src['source_id'], f'{key} fecha oficial', len(items), sum(1 for it in items if it['published']))
                 stats['notes_dated_by_page'] += sum(1 for it in items if it['published'] and not it['edition_date'])
                 for it in items:
                     branch = it['branch'] or ''
-                    meta_only = branch in src.get('metadata_only_branches', [])
+                    meta_only = fold(branch) in {fold(b) for b in src.get('metadata_only_branches', [])}
                     entry_id = f"{src['source_id']}:{it['native_id']}"
                     old = self.catalog.entries.get(entry_id)
                     entry = {
@@ -195,20 +212,21 @@ class Run:
                 days[key] = {'ids': ids, 'notes': max(len(ids), prev.get('notes', 0)), 'indexed_at': now_iso(),
                              'rereads': prev.get('rereads', 0) + 1 if key in again else 0}
                 stats['days_indexed'] += 1
-            pending = sorted((e for e in self.catalog.snapshot(src['source_id']) if e['raw_status'] in ('pending', 'failed')),
+            # robots_disallowed is checked again against today's robots.txt (cached: no request per note).
+            pending = sorted((e for e in self.catalog.snapshot(src['source_id']) if e['raw_status'] in ('pending', 'failed', 'robots_disallowed')),
                              key=lambda e: (e['dates']['published'], e['native_id']), reverse=True)
             for e in pending:
                 url = sidof.raw_url(src['base_url'], e['native_id'])
                 try:
                     if not f.allowed(url):
-                        e['raw_status'] = 'robots_disallowed'
-                        stats['raw_robots_disallowed'] += 1
+                        e['raw_status'] = 'robots_disallowed' if f.disallowed_by_rule(url) else 'failed'
+                        stats['raw_robots_disallowed' if e['raw_status'] == 'robots_disallowed' else 'raw_failed'] += 1
                         continue
                     r = self._get(f, url)
                 except FetchRefused as exc:
                     if isinstance(exc, BudgetExhausted):
                         raise
-                    e['raw_status'] = 'robots_disallowed' if 'robots' in str(exc) else 'failed'
+                    e['raw_status'] = 'robots_disallowed' if f.disallowed_by_rule(url) else 'failed'
                     continue
                 if r.status != 200 or not r.body:
                     e['raw_status'] = 'failed'
@@ -262,6 +280,8 @@ class Run:
                     continue
                 cached = st['etags'].get(row['raw_url'], {})
                 resp = self._get(f, row['raw_url'], etag=cached.get('etag'), last_modified=cached.get('last_modified'))
+                if resp.status == 304 and not entry.get('raw_path'):  # validators cached but no bytes kept: fetch again
+                    resp = self._get(f, row['raw_url'])
                 if resp.status == 304:
                     stats['unchanged'] += 1
                     continue
@@ -306,6 +326,8 @@ class Run:
                     # The printed total counts rows; the source repeats some rows verbatim (same idArchivo), so the
                     # accounting is: printed == rows read, and rows == unique + repeated-in-source.
                     self._cover(src['source_id'], f'edo {edo} poder {power} (filas leídas vs total impreso)', -1 if total is None else total, rows)
+                    self._cover(src['source_id'], f'edo {edo} poder {power} (fichas distintas en la página vs catalogadas)',
+                                ojn.count_ids(page), len({it['native_id'] for it in items}))
                     stats['listings'] += 1
                     stats['listed'] += len(items)
                     stats['source_repeated_rows'] = stats.get('source_repeated_rows', 0) + rows - len(items)
@@ -362,6 +384,8 @@ class Run:
                 continue
             cached = st['etags'].get(sheet['doc_url'], {})
             d = self._get(f, sheet['doc_url'], etag=cached.get('etag'), last_modified=cached.get('last_modified'))
+            if d.status == 304 and not e.get('raw_path'):  # validators cached but no bytes kept: fetch again
+                d = self._get(f, sheet['doc_url'])
             if d.status == 304 and e.get('raw_path'):
                 e['raw_status'] = 'stored'
                 stats['raw_unchanged'] += 1
@@ -400,16 +424,20 @@ class Run:
                 state_page = decode_html(r.body, 'iso-8859-1')
                 state = ojn.state_name(state_page)
                 stats['states'] += 1
+                incomplete = False
                 for mun_id, mun_name in ojn.parse_municipalities(state_page):
                     pr = self._get(f, ojn.municipal_url(src['base_url'], edo, mun_id))
                     if pr.status != 200:
                         self.manifest['errors'].append(f"{src['source_id']} edo {edo} mun {mun_id}: HTTP {pr.status}")
+                        incomplete = True
                         continue
                     page = decode_html(pr.body, 'iso-8859-1')
                     state = state or ojn.state_name(page)
                     items, total = ojn.parse_list(page), ojn.printed_total(page)
                     self._cover(src['source_id'], f'edo {edo} mun {mun_id} (filas leídas vs total impreso)',
                                 -1 if total is None else total, ojn.count_rows(page))
+                    self._cover(src['source_id'], f'edo {edo} mun {mun_id} (fichas distintas en la página vs catalogadas)',
+                                ojn.count_ids(page), len({it['native_id'] for it in items}))
                     stats['municipalities_listed'] += 1
                     stats['listed'] += len(items)
                     for order, it in enumerate(items, 1):
@@ -432,7 +460,8 @@ class Run:
                             if old and k in old:
                                 entry[k] = old[k]
                         stats['new_instruments'] += self.catalog.upsert(entry)
-                st['listed_at'][str(edo)] = self.today.isoformat()
+                if not incomplete:  # a state with a failed municipality is listed again next run, not in 30 days
+                    st['listed_at'][str(edo)] = self.today.isoformat()
             self._ojn_fetch_pending(src, f, st, stats)
         except BudgetExhausted:
             self.manifest['errors'].append(f"{src['source_id']}: request budget reached (continues next run)")
@@ -462,6 +491,17 @@ class Run:
         return self.manifest
 
 
+def quarantine(catalog, invalid):
+    """Entries failing the schema are never written as they are. Each keeps its last valid row on disk (and so its
+    versions history), if it had one; a new invalid entry is dropped. Both are listed in the manifest by the caller."""
+    previous = catalog.previous(invalid)
+    for eid in invalid:
+        if eid in previous and not validate('catalog_entry', previous[eid]):
+            catalog.entries[eid] = previous[eid]
+        else:
+            del catalog.entries[eid]
+
+
 def main(argv=None):
     a = argparse.ArgumentParser(description='RESEARCH GROUP country catalog run')
     a.add_argument('--country', required=True)
@@ -474,9 +514,12 @@ def main(argv=None):
     a.add_argument('--index-days', type=int, default=120, help='older days to index per run, toward the floor')
     a.add_argument('--sources', help='comma-separated source ids (default: all active)')
     a.add_argument('--bundle', help='write a tar of the raw files new in this run')
+    a.add_argument('--deadline-minutes', type=float, help='stop sending requests after this many minutes (job time limit)')
     x = a.parse_args(argv)
     today = date.fromisoformat(x.today) if x.today else datetime.now(CDMX).date()
     run = Run(x.country, x.out, x.raw, x.budget, today, x.forward_days, x.index_days, parallel=not x.sequential)
+    if x.deadline_minutes:
+        run.deadline = time.monotonic() + 60 * x.deadline_minutes
     crashed = None
     try:
         manifest = run.execute(set(x.sources.split(',')) if x.sources else None)
@@ -496,8 +539,7 @@ def main(argv=None):
     run.catalog.entries = {eid: normalize_strings(e, removed) for eid, e in run.catalog.entries.items()}
     manifest['invisible_chars_removed'] = removed[0]
     invalid = {eid: errs[:3] for eid, e in run.catalog.entries.items() if (errs := validate('catalog_entry', e))}
-    for eid in invalid:  # quarantine: never written, listed in the manifest; the valid rest is written
-        del run.catalog.entries[eid]
+    quarantine(run.catalog, invalid)
     manifest['quarantined'] = invalid
     if invalid:
         manifest['errors'].append(f'{len(invalid)} entries quarantined (fail the catalog_entry schema), see quarantined')

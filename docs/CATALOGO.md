@@ -21,7 +21,7 @@ El catálogo extrae información oficial pública por país. La guarda **cruda**
   - leyes con título que no empieza con "LEY" (Ordenanza, Presupuesto);
   - un reglamento cuyo "texto vigente" era en realidad una versión histórica;
   - filas abrogadas que se saltaban.
-- **Esquema en cada registro** (`schemas/catalog_entry.schema.json`). Un registro inválido detiene la escritura (código 4).
+- **Esquema en cada registro** (`schemas/catalog_entry.schema.json`). Un registro inválido va a cuarentena: se lista en el manifiesto, conserva su última fila válida si la tenía, el resto se escribe y la corrida sale con código 4.
 - **Fetcher con guardas** (`rg/catalog/fetch.py`):
   - solo hosts de la lista de cada fuente;
   - TLS verificado;
@@ -29,7 +29,7 @@ El catálogo extrae información oficial pública por país. La guarda **cruda**
   - al menos 1 s entre peticiones por host, o el Crawl-delay del sitio si es mayor;
   - redirecciones solo dentro de la lista;
   - tope de tamaño y presupuesto de peticiones por corrida y por fuente.
-- **Corre en la red aislada** (`substrate/runtime`, servicio `catalog`). Sale solo por el proxy, que bloquea direcciones internas.
+- **Dónde corre.** En local, en la red aislada (`substrate/runtime`, servicio `catalog`): sale solo por el proxy, que bloquea direcciones internas. La corrida programada corre en un runner de GitHub con las mismas guardas del `Fetcher`, sin token de escritura en disco mientras lee páginas.
 - **Datos personales:** los avisos judiciales y generales del DOF (edictos, convocatorias de particulares) quedan solo como metadatos, sin crudo.
 - **Derechos:** los textos legislativos, reglamentarios, administrativos y judiciales no tienen protección de derecho de autor (LFDA art. 14 fr. VIII). Las normas privadas con derechos (ISO, NMX de venta) quedan solo como metadatos.
 

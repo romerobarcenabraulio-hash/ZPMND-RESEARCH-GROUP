@@ -64,7 +64,7 @@ class _NoRedirect(urllib.request.HTTPRedirectHandler):
 
 class Fetcher:
     def __init__(self, allowed_hosts, budget=3000, min_interval=1.0, max_bytes=60_000_000, timeout=60,
-                 opener=None, clock=time.monotonic, sleep=time.sleep, retries=2):
+                 opener=None, clock=time.monotonic, sleep=time.sleep, retries=2, deadline=None):
         self.allowed_hosts = {h.lower() for h in allowed_hosts}
         self.budget = budget
         self.used = 0
@@ -76,10 +76,12 @@ class Fetcher:
         self._clock, self._sleep = clock, sleep
         self._last = {}
         self._robots = {}
+        self._robots_status = {}
+        self.deadline = deadline  # clock() value after which no request is sent (job time limit)
 
     def _check_url(self, url):
         parts = urlsplit(url)
-        if parts.scheme not in ('https', 'http') or not parts.hostname:
+        if parts.scheme != 'https' or not parts.hostname:  # https only: a redirect to http is refused, never followed
             raise FetchRefused(f'scheme or host not allowed: {url}')
         if parts.hostname.lower() not in self.allowed_hosts:
             raise FetchRefused(f'host not in allowlist: {parts.hostname}')
@@ -96,6 +98,8 @@ class Fetcher:
     def _send(self, url, headers):
         if self.used >= self.budget:
             raise BudgetExhausted(f'request budget of {self.budget} used')
+        if self.deadline is not None and self._clock() >= self.deadline:
+            raise BudgetExhausted('run deadline reached')
         self.used += 1
         req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT, **headers})
         try:
@@ -105,7 +109,7 @@ class Fetcher:
         except urllib.error.HTTPError as e:
             with e:
                 status, hdrs, body = e.code, e.headers, e.read(self.max_bytes + 1) if e.fp else b''
-        except (http.client.HTTPException, urllib.error.URLError, OSError) as e:
+        except (http.client.HTTPException, urllib.error.URLError, OSError, ValueError) as e:  # ValueError: non-ASCII URL
             # Transient network failure (cut response, reset, timeout): status 0, the caller marks it failed and
             # the run goes on. Seen 2026-10-19: one IncompleteRead killed a 1.5 h run before this existed.
             return Response(0, b'', url, {'x-rg-network-error': type(e).__name__})
@@ -122,8 +126,11 @@ class Fetcher:
                 r = self._send(key + '/robots.txt', {})
                 if r.status != 0 and r.status < 500:
                     break
+            self._robots_status[key] = r.status
             if r.status == 200:
                 rp.parse(r.text().splitlines())
+            elif r.status in (401, 403, 429):
+                rp.disallow_all = True  # the site refuses robots: a block (rule 8), not an absent file
             elif 400 <= r.status < 500:
                 rp.allow_all = True
             else:
@@ -134,6 +141,13 @@ class Fetcher:
     def allowed(self, url):
         parts = self._check_url(url)
         return self._robots_for(parts).can_fetch(USER_AGENT, url)
+
+    def disallowed_by_rule(self, url):
+        """True only when a robots.txt that was read (200) disallows the URL. An unreachable robots.txt also blocks
+        fetching, but it is a passing condition: the caller marks the item failed and retries, never 'disallowed'."""
+        parts = self._check_url(url)
+        rp = self._robots_for(parts)
+        return self._robots_status.get(f'{parts.scheme}://{parts.netloc}') == 200 and not rp.can_fetch(USER_AGENT, url)
 
     def get(self, url, etag=None, last_modified=None, max_redirects=5):
         """GET with guards. Returns Response; status 304 means not modified."""

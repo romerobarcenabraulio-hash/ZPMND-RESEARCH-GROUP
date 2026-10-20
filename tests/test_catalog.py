@@ -348,7 +348,9 @@ class OjnParser(unittest.TestCase):
             self.assertEqual(ojn.printed_total(page), total)
             self.assertEqual(len(items), total)
             self.assertEqual(ojn.state_name(page), state)
-            self.assertTrue(all(i['published'] and re.fullmatch(r'\d+', i['native_id']) for i in items))
+            self.assertTrue(all(re.fullmatch(r'\d+', i['native_id']) for i in items))
+            # no date exactly where the source prints 00-00-0000 ('no date'), never a fake 0000-00-00
+            self.assertTrue(all((i['published'] is None) == (i['published_printed'] == '00-00-0000') for i in items))
 
     def test_source_repeated_rows_are_accounted(self):
         # Regression 2026-10-19: 21 of 128 listings 'missed' 1-10 rows; the source repeats rows (same idArchivo).
@@ -548,6 +550,21 @@ class SidofRun(unittest.TestCase):
         self.assertEqual(days['2026-10-14']['ids'], ['1', '2'])
         self.assertEqual(days['2026-10-15']['notes'], 3)
         self.assertEqual(short_days(days, run.catalog.snapshot('mx.dof'), 'mx.dof')[0], ['2026-10-14', '2026-10-15'])
+
+    def test_reread_listing_fewer_notes_keeps_the_debt(self):
+        # A re-read that lists fewer notes than before (not zero) never shrinks what the day owes.
+        from datetime import date
+        page = (FIX / SAT).read_bytes()
+        for d in (date(2026, 10, 14), date(2026, 10, 15)):
+            self.routes[self.day(d)] = (200, page, {})
+        run = self.make_run(date(2026, 10, 22))
+        days = {'2026-10-14': {'ids': ['X1'], 'notes': 1},  # X1 was listed before; today's page no longer lists it
+                '2026-10-15': {'notes': 999},                # a count-only row from before 2026-10-20
+                '2026-10-20': {'ids': [], 'notes': 0}}
+        run.catalog.state['mx.dof'] = {'days': days}
+        self.run_once(run)
+        self.assertIn('X1', days['2026-10-14']['ids'])
+        self.assertEqual(days['2026-10-15']['notes'], 999)
 
     def test_requeued_day_in_the_reread_window_is_fetched_once(self):
         from datetime import date
