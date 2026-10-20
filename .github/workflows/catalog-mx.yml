@@ -42,7 +42,7 @@ jobs:
           python -m rg.catalog.run --country mx --out data --raw raw ${BUDGET:+--budget "$BUDGET"} \
             --bundle "raw-mx-${day}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.tar" --deadline-minutes 270  # a re-run gets its own asset name
           echo "rc=$?" >> "$GITHUB_OUTPUT"
-      - name: Upload raw bundle (before the commit: an entry marked stored always has its bytes published)
+      - name: Upload raw bundle before the commit, so an entry marked stored always has its bytes published
         env: { GH_TOKEN: '${{ github.token }}' }
         run: |
           shopt -s nullglob
