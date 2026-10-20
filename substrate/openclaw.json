@@ -1,0 +1,80 @@
+{
+  "gateway": {
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "${OPENCLAW_GATEWAY_TOKEN}"
+    }
+  },
+  "proxy": {
+    "proxyUrl": "http://egress:3128",
+    "loopbackMode": "gateway-only"
+  },
+  "plugins": {
+    "allow": [
+      "anthropic",
+      "web-readability"
+    ],
+    "slots": {
+      "memory": "none"
+    }
+  },
+  "tools": {
+    "profile": "minimal",
+    "alsoAllow": [
+      "web_search",
+      "web_fetch"
+    ],
+    "deny": [
+      "group:runtime",
+      "group:automation",
+      "group:sessions",
+      "group:nodes",
+      "group:ui",
+      "group:messaging",
+      "group:media",
+      "group:agents",
+      "group:memory",
+      "edit",
+      "apply_patch",
+      "x_search"
+    ],
+    "fs": {
+      "workspaceOnly": true
+    },
+    "exec": {
+      "security": "deny",
+      "ask": "always",
+      "applyPatch": {
+        "workspaceOnly": true
+      }
+    },
+    "elevated": {
+      "enabled": false
+    },
+    "agentToAgent": {
+      "enabled": false
+    },
+    "codeMode": false
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "/workspace"
+    }
+  },
+  "browser": {
+    "enabled": false
+  },
+  "models": {
+    "catalogRefresh": {
+      "enabled": false
+    }
+  },
+  "update": {
+    "checkOnStart": false
+  },
+  "telemetry": {
+    "enabled": false
+  }
+}

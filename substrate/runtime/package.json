@@ -1,0 +1,8 @@
+{
+  "name": "rg-openclaw-runtime",
+  "private": true,
+  "description": "Pinned OpenClaw for RESEARCH GROUP. Install only with npm ci --ignore-scripts (see Dockerfile.gateway).",
+  "dependencies": {
+    "openclaw": "2026.10.5"
+  }
+}
