@@ -2,7 +2,7 @@
 
 País → ámbito → estado → municipio → poder → dependencia → tipo. Conteos de los registros; "(sin dato en la fuente)" marca un nivel que la fuente no publica (nunca se infiere).
 
-- país: MX — 47014
+- país: MX — 54626
   - ámbito: estatal — 29944
     - estado: Ciudad de México — 5647
       - poder: PODER EJECUTIVO — 4709
@@ -1472,274 +1472,327 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
       - poder: PODER EJECUTIVO — 1
         - dependencia: (sin dato en la fuente) — 1
           - tipo: LEY — 1
-  - ámbito: federal — 10383
-    - poder: AVISOS JUDICIALES Y GENERALES — 4068
-      - dependencia: AVISOS — 4067
-        - tipo: AVISO — 4067
+  - ámbito: federal — 17995
+    - poder: AVISOS JUDICIALES Y GENERALES — 7262
+      - dependencia: AVISOS — 7261
+        - tipo: AVISO — 7261
       - dependencia: NULLS — 1
         - tipo: AVISO — 1
-    - poder: CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO — 3233
-      - dependencia: AVISOS — 3233
-        - tipo: OTRO — 3233
-    - poder: PODER EJECUTIVO — 1412
-      - dependencia: SECRETARIA DE HACIENDA Y CREDITO PUBLICO — 225
-        - tipo: ACUERDO — 120
-        - tipo: OFICIO — 51
-        - tipo: RESOLUCION — 26
-        - tipo: OTRO — 18
-        - tipo: CONVOCATORIA — 4
-        - tipo: CIRCULAR — 2
-        - tipo: ACLARACION — 1
-        - tipo: DECLARATORIA — 1
-        - tipo: LINEAMIENTOS — 1
-        - tipo: REGLAS — 1
-      - dependencia: SECRETARIA DE LAS MUJERES — 218
-        - tipo: CONVENIO — 217
-        - tipo: ACUERDO — 1
-      - dependencia: SECRETARIA DE GOBERNACION — 171
-        - tipo: AVISO — 93
-        - tipo: CONVENIO — 45
+    - poder: CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO — 5628
+      - dependencia: AVISOS — 5628
+        - tipo: OTRO — 5628
+    - poder: PODER EJECUTIVO — 2461
+      - dependencia: SECRETARIA DE HACIENDA Y CREDITO PUBLICO — 407
+        - tipo: ACUERDO — 228
+        - tipo: OFICIO — 90
+        - tipo: RESOLUCION — 37
         - tipo: OTRO — 31
-        - tipo: ACUERDO — 1
-        - tipo: CODIGO — 1
-      - dependencia: SECRETARIA DE SALUD — 160
-        - tipo: CONVENIO — 90
-        - tipo: OTRO — 41
-        - tipo: AVISO — 13
-        - tipo: ACUERDO — 10
+        - tipo: DECLARATORIA — 6
+        - tipo: CIRCULAR — 5
+        - tipo: CONVOCATORIA — 4
+        - tipo: LINEAMIENTOS — 3
         - tipo: ACLARACION — 2
-        - tipo: NORMA OFICIAL MEXICANA — 2
         - tipo: REGLAS — 1
-        - tipo: RESPUESTA A COMENTARIOS — 1
-      - dependencia: SECRETARIA ANTICORRUPCION Y BUEN GOBIERNO — 73
-        - tipo: CIRCULAR — 61
-        - tipo: ACUERDO — 8
-        - tipo: OFICIO — 2
+      - dependencia: SECRETARIA DE LAS MUJERES — 315
+        - tipo: CONVENIO — 310
+        - tipo: ACUERDO — 2
+        - tipo: AVISO — 2
+        - tipo: ACLARACION — 1
+      - dependencia: SECRETARIA DE GOBERNACION — 282
+        - tipo: AVISO — 176
+        - tipo: CONVENIO — 62
+        - tipo: OTRO — 32
+        - tipo: ACUERDO — 5
+        - tipo: LINEAMIENTOS — 2
+        - tipo: MANUAL — 2
+        - tipo: REGLAS — 2
+        - tipo: CODIGO — 1
+      - dependencia: SECRETARIA DE SALUD — 236
+        - tipo: CONVENIO — 101
+        - tipo: OTRO — 84
+        - tipo: ACUERDO — 21
+        - tipo: AVISO — 19
+        - tipo: NORMA OFICIAL MEXICANA — 3
+        - tipo: ACLARACION — 2
+        - tipo: LINEAMIENTOS — 2
+        - tipo: REGLAS — 2
+        - tipo: RESPUESTA A COMENTARIOS — 2
+      - dependencia: PRESIDENCIA DE LA REPUBLICA — 203
+        - tipo: DECRETO — 170
+        - tipo: PROGRAMA — 27
+        - tipo: ACUERDO — 3
+        - tipo: ACLARACION — 2
+        - tipo: ESTATUTO — 1
+      - dependencia: SECRETARIA ANTICORRUPCION Y BUEN GOBIERNO — 122
+        - tipo: CIRCULAR — 104
+        - tipo: ACUERDO — 13
+        - tipo: OFICIO — 3
         - tipo: AVISO — 1
         - tipo: MANUAL — 1
-      - dependencia: PRESIDENCIA DE LA REPUBLICA — 70
-        - tipo: DECRETO — 66
-        - tipo: ACUERDO — 2
-        - tipo: ACLARACION — 1
-        - tipo: ESTATUTO — 1
-      - dependencia: SECRETARIA DE MEDIO AMBIENTE Y RECURSOS NATURALES — 65
-        - tipo: CONVENIO — 32
-        - tipo: ACUERDO — 23
-        - tipo: NORMA OFICIAL MEXICANA — 4
-        - tipo: AVISO — 2
+      - dependencia: SECRETARIA DE ECONOMIA — 104
+        - tipo: RESOLUCION — 45
+        - tipo: ACUERDO — 35
+        - tipo: AVISO — 10
+        - tipo: PROGRAMA — 7
+        - tipo: OTRO — 3
+        - tipo: ACLARACION — 2
+        - tipo: MANUAL — 1
+        - tipo: NORMA OFICIAL MEXICANA — 1
+      - dependencia: SECRETARIA DE MEDIO AMBIENTE Y RECURSOS NATURALES — 103
+        - tipo: ACUERDO — 39
+        - tipo: CONVENIO — 39
+        - tipo: AVISO — 11
+        - tipo: NORMA OFICIAL MEXICANA — 6
         - tipo: OFICIO — 2
+        - tipo: PROYECTO DE NORMA OFICIAL MEXICANA — 2
         - tipo: ACLARACION — 1
-        - tipo: PROYECTO DE NORMA OFICIAL MEXICANA — 1
-      - dependencia: SECRETARIA DE DESARROLLO AGRARIO, TERRITORIAL Y URBANO — 62
-        - tipo: CONVENIO — 26
+        - tipo: LINEAMIENTOS — 1
+        - tipo: OTRO — 1
+        - tipo: RESPUESTA A COMENTARIOS — 1
+      - dependencia: SECRETARIA DE DESARROLLO AGRARIO, TERRITORIAL Y URBANO — 92
+        - tipo: CONVENIO — 49
         - tipo: AVISO — 15
+        - tipo: ACUERDO — 9
+        - tipo: DECLARATORIA — 7
         - tipo: RESOLUCION — 6
-        - tipo: ACUERDO — 5
-        - tipo: DECLARATORIA — 5
-        - tipo: OTRO — 2
+        - tipo: OTRO — 3
         - tipo: ACLARACION — 1
         - tipo: CODIGO — 1
         - tipo: MANUAL — 1
-      - dependencia: SECRETARIA DEL TRABAJO Y PREVISION SOCIAL — 60
-        - tipo: CONVENIO — 38
-        - tipo: ACUERDO — 12
-        - tipo: ACLARACION — 4
-        - tipo: OTRO — 4
-        - tipo: AVISO — 1
-        - tipo: LINEAMIENTOS — 1
-      - dependencia: SECRETARIA DE ECONOMIA — 48
-        - tipo: RESOLUCION — 22
+      - dependencia: SECRETARIA DE SEGURIDAD Y PROTECCION CIUDADANA — 82
+        - tipo: CONVENIO — 63
+        - tipo: ACUERDO — 11
+        - tipo: AVISO — 4
+        - tipo: LINEAMIENTOS — 3
+        - tipo: OTRO — 1
+      - dependencia: SECRETARIA DEL TRABAJO Y PREVISION SOCIAL — 81
+        - tipo: CONVENIO — 43
+        - tipo: OTRO — 16
         - tipo: ACUERDO — 15
-        - tipo: AVISO — 7
-        - tipo: OTRO — 2
-        - tipo: MANUAL — 1
-        - tipo: PROGRAMA — 1
-      - dependencia: SECRETARIA DE INFRAESTRUCTURA, COMUNICACIONES Y TRANSPORTES — 45
-        - tipo: CONVENIO — 16
-        - tipo: ACUERDO — 9
-        - tipo: AVISO — 9
-        - tipo: OTRO — 5
+        - tipo: ACLARACION — 4
+        - tipo: AVISO — 2
+        - tipo: LINEAMIENTOS — 1
+      - dependencia: SECRETARIA DE AGRICULTURA Y DESARROLLO RURAL — 71
+        - tipo: OTRO — 34
+        - tipo: ACUERDO — 27
+        - tipo: CONVENIO — 5
+        - tipo: AVISO — 2
+        - tipo: CONVOCATORIA — 2
+        - tipo: ACLARACION — 1
+      - dependencia: SECRETARIA DE INFRAESTRUCTURA, COMUNICACIONES Y TRANSPORTES — 67
+        - tipo: CONVENIO — 20
+        - tipo: ACUERDO — 15
+        - tipo: AVISO — 12
+        - tipo: OTRO — 9
         - tipo: DECLARATORIA — 2
+        - tipo: LINEAMIENTOS — 2
+        - tipo: NORMA OFICIAL MEXICANA — 2
         - tipo: ACLARACION — 1
         - tipo: CIRCULAR — 1
-        - tipo: LINEAMIENTOS — 1
+        - tipo: ESTATUTO — 1
         - tipo: MANUAL — 1
-      - dependencia: SECRETARIA DE MARINA — 40
-        - tipo: AVISO — 23
-        - tipo: OTRO — 7
-        - tipo: ACUERDO — 6
-        - tipo: ACLARACION — 1
+        - tipo: RESOLUCION — 1
+      - dependencia: SECRETARIA DE MARINA — 62
+        - tipo: AVISO — 35
+        - tipo: ACUERDO — 12
+        - tipo: OTRO — 10
+        - tipo: ACLARACION — 2
         - tipo: CODIGO — 1
         - tipo: LINEAMIENTOS — 1
         - tipo: PROGRAMA — 1
-      - dependencia: SECRETARIA DE ENERGIA — 39
-        - tipo: ACUERDO — 21
-        - tipo: AVISO — 10
+      - dependencia: SECRETARIA DE ENERGIA — 60
+        - tipo: ACUERDO — 32
+        - tipo: AVISO — 15
+        - tipo: NORMA OFICIAL MEXICANA — 3
         - tipo: OFICIO — 3
-        - tipo: NORMA OFICIAL MEXICANA — 2
+        - tipo: MANUAL — 2
         - tipo: ACLARACION — 1
+        - tipo: CONVOCATORIA — 1
         - tipo: ESTATUTO — 1
+        - tipo: OTRO — 1
         - tipo: PROGRAMA — 1
-      - dependencia: SECRETARIA DE RELACIONES EXTERIORES — 23
-        - tipo: OTRO — 18
-        - tipo: ACUERDO — 3
+      - dependencia: SECRETARIA DE RELACIONES EXTERIORES — 31
+        - tipo: OTRO — 22
+        - tipo: ACUERDO — 7
         - tipo: CONVENIO — 1
         - tipo: LINEAMIENTOS — 1
-      - dependencia: SECRETARIA DE AGRICULTURA Y DESARROLLO RURAL — 22
-        - tipo: OTRO — 12
-        - tipo: ACUERDO — 8
-        - tipo: AVISO — 1
+      - dependencia: SECRETARIA DE CIENCIA, HUMANIDADES, TECNOLOGIA E INNOVACION — 30
+        - tipo: ACUERDO — 20
+        - tipo: PROGRAMA — 4
+        - tipo: AVISO — 3
+        - tipo: REGLAS — 2
+        - tipo: LINEAMIENTOS — 1
+      - dependencia: SECRETARIA DE EDUCACION PUBLICA — 28
+        - tipo: ACUERDO — 14
+        - tipo: AVISO — 6
+        - tipo: LINEAMIENTOS — 3
+        - tipo: PROGRAMA — 3
         - tipo: CONVENIO — 1
-      - dependencia: SECRETARIA DE SEGURIDAD Y PROTECCION CIUDADANA — 19
-        - tipo: CONVENIO — 11
+        - tipo: MANUAL — 1
+      - dependencia: SECRETARIA DE CULTURA — 22
+        - tipo: ACUERDO — 12
+        - tipo: AVISO — 10
+      - dependencia: CONSEJO DE SALUBRIDAD GENERAL — 15
+        - tipo: ACUERDO — 11
+        - tipo: AVISO — 4
+      - dependencia: SECRETARIA DE TURISMO — 14
+        - tipo: CONVENIO — 8
+        - tipo: AVISO — 4
+        - tipo: ACUERDO — 1
+        - tipo: PROGRAMA — 1
+      - dependencia: AGENCIA DE TRANSFORMACION DIGITAL Y TELECOMUNICACIONES — 12
+        - tipo: PROGRAMA — 5
+        - tipo: ACUERDO — 3
+        - tipo: LINEAMIENTOS — 2
+        - tipo: AVISO — 1
+        - tipo: OTRO — 1
+      - dependencia: SECRETARIA DE BIENESTAR — 12
+        - tipo: ACUERDO — 12
+      - dependencia: SECRETARIA DE LA DEFENSA NACIONAL — 8
         - tipo: ACUERDO — 3
         - tipo: AVISO — 2
-        - tipo: LINEAMIENTOS — 2
-        - tipo: OTRO — 1
-      - dependencia: SECRETARIA DE CULTURA — 15
-        - tipo: AVISO — 9
-        - tipo: ACUERDO — 6
-      - dependencia: SECRETARIA DE EDUCACION PUBLICA — 14
-        - tipo: ACUERDO — 10
-        - tipo: PROGRAMA — 3
-        - tipo: AVISO — 1
-      - dependencia: SECRETARIA DE CIENCIA, HUMANIDADES, TECNOLOGIA E INNOVACION — 12
-        - tipo: ACUERDO — 7
-        - tipo: AVISO — 3
-        - tipo: PROGRAMA — 2
-      - dependencia: SECRETARIA DE TURISMO — 9
-        - tipo: CONVENIO — 7
-        - tipo: ACUERDO — 1
-        - tipo: AVISO — 1
-      - dependencia: CONSEJO DE SALUBRIDAD GENERAL — 7
-        - tipo: ACUERDO — 5
-        - tipo: AVISO — 2
-      - dependencia: AGENCIA DE TRANSFORMACION DIGITAL Y TELECOMUNICACIONES — 6
-        - tipo: ACUERDO — 2
-        - tipo: LINEAMIENTOS — 2
-        - tipo: AVISO — 1
-        - tipo: PROGRAMA — 1
-      - dependencia: SECRETARIA DE LA DEFENSA NACIONAL — 6
-        - tipo: ACUERDO — 2
         - tipo: MANUAL — 2
-        - tipo: AVISO — 1
         - tipo: CODIGO — 1
       - dependencia: FIDEICOMISOS INSTITUIDOS EN RELACION CON LA AGRICULTURA — 1
         - tipo: OTRO — 1
       - dependencia: PROCURADURIA GENERAL DE LA REPUBLICA — 1
         - tipo: ACUERDO — 1
-      - dependencia: SECRETARIA DE BIENESTAR — 1
-        - tipo: ACUERDO — 1
-    - poder: ORGANISMOS AUTONOMOS — 530
-      - dependencia: BANCO DE MEXICO — 358
-        - tipo: INDICADOR ECONOMICO — 323
-        - tipo: OTRO — 30
+    - poder: ORGANISMOS AUTONOMOS — 1031
+      - dependencia: BANCO DE MEXICO — 631
+        - tipo: INDICADOR ECONOMICO — 570
+        - tipo: OTRO — 55
         - tipo: CIRCULAR — 5
-      - dependencia: INSTITUTO NACIONAL ELECTORAL — 79
-        - tipo: ACUERDO — 40
-        - tipo: RESOLUCION — 15
-        - tipo: OTRO — 14
-        - tipo: EXTRACTO — 8
-        - tipo: AVISO — 1
-        - tipo: CIRCULAR — 1
-      - dependencia: TRIBUNAL FEDERAL DE JUSTICIA ADMINISTRATIVA — 44
-        - tipo: EXTRACTO — 33
-        - tipo: ACUERDO — 9
-        - tipo: CIRCULAR — 1
-        - tipo: OTRO — 1
-      - dependencia: INSTITUTO NACIONAL DE ESTADISTICA Y GEOGRAFIA — 31
-        - tipo: INDICADOR ECONOMICO — 16
-        - tipo: OTRO — 9
-        - tipo: ACUERDO — 5
-        - tipo: CIRCULAR — 1
-      - dependencia: FISCALIA GENERAL DE LA REPUBLICA — 9
-        - tipo: ACUERDO — 3
+        - tipo: DISPOSICIONES — 1
+      - dependencia: INSTITUTO NACIONAL ELECTORAL — 177
+        - tipo: ACUERDO — 83
+        - tipo: OTRO — 46
+        - tipo: EXTRACTO — 22
+        - tipo: RESOLUCION — 20
         - tipo: AVISO — 3
+        - tipo: CIRCULAR — 3
+      - dependencia: TRIBUNAL FEDERAL DE JUSTICIA ADMINISTRATIVA — 130
+        - tipo: EXTRACTO — 93
+        - tipo: ACUERDO — 32
+        - tipo: CIRCULAR — 2
         - tipo: OTRO — 2
-        - tipo: REGLAS — 1
-      - dependencia: TRIBUNAL SUPERIOR AGRARIO — 9
-        - tipo: ACUERDO — 5
-        - tipo: SENTENCIA — 4
-    - poder: Poder Legislativo — 318
-      - dependencia: CONGRESO DE LA UNION — 318
-        - tipo: LEY — 301
-        - tipo: CODIGO — 9
-        - tipo: REGLAMENTO — 3
-        - tipo: CONSTITUCION — 1
-        - tipo: ESTATUTO — 1
-        - tipo: ORDENANZA — 1
-        - tipo: OTRO — 1
-        - tipo: PRESUPUESTO — 1
-    - poder: ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS — 299
-      - dependencia: SISTEMA NACIONAL PARA EL DESARROLLO INTEGRAL DE LA FAMILIA — 173
-        - tipo: CONVENIO — 171
-        - tipo: ACUERDO — 1
-        - tipo: AVISO — 1
-      - dependencia: INSTITUTO MEXICANO DE LA PROPIEDAD INDUSTRIAL — 29
-        - tipo: ACUERDO — 17
-        - tipo: OTRO — 11
-        - tipo: AVISO — 1
-      - dependencia: INSTITUTO MEXICANO DEL SEGURO SOCIAL — 18
-        - tipo: AVISO — 11
-        - tipo: ACUERDO — 7
-      - dependencia: COMISION REGULADORA DE TELECOMUNICACIONES — 11
-        - tipo: ACUERDO — 11
-      - dependencia: CENTRO FEDERAL DE CONCILIACION Y REGISTRO LABORAL — 6
-        - tipo: AVISO — 3
-        - tipo: CONVOCATORIA — 2
-        - tipo: ACUERDO — 1
-      - dependencia: SERVICIOS DE SALUD DEL INSTITUTO MEXICANO DEL SEGURO SOCIAL PARA EL BIENESTAR (IMSS-BIENESTAR) — 6
-        - tipo: OTRO — 3
-        - tipo: ACUERDO — 1
-        - tipo: AVISO — 1
-        - tipo: CONVENIO — 1
-      - dependencia: CAMINOS Y PUENTES FEDERALES DE INGRESOS Y SERVICIOS CONEXOS — 5
-        - tipo: AVISO — 5
-      - dependencia: COMISION NACIONAL PARA LA PROTECCION Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS — 5
-        - tipo: ACUERDO — 4
-        - tipo: OFICIO — 1
-      - dependencia: INSTITUTO PARA LA PROTECCION AL AHORRO BANCARIO — 5
-        - tipo: ACUERDO — 3
-        - tipo: OTRO — 2
-      - dependencia: COMISION NACIONAL ANTIMONOPOLIO — 4
-        - tipo: ACUERDO — 1
-        - tipo: AVISO — 1
         - tipo: MANUAL — 1
-        - tipo: PROGRAMA — 1
-      - dependencia: INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO — 4
-        - tipo: ACUERDO — 2
+      - dependencia: INSTITUTO NACIONAL DE ESTADISTICA Y GEOGRAFIA — 48
+        - tipo: INDICADOR ECONOMICO — 27
+        - tipo: OTRO — 13
+        - tipo: ACUERDO — 7
+        - tipo: CIRCULAR — 1
+      - dependencia: FISCALIA GENERAL DE LA REPUBLICA — 18
+        - tipo: ACUERDO — 7
+        - tipo: OTRO — 5
+        - tipo: AVISO — 4
+        - tipo: LINEAMIENTOS — 1
+        - tipo: REGLAS — 1
+      - dependencia: TRIBUNAL SUPERIOR AGRARIO — 18
+        - tipo: ACUERDO — 13
+        - tipo: SENTENCIA — 5
+      - dependencia: COMISION NACIONAL DE LOS DERECHOS HUMANOS — 8
+        - tipo: ACUERDO — 4
+        - tipo: AVISO — 1
         - tipo: LINEAMIENTOS — 1
         - tipo: MANUAL — 1
-      - dependencia: INSTITUTO DEL FONDO NACIONAL DE LA VIVIENDA PARA LOS TRABAJADORES — 3
-        - tipo: AVISO — 1
-        - tipo: DISPOSICIONES — 1
         - tipo: OTRO — 1
-      - dependencia: INSTITUTO PARA DEVOLVER AL PUEBLO LO ROBADO — 3
+      - dependencia: TRIBUNAL UNITARIO AGRARIO — 1
+        - tipo: SENTENCIA — 1
+    - poder: CONVOCATORIAS PARA CONCURSOS DE PLAZAS VACANTES DEL SERVICIO PROFESIONAL DE CARRERA EN LA ADMINISTRACION PUBLICA FEDERAL — 451
+      - dependencia: AVISOS — 451
+        - tipo: OTRO — 451
+    - poder: ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS — 419
+      - dependencia: SISTEMA NACIONAL PARA EL DESARROLLO INTEGRAL DE LA FAMILIA — 187
+        - tipo: CONVENIO — 181
         - tipo: ACUERDO — 3
-      - dependencia: PROCURADURIA AGRARIA — 3
+        - tipo: EXTRACTO — 2
+        - tipo: AVISO — 1
+      - dependencia: INSTITUTO MEXICANO DE LA PROPIEDAD INDUSTRIAL — 61
+        - tipo: OTRO — 38
+        - tipo: ACUERDO — 21
+        - tipo: AVISO — 2
+      - dependencia: INSTITUTO MEXICANO DEL SEGURO SOCIAL — 27
+        - tipo: AVISO — 15
+        - tipo: ACUERDO — 11
+        - tipo: LINEAMIENTOS — 1
+      - dependencia: COMISION REGULADORA DE TELECOMUNICACIONES — 15
+        - tipo: ACUERDO — 15
+      - dependencia: SERVICIOS DE SALUD DEL INSTITUTO MEXICANO DEL SEGURO SOCIAL PARA EL BIENESTAR (IMSS-BIENESTAR) — 15
+        - tipo: AVISO — 6
+        - tipo: OTRO — 5
+        - tipo: ACUERDO — 3
+        - tipo: CONVENIO — 1
+      - dependencia: INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO — 12
+        - tipo: ACUERDO — 8
+        - tipo: AVISO — 2
+        - tipo: LINEAMIENTOS — 1
+        - tipo: MANUAL — 1
+      - dependencia: CENTRO FEDERAL DE CONCILIACION Y REGISTRO LABORAL — 9
+        - tipo: AVISO — 4
+        - tipo: ACUERDO — 2
+        - tipo: CONVOCATORIA — 2
+        - tipo: PROGRAMA — 1
+      - dependencia: COMISION NACIONAL PARA LA PROTECCION Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS — 9
+        - tipo: ACUERDO — 8
+        - tipo: OFICIO — 1
+      - dependencia: COMISION NACIONAL ANTIMONOPOLIO — 7
         - tipo: ACUERDO — 2
         - tipo: AVISO — 1
-      - dependencia: PROCURADURIA FEDERAL DEL CONSUMIDOR — 3
+        - tipo: EXTRACTO — 1
+        - tipo: MANUAL — 1
+        - tipo: OTRO — 1
+        - tipo: PROGRAMA — 1
+      - dependencia: INSTITUTO DEL FONDO NACIONAL DE LA VIVIENDA PARA LOS TRABAJADORES — 7
+        - tipo: AVISO — 4
+        - tipo: DISPOSICIONES — 1
+        - tipo: OTRO — 1
+        - tipo: RESOLUCION — 1
+      - dependencia: INSTITUTO PARA LA PROTECCION AL AHORRO BANCARIO — 7
         - tipo: ACUERDO — 3
+        - tipo: OTRO — 3
+        - tipo: PROGRAMA — 1
+      - dependencia: PROCURADURIA FEDERAL DEL CONSUMIDOR — 7
+        - tipo: ACUERDO — 7
+      - dependencia: CAMINOS Y PUENTES FEDERALES DE INGRESOS Y SERVICIOS CONEXOS — 5
+        - tipo: AVISO — 5
+      - dependencia: INSTITUTO PARA DEVOLVER AL PUEBLO LO ROBADO — 5
+        - tipo: ACUERDO — 5
+      - dependencia: ARCHIVO GENERAL DE LA NACION — 4
+        - tipo: ACUERDO — 2
+        - tipo: AVISO — 1
+        - tipo: OTRO — 1
+      - dependencia: CONSEJO NACIONAL DE NORMALIZACION Y CERTIFICACION DE COMPETENCIAS LABORALES — 4
+        - tipo: ACUERDO — 4
+      - dependencia: PROCURADURIA AGRARIA — 4
+        - tipo: ACUERDO — 3
+        - tipo: AVISO — 1
+      - dependencia: CONSEJO NACIONAL PARA PREVENIR LA DISCRIMINACION — 3
+        - tipo: ACUERDO — 3
+      - dependencia: INSTITUTO NACIONAL DE LOS PUEBLOS INDIGENAS — 3
+        - tipo: ACUERDO — 3
+      - dependencia: LOTERIA NACIONAL — 3
+        - tipo: ACUERDO — 2
+        - tipo: OTRO — 1
+      - dependencia: PROCURADURIA DE LA DEFENSA DEL CONTRIBUYENTE — 3
+        - tipo: ACUERDO — 3
+      - dependencia: CENTRO NACIONAL DE CONTROL DE ENERGIA — 2
+        - tipo: AVISO — 2
       - dependencia: CENTRO NACIONAL DE CONTROL DEL GAS NATURAL — 2
         - tipo: CONVOCATORIA — 1
         - tipo: PROGRAMA — 1
       - dependencia: COMISION NACIONAL FORESTAL — 2
         - tipo: ACUERDO — 2
-      - dependencia: CONSEJO NACIONAL DE NORMALIZACION Y CERTIFICACION DE COMPETENCIAS LABORALES — 2
-        - tipo: ACUERDO — 2
+      - dependencia: CONSEJO NACIONAL DE FOMENTO EDUCATIVO — 2
+        - tipo: AVISO — 1
+        - tipo: LINEAMIENTOS — 1
       - dependencia: CORREDOR INTEROCEANICO DEL ISTMO DE TEHUANTEPEC — 2
         - tipo: ACUERDO — 2
-      - dependencia: INSTITUTO NACIONAL DE LOS PUEBLOS INDIGENAS — 2
-        - tipo: ACUERDO — 2
-      - dependencia: PROCURADURIA DE LA DEFENSA DEL CONTRIBUYENTE — 2
-        - tipo: ACUERDO — 2
-      - dependencia: ARCHIVO GENERAL DE LA NACION — 1
-        - tipo: ACUERDO — 1
+      - dependencia: COMISION NACIONAL DE LOS SALARIOS MINIMOS — 1
+        - tipo: RESOLUCION — 1
       - dependencia: COMISION NACIONAL DE VIVIENDA — 1
         - tipo: MANUAL — 1
-      - dependencia: CONSEJO NACIONAL PARA PREVENIR LA DISCRIMINACION — 1
-        - tipo: ACUERDO — 1
+      - dependencia: COMISION NACIONAL PARA LA MEJORA CONTINUA DE LA EDUCACION — 1
+        - tipo: AVISO — 1
       - dependencia: INSTITUTO DE SEGURIDAD SOCIAL PARA LAS FUERZAS ARMADAS MEXICANAS — 1
         - tipo: ACUERDO — 1
       - dependencia: INSTITUTO MEXICANO DE LA RADIO — 1
@@ -1750,45 +1803,73 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: ACUERDO — 1
       - dependencia: LITIO PARA MEXICO — 1
         - tipo: AVISO — 1
-      - dependencia: LOTERIA NACIONAL — 1
+      - dependencia: PROCURADURIA FEDERAL DE LA DEFENSA DEL TRABAJO — 1
+        - tipo: AVISO — 1
+      - dependencia: SECRETARIA EJECUTIVA DEL SISTEMA NACIONAL ANTICORRUPCION — 1
+        - tipo: ACUERDO — 1
+      - dependencia: SERVICIO POSTAL MEXICANO — 1
+        - tipo: ACUERDO — 1
+      - dependencia: TALLERES GRAFICOS DE MEXICO — 1
+        - tipo: AVISO — 1
+    - poder: Poder Legislativo — 318
+      - dependencia: CONGRESO DE LA UNION — 318
+        - tipo: LEY — 301
+        - tipo: CODIGO — 9
+        - tipo: REGLAMENTO — 3
+        - tipo: CONSTITUCION — 1
+        - tipo: ESTATUTO — 1
+        - tipo: ORDENANZA — 1
         - tipo: OTRO — 1
-    - poder: CONVOCATORIAS PARA CONCURSOS DE PLAZAS VACANTES DEL SERVICIO PROFESIONAL DE CARRERA EN LA ADMINISTRACION PUBLICA FEDERAL — 234
-      - dependencia: AVISOS — 234
-        - tipo: OTRO — 234
-    - poder: Poder Ejecutivo — 150
-      - dependencia: PRESIDENCIA DE LA REPUBLICA — 150
-        - tipo: REGLAMENTO — 150
-    - poder: PODER JUDICIAL — 120
-      - dependencia: SUPREMA CORTE DE JUSTICIA DE LA NACION — 85
-        - tipo: SENTENCIA — 72
-        - tipo: ACUERDO — 7
-        - tipo: OTRO — 6
-      - dependencia: ORGANO DE ADMINISTRACION JUDICIAL — 33
-        - tipo: ACUERDO — 24
-        - tipo: AVISO — 5
-        - tipo: OTRO — 3
+        - tipo: PRESUPUESTO — 1
+    - poder: PODER JUDICIAL — 227
+      - dependencia: SUPREMA CORTE DE JUSTICIA DE LA NACION — 163
+        - tipo: SENTENCIA — 138
+        - tipo: ACUERDO — 12
+        - tipo: OTRO — 12
+        - tipo: AVISO — 1
+      - dependencia: ORGANO DE ADMINISTRACION JUDICIAL — 58
+        - tipo: ACUERDO — 37
+        - tipo: OTRO — 13
+        - tipo: AVISO — 6
+        - tipo: ACLARACION — 1
         - tipo: DECLARATORIA — 1
-      - dependencia: TRIBUNAL DE DISCIPLINA JUDICIAL — 1
+      - dependencia: TRIBUNAL DE DISCIPLINA JUDICIAL — 5
+        - tipo: ACUERDO — 3
+        - tipo: ACLARACION — 1
         - tipo: REGLAMENTO — 1
       - dependencia: TRIBUNAL ELECTORAL DEL PODER JUDICIAL DE LA FEDERACION — 1
         - tipo: AVISO — 1
-    - poder: EMPRESAS PUBLICAS DEL ESTADO MEXICANO — 10
-      - dependencia: COMISION FEDERAL DE ELECTRICIDAD — 8
-        - tipo: OTRO — 7
-        - tipo: DISPOSICIONES — 1
-      - dependencia: PETROLEOS MEXICANOS — 2
-        - tipo: ACUERDO — 1
-        - tipo: ESTATUTO — 1
-    - poder: PODER LEGISLATIVO — 6
-      - dependencia: AUDITORIA SUPERIOR DE LA FEDERACION — 3
-        - tipo: OTRO — 2
-        - tipo: REGLAMENTO — 1
-      - dependencia: CAMARA DE DIPUTADOS — 1
-        - tipo: DECRETO — 1
-      - dependencia: CAMARA DE SENADORES — 1
-        - tipo: DECRETO — 1
+    - poder: Poder Ejecutivo — 150
+      - dependencia: PRESIDENCIA DE LA REPUBLICA — 150
+        - tipo: REGLAMENTO — 150
+    - poder: PODER LEGISLATIVO — 26
+      - dependencia: AUDITORIA SUPERIOR DE LA FEDERACION — 11
+        - tipo: OTRO — 4
+        - tipo: ACUERDO — 3
+        - tipo: REGLAMENTO — 2
+        - tipo: LINEAMIENTOS — 1
+        - tipo: PROGRAMA — 1
+      - dependencia: CAMARA DE DIPUTADOS — 10
+        - tipo: ACUERDO — 5
+        - tipo: DECRETO — 3
+        - tipo: LINEAMIENTOS — 1
+        - tipo: MANUAL — 1
+      - dependencia: CAMARA DE SENADORES — 4
+        - tipo: DECRETO — 2
+        - tipo: LINEAMIENTOS — 1
+        - tipo: MANUAL — 1
       - dependencia: CONGRESO DE LA UNION — 1
         - tipo: DECRETO — 1
+    - poder: EMPRESAS PUBLICAS DEL ESTADO MEXICANO — 19
+      - dependencia: COMISION FEDERAL DE ELECTRICIDAD — 16
+        - tipo: OTRO — 13
+        - tipo: ACUERDO — 1
+        - tipo: DISPOSICIONES — 1
+        - tipo: LINEAMIENTOS — 1
+      - dependencia: PETROLEOS MEXICANOS — 3
+        - tipo: ACUERDO — 1
+        - tipo: AVISO — 1
+        - tipo: ESTATUTO — 1
     - poder: OTROS — 2
       - dependencia: INSTITUTO NACIONAL DE LOS PUEBLOS — 2
         - tipo: CONVOCATORIA — 1

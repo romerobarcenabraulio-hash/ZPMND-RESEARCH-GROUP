@@ -1,0 +1,899 @@
+{
+ "country": "MX",
+ "coverage": [
+  {
+   "expected": 57,
+   "extracted": 57,
+   "ok": true,
+   "scope": "2026-10-17",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 57,
+   "extracted": 57,
+   "ok": true,
+   "scope": "2026-10-18",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 43,
+   "extracted": 43,
+   "ok": true,
+   "scope": "2026-10-19",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 143,
+   "extracted": 143,
+   "ok": true,
+   "scope": "2026-05-21",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 97,
+   "extracted": 97,
+   "ok": true,
+   "scope": "2026-05-20",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 171,
+   "extracted": 171,
+   "ok": true,
+   "scope": "2026-05-19",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 91,
+   "extracted": 91,
+   "ok": true,
+   "scope": "2026-05-18",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 78,
+   "extracted": 78,
+   "ok": true,
+   "scope": "2026-05-17",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 78,
+   "extracted": 78,
+   "ok": true,
+   "scope": "2026-05-16",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 78,
+   "extracted": 78,
+   "ok": true,
+   "scope": "2026-05-15",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 128,
+   "extracted": 128,
+   "ok": true,
+   "scope": "2026-05-14",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 101,
+   "extracted": 101,
+   "ok": true,
+   "scope": "2026-05-13",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 162,
+   "extracted": 162,
+   "ok": true,
+   "scope": "2026-05-12",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 94,
+   "extracted": 94,
+   "ok": true,
+   "scope": "2026-05-11",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 1,
+   "extracted": 1,
+   "ok": true,
+   "scope": "2026-05-10",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 1,
+   "extracted": 1,
+   "ok": true,
+   "scope": "2026-05-09",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 41,
+   "extracted": 41,
+   "ok": true,
+   "scope": "2026-05-08",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 163,
+   "extracted": 163,
+   "ok": true,
+   "scope": "2026-05-07",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 108,
+   "extracted": 108,
+   "ok": true,
+   "scope": "2026-05-06",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 32,
+   "extracted": 32,
+   "ok": true,
+   "scope": "2026-05-05",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 32,
+   "extracted": 32,
+   "ok": true,
+   "scope": "2026-05-04",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 4,
+   "extracted": 4,
+   "ok": true,
+   "scope": "2026-05-03",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 4,
+   "extracted": 4,
+   "ok": true,
+   "scope": "2026-05-02",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 4,
+   "extracted": 4,
+   "ok": true,
+   "scope": "2026-05-01",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 159,
+   "extracted": 159,
+   "ok": true,
+   "scope": "2026-04-30",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 80,
+   "extracted": 80,
+   "ok": true,
+   "scope": "2026-04-29",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 127,
+   "extracted": 127,
+   "ok": true,
+   "scope": "2026-04-28",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 79,
+   "extracted": 79,
+   "ok": true,
+   "scope": "2026-04-27",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 110,
+   "extracted": 110,
+   "ok": true,
+   "scope": "2026-04-26",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 110,
+   "extracted": 110,
+   "ok": true,
+   "scope": "2026-04-25",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 110,
+   "extracted": 110,
+   "ok": true,
+   "scope": "2026-04-24",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 123,
+   "extracted": 123,
+   "ok": true,
+   "scope": "2026-04-23",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 80,
+   "extracted": 80,
+   "ok": true,
+   "scope": "2026-04-22",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 155,
+   "extracted": 155,
+   "ok": true,
+   "scope": "2026-04-21",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 94,
+   "extracted": 94,
+   "ok": true,
+   "scope": "2026-04-20",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 62,
+   "extracted": 62,
+   "ok": true,
+   "scope": "2026-04-19",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 62,
+   "extracted": 62,
+   "ok": true,
+   "scope": "2026-04-18",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 62,
+   "extracted": 62,
+   "ok": true,
+   "scope": "2026-04-17",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 126,
+   "extracted": 126,
+   "ok": true,
+   "scope": "2026-04-16",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 88,
+   "extracted": 88,
+   "ok": true,
+   "scope": "2026-04-15",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 171,
+   "extracted": 171,
+   "ok": true,
+   "scope": "2026-04-14",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 88,
+   "extracted": 88,
+   "ok": true,
+   "scope": "2026-04-13",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 75,
+   "extracted": 75,
+   "ok": true,
+   "scope": "2026-04-12",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 75,
+   "extracted": 75,
+   "ok": true,
+   "scope": "2026-04-11",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 75,
+   "extracted": 75,
+   "ok": true,
+   "scope": "2026-04-10",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 84,
+   "extracted": 84,
+   "ok": true,
+   "scope": "2026-04-09",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 39,
+   "extracted": 39,
+   "ok": true,
+   "scope": "2026-04-08",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 95,
+   "extracted": 95,
+   "ok": true,
+   "scope": "2026-04-07",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 144,
+   "extracted": 144,
+   "ok": true,
+   "scope": "2026-04-06",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 30,
+   "extracted": 30,
+   "ok": true,
+   "scope": "2026-04-05",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 30,
+   "extracted": 30,
+   "ok": true,
+   "scope": "2026-04-04",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 30,
+   "extracted": 30,
+   "ok": true,
+   "scope": "2026-04-03",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 69,
+   "extracted": 69,
+   "ok": true,
+   "scope": "2026-04-02",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 57,
+   "extracted": 57,
+   "ok": true,
+   "scope": "2026-04-01",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 150,
+   "extracted": 150,
+   "ok": true,
+   "scope": "2026-03-31",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 74,
+   "extracted": 74,
+   "ok": true,
+   "scope": "2026-03-30",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 78,
+   "extracted": 78,
+   "ok": true,
+   "scope": "2026-03-29",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 78,
+   "extracted": 78,
+   "ok": true,
+   "scope": "2026-03-28",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 78,
+   "extracted": 78,
+   "ok": true,
+   "scope": "2026-03-27",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 131,
+   "extracted": 131,
+   "ok": true,
+   "scope": "2026-03-26",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 72,
+   "extracted": 72,
+   "ok": true,
+   "scope": "2026-03-25",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 157,
+   "extracted": 157,
+   "ok": true,
+   "scope": "2026-03-24",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 67,
+   "extracted": 67,
+   "ok": true,
+   "scope": "2026-03-23",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 58,
+   "extracted": 58,
+   "ok": true,
+   "scope": "2026-03-22",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 58,
+   "extracted": 58,
+   "ok": true,
+   "scope": "2026-03-21",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 58,
+   "extracted": 58,
+   "ok": true,
+   "scope": "2026-03-20",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 136,
+   "extracted": 136,
+   "ok": true,
+   "scope": "2026-03-19",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 89,
+   "extracted": 89,
+   "ok": true,
+   "scope": "2026-03-18",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 171,
+   "extracted": 171,
+   "ok": true,
+   "scope": "2026-03-17",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 73,
+   "extracted": 73,
+   "ok": true,
+   "scope": "2026-03-16",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 73,
+   "extracted": 73,
+   "ok": true,
+   "scope": "2026-03-15",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 73,
+   "extracted": 73,
+   "ok": true,
+   "scope": "2026-03-14",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 73,
+   "extracted": 73,
+   "ok": true,
+   "scope": "2026-03-13",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 116,
+   "extracted": 116,
+   "ok": true,
+   "scope": "2026-03-12",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 61,
+   "extracted": 61,
+   "ok": true,
+   "scope": "2026-03-11",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 143,
+   "extracted": 143,
+   "ok": true,
+   "scope": "2026-03-10",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 71,
+   "extracted": 71,
+   "ok": true,
+   "scope": "2026-03-09",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 68,
+   "extracted": 68,
+   "ok": true,
+   "scope": "2026-03-08",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 68,
+   "extracted": 68,
+   "ok": true,
+   "scope": "2026-03-07",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 68,
+   "extracted": 68,
+   "ok": true,
+   "scope": "2026-03-06",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 104,
+   "extracted": 104,
+   "ok": true,
+   "scope": "2026-03-05",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 85,
+   "extracted": 85,
+   "ok": true,
+   "scope": "2026-03-04",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 102,
+   "extracted": 102,
+   "ok": true,
+   "scope": "2026-03-03",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 63,
+   "extracted": 63,
+   "ok": true,
+   "scope": "2026-03-02",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 81,
+   "extracted": 81,
+   "ok": true,
+   "scope": "2026-03-01",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 81,
+   "extracted": 81,
+   "ok": true,
+   "scope": "2026-02-28",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 81,
+   "extracted": 81,
+   "ok": true,
+   "scope": "2026-02-27",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 113,
+   "extracted": 113,
+   "ok": true,
+   "scope": "2026-02-26",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 50,
+   "extracted": 50,
+   "ok": true,
+   "scope": "2026-02-25",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 101,
+   "extracted": 101,
+   "ok": true,
+   "scope": "2026-02-24",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 86,
+   "extracted": 86,
+   "ok": true,
+   "scope": "2026-02-23",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 67,
+   "extracted": 67,
+   "ok": true,
+   "scope": "2026-02-22",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 67,
+   "extracted": 67,
+   "ok": true,
+   "scope": "2026-02-21",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 67,
+   "extracted": 67,
+   "ok": true,
+   "scope": "2026-02-20",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 100,
+   "extracted": 100,
+   "ok": true,
+   "scope": "2026-02-19",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 66,
+   "extracted": 66,
+   "ok": true,
+   "scope": "2026-02-18",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 135,
+   "extracted": 135,
+   "ok": true,
+   "scope": "2026-02-17",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 55,
+   "extracted": 55,
+   "ok": true,
+   "scope": "2026-02-16",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 66,
+   "extracted": 66,
+   "ok": true,
+   "scope": "2026-02-15",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 66,
+   "extracted": 66,
+   "ok": true,
+   "scope": "2026-02-14",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 66,
+   "extracted": 66,
+   "ok": true,
+   "scope": "2026-02-13",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 101,
+   "extracted": 101,
+   "ok": true,
+   "scope": "2026-02-12",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 47,
+   "extracted": 47,
+   "ok": true,
+   "scope": "2026-02-11",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 144,
+   "extracted": 144,
+   "ok": true,
+   "scope": "2026-02-10",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 59,
+   "extracted": 59,
+   "ok": true,
+   "scope": "2026-02-09",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 69,
+   "extracted": 69,
+   "ok": true,
+   "scope": "2026-02-08",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 69,
+   "extracted": 69,
+   "ok": true,
+   "scope": "2026-02-07",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 69,
+   "extracted": 69,
+   "ok": true,
+   "scope": "2026-02-06",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 42,
+   "extracted": 42,
+   "ok": true,
+   "scope": "2026-02-05",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 58,
+   "extracted": 58,
+   "ok": true,
+   "scope": "2026-02-04",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 92,
+   "extracted": 92,
+   "ok": true,
+   "scope": "2026-02-03",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 64,
+   "extracted": 64,
+   "ok": true,
+   "scope": "2026-02-02",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 64,
+   "extracted": 64,
+   "ok": true,
+   "scope": "2026-02-01",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 64,
+   "extracted": 64,
+   "ok": true,
+   "scope": "2026-01-31",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 64,
+   "extracted": 64,
+   "ok": true,
+   "scope": "2026-01-30",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 95,
+   "extracted": 95,
+   "ok": true,
+   "scope": "2026-01-29",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 50,
+   "extracted": 50,
+   "ok": true,
+   "scope": "2026-01-28",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 100,
+   "extracted": 100,
+   "ok": true,
+   "scope": "2026-01-27",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 29,
+   "extracted": 29,
+   "ok": true,
+   "scope": "2026-01-26",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 53,
+   "extracted": 53,
+   "ok": true,
+   "scope": "2026-01-25",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 53,
+   "extracted": 53,
+   "ok": true,
+   "scope": "2026-01-24",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 53,
+   "extracted": 53,
+   "ok": true,
+   "scope": "2026-01-23",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 71,
+   "extracted": 71,
+   "ok": true,
+   "scope": "2026-01-22",
+   "source_id": "mx.dof"
+  }
+ ],
+ "errors": [
+  "mx.dof: request budget reached (continues next run)"
+ ],
+ "finished_at": "2026-10-20T05:16:08Z",
+ "invisible_chars_removed": 0,
+ "planned_sources": {
+  "mx.banxico-sie": "API requires a token; owner decision",
+  "mx.conamer-cnartys": "catalogonacional.gob.mx answers robots.txt with 403 and cna.conamer.gob.mx does not resolve (2026-10-19).",
+  "mx.congresos-locales": "32 different sites and formats; the OJN compilation (mx.ojn-estatal) covers state legislation meanwhile",
+  "mx.datos-gob": "robots.txt disallows /api/ and asks Crawl-Delay 10; no bulk export found (data.json, catalog.json: 404). Needs an operator-approved export or permission.",
+  "mx.inegi": "API requires a token; owner decision",
+  "mx.normas-nom-nmx": "www.sinec.gob.mx and sinec.gob.mx do not resolve (2026-10-19); the OJN NOM catalog page is from 2014. NOMs, PROY-NOMs and comment responses are catalogued from the DOF (doc_type NORMA OFICIAL MEXICANA, PROYECTO DE NORMA OFICIAL MEXICANA, RESPUESTA A COMENTARIOS). NMX texts are often sold: metadata only.",
+  "mx.periodicos-oficiales-estatales": "32 different sites and formats; one adapter per format",
+  "mx.scjn-sjf": "sjf2.scjn.gob.mx answers robots.txt with 403 (JSON, looks like a firewall), 2026-10-19; access method and terms not yet reviewed. Sentences of the SCJN Pleno published in the DOF are already catalogued (doc_type SENTENCIA).",
+  "mx.tratados-sre": "cja.sre.gob.mx/tratadosmexico serves a Radware bot-protection challenge page (2026-10-19); bot protection is never bypassed. Needs an official export or operator permission. The OJN treaty list is a 2012 compilation (stale), not used as primary."
+ },
+ "quarantined": {},
+ "raw_bundle": "raw-mx-2026-10-19-dof.tar",
+ "raw_new_files": 3132,
+ "requests_total": 4000,
+ "run_id": "2026-10-20T021508Z",
+ "sources": {
+  "mx.dof": {
+   "days_indexed": 123,
+   "notes_new": 7612,
+   "raw_failed": 20,
+   "raw_robots_disallowed": 0,
+   "raw_skipped_metadata_only": 7262,
+   "raw_stored": 3830,
+   "requests": 4000
+  }
+ },
+ "started_at": "2026-10-20T02:15:08Z"
+}
