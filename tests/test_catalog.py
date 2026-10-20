@@ -212,6 +212,15 @@ class SidofParser(unittest.TestCase):
         self.assertEqual(items[0]['issuer'], 'SECRETARIA DE HACIENDA Y CREDITO PUBLICO')
         self.assertNotIn('5801477', {i['native_id'] for i in items})  # 'top notes' carousel link from another day
 
+    def test_publication_date_is_the_editions_own_date(self):
+        # Regression 2026-10-20: the Saturday page shows Friday's edition; notes got Sunday's date in the catalog.
+        sat = (FIX / 'sidof_day_2026-10-17_saturday_mirror.html').read_text(encoding='utf-8')
+        self.assertEqual(sidof.edition_dates(sat).get('MATUTINA'), '2026-10-16')
+        items = sidof.parse_day(sat)
+        self.assertTrue(items and all(i['edition_date'] == '2026-10-16' for i in items))
+        fri = (FIX / 'sidof_day_2026-10-16_two_editions.html').read_text(encoding='utf-8')
+        self.assertEqual({i['edition_date'] for i in sidof.parse_day(fri)}, {'2026-10-16'})
+
     def test_reconciliation_detects_structure_drift(self):
         # The 2026-10-15 failure mode: the page structure changes, the parser silently extracts fewer notes,
         # and only the independent count (official class on the page) shows it.
@@ -438,3 +447,14 @@ class Concurrency(unittest.TestCase):
         page = (FIX / 'sidof_day_2026-10-16_two_editions.html').read_text(encoding='utf-8')
         page = page.replace('SECRETARIA DE HACIENDA Y CREDITO PUBLICO </span>', ' </span>', 1)
         self.assertIsNone(sidof.parse_day(page)[0]['issuer'])
+
+
+class Requeue(unittest.TestCase):
+    def test_day_with_missing_notes_is_read_again(self):
+        # 2026-10-19: 3 DOF notes were quarantined; their days stayed 'indexed', so the notes would never come back.
+        from rg.catalog.run import requeue_short_days
+        days = {'2026-10-01': {'notes': 2}, '2026-10-02': {'notes': 1}, '2026-10-03': {'notes': 5, 'edition': '2026-10-02'}}
+        entries = [{'source_id': 'mx.dof', 'dates': {'published': '2026-10-01'}},
+                   {'source_id': 'mx.dof', 'dates': {'published': '2026-10-02'}}]
+        self.assertEqual(requeue_short_days(days, entries, 'mx.dof'), ['2026-10-01'])
+        self.assertEqual(list(days), ['2026-10-02', '2026-10-03'])  # the mirror day (edition of 10-02) is not requeued

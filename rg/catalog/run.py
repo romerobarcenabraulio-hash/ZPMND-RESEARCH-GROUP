@@ -44,6 +44,21 @@ def recategorize(entries):
             e['category']['doc_type'] = doc_type(e['title'])
 
 
+def requeue_short_days(days, entries, source_id):
+    """Days whose catalog has fewer notes than the day page listed (e.g. a quarantined note) are dropped from the
+    state so the next window reads them again: a quarantine never loses a note silently. Returns the requeued days."""
+    have = {}
+    for e in entries:
+        if e['source_id'] == source_id:
+            d = e['dates'].get('published')
+            have[d] = have.get(d, 0) + 1
+    # Only a day that owns its edition owns its notes; a weekend page mirroring Friday is never 'short'.
+    short = sorted(d for d, info in days.items() if info.get('edition', d) == d and have.get(d, 0) < info.get('notes', 0))
+    for d in short:
+        del days[d]
+    return short
+
+
 def host_groups(sources):
     """Group sources by the hosts they hit; groups run in parallel, members of a group run in sequence."""
     groups = defaultdict(list)
@@ -118,15 +133,17 @@ class Run:
         f = self._fetcher(src)
         st = self.catalog.state.setdefault(src['source_id'], {'days': {}})
         days = st['days']
+        requeued = requeue_short_days(days, self.catalog.snapshot(src['source_id']), src['source_id'])
+        stats_requeued = len(requeued)
         floor = date.fromisoformat(src['backfill_floor'])
         start = dof_window_start(days, self.today, self.forward_days)
         forward = [start + timedelta(days=i) for i in range((self.today - start).days + 1)]
         oldest = date.fromisoformat(min(days)) if days else start
         backfill = [oldest - timedelta(days=i) for i in range(1, self.index_days + 1) if oldest - timedelta(days=i) >= floor]
-        stats = {'days_indexed': 0, 'notes_new': 0, 'raw_stored': 0, 'raw_skipped_metadata_only': 0,
+        stats = {'days_requeued': stats_requeued, 'days_indexed': 0, 'notes_new': 0, 'raw_stored': 0, 'raw_skipped_metadata_only': 0,
                  'raw_robots_disallowed': 0, 'raw_failed': 0}
         try:
-            for day in forward + backfill:
+            for day in sorted({date.fromisoformat(d) for d in requeued}) + forward + backfill:
                 key = day.isoformat()
                 if key in days and day < self.today - timedelta(days=2):
                     continue  # closed day already indexed; the last 3 days are re-read for late notes
@@ -148,7 +165,7 @@ class Run:
                         'url': sidof.note_url(src['base_url'], it['native_id']),
                         'category': {**src['category'], 'edition': it['edition'], 'section': it['section'],
                                      'branch': it['branch'], 'issuer': it['issuer'], 'doc_type': dof_doc_type(it['title'], it['branch'])},
-                        'dates': {'published': key},
+                        'dates': {'published': it['edition_date'] or key},
                         'raw_status': old['raw_status'] if old else ('metadata_only' if meta_only else 'pending'),
                         'first_seen': now_iso(),
                     }
@@ -156,7 +173,8 @@ class Run:
                         if old and k in old:
                             entry[k] = old[k]
                     stats['notes_new'] += self.catalog.upsert(entry)
-                days[key] = {'notes': len(items), 'indexed_at': now_iso()}
+                own = sidof.edition_dates(page).get('MATUTINA') or (items[0]['edition_date'] if items else None) or key
+                days[key] = {'notes': len(items), 'edition': own, 'indexed_at': now_iso()}
                 stats['days_indexed'] += 1
             pending = sorted((e for e in self.catalog.snapshot(src['source_id']) if e['raw_status'] in ('pending', 'failed')),
                              key=lambda e: (e['dates']['published'], e['native_id']), reverse=True)

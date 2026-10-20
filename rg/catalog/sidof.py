@@ -94,15 +94,31 @@ class _DayParser(HTMLParser):
             self._capture[1].append(data)
 
 
+_PDF_INPUT = {'MATUTINA': 'pdfMat', 'VESPERTINA': 'pdfVes', 'EXTRAORDINARIA': 'pdfExt'}
+
+
+def edition_dates(page_html):
+    """Official date of each edition shown on the page, from its own PDF link (/showPDF/DD-MM-YYYY/...). A weekend
+    page with no edition of its own shows the last edition, so the requested day is NOT the publication date."""
+    out = {}
+    for edition, input_id in _PDF_INPUT.items():
+        m = re.search(r'id="%s"[^>]*value="[^"]*/showPDF/(\d{2})-(\d{2})-(\d{4})/' % input_id, page_html)
+        if m:
+            out[edition] = f'{m.group(3)}-{m.group(2)}-{m.group(1)}'
+    return out
+
+
 def parse_day(page_html):
-    """Notes of one DOF day in page order; a note listed twice keeps its first position."""
+    """Notes of one DOF page in page order, each with the official date of its edition (None if the page gives
+    none); a note listed twice keeps its first position."""
     p = _DayParser()
     p.feed(page_html)
+    dates = edition_dates(page_html)
     seen, out = set(), []
     for item in p.items:
         if item['native_id'] not in seen:
             seen.add(item['native_id'])
-            out.append(item)
+            out.append({**item, 'edition_date': dates.get(item['edition'])})
     return out
 
 
