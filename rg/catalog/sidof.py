@@ -97,28 +97,59 @@ class _DayParser(HTMLParser):
 _PDF_INPUT = {'MATUTINA': 'pdfMat', 'VESPERTINA': 'pdfVes', 'EXTRAORDINARIA': 'pdfExt'}
 
 
+class _Inputs(HTMLParser):
+    """Every <input id=... value=...> of the page, whatever the attribute order or quoting."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.values = {}
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == 'input' and a.get('id'):
+            self.values.setdefault(a['id'], a.get('value') or '')
+
+
+def _inputs(page_html):
+    p = _Inputs()
+    p.feed(page_html)
+    return p.values
+
+
+def _iso(d, m, y):
+    return f'{y}-{m}-{d}'
+
+
 def edition_dates(page_html):
     """Official date of each edition shown on the page, from its own PDF link (/showPDF/DD-MM-YYYY/...). A weekend
     page with no edition of its own shows the last edition, so the requested day is NOT the publication date."""
-    out = {}
+    values, out = _inputs(page_html), {}
     for edition, input_id in _PDF_INPUT.items():
-        m = re.search(r'id="%s"[^>]*value="[^"]*/showPDF/(\d{2})-(\d{2})-(\d{4})/' % input_id, page_html)
+        m = re.search(r'/showPDF/(\d{2})-(\d{2})-(\d{4})/', values.get(input_id, ''))
         if m:
-            out[edition] = f'{m.group(3)}-{m.group(2)}-{m.group(1)}'
+            out[edition] = _iso(*m.groups())
     return out
 
 
+def page_date(page_html):
+    """The page's own publication date (<input id="fechaPub" value="DD-MM-YYYY">); on a weekend mirror it is the
+    mirrored edition's date. None when the page does not give it: never replaced by the requested day."""
+    m = re.fullmatch(r'(\d{2})-(\d{2})-(\d{4})', _inputs(page_html).get('fechaPub', '').strip())
+    return _iso(*m.groups()) if m else None
+
+
 def parse_day(page_html):
-    """Notes of one DOF page in page order, each with the official date of its edition (None if the page gives
-    none); a note listed twice keeps its first position."""
+    """Notes of one DOF page in page order; a note listed twice keeps its first position. Each note carries the
+    official date of its edition (edition_date, from the edition's PDF link) and 'published': that date, else the
+    page's own date (an edition the page cannot name), else None, which the run reports and never fills in."""
     p = _DayParser()
     p.feed(page_html)
-    dates = edition_dates(page_html)
+    dates, fallback = edition_dates(page_html), page_date(page_html)
     seen, out = set(), []
     for item in p.items:
         if item['native_id'] not in seen:
             seen.add(item['native_id'])
-            out.append({**item, 'edition_date': dates.get(item['edition'])})
+            own = dates.get(item['edition'])
+            out.append({**item, 'edition_date': own, 'published': own or fallback})
     return out
 
 

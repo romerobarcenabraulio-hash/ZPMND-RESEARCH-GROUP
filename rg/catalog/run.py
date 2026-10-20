@@ -44,19 +44,31 @@ def recategorize(entries):
             e['category']['doc_type'] = doc_type(e['title'])
 
 
-def requeue_short_days(days, entries, source_id):
-    """Days whose catalog has fewer notes than the day page listed (e.g. a quarantined note) are dropped from the
-    state so the next window reads them again: a quarantine never loses a note silently. Returns the requeued days."""
-    have = {}
+MAX_REREADS = 3  # a day still short after this many successful re-reads is reported every run instead of re-read
+
+
+def short_days(days, entries, source_id):
+    """Days whose page listed a note that is not in the catalog (a quarantined note, a lost write). Returns
+    (requeue, stuck); the state is never modified, so a re-read that fails leaves the day short and the next run asks
+    again. A row keeps the ids its page listed, so the check needs no date. Rows written before 2026-10-20 have only
+    a count and are judged by the notes dated that day (a weekend mirror of another day's edition is never short). A
+    day re-read MAX_REREADS times and still short (a note failing the schema the same way every run) is 'stuck': it
+    is reported, not re-read forever."""
+    have_ids, have_dated = set(), {}
     for e in entries:
         if e['source_id'] == source_id:
+            have_ids.add(e['native_id'])
             d = e['dates'].get('published')
-            have[d] = have.get(d, 0) + 1
-    # Only a day that owns its edition owns its notes; a weekend page mirroring Friday is never 'short'.
-    short = sorted(d for d, info in days.items() if info.get('edition', d) == d and have.get(d, 0) < info.get('notes', 0))
-    for d in short:
-        del days[d]
-    return short
+            have_dated[d] = have_dated.get(d, 0) + 1
+    requeue, stuck = [], []
+    for d, info in sorted(days.items()):
+        if 'ids' in info:
+            short = len(info['ids']) < info.get('notes', 0) or any(i not in have_ids for i in info['ids'])
+        else:
+            short = info.get('edition', d) == d and have_dated.get(d, 0) < info.get('notes', 0)
+        if short:
+            (stuck if info.get('rereads', 0) >= MAX_REREADS else requeue).append(d)
+    return requeue, stuck
 
 
 def host_groups(sources):
@@ -133,20 +145,23 @@ class Run:
         f = self._fetcher(src)
         st = self.catalog.state.setdefault(src['source_id'], {'days': {}})
         days = st['days']
-        requeued = requeue_short_days(days, self.catalog.snapshot(src['source_id']), src['source_id'])
-        stats_requeued = len(requeued)
+        requeued, stuck = short_days(days, self.catalog.snapshot(src['source_id']), src['source_id'])
+        for d in stuck:
+            self.manifest['errors'].append(f'{src["source_id"]} {d}: listed notes still missing after {MAX_REREADS} re-reads (see quarantined)')
         floor = date.fromisoformat(src['backfill_floor'])
         start = dof_window_start(days, self.today, self.forward_days)
         forward = [start + timedelta(days=i) for i in range((self.today - start).days + 1)]
         oldest = date.fromisoformat(min(days)) if days else start
         backfill = [oldest - timedelta(days=i) for i in range(1, self.index_days + 1) if oldest - timedelta(days=i) >= floor]
-        stats = {'days_requeued': stats_requeued, 'days_indexed': 0, 'notes_new': 0, 'raw_stored': 0, 'raw_skipped_metadata_only': 0,
-                 'raw_robots_disallowed': 0, 'raw_failed': 0}
+        stats = {'days_requeued': len(requeued), 'days_short_unresolved': len(stuck), 'days_indexed': 0, 'notes_new': 0,
+                 'notes_dated_by_page': 0, 'raw_stored': 0, 'raw_skipped_metadata_only': 0, 'raw_robots_disallowed': 0,
+                 'raw_failed': 0}
         try:
-            for day in sorted({date.fromisoformat(d) for d in requeued}) + forward + backfill:
+            again = set(requeued)
+            for day in dict.fromkeys([date.fromisoformat(d) for d in requeued] + forward + backfill):  # each day once
                 key = day.isoformat()
-                if key in days and day < self.today - timedelta(days=2):
-                    continue  # closed day already indexed; the last 3 days are re-read for late notes
+                if key in days and key not in again and day < self.today - timedelta(days=2):
+                    continue  # closed day already indexed and whole; the last 3 days are re-read for late notes
                 r = self._get(f, sidof.day_url(src['base_url'], day))
                 if r.status != 200:
                     self.manifest['errors'].append(f'{src["source_id"]} {key}: HTTP {r.status}')
@@ -154,6 +169,8 @@ class Run:
                 page = r.text()
                 items = sidof.parse_day(page)
                 self._cover(src['source_id'], key, sidof.count_listed(page), len(items))
+                self._cover(src['source_id'], f'{key} fecha oficial', len(items), sum(1 for it in items if it['published']))
+                stats['notes_dated_by_page'] += sum(1 for it in items if it['published'] and not it['edition_date'])
                 for it in items:
                     branch = it['branch'] or ''
                     meta_only = branch in src.get('metadata_only_branches', [])
@@ -165,7 +182,7 @@ class Run:
                         'url': sidof.note_url(src['base_url'], it['native_id']),
                         'category': {**src['category'], 'edition': it['edition'], 'section': it['section'],
                                      'branch': it['branch'], 'issuer': it['issuer'], 'doc_type': dof_doc_type(it['title'], it['branch'])},
-                        'dates': {'published': it['edition_date'] or key},
+                        'dates': {'published': it['published']},  # None fails the schema: quarantined, never guessed
                         'raw_status': old['raw_status'] if old else ('metadata_only' if meta_only else 'pending'),
                         'first_seen': now_iso(),
                     }
@@ -173,8 +190,10 @@ class Run:
                         if old and k in old:
                             entry[k] = old[k]
                     stats['notes_new'] += self.catalog.upsert(entry)
-                own = sidof.edition_dates(page).get('MATUTINA') or (items[0]['edition_date'] if items else None) or key
-                days[key] = {'notes': len(items), 'edition': own, 'indexed_at': now_iso()}
+                prev = days.get(key, {})
+                ids = list(dict.fromkeys(prev.get('ids', []) + [it['native_id'] for it in items]))  # once listed, always owed
+                days[key] = {'ids': ids, 'notes': max(len(ids), prev.get('notes', 0)), 'indexed_at': now_iso(),
+                             'rereads': prev.get('rereads', 0) + 1 if key in again else 0}
                 stats['days_indexed'] += 1
             pending = sorted((e for e in self.catalog.snapshot(src['source_id']) if e['raw_status'] in ('pending', 'failed')),
                              key=lambda e: (e['dates']['published'], e['native_id']), reverse=True)

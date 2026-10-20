@@ -14,10 +14,13 @@ from pathlib import Path
 from rg.catalog import leyesbiblio, sidof
 from rg.catalog.categorize import doc_type, fold
 from rg.catalog.fetch import BudgetExhausted, Fetcher, FetchRefused
+from rg.catalog.run import MAX_REREADS as MAX
 from rg.catalog.store import Catalog, RawStore
 
 FIX = Path(__file__).resolve().parent / 'fixtures'
 BASE = 'https://www.diputados.gob.mx/LeyesBiblio/'
+SAT = 'sidof_day_2026-10-17_saturday_mirror.html'
+SIDOF = 'https://sidof.segob.gob.mx'
 
 
 class FakeResp(io.BytesIO):
@@ -220,6 +223,18 @@ class SidofParser(unittest.TestCase):
         self.assertTrue(items and all(i['edition_date'] == '2026-10-16' for i in items))
         fri = (FIX / 'sidof_day_2026-10-16_two_editions.html').read_text(encoding='utf-8')
         self.assertEqual({i['edition_date'] for i in sidof.parse_day(fri)}, {'2026-10-16'})
+
+    def test_unnamed_edition_falls_back_to_the_page_date_never_the_requested_day(self):
+        # Audit of #6 finding 2: without the edition's PDF link the note took the requested day (a Saturday).
+        sat = (FIX / SAT).read_text(encoding='utf-8')
+        no_pdf = re.sub(r'(id="(pdfMat|pdfVes)"[^>]*value=")[^"]*"', r'\1"', sat)
+        self.assertEqual(sidof.edition_dates(no_pdf), {})
+        self.assertEqual({i['published'] for i in sidof.parse_day(no_pdf)}, {'2026-10-16'})
+        self.assertEqual({i['edition_date'] for i in sidof.parse_day(no_pdf)}, {None})
+
+    def test_edition_dates_ignore_attribute_order_and_quotes(self):
+        page = "<input value='/welcome/showPDF/16-10-2026/MAT/1' type=hidden id='pdfMat'>"
+        self.assertEqual(sidof.edition_dates(page), {'MATUTINA': '2026-10-16'})
 
     def test_reconciliation_detects_structure_drift(self):
         # The 2026-10-15 failure mode: the page structure changes, the parser silently extracts fewer notes,
@@ -450,11 +465,123 @@ class Concurrency(unittest.TestCase):
 
 
 class Requeue(unittest.TestCase):
-    def test_day_with_missing_notes_is_read_again(self):
+    def test_short_days_never_modifies_state(self):
         # 2026-10-19: 3 DOF notes were quarantined; their days stayed 'indexed', so the notes would never come back.
-        from rg.catalog.run import requeue_short_days
-        days = {'2026-10-01': {'notes': 2}, '2026-10-02': {'notes': 1}, '2026-10-03': {'notes': 5, 'edition': '2026-10-02'}}
-        entries = [{'source_id': 'mx.dof', 'dates': {'published': '2026-10-01'}},
-                   {'source_id': 'mx.dof', 'dates': {'published': '2026-10-02'}}]
-        self.assertEqual(requeue_short_days(days, entries, 'mx.dof'), ['2026-10-01'])
-        self.assertEqual(list(days), ['2026-10-02', '2026-10-03'])  # the mirror day (edition of 10-02) is not requeued
+        # Audit of #6 (2026-10-20): deleting the row before the re-read lost the day when the re-read failed.
+        from rg.catalog.run import short_days
+        days = {'2026-10-01': {'notes': 2}, '2026-10-02': {'notes': 1}, '2026-10-03': {'notes': 5, 'edition': '2026-10-02'},
+                '2026-10-04': {'ids': ['1', '2'], 'notes': 2}, '2026-10-05': {'ids': ['1'], 'notes': 1},
+                '2026-10-06': {'ids': ['1'], 'notes': 3}, '2026-10-07': {'ids': ['9'], 'notes': 1, 'rereads': 3}}
+        entries = [{'source_id': 'mx.dof', 'native_id': '1', 'dates': {'published': '2026-10-01'}},
+                   {'source_id': 'mx.dof', 'native_id': '5', 'dates': {'published': '2026-10-02'}}]
+        before = json.dumps(days, sort_keys=True)
+        # 10-01 legacy count short; 10-03 legacy mirror never short; 10-04 id '2' missing; 10-06 fewer ids than its count
+        self.assertEqual(short_days(days, entries, 'mx.dof'), (['2026-10-01', '2026-10-04', '2026-10-06'], ['2026-10-07']))
+        self.assertEqual(json.dumps(days, sort_keys=True), before)
+
+
+class SidofRun(unittest.TestCase):
+    """run_sidof wiring with a fake site (no network): the audit of #6 showed four mutations of it passing the suite."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.routes = {SIDOF + '/robots.txt': (200, b'User-agent: *\nAllow: /\n', {})}
+
+    def run_once(self, run, today=None):
+        from rg.catalog.run import Run
+        src = next(s for s in run.registry['sources'] if s['source_id'] == 'mx.dof')
+        f = Fetcher(['sidof.segob.gob.mx'], opener=self.opener, clock=lambda: 0.0, sleep=lambda s: None, retries=0)
+        run._fetcher = lambda s: f
+        return run.run_sidof(src)
+
+    def make_run(self, today, forward_days=0):
+        from rg.catalog.run import Run
+        self.opener = FakeOpener(self.routes)
+        return Run('MX', self.tmp.name + '/out', self.tmp.name + '/raw', None, today, forward_days, 0)
+
+    def day(self, d):
+        return sidof.day_url(SIDOF, d)
+
+    def fetched(self, d):
+        return sum(1 for c in self.opener.calls if c[0] == self.day(d))
+
+    def entry(self, native_id, published):
+        return {'entry_id': 'mx.dof:' + native_id, 'source_id': 'mx.dof', 'native_id': native_id,
+                'dates': {'published': published}, 'raw_status': 'metadata_only'}
+
+    def test_weekend_mirror_notes_get_the_editions_date(self):
+        from datetime import date
+        sat = date(2026, 10, 17)
+        self.routes[self.day(sat)] = (200, (FIX / SAT).read_bytes(), {})
+        run = self.make_run(sat)
+        self.run_once(run)
+        published = {e['dates']['published'] for e in run.catalog.snapshot('mx.dof')}
+        self.assertEqual(published, {'2026-10-16'})  # never the requested Saturday
+        self.assertTrue(all(c['ok'] for c in run.manifest['coverage']))
+
+    def test_failed_reread_keeps_the_day_owed(self):
+        from datetime import date
+        short = date(2026, 10, 14)
+        self.routes[self.day(short)] = (500, b'', {})
+        run = self.make_run(date(2026, 10, 22))
+        run.catalog.state['mx.dof'] = {'days': {'2026-10-14': {'ids': ['1', '2'], 'notes': 2},
+                                                '2026-10-20': {'ids': [], 'notes': 0}}}
+        run.catalog.entries['mx.dof:1'] = self.entry('1', '2026-10-14')
+        self.run_once(run)
+        self.assertIn('2026-10-14', run.catalog.state['mx.dof']['days'])
+        self.run_once(run)  # the next run asks again
+        self.assertEqual(self.fetched(short), 2)
+
+    def test_empty_reread_never_erases_the_debt(self):
+        from datetime import date
+        from rg.catalog.run import short_days
+        self.routes[self.day(date(2026, 10, 14))] = (200, b'<html><body>mantenimiento</body></html>', {})
+        run = self.make_run(date(2026, 10, 22))
+        self.routes[self.day(date(2026, 10, 15))] = self.routes[self.day(date(2026, 10, 14))]
+        days = {'2026-10-14': {'ids': ['1', '2'], 'notes': 2},
+                '2026-10-15': {'notes': 3},  # a row from before 2026-10-20: only the count is known
+                '2026-10-20': {'ids': [], 'notes': 0}}
+        run.catalog.state['mx.dof'] = {'days': days}
+        run.catalog.entries['mx.dof:1'] = self.entry('1', '2026-10-14')
+        self.run_once(run)
+        self.assertEqual(days['2026-10-14']['ids'], ['1', '2'])
+        self.assertEqual(days['2026-10-15']['notes'], 3)
+        self.assertEqual(short_days(days, run.catalog.snapshot('mx.dof'), 'mx.dof')[0], ['2026-10-14', '2026-10-15'])
+
+    def test_requeued_day_in_the_reread_window_is_fetched_once(self):
+        from datetime import date
+        d = date(2026, 10, 21)
+        self.routes[self.day(d)] = (500, b'', {})
+        run = self.make_run(date(2026, 10, 22))
+        run.catalog.state['mx.dof'] = {'days': {'2026-10-21': {'ids': ['1'], 'notes': 1}}}
+        self.run_once(run)
+        self.assertEqual(self.fetched(d), 1)
+
+    def test_a_day_that_stays_short_is_reported_not_reread_forever(self):
+        from datetime import date
+        sat = date(2026, 10, 17)
+        self.routes[self.day(sat)] = (200, (FIX / SAT).read_bytes(), {})
+        run = self.make_run(date(2026, 10, 25))
+        lost = sidof.parse_day((FIX / SAT).read_text(encoding='utf-8'))[0]['native_id']
+        run.catalog.state['mx.dof'] = {'days': {'2026-10-17': {'ids': [lost], 'notes': 1},
+                                                '2026-10-23': {'ids': [], 'notes': 0}}}
+        for _ in range(MAX + 2):  # the same note is quarantined after every run (deterministic schema failure)
+            self.run_once(run)
+            run.catalog.entries.pop('mx.dof:' + lost, None)
+        self.assertEqual(self.fetched(sat), MAX)
+        self.assertTrue(any('2026-10-17' in e and 're-reads' in e for e in run.manifest['errors']))
+
+    def test_note_without_any_official_date_fails_coverage(self):
+        from datetime import date
+        sat = date(2026, 10, 17)
+        page = (FIX / SAT).read_text(encoding='utf-8')
+        page = re.sub(r'(id="(pdfMat|pdfVes|fechaPub)"[^>]*value=")[^"]*"', r'\1"', page)
+        page = re.sub(r'(value=")[^"]*("[^>]*id="fechaPub")', r'\1\2', page)
+        self.routes[self.day(sat)] = (200, page.encode('utf-8'), {})
+        run = self.make_run(sat)
+        self.run_once(run)
+        self.assertIn('2026-10-17 fecha oficial', [c['scope'] for c in run.manifest['coverage'] if not c['ok']])
+        self.assertTrue(all(e['dates']['published'] is None for e in run.catalog.snapshot('mx.dof')))
+
+
