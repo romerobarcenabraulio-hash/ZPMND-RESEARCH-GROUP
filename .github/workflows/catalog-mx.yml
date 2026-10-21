@@ -11,6 +11,9 @@ on:
       budget:
         description: 'catch-up: max HTTP requests PER SOURCE (empty = registry max_requests). ~1 request/s per host; the run stops sending at 270 min and writes what it gathered'
         default: ''
+      index_days:
+        description: 'catch-up: older DOF days to index this run, toward the 1993 floor (empty = 120)'
+        default: ''
 permissions:
   contents: read
 concurrency:
@@ -41,12 +44,14 @@ jobs:
         id: catalog
         env:
           BUDGET: ${{ inputs.budget }}   # passed as data, never interpolated into the script
+          INDEX_DAYS: ${{ inputs.index_days }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}   # read-only; the Fetcher sends it only to huggingface.co (mx.hf-tesis-scjn)
         run: |
           [[ "$BUDGET" =~ ^[0-9]*$ ]] || { echo "budget must be a number"; exit 2; }
+          [[ "$INDEX_DAYS" =~ ^[0-9]*$ ]] || { echo "index_days must be a number"; exit 2; }
           set +e
           day=$(date -u +%F)
-          python -m rg.catalog.run --country mx --out data --raw raw ${BUDGET:+--budget "$BUDGET"} --deadline-minutes 240
+          python -m rg.catalog.run --country mx --out data --raw raw ${BUDGET:+--budget "$BUDGET"} ${INDEX_DAYS:+--index-days "$INDEX_DAYS"} --deadline-minutes 240
           echo "rc=$?" >> "$GITHUB_OUTPUT"
       - name: Upload raw bundle before the commit, so an entry marked stored always has its bytes published
         env: { GH_TOKEN: '${{ github.token }}' }

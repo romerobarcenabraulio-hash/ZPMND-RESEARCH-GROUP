@@ -1,0 +1,160 @@
+"""NOM lineages from DOF titles (real titles, copied from the DOF) and the historic DOF pages the 1993 floor needs."""
+import unittest
+
+from rg.catalog import normas, sidof
+from tests.test_catalog import FIX
+
+
+def note(i, title, published):
+    return {'entry_id': f'mx.dof:{i}', 'title': title, 'dates': {'published': published}}
+
+
+REAL = [
+    note(1, 'Respuesta a los comentarios recibidos respecto del Proyecto de Norma Oficial Mexicana PROY-NOM-137-SSA1-2024, '
+            'Etiquetado de dispositivos médicos, publicado el 23 de abril de 2024.', '2025-11-03'),
+    note(2, 'Norma Oficial Mexicana NOM-137-SSA1-2025, Etiquetado de dispositivos médicos.', '2026-01-15'),
+    note(3, 'Norma Oficial Mexicana de Emergencia NOM-EM-007-ASEA- 2025, Distribución de Gas Licuado de Petróleo '
+            '(cancela a la NOM-007-SESH-2010 Vehículos para el transporte y distribución de Gas L.P.).', '2025-10-01'),
+    note(4, 'Aviso por el cual se prorroga por un plazo de seis meses la vigencia de la Norma Oficial Mexicana de '
+            'Emergencia NOM-EM-007-ASEA-2025, Distribución de Gas Licuado de Petróleo.', '2026-04-01'),
+    note(5, 'Aviso de consulta pública del Proyecto de Norma Oficial Mexicana PROY-NOM-011-SICT2/2025, Condiciones para '
+            'el transporte de mercancías peligrosas embaladas/ envasadas en cantidades limitadas.', '2025-12-01'),
+    note(6, 'Norma Oficial Mexicana NOM-008-TUR-2022, Que establece los elementos a que deben sujetarse los guías de '
+            'turistas de carácter cultural (cancela la NOM-08-TUR-2002, Que establece los elementos).', '2025-10-20'),
+    note(7, 'Aviso de consulta pública del Proyecto de Modificación de la Norma Oficial Mexicana NOM-157-SEMARNAT-2009, '
+            'Que establece los elementos y procedimientos para instrumentar planes de manejo de residuos mineros.', '2025-10-10'),
+    note(8, 'Fe de erratas a la Norma Oficial Mexicana NOM-037-SICT2-2026, Barreras de protección en carreteras y vías '
+            'urbanas, publicada el 19 de mayo de 2026.', '2026-06-01'),
+    note(9, 'Decreto por el que se reforma la Ley de Infraestructura de la Calidad.', '2025-11-01'),
+    note(10, 'Modificación a la Norma Oficial Mexicana NOM-051-SCFI/SSA1-2010, Especificaciones generales de etiquetado '
+             'para alimentos y bebidas no alcohólicas preenvasados-Información comercial y sanitaria.', '2020-03-27'),
+    note(11, 'Norma Oficial Mexicana NOM-087-ECOL-SSA1-2002, Protección ambiental-Salud ambiental-Residuos peligrosos '
+             'biológico-infecciosos-Clasificación y especificaciones de manejo.', '2003-02-17'),
+    note(12, 'Norma Oficial Mexicana NOM-241- SSA1-2025, Buenas prácticas de fabricación de dispositivos médicos.', '2025-12-01'),
+    note(13, 'Modificación a la Norma Oficial Mexicana NOM-021/3- SCT3-2010, Que establece los requerimientos que deben '
+             'cumplir los helicópteros.', '2026-02-01'),
+]
+
+
+class Lineages(unittest.TestCase):
+    def setUp(self):
+        self.by = {r['lineage']: r for r in normas.lineages(REAL)}
+
+    def test_project_and_standard_with_different_years_share_a_lineage(self):
+        r = self.by['NOM-137-SSA1']
+        self.assertEqual([(n['stage'], n['edition'], n['project']) for n in r['notes']],
+                         [('respuesta_comentarios', 2024, True), ('norma', 2025, False)])
+        self.assertEqual(r['editions'], [2024, 2025])
+
+    def test_printed_variants_of_a_code_are_read_as_printed(self):
+        self.assertIn('NOM-EM-007-ASEA', self.by)                  # 'NOM-EM-007-ASEA- 2025' (space in the source)
+        self.assertIn('NOM-011-SICT2', self.by)                    # 'SICT2/2025' (slash in the source)
+        self.assertEqual(self.by['NOM-011-SICT2']['notes'][0]['code_printed'], 'PROY-NOM-011-SICT2/2025')
+
+    def test_stages_come_from_the_fixed_table(self):
+        stages = {r['lineage']: [n['stage'] for n in r['notes']] for r in self.by.values()}
+        self.assertEqual(stages['NOM-EM-007-ASEA'], ['norma_emergencia', 'prorroga'])
+        self.assertEqual(stages['NOM-157-SEMARNAT'], ['consulta_proyecto_modificacion'])
+        self.assertEqual(stages['NOM-037-SICT2'], ['fe_de_erratas'])
+        self.assertEqual(normas.stage('Nota aclaratoria a la Norma Oficial Mexicana NOM-004-SAGARPA- 2018, Carne'), 'aclaracion')
+        self.assertEqual(normas.stage('Algo sin tabla NOM-001-SE-2020'), 'OTRO')
+
+    def test_compound_issuers_are_read_whole(self):
+        # Audit of #8: codes with a compound issuer (SCFI/SSA1, ECOL-SSA1) were silently dropped.
+        self.assertEqual([n['stage'] for n in self.by['NOM-051-SCFI/SSA1']['notes']], ['modificacion'])
+        self.assertEqual(self.by['NOM-087-ECOL-SSA1']['editions'], [2002])
+        self.assertIn('NOM-241-SSA1', self.by)         # space after the number, as printed
+        self.assertIn('NOM-021/3-SCT3', self.by)       # sub-number, as printed
+
+    def test_spaces_inside_a_compound_issuer_do_not_split_the_lineage(self):
+        # Audit of #8 (REVISE 198ab49): the strip matched a literal backslash, not whitespace.
+        spaced = [note(30, 'Aviso de cancelación de la Norma Oficial Mexicana NOM-051-SCFI/ SSA1-2010, Especificaciones.', '2026-05-01'),
+                  note(31, 'Aclaración a la Norma Oficial Mexicana NOM-087-ECOL - SSA1-2002, Protección ambiental.', '2026-05-02')]
+        by = {r['lineage']: r for r in normas.lineages(REAL + spaced)}
+        self.assertEqual([n['entry_id'] for n in by['NOM-051-SCFI/SSA1']['notes']], ['mx.dof:10', 'mx.dof:30'])
+        self.assertEqual([n['entry_id'] for n in by['NOM-087-ECOL-SSA1']['notes']], ['mx.dof:11', 'mx.dof:31'])
+        self.assertEqual([k for k in by if ' ' in k], [])
+
+    def test_a_title_that_names_a_nom_but_yields_no_code_is_reported(self):
+        odd = [note(20, 'Aviso de la NOM-5-XX-, texto truncado en la fuente.', '2026-01-01')]
+        self.assertEqual(normas.unparsed(REAL + odd), ['mx.dof:20'])
+        self.assertEqual(normas.unparsed(REAL), [])
+
+    def test_relations_are_copied_from_the_title(self):
+        self.assertEqual([(x['type'], x['to_lineage'], x['to_edition']) for x in self.by['NOM-EM-007-ASEA']['relations']],
+                         [('cancela', 'NOM-007-SESH', 2010)])
+        self.assertEqual([(x['type'], x['to_lineage'], x['to_edition']) for x in self.by['NOM-008-TUR']['relations']],
+                         [('cancela', 'NOM-008-TUR', 2002)])           # '08' as printed, normalized to 008
+        self.assertEqual(self.by['NOM-137-SSA1']['relations'], [])
+
+    def test_titles_without_a_nom_code_are_not_standards(self):
+        self.assertEqual(len(self.by), 10)
+        self.assertFalse(normas.cites_nom(REAL[8]['title']))  # the decree without a NOM code
+        self.assertTrue(normas.cites_nom(REAL[0]['title']))
+
+    def test_written_file_is_sorted_and_complete(self):
+        import json, tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as d:
+            self.assertEqual(normas.write(d, REAL), 10)
+            rows = [json.loads(l) for l in (Path(d) / 'normas' / 'nom.jsonl').read_text(encoding='utf-8').splitlines()]
+            self.assertEqual([r['lineage'] for r in rows], sorted(r['lineage'] for r in rows))
+            self.assertEqual(sum(len(r['notes']) for r in rows), 12)
+
+    def test_the_lineage_file_is_not_read_back_as_catalog_rows(self):
+        # Found while building #13: the run after normas.write died with KeyError 'entry_id' loading nom.jsonl.
+        import tempfile
+        from pathlib import Path
+        from rg.catalog.store import Catalog
+        with tempfile.TemporaryDirectory() as d:
+            normas.write(Path(d) / 'mx', REAL)
+            catalog = Catalog(d, 'mx')
+            self.assertEqual((catalog.entries, catalog.previous(['mx.dof:1'])), ({}, {}))
+
+
+class RawPriority(unittest.TestCase):
+    def test_standards_texts_are_fetched_first_then_newest(self):
+        from rg.catalog.run import raw_priority
+        pending = [note(1, 'Acuerdo por el que se da a conocer algo.', '2026-10-01'),
+                   note(2, 'Norma Oficial Mexicana NOM-137-SSA1-2025, Etiquetado de dispositivos médicos.', '2025-01-01'),
+                   note(3, 'Aviso de algo.', '2026-10-05'), {'entry_id': 'mx.dof:4', 'native_id': '4', 'dates': {}}]
+        for e in pending:
+            e.setdefault('native_id', e['entry_id'].split(':')[1])
+        order = [e['native_id'] for e in sorted(pending, key=raw_priority, reverse=True)]
+        self.assertEqual(order, ['2', '3', '1', '4'])
+
+
+class RunCoverage(unittest.TestCase):
+    def test_a_run_with_an_unreadable_nom_title_is_not_whole(self):
+        import json, tempfile
+        from pathlib import Path
+        from unittest import mock
+        from rg.catalog import run as runmod
+        row = json.loads((FIX / 'catalog_row_ley.json').read_text(encoding='utf-8'))
+        odd = {**row, 'entry_id': 'mx.dof:99', 'native_id': '99', 'source_id': 'mx.dof',
+               'title': 'Aviso relativo a la NOM-5-XX-, texto truncado en la fuente.'}
+
+        def execute(self_, sources):
+            self_.catalog.entries[odd['entry_id']] = odd
+            self_.manifest.update({'requests_total': 0, 'raw_new_files': 0, 'finished_at': 'x'})
+            return self_.manifest
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(runmod.Run, 'execute', execute):
+            rc = runmod.main(['--country', 'mx', '--out', d + '/out', '--raw', d + '/raw', '--today', '2026-10-22'])
+            manifest = json.loads(next((Path(d) / 'out' / 'mx' / 'runs').glob('*.json')).read_text(encoding='utf-8'))
+        self.assertEqual(rc, 3)
+        self.assertIn('mx.dof:99', [x for c in manifest['coverage'] if not c['ok'] for x in c.get('entries', [])])
+
+
+class HistoricDof(unittest.TestCase):
+    def test_pages_back_to_1994_parse_whole_with_their_official_date(self):
+        # The 1993 floor depends on SIDOF serving old days in the same format (checked 2026-10-20: 1994, 1999).
+        for name, day, listed in (('sidof_day_1999-03-01_historic.html', '1999-03-01', 58),
+                                  ('sidof_day_1994-06-02_historic.html', '1994-06-02', 39)):
+            page = (FIX / name).read_text(encoding='utf-8', errors='replace')
+            items = sidof.parse_day(page)
+            self.assertEqual((len(items), sidof.count_listed(page)), (listed, listed), name)
+            self.assertEqual({i['published'] for i in items}, {day}, name)
+
+
+if __name__ == '__main__':
+    unittest.main()

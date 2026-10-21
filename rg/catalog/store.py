@@ -26,6 +26,7 @@ TREE_LEVELS = (('país', lambda e: e['country']),
                ('dependencia', lambda e: e['category'].get('issuer')),
                ('tipo', lambda e: e['category']['doc_type']))
 NO_DATA = '(sin dato en la fuente)'
+DERIVED = ('normas',)  # folders of derived views rewritten every run: their lines are never read back as rows
 
 
 def build_tree(entries):
@@ -82,12 +83,18 @@ class RawStore:
         return rel
 
 
+def row_files(d):
+    """Catalog row files under d: every *.jsonl except the derived views (DERIVED), which are never rows."""
+    d = Path(d)
+    return [f for f in sorted(d.rglob('*.jsonl')) if f.relative_to(d).parts[0] not in DERIVED]
+
+
 class Catalog:
     def __init__(self, root, country):
         self.dir = Path(root) / country.lower()
         self.entries = {}
         self.lock = threading.RLock()  # sources run in parallel threads; every read-for-iteration and write takes it
-        for f in sorted(self.dir.rglob('*.jsonl')):
+        for f in row_files(self.dir):
             for line in f.read_text(encoding='utf-8').splitlines():
                 if line.strip():
                     e = json.loads(line)
@@ -100,7 +107,7 @@ class Catalog:
         out, want = {}, set(entry_ids)
         if not want:
             return out
-        for f in sorted(self.dir.rglob('*.jsonl')):
+        for f in row_files(self.dir):
             for line in f.read_text(encoding='utf-8').splitlines():
                 if line.strip():
                     e = json.loads(line)

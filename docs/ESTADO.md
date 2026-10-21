@@ -6,6 +6,7 @@ Página única para saber qué hay, dónde está y qué sigue. Se actualiza en c
 
 | Qué | Dónde |
 |---|---|
+| **Checklist vivo (dónde vamos)** | https://claude.ai/artifact/92UhMa3fGuDP42tqkw71ip (informativo, fuera del repo: no es fuente ni evidencia) |
 | Código, reglas, contrato | rama `main` (al fusionar #1, #3 y #4); modos de trabajo en #2 |
 | Catálogo de México (datos) | rama `catalog`, carpeta `mx/`. Para navegar: `mx/ARBOL.md` |
 | Crudos (bytes originales) | release `raw-mx`, `.tar` con rutas `sha256/<2>/<sha256>.<ext>` y su `.sha256` |

@@ -14,6 +14,15 @@ El catálogo extrae información oficial pública por país. La guarda **cruda**
 
 "Cálculo" (valores oficiales para calcular: tipo de cambio, INPC, UDIS, tasas, salarios mínimos, UMA) se publica en el DOF y queda en la categoría `INDICADOR ECONOMICO`. Las NOM y sus proyectos también salen del DOF.
 
+## Normas Oficiales Mexicanas (NOM): linajes desde el DOF
+
+Cada corrida escribe `mx/normas/nom.jsonl`: una línea por linaje (el código sin su año, p. ej. `NOM-137-SSA1`), con
+todas las notas del DOF que lo nombran, ordenadas por fecha oficial. La etapa de cada nota (proyecto, consulta pública,
+respuesta a comentarios, norma, aclaración, prórroga, cancelación…) sale de una tabla fija de aperturas del título;
+sin coincidencia es `OTRO`. Las relaciones (`cancela`, `menciona`) se copian del propio título. No se calcula la
+vigencia. El piso del DOF es 1993 (Ley Federal sobre Metrología y Normalización, 1992): SIDOF sirve esos días con el
+mismo formato. Los textos de las notas que citan una NOM se descargan primero.
+
 ## Tesis de la SCJN: fuente secundaria (`mx.hf-tesis-scjn`)
 
 El Semanario de la SCJN responde 403 a robots.txt y no se rodea. Mientras tanto las tesis entran desde el dataset

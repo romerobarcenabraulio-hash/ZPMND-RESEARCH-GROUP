@@ -24,7 +24,7 @@
       "metadata_only_branches": [
         "AVISOS JUDICIALES Y GENERALES"
       ],
-      "backfill_floor": "2024-01-01",
+      "backfill_floor": "1993-01-01",
       "note": "dof.gob.mx disallows /nota_detalle.php for robots and serves a certificate that does not match www.dof.gob.mx; SIDOF is the official system and allows notes except those listed in its robots.txt.",
       "max_requests": 1500
     },
