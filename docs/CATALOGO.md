@@ -10,8 +10,36 @@ El catálogo extrae información oficial pública por país. La guarda **cruda**
 | `mx.leyes-federales` (Cámara de Diputados) | Constitución, leyes y códigos federales vigentes y abrogados | listado oficial: fechas impresas, estado impreso (VIGENTE/ABROGADO), historial de reformas | PDF del texto vigente (columna "TEXTO VIGENTE") |
 | `mx.reglamentos-federales` (Cámara de Diputados) | Reglamentos de leyes federales | igual que las leyes | PDF del texto vigente |
 | `mx.ojn-estatal` (Orden Jurídico Nacional, SEGOB) | Legislación de las 32 entidades, por poder | tipo oficial impreso por la fuente, poder, entidad, fechas, estatus de la ficha | documento oficial (mayormente .doc) |
+| `mx.hf-tesis-scjn` (**fuente secundaria**, dataset de Hugging Face) | Tesis aisladas y jurisprudencia del Semanario Judicial de la Federación | lo que imprime cada tesis: época, instancia, materias, número de tesis, tipo (tabla fija), fecha de publicación impresa | el archivo del dataset (JSON de 3.6 GB), verificado contra su sha256 |
 
 "Cálculo" (valores oficiales para calcular: tipo de cambio, INPC, UDIS, tasas, salarios mínimos, UMA) se publica en el DOF y queda en la categoría `INDICADOR ECONOMICO`. Las NOM y sus proyectos también salen del DOF.
+
+## Tesis de la SCJN: fuente secundaria (`mx.hf-tesis-scjn`)
+
+El Semanario de la SCJN responde 403 a robots.txt y no se rodea. Mientras tanto las tesis entran desde el dataset
+`ayaxrojo/tesis_scjn_v5_complete` de Hugging Face (CC-BY-4.0, con acceso condicionado). Es una fuente **secundaria**:
+cada registro lleva su procedencia (`source_type: dataset`, `role: secondary` en el registro de fuentes) y se coteja con
+la SCJN cuando la fuente primaria abra.
+
+- **Acceso:** el token de solo lectura `HF_TOKEN` es un secreto del repo. Llega al paso del catálogo como variable de
+  entorno y el `Fetcher` lo manda solo a `huggingface.co`. La redirección firmada a `us.aws.cdn.hf.co` va sin token, y
+  su firma nunca se escribe en el manifiesto. Los dos hosts pasan por robots.txt: `huggingface.co` permite todo y
+  `us.aws.cdn.hf.co` no publica robots.txt (404) (revisado el 2026-10-21).
+- **Descarga:** un solo archivo JSON de 3,638,883,446 bytes. Es una exportación de Qdrant y trae un vector de 4096
+  números por tesis. Se baja a disco por partes y se compara con el sha256 que publica la API del Hub. Se vuelve a bajar
+  solo si cambia ese sha256 o si falta en el catálogo alguna tesis que produjo.
+- **Lectura:** el archivo se lee como flujo, una tesis a la vez, y los campos se copian tal cual: registro digital →
+  `native_id`, rubro → `title`, época → `edition`, materias → `section`, instancia → `issuer`, número de tesis →
+  `list_marker`, tipo → `type_printed`. `doc_type` sale de una tabla fija sobre el tipo impreso (Aislada, Jurisprudencia;
+  otro = OTRO). La única fecha es la impresa en "Esta tesis se publicó el …". Las de la Novena Época solo traen mes y
+  año, así que quedan sin fecha.
+- **Cuadre:** el `total_points` del propio archivo (59,678) debe ser igual a las filas leídas. Además, los registros
+  digitales distintos deben ser iguales a los catalogados con ese archivo. Una fila repetida en la fuente se cuenta
+  (`source_repeated_rows`) y se queda la primera.
+- **Partición:** las ~60 mil tesis se guardan en `hf-tesis-scjn/<registro // 10000>.jsonl`. Un solo archivo pasaría el
+  límite de 100 MB de GitHub.
+- **Qué no se usa:** las estadísticas de la ficha del dataset no coinciden con las filas (las filas muestreadas son de
+  la Novena y la Décima Época). Solo se usan las filas.
 
 ## Reglas que no se negocian
 
@@ -59,7 +87,7 @@ En cada corrida:
 
 Están en `sources/mx.json` con su causa observada:
 - datos.gob.mx: robots prohíbe `/api/`.
-- SCJN: robots responde 403.
+- SCJN: robots responde 403. Mientras tanto, las tesis entran por la fuente secundaria `mx.hf-tesis-scjn`.
 - Catálogo de NOM: el dominio ya no resuelve; las NOM se cubren desde el DOF.
 - CONAMER: robots responde 403 y el dominio no resuelve.
 - Periódicos oficiales estatales y congresos locales: 32 formatos distintos.

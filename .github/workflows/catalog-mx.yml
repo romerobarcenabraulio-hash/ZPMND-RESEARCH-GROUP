@@ -1,7 +1,8 @@
 name: catalog-mx
 # Every 3 days: index what is new in Mexico's tier-1 sources, fetch raw within budget, reconcile coverage.
 # Code comes from the default branch; the catalog lives on the data branch `catalog`; raw bytes go to release `raw-mx`.
-# The bot never writes code. Deterministic acquisition only: no model, no agent, no credentials beyond GITHUB_TOKEN.
+# The bot never writes code. Deterministic acquisition only: no model, no agent, no credentials beyond GITHUB_TOKEN and
+# the read-only HF_TOKEN of the gated tesis dataset (an env var of the catalog step only).
 on:
   schedule:
     - cron: '0 11 */3 * *'   # 05:00 America/Mexico_City on days 1, 4, 7, ... 31 (day 31 -> 1 is one day apart)
@@ -40,6 +41,7 @@ jobs:
         id: catalog
         env:
           BUDGET: ${{ inputs.budget }}   # passed as data, never interpolated into the script
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}   # read-only; the Fetcher sends it only to huggingface.co (mx.hf-tesis-scjn)
         run: |
           [[ "$BUDGET" =~ ^[0-9]*$ ]] || { echo "budget must be a number"; exit 2; }
           set +e

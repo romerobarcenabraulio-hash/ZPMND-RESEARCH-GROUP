@@ -132,6 +132,10 @@
           "type": "integer",
           "minimum": 1,
           "maximum": 32
+        },
+        "type_printed": {
+          "description": "The document type exactly as the source prints it (e.g. a tesis' 'Aislada' / 'Jurisprudencia'); doc_type is recomputed from it every run with a fixed table.",
+          "$ref": "#/$defs/label"
         }
       }
     },
@@ -151,7 +155,7 @@
     },
     "raw_path": {
       "type": "string",
-      "pattern": "^sha256/[0-9a-f]{2}/[0-9a-f]{64}\\.(html|htm|pdf|doc|docx|rtf|bin)$"
+      "pattern": "^sha256/[0-9a-f]{2}/[0-9a-f]{64}\\.(html|htm|pdf|doc|docx|rtf|json|bin)$"
     },
     "artifact": {
       "$ref": "source_artifact.schema.json"
@@ -176,7 +180,7 @@
           },
           "raw_path": {
             "type": "string",
-            "pattern": "^sha256/[0-9a-f]{2}/[0-9a-f]{64}\\.(html|htm|pdf|doc|docx|rtf|bin)$"
+            "pattern": "^sha256/[0-9a-f]{2}/[0-9a-f]{64}\\.(html|htm|pdf|doc|docx|rtf|json|bin)$"
           },
           "last_modified": {
             "type": [

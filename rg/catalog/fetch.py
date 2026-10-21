@@ -1,19 +1,24 @@
 """Polite, fail-closed HTTP fetcher for deterministic acquisition (no agent, no model).
 
-Guards, each with a test in tests/test_catalog.py (FetchGuards) or tests/test_run_guards.py:
+Guards, each with a test in tests/test_catalog.py (FetchGuards), tests/test_run_guards.py or tests/test_hf_tesis.py:
 - only https URLs whose host is in the source's allowlist; redirects are re-checked the same way;
 - robots.txt is honored for every URL (other 4xx = allowed; 401/403/429, 3xx, 5xx or unreachable = everything
   disallowed; only a rule read from a 200 robots.txt is recorded as 'disallowed');
 - at least `min_interval` seconds between requests to one host (or the site's Crawl-delay if larger);
 - TLS is always verified; responses larger than `max_bytes` are refused; a per-run request budget and an optional
-  deadline stop the run (BudgetExhausted); network errors, including a non-ASCII URL, are status 0, never a crash.
+  deadline stop the run (BudgetExhausted); network errors, including a non-ASCII URL, are status 0, never a crash;
+- a credential (`auth`) goes only to the host of the URL asked for: never to a host reached by redirect (a CDN with a
+  signed URL) and never to robots.txt;
+- a large body can be streamed to disk (`sink`, a FileSink) with its own size cap; every attempt starts it empty.
 """
+import hashlib
 import http.client
 import time
 import urllib.error
 import urllib.request
 import urllib.robotparser
 from dataclasses import dataclass, field
+from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
 USER_AGENT = 'ZPMND-RESEARCH-GROUP-catalog/0.1 (deterministic catalog; honors robots.txt)'
@@ -59,6 +64,29 @@ class Response:
         return decode_html(self.body, self.charset)
 
 
+class FileSink:
+    """Destination for a body too large to keep in memory: written to `path` and hashed on the way, at most `limit`
+    bytes. reset() empties it; the Fetcher calls it before every attempt, so a retry never appends to a cut body."""
+    def __init__(self, path, limit):
+        self.path, self.limit = Path(path), limit
+        self.reset()
+
+    def reset(self):
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.write_bytes(b'')
+        self._hash, self.bytes = hashlib.sha256(), 0
+
+    def write(self, chunk):
+        with open(self.path, 'ab') as fh:
+            fh.write(chunk)
+        self._hash.update(chunk)
+        self.bytes += len(chunk)
+
+    @property
+    def sha256(self):
+        return self._hash.hexdigest()
+
+
 class _NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, *args, **kwargs):
         return None  # redirects are followed by Fetcher.get after re-checking host and robots
@@ -97,7 +125,7 @@ class Fetcher:
             self._sleep(wait)
         self._last[host] = self._clock()
 
-    def _send(self, url, headers):
+    def _send(self, url, headers, sink=None):
         if self.used >= self.budget:
             raise BudgetExhausted(f'request budget of {self.budget} used')
         if self.deadline is not None and self._clock() >= self.deadline:
@@ -107,7 +135,15 @@ class Fetcher:
         try:
             with self._opener.open(req, timeout=self.timeout) as r:
                 status, hdrs, stream = r.status, r.headers, r
-                body = stream.read(self.max_bytes + 1)
+                if sink is not None and status == 200:
+                    sink.reset()  # a retry after a cut body starts from zero
+                    while chunk := stream.read(1 << 20):
+                        if sink.bytes + len(chunk) > sink.limit:
+                            raise FetchRefused(f'response larger than {sink.limit} bytes: {url}')
+                        sink.write(chunk)
+                    body = b''
+                else:
+                    body = stream.read(self.max_bytes + 1)
         except urllib.error.HTTPError as e:
             with e:
                 status, hdrs, body = e.code, e.headers, e.read(self.max_bytes + 1) if e.fp else b''
@@ -151,8 +187,10 @@ class Fetcher:
         rp = self._robots_for(parts)
         return self._robots_status.get(f'{parts.scheme}://{parts.netloc}') == 200 and not rp.can_fetch(USER_AGENT, url)
 
-    def get(self, url, etag=None, last_modified=None, max_redirects=5):
-        """GET with guards. Returns Response; status 304 means not modified."""
+    def get(self, url, etag=None, last_modified=None, max_redirects=5, auth=None, sink=None):
+        """GET with guards. Returns Response; status 304 means not modified. `auth` is an Authorization value sent only
+        to the host of `url`; with `sink`, a 200 body goes to the FileSink and Response.body is empty."""
+        origin = self._check_url(url).hostname
         for _ in range(max_redirects + 1):
             parts = self._check_url(url)
             robots = self._robots_for(parts)
@@ -160,13 +198,15 @@ class Fetcher:
                 raise FetchRefused(f'robots.txt disallows {url}')
             delay = max(self.min_interval, float(robots.crawl_delay(USER_AGENT) or 0))
             headers = {}
+            if auth and parts.hostname == origin:  # a redirect to another host (a signed CDN URL) gets no credential
+                headers['Authorization'] = auth
             if etag:
                 headers['If-None-Match'] = etag
             if last_modified:
                 headers['If-Modified-Since'] = last_modified
             for attempt in range(self.retries + 1):
                 self._pace(parts.hostname, delay * (attempt + 1))
-                r = self._send(url, headers)
+                r = self._send(url, headers, sink)
                 if r.status != 0 and r.status < 500:
                     break
             if r.status in (301, 302, 303, 307, 308) and r.headers.get('location'):
