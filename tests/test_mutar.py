@@ -20,6 +20,11 @@ class Shards(unittest.TestCase):
             self.assertEqual(sorted(seen), list(range(1, len(items) + 1)), n)   # each mutant exactly once
             self.assertTrue(all(items[i - 1] == m for p in parts for i, m in p))
 
+    def test_the_mutant_list_is_sorted_without_duplicates(self):
+        # Each PR inserts its mutants in place; appending at the end made parallel PRs conflict on one line (2026-10-21).
+        self.assertEqual(mutar.MUT, sorted(mutar.MUT))
+        self.assertEqual(len(mutar.MUT), len(set(mutar.MUT)))
+
     def test_a_bad_shard_spec_stops_the_run(self):
         for spec in ('4/4', '-1/4', '1/0', 'x', '1'):
             with self.assertRaises(ValueError, msg=spec):
