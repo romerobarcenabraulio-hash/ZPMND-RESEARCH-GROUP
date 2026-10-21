@@ -28,6 +28,11 @@ jobs:
         with: { ref: catalog, path: data, persist-credentials: false }  # no write token on disk while hostile pages are parsed
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with: { python-version: '3.12' }
+      - name: Free runner disk (the raw corpus and its parts need the room)
+        run: |
+          df -h / | tail -1
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h / | tail -1
       - run: pip install -r requirements-dev.txt
       - name: Tests before touching any source
         run: python -m unittest discover -s tests -t .
@@ -39,18 +44,23 @@ jobs:
           [[ "$BUDGET" =~ ^[0-9]*$ ]] || { echo "budget must be a number"; exit 2; }
           set +e
           day=$(date -u +%F)
-          python -m rg.catalog.run --country mx --out data --raw raw ${BUDGET:+--budget "$BUDGET"} \
-            --bundle "raw-mx-${day}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.tar" --deadline-minutes 270  # a re-run gets its own asset name
+          python -m rg.catalog.run --country mx --out data --raw raw ${BUDGET:+--budget "$BUDGET"} --deadline-minutes 240
           echo "rc=$?" >> "$GITHUB_OUTPUT"
       - name: Upload raw bundle before the commit, so an entry marked stored always has its bytes published
         env: { GH_TOKEN: '${{ github.token }}' }
         run: |
-          shopt -s nullglob
-          for f in raw-mx-*.tar; do
-            gh release view raw-mx >/dev/null 2>&1 || gh release create raw-mx --target catalog --title "Raw corpus MX" \
-              --notes "Content-addressed raw files (sha256/<2>/<sha256>.<ext>) from each catalog run; see catalog/mx/runs."
-            if [ "$(stat -c %s "$f")" -gt 1900000000 ]; then split -b 1900m -d "$f" "$f.part"; gh release upload raw-mx "$f".part*; else gh release upload raw-mx "$f"; fi
-          done
+          set -euo pipefail
+          [ -d raw ] && [ -n "$(ls -A raw)" ] || { echo "no new raw files"; exit 0; }
+          # One copy only: stream the tar straight into <=1.9 GB parts, then drop the originals (2026-10-21: the run
+          # that kept raw files, a tar and its parts at once died while packing, with no log).
+          name="raw-mx-$(date -u +%F)-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.tar"  # a re-run gets its own asset name
+          tar -C raw -cf - . | split -b 1900m -d - "$name.part"
+          rm -rf raw
+          sha256sum "$name".part* > "$name.sha256"
+          df -h / | tail -1
+          gh release view raw-mx >/dev/null 2>&1 || gh release create raw-mx --target catalog --title "Raw corpus MX" \
+            --notes "Content-addressed raw files (sha256/<2>/<sha256>.<ext>) from each catalog run; see catalog/mx/runs."
+          gh release upload raw-mx "$name".part* "$name.sha256"
       - name: Commit catalog to the data branch
         env: { RC: '${{ steps.catalog.outputs.rc }}', GH_TOKEN: '${{ github.token }}' }
         run: |
