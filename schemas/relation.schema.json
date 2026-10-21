@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zpmnd-research-group/schemas/relation.schema.json",
+  "title": "Relation candidate (one edge between two instruments)",
+  "description": "RG side of a Goodware canon DependencyGraph edge (PREZIP_DESIGN_CLOSED_SOURCE.md §24). The type comes from a fixed list and the evidence is a verbatim quote of the official text (rule 10); nothing is inferred (rule 3). Direction: from is the instrument that acts (the reglamento that reglamenta; the decree that reforma, adiciona, deroga, abroga or cancela; the text that cita); to is the instrument acted upon. status is always CANDIDATE: what the edge implies is ZPMND's. Checks a schema cannot express live in rg.schemas: from and to differ, and a printed identifier appears verbatim in evidence.quote.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "from", "to", "evidence", "status"],
+  "properties": {
+    "type": { "enum": ["reglamenta", "reforma", "adiciona", "deroga", "abroga", "cancela", "cita"] },
+    "from": { "$ref": "#/$defs/endpoint" },
+    "to": { "$ref": "#/$defs/endpoint" },
+    "evidence": { "$ref": "common.schema.json#/$defs/evidence" },
+    "status": { "const": "CANDIDATE" }
+  },
+  "$defs": {
+    "endpoint": {
+      "description": "Exactly one key: entry_id when the instrument is in the catalog, or printed, the identifier exactly as the official text prints it (title, number or code) when it is not. Never both, never resolved by guess.",
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "maxProperties": 1,
+      "properties": {
+        "entry_id": { "$ref": "catalog_entry.schema.json#/properties/entry_id" },
+        "printed": { "$ref": "common.schema.json#/$defs/short_text" }
+      }
+    }
+  }
+}

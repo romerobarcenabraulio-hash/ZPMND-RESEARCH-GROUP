@@ -68,6 +68,9 @@ and asks its own questions (authority of the source, currency, relation to canon
 - A request that is private, or issued by RESEARCH GROUP.
 - A knowledge demand marked as verified.
 - A raw file stored in the repo without redistribution rights.
+- A ChangeEvent or a relation with any status other than `CANDIDATE`; a ChangeEvent with `semantic_delta` (what a
+  change means is ZPMND's reasoning); an `effective_at` without the quote of its transitorio; a relation type outside
+  the fixed list; an evidence quote without the sha256 of its raw and the pinned extractor that reads it.
 
 ## 5. Order of work (handoff section 41)
 
