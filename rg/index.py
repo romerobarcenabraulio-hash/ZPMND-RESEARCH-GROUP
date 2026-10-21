@@ -15,6 +15,8 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+from .catalog.store import row_files
+
 MODEL = 'BAAI/bge-m3'
 REVISION = '5617a9f61b028005a4858fdac845db406aefb181'  # pinned: Hub sha recorded in RP-2026-10-19-hf-zpmnd
 
@@ -28,7 +30,7 @@ def entry_text(e):
 def load_entries(catalog_dirs):
     rows = {}
     for d in catalog_dirs:
-        for f in sorted(Path(d).rglob('*.jsonl')):
+        for f in row_files(d):  # derived views (store.DERIVED) are not rows
             for line in f.read_text(encoding='utf-8').splitlines():
                 if line.strip():
                     e = json.loads(line)

@@ -10,6 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from rg.catalog.categorize import fold  # noqa: E402
+from rg.catalog.store import row_files  # noqa: E402
 
 NOM = re.compile(r'\bNOM-\d{3}-[A-Z0-9]+-\d{4}\b')
 
@@ -40,7 +41,7 @@ def main(root):
     states = {e['listing'].get('state_code') for e in ojn if e.get('listing')}
     municipalities = {(e['listing'].get('state_code'), e['category'].get('municipality')) for e in ojn
                       if e['source_id'].endswith('municipal') and e['category'].get('municipality')}
-    total = len(load(root, '**/*.jsonl'))
+    total = sum(1 for f in row_files(root) for line in f.read_text(encoding='utf-8').splitlines() if line.strip())
     versioned = sum(1 for e in laws + regs if e.get('versions') and all(v.get('sha256') for v in e['versions']))
     print(json.dumps({
         'reglamentos_ligados_a_su_ley_por_titulo': [linked, len(regs)],

@@ -20,6 +20,15 @@ from pathlib import Path
 R = Path(__file__).resolve().parents[1]
 PY = sys.executable
 MUT = [
+ ('rg/catalog/normas.py', '(\\d{2,3}(?:/\\d+)?)\\s*-\\s*(', '(\\d{2,3})-('),
+ ('rg/catalog/normas.py', '((?:[A-Z0-9]+\\s*[-/]\\s*)*?[A-Z0-9]+)', '([A-Z0-9]+)'),
+ ('rg/catalog/normas.py', "if LOOKS_LIKE.search(fold(e['title'])) and not codes(e['title'])", 'if False'),
+ ('rg/catalog/run.py', "'ok': not missed,", "'ok': True,"),
+ ('rg/catalog/normas.py', 'best = max((p for p in STAGES if t.startswith(p)), key=len, default=None)', 'best = min((p for p in STAGES if t.startswith(p)), key=len, default=None)'),
+ ('rg/catalog/normas.py', "kind = 'cancela' if 'CANCELA' in t[:pos] else 'menciona'", "kind = 'menciona'"),
+ ('rg/catalog/normas.py', "{int(head):03d}{'/' + sub if sub else ''}", '{head}'),
+ ('rg/catalog/normas.py', 'if lineage == subject and ed == edition:', 'if lineage == subject:'),
+ ('rg/catalog/run.py', "return normas.cites_nom(e.get('title') or ''), e['dates']", "return False, e['dates']"),
  ('rg/catalog/run.py', "dict.fromkeys(prev.get('ids', []) + sidof.listed_ids", 'dict.fromkeys(sidof.listed_ids'),
  ('rg/catalog/run.py', "i not in have or not have[i].get('date_source')", "i in have and not have[i].get('date_source')"),
  ('rg/catalog/run.py', "requeued, stuck = short_days(days, self.catalog.snapshot(src['source_id']), src['source_id'], self.today)", 'requeued, stuck = [], []'),
@@ -51,7 +60,7 @@ MUT = [
  ('rg/catalog/ojn.py', '        return date(int(m.group(3)), int(m.group(2)), int(m.group(1))).isoformat()', "        return f'{m.group(3)}-{m.group(2)}-{m.group(1)}'"),
  ('rg/catalog/run.py', "                del e['dates'][k]", '                pass'),
  ('schemas/catalog_entry.schema.json', '(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])', '[0-9]{2}-[0-9]{2}'),
- ('rg/catalog/run.py', "key=lambda e: (e['dates'].get('published') or '', e['native_id'])", "key=lambda e: (e['dates']['published'], e['native_id'])"),
+ ('rg/catalog/run.py', "e['dates'].get('published') or '', e['native_id']\n\n\ndef host_groups", "e['dates']['published'], e['native_id']\n\n\ndef host_groups"),
  ('rg/catalog/run.py', 'for d in sorted(set(owed) | set(stuck)):', 'for d in []:'),
  ('rg/catalog/run.py', "days[key]['withdrawn'] = prev['withdrawn']", 'pass'),
  ('rg/catalog/sidof.py', '        return date(int(y), int(m), int(d)).isoformat()', "        return f'{y}-{m}-{d}'"),
@@ -95,6 +104,10 @@ MUT = [
  ('rg/catalog/run.py', "e['category']['doc_type'] = hf_tesis.doc_type(e.get('listing', {}).get('type_printed'))", 'pass'),
  ('rg/catalog/store.py', "if entry['source_id'].endswith('.hf-tesis-scjn'):", 'if False:'),
  ('.github/workflows/catalog-mx.yml', '          HF_TOKEN: ${{ secrets.HF_TOKEN }}', '          HF_TOKEN_UNUSED: ${{ secrets.HF_TOKEN }}'),
+ # NOM lineages (#8)
+ ('rg/catalog/store.py', "DERIVED = ('normas',)", 'DERIVED = ()'),
+ ('rg/index.py', '        for f in row_files(d):', "        for f in sorted(Path(d).rglob('*.jsonl')):"),
+ ('rg/catalog/normas.py', "        issuer = re.sub(r'\\s+', '', issuer)", '        pass'),
 ]
 
 

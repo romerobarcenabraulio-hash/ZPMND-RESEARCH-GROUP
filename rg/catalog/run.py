@@ -18,7 +18,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import hf_tesis, leyesbiblio, ojn, sidof
+from . import hf_tesis, leyesbiblio, normas, ojn, sidof
 from .categorize import clean_text, doc_type, dof_doc_type, fold
 from .fetch import BudgetExhausted, Fetcher, FetchRefused, FileSink, Response, decode_html
 from .store import Catalog, RawStore
@@ -85,6 +85,12 @@ def short_days(days, entries, source_id, today=None):
             else:
                 requeue.append(d)
     return requeue, stuck
+
+
+def raw_priority(e):
+    """Order for fetching DOF raw texts (highest first): standards first, since their text is what compliance work
+    reads, then the newest."""
+    return normas.cites_nom(e.get('title') or ''), e['dates'].get('published') or '', e['native_id']
 
 
 def host_groups(sources):
@@ -236,7 +242,7 @@ class Run:
                 stats['days_indexed'] += 1
             # robots_disallowed is checked again against today's robots.txt (cached: no request per note).
             pending = sorted((e for e in self.catalog.snapshot(src['source_id']) if e['raw_status'] in ('pending', 'failed', 'robots_disallowed')),
-                             key=lambda e: (e['dates'].get('published') or '', e['native_id']), reverse=True)
+                             key=raw_priority, reverse=True)
             for e in pending:
                 url = sidof.raw_url(src['base_url'], e['native_id'])
                 try:
@@ -663,6 +669,12 @@ def main(argv=None):
     if invalid:
         manifest['errors'].append(f'{len(invalid)} entries quarantined (fail the catalog_entry schema), see quarantined')
     run.catalog.write()
+    if x.country.lower() == 'mx':  # NOM lineages come from the DOF; no other country has them
+        dof = run.catalog.snapshot('mx.dof')
+        manifest['nom_lineages'] = normas.write(run.catalog.dir, dof)
+        missed = normas.unparsed(dof)  # a title that seems to name a NOM must yield a code, or the run is not whole
+        manifest['coverage'].append({'source_id': 'mx.normas', 'scope': 'titulos con NOM sin codigo leido',
+                                     'expected': 0, 'extracted': len(missed), 'ok': not missed, 'entries': missed[:20]})
     run.catalog.write_run(manifest)
     bad = [c for c in manifest['coverage'] if not c['ok']]
     if invalid:
