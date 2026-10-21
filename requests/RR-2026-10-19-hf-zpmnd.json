@@ -1,0 +1,12 @@
+{
+  "request_id": "RR-2026-10-19-hf-zpmnd",
+  "issued_by": "OWNER",
+  "issued_at": "2026-10-19T18:30:00Z",
+  "question": "¿Qué recursos de Hugging Face (modelos, datasets, cómputo) aceleran de verdad a ZPMND sobre conocimiento legal y normativo mexicano: recuperación semántica, reordenamiento, lectura de documentos escaneados, detección de inyección y evaluación? Con licencia, límites y costo de cómputo.",
+  "why_needed": "Braulio pidió usar Hugging Face para acelerar a ZPMND y consolidar la investigación lo antes posible; RG debe entregar candidatos con evidencia, no decisiones.",
+  "affected_component": "plano de conocimiento y evaluación de ZPMND (nombres abstractos)",
+  "desired_evidence": ["fichas oficiales de los modelos y datasets (licencia, idiomas, límites)", "costo y forma de cómputo (CPU, GPU rentada)", "riesgos de licencia (no comercial, acceso condicionado)"],
+  "priority": "P1",
+  "risk_if_wrong": "Adoptar un modelo con licencia no comercial o que no maneja español jurídico; gastar en GPU sin necesidad.",
+  "privacy_class": "PUBLIC"
+}

@@ -1,0 +1,41 @@
+{
+  "note": "Hugging Face datasets found 2026-10-19 for countries after Mexico. Secondary sources only, licenses as declared by their authors; verify before use.",
+  "candidates": [
+    {
+      "country": "AR",
+      "dataset": "marianbasti/jurisprudencia-Argentina-SAIJ",
+      "license": "apache-2.0",
+      "last_modified": "2026-05-06",
+      "covers": "jurisprudencia (SAIJ)"
+    },
+    {
+      "country": "CL",
+      "dataset": "pablobenavidesj/doctrina-jurisprudencia-chile",
+      "license": "other",
+      "last_modified": "2026-10-19",
+      "covers": "doctrina y jurisprudencia; license 'other' must be read"
+    },
+    {
+      "country": "BR",
+      "dataset": "celsowm/jurisprudencias_br_full",
+      "license": "cc-by-4.0",
+      "last_modified": "2026-09-20",
+      "covers": "jurisprudência"
+    },
+    {
+      "country": "ES",
+      "dataset": "Pepere45/spanish-boe-legal-corpus",
+      "license": "other",
+      "gated": "manual",
+      "last_modified": "2026-05-07",
+      "covers": "BOE corpus; gated manual"
+    },
+    {
+      "country": "ES",
+      "dataset": "BSC-LT/Legal_Catalan_Spanish_Parallel_Corpus",
+      "license": "cc-by-4.0",
+      "last_modified": "2026-10-19",
+      "covers": "legal parallel corpus ca-es"
+    }
+  ]
+}

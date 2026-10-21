@@ -69,3 +69,9 @@ surface) · isolate ✔ · small pilot ☐ · observe ☐ · measure ☐ · deci
   showed skill dispatch skipping before-tool-call hooks.
 - `web_search` needs a provider. Claude's native search through the `anthropic` plugin adds no new egress host. Choose
   this in the pilot.
+- Prompt-injection detectors on Hugging Face (checked 2026-10-19). These are an extra signal on fetched content, never
+  a boundary, because a classifier can be evaded:
+  - `protectai/deberta-v3-base-prompt-injection-v2`: Apache-2.0, not gated, mostly English.
+  - `proventra/mdeberta-v3-base-prompt-injection`: MIT, multilingual. Relevant because most sources are in Spanish.
+
+  Measure both on Spanish legal pages before relying on either. Downloading them is a pilot step.

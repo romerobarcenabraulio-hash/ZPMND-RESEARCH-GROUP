@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zpmnd-research-group/schemas/catalog_entry.schema.json",
+  "title": "CatalogEntry (one official instrument or gazette note, raw and categorized, never summarized)",
+  "description": "Categories are copied from the source's own structure or come from a fixed table over the official title (doc_type; no match = OTRO). Nothing here is interpretation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "entry_id",
+    "country",
+    "source_id",
+    "native_id",
+    "title",
+    "url",
+    "category",
+    "dates",
+    "raw_status",
+    "first_seen"
+  ],
+  "properties": {
+    "entry_id": {
+      "type": "string",
+      "pattern": "^[a-z]{2}\\.[a-z0-9-]+:[A-Za-z0-9._-]{1,80}$"
+    },
+    "country": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "source_id": {
+      "type": "string",
+      "pattern": "^[a-z]{2}\\.[a-z0-9-]+$"
+    },
+    "native_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]{1,80}$"
+    },
+    "title": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "url": {
+      "$ref": "common.schema.json#/$defs/url"
+    },
+    "category": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "jurisdiction",
+        "collection",
+        "doc_type"
+      ],
+      "properties": {
+        "jurisdiction": {
+          "enum": [
+            "federal",
+            "estatal",
+            "municipal"
+          ]
+        },
+        "collection": {
+          "$ref": "#/$defs/label"
+        },
+        "edition": {
+          "$ref": "#/$defs/label_or_null"
+        },
+        "section": {
+          "$ref": "#/$defs/label_or_null"
+        },
+        "branch": {
+          "$ref": "#/$defs/label_or_null"
+        },
+        "issuer": {
+          "$ref": "#/$defs/label_or_null"
+        },
+        "doc_type": {
+          "$ref": "#/$defs/label"
+        },
+        "status_printed": {
+          "$ref": "#/$defs/label"
+        },
+        "locality": {
+          "$ref": "#/$defs/label_or_null"
+        },
+        "municipality": {
+          "$ref": "#/$defs/label_or_null"
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "published": {
+          "$ref": "#/$defs/date"
+        },
+        "original_publication": {
+          "$ref": "#/$defs/date"
+        },
+        "last_reform_printed": {
+          "$ref": "#/$defs/date"
+        }
+      }
+    },
+    "listing": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "list_marker": {
+          "$ref": "#/$defs/label"
+        },
+        "page_order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "listing_text": {
+          "$ref": "common.schema.json#/$defs/text"
+        },
+        "history_urls": {
+          "type": "array",
+          "maxItems": 200,
+          "items": {
+            "$ref": "common.schema.json#/$defs/url"
+          }
+        },
+        "related_urls": {
+          "type": "array",
+          "maxItems": 50,
+          "items": {
+            "$ref": "common.schema.json#/$defs/url"
+          }
+        },
+        "state_code": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 32
+        }
+      }
+    },
+    "date_source": {
+      "description": "Where the official publication date came from, set only by the current code: the edition's own PDF link, or the page's own date. A date without it is not trusted (legacy) and its day is read again.",
+      "enum": ["edition", "page"]
+    },
+    "raw_status": {
+      "enum": [
+        "stored",
+        "pending",
+        "metadata_only",
+        "robots_disallowed",
+        "failed",
+        "no_text_link"
+      ]
+    },
+    "raw_path": {
+      "type": "string",
+      "pattern": "^sha256/[0-9a-f]{2}/[0-9a-f]{64}\\.(html|htm|pdf|doc|docx|rtf|bin)$"
+    },
+    "artifact": {
+      "$ref": "source_artifact.schema.json"
+    },
+    "versions": {
+      "type": "array",
+      "maxItems": 500,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sha256",
+          "retrieved_at",
+          "raw_path"
+        ],
+        "properties": {
+          "sha256": {
+            "$ref": "common.schema.json#/$defs/sha256"
+          },
+          "retrieved_at": {
+            "$ref": "common.schema.json#/$defs/timestamp"
+          },
+          "raw_path": {
+            "type": "string",
+            "pattern": "^sha256/[0-9a-f]{2}/[0-9a-f]{64}\\.(html|htm|pdf|doc|docx|rtf|bin)$"
+          },
+          "last_modified": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 100
+          }
+        }
+      }
+    },
+    "first_seen": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    }
+  },
+  "if": {
+    "properties": {
+      "raw_status": {
+        "const": "stored"
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "artifact",
+      "raw_path"
+    ]
+  },
+  "$defs": {
+    "date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "label": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/text"
+        }
+      ],
+      "maxLength": 300
+    },
+    "label_or_null": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/label"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

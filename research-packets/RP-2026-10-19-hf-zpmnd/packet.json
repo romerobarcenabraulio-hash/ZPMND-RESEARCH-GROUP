@@ -1,0 +1,370 @@
+{
+ "research_id": "RP-2026-10-19-hf-zpmnd",
+ "request_id": "RR-2026-10-19-hf-zpmnd",
+ "status": "CANDIDATE",
+ "produced_at": "2026-10-19T19:00:00Z",
+ "question": "¿Qué recursos de Hugging Face aceleran a ZPMND sobre conocimiento legal y normativo mexicano (recuperación, reordenamiento, detección de inyección, evaluación), con licencia y límites?",
+ "why_zpmnd_needs_it": "El catálogo crudo de RG (DOF, leyes, reglamentos, 29,944 ordenamientos estatales) solo acelera a ZPMND si ZPMND puede buscarlo por significado y citar el texto exacto; Braulio pidió usar Hugging Face para eso.",
+ "scope": "Fichas oficiales en Hugging Face de 7 modelos y 2 datasets, recuperadas 2026-10-19. No se descargaron pesos ni se midió calidad en español jurídico.",
+ "sources": {
+  "primary": [
+   "SA-hf-bge-m3",
+   "SA-hf-bge-m3-api",
+   "SA-hf-me5-large",
+   "SA-hf-me5-large-api",
+   "SA-hf-gte-multi",
+   "SA-hf-gte-multi-api",
+   "SA-hf-jina-v3",
+   "SA-hf-jina-v3-api",
+   "SA-hf-bge-reranker",
+   "SA-hf-bge-reranker-api",
+   "SA-hf-pi-protectai",
+   "SA-hf-pi-protectai-api",
+   "SA-hf-pi-mdeberta",
+   "SA-hf-pi-mdeberta-api",
+   "SA-hf-mx-bench",
+   "SA-hf-tesis-scjn-api"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-hf-bge-m3",
+   "url": "https://huggingface.co/BAAI/bge-m3/raw/main/README.md",
+   "retrieved_at": "2026-10-19T21:41:28Z",
+   "sha256": "0b81ccf9134e5874d620a86e6905062ea999e779c34eb1a7e65eaeb7fe00e450",
+   "bytes": 15822,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "BAAI",
+   "license": "mit",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Model card BAAI/bge-m3"
+  },
+  {
+   "artifact_id": "SA-hf-bge-m3-api",
+   "url": "https://huggingface.co/api/models/BAAI/bge-m3",
+   "retrieved_at": "2026-10-19T21:41:29Z",
+   "sha256": "94143a8be304d55de1147b8bd74c18b8a3f0a1dec9d3a7de97b8ed825df17975",
+   "bytes": 5232,
+   "media_type": "application/json",
+   "source_type": "vendor_doc",
+   "publisher": "Hugging Face Hub API",
+   "license": "Hugging Face terms of service (metadata)",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Hub metadata BAAI/bge-m3"
+  },
+  {
+   "artifact_id": "SA-hf-me5-large",
+   "url": "https://huggingface.co/intfloat/multilingual-e5-large/raw/main/README.md",
+   "retrieved_at": "2026-10-19T21:41:30Z",
+   "sha256": "7d7af14813a22388e183b0ac3276e13887c7eb644d0a13af7c6252217066e43f",
+   "bytes": 160024,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "intfloat",
+   "license": "mit",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Model card intfloat/multilingual-e5-large"
+  },
+  {
+   "artifact_id": "SA-hf-me5-large-api",
+   "url": "https://huggingface.co/api/models/intfloat/multilingual-e5-large",
+   "retrieved_at": "2026-10-19T21:41:31Z",
+   "sha256": "48572fa03ffaa457d1cd5703f4edf8e630044822d017b812f3bf853cc2423d7d",
+   "bytes": 324255,
+   "media_type": "application/json",
+   "source_type": "vendor_doc",
+   "publisher": "Hugging Face Hub API",
+   "license": "Hugging Face terms of service (metadata)",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Hub metadata intfloat/multilingual-e5-large"
+  },
+  {
+   "artifact_id": "SA-hf-gte-multi",
+   "url": "https://huggingface.co/Alibaba-NLP/gte-multilingual-base/raw/main/README.md",
+   "retrieved_at": "2026-10-19T21:41:33Z",
+   "sha256": "7bc40a3d4b2ae520f7c50d40d0c56fca61d13973e3f022b464f325939b7fff68",
+   "bytes": 124473,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "Alibaba-NLP",
+   "license": "apache-2.0",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Model card Alibaba-NLP/gte-multilingual-base"
+  },
+  {
+   "artifact_id": "SA-hf-gte-multi-api",
+   "url": "https://huggingface.co/api/models/Alibaba-NLP/gte-multilingual-base",
+   "retrieved_at": "2026-10-19T21:41:34Z",
+   "sha256": "a8e5e1e6aca2bac763b723bb8afc4b8b05147433810a911a0309b763b66db753",
+   "bytes": 228712,
+   "media_type": "application/json",
+   "source_type": "vendor_doc",
+   "publisher": "Hugging Face Hub API",
+   "license": "Hugging Face terms of service (metadata)",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Hub metadata Alibaba-NLP/gte-multilingual-base"
+  },
+  {
+   "artifact_id": "SA-hf-jina-v3",
+   "url": "https://huggingface.co/jinaai/jina-embeddings-v3/raw/main/README.md",
+   "retrieved_at": "2026-10-19T21:41:36Z",
+   "sha256": "e573f7395798fe3d78d2e3e92da64814a6ec130494280f7b91ea8b0acb0284ed",
+   "bytes": 734278,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "Jina AI",
+   "license": "cc-by-nc-4.0",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Model card jinaai/jina-embeddings-v3"
+  },
+  {
+   "artifact_id": "SA-hf-jina-v3-api",
+   "url": "https://huggingface.co/api/models/jinaai/jina-embeddings-v3",
+   "retrieved_at": "2026-10-19T21:41:37Z",
+   "sha256": "2591412072b8ea8bcd2c1ce2a2cd968a7243193e201f6377f15296b6db03c436",
+   "bytes": 1683664,
+   "media_type": "application/json",
+   "source_type": "vendor_doc",
+   "publisher": "Hugging Face Hub API",
+   "license": "Hugging Face terms of service (metadata)",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Hub metadata jinaai/jina-embeddings-v3"
+  },
+  {
+   "artifact_id": "SA-hf-bge-reranker",
+   "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3/raw/main/README.md",
+   "retrieved_at": "2026-10-19T21:41:37Z",
+   "sha256": "c887aa6dd2598f908bf0582ca7068cc816585c7a1b6a07df305b631ede0cb174",
+   "bytes": 17229,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "BAAI",
+   "license": "apache-2.0",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Model card BAAI/bge-reranker-v2-m3"
+  },
+  {
+   "artifact_id": "SA-hf-bge-reranker-api",
+   "url": "https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3",
+   "retrieved_at": "2026-10-19T21:41:38Z",
+   "sha256": "d1335ef50a29b97667344e293462556f0997dbfbbfa5a5184b9c9e3510731039",
+   "bytes": 4619,
+   "media_type": "application/json",
+   "source_type": "vendor_doc",
+   "publisher": "Hugging Face Hub API",
+   "license": "Hugging Face terms of service (metadata)",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Hub metadata BAAI/bge-reranker-v2-m3"
+  },
+  {
+   "artifact_id": "SA-hf-pi-protectai",
+   "url": "https://huggingface.co/protectai/deberta-v3-base-prompt-injection-v2/raw/main/README.md",
+   "retrieved_at": "2026-10-19T21:41:39Z",
+   "sha256": "37221a38df1e60ad56364c39a233c75b77fa08740ecdee248d1b4e07ccc8ef5a",
+   "bytes": 6327,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "Protect AI",
+   "license": "apache-2.0",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Model card protectai/deberta-v3-base-prompt-injection-v2"
+  },
+  {
+   "artifact_id": "SA-hf-pi-protectai-api",
+   "url": "https://huggingface.co/api/models/protectai/deberta-v3-base-prompt-injection-v2",
+   "retrieved_at": "2026-10-19T21:41:40Z",
+   "sha256": "dc2601d03f73162ed8ab5204bfc041668c756a85c2c5acd277ec495b3f9e06a0",
+   "bytes": 4140,
+   "media_type": "application/json",
+   "source_type": "vendor_doc",
+   "publisher": "Hugging Face Hub API",
+   "license": "Hugging Face terms of service (metadata)",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Hub metadata protectai/deberta-v3-base-prompt-injection-v2"
+  },
+  {
+   "artifact_id": "SA-hf-pi-mdeberta",
+   "url": "https://huggingface.co/proventra/mdeberta-v3-base-prompt-injection/raw/main/README.md",
+   "retrieved_at": "2026-10-19T21:41:41Z",
+   "sha256": "2c2f691d32b9686b1591a635182bc2a334e397c6a9efb34dc183f26f1352f844",
+   "bytes": 1170,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "proventra",
+   "license": "mit",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Model card proventra/mdeberta-v3-base-prompt-injection"
+  },
+  {
+   "artifact_id": "SA-hf-pi-mdeberta-api",
+   "url": "https://huggingface.co/api/models/proventra/mdeberta-v3-base-prompt-injection",
+   "retrieved_at": "2026-10-19T21:41:42Z",
+   "sha256": "3eb46f18ee57e9a11981e8dbeb27bc0545a61fb3da2f0c0b22836c7362626061",
+   "bytes": 2042,
+   "media_type": "application/json",
+   "source_type": "vendor_doc",
+   "publisher": "Hugging Face Hub API",
+   "license": "Hugging Face terms of service (metadata)",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Hub metadata proventra/mdeberta-v3-base-prompt-injection"
+  },
+  {
+   "artifact_id": "SA-hf-mx-bench",
+   "url": "https://huggingface.co/datasets/Echo9k/mexican-legal-benchmarks/raw/main/README.md",
+   "retrieved_at": "2026-10-19T21:41:43Z",
+   "sha256": "cfc5faa55780271811548b6e39a60ef92336973383ec0dce317668845716a13d",
+   "bytes": 26110,
+   "media_type": "text/plain",
+   "source_type": "dataset",
+   "publisher": "Guillermo Alcantara Gonzalez (IUAC)",
+   "license": "cc-by-4.0",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Dataset card Echo9k/mexican-legal-benchmarks"
+  },
+  {
+   "artifact_id": "SA-hf-tesis-scjn-api",
+   "url": "https://huggingface.co/api/datasets/ayaxrojo/tesis_scjn_v5_complete",
+   "retrieved_at": "2026-10-19T21:41:44Z",
+   "sha256": "41635f639b173588059e447d830e75fd4b3980ee6736618ed38ad1457c08fe52",
+   "bytes": 1428,
+   "media_type": "application/json",
+   "source_type": "dataset",
+   "publisher": "Hugging Face Hub API",
+   "license": "Hugging Face terms of service (metadata)",
+   "redistribution": "metadata_only",
+   "stored_at": "local_corpus",
+   "title": "Hub metadata ayaxrojo/tesis_scjn_v5_complete"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "BGE-M3 hace recuperación densa, multivector y dispersa en un solo modelo, con más de 100 idiomas y entradas de hasta 8192 tokens.",
+    "artifact_ids": [
+     "SA-hf-bge-m3"
+    ],
+    "quote": "It can support more than 100 working languages."
+   },
+   {
+    "claim": "BGE-M3 se publica con licencia MIT.",
+    "artifact_ids": [
+     "SA-hf-bge-m3-api"
+    ]
+   },
+   {
+    "claim": "gte-multilingual-base admite hasta 8192 tokens, más de 70 idiomas y vectores dispersos además de densos; licencia Apache-2.0.",
+    "artifact_ids": [
+     "SA-hf-gte-multi",
+     "SA-hf-gte-multi-api"
+    ],
+    "quote": "Supports text lengths up to **8192** tokens."
+   },
+   {
+    "claim": "multilingual-e5-large exige anteponer \"query: \" o \"passage: \" a cada texto, incluso en idiomas distintos del inglés; licencia MIT.",
+    "artifact_ids": [
+     "SA-hf-me5-large",
+     "SA-hf-me5-large-api"
+    ],
+    "quote": "Each input text should start with \"query: \" or \"passage: \", even for non-English texts."
+   },
+   {
+    "claim": "jina-embeddings-v3 tiene licencia CC-BY-NC-4.0 (no comercial).",
+    "artifact_ids": [
+     "SA-hf-jina-v3-api"
+    ]
+   },
+   {
+    "claim": "bge-reranker-v2-m3 es un reordenador ligero y multilingüe construido sobre bge-m3; licencia Apache-2.0.",
+    "artifact_ids": [
+     "SA-hf-bge-reranker",
+     "SA-hf-bge-reranker-api"
+    ],
+    "quote": "Lightweight reranker model, possesses strong multilingual cap"
+   },
+   {
+    "claim": "El detector de inyección de Protect AI v2 es preciso en inglés pero no detecta jailbreaks ni maneja prompts en otros idiomas; licencia Apache-2.0.",
+    "artifact_ids": [
+     "SA-hf-pi-protectai",
+     "SA-hf-pi-protectai-api"
+    ],
+    "quote": "It does not detect jailbreak attacks or handle non-English prompts"
+   },
+   {
+    "claim": "Las tesis de la SCJN en Hugging Face (ayaxrojo/tesis_scjn_v5_complete) tienen licencia CC-BY-4.0, acceso condicionado automático y última modificación 2026-03-21.",
+    "artifact_ids": [
+     "SA-hf-tesis-scjn-api"
+    ]
+   },
+   {
+    "claim": "Los benchmarks de derecho mexicano (Echo9k/mexican-legal-benchmarks) se publican con CC-BY-4.0 e incluyen una configuración de evaluación entre jurisdicciones.",
+    "artifact_ids": [
+     "SA-hf-mx-bench"
+    ],
+    "quote": "license: cc-by-4.0"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Calidad real de cada modelo de embeddings sobre español jurídico mexicano: ninguna ficha reporta una prueba sobre leyes mexicanas.",
+   "Desempeño del detector multilingüe proventra/mdeberta: su ficha no documenta idiomas ni métricas.",
+   "Costo actual de GPU en Hugging Face o terceros: no verificado en esta ronda."
+  ]
+ },
+ "candidate_claims": [
+  "Para buscar en el catálogo de RG, BGE-M3 (MIT) es el candidato más completo: una sola pasada da vectores densos y dispersos y admite documentos largos.",
+  "jina-embeddings-v3 no es apto para un producto comercial por su licencia no comercial."
+ ],
+ "candidate_methods": [
+  "Recuperación híbrida: vector denso + disperso (BGE-M3) para encontrar, y reordenador (bge-reranker-v2-m3) para elegir; la cita final sale del crudo con su sha256, nunca del modelo.",
+  "Medición antes de adoptar: un conjunto reservado de preguntas sobre leyes mexicanas con respuesta citada, comparando BGE-M3, gte y e5."
+ ],
+ "candidate_controls": [
+  "La señal de un detector de inyección solo agrega información; el contenido externo siempre se trata como dato aunque el detector diga limpio.",
+  "Cada modelo adoptado entra con licencia verificada y versión (sha) fija."
+ ],
+ "candidate_tests": [
+  "Describe: una pregunta sobre un artículo de una ley federal debe recuperar ese artículo entre los primeros resultados y citar el PDF por su sha256.",
+  "Describe: un texto en español con una instrucción oculta debe marcarse por el detector multilingüe; si no se marca, el contenido igual se trata como dato."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Un índice semántico del catálogo de RG (calculado una vez por versión del corpus) daría a ZPMND búsqueda por significado sobre DOF, leyes y legislación estatal.",
+  "Los benchmarks mexicanos podrían servir como evaluación reservada si ZPMND verifica su procedencia y licencia."
+ ],
+ "affected_existing_concepts": [
+  "plano de conocimiento",
+  "evaluación reservada",
+  "respuesta citada"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: los títulos y metadatos del catálogo (unos 31 mil registros) se pueden vectorizar en CPU; el texto completo de los crudos probablemente requiere GPU rentada por horas."
+ ],
+ "limitations": [
+  "Solo fichas de los autores; nada medido en español jurídico.",
+  "No se descargaron pesos de modelos.",
+  "Costos de cómputo no verificados."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "claude-research-group",
+   "model": "claude-opus-5-5",
+   "substrate": "Claude Code (rg.collect, sin OpenClaw)"
+  }
+ ]
+}
