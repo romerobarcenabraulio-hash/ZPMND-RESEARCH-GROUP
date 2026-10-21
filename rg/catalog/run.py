@@ -7,6 +7,7 @@ Exit codes: 0 ok; 3 a coverage reconciliation failed (data is still written, the
 """
 import argparse
 import json
+import os
 import re
 import sys
 import tarfile
@@ -17,9 +18,9 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import leyesbiblio, ojn, sidof
+from . import hf_tesis, leyesbiblio, ojn, sidof
 from .categorize import clean_text, doc_type, dof_doc_type, fold
-from .fetch import BudgetExhausted, Fetcher, FetchRefused, Response, decode_html
+from .fetch import BudgetExhausted, Fetcher, FetchRefused, FileSink, Response, decode_html
 from .store import Catalog, RawStore
 from ..schemas import validate
 
@@ -49,6 +50,8 @@ def recategorize(entries):
             e['category']['doc_type'] = dof_doc_type(e['title'], e['category'].get('branch'))
         elif e['source_id'].endswith(('leyes-federales', 'reglamentos-federales')):
             e['category']['doc_type'] = doc_type(e['title'])
+        elif e['source_id'].endswith('hf-tesis-scjn'):
+            e['category']['doc_type'] = hf_tesis.doc_type(e.get('listing', {}).get('type_printed'))
 
 
 MAX_REREADS = 3  # after this many successful re-reads a still-short day is 'stuck': reported every run, retried spaced
@@ -496,10 +499,96 @@ class Run:
             self.used += f.used
         return stats
 
+    # ---- SCJN tesis, SECONDARY source: Hugging Face dataset (hf_tesis.py) --------------------------
+    def run_hf_tesis(self, src):
+        """One 3.6 GB file, downloaded only when its sha256 changed or rows it produced are missing from the catalog.
+        Coverage: the file's own total_points == rows read, and distinct registros digitales == entries catalogued."""
+        f = self._fetcher(src)
+        st = self.catalog.state.setdefault(src['source_id'], {})
+        stats = {'downloaded': False, 'rows_read': 0, 'distinct': 0, 'source_repeated_rows': 0, 'new_entries': 0}
+        try:
+            self._hf_tesis(src, f, st, stats)
+        except BudgetExhausted:
+            self.manifest['errors'].append(f"{src['source_id']}: request budget reached (continues next run)")
+            self._cover(src['source_id'], src['file'], None, 0)
+        stats['requests'] = f.used
+        with self._lock:
+            self.used += f.used
+        return stats
+
+    def _hf_tesis(self, src, f, st, stats):
+        sid = src['source_id']
+        r = self._get(f, hf_tesis.API_URL.format(dataset=src['dataset']))  # public metadata: sent without the token
+        try:
+            if r.status != 200:
+                raise ValueError(f'Hub API HTTP {r.status}')
+            meta = hf_tesis.parse_meta(r.body, src['file'], src['license_id'])
+        except ValueError as exc:
+            self.manifest['errors'].append(f'{sid}: {exc}')
+            self._cover(sid, src['file'], None, 0)
+            return
+        scope = f"{src['file']} @ {meta['revision'][:12]}"
+
+        def catalogued():
+            return sum(1 for e in self.catalog.snapshot(sid) if (e.get('artifact') or {}).get('sha256') == meta['sha256'])
+        if st.get('sha256') == meta['sha256'] and st.get('distinct') == catalogued():
+            # Same file and every row it produced is still catalogued: nothing to download. The receipts of the run
+            # that read it are checked again every run, so a file that did not reconcile keeps failing.
+            self._cover(sid, f'{scope} (total_points declarado vs filas leídas)', st['total_points'], st['rows_read'])
+            self._cover(sid, f'{scope} (registros digitales distintos vs catalogados)', st['distinct'], catalogued())
+            return
+        token = os.environ.get(src['token_env'], '')
+        if not token:
+            self.manifest['errors'].append(f"{sid}: {src['token_env']} is not set; the gated file is not requested")
+            self._cover(sid, scope, None, 0)
+            return
+        url = hf_tesis.RESOLVE_URL.format(dataset=src['dataset'], revision=meta['revision'], file=src['file'])
+        sink = FileSink(self.raw.root / f'.{sid}.{os.getpid()}.part', meta['size'])
+        try:
+            try:
+                d = f.get(url, auth=f'Bearer {token}', sink=sink)
+            except BudgetExhausted:
+                raise
+            except FetchRefused as exc:
+                d = Response(0, b'', url, {'x-rg-refused': hf_tesis.redact(str(exc))[:300]})
+            if d.status != 200 or sink.bytes != meta['size'] or sink.sha256 != meta['sha256']:
+                self.manifest['errors'].append(
+                    f"{sid}: {scope}: HTTP {d.status} {d.headers.get('x-rg-refused', '')} {sink.bytes} of {meta['size']} "
+                    f"bytes, sha256 {'ok' if sink.sha256 == meta['sha256'] else 'differs from the Hub metadata'}")
+                self._cover(sid, scope, None, 0)
+                return
+            rel = self.raw.put_file(sink.path, meta['sha256'], 'json')
+        finally:
+            sink.path.unlink(missing_ok=True)
+        stats['downloaded'] = True
+        artifact = {**_artifact(src, url, meta['sha256'], b'', 'application/json', rel), 'bytes': meta['size']}
+        header, seen, now, complete = {}, set(), now_iso(), True
+        with open(self.raw.root / rel, 'rb') as fh:
+            try:
+                for order, point in enumerate(hf_tesis.iter_points(fh, header), 1):
+                    stats['rows_read'] += 1
+                    entry = hf_tesis.to_entry(src, self.country, point, order, artifact, rel, now)
+                    if entry['native_id'] in seen:  # repeated in the source: the first row stays, repeats are counted
+                        stats['source_repeated_rows'] += 1
+                        continue
+                    seen.add(entry['native_id'])
+                    stats['new_entries'] += self.catalog.upsert(entry)
+            except ValueError as exc:  # malformed file: what was read is kept, the run is not whole
+                complete = False
+                self.manifest['errors'].append(f'{sid}: {scope}: {exc}')
+        declared = header.get('total_points')
+        stats['distinct'] = len(seen)
+        self._cover(sid, f'{scope} (total_points declarado vs filas leídas)',
+                    declared if isinstance(declared, int) else None, stats['rows_read'] if complete else None)
+        self._cover(sid, f'{scope} (registros digitales distintos vs catalogados)', len(seen), catalogued())
+        if complete:  # a file read only in part is downloaded again next run
+            st.update(revision=meta['revision'], sha256=meta['sha256'], total_points=declared,
+                      rows_read=stats['rows_read'], distinct=len(seen))
+
     def execute(self, only=None):
         active = [s for s in self.registry['sources'] if s['status'] == 'active' and (not only or s['source_id'] in only)]
         runners = {'sidof': self.run_sidof, 'leyesbiblio': self.run_leyesbiblio, 'ojn': self.run_ojn,
-                   'ojn-municipal': self.run_ojn_municipal}
+                   'ojn-municipal': self.run_ojn_municipal, 'hf-tesis': self.run_hf_tesis}
         def run_group(srcs):  # sources sharing a host run one after another: politeness is per host
             for src in srcs:
                 self.manifest['sources'][src['source_id']] = runners[src['adapter']](src)

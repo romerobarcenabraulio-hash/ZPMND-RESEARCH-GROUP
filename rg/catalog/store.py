@@ -1,7 +1,7 @@
 """Raw bytes by content address, catalog rows ordered and deduplicated, run state, and the category index.
 
 Layout under <catalog_root>/<cc>/:
-  <source>.jsonl or <source>/<year>.jsonl   one row per instrument or note, sorted
+  <source>.jsonl or <source>/<part>.jsonl   one row per instrument or note, sorted (part: year, state, id range)
   _state.json                               what has been indexed (days, ETags), so runs are incremental
   INDEX.md, index.json                      counts per category, computed from the rows
   runs/<run_id>.json                        manifest of each run (coverage, counts, budget, errors)
@@ -69,6 +69,18 @@ class RawStore:
             self.new_files.append(rel)
         return sha, rel
 
+    def put_file(self, src, sha, ext):
+        """Move a file already on disk (streamed by a FileSink, whose sha256 is `sha`) to its content address."""
+        rel = f'sha256/{sha[:2]}/{sha}.{ext}'
+        path = self.root / rel
+        if path.exists():
+            Path(src).unlink()
+        else:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            Path(src).replace(path)
+            self.new_files.append(rel)
+        return rel
+
 
 class Catalog:
     def __init__(self, root, country):
@@ -122,6 +134,9 @@ class Catalog:
             return f"{short}/{(entry['dates'].get('published') or '0000')[:4]}.jsonl"
         if 'state_code' in entry.get('listing', {}):
             return f"{short}/{entry['listing']['state_code']:02d}.jsonl"
+        if entry['source_id'].endswith('.hf-tesis-scjn'):  # ~60k rows: one file would pass GitHub's 100 MB file limit
+            nid = entry['native_id']  # registro digital; 10,000 per file
+            return f'{short}/{int(nid) // 10000:04d}.jsonl' if nid.isascii() and nid.isdigit() else f'{short}/otros.jsonl'
         return f'{short}.jsonl'
 
     @staticmethod

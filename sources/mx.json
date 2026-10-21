@@ -188,6 +188,33 @@
       "note": "Municipalities come from each state's own selector (including 'Todos los Municipios'). Municipal rows carry title and type only (no dates). Same host as mx.ojn-estatal: runs in the same host group, in sequence."
     },
     {
+      "source_id": "mx.hf-tesis-scjn",
+      "status": "active",
+      "tier": 1,
+      "role": "secondary",
+      "adapter": "hf-tesis",
+      "title": "Tesis y jurisprudencia del Semanario Judicial de la Federación (fuente secundaria: dataset de Hugging Face ayaxrojo/tesis_scjn_v5_complete)",
+      "base_url": "https://huggingface.co/datasets/ayaxrojo/tesis_scjn_v5_complete",
+      "dataset": "ayaxrojo/tesis_scjn_v5_complete",
+      "file": "tesis_scjn_v5_complete.json",
+      "token_env": "HF_TOKEN",
+      "allowed_hosts": [
+        "huggingface.co",
+        "us.aws.cdn.hf.co"
+      ],
+      "category": {
+        "jurisdiction": "federal",
+        "collection": "SEMANARIO JUDICIAL DE LA FEDERACION (TESIS, FUENTE SECUNDARIA)"
+      },
+      "publisher": "ayaxrojo (Hugging Face), compilación secundaria del Semanario Judicial de la Federación",
+      "source_type": "dataset",
+      "license": "CC-BY-4.0 (atribución: ayaxrojo/tesis_scjn_v5_complete, Hugging Face)",
+      "license_id": "cc-by-4.0",
+      "redistribution": "allowed",
+      "max_requests": 20,
+      "note": "Secondary: the primary (mx.scjn-sjf) answers robots.txt with 403 and is never bypassed; each tesis is to be cross-checked against the SCJN when it opens. Gated (auto): the read-only HF_TOKEN goes only to huggingface.co; the signed redirect goes to us.aws.cdn.hf.co (robots.txt 404 = allowed, 2026-10-21). One JSON file of 3,638,883,446 bytes (Qdrant export with a 4096-number vector per tesis), downloaded only when its sha256 changes and checked against the sha256 in the Hub metadata. Independent count: the file's own total_points (59,678 at revision f233341). The dataset card's statistics do not match the rows (sampled rows are Novena and Décima Época): only the rows are used. source_type is 'dataset' because the SourceArtifact enum has no 'secondary'; the role field marks it."
+    },
+    {
       "source_id": "mx.datos-gob",
       "status": "planned",
       "tier": 2,
@@ -199,7 +226,7 @@
       "status": "planned",
       "tier": 2,
       "title": "Semanario Judicial de la Federación (SCJN): tesis y jurisprudencia",
-      "blocked_by": "sjf2.scjn.gob.mx answers robots.txt with 403 (JSON, looks like a firewall), 2026-10-19; access method and terms not yet reviewed. Sentences of the SCJN Pleno published in the DOF are already catalogued (doc_type SENTENCIA)."
+      "blocked_by": "sjf2.scjn.gob.mx answers robots.txt with 403 (JSON, looks like a firewall), 2026-10-19; access method and terms not yet reviewed. Sentences of the SCJN Pleno published in the DOF are already catalogued (doc_type SENTENCIA). Tesis are catalogued meanwhile from the secondary source mx.hf-tesis-scjn."
     },
     {
       "source_id": "mx.normas-nom-nmx",
@@ -252,20 +279,6 @@
     }
   ],
   "secondary_sources": [
-    {
-      "source_id": "mx.hf-tesis-scjn",
-      "status": "blocked_owner",
-      "kind": "dataset",
-      "host": "huggingface.co",
-      "dataset": "ayaxrojo/tesis_scjn_v5_complete",
-      "revision": "f233341df3b9",
-      "license": "cc-by-4.0",
-      "declared_size": "59,678 tesis (100K<n<1M rows bucket)",
-      "last_modified": "2026-03-21",
-      "covers": "SCJN tesis y jurisprudencia (mx.scjn-sjf, blocked at the primary)",
-      "use": "secondary: catalogued with its own provenance, never as the primary; each tesis is cross-checked against the SCJN when the primary opens",
-      "blocked_by": "gated=auto: requires a logged-in Hugging Face account that accepts the dataset's access conditions. Owner action (Braulio's account); RG does not log in or accept terms."
-    },
     {
       "source_id": "mx.hf-legal-benchmarks",
       "status": "candidate",

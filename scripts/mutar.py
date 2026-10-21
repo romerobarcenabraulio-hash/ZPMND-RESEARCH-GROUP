@@ -72,6 +72,27 @@ MUT = [
  ('rg/catalog/run.py', "                        entry['date_source'] = source\n", '                        pass\n'),
  ('rg/catalog/run.py', "prev.get('ids', []) + sidof.listed_ids(page) + [it", "prev.get('ids', []) + [it"),
  ('rg/catalog/run.py', 'if i not in withdrawn)', 'if True)'),
+ # SCJN tesis from the Hugging Face dataset (secondary source): credential, streaming, parser, coverage
+ ('rg/catalog/fetch.py', 'if auth and parts.hostname == origin:', 'if auth:'),
+ ('rg/catalog/fetch.py', 'sink.reset()  # a retry', 'pass  # a retry'),
+ ('rg/catalog/fetch.py', 'if sink.bytes + len(chunk) > sink.limit:', 'if False:'),
+ ('rg/catalog/hf_tesis.py', 'if (end < len(self.buf) and self.buf[end] in _DELIMITERS) or self.eof:', 'if end < len(self.buf) or self.eof:'),
+ ('rg/catalog/hf_tesis.py', 'if len(self.buf) - self.pos > self.max_value:', 'if False:'),
+ ('rg/catalog/hf_tesis.py', "    if r.peek() != '':\n        raise", "    if False:\n        raise"),
+ ('rg/catalog/hf_tesis.py', "TIPO_TYPES.get(fold(tipo_printed or ''), 'OTRO')", "TIPO_TYPES.get(tipo_printed or '', 'OTRO')"),
+ ('rg/catalog/hf_tesis.py', '        return date(int(m.group(3)), month, int(m.group(1))).isoformat()', "        return f'{m.group(3)}-{month:02d}-{m.group(1)}'"),
+ ('rg/catalog/hf_tesis.py', 'if license_ != license_id:', 'if False:'),
+ ('rg/catalog/hf_tesis.py', "return re.sub(r'\\?\\S*', '?<redacted>', text)", 'return text'),
+ ('rg/catalog/run.py', "sink.bytes != meta['size'] or sink.sha256 != meta['sha256']:", "sink.bytes != meta['size']:"),
+ ('rg/catalog/run.py', "if st.get('sha256') == meta['sha256'] and st.get('distinct') == catalogued():", "if st.get('sha256') == meta['sha256']:"),
+ ('rg/catalog/run.py', '        if not token:\n', '        if False:\n'),
+ ('rg/catalog/run.py', "declared if isinstance(declared, int) else None, stats['rows_read'] if complete else None)", "stats['rows_read'], stats['rows_read'])"),
+ ('rg/catalog/run.py', "st['total_points'], st['rows_read'])", "st['rows_read'], st['rows_read'])"),
+ ('rg/catalog/run.py', "stats['source_repeated_rows'] += 1\n                        continue", "stats['source_repeated_rows'] += 1"),
+ ('rg/catalog/run.py', 'if complete:  # a file read only in part', 'if True:  # a file read only in part'),
+ ('rg/catalog/run.py', "e['category']['doc_type'] = hf_tesis.doc_type(e.get('listing', {}).get('type_printed'))", 'pass'),
+ ('rg/catalog/store.py', "if entry['source_id'].endswith('.hf-tesis-scjn'):", 'if False:'),
+ ('.github/workflows/catalog-mx.yml', '          HF_TOKEN: ${{ secrets.HF_TOKEN }}', '          HF_TOKEN_UNUSED: ${{ secrets.HF_TOKEN }}'),
 ]
 
 
