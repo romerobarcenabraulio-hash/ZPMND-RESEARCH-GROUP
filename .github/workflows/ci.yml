@@ -26,7 +26,10 @@ jobs:
     # with git init and no remote; the baseline must pass first. Read-only token, nothing is pushed.
     if: github.event_name != 'schedule'
     runs-on: ubuntu-24.04
-    timeout-minutes: 90  # private runners have 2 cores: ~55 mutants took over 30 min (2026-10-21)
+    timeout-minutes: 90  # private runners have 2 cores: ~55 mutants took over 30 min on one runner (2026-10-21)
+    strategy:
+      fail-fast: false  # every shard reports all of its mutants
+      matrix: { shard: [0, 1, 2, 3] }  # 4 runners in parallel
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { persist-credentials: false }
@@ -35,3 +38,5 @@ jobs:
       - run: pip install -r requirements-dev.txt
       - run: git config --global user.email ci@invalid && git config --global user.name ci
       - run: python scripts/mutar.py
+        env:  # index/total come from the matrix itself, so no shard can be skipped or run twice
+          RG_SHARD: '${{ strategy.job-index }}/${{ strategy.job-total }}'
