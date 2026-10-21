@@ -1,11 +1,13 @@
 """Mutation check: every guard of the catalog must have a test that fails without it.
 
     python scripts/mutar.py            # from the repo root; writes nothing to the repo
+    RG_SHARD=1/4 python scripts/mutar.py   # only mutants i with i % 4 == 1 (CI runs the 4 shards in parallel)
 
 Each mutant runs in its own throwaway copy with `git init` and NO remote (a mutant can never be pushed; incident
 2026-10-11). The unmutated baseline must pass in such a copy first, or the run stops: a copy that cannot pass makes
 every mutant look killed (2026-10-20, REGLAS 16b). The property test runs with fewer scenarios here
-(RG_PROPERTY_SCENARIOS) to keep the run short; the full suite runs it in full.
+(RG_PROPERTY_SCENARIOS) to keep the run short; the full suite runs it in full. A mutant's suite stops at its first
+failing test (-f): the verdict is only "some test failed", so stopping there changes no verdict, only the time.
 """
 import os
 import shutil
@@ -75,10 +77,18 @@ MUT = [
 ]
 
 
-def suite(d):
+def shard(items, spec):
+    """(i, item) pairs of this shard, numbered from 1; 'k/n' keeps i % n == k, so the n shards partition the list."""
+    k, n = (int(x) for x in spec.split('/'))
+    if not 0 <= k < n:
+        raise ValueError(f'RG_SHARD must be k/n with 0 <= k < n, got {spec!r}')
+    return [(i, m) for i, m in enumerate(items, 1) if i % n == k]
+
+
+def suite(d, failfast=False):
     env = {**os.environ, 'RG_PROPERTY_SCENARIOS': '4'}
     try:  # a mutant that hangs the suite is detected, not waited on until the job limit
-        return subprocess.run([PY, '-m', 'unittest', 'discover', '-s', 'tests', '-t', '.'], cwd=d, env=env,
+        return subprocess.run([PY, '-m', 'unittest', 'discover', '-s', 'tests', '-t', '.'] + ['-f'] * failfast, cwd=d, env=env,
                               capture_output=True, text=True, timeout=600)
     except subprocess.TimeoutExpired:
         return subprocess.CompletedProcess([], 124, '', 'timeout')
@@ -99,12 +109,13 @@ def mutant(args):
     if s.count(a) != 1:
         return i, f, a, 'NOT FOUND'
     p.write_text(s.replace(a, b), encoding='utf-8')
-    killed = suite(d).returncode != 0
+    killed = suite(d, failfast=True).returncode != 0
     shutil.rmtree(d)
     return i, f, a, 'KILLED' if killed else 'ALIVE'
 
 
 def main():
+    mine = shard(MUT, os.environ.get('RG_SHARD') or '0/1')
     with tempfile.TemporaryDirectory() as tmp:
         base = Path(tmp) / 'base'
         copy(base)
@@ -113,7 +124,7 @@ def main():
             sys.exit('baseline fails in the copy: ' + b.stderr[-600:])
         shutil.rmtree(base)
         with ThreadPoolExecutor(max_workers=max(1, os.cpu_count() or 1)) as pool:  # one suite per core
-            results = list(pool.map(mutant, [(i, m, tmp) for i, m in enumerate(MUT, 1)]))
+            results = list(pool.map(mutant, [(i, m, tmp) for i, m in mine]))
     bad = 0
     for i, f, a, verdict in results:
         bad += verdict != 'KILLED'
