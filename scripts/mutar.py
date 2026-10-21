@@ -112,7 +112,7 @@ def main():
         if b.returncode != 0:
             sys.exit('baseline fails in the copy: ' + b.stderr[-600:])
         shutil.rmtree(base)
-        with ThreadPoolExecutor(max_workers=4) as pool:
+        with ThreadPoolExecutor(max_workers=max(1, os.cpu_count() or 1)) as pool:  # one suite per core
             results = list(pool.map(mutant, [(i, m, tmp) for i, m in enumerate(MUT, 1)]))
     bad = 0
     for i, f, a, verdict in results:
