@@ -26,7 +26,7 @@ jobs:
     # with git init and no remote; the baseline must pass first. Read-only token, nothing is pushed.
     if: github.event_name != 'schedule'
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 90  # private runners have 2 cores: ~55 mutants took over 30 min (2026-10-21)
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { persist-credentials: false }
