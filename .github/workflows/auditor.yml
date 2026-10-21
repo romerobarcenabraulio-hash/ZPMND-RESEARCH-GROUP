@@ -55,8 +55,8 @@ jobs:
           [ "$base" = main ] || { echo run=false >> "$GITHUB_OUTPUT"; exit 0; }
           sha=$(gh pr view "$pr" -R "$REPO" --json headRefOid --jq .headRefOid)
           [[ "$sha" =~ ^[0-9a-f]{40}$ ]] || { echo "bad head"; exit 1; }
-          done=$(gh pr view "$pr" -R "$REPO" --json comments | jq --arg o "$OWNER" --arg s "$sha" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | startswith("AUDIT VERDICT: ")) and (.body | split("\n")[0] | endswith(" " + $s)))] | length')
-          if [ "$done" -ge 1 ]; then  # this exact head already has a verdict: never pay for the same audit twice
+          done=$(gh pr view "$pr" -R "$REPO" --json comments | jq --arg o "$OWNER" --arg s "$sha" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | split("\n")[0] | rtrimstr("\r") | . == "AUDIT VERDICT: PASS \($s)" or . == "AUDIT VERDICT: REVISE \($s)"))] | length')
+          if [ "$EVENT" != issue_comment ] && [ "$done" -ge 1 ]; then  # a push never re-audits a head with a verdict; the owner's "otra ronda" always can
             echo "#$pr head $sha already has a verdict"; echo run=false >> "$GITHUB_OUTPUT"; exit 0
           fi
           revise=$(gh pr view "$pr" -R "$REPO" --json comments | jq --arg o "$OWNER" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | startswith("AUDIT VERDICT: REVISE")))] | length')
@@ -94,6 +94,8 @@ jobs:
             cp "$RUNNER_TEMP/mutar_main.py" scripts/mutar_main.py
             python scripts/mutar_main.py > evidence/mutation-main.txt 2>&1; echo "exit=$?" >> evidence/mutation-main.txt
             rm -f scripts/mutar_main.py
+          else
+            echo "skipped: scripts/mutar.py is identical to main's, so mutation.txt already ran main's mutants" > evidence/mutation-main.txt
           fi
           exit 0
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
