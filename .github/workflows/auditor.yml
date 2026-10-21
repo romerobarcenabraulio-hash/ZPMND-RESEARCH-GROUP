@@ -55,6 +55,10 @@ jobs:
           [ "$base" = main ] || { echo run=false >> "$GITHUB_OUTPUT"; exit 0; }
           sha=$(gh pr view "$pr" -R "$REPO" --json headRefOid --jq .headRefOid)
           [[ "$sha" =~ ^[0-9a-f]{40}$ ]] || { echo "bad head"; exit 1; }
+          done=$(gh pr view "$pr" -R "$REPO" --json comments | jq --arg o "$OWNER" --arg s "$sha" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | startswith("AUDIT VERDICT: ")) and (.body | split("\n")[0] | endswith(" " + $s)))] | length')
+          if [ "$done" -ge 1 ]; then  # this exact head already has a verdict: never pay for the same audit twice
+            echo "#$pr head $sha already has a verdict"; echo run=false >> "$GITHUB_OUTPUT"; exit 0
+          fi
           revise=$(gh pr view "$pr" -R "$REPO" --json comments | jq --arg o "$OWNER" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | startswith("AUDIT VERDICT: REVISE")))] | length')
           if [ "$EVENT" != issue_comment ] && [ "$revise" -ge 3 ]; then
             echo "#$pr has $revise REVISE verdicts: the next round waits for the owner's 'otra ronda'"
@@ -67,7 +71,7 @@ jobs:
     needs: gate
     if: needs.gate.outputs.run == 'true'
     runs-on: ubuntu-24.04
-    timeout-minutes: 45
+    timeout-minutes: 90  # a private runner has 2 cores: tests + ~60 mutants took over 45 min (2026-10-21)
     permissions: { contents: read }
     concurrency: { group: 'auditor-evidence-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }
     steps:
@@ -85,7 +89,8 @@ jobs:
           git config --global user.email ci@invalid; git config --global user.name ci
           python -m unittest discover -s tests -t . > evidence/tests.txt 2>&1; echo "exit=$?" >> evidence/tests.txt
           if [ -f scripts/mutar.py ]; then python scripts/mutar.py > evidence/mutation.txt 2>&1; echo "exit=$?" >> evidence/mutation.txt; fi
-          if [ -f "$RUNNER_TEMP/mutar_main.py" ]; then  # main's mutants on this code: a dropped guard shows here
+          # main's mutants on this code, only when the PR changed the list: a dropped guard shows here
+          if [ -f "$RUNNER_TEMP/mutar_main.py" ] && ! cmp -s "$RUNNER_TEMP/mutar_main.py" scripts/mutar.py; then
             cp "$RUNNER_TEMP/mutar_main.py" scripts/mutar_main.py
             python scripts/mutar_main.py > evidence/mutation-main.txt 2>&1; echo "exit=$?" >> evidence/mutation-main.txt
             rm -f scripts/mutar_main.py
