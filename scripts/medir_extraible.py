@@ -5,8 +5,8 @@
 Every file: count by extension and by magic bytes. HTML: visible characters (tags, script and style removed).
 PDF: a fixed-seed random sample, each read with pypdf; a page "has text" when its text layer gives at least
 MIN_CHARS non-blank characters, and the text is "legible" when at least MIN_LEGIBLE of those characters are
-Latin letters, digits or common punctuation (a garbled font map gives text that is not). Needs pypdf, which is
-not in requirements-dev.txt: this is a measurement, not a guard. Same store, sample size and seed = same output.
+Latin letters, digits or common punctuation (a garbled font map gives text that is not). Needs pypdf (pinned in
+requirements-dev.txt for rg.text); this is a measurement, not a guard. Same store, sample size and seed = same output.
 Files that iCloud evicted from the disk (macOS "dataless" flag) are counted apart and never opened: opening one
 starts a download, and this measurement runs without network.
 """

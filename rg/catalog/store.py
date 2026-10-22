@@ -28,6 +28,7 @@ TREE_LEVELS = (('país', lambda e: e['country']),
                ('tipo', lambda e: e['category']['doc_type']))
 NO_DATA = '(sin dato en la fuente)'
 DERIVED = ('normas', 'tratados')  # folders of derived views rewritten every run: their lines are never read back as rows
+DERIVED += ('texto',)  # the text manifest (rg.text): its lines are never rows either
 
 
 def build_tree(entries):
