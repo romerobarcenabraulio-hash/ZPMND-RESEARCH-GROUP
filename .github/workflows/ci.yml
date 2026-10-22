@@ -24,7 +24,7 @@ jobs:
   mutation:
     # Every catalog guard must have a test that fails without it (scripts/mutar.py; REGLAS 16b). Throwaway copies
     # with git init and no remote; the baseline must pass first. Read-only token, nothing is pushed.
-    if: github.event_name != 'schedule'
+    if: github.event_name == 'pull_request'  # each PR already proved its head; repeating it on main only spent minutes
     runs-on: ubuntu-24.04
     timeout-minutes: 90  # private runners have 2 cores: ~55 mutants took over 30 min on one runner (2026-10-21)
     strategy:
