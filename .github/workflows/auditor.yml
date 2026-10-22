@@ -12,6 +12,13 @@ name: auditor
 #   prove it read the criteria, that names another head, or whose body looks like a credential is never posted as PASS.
 # - Goodware rule: after 3 REVISE on a PR, a push does not trigger a new round; the owner comments exactly
 #   "otra ronda". Nothing here can merge.
+#
+# Second, independent opinion (audit-gpt, post-gpt): one OpenAI call per audited head, under the same gate. The job
+# checks out main, never the PR head; it fetches the head as git objects only to compute the same diff, and sends
+# text alone (main's criteria, that diff, the untrusted evidence) through scripts/auditor_gpt.py from main. The model
+# has no tools. OPENAI_API_KEY reaches only the step that calls the API; the model name comes from the repo variable
+# OPENAI_AUDIT_MODEL, and without it the status `auditor-gpt` says skipped. Its comment starts "GPT REVIEW:" and never
+# contains "AUDIT VERDICT"; its status is `auditor-gpt`, never `auditor`; see docs/REGLAS.md for the merge policy.
 on:
   pull_request_target:
     types: [opened, synchronize, reopened]
@@ -239,3 +246,84 @@ jobs:
           gh pr comment "$PR" -R "$REPO" --body-file verdict.md
           state=$([ "$verdict" = PASS ] && echo success || echo failure)
           gh api "repos/$REPO/statuses/$SHA" -f state="$state" -f context=auditor -f description="AUDIT VERDICT: $verdict" >/dev/null
+
+  audit-gpt:
+    # Second, independent opinion. Checks out main only: the PR head is fetched as git objects for the diff, never
+    # checked out and never run. The key exists only in the step that calls the API.
+    needs: [gate, evidence]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions: { contents: read }
+    concurrency: { group: 'auditor-gpt-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }
+    outputs:
+      result: ${{ steps.gpt.outputs.result }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { ref: main, fetch-depth: 0, persist-credentials: false }
+      - name: Trusted text (main's criteria and the diff as git computes it; no PR code is checked out or run)
+        env: { GH_TOKEN: '${{ github.token }}', SHA: '${{ needs.gate.outputs.sha }}' }
+        run: |
+          set -euo pipefail
+          [[ "$SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "bad head"; exit 1; }
+          d="$RUNNER_TEMP/gpt-audit"
+          rm -rf "$d"; mkdir -p "$d/criteria" "$d/trusted"
+          # The head as objects only. Token only for this command, through the environment (as in catalog-mx.yml)
+          GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader \
+            GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" \
+            git fetch --no-tags --quiet origin "$SHA"
+          git cat-file -e "$SHA^{commit}"
+          for f in README.md RESEARCH_CONTRACT.md SECURITY.md docs/REGLAS.md; do
+            if git cat-file -e "origin/main:$f" 2>/dev/null; then git show "origin/main:$f" > "$d/criteria/$(basename "$f")"; fi
+          done
+          # The audit job's commands, immune to .gitattributes, textconv or external diff drivers
+          g="git -c core.attributesFile=/dev/null -c diff.external="
+          $g diff --text --no-ext-diff --no-textconv --stat "origin/main...$SHA" > "$d/trusted/diff-stat.txt"
+          $g diff --text --no-ext-diff --no-textconv "origin/main...$SHA" > "$d/trusted/diff.patch"
+          git log --oneline "origin/main..$SHA" > "$d/trusted/commits.txt"
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with: { name: evidence, path: '${{ runner.temp }}/gpt-audit/evidence' }
+      - name: Ask the model (the only step with the key; main's script, text only, no tools)
+        id: gpt
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_AUDIT_MODEL: ${{ vars.OPENAI_AUDIT_MODEL }}
+          PR: ${{ needs.gate.outputs.pr }}
+          SHA: ${{ needs.gate.outputs.sha }}
+        run: |
+          set -euo pipefail
+          out="$RUNNER_TEMP/gpt-result.json"
+          python3 -I scripts/auditor_gpt.py --inputs "$RUNNER_TEMP/gpt-audit" --pr "$PR" --sha "$SHA" --out "$out"
+          [ "$(wc -l < "$out")" -eq 1 ] || { echo "result is not one line"; exit 1; }
+          echo "result=$(cat "$out")" >> "$GITHUB_OUTPUT"
+
+  post-gpt:
+    needs: [gate, audit-gpt]
+    runs-on: ubuntu-24.04
+    permissions: { pull-requests: write, statuses: write }
+    steps:
+      - name: Validate and post the second opinion
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ needs.gate.outputs.pr }}
+          SHA: ${{ needs.gate.outputs.sha }}
+          RESULT: ${{ needs.audit-gpt.outputs.result }}
+        run: |
+          set -euo pipefail
+          verdict=$(printf '%s' "$RESULT" | jq -r '.verdict')
+          if [ "$verdict" = SKIPPED ]; then  # no model configured: say so on the commit; the workflow does not fail
+            desc=$(printf '%s' "$RESULT" | jq -r '.description' | cut -c1-140)
+            gh api "repos/$REPO/statuses/$SHA" -f state=pending -f context=auditor-gpt -f description="$desc" >/dev/null
+            exit 0
+          fi
+          [[ "$verdict" =~ ^(PASS|REVISE)$ ]] || { echo "no valid GPT verdict"; exit 1; }
+          now=$(gh pr view "$PR" -R "$REPO" --json headRefOid --jq .headRefOid)
+          [ "$now" = "$SHA" ] || { echo "head moved during the audit: not posted"; exit 1; }
+          printf '%s' "$RESULT" | jq -r '.comment' > verdict.md
+          # The first line is the GPT line, and "AUDIT VERDICT" appears nowhere: that string belongs to the Claude
+          # auditor alone, so no tool that looks for it (anchored or not) can read a GPT comment as a verdict.
+          [ "$(head -n 1 verdict.md)" = "GPT REVIEW: $verdict $SHA" ] || { echo "malformed GPT verdict line: not posted"; exit 1; }
+          [ "$(grep -ci 'AUDIT VERDICT' verdict.md)" = 0 ] || { echo "the comment names an AUDIT VERDICT: not posted"; exit 1; }
+          gh pr comment "$PR" -R "$REPO" --body-file verdict.md
+          state=$([ "$verdict" = PASS ] && echo success || echo failure)
+          gh api "repos/$REPO/statuses/$SHA" -f state="$state" -f context=auditor-gpt -f description="GPT REVIEW: $verdict" >/dev/null

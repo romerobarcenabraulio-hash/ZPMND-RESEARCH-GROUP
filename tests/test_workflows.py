@@ -3,12 +3,14 @@
 2026-10-20: a step name containing ': ' made catalog-mx.yml invalid; GitHub would reject the file and the scheduled
 catalog would never run. Neither the tests nor three audits noticed, because nothing parsed the workflows.
 """
+import re
 import unittest
 from pathlib import Path
 
 import yaml
 
 WORKFLOWS = sorted((Path(__file__).resolve().parents[1] / '.github' / 'workflows').glob('*.yml'))
+AUDITOR = Path(__file__).resolve().parents[1] / '.github' / 'workflows' / 'auditor.yml'
 
 
 class Workflows(unittest.TestCase):
@@ -24,3 +26,82 @@ class Workflows(unittest.TestCase):
                     self.assertTrue(job.get('runs-on'), f'{wf.name}:{name}')
                     for step in job.get('steps', []):
                         self.assertTrue('run' in step or 'uses' in step, f'{wf.name}:{name}: {step}')
+
+    def test_every_action_is_pinned_by_full_commit_sha(self):
+        for wf in WORKFLOWS:
+            for name, job in yaml.safe_load(wf.read_text(encoding='utf-8'))['jobs'].items():
+                for step in job.get('steps', []):
+                    if 'uses' in step:
+                        self.assertRegex(step['uses'], r'^[\w.-]+/[\w./-]+@[0-9a-f]{40}$', f'{wf.name}:{name}')
+
+    def test_no_expression_is_interpolated_into_a_script(self):  # REGLAS 12: inputs go through env
+        for wf in WORKFLOWS:
+            for name, job in yaml.safe_load(wf.read_text(encoding='utf-8'))['jobs'].items():
+                for step in job.get('steps', []):
+                    self.assertNotIn('${{', step.get('run', ''), f'{wf.name}:{name}')
+
+
+class AuditorGpt(unittest.TestCase):
+    """The second auditor never has PR code next to its key, and never speaks with the Claude auditor's voice."""
+
+    def setUp(self):
+        self.raw = AUDITOR.read_text(encoding='utf-8')
+        self.doc = yaml.safe_load(self.raw)
+        self.jobs = self.doc['jobs']
+
+    def test_it_runs_beside_the_claude_audit_under_the_same_gate(self):
+        self.assertEqual(self.jobs['audit-gpt']['needs'], self.jobs['audit']['needs'])
+        self.assertEqual(self.jobs['audit-gpt']['needs'], ['gate', 'evidence'])
+        self.assertEqual(self.jobs['post-gpt']['needs'], ['gate', 'audit-gpt'])
+        self.assertNotIn('if', self.jobs['audit-gpt'])  # skipped exactly when evidence is, as the audit job
+
+    def test_it_checks_out_main_and_never_the_pr_head(self):
+        job = self.jobs['audit-gpt']
+        uses = [s['uses'].split('@')[0] for s in job['steps'] if 'uses' in s]
+        self.assertEqual(uses, ['actions/checkout', 'actions/download-artifact'])
+        checkout = next(s for s in job['steps'] if s.get('uses', '').startswith('actions/checkout@'))
+        self.assertEqual(checkout['with']['ref'], 'main')
+        self.assertIs(checkout['with']['persist-credentials'], False)
+        for step in job['steps']:
+            run = step.get('run', '')
+            self.assertNotRegex(run, r'\bgit\b[^\n;|&]*\b(checkout|switch|worktree|restore|reset|read-tree|'
+                                     r'checkout-index|stash|merge|rebase|cherry-pick|pull|apply|am|archive)\b')
+            self.assertNotRegex(run, r'\b(pip|unittest|pytest|make|npm|npx|bash|sh|source)\b')
+            for line in run.splitlines():  # the only program run is main's script, isolated from env and cwd
+                if 'python' in line:
+                    self.assertRegex(line.strip(), r'^python3 -I scripts/auditor_gpt\.py ')
+
+    def test_the_key_reaches_only_the_step_that_calls_the_api(self):
+        self.assertEqual(self.raw.count('secrets.OPENAI_API_KEY'), 1)
+        self.assertNotIn('env', self.doc)
+        job = self.jobs['audit-gpt']
+        self.assertNotIn('env', job)
+        self.assertEqual(job['permissions'], {'contents': 'read'})
+        holders = [s for s in job['steps'] if 'secrets.' in yaml.safe_dump(s)]
+        self.assertEqual(len(holders), 1)
+        step = holders[0]
+        self.assertEqual(step['env']['OPENAI_API_KEY'], '${{ secrets.OPENAI_API_KEY }}')
+        self.assertEqual([v for v in step['env'].values() if 'secrets.' in v], ['${{ secrets.OPENAI_API_KEY }}'])
+        self.assertIn('python3 -I scripts/auditor_gpt.py', step['run'])
+        self.assertEqual(step['env']['OPENAI_AUDIT_MODEL'], '${{ vars.OPENAI_AUDIT_MODEL }}')  # no model in code
+        self.assertNotIn('secrets.', yaml.safe_dump(self.jobs['evidence']))  # where PR code runs, no secret at all
+
+    def test_post_gpt_speaks_only_as_gpt(self):
+        job = self.jobs['post-gpt']
+        self.assertEqual(job['permissions'], {'pull-requests': 'write', 'statuses': 'write'})
+        self.assertNotIn('secrets.', yaml.safe_dump(job))
+        self.assertFalse(any('uses' in s for s in job['steps']))
+        run = '\n'.join(s.get('run', '') for s in job['steps'])
+        self.assertIn('[ "$(head -n 1 verdict.md)" = "GPT REVIEW: $verdict $SHA" ]', run)
+        self.assertIn('[ "$(grep -ci \'AUDIT VERDICT\' verdict.md)" = 0 ]', run)
+        self.assertIn('-f state=pending -f context=auditor-gpt', run)
+        self.assertIn('-f context=auditor-gpt -f description="GPT REVIEW: $verdict"', run)
+        self.assertNotRegex(run, r'context=auditor(\s|$)')
+
+    def test_the_claude_auditor_keeps_its_format_and_status(self):
+        run = self.jobs['post']['steps'][0]['run']
+        self.assertIn('echo "AUDIT VERDICT: $verdict $SHA"; echo', run)
+        self.assertIn('-f context=auditor -f description="AUDIT VERDICT: $verdict"', run)
+        gate = self.jobs['gate']['steps'][0]['run']
+        self.assertIn('. == "AUDIT VERDICT: PASS \\($s)" or . == "AUDIT VERDICT: REVISE \\($s)"', gate)
+        self.assertIn('startswith("AUDIT VERDICT: REVISE")', gate)
