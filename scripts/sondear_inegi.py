@@ -3,7 +3,9 @@
     INEGI_TOKEN=... python scripts/sondear_inegi.py 628194 [910392 ...]
 
 The first real run got 400 "No se encontraron resultados" for INDICATOR 628194 with area 00 and fuente BIE, and 401 for
-CL_INDICATOR. The official API page shows areas 00000 and 0700 in its examples and only fuente BISE, so each id is tried
+CL_INDICATOR. On 2026-10-22 the API page's own example (1002000001, BISE) answered 200 with the same token while 628194
+and 910392 gave 400 in every BIE and BISE shape (runs 39870811830, 39870891633): the token works, the source or the id
+does not. INEGI's query builder says BIE now sits inside BISE ("BIE EN BISE"), so BIE-BISE is tried too. The official API page shows areas 00000 and 0700 in its examples and only fuente BISE, so each id is tried
 with every documented combination, through the catalog's Fetcher (robots, the single allowed host, the token sent only
 to www.inegi.org.mx). One line per request: the URL with <token>, the HTTP status and at most 160 characters of
 INEGI's answer with the token removed. Nothing is written to disk.
@@ -19,7 +21,7 @@ from rg.catalog.indicadores import INEGI_CATALOG, INEGI_INDICATOR, TOKEN_SLOT  #
 
 HOST = 'www.inegi.org.mx'
 AREAS = ('00', '0700', '00000')  # 00 from the API page's text; 0700 and 00000 from its examples
-FUENTES = ('BIE', 'BISE')
+FUENTES = ('BIE', 'BISE', 'BIE-BISE')  # BIE-BISE: HIPÓTESIS from INEGI's own query builder ("BIE EN BISE", 2026-10-22)
 
 
 def shapes(series_id):
@@ -27,6 +29,11 @@ def shapes(series_id):
     out = [(INEGI_INDICATOR, {'series': series_id, 'lang': 'es', 'area': a, 'fuente': f}) for f in FUENTES for a in AREAS]
     out += [(INEGI_CATALOG, {'series': series_id, 'lang': 'es', 'fuente': f}) for f in FUENTES]
     return out
+
+
+def budget_for(series_ids):
+    """Every shape of every id plus one robots.txt: a budget that cannot run out before the last shape is tried."""
+    return sum(len(shapes(i)) for i in series_ids) + 1
 
 
 def make_fetcher(token, n_requests):
@@ -44,7 +51,7 @@ def redact(text, token):
 def probe(series_ids, token, fetcher=None, out=print):
     if not token:
         raise SystemExit('INEGI_TOKEN missing')
-    fetcher = fetcher or make_fetcher(token, 10 * len(series_ids))
+    fetcher = fetcher or make_fetcher(token, budget_for(series_ids))
     for series_id in series_ids:
         for tpl, kw in shapes(series_id):
             shown = tpl.format(**kw, token=TOKEN_SLOT)
