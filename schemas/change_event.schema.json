@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zpmnd-research-group/schemas/change_event.schema.json",
+  "title": "ChangeEvent candidate (the stored raw of one catalog instrument changed between two retrievals)",
+  "description": "RG side of the Goodware canon ChangeEvent (PREZIP_DESIGN_CLOSED_SOURCE.md §24). Emitted when the sha256 of a catalog entry's raw changes from before_ref to after_ref. Every field is copied from the catalog or verbatim from the official text; nothing is inferred. status is always CANDIDATE. There is no semantic_delta: what the change means is reasoning and belongs to ZPMND, so the field does not exist here and is rejected like any unknown field. Checks a schema cannot express live in rg.schemas: before_ref differs from after_ref, provenance.sha256 and effective_at_evidence.raw_sha256 are after_ref, entry_id belongs to source_id.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_id", "entry_id", "before_ref", "after_ref", "published_at", "effective_at", "provenance", "status"],
+  "properties": {
+    "source_id": { "$ref": "catalog_entry.schema.json#/properties/source_id" },
+    "entry_id": { "$ref": "catalog_entry.schema.json#/properties/entry_id" },
+    "before_ref": {
+      "description": "sha256 of the previous stored raw version (catalog versions[]).",
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "after_ref": {
+      "description": "sha256 of the new stored raw version (catalog versions[]).",
+      "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "published_at": {
+      "description": "Official publication date of the new text as the source prints it (catalog dates.published or dates.last_reform_printed). null when the source prints none; never the retrieval date, never inferred.",
+      "anyOf": [ { "$ref": "catalog_entry.schema.json#/$defs/date" }, { "type": "null" } ]
+    },
+    "effective_at": {
+      "description": "Entry into force, only when a transitorio article prints the calendar date; effective_at_evidence then carries that article's quote. Otherwise null: a relative rule such as 'al día siguiente de su publicación' is not turned into a date here.",
+      "anyOf": [ { "$ref": "catalog_entry.schema.json#/$defs/date" }, { "type": "null" } ]
+    },
+    "effective_at_evidence": { "$ref": "common.schema.json#/$defs/evidence" },
+    "provenance": {
+      "description": "Retrieval of the new version (after_ref).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "sha256", "retrieved_at"],
+      "properties": {
+        "url": { "$ref": "common.schema.json#/$defs/url" },
+        "sha256": { "$ref": "common.schema.json#/$defs/sha256" },
+        "retrieved_at": { "$ref": "common.schema.json#/$defs/timestamp" }
+      }
+    },
+    "status": { "const": "CANDIDATE" }
+  },
+  "if": { "required": ["effective_at"], "properties": { "effective_at": { "type": "string" } } },
+  "then": { "required": ["effective_at_evidence"] },
+  "else": { "not": { "required": ["effective_at_evidence"] } }
+}

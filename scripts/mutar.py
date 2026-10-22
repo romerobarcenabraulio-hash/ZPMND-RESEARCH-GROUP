@@ -107,7 +107,19 @@ MUT = [
  ('rg/catalog/store.py', "if entry['source_id'].endswith('.hf-tesis-scjn'):", 'if False:'),
  ('rg/catalog/store.py', 'self.dir.mkdir(parents=True, exist_ok=True)  # a new', 'pass  # a new'),
  ('rg/index.py', '        for f in row_files(d):', "        for f in sorted(Path(d).rglob('*.jsonl')):"),
+ ('rg/schemas.py', '        if printed is not None and fold(printed) not in quote:', '        if False:'),
+ ('rg/schemas.py', "    if ev['before_ref'] == ev['after_ref']:", '    if False:'),
+ ('rg/schemas.py', "    if ev['entry_id'].split(':', 1)[0] != ev['source_id']:", '    if False:'),
+ ('rg/schemas.py', "    if ev['provenance']['sha256'] != ev['after_ref']:", '    if False:'),
+ ('rg/schemas.py', "    if evid and evid['raw_sha256'] != ev['after_ref']:", '    if False:'),
+ ('rg/schemas.py', "    if rel['from'] == rel['to']:", '    if False:'),
+ ('rg/schemas.py', "_packet_references, 'change_event': _change_event_checks, 'relation': _relation_checks}", '_packet_references}'),
  ('schemas/catalog_entry.schema.json', '(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])', '[0-9]{2}-[0-9]{2}'),
+ ('schemas/change_event.schema.json', '"additionalProperties": false,\n  "required": ["source_id"', '"additionalProperties": true,\n  "required": ["source_id"'),
+ ('schemas/change_event.schema.json', '"status": { "const": "CANDIDATE" }', '"status": { "type": "string" }'),
+ ('schemas/change_event.schema.json', '"then": { "required": ["effective_at_evidence"] },', '"then": true,'),
+ ('schemas/relation.schema.json', '"maxProperties": 1,', '"maxProperties": 2,'),
+ ('schemas/relation.schema.json', '"status": { "const": "CANDIDATE" }', '"status": { "type": "string" }'),
 ]
 
 

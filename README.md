@@ -18,7 +18,7 @@ ResearchRequest (from ZPMND or Braulio) ──► RESEARCH GROUP ──► Resea
 
 | Path | What it holds |
 |---|---|
-| `schemas/` | ResearchRequest, ResearchPacket, SourceArtifact, KnowledgeDemand (JSON Schema 2020-12) |
+| `schemas/` | ResearchRequest, ResearchPacket, SourceArtifact, KnowledgeDemand, CatalogEntry, ChangeEvent, Relation (JSON Schema 2020-12) |
 | `rg/` | validator (`rg.schemas`), OpenClaw advisory gate (`rg.advisories`), effective-policy check (`rg.openclaw_policy`) |
 | `substrate/` | pinned OpenClaw (`openclaw.lock.json`), hardened profile (`openclaw.json`), isolated runtime (`runtime/`), catalog runner (`runtime/Dockerfile.catalog`) |
 | `sources/` | per-country source registry (data, not code): active sources and planned ones with their observed blocker |

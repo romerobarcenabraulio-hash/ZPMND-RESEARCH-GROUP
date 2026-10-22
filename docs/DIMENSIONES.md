@@ -15,7 +15,7 @@ Se ordena en dimensiones, y la última son las relaciones entre piezas.
 ## Lo que ya se puede extraer sin inferir
 
 Medido con `scripts/medir_dimensiones.py` (coincidencia exacta de títulos, sin inferencia) sobre el catálogo local de la
-corrida 2026-10-20T152357Z (62,239 registros; entra a la rama `catalog` con la siguiente publicación). Todas las cifras de este documento
+corrida 2026-10-20T152357Z (62,239 registros; entra a la rama `catalog` con la siguiente publicación). Las cifras de esta sección
 salen de ese script. Recibo de Goodware `ev:349b7f6b6cec1d38aa30e9653b52aa114972d63ff7250189100cfac1a5da1f34`: ejecución
 del script con salida (stdout) de sha256 `8407af1cdccfe59d9c2180e06fc9409ec46317222ceff87d1031ae2868d02036`.
 
@@ -25,6 +25,45 @@ del script con salida (stdout) de sha256 `8407af1cdccfe59d9c2180e06fc9409ec46317
   del texto. La dimensión 5 necesita **extraer el texto de los crudos**.
 - **Cadena de una NOM:** 60 códigos NOM en títulos del DOF; solo 2 aparecen en más de una nota dentro de la ventana
   actual. Se completa al llenar el rezago del DOF.
+
+## Cuánto texto se puede extraer de los crudos (medición, 2026-10-21)
+
+Medido con `scripts/medir_extraible.py` sobre el almacén local `work/raw` (solo lectura, sin red), con pypdf 6.19.0. La
+salida (stdout) tiene sha256 `9f903db750d0951e0e4b5e2ce3e66a624a6ff0e54c6878923c93cc54c8879074`.
+
+**Conteo completo (MEDICIÓN).** Hay 7,779 crudos. 28 no estaban en el disco porque iCloud los desalojó (17 PDF, 5 HTML,
+4 DOC, 1 DOCX y 1 RTF), así que no se abrieron. De los 7,751 restantes:
+
+| Formato | Archivos | Qué falta para tener el texto |
+|---|---:|---|
+| HTML | 4,008 | Quitar etiquetas. Solo 3 tienen menos de 200 caracteres visibles (mediana: 1,919) |
+| PDF | 2,297 | Capa de texto u OCR (ver la muestra). Hay 4 `.bin` más que también son PDF |
+| DOC | 1,422 | Nada de OCR: ya son texto. Por sus bytes iniciales, 917 son DOCX (zip), 499 son Word 97 (OLE2) y 6 son RTF |
+| DOCX y RTF | 19 y 1 | Nada de OCR: ya son texto |
+
+Además, un `.pdf` resultó ser HTML. **El extractor debe decidir el formato por los bytes iniciales, no por la extensión.**
+Los PDF salen de cuatro fuentes: OJN municipal (1,004), OJN estatal (837), leyes federales (307) y reglamentos federales
+(149). Las notas del DOF son HTML.
+
+**Muestra de 300 PDF, semilla 20261021 (HIPÓTESIS para el total, porque es una muestra).** Una página "tiene texto"
+cuando su capa da al menos 30 caracteres no blancos. De cada PDF se leen hasta 40 páginas repartidas.
+
+| Clase | PDF | Páginas |
+|---|---:|---:|
+| Con capa de texto legible | 293 | 9,960 |
+| Escaneados (10 % de páginas con texto o menos) | 5 | 163 |
+| Mixtos | 2 | 306 |
+| Texto ilegible (mapa de fuentes roto) o error al abrir | 0 | 0 |
+
+- Necesitan OCR 7 de 300 (2.3 %; IC 95 %: 1.1 % a 4.7 %). Los 7 vienen del OJN (3 estatales y 4 municipales). Los 52
+  federales de la muestra (39 leyes y 13 reglamentos) traen texto.
+- Llevado a los 2,297 PDF, serían unos 54 PDF (entre 26 y 109) y unas 1,800 páginas sin capa de texto.
+- **Lectura (INTERPRETACIÓN).** El OCR no es el cuello de botella: el 98 % de los PDF ya trae texto. Con unas 1,800
+  páginas, no hace falta reservar GPU esta noche. El tiempo y el costo de hacer ese OCR con CPU siguen siendo HIPÓTESIS
+  hasta medirlos. Lo que sí falta es el extractor determinista (HTML, PDF con capa, DOCX, Word 97 y RTF), con nombre y
+  versión fijos para el campo `extractor` del contrato.
+- **Límites.** Una capa de texto no garantiza el orden de lectura (columnas, tablas, palabras cortadas); eso se mide
+  cuando exista el extractor. No se midió si los DOC y DOCX traen imágenes escaneadas adentro.
 
 ## División del trabajo
 
@@ -88,7 +127,7 @@ STATE; el DELTA lo calcula ZPMND.
 | `category.issuer`, `section`, `branch` | `applicability` (materia) | Existe, copiado de la fuente |
 | `category.doc_type` y orden de gobierno | `source_authority` | Existe. El rango entre tipos lo decide ZPMND (INTERPRETACIÓN jurídica, art. 133 constitucional) |
 | `dates.published` (fecha oficial de la edición), `original_publication`, `last_reform_printed` | ChangeEvent `published_at` | Existe; la fecha del DOF se corrigió en #6 |
-| (falta) | ChangeEvent `effective_at` | FALTA: transitorios del texto completo |
+| (falta) | ChangeEvent `effective_at` | FALTA el extractor; el contrato ya existe (`effective_at` con la cita de su transitorio) |
 | `versions[]` (sha256 por corrida) | ChangeEvent `before_ref` / `after_ref` | Existe; el primer cambio aparece en la siguiente corrida |
 | `status_printed` (VIGENTE, ABROGADA…) | evidencia para el ciclo de vida | Existe. RG no asigna el estado |
 | Aristas *reglamenta*, *reforma*, *abroga* y *cita*, cada una con su cita | DependencyGraph | 122 *reglamenta* por título exacto; el resto necesita el texto completo |
@@ -102,4 +141,7 @@ STATE; el DELTA lo calcula ZPMND.
 2. Extraer el texto de los crudos para obtener `effective_at` (transitorios) y las aristas, cada una con su cita.
 3. Claves INEGI de territorio por tabla fija, con su fuente oficial revisada (robots y licencia) antes de activarla.
 
-El esquema de ChangeEvent y el de las aristas entran como contrato en `main` antes de escribir el código que los produce.
+El contrato ya está escrito: `schemas/change_event.schema.json` y `schemas/relation.schema.json`, validados por
+`rg.schemas` (pruebas en `tests/test_contrato_texto.py`). Entra a `main` antes que el código que los produce. Cada cita
+lleva el sha256 de su crudo y el extractor fijado (`nombre==versión`): los bytes de un PDF o de un DOC no son texto, y la
+regla 10 solo se puede revisar si la aduana de ZPMND corre el mismo extractor sobre el mismo crudo.

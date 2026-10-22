@@ -16,6 +16,17 @@
     "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
     "url": { "type": "string", "maxLength": 2000, "pattern": "^https?://[^\\s\\u0000-\\u001F]+$" },
     "request_id": { "type": "string", "pattern": "^RR-[A-Za-z0-9._-]{3,64}$" },
-    "artifact_id": { "type": "string", "pattern": "^SA-[A-Za-z0-9._-]{3,64}$" }
+    "artifact_id": { "type": "string", "pattern": "^SA-[A-Za-z0-9._-]{3,64}$" },
+    "evidence": {
+      "description": "Rule 10: quote exists verbatim (whitespace folded) in the text that `extractor` gives for the stored raw whose sha256 is raw_sha256. The extractor is named and pinned (name==version) because PDF and DOC bytes are not text: the airlock re-runs the same extractor on the same raw and finds the quote.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["raw_sha256", "extractor", "quote"],
+      "properties": {
+        "raw_sha256": { "$ref": "#/$defs/sha256" },
+        "extractor": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{0,59}==[A-Za-z0-9][A-Za-z0-9._+-]{0,39}$" },
+        "quote": { "allOf": [ { "$ref": "#/$defs/text" } ], "maxLength": 300 }
+      }
+    }
   }
 }
