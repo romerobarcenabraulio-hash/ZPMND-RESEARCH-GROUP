@@ -35,6 +35,18 @@ REAL = [
              'cumplir los helicópteros.', '2026-02-01'),
 ]
 
+# Real DOF titles that failed coverage 'titulos con NOM sin codigo leido' in catalog run 39691250207 (2026-10-21),
+# with their real entry ids and official dates.
+REAL_SEPARATORS = [
+    note(5638496, 'Respuestas a los comentarios recibidos durante el plazo de consulta pública, del Proyecto de Norma '
+                  'Oficial Mexicana PROY-NOM-020-SCT2/-2020, Especificaciones generales para el diseño, construcción y '
+                  'pruebas de autotanques destinados al autotransporte de substancias, materiales y residuos peligrosos, '
+                  'especificaciones SCT 406, SCT 407 y SCT 412, publicado el 16 de diciembre de 2020.', '2021-12-16'),
+    note(5763083, 'Respuesta a los comentarios recibidos al Proyecto de Norma Oficial Mexicana PROY-NOM-016ENER2024, '
+                  'Eficiencia energética de motores de corriente alterna, trifásicos, de inducción, tipo jaula de ardilla, '
+                  'en potencia nominal de 0.746 kW a 373 kW. Límites, método de prueba y marcado.', '2025-07-16'),
+]
+
 
 class Lineages(unittest.TestCase):
     def setUp(self):
@@ -110,6 +122,38 @@ class Lineages(unittest.TestCase):
             normas.write(Path(d) / 'mx', REAL)
             catalog = Catalog(d, 'mx')
             self.assertEqual((catalog.entries, catalog.previous(['mx.dof:1'])), ({}, {}))
+
+
+class CodesAsPrinted(unittest.TestCase):
+    """Run 39691250207: two real titles name a NOM with separators the parser did not read."""
+
+    def test_two_separators_before_the_year(self):
+        self.assertEqual([c[:4] for c in normas.codes(REAL_SEPARATORS[0]['title'])],
+                         [('NOM-020-SCT2', 2020, 'PROY-NOM-020-SCT2/-2020', True)])  # 'SCT 406' is not a NOM code
+
+    def test_no_separator_with_a_letters_only_issuer(self):
+        self.assertEqual([c[:4] for c in normas.codes(REAL_SEPARATORS[1]['title'])],
+                         [('NOM-016-ENER', 2024, 'PROY-NOM-016ENER2024', True)])
+
+    def test_the_failed_titles_now_yield_a_code_and_a_lineage(self):
+        self.assertEqual(normas.unparsed(REAL_SEPARATORS), [])
+        self.assertEqual(normas.unparsed(REAL + REAL_SEPARATORS), [])
+        by = {r['lineage']: r for r in normas.lineages(REAL + REAL_SEPARATORS)}
+        self.assertEqual([(n['entry_id'], n['published'], n['stage'], n['edition'], n['project'])
+                          for k in ('NOM-020-SCT2', 'NOM-016-ENER') for n in by[k]['notes']],
+                         [('mx.dof:5638496', '2021-12-16', 'respuesta_comentarios', 2020, True),
+                          ('mx.dof:5763083', '2025-07-16', 'respuesta_comentarios', 2024, True)])
+
+    def test_the_new_forms_change_nothing_already_read(self):
+        before = normas.lineages(REAL)
+        after = [r for r in normas.lineages(REAL + REAL_SEPARATORS) if r['lineage'] not in ('NOM-020-SCT2', 'NOM-016-ENER')]
+        self.assertEqual(after, before)
+
+    def test_an_issuer_ending_in_a_digit_without_separator_is_never_guessed(self):
+        # CONSTRUIDO (not a DOF title): 'SSA12024' is SSA1 + 2024 or SSA + 12024; nothing is read and the run reports it.
+        odd = [note(40, 'Aviso relativo a la Norma Oficial Mexicana NOM-016SSA12024, texto construido.', '2026-01-01')]
+        self.assertEqual(normas.codes(odd[0]['title']), [])
+        self.assertEqual(normas.unparsed(odd), ['mx.dof:40'])
 
 
 class RawPriority(unittest.TestCase):

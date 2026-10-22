@@ -512,10 +512,13 @@ class Run:
     # ---- SCJN tesis, SECONDARY source: Hugging Face dataset (hf_tesis.py) --------------------------
     def run_hf_tesis(self, src):
         """One 3.6 GB file, downloaded only when its sha256 changed or rows it produced are missing from the catalog.
-        Coverage: the file's own total_points == rows read, and distinct registros digitales == entries catalogued."""
+        Coverage: the file's own total_points == rows read, and distinct registros digitales == entries catalogued.
+        Every row read lands in exactly one count: rows read == distinct + repeated + without registro + without rubro."""
         f = self._fetcher(src)
         st = self.catalog.state.setdefault(src['source_id'], {})
-        stats = {'downloaded': False, 'rows_read': 0, 'distinct': 0, 'source_repeated_rows': 0, 'new_entries': 0}
+        stats = {'downloaded': False, 'rows_read': 0, 'distinct': 0, 'source_repeated_rows': 0,
+                 'source_rows_without_registro': 0, 'source_rows_without_registro_point_ids': [],
+                 'source_rows_without_rubro': 0, 'source_rows_without_rubro_point_ids': [], 'new_entries': 0}
         try:
             self._hf_tesis(src, f, st, stats)
         except BudgetExhausted:
@@ -578,6 +581,13 @@ class Run:
                 for order, point in enumerate(hf_tesis.iter_points(fh, header), 1):
                     stats['rows_read'] += 1
                     entry = hf_tesis.to_entry(src, self.country, point, order, artifact, rel, now)
+                    missing = hf_tesis.uncitable(entry)
+                    if missing:  # nothing to cite or name it by: counted, never catalogued, its content never kept
+                        stats[f'source_rows_{missing}'] += 1
+                        sample = stats[f'source_rows_{missing}_point_ids']
+                        if len(sample) < hf_tesis.SAMPLE:
+                            sample.append(hf_tesis.point_id(point))
+                        continue
                     if entry['native_id'] in seen:  # repeated in the source: the first row stays, repeats are counted
                         stats['source_repeated_rows'] += 1
                         continue

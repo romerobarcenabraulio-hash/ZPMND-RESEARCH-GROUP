@@ -15,6 +15,9 @@ Fields are copied verbatim. doc_type comes from a fixed table over the printed '
 printed in 'publicacion' ("Esta tesis se publicó el viernes 27 de junio de 2014 a las 09:30 horas ..."). Nothing is
 inferred: no date from 'fuente' (it prints month and year only), no URL is built, no época is guessed. The dataset
 card's statistics do not match the rows; only the rows and the file's own total_points are used.
+
+A row the catalog cannot cite (no registro digital to identify it, or no rubro to name it) is not catalogued and not
+completed by guessing: it is counted, with the Qdrant ids of its first points, and nothing of its content is kept.
 """
 import codecs
 import json
@@ -33,6 +36,8 @@ MONTHS = {'ENERO': 1, 'FEBRERO': 2, 'MARZO': 3, 'ABRIL': 4, 'MAYO': 5, 'JUNIO': 
 _PUBLISHED = re.compile(r'se public[oó] el (?:[a-záéíóú]+ )?(\d{1,2}) de ([a-záéíóú]+) de (\d{4})', re.I)
 _REVISION = re.compile(r'[0-9a-f]{40}')
 _SHA256 = re.compile(r'[0-9a-f]{64}')
+_UUID = re.compile(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')
+SAMPLE = 20  # point ids kept per kind of uncatalogued row
 _WS = re.compile(r'[ \t\n\r]*')
 _DELIMITERS = frozenset(' \t\n\r,:]}')
 _DECODER = json.JSONDecoder()
@@ -160,6 +165,26 @@ def _str(v):
 
 def _label(v):
     return ' '.join(_str(v).split()) or None
+
+
+def point_id(point):
+    """The Qdrant id of a point (an unsigned integer or a UUID), the only thing of an uncatalogued row the manifest
+    names; anything else is None, so no row content can reach the manifest through it."""
+    pid = point.get('id') if isinstance(point, dict) else None
+    if isinstance(pid, int) and not isinstance(pid, bool) and pid >= 0:
+        return pid
+    return pid if isinstance(pid, str) and _UUID.fullmatch(pid) else None
+
+
+def uncitable(entry):
+    """Why the row behind `entry` cannot be catalogued, or None. A tesis is cited by its registro digital and named by
+    its rubro (whitespace already normalised by to_entry); a row missing one is counted once, registro first. The size
+    of the registro number is never judged: a row with both stays, whatever its registro."""
+    if not entry['native_id']:
+        return 'without_registro'
+    if not entry['title']:
+        return 'without_rubro'
+    return None
 
 
 def to_entry(src, country, point, order, artifact, raw_path, seen_at):
