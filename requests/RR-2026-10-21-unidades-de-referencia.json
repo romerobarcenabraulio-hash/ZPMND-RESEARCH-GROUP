@@ -1,0 +1,16 @@
+{
+  "request_id": "RR-2026-10-21-unidades-de-referencia",
+  "issued_by": "ZPMND",
+  "issued_at": "2026-10-21T06:00:00Z",
+  "question": "¿Cuáles son los valores de la UMA y de los salarios mínimos generales y de la zona libre de la frontera norte vigentes en 2024, 2025 y 2026, desde qué fecha rige cada uno y en qué publicación oficial (DOF o INEGI) consta?",
+  "why_needed": "ZPMND calculará obligaciones laborales y fiscales con fórmulas en código; cada unidad de referencia debe entrar con su fuente y su vigencia, nunca de memoria del modelo.",
+  "affected_component": "fórmulas con dinero y tiempo",
+  "desired_evidence": [
+    "publicación oficial con fecha y sha256",
+    "valor, unidad y fecha de inicio de vigencia",
+    "contradicciones entre fuentes, si las hay"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Un cálculo de obligación con un valor desactualizado o de otra zona.",
+  "privacy_class": "PUBLIC"
+}
