@@ -4,6 +4,7 @@ name: auditor
 #
 # Security by construction:
 # - pull_request_target: this file and the prompt always come from main, so a PR cannot rewrite its own audit.
+# - Only PRs from branches of this repo are audited; a fork's PR never reaches a job with secrets (public repo).
 # - The PR's code runs only in `evidence` (tests, mutation), with no secrets and a read-only token. Its output is
 #   labelled untrusted. What changed (diff, stat, commits) is computed in `audit`, where no PR code ever runs.
 # - The model never executes code and cannot write: Read, Grep and Glob only (deny beats any allow). It may read the
@@ -60,6 +61,12 @@ jobs:
           [[ "$pr" =~ ^[0-9]+$ ]] || { echo "bad PR number"; exit 1; }
           base=$(gh pr view "$pr" -R "$REPO" --json baseRefName --jq .baseRefName)
           [ "$base" = main ] || { echo run=false >> "$GITHUB_OUTPUT"; exit 0; }
+          # The repo is public (2026-10-22): a fork's PR never reaches the jobs that hold the Claude and OpenAI secrets.
+          # Anything but an explicit "false" (an error, an empty answer) counts as a fork.
+          cross=$(gh pr view "$pr" -R "$REPO" --json isCrossRepository --jq .isCrossRepository)
+          if [ "$cross" != false ]; then
+            echo "#$pr comes from a fork: not audited here"; echo run=false >> "$GITHUB_OUTPUT"; exit 0
+          fi
           sha=$(gh pr view "$pr" -R "$REPO" --json headRefOid --jq .headRefOid)
           [[ "$sha" =~ ^[0-9a-f]{40}$ ]] || { echo "bad head"; exit 1; }
           done=$(gh pr view "$pr" -R "$REPO" --json comments | jq --arg o "$OWNER" --arg s "$sha" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | split("\n")[0] | rtrimstr("\r") | . == "AUDIT VERDICT: PASS \($s)" or . == "AUDIT VERDICT: REVISE \($s)"))] | length')

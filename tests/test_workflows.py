@@ -3,7 +3,11 @@
 2026-10-20: a step name containing ': ' made catalog-mx.yml invalid; GitHub would reject the file and the scheduled
 catalog would never run. Neither the tests nor three audits noticed, because nothing parsed the workflows.
 """
+import os
 import re
+import shutil
+import subprocess
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -105,3 +109,43 @@ class AuditorGpt(unittest.TestCase):
         gate = self.jobs['gate']['steps'][0]['run']
         self.assertIn('. == "AUDIT VERDICT: PASS \\($s)" or . == "AUDIT VERDICT: REVISE \\($s)"', gate)
         self.assertIn('startswith("AUDIT VERDICT: REVISE")', gate)
+
+
+GH_STUB = """#!/bin/sh
+case "$*" in
+  *baseRefName*) echo main ;;
+  *isCrossRepository*) printf '%s' "$STUB_CROSS" ;;
+  *headRefOid*) echo 0123456789abcdef0123456789abcdef01234567 ;;
+  *comments*) echo '{"comments": []}' ;;
+  *) exit 9 ;;
+esac
+"""
+
+
+@unittest.skipUnless(shutil.which('bash') and shutil.which('jq'), 'the gate needs bash and jq, as on the CI runner')
+class AuditorGate(unittest.TestCase):
+    """The repo is public since 2026-10-22: a fork's PR must never reach the jobs that hold the Claude and OpenAI
+    secrets. The gate's own script runs here against a stub gh."""
+
+    def gate(self, cross):
+        script = yaml.safe_load(AUDITOR.read_text(encoding='utf-8'))['jobs']['gate']['steps'][0]['run']
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / 'gh').write_text(GH_STUB, encoding='utf-8')
+            (Path(d) / 'gh').chmod(0o755)
+            out = Path(d) / 'out'
+            out.write_text('', encoding='utf-8')
+            env = {**os.environ, 'PATH': d + os.pathsep + os.environ['PATH'], 'GITHUB_OUTPUT': str(out),
+                   'STUB_CROSS': cross, 'EVENT': 'pull_request_target', 'PR_EVENT': '7', 'REPO': 'o/r', 'OWNER': 'o'}
+            r = subprocess.run(['bash', '-c', script], env=env, capture_output=True, text=True, timeout=60)
+            self.assertEqual(r.returncode, 0, r.stderr)
+            return dict(l.split('=', 1) for l in out.read_text(encoding='utf-8').split())
+
+    def test_a_branch_of_this_repo_is_audited(self):
+        self.assertEqual(self.gate('false'), {'run': 'true', 'pr': '7', 'sha': '0123456789abcdef0123456789abcdef01234567'})
+
+    def test_a_fork_is_never_audited(self):
+        self.assertEqual(self.gate('true'), {'run': 'false'})
+
+    def test_an_unreadable_answer_counts_as_a_fork(self):
+        for answer in ('', 'null', 'False'):
+            self.assertEqual(self.gate(answer), {'run': 'false'}, answer)
