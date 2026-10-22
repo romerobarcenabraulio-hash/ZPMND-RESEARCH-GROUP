@@ -199,6 +199,10 @@ MUT = [
  ('scripts/auditor_gpt.py', "PREFIX = 'GPT REVIEW: '", "PREFIX = 'GPT AUDIT VERDICT: '"),
  ('scripts/auditor_gpt.py', 'if _entropy(run) > 4.2 or', 'if _entropy(run) > 99 or'),
  ('scripts/auditor_gpt.py', 'if p.is_symlink() or not p.is_file() or not p.resolve().is_relative_to(root.resolve()):', 'if not p.is_file():'),
+ ('scripts/sondear_inegi.py', '    if not token:\n', '    if False:\n'),
+ ('scripts/sondear_inegi.py', "AREAS = ('00', '0700', '00000')", "AREAS = ('00',)"),
+ ('scripts/sondear_inegi.py', "answer = redact(r.body.decode('utf-8', 'replace'), token)", "answer = redact(r.body[:400].decode('utf-8', 'replace'), token)"),
+ ('scripts/sondear_inegi.py', 'secrets={token: HOST})', ')'),
 ]
 
 

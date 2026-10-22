@@ -1,0 +1,28 @@
+name: sondeo-inegi
+# One-off probe (scripts/sondear_inegi.py): which INEGI API request shape answers for an indicator id. Prints status
+# codes and short error texts only; nothing is stored, uploaded or committed. The token reaches only the probe step.
+on:
+  workflow_dispatch:
+    inputs:
+      series:
+        description: 'INEGI indicator ids, separated by spaces (digits only)'
+        default: '628194'
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - name: Probe INEGI request shapes
+        env:
+          INEGI_TOKEN: '${{ secrets.INEGI_TOKEN }}'
+          SERIES: '${{ inputs.series }}'   # passed as data, never interpolated into the script
+        run: |
+          [[ "$SERIES" =~ ^[0-9]+( [0-9]+){0,4}$ ]] || { echo "series: up to 5 ids, digits separated by spaces"; exit 2; }
+          python scripts/sondear_inegi.py $SERIES
