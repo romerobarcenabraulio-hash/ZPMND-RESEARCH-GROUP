@@ -19,7 +19,7 @@ import yaml
 
 from rg.catalog import hf_tesis
 from rg.catalog.fetch import Fetcher, FetchRefused, FileSink
-from rg.catalog.run import Run, recategorize
+from rg.catalog.run import Run, quarantine, recategorize
 from rg.catalog.store import Catalog
 from rg.schemas import validate
 from tests.test_catalog import FIX, FakeOpener, FakeResp
@@ -56,6 +56,18 @@ def api_body(file_bytes, license_='cc-by-4.0', sha=None):
 
 def points():
     return json.loads(SAMPLE)['points']
+
+
+def construido(point, **metadata):
+    """CONSTRUIDO: a copy of a real point with some metadata fields replaced (e.g. the rubro blanked), for the rows of
+    run 39691250207 that print no rubro or no registro digital (the excerpt has none)."""
+    p = json.loads(json.dumps(point))
+    p['payload']['metadata'].update(metadata)
+    return p
+
+
+def body_of(ps):
+    return json.dumps({'total_points': len(ps), 'points': ps}, ensure_ascii=False).encode('utf-8')
 
 
 class Parser(unittest.TestCase):
@@ -127,6 +139,28 @@ class Mapping(unittest.TestCase):
         self.assertIsNone(p('Esta tesis se publicó el viernes 27 de juniembre de 2014'))
         self.assertIsNone(p('Semanario Judicial de la Federación y su Gaceta. Tomo XXXIV, Septiembre de 2011'))
         self.assertIsNone(p(''))
+
+    def entry(self, point):
+        return hf_tesis.to_entry(self.src, 'MX', point, 1, self.art, 'sha256/aa/' + 'a' * 64 + '.json', '2026-10-21T00:00:00Z')
+
+    def test_only_a_row_without_rubro_or_registro_is_uncitable(self):
+        self.assertEqual([hf_tesis.uncitable(e) for e in self.entries()], [None] * 5)
+        p = points()[0]
+        cases = [(construido(p, rubro=''), 'without_rubro'),                     # CONSTRUIDO: rubro blanked
+                 (construido(p, rubro=' \n\t '), 'without_rubro'),               # CONSTRUIDO: blank after normalising
+                 (construido(p, registro_digital=''), 'without_registro'),       # CONSTRUIDO: registro blanked
+                 (construido(p, registro_digital='', rubro=''), 'without_registro'),  # CONSTRUIDO: counted once
+                 (construido(p, registro_digital='1000'), None)]                 # CONSTRUIDO: a small registro stays
+        self.assertEqual([hf_tesis.uncitable(self.entry(q)) for q, _ in cases], [why for _, why in cases])
+        small = self.entry(cases[-1][0])
+        self.assertEqual((small['entry_id'], validate('catalog_entry', small)), (f'{SID}:1000', []))
+
+    def test_only_a_qdrant_id_names_an_uncatalogued_row(self):
+        ps = points()
+        self.assertEqual([hf_tesis.point_id(p) for p in ps[:3]], [160971, 160972, '07e52232-7046-4331-8512-f74b3c96cbcf'])
+        rubro = ps[0]['payload']['metadata']['rubro']
+        for odd in ({'id': rubro}, {'id': True}, {'id': -1}, {'id': None}, {}, 'x', None, {'id': ps[2]['id'].upper()}):
+            self.assertIsNone(hf_tesis.point_id(odd), odd if not isinstance(odd, dict) else str(odd)[:40])
 
     def test_recategorize_recomputes_the_type_from_the_printed_one(self):
         e = self.entries()[3]
@@ -332,6 +366,55 @@ class Download(unittest.TestCase):
         self.assertEqual(self.failed(), [])
         self.assertEqual((stats['rows_read'], stats['distinct'], stats['source_repeated_rows']), (6, 5, 1))
         self.assertTrue(self.entries()['160971']['title'].startswith('VISITAS DOMICILIARIAS'))
+
+    def uncitable_file(self):
+        """The real excerpt plus CONSTRUIDO rows like the 2,876 quarantined in run 39691250207: one without rubro placed
+        BEFORE the real row of the same registro, one without registro, and one with a small registro and a rubro."""
+        ps = points()
+        return [construido(ps[1], rubro='')] + ps + [construido(ps[2], registro_digital=''),
+                                                     construido(ps[3], registro_digital='1000')]
+
+    def test_rows_without_rubro_or_registro_are_counted_never_catalogued(self):
+        rows = self.uncitable_file()
+        self.serve(body_of(rows))
+        stats = self.go()
+        self.assertEqual(self.failed(), [])
+        es = self.entries()
+        self.assertEqual(sorted(es), ['1000', '160971', '160972', '2006839', '2009327', '2021168'])
+        self.assertEqual(es['160972']['title'], ' '.join(points()[1]['payload']['metadata']['rubro'].split()))
+        for e in es.values():
+            self.assertEqual(validate('catalog_entry', e), [], e['native_id'])
+        self.assertEqual({k: stats[k] for k in ('rows_read', 'distinct', 'source_repeated_rows', 'source_rows_without_registro',
+                                                'source_rows_without_rubro')},
+                         {'rows_read': 8, 'distinct': 6, 'source_repeated_rows': 0, 'source_rows_without_registro': 1,
+                          'source_rows_without_rubro': 1})
+        self.assertEqual(stats['rows_read'], stats['distinct'] + stats['source_repeated_rows']
+                         + stats['source_rows_without_registro'] + stats['source_rows_without_rubro'])
+        self.assertEqual((stats['source_rows_without_rubro_point_ids'], stats['source_rows_without_registro_point_ids']),
+                         ([160972], ['07e52232-7046-4331-8512-f74b3c96cbcf']))
+        dump = json.dumps(self.run_.manifest, ensure_ascii=False)
+        for p in (rows[0], rows[-2]):  # nothing of an uncatalogued row reaches the manifest but its point id
+            for field in ('rubro', 'texto', 'tesis', 'url'):
+                if p['payload']['metadata'].get(field):
+                    self.assertNotIn(p['payload']['metadata'][field], dump, field)
+
+    def test_a_file_with_uncatalogued_rows_reconciles_and_is_not_downloaded_again(self):
+        # Run 39691250207: such rows failed the schema and were quarantined (dropped), so 'distinct' never matched the
+        # catalog again: every run would download the 3.6 GB file again and exit 4.
+        self.serve(body_of(self.uncitable_file()))
+        self.go()
+        invalid = {eid: errs for eid, e in self.run_.catalog.entries.items() if (errs := validate('catalog_entry', e))}
+        quarantine(self.run_.catalog, invalid)  # what main() does after the sources ran
+        self.run_.manifest['coverage'] = []
+        self.go()
+        self.assertEqual((invalid, self.fetched(SIGNED), self.failed()), ({}, 1, []))
+
+    def test_at_most_twenty_point_ids_are_kept(self):
+        ps = points()
+        self.serve(body_of(ps + [construido(ps[0], rubro='')] * 25))  # CONSTRUIDO: 25 rows with the rubro blanked
+        stats = self.go()
+        self.assertEqual(self.failed(), [])
+        self.assertEqual((stats['source_rows_without_rubro'], stats['source_rows_without_rubro_point_ids']), (25, [160971] * 20))
 
 
 class Wiring(unittest.TestCase):

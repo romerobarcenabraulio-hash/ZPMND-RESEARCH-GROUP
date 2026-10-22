@@ -15,8 +15,15 @@ from .categorize import fold
 
 # NOM-137-SSA1-2025, PROY-NOM-034-ENER-2025, NOM-EM-007-ASEA- 2025, NOM-011-SICT2/2025, NOM-08-TUR-2002, and compound
 # issuers: NOM-051-SCFI/SSA1-2010, NOM-087-ECOL-SSA1-2002
-# printed variants seen in the DOF: a space after the number (NOM-241- SSA1-2025), a sub-number (NOM-021/3- SCT3-2010)
-CODE = re.compile(r'\b(PROY-)?NOM-(EM-)?(\d{2,3}(?:/\d+)?)\s*-\s*((?:[A-Z0-9]+\s*[-/]\s*)*?[A-Z0-9]+)\s*[-/]\s*(\d{4})\b')
+# printed variants seen in the DOF: a space after the number (NOM-241- SSA1-2025), a sub-number (NOM-021/3- SCT3-2010),
+# two separators before the year (PROY-NOM-020-SCT2/-2020, mx.dof:5638496), and no separator at all
+# (PROY-NOM-016ENER2024, mx.dof:5763083).
+# The no-separator form (second branch) is read only when the issuer is letters only, between a 2-3 digit number and a
+# 4-digit year that ends the word: letters and digits are disjoint, so the split is unique. An issuer ending in a digit
+# (SSA1, SCT2) cannot be told from the year without a separator ('SSA12024': SSA1 + 2024 or SSA + 12024?), so such a
+# code yields nothing and stays in unparsed(), visible, instead of being guessed.
+CODE = re.compile(r'\b(PROY-)?NOM-(EM-)?(?:(\d{2,3}(?:/\d+)?)\s*-\s*((?:[A-Z0-9]+\s*[-/]\s*)*?[A-Z0-9]+)\s*(?:[-/]|/-)\s*(\d{4})'
+                  r'|(\d{2,3})([A-Z]+)(\d{4}))\b')
 LOOKS_LIKE = re.compile(r'\bNOM-(?:EM-)?\d')  # independent of CODE: any title that seems to name a NOM
 
 # Folded title opening -> stage; the longest matching opening wins.
@@ -52,7 +59,9 @@ def codes(title):
     """NOM codes printed in a title, in order: (lineage, edition, printed, is_project, position)."""
     out = []
     for m in CODE.finditer(fold(title)):
-        proj, em, num, issuer, year = m.groups()
+        proj, em, num, issuer, year, num_bare, issuer_bare, year_bare = m.groups()
+        if num is None:  # the no-separator branch matched
+            num, issuer, year = num_bare, issuer_bare, year_bare
         head, _, sub = num.partition('/')
         issuer = re.sub(r'\s+', '', issuer)  # 'SCFI/ SSA1' as printed is the issuer SCFI/SSA1
         lineage = f"NOM-{'EM-' if em else ''}{int(head):03d}{'/' + sub if sub else ''}-{issuer}"

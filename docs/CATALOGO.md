@@ -81,6 +81,13 @@ sin coincidencia es `OTRO`. Las relaciones (`cancela`, `menciona`) se copian del
 vigencia. El piso del DOF es 1993 (Ley Federal sobre Metrología y Normalización, 1992): SIDOF sirve esos días con el
 mismo formato. Los textos de las notas que citan una NOM se descargan primero.
 
+El código se lee tal como se imprime. La corrida 39691250207 encontró dos títulos reales que no se leían:
+`PROY-NOM-020-SCT2/-2020` (`mx.dof:5638496`, dos separadores antes del año) y `PROY-NOM-016ENER2024`
+(`mx.dof:5763083`, sin ningún separador). La forma sin separador se lee solo si el emisor es de puras letras, entre un
+número de 2 o 3 dígitos y un año de 4: letras y dígitos no se mezclan, así que el corte es único. Un emisor que termina
+en dígito (`SSA12024`: ¿SSA1 + 2024 o SSA + 12024?) no se adivina. Queda en la cobertura `titulos con NOM sin codigo
+leido` y la corrida sale con código 3.
+
 ## Tesis de la SCJN: fuente secundaria (`mx.hf-tesis-scjn`)
 
 El Semanario de la SCJN responde 403 a robots.txt y no se rodea. Mientras tanto las tesis entran desde el dataset
@@ -102,7 +109,22 @@ la SCJN cuando la fuente primaria abra.
   año, así que quedan sin fecha.
 - **Cuadre:** el `total_points` del propio archivo (59,678) debe ser igual a las filas leídas. Además, los registros
   digitales distintos deben ser iguales a los catalogados con ese archivo. Una fila repetida en la fuente se cuenta
-  (`source_repeated_rows`) y se queda la primera.
+  (`source_repeated_rows`) y se queda la primera. Cada fila leída cae en una sola cuenta: filas leídas = registros
+  distintos catalogados + repetidas + sin registro + sin rubro.
+- **Filas que no se pueden citar:** una fila sin registro digital o sin rubro (vacío después de normalizar los
+  espacios) no entra al catálogo. No hay con qué citarla ni con qué nombrarla, y nada se completa adivinando.
+  - Se cuenta en `source_rows_without_registro` o en `source_rows_without_rubro`, una sola vez (primero el registro).
+  - El manifiesto lleva hasta 20 ids de punto de Qdrant por cuenta (`source_rows_without_registro_point_ids`,
+    `source_rows_without_rubro_point_ids`). No se guarda nada del contenido de la fila.
+  - El tamaño del número de registro nunca se juzga: una fila con rubro y registro entra, sea cual sea su registro.
+- **Corrida 39691250207 (2026-10-21):** 2,876 registros de esta fuente fueron a cuarentena con `title: '' should be
+  non-empty`. Sus ids nativos se ven como `1`, `10`, `100`, `1000`, y uno está vacío (`mx.hf-tesis-scjn:`).
+  - La cuarentena los quitaba del catálogo. Así, los registros distintos ya no cuadraban con los catalogados: cada
+    corrida volvía a bajar los 3.6 GB y salía con código 4, y eso también detenía la cadena automática del catálogo.
+  - Ahora esas filas se cuentan a la vista en el manifiesto; no se esconden ni se filtran por el tamaño del registro.
+  - **HIPÓTESIS** hasta la próxima corrida completa: cuántas filas son y cómo se reparten entre sin rubro y sin
+    registro. 2,876 es el número de ids distintos en cuarentena, y las filas con el mismo id (por ejemplo, todas las de
+    registro vacío) se juntaban en uno solo.
 - **Partición:** las ~60 mil tesis se guardan en `hf-tesis-scjn/<registro // 10000>.jsonl`. Un solo archivo pasaría el
   límite de 100 MB de GitHub.
 - **Qué no se usa:** las estadísticas de la ficha del dataset no coinciden con las filas (las filas muestreadas son de
