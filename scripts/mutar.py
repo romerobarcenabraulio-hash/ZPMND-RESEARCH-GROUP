@@ -38,6 +38,8 @@ MUT = [
  ('.github/workflows/catalog-mx.yml', '(( CHAIN >= 1 && CHAIN <= 30 ))', '(( CHAIN >= 1 ))'),
  ('.github/workflows/catalog-mx.yml', '-f chain="$(( CHAIN - 1 ))"', '-f chain="$CHAIN"'),
  ('.github/workflows/catalog-mx.yml', '[ "$rc" = 1 ] ||', 'true ||'),
+ ('.github/workflows/catalog-mx.yml', '[[ "$BUDGET" =~ ^[0-9]*$ && "$INDEX_DAYS" =~ ^[0-9]*$ ]] ||', 'true ||'),
+ ('.github/workflows/catalog-mx.yml', '[[ "$CHAIN" =~ ^[0-9]+$ ]] && ', ''),
  ('.github/workflows/catalog-mx.yml', 'for d in data raw;', 'for d in raw;'),
  ('.github/workflows/ci.yml', "    if: github.event_name == 'pull_request'", "    if: github.event_name != 'schedule'"),
  ('.github/workflows/indicadores-mx.yml', "          INEGI_TOKEN: ${{ secrets.INEGI_TOKEN }}   # sent only", "          INEGI_TOKEN_UNUSED: ${{ secrets.INEGI_TOKEN }}   # sent only"),

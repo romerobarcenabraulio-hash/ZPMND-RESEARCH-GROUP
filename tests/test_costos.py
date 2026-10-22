@@ -45,6 +45,36 @@ class CatalogChain(unittest.TestCase):
         self.assertEqual(self.doc['jobs']['run']['if'], "github.ref == 'refs/heads/main'")
 
 
+class ChainInputs(unittest.TestCase):
+    """The chain step's own script, run against a stub gh: only plain numbers in range dispatch, and an input is never
+    evaluated as an expression (GPT review of #19, c671ad3)."""
+
+    def dispatch(self, chain, budget='12000', index_days='1500'):
+        step = load('catalog-mx.yml')['jobs']['chain']['steps'][0]['run']
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / 'gh').write_text('#!/bin/sh\nprintf "%s\\n" "$@" > "$GH_ARGS"\n', encoding='utf-8')
+            (Path(d) / 'gh').chmod(0o755)
+            env = {**os.environ, 'PATH': d + os.pathsep + os.environ['PATH'], 'GH_ARGS': str(Path(d) / 'args'),
+                   'GITHUB_REPOSITORY': 'o/r', 'CHAIN': chain, 'BUDGET': budget, 'INDEX_DAYS': index_days}
+            r = subprocess.run(['bash', '-c', step], cwd=d, env=env, capture_output=True, text=True, timeout=30)
+            args = (Path(d) / 'args').read_text(encoding='utf-8').split('\n') if (Path(d) / 'args').exists() else None
+            return r.returncode, args, (Path(d) / 'pwned').exists()
+
+    def test_a_number_in_range_dispatches_one_less(self):
+        rc, args, _ = self.dispatch('3')
+        self.assertEqual(rc, 0)
+        self.assertEqual(args[:9], ['workflow', 'run', 'catalog-mx.yml', '-R', 'o/r', '--ref', 'main', '-f', 'budget=12000'])
+        self.assertIn('chain=2', args)
+
+    def test_anything_but_a_plain_number_in_range_dispatches_nothing(self):
+        for chain in ('0', '31', '1+1', '2*3', 'a[$(touch pwned)]', ' 3', ''):
+            rc, args, pwned = self.dispatch(chain)
+            self.assertEqual((rc, args, pwned), (2, None, False), repr(chain))
+        for budget, days in (('12x', '1'), ('1', '$(touch pwned)'), ('1-1', '1')):
+            rc, args, pwned = self.dispatch('3', budget, days)
+            self.assertEqual((rc, args, pwned), (2, None, False), (budget, days))
+
+
 class ThisRunsManifest(unittest.TestCase):
     """`more` must come from the manifest this run wrote, never from an older one already on the data branch."""
 
@@ -64,7 +94,7 @@ class ThisRunsManifest(unittest.TestCase):
             if new_text is not None:
                 script += f"sleep 0.01; printf '%s' {new_text!r} > data/mx/runs/2026-10-22T000000Z.json\n"
             script += f'{pick}\n{decide}\necho "$more"\n'
-            out = subprocess.run(['bash', '-c', script], cwd=d, capture_output=True, text=True, check=True)
+            out = subprocess.run(['bash', '-c', script], cwd=d, capture_output=True, text=True, check=True, timeout=30)
             return out.stdout.strip()
 
     def test_more_reads_only_this_runs_manifest(self):
