@@ -26,7 +26,7 @@ TREE_LEVELS = (('país', lambda e: e['country']),
                ('dependencia', lambda e: e['category'].get('issuer')),
                ('tipo', lambda e: e['category']['doc_type']))
 NO_DATA = '(sin dato en la fuente)'
-DERIVED = ('normas',)  # folders of derived views rewritten every run: their lines are never read back as rows
+DERIVED = ('normas', 'tratados')  # folders of derived views rewritten every run: their lines are never read back as rows
 
 
 def build_tree(entries):

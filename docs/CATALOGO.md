@@ -83,6 +83,24 @@ la SCJN cuando la fuente primaria abra.
 - Crudos: release `raw-mx`, un `.tar` por corrida con los archivos nuevos. Las rutas son direcciones por contenido (`sha256/<2>/<sha256>.<ext>`), así que el hash es la ruta.
 - Cada registro lleva url, fecha de recuperación, sha256, tamaño, tipo, licencia y la ruta de su crudo. Las versiones de leyes y ordenamientos estatales se acumulan; nunca se borran.
 
+## Tratados internacionales: vista derivada del DOF
+
+Cada corrida escribe `mx/tratados/tratados.jsonl`, justo después del catálogo, sin tocar el sitio de la SRE (su reto
+anti-bots no se rodea). Todo tratado vigente en México pasa por el DOF: el decreto del Senado que lo aprueba
+("Decreto por el que se aprueba el Convenio…") y el decreto que lo promulga ("Decreto Promulgatorio del Tratado…").
+- **Selección y etapa:** tabla fija de aperturas del título (`rg/catalog/tratados.py`): acto, artículo y una palabra de
+  instrumento (Tratado, Convenio, Convención, Acuerdo, Protocolo, Enmienda). Etapas: `promulgacion`,
+  `aprobacion_senado`, `enmienda`, `retiro_o_denuncia`, `fe_de_erratas`, `aclaracion`. Gana la apertura más larga
+  seguida de un instrumento.
+- **Nombre:** se copia del título, desde después del artículo hasta la cláusula de conclusión (", adoptado en",
+  ", firmado en", ", hecho en", ", suscrito en"), o hasta el final sin el punto.
+- **Agrupación y orden:** una línea por nombre exacto plegado (sin acentos, mayúsculas, espacios simples), con sus notas
+  ordenadas por fecha oficial. No se calcula vigencia, no se adivinan partes y no se unen nombres distintos.
+- **Chequeo independiente:** una regex más laxa ("decreto" con "promulgatorio" o con cláusula de conclusión) debe
+  seleccionar exactamente los mismos títulos que la tabla. Cualquier diferencia, en un sentido o en el otro, queda en
+  `coverage` (`mx.tratados`) y la corrida sale con código 3.
+- La carpeta es una vista: `Catalog` nunca la lee como registros (`store.DERIVED`).
+
 ## Programación
 
 `.github/workflows/catalog-mx.yml` corre cada 3 días a las 05:00 de la Ciudad de México. Antes de tocar una fuente corre las pruebas. Escribe solo la rama de datos y el release: el bot nunca toca el código.

@@ -22,6 +22,7 @@ from . import hf_tesis, leyesbiblio, normas, ojn, sidof
 from .categorize import clean_text, doc_type, dof_doc_type, fold
 from .fetch import BudgetExhausted, Fetcher, FetchRefused, FileSink, Response, decode_html
 from .store import Catalog, RawStore
+from . import tratados
 from ..schemas import validate
 
 REPO = Path(__file__).resolve().parents[2]
@@ -675,6 +676,7 @@ def main(argv=None):
         missed = normas.unparsed(dof)  # a title that seems to name a NOM must yield a code, or the run is not whole
         manifest['coverage'].append({'source_id': 'mx.normas', 'scope': 'titulos con NOM sin codigo leido',
                                      'expected': 0, 'extracted': len(missed), 'ok': not missed, 'entries': missed[:20]})
+    tratados.derive(run.catalog.dir, run.catalog.snapshot(), manifest)  # derived view + its independent check
     run.catalog.write_run(manifest)
     bad = [c for c in manifest['coverage'] if not c['ok']]
     if invalid:
