@@ -1,0 +1,16 @@
+{
+  "request_id": "RR-2026-10-21-nom035-obligaciones",
+  "issued_by": "ZPMND",
+  "issued_at": "2026-10-21T06:00:00Z",
+  "question": "En la NOM-035-STPS-2018 (DOF 23/10/2018), ¿qué obligaciones concretas imponen al patrón los numerales 5 a 8, a qué centros de trabajo aplica cada una (por número de trabajadores u otra condición) y cuál es el texto literal que la establece, en tramos de 300 caracteres o menos?",
+  "why_needed": "ZPMND convierte cada obligación en una unidad tipada que solo entra si su cita está literal en la fuente; hoy solo tiene curado el numeral 2.",
+  "affected_component": "curaduría tipada del plano de conocimiento",
+  "desired_evidence": [
+    "texto del DOF con su sha256 y fecha",
+    "por cada obligación: numeral, condición de aplicación, cita literal",
+    "lo que el texto no decide, marcado como desconocido"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Una obligación atribuida a un tramo que no le corresponde, o una cita parafraseada que no se localiza en la fuente.",
+  "privacy_class": "PUBLIC"
+}
