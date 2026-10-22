@@ -202,6 +202,8 @@ MUT = [
  ('scripts/sondear_inegi.py', '    if not token:\n', '    if False:\n'),
  ('scripts/sondear_inegi.py', "AREAS = ('00', '0700', '00000')", "AREAS = ('00',)"),
  ('scripts/sondear_inegi.py', "answer = redact(r.body.decode('utf-8', 'replace'), token)", "answer = redact(r.body[:400].decode('utf-8', 'replace'), token)"),
+ ('scripts/sondear_inegi.py', "for form in {token, quote(token, safe='')}:", 'for form in {token}:'),
+ ('scripts/sondear_inegi.py', "out(f'refused {shown} {redact(str(exc), token)[:160]}')", "out(f'refused {shown} {str(exc)[:160]}')"),
  ('scripts/sondear_inegi.py', 'secrets={token: HOST})', ')'),
 ]
 

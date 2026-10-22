@@ -2,6 +2,7 @@
 import importlib.util
 import unittest
 from pathlib import Path
+from urllib.parse import quote
 
 import yaml
 
@@ -42,6 +43,30 @@ class Probe(unittest.TestCase):
         lines = []
         sondeo.probe(['628194'], TOKEN, fetcher=Straddle(), out=lines.append)
         self.assertFalse(any(TOKEN[:8] in line for line in lines))
+
+    def test_a_refusal_that_names_the_url_never_prints_the_token(self):
+        # GPT review of #23 (c236293): no fake raised FetchRefused, so dropping the redaction of its message went unseen.
+        class Refuses(FakeFetcher):
+            def get(self, url):
+                from rg.catalog.fetch import FetchRefused
+                raise FetchRefused(f'{url} is disallowed by robots.txt')  # the token sits inside the 160 characters shown
+        lines = []
+        sondeo.probe(['628194'], TOKEN, fetcher=Refuses(), out=lines.append)
+        self.assertTrue(lines and all(line.startswith('refused ') for line in lines))
+        self.assertFalse(any(TOKEN in line for line in lines))
+
+    def test_a_token_reflected_url_encoded_is_never_printed(self):
+        # GPT review of #23 (c236293): TOKEN reads the same quoted, so dropping the quoted form went unseen.
+        odd = 'tok/+ =0123456789'
+        self.assertNotEqual(quote(odd, safe=''), odd)
+
+        class Encoded(FakeFetcher):
+            def get(self, url):
+                from rg.catalog.fetch import Response
+                return Response(400, f'no results for {quote(odd, safe="")}'.encode(), url)
+        lines = []
+        sondeo.probe(['628194'], odd, fetcher=Encoded(), out=lines.append)
+        self.assertFalse(any(quote(odd, safe='') in line or odd in line for line in lines))
 
     def test_the_real_fetcher_binds_the_token_to_inegi_only(self):
         f = sondeo.make_fetcher(TOKEN, 8)
