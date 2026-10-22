@@ -1,0 +1,16 @@
+{
+  "request_id": "RR-2026-10-21-seguridad-arte-previo",
+  "issued_by": "ZPMND",
+  "issued_at": "2026-10-21T05:00:00Z",
+  "question": "Para cada concepto de seguridad de un entorno donde agentes de IA razonan y actuan (autoridad no transitiva y atenuada al delegar, autorizacion ligada al efecto exacto con plan y digest, recibos de comportamiento observados por el entorno, cuarentena y procedencia de memoria, aduana de conocimiento, ingreso de capacidades sin autoridad, autoextension sin autoautoridad, control semantico de efectos, instituciones computacionales), ¿cual es el arte previo mas cercano en seguridad por capacidades de objetos, zero trust, gobierno de agentes de IA, sistemas multiagente, sistemas operativos, metodos formales, IAM, flujos de trabajo y alineacion, y que lo diferencia?",
+  "why_needed": "ZPMND no debe afirmar originalidad sin mapa de arte previo; necesita saber que reutilizar y que problema sigue abierto antes de convertir invariantes en pruebas adversarias.",
+  "affected_component": "agenda de seguridad del entorno",
+  "desired_evidence": [
+    "por concepto: equivalente existente, arte previo mas cercano, diferencia, evidencia, contribucion posible y problema abierto",
+    "fuentes primarias (papers, especificaciones, documentacion oficial) con fecha y sha256",
+    "lo que no se encuentre, marcado como desconocido"
+  ],
+  "priority": "P2",
+  "risk_if_wrong": "Reinventar mecanismos maduros o afirmar como nuevo algo que ya existe.",
+  "privacy_class": "PUBLIC"
+}
