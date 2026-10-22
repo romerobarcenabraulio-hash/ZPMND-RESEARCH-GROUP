@@ -139,6 +139,42 @@
         }
       }
     },
+    "observation": {
+      "description": "One observation of an indicator series exactly as the API served it (Banxico SIE, INEGI BIE): date, value and unit are the literal text of the response, never computed, converted or derived.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "series_id",
+        "date_printed",
+        "value_printed",
+        "unit_printed"
+      ],
+      "properties": {
+        "series_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9]{1,30}$"
+        },
+        "date_printed": {
+          "type": "string",
+          "pattern": "^[0-9]{1,4}(/[0-9]{1,4}){0,2}$"
+        },
+        "value_printed": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "maxLength": 100,
+              "pattern": "^[^\\u0000-\\u001F\\u007F-\\u009F\\u200B-\\u200F\\u202A-\\u202E\\u2060-\\u2064\\u2066-\\u2069\\uFEFF]*$"
+            }
+          ]
+        },
+        "unit_printed": {
+          "$ref": "#/$defs/label_or_null"
+        }
+      }
+    },
     "date_source": {
       "description": "Where the official publication date came from, set only by the current code: the edition's own PDF link, or the page's own date. A date without it is not trusted (legacy) and its day is read again.",
       "enum": ["edition", "page"]

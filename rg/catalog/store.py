@@ -1,7 +1,8 @@
 """Raw bytes by content address, catalog rows ordered and deduplicated, run state, and the category index.
 
 Layout under <catalog_root>/<cc>/:
-  <source>.jsonl or <source>/<part>.jsonl   one row per instrument or note, sorted (part: year, state, id range)
+  <source>.jsonl or <source>/<part>.jsonl   one row per instrument, note or observation, sorted (part: year, state,
+                                            id range or indicator series)
   _state.json                               what has been indexed (days, ETags), so runs are incremental
   INDEX.md, index.json                      counts per category, computed from the rows
   runs/<run_id>.json                        manifest of each run (coverage, counts, budget, errors)
@@ -139,6 +140,8 @@ class Catalog:
         short = entry['source_id'].split('.', 1)[1]
         if entry['source_id'].endswith('.dof'):
             return f"{short}/{(entry['dates'].get('published') or '0000')[:4]}.jsonl"
+        if 'observation' in entry:  # indicators: one file per series, e.g. banxico-sie/SF43718.jsonl
+            return f"{short}/{entry['observation']['series_id']}.jsonl"
         if 'state_code' in entry.get('listing', {}):
             return f"{short}/{entry['listing']['state_code']:02d}.jsonl"
         if entry['source_id'].endswith('.hf-tesis-scjn'):  # ~60k rows: one file would pass GitHub's 100 MB file limit

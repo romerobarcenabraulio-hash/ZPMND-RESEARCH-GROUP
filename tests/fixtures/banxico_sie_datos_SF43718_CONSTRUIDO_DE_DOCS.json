@@ -1,0 +1,44 @@
+{
+  "bmx": {
+    "series": [
+      {
+        "idSerie": "SF43718",
+        "titulo": "Tipo de cambio Pesos por dólar E.U.A. Tipo de cambio para solventar obligaciones denominadas en moneda extranjera Fecha de determinación (FIX)",
+        "datos": [
+          {
+            "fecha": "01/01/2015",
+            "dato": "N/E"
+          },
+          {
+            "fecha": "02/01/2015",
+            "dato": "14.8290"
+          },
+          {
+            "fecha": "03/01/2015",
+            "dato": "N/E"
+          },
+          {
+            "fecha": "04/01/2015",
+            "dato": "N/E"
+          },
+          {
+            "fecha": "05/01/2015",
+            "dato": "14.9469"
+          },
+          {
+            "fecha": "06/01/2015",
+            "dato": "14.8479"
+          },
+          {
+            "fecha": "07/01/2015",
+            "dato": "14.7936"
+          },
+          {
+            "fecha": "08/01/2015",
+            "dato": "14.6274"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+User-agent: *
+Disallow: /dyn
+
+User-agent: *
+Disallow: /dyn/
+
+User-agent: *
+Disallow: /ALEPH
+
+User-Agent: *
+Disallow: /ALEPH
+
+User-agent: Googlebot
+Disallow: /ALEPH
+
+User-agent: googlebot
+Disallow: /ALEPH
+
+User-agent: WT
+Disallow: /ALEPH
+
+User-Agent: WT
+Disallow: /ALEPH
+
+User-agent: WT.*
+Disallow: /ALEPH
+
+User-Agent: WT.*
+Disallow: /ALEPH
+
+User-agent: Slurp
+Disallow: /ALEPH
+
+User-agent: Slurp
+Disallow: /ALEPHcgi-bin/
+
+User-agent: http://www.almaden.ibm.com/cs/crawler
+Disallow: /ALEPH
+
+Useri-agent: msnbot
+Disallow: /ALEPH
+
+User-agent; MSNBot
+Disallow: /ALEPH
+
+User-agent: Exabot
+Disallow: /ALEPH
+
+User-agent: WebTrends
+Disallow: /ALEPH
+
+User-agent: webtrends
+Disallow: /ALEPH
+
+User-agent: *
+Disallow: /V
+
+User-Agent: *
+Disallow: /V
+
+User-agent: Googlebot
+Disallow: /V
+
+User-agent: googlebot
+Disallow: /V
+
+User-agent: WT
+Disallow: /V
+
+User-Agent: WT
+Disallow: /V
+
+User-agent: WT.*
+Disallow: /V
+
+User-Agent: WT.*
+Disallow: /V
+
+User-agent: Slurp
+Disallow: /V
+
+User-agent: http://www.almaden.ibm.com/cs/crawler
+Disallow: /V
+
+Useri-agent: msnbot
+Disallow: /V
+
+User-agent; MSNBot
+Disallow: /V
+
+User-agent: Exabot
+Disallow: /V
+
+User-agent: WebTrends
+Disallow: /V
+
+User-agent: webtrends
+Disallow: /V

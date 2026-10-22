@@ -91,6 +91,67 @@ class FetchGuards(unittest.TestCase):
         with self.assertRaises(FetchRefused):
             f.get('https://b.gob.mx/x')
 
+    def test_robots_redirect_is_followed_and_its_rules_apply_to_the_first_host(self):
+        # RFC 9309 §2.3.1.2. Banxico, 2026-10-20: www.banxico.org.mx/robots.txt answers 302 to
+        # anterior.banxico.org.mx/robots.txt (rules for every agent: /dyn, /ALEPH, /V). Before this, 3xx = disallow all.
+        f, _ = fetcher({'https://a.gob.mx/robots.txt': (302, b'', {'Location': 'https://b.gob.mx/robots.txt'}),
+                        'https://b.gob.mx/robots.txt': (200, b'User-agent: *\nDisallow: /dyn\nCrawl-delay: 3\n', {}),
+                        'https://a.gob.mx/x': (200, b'ok', {})}, robots_log={})
+        self.assertEqual(f.get('https://a.gob.mx/x').body, b'ok')
+        with self.assertRaises(FetchRefused):
+            f.get('https://a.gob.mx/dyn/1')
+        self.assertTrue(f.disallowed_by_rule('https://a.gob.mx/dyn/1'))  # a rule that was read: recorded as 'disallowed'
+        self.assertEqual(f._robots_for(f._check_url('https://a.gob.mx/x')).crawl_delay('x'), 3)
+        self.assertEqual(f.robots_log['https://a.gob.mx'],
+                         {'url': 'https://b.gob.mx/robots.txt', 'status': 200, 'redirects': 1})
+
+    def robots_chain(self, hops, end=(200, b'User-agent: *\nAllow: /\n', {})):
+        routes = {f'https://a.gob.mx/r{i}': (301, b'', {'Location': f'https://a.gob.mx/r{i + 1}'}) for i in range(1, hops)}
+        routes['https://a.gob.mx/robots.txt'] = (302, b'', {'Location': 'https://a.gob.mx/r1'}) if hops else end
+        routes[f'https://a.gob.mx/r{hops}'] = end
+        routes['https://a.gob.mx/x'] = (200, b'ok', {})
+        return fetcher(routes, robots_log={})[0]
+
+    def test_robots_redirects_up_to_five_are_followed(self):
+        for hops in (2, 5):
+            f = self.robots_chain(hops)
+            self.assertEqual(f.get('https://a.gob.mx/x').body, b'ok', hops)
+            self.assertEqual(f.robots_log['https://a.gob.mx'], {'url': f'https://a.gob.mx/r{hops}', 'status': 200, 'redirects': hops})
+
+    def test_six_robots_redirects_mean_unreachable_everything_disallowed(self):
+        f = self.robots_chain(6)
+        with self.assertRaises(FetchRefused):
+            f.get('https://a.gob.mx/x')
+        self.assertFalse(f.disallowed_by_rule('https://a.gob.mx/x'))  # unreachable, never recorded as a rule
+        sent = [c[0] for c in f._opener.calls]
+        self.assertEqual(len(sent), 6)  # robots.txt + 5 redirects followed; the 6th redirect is not
+        self.assertNotIn('https://a.gob.mx/r6', sent)
+        self.assertEqual(f.robots_log['https://a.gob.mx'], {'url': 'https://a.gob.mx/r5', 'status': 301, 'redirects': 5})
+
+    def test_robots_redirect_leaving_the_allowlist_or_https_is_not_followed(self):
+        for target in ('https://evil.example/robots.txt', 'http://b.gob.mx/robots.txt', 'https://u:p@b.gob.mx/robots.txt'):
+            f, _ = fetcher({'https://a.gob.mx/robots.txt': (302, b'', {'Location': target}),
+                            target: (200, b'User-agent: *\nAllow: /\n', {}), 'https://a.gob.mx/x': (200, b'ok', {})})
+            with self.assertRaises(FetchRefused, msg=target):
+                f.get('https://a.gob.mx/x')
+            self.assertEqual([c[0] for c in f._opener.calls], ['https://a.gob.mx/robots.txt'], target)
+
+    def test_robots_groups_for_the_same_agent_are_combined(self):
+        # RFC 9309 §2.2.1. Real file (anterior.banxico.org.mx, 2026-10-21) with several 'User-agent: *' groups: the
+        # stdlib parser kept only the first (/dyn) and let /ALEPH and /V through.
+        body = (FIX / 'banxico_robots_2026-10-21.txt').read_bytes()
+        named = b'User-agent: ZPMND-RESEARCH-GROUP-catalog\nDisallow: /a\n\nUser-agent: ZPMND-RESEARCH-GROUP-catalog\nDisallow: /b\n'
+        f, _ = fetcher({'https://a.gob.mx/robots.txt': (200, body, {}), 'https://b.gob.mx/robots.txt': (200, named, {})})
+        for url in ('https://a.gob.mx/dyn/x', 'https://a.gob.mx/ALEPH/x', 'https://a.gob.mx/V/x', 'https://b.gob.mx/a', 'https://b.gob.mx/b'):
+            self.assertFalse(f.allowed(url), url)
+            self.assertTrue(f.disallowed_by_rule(url), url)
+        self.assertTrue(f.allowed('https://a.gob.mx/SieAPIRest/service/v1/series/SF43718/datos/2026-10-01/2026-10-20'))
+
+    def test_robots_3xx_without_location_still_disallows_all(self):
+        f, _ = fetcher({'https://a.gob.mx/robots.txt': (302, b'', {}), 'https://a.gob.mx/x': (200, b'ok', {})})
+        with self.assertRaises(FetchRefused):
+            f.get('https://a.gob.mx/x')
+
     def test_redirect_outside_allowlist_refused_inside_followed(self):
         f, _ = fetcher({'https://a.gob.mx/robots.txt': ROBOTS_OK, 'https://b.gob.mx/robots.txt': ROBOTS_OK,
                         'https://a.gob.mx/out': (302, b'', {'Location': 'https://evil.example/'}),

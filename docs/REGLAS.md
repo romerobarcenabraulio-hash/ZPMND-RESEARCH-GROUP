@@ -24,6 +24,8 @@ depende de que el modelo "se acuerde" no cuenta: necesita una prueba, un cuadre 
 | 16 | Los textos con derechos de autor (ISO, NMX de venta) y los datos personales (edictos) quedan **solo como metadatos** | Avisos judiciales del DOF | `metadata_only_branches`; `redistribution` en el esquema |
 | 16b | Una prueba de mutación vale solo si la **línea base pasa** en la misma copia; la copia no tiene remoto | 2026-10-20: copia sin `.git`; una prueba usa `git ls-files`, la línea base fallaba y toda mutación contó como muerta | `scripts/mutar.py` verifica la línea base antes de mutar; corre en CI (job `mutation`) en cada PR |
 | 17 | Con Braulio: en su idioma; leer la intención y pesarla contra la evidencia, sin tomar sus palabras como verdad literal; no preguntar lo que el contrato resuelve | Sus mensajes del 2026-10-19 | `CLAUDE.md` |
+| 18 | robots.txt se lee como dice el RFC 9309, no como lo lee la biblioteca: hasta 5 redirecciones dentro de la lista de hosts, y los grupos del mismo agente se combinan | 2026-10-21: el robots.txt de Banxico redirige (302) y repite `User-agent: *`; la biblioteca de Python tomaba la redirección como bloqueo y se quedaba con el primer grupo (dejaba pasar `/ALEPH` y `/V`) | `_robots_for` y `_Robots` en `fetch.py`; `tests/test_catalog.py` FetchGuards con el robots.txt real |
+| 19 | Un token va solo a su host y nunca se escribe: ni en la URL registrada (`<token>`), ni en el manifiesto, ni en un crudo | INEGI pone el token en la ruta de la URL (2026-10-21) | `secrets` del `Fetcher`, `redact_secrets` en `run.py`, paso de búsqueda en `indicadores-mx.yml`, `tests/test_indicadores.py` |
 
 ## Qué cambia en mi forma de trabajar
 

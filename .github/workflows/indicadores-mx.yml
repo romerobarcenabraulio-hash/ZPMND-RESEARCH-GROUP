@@ -1,0 +1,64 @@
+name: indicadores-mx
+# First real runs of the calculation-indicator sources (Banxico SIE, INEGI BIE), status 'trial' in sources/mx.json.
+# On demand only, read-only: no push, no release, no write token. Each token reaches only the run step and the token
+# scan, as an env var; the Fetcher sends it only to its own host. The raw responses (byte-exact), the catalog rows and
+# the manifest are uploaded as a workflow artifact, so a later PR can replace the fixtures CONSTRUIDO_DE_DOCS with
+# real bytes and then move the sources to 'active' (catalog-mx).
+on:
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: 'comma-separated trial indicator sources (mx.banxico-sie, mx.inegi-bie)'
+        default: 'mx.banxico-sie,mx.inegi-bie'
+permissions:
+  contents: read
+concurrency:
+  group: indicadores-mx
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - name: Tests before touching any source
+        run: python -m unittest discover -s tests -t .
+      - name: Indicators run (trial sources)
+        id: ind
+        env:
+          SOURCES: ${{ inputs.sources }}   # passed as data, never interpolated into the script
+          BANXICO_TOKEN: ${{ secrets.BANXICO_TOKEN }}   # sent only to www.banxico.org.mx, header Bmx-Token
+          INEGI_TOKEN: ${{ secrets.INEGI_TOKEN }}   # sent only to www.inegi.org.mx, as the documented path segment
+        run: |
+          [[ "$SOURCES" =~ ^(mx\.banxico-sie|mx\.inegi-bie)(,(mx\.banxico-sie|mx\.inegi-bie))?$ ]] || { echo "sources: mx.banxico-sie and/or mx.inegi-bie"; exit 2; }
+          set +e
+          python -m rg.catalog.run --country mx --out out --raw raw --sources "$SOURCES"
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+      - name: No token in anything that is uploaded
+        env:
+          BANXICO_TOKEN: ${{ secrets.BANXICO_TOKEN }}
+          INEGI_TOKEN: ${{ secrets.INEGI_TOKEN }}
+        run: |
+          for t in "$BANXICO_TOKEN" "$INEGI_TOKEN"; do
+            [ -n "$t" ] || continue
+            if grep -rqF -- "$t" out raw; then echo "a token was found in the output; nothing is uploaded"; exit 1; fi
+          done
+      - name: Upload raw responses, catalog rows and manifest
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9  # v7.0.2
+        with:
+          name: indicadores-mx-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            out
+            raw
+          retention-days: 30
+          if-no-files-found: error
+      - name: Fail on coverage or schema problems
+        if: steps.ind.outputs.rc != '0'
+        env: { RC: '${{ steps.ind.outputs.rc }}' }
+        run: |
+          echo "indicators run exited ${RC} (3 = coverage mismatch, 4 = quarantined entries). See out/mx/runs in the artifact."
+          exit 1
