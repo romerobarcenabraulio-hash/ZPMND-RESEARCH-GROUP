@@ -213,6 +213,7 @@ MUT = [
  ('rg/text/bundles.py', 'if not files or _sha(files) != listed[tar]:', 'if not files:'),
  ('rg/text/bundles.py', 'if numbers and numbers != list(range(len(numbers))):', 'if False:'),
  ('rg/text/bundles.py', "return isinstance(mark, dict) and mark.get('extractors') == VERSIONS", 'return mark is not None'),
+ ('rg/text/extract.py', "            res['text'].encode('utf-8')  # file's fallo", "            pass  # file's fallo"),
  ('rg/text/extract.py', '    except Exception as e:  # a broken or hostile file', '    except ZeroDivisionError as e:  # a broken or hostile file'),
  ('rg/text/extract.py', ", _MC + 'Fallback'", ''),
  ('rg/text/extract.py', "VERSIONS = {**EXTRACTORS, 'sniff': SNIFF}", 'VERSIONS = dict(EXTRACTORS)'),

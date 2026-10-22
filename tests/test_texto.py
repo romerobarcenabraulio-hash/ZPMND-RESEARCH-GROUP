@@ -249,6 +249,15 @@ class Pdf(unittest.TestCase):
         self.assertEqual((r['status'], r['error']), (ex.FAILED, 'encrypted: needs a password'))
         self.assertEqual(ex.extract(enc(''))['text'], ex.extract(PDF)['text'])  # owner password only: readable
 
+    def test_text_that_cannot_be_utf8_is_a_fallo_in_the_child(self):
+        # Audit of #21 (05412eb): a lone surrogate in extracted text passed the child and raised UnicodeEncodeError in
+        # the parent's text_sha, which stopped every run on the same raw.
+        with mock.patch.object(ex, '_html', lambda body: ex._result('html', ex.OK, text='antes\ud800despues')):
+            r = ex.extract(html('ojn_ficha_95983.html'))
+        self.assertEqual((r['format'], r['status'], r['text']), ('html', ex.FAILED, None))
+        self.assertIn('surrogates not allowed', r['error'])
+        r['error'].encode('utf-8')  # the error itself never carries the surrogate
+
     def test_a_broken_file_is_a_fallo_not_a_crash(self):
         r = ex.extract(b'%PDF-1.4\n1 0 obj << /Type /Catalog')  # CONSTRUIDO
         self.assertEqual((r['format'], r['status'], r['extractor']), ('pdf', ex.FAILED, ex.EXTRACTORS['pdf']))

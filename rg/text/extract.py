@@ -211,7 +211,10 @@ def extract(body):
     if fmt not in SUPPORTED:
         return _result(fmt, UNSUPPORTED)
     try:
-        return {'html': _html, 'pdf': _pdf, 'zip': _docx}[fmt](body)
+        res = {'html': _html, 'pdf': _pdf, 'zip': _docx}[fmt](body)
+        if res.get('text') is not None:  # a lone surrogate (a malformed PDF CMap) must fail here, in the child, as this
+            res['text'].encode('utf-8')  # file's fallo, not later in the parent where hashing it would stop the run
+        return res
     except Exception as e:  # a broken or hostile file is a status, never a crash
         return _result('docx' if fmt == 'zip' else fmt, FAILED, error=clean_text(f'{type(e).__name__}: {e}')[0][:300])
 
