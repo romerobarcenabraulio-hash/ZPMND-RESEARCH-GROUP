@@ -90,6 +90,7 @@ jobs:
         with: { python-version: '3.12' }
       - run: pip install -r requirements-dev.txt
       - name: Run the PR's tests, and main's mutants that the PR's list no longer has
+        id: evidence-run
         run: |
           set +e
           mkdir -p evidence
@@ -103,22 +104,32 @@ jobs:
             echo "skipped: main has no scripts/mutar.py (or it could not be read)" > evidence/mutation-main.txt
           elif ! cmp -s "$RUNNER_TEMP/mutar_main.py" scripts/mutar.py; then
             # A copy of main's script whose MUT keeps only main's mutants missing from the PR's list (exact source text).
+            # Only when the PR changed nothing but the list: if it touched the runner itself, "all" runs main's whole list
+            # with main's runner, so a PR cannot skip this by keeping the tuples and weakening the script around them.
             n=$(python3 -I - "$RUNNER_TEMP/mutar_main.py" scripts/mutar.py scripts/mutar_main.py <<'PY'
           import ast, sys
           def parse(path):
               src = open(path, encoding='utf-8').read()
               node = next(n for n in ast.parse(src).body if isinstance(n, ast.Assign) and getattr(n.targets[0], 'id', '') == 'MUT')
               return src, node, [(tuple(ast.literal_eval(e)), ast.get_source_segment(src, e)) for e in node.value.elts]
+          def without_list(src, node):
+              lines = src.splitlines(keepends=True)
+              return ''.join(lines[:node.lineno - 1]), ''.join(lines[node.end_lineno:])
           src, node, main_list = parse(sys.argv[1])
-          pr = {k for k, _ in parse(sys.argv[2])[2]}
+          pr_src, pr_node, pr_list = parse(sys.argv[2])
+          head, tail = without_list(src, node)
+          if (head, tail) != without_list(pr_src, pr_node):
+              open(sys.argv[3], 'w', encoding='utf-8').write(src)
+              print('all')
+              sys.exit(0)
+          pr = {k for k, _ in pr_list}
           missing = [seg for k, seg in main_list if k not in pr]
-          lines = src.splitlines(keepends=True)
           body = 'MUT = [\n' + ''.join(' ' + seg + ',\n' for seg in missing) + ']\n'
-          open(sys.argv[3], 'w', encoding='utf-8').write(''.join(lines[:node.lineno - 1]) + body + ''.join(lines[node.end_lineno:]))
+          open(sys.argv[3], 'w', encoding='utf-8').write(head + body + tail)
           print(len(missing))
           PY
             )
-            if ! [[ "$n" =~ ^[0-9]+$ ]]; then  # the PR's list could not be read: run all of main's, to be safe
+            if [[ "$n" == all ]] || ! [[ "$n" =~ ^[0-9]+$ ]]; then  # runner changed, or list unreadable: all of main's
               cp "$RUNNER_TEMP/mutar_main.py" scripts/mutar_main.py
               python scripts/mutar_main.py > evidence/mutation-main.txt 2>&1; echo "exit=$?" >> evidence/mutation-main.txt
             elif [ "$n" = 0 ]; then
