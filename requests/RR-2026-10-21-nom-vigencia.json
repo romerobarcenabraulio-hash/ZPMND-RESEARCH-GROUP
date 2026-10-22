@@ -1,0 +1,16 @@
+{
+  "request_id": "RR-2026-10-21-nom-vigencia",
+  "issued_by": "ZPMND",
+  "issued_at": "2026-10-21T06:00:00Z",
+  "question": "De los linajes NOM del catálogo del DOF, ¿cuáles están vigentes hoy y cuáles fueron cancelados o sustituidos, según qué nota del DOF, y qué NOM laborales (STPS) aplican a cualquier centro de trabajo sin importar el giro?",
+  "why_needed": "El registro de conocimiento de ZPMND necesita saber qué normas candidatas curar después de la NOM-035 sin suponer su vigencia.",
+  "affected_component": "registro de normas candidatas",
+  "desired_evidence": [
+    "la nota del DOF que fija cada estado, con fecha y sha256",
+    "las relaciones cancela/sustituye con su fuente",
+    "lo no determinable, como desconocido"
+  ],
+  "priority": "P2",
+  "risk_if_wrong": "Curar una norma cancelada o dejar fuera una vigente de aplicación general.",
+  "privacy_class": "PUBLIC"
+}

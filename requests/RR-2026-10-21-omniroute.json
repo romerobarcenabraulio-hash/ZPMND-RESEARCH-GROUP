@@ -1,0 +1,17 @@
+{
+  "request_id": "RR-2026-10-21-omniroute",
+  "issued_by": "OWNER",
+  "issued_at": "2026-10-21T05:30:00Z",
+  "question": "Evaluar el repositorio diegosouzapw/OmniRoute (gateway de IA con un endpoint para ~375 proveedores, licencia MIT segun GitHub): que hace exactamente, como guarda y usa las llaves y cuentas de proveedores, que registra o envia a terceros (prompts, telemetria, logs), que dependencias y procedencia tiene su paquete npm e imagen Docker, que terminos de servicio de los proveedores de nivel gratuito permiten o prohiben el uso que propone (acumular niveles gratuitos, cuentas multiples), y como se comporta en un sandbox sin llaves reales.",
+  "why_needed": "ZPMND quiere aprovechar modelos gratuitos y enrutar cada tarea al modelo mas barato que alcance la calidad (inteligencia elastica), pero un gateway ve todos los prompts y todas las llaves: antes de usarlo necesita saber su riesgo, su legalidad y su comportamiento real.",
+  "affected_component": "enrutamiento de modelos y fisica de secretos",
+  "desired_evidence": [
+    "codigo y documentacion del repositorio en una version fijada, con sha256",
+    "terminos de servicio vigentes de los principales proveedores gratuitos que lista",
+    "resultado de correrlo en un contenedor sin red hacia llaves reales: que puertos abre, que escribe en disco, a que hosts intenta salir",
+    "lo no determinable, como desconocido"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Filtrar prompts o llaves a un intermediario, violar terminos de proveedores, o depender de niveles gratuitos que desaparecen.",
+  "privacy_class": "PUBLIC"
+}

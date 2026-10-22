@@ -1,0 +1,18 @@
+{
+  "request_id": "RR-2026-10-22-repertorio-operacional",
+  "issued_by": "OWNER",
+  "issued_at": "2026-10-22T16:30:00Z",
+  "question": "Una vez que el sistema tiene conocimiento citado (normas, obligaciones, procesos) y acceso gobernado a apps, ¿cómo puede proponer por sí solo qué ejecutar para resolver lo que detecta, como un instinto y sin que el humano lo pida, con un repertorio de acciones casi infinito? ¿Qué arte previo existe (planeación automática, composición de herramientas y APIs, affordances, habilidades u opciones en aprendizaje por refuerzo, síntesis de programas, agentes que operan apps), cómo se evaluó cada enfoque, qué nunca se ha evaluado, y qué mecanismo propio puede probarse contra una línea base con medición?",
+  "why_needed": "Braulio (2026-10-22) pide que el sistema sepa qué proponer para ejecutar lo que identifica, con capacidad operativa en las apps. ZPMND es el entorno que actúa; RG investiga el cómo, con arte previo, antes de que se construya.",
+  "affected_component": "propuesta de acciones y composición de capacidades sobre apps",
+  "desired_evidence": [
+    "fuentes primarias (artículos, benchmarks, documentación oficial de APIs) con fecha y enlace",
+    "por enfoque: qué propone, cómo se evaluó, resultados y límites",
+    "lo que nadie ha evaluado: el hueco donde un mecanismo propio sería nuevo, marcado HIPÓTESIS",
+    "un experimento medible: el mecanismo propuesto contra una línea base (modelo solo) en tareas fijas sobre una app real (Odoo Community), con costo",
+    "lo no determinable, como desconocido"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Construir en ZPMND un mecanismo que ya existe y fue superado, declarar nuevo algo sin arte previo, o un repertorio que propone acciones fuera de gobierno.",
+  "privacy_class": "ABSTRACTED"
+}
