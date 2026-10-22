@@ -110,22 +110,26 @@ jobs:
           import ast, sys
           def parse(path):
               src = open(path, encoding='utf-8').read()
-              node = next(n for n in ast.parse(src).body if isinstance(n, ast.Assign) and getattr(n.targets[0], 'id', '') == 'MUT')
-              return src, node, [(tuple(ast.literal_eval(e)), ast.get_source_segment(src, e)) for e in node.value.elts]
-          def without_list(src, node):
+              tree = ast.parse(src)
+              node = next(n for n in tree.body if isinstance(n, ast.Assign) and getattr(n.targets[0], 'id', '') == 'MUT')
+              return src, tree, node, [(tuple(ast.literal_eval(e)), ast.get_source_segment(src, e)) for e in node.value.elts]
+          def runner(tree, node):  # the whole program with the list emptied: any other change shows here
+              node.value = ast.List(elts=[], ctx=ast.Load())
+              return ast.dump(tree)
+          def offset(src, line, col):  # ast columns are UTF-8 byte offsets
               lines = src.splitlines(keepends=True)
-              return ''.join(lines[:node.lineno - 1]), ''.join(lines[node.end_lineno:])
-          src, node, main_list = parse(sys.argv[1])
-          pr_src, pr_node, pr_list = parse(sys.argv[2])
-          head, tail = without_list(src, node)
-          if (head, tail) != without_list(pr_src, pr_node):
+              return sum(len(l) for l in lines[:line - 1]) + len(lines[line - 1].encode('utf-8')[:col].decode('utf-8'))
+          src, tree, node, main_list = parse(sys.argv[1])
+          start, end = offset(src, node.lineno, node.col_offset), offset(src, node.end_lineno, node.end_col_offset)
+          _, pr_tree, pr_node, pr_list = parse(sys.argv[2])
+          if runner(tree, node) != runner(pr_tree, pr_node):
               open(sys.argv[3], 'w', encoding='utf-8').write(src)
               print('all')
               sys.exit(0)
           pr = {k for k, _ in pr_list}
           missing = [seg for k, seg in main_list if k not in pr]
-          body = 'MUT = [\n' + ''.join(' ' + seg + ',\n' for seg in missing) + ']\n'
-          open(sys.argv[3], 'w', encoding='utf-8').write(head + body + tail)
+          body = 'MUT = [\n' + ''.join(' ' + seg + ',\n' for seg in missing) + ']'
+          open(sys.argv[3], 'w', encoding='utf-8').write(src[:start] + body + src[end:])
           print(len(missing))
           PY
             )

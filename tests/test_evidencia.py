@@ -61,6 +61,12 @@ class MissingFromThePR(unittest.TestCase):
         pr = 'MUT = [\n' + ''.join(f' {t!r},\n' for t in main_list) + ']\n'
         self.assertEqual(self.select(main_list, pr, pr_runner='\ndef main():\n    print("all killed")\n'), ('all', True))
 
+    def test_a_statement_hidden_on_the_list_line_is_a_runner_change(self):
+        # GPT review of #20 (d3d8b82): '] ; raise SystemExit(0)' kept every tuple and hid an exit on the list's last line.
+        main_list = [('a', '1', 'x'), ('b', '2', 'y')]
+        pr = 'MUT = [\n' + ''.join(f' {t!r},\n' for t in main_list) + ']; raise SystemExit(0)\n'
+        self.assertEqual(self.select(main_list, pr), ('all', True))
+
     def test_an_unreadable_pr_list_runs_all_of_mains(self):
         self.assertEqual(self.select([('a', '1', 'x')], 'MUT = [broken\n'), (None, None))
         fallback = self.run_text.split('if [[ "$n" == all ]] || ! [[ "$n" =~ ^[0-9]+$ ]]; then', 1)[1].split('elif', 1)[0]
