@@ -22,6 +22,12 @@ PY = sys.executable
 # Sorted (file, anchor, replacement) and kept sorted by tests/test_mutar.py: each PR inserts its mutants in place
 # instead of appending at the end, so parallel PRs stop colliding on the last line of this list (2026-10-21).
 MUT = [
+ ('.github/workflows/auditor.yml', '        with: { ref: main, fetch-depth: 0, persist-credentials: false }', "        with: { ref: '${{ needs.gate.outputs.sha }}', fetch-depth: 0, persist-credentials: false }"),
+ ('.github/workflows/auditor.yml', "    concurrency: { group: 'auditor-gpt-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }", "    concurrency: { group: 'auditor-gpt-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }\n    env: { OPENAI_API_KEY: '${{ secrets.OPENAI_API_KEY }}' }"),
+ ('.github/workflows/auditor.yml', '-f context=auditor-gpt -f description="GPT REVIEW: $verdict"', '-f context=auditor -f description="GPT REVIEW: $verdict"'),
+ ('.github/workflows/auditor.yml', '= "GPT REVIEW: $verdict $SHA" ]', '= "AUDIT VERDICT: $verdict $SHA" ]'),
+ ('.github/workflows/auditor.yml', """[ "$(grep -ci 'AUDIT VERDICT' verdict.md)" = 0 ] || { echo "the comment names an AUDIT VERDICT: not posted"; exit 1; }""", 'true'),
+ ('.github/workflows/auditor.yml', 'python3 -I scripts/auditor_gpt.py --inputs', 'python3 scripts/auditor_gpt.py --inputs'),
  ('.github/workflows/catalog-mx.yml', '          HF_TOKEN: ${{ secrets.HF_TOKEN }}', '          HF_TOKEN_UNUSED: ${{ secrets.HF_TOKEN }}'),
  ('rg/catalog/fetch.py', 'OSError, ValueError) as e:', 'OSError) as e:'),
  ('rg/catalog/fetch.py', 'elif r.status in (401, 403, 429):', 'elif r.status in ():'),
@@ -135,6 +141,28 @@ MUT = [
  ('schemas/change_event.schema.json', '"then": { "required": ["effective_at_evidence"] },', '"then": true,'),
  ('schemas/relation.schema.json', '"maxProperties": 1,', '"maxProperties": 2,'),
  ('schemas/relation.schema.json', '"status": { "const": "CANDIDATE" }', '"status": { "type": "string" }'),
+ ('scripts/auditor_gpt.py', "        'max_output_tokens': MAX_OUTPUT_TOKENS,\n", ''),
+ ('scripts/auditor_gpt.py', "        'store': False,\n", "        'store': True,\n"),
+ ('scripts/auditor_gpt.py', '        if tail and size > 4 * cap:', '        if False:'),
+ ('scripts/auditor_gpt.py', '        text = text[-cap:] if tail else text[:cap]', '        pass'),
+ ('scripts/auditor_gpt.py', "    body = re.sub(r'(?i)audit\\s+verdict', 'AUDIT-VERDICT', body)\n", ''),
+ ('scripts/auditor_gpt.py', '    cut = size > len(raw) or len(text) > cap', '    cut = False'),
+ ('scripts/auditor_gpt.py', "    if answer.get('verdict') not in ('PASS', 'REVISE'):", '    if False:'),
+ ('scripts/auditor_gpt.py', "    if answer['head_sha'] != sha:", '    if False:'),
+ ('scripts/auditor_gpt.py', '    if looks_like_credential(body):', '    if False:'),
+ ('scripts/auditor_gpt.py', '    if not MODEL_RE.fullmatch(model):', '    if False:'),
+ ('scripts/auditor_gpt.py', "    if not complete:\n        verdict = 'REVISE'", "    if False:\n        verdict = 'REVISE'"),
+ ('scripts/auditor_gpt.py', '    if not key:\n', '    if False:\n'),
+ ('scripts/auditor_gpt.py', '    if not model:\n        return skipped', '    if False:\n        return skipped'),
+ ('scripts/auditor_gpt.py', "    if not quote or answer['criteria_quote'] != quote:", '    if False:'),
+ ('scripts/auditor_gpt.py', "    if re.search(r'(?<![A-Za-z0-9])sk-[A-Za-z0-9_-]{20,}', text):", '    if False:'),
+ ('scripts/auditor_gpt.py', "    if resp.get('status') != 'completed':", '    if False:'),
+ ('scripts/auditor_gpt.py', '    if set(answer) != set(FIELDS):', '    if False:'),
+ ('scripts/auditor_gpt.py', '    log_usage(model, resp, len(text), complete)\n', '    pass\n'),
+ ('scripts/auditor_gpt.py', '    nonce = secrets.token_hex(8)', "    nonce = '0' * 16"),
+ ('scripts/auditor_gpt.py', "PREFIX = 'GPT REVIEW: '", "PREFIX = 'GPT AUDIT VERDICT: '"),
+ ('scripts/auditor_gpt.py', 'if _entropy(run) > 4.2 or', 'if _entropy(run) > 99 or'),
+ ('scripts/auditor_gpt.py', 'if p.is_symlink() or not p.is_file() or not p.resolve().is_relative_to(root.resolve()):', 'if not p.is_file():'),
 ]
 
 

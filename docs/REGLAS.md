@@ -25,6 +25,36 @@ depende de que el modelo "se acuerde" no cuenta: necesita una prueba, un cuadre 
 | 16b | Una prueba de mutación vale solo si la **línea base pasa** en la misma copia; la copia no tiene remoto | 2026-10-20: copia sin `.git`; una prueba usa `git ls-files`, la línea base fallaba y toda mutación contó como muerta | `scripts/mutar.py` verifica la línea base antes de mutar; corre en CI (job `mutation`) en cada PR |
 | 17 | Con Braulio: en su idioma; leer la intención y pesarla contra la evidencia, sin tomar sus palabras como verdad literal; no preguntar lo que el contrato resuelve | Sus mensajes del 2026-10-19 | `CLAUDE.md` |
 
+## Segundo auditor (GPT): una segunda opinión independiente
+
+`auditor.yml` corre dos auditores sobre el mismo head, en paralelo y con la misma compuerta (`gate`):
+
+- **Claude** (`audit` → `post`): comentario `AUDIT VERDICT: PASS|REVISE <sha>` y estado `auditor`. Sin cambios.
+- **GPT** (`audit-gpt` → `post-gpt`): comentario `GPT REVIEW: PASS|REVISE <sha>` y estado `auditor-gpt`. Otro
+  proveedor y otro modelo, que no ve la respuesta de Claude: es una segunda opinión, no un reemplazo.
+
+Qué lo hace seguro y barato por construcción (`scripts/auditor_gpt.py`; pruebas en `tests/test_auditor_gpt.py` y
+`tests/test_workflows.py`; mutantes en `scripts/mutar.py`):
+
+- El job saca `main`, nunca el head del PR. El head llega solo como objetos de git para calcular el mismo diff que el
+  job `audit`; el código del PR nunca corre donde está la llave. `OPENAI_API_KEY` existe solo en el paso que llama a la
+  API. El modelo no tiene herramientas: recibe texto (criterios de `main`, diff, commits y la evidencia, marcada como no
+  confiable).
+- Las mismas pruebas que el auditor de Claude: esquema estricto, el head correcto, `criteria_quote` igual a la primera
+  línea del README de `main` y el filtro de credenciales sobre el cuerpo. Si algo falla, se publica REVISE.
+- Costo acotado: una llamada por head auditado; topes fijos de caracteres por archivo (diff + evidencia: 160,000); si
+  algo se trunca o falta, no puede salir PASS ("no pude leer todo"); tope de 12,000 tokens de salida. El uso de tokens
+  que reporta la API queda en el resumen del job.
+- El modelo sale de la variable del repo `OPENAI_AUDIT_MODEL`; el código no trae ninguno. Sin ella no se llama a nada y
+  el estado `auditor-gpt` queda `pending` con "skipped: OPENAI_AUDIT_MODEL not set".
+- Distinguibles por construcción: un comentario de GPT nunca contiene "AUDIT VERDICT" (su línea dice `GPT REVIEW` y el
+  cuerpo reescribe cualquier mención; `post-gpt` se niega a publicar si aparece). Ninguna búsqueda del veredicto de
+  Claude, con o sin ancla, puede tomar una opinión de GPT por un veredicto.
+
+**PROPUESTA de política de merge (la decide Braulio):** el merge sigue requiriendo `AUDIT VERDICT: PASS` de Claude
+sobre el head exacto. Un `GPT REVIEW: REVISE` se lee, y antes del merge se responde en el PR o se corrige. GPT no
+bloquea mientras Braulio no decida volverlo obligatorio (por ejemplo, exigiendo el estado `auditor-gpt` en `main`).
+
 ## Qué cambia en mi forma de trabajar
 
 - **Antes de activar una fuente:** robots.txt revisado; formato leído en páginas reales guardadas como fixtures; conteo independiente definido; prueba de regresión sobre la página real.
