@@ -12,9 +12,9 @@ El catálogo extrae información oficial pública por país. La guarda **cruda**
 | `mx.ojn-estatal` (Orden Jurídico Nacional, SEGOB) | Legislación de las 32 entidades, por poder | tipo oficial impreso por la fuente, poder, entidad, fechas, estatus de la ficha | documento oficial (mayormente .doc) |
 | `mx.hf-tesis-scjn` (**fuente secundaria**, dataset de Hugging Face) | Tesis aisladas y jurisprudencia del Semanario Judicial de la Federación | lo que imprime cada tesis: época, instancia, materias, número de tesis, tipo (tabla fija), fecha de publicación impresa | el archivo del dataset (JSON de 3.6 GB), verificado contra su sha256 |
 
-"Cálculo" (valores oficiales para calcular: tipo de cambio, INPC, UDIS, tasas, salarios mínimos, UMA) se publica en el DOF y queda en la categoría `INDICADOR ECONOMICO`. Las NOM y sus proyectos también salen del DOF. Los valores mismos, serie por serie, llegan de las API de Banxico e INEGI (sección siguiente, en prueba).
+"Cálculo" (valores oficiales para calcular: tipo de cambio, INPC, UDIS, tasas, salarios mínimos, UMA) se publica en el DOF y queda en la categoría `INDICADOR ECONOMICO`. Las NOM y sus proyectos también salen del DOF. Los valores mismos, serie por serie, llegan de las API de Banxico (activa) e INEGI (en prueba) (sección siguiente).
 
-## Indicadores para cálculo: Banxico SIE e INEGI BIE (`mx.banxico-sie`, `mx.inegi-bie`, en prueba)
+## Indicadores para cálculo: Banxico SIE (`mx.banxico-sie`, activa) e INEGI BIE (`mx.inegi-bie`, en prueba)
 
 Valores oficiales para calcular, tomados directo de la API de cada institución. Se guardan **tal como los sirve la
 API**: sin cálculos, conversiones ni variaciones.
@@ -34,8 +34,12 @@ API**: sin cálculos, conversiones ni variaciones.
   Banxico y `UNIT` en INEGI, tal como llega. No se guarda ningún cálculo derivado.
 - **Crudo:** cada respuesta 200 de la API (metadatos, datos, `CL_INDICATOR`) se guarda byte por byte en el `RawStore`.
   Un registro que no cambia conserva el crudo que lo sirvió primero, y un valor revisado agrega una versión.
-- **Rango:** cada corrida pide la historia completa. En Banxico va de la fecha inicial que imprime el cuadro oficial
-  hasta hoy. En INEGI se pide `false` (serie histórica completa), porque la API no tiene rango de fechas.
+- **Rango:** cada corrida pide la historia completa hasta hoy. En Banxico va de la fecha inicial que imprime el cuadro
+  oficial hasta hoy. En INEGI se pide `false` (serie histórica completa), porque la API no tiene rango de fechas.
+  - Banxico publica algunos valores antes de su fecha. En la corrida real, `fechaFin` de los metadatos era el
+    25/10/2026 para las UDIS y el 22/10/2026 para la TIIE a 28 días, y se pidió hasta el 21/10/2026. Esos valores
+    entran en una corrida posterior; no se pierden.
+  - PROPUESTA: pedir hasta `fechaFin` cuando sea posterior a hoy.
 - **Cuadre:** ninguna de las dos API imprime un total. Lo servido se cuenta en los bytes crudos, aparte del parser: una
   clave de fecha por observación (`"fecha"` en Banxico, `"TIME_PERIOD"` en INEGI). Ese conteo debe ser igual a los
   registros catalogados de la serie. Si no, sale con código 3. Así fallan cero observaciones, una fecha repetida o
@@ -59,18 +63,74 @@ API**: sin cálculos, conversiones ni variaciones.
 - **Derechos:** Banxico autoriza reproducir o usar su información si se cita la fuente y su dirección de Internet. INEGI
   permite copiar, distribuir y publicar sin alterar metadatos, con el crédito "Fuente: INEGI". Por eso
   `redistribution: allowed`, con la atribución en `license`.
-- **Estado `trial`:** el formato de las respuestas se leyó en la documentación. Las fixtures de las pruebas llevan
-  `CONSTRUIDO_DE_DOCS` en el nombre y son HIPÓTESIS hasta la primera corrida real.
-  - Una fuente `trial` corre solo si se nombra en `--sources`; la corrida programada no la toca.
+- **Estado:**
+  - `mx.banxico-sie` es `active` desde la corrida real 39709378896. La corrida programada (`catalog-mx`, cada 3 días)
+    la pide.
+  - `BANXICO_TOKEN` llega solo a dos pasos de `catalog-mx`: el del catálogo y un escaneo que busca el token en `data` y
+    `raw` antes de subir crudos y de hacer commit. Si lo encuentra, o no puede leer una carpeta, no se sube nada.
+  - `mx.inegi-bie` sigue `trial`. Corre solo si se nombra en `--sources` (workflow `indicadores-mx`), e `INEGI_TOKEN`
+    nunca llega a `catalog-mx`.
+  - Una fuente `trial` pasa a `active` solo con bytes reales. Sus fixtures `CONSTRUIDO_DE_DOCS` se reemplazan por los
+    crudos de una corrida real, y una prueba impide `active` mientras quede alguna. Otra prueba impide `active`
+    mientras alguna serie no tenga `confirmed_by`.
   - La corrida real se lanza con `gh workflow run indicadores-mx.yml`. Sube como artefacto los crudos, las filas y el
     manifiesto. Antes de subir, un paso busca los tokens en todo lo que se sube.
-  - Con esos bytes, otro PR reemplaza las fixtures, confirma la clave de INEGI y pasa las fuentes a `active`.
-  - Una prueba impide `active` mientras alguna serie no tenga `confirmed_by`.
-- **HIPÓTESIS hasta la primera corrida real:**
-  - la forma exacta de cada respuesta;
-  - que Banxico sirva los días sin dato como "N/E", como en su ejemplo;
-  - la clave `628194`, la fuente `BIE` (los ejemplos documentados usan `BISE`) y el área `00` de INEGI;
+- **Confirmado con bytes reales (Banxico):** la forma de cada respuesta, y que los días sin dato llegan como "N/E"
+  (en SF43783).
+- **HIPÓTESIS (INEGI, todavía sin bytes reales):**
+  - la clave `628194`, la fuente `BIE` (los ejemplos documentados usan `BISE`) y el área `00`;
   - el formato de `TIME_PERIOD`.
+
+### Primera corrida real (2026-10-22)
+
+Workflow `indicadores-mx`, corrida 39709378896 (2026-10-22 02:06 UTC, artefacto `indicadores-mx-39709378896-1`).
+
+**Banxico cuadra completo.** En cada serie, las observaciones servidas son iguales a las catalogadas:
+
+| Serie | Servidas = catalogadas | "N/E" | Unidad servida |
+|---|---|---|---|
+| `SF43718` (FIX) | 8,783 | 0 | Pesos por Dólar |
+| `SP68257` (UDIS) | 11,524 | 0 | Unidades de Inversión |
+| `SF331451` (TIIE de fondeo) | 5,231 | 0 | Porcentajes |
+| `SF43783` (TIIE a 28 días) | 7,943 | 200, del 24/03/1995 al 27/03/1996 | Sin Unidad |
+
+- En total fueron 33,481 observaciones y ninguna quedó en cuarentena.
+- Se guardaron 5 crudos (metadatos y 4 series, 1,338,609 bytes) con 7 peticiones a Banxico: robots.txt con su 302,
+  metadatos y una por serie.
+
+**Lo que los bytes reales cambiaron frente a las fixtures construidas:**
+- El FIX (`SF43718`) no trae "N/E", porque la API sirve solo días hábiles. El ejemplo de la documentación sí los
+  traía. "N/E" aparece solo en `SF43783` y se guarda tal cual.
+- El JSON llega compacto. Todo `dato` es texto JSON (4 decimales; las UDIS, 6), nunca número. `parse_float=str` queda
+  como guarda por si una respuesta trae números.
+- Los metadatos llegan en su propio orden (`SP68257` primero), no en el pedido, y traen además `versionada`. La unidad
+  se toma por `idSerie`, nunca por posición.
+- Los títulos son los de la API, no los del cuadro:
+  - `SF43718` trae 42 espacios seguidos entre "Tipo de cambio" y "Pesos por dólar", y se guarda tal cual;
+  - `SF331451` es "TIIE de Fondeo a Un Día Hábil Bancario, Mediana ponderada por volumen";
+  - `SF43783` es "TIIE a 28 días Tasa de interés en por ciento anual".
+- El parser no tenía supuestos equivocados. Lo equivocado estaba en las fixtures construidas: "N/E" en el FIX, títulos
+  con un solo espacio, JSON con sangría y metadatos en el orden pedido.
+
+**Fixtures de Banxico ahora.** Son dos archivos copiados sin editar del crudo de esa corrida. Una prueba fija su sha256:
+- `banxico_sie_metadatos_2026-10-22.json`: 1,058 bytes, sha256 `6a05641d…71268c4`.
+- `banxico_sie_datos_SF43783_2026-10-22.json`: 311,383 bytes, sha256 `d98bcf18…e40a3d`. Se eligió `SF43783` porque es
+  la única respuesta real con "N/E".
+
+**Tamaño en el catálogo.**
+- Las 4 series ocupan unos 61 MB de `.jsonl`. La mayor, `SP68257.jsonl`, pesa 20.5 MB, por debajo del límite de
+  100 MB por archivo de GitHub.
+- Cada corrida baja la historia completa: unos 1.34 MB de crudo por corrida en `raw-mx`.
+- HIPÓTESIS: si las respuestas cambian en cada corrida (un dato nuevo al día), son unos 160 MB al año.
+
+**Pendiente para el dueño (INEGI).**
+- `CL_INDICATOR` respondió HTTP 401 "No autorizado" (ErrorCode 110).
+- `INDICATOR/628194` respondió HTTP 400 "No se encontraron resultados" (ErrorCode 100).
+- No se guardó nada y la fuente sigue `trial`.
+- HIPÓTESIS: el 401 apunta al token. El 400 puede venir del mismo token o de la combinación clave `628194`, fuente
+  `BIE` y área `00`.
+- Acción: volver a poner el secreto `INEGI_TOKEN` y correr
+  `gh workflow run indicadores-mx.yml -f sources=mx.inegi-bie`.
 
 ## Normas Oficiales Mexicanas (NOM): linajes desde el DOF
 
@@ -167,6 +227,8 @@ En cada corrida:
 - **DOF:** vuelve a leer los últimos 3 días (por notas tardías) e indexa hacia atrás hasta el piso configurado (`backfill_floor`).
 - **Leyes y reglamentos:** usa descarga condicional por ETag; lo que no cambió no se baja.
 - **OJN:** relista los 32 estados y vuelve a bajar lo que cambió de fecha de última reforma.
+- **Banxico SIE:** pide la historia completa de las 4 series (5 peticiones, más robots.txt). Después, un paso busca
+  `BANXICO_TOKEN` en `data` y `raw`. Si lo encuentra, o no puede leer, no sube crudos ni hace commit.
 
 ## Fuentes registradas que esperan (tier 2) y por qué
 
@@ -176,7 +238,8 @@ Están en `sources/mx.json` con su causa observada:
 - Catálogo de NOM: el dominio ya no resuelve; las NOM se cubren desde el DOF.
 - CONAMER: robots responde 403 y el dominio no resuelve.
 - Periódicos oficiales estatales y congresos locales: 32 formatos distintos.
-- INEGI (más allá del INPC): estadística y geografía; por ahora solo el INPC entra, en prueba.
+- INEGI (más allá del INPC): estadística y geografía; por ahora solo el INPC entra, en prueba. Su primera corrida
+  real respondió 401 y 400 (pendiente para el dueño, arriba).
 - Tratados de la SRE: es una aplicación con JavaScript; falta revisar sus reglas.
 
 Nada de esto se rodea: o se abre por la vía permitida o queda bloqueado con su causa.
