@@ -1,0 +1,16 @@
+{
+  "request_id": "RR-2026-10-21-odoo-community-funciones",
+  "issued_by": "ZPMND",
+  "issued_at": "2026-10-21T06:00:00Z",
+  "question": "¿Qué funciones de recursos humanos y operación trae gratis Odoo Community 17 (empleados, asistencias, ausencias, nómina, proyectos u otras), qué modelos de datos expone cada una por su API externa y cuáles son exclusivas de Enterprise?",
+  "why_needed": "Antes de construir una capacidad, ZPMND revisa si una app gratuita ya la tiene; Odoo es su primera app y hoy solo lee tres modelos.",
+  "affected_component": "inventario de capacidades de apps",
+  "desired_evidence": [
+    "documentación oficial de Odoo 17 por módulo",
+    "licencia (LGPL frente a Enterprise)",
+    "modelos y campos accesibles por la API externa"
+  ],
+  "priority": "P2",
+  "risk_if_wrong": "Construir lo que ya existe gratis, o planear sobre una función que solo trae Enterprise.",
+  "privacy_class": "PUBLIC"
+}
