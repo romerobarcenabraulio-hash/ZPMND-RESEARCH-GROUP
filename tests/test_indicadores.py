@@ -1,22 +1,31 @@
 """Calculation indicators (Banxico SIE, INEGI BIE): parsers, verbatim entries, coverage, token handling, wiring.
 
-FIXTURES CONSTRUIDOS DE LA DOCUMENTACIÓN OFICIAL (HIPÓTESIS hasta la primera corrida real, workflow indicadores-mx):
-the tokens exist only in GitHub Actions, so no real API answer could be read from here. Each fixture has
-CONSTRUIDO_DE_DOCS in its name and follows the documented format, read on 2026-10-21:
-- banxico_sie_datos_SF43718_CONSTRUIDO_DE_DOCS.json: the SF43718 block of Banxico's own example resource
-  https://www.banxico.org.mx/SieAPIRest/json/datosSeriesRango.json (shown at .../service/v1/doc/consultaDatosSerieRango).
-- banxico_sie_metadatos_CONSTRUIDO_DE_DOCS.json: format of the example at .../service/v1/doc/consultaSeries; SF43718
-  and SP68257 copied from it, SF331451 and SF43783 filled with what the SIE cuadro CF101 prints for them.
-- inegi_bie_indicator_628194_CONSTRUIDO_DE_DOCS.json and inegi_bie_cl_indicator_628194_CONSTRUIDO_DE_DOCS.json: the
-  fields of "Estructura de salida" and of the example code at https://www.inegi.org.mx/servicios/api_indicadores.html
-  (Series[0].OBSERVATIONS[i].TIME_PERIOD / OBS_VALUE; CODE[0].value / Description). Values are placeholders.
+BANXICO FIXTURES ARE REAL BYTES of the first real run: workflow indicadores-mx, run 39709378896 (2026-10-22T02:06Z,
+artifact indicadores-mx-39709378896-1), copied unedited from that run's RawStore (raw/sha256/<2>/<sha256>.json):
+- banxico_sie_metadatos_2026-10-22.json, 1,058 bytes,
+  sha256 6a05641d6412fd8aaab2589e5cf800a95643d092ffc2441334a4a8c8471268c4:
+  the answer to GET series/SF43718,SP68257,SF331451,SF43783 (metadata of the four series, served in its own order).
+- banxico_sie_datos_SF43783_2026-10-22.json, 311,383 bytes,
+  sha256 d98bcf18b512b405dc58b349258e6a84c96cf8dfd230376da784f6a7e1e40a3d:
+  the answer to GET series/SF43783/datos/1995-03-23/2026-10-21 (TIIE a 28 días): 7,943 observations, 200 of them
+  "N/E". Chosen over SF331451 (204,693 bytes) because it is the only real answer that serves "N/E". The other three
+  series are played here by these same bytes with only idSerie relabelled (datos_for).
+That run reconciled all four series (SF43718 8783/8783, SP68257 11524/11524, SF331451 5231/5231, SF43783 7943/7943).
+
+INEGI FIXTURES STAY CONSTRUIDOS DE LA DOCUMENTACIÓN OFICIAL (HIPÓTESIS): the same run got HTTP 401 on CL_INDICATOR and
+HTTP 400 on INDICATOR 628194, so no real INEGI answer exists yet. inegi_bie_indicator_628194_CONSTRUIDO_DE_DOCS.json and
+inegi_bie_cl_indicator_628194_CONSTRUIDO_DE_DOCS.json follow the fields of "Estructura de salida" and of the example
+code at https://www.inegi.org.mx/servicios/api_indicadores.html (Series[0].OBSERVATIONS[i].TIME_PERIOD / OBS_VALUE;
+CODE[0].value / Description), read on 2026-10-21. Values are placeholders.
 banxico_robots_2026-10-21.txt is real (anterior.banxico.org.mx/robots.txt). No network: a fake opener plays both hosts.
 """
 import contextlib
+import hashlib
 import io
 import json
 import os
 import re
+import subprocess
 import tempfile
 import unittest
 from datetime import date
@@ -38,11 +47,18 @@ BTOK = '0123456789abcdef' * 4  # fake; Banxico's documented tokens are 64 hex ch
 ITOK = '11111111-2222-3333-4444-555555555555'  # fake; INEGI's documented token is a UUID
 BX, BX_OLD, IN = 'https://www.banxico.org.mx', 'https://anterior.banxico.org.mx', 'https://www.inegi.org.mx'
 ROBOTS_BX = (FIX / 'banxico_robots_2026-10-21.txt').read_bytes()
-DATOS = (FIX / 'banxico_sie_datos_SF43718_CONSTRUIDO_DE_DOCS.json').read_bytes()
-META = (FIX / 'banxico_sie_metadatos_CONSTRUIDO_DE_DOCS.json').read_bytes()
+# Real bytes of run 39709378896 (see the module docstring); the sha256 is the name the run's RawStore gave each one.
+REAL = {'banxico_sie_metadatos_2026-10-22.json': '6a05641d6412fd8aaab2589e5cf800a95643d092ffc2441334a4a8c8471268c4',
+        'banxico_sie_datos_SF43783_2026-10-22.json': 'd98bcf18b512b405dc58b349258e6a84c96cf8dfd230376da784f6a7e1e40a3d'}
+META = (FIX / 'banxico_sie_metadatos_2026-10-22.json').read_bytes()
+DATOS = (FIX / 'banxico_sie_datos_SF43783_2026-10-22.json').read_bytes()
+SERVED_N, NE_N = 7943, 200  # observations and "N/E" values in DATOS, as the run counted them
 IND = (FIX / 'inegi_bie_indicator_628194_CONSTRUIDO_DE_DOCS.json').read_bytes()
 CL = (FIX / 'inegi_bie_cl_indicator_628194_CONSTRUIDO_DE_DOCS.json').read_bytes()
 JSON_CT = {'content-type': 'application/json;charset=UTF-8'}
+META_URL = indicadores.BANXICO_META.format(series='SF43718,SP68257,SF331451,SF43783')
+TIIE28 = 'TIIE a 28 días Tasa de interés en por ciento anual'  # the titulo SF43783 is served with
+SCAN = 'No token in anything that is committed or uploaded'  # the token-scan step of catalog-mx.yml
 
 
 def registry():
@@ -53,27 +69,63 @@ def source(sid):
     return next(s for s in registry()['sources'] if s['source_id'] == sid)
 
 
+def datos_url(series_id):
+    start = next(s['start'] for s in source('mx.banxico-sie')['series'] if s['id'] == series_id)
+    return indicadores.BANXICO_DATOS.format(series=series_id, start=start, end=TODAY.isoformat())
+
+
 def datos_for(series_id, body=DATOS):
-    """The constructed SF43718 answer, re-labelled for another series (same documented shape)."""
-    doc = json.loads(body)
-    doc['bmx']['series'][0]['idSerie'] = series_id
-    doc['bmx']['series'][0]['titulo'] = f'Serie {series_id}'
-    return json.dumps(doc, ensure_ascii=False, indent=2).encode('utf-8') if series_id != 'SF43718' else body
+    """The real SF43783 answer played for another series: only idSerie changes, every other byte is the real one."""
+    return body.replace(b'"idSerie":"SF43783"', f'"idSerie":"{series_id}"'.encode(), 1)
 
 
 def with_datos(edit, body=DATOS):
+    """The real answer with one edit, written back in the API's own compact form: no other byte changes
+    (Parsers.test_the_fixtures_are_the_real_bytes_unedited checks that an empty edit gives the real bytes back)."""
     doc = json.loads(body)
     edit(doc['bmx']['series'][0]['datos'])
-    return json.dumps(doc, ensure_ascii=False, indent=2).encode('utf-8')
+    return json.dumps(doc, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
+
+
+def first(n):
+    """The first n real observations of DATOS: for tests about tokens, not volume."""
+    def cut(datos):
+        del datos[n:]
+    return with_datos(cut)
 
 
 class Parsers(unittest.TestCase):
+    def test_the_fixtures_are_the_real_bytes_unedited(self):
+        for name, sha in REAL.items():
+            self.assertEqual(hashlib.sha256((FIX / name).read_bytes()).hexdigest(), sha, name)
+        self.assertEqual(with_datos(lambda d: None), DATOS)  # an edited variant differs from the real bytes only by its edit
+        self.assertEqual(datos_for('SF43783'), DATOS)
+
     def test_banxico_values_and_dates_are_the_served_text(self):
-        title, obs = indicadores.parse_banxico_datos(DATOS, 'SF43718')
-        self.assertTrue(title.startswith('Tipo de cambio Pesos por dólar E.U.A.') and title.endswith('(FIX)'))
-        self.assertEqual(obs[:3], [('01/01/2015', 'N/E'), ('02/01/2015', '14.8290'), ('03/01/2015', 'N/E')])
-        self.assertEqual(len(obs), indicadores.served_count(DATOS, 'fecha'))
-        self.assertEqual(indicadores.parse_banxico_meta(META)['SF43718']['unidad'], 'Pesos por Dólar')
+        title, obs = indicadores.parse_banxico_datos(DATOS, 'SF43783')
+        self.assertEqual(title, TIIE28)
+        self.assertEqual(obs[:3], [('23/03/1995', '90.5000'), ('24/03/1995', 'N/E'), ('27/03/1995', 'N/E')])
+        self.assertEqual(obs[-1], ('21/10/2026', '6.7760'))
+        self.assertEqual((len(obs), indicadores.served_count(DATOS, 'fecha')), (SERVED_N, SERVED_N))
+        # As served: every date dd/mm/yyyy; every value a JSON string, "N/E" or a number with 4 decimals, never parsed.
+        self.assertTrue(all(re.fullmatch(r'\d{2}/\d{2}/\d{4}', d) for d, _ in obs))
+        self.assertTrue(all(v == 'N/E' or re.fullmatch(r'\d{1,2}\.\d{4}', v) for _, v in obs))
+        self.assertNotRegex(DATOS, rb'"dato":[^"]')
+        ne = [d for d, v in obs if v == 'N/E']  # all of them in the series' first year
+        self.assertEqual((len(ne), ne[0], ne[-1]), (NE_N, '24/03/1995', '27/03/1996'))
+
+    def test_banxico_metadata_is_read_by_series_not_by_position(self):
+        # Served in its own order, not the requested one (SF43718,SP68257,SF331451,SF43783).
+        self.assertEqual([s['idSerie'] for s in json.loads(META)['bmx']['series']], ['SP68257', 'SF43718', 'SF331451', 'SF43783'])
+        meta = indicadores.parse_banxico_meta(META)
+        self.assertEqual({k: v['unidad'] for k, v in meta.items()},
+                         {'SF43718': 'Pesos por Dólar', 'SP68257': 'Unidades de Inversión', 'SF331451': 'Porcentajes',
+                          'SF43783': 'Sin Unidad'})
+        # Titles are kept verbatim, SF43718's run of 42 spaces included.
+        self.assertEqual(meta['SF43718']['titulo'], 'Tipo de cambio' + ' ' * 42 + 'Pesos por dólar E.U.A. Tipo de cambio para '
+                         'solventar obligaciones denominadas en moneda extranjera Fecha de determinación (FIX)')
+        self.assertEqual(meta['SF43783']['titulo'], TIIE28)
+        self.assertEqual(indicadores.served_count(META, 'fecha'), 0)  # its fechaInicio and fechaFin are no observations
 
     def test_numbers_keep_their_literal_text(self):
         body = b'{"bmx":{"series":[{"idSerie":"SF43718","titulo":"t","datos":[{"fecha":"02/01/2015","dato":14.8290},' \
@@ -85,7 +137,7 @@ class Parsers(unittest.TestCase):
     def test_a_response_for_another_or_for_several_series_is_refused(self):
         example = json.loads(DATOS)
         example['bmx']['series'].append(dict(example['bmx']['series'][0], idSerie='SF61745'))
-        for body, sid in ((DATOS, 'SP68257'), (json.dumps(example).encode(), 'SF43718'), (b'[]', 'SF43718'),
+        for body, sid in ((DATOS, 'SP68257'), (json.dumps(example).encode(), 'SF43783'), (b'[]', 'SF43718'),
                           (b'{"bmx": {"series": [{"idSerie": "SF43718"}]}}', 'SF43718')):
             with self.subTest(sid=sid, body=body[:30]), self.assertRaises(ValueError):
                 indicadores.parse_banxico_datos(body, sid)
@@ -107,7 +159,7 @@ class Parsers(unittest.TestCase):
         self.assertEqual(indicadores.served_count(body, 'fecha'), 2)  # "fechaInicio" is not an observation
 
     def test_ids_are_identifiers_and_dates_stay_verbatim(self):
-        self.assertEqual(indicadores.native_id('SF43718', '02/01/2015'), 'SF43718.02-01-2015')
+        self.assertEqual(indicadores.native_id('SF43783', '24/03/1995'), 'SF43783.24-03-1995')
         self.assertEqual(indicadores.native_id('628194', '2026/09'), '628194.2026-09')
         for bad in ('2015-01-02', '02/01/2015 ', '', None, '1/2/3/4'):
             self.assertIsNone(indicadores.native_id('SF1', bad), bad)
@@ -204,36 +256,43 @@ class _RunCase(unittest.TestCase):
 class BanxicoRun(_RunCase):
     SID = 'mx.banxico-sie'
 
-    def default_routes(self):
-        ids = [s['id'] for s in source(self.SID)['series']]
+    def default_routes(self, body=DATOS):
         routes = {BX + '/robots.txt': (302, b'', {'Location': BX_OLD + '/robots.txt'}), BX_OLD + '/robots.txt': (200, ROBOTS_BX, {}),
-                  indicadores.BANXICO_META.format(series=','.join(ids)): (200, META, JSON_CT)}
+                  META_URL: (200, META, JSON_CT)}
         for s in source(self.SID)['series']:
-            routes[self.datos_url(s['id'])] = (200, datos_for(s['id']), JSON_CT)
+            routes[datos_url(s['id'])] = (200, datos_for(s['id'], body), JSON_CT)
         return routes
 
     def datos_url(self, series_id):
-        start = next(s['start'] for s in self.src['series'] if s['id'] == series_id) if hasattr(self, 'src') else \
-            next(s['start'] for s in source(self.SID)['series'] if s['id'] == series_id)
-        return indicadores.BANXICO_DATOS.format(series=series_id, start=start, end=TODAY.isoformat())
+        return datos_url(series_id)
 
     def test_every_observation_is_catalogued_exactly_as_served(self):
         stats = self.go()
         self.assertEqual(self.failed(), [])
-        es = self.entries('SF43718')
-        self.assertEqual([e['observation']['value_printed'] for e in es],
-                         ['N/E', '14.8290', 'N/E', 'N/E', '14.9469', '14.8479', '14.7936', '14.6274'])
-        self.assertEqual({e['observation']['unit_printed'] for e in es}, {'Pesos por Dólar'})  # from the metadata
-        e = next(x for x in es if x['observation']['date_printed'] == '02/01/2015')
-        self.assertEqual((e['native_id'], e['url'], e['category']['doc_type'], e['category']['issuer']),
-                         ('SF43718.02-01-2015', self.datos_url('SF43718'), 'INDICADOR ECONOMICO', 'Banco de México'))
-        self.assertTrue(e['title'].endswith('Fecha de determinación (FIX)'))
+        es = sorted(self.entries('SF43783'), key=lambda x: x['listing']['page_order'])
+        served = [(o['fecha'], o['dato']) for o in json.loads(DATOS)['bmx']['series'][0]['datos']]  # read apart from the parser
+        self.assertEqual([(e['observation']['date_printed'], e['observation']['value_printed']) for e in es], served)
+        self.assertEqual(sum(e['observation']['value_printed'] == 'N/E' for e in es), NE_N)  # "N/E" is kept as served
+        # Each series takes the unit of its own metadata row, although the metadata came in another order.
+        self.assertEqual({sid: {e['observation']['unit_printed'] for e in self.entries(sid)}
+                          for sid in ('SF43718', 'SP68257', 'SF331451', 'SF43783')},
+                         {'SF43718': {'Pesos por Dólar'}, 'SP68257': {'Unidades de Inversión'}, 'SF331451': {'Porcentajes'},
+                          'SF43783': {'Sin Unidad'}})
+        e = next(x for x in es if x['observation']['date_printed'] == '24/03/1995')
+        self.assertEqual((e['native_id'], e['url'], e['category']['doc_type'], e['category']['issuer'], e['title']),
+                         ('SF43783.24-03-1995', self.datos_url('SF43783'), 'INDICADOR ECONOMICO', 'Banco de México', TIIE28))
         self.assertEqual((self.raw / e['raw_path']).read_bytes(), DATOS)  # the raw response, byte-exact
-        self.assertEqual((stats['raw_stored'], stats['observations_served'], stats['entries_new']), (5, 32, 32))
-        for x in self.run_.catalog.snapshot(self.SID):
+        self.assertEqual((stats['raw_stored'], stats['observations_served'], stats['entries_new']), (5, 4 * SERVED_N, 4 * SERVED_N))
+        # The schema, on one row per distinct shape of the real bytes plus the first and the last row: every row costs
+        # ~3 s per 7,943 here, and the real run already validated all 33,481 rows it wrote (none quarantined).
+        shapes = {}
+        for x in es:
+            shapes.setdefault(tuple(re.sub(r'\d', '9', x['observation'][k]) for k in ('date_printed', 'value_printed')), x)
+        self.assertEqual(sorted(shapes), [('99/99/9999', '9.9999'), ('99/99/9999', '99.9999'), ('99/99/9999', 'N/E')])
+        for x in [*shapes.values(), es[0], es[-1]]:
             self.assertEqual(validate('catalog_entry', x), [], x['entry_id'])
         # the token went in Bmx-Token to the API, never to robots.txt; the robots redirect is in the manifest
-        for url in [self.datos_url('SF43718'), indicadores.BANXICO_META.format(series='SF43718,SP68257,SF331451,SF43783')]:
+        for url in [self.datos_url('SF43783'), META_URL]:
             self.assertEqual([h.get('bmx-token') for h in self.headers_of(url)], [BTOK])
         self.assertEqual(self.headers_of(BX + '/robots.txt')[0].get('bmx-token'), None)
         self.assertEqual(self.run_.manifest['robots'][BX], {'url': BX_OLD + '/robots.txt', 'status': 200, 'redirects': 1})
@@ -248,48 +307,48 @@ class BanxicoRun(_RunCase):
     def test_served_and_stored_must_match_or_the_run_fails(self):
         cases = {
             'a repeated date': with_datos(lambda d: d.append(dict(d[1]))),
-            'a date the id cannot carry': with_datos(lambda d: d[0].update(fecha='2015-01-01')),
+            'a date the id cannot carry': with_datos(lambda d: d[0].update(fecha='1995-03-23')),
             'no observations': with_datos(lambda d: d.clear()),
-            'a key repeated in the JSON (the parser keeps the last)': DATOS.replace(b'"datos": [', b'"datos": [], "datos": [', 1)
-            .replace(b'"datos": [], "datos": [', b'"datos": [{"fecha": "31/12/2014", "dato": "N/E"}], "datos": [', 1),
+            'a key repeated in the JSON (the parser keeps the last)':
+                DATOS.replace(b'"datos":[', b'"datos":[{"fecha":"22/03/1995","dato":"N/E"}],"datos":[', 1),
         }
         for name, body in cases.items():
             with self.subTest(name):
                 self.run_.catalog.entries.clear()
-                self.routes[self.datos_url('SF43718')] = (200, body, JSON_CT)
+                self.routes[self.datos_url('SF43783')] = (200, body, JSON_CT)
                 self.go()
-                bad = [c for c in self.failed() if c['scope'].startswith('SF43718')]
+                bad = [c for c in self.failed() if c['scope'].startswith('SF43783')]
                 self.assertEqual(len(bad), 1, name)
                 self.assertNotEqual(bad[0]['expected'], bad[0]['extracted'])
-                self.assertEqual([c for c in self.failed() if not c['scope'].startswith('SF43718')], [])
+                self.assertEqual([c for c in self.failed() if not c['scope'].startswith('SF43783')], [])
 
     def test_without_the_served_unit_nothing_is_catalogued(self):
-        self.routes[indicadores.BANXICO_META.format(series='SF43718,SP68257,SF331451,SF43783')] = (500, b'', {})
+        self.routes[META_URL] = (500, b'', {})
         self.go()
         self.assertEqual(self.run_.catalog.snapshot(self.SID), [])
         self.assertEqual(len(self.failed()), 4)
 
     def test_unchanged_rows_keep_their_raw_and_a_revision_appends_a_version(self):
         self.go()
-        first = {e['entry_id']: e for e in self.entries('SF43718')}
-        self.routes[self.datos_url('SF43718')] = (200, with_datos(lambda d: d[1].update(dato='14.8291')), JSON_CT)
+        before = {e['entry_id']: e for e in self.entries('SF43783')}
+        self.routes[self.datos_url('SF43783')] = (200, with_datos(lambda d: d[1].update(dato='89.9900')), JSON_CT)  # was N/E
         stats = self.go()
         self.assertEqual(self.failed(), [])
         self.assertEqual((stats['entries_new'], stats['entries_changed']), (0, 1))
-        now = {e['entry_id']: e for e in self.entries('SF43718')}
-        changed = 'mx.banxico-sie:SF43718.02-01-2015'
-        self.assertEqual(now[changed]['observation']['value_printed'], '14.8291')
+        now = {e['entry_id']: e for e in self.entries('SF43783')}
+        changed = 'mx.banxico-sie:SF43783.24-03-1995'
+        self.assertEqual((before[changed]['observation']['value_printed'], now[changed]['observation']['value_printed']), ('N/E', '89.9900'))
         self.assertEqual(len(now[changed]['versions']), 2)
-        self.assertEqual({k: v for k, v in now.items() if k != changed}, {k: v for k, v in first.items() if k != changed})
+        self.assertEqual({k: v for k, v in now.items() if k != changed}, {k: v for k, v in before.items() if k != changed})
 
     def test_an_observation_no_longer_served_fails_coverage(self):
         self.go()
-        self.routes[self.datos_url('SF43718')] = (200, with_datos(lambda d: d.pop()), JSON_CT)
+        self.routes[self.datos_url('SF43783')] = (200, with_datos(lambda d: d.pop()), JSON_CT)
         self.go()
-        self.assertEqual([(c['expected'], c['extracted']) for c in self.failed()], [(7, 8)])
+        self.assertEqual([(c['expected'], c['extracted']) for c in self.failed()], [(SERVED_N - 1, SERVED_N)])
 
     def test_a_response_that_echoes_the_token_is_not_stored(self):
-        self.routes[self.datos_url('SP68257')] = (200, datos_for('SP68257').replace(b'Serie SP68257', BTOK.encode()), JSON_CT)
+        self.routes[self.datos_url('SP68257')] = (200, datos_for('SP68257').replace(TIIE28.encode(), BTOK.encode()), JSON_CT)
         self.go()
         self.assertEqual(self.entries('SP68257'), [])
         self.assertEqual(len(self.failed()), 1)
@@ -357,7 +416,7 @@ class InegiRun(_RunCase):
         (ind, _), (cl, _) = self.urls()
         self.routes[cl] = (302, b'', {'Location': ind.replace('https://', 'http://')})  # refused: names the URL
         self.routes[ind] = (500, b'internal error for ' + ITOK.encode(), {})  # an error page that echoes it
-        bx = BanxicoRun.default_routes(BanxicoRun.__new__(BanxicoRun))
+        bx = BanxicoRun.default_routes(BanxicoRun.__new__(BanxicoRun), first(3))  # tokens, not volume, are checked here
         self.routes.update(bx)
         log = io.StringIO()
         with mock.patch.object(Run, '_fetcher', lambda run_self, src, secrets=None: self.fake_fetcher(run_self)(src, secrets)), \
@@ -405,10 +464,23 @@ class Wiring(unittest.TestCase):
                 mock.patch.object(Run, 'run_ojn', lambda self_, s: {}), mock.patch.object(Run, 'run_ojn_municipal', lambda self_, s: {}), \
                 mock.patch.object(Run, 'run_hf_tesis', lambda self_, s: {}):
             manifest = Run('MX', tmp + '/o', tmp + '/r', None, TODAY, 0, 0, parallel=False).execute()
-            self.assertEqual(ran, [])  # the scheduled run (no --sources) never reaches a trial source
-            self.assertNotIn('mx.banxico-sie', manifest['planned_sources'])  # trial is not 'planned': it has no blocker
+            # the scheduled run (no --sources) reaches the active indicator source and never the trial one
+            self.assertEqual(ran, ['mx.banxico-sie'])
+            self.assertNotIn('mx.inegi-bie', manifest['planned_sources'])  # trial is not 'planned': it has no blocker
+            ran.clear()
             Run('MX', tmp + '/o', tmp + '/r', None, TODAY, 0, 0, parallel=False).execute({'mx.banxico-sie', 'mx.inegi-bie'})
         self.assertEqual(sorted(ran), ['mx.banxico-sie', 'mx.inegi-bie'])
+        self.assertEqual((source('mx.banxico-sie')['status'], source('mx.inegi-bie')['status']), ('active', 'trial'))
+
+    def test_an_active_indicator_source_is_tested_on_real_bytes(self):
+        # trial -> active only once a real run has served real bytes: an active source keeps no fixture built from the
+        # docs, and its real fixtures are byte for byte what that run stored (Parsers checks their sha256).
+        prefix = {'banxico-sie': 'banxico_', 'inegi-bie': 'inegi_'}
+        active = [s for s in registry()['sources'] if 'series' in s and s['status'] == 'active']
+        self.assertEqual([s['source_id'] for s in active], ['mx.banxico-sie'])
+        for src in active:
+            self.assertEqual(sorted(p.name for p in FIX.glob(prefix[src['adapter']] + '*CONSTRUIDO*')), [], src['source_id'])
+        self.assertEqual(sorted(p.name for p in FIX.glob('banxico_sie_*.json')), sorted(REAL))
 
     def test_a_series_id_is_active_only_when_an_official_page_confirms_it(self):
         official = {'mx.banxico-sie': ('https://www.banxico.org.mx/',), 'mx.inegi-bie': ('https://www.inegi.org.mx/',)}
@@ -456,7 +528,7 @@ class Wiring(unittest.TestCase):
             with self.subTest(bad=bad):
                 self.assertTrue(validate('catalog_entry', {**e, 'observation': {**e['observation'], **bad}}))
 
-    def test_the_tokens_reach_only_the_dispatch_job_steps_that_need_them(self):
+    def test_the_tokens_reach_only_the_steps_that_need_them(self):
         wf = yaml.safe_load((ROOT / '.github' / 'workflows' / 'indicadores-mx.yml').read_text(encoding='utf-8'))
         self.assertEqual(list(wf.get('on') or wf.get(True)), ['workflow_dispatch'])  # never on a schedule
         self.assertEqual(wf['permissions'], {'contents': 'read'})
@@ -471,9 +543,42 @@ class Wiring(unittest.TestCase):
         for s in steps:
             if 'uses' in s:
                 self.assertRegex(s['uses'], r'^[\w.-]+/[\w.-]+@[0-9a-f]{40}$')
-        sched = (ROOT / '.github' / 'workflows' / 'catalog-mx.yml').read_text(encoding='utf-8')
-        self.assertNotIn('BANXICO_TOKEN', sched)
-        self.assertNotIn('INEGI_TOKEN', sched)
+        # The scheduled run fetches the active source (Banxico): its token reaches the catalog step and the scan that
+        # runs before anything is uploaded or committed. INEGI is trial: its token never reaches the scheduled run.
+        text = (ROOT / '.github' / 'workflows' / 'catalog-mx.yml').read_text(encoding='utf-8')
+        self.assertNotIn('secrets.INEGI_TOKEN', text)
+        steps = yaml.safe_load(text)['jobs']['run']['steps']
+        names = [s.get('name') for s in steps]
+        catalog = next(s for s in steps if s.get('id') == 'catalog')
+        self.assertEqual([s.get('name') for s in steps if 'BANXICO_TOKEN' in json.dumps(s.get('env', {}))],
+                         [catalog['name'], SCAN])
+        self.assertEqual(catalog['env']['BANXICO_TOKEN'], '${{ secrets.BANXICO_TOKEN }}')
+        scan = names.index(SCAN)
+        self.assertLess(names.index(catalog['name']), scan)
+        self.assertLess(scan, min(i for i, n in enumerate(names) if n and n.startswith(('Upload raw bundle', 'Commit catalog'))))
+
+    @staticmethod
+    def scan(wf_name, step_name, cwd):
+        """Exit code of a workflow's token-scan step, run as GitHub runs it (bash -eo pipefail) in `cwd`."""
+        wf = yaml.safe_load((ROOT / '.github' / 'workflows' / wf_name).read_text(encoding='utf-8'))
+        script = next(s for s in wf['jobs']['run']['steps'] if s.get('name') == step_name)['run']
+        return subprocess.run(['bash', '--noprofile', '--norc', '-eo', 'pipefail', '-c', script], cwd=cwd, capture_output=True,
+                              env={'PATH': os.environ.get('PATH', ''), 'BANXICO_TOKEN': BTOK, 'INEGI_TOKEN': ITOK}).returncode
+
+    def test_the_token_scan_stops_an_output_that_holds_a_token(self):
+        for wf_name, step_name, folders in (('catalog-mx.yml', SCAN, ('data', 'raw')),
+                                            ('indicadores-mx.yml', 'No token in anything that is uploaded', ('out', 'raw'))):
+            for holder in (None,) + folders:
+                with self.subTest(wf_name, holder=holder), tempfile.TemporaryDirectory() as tmp:
+                    for d in folders:
+                        Path(tmp, d, 'mx').mkdir(parents=True)
+                        Path(tmp, d, 'mx', 'x.json').write_bytes(DATOS)
+                    if holder:
+                        Path(tmp, holder, 'mx', 'y.json').write_text(f'{{"url": "x/{BTOK}"}}', encoding='utf-8')
+                    self.assertEqual(self.scan(wf_name, step_name, tmp), 1 if holder else 0)
+        with tempfile.TemporaryDirectory() as tmp:  # a run with no new raw files leaves no raw folder: nothing to stop
+            Path(tmp, 'data').mkdir()
+            self.assertEqual(self.scan('catalog-mx.yml', SCAN, tmp), 0)
 
 
 if __name__ == '__main__':

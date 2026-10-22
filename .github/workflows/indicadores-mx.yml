@@ -1,14 +1,15 @@
 name: indicadores-mx
-# First real runs of the calculation-indicator sources (Banxico SIE, INEGI BIE), status 'trial' in sources/mx.json.
-# On demand only, read-only: no push, no release, no write token. Each token reaches only the run step and the token
+# Real runs of the calculation-indicator sources on demand. mx.inegi-bie is 'trial' in sources/mx.json and runs only
+# here; mx.banxico-sie went 'active' after run 39709378896 (2026-10-22) and is fetched by catalog-mx, but can still be
+# run here. Read-only: no push, no release, no write token. Each token reaches only the run step and the token
 # scan, as an env var; the Fetcher sends it only to its own host. The raw responses (byte-exact), the catalog rows and
-# the manifest are uploaded as a workflow artifact, so a later PR can replace the fixtures CONSTRUIDO_DE_DOCS with
-# real bytes and then move the sources to 'active' (catalog-mx).
+# the manifest are uploaded as a workflow artifact, so a later PR can replace the INEGI fixtures CONSTRUIDO_DE_DOCS
+# with real bytes and then move mx.inegi-bie to 'active' (as was done for Banxico).
 on:
   workflow_dispatch:
     inputs:
       sources:
-        description: 'comma-separated trial indicator sources (mx.banxico-sie, mx.inegi-bie)'
+        description: 'comma-separated indicator sources (mx.banxico-sie active, mx.inegi-bie trial)'
         default: 'mx.banxico-sie,mx.inegi-bie'
 permissions:
   contents: read

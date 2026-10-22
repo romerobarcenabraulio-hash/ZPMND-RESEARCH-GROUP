@@ -4,12 +4,15 @@ One catalog entry per observation, with value, date and unit copied exactly as t
 computed, converted or derived (no variations, no averages, no rebasing). Numbers are kept as the literal text of the
 response (json parse_float/parse_int=str), so '14.8290' never becomes 14.829.
 
-Formats were read from the official documentation on 2026-10-21; the test fixtures are CONSTRUCTED from it and stay
-HIPÓTESIS until the first real run replaces them with real bytes:
+Formats were read from the official documentation on 2026-10-21. Banxico's are confirmed by the real bytes of the
+first real run (workflow indicadores-mx, run 39709378896, 2026-10-22), which are now the test fixtures; INEGI's stay
+HIPÓTESIS (that run got HTTP 401 and 400, no INEGI bytes) and so do its CONSTRUIDO_DE_DOCS fixtures:
 - Banxico SIE (https://www.banxico.org.mx/SieAPIRest/service/v1/doc/consultaDatosSerieRango and doc/consultaSeries):
   GET series/:idSerie/datos/:fechaIni/:fechaFin -> {"bmx": {"series": [{"idSerie", "titulo", "datos": [{"fecha":
   "dd/mm/yyyy", "dato": "14.8290" | "N/E"}]}]}}; GET series/:idSerie -> metadata with "unidad". Token in the header
   Bmx-Token (doc/ejemplos). Limits: 200 historical queries per 5 min, 80 metadata queries per minute (doc/limiteConsultas).
+  Seen in the real bytes: compact JSON; every "dato" a JSON string; "N/E" served (SF43783: 200 of 7,943, 1995-1996);
+  the metadata of several series comes in its own order, not the requested one, with an extra "versionada" boolean.
 - INEGI BIE (https://www.inegi.org.mx/servicios/api_indicadores.html): GET .../INDICATOR/{id}/{idioma}/{area}/false/
   {fuente}/2.0/{token}?type=json -> {"Header": ..., "Series": [{"INDICADOR", "UNIT", ..., "OBSERVATIONS":
   [{"TIME_PERIOD", "OBS_VALUE", ...}]}]}; catalog method CL_INDICATOR -> {"CODE": [{"value", "Description"}]}. The
@@ -36,7 +39,7 @@ DOC_TYPE = 'INDICADOR ECONOMICO'  # fixed: the same category the DOF gives to pu
 # examples are 64 hex characters, INEGI's a UUID).
 _TOKEN = re.compile(r'[A-Za-z0-9-]{16,128}')
 _SERIES = re.compile(r'[A-Za-z0-9]{1,30}')
-_DATE = re.compile(r'[0-9]{1,4}(?:/[0-9]{1,4}){0,2}')  # 'dd/mm/yyyy' (Banxico), 'yyyy/mm' (INEGI, HIPÓTESIS)
+_DATE = re.compile(r'[0-9]{1,4}(?:/[0-9]{1,4}){0,2}')  # 'dd/mm/yyyy' (Banxico, real bytes), 'yyyy/mm' (INEGI, HIPÓTESIS)
 
 
 def valid_token(token):

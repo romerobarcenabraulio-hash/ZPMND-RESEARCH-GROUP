@@ -258,7 +258,7 @@
     },
     {
       "source_id": "mx.banxico-sie",
-      "status": "trial",
+      "status": "active",
       "tier": 1,
       "adapter": "banxico-sie",
       "title": "Banco de México, Sistema de Información Económica (API SIE): indicadores oficiales para cálculo",
@@ -329,7 +329,7 @@
           "printed_there": "cuadro CF101: serie SF43783 'TIIE a 28 días', diaria, fecha inicial 23/03/1995. catalogoSeries lista además SF60648 'TIIE a 28 días.' entre las series del servicio SOAP anterior (DgieWS); SF60648 no aparece en los cuadros CF101, CF111 ni CA51 y no se usa"
         }
       ],
-      "note": "Read-only, polite: robots.txt of www.banxico.org.mx answers 302 to anterior.banxico.org.mx/robots.txt (rules: /dyn, /ALEPH, /V for every agent), followed per RFC 9309. The token goes only to www.banxico.org.mx in the Bmx-Token header. 5 requests per run (metadata + one per series), far below the documented limits. Status trial: the response format is read from the docs (HIPÓTESIS) until the first real run (workflow indicadores-mx) brings real bytes."
+      "note": "Read-only, polite: robots.txt of www.banxico.org.mx answers 302 to anterior.banxico.org.mx/robots.txt (rules: /dyn, /ALEPH, /V for every agent), followed per RFC 9309. The token goes only to www.banxico.org.mx in the Bmx-Token header. 5 requests per run (metadata + one per series), far below the documented limits. Status active since the first real run (workflow indicadores-mx, run 39709378896, 2026-10-22): the four series reconciled (SF43718 8783/8783, SP68257 11524/11524, SF331451 5231/5231, SF43783 7943/7943; 33,481 observations) and the test fixtures are its real bytes. Seen in those bytes: compact JSON, every dato a JSON string, dates dd/mm/yyyy, 'N/E' only in SF43783 (200, 1995-1996), metadata in its own order with a 'versionada' field. The run asks up to today: values already published with a later date (UDIS to 25/10/2026, TIIE 28 to 22/10/2026 in that run's metadata) enter in a later run."
     },
     {
       "source_id": "mx.inegi-bie",
@@ -366,7 +366,7 @@
           "id_status": "HIPÓTESIS: no se encontró una página oficial estática que imprima esta clave (las páginas del INEGI se arman con JavaScript y el constructor de consultas usa un token interno que no es nuestro). La primera corrida guarda la respuesta de CL_INDICATOR (método oficial de catálogo) como evidencia; la fuente no pasa a active sin confirmed_by."
         }
       ],
-      "note": "Read-only, polite: robots.txt of www.inegi.org.mx allows /app. The token is a path segment of every API URL (documented syntax .../INDICATOR/[IdIndicador]/[Idioma]/[Área]/[Recientes]/[Fuente]/[Versión]/[Token]?type=[Formato]); every recorded URL carries '<token>' instead. 'false' asks for the whole historical series (documented); there is no date range. HIPÓTESIS until the first real run: the indicator key, fuente 'BIE' (the documented examples use BISE) and área '00'."
+      "note": "Read-only, polite: robots.txt of www.inegi.org.mx allows /app. The token is a path segment of every API URL (documented syntax .../INDICATOR/[IdIndicador]/[Idioma]/[Área]/[Recientes]/[Fuente]/[Versión]/[Token]?type=[Formato]); every recorded URL carries '<token>' instead. 'false' asks for the whole historical series (documented); there is no date range. HIPÓTESIS until a real run answers: the indicator key, fuente 'BIE' (the documented examples use BISE) and área '00'. First real run (indicadores-mx 39709378896, 2026-10-22): HTTP 401 'No autorizado' (ErrorCode 110) on CL_INDICATOR and HTTP 400 'No se encontraron resultados' (ErrorCode 100) on INDICATOR 628194; nothing was stored. Open item for the owner: set INEGI_TOKEN again and re-run indicadores-mx with mx.inegi-bie."
     },
     {
       "source_id": "mx.tratados-sre",
