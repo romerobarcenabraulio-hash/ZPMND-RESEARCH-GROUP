@@ -1,0 +1,42 @@
+{
+  "bmx": {
+    "series": [
+      {
+        "idSerie": "SF43718",
+        "titulo": "Tipo de cambio Pesos por dólar E.U.A. Tipo de cambio para solventar obligaciones denominadas en moneda extranjera Fecha de determinación (FIX)",
+        "fechaInicio": "12/11/1991",
+        "fechaFin": "29/09/2015",
+        "periodicidad": "Diaria",
+        "cifra": "Tipo de Cambio",
+        "unidad": "Pesos por Dólar"
+      },
+      {
+        "idSerie": "SP68257",
+        "titulo": "Valor de UDIS",
+        "fechaInicio": "04/04/1995",
+        "fechaFin": "10/09/2015",
+        "periodicidad": "Diaria",
+        "cifra": "Tipo de Cambio",
+        "unidad": "Unidades de Inversión"
+      },
+      {
+        "idSerie": "SF331451",
+        "titulo": "TIIE de fondeo a un día",
+        "fechaInicio": "02/01/2006",
+        "fechaFin": "20/10/2026",
+        "periodicidad": "Diaria",
+        "cifra": "Tasas Promedio",
+        "unidad": "Porcentajes"
+      },
+      {
+        "idSerie": "SF43783",
+        "titulo": "TIIE a 28 días",
+        "fechaInicio": "23/03/1995",
+        "fechaFin": "22/10/2026",
+        "periodicidad": "Diaria",
+        "cifra": "Porcentajes",
+        "unidad": "Sin Unidad"
+      }
+    ]
+  }
+}

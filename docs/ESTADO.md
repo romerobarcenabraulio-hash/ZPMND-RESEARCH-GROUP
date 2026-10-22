@@ -48,7 +48,7 @@ Para ponerse al día más rápido: `gh workflow run catalog-mx.yml -f budget=120
 | datos.gob.mx | robots.txt prohíbe `/api/` | petición de exportación |
 | CONAMER | robots.txt responde 403 | petición al operador |
 | Catálogo de NOM (SINEC) | el dominio no resuelve | las NOM se cubren desde el DOF |
-| INEGI y Banxico | requieren token | SOLICITUDES #5 y #6 |
+| INEGI BIE (clave del INPC) | ninguna página oficial estática imprime la clave 628194 (HIPÓTESIS) | la respuesta de `CL_INDICATOR` en la primera corrida de `indicadores-mx` |
 
 ## Qué sigue, en orden
 

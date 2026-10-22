@@ -257,18 +257,116 @@
       "blocked_by": "32 different sites and formats; the OJN compilation (mx.ojn-estatal) covers state legislation meanwhile"
     },
     {
-      "source_id": "mx.inegi",
-      "status": "planned",
-      "tier": 2,
-      "title": "INEGI (estadística y geografía)",
-      "blocked_by": "API requires a token; owner decision"
+      "source_id": "mx.banxico-sie",
+      "status": "trial",
+      "tier": 1,
+      "adapter": "banxico-sie",
+      "title": "Banco de México, Sistema de Información Económica (API SIE): indicadores oficiales para cálculo",
+      "base_url": "https://www.banxico.org.mx/SieAPIRest/service/v1/",
+      "allowed_hosts": [
+        "www.banxico.org.mx",
+        "anterior.banxico.org.mx"
+      ],
+      "token_env": "BANXICO_TOKEN",
+      "token_host": "www.banxico.org.mx",
+      "token_header": "Bmx-Token",
+      "category": {
+        "jurisdiction": "federal",
+        "collection": "BANXICO SIE (INDICADORES PARA CALCULO)"
+      },
+      "publisher": "Banco de México",
+      "source_type": "primary_official",
+      "license": "Banco de México, salvedad de uso: autorización general para reproducir o utilizar la información, citando la fuente y la dirección de Internet del Banco de México (https://www.banxico.org.mx/footer-es/salvedad-politicas-uso-banco-.html, leída 2026-10-21)",
+      "redistribution": "allowed",
+      "max_requests": 20,
+      "docs": {
+        "datos_rango": "https://www.banxico.org.mx/SieAPIRest/service/v1/doc/consultaDatosSerieRango",
+        "metadatos": "https://www.banxico.org.mx/SieAPIRest/service/v1/doc/consultaSeries",
+        "token_header": "https://www.banxico.org.mx/SieAPIRest/service/v1/doc/ejemplos",
+        "limites": "https://www.banxico.org.mx/SieAPIRest/service/v1/doc/limiteConsultas"
+      },
+      "series": [
+        {
+          "id": "SF43718",
+          "label": "Tipo de cambio FIX (pesos por dólar E.U.A., fecha de determinación)",
+          "start": "1991-11-12",
+          "confirmed_by": [
+            "https://www.banxico.org.mx/SieAPIRest/service/v1/doc/catalogoSeries",
+            "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CF102&sector=6&locale=es"
+          ],
+          "confirmed_at": "2026-10-21",
+          "printed_there": "catalogoSeries: 'SF43718 Pesos por Dólar. FIX.'; cuadro CF102: serie SF43718 'Fecha de determinación (FIX).', Pesos por Dólar, diaria, fecha inicial 12/11/1991"
+        },
+        {
+          "id": "SP68257",
+          "label": "Valor de UDIS",
+          "start": "1995-04-04",
+          "confirmed_by": [
+            "https://www.banxico.org.mx/SieAPIRest/service/v1/doc/catalogoSeries",
+            "https://www.banxico.org.mx/SieAPIRest/service/v1/doc/consultaSeries"
+          ],
+          "confirmed_at": "2026-10-21",
+          "printed_there": "catalogoSeries: 'SP68257 Valor de UDIS.'; ejemplo de metadatos de consultaSeries: SP68257 'Valor de UDIS', fechaInicio 04/04/1995, unidad 'Unidades de Inversión'"
+        },
+        {
+          "id": "SF331451",
+          "label": "TIIE de fondeo a un día hábil bancario",
+          "start": "2006-01-02",
+          "confirmed_by": [
+            "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CF101&sector=18&locale=es"
+          ],
+          "confirmed_at": "2026-10-21",
+          "printed_there": "cuadro CF101 (Tasas de Interés en el Mercado de Dinero: Objetivo, TIIE 28, fondeo): serie SF331451 'TIIE de fondeo a un día', Porcentajes, diaria, fecha inicial 02/01/2006"
+        },
+        {
+          "id": "SF43783",
+          "label": "TIIE a 28 días",
+          "start": "1995-03-23",
+          "confirmed_by": [
+            "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CF101&sector=18&locale=es"
+          ],
+          "confirmed_at": "2026-10-21",
+          "printed_there": "cuadro CF101: serie SF43783 'TIIE a 28 días', diaria, fecha inicial 23/03/1995. catalogoSeries lista además SF60648 'TIIE a 28 días.' entre las series del servicio SOAP anterior (DgieWS); SF60648 no aparece en los cuadros CF101, CF111 ni CA51 y no se usa"
+        }
+      ],
+      "note": "Read-only, polite: robots.txt of www.banxico.org.mx answers 302 to anterior.banxico.org.mx/robots.txt (rules: /dyn, /ALEPH, /V for every agent), followed per RFC 9309. The token goes only to www.banxico.org.mx in the Bmx-Token header. 5 requests per run (metadata + one per series), far below the documented limits. Status trial: the response format is read from the docs (HIPÓTESIS) until the first real run (workflow indicadores-mx) brings real bytes."
     },
     {
-      "source_id": "mx.banxico-sie",
-      "status": "planned",
-      "tier": 2,
-      "title": "Banco de México, Sistema de Información Económica",
-      "blocked_by": "API requires a token; owner decision"
+      "source_id": "mx.inegi-bie",
+      "status": "trial",
+      "tier": 1,
+      "adapter": "inegi-bie",
+      "title": "INEGI, Banco de Información Económica (API del Banco de Indicadores): INPC",
+      "base_url": "https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/",
+      "allowed_hosts": [
+        "www.inegi.org.mx"
+      ],
+      "token_env": "INEGI_TOKEN",
+      "token_host": "www.inegi.org.mx",
+      "language": "es",
+      "area": "00",
+      "fuente": "BIE",
+      "category": {
+        "jurisdiction": "federal",
+        "collection": "INEGI BIE (INDICADORES PARA CALCULO)"
+      },
+      "publisher": "Instituto Nacional de Estadística y Geografía (INEGI)",
+      "source_type": "primary_official",
+      "license": "Términos de Libre Uso de la Información del INEGI: copiar, distribuir y publicar sin alterar metadatos, con el crédito 'Fuente: INEGI, Banco de Información Económica' (https://www.inegi.org.mx/inegi/terminos.html, leída 2026-10-21)",
+      "redistribution": "allowed",
+      "max_requests": 10,
+      "docs": {
+        "api": "https://www.inegi.org.mx/servicios/api_indicadores.html"
+      },
+      "series": [
+        {
+          "id": "628194",
+          "label": "INPC, índice general (base 2a. quincena de julio 2018 = 100)",
+          "confirmed_by": [],
+          "id_status": "HIPÓTESIS: no se encontró una página oficial estática que imprima esta clave (las páginas del INEGI se arman con JavaScript y el constructor de consultas usa un token interno que no es nuestro). La primera corrida guarda la respuesta de CL_INDICATOR (método oficial de catálogo) como evidencia; la fuente no pasa a active sin confirmed_by."
+        }
+      ],
+      "note": "Read-only, polite: robots.txt of www.inegi.org.mx allows /app. The token is a path segment of every API URL (documented syntax .../INDICATOR/[IdIndicador]/[Idioma]/[Área]/[Recientes]/[Fuente]/[Versión]/[Token]?type=[Formato]); every recorded URL carries '<token>' instead. 'false' asks for the whole historical series (documented); there is no date range. HIPÓTESIS until the first real run: the indicator key, fuente 'BIE' (the documented examples use BISE) and área '00'."
     },
     {
       "source_id": "mx.tratados-sre",

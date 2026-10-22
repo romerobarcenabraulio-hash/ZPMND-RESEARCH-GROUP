@@ -4,6 +4,7 @@
 
 Exit codes: 0 ok; 3 a coverage reconciliation failed (data is still written, the failure is in the manifest);
 4 some entries fail the catalog_entry schema (they are quarantined: listed in the manifest, never written).
+Sources with status 'trial' run only when named in --sources (never in the scheduled run).
 """
 import argparse
 import json
@@ -18,7 +19,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import hf_tesis, leyesbiblio, normas, ojn, sidof
+from . import hf_tesis, indicadores, leyesbiblio, normas, ojn, sidof
 from .categorize import clean_text, doc_type, dof_doc_type, fold
 from .fetch import BudgetExhausted, Fetcher, FetchRefused, FileSink, Response, decode_html
 from .store import Catalog, RawStore
@@ -143,11 +144,13 @@ class Run:
         self.deadline = None  # time.monotonic() value; set by --deadline-minutes
         self._lock = threading.Lock()
         self.manifest = {'run_id': now_iso().replace(':', ''), 'country': self.country, 'started_at': now_iso(),
-                         'sources': {}, 'coverage': [], 'errors': []}
+                         'sources': {}, 'coverage': [], 'errors': [], 'robots': {}}
 
-    def _fetcher(self, src):
-        # Per-source budget: --budget when given, else the source's max_requests from the registry.
+    def _fetcher(self, src, secrets=None):
+        # Per-source budget: --budget when given, else the source's max_requests from the registry. The final robots.txt
+        # URL of every origin goes to the manifest; `secrets` binds each credential to its one host.
         return Fetcher(src['allowed_hosts'], budget=self.budget if self.budget is not None else src.get('max_requests', 1500),
+                       robots_log=self.manifest['robots'], secrets=secrets,
                        deadline=self.deadline)
 
     def _get(self, f, url, **kw):
@@ -592,10 +595,146 @@ class Run:
             st.update(revision=meta['revision'], sha256=meta['sha256'], total_points=declared,
                       rows_read=stats['rows_read'], distinct=len(seen))
 
+    # ---- Calculation indicators: Banxico SIE and INEGI BIE (indicadores.py) -----------------------
+    def run_indicadores(self, src):
+        """The whole history of each registered series, every run. Raw responses are kept byte-exact; one entry per
+        observation as served; per series, observations served == entries stored (exit 3 otherwise). The token goes
+        only to its own host and is never recorded: every recorded URL carries '<token>'."""
+        sid = src['source_id']
+        stats = {'series': len(src['series']), 'observations_served': 0, 'entries_new': 0, 'entries_changed': 0,
+                 'raw_stored': 0, 'raw': {}}
+        done = set()
+        token = os.environ.get(src['token_env'], '')
+        if not indicadores.valid_token(token):
+            self.manifest['errors'].append(f"{sid}: {src['token_env']} is not set or not a valid token; nothing is requested")
+        else:
+            f = self._fetcher(src, secrets={token: src['token_host']})
+            try:
+                if src['adapter'] == 'banxico-sie':
+                    self._banxico(src, f, token, stats, done)
+                else:
+                    self._inegi(src, f, token, stats, done)
+            except BudgetExhausted:
+                self.manifest['errors'].append(f'{sid}: request budget reached (continues next run)')
+            stats['requests'] = f.used
+            with self._lock:
+                self.used += f.used
+        for s in src['series']:
+            if s['id'] not in done:  # not read this run (no token, budget): the run is not whole
+                self._cover(sid, f"{s['id']} (serie no leída)", None, 0)
+        return stats
+
+    def _ind_error(self, sid, text, token):
+        self.manifest['errors'].append(indicadores.redact(f'{sid}: {text}', token)[:400])
+
+    def _ind_get(self, f, sid, url, shown, token, **kw):
+        """Like _get, but what is recorded names `shown` (the URL with '<token>'), never the URL that was sent."""
+        try:
+            r = f.get(url, **kw)
+        except BudgetExhausted:
+            raise
+        except FetchRefused as exc:
+            self._ind_error(sid, f'refused {shown}: {exc}', token)
+            return Response(0, b'', shown, {})
+        if r.status != 200:
+            self._ind_error(sid, f'{shown}: HTTP {r.status} {r.body[:200].decode("utf-8", "replace")}', token)
+        return r
+
+    def _ind_store(self, sid, r, token, stats, key):
+        """Raw bytes exactly as served, unless they echo the credential: then nothing is kept."""
+        if r.status != 200:
+            return None
+        if token.encode() in r.body:
+            self._ind_error(sid, f'{key}: the response contains the credential; it is not stored', token)
+            return None
+        sha, rel = self.raw.put(r.body, 'json')
+        stats['raw'][key] = rel
+        stats['raw_stored'] += 1
+        return sha, rel
+
+    def _ind_catalog(self, src, series_id, scope, r, stored, shown, token, title, unit, observations, date_key, stats):
+        sid = src['source_id']
+        served = indicadores.served_count(r.body, date_key) if stored else 0
+        stats['observations_served'] += served
+        if not stored or not served or not title or unit is None:
+            missing = [k for k, v in (('raw', stored), ('observaciones', served), ('título', title), ('unidad', unit)) if not v]
+            self._ind_error(sid, f'{series_id}: not catalogued, missing {", ".join(missing)}', token)
+            self._cover(sid, scope, served or None, 0)
+            return
+        sha, rel = stored
+        artifact, now = _artifact(src, shown, sha, r.body, 'application/json', rel), now_iso()
+        for order, (date_printed, value) in enumerate(observations, 1):
+            e = indicadores.entry(src, self.country, series_id, title, unit, order, date_printed, value, shown,
+                                  artifact, rel, now)
+            if e['native_id'] is None:
+                self._ind_error(sid, f'{series_id}: observation {order} has no usable date', token)
+                continue
+            old = self.catalog.entries.get(e['entry_id'])
+            if old and all(old.get(k) == e[k] for k in ('observation', 'title', 'listing')):
+                continue  # unchanged: the row keeps the raw that first served it
+            stats['entries_changed' if old else 'entries_new'] += 1
+            self.catalog.upsert(e)
+        stored_n = sum(1 for e in self.catalog.snapshot(sid) if (e.get('observation') or {}).get('series_id') == series_id)
+        self._cover(sid, scope, served, stored_n)
+
+    def _banxico(self, src, f, token, stats, done):
+        sid, auth, end = src['source_id'], (src['token_header'], token), self.today.isoformat()
+        series = [s for s in src['series'] if indicadores.valid_series(s['id'])]
+        meta_url = indicadores.BANXICO_META.format(series=','.join(s['id'] for s in series))
+        m = self._ind_get(f, sid, meta_url, meta_url, token, auth=auth)
+        meta = {}
+        if self._ind_store(sid, m, token, stats, 'metadatos'):
+            try:
+                meta = indicadores.parse_banxico_meta(m.body)
+            except ValueError as exc:
+                self._ind_error(sid, f'metadatos: {exc}', token)
+        for s in series:
+            url = indicadores.BANXICO_DATOS.format(series=s['id'], start=s['start'], end=end)
+            r = self._ind_get(f, sid, url, url, token, auth=auth)
+            stored = self._ind_store(sid, r, token, stats, s['id'])
+            title, observations = None, []
+            if stored:
+                try:
+                    title, observations = indicadores.parse_banxico_datos(r.body, s['id'])
+                except ValueError as exc:
+                    self._ind_error(sid, f"{s['id']}: {exc}", token)
+            info = meta.get(s['id'], {})
+            self._ind_catalog(src, s['id'], f"{s['id']} {s['start']}..{end} (observaciones servidas vs catalogadas)", r,
+                              stored, url, token, title or info.get('titulo'), info.get('unidad'), observations, 'fecha', stats)
+            done.add(s['id'])
+
+    def _inegi(self, src, f, token, stats, done):
+        sid = src['source_id']
+        for s in src['series']:
+            if not indicadores.valid_series(s['id']):
+                continue
+            (url, shown), (cat_url, cat_shown) = indicadores.inegi_urls(src, s['id'], token)
+            c = self._ind_get(f, sid, cat_url, cat_shown, token)
+            title = None
+            if self._ind_store(sid, c, token, stats, f"{s['id']} CL_INDICATOR"):
+                try:
+                    title = indicadores.parse_inegi_catalog(c.body, s['id'])
+                except ValueError as exc:
+                    self._ind_error(sid, f"{s['id']} CL_INDICATOR: {exc}", token)
+            r = self._ind_get(f, sid, url, shown, token)
+            stored = self._ind_store(sid, r, token, stats, s['id'])
+            unit, observations = None, []
+            if stored:
+                try:
+                    unit, observations = indicadores.parse_inegi_indicator(r.body, s['id'])
+                except ValueError as exc:
+                    self._ind_error(sid, f"{s['id']}: {exc}", token)
+            self._ind_catalog(src, s['id'], f"{s['id']} serie histórica completa (observaciones servidas vs catalogadas)",
+                              r, stored, shown, token, title, unit, observations, 'TIME_PERIOD', stats)
+            done.add(s['id'])
+
     def execute(self, only=None):
-        active = [s for s in self.registry['sources'] if s['status'] == 'active' and (not only or s['source_id'] in only)]
+        # 'trial' sources (new, formats still HIPÓTESIS) run only when named; the scheduled run never reaches them.
+        active = [s for s in self.registry['sources'] if (not only or s['source_id'] in only)
+                  and (s['status'] == 'active' or (s['status'] == 'trial' and only))]
         runners = {'sidof': self.run_sidof, 'leyesbiblio': self.run_leyesbiblio, 'ojn': self.run_ojn,
-                   'ojn-municipal': self.run_ojn_municipal, 'hf-tesis': self.run_hf_tesis}
+                   'ojn-municipal': self.run_ojn_municipal, 'hf-tesis': self.run_hf_tesis,
+                   'banxico-sie': self.run_indicadores, 'inegi-bie': self.run_indicadores}
         def run_group(srcs):  # sources sharing a host run one after another: politeness is per host
             for src in srcs:
                 self.manifest['sources'][src['source_id']] = runners[src['adapter']](src)
@@ -606,11 +745,28 @@ class Run:
         else:
             for g in groups:
                 run_group(g)
-        self.manifest['planned_sources'] = {s['source_id']: s.get('blocked_by') for s in self.registry['sources'] if s['status'] != 'active'}
+        self.manifest['planned_sources'] = {s['source_id']: s.get('blocked_by') for s in self.registry['sources']
+                                            if s['status'] not in ('active', 'trial')}
         self.manifest['requests_total'] = self.used
         self.manifest['raw_new_files'] = len(self.raw.new_files)
         self.manifest['finished_at'] = now_iso()
         return self.manifest
+
+
+def secrets_in_env(registry):
+    """Every credential a source of the registry reads from the environment (to keep them out of what is written)."""
+    return [v for s in registry['sources'] if s.get('token_env') and len(v := os.environ.get(s['token_env'], '')) >= 16]
+
+
+def redact_secrets(obj, secrets):
+    if isinstance(obj, dict):
+        return {k: redact_secrets(v, secrets) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [redact_secrets(v, secrets) for v in obj]
+    if isinstance(obj, str):
+        for s in secrets:
+            obj = indicadores.redact(obj, s)
+    return obj
 
 
 def quarantine(catalog, invalid):
@@ -669,6 +825,7 @@ def main(argv=None):
     manifest['quarantined'] = invalid
     if invalid:
         manifest['errors'].append(f'{len(invalid)} entries quarantined (fail the catalog_entry schema), see quarantined')
+    manifest = redact_secrets(manifest, secrets_in_env(run.registry))  # the manifest and the log never hold a token
     run.catalog.write()
     if x.country.lower() == 'mx':  # NOM lineages come from the DOF; no other country has them
         dof = run.catalog.snapshot('mx.dof')
