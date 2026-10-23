@@ -7,7 +7,7 @@ name: investigar
 # - analyze: the owner's Claude subscription (CLAUDE_CODE_OAUTH_TOKEN). The Claude Code CLI, pinned by version and by
 #   the npm integrity of its Linux build, runs with no tools at all (--tools "") from an empty folder; the texts are
 #   inside its prompt. It cannot read a file, run a command or open a URL, so it cannot reach the credential; it can
-#   only answer. No GitHub token reaches it.
+#   only answer, through the JSON Schema (--json-schema, structured output). No GitHub token reaches it.
 # - gate: no model, no write token. Builds the packet from the fetch record and the request (artifacts, hashes and
 #   licenses never come from the model) and runs rg.packets: schema, only declared files, sha256 of every raw, every
 #   quote in the extracted text of its source.
@@ -83,7 +83,8 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/vacio" && cd "$RUNNER_TEMP/vacio"
-          "$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config --max-turns 2 --output-format json \
+          "$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config --max-turns 3 --output-format json \
+            --json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")" \
             --system-prompt "$(cat "$GITHUB_WORKSPACE/work/system.txt")" \
             < "$GITHUB_WORKSPACE/work/user.txt" > "$GITHUB_WORKSPACE/work/modelo-cli.json"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
