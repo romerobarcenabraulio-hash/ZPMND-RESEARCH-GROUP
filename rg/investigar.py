@@ -221,11 +221,9 @@ def model_answer(cli):
     through --json-schema. The free text of the result is never parsed (run 39899045829: the model nested the lists
     inside findings and left the JSON open). ValueError unless the run succeeded with one; assemble checks the schema
     again."""
-    if not isinstance(cli, dict) or cli.get('type') != 'result' or cli.get('is_error'):
-        raise ValueError('the model run did not finish with an answer')
-    answer = cli.get('structured_output')
-    if not isinstance(answer, dict):
-        raise ValueError('the run has no structured_output: the model did not answer through the schema')
+    if not isinstance(cli, dict) or cli.get('type') != 'result' or cli.get('is_error') or not isinstance(cli.get('structured_output'), dict):
+        raise ValueError('the model run did not finish with an answer through the schema (structured_output)')
+    answer = cli['structured_output']
     models = sorted(m for m in (cli.get('modelUsage') or {}) if MODEL.match(m))
     return answer, f"claude ({', '.join(models) or 'modelo no reportado'}; Claude Code CLI sin herramientas; suscripción del dueño)"
 
