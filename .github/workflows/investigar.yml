@@ -42,6 +42,7 @@ jobs:
           [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || { echo "request_id: RR-..."; exit 2; }
           python -m rg.investigar fetch --request "requests/$RID.json" --plan "requests/plans/$RID.json" --out work
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        if: ${{ !cancelled() }}  # a failed fetch still leaves its record; the jobs after it do not run
         with: { name: investigar-work, path: work/, retention-days: 1, if-no-files-found: error }
 
   analyze:

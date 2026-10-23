@@ -7,8 +7,8 @@
   raw/sha256/<2>/<sha>.<ext> per artifact with stored_at 'repo', and only when its redistribution is 'allowed'. Any
   other file (an undeclared raw, a second copy, a symlink, a note) is a problem;
 - every kept raw hashes to its artifact's sha256 and has its declared size;
-- every quote of a finding (confirmed and conflicting) is found, whitespace folded as the contract folds it, in the
-  text of one of the raws it cites. That text is what rg.text extracts (html, pdf, docx; each raw parsed in its own
+- every quote of a finding (confirmed and conflicting) has at least MIN_QUOTE characters and is found, whitespace
+  folded as the contract folds it, in the text of one of the raws it cites. That text is what rg.text extracts (html, pdf, docx; each raw parsed in its own
   process with time, size and memory limits). Only a format rg.text does not read (formato_no_soportado) whose
   media type is plain text (TEXTUAL) is read as strict UTF-8, up to MAX_PLAIN bytes; a failed extraction gives no
   text, so a quote from it is never found in the raw bytes. --raw adds folders of raws that are not kept (a manual
@@ -31,6 +31,7 @@ from .text.run import extract_all
 TOP = ('packet.json', 'receipt.json', 'sources.json')
 TEXTUAL = ('text/plain', 'text/csv', 'application/json', 'application/xml', 'text/xml')
 MAX_PLAIN = 20_000_000
+MIN_QUOTE = 12  # folded characters: a shorter quote is found almost anywhere and locates nothing
 RAW = re.compile(r'^raw/sha256/[0-9a-f]{2}/([0-9a-f]{64})\.[a-z0-9]{1,5}$')
 
 
@@ -114,8 +115,8 @@ def check(folder, extra=()):
             quotes += 1
             at_hand = [a for a in finding['artifact_ids'] if a in cited]
             sources = [texts[str(cited[a][0])] for a in at_hand if texts[str(cited[a][0])] is not None]
-            if not fold(finding['quote']):
-                problems.append(f'{group}[{i}]: the quote is empty once its whitespace is folded')
+            if len(fold(finding['quote'])) < MIN_QUOTE:
+                problems.append(f'{group}[{i}]: the quote has fewer than {MIN_QUOTE} characters once its whitespace is folded')
             elif not at_hand:
                 warnings.append(f'{group}[{i}]: no raw at hand for its artifacts; quote not checked')
             elif not sources:

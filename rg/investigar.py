@@ -31,7 +31,7 @@ from urllib.parse import urlsplit
 import jsonschema
 
 from .catalog.fetch import Fetcher, FetchRefused
-from .packets import plain_text
+from .packets import MIN_QUOTE, plain_text
 from .schemas import validate
 from .text.run import extract_all
 
@@ -48,7 +48,8 @@ _FINDING = {'type': 'object', 'additionalProperties': False, 'required': ['claim
             'properties': {'claim': _TEXT,
                            'artifact_ids': {'type': 'array', 'minItems': 1, 'maxItems': 10,
                                             'items': {'type': 'string', 'pattern': '^SA-[0-9a-f]{24}$'}},
-                           'quote': {'type': 'string', 'maxLength': 300}, 'locator': {'type': 'string', 'maxLength': 300}}}
+                           'quote': {'type': 'string', 'minLength': MIN_QUOTE, 'maxLength': 300},
+                           'locator': {'type': 'string', 'maxLength': 300}}}
 _LIST = {'type': 'array', 'maxItems': 30, 'items': _TEXT}
 # What the model may answer: findings and candidate lists. Everything else in the packet is built here.
 MODEL_SCHEMA = {
@@ -125,29 +126,34 @@ def fetch(plan, out, opener=None, sleep=None, clock=None):
     kw = {k: v for k, v in (('opener', opener), ('sleep', sleep), ('clock', clock)) if v is not None}
     f = Fetcher(hosts, budget=3 * len(plan['sources']) + 2 * len(hosts), min_interval=1.0, **kw)
     rows, paths, seen = [], {}, {}
-    for s in plan['sources']:
-        row = {**s, 'retrieved_at': now_iso()}
-        if s.get('redistribution') != 'allowed':  # load_plan refuses it already; a direct call must not download it either
-            rows.append({**row, 'status': 'not_fetched', 'error': 'redistribution is not allowed'})
-            continue
-        try:
-            r = f.get(s['url'])
-        except FetchRefused as exc:
-            rows.append({**row, 'status': 'refused', 'error': str(exc)[:300]})
-            continue
-        row['status'] = r.status
-        if r.status == 200 and r.body:
-            sha, media = hashlib.sha256(r.body).hexdigest(), media_type(r.headers)
-            if sha in seen:  # one artifact per body: a second URL with the same bytes would lose a provenance
-                raise ValueError(f"{s['url']} returned the same bytes as {seen[sha]}: the plan must name only one of them")
-            seen[sha] = s['url']
-            path = out / 'raw' / 'sha256' / sha[:2] / f'{sha}.{EXT.get(media, "bin")}'
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_bytes(r.body)
-            row.update(artifact_id=f'SA-{sha[:24]}', sha256=sha, bytes=len(r.body), media_type=media,
-                       final_url=r.url, raw=path.relative_to(out).as_posix())
-            paths[str(path)] = row
-        rows.append(row)
+    try:
+        for s in plan['sources']:
+            row = {**s, 'retrieved_at': now_iso()}
+            if s.get('redistribution') != 'allowed':  # load_plan refuses it already; a direct call must not download it
+                rows.append({**row, 'status': 'not_fetched', 'error': 'redistribution is not allowed'})
+                continue
+            try:
+                r = f.get(s['url'])
+            except FetchRefused as exc:
+                rows.append({**row, 'status': 'refused', 'error': str(exc)[:300]})
+                continue
+            row['status'] = r.status
+            if r.status == 200 and r.body:
+                sha, media = hashlib.sha256(r.body).hexdigest(), media_type(r.headers)
+                if sha in seen:  # one artifact per body: a second URL with the same bytes would lose a provenance
+                    rows.append({**row, 'error': f'same bytes as {seen[sha]}'})
+                    raise ValueError(f"{s['url']} returned the same bytes as {seen[sha]}: the plan must name only one of them")
+                seen[sha] = s['url']
+                path = out / 'raw' / 'sha256' / sha[:2] / f'{sha}.{EXT.get(media, "bin")}'
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(r.body)
+                row.update(artifact_id=f'SA-{sha[:24]}', sha256=sha, bytes=len(r.body), media_type=media,
+                           final_url=r.url, raw=path.relative_to(out).as_posix())
+                paths[str(path)] = row
+            rows.append(row)
+    except BaseException:
+        _record(out, rows)  # whatever stops the run, what was gathered is written (REGLAS 5) and uploaded
+        raise
     (out / 'texto').mkdir(parents=True, exist_ok=True)
     for path, res in extract_all(sorted(paths), workers=2, timeout=300):
         row = paths[str(path)]
@@ -156,8 +162,13 @@ def fetch(plan, out, opener=None, sleep=None, clock=None):
         if text is not None:
             (out / 'texto' / f"{row['artifact_id']}.txt").write_text(text, encoding='utf-8')
             row['text_chars'] = len(text)
-    (out / 'fuentes.json').write_text(json.dumps(rows, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+    _record(out, rows)
     return rows
+
+
+def _record(out, rows):
+    out.mkdir(parents=True, exist_ok=True)
+    (out / 'fuentes.json').write_text(json.dumps(rows, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
 
 
 def text_chars(rows):

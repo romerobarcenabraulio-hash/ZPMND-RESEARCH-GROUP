@@ -169,6 +169,10 @@ class Fetch(Base):
         with self.assertRaises(ValueError) as e:
             self.fetch({**PLAN, 'sources': [PLAN['sources'][0], mirror]})
         self.assertIn('https://a.gob.mx/nota', str(e.exception))
+        record = json.loads((self.work / 'fuentes.json').read_text(encoding='utf-8'))  # what was gathered is kept (REGLAS 5)
+        self.assertEqual([(r['url'], r.get('artifact_id'), r.get('error')) for r in record],
+                         [('https://a.gob.mx/nota', A_PAGE, None), (mirror['url'], None, 'same bytes as https://a.gob.mx/nota')])
+        self.assertEqual((self.work / record[0]['raw']).read_bytes(), PAGE)
 
     def test_only_the_plans_hosts_are_reached_even_through_a_redirect(self):
         plan = copy.deepcopy(PLAN)
@@ -235,12 +239,20 @@ class Gate(Base):
         self.assertEqual(len(problems), 1)
         self.assertIn('quote not found', problems[0])
 
-    def test_a_quote_of_only_whitespace_is_not_verified(self):
+    def test_a_quote_too_short_to_locate_anything_is_not_verified(self):
+        folder = self.build()
+        p = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        for quote in (' \n\t ', 'patrón', ' El    patrón  '):  # all present in the page once folded, none locates anything
+            with self.subTest(quote=quote):
+                p['findings']['confirmed'][0]['quote'] = quote  # a hand-made packet: the gate holds it too
+                (folder / 'packet.json').write_text(json.dumps(p), encoding='utf-8')
+                problems, _, stats = self.gate(folder)
+                self.assertTrue(any(f'fewer than {packets.MIN_QUOTE}' in x for x in problems), problems)
+                self.assertEqual(stats['quotes_verified'], 1)
         ans = answer()
-        ans['findings']['confirmed'][0]['quote'] = ' \n\t '
-        problems, _, stats = self.gate(self.build(ans))
-        self.assertTrue(any('empty' in p for p in problems), problems)
-        self.assertEqual(stats['quotes_verified'], 1)
+        ans['findings']['confirmed'][0]['quote'] = 'patrón'
+        with self.assertRaises(ValueError):  # and the model's answer cannot carry one (MODEL_SCHEMA)
+            self.build(ans)
 
     def test_without_the_raw_a_quote_is_a_warning_never_a_pass(self):
         # A manual packet that read a metadata-only source: its raw is not kept, so --raw must bring it to be checked.
@@ -334,6 +346,23 @@ class Model(Base):
         with mock.patch.object(inv, 'MAX_TEXT_CHARS', inv.text_chars(rows) - 1), self.assertRaises(ValueError):
             inv.prompt(RR, rows, self.work)
 
+    def test_nothing_goes_to_the_model_when_no_source_has_text(self):
+        rows = self.fetch({**PLAN, 'sources': [{**PLAN['sources'][0], 'url': 'https://a.gob.mx/roto.pdf'}]})
+        self.assertTrue(inv.fetch_ok(rows))  # downloaded, so fetch passes; its extraction failed
+        with self.assertRaises(ValueError):
+            inv.prompt(RR, rows, self.work)
+
+    def test_the_fetch_step_fails_when_its_record_would_send_nothing_or_too_much(self):
+        req, plan = self.tmp / 'rr.json', self.tmp / 'plan.json'
+        req.write_text(json.dumps(RR), encoding='utf-8')
+        plan.write_text(json.dumps(PLAN), encoding='utf-8')
+        args = ['fetch', '--request', str(req), '--plan', str(plan), '--out', str(self.work)]
+        rows = self.fetch()
+        with mock.patch.object(inv, 'fetch', return_value=rows):
+            self.assertEqual(inv.main(args), 0)
+        with mock.patch.object(inv, 'fetch', return_value=[r for r in rows if not r.get('artifact_id')]):
+            self.assertEqual(inv.main(args), 1)
+
     def test_only_a_successful_run_whose_answer_is_one_json_object_is_read(self):
         ok = {'type': 'result', 'is_error': False, 'result': '```json\n' + json.dumps(answer()) + '\n```',
               'modelUsage': {'claude-opus-5-5': {}, '<b>x y</b>': {}}}
@@ -387,6 +416,22 @@ class Workflow(unittest.TestCase):
         self.assertIn('[ "sha512-$(openssl dgst -sha512 -binary "$tgz" | base64 -w0)" = "$CC_INTEGRITY" ] '
                       "|| { echo 'integrity mismatch'; exit 2; }", pin)
         self.assertLess(pin.index('CC_INTEGRITY'), pin.index('tar -xzf'))
+
+    def test_every_input_is_checked_before_it_names_a_path(self):
+        runs = {j: '\n'.join(s.get('run', '') for s in v['steps']) for j, v in self.jobs.items()}
+        self.assertIn('[[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || { echo "request_id: RR-..."; exit 2; }', runs['fetch'])
+        for job in ('analyze', 'gate'):
+            self.assertIn('[[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || exit 2', runs[job])
+        self.assertIn('[[ "$rp" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]] || exit 2', runs['gate'])
+        self.assertIn('[[ "$RP" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]] || exit 2', runs['publish'])
+        for job, var in (('fetch', '$RID'), ('analyze', '$RID'), ('gate', '$RID'), ('publish', '$RP')):
+            self.assertLess(runs[job].index(f'[[ "{var}" =~'), runs[job].index(f'{var}.json' if var == '$RID' else f'out/{var}'))
+
+    def test_a_failed_fetch_still_uploads_its_record_and_nothing_after_it_runs(self):
+        up = next(s for s in self.jobs['fetch']['steps'] if 'upload-artifact' in s.get('uses', ''))
+        self.assertEqual(up['if'], '${{ !cancelled() }}')
+        self.assertEqual(self.jobs['analyze']['needs'], 'fetch')
+        self.assertNotIn('if', self.jobs['analyze'])
 
     def test_artifacts_live_one_day(self):
         uploads = [s['with'] for j in self.jobs.values() for s in j['steps'] if 'upload-artifact' in s.get('uses', '')]

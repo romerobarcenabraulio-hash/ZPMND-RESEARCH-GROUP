@@ -1,9 +1,10 @@
 # Investigación autónoma (`investigar.yml`)
 
 Un ResearchRequest en `requests/` y su plan de fuentes revisado en `requests/plans/<RR>.json` se convierten, sin esta
-conversación, en una rama `investigar/<RP>` con la carpeta del paquete. Corre en GitHub Actions; en el repo público los
-minutos no se cobran. El modelo usa la suscripción de Claude del dueño (la misma credencial del auditor), sin cobro por
-token.
+conversación, en una rama `investigar/<RP>` con la carpeta del paquete. Corre en GitHub Actions con runners estándar,
+que GitHub no cobra en repositorios públicos (documentación de facturación de GitHub Actions). El modelo usa la
+suscripción de Claude del dueño (la misma credencial del auditor): HIPÓTESIS, sin medir todavía, que cada corrida solo
+consume el uso incluido en el plan y no genera un cargo por token.
 
 ## Cómo se usa
 
