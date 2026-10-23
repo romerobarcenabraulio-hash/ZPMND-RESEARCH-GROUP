@@ -314,6 +314,16 @@ class Gate(Base):
         self.assertEqual(packets.main([str(folder), '--strict']), 1)
         self.assertEqual(self.gate(folder, [self.work / 'raw'])[1:], ([], {**stats, 'quotes_verified': 2}))
 
+    def test_a_finding_without_a_quote_is_a_warning_never_a_pass(self):
+        folder = self.build()
+        p = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        del p['findings']['confirmed'][0]['quote']  # a hand-made packet may omit it
+        (folder / 'packet.json').write_text(json.dumps(p), encoding='utf-8')
+        problems, warnings, stats = self.gate(folder)
+        self.assertEqual((problems, stats['quotes_verified']), ([], 1))
+        self.assertIn('confirmed[0]: no quote, so nothing to verify', warnings)
+        self.assertEqual(packets.main([str(folder), '--strict']), 1)
+
     def test_a_packet_outside_its_schema_fails(self):
         folder = self.build()
         p = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
@@ -525,30 +535,47 @@ class Publish(unittest.TestCase):
         self.git('-C', str(seed), 'push', '-q', 'origin', 'HEAD:refs/heads/main')
 
     def git(self, *args):
-        return subprocess.run(['git', *args], check=True, capture_output=True, text=True).stdout.strip()
+        return subprocess.run(['git', *args], check=True, capture_output=True, text=True, timeout=60).stdout.strip()
 
-    def publish(self, n, body):
+    def branch(self):
+        return self.git('-C', str(self.origin), 'rev-parse', f'refs/heads/investigar/{self.RP}')
+
+    def publish(self, n, body, extra=None):
         work = self.tmp / f'runner{n}'  # a fresh checkout of main, as each run gets
         self.git('clone', '-q', '--branch', 'main', str(self.origin), str(work))
         if body is not None:
             (work / 'out' / self.RP).mkdir(parents=True)
             (work / 'out' / self.RP / 'packet.json').write_text(body, encoding='utf-8')
+        if extra:
+            (work / 'out' / extra).mkdir(parents=True)
         env = {**os.environ, 'RP': self.RP, 'GH_TOKEN': 'x', 'REPO': 'o/r', 'GITHUB_RUN_ID': str(n),
                'GITHUB_STEP_SUMMARY': str(self.tmp / 'summary.md')}
-        return subprocess.run(['bash', '-c', self.script], cwd=work, env=env, capture_output=True, text=True)
+        return subprocess.run(['bash', '-c', self.script], cwd=work, env=env, capture_output=True, text=True, timeout=120)
 
     def test_a_second_run_never_moves_the_branch_an_audit_is_reading(self):
         first = self.publish(1, '{"corrida": 1}')
         self.assertEqual(first.returncode, 0, first.stderr)
-        head = self.git('-C', str(self.origin), 'rev-parse', f'refs/heads/investigar/{self.RP}')
+        head = self.branch()
         second = self.publish(2, '{"corrida": 2}')
         self.assertEqual(second.returncode, 3, second.stdout + second.stderr)
-        self.assertEqual(self.git('-C', str(self.origin), 'rev-parse', f'refs/heads/investigar/{self.RP}'), head)
+        self.assertEqual(self.branch(), head)
         files = self.git('-C', str(self.origin), 'ls-tree', '-r', '--name-only', f'investigar/{self.RP}').split()
         self.assertEqual(files, [f'research-packets/{self.RP}/packet.json'])  # only the packet folder
 
+    def test_a_branch_a_plain_push_would_fast_forward_does_not_move_either(self):
+        main = self.git('-C', str(self.origin), 'rev-parse', 'refs/heads/main')
+        self.git('-C', str(self.origin), 'update-ref', f'refs/heads/investigar/{self.RP}', main)  # the branch sits on main
+        run = self.publish(1, '{"corrida": 1}')
+        self.assertEqual(run.returncode, 3, run.stdout + run.stderr)
+        self.assertEqual(self.branch(), main)
+
+    def test_an_artifact_with_anything_beside_the_packet_is_not_pushed(self):
+        self.assertEqual(self.publish(1, '{"corrida": 1}', extra='RP-otro').returncode, 2)
+        self.assertEqual(self.git('-C', str(self.origin), 'branch', '--list', 'investigar/*'), '')
+
     def test_without_a_packet_nothing_is_pushed(self):
         self.assertEqual(self.publish(1, None).returncode, 2)
+        self.assertEqual(self.publish(2, None, extra=self.RP).returncode, 2)  # its folder, but no packet.json in it
         self.assertEqual(self.git('-C', str(self.origin), 'branch', '--list', 'investigar/*'), '')
 
 

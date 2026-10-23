@@ -110,7 +110,8 @@ def check(folder, extra=()):
     warnings = []
     for group in ('confirmed', 'conflicting'):
         for i, finding in enumerate(packet.get('findings', {}).get(group, [])):
-            if 'quote' not in finding:
+            if 'quote' not in finding:  # a hand-made packet may omit it: nothing to verify, so never a silent pass
+                warnings.append(f'{group}[{i}]: no quote, so nothing to verify')
                 continue
             quotes += 1
             at_hand = [a for a in finding['artifact_ids'] if a in cited]

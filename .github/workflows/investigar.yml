@@ -140,6 +140,7 @@ jobs:
           set -euo pipefail
           [[ "$RP" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
           [ -f "out/$RP/packet.json" ] || exit 2
+          [ "$(ls out)" = "$RP" ] || exit 2  # the gate's artifact holds that one folder and nothing else
           rm -rf "research-packets/$RP"
           mkdir -p research-packets
           cp -r "out/$RP" "research-packets/$RP"
@@ -148,10 +149,11 @@ jobs:
           git checkout -b "investigar/$RP"
           git add -- "research-packets/$RP"
           git commit -m "Paquete $RP (investigar.yml, corrida $GITHUB_RUN_ID)"
-          # never --force: a branch that exists may be the head of a PR under audit (REGLAS 14), so it never moves
+          # create only: a lease that expects no ref fails atomically if investigar/<RP> exists at all, even when it is an
+          # ancestor a plain push would fast-forward. It may be the head of a PR under audit (REGLAS 14): it never moves.
           GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader \
             GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 | tr -d '\n')" \
-            git push origin "investigar/$RP" \
+            git push --force-with-lease="refs/heads/investigar/$RP:" origin "investigar/$RP" \
             || { echo "investigar/$RP ya existe: cierra su PR y borra la rama antes de repetir el pedido"; exit 3; }
           { echo "Rama investigar/$RP lista. Abre el PR para que corran CI y los dos auditores:"
             echo '```'; echo "gh pr create -R $REPO --base main --head investigar/$RP --fill"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
