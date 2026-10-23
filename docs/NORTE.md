@@ -356,11 +356,19 @@ los encontró.
 RG trata sobre todo conocimiento global. Un artefacto privado de una empresa requiere scope de tenant explícito. Nunca
 volver global una fuente privada en silencio.
 
+> **Nota RG (2026-10-23):** hoy el contrato no permite esto. RG no guarda datos privados de organizaciones ni de
+> clientes (`RESEARCH_CONTRACT.md`, `SECURITY.md`): lo privado queda en ZPMND. Admitir artefactos privados con scope de
+> tenant es una PROPUESTA incompatible con el contrato actual, y no se implementa sin reconciliarlo antes (como §61).
+
 ## 60. Privacidad de los pedidos
 
 ZPMND puede necesitar conocimiento por una situación privada. Debe poder preguntar algo saneado ("normas vigentes de
 aire comprimido industrial en México") sin mandar "la empresa X tiene el compresor Y fallando en la planta Z", salvo que
 sea necesario y esté autorizado.
+
+> **Nota RG (2026-10-23):** hoy un pedido solo puede ser `PUBLIC` o `ABSTRACTED` (`schemas/research_request.schema.json`):
+> se manda la versión saneada. Mandar detalles privados "cuando sea necesario y esté autorizado" es una PROPUESTA
+> incompatible con el contrato actual, y no se implementa sin reconciliarlo antes (como §61).
 
 ## 61. El puente manual actual es seguro, pero a futuro es deuda de autonomía
 
