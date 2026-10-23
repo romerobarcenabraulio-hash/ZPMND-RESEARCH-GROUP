@@ -28,7 +28,8 @@ consume el uso incluido en el plan y no genera un cargo por token.
 | Derechos | El plan solo admite fuentes redistribuibles y `fetch` no descarga ninguna otra, aunque se le pase. La compuerta rechaza cualquier archivo que el paquete no declare: un crudo de más, una segunda copia, un enlace o una nota |
 | Robots y cortesía | El `Fetcher` del catálogo: robots.txt, solo los hosts del plan, una petición por segundo por host, 60 MB por cuerpo |
 | Archivos hostiles | El texto sale de `rg.text`, con un proceso por archivo y límites de tiempo, tamaño y memoria, en trabajos sin permiso de escritura |
-| Superficie | Solo `workflow_dispatch` desde main; `publish` no analiza nada y solo agrega `research-packets/<RP>/` |
+| Superficie | Solo `workflow_dispatch` desde main; `publish` no analiza nada, solo agrega `research-packets/<RP>/` y nunca mueve una rama que ya existe (sin `--force`): el head de un PR en auditoría no cambia |
+| Registro | Pase lo que pase en `fetch` (descarga o extracción), `fuentes.json` se escribe con lo reunido, cada URL entra al registro antes de pedirse, y el artefacto se sube aunque el paso falle |
 | Costo | Una llamada al modelo por pedido, con 2 turnos como máximo y a lo más 400 000 caracteres de texto; un plan más grande se divide. Los artefactos de Actions duran un día. Lo demás es código determinista |
 
 ## Qué no hace (todavía)

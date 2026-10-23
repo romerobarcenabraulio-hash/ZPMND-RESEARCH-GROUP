@@ -7,7 +7,9 @@ is the point, since the gate must hold whatever the model says.
 import copy
 import hashlib
 import json
+import os
 import shutil
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -37,6 +39,7 @@ ROUTES = {
     'https://c.example.com/x': (200, PAGE, {'Content-Type': 'text/html'}),
     'https://a.gob.mx/roto.pdf': (200, BROKEN_PDF, {'Content-Type': 'application/pdf'}),
     'https://b.example.org/espejo': (200, PAGE, {'Content-Type': 'text/html'}),  # the same bytes as a.gob.mx/nota
+    'https://a.gob.mx/no-existe': (404, b'<html><body>No existe.</body></html>', {'Content-Type': 'text/html'}),
     'https://b.example.org/cerrado.json': (200, b'{"cerrado": true}', {'Content-Type': 'application/json'}),
 }
 RR = {'request_id': 'RR-2026-10-23-prueba', 'issued_by': 'OWNER', 'issued_at': '2026-10-23T00:00:00Z',
@@ -105,6 +108,11 @@ class Plan(Base):
             'source_type': broken(lambda p: p['sources'][0].update(source_type='rumor')),
             'role': broken(lambda p: p['sources'][0].pop('role')),
             'empty publisher': broken(lambda p: p['sources'][0].update(publisher=' ')),
+            'no license': broken(lambda p: p['sources'][0].pop('license')),
+            'empty license': broken(lambda p: p['sources'][0].update(license='')),
+            'license too long': broken(lambda p: p['sources'][0].update(license='x' * 301)),
+            'empty title': broken(lambda p: p['sources'][0].update(title='  ')),
+            'title too long': broken(lambda p: p['sources'][0].update(title='x' * 301)),
             'too many': broken(lambda p: p.update(sources=p['sources'] * 14)),
         }
         for name, plan in cases.items():
@@ -174,6 +182,38 @@ class Fetch(Base):
                          [('https://a.gob.mx/nota', A_PAGE, None), (mirror['url'], None, 'same bytes as https://a.gob.mx/nota')])
         self.assertEqual((self.work / record[0]['raw']).read_bytes(), PAGE)
 
+    def test_an_error_page_is_never_an_artifact(self):
+        rows = self.fetch({**PLAN, 'sources': [{**PLAN['sources'][0], 'url': 'https://a.gob.mx/no-existe'}]})
+        self.assertEqual((rows[0]['status'], rows[0].get('artifact_id')), (404, None))
+        self.assertEqual(list(self.work.glob('raw/**/*.html')), [])
+
+    def test_the_media_type_is_a_plain_token_or_octet_stream(self):
+        self.assertEqual(inv.media_type({'Content-Type': 'text/HTML; charset=utf-8'}), 'text/html')
+        for headers in ({'content-type': 'text/html<script>'}, {'Content-Type': ''}, {}, None):
+            self.assertEqual(inv.media_type(headers), 'application/octet-stream')
+
+    def test_a_crash_while_downloading_still_leaves_the_record(self):
+        real = inv.Fetcher.get
+
+        def flaky(fetcher, url, *a, **k):
+            if url.endswith('datos.json'):
+                raise RuntimeError('red caída')
+            return real(fetcher, url, *a, **k)
+        with mock.patch.object(inv.Fetcher, 'get', flaky), self.assertRaises(RuntimeError):
+            self.fetch()
+        record = json.loads((self.work / 'fuentes.json').read_text(encoding='utf-8'))
+        self.assertEqual([(r['url'], r['status'], r.get('artifact_id')) for r in record],
+                         [('https://a.gob.mx/nota', 200, A_PAGE), ('https://a.gob.mx/privado/x', 'refused', None),
+                          ('https://b.example.org/datos.json', 'started', None)])
+        self.assertEqual((self.work / record[0]['raw']).read_bytes(), PAGE)
+
+    def test_a_crash_while_extracting_still_leaves_the_record(self):
+        with mock.patch.object(inv, 'extract_all', side_effect=OSError('no se pudo iniciar el proceso')):
+            with self.assertRaises(OSError):
+                self.fetch()
+        record = json.loads((self.work / 'fuentes.json').read_text(encoding='utf-8'))
+        self.assertEqual([r.get('artifact_id') for r in record], [A_PAGE, None, A_DATA])
+
     def test_only_the_plans_hosts_are_reached_even_through_a_redirect(self):
         plan = copy.deepcopy(PLAN)
         plan['sources'].append({**PLAN['sources'][0], 'url': 'https://a.gob.mx/redirige'})
@@ -213,6 +253,12 @@ class Assemble(Base):
         self.assertFalse(inv.fetch_ok([r for r in rows if not r.get('artifact_id')]))
         with mock.patch.object(inv, 'MAX_TEXT_CHARS', inv.text_chars(rows) - 1):
             self.assertFalse(inv.fetch_ok(rows))
+
+    def test_nothing_is_assembled_when_nothing_was_downloaded(self):
+        rows = [r for r in self.fetch() if not r.get('artifact_id')]
+        with self.assertRaises(ValueError):
+            inv.assemble(RR, rows, answer(findings={'confirmed': [], 'conflicting': [], 'unknown': ['x']}), self.work,
+                         self.out, 'modelo de prueba')
 
     def test_an_answer_that_cites_what_was_not_downloaded_or_adds_fields_stops_it(self):
         bad_id = answer()
@@ -267,6 +313,13 @@ class Gate(Base):
         self.assertEqual((problems, len(warnings), stats['quotes_verified']), ([], 1, 1))
         self.assertEqual(packets.main([str(folder), '--strict']), 1)
         self.assertEqual(self.gate(folder, [self.work / 'raw'])[1:], ([], {**stats, 'quotes_verified': 2}))
+
+    def test_a_packet_outside_its_schema_fails(self):
+        folder = self.build()
+        p = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        p['status'] = 'ACCEPTED'  # RG has no authority to accept anything
+        (folder / 'packet.json').write_text(json.dumps(p), encoding='utf-8')
+        self.assertTrue(any(x.startswith('schema:') for x in self.gate(folder)[0]))
 
     def test_a_tampered_or_misfiled_raw_fails(self):
         folder = self.build()
@@ -433,6 +486,12 @@ class Workflow(unittest.TestCase):
         self.assertEqual(self.jobs['analyze']['needs'], 'fetch')
         self.assertNotIn('if', self.jobs['analyze'])
 
+    def test_only_main_runs_it_and_no_checkout_keeps_its_token(self):
+        self.assertEqual(self.jobs['fetch']['if'], "github.ref == 'refs/heads/main'")
+        checkouts = [s for j in self.jobs.values() for s in j['steps'] if 'actions/checkout' in s.get('uses', '')]
+        self.assertEqual(len(checkouts), 4)
+        self.assertTrue(all(s['with']['persist-credentials'] is False for s in checkouts))
+
     def test_artifacts_live_one_day(self):
         uploads = [s['with'] for j in self.jobs.values() for s in j['steps'] if 'upload-artifact' in s.get('uses', '')]
         self.assertEqual(sorted(u['name'] for u in uploads), ['investigar-modelo', 'investigar-packet', 'investigar-work'])
@@ -445,6 +504,52 @@ class Workflow(unittest.TestCase):
         self.assertNotIn('python', publish)
         self.assertIn('git add -- "research-packets/$RP"', publish)
         self.assertEqual(self.jobs['publish']['needs'], 'gate')
+
+
+@unittest.skipUnless(shutil.which('git') and shutil.which('bash'), 'needs git and bash')
+class Publish(unittest.TestCase):
+    """The publish step itself, run against a local bare repository standing in for GitHub."""
+    RP = 'RP-2026-10-23-prueba'
+
+    def setUp(self):
+        wf = yaml.safe_load((ROOT / '.github' / 'workflows' / 'investigar.yml').read_text(encoding='utf-8'))
+        self.script = next(s for s in wf['jobs']['publish']['steps'] if 'run' in s)['run']
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        self.tmp = Path(tmp.name)
+        self.origin = self.tmp / 'origin.git'
+        self.git('init', '-q', '--bare', str(self.origin))
+        seed = self.tmp / 'seed'
+        self.git('clone', '-q', str(self.origin), str(seed))
+        self.git('-C', str(seed), '-c', 'user.name=t', '-c', 'user.email=t@t', 'commit', '-q', '--allow-empty', '-m', 'main')
+        self.git('-C', str(seed), 'push', '-q', 'origin', 'HEAD:refs/heads/main')
+
+    def git(self, *args):
+        return subprocess.run(['git', *args], check=True, capture_output=True, text=True).stdout.strip()
+
+    def publish(self, n, body):
+        work = self.tmp / f'runner{n}'  # a fresh checkout of main, as each run gets
+        self.git('clone', '-q', '--branch', 'main', str(self.origin), str(work))
+        if body is not None:
+            (work / 'out' / self.RP).mkdir(parents=True)
+            (work / 'out' / self.RP / 'packet.json').write_text(body, encoding='utf-8')
+        env = {**os.environ, 'RP': self.RP, 'GH_TOKEN': 'x', 'REPO': 'o/r', 'GITHUB_RUN_ID': str(n),
+               'GITHUB_STEP_SUMMARY': str(self.tmp / 'summary.md')}
+        return subprocess.run(['bash', '-c', self.script], cwd=work, env=env, capture_output=True, text=True)
+
+    def test_a_second_run_never_moves_the_branch_an_audit_is_reading(self):
+        first = self.publish(1, '{"corrida": 1}')
+        self.assertEqual(first.returncode, 0, first.stderr)
+        head = self.git('-C', str(self.origin), 'rev-parse', f'refs/heads/investigar/{self.RP}')
+        second = self.publish(2, '{"corrida": 2}')
+        self.assertEqual(second.returncode, 3, second.stdout + second.stderr)
+        self.assertEqual(self.git('-C', str(self.origin), 'rev-parse', f'refs/heads/investigar/{self.RP}'), head)
+        files = self.git('-C', str(self.origin), 'ls-tree', '-r', '--name-only', f'investigar/{self.RP}').split()
+        self.assertEqual(files, [f'research-packets/{self.RP}/packet.json'])  # only the packet folder
+
+    def test_without_a_packet_nothing_is_pushed(self):
+        self.assertEqual(self.publish(1, None).returncode, 2)
+        self.assertEqual(self.git('-C', str(self.origin), 'branch', '--list', 'investigar/*'), '')
 
 
 class RepoPackets(unittest.TestCase):

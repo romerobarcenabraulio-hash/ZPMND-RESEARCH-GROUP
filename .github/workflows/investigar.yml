@@ -11,7 +11,7 @@ name: investigar
 # - gate: no model, no write token. Builds the packet from the fetch record and the request (artifacts, hashes and
 #   licenses never come from the model) and runs rg.packets: schema, only declared files, sha256 of every raw, every
 #   quote in the extracted text of its source.
-# - publish: contents: write and nothing else. Parses nothing; pushes only research-packets/<RP>/.
+# - publish: contents: write and nothing else. Parses nothing; pushes only research-packets/<RP>/, to a new branch only.
 # A branch pushed with GITHUB_TOKEN starts no workflow, so the owner opens the PR (and with it CI and both auditors):
 # the job summary prints the command.
 on:
@@ -148,8 +148,10 @@ jobs:
           git checkout -b "investigar/$RP"
           git add -- "research-packets/$RP"
           git commit -m "Paquete $RP (investigar.yml, corrida $GITHUB_RUN_ID)"
+          # never --force: a branch that exists may be the head of a PR under audit (REGLAS 14), so it never moves
           GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader \
-            GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" \
-            git push --force origin "investigar/$RP"
+            GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 | tr -d '\n')" \
+            git push origin "investigar/$RP" \
+            || { echo "investigar/$RP ya existe: cierra su PR y borra la rama antes de repetir el pedido"; exit 3; }
           { echo "Rama investigar/$RP lista. Abre el PR para que corran CI y los dos auditores:"
             echo '```'; echo "gh pr create -R $REPO --base main --head investigar/$RP --fill"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

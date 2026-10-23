@@ -126,22 +126,23 @@ def fetch(plan, out, opener=None, sleep=None, clock=None):
     kw = {k: v for k, v in (('opener', opener), ('sleep', sleep), ('clock', clock)) if v is not None}
     f = Fetcher(hosts, budget=3 * len(plan['sources']) + 2 * len(hosts), min_interval=1.0, **kw)
     rows, paths, seen = [], {}, {}
-    try:
+    try:  # whatever stops the run, downloading or extracting, what was gathered is written (REGLAS 5) and uploaded
         for s in plan['sources']:
-            row = {**s, 'retrieved_at': now_iso()}
+            row = {**s, 'retrieved_at': now_iso(), 'status': 'started'}
+            rows.append(row)  # in the record before the request: a crash during it still names the URL
             if s.get('redistribution') != 'allowed':  # load_plan refuses it already; a direct call must not download it
-                rows.append({**row, 'status': 'not_fetched', 'error': 'redistribution is not allowed'})
+                row.update(status='not_fetched', error='redistribution is not allowed')
                 continue
             try:
                 r = f.get(s['url'])
             except FetchRefused as exc:
-                rows.append({**row, 'status': 'refused', 'error': str(exc)[:300]})
+                row.update(status='refused', error=str(exc)[:300])
                 continue
             row['status'] = r.status
             if r.status == 200 and r.body:
                 sha, media = hashlib.sha256(r.body).hexdigest(), media_type(r.headers)
                 if sha in seen:  # one artifact per body: a second URL with the same bytes would lose a provenance
-                    rows.append({**row, 'error': f'same bytes as {seen[sha]}'})
+                    row['error'] = f'same bytes as {seen[sha]}'
                     raise ValueError(f"{s['url']} returned the same bytes as {seen[sha]}: the plan must name only one of them")
                 seen[sha] = s['url']
                 path = out / 'raw' / 'sha256' / sha[:2] / f'{sha}.{EXT.get(media, "bin")}'
@@ -150,19 +151,16 @@ def fetch(plan, out, opener=None, sleep=None, clock=None):
                 row.update(artifact_id=f'SA-{sha[:24]}', sha256=sha, bytes=len(r.body), media_type=media,
                            final_url=r.url, raw=path.relative_to(out).as_posix())
                 paths[str(path)] = row
-            rows.append(row)
-    except BaseException:
-        _record(out, rows)  # whatever stops the run, what was gathered is written (REGLAS 5) and uploaded
-        raise
-    (out / 'texto').mkdir(parents=True, exist_ok=True)
-    for path, res in extract_all(sorted(paths), workers=2, timeout=300):
-        row = paths[str(path)]
-        text = plain_text(path, row['media_type'], res)
-        row['text_status'] = res.get('status') if res else 'fallo'
-        if text is not None:
-            (out / 'texto' / f"{row['artifact_id']}.txt").write_text(text, encoding='utf-8')
-            row['text_chars'] = len(text)
-    _record(out, rows)
+        (out / 'texto').mkdir(parents=True, exist_ok=True)
+        for path, res in extract_all(sorted(paths), workers=2, timeout=300):
+            row = paths[str(path)]
+            text = plain_text(path, row['media_type'], res)
+            row['text_status'] = res.get('status') if res else 'fallo'
+            if text is not None:
+                (out / 'texto' / f"{row['artifact_id']}.txt").write_text(text, encoding='utf-8')
+                row['text_chars'] = len(text)
+    finally:
+        _record(out, rows)
     return rows
 
 
