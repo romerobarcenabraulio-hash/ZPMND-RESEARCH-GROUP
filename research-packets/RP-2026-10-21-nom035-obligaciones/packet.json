@@ -1,0 +1,217 @@
+{
+ "research_id": "RP-2026-10-21-nom035-obligaciones",
+ "request_id": "RR-2026-10-21-nom035-obligaciones",
+ "status": "CANDIDATE",
+ "produced_at": "2026-10-23T15:14:23Z",
+ "question": "En la NOM-035-STPS-2018 (DOF 23/10/2018), ¿qué obligaciones concretas imponen al patrón los numerales 5 a 8, a qué centros de trabajo aplica cada una (por número de trabajadores u otra condición) y cuál es el texto literal que la establece, en tramos de 300 caracteres o menos?",
+ "why_zpmnd_needs_it": "ZPMND convierte cada obligación en una unidad tipada que solo entra si su cita está literal en la fuente; hoy solo tiene curado el numeral 2.",
+ "scope": "Lectura de la única fuente dada (SA-75b62246f311f4451094bb20, texto del DOF 23/10/2018 de la NOM-035-STPS-2018). Se extraen las obligaciones del patrón del numeral 5, las de los numerales 6 a 8 y su aplicación por tamaño del centro de trabajo, según el campo de aplicación (numeral 2), el procedimiento de conformidad (10.2) y los transitorios. Citas literales de 300 caracteres o menos.",
+ "sources": {
+  "primary": [
+   "SA-75b62246f311f4451094bb20"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-75b62246f311f4451094bb20",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+   "retrieved_at": "2026-10-23T15:13:08Z",
+   "sha256": "75b62246f311f4451094bb20eb3b7528ed6c317390530cf4ca8eae62e04548cc",
+   "bytes": 1133731,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Secretaría del Trabajo y Previsión Social)",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "NOM-035-STPS-2018, Factores de riesgo psicosocial en el trabajo-Identificación, análisis y prevención (DOF 23/10/2018)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El numeral 2 asigna los numerales aplicables según el tamaño del centro de trabajo; hasta 15 trabajadores: 5.1, 5.4, 5.5, 5.7, 8.1 y 8.2.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Para centros de trabajo en los que laboren hasta quince trabajadores deberán cumplir con lo dispuesto por los numerales 5.1, 5.4, 5.5, 5.7, 8.1 y 8.2 de la presente Norma;",
+    "locator": "Numeral 2, inciso a)"
+   },
+   {
+    "claim": "De 16 a 50 trabajadores aplican 5.1, 5.2, 5.4 al 5.8, 7.1 a), 7.2, 7.4 al 7.9 y el Capítulo 8.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Para centros de trabajo en los que laboren entre dieciséis y cincuenta trabajadores deberán cumplir con los numerales 5.1, 5.2, del 5.4 al 5.8, 7.1, inciso a), 7.2, del 7.4 al 7.9, y el Capítulo 8 de esta Norma, y",
+    "locator": "Numeral 2, inciso b)"
+   },
+   {
+    "claim": "Con más de 50 trabajadores aplican 5.1, 5.3 al 5.8, 7.1 b), 7.2 al 7.9 y el Capítulo 8.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Para centros de trabajo en los que laboren más de 50 trabajadores deberán cumplir con los numerales 5.1, del 5.3 al 5.8, 7.1, inciso b), del 7.2 al 7.9 y el Capítulo 8 de la presente Norma.",
+    "locator": "Numeral 2, inciso c)"
+   },
+   {
+    "claim": "La certificación NMX-R-025-SCFI-2015 vigente da por cumplidos ciertos numerales.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "darán por esa condición cumplimiento con las obligaciones y numerales siguientes: 5.1 inciso b); 8.1, inciso b); 8.2 incisos a), subinciso 2), e) y g); y 5.7 inciso d).",
+    "locator": "Numeral 2, último párrafo"
+   },
+   {
+    "claim": "5.1: política de prevención de riesgos psicosociales por escrito (aplica a todos los tamaños según numeral 2).",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Establecer por escrito, implantar, mantener y difundir en el centro de trabajo una política de prevención de riesgos psicosociales que contemple:",
+    "locator": "Numeral 5.1"
+   },
+   {
+    "claim": "5.2: identificar y analizar factores de riesgo psicosocial, solo para centros de 16 a 50 trabajadores.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "tratándose de centros de trabajo que tengan entre 16 y 50 trabajadores.",
+    "locator": "Numeral 5.2"
+   },
+   {
+    "claim": "5.3: identificar y analizar los factores y evaluar el entorno organizacional, solo para centros con más de 50 trabajadores.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "tratándose de centros de trabajo que tengan más de 50 trabajadores.",
+    "locator": "Numeral 5.3"
+   },
+   {
+    "claim": "5.4: adoptar medidas de prevención y control con base en el Capítulo 8.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Adoptar las medidas para prevenir y controlar los factores de riesgo psicosocial, promover el entorno organizacional favorable,",
+    "locator": "Numeral 5.4"
+   },
+   {
+    "claim": "5.5: identificar y canalizar a trabajadores sujetos a acontecimientos traumáticos severos.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Identificar a los trabajadores que fueron sujetos a acontecimientos traumáticos severos durante o con motivo del trabajo",
+    "locator": "Numeral 5.5"
+   },
+   {
+    "claim": "5.6: exámenes médicos y evaluaciones psicológicas, condicionados a signos o síntomas, resultados o quejas.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Practicar exámenes médicos y evaluaciones psicológicas a los trabajadores expuestos a violencia laboral y/o a los factores de riesgo psicosocial, cuando existan signos o síntomas",
+    "locator": "Numeral 5.6"
+   },
+   {
+    "claim": "5.7: difundir información a trabajadores; el inciso e) distingue por tamaño.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Los resultados de la identificación y análisis de los factores de riesgo psicosocial para los centros  de trabajo que tengan entre 16 y 50 trabajadores,",
+    "locator": "Numeral 5.7, inciso e)"
+   },
+   {
+    "claim": "5.8: registros; el entorno organizacional solo para más de 50 trabajadores.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "tratándose de centros de trabajo de más de 50 trabajadores, de las evaluaciones del entorno organizacional;",
+    "locator": "Numeral 5.8, inciso a)"
+   },
+   {
+    "claim": "Numeral 6: obligaciones de los trabajadores (no del patrón), p. ej. observar medidas.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Observar las medidas de prevención y, en su caso, de control que dispone esta Norma,",
+    "locator": "Numeral 6.1"
+   },
+   {
+    "claim": "7.1: distingue el alcance: 16-50 solo identificación y análisis; más de 50 también evaluación del entorno, con posible muestra representativa.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Los centros de trabajo que tengan entre 16 y 50 trabajadores, únicamente deberán realizar la identificación y análisis de los factores de riesgo psicosocial, incluyendo a todos los trabajadores",
+    "locator": "Numeral 7.1 a)"
+   },
+   {
+    "claim": "7.9: periodicidad mínima de dos años.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "deberá realizarse, al menos, cada dos años.",
+    "locator": "Numeral 7.9"
+   },
+   {
+    "claim": "8.1: los centros de trabajo deben establecer acciones, mecanismos de quejas y acciones de entorno favorable (aplica a todos los tamaños por numeral 2).",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Disponer de mecanismos seguros y confidenciales para la recepción de quejas por prácticas opuestas al entorno organizacional favorable y para denunciar actos de violencia laboral, y",
+    "locator": "Numeral 8.1 b)"
+   },
+   {
+    "claim": "8.3 exige un Programa si la evaluación determina la necesidad de acciones de control; el procedimiento de conformidad lo limita a centros con más de 15 trabajadores.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Estas disposiciones sólo aplican a centros de trabajo con más de 15 trabajadores, cuando el resultado de la identificación y análisis de los factores de riesgo psicosocial y de la evaluación del entorno organizacional, así lo determinen.",
+    "locator": "Numeral 10.2, fila 5.4, 8.3, 8.4 y 8.5"
+   },
+   {
+    "claim": "Entrada en vigor escalonada: 5.2, 5.3, 5.6, 5.8, 8.3 a 8.5 y Capítulo 7 a los dos años; el resto un año.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Lo dispuesto por los numerales 5.2, 5.3, 5.6, 5.8, 8.3, 8.4, 8.5, y Capítulo 7, entrará en vigor a los dos años siguientes a su publicación en el Diario Oficial de la Federación.",
+    "locator": "Transitorio SEGUNDO"
+   },
+   {
+    "claim": "El 5.8 se limita a centros con más de 15 trabajadores según la tabla de conformidad.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Estas disposiciones sólo aplican a centros de trabajo con más de 15 trabajadores.",
+    "locator": "Numeral 10.2, fila 5.8"
+   }
+  ],
+  "conflicting": [
+   {
+    "claim": "Tensión interna: el numeral 2 inciso a) no incluye 5.8 para ≤15 trabajadores, pero 8.3 a 8.5 tampoco aparecen en el inciso a) (salvo 8.1 y 8.2); la tabla 10.2 limita 5.4/8.3-8.5 a más de 15 y 5.8 a más de 15. Además 5.6 no está en el inciso a) pero sí en b) y c). Las guías citan 8.1 a) y b) cuando la identificación está en 7.1.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Estas disposiciones sólo aplican a centros de trabajo con más de 15 trabajadores.",
+    "locator": "Numeral 10.2 (fila 5.8) vs. numeral 2 a) y Guías II y III (referencia a 8.1)"
+   }
+  ],
+  "unknown": [
+   "El sha256 del texto y la fecha de descarga no figuran en el texto recibido; no se pueden confirmar.",
+   "El texto no define cómo contar trabajadores (planta, subcontratados, por centro o por empresa).",
+   "El texto no aclara si el Programa de 8.3 a 8.5 aplica a centros de hasta 15 trabajadores, pues no los incluye en el numeral 2 a).",
+   "No se leyeron reformas o modificaciones posteriores al DOF 23/10/2018."
+  ]
+ },
+ "limitations": [
+  "Una sola fuente, que es un texto convertido con pérdidas (tablas, ecuación de la Guía III, marcadores de error).",
+  "Quotes truncadas a 300 caracteres; las obligaciones largas no se citan completas.",
+  "No se verificó el sha256 ni la versión vigente actual.",
+  "El numeral 6 se incluyó porque la solicitud pide 5 a 8, aunque son obligaciones de trabajadores.",
+  "Las obligaciones 5.5 y 5.7 en 'hasta 15' vienen del numeral 2, no de una condición dentro de cada numeral."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
