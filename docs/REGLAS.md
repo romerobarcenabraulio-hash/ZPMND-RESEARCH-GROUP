@@ -47,6 +47,12 @@ Qué lo hace seguro y barato por construcción (`scripts/auditor_gpt.py`; prueba
 - Costo acotado: una llamada por head auditado; topes fijos de caracteres por archivo (diff + evidencia: 160,000); si
   algo se trunca o falta, no puede salir PASS ("no pude leer todo"); tope de 12,000 tokens de salida. El uso de tokens
   que reporta la API queda en el resumen del job.
+- Los crudos de un paquete (`research-packets/<RP>/raw/`) se comprueban por máquina, no leyéndolos. El job
+  `packet-gate`, sin secretos, saca `main` y corre su `rg.packets` sobre las carpetas de paquete que cambia el head,
+  escritas desde los objetos de git byte por byte (`scripts/packet_gate.py`: `ls-tree` y `cat-file`, nunca `archive`,
+  que aplica los atributos de exportación del head; ningún código del PR corre; el token solo en el paso del fetch). Si una carpeta pasa (sin problemas ni
+  avisos), cada crudo suyo llega a GPT como una línea con su sha256 y no cuenta como contenido sin leer; el resultado
+  llega como sección confiable `packets.json`. Si no pasa, o el resultado es de otro head, el crudo va entero.
 - El modelo sale de la variable del repo `OPENAI_AUDIT_MODEL`; el código no trae ninguno. Sin ella no se llama a nada y
   el estado `auditor-gpt` queda `pending` con "skipped: OPENAI_AUDIT_MODEL not set".
 - Distinguibles por construcción: un comentario de GPT nunca contiene "AUDIT VERDICT" (su línea dice `GPT REVIEW` y el

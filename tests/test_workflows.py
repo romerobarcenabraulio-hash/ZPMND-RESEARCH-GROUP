@@ -54,15 +54,19 @@ class AuditorGpt(unittest.TestCase):
         self.jobs = self.doc['jobs']
 
     def test_it_runs_beside_the_claude_audit_under_the_same_gate(self):
-        self.assertEqual(self.jobs['audit-gpt']['needs'], self.jobs['audit']['needs'])
-        self.assertEqual(self.jobs['audit-gpt']['needs'], ['gate', 'evidence'])
+        self.assertEqual(self.jobs['audit-gpt']['needs'], self.jobs['audit']['needs'] + ['packet-gate'])
+        self.assertEqual(self.jobs['audit-gpt']['needs'], ['gate', 'evidence', 'packet-gate'])
         self.assertEqual(self.jobs['post-gpt']['needs'], ['gate', 'audit-gpt'])
         self.assertNotIn('if', self.jobs['audit-gpt'])  # skipped exactly when evidence is, as the audit job
 
     def test_it_checks_out_main_and_never_the_pr_head(self):
         job = self.jobs['audit-gpt']
         uses = [s['uses'].split('@')[0] for s in job['steps'] if 'uses' in s]
-        self.assertEqual(uses, ['actions/checkout', 'actions/download-artifact'])
+        self.assertEqual(uses, ['actions/checkout', 'actions/download-artifact', 'actions/download-artifact'])
+        downloads = [s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/download-artifact@')]
+        self.assertEqual([(d['name'], d['path']) for d in downloads],
+                         [('evidence', '${{ runner.temp }}/gpt-audit/evidence'),
+                          ('packet-gate', '${{ runner.temp }}/gpt-audit/trusted')])
         checkout = next(s for s in job['steps'] if s.get('uses', '').startswith('actions/checkout@'))
         self.assertEqual(checkout['with']['ref'], 'main')
         self.assertIs(checkout['with']['persist-credentials'], False)
@@ -89,6 +93,26 @@ class AuditorGpt(unittest.TestCase):
         self.assertIn('python3 -I scripts/auditor_gpt.py', step['run'])
         self.assertEqual(step['env']['OPENAI_AUDIT_MODEL'], '${{ vars.OPENAI_AUDIT_MODEL }}')  # no model in code
         self.assertNotIn('secrets.', yaml.safe_dump(self.jobs['evidence']))  # where PR code runs, no secret at all
+
+    def test_the_packet_gate_runs_mains_code_on_the_heads_packets_as_data(self):
+        job = self.jobs['packet-gate']
+        self.assertEqual((job['needs'], job['if'], job['permissions']),
+                         ('gate', "needs.gate.outputs.run == 'true'", {'contents': 'read'}))
+        self.assertNotIn('secrets.', yaml.safe_dump(job))  # hostile raws are parsed here
+        checkout = next(s for s in job['steps'] if s.get('uses', '').startswith('actions/checkout@'))
+        self.assertEqual((checkout['with']['ref'], checkout['with']['persist-credentials']), ('main', False))
+        run = '\n'.join(s.get('run', '') for s in job['steps'])
+        self.assertNotRegex(run, r'\bgit\b[^\n;|&]*\b(checkout|switch|worktree|restore|reset|read-tree|checkout-index|'
+                                 r'stash|merge|rebase|cherry-pick|pull|apply|am)\b')
+        self.assertIn('[[ "$SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "bad head"; exit 1; }', run)
+        self.assertIn('python scripts/packet_gate.py --base origin/main --sha "$SHA" --data "$d/data" --out "$d/packets.json"', run)
+        with_token = [s for s in job['steps'] if 'github.token' in yaml.safe_dump(s)]
+        self.assertEqual(len(with_token), 1)
+        self.assertNotIn('python', with_token[0]['run'])  # the token fetches; it is never where raws are parsed
+        gate_step = next(s for s in job['steps'] if 'packet_gate.py' in s.get('run', ''))
+        self.assertEqual(gate_step['env'], {'SHA': '${{ needs.gate.outputs.sha }}'})
+        upload = next(s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/upload-artifact@'))
+        self.assertEqual(upload['name'], 'packet-gate')
 
     def test_post_gpt_speaks_only_as_gpt(self):
         job = self.jobs['post-gpt']
