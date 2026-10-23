@@ -2,6 +2,7 @@
 import importlib.util
 import unittest
 from pathlib import Path
+from unittest import mock
 from urllib.parse import quote
 
 import yaml
@@ -27,9 +28,10 @@ class Probe(unittest.TestCase):
     def test_every_documented_shape_is_tried_and_the_token_never_printed(self):
         lines, fake = [], FakeFetcher()
         sondeo.probe(['628194'], TOKEN, fetcher=fake, out=lines.append)
-        self.assertEqual(len(fake.urls), 8)  # 3 areas x 2 fuentes for INDICATOR, 2 fuentes for CL_INDICATOR
+        self.assertEqual(len(fake.urls), 12)  # 3 areas x 3 fuentes for INDICATOR, 3 fuentes for CL_INDICATOR
         self.assertTrue(any('/628194/es/0700/false/BIE/' in u for u in fake.urls))
         self.assertTrue(any('/CL_INDICATOR/628194/es/BISE/' in u for u in fake.urls))
+        self.assertTrue(any('/628194/es/00000/false/BIE-BISE/' in u for u in fake.urls))  # INEGI: "BIE EN BISE"
         self.assertTrue(all(u.startswith('https://www.inegi.org.mx/') and TOKEN in u for u in fake.urls))
         self.assertTrue(lines and not any(TOKEN in line for line in lines))
         self.assertTrue(all('<token>' in line for line in lines))
@@ -67,6 +69,14 @@ class Probe(unittest.TestCase):
         lines = []
         sondeo.probe(['628194'], odd, fetcher=Encoded(), out=lines.append)
         self.assertFalse(any(quote(odd, safe='') in line or odd in line for line in lines))
+
+    def test_the_budget_covers_every_shape_and_robots(self):
+        # With BIE-BISE there are 12 shapes per id: the old 10 per id would have stopped the probe before the last ones.
+        self.assertEqual(sondeo.budget_for(['628194', '910392']), 2 * len(sondeo.shapes('628194')) + 1)
+        asked = []
+        with mock.patch.object(sondeo, 'make_fetcher', lambda token, n: asked.append(n) or FakeFetcher()):
+            sondeo.probe(['628194', '910392'], TOKEN, out=lambda _: None)
+        self.assertEqual(asked, [sondeo.budget_for(['628194', '910392'])])
 
     def test_the_real_fetcher_binds_the_token_to_inegi_only(self):
         f = sondeo.make_fetcher(TOKEN, 8)
