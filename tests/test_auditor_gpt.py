@@ -2,6 +2,7 @@
 
 No test reaches the network: urlopen is replaced in every test, and a call nobody expected fails the test.
 """
+import hashlib
 import importlib.util
 import io
 import json
@@ -377,6 +378,83 @@ class Distinguishable(Base):
         lines = r['comment'].split('\n')
         self.assertEqual([i for i, line in enumerate(lines) if re.search(r'(?i)audit\s+verdict', line)], [])
         self.assertFalse(any(line.startswith('AUDIT VERDICT') for line in lines))
+
+
+class Fixtures(Base):
+    """Binary fixtures arrive as one line each, so they cannot push the code out of the diff budget (#21); bytes left out
+    keep the verdict REVISE (GPT review of #30)."""
+
+    def test_a_binary_fixture_lets_the_code_be_read_and_never_passes(self):
+        header = ('diff --git a/tests/fixtures/big.pdf b/tests/fixtures/big.pdf\nindex 1111111..2222222 100644\n'
+                  '--- a/tests/fixtures/big.pdf\n+++ b/tests/fixtures/big.pdf\n')
+        content = '@@ -1 +1 @@\n+' + 'x\x00\x01\ufffd' * (CAP['trusted/diff.patch'] // 2) + '\n'
+        code = 'diff --git a/rg/x.py b/rg/x.py\n@@ -1 +1 @@\n+CODIGO_DESPUES = 1\n'
+        make_inputs(self.root, **{'trusted/diff.patch': header + content + code})
+        http = FakeHTTP(response(answer()))
+        r = self.run_audit(http)
+        self.assertRevise(r, 'No pude leer todo')
+        self.assertIn('No leí el contenido de 1 fixture(s) binario(s)', r['comment'])
+        sent = http.calls[0]['payload']['input']
+        self.assertIn('CODIGO_DESPUES = 1', sent)
+        self.assertIn(header + f'[fixture binario omitido: {len(content)} caracteres de contenido; sha256 '
+                      f'{hashlib.sha256(content.encode("utf-8")).hexdigest()[:12]}…]', sent)
+        self.assertFalse(gpt.looks_like_credential(sent.split('BEGIN TRUSTED trusted/diff.patch', 1)[1]))
+        self.assertNotIn('x\x00\x01\ufffd' * 10, sent)
+
+    def test_text_under_a_binary_name_is_sent_whole(self):
+        # GPT review of #30 (25fa227): the extension alone hid text (personal data, code) named .pdf or .bin.
+        diff = ('diff --git a/tests/fixtures/personas.pdf b/tests/fixtures/personas.pdf\n@@ -0,0 +1 @@\n+DATO_EN_UN_PDF\n'
+                'diff --git a/tests/fixtures/x.bin b/tests/fixtures/x.bin\n@@ -0,0 +1 @@\n+codigo = "EN_UN_BIN"\n')
+        make_inputs(self.root, **{'trusted/diff.patch': diff})
+        http = FakeHTTP(response(answer()))
+        self.assertEqual(self.run_audit(http)['verdict'], 'PASS')
+        sent = http.calls[0]['payload']['input']
+        self.assertIn('DATO_EN_UN_PDF', sent)
+        self.assertIn('EN_UN_BIN', sent)
+
+    def test_code_under_fixtures_and_renames_are_sent_whole(self):
+        diff = ('diff --git a/tests/fixtures/helper.py b/tests/fixtures/helper.py\n@@ -1 +1 @@\n+AYUDANTE = 1\n'
+                'diff --git a/tests/fixtures/a.pdf b/tests/fixtures/b.pdf\n@@ -1 +1 @@\n+' + '\x00' * 40 + 'RENOMBRADO = 1\n')
+        make_inputs(self.root, **{'trusted/diff.patch': diff})
+        http = FakeHTTP(response(answer()))
+        self.run_audit(http)
+        sent = http.calls[0]['payload']['input']
+        self.assertIn('AYUDANTE = 1', sent)
+        self.assertIn('RENOMBRADO = 1', sent)
+        self.assertNotIn('fixture binario omitido', sent)
+
+    def test_a_text_fixture_is_always_sent_whole(self):
+        # GPT review of #30 (3d25654): a text fixture can carry data a reviewer must see (personal data, a payload).
+        diff = ('diff --git a/tests/fixtures/personas.txt b/tests/fixtures/personas.txt\nnew file mode 100644\n'
+                '--- /dev/null\n+++ b/tests/fixtures/personas.txt\n@@ -0,0 +1 @@\n+' + '\x00' * 40 + 'DATO_QUE_SE_DEBE_VER\n'
+                'diff --git a/tests/fixtures/x.json b/tests/fixtures/x.json\n@@ -1 +1 @@\n+JSON_QUE_SE_DEBE_VER\n')
+        make_inputs(self.root, **{'trusted/diff.patch': diff})
+        http = FakeHTTP(response(answer()))
+        self.run_audit(http)
+        sent = http.calls[0]['payload']['input']
+        self.assertIn('DATO_QUE_SE_DEBE_VER', sent)
+        self.assertIn('JSON_QUE_SE_DEBE_VER', sent)
+        self.assertNotIn('fixture binario omitido', sent)
+
+    def test_a_symlink_or_a_mode_change_is_never_compacted(self):
+        # GPT review of #30 (c1d63ff): compacting by extension hid a fixture turned into a symlink, and mode changes.
+        diff = ('diff --git a/tests/fixtures/s.pdf b/tests/fixtures/s.pdf\nnew file mode 120000\nindex 0000000..1111111\n'
+                '--- /dev/null\n+++ b/tests/fixtures/s.pdf\n@@ -0,0 +1 @@\n+' + '\x00' * 40 + '../../rg/ENLACE_A_OTRO\n'
+                'diff --git a/tests/fixtures/m.pdf b/tests/fixtures/m.pdf\nold mode 100644\nnew mode 100755\n'
+                '@@ -1 +1 @@\n+' + '\x00' * 40 + 'MODO_CAMBIADO\n')
+        make_inputs(self.root, **{'trusted/diff.patch': diff})
+        http = FakeHTTP(response(answer()))
+        self.run_audit(http)
+        sent = http.calls[0]['payload']['input']
+        self.assertIn('ENLACE_A_OTRO', sent)
+        self.assertIn('MODO_CAMBIADO', sent)
+        self.assertNotIn('fixture binario omitido', sent)
+
+    def test_a_diff_larger_than_the_read_limit_never_passes(self):
+        fixture = 'diff --git a/tests/fixtures/big.pdf b/tests/fixtures/big.pdf\n@@ -1 +1 @@\n+' + 'p' * 5_000 + '\n'
+        make_inputs(self.root, **{'trusted/diff.patch': fixture + 'diff --git a/rg/x.py b/rg/x.py\n+TARDE = 1\n'})
+        with mock.patch.object(gpt, 'MAX_DIFF_BYTES', 1_000):
+            self.assertRevise(self.run_audit(FakeHTTP(response(answer()))), 'No pude leer todo')
 
 
 if __name__ == '__main__':
