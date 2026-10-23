@@ -16,6 +16,9 @@ on:
       index_days:
         description: 'catch-up: older DOF days to index this run, toward the 1993 floor (empty = 120)'
         default: ''
+      chain:
+        description: 'catch-up: more runs to launch by themselves while a source still has work (0-30; empty = 0). Each run costs ~240 Actions minutes'
+        default: ''
 permissions:
   contents: read
 concurrency:
@@ -23,10 +26,13 @@ concurrency:
   cancel-in-progress: false
 jobs:
   run:
+    if: github.ref == 'refs/heads/main'  # a dispatch of any other branch never writes the data branch
     runs-on: ubuntu-24.04
     timeout-minutes: 300
     permissions:
       contents: write   # push to the data branch and upload release assets; nothing else
+    outputs:
+      more: ${{ steps.catalog.outputs.more }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { persist-credentials: false }
@@ -54,8 +60,14 @@ jobs:
           [[ "$INDEX_DAYS" =~ ^[0-9]*$ ]] || { echo "index_days must be a number"; exit 2; }
           set +e
           day=$(date -u +%F)
+          marker=$(mktemp)  # only a manifest written after this instant is this run's
           python -m rg.catalog.run --country mx --out data --raw raw ${BUDGET:+--budget "$BUDGET"} ${INDEX_DAYS:+--index-days "$INDEX_DAYS"} --deadline-minutes 240
           echo "rc=$?" >> "$GITHUB_OUTPUT"
+          # more = this run stopped with work left: a source reached its request budget or the run deadline (both are
+          # 'request budget reached' in the manifest). No manifest of this run means no more, never an older one's.
+          manifest=$(find data/mx/runs -name '*.json' -newer "$marker" 2>/dev/null | sort | tail -n 1)
+          more=$( [ -n "$manifest" ] && grep -q 'request budget reached' "$manifest" && echo true || echo false )
+          echo "more=$more" >> "$GITHUB_OUTPUT"
       - name: No token in anything that is committed or uploaded
         env:
           BANXICO_TOKEN: ${{ secrets.BANXICO_TOKEN }}
@@ -100,3 +112,23 @@ jobs:
         run: |
           echo "catalog run exited ${RC} (3 = coverage mismatch, 4 = quarantined entries). See the run manifest on branch catalog."
           exit 1
+  chain:
+    # Catch-up without anyone dispatching: while this run left work and the owner asked for more runs, launch the next
+    # one with one less to go. It stops by construction: at 0, when nothing is left, or when a run fails (needs).
+    needs: run
+    if: needs.run.outputs.more == 'true' && inputs.chain != '' && inputs.chain != '0'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      actions: write   # dispatch this same workflow; nothing else
+    steps:
+      - env:
+          GH_TOKEN: '${{ github.token }}'
+          CHAIN: '${{ inputs.chain }}'
+          BUDGET: '${{ inputs.budget }}'
+          INDEX_DAYS: '${{ inputs.index_days }}'
+        run: |
+          [[ "$CHAIN" =~ ^[0-9]+$ ]] && (( CHAIN >= 1 && CHAIN <= 30 )) || { echo "chain must be 1-30"; exit 2; }
+          [[ "$BUDGET" =~ ^[0-9]*$ && "$INDEX_DAYS" =~ ^[0-9]*$ ]] || { echo "budget and index_days must be numbers"; exit 2; }
+          gh workflow run catalog-mx.yml -R "$GITHUB_REPOSITORY" --ref main \
+            -f budget="$BUDGET" -f index_days="$INDEX_DAYS" -f chain="$(( CHAIN - 1 ))"
