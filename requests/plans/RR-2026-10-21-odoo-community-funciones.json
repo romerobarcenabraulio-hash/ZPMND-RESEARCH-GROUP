@@ -1,0 +1,167 @@
+{
+ "request_id": "RR-2026-10-21-odoo-community-funciones",
+ "sources": [
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr/__manifest__.py",
+   "title": "Odoo 17.0 hr/__manifest__.py (Employees)",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_attendance/__manifest__.py",
+   "title": "Odoo 17.0 hr_attendance/__manifest__.py (Attendances)",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_holidays/__manifest__.py",
+   "title": "Odoo 17.0 hr_holidays/__manifest__.py (Time Off)",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_contract/__manifest__.py",
+   "title": "Odoo 17.0 hr_contract/__manifest__.py (Employee Contracts)",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_work_entry/__manifest__.py",
+   "title": "Odoo 17.0 hr_work_entry/__manifest__.py (Work Entries)",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/project/__manifest__.py",
+   "title": "Odoo 17.0 project/__manifest__.py (Project)",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_timesheet/__manifest__.py",
+   "title": "Odoo 17.0 hr_timesheet/__manifest__.py (Task Logs)",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_skills/__manifest__.py",
+   "title": "Odoo 17.0 hr_skills/__manifest__.py (Skills Management)",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr/security/ir.model.access.csv",
+   "title": "Odoo 17.0 hr/security/ir.model.access.csv",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_attendance/security/ir.model.access.csv",
+   "title": "Odoo 17.0 hr_attendance/security/ir.model.access.csv",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_holidays/security/ir.model.access.csv",
+   "title": "Odoo 17.0 hr_holidays/security/ir.model.access.csv",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_contract/security/ir.model.access.csv",
+   "title": "Odoo 17.0 hr_contract/security/ir.model.access.csv",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_work_entry/security/ir.model.access.csv",
+   "title": "Odoo 17.0 hr_work_entry/security/ir.model.access.csv",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/project/security/ir.model.access.csv",
+   "title": "Odoo 17.0 project/security/ir.model.access.csv",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_timesheet/security/ir.model.access.csv",
+   "title": "Odoo 17.0 hr_timesheet/security/ir.model.access.csv",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/LICENSE",
+   "title": "Odoo 17.0 LICENSE (GNU LGPL v3)",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "source_type": "code",
+   "license": "texto de la LGPL-3.0 (copia literal permitida)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/documentation/17.0/content/developer/reference/external_api.rst",
+   "title": "Odoo 17.0 documentation: External API",
+   "publisher": "Odoo S.A. (repositorio odoo/documentation)",
+   "source_type": "vendor_doc",
+   "license": "CC BY-SA 4.0",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/documentation/17.0/content/applications/hr/payroll.rst",
+   "title": "Odoo 17.0 documentation: Payroll",
+   "publisher": "Odoo S.A. (repositorio odoo/documentation)",
+   "source_type": "vendor_doc",
+   "license": "CC BY-SA 4.0",
+   "redistribution": "allowed",
+   "role": "secondary"
+  }
+ ]
+}
