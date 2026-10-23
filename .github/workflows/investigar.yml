@@ -1,0 +1,159 @@
+name: investigar
+# Autonomous research run (docs/INVESTIGAR.md): a ResearchRequest on main plus its reviewed source plan
+# (requests/plans/<RR>.json, redistributable sources only: this repository and its artifacts are public) -> branch
+# investigar/<RP> with the packet folder. Four jobs, each with only what it needs:
+# - fetch: no secrets. The plan's https URLs only, through the catalog's Fetcher (robots.txt, the plan's hosts, one
+#   request per second per host, 60 MB per body); texts from rg.text in isolated processes.
+# - analyze: the owner's Claude subscription (CLAUDE_CODE_OAUTH_TOKEN). The Claude Code CLI, pinned by version and by
+#   the npm integrity of its Linux build, runs with no tools at all (--tools "") from an empty folder; the texts are
+#   inside its prompt. It cannot read a file, run a command or open a URL, so it cannot reach the credential; it can
+#   only answer. No GitHub token reaches it.
+# - gate: no model, no write token. Builds the packet from the fetch record and the request (artifacts, hashes and
+#   licenses never come from the model) and runs rg.packets: schema, only declared files, sha256 of every raw, every
+#   quote in the extracted text of its source.
+# - publish: contents: write and nothing else. Parses nothing; pushes only research-packets/<RP>/, to a new branch only.
+# A branch pushed with GITHUB_TOKEN starts no workflow, so the owner opens the PR (and with it CI and both auditors):
+# the job summary prints the command.
+on:
+  workflow_dispatch:
+    inputs:
+      request_id:
+        description: 'RR-... with requests/<RR>.json and requests/plans/<RR>.json on main'
+        required: true
+permissions: {}
+concurrency:
+  group: investigar-${{ inputs.request_id }}
+  cancel-in-progress: false
+jobs:
+  fetch:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    permissions: { contents: read }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - name: Fetch the plan's sources (no secrets)
+        env: { RID: '${{ inputs.request_id }}' }
+        run: |
+          [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || { echo "request_id: RR-..."; exit 2; }
+          python -m rg.investigar fetch --request "requests/$RID.json" --plan "requests/plans/$RID.json" --out work
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        if: ${{ !cancelled() }}  # a failed fetch still leaves its record; the jobs after it do not run
+        with: { name: investigar-work, path: work/, retention-days: 1, if-no-files-found: error }
+
+  analyze:
+    needs: fetch
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    permissions: { contents: read }
+    env:
+      CC_VERSION: '2.1.289'
+      CC_INTEGRITY: 'sha512-I23SaSYE8vSwFbJ+Tc0mRlzvJmRQNaiyBUXK/K5R6BVr2lOoCdMI2SJR4N6xiVYy6yyIt39JNiyvPHoiOymyyw=='
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with: { name: investigar-work, path: work }
+      - name: Prompt (instructions and schema; the request and the texts as data)
+        env: { RID: '${{ inputs.request_id }}' }
+        run: |
+          set -euo pipefail
+          [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
+          python -m rg.investigar prompt --request "requests/$RID.json" --work work
+      - name: Claude Code CLI, pinned by version and by the npm integrity of its Linux build
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          npm pack --silent "@anthropic-ai/claude-code-linux-x64@$CC_VERSION" > /dev/null
+          tgz="anthropic-ai-claude-code-linux-x64-$CC_VERSION.tgz"
+          [ "sha512-$(openssl dgst -sha512 -binary "$tgz" | base64 -w0)" = "$CC_INTEGRITY" ] || { echo 'integrity mismatch'; exit 2; }
+          mkdir cc && tar -xzf "$tgz" -C cc && chmod 755 cc/package/claude
+      - name: The model (no tools, an empty folder, no GitHub token)
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
+          DISABLE_AUTOUPDATER: '1'
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/vacio" && cd "$RUNNER_TEMP/vacio"
+          "$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config --max-turns 2 --output-format json \
+            --system-prompt "$(cat "$GITHUB_WORKSPACE/work/system.txt")" \
+            < "$GITHUB_WORKSPACE/work/user.txt" > "$GITHUB_WORKSPACE/work/modelo-cli.json"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with: { name: investigar-modelo, path: work/modelo-cli.json, retention-days: 1, if-no-files-found: error }
+
+  gate:
+    needs: [fetch, analyze]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions: { contents: read }
+    outputs:
+      rp: ${{ steps.build.outputs.rp }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with: { name: investigar-work, path: work }
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with: { name: investigar-modelo, path: work }
+      - name: Build the packet and run the gate (no model, no write token)
+        id: build
+        env:
+          RID: '${{ inputs.request_id }}'
+          RUN_URL: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}'
+        run: |
+          set -euo pipefail
+          [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
+          rp=$(python -m rg.investigar assemble --request "requests/$RID.json" --work work --model-output work/modelo-cli.json --out out)
+          [[ "$rp" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
+          python -m rg.packets "out/research-packets/$rp" --strict
+          echo "rp=$rp" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with: { name: investigar-packet, path: out/research-packets/, retention-days: 1, if-no-files-found: error }
+
+  publish:
+    needs: gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: { contents: write }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with: { name: investigar-packet, path: out }
+      - name: Push only research-packets/<RP> to investigar/<RP>
+        env:
+          RP: '${{ needs.gate.outputs.rp }}'
+          GH_TOKEN: '${{ github.token }}'
+          REPO: '${{ github.repository }}'
+        run: |
+          set -euo pipefail
+          [[ "$RP" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
+          [ -f "out/$RP/packet.json" ] || exit 2
+          [ "$(ls out)" = "$RP" ] || exit 2  # the gate's artifact holds that one folder and nothing else
+          rm -rf "research-packets/$RP"
+          mkdir -p research-packets
+          cp -r "out/$RP" "research-packets/$RP"
+          git config user.name rg-investigar
+          git config user.email rg-investigar@users.noreply.github.com
+          git checkout -b "investigar/$RP"
+          git add -- "research-packets/$RP"
+          git commit -m "Paquete $RP (investigar.yml, corrida $GITHUB_RUN_ID)"
+          # create only: a lease that expects no ref fails atomically if investigar/<RP> exists at all, even when it is an
+          # ancestor a plain push would fast-forward. It may be the head of a PR under audit (REGLAS 14): it never moves.
+          GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader \
+            GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 | tr -d '\n')" \
+            git push --force-with-lease="refs/heads/investigar/$RP:" origin "investigar/$RP" \
+            || { echo "investigar/$RP ya existe: cierra su PR y borra la rama antes de repetir el pedido"; exit 3; }
+          { echo "Rama investigar/$RP lista. Abre el PR para que corran CI y los dos auditores:"
+            echo '```'; echo "gh pr create -R $REPO --base main --head investigar/$RP --fill"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
