@@ -426,17 +426,33 @@ class Model(Base):
         with mock.patch.object(inv, 'fetch', return_value=[r for r in rows if not r.get('artifact_id')]):
             self.assertEqual(inv.main(args), 1)
 
-    def test_only_a_successful_run_whose_answer_is_one_json_object_is_read(self):
-        ok = {'type': 'result', 'is_error': False, 'result': '```json\n' + json.dumps(answer()) + '\n```',
-              'modelUsage': {'claude-opus-5-5': {}, '<b>x y</b>': {}}}
+    def test_only_the_structured_output_of_a_successful_run_is_read(self):
+        ok = {'type': 'result', 'is_error': False, 'structured_output': answer(), 'result': 'texto libre, nunca leído',
+              'modelUsage': {'claude-sonnet-5-5': {}, '<b>x y</b>': {}}}
         got, label = inv.model_answer(ok)
         self.assertEqual(got, answer())
-        self.assertIn('claude-opus-5-5', label)
+        self.assertIn('claude-sonnet-5-5', label)
         self.assertNotIn('<b>', label)  # only names that look like model ids reach the packet
-        for bad in ({**ok, 'is_error': True}, {**ok, 'type': 'system'}, {**ok, 'result': 'No puedo.'},
-                    {**ok, 'result': '[1, 2]'}, {**ok, 'result': '{"a": '}, None):
+        for bad in ({**ok, 'is_error': True}, {**ok, 'type': 'system'}, {**ok, 'structured_output': [answer()]},
+                    {k: v for k, v in ok.items() if k != 'structured_output'}, None):
             with self.subTest(bad=str(bad)[:40]), self.assertRaises(ValueError):
                 inv.model_answer(bad)
+
+    def test_free_text_is_never_parsed_even_when_it_holds_a_valid_answer(self):
+        # Run 39899045829 (2026-10-23): without --json-schema the model nested the lists inside findings and left the
+        # JSON open. Now the text is not read at all, valid or not.
+        for text in (json.dumps(answer()), '{"scope": "x", "findings": {"confirmed": [], "limitations": ["x"]'):
+            with self.subTest(text=text[:30]), self.assertRaises(ValueError):
+                inv.model_answer({'type': 'result', 'is_error': False, 'result': text})
+
+    def test_the_prompt_step_writes_the_schema_the_cli_enforces(self):
+        self.fetch()
+        req = self.tmp / 'rr.json'
+        req.write_text(json.dumps(RR), encoding='utf-8')
+        self.assertEqual(inv.main(['prompt', '--request', str(req), '--work', str(self.work)]), 0)
+        self.assertEqual(json.loads((self.work / 'schema.json').read_text(encoding='utf-8')), inv.MODEL_SCHEMA)
+        self.assertTrue((self.work / 'system.txt').read_text(encoding='utf-8'))
+        self.assertIn(QUOTE, (self.work / 'user.txt').read_text(encoding='utf-8'))
 
 
 class Workflow(unittest.TestCase):
@@ -465,6 +481,7 @@ class Workflow(unittest.TestCase):
         run = model['run']
         self.assertIn('cd "$RUNNER_TEMP/vacio"', run)
         self.assertIn('"$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config ', run)
+        self.assertIn('--json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")"', run)
         for word in ('Read', 'Grep', 'Glob', 'allowedTools', 'add-dir', ' --mcp-config', 'dangerously'):
             self.assertNotIn(word, run)
         self.assertNotIn('uses', model)  # the CLI itself, not an action that adds tools of its own
