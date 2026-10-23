@@ -1,0 +1,17 @@
+{
+  "request_id": "RR-2026-10-22-frontend-piloto",
+  "issued_by": "OWNER",
+  "issued_at": "2026-10-22T18:00:00Z",
+  "question": "Comparar, para construir la vista del piloto de ZPMND (una pantalla con el gemelo de la organizacion, sus Work Pins con cita legal, la verificacion por relectura y el tablero de complejidad absorbida, alimentada por la API FastAPI existente): Base44, v0 (Vercel), Bolt, Claude Design / Artifacts y construir el frontend dentro del propio repositorio. Lovable queda fuera por decision del dueno. Para cada opcion: donde quedan los datos que muestra y si pueden quedarse en la frontera de ZPMND (sin que datos de clientes pasen por el proveedor), si el codigo se exporta completo y se puede revisar con pruebas y auditoria propias, autenticacion y multi-inquilino, costo mensual realista para un piloto, amarre al proveedor y terminos de servicio sobre datos.",
+  "why_needed": "El dueno quiere aprovechar herramientas expertas en frontend en lugar de construir la interfaz desde cero, pero sin decidir a la ligera: la vista muestra datos de clientes y obligaciones legales, y todo lo que entra a ZPMND pasa por compuertas (CI, mutacion, auditoria).",
+  "affected_component": "vista del piloto (ROADMAP §6 paso 6) y frontera de datos con proveedores",
+  "desired_evidence": [
+    "terminos de servicio y politica de datos vigentes de cada proveedor, con fecha y sha256",
+    "prueba en sandbox con datos sinteticos: que se exporta, a que hosts sale, donde se guardan los datos",
+    "precios publicados por plan, con fecha",
+    "lo no determinable, como desconocido"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Datos de clientes en un proveedor no calificado, codigo que no pasa nuestras compuertas, o amarre caro a una plataforma.",
+  "privacy_class": "PUBLIC"
+}
