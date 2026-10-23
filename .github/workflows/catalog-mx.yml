@@ -2,9 +2,9 @@ name: catalog-mx
 # Every 3 days: index what is new in Mexico's tier-1 sources, fetch raw within budget, reconcile coverage.
 # Code comes from the default branch; the catalog lives on the data branch `catalog`; raw bytes go to release `raw-mx`.
 # The bot never writes code. Deterministic acquisition only: no model, no agent, no credentials beyond GITHUB_TOKEN,
-# the read-only HF_TOKEN of the gated tesis dataset (an env var of the catalog step only) and the read-only
-# BANXICO_TOKEN of the SIE API (an env var of the catalog step and of the token scan that runs before anything is
-# uploaded or committed). INEGI_TOKEN never reaches this workflow while mx.inegi-bie is 'trial'.
+# the read-only HF_TOKEN of the gated tesis dataset (an env var of the catalog step only), and the read-only
+# BANXICO_TOKEN and INEGI_TOKEN of the indicator APIs (env vars of the catalog step and of the token scan that runs
+# before anything is uploaded or committed).
 on:
   schedule:
     - cron: '0 11 */3 * *'   # 05:00 America/Mexico_City on days 1, 4, 7, ... 31 (day 31 -> 1 is one day apart)
@@ -55,6 +55,7 @@ jobs:
           INDEX_DAYS: ${{ inputs.index_days }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}   # read-only; the Fetcher sends it only to huggingface.co (mx.hf-tesis-scjn)
           BANXICO_TOKEN: ${{ secrets.BANXICO_TOKEN }}   # sent only to www.banxico.org.mx, header Bmx-Token (mx.banxico-sie)
+          INEGI_TOKEN: ${{ secrets.INEGI_TOKEN }}   # sent only to www.inegi.org.mx, as the documented path segment (mx.inegi-bie)
         run: |
           [[ "$BUDGET" =~ ^[0-9]*$ ]] || { echo "budget must be a number"; exit 2; }
           [[ "$INDEX_DAYS" =~ ^[0-9]*$ ]] || { echo "index_days must be a number"; exit 2; }
@@ -71,14 +72,17 @@ jobs:
       - name: No token in anything that is committed or uploaded
         env:
           BANXICO_TOKEN: ${{ secrets.BANXICO_TOKEN }}
+          INEGI_TOKEN: ${{ secrets.INEGI_TOKEN }}
         run: |
-          [ -n "$BANXICO_TOKEN" ] || exit 0
           dirs=(); for d in data raw; do [ -d "$d" ] && dirs+=("$d"); done
           set +e
-          grep -rqF --exclude-dir=.git -- "$BANXICO_TOKEN" "${dirs[@]}"
-          rc=$?
-          # fail closed: 1 is the only "not found"; 0 is found, 2 is a folder that could not be read
-          [ "$rc" = 1 ] || { echo "token scan: grep exit $rc; nothing is uploaded or committed"; exit 1; }
+          for t in "$BANXICO_TOKEN" "$INEGI_TOKEN"; do
+            [ -n "$t" ] || continue
+            grep -rqF --exclude-dir=.git -- "$t" "${dirs[@]}"
+            rc=$?
+            # fail closed: 1 is the only "not found"; 0 is found, 2 is a folder that could not be read
+            [ "$rc" = 1 ] || { echo "token scan: grep exit $rc; nothing is uploaded or committed"; exit 1; }
+          done
       - name: Upload raw bundle before the commit, so an entry marked stored always has its bytes published
         env: { GH_TOKEN: '${{ github.token }}' }
         run: |

@@ -12,11 +12,13 @@ artifact indicadores-mx-39709378896-1), copied unedited from that run's RawStore
   series are played here by these same bytes with only idSerie relabelled (datos_for).
 That run reconciled all four series (SF43718 8783/8783, SP68257 11524/11524, SF331451 5231/5231, SF43783 7943/7943).
 
-INEGI FIXTURES STAY CONSTRUIDOS DE LA DOCUMENTACIÓN OFICIAL (HIPÓTESIS): the same run got HTTP 401 on CL_INDICATOR and
-HTTP 400 on INDICATOR 628194, so no real INEGI answer exists yet. inegi_bie_indicator_628194_CONSTRUIDO_DE_DOCS.json and
-inegi_bie_cl_indicator_628194_CONSTRUIDO_DE_DOCS.json follow the fields of "Estructura de salida" and of the example
-code at https://www.inegi.org.mx/servicios/api_indicadores.html (Series[0].OBSERVATIONS[i].TIME_PERIOD / OBS_VALUE;
-CODE[0].value / Description), read on 2026-10-21. Values are placeholders.
+THE INEGI FIXTURE IS REAL BYTES too: workflow indicadores-mx, run 39877667471 (2026-10-23, branch inegi-fuente, fuente
+BIE-BISE, artifact indicadores-mx-39877667471-1), copied unedited from that run's RawStore:
+- inegi_bie_indicator_910392_2026-10-23.json, 102,668 bytes,
+  sha256 8ad0a8b1013348720e34fb6804d24d7ebb35481f5deac78338ac2458308f2710: INDICATOR 910392 (INPC, índice general),
+  693 monthly observations from 1969/01 to 2026/09, newest first. 2026/09 is 146.07499999999999000000 and 2026/08
+  145.46199999999999000000; INEGI's note in the DOF of 2026-10-09 (5800864) prints 146.075 and 145.462.
+CL_INDICATOR answered 401 in every run, so there is no real catalog answer and none is requested.
 banxico_robots_2026-10-21.txt is real (anterior.banxico.org.mx/robots.txt). No network: a fake opener plays both hosts.
 """
 import contextlib
@@ -49,12 +51,13 @@ BX, BX_OLD, IN = 'https://www.banxico.org.mx', 'https://anterior.banxico.org.mx'
 ROBOTS_BX = (FIX / 'banxico_robots_2026-10-21.txt').read_bytes()
 # Real bytes of run 39709378896 (see the module docstring); the sha256 is the name the run's RawStore gave each one.
 REAL = {'banxico_sie_metadatos_2026-10-22.json': '6a05641d6412fd8aaab2589e5cf800a95643d092ffc2441334a4a8c8471268c4',
-        'banxico_sie_datos_SF43783_2026-10-22.json': 'd98bcf18b512b405dc58b349258e6a84c96cf8dfd230376da784f6a7e1e40a3d'}
+        'banxico_sie_datos_SF43783_2026-10-22.json': 'd98bcf18b512b405dc58b349258e6a84c96cf8dfd230376da784f6a7e1e40a3d',
+        'inegi_bie_indicator_910392_2026-10-23.json': '8ad0a8b1013348720e34fb6804d24d7ebb35481f5deac78338ac2458308f2710'}
 META = (FIX / 'banxico_sie_metadatos_2026-10-22.json').read_bytes()
 DATOS = (FIX / 'banxico_sie_datos_SF43783_2026-10-22.json').read_bytes()
 SERVED_N, NE_N = 7943, 200  # observations and "N/E" values in DATOS, as the run counted them
-IND = (FIX / 'inegi_bie_indicator_628194_CONSTRUIDO_DE_DOCS.json').read_bytes()
-CL = (FIX / 'inegi_bie_cl_indicator_628194_CONSTRUIDO_DE_DOCS.json').read_bytes()
+IND = (FIX / 'inegi_bie_indicator_910392_2026-10-23.json').read_bytes()
+INPC, IND_N = '910392', 693  # the key and the observations IND serves
 JSON_CT = {'content-type': 'application/json;charset=UTF-8'}
 META_URL = indicadores.BANXICO_META.format(series='SF43718,SP68257,SF331451,SF43783')
 TIIE28 = 'TIIE a 28 días Tasa de interés en por ciento anual'  # the titulo SF43783 is served with
@@ -131,8 +134,10 @@ class Parsers(unittest.TestCase):
         body = b'{"bmx":{"series":[{"idSerie":"SF43718","titulo":"t","datos":[{"fecha":"02/01/2015","dato":14.8290},' \
                b'{"fecha":"05/01/2015","dato":15}]}]}}'
         self.assertEqual(indicadores.parse_banxico_datos(body, 'SF43718')[1], [('02/01/2015', '14.8290'), ('05/01/2015', '15')])
-        ind = IND.replace(b'"100.500000"', b'100.500000').replace(b'"INDICADOR": "628194"', b'"INDICADOR": 628194')
-        self.assertEqual(indicadores.parse_inegi_indicator(ind, '628194')[1][1], ('2026/07', '100.500000'))
+        ind = IND.replace(b'"OBS_VALUE":"146.07499999999999000000"', b'"OBS_VALUE":146.07499999999999000000') \
+                 .replace(b'"INDICADOR":"910392"', b'"INDICADOR":910392')
+        self.assertNotEqual(ind, IND)
+        self.assertEqual(indicadores.parse_inegi_indicator(ind, INPC)[1][0], ('2026/09', '146.07499999999999000000'))
 
     def test_a_response_for_another_or_for_several_series_is_refused(self):
         example = json.loads(DATOS)
@@ -142,16 +147,17 @@ class Parsers(unittest.TestCase):
             with self.subTest(sid=sid, body=body[:30]), self.assertRaises(ValueError):
                 indicadores.parse_banxico_datos(body, sid)
         with self.assertRaises(ValueError):
-            indicadores.parse_inegi_indicator(IND, '628195')
-        with self.assertRaises(ValueError):
-            indicadores.parse_inegi_catalog(CL, '628195')
+            indicadores.parse_inegi_indicator(IND, '628194')
 
-    def test_inegi_unit_values_and_official_description(self):
-        unit, obs = indicadores.parse_inegi_indicator(IND, '628194')
-        self.assertEqual(unit, '96')
-        self.assertEqual(obs, [('2026/06', '100.000000'), ('2026/07', '100.500000'), ('2026/08', None), ('2026/09', '101.250000')])
-        self.assertEqual(indicadores.parse_inegi_catalog(CL, '628194'), 'Índice general')
-        self.assertEqual(indicadores.served_count(IND, 'TIME_PERIOD'), 4)
+    def test_inegi_unit_and_values_are_the_served_text(self):
+        unit, obs = indicadores.parse_inegi_indicator(IND, INPC)
+        self.assertEqual((unit, len(obs), len(dict(obs))), ('1051', IND_N, IND_N))
+        by = dict(obs)
+        # INEGI's note in the DOF of 2026-10-09 (5800864): "... del mes de septiembre de 2026 es 146.075 ... agosto de
+        # 2026, que fue de 145.462": the same values, as the API serves them.
+        self.assertEqual((by['2026/09'], by['2026/08']), ('146.07499999999999000000', '145.46199999999999000000'))
+        self.assertEqual((obs[0][0], obs[-1][0]), ('2026/09', '1969/01'))  # newest first, as served
+        self.assertEqual(indicadores.served_count(IND, 'TIME_PERIOD'), IND_N)
 
     def test_the_served_count_reads_bytes_not_the_parser(self):
         body = b'{"bmx":{"series":[{"idSerie":"SF1","fechaInicio":"x","datos":[{"fecha" : "01/01/2015","dato":"1"},' \
@@ -370,51 +376,53 @@ class InegiRun(_RunCase):
     SID = 'mx.inegi-bie'
 
     def urls(self):
-        return indicadores.inegi_urls(self.src if hasattr(self, 'src') else source(self.SID), '628194', ITOK)
+        return indicadores.inegi_url(self.src if hasattr(self, 'src') else source(self.SID), INPC, ITOK)
 
     def default_routes(self):
-        (ind, _), (cl, _) = self.urls()
-        return {IN + '/robots.txt': (200, b'User-Agent: *\nAllow: /app\n', {}), ind: (200, IND, JSON_CT), cl: (200, CL, JSON_CT)}
+        ind, _ = self.urls()
+        return {IN + '/robots.txt': (200, b'User-Agent: *\nAllow: /app\n', {}), ind: (200, IND, JSON_CT)}
 
-    def test_observations_with_the_official_description_and_no_token_recorded(self):
+    def test_observations_with_the_confirmed_title_and_no_token_recorded(self):
         stats = self.go()
         self.assertEqual(self.failed(), [])
-        es = self.entries('628194')
-        self.assertEqual([(e['observation']['date_printed'], e['observation']['value_printed']) for e in es],
-                         [('2026/06', '100.000000'), ('2026/07', '100.500000'), ('2026/08', None), ('2026/09', '101.250000')])
-        self.assertEqual({(e['title'], e['observation']['unit_printed']) for e in es}, {('Índice general', '96')})
-        (ind, shown), (cl, cl_shown) = self.urls()
+        es = self.entries(INPC)
+        self.assertEqual(len(es), IND_N)
+        by = {e['observation']['date_printed']: e['observation']['value_printed'] for e in es}
+        self.assertEqual((by['2026/09'], by['2024/07']), ('146.07499999999999000000', '136.00299999999999000000'))
+        title = source(self.SID)['series'][0]['title']  # copied from the DOF note in confirmed_by
+        self.assertEqual({(e['title'], e['observation']['unit_printed']) for e in es}, {(title, '1051')})
+        ind, shown = self.urls()
         self.assertIn(ITOK, ind)  # the documented syntax: the token is a path segment
         self.assertEqual(shown, ind.replace(ITOK, '<token>'))
-        for e in es:
+        for e in es[:20]:
             self.assertEqual((e['url'], e['artifact']['url']), (shown, shown))
             self.assertEqual(validate('catalog_entry', e), [])
-        self.assertEqual(stats['raw_stored'], 2)  # INDICATOR and CL_INDICATOR, byte-exact
-        self.assertEqual((self.raw / stats['raw']['628194 CL_INDICATOR']).read_bytes(), CL)
+        self.assertEqual(stats['raw_stored'], 1)  # INDICATOR, byte-exact
+        self.assertEqual((self.raw / stats['raw'][INPC]).read_bytes(), IND)
         self.assertNotIn(ITOK, json.dumps(self.run_.manifest) + json.dumps(self.run_.catalog.snapshot()))
-        self.assertEqual([u for u, _ in self.calls if ITOK in u], [cl, ind])  # only these two, both to www.inegi.org.mx
+        self.assertEqual([u for u, _ in self.calls if ITOK in u], [ind])  # INDICATOR only: CL_INDICATOR answers 401 to us
         self.assertEqual(self.secrets_seen, [{ITOK: 'www.inegi.org.mx'}])
 
-    def test_a_refusal_or_an_error_page_is_recorded_without_the_token(self):
-        (ind, _), (cl, _) = self.urls()
-        self.routes[cl] = (302, b'', {'Location': ind.replace('https://', 'http://')})  # refused, and the refusal names the URL
-        self.routes[ind] = (500, b'internal error for ' + ITOK.encode(), {})  # an error page that echoes it
+    def test_an_unconfirmed_key_is_fetched_but_never_catalogued(self):
+        self.src = {**self.src, 'series': [{**self.src['series'][0], 'confirmed_by': []}]}  # its title stays: not enough
         self.go()
-        dump = json.dumps(self.run_.manifest)
-        self.assertNotIn(ITOK, dump)
-        self.assertIn('scheme or host not allowed: http://www.inegi.org.mx/', dump)
-        self.assertIn('internal error for <token>', dump)
-
-    def test_a_catalog_answer_for_another_indicator_stops_it(self):
-        (_, _), (cl, _) = self.urls()
-        self.routes[cl] = (200, CL.replace(b'"628194"', b'"628195"'), JSON_CT)
-        self.go()
-        self.assertEqual(self.entries('628194'), [])
+        self.assertEqual(self.entries(INPC), [])
         self.assertEqual(len(self.failed()), 1)
 
+    def test_a_refusal_or_an_error_page_is_recorded_without_the_token(self):
+        ind, _ = self.urls()
+        for route, recorded in (((302, b'', {'Location': ind.replace('https://', 'http://')}),  # the refusal names the URL
+                                 'scheme or host not allowed: http://www.inegi.org.mx/'),
+                                ((500, b'internal error for ' + ITOK.encode(), {}), 'internal error for <token>')):
+            with self.subTest(recorded):
+                self.routes[ind] = route
+                self.go()
+                dump = json.dumps(self.run_.manifest)
+                self.assertNotIn(ITOK, dump)
+                self.assertIn(recorded, dump)
+
     def test_no_token_in_any_file_or_log_of_a_whole_run(self):
-        (ind, _), (cl, _) = self.urls()
-        self.routes[cl] = (302, b'', {'Location': ind.replace('https://', 'http://')})  # refused: names the URL
+        ind, _ = self.urls()
         self.routes[ind] = (500, b'internal error for ' + ITOK.encode(), {})  # an error page that echoes it
         bx = BanxicoRun.default_routes(BanxicoRun.__new__(BanxicoRun), first(3))  # tokens, not volume, are checked here
         self.routes.update(bx)
@@ -463,27 +471,33 @@ class Wiring(unittest.TestCase):
                 mock.patch.object(Run, 'run_sidof', lambda self_, s: {}), mock.patch.object(Run, 'run_leyesbiblio', lambda self_, s: {}), \
                 mock.patch.object(Run, 'run_ojn', lambda self_, s: {}), mock.patch.object(Run, 'run_ojn_municipal', lambda self_, s: {}), \
                 mock.patch.object(Run, 'run_hf_tesis', lambda self_, s: {}):
-            manifest = Run('MX', tmp + '/o', tmp + '/r', None, TODAY, 0, 0, parallel=False).execute()
+            def with_inegi_trial():  # both indicator sources are active now; the rule is checked on a trial copy
+                run = Run('MX', tmp + '/o', tmp + '/r', None, TODAY, 0, 0, parallel=False)
+                next(s for s in run.registry['sources'] if s['source_id'] == 'mx.inegi-bie')['status'] = 'trial'
+                return run
+            manifest = with_inegi_trial().execute()
             # the scheduled run (no --sources) reaches the active indicator source and never the trial one
             self.assertEqual(ran, ['mx.banxico-sie'])
             self.assertNotIn('mx.inegi-bie', manifest['planned_sources'])  # trial is not 'planned': it has no blocker
             ran.clear()
-            Run('MX', tmp + '/o', tmp + '/r', None, TODAY, 0, 0, parallel=False).execute({'mx.banxico-sie', 'mx.inegi-bie'})
+            with_inegi_trial().execute({'mx.banxico-sie', 'mx.inegi-bie'})
         self.assertEqual(sorted(ran), ['mx.banxico-sie', 'mx.inegi-bie'])
-        self.assertEqual((source('mx.banxico-sie')['status'], source('mx.inegi-bie')['status']), ('active', 'trial'))
+        self.assertEqual((source('mx.banxico-sie')['status'], source('mx.inegi-bie')['status']), ('active', 'active'))
 
     def test_an_active_indicator_source_is_tested_on_real_bytes(self):
         # trial -> active only once a real run has served real bytes: an active source keeps no fixture built from the
         # docs, and its real fixtures are byte for byte what that run stored (Parsers checks their sha256).
         prefix = {'banxico-sie': 'banxico_', 'inegi-bie': 'inegi_'}
         active = [s for s in registry()['sources'] if 'series' in s and s['status'] == 'active']
-        self.assertEqual([s['source_id'] for s in active], ['mx.banxico-sie'])
+        self.assertEqual([s['source_id'] for s in active], ['mx.banxico-sie', 'mx.inegi-bie'])
         for src in active:
             self.assertEqual(sorted(p.name for p in FIX.glob(prefix[src['adapter']] + '*CONSTRUIDO*')), [], src['source_id'])
-        self.assertEqual(sorted(p.name for p in FIX.glob('banxico_sie_*.json')), sorted(REAL))
+        self.assertEqual(sorted(p.name for p in [*FIX.glob('banxico_sie_*.json'), *FIX.glob('inegi_bie_*.json')]), sorted(REAL))
 
     def test_a_series_id_is_active_only_when_an_official_page_confirms_it(self):
-        official = {'mx.banxico-sie': ('https://www.banxico.org.mx/',), 'mx.inegi-bie': ('https://www.inegi.org.mx/',)}
+        # INEGI publishes the INPC in the DOF by law (LSNIEG art. 59 III a; CFF 20 and 20-bis): a note there confirms a key
+        official = {'mx.banxico-sie': ('https://www.banxico.org.mx/',),
+                    'mx.inegi-bie': ('https://www.inegi.org.mx/', 'https://sidof.segob.gob.mx/notas/docFuente/')}
         for src in registry()['sources']:
             if 'series' not in src:
                 continue
@@ -498,7 +512,7 @@ class Wiring(unittest.TestCase):
                     if src['adapter'] == 'banxico-sie':
                         self.assertEqual(date.fromisoformat(s['start']).isoformat(), s['start'])
         self.assertTrue(all(s['confirmed_by'] for s in source('mx.banxico-sie')['series']))
-        self.assertEqual([s['confirmed_by'] for s in source('mx.inegi-bie')['series']], [[]])  # HIPÓTESIS, see id_status
+        self.assertTrue(all(s['confirmed_by'] and s['title'] for s in source('mx.inegi-bie')['series']))
 
     def test_observations_go_one_file_per_series_and_load_back(self):
         src = source('mx.banxico-sie')
@@ -543,16 +557,14 @@ class Wiring(unittest.TestCase):
         for s in steps:
             if 'uses' in s:
                 self.assertRegex(s['uses'], r'^[\w.-]+/[\w.-]+@[0-9a-f]{40}$')
-        # The scheduled run fetches the active source (Banxico): its token reaches the catalog step and the scan that
-        # runs before anything is uploaded or committed. INEGI is trial: its token never reaches the scheduled run.
-        text = (ROOT / '.github' / 'workflows' / 'catalog-mx.yml').read_text(encoding='utf-8')
-        self.assertNotIn('secrets.INEGI_TOKEN', text)
-        steps = yaml.safe_load(text)['jobs']['run']['steps']
+        # The scheduled run fetches both active indicator sources: each token reaches the catalog step and the scan that
+        # runs before anything is uploaded or committed, and no other step.
+        steps = yaml.safe_load((ROOT / '.github' / 'workflows' / 'catalog-mx.yml').read_text(encoding='utf-8'))['jobs']['run']['steps']
         names = [s.get('name') for s in steps]
         catalog = next(s for s in steps if s.get('id') == 'catalog')
-        self.assertEqual([s.get('name') for s in steps if 'BANXICO_TOKEN' in json.dumps(s.get('env', {}))],
-                         [catalog['name'], SCAN])
-        self.assertEqual(catalog['env']['BANXICO_TOKEN'], '${{ secrets.BANXICO_TOKEN }}')
+        for tok in ('BANXICO_TOKEN', 'INEGI_TOKEN'):
+            self.assertEqual([s.get('name') for s in steps if tok in json.dumps(s.get('env', {}))], [catalog['name'], SCAN], tok)
+            self.assertEqual(catalog['env'][tok], '${{ secrets.%s }}' % tok)
         scan = names.index(SCAN)
         self.assertLess(names.index(catalog['name']), scan)
         self.assertLess(scan, min(i for i, n in enumerate(names) if n and n.startswith(('Upload raw bundle', 'Commit catalog'))))
@@ -576,6 +588,11 @@ class Wiring(unittest.TestCase):
                     if holder:
                         Path(tmp, holder, 'mx', 'y.json').write_text(f'{{"url": "x/{BTOK}"}}', encoding='utf-8')
                     self.assertEqual(self.scan(wf_name, step_name, tmp), 1 if holder else 0)
+                with self.subTest(wf_name, token='INEGI'), tempfile.TemporaryDirectory() as tmp:
+                    for d in folders:
+                        Path(tmp, d, 'mx').mkdir(parents=True)
+                    Path(tmp, folders[-1], 'mx', 'y.json').write_text(f'{{"url": "x/{ITOK}"}}', encoding='utf-8')
+                    self.assertEqual(self.scan(wf_name, step_name, tmp), 1)
         with tempfile.TemporaryDirectory() as tmp:  # a run with no new raw files leaves no raw folder: nothing to stop
             Path(tmp, 'data').mkdir()
             self.assertEqual(self.scan('catalog-mx.yml', SCAN, tmp), 0)

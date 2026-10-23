@@ -333,7 +333,7 @@
     },
     {
       "source_id": "mx.inegi-bie",
-      "status": "trial",
+      "status": "active",
       "tier": 1,
       "adapter": "inegi-bie",
       "title": "INEGI, Banco de Información Económica (API del Banco de Indicadores): INPC",
@@ -345,7 +345,7 @@
       "token_host": "www.inegi.org.mx",
       "language": "es",
       "area": "00",
-      "fuente": "BIE",
+      "fuente": "BIE-BISE",
       "category": {
         "jurisdiction": "federal",
         "collection": "INEGI BIE (INDICADORES PARA CALCULO)"
@@ -360,13 +360,16 @@
       },
       "series": [
         {
-          "id": "628194",
+          "id": "910392",
+          "title": "Índice Nacional de Precios al Consumidor (base segunda quincena de julio de 2018=100)",
           "label": "INPC, índice general (base 2a. quincena de julio 2018 = 100)",
-          "confirmed_by": [],
-          "id_status": "HIPÓTESIS: no se encontró una página oficial estática que imprima esta clave (las páginas del INEGI se arman con JavaScript y el constructor de consultas usa un token interno que no es nuestro). La primera corrida guarda la respuesta de CL_INDICATOR (método oficial de catálogo) como evidencia; la fuente no pasa a active sin confirmed_by."
+          "confirmed_by": [
+            "https://sidof.segob.gob.mx/notas/docFuente/5800864"
+          ],
+          "id_status": "Confirmada 2026-10-23: la nota del INEGI en el DOF del 09/10/2026 (5800864) dice \"Con base en la segunda quincena de julio de 2018=100 el Índice Nacional de Precios al Consumidor del mes de septiembre de 2026 es 146.075\"; esta clave sirve 146.07499999999999000000 para 2026/09 y 145.46199999999999000000 para 2026/08 (la misma nota: 146.075 y 145.462) (corrida 39877667471). El título se copia de esas dos frases de la nota. La clave anterior, 628194, sirve los mismos valores hasta 2024/07 y ahí termina (LASTUPDATE 09/10/2024)."
         }
       ],
-      "note": "Read-only, polite: robots.txt of www.inegi.org.mx allows /app. The token is a path segment of every API URL (documented syntax .../INDICATOR/[IdIndicador]/[Idioma]/[Área]/[Recientes]/[Fuente]/[Versión]/[Token]?type=[Formato]); every recorded URL carries '<token>' instead. 'false' asks for the whole historical series (documented); there is no date range. HIPÓTESIS until a real run answers: the indicator key, fuente 'BIE' (the documented examples use BISE) and área '00'. First real run (indicadores-mx 39709378896, 2026-10-22): HTTP 401 'No autorizado' (ErrorCode 110) on CL_INDICATOR and HTTP 400 'No se encontraron resultados' (ErrorCode 100) on INDICATOR 628194; nothing was stored. Open item for the owner: set INEGI_TOKEN again and re-run indicadores-mx with mx.inegi-bie."
+      "note": "Read-only, polite: robots.txt of www.inegi.org.mx allows /app. The token is a path segment of every API URL (documented syntax .../INDICATOR/[IdIndicador]/[Idioma]/[Área]/[Recientes]/[Fuente]/[Versión]/[Token]?type=[Formato]); every recorded URL carries '<token>' instead. 'false' asks for the whole historical series (documented); there is no date range. Fuente: 'BIE' and 'BISE' answer HTTP 400 for the INPC keys and 'BIE-BISE' answers 200 with área 00 and 00000 (sonda, runs 39870811830, 39870891633, 39875830218; INEGI's query builder says the BIE now lives inside the BISE). CL_INDICATOR answers HTTP 401 'No autorizado' (ErrorCode 110) to our token for every key, the documented example included, so it is not requested; each series carries its title copied from the official publication in confirmed_by. Real bytes: indicadores-mx run 39877667471 (2026-10-23), tests/fixtures/inegi_bie_indicator_910392_2026-10-23.json."
     },
     {
       "source_id": "mx.tratados-sre",

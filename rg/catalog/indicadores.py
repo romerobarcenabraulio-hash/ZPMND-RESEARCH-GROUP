@@ -4,9 +4,8 @@ One catalog entry per observation, with value, date and unit copied exactly as t
 computed, converted or derived (no variations, no averages, no rebasing). Numbers are kept as the literal text of the
 response (json parse_float/parse_int=str), so '14.8290' never becomes 14.829.
 
-Formats were read from the official documentation on 2026-10-21. Banxico's are confirmed by the real bytes of the
-first real run (workflow indicadores-mx, run 39709378896, 2026-10-22), which are now the test fixtures; INEGI's stay
-HIPÓTESIS (that run got HTTP 401 and 400, no INEGI bytes) and so do its CONSTRUIDO_DE_DOCS fixtures:
+Formats were read from the official documentation on 2026-10-21 and are confirmed by real bytes, now the test
+fixtures: Banxico's from run 39709378896 (2026-10-22), INEGI's from run 39877667471 (2026-10-23, fuente BIE-BISE):
 - Banxico SIE (https://www.banxico.org.mx/SieAPIRest/service/v1/doc/consultaDatosSerieRango and doc/consultaSeries):
   GET series/:idSerie/datos/:fechaIni/:fechaFin -> {"bmx": {"series": [{"idSerie", "titulo", "datos": [{"fecha":
   "dd/mm/yyyy", "dato": "14.8290" | "N/E"}]}]}}; GET series/:idSerie -> metadata with "unidad". Token in the header
@@ -15,8 +14,11 @@ HIPÓTESIS (that run got HTTP 401 and 400, no INEGI bytes) and so do its CONSTRU
   the metadata of several series comes in its own order, not the requested one, with an extra "versionada" boolean.
 - INEGI BIE (https://www.inegi.org.mx/servicios/api_indicadores.html): GET .../INDICATOR/{id}/{idioma}/{area}/false/
   {fuente}/2.0/{token}?type=json -> {"Header": ..., "Series": [{"INDICADOR", "UNIT", ..., "OBSERVATIONS":
-  [{"TIME_PERIOD", "OBS_VALUE", ...}]}]}; catalog method CL_INDICATOR -> {"CODE": [{"value", "Description"}]}. The
-  token is a path segment, so every URL that is recorded carries '<token>' in its place.
+  [{"TIME_PERIOD", "OBS_VALUE", ...}]}]}. Seen in the real bytes: fuente 'BIE' and 'BISE' answer 400 for the INPC keys
+  and 'BIE-BISE' answers 200 (sonda, run 39875830218); every OBS_VALUE a JSON string; newest observation first. The
+  catalog method CL_INDICATOR answers 401 to our token, so a series' title is copied from the official publication that
+  confirmed its key (sources/mx.json, confirmed_by). The token is a path segment, so every URL that is recorded carries
+  '<token>' in its place.
 
 Coverage by construction: neither API prints a total, so the count of observations the API served is taken from the
 raw bytes (occurrences of the observation's date key), apart from the parser, and must equal the entries stored for
@@ -110,15 +112,6 @@ def parse_inegi_indicator(body, series_id):
                                   _str(o.get('OBS_VALUE')) if isinstance(o, dict) else None) for o in obs]
 
 
-def parse_inegi_catalog(body, series_id):
-    """The official description of the indicator (CL_INDICATOR), or ValueError."""
-    code = _load(body).get('CODE')
-    match = [c for c in code if isinstance(c, dict) and c.get('value') == series_id] if isinstance(code, list) else []
-    if len(match) != 1 or not _str(match[0].get('Description')):
-        raise ValueError(f'CL_INDICATOR does not describe {series_id} exactly once')
-    return match[0]['Description']
-
-
 def native_id(series_id, date_printed):
     """series.date with '/' as '-': an identifier only; the date itself is kept verbatim in the observation."""
     if not (isinstance(date_printed, str) and _DATE.fullmatch(date_printed)):
@@ -130,13 +123,10 @@ def banxico_urls(series_id, start, end):
     return BANXICO_DATOS.format(series=series_id, start=start, end=end), BANXICO_META.format(series=series_id)
 
 
-def inegi_urls(src, series_id, token):
-    """(url to request, url to record) for INDICATOR and CL_INDICATOR; the recorded ones carry '<token>'."""
+def inegi_url(src, series_id, token):
+    """(url to request, url to record) for INDICATOR; the recorded one carries '<token>'."""
     kw = {'series': series_id, 'lang': src['language'], 'area': src['area'], 'fuente': src['fuente']}
-    out = []
-    for tpl in (INEGI_INDICATOR, INEGI_CATALOG):
-        out.append((tpl.format(**kw, token=quote(token, safe='')), tpl.format(**kw, token=TOKEN_SLOT)))
-    return out
+    return INEGI_INDICATOR.format(**kw, token=quote(token, safe='')), INEGI_INDICATOR.format(**kw, token=TOKEN_SLOT)
 
 
 def entry(src, country, series_id, title, unit, order, date_printed, value_printed, url, artifact, raw_path, seen_at):
