@@ -1,6 +1,8 @@
 """Every interface guard has a case that fails without it (SECURITY.md, threats T1-T4)."""
 import copy
+import json
 import unittest
+from pathlib import Path
 
 from rg.schemas import validate
 
@@ -133,6 +135,27 @@ class PrivacyAndRights(unittest.TestCase):
 
     def test_requested_demand_needs_request_id(self):
         self.assertTrue(validate('knowledge_demand', mutate(DEMAND, lambda d: d.update(origin='RESEARCH_REQUEST'))))
+
+
+class RepoFiles(unittest.TestCase):
+    """Every request and packet in the repo validates, is named by its id, and every packet answers a request that is
+    in requests/: a packet that answers nothing, or a hand-edited file that drifts from its schema, fails here."""
+
+    def test_every_request_and_packet_validates_and_every_packet_answers_a_request(self):
+        root = Path(__file__).resolve().parents[1]
+        requests = {}
+        for f in sorted((root / 'requests').glob('*.json')):
+            r = json.loads(f.read_text(encoding='utf-8'))
+            self.assertEqual(validate('research_request', r), [], f.name)
+            self.assertEqual(f.stem, r['request_id'])
+            requests[r['request_id']] = r
+        packets = sorted((root / 'research-packets').glob('*/packet.json'))
+        self.assertTrue(requests and packets)
+        for f in packets:
+            p = json.loads(f.read_text(encoding='utf-8'))
+            self.assertEqual(validate('research_packet', p), [], f.parent.name)
+            self.assertEqual(f.parent.name, p['research_id'])
+            self.assertIn(p['request_id'], requests, f.parent.name)
 
 
 if __name__ == '__main__':
