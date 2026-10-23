@@ -138,7 +138,8 @@ STATE; el DELTA lo calcula ZPMND.
 ### Orden de construcción que sale de aquí
 
 1. Emitir ChangeEvent candidatos cuando cambia el sha256 de una ley o un reglamento. Es determinista y los datos ya están.
-2. Extraer el texto de los crudos para obtener `effective_at` (transitorios) y las aristas, cada una con su cita.
+2. Extraer el texto de los crudos para obtener `effective_at` (transitorios) y las aristas, cada una con su cita. El
+   extractor ya existe ([TEXTO.md](TEXTO.md)); falta leer transitorios y aristas sobre ese texto.
 3. Claves INEGI de territorio por tabla fija, con su fuente oficial revisada (robots y licencia) antes de activarla.
 
 El contrato ya está escrito: `schemas/change_event.schema.json` y `schemas/relation.schema.json`, validados por

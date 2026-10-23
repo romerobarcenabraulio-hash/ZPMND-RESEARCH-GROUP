@@ -23,6 +23,7 @@ ResearchRequest (from ZPMND or Braulio) ──► RESEARCH GROUP ──► Resea
 | `substrate/` | pinned OpenClaw (`openclaw.lock.json`), hardened profile (`openclaw.json`), isolated runtime (`runtime/`), catalog runner (`runtime/Dockerfile.catalog`) |
 | `sources/` | per-country source registry (data, not code): active sources and planned ones with their observed blocker |
 | `rg/catalog/` | guarded fetcher, site adapters (SIDOF/DOF, LeyesBiblio, OJN; SCJN tesis from a secondary Hugging Face dataset; Banxico SIE indicators, active; INEGI BIE, in trial), fixed doc-type table, store, run with coverage reconciliation |
+| `rg/text/` | text of each stored raw by pinned extractor (HTML, DOCX, PDF text layer), one status per raw, quote check ([docs/TEXTO.md](docs/TEXTO.md)) |
 | `tests/` | one failing case per guard |
 | `requests/`, `knowledge-demand/`, `research-packets/`, `manifests/`, `hooks/research-goodware/` | next steps; see the contract, section 5 |
 

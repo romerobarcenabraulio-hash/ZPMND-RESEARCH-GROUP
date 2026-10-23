@@ -221,6 +221,7 @@ la SCJN cuando la fuente primaria abra.
   - `runs/<id>.json` con el manifiesto de cada corrida;
   - `_state.json` con lo ya indexado, para que cada corrida sea incremental.
 - Crudos: release `raw-mx`, un `.tar` por corrida con los archivos nuevos. Las rutas son direcciones por contenido (`sha256/<2>/<sha256>.<ext>`), así que el hash es la ruta.
+- Texto de los crudos: manifiesto en `mx/texto/` (un estado por crudo) y textos en el release `text-mx`. Lo produce el flujo manual `texto-mx.yml`; formatos, estados y la brecha de OCR están en [TEXTO.md](TEXTO.md).
 - Cada registro lleva url, fecha de recuperación, sha256, tamaño, tipo, licencia y la ruta de su crudo. Las versiones de leyes y ordenamientos estatales se acumulan; nunca se borran.
 
 ## Tratados internacionales: vista derivada del DOF
