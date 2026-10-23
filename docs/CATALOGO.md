@@ -12,9 +12,9 @@ El catálogo extrae información oficial pública por país. La guarda **cruda**
 | `mx.ojn-estatal` (Orden Jurídico Nacional, SEGOB) | Legislación de las 32 entidades, por poder | tipo oficial impreso por la fuente, poder, entidad, fechas, estatus de la ficha | documento oficial (mayormente .doc) |
 | `mx.hf-tesis-scjn` (**fuente secundaria**, dataset de Hugging Face) | Tesis aisladas y jurisprudencia del Semanario Judicial de la Federación | lo que imprime cada tesis: época, instancia, materias, número de tesis, tipo (tabla fija), fecha de publicación impresa | el archivo del dataset (JSON de 3.6 GB), verificado contra su sha256 |
 
-"Cálculo" (valores oficiales para calcular: tipo de cambio, INPC, UDIS, tasas, salarios mínimos, UMA) se publica en el DOF y queda en la categoría `INDICADOR ECONOMICO`. Las NOM y sus proyectos también salen del DOF. Los valores mismos, serie por serie, llegan de las API de Banxico (activa) e INEGI (en prueba) (sección siguiente).
+"Cálculo" (valores oficiales para calcular: tipo de cambio, INPC, UDIS, tasas, salarios mínimos, UMA) se publica en el DOF y queda en la categoría `INDICADOR ECONOMICO`. Las NOM y sus proyectos también salen del DOF. Los valores mismos, serie por serie, llegan de las API de Banxico e INEGI, las dos activas (sección siguiente).
 
-## Indicadores para cálculo: Banxico SIE (`mx.banxico-sie`, activa) e INEGI BIE (`mx.inegi-bie`, en prueba)
+## Indicadores para cálculo: Banxico SIE (`mx.banxico-sie`) e INEGI BIE (`mx.inegi-bie`), activas
 
 Valores oficiales para calcular, tomados directo de la API de cada institución. Se guardan **tal como los sirve la
 API**: sin cálculos, conversiones ni variaciones.
@@ -25,14 +25,15 @@ API**: sin cálculos, conversiones ni variaciones.
 | UDIS | `SP68257` | [catálogo de series](https://www.banxico.org.mx/SieAPIRest/service/v1/doc/catalogoSeries) ("Valor de UDIS.") y el ejemplo de [metadatos](https://www.banxico.org.mx/SieAPIRest/service/v1/doc/consultaSeries) (desde 04/04/1995) |
 | TIIE de fondeo a un día | `SF331451` | [cuadro CF101](https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CF101&sector=18&locale=es) ("TIIE de fondeo a un día", desde 02/01/2006) |
 | TIIE a 28 días | `SF43783` | [cuadro CF101](https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CF101&sector=18&locale=es) ("TIIE a 28 días", desde 23/03/1995). El catálogo de la API lista además `SF60648` entre las series del servicio SOAP anterior; no aparece en los cuadros actuales y no se usa |
-| INPC, índice general | `628194` | **HIPÓTESIS**: ninguna página oficial estática la imprime. Las páginas del INEGI se arman con JavaScript, y el constructor de consultas usa un token interno que no es nuestro. La primera corrida guarda la respuesta de `CL_INDICATOR`, el método oficial de catálogo, como evidencia |
+| INPC, índice general | `910392` | La [nota del INEGI en el DOF del 09/10/2026](https://sidof.segob.gob.mx/notas/docFuente/5800864) imprime el INPC de septiembre (146.075) y agosto (145.462) de 2026, con base en la segunda quincena de julio de 2018=100. Esta clave sirve esos mismos valores (`146.07499999999999000000`, `145.46199999999999000000`). Se pide con la fuente `BIE-BISE`: con `BIE` o `BISE` la API responde 400. La clave anterior, `628194`, sirve los mismos valores hasta 2024/07 y ahí termina |
 
 - **Qué se guarda:** un registro por observación, en `banxico-sie/<serie>.jsonl` e `inegi-bie/<indicador>.jsonl`.
   `observation` lleva `date_printed`, `value_printed` y `unit_printed` exactamente como llegan. "N/E" se guarda tal
   cual, y los números se guardan como el texto de la respuesta, nunca como float. El título sale de la fuente: el
-  `titulo` de Banxico o la `Description` del catálogo `CL_INDICATOR` de INEGI. La unidad es `unidad` en los metadatos de
+  `titulo` de Banxico; en INEGI, el título copiado de la nota oficial que confirmó la clave, porque `CL_INDICATOR` (el
+  método de catálogo) responde 401 a nuestro token y no se pide. La unidad es `unidad` en los metadatos de
   Banxico y `UNIT` en INEGI, tal como llega. No se guarda ningún cálculo derivado.
-- **Crudo:** cada respuesta 200 de la API (metadatos, datos, `CL_INDICATOR`) se guarda byte por byte en el `RawStore`.
+- **Crudo:** cada respuesta 200 de la API (metadatos y datos) se guarda byte por byte en el `RawStore`.
   Un registro que no cambia conserva el crudo que lo sirvió primero, y un valor revisado agrega una versión.
 - **Rango:** cada corrida pide la historia completa hasta hoy. En Banxico va de la fecha inicial que imprime el cuadro
   oficial hasta hoy. En INEGI se pide `false` (serie histórica completa), porque la API no tiene rango de fechas.

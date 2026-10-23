@@ -718,14 +718,10 @@ class Run:
         for s in src['series']:
             if not indicadores.valid_series(s['id']):
                 continue
-            (url, shown), (cat_url, cat_shown) = indicadores.inegi_urls(src, s['id'], token)
-            c = self._ind_get(f, sid, cat_url, cat_shown, token)
-            title = None
-            if self._ind_store(sid, c, token, stats, f"{s['id']} CL_INDICATOR"):
-                try:
-                    title = indicadores.parse_inegi_catalog(c.body, s['id'])
-                except ValueError as exc:
-                    self._ind_error(sid, f"{s['id']} CL_INDICATOR: {exc}", token)
+            url, shown = indicadores.inegi_url(src, s['id'], token)
+            # CL_INDICATOR answers 401 to our token: the title is the one copied from the official publication that
+            # confirmed the key (sources/mx.json). An unconfirmed key is fetched but never catalogued.
+            title = s.get('title') if s.get('confirmed_by') else None
             r = self._ind_get(f, sid, url, shown, token)
             stored = self._ind_store(sid, r, token, stats, s['id'])
             unit, observations = None, []
