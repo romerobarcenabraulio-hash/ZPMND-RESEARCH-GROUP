@@ -66,7 +66,9 @@ def write_blobs(rows, rp, data, repo='.'):
 
 
 def one(sha, rp, data, budget, repo='.'):
-    """(result, bytes written) for one changed packet folder; an error is a failed result."""
+    """(result, bytes reserved) for one changed packet folder; an error is a failed result. The folder's bytes are
+    reserved before the first one is written, so an error after that still counts them against the head's budget."""
+    reserved = 0
     try:
         rows = tree(sha, rp, repo)
         if not rows:
@@ -78,18 +80,19 @@ def one(sha, rp, data, budget, repo='.'):
                     + ([f'{total} bytes: over the {budget} left for this head'] if total > budget else []))
         if problems:
             return {'packet': rp, 'status': 'failed', 'problems': problems}, 0
+        reserved = total
         folder = write_blobs(rows, rp, data, repo)
         problems, warnings, stats = check(folder)
+        ok = not problems and not warnings
+        raws = {}
+        if ok:
+            for f in sorted((folder / 'raw').rglob('*')):
+                if f.is_file():
+                    raws[f'research-packets/{rp}/{f.relative_to(folder).as_posix()}'] = hashlib.sha256(f.read_bytes()).hexdigest()
     except Exception as e:  # noqa: BLE001 - whatever breaks, the folder fails and packets.json is still written
-        return {'packet': rp, 'status': 'failed', 'problems': [f'the gate did not finish: {type(e).__name__}']}, 0
-    ok = not problems and not warnings
-    raws = {}
-    if ok:
-        for f in sorted((folder / 'raw').rglob('*')):
-            if f.is_file():
-                raws[f'research-packets/{rp}/{f.relative_to(folder).as_posix()}'] = hashlib.sha256(f.read_bytes()).hexdigest()
+        return {'packet': rp, 'status': 'failed', 'problems': [f'the gate did not finish: {type(e).__name__}']}, reserved
     return {'packet': rp, 'status': 'passed' if ok else 'failed', 'problems': problems, 'warnings': warnings,
-            'stats': stats, 'raws': raws}, total
+            'stats': stats, 'raws': raws}, reserved
 
 
 def gate(base, sha, data, repo='.'):

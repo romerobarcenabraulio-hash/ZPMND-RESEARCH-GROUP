@@ -104,6 +104,35 @@ class PacketGate(unittest.TestCase):
             [packet] = self.run_gate(sha)['packets']
         self.assertEqual((packet['status'], packet['problems']), ('failed', ['the gate did not finish: RuntimeError']))
 
+    def two_packets(self):
+        shutil.copytree(self.repo / 'research-packets' / RP, self.repo / 'research-packets' / 'RP-2026-10-23-segundo')
+        size = sum(f.stat().st_size for f in (self.repo / 'research-packets' / RP).rglob('*') if f.is_file())
+        return self.commit('dos paquetes'), size
+
+    def test_bytes_written_before_an_error_still_count_against_the_budget(self):
+        sha, size = self.two_packets()
+        real = pg.check
+        calls = iter([RuntimeError('después de escribir'), None])
+
+        def first_fails(folder):
+            err = next(calls)
+            if err:
+                raise err
+            return real(folder)
+        with mock.patch.object(pg, 'MAX_TOTAL', size + size // 2), mock.patch.object(pg, 'check', first_fails):
+            first, second = self.run_gate(sha)['packets']
+        self.assertEqual(first['problems'], ['the gate did not finish: RuntimeError'])
+        self.assertEqual(second['status'], 'failed')
+        self.assertTrue(any('over the' in p for p in second['problems']), second['problems'])
+
+    def test_an_error_while_hashing_fails_that_folder_and_keeps_the_others(self):
+        sha, _ = self.two_packets()
+        with mock.patch.object(pg.hashlib, 'sha256', side_effect=OSError('disco')):
+            result = self.run_gate(sha)
+        self.assertNotIn('error', result)
+        self.assertEqual([(p['status'], p['problems']) for p in result['packets']],
+                         [('failed', ['the gate did not finish: OSError'])] * 2)
+
     def test_a_tampered_raw_fails_and_lists_no_raw(self):
         raw = next((self.repo / 'research-packets' / RP / 'raw').rglob('*.html'))
         raw.write_bytes(raw.read_bytes().replace(b'escrito', b'ESCRITO'))
