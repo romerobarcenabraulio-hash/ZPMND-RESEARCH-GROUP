@@ -66,7 +66,9 @@ bloquea mientras Braulio no decida volverlo obligatorio (por ejemplo, exigiendo 
 **Merge automático de datos (Braulio, 2026-10-27: "sí, fusión automática para PRs de datos"):** un PR que solo agrega
 o modifica paquetes (`research-packets/<RP>/`) o planes de fuentes (`requests/plans/<RR>.json`), desde una rama de este
 repo, se fusiona solo cuando los dos auditores dieron PASS sobre su commit exacto y todo CI está verde
-(`scripts/automerge.py`, flujo `automerge.yml`, SECURITY.md T15). Para datos, GPT sí bloquea: hace falta su PASS. Todo
+(`scripts/automerge.py`, flujo `automerge.yml`, SECURITY.md T15). Para datos, GPT sí bloquea: hace falta su PASS. La
+aprobación se lee de las corridas de `auditor.yml` (su trabajo `pass-both`) y de `ci.yml` sobre ese commit, nunca de un
+estado o un comentario, que cualquier flujo de una rama podría imitar (REVISE de GPT en #48). Todo
 lo demás (código, flujos, documentos, pruebas, mutantes, o un PR que borra o renombra) sigue esperando el merge de
 Braulio.
 

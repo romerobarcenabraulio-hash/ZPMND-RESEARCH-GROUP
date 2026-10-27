@@ -7,29 +7,29 @@ commit is merged, pinned to it, only when all of this holds; anything else leave
 - it comes from a branch of this repository (a fork never qualifies), is not a draft and still has that head;
 - every file it touches is data: added or modified (never removed or renamed) under research-packets/<RP>/, or a
   source plan requests/plans/<RR>.json. Never code, workflows, docs, tests or mutants;
-- both auditors passed this exact commit: the latest statuses `auditor` ("AUDIT VERDICT: PASS") and `auditor-gpt`
-  ("GPT REVIEW: PASS") are success and were set by github-actions[bot], the auditor workflow's token;
-- every check run on the commit finished as success, skipped or neutral, and the jobs of ci and of the auditor are
-  among them (REQUIRED), so a workflow that has not started yet holds the merge back.
-Trust boundary (SECURITY.md T15): a workflow of a same-repo PR runs with this repository's token too, so whoever can
-push a branch here could set a status as github-actions[bot]; that actor can already push to main. A fork's workflows
-get a read-only token, and the auditor never audits a fork.
+- the trusted runs on that commit for that PR passed (TRUSTED): the newest run of .github/workflows/auditor.yml for
+  pull_request_target (whose file always comes from main) and of .github/workflows/ci.yml for pull_request (the PR's
+  copy, which a data-only PR cannot change) both finished success, and every job in them succeeded, none skipped, among
+  them the ones each must have; in the auditor's, pass-both, which runs only when the Claude verdict and the GPT review
+  it posted for that head are both PASS.
+Statuses and comments are never read: any workflow of a branch here runs with this repository's token and could imitate
+them (GPT, REVISE of #48). A run's file path and event are GitHub's, not the branch's. SECURITY.md T15.
 """
 import json
 import os
 import re
 import sys
-import urllib.parse
 import urllib.request
 
 API = 'https://api.github.com'
 SHA = re.compile(r'^[0-9a-f]{40}$')
 REPO = re.compile(r'^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')
 DATA = re.compile(r'^(?:research-packets/RP-[A-Za-z0-9._-]{3,64}/[A-Za-z0-9._/-]+|requests/plans/RR-[A-Za-z0-9._-]{3,64}\.json)$')
-BOT = 'github-actions[bot]'
-VERDICTS = {'auditor': 'AUDIT VERDICT: PASS', 'auditor-gpt': 'GPT REVIEW: PASS'}
-REQUIRED = {'checks', 'audit', 'audit-gpt', 'packet-gate'}  # ci's job and the auditor's
-GREEN = {'success', 'skipped', 'neutral'}
+TRUSTED = {  # workflow file -> (the event of its trusted run, jobs that run must have)
+    '.github/workflows/auditor.yml': ('pull_request_target', {'gate', 'evidence', 'packet-gate', 'audit', 'audit-gpt',
+                                                              'post', 'post-gpt', 'pass-both'}),
+    '.github/workflows/ci.yml': ('pull_request', {'checks'}),
+}
 MAX_FILES = 3000  # the files API lists at most 3,000 per PR: a longer list could hide one
 
 
@@ -48,30 +48,33 @@ def data_only(files):
     return None
 
 
-def audited(statuses, sha):
-    """None when both auditors passed the commit; statuses newest first (the API's order), the latest per context."""
-    latest = {}
-    for s in statuses:
-        latest.setdefault(s.get('context'), s)
-    for context, line in VERDICTS.items():
-        s = latest.get(context) or {}
-        if s.get('state') != 'success' or s.get('description') != line or (s.get('creator') or {}).get('login') != BOT:
-            return f'{context}: no PASS from the auditor on {sha[:7]}'
+def newest(runs, path, event, sha, n):
+    """The newest run of that workflow file, for that event, on that commit and that PR; None if there is none."""
+    mine = [r for r in runs if r.get('path') == path and r.get('event') == event and r.get('head_sha') == sha
+            and n in [p.get('number') for p in r.get('pull_requests') or []]]
+    return max(mine, key=lambda r: r.get('id', 0), default=None)
+
+
+def verified(runs, jobs_of, sha, n):
+    """None when each TRUSTED workflow's newest run on the commit for PR n finished success with every job succeeded
+    (none skipped) and its required jobs among them; else why not. jobs_of(run id) lists that run's jobs."""
+    for path, (event, required) in TRUSTED.items():
+        run = newest(runs, path, event, sha, n)
+        if run is None:
+            return f'no {event} run of {path} on {sha[:7]}'
+        if run.get('status') != 'completed' or run.get('conclusion') != 'success':
+            return f"{path}: {run.get('status')}/{run.get('conclusion')}"
+        jobs = jobs_of(run['id'])
+        missing = required - {j.get('name') for j in jobs}
+        if missing:
+            return f'{path}: did not run {", ".join(sorted(missing))}'
+        for j in jobs:
+            if j.get('conclusion') != 'success':
+                return f"{path}: {j.get('name')} {j.get('conclusion')}"
     return None
 
 
-def green(runs):
-    """None when ci and the auditor ran and every check run finished green; else why not."""
-    missing = REQUIRED - {r.get('name') for r in runs}
-    if missing:
-        return f'not run yet: {", ".join(sorted(missing))}'
-    for r in runs:
-        if r.get('conclusion') not in GREEN:  # a run still going has no conclusion
-            return f"{r.get('name')}: {r.get('status')}/{r.get('conclusion')}"
-    return None
-
-
-def decide(pr, files, statuses, runs, repo, sha):
+def decide(pr, files, runs, jobs_of, repo, sha):
     """None to merge; else the reason the PR stays with the owner."""
     head = pr.get('head') or {}
     if pr.get('state') != 'open' or pr.get('draft'):
@@ -84,7 +87,7 @@ def decide(pr, files, statuses, runs, repo, sha):
         return 'it comes from a fork'
     if pr.get('changed_files') != len(files):
         return f"{pr.get('changed_files')} changed files, {len(files)} listed"
-    return data_only(files) or audited(statuses, sha) or green(runs)
+    return data_only(files) or verified(runs, jobs_of, sha, pr.get('number'))
 
 
 def api(method, path, body=None, token=''):
@@ -115,22 +118,22 @@ def main(env=None, call=None):
         print('REPO and SHA are required')
         return 2
     call = call or (lambda method, path, body=None: api(method, path, body, env.get('GH_TOKEN', '')))
+    runs = pages(call, f'/repos/{repo}/actions/runs?head_sha={sha}', 'workflow_runs')
+
+    def jobs_of(run_id):
+        return pages(call, f'/repos/{repo}/actions/runs/{int(run_id)}/jobs?filter=latest', 'jobs')
+
     for listed in call('GET', f'/repos/{repo}/commits/{sha}/pulls'):
         n = listed.get('number')
         if listed.get('state') != 'open' or not isinstance(n, int):
             continue
         pr = call('GET', f'/repos/{repo}/pulls/{n}')
-        why = decide(pr, pages(call, f'/repos/{repo}/pulls/{n}/files'), pages(call, f'/repos/{repo}/commits/{sha}/statuses'),
-                     pages(call, f'/repos/{repo}/commits/{sha}/check-runs?filter=latest', 'check_runs'), repo, sha)
+        why = decide(pr, pages(call, f'/repos/{repo}/pulls/{n}/files'), runs, jobs_of, repo, sha)
         if why:
             print(f'#{n} stays with the owner: {why}')
             continue
         call('PUT', f'/repos/{repo}/pulls/{n}/merge', {'sha': sha, 'merge_method': 'squash', 'commit_title': f"{pr['title']} (#{n})"})
-        print(f'#{n} merged, pinned to {sha}')
-        try:
-            call('DELETE', f"/repos/{repo}/git/refs/heads/{urllib.parse.quote(pr['head']['ref'], safe='/')}")
-        except Exception as exc:  # the merge stands; a branch left behind is only clutter
-            print(f"#{n}: branch {pr['head']['ref']} not deleted: {exc}")
+        print(f'#{n} merged, pinned to {sha}')  # its branch stays: deleting it could race a new push (GPT, #48)
     return 0
 
 
