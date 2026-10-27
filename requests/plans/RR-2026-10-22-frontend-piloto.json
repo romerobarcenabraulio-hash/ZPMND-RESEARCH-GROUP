@@ -1,0 +1,185 @@
+{
+ "request_id": "RR-2026-10-22-frontend-piloto",
+ "sources": [
+  {
+   "url": "https://base44.com/terms-of-service",
+   "title": "Base44: Terms of Service",
+   "publisher": "Base44",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://base44.com/privacy-policy",
+   "title": "Base44: Privacy Policy",
+   "publisher": "Base44",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://base44.com/pricing",
+   "title": "Base44: Pricing",
+   "publisher": "Base44",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://docs.base44.com/Integrations/github-connector.md",
+   "title": "Base44 docs: GitHub connector",
+   "publisher": "Base44",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://docs.base44.com/Building-your-app/Managing-your-app-data.md",
+   "title": "Base44 docs: Managing your app data",
+   "publisher": "Base44",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://vercel.com/legal/terms",
+   "title": "Vercel: Terms of Service (v0)",
+   "publisher": "Vercel",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://vercel.com/legal/privacy-policy",
+   "title": "Vercel: Privacy Notice (v0)",
+   "publisher": "Vercel",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://v0.app/pricing",
+   "title": "v0: Pricing",
+   "publisher": "Vercel",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://v0.app/docs/github.md",
+   "title": "v0 docs: GitHub",
+   "publisher": "Vercel",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://v0.app/docs/faqs.md",
+   "title": "v0 docs: FAQs",
+   "publisher": "Vercel",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://stackblitz.com/terms-of-service",
+   "title": "StackBlitz: Terms of Service (Bolt)",
+   "publisher": "StackBlitz",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://stackblitz.com/privacy-policy",
+   "title": "StackBlitz: Privacy Policy (Bolt)",
+   "publisher": "StackBlitz",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://bolt.new/pricing",
+   "title": "Bolt: Pricing",
+   "publisher": "StackBlitz",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://support.bolt.new/integrations/git.md",
+   "title": "Bolt docs: Git integration",
+   "publisher": "StackBlitz",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://support.bolt.new/bolt-cloud/database/security.md",
+   "title": "Bolt docs: Bolt Cloud database security",
+   "publisher": "StackBlitz",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://www.anthropic.com/legal/consumer-terms",
+   "title": "Anthropic: Consumer Terms of Service (Claude)",
+   "publisher": "Anthropic",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://www.anthropic.com/legal/commercial-terms",
+   "title": "Anthropic: Commercial Terms of Service",
+   "publisher": "Anthropic",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://www.anthropic.com/legal/privacy",
+   "title": "Anthropic: Privacy Policy",
+   "publisher": "Anthropic",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://claude.com/pricing",
+   "title": "Claude: Pricing",
+   "publisher": "Anthropic",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them",
+   "title": "Claude Help Center: What are artifacts",
+   "publisher": "Anthropic",
+   "source_type": "vendor_doc",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  }
+ ]
+}
