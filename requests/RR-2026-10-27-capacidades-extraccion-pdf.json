@@ -1,0 +1,17 @@
+{
+ "request_id": "RR-2026-10-27-capacidades-extraccion-pdf",
+ "issued_by": "OWNER",
+ "issued_at": "2026-10-27T18:00:00Z",
+ "question": "¿Qué software, servicios, APIs, modelos o conjuntos de datos existentes pueden extraer el texto y la estructura (encabezados, tablas, notas, numerales) de documentos oficiales en PDF en español, incluidos los escaneados, con la fidelidad que exige citar textualmente, y bajo qué licencias, costos, límites y condiciones de autoalojamiento? ¿Cómo se evaluó cada uno y dónde fallan?",
+ "why_needed": "ZPMND y RESEARCH GROUP leen normas y avisos oficiales que llegan en PDF; una cita que no es textual no se puede verificar. Antes de construir o elegir, hace falta saber qué capacidades existen, con qué evidencia y con qué condiciones (experimento de exploración de capacidades del dueño, 2026-10-27).",
+ "affected_component": "extracción de texto de fuentes oficiales y resolución de capacidades",
+ "desired_evidence": [
+  "candidatos de varias familias (bibliotecas abiertas, servicios comerciales, modelos, datasets o benchmarks), cada uno con su documentación oficial",
+  "cómo se evaluó cada uno, con qué datos y resultados, y evidencia independiente o en contra",
+  "licencia, costo y condiciones de uso y autoalojamiento según la fuente primaria",
+  "lo no determinable, como desconocido"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Elegir una capacidad por su propaganda, con citas que no son fieles o condiciones de licencia o datos incompatibles.",
+ "privacy_class": "PUBLIC"
+}
