@@ -1,0 +1,246 @@
+{
+ "request_id": "RR-2026-10-21-odoo-community-funciones",
+ "fetched": [
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr/__manifest__.py",
+   "status": 200,
+   "error": null,
+   "sha256": "37425daa3f9339592650a1fecdcd0c8d8cccec436712b9a0ec12c181c0223a67",
+   "bytes": 1880,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:45Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1880
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_attendance/__manifest__.py",
+   "status": 200,
+   "error": null,
+   "sha256": "b8c35ba02fd9c075c78097c589e664db31d533f0d72768a46cc0c433e31eb5b5",
+   "bytes": 3632,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:46Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 3632
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_holidays/__manifest__.py",
+   "status": 200,
+   "error": null,
+   "sha256": "c79d1b4939c6be83e7dd08e800d342a35f81caaa38f7406b08b191d7ce2efa91",
+   "bytes": 3424,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:47Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 3424
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_contract/__manifest__.py",
+   "status": 200,
+   "error": null,
+   "sha256": "b36a5369b3ab9a25b783cbb38d03a0d1fbee2882613d9917667d9f4eda8e5489",
+   "bytes": 1268,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:48Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1268
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_work_entry/__manifest__.py",
+   "status": 200,
+   "error": null,
+   "sha256": "037e72e153a425c6de92ec3a8fcc7d1973592f2e76dc67f1dfdd23dec1fc0ed8",
+   "bytes": 700,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:49Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 700
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/project/__manifest__.py",
+   "status": 200,
+   "error": null,
+   "sha256": "1131de0d272d50c0f95a45122bda311532f4f6b52aca811222bfc3a8c67e3d51",
+   "bytes": 8941,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:50Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 8941
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_timesheet/__manifest__.py",
+   "status": 200,
+   "error": null,
+   "sha256": "46ed579436e0c06ad5925bf55a2e510926ad9d3770d7d10661c8d0d85f2a5244",
+   "bytes": 2303,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:51Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 2303
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_skills/__manifest__.py",
+   "status": 200,
+   "error": null,
+   "sha256": "d215abd31d03d27588e7d06dc874ae01a46d3eba3781f0ec7cff095ac104d3a2",
+   "bytes": 1883,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:52Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1883
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr/security/ir.model.access.csv",
+   "status": 200,
+   "error": null,
+   "sha256": "a06eda17816585213f3c76023aacd1290982b3ad7cf9f9a09ffd020208edd733",
+   "bytes": 1761,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:53Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1761
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_attendance/security/ir.model.access.csv",
+   "status": 200,
+   "error": null,
+   "sha256": "102c1a7619621105c0c3db804a022675b10c29e43d213290c900fc1fd3fcb831",
+   "bytes": 793,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:54Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 793
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_holidays/security/ir.model.access.csv",
+   "status": 200,
+   "error": null,
+   "sha256": "765f2d2940ce95958e04d5ec0869e5e05895981a92429cf955534ca0c5bc76d2",
+   "bytes": 3358,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:55Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 3358
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_contract/security/ir.model.access.csv",
+   "status": 200,
+   "error": null,
+   "sha256": "2a8f2f2f6b485c26c50de8f0c54deecdad7f23751c5adb0f71c730fe357fc0b8",
+   "bytes": 1051,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:56Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1051
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_work_entry/security/ir.model.access.csv",
+   "status": 200,
+   "error": null,
+   "sha256": "c41389a673a2c31ef12b199939596b4c682e9d603db0b04a00a4ee7d21a9c125",
+   "bytes": 639,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:57Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 639
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/project/security/ir.model.access.csv",
+   "status": 200,
+   "error": null,
+   "sha256": "f26e563e35bb160b54b41455d908abb3a9616e5e64d84cfbbf6a6595e9a30de7",
+   "bytes": 5722,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:58Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 5722
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_timesheet/security/ir.model.access.csv",
+   "status": 200,
+   "error": null,
+   "sha256": "1ac5099c9af2938b6c8921293f8971205b01fb4854af9bbeaeb2d703541cc70b",
+   "bytes": 1044,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:12:59Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1044
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/LICENSE",
+   "status": 200,
+   "error": null,
+   "sha256": "abc09dad5f84a76e1b0279237053cae16c03228ab27d8d467677054c2bd17eeb",
+   "bytes": 43529,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:13:00Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 43529
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/documentation/17.0/content/developer/reference/external_api.rst",
+   "status": 200,
+   "error": null,
+   "sha256": "feb2d58ab234aa5458fb93f1ab14bc0416ed9e62ed1905d6b8b5fcd48bdf7e1e",
+   "bytes": 46548,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:13:01Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 46548
+  },
+  {
+   "url": "https://raw.githubusercontent.com/odoo/documentation/17.0/content/applications/hr/payroll.rst",
+   "status": 200,
+   "error": null,
+   "sha256": "8c84c16d8b4c84ff0cb463c38d3229385117c34ee13bd40d2481d8043d56ae13",
+   "bytes": 46823,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-27T17:13:02Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 46819
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/40548387174",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "El módulo Employees (hr) de Odoo 17 está bajo LGPL-3.",
+    "now": "El módulo Employees (hr) está bajo LGPL-3.",
+    "cut": "La mención de Odoo 17, que la cita no dice."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "El repositorio de Odoo 17 declara que Odoo se publica bajo LGPLv3.",
+    "now": "Odoo se publica bajo la GNU Lesser General Public License, versión 3.",
+    "cut": "La referencia al repositorio de Odoo 17."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "Las horas (hr_timesheet) se registran sobre account.analytic.line.",
+    "now": "hr_timesheet define ACL para account.analytic.line.",
+    "cut": "Que las horas se registran sobre ese modelo."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "La doc de la API externa dice que sus funciones y datos están disponibles desde fuera de Odoo.",
+    "now": "Odoo suele extenderse internamente mediante módulos, pero muchas de sus funciones y (el texto se corta aquí).",
+    "cut": "Que estén disponibles desde fuera de Odoo."
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "El endpoint xmlrpc/2/object sirve para llamar métodos de los modelos.",
+    "now": "El endpoint xmlrpc/2/object sirve para llamar métodos de odoo.",
+    "cut": "La palabra «modelos», que la cita no incluye."
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "fields_get sirve para inspeccionar los campos de un modelo.",
+    "now": "fields_get puede usarse para inspeccionar (el texto se corta aquí).",
+    "cut": "Que inspeccione los campos de un modelo."
+   }
+  ]
+ }
+}
