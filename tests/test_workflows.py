@@ -126,6 +126,11 @@ class AuditorGpt(unittest.TestCase):
         self.assertIn('-f context=auditor-gpt -f description="GPT REVIEW: $verdict"', run)
         self.assertNotRegex(run, r'context=auditor(\s|$)')
 
+    def test_the_evidence_has_time_for_all_of_mains_mutants(self):
+        # #43 (run 40441783078): a PR that changes the mutation runner runs all of main's mutants with main's runner on
+        # one runner; cancelled at 90 min, it left the PR with no audit at all.
+        self.assertGreaterEqual(self.jobs['evidence']['timeout-minutes'], 300)
+
     def test_the_claude_auditor_keeps_its_format_and_status(self):
         run = self.jobs['post']['steps'][0]['run']
         self.assertIn('echo "AUDIT VERDICT: $verdict $SHA"; echo', run)

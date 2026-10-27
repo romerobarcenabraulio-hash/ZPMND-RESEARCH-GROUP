@@ -29,6 +29,7 @@ MUT = [
  ('.github/workflows/auditor.yml', "    concurrency: { group: 'auditor-gpt-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }", "    concurrency: { group: 'auditor-gpt-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }\n    env: { OPENAI_API_KEY: '${{ secrets.OPENAI_API_KEY }}' }"),
  ('.github/workflows/auditor.yml', "    if: needs.post.outputs.verdict == 'PASS' && needs.post-gpt.outputs.verdict == 'PASS'\n", "    if: needs.post.outputs.verdict == 'PASS'\n"),
  ('.github/workflows/auditor.yml', '    needs: [gate, evidence, packet-gate]', '    needs: [gate, evidence]'),
+ ('.github/workflows/auditor.yml', '    timeout-minutes: 300  # a PR that changes', '    timeout-minutes: 90  # a PR that changes'),
  ('.github/workflows/auditor.yml', '-f context=auditor-gpt -f description="GPT REVIEW: $verdict"', '-f context=auditor -f description="GPT REVIEW: $verdict"'),
  ('.github/workflows/auditor.yml', '= "GPT REVIEW: $verdict $SHA" ]', '= "AUDIT VERDICT: $verdict $SHA" ]'),
  ('.github/workflows/auditor.yml', """[ "$(grep -ci 'AUDIT VERDICT' verdict.md)" = 0 ] || { echo "the comment names an AUDIT VERDICT: not posted"; exit 1; }""", 'true'),

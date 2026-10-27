@@ -87,7 +87,8 @@ jobs:
     needs: gate
     if: needs.gate.outputs.run == 'true'
     runs-on: ubuntu-24.04
-    timeout-minutes: 90  # a private runner has 2 cores: tests + ~60 mutants took over 45 min (2026-10-21)
+    timeout-minutes: 300  # a PR that changes the mutation runner gets all of main's ~440 mutants on one runner: #43
+    # (run 40441783078) was cancelled at 90 min; CI's shards measure ~1.7 min per mutant per core, so ~3 h on 4 cores
     permissions: { contents: read }
     concurrency: { group: 'auditor-evidence-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }
     steps:
