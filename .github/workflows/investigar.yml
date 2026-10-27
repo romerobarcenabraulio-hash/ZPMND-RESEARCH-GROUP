@@ -10,7 +10,9 @@ name: investigar
 # - analyze: the owner's Claude subscription (CLAUDE_CODE_OAUTH_TOKEN). The Claude Code CLI, pinned by version and by
 #   the npm integrity of its Linux build, runs with no tools at all (--tools "") from an empty folder; the texts are
 #   inside its prompt. It cannot read a file, run a command or open a URL, so it cannot reach the credential; it can
-#   only answer, through the JSON Schema (--json-schema, structured output). No GitHub token reaches it.
+#   only answer, through the JSON Schema (--json-schema, structured output). No GitHub token reaches it. Then the
+#   same CLI, the same way, from an empty folder of its own, reviews each confirmed claim beside its quote, nothing else,
+#   and cuts a claim down to what its quote says (rg.investigar REVIEW_SCHEMA; the cut goes to receipt.json).
 # - gate: no model, no write token. Builds the packet from the fetch record and the request (artifacts, hashes and
 #   licenses never come from the model) and runs rg.packets: schema, only declared files, sha256 of every raw, every
 #   quote in the extracted text of its source (the run's raws at hand, also those a metadata_only packet never keeps).
@@ -100,8 +102,28 @@ jobs:
             --json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")" \
             --system-prompt "$(cat "$GITHUB_WORKSPACE/work/system.txt")" \
             < "$GITHUB_WORKSPACE/work/user.txt" > "$GITHUB_WORKSPACE/work/modelo-cli.json"
+      - name: Review prompt (each claim beside its quote, nothing else)
+        run: python -m rg.investigar review-prompt --work work --model-output work/modelo-cli.json
+      - name: The reviewer (the same CLI, no tools, an empty folder of its own; it sees claims and quotes only)
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
+          DISABLE_AUTOUPDATER: '1'
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/vacio-revision" && cd "$RUNNER_TEMP/vacio-revision"
+          "$RUNNER_TEMP/cc/package/claude" -p --tools "" --max-turns 3 --strict-mcp-config --output-format json \
+            --json-schema "$(cat "$GITHUB_WORKSPACE/work/revision-schema.json")" \
+            --system-prompt "$(cat "$GITHUB_WORKSPACE/work/revision-system.txt")" \
+            < "$GITHUB_WORKSPACE/work/revision-user.txt" > "$GITHUB_WORKSPACE/work/revision-cli.json"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
-        with: { name: investigar-modelo, path: work/modelo-cli.json, retention-days: 1, if-no-files-found: error }
+        with:
+          name: investigar-modelo
+          path: |
+            work/modelo-cli.json
+            work/revision-cli.json
+          retention-days: 1
+          if-no-files-found: error
 
   gate:
     needs: [fetch, analyze]
@@ -131,7 +153,7 @@ jobs:
         run: |
           set -euo pipefail
           [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
-          rp=$(python -m rg.investigar assemble --request "requests/$RID.json" --work work --model-output work/modelo-cli.json --out out)
+          rp=$(python -m rg.investigar assemble --request "requests/$RID.json" --work work --model-output work/modelo-cli.json --review-output work/revision-cli.json --out out)
           [[ "$rp" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
           python -m rg.packets "out/research-packets/$rp" --strict --raw work/raw
           echo "rp=$rp" >> "$GITHUB_OUTPUT"
