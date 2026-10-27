@@ -55,8 +55,10 @@ def _packet_references(packet):
             for ref in finding.get('artifact_ids', []):
                 if ref not in known:
                     errors.append(f'findings.{group}[{i}]: unknown artifact {ref}')
-    if findings.get('confirmed') and not sources.get('primary'):
-        errors.append('findings.confirmed requires at least one primary source')
+    primary = set(sources.get('primary', []))
+    for i, finding in enumerate(findings.get('confirmed', [])):  # T2 per finding (GPT, REVISE of #51)
+        if not primary & set(finding.get('artifact_ids', [])):
+            errors.append(f'findings.confirmed[{i}]: cites no primary source')
     return errors
 
 
