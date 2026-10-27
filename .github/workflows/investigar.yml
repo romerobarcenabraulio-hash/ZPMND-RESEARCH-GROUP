@@ -97,11 +97,16 @@ jobs:
           DISABLE_AUTOUPDATER: '1'
         run: |
           set -euo pipefail
+          diagnose() {  # a failed call says why, from the result's metadata only: never its text unless the CLI flags an error
+            jq -c '{type, subtype, is_error, num_turns, duration_ms, error: (if .is_error then ((.result // "") | tostring | .[0:160]) else null end)}' "$1" 2>/dev/null \
+              || echo "no JSON result from the CLI"
+          }
           mkdir -p "$RUNNER_TEMP/vacio" && cd "$RUNNER_TEMP/vacio"
           "$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config --max-turns 3 --output-format json \
             --json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")" \
             --system-prompt "$(cat "$GITHUB_WORKSPACE/work/system.txt")" \
-            < "$GITHUB_WORKSPACE/work/user.txt" > "$GITHUB_WORKSPACE/work/modelo-cli.json"
+            < "$GITHUB_WORKSPACE/work/user.txt" > "$GITHUB_WORKSPACE/work/modelo-cli.json" \
+            || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/modelo-cli.json"; exit $rc; }
       - name: Review prompt (each claim beside its quote, nothing else)
         run: python -m rg.investigar review-prompt --work work --model-output work/modelo-cli.json
       - name: The reviewer (the same CLI, no tools, an empty folder of its own; it sees claims and quotes only)
@@ -111,11 +116,16 @@ jobs:
           DISABLE_AUTOUPDATER: '1'
         run: |
           set -euo pipefail
+          diagnose() {  # a failed call says why, from the result's metadata only: never its text unless the CLI flags an error
+            jq -c '{type, subtype, is_error, num_turns, duration_ms, error: (if .is_error then ((.result // "") | tostring | .[0:160]) else null end)}' "$1" 2>/dev/null \
+              || echo "no JSON result from the CLI"
+          }
           mkdir -p "$RUNNER_TEMP/vacio-revision" && cd "$RUNNER_TEMP/vacio-revision"
           "$RUNNER_TEMP/cc/package/claude" -p --tools "" --max-turns 3 --strict-mcp-config --output-format json \
             --json-schema "$(cat "$GITHUB_WORKSPACE/work/revision-schema.json")" \
             --system-prompt "$(cat "$GITHUB_WORKSPACE/work/revision-system.txt")" \
-            < "$GITHUB_WORKSPACE/work/revision-user.txt" > "$GITHUB_WORKSPACE/work/revision-cli.json"
+            < "$GITHUB_WORKSPACE/work/revision-user.txt" > "$GITHUB_WORKSPACE/work/revision-cli.json" \
+            || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/revision-cli.json"; exit $rc; }
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
           name: investigar-modelo

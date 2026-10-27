@@ -551,7 +551,6 @@ class Review(Base):
         rows = self.fetch()
         ok0, ok1 = ('confirmed[0]', True, '', ''), ('confirmed[1]', True, '', '')
         for name, rev in (('skips', review(ok0)), ('repeats', review(ok0, ok0)), ('invents', review(ok0, ok1, ('conflicting[0]', True, '', ''))),
-                          ('no claim', review(ok0, ('confirmed[1]', False, ' ', 'x'))), ('no cut', review(ok0, ('confirmed[1]', False, 'x', ''))),
                           ('extra field', {'reviews': [dict(r, nota='x') for r in review(ok0, ok1)['reviews']]}),
                           ('not an object', [ok0, ok1])):
             with self.subTest(name), self.assertRaises(ValueError):
@@ -560,6 +559,22 @@ class Review(Base):
         folder = inv.assemble(RR, rows, answer(), self.work, self.out, 'm', review=(review(ok1, ok0), 'r'))  # any order
         limits = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))['limitations']
         self.assertEqual(sum('recortó 0 de 2' in x for x in limits), 1)
+
+    def test_a_review_that_leaves_nothing_drops_its_finding_and_one_without_its_cut_still_stands(self):
+        # run 40548398494: one such review stopped the whole OmniRoute run; it is about one finding
+        rows = self.fetch()
+        rev = review(('confirmed[0]', False, ' ', 'todo'), ('confirmed[1]', False, 'El dataset trae una nota abierta.', ''))
+        folder = inv.assemble(RR, rows, self.wide(), self.work, self.out, 'm', '2026-10-23T00:00:00Z', review=(rev, 'r'))
+        packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        self.assertEqual([f['claim'] for f in packet['findings']['confirmed']], ['El dataset trae una nota abierta.'])
+        self.assertEqual([x for x in packet['limitations'] if 'segunda pasada' in x], [
+            'Una segunda pasada que solo ve cada afirmación junto a su cita recortó 2 de 2 hallazgos confirmados a lo que su '
+            'cita dice (de ellos, 1 se sacaron: su cita no sostiene nada de la afirmación); lo recortado no tiene cita y '
+            'queda en receipt.json, fuera de los hallazgos.'])
+        cuts = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))['review']['cuts']
+        self.assertEqual(cuts, [{'id': 'confirmed[0]', 'claim': self.WIDE, 'now': None, 'cut': self.WIDE},
+                                {'id': 'confirmed[1]', 'claim': 'El dataset trae una nota.', 'now': 'El dataset trae una nota abierta.', 'cut': ''}])
+        self.assertEqual(packets.check(folder)[0], [])
 
     def test_the_command_line_writes_the_review_prompt_and_never_assembles_without_a_review(self):
         rows = self.fetch()
@@ -702,6 +717,18 @@ class Workflow(unittest.TestCase):
         self.assertEqual(up['with']['path'].split(), ['work/modelo-cli.json', 'work/revision-cli.json'])
         gate = '\n'.join(s.get('run', '') for s in self.jobs['gate']['steps'])
         self.assertIn('--model-output work/modelo-cli.json --review-output work/revision-cli.json --out out', gate)
+
+    def test_a_failed_model_call_says_why_from_its_metadata_only(self):
+        # run 40548392438: the model step failed with exit 1 and no reason, because its output is a sealed file
+        steps = [s for s in self.jobs['analyze']['steps'] if 'secrets.CLAUDE_CODE_OAUTH_TOKEN' in json.dumps(s)]
+        filt = ("jq -c '{type, subtype, is_error, num_turns, duration_ms, error: (if .is_error then ((.result // \"\") "
+                "| tostring | .[0:160]) else null end)}' \"$1\" 2>/dev/null")
+        for step, out in zip(steps, ('modelo-cli.json', 'revision-cli.json')):
+            with self.subTest(out):
+                run = step['run']
+                self.assertIn(filt, run)  # a result's text is printed only when the CLI itself flags an error
+                self.assertIn(f'> "$GITHUB_WORKSPACE/work/{out}" \\\n  || {{ rc=$?; diagnose "$GITHUB_WORKSPACE/work/{out}"; exit $rc; }}', run)
+                self.assertLess(run.index('diagnose() {'), run.index('"$RUNNER_TEMP/cc/package/claude"'))
 
     def test_the_cli_is_pinned_by_version_and_integrity(self):
         env = self.jobs['analyze']['env']

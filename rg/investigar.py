@@ -290,7 +290,9 @@ One review per finding, every id once:
 def apply_review(answer, review):
     """(answer with every claim the reviewer cut replaced by its cut-down version, the cuts). ValueError unless the
     review fits REVIEW_SCHEMA and holds one review per confirmed finding. A claim that fits stays as the model wrote it: the
-    reviewer's text enters the packet only where it cuts."""
+    reviewer's text enters the packet only where it cuts. One review that leaves nothing of its claim, or does not say
+    what it cut, is about one finding and no longer stops the run (run 40548398494): nothing left, the finding goes (a
+    cut with now None); a rewrite without its cut, the rewrite stands."""
     try:
         jsonschema.validate(review, REVIEW_SCHEMA)
     except jsonschema.ValidationError as exc:
@@ -300,15 +302,20 @@ def apply_review(answer, review):
     if sorted(got) != sorted(ids):
         raise ValueError(f'the review must cover each finding once: {len(got)} reviews for {len(ids)} findings')
     out = copy.deepcopy(answer)
-    cuts = []
+    cuts, gone = [], set()
     for r in review['reviews']:
         if r['fits']:
             continue
+        i = int(r['id'][len('confirmed['):-1])
+        finding = out['findings']['confirmed'][i]
         if not r['claim'].strip() or not r['cut'].strip():
-            raise ValueError(f"{r['id']}: a claim that does not fit needs its cut-down claim and what was cut")
-        finding = out['findings']['confirmed'][int(r['id'][len('confirmed['):-1])]
+            if not r['claim'].strip():
+                cuts.append({'id': r['id'], 'claim': finding['claim'], 'now': None, 'cut': finding['claim']})
+                gone.add(i)
+                continue
         cuts.append({'id': r['id'], 'claim': finding['claim'], 'now': r['claim'], 'cut': r['cut']})
         finding['claim'] = r['claim']
+    out['findings']['confirmed'] = [f for i, f in enumerate(out['findings']['confirmed']) if i not in gone]
     return out, cuts
 
 
@@ -371,12 +378,14 @@ def assemble(rr, rows, answer, work, out_root, model_label, produced_at=None, re
                 raise ValueError(f'{group}[{i}] cites artifacts that were not downloaded: {unknown}')
     agents = [{'agent': 'rg-investigar', 'model': model_label, 'substrate': 'GitHub Actions: investigar.yml'}]
     if review is not None:
+        reviewed = len(answer['findings']['confirmed'])
         answer, cuts = apply_review(answer, review[0])
         agents.append({'agent': 'rg-investigar-revision', 'model': review[1], 'substrate': 'GitHub Actions: investigar.yml'})
-        n = len(answer['findings']['confirmed'])
+        n, out = reviewed, sum(c['now'] is None for c in cuts)
         answer['limitations'] = answer['limitations'] + [  # answer is apply_review's copy
             f'Una segunda pasada que solo ve cada afirmación junto a su cita recortó {len(cuts)} de {n} hallazgos confirmados a lo que '
-            'su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.']
+            'su cita dice' + (f' (de ellos, {out} se sacaron: su cita no sostiene nada de la afirmación)' if out else '') +
+            '; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.']
     answer, dropped = unfound(answer, rows, work)
     if dropped:
         answer['limitations'] = answer['limitations'] + [
