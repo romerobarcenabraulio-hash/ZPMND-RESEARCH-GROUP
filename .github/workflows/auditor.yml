@@ -17,7 +17,7 @@ name: auditor
 # Second, independent opinion (audit-gpt, post-gpt): one OpenAI call per audited head, under the same gate. The job
 # checks out main, never the PR head; it fetches the head as git objects only to compute the same diff, and sends
 # text alone (main's criteria, that diff, the untrusted evidence) through scripts/auditor_gpt.py from main. The model
-# has no tools. A raw of a research packet that the job packet-gate passed (main's rg.packets on the head's packets,
+# has no tools. A raw of a research packet that the job packet-read passed (main's rg.packets on the head's packets,
 # read as data, no secrets) reaches it as one line, with that gate's result as trusted input. OPENAI_API_KEY reaches
 # only the step that calls the API; the model name comes from the repo variable OPENAI_AUDIT_MODEL, and without it the
 # status `auditor-gpt` says skipped. Its comment starts "GPT REVIEW:" and never
@@ -300,12 +300,13 @@ jobs:
           gh api "repos/$REPO/statuses/$SHA" -f state="$state" -f context=auditor -f description="AUDIT VERDICT: $verdict" >/dev/null
           echo "verdict=$verdict" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both
 
-  packet-gate:
+  packet-read:
     # Main's rg.packets on the packet folders the head changes, read as data: each blob is written from the head's
     # objects with git cat-file, byte for byte (never git archive, which applies the head's export attributes); no PR
     # code is checked out or run. No secrets; the read-only token exists only in the fetch step, never where the raw
-    # files, hostile input, are parsed (SECURITY T12). A gate problem or error is a result in packets.json, not a job
-    # failure, so audit-gpt gets it: there a raw this gate passed arrives as one line instead of its bytes.
+    # files, hostile input, are parsed (SECURITY T12), and no step with a token runs after them in this job. A gate
+    # problem or error is a result in packets.json, not a job failure. A metadata_only packet keeps no raw, so it ends
+    # needs_attestation here; packet-gate, on a clean runner, settles it.
     needs: gate
     if: needs.gate.outputs.run == 'true'
     runs-on: ubuntu-24.04
@@ -334,6 +335,41 @@ jobs:
           d="$RUNNER_TEMP/packet-gate"
           rm -rf "$d"; mkdir -p "$d/data"
           python scripts/packet_gate.py --base origin/main --sha "$SHA" --data "$d/data" --out "$d/packets.json"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with: { name: packet-read, path: '${{ runner.temp }}/packet-gate/packets.json', retention-days: 1, if-no-files-found: error }
+
+  packet-gate:
+    # A clean runner, where nothing of the head is parsed (GPT, REVISEs of #56). packet-read's result may come from a
+    # runner a hostile raw took over, so nothing it grants is relayed: this job lists the changed folders again and,
+    # for each, writes its files from the head's git objects and hashes them. A folder passes only when one statement
+    # signed by the investigar.yml run on main that gated it names exactly those files with those digests (gh
+    # attestation verify, read-only token); of packet-read only a failure is kept. An error is a failed result, never
+    # a missing one. Its packets.json is what audit-gpt reads as TRUSTED (SECURITY T14).
+    needs: [gate, packet-read]
+    if: needs.gate.outputs.run == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions: { contents: read, attestations: read }
+    concurrency: { group: 'auditor-attest-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { ref: main, persist-credentials: false, fetch-depth: 0 }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with: { name: packet-read, path: '${{ runner.temp }}/packet-gate' }
+      - name: The head's packets, hashed, against the investigar runs' attestations (no raw parsed; read-only token)
+        env: { GH_TOKEN: '${{ github.token }}', SHA: '${{ needs.gate.outputs.sha }}', REPO: '${{ github.repository }}' }
+        run: |
+          set -euo pipefail
+          [[ "$SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "bad head"; exit 1; }
+          GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader \
+            GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" \
+            git fetch --no-tags --quiet origin "$SHA"
+          d="$RUNNER_TEMP/packet-gate"
+          rm -rf "$d/data"; mkdir -p "$d/data"
+          python scripts/packet_gate.py --attest "$d/packets.json" --base origin/main --sha "$SHA" --data "$d/data" --repo-name "$REPO"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with: { name: packet-gate, path: '${{ runner.temp }}/packet-gate/packets.json', retention-days: 7, if-no-files-found: error }
 

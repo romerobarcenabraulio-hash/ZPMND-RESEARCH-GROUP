@@ -95,7 +95,7 @@ class AuditorGpt(unittest.TestCase):
         self.assertNotIn('secrets.', yaml.safe_dump(self.jobs['evidence']))  # where PR code runs, no secret at all
 
     def test_the_packet_gate_runs_mains_code_on_the_heads_packets_as_data(self):
-        job = self.jobs['packet-gate']
+        job = self.jobs['packet-read']
         self.assertEqual((job['needs'], job['if'], job['permissions']),
                          ('gate', "needs.gate.outputs.run == 'true'", {'contents': 'read'}))
         self.assertNotIn('secrets.', yaml.safe_dump(job))  # hostile raws are parsed here
@@ -112,7 +112,30 @@ class AuditorGpt(unittest.TestCase):
         gate_step = next(s for s in job['steps'] if 'packet_gate.py' in s.get('run', ''))
         self.assertEqual(gate_step['env'], {'SHA': '${{ needs.gate.outputs.sha }}'})
         upload = next(s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/upload-artifact@'))
-        self.assertEqual(upload['name'], 'packet-gate')
+        self.assertEqual(upload['name'], 'packet-read')
+
+    def test_the_attestations_are_checked_on_a_clean_runner_that_parses_no_raw(self):
+        # GPT, REVISE of #56: a token step after hostile raws were parsed, on the same runner, is not isolated
+        job = self.jobs['packet-gate']
+        self.assertEqual((job['needs'], job['if'], job['permissions']),
+                         (['gate', 'packet-read'], "needs.gate.outputs.run == 'true'", {'contents': 'read', 'attestations': 'read'}))
+        checkout = next(s for s in job['steps'] if s.get('uses', '').startswith('actions/checkout@'))
+        self.assertEqual((checkout['with']['ref'], checkout['with']['persist-credentials']), ('main', False))
+        down = next(s for s in job['steps'] if s.get('uses', '').startswith('actions/download-artifact@'))
+        self.assertEqual(down['with']['name'], 'packet-read')
+        [step] = [s for s in job['steps'] if 'github.token' in yaml.safe_dump(s)]
+        self.assertIn('python scripts/packet_gate.py --attest "$d/packets.json" --base origin/main --sha "$SHA" --data "$d/data" --repo-name "$REPO"', step['run'])
+        self.assertNotIn('--out', step['run'])  # --attest writes blobs and hashes them; the gate (rg.packets) never runs here
+        upload = next(s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/upload-artifact@'))
+        self.assertEqual(upload['name'], 'packet-gate')  # what audit-gpt reads as TRUSTED
+
+    def test_no_job_hands_a_token_to_a_step_after_raws_were_parsed_in_it(self):
+        for name, job in self.jobs.items():
+            parsed = False
+            for step in job.get('steps', []):
+                if parsed:
+                    self.assertNotIn('github.token', yaml.safe_dump(step), f'{name}: a token after parsing')
+                parsed = parsed or 'packet_gate.py --base' in step.get('run', '')
 
     def test_post_gpt_speaks_only_as_gpt(self):
         job = self.jobs['post-gpt']
