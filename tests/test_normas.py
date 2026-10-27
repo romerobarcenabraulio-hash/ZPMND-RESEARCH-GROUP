@@ -87,6 +87,17 @@ class Lineages(unittest.TestCase):
         self.assertEqual([n['entry_id'] for n in by['NOM-087-ECOL-SSA1']['notes']], ['mx.dof:11', 'mx.dof:31'])
         self.assertEqual([k for k in by if ' ' in k], [])
 
+    def test_a_reviewed_title_is_not_reported_and_a_new_one_like_it_is(self):
+        # Real title (DOF 2020-01-03, mx.dof:5583405): «conforme a la NOM-046.», no issuer, no year (run of 2026-10-25).
+        title = ('Convenio de Coordinación que celebran la Secretaría de Gobernación y el Estado de Guerrero, que tiene '
+                 'por objeto el otorgamiento de subsidios para el proyecto Estrategias de fortalecimiento interinstitucional '
+                 'para la Atención de la Declaratoria de Alerta de Violencia de Género- Desarrollar un Protocolo de Atención '
+                 'Médica y Psicológica a Víctimas de Violencia Sexual Infantil, conforme a la NOM-046.')
+        reviewed = {'entry_id': 'mx.dof:5583405', 'title': title, 'dates': {'published': '2020-01-03'}}
+        self.assertIn('mx.dof:5583405', normas.REVIEWED)
+        self.assertEqual(normas.unparsed([reviewed]), [])
+        self.assertEqual(normas.unparsed([{**reviewed, 'entry_id': 'mx.dof:99'}]), ['mx.dof:99'])
+
     def test_a_title_that_names_a_nom_but_yields_no_code_is_reported(self):
         odd = [note(20, 'Aviso de la NOM-5-XX-, texto truncado en la fuente.', '2026-01-01')]
         self.assertEqual(normas.unparsed(REAL + odd), ['mx.dof:20'])

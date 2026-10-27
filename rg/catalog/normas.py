@@ -69,8 +69,16 @@ def codes(title):
     return out
 
 
+# Titles a person reviewed that name a NOM with no readable code (entry id -> why). Only notes, never patterns.
+REVIEWED = {
+    'mx.dof:5583405': 'convenio de subsidios que cita «conforme a la NOM-046.» sin emisor ni año: no es una nota de NOM',
+}
+
+
 def unparsed(entries):
-    """Entry ids whose title seems to name a NOM but yields no code: the parser's independent check."""
+    """Entry ids whose title seems to name a NOM but yields no code: the parser's independent check. A reviewed note
+    (REVIEWED) is not reported; a new one is."""
+    entries = [e for e in entries if e['entry_id'] not in REVIEWED]
     return sorted(e['entry_id'] for e in entries if LOOKS_LIKE.search(fold(e['title'])) and not codes(e['title']))
 
 

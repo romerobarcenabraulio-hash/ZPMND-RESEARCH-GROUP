@@ -9,7 +9,8 @@ to the end without the final period. Notes are grouped by the exact name, folded
 spaces), and ordered by official date. Nothing is inferred: no validity, no parties, no merging of different names.
 
 Independent check: a looser regex over every DOF title (LOOKS_LIKE) must select exactly the titles the table
-classifies; any disagreement, either way, fails the run's coverage (exit 3).
+classifies; any disagreement, either way, fails the run's coverage (exit 3), except a note a person reviewed and wrote
+down in REVIEWED with the reason: the table's answer stands for it, and a new disagreement still fails the run.
 """
 import json
 import re
@@ -30,6 +31,8 @@ STAGES = {
     'DECRETO POR EL QUE SE APRUEBAN LAS ENMIENDAS': 'enmienda',
     'DECRETO PROMULGATORIO DE LA DENUNCIA': 'retiro_o_denuncia',
     'DECRETO POR EL QUE SE APRUEBA LA DENUNCIA': 'retiro_o_denuncia',
+    'DECRETO POR EL QUE SE DA A CONOCER LA DENUNCIA': 'retiro_o_denuncia',
+    'DECRETO PROMULGATORIO CON': 'promulgacion',  # 'con las declaraciones ... al Acta de Ginebra' (DOF 2020-06-05)
     'DECRETO PROMULGATORIO DEL RETIRO': 'retiro_o_denuncia',
     'DECRETO POR EL QUE SE APRUEBA EL RETIRO': 'retiro_o_denuncia',
     'FE DE ERRATAS AL DECRETO PROMULGATORIO': 'fe_de_erratas',
@@ -38,12 +41,22 @@ STAGES = {
     'ACLARACION AL DECRETO POR EL QUE SE APRUEBA': 'aclaracion',
 }
 _OPENINGS = sorted(STAGES, key=len, reverse=True)
+# Disagreements a person reviewed (entry id -> why the table's answer stands). Only notes, never patterns.
+REVIEWED = {
+    'mx.dof:5636928': 'aprueba el Anexo III de MARPOL 73/78 (un tratado); el título no trae cláusula de conclusión',
+    'mx.dof:5636929': 'aprueba el Anexo IV de MARPOL 73/78 (un tratado); el título no trae cláusula de conclusión',
+}
 ARTICLES = ('DEL', 'DE LA', 'DE LOS', 'DE LAS', 'AL', 'A LA', 'A LOS', 'A LAS', 'EL', 'LA', 'LOS', 'LAS')
 INSTRUMENTS = {'TRATADO', 'TRATADOS', 'CONVENIO', 'CONVENIOS', 'CONVENCION', 'CONVENCIONES', 'ACUERDO', 'ACUERDOS',
-               'PROTOCOLO', 'PROTOCOLOS', 'ENMIENDA', 'ENMIENDAS'}
-CLAUSE = re.compile(r',\s*(?:adoptad|firmad|hech|suscrit)[oa]s?\b', re.IGNORECASE)
+               'PROTOCOLO', 'PROTOCOLOS', 'ENMIENDA', 'ENMIENDAS', 'ACTA', 'ACTAS', 'ANEXO', 'ANEXOS', 'DECLARACIONES'}
+# One ordinal may precede the instrument word: 'el Segundo Protocolo Modificatorio', 'el Tercer Protocolo Adicional'.
+ORDINALS = {'PRIMER', 'PRIMERO', 'PRIMERA', 'SEGUNDO', 'SEGUNDA', 'TERCER', 'TERCERO', 'TERCERA', 'CUARTO', 'CUARTA',
+            'QUINTO', 'QUINTA', 'SEXTO', 'SEXTA', 'SEPTIMO', 'SEPTIMA', 'OCTAVO', 'OCTAVA', 'NOVENO', 'NOVENA', 'DECIMO',
+            'DECIMA'}
+CLAUSE = re.compile(r',\s*(?:adoptad|aprobad|celebrad|firmad|hech|suscrit)[oa]s?\b', re.IGNORECASE)
 # Independent of the table: a decree that names a promulgation, or a decree with a conclusion clause.
-LOOKS_LIKE = re.compile(r'\bDECRETO\b.*(?:\bPROMULGATORI[OA]S?\b|, ?(?:ADOPTAD|FIRMAD|HECH|SUSCRIT)[OA]S? (?:EN|EL|POR)\b)')
+LOOKS_LIKE = re.compile(r'\bDECRETO\b.*(?:\bPROMULGATORI[OA]S?\b|, ?(?:APROBAD|CELEBRAD)[OA]S? (?:EN|POR|MEDIANTE)\b'
+                        r'|, ?(?:ADOPTAD|FIRMAD|HECH|SUSCRIT)[OA]S? (?:EN|EL|POR)\b)')
 
 
 def classify(title):
@@ -54,6 +67,8 @@ def classify(title):
             continue
         rest = t[len(opening) + 1:]
         art = next((a for a in ARTICLES if rest.startswith(a + ' ')), None)
+        if art is not None and rest[len(art) + 1:].split(' ', 1)[0] in ORDINALS:  # the instrument word follows it
+            rest = f"{art} {rest[len(art) + 1:].split(' ', 1)[-1]}"
         if art is None or rest[len(art) + 1:].split(' ', 1)[0].rstrip(',.') not in INSTRUMENTS:
             continue
         words, prefix = title.split(), f'{opening} {art}'
@@ -73,6 +88,7 @@ def _dof(entries):
 def unreconciled(entries):
     """DOF entry ids where the independent check and the table disagree: a title that looks like a treaty decree and
     is not classified, or one classified that does not look like one."""
+    entries = [e for e in entries if e['entry_id'] not in REVIEWED]  # reviewed: the table's answer stands
     return sorted(e['entry_id'] for e in _dof(entries)
                   if bool(LOOKS_LIKE.search(fold(e['title']))) != (classify(e['title']) is not None))
 
