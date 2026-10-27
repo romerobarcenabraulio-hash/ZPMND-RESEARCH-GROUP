@@ -457,5 +457,68 @@ class Fixtures(Base):
             self.assertRevise(self.run_audit(FakeHTTP(response(answer()))), 'No pude leer todo')
 
 
+class Packets(Base):
+    """A raw of a research packet that main's packet gate passed for this head arrives as one line, and does not count
+    as left out: the gate read it (sha256, size, declared, every quote). Anything else is sent whole."""
+    RAW = 'research-packets/RP-2026-10-23-prueba/raw/sha256/ab/ab' + '0' * 62 + '.html'
+    DIGEST = 'ab' + '0' * 62
+
+    def diff(self, raw=RAW, size=None):
+        content = '@@ -0,0 +1 @@\n+<html>' + 'CONTENIDO_DEL_CRUDO ' * ((size or 50) // 20) + '</html>\n'
+        return (f'diff --git a/{raw} b/{raw}\nnew file mode 100644\nindex 0000000..1111111\n--- /dev/null\n+++ b/{raw}\n'
+                + content + 'diff --git a/rg/x.py b/rg/x.py\n@@ -1 +1 @@\n+CODIGO_DESPUES = 1\n'), content
+
+    def gate(self, sha=SHA, status='passed', raws=None):
+        return json.dumps({'head_sha': sha, 'packets': [{'packet': 'RP-2026-10-23-prueba', 'status': status,
+                                                         'problems': [], 'warnings': [], 'stats': {'quotes_verified': 3},
+                                                         'raws': {self.RAW: self.DIGEST} if raws is None else raws}]})
+
+    def sent(self, diff, packets):
+        make_inputs(self.root, **{'trusted/diff.patch': diff, 'trusted/packets.json': packets})
+        http = FakeHTTP(response(answer()))
+        r = self.run_audit(http)
+        return r, http.calls[0]['payload']['input']
+
+    def test_a_raw_the_gate_passed_is_one_line_and_the_review_can_pass(self):
+        diff, content = self.diff(size=CAP['trusted/diff.patch'] * 2)  # whole, it would not fit the budget
+        r, sent = self.sent(diff, self.gate())
+        self.assertEqual(r['verdict'], 'PASS')
+        self.assertIn(f'[crudo verificado por la compuerta de main (rg.packets --strict): {len(content)} caracteres; '
+                      f'sha256 del archivo {self.DIGEST[:12]}…]', sent)
+        self.assertNotIn('CONTENIDO_DEL_CRUDO', sent)
+        self.assertIn('CODIGO_DESPUES = 1', sent)
+        self.assertIn('BEGIN TRUSTED trusted/packets.json', sent)
+        self.assertIn('"quotes_verified": 3', sent)
+
+    def test_a_raw_the_gate_did_not_pass_for_this_head_is_sent_whole(self):
+        diff, _ = self.diff()
+        for name, packets in {'another head': self.gate(sha='f' * 40), 'failed': self.gate(status='failed'),
+                              'not listed': self.gate(raws={}), 'no result': None, 'not json': '{',
+                              'a digest that is not one': self.gate(raws={self.RAW: 'x' * 64})}.items():
+            with self.subTest(name):
+                r, sent = self.sent(diff, packets)
+                self.assertIn('CONTENIDO_DEL_CRUDO', sent)
+                self.assertNotIn('crudo verificado', sent)
+
+    def test_only_raw_paths_are_ever_compacted(self):
+        code = 'research-packets/RP-2026-10-23-prueba/raw/sha256/ab/ab' + '0' * 62 + '.py'
+        for path in ('rg/packets.py', 'research-packets/RP-2026-10-23-prueba/packet.json',
+                     'research-packets/RP-2026-10-23-prueba/raw/sha256/cd/ab' + '0' * 62 + '.html'):
+            with self.subTest(path):
+                diff, _ = self.diff(raw=path)
+                r, sent = self.sent(diff, self.gate(raws={path: self.DIGEST}))
+                self.assertIn('CONTENIDO_DEL_CRUDO', sent)
+        diff, _ = self.diff(raw=code[:-3] + '.html')
+        diff = diff.replace('new file mode 100644', 'new file mode 120000')  # a link is never compacted
+        r, sent = self.sent(diff, self.gate())
+        self.assertIn('CONTENIDO_DEL_CRUDO', sent)
+
+    def test_without_a_packet_gate_result_nothing_changes(self):
+        make_inputs(self.root)
+        http = FakeHTTP(response(answer()))
+        self.assertEqual(self.run_audit(http)['verdict'], 'PASS')  # a PR without packets has no packets.json
+        self.assertIn('sin resultado de la compuerta de paquetes', http.calls[0]['payload']['input'])
+
+
 if __name__ == '__main__':
     unittest.main()
