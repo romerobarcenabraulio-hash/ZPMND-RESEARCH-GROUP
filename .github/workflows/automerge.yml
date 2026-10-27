@@ -1,0 +1,29 @@
+name: automerge
+# Data-only PRs merge by themselves (Braulio, 2026-10-27). Each time ci or auditor finishes for a commit, main's
+# scripts/automerge.py merges the open PR into main whose head is that commit, pinned to it, only if it comes from a
+# branch of this repo, touches nothing but research-packets/<RP>/ and requests/plans/<RR>.json (added or modified),
+# both auditors passed that commit (statuses auditor and auditor-gpt) and every check run on it is green. Code,
+# workflows, docs, tests and mutants are never merged here: those PRs stay with the owner. SECURITY.md T15.
+# workflow_run always runs this file and the script from main, never from the PR; no PR code is checked out or run.
+on:
+  workflow_run:
+    workflows: [ci, auditor]
+    types: [completed]
+permissions: {}
+concurrency:
+  group: automerge-${{ github.event.workflow_run.head_sha }}
+  cancel-in-progress: false
+jobs:
+  merge:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: { contents: write, pull-requests: write, checks: read, statuses: read }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - name: Merge the PR of this commit if it is data only, passed both auditors and is green
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.event.workflow_run.head_sha }}
+        run: python3 scripts/automerge.py

@@ -63,6 +63,13 @@ Qué lo hace seguro y barato por construcción (`scripts/auditor_gpt.py`; prueba
 sobre el head exacto. Un `GPT REVIEW: REVISE` se lee, y antes del merge se responde en el PR o se corrige. GPT no
 bloquea mientras Braulio no decida volverlo obligatorio (por ejemplo, exigiendo el estado `auditor-gpt` en `main`).
 
+**Merge automático de datos (Braulio, 2026-10-27: "sí, fusión automática para PRs de datos"):** un PR que solo agrega
+o modifica paquetes (`research-packets/<RP>/`) o planes de fuentes (`requests/plans/<RR>.json`), desde una rama de este
+repo, se fusiona solo cuando los dos auditores dieron PASS sobre su commit exacto y todo CI está verde
+(`scripts/automerge.py`, flujo `automerge.yml`, SECURITY.md T15). Para datos, GPT sí bloquea: hace falta su PASS. Todo
+lo demás (código, flujos, documentos, pruebas, mutantes, o un PR que borra o renombra) sigue esperando el merge de
+Braulio.
+
 ## Qué cambia en mi forma de trabajar
 
 - **Antes de activar una fuente:** robots.txt revisado; formato leído en páginas reales guardadas como fixtures; conteo independiente definido; prueba de regresión sobre la página real.
