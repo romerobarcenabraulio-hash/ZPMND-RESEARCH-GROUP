@@ -1,0 +1,460 @@
+{
+ "request_id": "RR-2026-10-27-capacidades-extraccion-pdf",
+ "fetched": [
+  {
+   "url": "https://export.arxiv.org/pdf/2408.09869",
+   "status": "refused",
+   "error": "robots.txt disallows https://export.arxiv.org/pdf/2408.09869",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-10-27T22:38:42Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://github.com/tesseract-ocr/tessdata_best/blob/main/README.md",
+   "status": 200,
+   "error": null,
+   "sha256": "a1c550f3bd55e7a676c0bb66f730355c828b3f9ec6feef1dc99b2348c7c88f4f",
+   "bytes": 224991,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T22:38:43Z",
+   "text_status": "ok",
+   "text_chars": 3204
+  },
+  {
+   "url": "https://github.com/ocrmypdf/ocrmypdf",
+   "status": 200,
+   "error": null,
+   "sha256": "fca110a87505fb1ec7313a8fa59339711e7a61fb26a7c519a27a429bf75a59bf",
+   "bytes": 356431,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T22:38:44Z",
+   "text_status": "ok",
+   "text_chars": 11385
+  },
+  {
+   "url": "https://github.com/pymupdf/pymupdf",
+   "status": 200,
+   "error": null,
+   "sha256": "5133626b567746eb0dd73c413f369e9c197981f8c6adc28cbb80f4d46febd2f6",
+   "bytes": 572878,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T22:38:45Z",
+   "text_status": "ok",
+   "text_chars": 22938
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/language-support/ocr?view=doc-intel-4.0.0",
+   "status": 200,
+   "error": null,
+   "sha256": "04f50cb44dc14329e4dff8e2da8a291d08e5338f6130458a864cac2f281aa945",
+   "bytes": 188018,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T22:38:46Z",
+   "text_status": "ok",
+   "text_chars": 25884
+  },
+  {
+   "url": "https://docs.aws.amazon.com/textract/latest/dg/limits-document.html",
+   "status": 200,
+   "error": null,
+   "sha256": "99d8717b60e640158dbe49484ea901d0bcce2051d7b49d3c05422b361064bd1e",
+   "bytes": 20464,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T22:38:48Z",
+   "text_status": "ok",
+   "text_chars": 3757
+  },
+  {
+   "url": "https://mistral.ai/news/ocr-4/",
+   "status": 200,
+   "error": null,
+   "sha256": "7f25015f3fd376b94a3d92d9f7973ff2abf37cee02ee216c4fcbf3a65648de6d",
+   "bytes": 220488,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T22:38:49Z",
+   "text_status": "ok",
+   "text_chars": 14559
+  },
+  {
+   "url": "https://github.com/allenai/olmocr",
+   "status": 200,
+   "error": null,
+   "sha256": "3d223a30a71653438a9fae4b04d167ebcfc5b799083b58375047c1935df4a1dd",
+   "bytes": 409767,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T22:38:50Z",
+   "text_status": "ok",
+   "text_chars": 19282
+  },
+  {
+   "url": "https://github.com/opendatalab/OmniDocBench",
+   "status": 200,
+   "error": null,
+   "sha256": "fdf15a1bb7f14116cd89f891a1328045d2b0062ea67d15af011c7c06b8cca7f7",
+   "bytes": 752566,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T22:38:51Z",
+   "text_status": "ok",
+   "text_chars": 63498
+  },
+  {
+   "url": "https://arxiv.org/pdf/2410.09871",
+   "status": 200,
+   "error": null,
+   "sha256": "0693f6f29a35f69cd58c23a6cdfcbeab6887a22f33ec8370ca24471e2870823d",
+   "bytes": 553449,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-10-27T22:38:52Z",
+   "text_status": "necesita_ocr",
+   "text_chars": 55239
+  },
+  {
+   "url": "https://arxiv.org/pdf/2607.21617",
+   "status": 200,
+   "error": null,
+   "sha256": "b49535ebd31584d0ff825e52bbb8dfede30fccc733a8caf3534bb307a8c831b6",
+   "bytes": 813842,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-10-27T22:39:07Z",
+   "text_status": "ok",
+   "text_chars": 68212
+  },
+  {
+   "url": "https://arxiv.org/pdf/2607.24077",
+   "status": 200,
+   "error": null,
+   "sha256": "d2dc2320029cde617b8be8c3128ccacb52cc2c3e79995042b9cfe93c27249440",
+   "bytes": 6832286,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-10-27T22:39:22Z",
+   "text_status": "ok",
+   "text_chars": 45460
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/40596168806",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[2]",
+    "claim": "OCRmyPDF se publica bajo MPL-2.0, que permite integrarlo con código comercial y cerrado, pero pide publicar las modificaciones a nivel de código fuente.",
+    "now": "La licencia de OCRmyPDF permite integrarlo con otro código, incluido comercial y cerrado, pero pide publicar las modificaciones a nivel de código fuente.",
+    "cut": "El nombre de la licencia MPL-2.0."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "OCRmyPDF admite plugins que reemplazan Tesseract por otros motores, como PaddleOCR.",
+    "now": "OCRmyPDF-PaddleOCR reemplaza el motor estándar Tesseract OCR por PaddleOCR, un potente motor OCR acelerado por GPU.",
+    "cut": "Generalización a plugins y a otros motores."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "PyMuPDF declara que corre localmente, sin enviar datos a la nube.",
+    "now": "PyMuPDF se ejecuta íntegramente en local.",
+    "cut": "Que no envía datos a la nube."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "Según el propio README de PyMuPDF (comparación del proveedor, corpus ExtractBench de 370 PDF), el resultado global fue 78.31% con Tesseract y 85.20% con RapidOCR.",
+    "now": "En el total de 370, los resultados son 78.31% y 85.20%.",
+    "cut": "Nombres ExtractBench, Tesseract y RapidOCR, y la atribución de cada cifra."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "Azure Document Intelligence advierte que forzar el código de idioma puede dar texto incompleto o incorrecto.",
+    "now": "Azure Document Intelligence advierte que, en caso contrario, el servicio puede devolver texto incompleto e incorrecto.",
+    "cut": "La condición de forzar el código de idioma."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "Textract limita las operaciones asíncronas de PDF a 500 MB y 3,000 páginas.",
+    "now": "Los archivos PDF y TIFF tienen un límite de 500 MB en memoria y de 3,000 páginas.",
+    "cut": "Que se aplica a operaciones asíncronas y solo a PDF."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "olmOCR requiere para inferencia local una GPU NVIDIA reciente con al menos 12 GB de memoria.",
+    "now": "olmOCR requiere una GPU NVIDIA reciente (probada en RTX 4090, L40S, A100, H100) con al menos 12 GB de memoria de GPU.",
+    "cut": "Que sea para inferencia local."
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "olmOCR-Bench contiene más de 7,000 casos de prueba en 1,400 documentos.",
+    "now": "Cubre más de 7,000 casos de prueba en 1,400 documentos.",
+    "cut": "El nombre olmOCR-Bench."
+   },
+   {
+    "id": "confirmed[28]",
+    "claim": "En OmniDocBench, Tesseract tuvo edición normalizada de 0.096 en inglés y 0.551 en chino (menor es mejor).",
+    "now": "Tesseract-OCR obtuvo 0.096, 0.551 y 0.250.",
+    "cut": "Asignación a inglés y chino, la métrica de edición normalizada y que menor es mejor."
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "En la clasificación end-to-end de OmniDocBench, Marker obtuvo 78.44.",
+    "now": "Marker, en la categoría Pipeline Tools, aparece con 78.44.",
+    "cut": "Que sea la clasificación end-to-end."
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "En un estudio con DocLayNet, PyMuPDF y pypdfium fueron generalmente los mejores extractores basados en reglas, pero todos tuvieron dificultades con documentos científicos y de patentes.",
+    "now": "PyMuPDF y pypdfium generalmente superaron a los demás, pero todos los analizadores tuvieron dificultades con documentos científicos y de patentes.",
+    "cut": "DocLayNet y que fueran extractores basados en reglas."
+   },
+   {
+    "id": "confirmed[31]",
+    "claim": "El estudio de DocLayNet usó principalmente PDF nativos digitales, por lo que no evalúa OCR de escaneos.",
+    "now": "El estudio utiliza principalmente PDF nativos digitales.",
+    "cut": "La conclusión de que no evalúa OCR de escaneos."
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "DocLayNet es mayoritariamente en inglés; el español no figura.",
+    "now": "Los documentos son mayoritariamente en inglés (95%), con unos pocos en alemán (2.5%), francés (1%) y japonés (1%).",
+    "cut": "Mención de DocLayNet y que el español no figura."
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "En FaithC4 (inglés, escramble), Tesseract reescribió 0.00% de las palabras perturbadas.",
+    "now": "Tesseract obtuvo 0.00%, 77.30%, 12.06% y 10.64%.",
+    "cut": "Contexto de inglés, escramble y el significado de las columnas."
+   },
+   {
+    "id": "confirmed[35]",
+    "claim": "En FaithC4 (inglés, escramble), olmOCR reescribió 58.63% de las palabras perturbadas.",
+    "now": "olmOCR obtuvo 58.63%, 32.09%, 4.84% y 4.44%.",
+    "cut": "Contexto de inglés, escramble y el significado de las columnas."
+   },
+   {
+    "id": "confirmed[37]",
+    "claim": "FaithC4 usa PDF renderizados sintéticamente, no escaneos reales.",
+    "now": "El dataset usa PDF renderizados sintéticamente, que pueden no captar la complejidad visual de documentos escaneados reales.",
+    "cut": "Afirmación categórica de que no son escaneos reales."
+   },
+   {
+    "id": "confirmed[38]",
+    "claim": "En el benchmark Berrutti (documentos uruguayos, microfilm), Tesseract tuvo CER medio 20.92% y mediana 11.86%.",
+    "now": "Tesseract (OCR tradicional) aparece con 20.92%, 11.86%, 41.21% y 29.63%.",
+    "cut": "Benchmark Berrutti, documentos uruguayos, microfilm y el significado de CER medio y mediana."
+   },
+   {
+    "id": "confirmed[39]",
+    "claim": "En Berrutti, los VLM mostraron normalización ortográfica, contenido espurio y sustituciones semánticas que preservan la fluidez.",
+    "now": "Se observan normalización ortográfica, generación de contenido espurio y sustituciones semánticas que preservan la fluidez mientras alteran el significado.",
+    "cut": "Que sea en Berrutti y que lo muestren los VLM."
+   },
+   {
+    "id": "confirmed[40]",
+    "claim": "Berrutti publica un subconjunto de 175 imágenes de documentos.",
+    "now": "Se trata de un subconjunto curado de 175 imágenes de documentos.",
+    "cut": "El nombre Berrutti y que lo publique."
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "id": "confirmed[30]",
+   "claim": "PyMuPDF y pypdfium generalmente superaron a los demás, pero todos los analizadores tuvieron dificultades con documentos científicos y de patentes.",
+   "quote": "PyMuPDF and pypdﬁum generally outperformed others, but all parsers struggled with Scientiﬁc and Patent documents.",
+   "artifact_ids": [
+    "SA-0693f6f29a35f69cd58c23a6"
+   ]
+  },
+  {
+   "id": "confirmed[32]",
+   "claim": "Los documentos son mayoritariamente en inglés (95%), con unos pocos en alemán (2.5%), francés (1%) y japonés (1%).",
+   "quote": "These documents are mostly in English (95%), with a few documents in German (2.5%), French (1%), and Japanese (1%).",
+   "artifact_ids": [
+    "SA-0693f6f29a35f69cd58c23a6"
+   ]
+  },
+  {
+   "id": "confirmed[36]",
+   "claim": "FaithC4 concluye que para transcripción literal los OCR tradicionales o VLM especializados bien elegidos son lo más seguro.",
+   "quote": "traditional OCR systems or carefully selected OCR-specialized VLMs remain the safest choice",
+   "artifact_ids": [
+    "SA-b49535ebd31584d0ff825e52"
+   ]
+  },
+  {
+   "id": "confirmed[37]",
+   "claim": "El dataset usa PDF renderizados sintéticamente, que pueden no captar la complejidad visual de documentos escaneados reales.",
+   "quote": "our dataset uses synthetically rendered PDFs, which may not capture the visual complexity of real scanned documents.",
+   "artifact_ids": [
+    "SA-b49535ebd31584d0ff825e52"
+   ]
+  },
+  {
+   "id": "confirmed[39]",
+   "claim": "Se observan normalización ortográfica, generación de contenido espurio y sustituciones semánticas que preservan la fluidez mientras alteran el significado.",
+   "quote": "including orthographic normalization, spurious content generation, and semantic substitutions that preserve fluency while altering meaning",
+   "artifact_ids": [
+    "SA-d2dc2320029cde617b8be8c3"
+   ]
+  }
+ ],
+ "discovery": {
+  "families": [
+   "Bibliotecas abiertas de extracción en PDF digital (PyMuPDF, pdfminer.six, pdfplumber)",
+   "Pipelines abiertos con modelos de layout y tablas (Docling, Marker, MinerU)",
+   "Motores OCR abiertos (Tesseract y OCRmyPDF)",
+   "Servicios comerciales en la nube (Azure Document Intelligence, AWS Textract, Mistral OCR)",
+   "Modelos VLM de OCR autoalojables (olmOCR y similares)",
+   "Benchmarks y datasets (OmniDocBench, olmOCR-Bench, PDF-Bench)",
+   "Evaluaciones independientes y de fallas (fidelidad textual, alucinación de VLM, OCR en español histórico)"
+  ],
+  "searches": [
+   {
+    "query": "Docling IBM PDF document conversion tables layout OCR license MIT documentation",
+    "intent": "official"
+   },
+   {
+    "query": "PDF parsing benchmark comparison PyMuPDF pdfplumber Docling Marker tables evaluation",
+    "intent": "support"
+   },
+   {
+    "query": "Tesseract OCR license Apache 2.0 Spanish language data tessdata accuracy",
+    "intent": "official"
+   },
+   {
+    "query": "Azure Document Intelligence pricing limits layout model Spanish OCR languages supported",
+    "intent": "official"
+   },
+   {
+    "query": "OmniDocBench benchmark document parsing results",
+    "intent": "support"
+   },
+   {
+    "query": "PyMuPDF license AGPL commercial Artifex; pdfminer.six license; Marker datalab license restrictions",
+    "intent": "official"
+   },
+   {
+    "query": "olmOCR-Bench olmOCR Allen AI license Apache self-host results",
+    "intent": "official"
+   },
+   {
+    "query": "Mistral OCR API pricing per 1000 pages self-hosting terms Spanish",
+    "intent": "official"
+   },
+   {
+    "query": "vision language model OCR hallucination failures verbatim transcription document parsing errors study",
+    "intent": "limitations"
+   },
+   {
+    "query": "OCRmyPDF license MPL-2.0 Tesseract scanned PDF text layer documentation",
+    "intent": "official"
+   },
+   {
+    "query": "Amazon Textract pricing limits Spanish support not supported languages",
+    "intent": "official"
+   },
+   {
+    "query": "OCR benchmark Spanish documents legal administrative Docling Tesseract evaluation character error rate",
+    "intent": "contradict"
+   }
+  ],
+  "not_found": [
+   "No hallé un benchmark que use documentos oficiales o normativos en español (BOE, diarios oficiales, avisos) con tablas y notas. La evidencia en español es histórica, de libros o de un proveedor.",
+   "No hallé documentación oficial verificada de Marker/Datalab, MinerU, Surya, PaddleOCR ni Google Document AI. Solo vi reseñas de terceros, y los umbrales de licencia de los pesos de Marker se contradicen entre fuentes. Los términos exactos son desconocidos hasta leer las licencias incluidas.",
+   "Precios oficiales vigentes de Azure, Textract y Mistral: solo vi cifras de terceros que discrepan entre sí (por ejemplo, Read a 0,50 o a 1,50 USD por 1.000 páginas). Hay que confirmarlos en las páginas de precios oficiales.",
+   "Términos de autoalojamiento de Mistral OCR 4 (licencia Premier): sin documento público; hay que pedir cotización a ventas.",
+   "Evaluaciones de fidelidad textual a nivel de carácter para encabezados, numerales y notas al pie: no hallé ninguna. Las métricas existentes son TEDS, distancia de edición y CER, sin verificación de cita literal.",
+   "Resultados contradictorios entre benchmarks de tablas (PDF-Bench da ventaja a pdfplumber; otro benchmark, a Docling), con datos de blogs y repositorios de terceros. No los incluí como fuente principal."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://export.arxiv.org/pdf/2408.09869",
+    "family": "Pipelines abiertos con modelos de layout y tablas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Fuente primaria de Docling: arquitectura (layout, TableFormer, OCR), licencia MIT y su propia evaluación. Los modelos pueden tener licencias distintas del código."
+   },
+   {
+    "url": "https://github.com/tesseract-ocr/tessdata_best/blob/main/README.md",
+    "family": "Motores OCR abiertos",
+    "stance": "context",
+    "role": "primary",
+    "why": "Fuente oficial de los modelos de idioma (incluido spa) y de la diferencia entre variantes best, fast y legacy. Las licencias Apache-2.0 aparecen en la documentación del proyecto."
+   },
+   {
+    "url": "https://github.com/ocrmypdf/ocrmypdf",
+    "family": "Motores OCR abiertos",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Agrega capa de texto OCR a PDF escaneados. Licencia MPL-2.0. Documenta que depende de Tesseract, que no entrega encabezados ni párrafos, solo texto y cajas."
+   },
+   {
+    "url": "https://github.com/pymupdf/pymupdf",
+    "family": "Bibliotecas abiertas de extracción en PDF digital",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Extracción rápida de texto en PDF digitales. Licencia dual AGPL o comercial, lo cual condiciona el autoalojamiento y el uso como servicio."
+   },
+   {
+    "url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/language-support/ocr?view=doc-intel-4.0.0",
+    "family": "Servicios comerciales en la nube",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Documentación oficial sobre el soporte de español en Read y Layout (texto impreso y manuscrito). Los precios y límites se confirman en la página de límites de servicio y en la de precios."
+   },
+   {
+    "url": "https://docs.aws.amazon.com/textract/latest/dg/limits-document.html",
+    "family": "Servicios comerciales en la nube",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Cuotas oficiales: español soportado, límites de páginas y tamaño, y restricciones como PDF sin contraseña."
+   },
+   {
+    "url": "https://mistral.ai/news/ocr-4/",
+    "family": "Servicios comerciales en la nube",
+    "stance": "context",
+    "role": "primary",
+    "why": "Anuncio del proveedor con capacidades y precio. Es propaganda del propio proveedor. Los términos de autoalojamiento empresarial no son públicos."
+   },
+   {
+    "url": "https://github.com/allenai/olmocr",
+    "family": "Modelos VLM de OCR autoalojables",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Toolkit y modelo con licencia Apache 2.0. Requiere GPU de 12 GB o más. Incluye olmOCR-Bench y su propia evaluación. La tarjeta del modelo indica uso para investigación y educación."
+   },
+   {
+    "url": "https://github.com/opendatalab/OmniDocBench",
+    "family": "Benchmarks y datasets",
+    "stance": "context",
+    "role": "primary",
+    "why": "Benchmark con clasificación de pipelines y VLM que mide texto, tablas, fórmulas y orden de lectura. Cubre pocos documentos en español. Muchas cifras las reportan los propios autores de cada modelo."
+   },
+   {
+    "url": "https://arxiv.org/pdf/2410.09871",
+    "family": "Evaluaciones independientes y de fallas",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Comparación independiente de herramientas (PyMuPDF, pypdfium y otras) sobre DocLayNet. Incluye documentos de tipo legal y de licitación, y muestra que las bibliotecas simples resultan competitivas en PDF digitales."
+   },
+   {
+    "url": "https://arxiv.org/pdf/2607.21617",
+    "family": "Evaluaciones independientes y de fallas",
+    "stance": "contradicts",
+    "role": "secondary",
+    "why": "Muestra que los VLM reescriben el texto, no solo lo leen. Para citas textuales recomienda OCR tradicional o VLM especializados. No cubre español (usa inglés, chino y coreano)."
+   },
+   {
+    "url": "https://arxiv.org/pdf/2607.24077",
+    "family": "Evaluaciones independientes y de fallas",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Evidencia en español, aunque con documentos históricos. Reporta CER de Tesseract y PP-OCRv5, y errores que cambian el significado sin subir el CER."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
