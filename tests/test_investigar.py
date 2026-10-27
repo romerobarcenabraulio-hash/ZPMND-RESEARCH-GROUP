@@ -478,6 +478,89 @@ class Model(Base):
         self.assertIn(QUOTE, (self.work / 'user.txt').read_text(encoding='utf-8'))
 
 
+def review(*reviews):
+    return {'reviews': [{'id': i, 'fits': f, 'claim': c, 'cut': x} for i, f, c, x in reviews]}
+
+
+class Review(Base):
+    """The second pass: a reviewer that sees each claim beside its quote and nothing else."""
+    WIDE = 'Desde 2024 obliga a una política escrita, firmada por el director.'
+    NARROW = 'Obliga a establecer por escrito una política de prevención de riesgos.'
+
+    def wide(self):
+        a = answer()
+        a['findings']['confirmed'][0]['claim'] = self.WIDE
+        return a
+
+    def test_the_reviewer_sees_each_claim_beside_its_quote_and_nothing_else(self):
+        system, user = inv.review_prompt(self.wide())
+        self.assertIn(json.dumps(inv.REVIEW_SCHEMA, ensure_ascii=False), system)
+        self.assertIn('A name, number, date, plan, license, condition or list item absent from the quote makes it false', system)
+        self.assertEqual(json.loads(user), [
+            {'id': 'confirmed[0]', 'claim': self.WIDE, 'quote': QUOTE},
+            {'id': 'confirmed[1]', 'claim': 'El dataset trae una nota.', 'quote': '"nota": "datos abiertos"'}])
+        self.assertNotIn(A_PAGE, user)  # no artifact, no source text, no request: only what a reader of the packet checks
+        tension = self.wide()
+        tension['findings']['conflicting'] = [{'claim': 'Dos fuentes difieren sobre la política.', 'artifact_ids': [A_PAGE],
+                                               'quote': QUOTE, 'locator': 'numeral 5.1'}]
+        # a conflicting finding names a disagreement and quotes one side: never reviewed, never cut
+        self.assertEqual([i['id'] for i in json.loads(inv.review_prompt(tension)[1])], ['confirmed[0]', 'confirmed[1]'])
+        with self.assertRaises(ValueError):
+            inv.review_prompt({'findings': {'confirmed': 'x'}})
+
+    def test_a_claim_its_quote_does_not_hold_is_cut_down_and_the_cut_leaves_the_findings(self):
+        rows = self.fetch()
+        rev = review(('confirmed[1]', True, 'texto del revisor que no entra', ''),
+                     ('confirmed[0]', False, self.NARROW, 'desde 2024; firmada por el director'))
+        folder = inv.assemble(RR, rows, self.wide(), self.work, self.out, 'modelo de prueba', '2026-10-23T00:00:00Z',
+                              review=(rev, 'revisor de prueba'))
+        packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        self.assertEqual([f['claim'] for f in packet['findings']['confirmed']], [self.NARROW, 'El dataset trae una nota.'])
+        self.assertNotIn('director', json.dumps(packet, ensure_ascii=False))
+        self.assertEqual([x for x in packet['limitations'] if 'segunda pasada' in x], [
+            'Una segunda pasada que solo ve cada afirmación junto a su cita recortó 1 de 2 hallazgos confirmados a lo que su '
+            'cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.'])
+        self.assertEqual([a['agent'] for a in packet['researcher_agents']], ['rg-investigar', 'rg-investigar-revision'])
+        receipt = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))
+        self.assertEqual(receipt['review'], {'model': 'revisor de prueba', 'cuts': [
+            {'id': 'confirmed[0]', 'claim': self.WIDE, 'now': self.NARROW, 'cut': 'desde 2024; firmada por el director'}]})
+        problems, _, _ = packets.check(folder)
+        self.assertEqual(problems, [])
+
+    def test_a_review_that_skips_repeats_or_invents_a_finding_stops_the_run(self):
+        rows = self.fetch()
+        ok0, ok1 = ('confirmed[0]', True, '', ''), ('confirmed[1]', True, '', '')
+        for name, rev in (('skips', review(ok0)), ('repeats', review(ok0, ok0)), ('invents', review(ok0, ok1, ('conflicting[0]', True, '', ''))),
+                          ('no claim', review(ok0, ('confirmed[1]', False, ' ', 'x'))), ('no cut', review(ok0, ('confirmed[1]', False, 'x', ''))),
+                          ('extra field', {'reviews': [dict(r, nota='x') for r in review(ok0, ok1)['reviews']]}),
+                          ('not an object', [ok0, ok1])):
+            with self.subTest(name), self.assertRaises(ValueError):
+                inv.assemble(RR, rows, answer(), self.work, self.out, 'm', review=(rev, 'r'))
+        self.assertFalse((self.out / 'research-packets').exists())
+        folder = inv.assemble(RR, rows, answer(), self.work, self.out, 'm', review=(review(ok1, ok0), 'r'))  # any order
+        limits = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))['limitations']
+        self.assertEqual(sum('recortó 0 de 2' in x for x in limits), 1)
+
+    def test_the_command_line_writes_the_review_prompt_and_never_assembles_without_a_review(self):
+        rows = self.fetch()
+        req, cli, rcli = self.tmp / 'rr.json', self.tmp / 'modelo-cli.json', self.tmp / 'revision-cli.json'
+        req.write_text(json.dumps(RR), encoding='utf-8')
+        cli.write_text(json.dumps({'type': 'result', 'is_error': False, 'structured_output': self.wide()}), encoding='utf-8')
+        self.assertEqual(inv.main(['review-prompt', '--work', str(self.work), '--model-output', str(cli)]), 0)
+        self.assertEqual(json.loads((self.work / 'revision-schema.json').read_text(encoding='utf-8')), inv.REVIEW_SCHEMA)
+        self.assertEqual(((self.work / 'revision-system.txt').read_text(encoding='utf-8'),
+                          (self.work / 'revision-user.txt').read_text(encoding='utf-8')), inv.review_prompt(self.wide()))
+        base = ['assemble', '--request', str(req), '--work', str(self.work), '--model-output', str(cli), '--out', str(self.out)]
+        with mock.patch('sys.stderr'), self.assertRaises(SystemExit):
+            inv.main(base)
+        rcli.write_text(json.dumps({'type': 'result', 'is_error': False, 'structured_output': review(
+            ('confirmed[0]', False, self.NARROW, 'desde 2024'), ('confirmed[1]', True, '', ''))}), encoding='utf-8')
+        self.assertEqual(inv.main(base + ['--review-output', str(rcli)]), 0)
+        packet = json.loads((self.out / 'research-packets' / 'RP-2026-10-23-prueba' / 'packet.json').read_text(encoding='utf-8'))
+        self.assertEqual(packet['findings']['confirmed'][0]['claim'], self.NARROW)
+        self.assertEqual(len(rows), len(json.loads((self.work / 'fuentes.json').read_text(encoding='utf-8'))))
+
+
 class Workflow(unittest.TestCase):
     def setUp(self):
         self.text = (ROOT / '.github' / 'workflows' / 'investigar.yml').read_text(encoding='utf-8')
@@ -520,19 +603,38 @@ class Workflow(unittest.TestCase):
     def test_the_model_has_no_tool_no_repository_and_no_github_token(self):
         steps = self.jobs['analyze']['steps']
         with_secret = [s for s in steps if 'secrets.CLAUDE_CODE_OAUTH_TOKEN' in json.dumps(s)]
-        self.assertEqual(len(with_secret), 1)
-        model = with_secret[0]
-        self.assertEqual(set(model['env']), {'CLAUDE_CODE_OAUTH_TOKEN', 'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC',
-                                             'DISABLE_AUTOUPDATER'})
-        run = model['run']
-        self.assertIn('cd "$RUNNER_TEMP/vacio"', run)
-        self.assertIn('"$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config ', run)
-        self.assertIn('--json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")"', run)
-        for word in ('Read', 'Grep', 'Glob', 'allowedTools', 'add-dir', ' --mcp-config', 'dangerously'):
-            self.assertNotIn(word, run)
-        self.assertNotIn('uses', model)  # the CLI itself, not an action that adds tools of its own
+        self.assertEqual(len(with_secret), 2)  # the reading and the review, each the CLI and nothing else
+        model, reviewer = with_secret
+        self.assertIn('cd "$RUNNER_TEMP/vacio"', model['run'])
+        self.assertIn('"$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config ', model['run'])
+        self.assertIn('--json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")"', model['run'])
+        self.assertIn('mkdir -p "$RUNNER_TEMP/vacio-revision" && cd "$RUNNER_TEMP/vacio-revision"', reviewer['run'])
+        self.assertIn('"$RUNNER_TEMP/cc/package/claude" -p --tools "" --max-turns 3 --strict-mcp-config ', reviewer['run'])
+        for step in with_secret:
+            self.assertEqual(set(step['env']), {'CLAUDE_CODE_OAUTH_TOKEN', 'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC',
+                                                'DISABLE_AUTOUPDATER'})
+            for word in ('Read', 'Grep', 'Glob', 'allowedTools', 'add-dir', ' --mcp-config', 'dangerously', 'python'):
+                self.assertNotIn(word, step['run'])
+            self.assertNotIn('uses', step)  # the CLI itself, not an action that adds tools of its own
         self.assertNotIn('github.token', json.dumps(self.jobs['analyze']))
         self.assertNotIn('claude-code-action', self.text)
+
+    def test_the_review_reads_the_models_answer_and_the_gate_cannot_build_without_it(self):
+        steps = self.jobs['analyze']['steps']
+        at = {k: next(i for i, s in enumerate(steps) if k in s.get('run', '')) for k in (
+            'work/schema.json', 'python -m rg.investigar review-prompt --work work --model-output work/modelo-cli.json',
+            'work/revision-schema.json')}
+        model, prompt, reviewer = at.values()
+        self.assertLess(model, prompt)
+        self.assertLess(prompt, reviewer)
+        self.assertNotIn('secrets.', json.dumps(steps[prompt]))  # the step that parses the model's answer holds no secret
+        self.assertIn('--system-prompt "$(cat "$GITHUB_WORKSPACE/work/revision-system.txt")" \\\n'
+                      '  < "$GITHUB_WORKSPACE/work/revision-user.txt" > "$GITHUB_WORKSPACE/work/revision-cli.json"',
+                      steps[reviewer]['run'])
+        up = next(s for s in steps if 'upload-artifact' in s.get('uses', ''))
+        self.assertEqual(up['with']['path'].split(), ['work/modelo-cli.json', 'work/revision-cli.json'])
+        gate = '\n'.join(s.get('run', '') for s in self.jobs['gate']['steps'])
+        self.assertIn('--model-output work/modelo-cli.json --review-output work/revision-cli.json --out out', gate)
 
     def test_the_cli_is_pinned_by_version_and_integrity(self):
         env = self.jobs['analyze']['env']
