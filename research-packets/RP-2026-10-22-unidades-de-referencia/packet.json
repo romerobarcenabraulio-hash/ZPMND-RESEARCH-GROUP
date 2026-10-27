@@ -1,0 +1,305 @@
+{
+ "research_id": "RP-2026-10-22-unidades-de-referencia",
+ "request_id": "RR-2026-10-21-unidades-de-referencia",
+ "status": "CANDIDATE",
+ "produced_at": "2026-10-23T02:00:00Z",
+ "question": "¿Cuáles son los valores de la UMA y de los salarios mínimos generales y de la zona libre de la frontera norte vigentes en 2024, 2025 y 2026, desde qué fecha rige cada uno y en qué publicación oficial (DOF o INEGI) consta?",
+ "why_zpmnd_needs_it": "ZPMND calculará obligaciones laborales y fiscales con fórmulas en código; cada unidad de referencia debe entrar con su fuente y su vigencia, nunca de memoria del modelo (RR-2026-10-21-unidades-de-referencia).",
+ "scope": "Las siete notas oficiales del DOF que fijan esos valores (cuatro de INEGI para la UMA 2023-2026, tres resoluciones de la CONASAMI), localizadas en el catálogo de RG por título y descargadas de sidof.segob.gob.mx el 2026-10-22 respetando robots.txt. Solo salarios mínimos generales; los profesionales quedan fuera.",
+ "sources": {
+  "primary": [
+   "SA-dof-5676670",
+   "SA-dof-5714085",
+   "SA-dof-5746930",
+   "SA-dof-5778072",
+   "SA-dof-5711066",
+   "SA-dof-5745678",
+   "SA-dof-5775534"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-dof-5676670",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5676670",
+   "retrieved_at": "2026-10-22T23:28:13Z",
+   "sha256": "fbe265c5bbfa60bf26da5087093c6de9a11633701b874ac12020e808475234cd",
+   "bytes": 7603,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Instituto Nacional de Estadística y Geografía)",
+   "title": "Unidad de medida y actualización (valores vigentes desde el 1 de febrero de 2023)",
+   "published_at": "2023-01-10T00:00:00-06:00",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo"
+  },
+  {
+   "artifact_id": "SA-dof-5714085",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5714085",
+   "retrieved_at": "2026-10-22T17:03:34Z",
+   "sha256": "7a947b114ccbff4b3ad1073b1161d378072fe75985e84f707324109c828a776b",
+   "bytes": 7565,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Instituto Nacional de Estadística y Geografía)",
+   "title": "Unidad de medida y actualización (valores vigentes desde el 1 de febrero de 2024)",
+   "published_at": "2024-01-10T00:00:00-06:00",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo"
+  },
+  {
+   "artifact_id": "SA-dof-5746930",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5746930",
+   "retrieved_at": "2026-10-22T17:03:39Z",
+   "sha256": "dd1647f57cf3d5d4aea6af538ff3a5fec5fc208acff8d56b86254d4f7ba46e80",
+   "bytes": 7746,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Instituto Nacional de Estadística y Geografía)",
+   "title": "Unidad de medida y actualización (valores vigentes desde el 1 de febrero de 2025)",
+   "published_at": "2025-01-10T00:00:00-06:00",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo"
+  },
+  {
+   "artifact_id": "SA-dof-5778072",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5778072",
+   "retrieved_at": "2026-10-22T17:03:45Z",
+   "sha256": "e8dbeaee785e4cc19ae4159cfcd06125981c749b18b75ced043f45005104bb57",
+   "bytes": 7307,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Instituto Nacional de Estadística y Geografía)",
+   "title": "Unidad de medida y actualización (valores vigentes desde el 1 de febrero de 2026)",
+   "published_at": "2026-01-09T00:00:00-06:00",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo"
+  },
+  {
+   "artifact_id": "SA-dof-5711066",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5711066",
+   "retrieved_at": "2026-10-22T17:03:33Z",
+   "sha256": "0e0f6dcf5c2f0127eb34ebf23e70a566b0be6b0ed95745032fdb4a8c7a83a851",
+   "bytes": 870278,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Comisión Nacional de los Salarios Mínimos)",
+   "title": "Resolución de la CONASAMI: salarios mínimos que rigen desde el 1 de enero de 2024",
+   "published_at": "2023-12-12T00:00:00-06:00",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo"
+  },
+  {
+   "artifact_id": "SA-dof-5745678",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5745678",
+   "retrieved_at": "2026-10-22T17:03:37Z",
+   "sha256": "80223d388ab9f8b1c5a477224cb3bfc8ae6447978a763fa17a890efa35b73608",
+   "bytes": 873123,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Comisión Nacional de los Salarios Mínimos)",
+   "title": "Resolución de la CONASAMI: salarios mínimos que rigen desde el 1 de enero de 2025",
+   "published_at": "2024-12-19T00:00:00-06:00",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo"
+  },
+  {
+   "artifact_id": "SA-dof-5775534",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5775534",
+   "retrieved_at": "2026-10-22T17:03:43Z",
+   "sha256": "82cbe329e1b0af07798a241ac5e398bd0a43b1dd396777bdaa60d3ff970afbc3",
+   "bytes": 903662,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Comisión Nacional de los Salarios Mínimos)",
+   "title": "Resolución de la CONASAMI: salarios mínimos que rigen desde el 1 de enero de 2026",
+   "published_at": "2025-12-09T00:00:00-06:00",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "UMA 2023: valor diario 103.74 MXN, mensual 3,153.70 MXN y anual 37,844.40 MXN, vigentes a partir del 1 de febrero de 2023 (DOF 10/01/2023, INEGI).",
+    "artifact_ids": [
+     "SA-dof-5676670"
+    ],
+    "quote": "el valor diario de la Unidad de Medida y Actualización es de $103.74 pesos mexicanos, el mensual es de $3,153.70 pesos mexicanos y el valor anual $37,844.40 pesos mexicanos, los cuales estarán vigentes a partir del 1º de febrero de 2023",
+    "locator": "párrafo final de la nota"
+   },
+   {
+    "claim": "UMA 2024: valor diario 108.57 MXN, mensual 3,300.53 MXN y anual 39,606.36 MXN, vigentes desde el 1 de febrero de 2024 (DOF 10/01/2024, INEGI).",
+    "artifact_ids": [
+     "SA-dof-5714085"
+    ],
+    "quote": "el valor diario de la Unidad de Medida y Actualización es de $108.57 pesos mexicanos, el mensual es de $3,300.53 pesos mexicanos y el valor anual $39,606.36 pesos mexicanos, los cuales estarán vigentes a partir del 1º de febrero de 2024",
+    "locator": "párrafo final de la nota"
+   },
+   {
+    "claim": "UMA 2025: valor diario 113.14 MXN, mensual 3,439.46 MXN y anual 41,273.52 MXN, vigentes desde el 1 de febrero de 2025 (DOF 10/01/2025, INEGI).",
+    "artifact_ids": [
+     "SA-dof-5746930"
+    ],
+    "quote": "el valor diario de la Unidad de Medida y Actualización es de $113.14 pesos mexicanos, el mensual es de $3,439.46 pesos mexicanos y el valor anual $41,273.52 pesos mexicanos, los cuales estarán vigentes a partir del 1º de febrero de 2025",
+    "locator": "párrafo final de la nota"
+   },
+   {
+    "claim": "UMA 2026: valor diario 117.31 MXN, mensual 3,566.22 MXN y anual 42,794.64 MXN, vigentes desde el 1 de febrero de 2026 (DOF 09/01/2026, INEGI).",
+    "artifact_ids": [
+     "SA-dof-5778072"
+    ],
+    "quote": "el valor diario de la Unidad de Medida y Actualización es de $117.31 pesos mexicanos, el mensual es de $3,566.22 pesos mexicanos y el valor anual $42,794.64 pesos mexicanos, los cuales estarán vigentes a partir del 1º de febrero de 2026",
+    "locator": "párrafo final de la nota"
+   },
+   {
+    "claim": "Método de la UMA (igual en las tres notas): mensual = diario × 30.4; anual = mensual × 12.",
+    "artifact_ids": [
+     "SA-dof-5778072",
+     "SA-dof-5714085",
+     "SA-dof-5746930"
+    ],
+    "quote": "2. El valor mensual será el producto de multiplicar el valor diario de la Unidad de Medida y Actualización por 30.4. 3. El valor anual será el producto de multiplicar el valor mensual de la Unidad de Medida y Actualización por 12.",
+    "locator": "numerales 2 y 3 del método"
+   },
+   {
+    "claim": "Salario mínimo general 2024, Zona Libre de la Frontera Norte: 374.89 MXN diarios, desde el 1 de enero de 2024.",
+    "artifact_ids": [
+     "SA-dof-5711066"
+    ],
+    "quote": "serán de 374.89 pesos diarios por jornada diaria de trabajo en el área geográfica de la Zona Libre de la Frontera Norte (ZLFN)",
+    "locator": "resolutivo TERCERO"
+   },
+   {
+    "claim": "Salario mínimo general 2024, \"Resto del País\": 248.93 MXN diarios, desde el 1 de enero de 2024.",
+    "artifact_ids": [
+     "SA-dof-5711066"
+    ],
+    "quote": "para el Resto del País el salario mínimo general será de 248.93 pesos diarios, por jornada diaria de trabajo",
+    "locator": "resolutivo TERCERO"
+   },
+   {
+    "claim": "Salario mínimo general 2025, Zona Libre de la Frontera Norte: 419.88 MXN diarios, desde el 1 de enero de 2025.",
+    "artifact_ids": [
+     "SA-dof-5745678"
+    ],
+    "quote": "serán de 419.88 pesos diarios por jornada diaria de trabajo en el área geográfica de la Zona Libre de la Frontera Norte (ZLFN)",
+    "locator": "resolutivo TERCERO"
+   },
+   {
+    "claim": "Salario mínimo general 2025, Zona del Salario Mínimo General: 278.80 MXN diarios, desde el 1 de enero de 2025.",
+    "artifact_ids": [
+     "SA-dof-5745678"
+    ],
+    "quote": "para La Zona del Salario Mínimo General (ZSMG) el salario mínimo será de 278.80 pesos diarios, por jornada diaria de trabajo",
+    "locator": "resolutivo TERCERO"
+   },
+   {
+    "claim": "Salario mínimo general 2026, Zona del Salario Mínimo General: 315.04 MXN diarios, desde el 1 de enero de 2026.",
+    "artifact_ids": [
+     "SA-dof-5775534"
+    ],
+    "quote": "En 13.0% en la Zona del Salario Mínimo General (ZSMG), con lo que será de 315.04 pesos por jornada diaria de trabajo",
+    "locator": "resolutivo TERCERO"
+   },
+   {
+    "claim": "Salario mínimo general 2026, Zona Libre de la Frontera Norte: 440.87 MXN diarios, desde el 1 de enero de 2026.",
+    "artifact_ids": [
+     "SA-dof-5775534"
+    ],
+    "quote": "En 5.0% en la Zona Libre de la Frontera Norte (ZLFN), con lo que será de 440.87 pesos por jornada diaria de trabajo",
+    "locator": "resolutivo TERCERO"
+   },
+   {
+    "claim": "Para 2026 la resolución fija el paso a mensual: diario × 365 / 12, es decir 9,582.47 MXN (ZSMG) y 13,409.80 MXN (ZLFN) desde el 1 de enero de 2026.",
+    "artifact_ids": [
+     "SA-dof-5775534"
+    ],
+    "quote": "multiplicar el salario mínimo diario por 365 días entre 12 meses; lo que equivale a 9,582.47 pesos mensuales para la ZSMG y 13,409.80 pesos mensuales para la ZLFN a partir del 1º de enero de 2026",
+    "locator": "resolutivo CUARTO"
+   },
+   {
+    "claim": "Las dos áreas geográficas se definen en el resolutivo PRIMERO de cada resolución; la ZLFN es una lista cerrada de municipios de Baja California, Sonora, Chihuahua, Coahuila, Nuevo León y Tamaulipas, y el resto del país forma la otra área.",
+    "artifact_ids": [
+     "SA-dof-5775534",
+     "SA-dof-5711066",
+     "SA-dof-5745678"
+    ],
+    "quote": "Para fines de aplicación de los salarios mínimos en la República Mexicana habrá dos áreas geográficas",
+    "locator": "resolutivo PRIMERO"
+   },
+   {
+    "claim": "La nota de la UMA 2024 (DOF 10/01/2024) recuerda que los valores de la UMA 2023 se publicaron en el DOF el 10 de enero de 2023, vigentes a partir del 1 de febrero de 2023.",
+    "artifact_ids": [
+     "SA-dof-5714085"
+    ],
+    "quote": "Que el 10 de enero de 2023 se publicó en el Diario Oficial de la Federación los valores de la Unidad de Medida y Actualización, vigentes a partir del 1 de febrero de 2023.",
+    "locator": "considerando de la nota"
+   }
+  ],
+  "conflicting": [
+   {
+    "claim": "Dos divisores oficiales distintos de diario a mensual: la UMA usa × 30.4 (método publicado por INEGI) y el salario mínimo 2026 usa × 365 / 12 (= 30.4166…). Una fórmula que use uno para el otro se desvía unos centavos por día de mes.",
+    "artifact_ids": [
+     "SA-dof-5778072",
+     "SA-dof-5775534"
+    ],
+    "quote": "2. El valor mensual será el producto de multiplicar el valor diario de la Unidad de Medida y Actualización por 30.4.",
+    "locator": "UMA numeral 2 frente a CONASAMI 2026 resolutivo CUARTO"
+   },
+   {
+    "claim": "El área que no es ZLFN cambia de nombre: \"Resto del País\" en la resolución de 2024 y \"Zona del Salario Mínimo General (ZSMG)\" en las de 2025 y 2026. Los municipios que la forman se describen igual (todos los no listados en la ZLFN).",
+    "artifact_ids": [
+     "SA-dof-5711066",
+     "SA-dof-5745678"
+    ],
+    "quote": "El área geográfica de la \"Zona del Salario Mínimo General\", integrada por el resto de los municipios",
+    "locator": "resolutivo PRIMERO"
+   }
+  ],
+  "unknown": [
+   "Las resoluciones de 2024 y 2025 no fijan en su parte resolutiva cómo expresar el salario mínimo en términos mensuales; solo la de 2026 lo hace (365/12). Qué divisor aplica a 2024 y 2025 queda sin determinar con estas fuentes.",
+   "No se buscó la publicación paralela de INEGI en su sitio web. El catálogo de RG no registra fe de erratas ni modificaciones de las seis notas de 2024 a 2026 (búsqueda por título); la nota de la UMA 2023 (SA-dof-5676670), añadida después, no se buscó."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN de RG, no literal: cada UMA rige desde el 1 de febrero de su año hasta el día anterior a la entrada en vigor de la siguiente. Las notas SA-dof-5676670 y SA-dof-5714085 solo fijan la fecha de inicio; de ahí se deduce que la UMA 2023 (103.74) rige del 1 de febrero de 2023 al 31 de enero de 2024 y que en enero de cada año rige la del año anterior.",
+  "Con esa interpretación, las siete cifras de este paquete cubren UMA y salario mínimo de todo 2024 a 2026, cada una con su fecha de inicio de vigencia: enero de 2024 usa la UMA 2023 (103.74)."
+ ],
+ "candidate_methods": [
+  "Una Equivalencia por año y área: (valor, unidad, fecha de inicio, nota DOF, sha256 del crudo), con el divisor mensual de la propia fuente (30.4 para UMA; 365/12 para salario mínimo 2026) y desconocido donde la fuente no lo fija."
+ ],
+ "candidate_tests": [
+  "Describe: una fecha del 15 de enero de 2025 debe tomar la UMA de 2024 (108.57) y no la de 2025.",
+  "Describe: el salario mínimo mensual 2026 en ZSMG calculado por fórmula debe dar 9,582.47 (315.04 × 365 / 12, a dos decimales), igual que la resolución.",
+  "Describe: un municipio fuera de la lista del resolutivo PRIMERO debe caer en ZSMG; Tijuana debe caer en ZLFN."
+ ],
+ "possible_implications_for_zpmnd": [
+  "U-059 (formulas.py) puede recibir el divisor del salario mensual para 2026 con cita; para 2024 y 2025 debe quedar como desconocido o pedirse otra fuente.",
+  "El nombre del área cambió entre 2024 y 2025: el código debería identificar el área por su definición, no por su nombre."
+ ],
+ "affected_existing_concepts": [
+  "formulas con dinero y tiempo",
+  "Equivalencia citada",
+  "en_vigor"
+ ],
+ "limitations": [
+  "Solo DOF; no se cruzó con el sitio de INEGI ni con el de la CONASAMI.",
+  "Los crudos de las siete notas van en raw/sha256/<2>/<sha>.html (stored_at repo; LFDA art. 14 fr. VIII). Las dos que ya estaban en raw-mx coinciden byte a byte con el sha256 del catálogo. Cada cita se comprueba con el extractor fijado rg-html==1 (rg.packets; en CI, la prueba RepoPackets).",
+  "La búsqueda de fe de erratas y modificaciones no cubrió la nota de la UMA 2023 (SA-dof-5676670)."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "claude-research-group",
+   "model": "claude-opus-5-5",
+   "substrate": "Claude Code (descarga directa con robots.txt, sin OpenClaw)"
+  }
+ ]
+}
