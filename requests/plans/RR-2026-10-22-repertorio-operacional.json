@@ -1,0 +1,194 @@
+{
+ "request_id": "RR-2026-10-22-repertorio-operacional",
+ "sources": [
+  {
+   "url": "https://arxiv.org/abs/2304.11477",
+   "title": "arXiv 2304.11477: LLM+P: Empowering Large Language Models with Optimal Planning Proficiency",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2402.01817",
+   "title": "arXiv 2402.01817: LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2302.04761",
+   "title": "arXiv 2302.04761: Toolformer: Language Models Can Teach Themselves to Use Tools",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2305.15334",
+   "title": "arXiv 2305.15334: Gorilla: Large Language Model Connected with Massive APIs",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2307.16789",
+   "title": "arXiv 2307.16789: ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2303.17580",
+   "title": "arXiv 2303.17580: HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2306.06624",
+   "title": "arXiv 2306.06624: RestGPT: Connecting Large Language Models with Real-World RESTful APIs",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2204.01691",
+   "title": "arXiv 2204.01691: Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2305.16291",
+   "title": "arXiv 2305.16291: Voyager: An Open-Ended Embodied Agent with Large Language Models",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2209.07753",
+   "title": "arXiv 2209.07753: Code as Policies: Language Model Programs for Embodied Control",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2210.03629",
+   "title": "arXiv 2210.03629: ReAct: Synergizing Reasoning and Acting in Language Models",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2303.11366",
+   "title": "arXiv 2303.11366: Reflexion: Language Agents with Verbal Reinforcement Learning",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2307.13854",
+   "title": "arXiv 2307.13854: WebArena: A Realistic Web Environment for Building Autonomous Agents",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2306.06070",
+   "title": "arXiv 2306.06070: Mind2Web: Towards a Generalist Agent for the Web",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2403.07718",
+   "title": "arXiv 2403.07718: WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2404.07972",
+   "title": "arXiv 2404.07972: OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2407.18901",
+   "title": "arXiv 2407.18901: AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2406.12045",
+   "title": "arXiv 2406.12045: $τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2312.13771",
+   "title": "arXiv 2312.13771: AppAgent: Multimodal Agents as Smartphone Users",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2409.07429",
+   "title": "arXiv 2409.07429: Agent Workflow Memory",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "CC BY-SA 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/2410.12361",
+   "title": "arXiv 2410.12361: Proactive Agent: Shifting LLM Agents from Reactive Responses to Active Assistance",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  }
+ ]
+}
