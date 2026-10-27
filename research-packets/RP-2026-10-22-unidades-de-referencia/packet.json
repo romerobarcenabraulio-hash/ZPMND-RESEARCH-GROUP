@@ -174,11 +174,11 @@
     "artifact_ids": [
      "SA-dof-5711066"
     ],
-    "quote": "serán de 374.89 pesos diarios por jornada diaria de trabajo en el área geográfica de la Zona Libre de la Frontera Norte (ZLFN)",
-    "locator": "resolutivo TERCERO"
+    "quote": "Los salarios mínimos generales que tendrán vigencia a partir del 1º de enero de 2024 se incrementarán en 20.0% en las dos zonas descritas en el primer resolutivo, por tanto, serán de 374.89 pesos diarios por jornada diaria de trabajo en el área geográfica de la Zona Libre de la Frontera Norte",
+    "locator": "parte resolutiva: salarios mínimos generales con vigencia a partir del 1 de enero"
    },
    {
-    "claim": "Salario mínimo general 2024, \"Resto del País\": 248.93 MXN diarios, desde el 1 de enero de 2024.",
+    "claim": "Salario mínimo general 2024, \"Resto del País\": 248.93 MXN diarios. Es un importe de la misma resolución que fija la vigencia a partir del 1 de enero de 2024 (la fecha la cita el hallazgo de la ZLFN 2024).",
     "artifact_ids": [
      "SA-dof-5711066"
     ],
@@ -190,11 +190,11 @@
     "artifact_ids": [
      "SA-dof-5745678"
     ],
-    "quote": "serán de 419.88 pesos diarios por jornada diaria de trabajo en el área geográfica de la Zona Libre de la Frontera Norte (ZLFN)",
-    "locator": "resolutivo TERCERO"
+    "quote": "Los salarios mínimos generales que tendrán vigencia a partir del 1º de enero de 2025, se incrementarán en 12% en las dos zonas descritas en el primer resolutivo, por tanto, serán de 419.88 pesos diarios por jornada diaria de trabajo en el área geográfica de la Zona Libre de la Frontera Norte",
+    "locator": "parte resolutiva: salarios mínimos generales con vigencia a partir del 1 de enero"
    },
    {
-    "claim": "Salario mínimo general 2025, Zona del Salario Mínimo General: 278.80 MXN diarios, desde el 1 de enero de 2025.",
+    "claim": "Salario mínimo general 2025, Zona del Salario Mínimo General: 278.80 MXN diarios. Es un importe de la misma resolución que fija la vigencia a partir del 1 de enero de 2025 (la fecha la cita el hallazgo de la ZLFN 2025).",
     "artifact_ids": [
      "SA-dof-5745678"
     ],
@@ -206,11 +206,11 @@
     "artifact_ids": [
      "SA-dof-5775534"
     ],
-    "quote": "En 13.0% en la Zona del Salario Mínimo General (ZSMG), con lo que será de 315.04 pesos por jornada diaria de trabajo",
-    "locator": "resolutivo TERCERO"
+    "quote": "Los salarios mínimos generales que tendrán vigencia a partir del 1º de enero de 2026, reflejan un incremento de la siguiente manera: · En 13.0% en la Zona del Salario Mínimo General (ZSMG), con lo que será de 315.04 pesos por jornada diaria de trabajo; que se compone de 17.01 pesos de MIR más un",
+    "locator": "parte resolutiva: salarios mínimos generales con vigencia a partir del 1 de enero"
    },
    {
-    "claim": "Salario mínimo general 2026, Zona Libre de la Frontera Norte: 440.87 MXN diarios, desde el 1 de enero de 2026.",
+    "claim": "Salario mínimo general 2026, Zona Libre de la Frontera Norte: 440.87 MXN diarios. Es un importe de la misma resolución que fija la vigencia a partir del 1 de enero de 2026 (la fecha la cita el hallazgo de la ZSMG 2026).",
     "artifact_ids": [
      "SA-dof-5775534"
     ],
@@ -226,13 +226,29 @@
     "locator": "resolutivo CUARTO"
    },
    {
-    "claim": "Las dos áreas geográficas se definen en el resolutivo PRIMERO de cada resolución; la ZLFN es una lista cerrada de municipios de Baja California, Sonora, Chihuahua, Coahuila, Nuevo León y Tamaulipas, y el resto del país forma la otra área.",
+    "claim": "Cada resolución establece dos áreas geográficas para la aplicación de los salarios mínimos.",
     "artifact_ids": [
      "SA-dof-5775534",
      "SA-dof-5711066",
      "SA-dof-5745678"
     ],
     "quote": "Para fines de aplicación de los salarios mínimos en la República Mexicana habrá dos áreas geográficas",
+    "locator": "resolutivo PRIMERO"
+   },
+   {
+    "claim": "ZLFN (resolución 2026): la integran los municipios que hacen frontera con Estados Unidos que el resolutivo enumera, empezando por los de Baja California; la lista completa está en el resolutivo.",
+    "artifact_ids": [
+     "SA-dof-5775534"
+    ],
+    "quote": "Zona Libre de la Frontera Norte (ZLFN), la cual está vigente desde el 1º de enero del 2019, se integra por los municipios que hacen frontera con Estados Unidos de Norteamérica: Ensenada, Playas de Rosarito, Mexicali, Tecate, Tijuana, San Quintín y San Felipe, en el Estado de Baja California",
+    "locator": "resolutivo PRIMERO"
+   },
+   {
+    "claim": "ZSMG (resolución 2026): la integran el resto de los municipios y las demarcaciones territoriales de la Ciudad de México no listados en la ZLFN.",
+    "artifact_ids": [
+     "SA-dof-5775534"
+    ],
+    "quote": "resto de los municipios y las demarcaciones territoriales de la Ciudad de México que no fueron listadas en el punto anterior y conforman la República Mexicana",
     "locator": "resolutivo PRIMERO"
    },
    {
@@ -266,7 +282,8 @@
   ],
   "unknown": [
    "Las resoluciones de 2024 y 2025 no fijan en su parte resolutiva cómo expresar el salario mínimo en términos mensuales; solo la de 2026 lo hace (365/12). Qué divisor aplica a 2024 y 2025 queda sin determinar con estas fuentes.",
-   "No se buscó la publicación paralela de INEGI en su sitio web. El catálogo de RG no registra fe de erratas ni modificaciones de las seis notas de 2024 a 2026 (búsqueda por título); la nota de la UMA 2023 (SA-dof-5676670), añadida después, no se buscó."
+   "No se buscó la publicación paralela de INEGI en su sitio web. El catálogo de RG no registra fe de erratas ni modificaciones de las seis notas de 2024 a 2026 (búsqueda por título); la nota de la UMA 2023 (SA-dof-5676670), añadida después, no se buscó.",
+   "La lista municipal completa de la ZLFN no se transcribe aquí: está en el resolutivo PRIMERO de cada resolución (crudos guardados en este paquete)."
   ]
  },
  "candidate_claims": [
