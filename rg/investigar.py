@@ -205,6 +205,10 @@ Write it in Spanish:
 - findings.confirmed: what a source states, one finding per statement, each with artifact_ids of the sources given
   only, a quote of at most 300 characters copied EXACTLY from that source's text (it is checked by machine; a quote
   that is not there stops the run), and a locator (section, numeral, page).
+- The claim says nothing its quote does not say: one fact per finding. A date, a number, a license, a dependency or
+  a list goes into a claim only if it is in that claim's own quote; a list needs a quote that holds the whole list,
+  or one finding per item. The machine checks that the quote exists, not that it supports the claim, so this is on
+  you. What you connect or deduce across quotes goes to candidate_claims, starting with "INTERPRETACIÓN:".
 - findings.conflicting: where sources disagree, with the quote of one side.
 - findings.unknown: what the request asks that these sources do not answer. Not finding something is not proof that
   it does not exist: say what was read.
