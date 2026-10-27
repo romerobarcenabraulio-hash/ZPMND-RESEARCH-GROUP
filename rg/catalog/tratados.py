@@ -9,8 +9,11 @@ to the end without the final period. Notes are grouped by the exact name, folded
 spaces), and ordered by official date. Nothing is inferred: no validity, no parties, no merging of different names.
 
 Independent check: a looser regex over every DOF title (LOOKS_LIKE) must select exactly the titles the table
-classifies; any disagreement, either way, fails the run's coverage (exit 3).
+classifies; any disagreement, either way, fails the run's coverage (exit 3), except a note a person reviewed and wrote
+down in REVIEWED with the sha256 of the exact title read and the reason: the table's answer stands for that title,
+and a new disagreement, or a new title under the same id, still fails the run.
 """
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -30,6 +33,8 @@ STAGES = {
     'DECRETO POR EL QUE SE APRUEBAN LAS ENMIENDAS': 'enmienda',
     'DECRETO PROMULGATORIO DE LA DENUNCIA': 'retiro_o_denuncia',
     'DECRETO POR EL QUE SE APRUEBA LA DENUNCIA': 'retiro_o_denuncia',
+    'DECRETO POR EL QUE SE DA A CONOCER LA DENUNCIA': 'retiro_o_denuncia',
+    'DECRETO PROMULGATORIO CON': 'promulgacion',  # 'con las declaraciones ... al Acta de Ginebra' (DOF 2020-06-05)
     'DECRETO PROMULGATORIO DEL RETIRO': 'retiro_o_denuncia',
     'DECRETO POR EL QUE SE APRUEBA EL RETIRO': 'retiro_o_denuncia',
     'FE DE ERRATAS AL DECRETO PROMULGATORIO': 'fe_de_erratas',
@@ -38,12 +43,25 @@ STAGES = {
     'ACLARACION AL DECRETO POR EL QUE SE APRUEBA': 'aclaracion',
 }
 _OPENINGS = sorted(STAGES, key=len, reverse=True)
+# Disagreements a person reviewed (entry id -> sha256 of the exact title read, why the table's answer stands).
+# Only notes, never patterns; the review holds for that title only.
+REVIEWED = {
+    'mx.dof:5636928': ('80ef8b31e6e315c46cdf4c89cd99c287f5e2218b2ce06f6f4a7b1710162ddfb0',
+                       'aprueba el Anexo III de MARPOL 73/78 (un tratado); el título no trae cláusula de conclusión'),
+    'mx.dof:5636929': ('f9caa9d30dbcf341cb1dc93a378060d41a8f4f7a19a5d3a43139281ebda6ab11',
+                       'aprueba el Anexo IV de MARPOL 73/78 (un tratado); el título no trae cláusula de conclusión'),
+}
 ARTICLES = ('DEL', 'DE LA', 'DE LOS', 'DE LAS', 'AL', 'A LA', 'A LOS', 'A LAS', 'EL', 'LA', 'LOS', 'LAS')
 INSTRUMENTS = {'TRATADO', 'TRATADOS', 'CONVENIO', 'CONVENIOS', 'CONVENCION', 'CONVENCIONES', 'ACUERDO', 'ACUERDOS',
-               'PROTOCOLO', 'PROTOCOLOS', 'ENMIENDA', 'ENMIENDAS'}
-CLAUSE = re.compile(r',\s*(?:adoptad|firmad|hech|suscrit)[oa]s?\b', re.IGNORECASE)
+               'PROTOCOLO', 'PROTOCOLOS', 'ENMIENDA', 'ENMIENDAS', 'ACTA', 'ACTAS', 'ANEXO', 'ANEXOS', 'DECLARACIONES'}
+# One ordinal may precede the instrument word: 'el Segundo Protocolo Modificatorio', 'el Tercer Protocolo Adicional'.
+ORDINALS = {'PRIMER', 'PRIMERO', 'PRIMERA', 'SEGUNDO', 'SEGUNDA', 'TERCER', 'TERCERO', 'TERCERA', 'CUARTO', 'CUARTA',
+            'QUINTO', 'QUINTA', 'SEXTO', 'SEXTA', 'SEPTIMO', 'SEPTIMA', 'OCTAVO', 'OCTAVA', 'NOVENO', 'NOVENA', 'DECIMO',
+            'DECIMA'}
+CLAUSE = re.compile(r',\s*(?:adoptad|aprobad|celebrad|firmad|hech|suscrit)[oa]s?\b', re.IGNORECASE)
 # Independent of the table: a decree that names a promulgation, or a decree with a conclusion clause.
-LOOKS_LIKE = re.compile(r'\bDECRETO\b.*(?:\bPROMULGATORI[OA]S?\b|, ?(?:ADOPTAD|FIRMAD|HECH|SUSCRIT)[OA]S? (?:EN|EL|POR)\b)')
+LOOKS_LIKE = re.compile(r'\bDECRETO\b.*(?:\bPROMULGATORI[OA]S?\b|, ?(?:APROBAD|CELEBRAD)[OA]S? (?:EN|POR|MEDIANTE)\b'
+                        r'|, ?(?:ADOPTAD|FIRMAD|HECH|SUSCRIT)[OA]S? (?:EN|EL|POR)\b)')
 
 
 def classify(title):
@@ -54,6 +72,8 @@ def classify(title):
             continue
         rest = t[len(opening) + 1:]
         art = next((a for a in ARTICLES if rest.startswith(a + ' ')), None)
+        if art is not None and rest[len(art) + 1:].split(' ', 1)[0] in ORDINALS:  # the instrument word follows it
+            rest = f"{art} {rest[len(art) + 1:].split(' ', 1)[-1]}"
         if art is None or rest[len(art) + 1:].split(' ', 1)[0].rstrip(',.') not in INSTRUMENTS:
             continue
         words, prefix = title.split(), f'{opening} {art}'
@@ -66,6 +86,12 @@ def classify(title):
     return None
 
 
+def reviewed(entry):
+    """True only for the exact title a person reviewed: a corrected title under the same id is checked again."""
+    seen = REVIEWED.get(entry['entry_id'])
+    return seen is not None and seen[0] == hashlib.sha256(entry['title'].encode('utf-8')).hexdigest()
+
+
 def _dof(entries):
     return [e for e in entries if e['source_id'] == SOURCE]
 
@@ -73,6 +99,7 @@ def _dof(entries):
 def unreconciled(entries):
     """DOF entry ids where the independent check and the table disagree: a title that looks like a treaty decree and
     is not classified, or one classified that does not look like one."""
+    entries = [e for e in entries if not reviewed(e)]  # reviewed: the table's answer stands for that title
     return sorted(e['entry_id'] for e in _dof(entries)
                   if bool(LOOKS_LIKE.search(fold(e['title']))) != (classify(e['title']) is not None))
 

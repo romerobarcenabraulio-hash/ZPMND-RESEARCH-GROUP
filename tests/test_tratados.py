@@ -1,6 +1,7 @@
 """Treaties from DOF titles: fixed table of openings, name copied from the title, exact grouping, independent check.
 
-REAL titles are copied verbatim from the local DOF catalog (2025-09-24 to 2026-10-20: the only treaty decrees in it).
+REAL titles are copied verbatim from the local DOF catalog (2025-09-24 to 2026-10-20: the only treaty decrees in it);
+VARIANTES, verbatim from the catalog back to 2017, are the ones the run of 2026-10-25 found unclassified.
 Stages that do not occur in that window (enmienda, denuncia, fe de erratas) use constructed titles, marked as such.
 """
 import json
@@ -65,6 +66,36 @@ SEGUNDO = note(6, 'Decreto Promulgatorio del Segundo Protocolo Adicional al Conv
                   'de dos mil veinticinco.', '2026-05-01')
 LIMITES = note(7, 'Decreto por el que se aprueba el Convenio Amistoso para el arreglo de límites entre los Estados de A '
                   'y B.', '2026-05-02')
+# Real DOF titles (2017-2022) the table missed until the run of 2026-10-25 (coverage 230/245): an ordinal before the
+# instrument, Acta / Anexo / Declaraciones, «se da a conocer la denuncia», «Promulgatorio con», «aprobado/celebrado en».
+VARIANTES = [
+    note(5487418, 'Decreto por el que se aprueba el Segundo Protocolo Modificatorio al Acuerdo entre el Gobierno de los Estados Unidos Mexicanos y el Gobierno de los Estados Unidos de América sobre el Establecimiento de la Comisión de Cooperación Ecológica Fronteriza y el Banco de Desarrollo de América del Norte, hecho en Washington, D.C. y en la Ciudad de México el diecisiete de enero y el dieciocho de abril de dos mil diecisiete, respectivamente.',
+         '2017-06-20'),
+    note(5528819, 'Decreto por el que se aprueba La Enmienda del Protocolo de Montreal relativo a las Sustancias que Agotan la Capa de Ozono, aprobada en Kigali, el quince de octubre de dos mil dieciséis.',
+         '2018-06-22'),
+    note(5545342, 'Decreto por el que se da a conocer la denuncia del Acuerdo entre el Gobierno de los Estados Unidos Mexicanos y el Gobierno de la República de la India para la Promoción y Protección de las Inversiones, hecho en la ciudad de Nueva Delhi, el veintiuno de mayo de dos mil siete.',
+         '2018-11-30'),
+    note(5584211, 'Decreto por el que se aprueba el Acta de Ginebra del Arreglo de la Haya relativo al Registro Internacional de Dibujos y Modelos Industriales, adoptada en Ginebra el dos de julio de mil novecientos noventa y nueve.',
+         '2020-01-17'),
+    note(5584213, 'Decreto por el que se aprueban las Declaraciones del Estado Mexicano al Acta de Ginebra del Arreglo de la Haya relativo al Registro Internacional de Dibujos y Modelos Industriales, adoptada en Ginebra el dos de julio de mil novecientos noventa y nueve.',
+         '2020-01-17'),
+    note(5594545, 'Decreto Promulgatorio con las declaraciones correspondientes por parte del Estado Mexicano en la adhesión al Acta de Ginebra del Arreglo de La Haya relativo al Registro Internacional de Dibujos y Modelos Industriales.',
+         '2020-06-05'),
+    note(5616645, 'Decreto por el que se aprueba el Acuerdo relativo al Artículo 12 del Acuerdo de Continuidad Comercial entre los Estados Unidos Mexicanos y el Reino Unido de la Gran Bretaña e Irlanda del Norte, celebrado mediante intercambio de cartas fechadas en la Ciudad de México el veintinueve de diciembre de dos mil veinte.',
+         '2021-04-23'),
+    note(5668505, 'Decreto Promulgatorio del Anexo III Reglas para Prevenir la Contaminación por Sustancias Perjudiciales Transportadas por Mar en Bultos del Convenio Internacional para Prevenir la Contaminación por los Buques, 1973, modificado por el Protocolo de 1978, enmendado.',
+         '2022-10-14'),
+    note(5723225, 'Decreto por el que se aprueba el Acuerdo Internacional del Café de 2022, aprobado en Londres, Reino Unido, el nueve de junio de dos mil veintidós.',
+         '2024-04-12'),
+    note(5526722, 'Decreto por el que se aprueba el Acuerdo entre los Estados Unidos Mexicanos y la Unión Europea por el que se Modifica el Anexo III de la Decisión 2/2000 del Consejo Conjunto CE-México del 23 de marzo de 2000, celebrado por intercambio de cartas fechadas en las ciudades de Bruselas y México, el dieciocho de septiembre de dos mil diecisiete.',
+         '2018-06-18'),
+    note(5636928, 'Decreto por el que se aprueba el Anexo III "Reglas para Prevenir la Contaminación por Sustancias Perjudiciales Transportadas por Mar en Bultos" del Convenio Internacional para Prevenir la Contaminación por los Buques, 1973, modificado por el Protocolo de 1978.',
+         '2021-12-01'),
+    note(5636929, 'Decreto por el que se aprueba el Anexo IV "Reglas para Prevenir la Contaminación por las Aguas Sucias de los Buques" del Convenio Internacional para Prevenir la Contaminación por los Buques, 1973, modificado por el Protocolo de 1978.',
+         '2021-12-01'),
+]
+MEMORANDO = note(9, 'Decreto Promulgatorio del Memorándum de Entendimiento X, hecho en Roma, el uno de enero de dos '
+                   'mil veinticinco.', '2026-05-04')  # CONSTRUIDO: a promulgation of something outside the table
 DESALINEADO = note(8, 'Decreto Promulgatorio del´Acuerdo X, hecho en Roma, el uno de enero de dos mil veinticinco.',
                    '2026-05-03')
 
@@ -123,7 +154,33 @@ class IndependentCheck(unittest.TestCase):
         self.assertEqual(tratados.unreconciled(REAL + NOT_TREATIES), [])
 
     def test_a_treaty_decree_the_table_does_not_classify_is_reported(self):
-        self.assertEqual(tratados.unreconciled(REAL + [SEGUNDO, DESALINEADO]), ['mx.dof:6', 'mx.dof:8'])
+        self.assertEqual(tratados.unreconciled(REAL + [MEMORANDO, DESALINEADO]), ['mx.dof:8', 'mx.dof:9'])
+
+    def test_the_variants_the_2026_10_25_run_found_are_classified_and_reconcile(self):
+        # Coverage 230/245 on 2026-10-25: ordinals, Acta/Anexo/Declaraciones, «se da a conocer la denuncia»,
+        # «Promulgatorio con», and the clauses «aprobado en» / «celebrado por|mediante».
+        self.assertEqual(tratados.unreconciled(REAL + VARIANTES), [])
+        by = {e['entry_id']: tratados.classify(e['title']) for e in VARIANTES}
+        self.assertEqual(by['mx.dof:5487418'][0], 'aprobacion_senado')
+        self.assertTrue(by['mx.dof:5487418'][1].startswith('Segundo Protocolo Modificatorio al Acuerdo'))
+        self.assertEqual(by['mx.dof:5545342'][0], 'retiro_o_denuncia')
+        self.assertEqual(by['mx.dof:5594545'][0], 'promulgacion')
+        self.assertEqual(by['mx.dof:5723225'], ('aprobacion_senado', 'Acuerdo Internacional del Café de 2022'))
+        self.assertEqual(by['mx.dof:5528819'], ('enmienda', 'Protocolo de Montreal relativo a las Sustancias que Agotan '
+                                                'la Capa de Ozono'))  # the amended instrument, cut at «, aprobada en»
+
+    def test_a_reviewed_disagreement_is_not_reported_and_a_new_one_with_its_title_is(self):
+        self.assertEqual(sorted(tratados.REVIEWED), ['mx.dof:5636928', 'mx.dof:5636929'])
+        for i, annex in (('mx.dof:5636928', 'Anexo III'), ('mx.dof:5636929', 'Anexo IV')):
+            with self.subTest(i):
+                anexo = next(e for e in VARIANTES if e['entry_id'] == i)
+                stage, name = tratados.classify(anexo['title'])
+                self.assertEqual((stage, name.startswith(f'{annex} "Reglas para Prevenir')), ('aprobacion_senado', True))
+                self.assertIsNone(tratados.LOOKS_LIKE.search(tratados.fold(anexo['title'])))  # the disagreement reviewed
+                self.assertEqual(tratados.unreconciled([anexo]), [])
+                self.assertEqual(tratados.unreconciled([{**anexo, 'entry_id': 'mx.dof:99'}]), ['mx.dof:99'])
+                # GPT #44: the review holds for the title read, not for the id; a corrected title is checked again
+                self.assertEqual(tratados.unreconciled([{**anexo, 'title': anexo['title'].replace('1978', '1997')}]), [i])
 
     def test_a_classified_title_that_does_not_look_like_a_treaty_decree_is_reported(self):
         self.assertEqual(tratados.unreconciled(REAL + [LIMITES]), ['mx.dof:7'])
@@ -168,9 +225,9 @@ class RunHook(unittest.TestCase):
 
     def test_an_unclassified_treaty_decree_fails_the_run(self):
         with tempfile.TemporaryDirectory() as d:
-            self.assertEqual(self.run_main(d + '/out', REAL + [SEGUNDO]), 3)
+            self.assertEqual(self.run_main(d + '/out', REAL + [MEMORANDO]), 3)
             bad = [c for c in self.manifests(d + '/out')[-1]['coverage'] if not c['ok']]
-        self.assertEqual([(c['source_id'], c['entries']) for c in bad], [('mx.tratados', ['mx.dof:6'])])
+        self.assertEqual([(c['source_id'], c['entries']) for c in bad], [('mx.tratados', ['mx.dof:9'])])
 
 
 if __name__ == '__main__':

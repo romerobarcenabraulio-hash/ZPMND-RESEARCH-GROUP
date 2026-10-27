@@ -7,6 +7,7 @@ correction, extension, cancellation...); a title that matches none is OTRO. Rela
 from the title itself: a NOM named after the word CANCELA is 'cancela'; any other NOM named in the title is
 'menciona'. Nothing is inferred: no validity is computed, no lineage is merged by subject.
 """
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -69,8 +70,24 @@ def codes(title):
     return out
 
 
+# Titles a person reviewed that name a NOM with no readable code (entry id -> sha256 of the exact title read, why).
+# Only notes, never patterns; the review holds for that title only.
+REVIEWED = {
+    'mx.dof:5583405': ('e632f71f9d17b86d9b648c267326db4b5329982704d1fa812c0e5cfe68e93159',
+                       'convenio de subsidios que cita «conforme a la NOM-046.» sin emisor ni año: no es una nota de NOM'),
+}
+
+
+def reviewed(entry):
+    """True only for the exact title a person reviewed: a corrected title under the same id is checked again."""
+    seen = REVIEWED.get(entry['entry_id'])
+    return seen is not None and seen[0] == hashlib.sha256(entry['title'].encode('utf-8')).hexdigest()
+
+
 def unparsed(entries):
-    """Entry ids whose title seems to name a NOM but yields no code: the parser's independent check."""
+    """Entry ids whose title seems to name a NOM but yields no code: the parser's independent check. A reviewed note
+    (REVIEWED, that exact title) is not reported; a new one, or a new title under its id, is."""
+    entries = [e for e in entries if not reviewed(e)]
     return sorted(e['entry_id'] for e in entries if LOOKS_LIKE.search(fold(e['title'])) and not codes(e['title']))
 
 
