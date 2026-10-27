@@ -415,7 +415,7 @@
     "locator": "hr_timesheet/security/ir.model.access.csv"
    },
    {
-    "claim": "La API externa de Odoo 17 usa XML-RPC en xmlrpc/2/object (execute_kw). Los métodos search, read, search_read, create, write, unlink y fields_get se aplican a cualquier modelo.",
+    "claim": "La API externa de Odoo 17 usa XML-RPC: el endpoint xmlrpc/2/object (execute_kw) llama métodos de los modelos. Qué modelos y métodos responden depende de los módulos instalados y de las ACL y reglas de registro de cada modelo; la cita acredita el endpoint, no permisos.",
     "artifact_ids": [
      "SA-feb2d58ab234aa5458fb93f1"
     ],
@@ -441,7 +441,7 @@
   ],
   "conflicting": [],
   "unknown": [
-   "No se encontró manifiesto de hr_payroll ni de módulos de Enterprise. No se puede confirmar que la nómina sea exclusiva de Enterprise. La doc de Payroll no declara edición.",
+   "El plan no incluyó fuentes que comparen ediciones: con estas fuentes no se puede saber si la nómina (hr_payroll) es exclusiva de Enterprise. La doc de Payroll no declara edición, y no haber leído un manifiesto de hr_payroll no es evidencia de nada.",
    "No hay lista oficial de módulos exclusivos de Enterprise.",
    "No se leyeron las definiciones Python de los modelos, así que no hay lista de campos. Se obtienen con fields_get.",
    "Se desconoce si la API externa tiene límites en Community autoalojado. La doc solo restringe planes de Odoo Online.",
@@ -450,8 +450,7 @@
   ]
  },
  "candidate_claims": [
-  "Community 17 trae gratis y con licencia LGPL-3, según sus manifiestos: empleados, asistencias, ausencias, contratos, entradas de trabajo, proyectos, hojas de horas y habilidades.",
-  "HIPÓTESIS: la nómina con recibos (hr_payroll) es de Enterprise, porque no aparece entre los manifiestos de Community leídos. Debe confirmarse."
+  "Community 17 trae gratis y con licencia LGPL-3, según sus manifiestos: empleados, asistencias, ausencias, contratos, entradas de trabajo, proyectos, hojas de horas y habilidades."
  ],
  "candidate_tests": [
   "En una instancia Community 17 limpia, consultar ir.module.module (name, state, license) para los módulos hr* y comprobar si hr_payroll existe.",
@@ -475,6 +474,11 @@
    "agent": "rg-investigar",
    "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
    "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-revision-manual",
+   "model": "claude (claude-opus-5-5; conversación con el dueño)",
+   "substrate": "PR #39: corrige dos afirmaciones que señaló el auditor GPT (XML-RPC y nómina)"
   }
  ]
 }
