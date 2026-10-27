@@ -152,7 +152,7 @@ def settle(rp, said, sha, data, repo_name, budget, repo='.', verify=None):
     reserved = 0
     try:
         rows = tree(sha, rp, repo)
-        if not rows:
+        if not rows:  # the head removed it
             return {'packet': rp, 'status': 'removed'}, 0
         if said.get('status') not in ('passed', 'needs_attestation'):
             return {'packet': rp, 'status': 'failed', 'warnings': _words(said.get('warnings')), 'raws': {},
@@ -163,7 +163,7 @@ def settle(rp, said, sha, data, repo_name, budget, repo='.', verify=None):
         if total > budget:
             return {'packet': rp, 'status': 'failed', 'warnings': [], 'raws': {},
                     'problems': [f'{total} bytes: over the {budget} left for this head']}, 0
-        reserved = total
+        reserved = total  # before the first byte is written
         folder = write_blobs(rows, rp, data, repo)
         digests = {f'research-packets/{rp}/{f.relative_to(folder).as_posix()}': hashlib.sha256(f.read_bytes()).hexdigest()
                    for f in sorted(folder.rglob('*')) if f.is_file()}
