@@ -1,0 +1,347 @@
+{
+ "request_id": "RR-2026-10-21-omniroute",
+ "sources": [
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/README.md",
+   "title": "OmniRoute d049df5 README.md (README: qué hace y cómo se usa)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "vendor_doc",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/SECURITY.md",
+   "title": "OmniRoute d049df5 SECURITY.md (Política de seguridad)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "vendor_doc",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/LICENSE",
+   "title": "OmniRoute d049df5 LICENSE (Licencia MIT del repositorio)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "vendor_doc",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/THIRD_PARTY_NOTICES.md",
+   "title": "OmniRoute d049df5 THIRD_PARTY_NOTICES.md (Avisos de terceros (licencias incluidas))",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "vendor_doc",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/package.json",
+   "title": "OmniRoute d049df5 package.json (package.json: dependencias, scripts y archivos publicados)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/.npmignore",
+   "title": "OmniRoute d049df5 .npmignore (.npmignore: qué queda fuera del paquete npm)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/Dockerfile",
+   "title": "OmniRoute d049df5 Dockerfile (Dockerfile de la imagen)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/.github/workflows/npm-publish.yml",
+   "title": "OmniRoute d049df5 .github/workflows/npm-publish.yml (Flujo de publicación npm (procedencia))",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/.github/workflows/docker-publish.yml",
+   "title": "OmniRoute d049df5 .github/workflows/docker-publish.yml (Flujo de publicación de la imagen Docker (procedencia))",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/encryption.ts",
+   "title": "OmniRoute d049df5 src/lib/db/encryption.ts (Cifrado de columnas en la base local)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/secrets.ts",
+   "title": "OmniRoute d049df5 src/lib/db/secrets.ts (Secretos en la base local)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/apiKeys/secretAtRest.ts",
+   "title": "OmniRoute d049df5 src/lib/db/apiKeys/secretAtRest.ts (Llaves de API en reposo)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/providers/providerSpecificDataSecrets.ts",
+   "title": "OmniRoute d049df5 src/lib/db/providers/providerSpecificDataSecrets.ts (Secretos por proveedor)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/cacheSecrets.ts",
+   "title": "OmniRoute d049df5 src/lib/db/cacheSecrets.ts (Secretos en caché)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/encryption.mjs",
+   "title": "OmniRoute d049df5 bin/cli/encryption.mjs (CLI: cifrado)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/utils/storageKeyProvision.mjs",
+   "title": "OmniRoute d049df5 bin/cli/utils/storageKeyProvision.mjs (CLI: aprovisionamiento de la llave de almacenamiento)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/open-sse/config/credentialLoader.ts",
+   "title": "OmniRoute d049df5 open-sse/config/credentialLoader.ts (Carga de credenciales de proveedores)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/cloudAgent/credentials.ts",
+   "title": "OmniRoute d049df5 src/lib/cloudAgent/credentials.ts (Credenciales de agentes en la nube)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/cloudSync.ts",
+   "title": "OmniRoute d049df5 src/lib/cloudSync.ts (Sincronización con la nube)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/sync/tokens.ts",
+   "title": "OmniRoute d049df5 src/lib/sync/tokens.ts (Tokens de sincronización)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/open-sse/utils/requestLogger.ts",
+   "title": "OmniRoute d049df5 open-sse/utils/requestLogger.ts (Registro de peticiones)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/open-sse/utils/providerRequestLogging.ts",
+   "title": "OmniRoute d049df5 open-sse/utils/providerRequestLogging.ts (Registro de peticiones a proveedores)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/usage/callLogArtifactWriter.ts",
+   "title": "OmniRoute d049df5 src/lib/usage/callLogArtifactWriter.ts (Escritura de artefactos de llamadas (prompts y respuestas))",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/usage/callLogRetention.ts",
+   "title": "OmniRoute d049df5 src/lib/usage/callLogRetention.ts (Retención de registros de llamadas)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/piiSettings.ts",
+   "title": "OmniRoute d049df5 src/lib/db/piiSettings.ts (Ajustes de datos personales (PII))",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/logExportDestinations.ts",
+   "title": "OmniRoute d049df5 src/lib/db/logExportDestinations.ts (Destinos de exportación de registros)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/logExport/secrets.ts",
+   "title": "OmniRoute d049df5 src/lib/logExport/secrets.ts (Secretos de la exportación de registros)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/webhooks.ts",
+   "title": "OmniRoute d049df5 src/lib/db/webhooks.ts (Webhooks)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/commands/telemetry.mjs",
+   "title": "OmniRoute d049df5 bin/cli/commands/telemetry.mjs (CLI: telemetría)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/api-commands/telemetry.mjs",
+   "title": "OmniRoute d049df5 bin/cli/api-commands/telemetry.mjs (CLI (API): telemetría)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/@omniroute/opencode-plugin/src/telemetry.ts",
+   "title": "OmniRoute d049df5 @omniroute/opencode-plugin/src/telemetry.ts (Plugin opencode: telemetría)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/shared/utils/requestTelemetry.ts",
+   "title": "OmniRoute d049df5 src/shared/utils/requestTelemetry.ts (Telemetría de peticiones)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/docs/OMNIROUTE_QUOTA_TELEMETRY.md",
+   "title": "OmniRoute d049df5 docs/OMNIROUTE_QUOTA_TELEMETRY.md (Documento: telemetría de cuotas)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "vendor_doc",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/radar/sync.ts",
+   "title": "OmniRoute d049df5 src/lib/radar/sync.ts (Radar: sincronización de feeds remotos)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/radar/verify.ts",
+   "title": "OmniRoute d049df5 src/lib/radar/verify.ts (Radar: verificación de feeds)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/radar/pinnedKeys.ts",
+   "title": "OmniRoute d049df5 src/lib/radar/pinnedKeys.ts (Radar: llaves fijadas)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/versionManager/binaryManager.ts",
+   "title": "OmniRoute d049df5 src/lib/versionManager/binaryManager.ts (Gestor de versiones: descarga de binarios)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/freeProxies.ts",
+   "title": "OmniRoute d049df5 src/lib/db/freeProxies.ts (Proxies gratuitos)",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "source_type": "code",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "role": "primary"
+  }
+ ]
+}
