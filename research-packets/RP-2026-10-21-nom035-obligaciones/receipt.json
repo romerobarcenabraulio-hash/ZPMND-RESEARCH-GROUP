@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-10-21-nom035-obligaciones",
+ "fetched": [
+  {
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+   "status": 200,
+   "error": null,
+   "sha256": "75b62246f311f4451094bb20eb3b7528ed6c317390530cf4ca8eae62e04548cc",
+   "bytes": 1133731,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-23T15:13:08Z",
+   "text_status": "ok",
+   "text_chars": 119139
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/39976340308"
+}
