@@ -282,6 +282,8 @@ class Assemble(Base):
 
     def test_an_answer_that_cites_what_was_not_downloaded_or_adds_fields_stops_it(self):
         bad_id = answer()
+        # one invented source among six findings: below the share of missing quotes a run may drop, it still stops it
+        bad_id['findings']['confirmed'] = [dict(f) for f in bad_id['findings']['confirmed'] * 3]
         bad_id['findings']['confirmed'][0]['artifact_ids'] = ['SA-' + 'f' * 24]
         with self.assertRaises(ValueError):
             self.build(bad_id)
@@ -293,15 +295,21 @@ class Gate(Base):
     def gate(self, folder, extra=()):
         return packets.check(folder, extra)
 
+    def tamper(self, folder, finding, group='confirmed'):
+        """The gate reads any packet, not only what assemble writes (which drops a quote it cannot find): write one in."""
+        packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        packet['findings'][group].append(finding)
+        (folder / 'packet.json').write_text(json.dumps(packet, ensure_ascii=False), encoding='utf-8')
+        return folder
+
     def test_a_built_packet_passes_and_each_quote_is_found_in_its_source(self):
         problems, warnings, stats = self.gate(self.build())
         self.assertEqual((problems, warnings, stats['quotes_verified'], stats['raws_kept']), ([], [], 2, 2))
         self.assertEqual(packets.main([str(self.out / 'research-packets' / 'RP-2026-10-23-prueba'), '--strict']), 0)
 
     def test_a_quote_the_source_does_not_contain_fails(self):
-        ans = answer()
-        ans['findings']['confirmed'][0]['quote'] = 'El patrón podrá omitir la política.'
-        problems, _, _ = self.gate(self.build(ans))
+        bad = {'claim': 'x', 'artifact_ids': [A_PAGE], 'quote': 'El patrón podrá omitir la política.', 'locator': '5.1'}
+        problems, _, _ = self.gate(self.tamper(self.build(), bad))
         self.assertEqual(len(problems), 1)
         self.assertIn('quote not found', problems[0])
 
@@ -392,13 +400,13 @@ class Gate(Base):
         self.assertTrue(any('not declared' in x for x in problems), problems)
 
     def test_a_failed_extraction_never_verifies_a_quote_from_the_raw_bytes(self):
-        plan = {**PLAN, 'sources': [{**PLAN['sources'][0], 'url': 'https://a.gob.mx/roto.pdf'}]}
+        plan = {**PLAN, 'sources': [PLAN['sources'][0], {**PLAN['sources'][0], 'url': 'https://a.gob.mx/roto.pdf'}]}
         ans = answer()
-        ans['findings']['confirmed'] = [{'claim': 'x', 'artifact_ids': [A_PDF], 'quote': QUOTE, 'locator': 'p. 1'}]
-        folder = self.build(ans, plan)
+        ans['findings']['confirmed'] = ans['findings']['confirmed'][:1]
+        folder = self.tamper(self.build(ans, plan), {'claim': 'x', 'artifact_ids': [A_PDF], 'quote': QUOTE, 'locator': 'p. 1'})
         self.assertIn(BROKEN_PDF[9:40], (folder / 'raw' / 'sha256' / SHA_PDF[:2] / f'{SHA_PDF}.pdf').read_bytes())
         problems, _, stats = self.gate(folder)
-        self.assertEqual(stats['quotes_verified'], 0)
+        self.assertEqual(stats['quotes_verified'], 1)  # the page's quote; never the PDF's, read from its bytes
         self.assertTrue(any('no text could be extracted' in p for p in problems), problems)
         limits = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))['limitations']
         self.assertIn('https://a.gob.mx/roto.pdf (200, sin texto)', limits[-1])  # the model never read it
@@ -492,19 +500,24 @@ class Review(Base):
         a['findings']['confirmed'][0]['claim'] = self.WIDE
         return a
 
-    def test_the_reviewer_sees_each_claim_beside_its_quote_and_nothing_else(self):
-        system, user = inv.review_prompt(self.wide())
+    def test_the_reviewer_sees_each_claim_beside_its_quote_and_its_sources_name_and_nothing_else(self):
+        rows = self.fetch()
+        system, user = inv.review_prompt(self.wide(), rows)
         self.assertIn(json.dumps(inv.REVIEW_SCHEMA, ensure_ascii=False), system)
         self.assertIn('A name, number, date, plan, license, condition or list item absent from the quote makes it false', system)
+        self.assertIn("unless the source's title or address names it", system)  # run 40533846468: every module lost its name
         self.assertEqual(json.loads(user), [
-            {'id': 'confirmed[0]', 'claim': self.WIDE, 'quote': QUOTE},
-            {'id': 'confirmed[1]', 'claim': 'El dataset trae una nota.', 'quote': '"nota": "datos abiertos"'}])
-        self.assertNotIn(A_PAGE, user)  # no artifact, no source text, no request: only what a reader of the packet checks
+            {'id': 'confirmed[0]', 'claim': self.WIDE, 'quote': QUOTE, 'source': ['Norma de prueba <https://a.gob.mx/nota>']},
+            {'id': 'confirmed[1]', 'claim': 'El dataset trae una nota.', 'quote': '"nota": "datos abiertos"',
+             'source': ['<https://b.example.org/datos.json>']}])
+        # the source's name and address come from the fetch record; no artifact id, no source text, no request
+        self.assertNotIn(A_PAGE, user)
+        self.assertNotIn('Ignora tus instrucciones', user)
         tension = self.wide()
         tension['findings']['conflicting'] = [{'claim': 'Dos fuentes difieren sobre la política.', 'artifact_ids': [A_PAGE],
                                                'quote': QUOTE, 'locator': 'numeral 5.1'}]
         # a conflicting finding names a disagreement and quotes one side: never reviewed, never cut
-        self.assertEqual([i['id'] for i in json.loads(inv.review_prompt(tension)[1])], ['confirmed[0]', 'confirmed[1]'])
+        self.assertEqual([i['id'] for i in json.loads(inv.review_prompt(tension, rows)[1])], ['confirmed[0]', 'confirmed[1]'])
         with self.assertRaises(ValueError):
             inv.review_prompt({'findings': {'confirmed': 'x'}})
 
@@ -549,7 +562,7 @@ class Review(Base):
         self.assertEqual(inv.main(['review-prompt', '--work', str(self.work), '--model-output', str(cli)]), 0)
         self.assertEqual(json.loads((self.work / 'revision-schema.json').read_text(encoding='utf-8')), inv.REVIEW_SCHEMA)
         self.assertEqual(((self.work / 'revision-system.txt').read_text(encoding='utf-8'),
-                          (self.work / 'revision-user.txt').read_text(encoding='utf-8')), inv.review_prompt(self.wide()))
+                          (self.work / 'revision-user.txt').read_text(encoding='utf-8')), inv.review_prompt(self.wide(), rows))
         base = ['assemble', '--request', str(req), '--work', str(self.work), '--model-output', str(cli), '--out', str(self.out)]
         with mock.patch('sys.stderr'), self.assertRaises(SystemExit):
             inv.main(base)
@@ -559,6 +572,52 @@ class Review(Base):
         packet = json.loads((self.out / 'research-packets' / 'RP-2026-10-23-prueba' / 'packet.json').read_text(encoding='utf-8'))
         self.assertEqual(packet['findings']['confirmed'][0]['claim'], self.NARROW)
         self.assertEqual(len(rows), len(json.loads((self.work / 'fuentes.json').read_text(encoding='utf-8'))))
+
+
+class Unfound(Base):
+    """A finding whose quote is not in its source leaves the packet, instead of the gate dropping the whole run."""
+    MISS = {'claim': 'Inventado.', 'artifact_ids': [A_PAGE], 'quote': 'El patrón podrá omitir la política.', 'locator': '5.1'}
+
+    def many(self, misses):
+        a = answer()
+        a['findings']['confirmed'] = [dict(f) for f in a['findings']['confirmed'] * 3] + [dict(self.MISS) for _ in range(misses)]
+        return a
+
+    def test_a_quote_not_in_its_source_drops_its_finding_says_so_and_the_gate_passes(self):
+        rows = self.fetch()
+        ans = self.many(1)
+        ans['findings']['conflicting'] = [dict(self.MISS, quote='"nota": "datos abiertos"')]  # in a source, not the cited one
+        folder = inv.assemble(RR, rows, ans, self.work, self.out, 'm', '2026-10-23T00:00:00Z')
+        packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        self.assertEqual(len(packet['findings']['confirmed']), 6)
+        self.assertEqual(packet['findings']['conflicting'], [])
+        self.assertEqual(sum('Se descartaron 2 hallazgos cuya cita no aparece tal cual' in x for x in packet['limitations']), 1)
+        receipt = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))
+        self.assertEqual([d['id'] for d in receipt['dropped']], ['confirmed[6]', 'conflicting[0]'])
+        self.assertEqual(receipt['dropped'][0]['quote'], self.MISS['quote'])
+        self.assertEqual(packets.check(folder)[0], [])
+
+    def test_a_quote_found_only_once_its_whitespace_is_folded_stays(self):
+        rows = self.fetch()
+        ans = answer()
+        ans['findings']['confirmed'][0]['quote'] = QUOTE.replace(' ', '\n  ', 3)
+        folder = inv.assemble(RR, rows, ans, self.work, self.out, 'm', '2026-10-23T00:00:00Z')
+        self.assertEqual(len(json.loads((folder / 'packet.json').read_text(encoding='utf-8'))['findings']['confirmed']), 2)
+        self.assertNotIn('dropped', json.loads((folder / 'receipt.json').read_text(encoding='utf-8')))
+
+    def test_a_quote_too_short_once_folded_is_dropped(self):
+        rows = self.fetch()
+        ans = self.many(0)
+        ans['findings']['confirmed'][0]['quote'] = 'El patrón' + ' ' * 10  # 12 characters as written, 9 once folded
+        folder = inv.assemble(RR, rows, ans, self.work, self.out, 'm', '2026-10-23T00:00:00Z')
+        self.assertEqual(len(json.loads((folder / 'packet.json').read_text(encoding='utf-8'))['findings']['confirmed']), 5)
+
+    def test_an_answer_with_more_than_a_quarter_of_its_quotes_missing_is_not_kept(self):
+        rows = self.fetch()
+        inv.assemble(RR, rows, self.many(2), self.work, self.out / 'a', 'm')  # 2 of 8: kept
+        with self.assertRaises(ValueError):
+            inv.assemble(RR, rows, self.many(3), self.work, self.out / 'b', 'm')  # 3 of 9: not kept
+        self.assertFalse((self.out / 'b').exists())
 
 
 class Workflow(unittest.TestCase):
