@@ -25,7 +25,7 @@ RUNS = [{'id': 20, 'path': AUDITOR, 'event': 'pull_request_target', 'head_sha': 
          'conclusion': 'success', 'pull_requests': [{'number': 7}]},
         {'id': 21, 'path': CI, 'event': 'pull_request', 'head_sha': SHA, 'status': 'completed', 'conclusion': 'success',
          'pull_requests': [{'number': 7}]}]
-JOBS = {20: [{'name': n, 'conclusion': 'success'} for n in ('gate', 'evidence', 'packet-gate', 'audit', 'audit-gpt', 'post',
+JOBS = {20: [{'name': n, 'conclusion': 'success'} for n in ('gate', 'evidence', 'packet-read', 'packet-gate', 'audit', 'audit-gpt', 'post',
                                                             'post-gpt', 'pass-both')],
         21: [{'name': n, 'conclusion': 'success'} for n in ('checks', 'mutation (0)', 'mutation (1)')]}
 PR = {'number': 7, 'state': 'open', 'draft': False, 'title': 'Paquete RP-2026-10-27-x', 'changed_files': 3,
@@ -109,8 +109,14 @@ class Decide(unittest.TestCase):
         self.assertIsNotNone(decide(runs=RUNS + [run(0, id=30, conclusion='failure')]))
         self.assertIsNone(decide(runs=[run(0, id=10, conclusion='failure')] + RUNS))
 
+    def test_the_required_jobs_are_the_ones_each_trusted_workflow_must_run(self):
+        self.assertEqual(am.TRUSTED, {
+            AUDITOR: ('pull_request_target', {'gate', 'evidence', 'packet-read', 'packet-gate', 'audit', 'audit-gpt', 'post',
+                                              'post-gpt', 'pass-both'}),
+            CI: ('pull_request', {'checks'})})
+
     def test_every_job_must_have_succeeded_none_skipped_and_the_required_ones_must_be_there(self):
-        for rid, name in ((20, 'pass-both'), (20, 'audit-gpt'), (20, 'packet-gate'), (20, 'evidence'), (21, 'checks')):
+        for rid, name in ((20, 'pass-both'), (20, 'audit-gpt'), (20, 'packet-read'), (20, 'packet-gate'), (20, 'evidence'), (21, 'checks')):
             for conclusion in ('skipped', 'neutral', 'failure', None):
                 with self.subTest(job=name, conclusion=conclusion):
                     self.assertIsNotNone(decide(jobs=jobs(rid, name, conclusion)))

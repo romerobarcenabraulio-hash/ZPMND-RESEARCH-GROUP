@@ -26,8 +26,8 @@ SHA = re.compile(r'^[0-9a-f]{40}$')
 REPO = re.compile(r'^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')
 DATA = re.compile(r'^(?:research-packets/RP-[A-Za-z0-9._-]{3,64}/[A-Za-z0-9._/-]+|requests/plans/RR-[A-Za-z0-9._-]{3,64}\.json)$')
 TRUSTED = {  # workflow file -> (the event of its trusted run, jobs that run must have)
-    '.github/workflows/auditor.yml': ('pull_request_target', {'gate', 'evidence', 'packet-gate', 'audit', 'audit-gpt',
-                                                              'post', 'post-gpt', 'pass-both'}),
+    '.github/workflows/auditor.yml': ('pull_request_target', {'gate', 'evidence', 'packet-read', 'packet-gate', 'audit',
+                                                              'audit-gpt', 'post', 'post-gpt', 'pass-both'}),
     '.github/workflows/ci.yml': ('pull_request', {'checks'}),
 }
 MAX_FILES = 3000  # the files API lists at most 3,000 per PR: a longer list could hide one

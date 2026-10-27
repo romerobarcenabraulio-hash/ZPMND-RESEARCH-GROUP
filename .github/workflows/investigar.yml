@@ -16,6 +16,10 @@ name: investigar
 # - gate: no model, no write token. Builds the packet from the fetch record and the request (artifacts, hashes and
 #   licenses never come from the model) and runs rg.packets: schema, only declared files, sha256 of every raw, every
 #   quote in the extracted text of its source (the run's raws at hand, also those a metadata_only packet never keeps).
+# - attest: id-token and attestations write, nothing else. Parses nothing: signs, with this run's OIDC identity
+#   (investigar.yml on main), the sha256 of every file of the packet folder the gate passed. A metadata_only packet keeps
+#   no raw, so an auditor or a consumer cannot check its quotes again; this attestation is what vouches that this
+#   workflow's gate did (scripts/packet_gate.py --attest verifies it; SECURITY T14).
 # - publish: contents: write and nothing else. Parses nothing; pushes only research-packets/<RP>/, to a new branch only.
 # A branch pushed with GITHUB_TOKEN starts no workflow, so the owner opens the PR (and with it CI and both auditors):
 # the job summary prints the command.
@@ -251,8 +255,27 @@ jobs:
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with: { name: investigar-packet, path: out/research-packets/, retention-days: 1, if-no-files-found: error }
 
-  publish:
+  attest:
     needs: gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: { contents: read, id-token: write, attestations: write }
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with: { name: investigar-packet, path: out }
+      - name: The sha256 of every file of the packet the gate passed (nothing is parsed)
+        env: { RP: '${{ needs.gate.outputs.rp }}' }
+        run: |
+          set -euo pipefail
+          [[ "$RP" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]] || { echo "bad packet id"; exit 2; }
+          [ "$(ls out)" = "$RP" ] || { echo "the artifact holds one packet folder"; exit 2; }
+          cd out && find "$RP" -type f -print0 | sort -z | xargs -0 sha256sum | sed 's|  |  research-packets/|' > "$RUNNER_TEMP/subjects.txt"
+          cat "$RUNNER_TEMP/subjects.txt"
+      - uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8  # v4.2.2
+        with: { subject-checksums: '${{ runner.temp }}/subjects.txt' }
+
+  publish:
+    needs: [gate, attest]
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions: { contents: write }

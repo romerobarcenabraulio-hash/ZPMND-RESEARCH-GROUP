@@ -762,7 +762,8 @@ class Workflow(unittest.TestCase):
         self.assertEqual(self.wf['permissions'], {})
         self.assertEqual({j: v['permissions'] for j, v in self.jobs.items()},
                          {'plan': {'contents': 'read'}, 'fetch': {'contents': 'read'}, 'analyze': {'contents': 'read'},
-                          'gate': {'contents': 'read'}, 'publish': {'contents': 'write'}})
+                          'gate': {'contents': 'read'}, 'attest': {'contents': 'read', 'id-token': 'write', 'attestations': 'write'},
+                          'publish': {'contents': 'write'}})
         self.assertEqual(self.jobs['fetch']['if'], "github.ref == 'refs/heads/main'")
         self.assertEqual(self.jobs['plan']['if'], "${{ github.ref == 'refs/heads/main' }}")
         with_secrets = [j for j, v in self.jobs.items() if 'secrets.' in json.dumps(v)]
@@ -827,6 +828,21 @@ class Workflow(unittest.TestCase):
         gate = '\n'.join(s.get('run', '') for s in self.jobs['gate']['steps'])
         self.assertIn('--model-output work/modelo-cli.json --review-output work/revision-cli.json --out out', gate)
 
+    def test_the_run_signs_every_file_of_the_packet_it_gated_and_parses_none(self):
+        # GPT, REVISE of #52: a metadata_only packet keeps no raw, so only this attestation vouches for its quotes
+        job = self.jobs['attest']
+        self.assertEqual(job['needs'], 'gate')
+        self.assertNotIn('secrets.', json.dumps(job))
+        down, digest, sign = job['steps']
+        self.assertEqual(down['with'], {'name': 'investigar-packet', 'path': 'out'})
+        run = digest['run']
+        self.assertNotIn('python', run)
+        self.assertLess(run.index('[[ "$RP" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]]'), run.index('ls out'))
+        self.assertIn('[ "$(ls out)" = "$RP" ] || { echo "the artifact holds one packet folder"; exit 2; }', run)
+        self.assertIn("find \"$RP\" -type f -print0 | sort -z | xargs -0 sha256sum | sed 's|  |  research-packets/|' "
+                      '> "$RUNNER_TEMP/subjects.txt"', run)
+        self.assertEqual(sign['uses'], 'actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8')
+        self.assertEqual(sign['with'], {'subject-checksums': '${{ runner.temp }}/subjects.txt'})
     def test_a_failed_model_call_says_why_from_its_metadata_only(self):
         # run 40548392438: the model step failed with exit 1 and no reason, because its output is a sealed file
         steps = [s for s in self.jobs['analyze']['steps'] if 'secrets.CLAUDE_CODE_OAUTH_TOKEN' in json.dumps(s)]
@@ -933,7 +949,7 @@ class Workflow(unittest.TestCase):
         publish = '\n'.join(s.get('run', '') for s in self.jobs['publish']['steps'])
         self.assertNotIn('python', publish)
         self.assertIn('git add -- "research-packets/$RP"', publish)
-        self.assertEqual(self.jobs['publish']['needs'], 'gate')
+        self.assertEqual(self.jobs['publish']['needs'], ['gate', 'attest'])  # nothing is published unsigned
 
 
 @unittest.skipUnless(shutil.which('git') and shutil.which('bash'), 'needs git and bash')

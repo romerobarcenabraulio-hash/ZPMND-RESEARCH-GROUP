@@ -48,11 +48,21 @@ Qué lo hace seguro y barato por construcción (`scripts/auditor_gpt.py`; prueba
   algo se trunca o falta, no puede salir PASS ("no pude leer todo"); tope de 12,000 tokens de salida. El uso de tokens
   que reporta la API queda en el resumen del job.
 - Los crudos de un paquete (`research-packets/<RP>/raw/`) se comprueban por máquina, no leyéndolos. El job
-  `packet-gate`, sin secretos, saca `main` y corre su `rg.packets` sobre las carpetas de paquete que cambia el head,
+  `packet-read`, sin secretos, saca `main` y corre su `rg.packets` sobre las carpetas de paquete que cambia el head,
   escritas desde los objetos de git byte por byte (`scripts/packet_gate.py`: `ls-tree` y `cat-file`, nunca `archive`,
-  que aplica los atributos de exportación del head; ningún código del PR corre; el token solo en el paso del fetch). Si una carpeta pasa (sin problemas ni
-  avisos), cada crudo suyo llega a GPT como una línea con su sha256 y no cuenta como contenido sin leer; el resultado
-  llega como sección confiable `packets.json`. Si no pasa, o el resultado es de otro head, el crudo va entero.
+  que aplica los atributos de exportación del head; ningún código del PR corre; el token solo en el paso del fetch).
+  Como ese runner leyó crudos hostiles, su resultado nunca se retransmite tal cual: `packet-gate`, en un runner limpio
+  que no analiza ningún crudo, vuelve a listar las carpetas cambiadas, las escribe desde los objetos de git y las
+  resuelve él mismo (`settle`): una carpeta pasa sólo si una declaración firmada por la corrida de `investigar.yml`
+  en `main` que la compuertó nombra exactamente sus archivos con sus sha256 (ni uno más, ni uno menos, ni de dos
+  corridas); de `packet-read` sólo se hereda un fallo y sus palabras. Sin esa declaración no pasa nunca. Si pasa,
+  cada crudo suyo (con el sha256 calculado en el runner limpio) llega a GPT como una línea y no cuenta como contenido sin
+  leer; el resultado llega como sección confiable `packets.json`. Si no pasa, o el resultado es de otro head, el crudo
+  va entero. Una atestación acredita sólo que esos bytes salieron de una corrida de `investigar.yml` en `main` después de
+  que su compuerta los pasó; esa corrida también leyó crudos hostiles, así que una toma de sus propios analizadores queda
+  fuera de lo que prueba y la acota T12 (correr el extractor como un usuario sin privilegios es el siguiente paso).
+  Nunca dice que un hallazgo sea verdad. El runner limpio reserva los tamaños del árbol contra un presupuesto de 500 MB
+  por head antes de escribir.
 - El modelo sale de la variable del repo `OPENAI_AUDIT_MODEL`; el código no trae ninguno. Sin ella no se llama a nada y
   el estado `auditor-gpt` queda `pending` con "skipped: OPENAI_AUDIT_MODEL not set".
 - Distinguibles por construcción: un comentario de GPT nunca contiene "AUDIT VERDICT" (su línea dice `GPT REVIEW` y el
