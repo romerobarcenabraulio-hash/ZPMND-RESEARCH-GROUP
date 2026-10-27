@@ -29,7 +29,7 @@ from .text.extract import UNSUPPORTED
 from .text.run import extract_all
 
 TOP = ('packet.json', 'receipt.json', 'sources.json')
-TEXTUAL = ('text/plain', 'text/csv', 'application/json', 'application/xml', 'text/xml')
+TEXTUAL = ('text/plain', 'text/markdown', 'text/csv', 'application/json', 'application/xml', 'text/xml')
 MAX_PLAIN = 20_000_000
 MIN_QUOTE = 12  # folded characters: a shorter quote is found almost anywhere and locates nothing
 RAW = re.compile(r'^raw/sha256/[0-9a-f]{2}/([0-9a-f]{64})\.[a-z0-9]{1,5}$')
