@@ -1,0 +1,369 @@
+{
+ "request_id": "RR-2026-10-22-repertorio-operacional",
+ "fetched": [
+  {
+   "url": "https://arxiv.org/abs/2304.11477",
+   "status": 200,
+   "error": null,
+   "sha256": "f1f848c2a468d511204915dd62fe02be1d5e315780e1eeb843b2f7c6b2a5576b",
+   "bytes": 43751,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:12:51Z",
+   "text_status": "ok",
+   "text_chars": 5251
+  },
+  {
+   "url": "https://arxiv.org/abs/2402.01817",
+   "status": 200,
+   "error": null,
+   "sha256": "d4fa0f60306615b0889aaa7318f48b75df787c194692f50f0fceb80f91d7d08c",
+   "bytes": 44604,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:13:06Z",
+   "text_status": "ok",
+   "text_chars": 5511
+  },
+  {
+   "url": "https://arxiv.org/abs/2302.04761",
+   "status": 200,
+   "error": null,
+   "sha256": "eca71f4fd5de2ce68af5711880270fce72bb87e2b089f1ae9a900d5453a64649",
+   "bytes": 42120,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:13:21Z",
+   "text_status": "ok",
+   "text_chars": 4600
+  },
+  {
+   "url": "https://arxiv.org/abs/2305.15334",
+   "status": 200,
+   "error": null,
+   "sha256": "72010f4b63e19c0874f1c27f555b03666885496320431e7856b8c5523ec47b50",
+   "bytes": 42434,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:13:36Z",
+   "text_status": "ok",
+   "text_chars": 4839
+  },
+  {
+   "url": "https://arxiv.org/abs/2307.16789",
+   "status": 200,
+   "error": null,
+   "sha256": "ce4ed6a3d612c54283f7c7eecdee1fbf3cc1ab26ec288c50360e13e176a53d36",
+   "bytes": 46703,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:13:51Z",
+   "text_status": "ok",
+   "text_chars": 5761
+  },
+  {
+   "url": "https://arxiv.org/abs/2303.17580",
+   "status": 200,
+   "error": null,
+   "sha256": "eeab6ac43ae1c0db23f82ce90d39616f0b0ea7d62794d7f68ea2cebe60b17a7d",
+   "bytes": 43628,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:14:06Z",
+   "text_status": "ok",
+   "text_chars": 5274
+  },
+  {
+   "url": "https://arxiv.org/abs/2306.06624",
+   "status": 200,
+   "error": null,
+   "sha256": "3eaf510732d8a45bba88a9f1d5999dc740e82d66712118847186d67dcf00ddf0",
+   "bytes": 43793,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:14:21Z",
+   "text_status": "ok",
+   "text_chars": 4994
+  },
+  {
+   "url": "https://arxiv.org/abs/2204.01691",
+   "status": 200,
+   "error": null,
+   "sha256": "d4b1c7b48b1df6d0c6f7669aef015b9ab3c0c388a931f52998ebc55003ce1423",
+   "bytes": 51300,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:14:36Z",
+   "text_status": "ok",
+   "text_chars": 6244
+  },
+  {
+   "url": "https://arxiv.org/abs/2305.16291",
+   "status": 200,
+   "error": null,
+   "sha256": "92e5b80920776ab028c6e7f5e00d8c41e16631665bc22b56739118cbf43d71ea",
+   "bytes": 43769,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:14:51Z",
+   "text_status": "ok",
+   "text_chars": 5080
+  },
+  {
+   "url": "https://arxiv.org/abs/2209.07753",
+   "status": 200,
+   "error": null,
+   "sha256": "246743b92f7b5fdca132f40c257c2fdd740b15acdc1b8f6d19935fb5a1f06898",
+   "bytes": 44614,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:15:06Z",
+   "text_status": "ok",
+   "text_chars": 5379
+  },
+  {
+   "url": "https://arxiv.org/abs/2210.03629",
+   "status": 200,
+   "error": null,
+   "sha256": "3ff741a07ecb128c0258ee656a47da1be5e37d35c89011c1d4b35a50aaddb6bc",
+   "bytes": 44817,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:15:21Z",
+   "text_status": "ok",
+   "text_chars": 5439
+  },
+  {
+   "url": "https://arxiv.org/abs/2303.11366",
+   "status": 200,
+   "error": null,
+   "sha256": "3e603a9b007a656c3a0f28f1b618cf972c186d7ac7d2e0c5be3dcb11c565bf1a",
+   "bytes": 43770,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:15:36Z",
+   "text_status": "ok",
+   "text_chars": 5172
+  },
+  {
+   "url": "https://arxiv.org/abs/2307.13854",
+   "status": 200,
+   "error": null,
+   "sha256": "0849ca5f4b362834455b175a80d45daa14da9ac4a52ba6090e2c00eee6ffebd8",
+   "bytes": 45223,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:15:51Z",
+   "text_status": "ok",
+   "text_chars": 5570
+  },
+  {
+   "url": "https://arxiv.org/abs/2306.06070",
+   "status": 200,
+   "error": null,
+   "sha256": "7ece1826e0e634376704807b46373cc274a2e629db7902db1249e5e15c2dfd44",
+   "bytes": 43501,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:16:06Z",
+   "text_status": "ok",
+   "text_chars": 5079
+  },
+  {
+   "url": "https://arxiv.org/abs/2403.07718",
+   "status": 200,
+   "error": null,
+   "sha256": "bddcee7a5db7fd9c751a18d65d53dfc06dfbcef6231858b6af796af8577c402e",
+   "bytes": 43911,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:16:21Z",
+   "text_status": "ok",
+   "text_chars": 4930
+  },
+  {
+   "url": "https://arxiv.org/abs/2404.07972",
+   "status": 200,
+   "error": null,
+   "sha256": "93fcd458a6fc159c19df9aac01d97ad985026f8b33e87473f9f16d7fcd467428",
+   "bytes": 46703,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:16:36Z",
+   "text_status": "ok",
+   "text_chars": 5768
+  },
+  {
+   "url": "https://arxiv.org/abs/2407.18901",
+   "status": 200,
+   "error": null,
+   "sha256": "9cb81897e7e878998ca4a1b52805ec78d0721a55d8ff27a134be4c7e87d775ba",
+   "bytes": 44236,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:16:51Z",
+   "text_status": "ok",
+   "text_chars": 5194
+  },
+  {
+   "url": "https://arxiv.org/abs/2406.12045",
+   "status": 200,
+   "error": null,
+   "sha256": "ad1522d07222a9d4f75117f9e976a1220c1857844a9e3dac0ebeccc1f7976605",
+   "bytes": 41286,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:17:06Z",
+   "text_status": "ok",
+   "text_chars": 4514
+  },
+  {
+   "url": "https://arxiv.org/abs/2312.13771",
+   "status": 200,
+   "error": null,
+   "sha256": "de08944494a26dc70e62730d459c3e72b485de91c68a128072a30d918cb7505e",
+   "bytes": 42898,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:17:21Z",
+   "text_status": "ok",
+   "text_chars": 5014
+  },
+  {
+   "url": "https://arxiv.org/abs/2409.07429",
+   "status": 200,
+   "error": null,
+   "sha256": "8a75cecd04af8d31f2bdb78c7131b2c62dbe9c1fe1b3892bb411b100148baf7d",
+   "bytes": 41649,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:17:36Z",
+   "text_status": "ok",
+   "text_chars": 4631
+  },
+  {
+   "url": "https://arxiv.org/abs/2410.12361",
+   "status": 200,
+   "error": null,
+   "sha256": "b462e553110554232907cd0528183357470f2ff8a8c85ef310372b417171137a",
+   "bytes": 44943,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-27T17:17:51Z",
+   "text_status": "ok",
+   "text_chars": 5282
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/40548403290",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "LLM+P convierte la descripción en lenguaje natural a PDDL, usa un planificador clásico y traduce el plan de vuelta; reporta que los LLM solos fallan en planes factibles en la mayoría de los problemas.",
+    "now": "LLM+P puede dar soluciones óptimas para la mayoría de los problemas, mientras que los LLM no logran dar ni siquiera planes factibles para la mayoría.",
+    "cut": "Conversión del lenguaje natural a PDDL, uso de un planificador clásico y traducción del plan de vuelta."
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "LLM-Modulo propone combinar LLM con verificadores externos basados en modelos en interacción bidireccional (posición, no benchmark).",
+    "now": "Se presenta una visión de los marcos LLM-Modulo, que combinan las fortalezas de los LLM con verificadores externos basados en modelos en un régimen de interacción bidireccional más estrecho.",
+    "cut": "Aclaración de que es una posición y no un benchmark."
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "Toolformer entrena al modelo para decidir qué APIs llamar, cuándo y con qué argumentos, de forma autosupervisada.",
+    "now": "Toolformer es un modelo entrenado para decidir qué APIs llamar, cuándo llamarlas, qué argumentos pasar y cómo incorporar mejor los resultados en la predicción futura de tokens.",
+    "cut": "Que el entrenamiento sea autosupervisado."
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "Gorilla señala que los LLM alucinan el uso de APIs y se evalúa con APIBench; con recuperador se adapta a cambios de documentación.",
+    "now": "Combinado con un recuperador de documentos, Gorilla demuestra una gran capacidad para adaptarse a cambios en los documentos en tiempo de prueba.",
+    "cut": "Alucinación del uso de APIs por los LLM y la evaluación con APIBench."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "ToolLLM construyó ToolBench con 16,464 APIs REST de RapidAPI y un evaluador automático (ToolEval).",
+    "now": "ToolLLM recopila 16,464 APIs RESTful del mundo real, de 49 categorías, desde RapidAPI Hub.",
+    "cut": "Mención de ToolBench y del evaluador automático ToolEval."
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "HuggingGPT usa un LLM como controlador: planea tareas, selecciona modelos por su descripción, los ejecuta y resume.",
+    "now": "HuggingGPT selecciona modelos según las descripciones de sus funciones disponibles en Hugging Face, ejecuta cada subtarea con el modelo elegido y resume la respuesta.",
+    "cut": "Que un LLM actúe como controlador y planee las tareas."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "RestGPT conecta LLM con APIs REST mediante planeación en línea de grueso a fino y se evalúa en RestBench.",
+    "now": "RestGPT aplica un mecanismo de planeación en línea de grueso a fino para mejorar la descomposición de tareas y la selección de APIs.",
+    "cut": "Conexión con APIs REST y evaluación en RestBench."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "SayCan restringe al LLM con habilidades preentrenadas y funciones de valor (affordances) para que proponga acciones factibles.",
+    "now": "SayCan usa habilidades preentrenadas para restringir al modelo a proponer acciones en lenguaje natural que sean factibles y apropiadas al contexto.",
+    "cut": "Funciones de valor (affordances)."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "Voyager mantiene una biblioteca creciente de habilidades como código ejecutable y un currículo automático, sin intervención humana.",
+    "now": "Voyager tiene una biblioteca de habilidades en crecimiento continuo, de código ejecutable, para almacenar y recuperar comportamientos complejos.",
+    "cut": "Currículo automático y ausencia de intervención humana."
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "Voyager reporta 3.3x más ítems únicos que el estado del arte previo en Minecraft.",
+    "now": "Voyager obtiene 3.3x más ítems únicos y recorre distancias 2.3x mayores.",
+    "cut": "Comparación con el estado del arte previo y mención de Minecraft."
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "Code as Policies hace que el LLM recomponga llamadas a APIs de control en código nuevo a partir de ejemplos few-shot.",
+    "now": "Los LLM pueden recibir nuevas órdenes y recomponer autónomamente llamadas a APIs para generar nuevo código de política.",
+    "cut": "Ejemplos few-shot y mención de APIs de control."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "ReAct intercala razonamiento y acciones; supera a métodos de imitación y RL en ALFWorld y WebShop por 34% y 10% absolutos.",
+    "now": "ReAct supera a los métodos de imitación y de aprendizaje por refuerzo por una tasa de éxito absoluta de 34% y 10%, respectivamente.",
+    "cut": "Intercalado de razonamiento y acciones, y mención de ALFWorld y WebShop."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "Reflexion mejora agentes con retroalimentación lingüística en memoria episódica, sin actualizar pesos.",
+    "now": "Reflexion mejora no actualizando pesos, sino mediante retroalimentación lingüística.",
+    "cut": "Memoria episódica."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "Mind2Web: filtrar el HTML con un modelo pequeño mejora la eficacia de los LLM; aún queda mucho margen para generalizar.",
+    "now": "Filtrar primero el HTML con un modelo de lenguaje pequeño mejora significativamente la eficacia y eficiencia de los LLM.",
+    "cut": "Que aún queda mucho margen para generalizar."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "WorkArena evalúa agentes en 33 tareas sobre ServiceNow (software empresarial) y halla una brecha considerable hacia la automatización total.",
+    "now": "WorkArena es un benchmark alojado remotamente de 33 tareas basadas en la plataforma ServiceNow, ampliamente usada.",
+    "cut": "Hallazgo de una brecha considerable hacia la automatización total."
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "AppWorld evalúa con pruebas de estado que verifican también daños colaterales (cambios inesperados).",
+    "now": "AppWorld permite distintas formas de completar una tarea y a la vez comprueba cambios inesperados, es decir, daños colaterales.",
+    "cut": "Mención explícita de pruebas de estado."
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "τ-bench incluye guías de política de dominio, compara el estado final de la base de datos con la meta y propone la métrica pass^k.",
+    "now": "τ-bench propone una nueva métrica (pass^k) para evaluar la fiabilidad del comportamiento del agente en múltiples intentos.",
+    "cut": "Guías de política de dominio y comparación del estado final de la base de datos con la meta."
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "τ-bench: incluso agentes de llamada a funciones de última generación tienen éxito en <50% de las tareas y son inconsistentes.",
+    "now": "Los agentes tienen éxito en <50% de las tareas y son bastante inconsistentes (pass^8 <25% en retail).",
+    "cut": "Calificación de los agentes como de llamada a funciones de última generación."
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "AppAgent opera apps con acciones simplificadas tipo toque/deslizamiento y aprende por exploración autónoma u observando demostraciones.",
+    "now": "El agente aprende a navegar y usar nuevas apps mediante exploración autónoma u observando demostraciones humanas.",
+    "cut": "Acciones simplificadas tipo toque/deslizamiento."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "Agent Workflow Memory induce flujos de trabajo reutilizables y mejora el éxito relativo 24.6% y 51.1% en Mind2Web y WebArena.",
+    "now": "AWM mejora sustancialmente los resultados base en 24.6% y 51.1% de tasa de éxito relativa en Mind2Web y WebArena.",
+    "cut": "Inducción de flujos de trabajo reutilizables."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "Proactive Agent entrena un modelo de recompensa con aceptación/rechazo humano de tareas proactivas y reporta F1 de 66.47%.",
+    "now": "El modelo ajustado logra un F1 de 66.47% al ofrecer asistencia proactivamente.",
+    "cut": "Entrenamiento de un modelo de recompensa con aceptación/rechazo humano."
+   }
+  ]
+ }
+}

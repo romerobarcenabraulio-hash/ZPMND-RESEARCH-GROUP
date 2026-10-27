@@ -1,0 +1,597 @@
+{
+ "research_id": "RP-2026-10-22-repertorio-operacional",
+ "request_id": "RR-2026-10-22-repertorio-operacional",
+ "status": "CANDIDATE",
+ "produced_at": "2026-10-27T17:19:46Z",
+ "question": "Una vez que el sistema tiene conocimiento citado (normas, obligaciones, procesos) y acceso gobernado a apps, ¿cómo puede proponer por sí solo qué ejecutar para resolver lo que detecta, como un instinto y sin que el humano lo pida, con un repertorio de acciones casi infinito? ¿Qué arte previo existe (planeación automática, composición de herramientas y APIs, affordances, habilidades u opciones en aprendizaje por refuerzo, síntesis de programas, agentes que operan apps), cómo se evaluó cada enfoque, qué nunca se ha evaluado, y qué mecanismo propio puede probarse contra una línea base con medición?",
+ "why_zpmnd_needs_it": "Braulio (2026-10-22) pide que el sistema sepa qué proponer para ejecutar lo que identifica, con capacidad operativa en las apps. ZPMND es el entorno que actúa; RG investiga el cómo, con arte previo, antes de que se construya.",
+ "scope": "Revisión de 18 páginas de resumen (abstracts) de arXiv sobre planeación con LLM, uso de herramientas/APIs, affordances, bibliotecas de habilidades, código como política, agentes que operan web/apps y proactividad. Solo se leyeron los resúmenes y metadatos, no los artículos completos. No hay fuentes sobre opciones/habilidades de RL clásico, síntesis de programas clásica, Odoo, ni documentación oficial de APIs.",
+ "sources": {
+  "primary": [
+   "SA-f1f848c2a468d511204915dd",
+   "SA-d4fa0f60306615b0889aaa73",
+   "SA-eca71f4fd5de2ce68af57118",
+   "SA-72010f4b63e19c0874f1c27f",
+   "SA-ce4ed6a3d612c54283f7c7ee",
+   "SA-eeab6ac43ae1c0db23f82ce9",
+   "SA-3eaf510732d8a45bba88a9f1",
+   "SA-d4b1c7b48b1df6d0c6f7669a",
+   "SA-92e5b80920776ab028c6e7f5",
+   "SA-246743b92f7b5fdca132f40c",
+   "SA-3ff741a07ecb128c0258ee65",
+   "SA-3e603a9b007a656c3a0f28f1",
+   "SA-0849ca5f4b362834455b175a",
+   "SA-7ece1826e0e634376704807b",
+   "SA-bddcee7a5db7fd9c751a18d6",
+   "SA-93fcd458a6fc159c19df9aac",
+   "SA-9cb81897e7e878998ca4a1b5",
+   "SA-ad1522d07222a9d4f75117f9",
+   "SA-de08944494a26dc70e62730d",
+   "SA-8a75cecd04af8d31f2bdb78c",
+   "SA-b462e553110554232907cd05"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-f1f848c2a468d511204915dd",
+   "url": "https://arxiv.org/abs/2304.11477",
+   "retrieved_at": "2026-10-27T17:12:51Z",
+   "sha256": "f1f848c2a468d511204915dd62fe02be1d5e315780e1eeb843b2f7c6b2a5576b",
+   "bytes": 43751,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2304.11477: LLM+P: Empowering Large Language Models with Optimal Planning Proficiency"
+  },
+  {
+   "artifact_id": "SA-d4fa0f60306615b0889aaa73",
+   "url": "https://arxiv.org/abs/2402.01817",
+   "retrieved_at": "2026-10-27T17:13:06Z",
+   "sha256": "d4fa0f60306615b0889aaa7318f48b75df787c194692f50f0fceb80f91d7d08c",
+   "bytes": 44604,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2402.01817: LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks"
+  },
+  {
+   "artifact_id": "SA-eca71f4fd5de2ce68af57118",
+   "url": "https://arxiv.org/abs/2302.04761",
+   "retrieved_at": "2026-10-27T17:13:21Z",
+   "sha256": "eca71f4fd5de2ce68af5711880270fce72bb87e2b089f1ae9a900d5453a64649",
+   "bytes": 42120,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2302.04761: Toolformer: Language Models Can Teach Themselves to Use Tools"
+  },
+  {
+   "artifact_id": "SA-72010f4b63e19c0874f1c27f",
+   "url": "https://arxiv.org/abs/2305.15334",
+   "retrieved_at": "2026-10-27T17:13:36Z",
+   "sha256": "72010f4b63e19c0874f1c27f555b03666885496320431e7856b8c5523ec47b50",
+   "bytes": 42434,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2305.15334: Gorilla: Large Language Model Connected with Massive APIs"
+  },
+  {
+   "artifact_id": "SA-ce4ed6a3d612c54283f7c7ee",
+   "url": "https://arxiv.org/abs/2307.16789",
+   "retrieved_at": "2026-10-27T17:13:51Z",
+   "sha256": "ce4ed6a3d612c54283f7c7eecdee1fbf3cc1ab26ec288c50360e13e176a53d36",
+   "bytes": 46703,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2307.16789: ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs"
+  },
+  {
+   "artifact_id": "SA-eeab6ac43ae1c0db23f82ce9",
+   "url": "https://arxiv.org/abs/2303.17580",
+   "retrieved_at": "2026-10-27T17:14:06Z",
+   "sha256": "eeab6ac43ae1c0db23f82ce90d39616f0b0ea7d62794d7f68ea2cebe60b17a7d",
+   "bytes": 43628,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2303.17580: HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face"
+  },
+  {
+   "artifact_id": "SA-3eaf510732d8a45bba88a9f1",
+   "url": "https://arxiv.org/abs/2306.06624",
+   "retrieved_at": "2026-10-27T17:14:21Z",
+   "sha256": "3eaf510732d8a45bba88a9f1d5999dc740e82d66712118847186d67dcf00ddf0",
+   "bytes": 43793,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2306.06624: RestGPT: Connecting Large Language Models with Real-World RESTful APIs"
+  },
+  {
+   "artifact_id": "SA-d4b1c7b48b1df6d0c6f7669a",
+   "url": "https://arxiv.org/abs/2204.01691",
+   "retrieved_at": "2026-10-27T17:14:36Z",
+   "sha256": "d4b1c7b48b1df6d0c6f7669aef015b9ab3c0c388a931f52998ebc55003ce1423",
+   "bytes": 51300,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2204.01691: Do As I Can, Not As I Say: Grounding Language in Robotic Affordances"
+  },
+  {
+   "artifact_id": "SA-92e5b80920776ab028c6e7f5",
+   "url": "https://arxiv.org/abs/2305.16291",
+   "retrieved_at": "2026-10-27T17:14:51Z",
+   "sha256": "92e5b80920776ab028c6e7f5e00d8c41e16631665bc22b56739118cbf43d71ea",
+   "bytes": 43769,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2305.16291: Voyager: An Open-Ended Embodied Agent with Large Language Models"
+  },
+  {
+   "artifact_id": "SA-246743b92f7b5fdca132f40c",
+   "url": "https://arxiv.org/abs/2209.07753",
+   "retrieved_at": "2026-10-27T17:15:06Z",
+   "sha256": "246743b92f7b5fdca132f40c257c2fdd740b15acdc1b8f6d19935fb5a1f06898",
+   "bytes": 44614,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2209.07753: Code as Policies: Language Model Programs for Embodied Control"
+  },
+  {
+   "artifact_id": "SA-3ff741a07ecb128c0258ee65",
+   "url": "https://arxiv.org/abs/2210.03629",
+   "retrieved_at": "2026-10-27T17:15:21Z",
+   "sha256": "3ff741a07ecb128c0258ee656a47da1be5e37d35c89011c1d4b35a50aaddb6bc",
+   "bytes": 44817,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2210.03629: ReAct: Synergizing Reasoning and Acting in Language Models"
+  },
+  {
+   "artifact_id": "SA-3e603a9b007a656c3a0f28f1",
+   "url": "https://arxiv.org/abs/2303.11366",
+   "retrieved_at": "2026-10-27T17:15:36Z",
+   "sha256": "3e603a9b007a656c3a0f28f1b618cf972c186d7ac7d2e0c5be3dcb11c565bf1a",
+   "bytes": 43770,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2303.11366: Reflexion: Language Agents with Verbal Reinforcement Learning"
+  },
+  {
+   "artifact_id": "SA-0849ca5f4b362834455b175a",
+   "url": "https://arxiv.org/abs/2307.13854",
+   "retrieved_at": "2026-10-27T17:15:51Z",
+   "sha256": "0849ca5f4b362834455b175a80d45daa14da9ac4a52ba6090e2c00eee6ffebd8",
+   "bytes": 45223,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2307.13854: WebArena: A Realistic Web Environment for Building Autonomous Agents"
+  },
+  {
+   "artifact_id": "SA-7ece1826e0e634376704807b",
+   "url": "https://arxiv.org/abs/2306.06070",
+   "retrieved_at": "2026-10-27T17:16:06Z",
+   "sha256": "7ece1826e0e634376704807b46373cc274a2e629db7902db1249e5e15c2dfd44",
+   "bytes": 43501,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2306.06070: Mind2Web: Towards a Generalist Agent for the Web"
+  },
+  {
+   "artifact_id": "SA-bddcee7a5db7fd9c751a18d6",
+   "url": "https://arxiv.org/abs/2403.07718",
+   "retrieved_at": "2026-10-27T17:16:21Z",
+   "sha256": "bddcee7a5db7fd9c751a18d65d53dfc06dfbcef6231858b6af796af8577c402e",
+   "bytes": 43911,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2403.07718: WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?"
+  },
+  {
+   "artifact_id": "SA-93fcd458a6fc159c19df9aac",
+   "url": "https://arxiv.org/abs/2404.07972",
+   "retrieved_at": "2026-10-27T17:16:36Z",
+   "sha256": "93fcd458a6fc159c19df9aac01d97ad985026f8b33e87473f9f16d7fcd467428",
+   "bytes": 46703,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2404.07972: OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments"
+  },
+  {
+   "artifact_id": "SA-9cb81897e7e878998ca4a1b5",
+   "url": "https://arxiv.org/abs/2407.18901",
+   "retrieved_at": "2026-10-27T17:16:51Z",
+   "sha256": "9cb81897e7e878998ca4a1b52805ec78d0721a55d8ff27a134be4c7e87d775ba",
+   "bytes": 44236,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2407.18901: AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents"
+  },
+  {
+   "artifact_id": "SA-ad1522d07222a9d4f75117f9",
+   "url": "https://arxiv.org/abs/2406.12045",
+   "retrieved_at": "2026-10-27T17:17:06Z",
+   "sha256": "ad1522d07222a9d4f75117f9e976a1220c1857844a9e3dac0ebeccc1f7976605",
+   "bytes": 41286,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "CC BY 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2406.12045: $τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains"
+  },
+  {
+   "artifact_id": "SA-de08944494a26dc70e62730d",
+   "url": "https://arxiv.org/abs/2312.13771",
+   "retrieved_at": "2026-10-27T17:17:21Z",
+   "sha256": "de08944494a26dc70e62730d459c3e72b485de91c68a128072a30d918cb7505e",
+   "bytes": 42898,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2312.13771: AppAgent: Multimodal Agents as Smartphone Users"
+  },
+  {
+   "artifact_id": "SA-8a75cecd04af8d31f2bdb78c",
+   "url": "https://arxiv.org/abs/2409.07429",
+   "retrieved_at": "2026-10-27T17:17:36Z",
+   "sha256": "8a75cecd04af8d31f2bdb78c7131b2c62dbe9c1fe1b3892bb411b100148baf7d",
+   "bytes": 41649,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "CC BY-SA 4.0 (según su página de arXiv)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2409.07429: Agent Workflow Memory"
+  },
+  {
+   "artifact_id": "SA-b462e553110554232907cd05",
+   "url": "https://arxiv.org/abs/2410.12361",
+   "retrieved_at": "2026-10-27T17:17:51Z",
+   "sha256": "b462e553110554232907cd0528183357470f2ff8a8c85ef310372b417171137a",
+   "bytes": 44943,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "arXiv: licencia no exclusiva de distribución (sin permiso de republicar)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 2410.12361: Proactive Agent: Shifting LLM Agents from Reactive Responses to Active Assistance"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "LLM+P puede dar soluciones óptimas para la mayoría de los problemas, mientras que los LLM no logran dar ni siquiera planes factibles para la mayoría.",
+    "artifact_ids": [
+     "SA-f1f848c2a468d511204915dd"
+    ],
+    "quote": "LLM+P is able to provide optimal solutions for most problems, while LLMs fail to provide even feasible plans for most problems.",
+    "locator": "Resumen, arXiv:2304.11477"
+   },
+   {
+    "claim": "Se presenta una visión de los marcos LLM-Modulo, que combinan las fortalezas de los LLM con verificadores externos basados en modelos en un régimen de interacción bidireccional más estrecho.",
+    "artifact_ids": [
+     "SA-d4fa0f60306615b0889aaa73"
+    ],
+    "quote": "We present a vision of {\\bf LLM-Modulo Frameworks} that combine the strengths of LLMs with external model-based verifiers in a tighter bi-directional interaction regime.",
+    "locator": "Resumen, arXiv:2402.01817"
+   },
+   {
+    "claim": "Toolformer es un modelo entrenado para decidir qué APIs llamar, cuándo llamarlas, qué argumentos pasar y cómo incorporar mejor los resultados en la predicción futura de tokens.",
+    "artifact_ids": [
+     "SA-eca71f4fd5de2ce68af57118"
+    ],
+    "quote": "a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction",
+    "locator": "Resumen, arXiv:2302.04761"
+   },
+   {
+    "claim": "Combinado con un recuperador de documentos, Gorilla demuestra una gran capacidad para adaptarse a cambios en los documentos en tiempo de prueba.",
+    "artifact_ids": [
+     "SA-72010f4b63e19c0874f1c27f"
+    ],
+    "quote": "When combined with a document retriever, Gorilla demonstrates a strong capability to adapt to test-time document changes",
+    "locator": "Resumen, arXiv:2305.15334"
+   },
+   {
+    "claim": "ToolLLM recopila 16,464 APIs RESTful del mundo real, de 49 categorías, desde RapidAPI Hub.",
+    "artifact_ids": [
+     "SA-ce4ed6a3d612c54283f7c7ee"
+    ],
+    "quote": "we collect 16,464 real-world RESTful APIs spanning 49 categories from RapidAPI Hub",
+    "locator": "Resumen, arXiv:2307.16789"
+   },
+   {
+    "claim": "HuggingGPT selecciona modelos según las descripciones de sus funciones disponibles en Hugging Face, ejecuta cada subtarea con el modelo elegido y resume la respuesta.",
+    "artifact_ids": [
+     "SA-eeab6ac43ae1c0db23f82ce9"
+    ],
+    "quote": "select models according to their function descriptions available in Hugging Face, execute each subtask with the selected AI model, and summarize the response",
+    "locator": "Resumen, arXiv:2303.17580"
+   },
+   {
+    "claim": "RestGPT aplica un mecanismo de planeación en línea de grueso a fino para mejorar la descomposición de tareas y la selección de APIs.",
+    "artifact_ids": [
+     "SA-3eaf510732d8a45bba88a9f1"
+    ],
+    "quote": "conducts a coarse-to-fine online planning mechanism to enhance the abilities of task decomposition and API selection",
+    "locator": "Resumen, arXiv:2306.06624"
+   },
+   {
+    "claim": "SayCan usa habilidades preentrenadas para restringir al modelo a proponer acciones en lenguaje natural que sean factibles y apropiadas al contexto.",
+    "artifact_ids": [
+     "SA-d4b1c7b48b1df6d0c6f7669a"
+    ],
+    "quote": "pretrained skills, which are used to constrain the model to propose natural language actions that are both feasible and contextually appropriate",
+    "locator": "Resumen, arXiv:2204.01691"
+   },
+   {
+    "claim": "Voyager tiene una biblioteca de habilidades en crecimiento continuo, de código ejecutable, para almacenar y recuperar comportamientos complejos.",
+    "artifact_ids": [
+     "SA-92e5b80920776ab028c6e7f5"
+    ],
+    "quote": "an ever-growing skill library of executable code for storing and retrieving complex behaviors",
+    "locator": "Resumen, arXiv:2305.16291"
+   },
+   {
+    "claim": "Voyager obtiene 3.3x más ítems únicos y recorre distancias 2.3x mayores.",
+    "artifact_ids": [
+     "SA-92e5b80920776ab028c6e7f5"
+    ],
+    "quote": "It obtains 3.3x more unique items, travels 2.3x longer distances",
+    "locator": "Resumen, arXiv:2305.16291"
+   },
+   {
+    "claim": "Los LLM pueden recibir nuevas órdenes y recomponer autónomamente llamadas a APIs para generar nuevo código de política.",
+    "artifact_ids": [
+     "SA-246743b92f7b5fdca132f40c"
+    ],
+    "quote": "LLMs can take in new commands and autonomously re-compose API calls to generate new policy code",
+    "locator": "Resumen, arXiv:2209.07753"
+   },
+   {
+    "claim": "ReAct supera a los métodos de imitación y de aprendizaje por refuerzo por una tasa de éxito absoluta de 34% y 10%, respectivamente.",
+    "artifact_ids": [
+     "SA-3ff741a07ecb128c0258ee65"
+    ],
+    "quote": "ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 34% and 10% respectively",
+    "locator": "Resumen, arXiv:2210.03629"
+   },
+   {
+    "claim": "Reflexion mejora no actualizando pesos, sino mediante retroalimentación lingüística.",
+    "artifact_ids": [
+     "SA-3e603a9b007a656c3a0f28f1"
+    ],
+    "quote": "not by updating weights, but instead through linguistic feedback",
+    "locator": "Resumen, arXiv:2303.11366"
+   },
+   {
+    "claim": "En WebArena el mejor agente basado en GPT-4 logra 14.41% frente a 78.24% humano.",
+    "artifact_ids": [
+     "SA-0849ca5f4b362834455b175a"
+    ],
+    "quote": "our best GPT-4-based agent only achieves an end-to-end task success rate of 14.41%, significantly lower than the human performance of 78.24%",
+    "locator": "Resumen, arXiv:2307.13854"
+   },
+   {
+    "claim": "Filtrar primero el HTML con un modelo de lenguaje pequeño mejora significativamente la eficacia y eficiencia de los LLM.",
+    "artifact_ids": [
+     "SA-7ece1826e0e634376704807b"
+    ],
+    "quote": "first filtering it with a small LM significantly improves the effectiveness and efficiency of LLMs",
+    "locator": "Resumen, arXiv:2306.06070"
+   },
+   {
+    "claim": "WorkArena es un benchmark alojado remotamente de 33 tareas basadas en la plataforma ServiceNow, ampliamente usada.",
+    "artifact_ids": [
+     "SA-bddcee7a5db7fd9c751a18d6"
+    ],
+    "quote": "a remote-hosted benchmark of 33 tasks based on the widely-used ServiceNow platform",
+    "locator": "Resumen, arXiv:2403.07718"
+   },
+   {
+    "claim": "OSWorld: humanos completan más de 72.36% de las tareas; el mejor modelo, 12.24%.",
+    "artifact_ids": [
+     "SA-93fcd458a6fc159c19df9aac"
+    ],
+    "quote": "While humans can accomplish over 72.36% of the tasks, the best model achieves only 12.24% success",
+    "locator": "Resumen, arXiv:2404.07972"
+   },
+   {
+    "claim": "AppWorld permite distintas formas de completar una tarea y a la vez comprueba cambios inesperados, es decir, daños colaterales.",
+    "artifact_ids": [
+     "SA-9cb81897e7e878998ca4a1b5"
+    ],
+    "quote": "allowing for different ways of completing a task while also checking for unexpected changes, i.e., collateral damage",
+    "locator": "Resumen, arXiv:2407.18901"
+   },
+   {
+    "claim": "τ-bench propone una nueva métrica (pass^k) para evaluar la fiabilidad del comportamiento del agente en múltiples intentos.",
+    "artifact_ids": [
+     "SA-ad1522d07222a9d4f75117f9"
+    ],
+    "quote": "We also propose a new metric (pass^k) to evaluate the reliability of agent behavior over multiple trials.",
+    "locator": "Resumen, arXiv:2406.12045"
+   },
+   {
+    "claim": "Los agentes tienen éxito en <50% de las tareas y son bastante inconsistentes (pass^8 <25% en retail).",
+    "artifact_ids": [
+     "SA-ad1522d07222a9d4f75117f9"
+    ],
+    "quote": "succeed on <50% of the tasks, and are quite inconsistent (pass^8 <25% in retail)",
+    "locator": "Resumen, arXiv:2406.12045"
+   },
+   {
+    "claim": "El agente aprende a navegar y usar nuevas apps mediante exploración autónoma u observando demostraciones humanas.",
+    "artifact_ids": [
+     "SA-de08944494a26dc70e62730d"
+    ],
+    "quote": "The agent learns to navigate and use new apps either through autonomous exploration or by observing human demonstrations.",
+    "locator": "Resumen, arXiv:2312.13771"
+   },
+   {
+    "claim": "AWM mejora sustancialmente los resultados base en 24.6% y 51.1% de tasa de éxito relativa en Mind2Web y WebArena.",
+    "artifact_ids": [
+     "SA-8a75cecd04af8d31f2bdb78c"
+    ],
+    "quote": "AWM substantially improves the baseline results by 24.6% and 51.1% relative success rate on Mind2Web and WebArena",
+    "locator": "Resumen, arXiv:2409.07429"
+   },
+   {
+    "claim": "El modelo ajustado logra un F1 de 66.47% al ofrecer asistencia proactivamente.",
+    "artifact_ids": [
+     "SA-b462e553110554232907cd05"
+    ],
+    "quote": "our fine-tuned model achieves an F1-Score of 66.47% in proactively offering assistance",
+    "locator": "Resumen, arXiv:2410.12361"
+   },
+   {
+    "claim": "Proactive Agent afirma que la mayoría de los sistemas de agentes siguen siendo reactivos.",
+    "artifact_ids": [
+     "SA-b462e553110554232907cd05"
+    ],
+    "quote": "most agent systems remain reactive, limiting their effectiveness in scenarios requiring foresight and autonomous decision-making",
+    "locator": "Resumen, arXiv:2410.12361"
+   }
+  ],
+  "conflicting": [
+   {
+    "claim": "Tensión sobre el papel del LLM en planeación: LLM+P lo trata como traductor a un planificador; LLM-Modulo rechaza ese extremo y propone integración más estrecha con verificadores.",
+    "artifact_ids": [
+     "SA-d4fa0f60306615b0889aaa73",
+     "SA-f1f848c2a468d511204915dd"
+    ],
+    "quote": "perhaps over-pessimistic claims that all that LLMs are good for in planning/reasoning tasks are as mere translators of the problem specification from one syntactic format to another",
+    "locator": "Resumen, arXiv:2402.01817"
+   }
+  ],
+  "unknown": [
+   "Ninguna fuente leída evalúa propuesta autónoma de acciones sin petición humana sobre un repertorio abierto de acciones gobernadas por normas citadas; Proactive Agent se acerca, pero solo evalúa aceptación de tareas predichas.",
+   "No hay datos sobre Odoo Community en estas fuentes (ni benchmark ni API); WorkArena usa ServiceNow.",
+   "No se leyó nada sobre opciones/habilidades en RL (options framework) ni síntesis de programas clásica; el hueco no puede afirmarse por ausencia.",
+   "Costos (tokens, dinero, latencia) por enfoque no aparecen en los resúmenes.",
+   "Cómo se aplica gobierno (permisos, normas) al repertorio propuesto no se cubre, salvo políticas en τ-bench y daño colateral en AppWorld.",
+   "Fechas y enlaces: se dan fecha de envío y arXiv ID; no se verificó contenido de los artículos completos."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: los enfoques leídos responden a una instrucción humana (Toolformer, Gorilla, ToolLLM, RestGPT, HuggingGPT); la iniciativa propia solo aparece en Proactive Agent, con repertorio no abierto ni normado.",
+  "INTERPRETACIÓN: SayCan (affordances con valor) y LLM-Modulo (verificadores externos) son los precedentes más cercanos para limitar propuestas a acciones factibles; el equivalente 'permitido por norma citada' no aparece en las fuentes leídas.",
+  "INTERPRETACIÓN: Voyager y Agent Workflow Memory muestran que reutilizar habilidades/flujos aprendidos mejora resultados; combinarlo con detección proactiva y gobierno normativo no está en estas fuentes."
+ ],
+ "candidate_methods": [
+  "Mecanismo candidato: detector de hallazgos -> recuperación de normas citadas -> generación de acciones candidatas desde esquema de API de Odoo -> filtro de gobierno (permisos/normas) y verificador de efectos antes de proponer -> propuesta con cita.",
+  "Biblioteca de flujos/habilidades tipo Voyager/AWM, alimentada solo con acciones aprobadas."
+ ],
+ "candidate_controls": [
+  "Lista de permitidos por rol y norma; toda acción propuesta debe citar la norma que la habilita.",
+  "Ejecución en modo propuesta (sin efecto) y simulación sobre copia de la base antes de ejecutar.",
+  "Prueba de daño colateral al estilo AppWorld sobre el estado de la base."
+ ],
+ "candidate_tests": [
+  "HIPÓTESIS: en tareas fijas sobre Odoo Community con anomalías sembradas, el mecanismo propuesto supera al modelo solo en precisión/recall de propuestas correctas, con menos propuestas fuera de gobierno. Métricas: éxito por estado final de la base, pass^k (como τ-bench), tasa de acciones fuera de gobierno, daño colateral, aceptación humana, costo en tokens y USD por tarea. Línea base: el mismo modelo con las mismas herramientas pero sin normas, filtro ni verificador.",
+  "Ablaciones: sin filtro de gobierno, sin verificador, sin biblioteca de habilidades."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Antes de declarar algo nuevo, falta revisar arte previo en opciones de RL, síntesis de programas, planeación de dominio abierto y agentes proactivos más recientes (no cubiertos aquí).",
+  "El diseño debe medir explícitamente acciones fuera de gobierno, que los benchmarks leídos casi no miden."
+ ],
+ "affected_existing_concepts": [
+  "Conocimiento citado (normas, obligaciones, procesos)",
+  "Acceso gobernado a apps",
+  "Repertorio operacional"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: el hueco es la combinación de iniciativa propia + repertorio abierto + restricción por normas citadas + medición contra línea base en una app ERP real; no se halló evaluada en estas fuentes, pero no se buscó exhaustivamente.",
+  "HIPÓTESIS: un filtro normativo reduce propuestas fuera de gobierno sin bajar demasiado la cobertura de propuestas correctas."
+ ],
+ "limitations": [
+  "Solo se leyeron páginas de resumen de arXiv; no hay métodos, tablas ni límites detallados de cada artículo.",
+  "Las fuentes son preprints de los propios autores; no hay documentación oficial de APIs ni Odoo.",
+  "Cobertura incompleta: faltan RL jerárquico/opciones, síntesis de programas clásica, planeación automática clásica (PDDL puro) y agentes comerciales recientes; las fechas son hasta 2024 y hoy es 2026-10-27, así que puede haber arte posterior no leído.",
+  "La fecha de envío v3 de AppAgent figura como 5 Jul 2026 en la fuente; se reporta tal cual.",
+  "Los enlaces se dan solo como identificadores arXiv/DOI de las páginas.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 21 de 24 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
