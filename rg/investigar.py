@@ -191,7 +191,8 @@ Answer in Spanish, as one JSON object, through this JSON Schema (it is enforced)
 
 
 def public_host(host):
-    """True for a public DNS name: never an IP literal, localhost, a single label or a private-use suffix."""
+    """True for a name that looks public: never an IP literal, localhost, a single label or a private-use suffix. The name
+    alone proves nothing (svc.127.0.0.1.nip.io passes): the Fetcher checks the address it resolves to before connecting."""
     host = (host or '').lower().rstrip('.')
     try:
         ipaddress.ip_address(host.strip('[]'))
@@ -211,9 +212,14 @@ def plan_from_discovery(rr, discovery):
         raise ValueError(f'the discovery does not fit its schema: {exc.message[:200]}') from None
     sources, rejected, seen = [], [], set()
     for d in discovery['sources']:
-        parts = urlsplit(d['url'].strip())
+        try:
+            parts = urlsplit(d['url'].strip())
+            port = parts.port
+        except ValueError:  # a malformed URL (a port that is not a number, an unclosed IPv6 bracket) is one rejection
+            rejected.append({'url': d['url'][:500], 'reason': 'malformed URL'})
+            continue
         why = ('not https' if parts.scheme != 'https' else 'not a public host' if not public_host(parts.hostname)
-               else 'user or port in the URL' if parts.username or parts.password or parts.port not in (None, 443)
+               else 'user or port in the URL' if parts.username or parts.password or port not in (None, 443)
                else 'repeated' if parts._replace(fragment='').geturl() in seen
                else f'over {MAX_DISCOVERED} sources' if len(sources) >= MAX_DISCOVERED else None)
         if why:

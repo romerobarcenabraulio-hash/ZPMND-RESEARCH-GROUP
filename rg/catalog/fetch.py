@@ -14,10 +14,16 @@ Guards, each with a test in tests/test_catalog.py (FetchGuards), tests/test_run_
   for: never to a host reached by redirect (a CDN with a signed URL) and never to robots.txt;
 - `secrets` binds each credential to its one host ({value: host}): a request that would carry it, in a header or in the
   URL, to any other host is refused before it is sent, and the refusal names no URL;
-- a large body can be streamed to disk (`sink`, a FileSink) with its own size cap; every attempt starts it empty.
+- a large body can be streamed to disk (`sink`, a FileSink) with its own size cap; every attempt starts it empty;
+- every https connection goes only to a public address: the host is resolved once, every address it has must be global
+  (no loopback, private range, link-local or cloud metadata, shared, reserved or multicast) and the socket opens to that
+  very address, TLS still verified for the name, so a name that points inside and a second lookup that rebinds are both
+  refused (_PublicConnection; GPT, REVISE of #54). Through a proxy (HTTPS_PROXY) the proxy's own policy decides.
 """
 import hashlib
 import http.client
+import ipaddress
+import socket
 import time
 import urllib.error
 import urllib.request
@@ -111,6 +117,34 @@ class _NoRedirect(urllib.request.HTTPRedirectHandler):
         return None  # redirects are followed by Fetcher.get after re-checking host and robots
 
 
+def public_address(addr):
+    """True for a global unicast address."""
+    ip = ipaddress.ip_address(addr.split('%')[0])
+    return ip.is_global and not ip.is_multicast
+
+
+class _PublicConnection(http.client.HTTPSConnection):
+    """An https connection that resolves its host once and connects to that address only if all of them are public."""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._create_connection = self._public_connection
+
+    def _public_connection(self, address, timeout, source_address=None):
+        if self._tunnel_host:  # the socket goes to the proxy, which reaches the host: the proxy's policy decides
+            return socket.create_connection(address, timeout, source_address)
+        host, port = address
+        addrs = [info[4][0] for info in socket.getaddrinfo(host, port, type=socket.SOCK_STREAM)]
+        if not addrs or not all(public_address(a) for a in addrs):
+            raise OSError(f'{host} resolves to an address that is not public')
+        return socket.create_connection((addrs[0], port), timeout, source_address)
+
+
+class _PublicHTTPS(urllib.request.HTTPSHandler):
+    def https_open(self, req):
+        return self.do_open(_PublicConnection, req, context=self._context)
+
+
 class Fetcher:
     def __init__(self, allowed_hosts, budget=3000, min_interval=1.0, max_bytes=60_000_000, timeout=60,
                  opener=None, clock=time.monotonic, sleep=time.sleep, retries=2, deadline=None, robots_log=None,
@@ -122,7 +156,7 @@ class Fetcher:
         self.max_bytes = max_bytes
         self.timeout = timeout
         self.retries = retries  # network errors and 5xx are retried with growing pauses; 4xx is final
-        self._opener = opener or urllib.request.build_opener(_NoRedirect)  # env proxies (HTTPS_PROXY) apply
+        self._opener = opener or urllib.request.build_opener(_NoRedirect, _PublicHTTPS)  # env proxies (HTTPS_PROXY) apply
         self._clock, self._sleep = clock, sleep
         self._last = {}
         self._robots = {}

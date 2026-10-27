@@ -683,6 +683,10 @@ class Discovery(Base):
         self.assertEqual([s['url'] for s in plan['sources']], ['https://a.gob.mx/nota'])
         self.assertEqual([r['url'] for r in record['rejected']], bad)  # each one named, with its reason
         self.assertEqual(record['rejected'][-2]['reason'], 'repeated')
+        # one malformed proposal is one rejection, never the end of the discovery (GPT, #54)
+        plan, record = inv.plan_from_discovery(RR, discovered('https://a.gob.mx:abc/x', 'https://[::1/x', 'https://a.gob.mx/nota'))
+        self.assertEqual([s['url'] for s in plan['sources']], ['https://a.gob.mx/nota'])
+        self.assertEqual([r['reason'] for r in record['rejected']], ['malformed URL', 'malformed URL'])
         many = [f'https://a.gob.mx/n{i}' for i in range(inv.MAX_DISCOVERED + 2)]
         plan, record = inv.plan_from_discovery(RR, discovered(*many))
         self.assertEqual(len(plan['sources']), inv.MAX_DISCOVERED)
