@@ -19,18 +19,96 @@ name: investigar
 # - publish: contents: write and nothing else. Parses nothing; pushes only research-packets/<RP>/, to a new branch only.
 # A branch pushed with GITHUB_TOKEN starts no workflow, so the owner opens the PR (and with it CI and both auditors):
 # the job summary prints the command.
+# - plan (first): the reviewed plan on main, or, with discover, the sources a web search proposes from the request alone
+#   (no URL given): the same pinned CLI, WebSearch its only tool, from an empty folder, no GitHub token, answering
+#   through DISCOVERY_SCHEMA; plan_from_discovery keeps public https hosts only and makes every source metadata_only.
+#   Either way the fetch job gets one plan that passed load_plan, and nothing else about it changes.
 on:
   workflow_dispatch:
     inputs:
       request_id:
-        description: 'RR-... with requests/<RR>.json and requests/plans/<RR>.json on main'
+        description: 'RR-... with requests/<RR>.json on main (and requests/plans/<RR>.json unless discover)'
         required: true
+      discover:
+        description: 'no plan: the sources come from a web search on the request alone (all metadata_only)'
+        type: boolean
+        default: false
 permissions: {}
 concurrency:
   group: investigar-${{ inputs.request_id }}
   cancel-in-progress: false
 jobs:
+  plan:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions: { contents: read }
+    env:
+      CC_VERSION: '2.1.289'
+      CC_INTEGRITY: 'sha512-I23SaSYE8vSwFbJ+Tc0mRlzvJmRQNaiyBUXK/K5R6BVr2lOoCdMI2SJR4N6xiVYy6yyIt39JNiyvPHoiOymyyw=='
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - name: The reviewed plan on main
+        if: ${{ !inputs.discover }}
+        env: { RID: '${{ inputs.request_id }}' }
+        run: |
+          [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
+          python -m rg.investigar plan --request "requests/$RID.json" --plan "requests/plans/$RID.json" --out plan
+      - name: Discovery prompt (the request alone, as data)
+        if: ${{ inputs.discover }}
+        env: { RID: '${{ inputs.request_id }}' }
+        run: |
+          [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
+          python -m rg.investigar discover-prompt --request "requests/$RID.json" --out plan
+      - name: Claude Code CLI for discovery, pinned by version and integrity
+        if: ${{ inputs.discover }}
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          npm pack --silent "@anthropic-ai/claude-code-linux-x64@$CC_VERSION" > /dev/null
+          tgz="anthropic-ai-claude-code-linux-x64-$CC_VERSION.tgz"
+          [ "sha512-$(openssl dgst -sha512 -binary "$tgz" | base64 -w0)" = "$CC_INTEGRITY" ] || { echo 'integrity mismatch (plan)'; exit 2; }
+          mkdir cc && tar -xzf "$tgz" -C cc && chmod 755 cc/package/claude
+      - name: The researcher (web search is its only tool; an empty folder, no GitHub token)
+        if: ${{ inputs.discover }}
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
+          DISABLE_AUTOUPDATER: '1'
+        run: |
+          set -euo pipefail
+          diagnose() {  # a failed call says why from the result's structure only, never any of its text (GPT, #53)
+            jq -c '{type, subtype, is_error, num_turns, duration_ms}' "$1" 2>/dev/null \
+              || echo "no JSON result from the CLI"
+          }
+          mkdir -p "$RUNNER_TEMP/vacio-descubrir" && cd "$RUNNER_TEMP/vacio-descubrir"
+          "$RUNNER_TEMP/cc/package/claude" -p --tools "WebSearch" --strict-mcp-config --max-turns 40 --output-format json \
+            --json-schema "$(cat "$GITHUB_WORKSPACE/plan/descubrir-schema.json")" \
+            --system-prompt "$(cat "$GITHUB_WORKSPACE/plan/descubrir-system.txt")" \
+            < "$GITHUB_WORKSPACE/plan/descubrir-user.txt" > "$GITHUB_WORKSPACE/plan/descubrir-cli.json" \
+            || { rc=$?; diagnose "$GITHUB_WORKSPACE/plan/descubrir-cli.json"; exit $rc; }
+          jq -c '{num_turns, duration_ms, total_cost_usd}' "$GITHUB_WORKSPACE/plan/descubrir-cli.json"  # what it cost
+      - name: The discovered plan (checked like a reviewed one; every source metadata_only)
+        if: ${{ inputs.discover }}
+        env: { RID: '${{ inputs.request_id }}' }
+        run: |
+          [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
+          python -m rg.investigar discover-plan --request "requests/$RID.json" --discovery plan/descubrir-cli.json --out plan
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: investigar-plan
+          path: |
+            plan/plan.json
+            plan/descubrimiento.json
+          retention-days: 1
+          if-no-files-found: error
+
   fetch:
+    needs: plan
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     timeout-minutes: 60
@@ -41,11 +119,14 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with: { python-version: '3.12' }
       - run: pip install -r requirements-dev.txt
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with: { name: investigar-plan, path: plan }
       - name: Fetch the plan's sources (no secrets)
         env: { RID: '${{ inputs.request_id }}' }
         run: |
           [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || { echo "request_id: RR-..."; exit 2; }
-          python -m rg.investigar fetch --request "requests/$RID.json" --plan "requests/plans/$RID.json" --out work
+          mkdir -p work && { [ ! -f plan/descubrimiento.json ] || cp plan/descubrimiento.json work/; }  # sealed with the rest
+          python -m rg.investigar fetch --request "requests/$RID.json" --plan plan/plan.json --out work
       - name: Seal the work folder (it may hold bodies that can only be cited; the artifact is public)
         id: seal
         if: ${{ !cancelled() }}  # a failed fetch still leaves its record; the jobs after it do not run
@@ -97,11 +178,16 @@ jobs:
           DISABLE_AUTOUPDATER: '1'
         run: |
           set -euo pipefail
+          diagnose() {  # a failed call says why from the result's structure only, never any of its text (GPT, #53)
+            jq -c '{type, subtype, is_error, num_turns, duration_ms}' "$1" 2>/dev/null \
+              || echo "no JSON result from the CLI"
+          }
           mkdir -p "$RUNNER_TEMP/vacio" && cd "$RUNNER_TEMP/vacio"
           "$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config --max-turns 3 --output-format json \
             --json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")" \
             --system-prompt "$(cat "$GITHUB_WORKSPACE/work/system.txt")" \
-            < "$GITHUB_WORKSPACE/work/user.txt" > "$GITHUB_WORKSPACE/work/modelo-cli.json"
+            < "$GITHUB_WORKSPACE/work/user.txt" > "$GITHUB_WORKSPACE/work/modelo-cli.json" \
+            || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/modelo-cli.json"; exit $rc; }
       - name: Review prompt (each claim beside its quote, nothing else)
         run: python -m rg.investigar review-prompt --work work --model-output work/modelo-cli.json
       - name: The reviewer (the same CLI, no tools, an empty folder of its own; it sees claims and quotes only)
@@ -111,11 +197,16 @@ jobs:
           DISABLE_AUTOUPDATER: '1'
         run: |
           set -euo pipefail
+          diagnose() {  # a failed call says why from the result's structure only, never any of its text (GPT, #53)
+            jq -c '{type, subtype, is_error, num_turns, duration_ms}' "$1" 2>/dev/null \
+              || echo "no JSON result from the CLI"
+          }
           mkdir -p "$RUNNER_TEMP/vacio-revision" && cd "$RUNNER_TEMP/vacio-revision"
           "$RUNNER_TEMP/cc/package/claude" -p --tools "" --max-turns 3 --strict-mcp-config --output-format json \
             --json-schema "$(cat "$GITHUB_WORKSPACE/work/revision-schema.json")" \
             --system-prompt "$(cat "$GITHUB_WORKSPACE/work/revision-system.txt")" \
-            < "$GITHUB_WORKSPACE/work/revision-user.txt" > "$GITHUB_WORKSPACE/work/revision-cli.json"
+            < "$GITHUB_WORKSPACE/work/revision-user.txt" > "$GITHUB_WORKSPACE/work/revision-cli.json" \
+            || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/revision-cli.json"; exit $rc; }
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
           name: investigar-modelo

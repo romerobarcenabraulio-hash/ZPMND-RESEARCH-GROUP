@@ -5,8 +5,10 @@ Each regression names the real failure it pins (found 2026-10-19 by the coverage
 import io
 import json
 import re
+import socket
 import tempfile
 import unittest
+from unittest import mock
 import urllib.error
 from email.message import Message
 from pathlib import Path
@@ -14,6 +16,7 @@ from pathlib import Path
 from rg.catalog import leyesbiblio, sidof
 from rg.catalog.categorize import doc_type, fold
 from rg.catalog.fetch import BudgetExhausted, Fetcher, FetchRefused
+from rg.catalog import fetch as fetch_module
 from rg.catalog.run import MAX_REREADS as MAX
 from rg.catalog.store import Catalog, RawStore
 
@@ -669,4 +672,51 @@ class SidofRun(unittest.TestCase):
         self.assertIn('2026-10-17 fecha oficial', [c['scope'] for c in run.manifest['coverage'] if not c['ok']])
         self.assertTrue(all(e['dates']['published'] is None for e in run.catalog.snapshot('mx.dof')))
 
+class PublicAddresses(unittest.TestCase):
+    """Every https connection goes only to a public address, resolved once (GPT, REVISE of #54): a name the model or a
+    page proposes can point anywhere, e.g. svc.127.0.0.1.nip.io resolves to loopback."""
+
+    def infos(self, *addrs):
+        return [(socket.AF_INET6 if ':' in a else socket.AF_INET, socket.SOCK_STREAM, 6, '', (a, 443)) for a in addrs]
+
+    def connect(self, *addrs, tunnel=None):
+        conn = fetch_module._PublicConnection('svc.example.org', 443, timeout=5)
+        if tunnel:
+            conn.set_tunnel(tunnel)
+        with mock.patch.object(fetch_module.socket, 'getaddrinfo', return_value=self.infos(*addrs)) as gai, \
+                mock.patch.object(fetch_module.socket, 'create_connection', return_value='sock') as cc:
+            try:
+                got = conn._create_connection((conn.host, conn.port), 5)
+            except OSError as e:
+                got = e
+        return got, gai, cc
+
+    def test_a_name_that_resolves_inside_is_never_connected_to(self):
+        for addrs in (('127.0.0.1',), ('10.0.0.5',), ('192.168.1.1',), ('172.16.0.1',), ('169.254.169.254',),
+                      ('100.64.0.1',), ('::1',), ('fe80::1%eth0',), ('::ffff:127.0.0.1',), ('0.0.0.0',), ('224.0.0.1',),
+                      ('93.184.216.34', '10.0.0.5'), ()):
+            with self.subTest(addrs=addrs):
+                got, gai, cc = self.connect(*addrs)
+                self.assertIsInstance(got, OSError)
+                cc.assert_not_called()
+
+    def test_a_public_address_is_resolved_once_and_connected_to_as_resolved(self):
+        got, gai, cc = self.connect('93.184.216.34', '2606:2800:220:1:248:1893:25c8:1946')
+        self.assertEqual(got, 'sock')
+        self.assertEqual(gai.call_count, 1)  # no second lookup that could rebind the name
+        self.assertEqual(cc.call_args.args[0], ('93.184.216.34', 443))  # the socket opens to the checked address
+
+    def test_through_a_proxy_the_socket_goes_to_the_proxy(self):
+        got, gai, cc = self.connect('10.0.0.5', tunnel='svc.example.org')
+        self.assertEqual(got, 'sock')
+        gai.assert_not_called()
+
+    def test_the_fetchers_default_opener_uses_it_and_a_refusal_is_a_status_0_row(self):
+        f = Fetcher(['svc.example.org'], sleep=lambda s: None, retries=0)
+        self.assertTrue(any(isinstance(h, fetch_module._PublicHTTPS) for h in f._opener.handlers))
+        with mock.patch.object(fetch_module.socket, 'getaddrinfo', return_value=self.infos('127.0.0.1')), \
+                mock.patch.object(fetch_module.socket, 'create_connection') as cc:
+            with self.assertRaises(FetchRefused):  # robots.txt unreachable: nothing is fetched
+                f.get('https://svc.example.org/x')
+        cc.assert_not_called()
 
