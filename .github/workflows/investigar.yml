@@ -1,16 +1,19 @@
 name: investigar
 # Autonomous research run (docs/INVESTIGAR.md): a ResearchRequest on main plus its reviewed source plan
-# (requests/plans/<RR>.json, redistributable sources only: this repository and its artifacts are public) -> branch
-# investigar/<RP> with the packet folder. Four jobs, each with only what it needs:
+# (requests/plans/<RR>.json: all redistributable sources, or all metadata_only ones) -> branch investigar/<RP> with the
+# packet folder. The repository and its artifacts are public, so the work folder (bodies and texts) travels sealed
+# (scripts/sobre.sh: AES-256 under a fresh key, the key sealed with RSA-OAEP to keys/rg-artifacts.pub.pem); only the
+# jobs that need it open it, in a step of their own that holds the private key RG_ARTIFACT_KEY and runs before anything
+# is parsed. Four jobs, each with only what it needs:
 # - fetch: no secrets. The plan's https URLs only, through the catalog's Fetcher (robots.txt, the plan's hosts, one
-#   request per second per host, 60 MB per body); texts from rg.text in isolated processes.
+#   request per second per host, 60 MB per body); texts from rg.text in isolated processes. Seals with the public key.
 # - analyze: the owner's Claude subscription (CLAUDE_CODE_OAUTH_TOKEN). The Claude Code CLI, pinned by version and by
 #   the npm integrity of its Linux build, runs with no tools at all (--tools "") from an empty folder; the texts are
 #   inside its prompt. It cannot read a file, run a command or open a URL, so it cannot reach the credential; it can
 #   only answer, through the JSON Schema (--json-schema, structured output). No GitHub token reaches it.
 # - gate: no model, no write token. Builds the packet from the fetch record and the request (artifacts, hashes and
 #   licenses never come from the model) and runs rg.packets: schema, only declared files, sha256 of every raw, every
-#   quote in the extracted text of its source.
+#   quote in the extracted text of its source (the run's raws at hand, also those a metadata_only packet never keeps).
 # - publish: contents: write and nothing else. Parses nothing; pushes only research-packets/<RP>/, to a new branch only.
 # A branch pushed with GITHUB_TOKEN starts no workflow, so the owner opens the PR (and with it CI and both auditors):
 # the job summary prints the command.
@@ -41,8 +44,15 @@ jobs:
         run: |
           [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || { echo "request_id: RR-..."; exit 2; }
           python -m rg.investigar fetch --request "requests/$RID.json" --plan "requests/plans/$RID.json" --out work
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+      - name: Seal the work folder (it may hold bodies that can only be cited; the artifact is public)
+        id: seal
         if: ${{ !cancelled() }}  # a failed fetch still leaves its record; the jobs after it do not run
+        run: |
+          set -euo pipefail
+          bash scripts/sobre.sh seal work "$RUNNER_TEMP/sobre" keys/rg-artifacts.pub.pem
+          rm -rf work && mv "$RUNNER_TEMP/sobre" work  # what is uploaded is the envelope, nothing in clear
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        if: ${{ !cancelled() && steps.seal.outcome == 'success' }}  # only the envelope, never the folder in clear
         with: { name: investigar-work, path: work/, retention-days: 1, if-no-files-found: error }
 
   analyze:
@@ -60,7 +70,10 @@ jobs:
         with: { python-version: '3.12' }
       - run: pip install -r requirements-dev.txt
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
-        with: { name: investigar-work, path: work }
+        with: { name: investigar-work, path: sobre }
+      - name: Open the work folder (the only step with the artifact key)
+        env: { RG_ARTIFACT_KEY: '${{ secrets.RG_ARTIFACT_KEY }}' }
+        run: bash scripts/sobre.sh open sobre work
       - name: Prompt (instructions and schema; the request and the texts as data)
         env: { RID: '${{ inputs.request_id }}' }
         run: |
@@ -104,7 +117,10 @@ jobs:
         with: { python-version: '3.12' }
       - run: pip install -r requirements-dev.txt
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
-        with: { name: investigar-work, path: work }
+        with: { name: investigar-work, path: sobre }
+      - name: Open the work folder (the only step with the artifact key, before anything is parsed)
+        env: { RG_ARTIFACT_KEY: '${{ secrets.RG_ARTIFACT_KEY }}' }
+        run: bash scripts/sobre.sh open sobre work
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
         with: { name: investigar-modelo, path: work }
       - name: Build the packet and run the gate (no model, no write token)
@@ -117,7 +133,7 @@ jobs:
           [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
           rp=$(python -m rg.investigar assemble --request "requests/$RID.json" --work work --model-output work/modelo-cli.json --out out)
           [[ "$rp" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
-          python -m rg.packets "out/research-packets/$rp" --strict
+          python -m rg.packets "out/research-packets/$rp" --strict --raw work/raw
           echo "rp=$rp" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with: { name: investigar-packet, path: out/research-packets/, retention-days: 1, if-no-files-found: error }

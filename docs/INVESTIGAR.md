@@ -9,9 +9,10 @@ consume el uso incluido en el plan y no genera un cargo por token.
 ## Cómo se usa
 
 1. Un PR agrega el plan: las URL https de las fuentes, con su editor, tipo, licencia, redistribución y si son
-   primarias o secundarias. Solo admite fuentes con `redistribution: allowed`, porque el repo y sus artefactos de
-   Actions son públicos y todo lo que la corrida mueve queda redistribuido. Las fuentes que solo admiten metadatos se
-   leen a mano, fuera de este flujo. El PR pasa por CI y por los dos auditores como cualquier cambio.
+   primarias o secundarias. Un plan es todo de fuentes `redistribution: allowed` (sus crudos van al paquete) o todo de
+   fuentes `metadata_only` (términos de servicio, precios, artículos: se citan, nunca se republican; el paquete guarda
+   sus metadatos y citas de hasta 300 caracteres, sin crudo). El PR pasa por CI y por los dos auditores como cualquier
+   cambio.
 2. Ya en main: `gh workflow run investigar.yml -f request_id=<RR>`.
 3. Al terminar, el resumen de la corrida trae el comando `gh pr create` de la rama. El PR lo abre el dueño, porque una
    rama empujada con `GITHUB_TOKEN` no dispara flujos, y así corren CI y los dos auditores.
@@ -25,7 +26,8 @@ consume el uso incluido en el plan y no genera un cargo por token.
 | CLI fijada | El Claude Code CLI se baja por versión exacta y se comprueba contra la integridad sha512 que publica npm para esa versión antes de desempacarlo; sin coincidencia no corre |
 | Nada inventado | El pedido se valida contra su esquema (emitido por OWNER o ZPMND, PUBLIC o ABSTRACTED) antes de descargar nada. Artefactos, sha256, tamaños, licencias y el texto del pedido salen del registro de descarga y de main, nunca del modelo. Un hallazgo que cita algo no descargado detiene la corrida, y dos URL que entregan los mismos bytes también, para no perder una procedencia. Las fuentes del plan que el modelo no leyó quedan en `limitations`, escritas desde el registro |
 | Citas comprobadas | `rg.packets` confirma que cada cita está, con los espacios plegados, en el texto que el extractor fijado sacó de su fuente. Si la extracción falla no hay texto y la cita no se da por buena: nunca se busca en los bytes crudos. Solo un formato de texto plano que `rg.text` no lee (JSON, CSV, XML, texto) se lee como UTF-8 estricto. Si una cita no está, no se publica nada |
-| Derechos | El plan solo admite fuentes redistribuibles y `fetch` no descarga ninguna otra, aunque se le pase. La compuerta rechaza cualquier archivo que el paquete no declare: un crudo de más, una segunda copia, un enlace o una nota |
+| Sobre cerrado | El repo y sus artefactos de Actions son públicos: la carpeta de trabajo (cuerpos y textos) viaja entre trabajos cifrada (`scripts/sobre.sh`: AES-256 con una llave nueva por corrida y HMAC-SHA256 con otra, ambas selladas con RSA-OAEP a `keys/rg-artifacts.pub.pem`). `fetch` sella sin ningún secreto y sube solo el sobre; `analyze` y `gate` abren en un paso propio, el único con la llave privada `RG_ARTIFACT_KEY`, antes de leer nada. Al abrir, la llave privada sale del entorno antes de que corra otro programa (`tar` nunca la ve), el HMAC se comprueba antes de descifrar y lo descifrado se extrae solo completo: un sobre alterado o cortado no escribe nada |
+| Derechos | El plan no mezcla fuentes redistribuibles con fuentes de solo metadatos, y `fetch` no descarga una de licencia desconocida aunque se le pase. La compuerta rechaza cualquier archivo que el paquete no declare: un crudo de más, una segunda copia, un enlace o una nota |
 | Robots y cortesía | El `Fetcher` del catálogo: robots.txt, solo los hosts del plan, una petición por segundo por host, 60 MB por cuerpo |
 | Archivos hostiles | El texto sale de `rg.text`, con un proceso por archivo y límites de tiempo, tamaño y memoria, en trabajos sin permiso de escritura |
 | Superficie | Solo `workflow_dispatch` desde main; `publish` no analiza nada, solo agrega `research-packets/<RP>/` y solo crea su rama: el push lleva una condición atómica de que la rama no exista, así que una rama existente no se mueve ni por avance directo y el head de un PR en auditoría no cambia |

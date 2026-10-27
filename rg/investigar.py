@@ -6,8 +6,9 @@
 
 The steps run in jobs that hold different powers (docs/INVESTIGAR.md):
 - fetch: no secrets. Only the plan's https URLs, through the catalog's Fetcher (robots.txt, the plan's hosts only,
-  one request per second per host, 60 MB per body). The plan may name only sources whose redistribution is 'allowed':
-  the repository is public and so are its workflow artifacts, so everything this run moves is redistributed. Each
+  one request per second per host, 60 MB per body). A plan is all 'allowed' sources (their raws go into the packet)
+  or all 'metadata_only' ones (cited, never republished: the packet keeps their metadata and quotes, no raw). The
+  repository and its artifacts are public, so the work folder travels between jobs sealed (scripts/sobre.sh). Each
   body is kept by its sha256; its text comes from rg.text (rg.packets.plain_text, as the gate reads it) in a process
   of its own with time, size and memory limits. fuentes.json records every URL: status, sha256, size, type.
 - the model: the Claude Code CLI with no tools at all (--tools ""), from an empty folder, with the texts inside its
@@ -16,7 +17,8 @@ The steps run in jobs that hold different powers (docs/INVESTIGAR.md):
   structured output, the only part of its result that is read): findings that cite artifact ids, nothing else.
 - assemble: no model. Artifacts, hashes, sizes, licenses and the request's own text come from fuentes.json and the
   request, never from the model; an answer outside MODEL_SCHEMA, or a finding that cites an artifact that was not
-  downloaded, stops the run. Every raw is kept in the packet. rg.packets then checks the folder.
+  downloaded, stops the run. The raws of an allowed plan are kept in the packet; a metadata_only plan keeps none.
+  rg.packets then checks the folder, with the run's raws at hand (--raw) for the quotes of metadata_only sources.
 """
 import argparse
 import hashlib
@@ -38,8 +40,9 @@ from .text.run import extract_all
 MAX_SOURCES = 40
 SOURCE_TYPES = ('primary_official', 'standard', 'peer_reviewed', 'preprint', 'vendor_doc', 'attack_evidence', 'dataset',
                 'code', 'news', 'blog', 'other')
-MAX_TEXT_CHARS = 400_000  # all texts of one run, inside one prompt; a larger plan is split
-EXT = {'text/html': 'html', 'application/pdf': 'pdf', 'application/json': 'json', 'text/plain': 'txt', 'text/csv': 'csv',
+READABLE = ('allowed', 'metadata_only')  # 'unknown' is never fetched: the plan's reviewer decides which one it is
+MAX_TEXT_CHARS = 600_000  # all texts of one run, in one prompt; HIPÓTESIS ~150k tokens (~4 characters per token)
+EXT = {'text/html': 'html', 'application/pdf': 'pdf', 'application/json': 'json', 'text/plain': 'txt', 'text/markdown': 'md', 'text/csv': 'csv',
        'application/xml': 'xml', 'text/xml': 'xml', 'application/msword': 'doc',
        'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'docx'}
 MEDIA = re.compile(r'^[a-z0-9.+-]+/[a-z0-9.+-]+$')
@@ -107,10 +110,13 @@ def load_plan(path, request_id):
             _short(s['title'], f'sources[{i}].title')
         if s.get('source_type') not in SOURCE_TYPES:
             raise ValueError(f'sources[{i}].source_type: one of {SOURCE_TYPES}')
-        if s.get('redistribution') != 'allowed':  # a public repo: whatever this run moves is redistributed
-            raise ValueError(f'sources[{i}].redistribution: only allowed sources (metadata-only ones are read by hand)')
+        if s.get('redistribution') != 'allowed':  # a public repo: a body that may not be republished is only cited
+            if s.get('redistribution') != 'metadata_only':
+                raise ValueError(f'sources[{i}].redistribution: one of {READABLE}')
         if s.get('role') not in ('primary', 'secondary'):
             raise ValueError(f'sources[{i}].role: primary or secondary')
+    if len({s['redistribution'] for s in sources}) > 1:  # a packet keeps all its raws, or none
+        raise ValueError('a plan is all allowed sources or all metadata_only ones: split it in two')
     return plan
 
 
@@ -130,9 +136,10 @@ def fetch(plan, out, opener=None, sleep=None, clock=None):
         for s in plan['sources']:
             row = {**s, 'retrieved_at': now_iso(), 'status': 'started'}
             rows.append(row)  # in the record before the request: a crash during it still names the URL
-            if s.get('redistribution') != 'allowed':  # load_plan refuses it already; a direct call must not download it
-                row.update(status='not_fetched', error='redistribution is not allowed')
-                continue
+            if s.get('redistribution') != 'allowed':  # load_plan refuses an unreadable one; a direct call must not fetch it
+                if s.get('redistribution') != 'metadata_only':
+                    row.update(status='not_fetched', error='redistribution is neither allowed nor metadata_only')
+                    continue
             try:
                 r = f.get(s['url'])
             except FetchRefused as exc:
@@ -254,7 +261,7 @@ def assemble(rr, rows, answer, work, out_root, model_label, produced_at=None):
     folder = Path(out_root) / 'research-packets' / rid
     artifacts = []
     for r in arts.values():
-        kept = r['redistribution'] == 'allowed'  # always, from load_plan; checked again by rg.packets
+        kept = r['redistribution'] == 'allowed'  # a metadata_only body is never kept; rg.packets checks it again
         a = {'artifact_id': r['artifact_id'], 'url': r['final_url'], 'retrieved_at': r['retrieved_at'], 'sha256': r['sha256'],
              'bytes': r['bytes'], 'media_type': r['media_type'], 'source_type': r['source_type'], 'publisher': r['publisher'],
              'license': r['license'], 'redistribution': r['redistribution'], 'stored_at': 'repo' if kept else 'none'}
