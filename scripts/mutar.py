@@ -242,6 +242,7 @@ MUT = [
  ('rg/investigar.py', '    if text_chars(have) > MAX_TEXT_CHARS:\n', '    if False:\n'),
  ('rg/investigar.py', " or not isinstance(cli.get('structured_output'), dict):", ':'),
  ('rg/investigar.py', "'limitations': answer['limitations'] + unread(rows),", "'limitations': answer['limitations'],"),
+ ('rg/investigar.py', '- The claim says nothing its quote does not say: one fact per finding.', '- Claims may summarize.'),
  ('rg/investigar.py', 'and text_chars(rows) <= MAX_TEXT_CHARS', ''),
  ('rg/investigar.py', "cli.get('type') != 'result' or cli.get('is_error') or", "cli.get('type') != 'result' or"),
  ('rg/investigar.py', "for r in rows if not r.get('text_chars')]", "for r in rows if not r.get('artifact_id')]"),

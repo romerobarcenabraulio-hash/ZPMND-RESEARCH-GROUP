@@ -423,6 +423,8 @@ class Model(Base):
         rows = self.fetch()
         system, user = inv.prompt(RR, rows, self.work)
         self.assertIn(json.dumps(inv.MODEL_SCHEMA, ensure_ascii=False), system)
+        self.assertIn('The claim says nothing its quote does not say: one fact per finding.', system)  # GPT #29, #39
+        self.assertIn('candidate_claims, starting with "INTERPRETACIÓN:"', system)
         self.assertNotIn(QUOTE, system)
         self.assertIn(f'===== FUENTE {A_PAGE}', user)
         self.assertIn(QUOTE, user)
