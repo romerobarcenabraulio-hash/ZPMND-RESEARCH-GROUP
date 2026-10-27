@@ -31,15 +31,33 @@ class CatalogChain(unittest.TestCase):
 
     def test_the_chain_can_only_dispatch_this_workflow_from_main(self):
         self.assertEqual(self.chain['permissions'], {'actions': 'write'})
-        self.assertEqual(self.chain['needs'], 'run')  # a failed run (coverage, schema) stops the chain
+        self.assertEqual(self.chain['needs'], 'run')
         run = self.chain['steps'][0]['run']
         self.assertIn('gh workflow run catalog-mx.yml -R "$GITHUB_REPOSITORY" --ref main', run)
         self.assertIn('-f chain="$(( CHAIN - 1 ))"', run)  # one less each time: it ends by construction
 
     def test_the_chain_is_bounded_and_opt_in(self):
-        self.assertEqual(self.chain['if'], "needs.run.outputs.more == 'true' && inputs.chain != '' && inputs.chain != '0'")
+        self.assertEqual(self.chain['if'], "needs.run.outputs.more == 'true' && inputs.chain != '' && inputs.chain != '0'"
+                                           " && !cancelled() && needs.run.outputs.published == 'true'"
+                                           " && contains(fromJSON('[\"0\", \"3\", \"4\"]'), needs.run.outputs.rc)")
         self.assertIn('(( CHAIN >= 1 && CHAIN <= 30 ))', self.chain['steps'][0]['run'])
         self.assertEqual(set(on(self.doc)), {'schedule', 'workflow_dispatch'})  # never code from a pull request
+
+    def test_a_data_finding_does_not_stop_the_catch_up_but_a_broken_run_does(self):
+        # 2026-10-27: one unparsed NOM title (exit 3) stopped the DOF catch-up for six days. A finding still fails the
+        # run; only a run whose data was scanned for tokens, uploaded and pushed hands on, and never after a crash.
+        run = self.doc['jobs']['run']
+        self.assertEqual(run['outputs'], {'more': '${{ steps.catalog.outputs.more }}', 'rc': '${{ steps.catalog.outputs.rc }}',
+                                          'published': '${{ steps.commit.outputs.published }}'})
+        names = [s.get('name') or s.get('uses', '') for s in run['steps']]
+        commit = next(s for s in run['steps'] if s.get('id') == 'commit')
+        self.assertEqual(commit['run'].strip().splitlines()[-1], 'echo "published=true" >> "$GITHUB_OUTPUT"')  # after the push
+        scan, upload = names.index('No token in anything that is committed or uploaded'), names.index(next(n for n in names if n.startswith('Upload raw bundle')))
+        self.assertLess(scan, upload)
+        self.assertLess(upload, run['steps'].index(commit))
+        self.assertLess(run['steps'].index(commit), names.index('Fail on coverage or schema problems'))
+        catalog = next(s for s in run['steps'] if s.get('id') == 'catalog')
+        self.assertIn('echo "rc=$?" >> "$GITHUB_OUTPUT"', catalog['run'])
 
     def test_only_main_writes_the_data_branch(self):
         self.assertEqual(self.doc['jobs']['run']['if'], "github.ref == 'refs/heads/main'")
