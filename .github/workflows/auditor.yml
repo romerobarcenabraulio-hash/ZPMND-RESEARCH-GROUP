@@ -243,8 +243,11 @@ jobs:
     needs: [gate, audit]
     runs-on: ubuntu-24.04
     permissions: { pull-requests: write, statuses: write }
+    outputs:
+      verdict: ${{ steps.post.outputs.verdict }}
     steps:
       - name: Validate and post the verdict
+        id: post
         env:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
@@ -294,6 +297,7 @@ jobs:
           gh pr comment "$PR" -R "$REPO" --body-file verdict.md
           state=$([ "$verdict" = PASS ] && echo success || echo failure)
           gh api "repos/$REPO/statuses/$SHA" -f state="$state" -f context=auditor -f description="AUDIT VERDICT: $verdict" >/dev/null
+          echo "verdict=$verdict" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both
 
   packet-gate:
     # Main's rg.packets on the packet folders the head changes, read as data: each blob is written from the head's
@@ -387,8 +391,11 @@ jobs:
     needs: [gate, audit-gpt]
     runs-on: ubuntu-24.04
     permissions: { pull-requests: write, statuses: write }
+    outputs:
+      verdict: ${{ steps.post.outputs.verdict }}
     steps:
       - name: Validate and post the second opinion
+        id: post
         env:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
@@ -414,3 +421,15 @@ jobs:
           gh pr comment "$PR" -R "$REPO" --body-file verdict.md
           state=$([ "$verdict" = PASS ] && echo success || echo failure)
           gh api "repos/$REPO/statuses/$SHA" -f state="$state" -f context=auditor-gpt -f description="GPT REVIEW: $verdict" >/dev/null
+          echo "verdict=$verdict" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both (a skipped review sets nothing)
+
+  pass-both:
+    # Both auditors passed this head, in this run: what scripts/automerge.py reads, from this workflow's own
+    # pull_request_target run (main's file), never from a status or a comment anyone with a branch could imitate
+    # (SECURITY.md T15). A REVISE, a skipped second opinion or a failed post leaves this job skipped.
+    needs: [gate, post, post-gpt]
+    if: needs.post.outputs.verdict == 'PASS' && needs.post-gpt.outputs.verdict == 'PASS'
+    runs-on: ubuntu-24.04
+    permissions: {}
+    steps:
+      - run: echo "AUDIT VERDICT and GPT REVIEW are PASS for this head"
