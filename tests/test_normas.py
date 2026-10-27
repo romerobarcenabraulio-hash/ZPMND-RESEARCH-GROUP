@@ -97,6 +97,8 @@ class Lineages(unittest.TestCase):
         self.assertIn('mx.dof:5583405', normas.REVIEWED)
         self.assertEqual(normas.unparsed([reviewed]), [])
         self.assertEqual(normas.unparsed([{**reviewed, 'entry_id': 'mx.dof:99'}]), ['mx.dof:99'])
+        # GPT #44: the review holds for the title read, not for the id; a corrected title is checked again
+        self.assertEqual(normas.unparsed([{**reviewed, 'title': title.replace('Guerrero', 'Oaxaca')}]), ['mx.dof:5583405'])
 
     def test_a_title_that_names_a_nom_but_yields_no_code_is_reported(self):
         odd = [note(20, 'Aviso de la NOM-5-XX-, texto truncado en la fuente.', '2026-01-01')]

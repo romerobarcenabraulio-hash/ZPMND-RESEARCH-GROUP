@@ -91,6 +91,8 @@ VARIANTES = [
          '2018-06-18'),
     note(5636928, 'Decreto por el que se aprueba el Anexo III "Reglas para Prevenir la Contaminación por Sustancias Perjudiciales Transportadas por Mar en Bultos" del Convenio Internacional para Prevenir la Contaminación por los Buques, 1973, modificado por el Protocolo de 1978.',
          '2021-12-01'),
+    note(5636929, 'Decreto por el que se aprueba el Anexo IV "Reglas para Prevenir la Contaminación por las Aguas Sucias de los Buques" del Convenio Internacional para Prevenir la Contaminación por los Buques, 1973, modificado por el Protocolo de 1978.',
+         '2021-12-01'),
 ]
 MEMORANDO = note(9, 'Decreto Promulgatorio del Memorándum de Entendimiento X, hecho en Roma, el uno de enero de dos '
                    'mil veinticinco.', '2026-05-04')  # CONSTRUIDO: a promulgation of something outside the table
@@ -168,10 +170,17 @@ class IndependentCheck(unittest.TestCase):
                                                 'la Capa de Ozono'))  # the amended instrument, cut at «, aprobada en»
 
     def test_a_reviewed_disagreement_is_not_reported_and_a_new_one_with_its_title_is(self):
-        anexo = next(e for e in VARIANTES if e['entry_id'] == 'mx.dof:5636928')
-        self.assertIn('mx.dof:5636928', tratados.REVIEWED)
-        self.assertEqual(tratados.unreconciled([anexo]), [])
-        self.assertEqual(tratados.unreconciled([{**anexo, 'entry_id': 'mx.dof:99'}]), ['mx.dof:99'])
+        self.assertEqual(sorted(tratados.REVIEWED), ['mx.dof:5636928', 'mx.dof:5636929'])
+        for i, annex in (('mx.dof:5636928', 'Anexo III'), ('mx.dof:5636929', 'Anexo IV')):
+            with self.subTest(i):
+                anexo = next(e for e in VARIANTES if e['entry_id'] == i)
+                stage, name = tratados.classify(anexo['title'])
+                self.assertEqual((stage, name.startswith(f'{annex} "Reglas para Prevenir')), ('aprobacion_senado', True))
+                self.assertIsNone(tratados.LOOKS_LIKE.search(tratados.fold(anexo['title'])))  # the disagreement reviewed
+                self.assertEqual(tratados.unreconciled([anexo]), [])
+                self.assertEqual(tratados.unreconciled([{**anexo, 'entry_id': 'mx.dof:99'}]), ['mx.dof:99'])
+                # GPT #44: the review holds for the title read, not for the id; a corrected title is checked again
+                self.assertEqual(tratados.unreconciled([{**anexo, 'title': anexo['title'].replace('1978', '1997')}]), [i])
 
     def test_a_classified_title_that_does_not_look_like_a_treaty_decree_is_reported(self):
         self.assertEqual(tratados.unreconciled(REAL + [LIMITES]), ['mx.dof:7'])
