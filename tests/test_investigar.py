@@ -4,8 +4,10 @@ Built here (CONSTRUIDO): a two-host web served by a fake opener, a short officia
 broken PDF, a request and a plan, and model answers. No network and no model: the model's answer is a literal, which
 is the point, since the gate must hold whatever the model says.
 """
+import contextlib
 import copy
 import hashlib
+import io
 import json
 import os
 import shutil
@@ -687,6 +689,119 @@ class Backed(Base):
         self.assertIn('only when the quote itself shows the disagreement', system)
 
 
+class FullCorpus(Base):
+    """Every text read whole, in parts, when one prompt cannot hold them (windows, partitions, prompt_part, reduce)."""
+
+    def small(self):
+        # a budget smaller than the page: the quote falls past what one prompt's fair share (shares) would read
+        return mock.patch.multiple(inv, MAX_TEXT_CHARS=120, OVERLAP=90)
+
+    def fake_model(self, rows, parts):
+        """Per part, what a model can only find in what it was given: the page's quote or the dataset's note, if whole."""
+        answers = []
+        for k in range(len(parts)):
+            _, user = inv.prompt_part(RR, rows, self.work, parts, k)
+            found = [f for f in answer()['findings']['confirmed'] if f['quote'] in user]
+            answers.append({'scope': f'parte {k}', 'findings': {'confirmed': found, 'conflicting': [], 'unknown': [f'no en parte {k}']},
+                            'limitations': ['Prueba.']})
+        return answers
+
+    def test_decisive_evidence_past_the_prefix_reaches_the_packet(self):
+        # E2: the falsifier of full-corpus reading
+        rows = self.fetch()
+        with self.small():
+            _, single = inv.prompt(RR, rows, self.work)
+            self.assertNotIn(QUOTE, single)  # one prompt's fair share never reads it
+            parts = inv.read_in_parts(rows)
+            self.assertGreater(len(parts), 1)
+            for k, part in enumerate(parts):  # each part holds its windows and nothing else of the source
+                _, user = inv.prompt_part(RR, rows, self.work, parts, k)
+                for aid, start, end in part:
+                    text = (self.work / 'texto' / f'{aid}.txt').read_text(encoding='utf-8')
+                    self.assertIn(text[start:end], user)
+                    if start > 0:
+                        self.assertNotIn(text[:start], user)
+            merged = inv.reduce(self.fake_model(rows, parts))
+            self.assertIn(QUOTE, [f['quote'] for f in merged['findings']['confirmed']])
+            whole_ids = {aid for part in parts for aid, _, _ in part}
+            read = [{**r, 'read_whole': True} if r.get('artifact_id') in whole_ids else r for r in rows]
+            folder = inv.assemble(RR, read, merged, self.work, self.out, 'm', '2026-10-23T00:00:00Z', parts=parts)
+        packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        receipt = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))
+        self.assertIn(QUOTE, [f['quote'] for f in packet['findings']['confirmed']])  # checked by the gate against the whole text
+        self.assertEqual(packets.check(folder)[0], [])
+        self.assertEqual((receipt['partes'], 'cut' in receipt), (parts, False))
+        self.assertFalse(any('se leyeron solo desde su inicio' in x for x in packet['limitations']))
+        self.assertEqual(sum('se leyeron completas en' in x for x in packet['limitations']), 1)
+
+    def test_windows_cover_every_text_and_hold_every_short_quote_whole(self):
+        rows = [{'artifact_id': 'SA-a', 'text_chars': 1000}, {'artifact_id': 'SA-b', 'text_chars': 50}, {'artifact_id': 'SA-c'}, {'url': 'u'}]
+        with mock.patch.multiple(inv, MAX_TEXT_CHARS=300, OVERLAP=100):
+            got = inv.windows(rows)
+            self.assertEqual(got, [('SA-a', 0, 300), ('SA-a', 200, 500), ('SA-a', 400, 700), ('SA-a', 600, 900), ('SA-a', 800, 1000),
+                                   ('SA-b', 0, 50)])
+            for start in range(0, 1000 - 100):  # any span up to OVERLAP lies whole inside one window
+                self.assertTrue(any(a == 'SA-a' and s <= start and start + 100 <= e for a, s, e in got), start)
+            parts = inv.partitions(rows)
+            self.assertEqual(parts, [[['SA-a', 0, 300]], [['SA-a', 200, 500]], [['SA-a', 400, 700]], [['SA-a', 600, 900]],
+                                     [['SA-a', 800, 1000], ['SA-b', 0, 50]]])
+            self.assertTrue(all(sum(e - s for _, s, e in p) <= 300 for p in parts))
+
+    def test_one_prompt_when_everything_fits_or_when_the_parts_would_be_too_many(self):
+        rows = [{'artifact_id': 'SA-a', 'text_chars': 250}, {'artifact_id': 'SA-b', 'text_chars': 200}]
+        with mock.patch.multiple(inv, MAX_TEXT_CHARS=300, OVERLAP=100):
+            self.assertEqual(len(inv.read_in_parts(rows)), 2)
+            self.assertEqual(inv.read_in_parts(rows[:1]), [])  # it fits: one prompt
+            with mock.patch.object(inv, 'MAX_PARTS', 1):
+                self.assertEqual(inv.read_in_parts(rows), [])  # beyond MAX_PARTS: one prompt, each text its fair share
+        self.assertEqual(inv.cut([{'artifact_id': 'SA-a', 'text_chars': inv.MAX_TEXT_CHARS * 2, 'read_whole': True}]), [])
+
+    def test_reduce_joins_without_rewriting_and_keeps_each_finding_once(self):
+        f = lambda n: {'claim': f'c{n}', 'artifact_ids': [A_PAGE], 'quote': f'{QUOTE} {n}'[:300], 'locator': 'x'}
+        one = {'scope': 'a', 'findings': {'confirmed': [f(0), f(1)], 'conflicting': [f(9)], 'unknown': ['u1', 'u2']},
+               'candidate_claims': ['k1'], 'limitations': ['L1']}
+        two = {'scope': 'b', 'findings': {'confirmed': [f(1), f(2)], 'conflicting': [], 'unknown': ['u2', 'u3']},
+               'candidate_claims': ['k1', 'k2'], 'limitations': ['L1', 'L2']}
+        got = inv.reduce([one, two])
+        self.assertEqual(got, {'scope': 'a / b', 'findings': {'confirmed': [f(0), f(1), f(2)], 'conflicting': [f(9)], 'unknown': ['u1', 'u2', 'u3']},
+                               'candidate_claims': ['k1', 'k2'],
+                               'limitations': ['Las fuentes se leyeron completas en 2 partes, una llamada por parte; un "unknown" de una parte '
+                                               'puede estar respondido en otra.', 'L1', 'L2']})
+        many = {'scope': 'a', 'findings': {'confirmed': [f(n) for n in range(70)], 'conflicting': [], 'unknown': []}, 'limitations': ['L']}
+        got = inv.reduce([many, many])
+        self.assertEqual(len(got['findings']['confirmed']), 60)  # what MODEL_SCHEMA cannot hold is left out and said
+        self.assertIn('10 hallazgos no cupieron en el esquema y se dejaron fuera.', got['limitations'])
+
+    def test_the_command_line_writes_each_part_and_joins_the_answers(self):
+        rows = self.fetch()
+        req = self.tmp / 'rr.json'
+        req.write_text(json.dumps(RR), encoding='utf-8')
+        with self.small(), contextlib.redirect_stdout(io.StringIO()) as out:
+            self.assertEqual(inv.main(['prompt', '--request', str(req), '--work', str(self.work)]), 0)
+            parts = inv.read_in_parts(rows)
+        self.assertEqual(json.loads(out.getvalue()), {'parts': len(parts)})
+        self.assertEqual(json.loads((self.work / 'partes.json').read_text(encoding='utf-8')), parts)
+        for k in range(len(parts)):
+            self.assertIn(f'part {k + 1} of {len(parts)}', (self.work / 'partes' / f'{k}-system.txt').read_text(encoding='utf-8'))
+        with self.small():
+            answers = self.fake_model(rows, parts)
+        for k, a in enumerate(answers):
+            (self.work / f'modelo-cli-{k}.json').write_text(json.dumps({'type': 'result', 'is_error': False, 'structured_output': a,
+                                                                        'modelUsage': {f'claude-x-{k % 2}': {}}}), encoding='utf-8')
+        self.assertEqual(inv.main(['reduce', '--work', str(self.work)]), 0)
+        joined = json.loads((self.work / 'modelo-cli.json').read_text(encoding='utf-8'))
+        self.assertEqual(joined['structured_output'], inv.reduce(answers))
+        self.assertEqual(set(joined['modelUsage']), {'claude-x-0', 'claude-x-1'})
+        rcli = self.tmp / 'revision-cli.json'
+        oks = [(f'confirmed[{i}]', True, '', '') for i in range(len(joined['structured_output']['findings']['confirmed']))]
+        rcli.write_text(json.dumps({'type': 'result', 'is_error': False, 'structured_output': review(*oks)}), encoding='utf-8')
+        with self.small(), contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(inv.main(['assemble', '--request', str(req), '--work', str(self.work), '--model-output',
+                                       str(self.work / 'modelo-cli.json'), '--review-output', str(rcli), '--out', str(self.out)]), 0)
+        receipt = json.loads((self.out / 'research-packets' / 'RP-2026-10-23-prueba' / 'receipt.json').read_text(encoding='utf-8'))
+        self.assertEqual((receipt['partes'], 'cut' in receipt), (parts, False))  # read whole, never reported as cut
+
+
 class Unfound(Base):
     """A finding whose quote is not in its source leaves the packet, instead of the gate dropping the whole run."""
     MISS = {'claim': 'Inventado.', 'artifact_ids': [A_PAGE], 'quote': 'El patrón podrá omitir la política.', 'locator': '5.1'}
@@ -885,16 +1000,20 @@ class Workflow(unittest.TestCase):
     def test_the_model_has_no_tool_no_repository_and_no_github_token(self):
         steps = self.jobs['analyze']['steps']
         with_secret = [s for s in steps if 'secrets.CLAUDE_CODE_OAUTH_TOKEN' in json.dumps(s)]
-        self.assertEqual(len(with_secret), 2)  # the reading and the review, each the CLI and nothing else
-        model, reviewer = with_secret
+        self.assertEqual(len(with_secret), 3)  # the reading (one prompt, or one call per part) and the review: the CLI only
+        model, parts, reviewer = with_secret
+        self.assertEqual((model['if'], parts['if']), ("steps.prompt.outputs.parts == '0'", "steps.prompt.outputs.parts != '0'"))
+        self.assertIn('( cd "$RUNNER_TEMP/vacio-partes/$k" && "$RUNNER_TEMP/cc/package/claude" -p --max-turns 3 --tools "" --strict-mcp-config ', parts['run'])
+        self.assertIn('--json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")"', parts['run'])
+        self.assertIn('[[ "$PARTS" =~ ^[2-9]$ ]] || exit 2', parts['run'])
         self.assertIn('cd "$RUNNER_TEMP/vacio"', model['run'])
         self.assertIn('"$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config ', model['run'])
         self.assertIn('--json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")"', model['run'])
         self.assertIn('mkdir -p "$RUNNER_TEMP/vacio-revision" && cd "$RUNNER_TEMP/vacio-revision"', reviewer['run'])
         self.assertIn('"$RUNNER_TEMP/cc/package/claude" -p --tools "" --max-turns 3 --strict-mcp-config ', reviewer['run'])
         for step in with_secret:
-            self.assertEqual(set(step['env']), {'CLAUDE_CODE_OAUTH_TOKEN', 'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC',
-                                                'DISABLE_AUTOUPDATER'})
+            self.assertEqual(set(step['env']) - {'PARTS'}, {'CLAUDE_CODE_OAUTH_TOKEN', 'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC',
+                                                         'DISABLE_AUTOUPDATER'})
             for word in ('Read', 'Grep', 'Glob', 'allowedTools', 'add-dir', ' --mcp-config', 'dangerously', 'python'):
                 self.assertNotIn(word, step['run'])
             self.assertNotIn('uses', step)  # the CLI itself, not an action that adds tools of its own
@@ -922,12 +1041,17 @@ class Workflow(unittest.TestCase):
         # run 40548392438: the model step failed with exit 1 and no reason, because its output is a sealed file
         steps = [s for s in self.jobs['analyze']['steps'] if 'secrets.CLAUDE_CODE_OAUTH_TOKEN' in json.dumps(s)]
         filt = "jq -c '{type, subtype, is_error, num_turns, duration_ms}' \"$1\" 2>/dev/null"
-        for step, out in zip(steps, ('modelo-cli.json', 'revision-cli.json')):
+        model, parts, reviewer = steps
+        for step, out in ((model, 'modelo-cli.json'), (reviewer, 'revision-cli.json')):
             with self.subTest(out):
                 run = step['run']
                 self.assertIn(filt, run)  # structure only: no text of the result, not even an error's (GPT, #53)
                 self.assertIn(f'> "$GITHUB_WORKSPACE/work/{out}" \\\n  || {{ rc=$?; diagnose "$GITHUB_WORKSPACE/work/{out}"; exit $rc; }}', run)
                 self.assertLess(run.index('diagnose() {'), run.index('"$RUNNER_TEMP/cc/package/claude"'))
+        run = parts['run']  # each part's call, failed, says why the same way
+        self.assertIn(filt, run)
+        self.assertIn('wait "${pids[$k]}" || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/modelo-cli-$k.json"; exit $rc; }', run)
+        self.assertLess(run.index('diagnose() {'), run.index('"$RUNNER_TEMP/cc/package/claude"'))
 
     def test_discovery_searches_the_web_and_nothing_else_and_fetch_gets_one_checked_plan(self):
         steps = self.jobs['plan']['steps']
@@ -965,7 +1089,7 @@ class Workflow(unittest.TestCase):
     def test_the_diagnosis_never_prints_the_results_text_and_keeps_the_exit_code(self):
         # GPT, #53: run what the step runs; a marker in .result (error or not) never reaches the log
         steps = [s for j in ('plan', 'analyze') for s in self.jobs[j]['steps'] if 'secrets.CLAUDE_CODE_OAUTH_TOKEN' in json.dumps(s)]
-        self.assertEqual(len(steps), 3)
+        self.assertEqual(len(steps), 4)
         for step in steps:
             body = step['run'][:step['run'].index('mkdir -p')]  # set -euo pipefail and diagnose(), nothing else
             for result in ({'type': 'result', 'is_error': True, 'subtype': 'error_during_execution', 'result': 'MARCA-SECRETA cita'},

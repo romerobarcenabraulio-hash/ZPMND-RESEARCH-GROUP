@@ -158,11 +158,15 @@ jobs:
         env: { RG_ARTIFACT_KEY: '${{ secrets.RG_ARTIFACT_KEY }}' }
         run: bash scripts/sobre.sh open sobre work
       - name: Prompt (instructions and schema; the request and the texts as data)
+        id: prompt
         env: { RID: '${{ inputs.request_id }}' }
         run: |
           set -euo pipefail
           [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
-          python -m rg.investigar prompt --request "requests/$RID.json" --work work
+          python -m rg.investigar prompt --request "requests/$RID.json" --work work > "$RUNNER_TEMP/partes.json"
+          parts=$(jq -r .parts "$RUNNER_TEMP/partes.json")
+          [[ "$parts" =~ ^[0-9]$ ]] || exit 2
+          echo "parts=$parts" >> "$GITHUB_OUTPUT"  # 0: one prompt; more: the texts read whole in that many parts
       - name: Claude Code CLI, pinned by version and by the npm integrity of its Linux build
         run: |
           set -euo pipefail
@@ -172,6 +176,7 @@ jobs:
           [ "sha512-$(openssl dgst -sha512 -binary "$tgz" | base64 -w0)" = "$CC_INTEGRITY" ] || { echo 'integrity mismatch'; exit 2; }
           mkdir cc && tar -xzf "$tgz" -C cc && chmod 755 cc/package/claude
       - name: The model (no tools, an empty folder, no GitHub token)
+        if: steps.prompt.outputs.parts == '0'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
@@ -188,6 +193,34 @@ jobs:
             --system-prompt "$(cat "$GITHUB_WORKSPACE/work/system.txt")" \
             < "$GITHUB_WORKSPACE/work/user.txt" > "$GITHUB_WORKSPACE/work/modelo-cli.json" \
             || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/modelo-cli.json"; exit $rc; }
+      - name: The model, one call per part at once (the same CLI and flags, each from its own empty folder)
+        if: steps.prompt.outputs.parts != '0'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
+          DISABLE_AUTOUPDATER: '1'
+          PARTS: '${{ steps.prompt.outputs.parts }}'
+        run: |
+          set -euo pipefail
+          diagnose() {  # a failed call says why from the result's structure only, never any of its text (GPT, #53)
+            jq -c '{type, subtype, is_error, num_turns, duration_ms}' "$1" 2>/dev/null \
+              || echo "no JSON result from the CLI"
+          }
+          mkdir -p "$RUNNER_TEMP/vacio-partes"
+          [[ "$PARTS" =~ ^[2-9]$ ]] || exit 2
+          pids=()
+          for k in $(seq 0 $((PARTS - 1))); do
+            mkdir -p "$RUNNER_TEMP/vacio-partes/$k"
+            ( cd "$RUNNER_TEMP/vacio-partes/$k" && "$RUNNER_TEMP/cc/package/claude" -p --max-turns 3 --tools "" --strict-mcp-config \
+                --output-format json --json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")" \
+                --system-prompt "$(cat "$GITHUB_WORKSPACE/work/partes/$k-system.txt")" \
+                < "$GITHUB_WORKSPACE/work/partes/$k.txt" > "$GITHUB_WORKSPACE/work/modelo-cli-$k.json" ) &
+            pids+=($!)
+          done
+          for k in "${!pids[@]}"; do wait "${pids[$k]}" || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/modelo-cli-$k.json"; exit $rc; }; done
+      - name: Join the parts' answers, changing none (no model, no secret)
+        if: steps.prompt.outputs.parts != '0'
+        run: python -m rg.investigar reduce --work work
       - name: Review prompt (each claim beside its quote, nothing else)
         run: python -m rg.investigar review-prompt --work work --model-output work/modelo-cli.json
       - name: The reviewer (the same CLI, no tools, an empty folder of its own; it sees claims and quotes only)
