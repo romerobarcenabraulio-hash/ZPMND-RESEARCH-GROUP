@@ -1,7 +1,7 @@
 {
  "branch_issuer": {
   "- | -": 7155,
-  "- | Banco de México": 33501,
+  "- | Banco de México": 33502,
   "- | Instituto Nacional de Estadística y Geografía (INEGI)": 693,
   "- | Pleno": 2066,
   "- | Plenos Regionales": 883,
@@ -305,7 +305,7 @@
   "TRIBUNAL FEDERAL DE CONCILIACION Y ARBITRAJE | ORGANISMOS AUTONOMOS": 1
  },
  "doc_type": {
-  "mx.banxico-sie | INDICADOR ECONOMICO": 33501,
+  "mx.banxico-sie | INDICADOR ECONOMICO": 33502,
   "mx.dof | ACLARACION": 2424,
   "mx.dof | ACUERDO": 42174,
   "mx.dof | AVISO": 264247,
@@ -519,11 +519,11 @@
   "mx.ojn-municipal | Zacatecas": 397
  },
  "raw_status": {
-  "mx.banxico-sie | stored": 33501,
-  "mx.dof | failed": 151,
+  "mx.banxico-sie | stored": 33502,
+  "mx.dof | failed": 152,
   "mx.dof | metadata_only": 260037,
-  "mx.dof | pending": 534749,
-  "mx.dof | stored": 49446,
+  "mx.dof | pending": 533404,
+  "mx.dof | stored": 50790,
   "mx.hf-tesis-scjn | stored": 51189,
   "mx.inegi-bie | stored": 693,
   "mx.leyes-federales | stored": 318,
@@ -535,7 +535,7 @@
   "mx.reglamentos-federales | stored": 150
  },
  "source": {
-  "mx.banxico-sie": 33501,
+  "mx.banxico-sie": 33502,
   "mx.dof": 844383,
   "mx.hf-tesis-scjn": 51189,
   "mx.inegi-bie": 693,
@@ -555,9 +555,9 @@
   "mx.reglamentos-federales | ABROGADO": 12,
   "mx.reglamentos-federales | VIGENTE": 138
  },
- "total": 966865,
+ "total": 966866,
  "year": {
-  "mx.banxico-sie | ????": 33501,
+  "mx.banxico-sie | ????": 33502,
   "mx.dof | 1992": 20,
   "mx.dof | 1993": 9420,
   "mx.dof | 1994": 10407,

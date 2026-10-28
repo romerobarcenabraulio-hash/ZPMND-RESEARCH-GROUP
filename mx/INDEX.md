@@ -1,6 +1,6 @@
 # Catálogo MX
 
-Total de registros: **966865**. Conteos calculados de los registros; nada resumido ni interpretado.
+Total de registros: **966866**. Conteos calculados de los registros; nada resumido ni interpretado.
 
 ## Por fuente
 
@@ -8,7 +8,7 @@ Total de registros: **966865**. Conteos calculados de los registros; nada resumi
 |---|---:|
 | mx.dof | 844383 |
 | mx.hf-tesis-scjn | 51189 |
-| mx.banxico-sie | 33501 |
+| mx.banxico-sie | 33502 |
 | mx.ojn-estatal | 29944 |
 | mx.ojn-municipal | 6687 |
 | mx.inegi-bie | 693 |
@@ -24,7 +24,7 @@ Total de registros: **966865**. Conteos calculados de los registros; nada resumi
 | mx.dof | OTRO | 50512 |
 | mx.dof | ACUERDO | 42174 |
 | mx.hf-tesis-scjn | TESIS AISLADA | 37947 |
-| mx.banxico-sie | INDICADOR ECONOMICO | 33501 |
+| mx.banxico-sie | INDICADOR ECONOMICO | 33502 |
 | mx.dof | CONVENIO | 24532 |
 | mx.dof | INDICADOR ECONOMICO | 24308 |
 | mx.dof | CONVOCATORIA DE PLAZAS | 19819 |
@@ -201,16 +201,16 @@ Total de registros: **966865**. Conteos calculados de los registros; nada resumi
 
 | categoría | registros |
 |---|---:|
-| mx.dof | pending | 534749 |
+| mx.dof | pending | 533404 |
 | mx.dof | metadata_only | 260037 |
 | mx.hf-tesis-scjn | stored | 51189 |
-| mx.dof | stored | 49446 |
-| mx.banxico-sie | stored | 33501 |
+| mx.dof | stored | 50790 |
+| mx.banxico-sie | stored | 33502 |
 | mx.ojn-estatal | stored | 29821 |
 | mx.ojn-municipal | stored | 6649 |
 | mx.inegi-bie | stored | 693 |
 | mx.leyes-federales | stored | 318 |
-| mx.dof | failed | 151 |
+| mx.dof | failed | 152 |
 | mx.reglamentos-federales | stored | 150 |
 | mx.ojn-estatal | failed | 112 |
 | mx.ojn-municipal | failed | 38 |
@@ -225,7 +225,7 @@ Total de registros: **966865**. Conteos calculados de los registros; nada resumi
 | mx.dof | 2013 | 34472 |
 | mx.dof | 2011 | 34234 |
 | mx.dof | 2015 | 33983 |
-| mx.banxico-sie | ???? | 33501 |
+| mx.banxico-sie | ???? | 33502 |
 | mx.dof | 2016 | 32633 |
 | mx.dof | 2017 | 31104 |
 | mx.dof | 2008 | 30731 |
@@ -509,7 +509,7 @@ Total de registros: **966865**. Conteos calculados de los registros; nada resumi
 | CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO | AVISOS | 333847 |
 | AVISOS JUDICIALES Y GENERALES | AVISOS | 236883 |
 | - | Tribunales Colegiados de Circuito | 33971 |
-| - | Banco de México | 33501 |
+| - | Banco de México | 33502 |
 | ORGANISMOS AUTONOMOS | BANCO DE MEXICO | 26684 |
 | PODER EJECUTIVO | SECRETARIA DE LA REFORMA AGRARIA | 23480 |
 | AVISOS JUDICIALES Y GENERALES | AVISOS JUDICIALES Y GENERALES | 23084 |
