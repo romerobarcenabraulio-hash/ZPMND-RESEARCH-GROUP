@@ -7,7 +7,10 @@ name: investigar
 # is parsed. Four jobs, each with only what it needs:
 # - fetch: no secrets. The plan's https URLs only, through the catalog's Fetcher (robots.txt, the plan's hosts, one
 #   request per second per host, 60 MB per body); texts from rg.text in isolated processes. Seals with the public key.
-# - analyze: the owner's Claude subscription (CLAUDE_CODE_OAUTH_TOKEN). The Claude Code CLI, pinned by version and by
+# - analyze: the owner's credentials through scripts/turno.sh, one per call: the heavy calls (the researcher, the model
+#   with every text) his Claude subscription (CLAUDE_CODE_OAUTH_TOKEN) alone, unless the variable RG_ORDEN_INVESTIGAR
+#   is "api"; the light one (the reviewer) his Anthropic API key (ANTHROPIC_API_KEY) first and the subscription if it
+#   fails. A subscription call never falls back to the paid key. The Claude Code CLI, pinned by version and by
 #   the npm integrity of its Linux build, runs with no tools at all (--tools "") from an empty folder; the texts are
 #   inside its prompt. It cannot read a file, run a command or open a URL, so it cannot reach the credential; it can
 #   only answer, through the JSON Schema (--json-schema, structured output). No GitHub token reaches it. Then the
@@ -76,7 +79,9 @@ jobs:
       - name: The researcher (web search is its only tool; an empty folder, no GitHub token)
         if: ${{ inputs.discover }}
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          RG_SUSCRIPCION: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          RG_API: ${{ vars.RG_ORDEN_INVESTIGAR == 'api' && secrets.ANTHROPIC_API_KEY || '' }}  # heavy: the key only when sent there on purpose
+          RG_ORDEN: ${{ vars.RG_ORDEN_INVESTIGAR }}
           CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
           DISABLE_AUTOUPDATER: '1'
         run: |
@@ -86,10 +91,11 @@ jobs:
               || echo "no JSON result from the CLI"
           }
           mkdir -p "$RUNNER_TEMP/vacio-descubrir" && cd "$RUNNER_TEMP/vacio-descubrir"
-          "$RUNNER_TEMP/cc/package/claude" -p --tools "WebSearch" --strict-mcp-config --max-turns 40 --output-format json \
+          . "$GITHUB_WORKSPACE/scripts/turno.sh"
+          turno "$GITHUB_WORKSPACE/plan/descubrir-cli.json" "$GITHUB_WORKSPACE/plan/descubrir-user.txt" \
+            "$RUNNER_TEMP/cc/package/claude" -p --tools "WebSearch" --strict-mcp-config --max-turns 40 --output-format json \
             --json-schema "$(cat "$GITHUB_WORKSPACE/plan/descubrir-schema.json")" \
             --system-prompt "$(cat "$GITHUB_WORKSPACE/plan/descubrir-system.txt")" \
-            < "$GITHUB_WORKSPACE/plan/descubrir-user.txt" > "$GITHUB_WORKSPACE/plan/descubrir-cli.json" \
             || { rc=$?; diagnose "$GITHUB_WORKSPACE/plan/descubrir-cli.json"; exit $rc; }
           jq -c '{num_turns, duration_ms, total_cost_usd}' "$GITHUB_WORKSPACE/plan/descubrir-cli.json"  # what it cost
       - name: The discovered plan (checked like a reviewed one; every source metadata_only)
@@ -173,7 +179,9 @@ jobs:
           mkdir cc && tar -xzf "$tgz" -C cc && chmod 755 cc/package/claude
       - name: The model (no tools, an empty folder, no GitHub token)
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          RG_SUSCRIPCION: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          RG_API: ${{ vars.RG_ORDEN_INVESTIGAR == 'api' && secrets.ANTHROPIC_API_KEY || '' }}  # heavy: the key only when sent there on purpose
+          RG_ORDEN: ${{ vars.RG_ORDEN_INVESTIGAR }}
           CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
           DISABLE_AUTOUPDATER: '1'
         run: |
@@ -183,16 +191,20 @@ jobs:
               || echo "no JSON result from the CLI"
           }
           mkdir -p "$RUNNER_TEMP/vacio" && cd "$RUNNER_TEMP/vacio"
-          "$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config --max-turns 3 --output-format json \
+          . "$GITHUB_WORKSPACE/scripts/turno.sh"
+          turno "$GITHUB_WORKSPACE/work/modelo-cli.json" "$GITHUB_WORKSPACE/work/user.txt" \
+            "$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config --max-turns 3 --output-format json \
             --json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")" \
             --system-prompt "$(cat "$GITHUB_WORKSPACE/work/system.txt")" \
-            < "$GITHUB_WORKSPACE/work/user.txt" > "$GITHUB_WORKSPACE/work/modelo-cli.json" \
             || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/modelo-cli.json"; exit $rc; }
+          jq -c '{num_turns, duration_ms, total_cost_usd}' "$GITHUB_WORKSPACE/work/modelo-cli.json"  # what it cost (no text)
       - name: Review prompt (each claim beside its quote, nothing else)
         run: python -m rg.investigar review-prompt --work work --model-output work/modelo-cli.json
       - name: The reviewer (the same CLI, no tools, an empty folder of its own; it sees claims and quotes only)
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          RG_SUSCRIPCION: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          RG_API: ${{ secrets.ANTHROPIC_API_KEY }}
+          RG_ORDEN: api  # light (claims beside their quotes, 3 turns): the API first, the subscription if it fails
           CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
           DISABLE_AUTOUPDATER: '1'
         run: |
@@ -202,11 +214,13 @@ jobs:
               || echo "no JSON result from the CLI"
           }
           mkdir -p "$RUNNER_TEMP/vacio-revision" && cd "$RUNNER_TEMP/vacio-revision"
-          "$RUNNER_TEMP/cc/package/claude" -p --tools "" --max-turns 3 --strict-mcp-config --output-format json \
+          . "$GITHUB_WORKSPACE/scripts/turno.sh"
+          turno "$GITHUB_WORKSPACE/work/revision-cli.json" "$GITHUB_WORKSPACE/work/revision-user.txt" \
+            "$RUNNER_TEMP/cc/package/claude" -p --tools "" --max-turns 3 --strict-mcp-config --output-format json \
             --json-schema "$(cat "$GITHUB_WORKSPACE/work/revision-schema.json")" \
             --system-prompt "$(cat "$GITHUB_WORKSPACE/work/revision-system.txt")" \
-            < "$GITHUB_WORKSPACE/work/revision-user.txt" > "$GITHUB_WORKSPACE/work/revision-cli.json" \
             || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/revision-cli.json"; exit $rc; }
+          jq -c '{num_turns, duration_ms, total_cost_usd}' "$GITHUB_WORKSPACE/work/revision-cli.json"  # what it cost (no text)
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
           name: investigar-modelo
