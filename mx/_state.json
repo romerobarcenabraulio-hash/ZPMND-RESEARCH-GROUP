@@ -1164501,7 +1164501,7 @@
      "5802122",
      "5802138"
     ],
-    "indexed_at": "2026-10-28T07:28:33Z",
+    "indexed_at": "2026-10-28T08:22:40Z",
     "notes": 63,
     "rereads": 0
    },
@@ -1164657,7 +1164657,7 @@
      "5802216",
      "5802219"
     ],
-    "indexed_at": "2026-10-28T07:28:34Z",
+    "indexed_at": "2026-10-28T08:22:42Z",
     "notes": 149,
     "rereads": 0
    },
@@ -1164813,7 +1164813,7 @@
      "5802216",
      "5802219"
     ],
-    "indexed_at": "2026-10-28T07:28:36Z",
+    "indexed_at": "2026-10-28T08:22:44Z",
     "notes": 149,
     "rereads": 0
    }
@@ -1222388,25 +1222388,461 @@
     "etag": "\"20884f-67855-490cbe2e10080\"",
     "last_modified": "Tue, 21 Sep 2010 21:41:06 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53625.pdf": {
+    "etag": "\"20897e-154a56-490cbe45e78c0\"",
+    "last_modified": "Tue, 21 Sep 2010 21:41:31 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53626.pdf": {
+    "etag": "\"2083d6-13411b-490cbea080e80\"",
+    "last_modified": "Tue, 21 Sep 2010 21:43:06 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53728.pdf": {
+    "etag": "\"208337-2eb977-490f01ca57980\"",
+    "last_modified": "Thu, 23 Sep 2010 16:54:14 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53730.pdf": {
+    "etag": "\"208483-2eb977-490f01de5e8c0\"",
+    "last_modified": "Thu, 23 Sep 2010 16:54:35 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53731.pdf": {
+    "etag": "\"2085bc-1b32a-490f01f07d380\"",
+    "last_modified": "Thu, 23 Sep 2010 16:54:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53733.pdf": {
+    "etag": "\"208a23-d7244-490f02333f100\"",
+    "last_modified": "Thu, 23 Sep 2010 16:56:04 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53736.pdf": {
+    "etag": "\"208592-d36bf-490f028913b80\"",
+    "last_modified": "Thu, 23 Sep 2010 16:57:34 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53745.pdf": {
+    "etag": "\"208454-d36bf-490f03a080ec0\"",
+    "last_modified": "Thu, 23 Sep 2010 17:02:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53746.pdf": {
+    "etag": "\"2089eb-d0042-490f03bc29000\"",
+    "last_modified": "Thu, 23 Sep 2010 17:02:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53748.pdf": {
+    "etag": "\"208a07-d7244-490f03e342c40\"",
+    "last_modified": "Thu, 23 Sep 2010 17:03:37 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53751.pdf": {
+    "etag": "\"2088eb-1225db-490f040b50ac0\"",
+    "last_modified": "Thu, 23 Sep 2010 17:04:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53884.pdf": {
+    "etag": "\"208487-20abc-4914180951bc0\"",
+    "last_modified": "Mon, 27 Sep 2010 18:00:23 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53885.pdf": {
+    "etag": "\"2085bd-1f897-4914188a10b80\"",
+    "last_modified": "Mon, 27 Sep 2010 18:02:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53886.pdf": {
+    "etag": "\"2087b2-141a01-491418aa7d800\"",
+    "last_modified": "Mon, 27 Sep 2010 18:03:12 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53887.pdf": {
+    "etag": "\"208a20-1449b7-491418c06cbc0\"",
+    "last_modified": "Mon, 27 Sep 2010 18:03:35 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53920.pdf": {
+    "etag": "\"208358-ec02c-491546aec6400\"",
+    "last_modified": "Tue, 28 Sep 2010 16:34:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53921.pdf": {
+    "etag": "\"20850d-e31a4-491547611c8c0\"",
+    "last_modified": "Tue, 28 Sep 2010 16:37:31 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53922.pdf": {
+    "etag": "\"2088b3-e31a4-4915477db8c40\"",
+    "last_modified": "Tue, 28 Sep 2010 16:38:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53923.pdf": {
+    "etag": "\"208aac-e31a4-49154792b3dc0\"",
+    "last_modified": "Tue, 28 Sep 2010 16:38:23 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo53924.pdf": {
+    "etag": "\"208a9e-1d7a98-491547ed4d380\"",
+    "last_modified": "Tue, 28 Sep 2010 16:39:58 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54074.pdf": {
     "etag": "\"20881e-eede2-4916a28bedac0\"",
     "last_modified": "Wed, 29 Sep 2010 18:30:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54075.pdf": {
+    "etag": "\"2089b7-972f15-4916a2bb9cb40\"",
+    "last_modified": "Wed, 29 Sep 2010 18:31:33 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54077.pdf": {
+    "etag": "\"20875a-826e52-4916a2d838ec0\"",
+    "last_modified": "Wed, 29 Sep 2010 18:32:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54078.pdf": {
+    "etag": "\"2083fa-692f6d-4916a2f4d5240\"",
+    "last_modified": "Wed, 29 Sep 2010 18:32:33 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54079.pdf": {
+    "etag": "\"20877a-4f4e0d-4916a30bb8840\"",
+    "last_modified": "Wed, 29 Sep 2010 18:32:57 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54080.pdf": {
+    "etag": "\"208a81-2a5093-4916a31ecb540\"",
+    "last_modified": "Wed, 29 Sep 2010 18:33:17 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54081.pdf": {
+    "etag": "\"2088fd-ede41-4916a330ea000\"",
+    "last_modified": "Wed, 29 Sep 2010 18:33:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54082.pdf": {
+    "etag": "\"208549-edc99-4916a358f7e80\"",
+    "last_modified": "Wed, 29 Sep 2010 18:34:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54083.pdf": {
+    "etag": "\"208329-1316cf-4916a371c3900\"",
+    "last_modified": "Wed, 29 Sep 2010 18:34:44 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54084.pdf": {
+    "etag": "\"208339-128ed8-4916a3a72b700\"",
+    "last_modified": "Wed, 29 Sep 2010 18:35:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54085.pdf": {
+    "etag": "\"208522-3255b-4916a3d4f2300\"",
+    "last_modified": "Wed, 29 Sep 2010 18:36:28 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54226.pdf": {
+    "etag": "\"2083a0-17b5f4-49191f10896c0\"",
+    "last_modified": "Fri, 01 Oct 2010 17:58:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54227.pdf": {
+    "etag": "\"2084e7-33b2f-49191f22a8180\"",
+    "last_modified": "Fri, 01 Oct 2010 17:58:46 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54319.pdf": {
+    "etag": "\"2089a0-9be86-491f54df8ab00\"",
+    "last_modified": "Wed, 06 Oct 2010 16:31:08 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54320.pdf": {
+    "etag": "\"2085a3-618bd-491f54f0b5380\"",
+    "last_modified": "Wed, 06 Oct 2010 16:31:26 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54321.pdf": {
+    "etag": "\"2084a7-4078a-491f5504bc2c0\"",
+    "last_modified": "Wed, 06 Oct 2010 16:31:47 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54322.pdf": {
+    "etag": "\"208a06-34b5b-491f553282ec0\"",
+    "last_modified": "Wed, 06 Oct 2010 16:32:35 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54323.pdf": {
+    "etag": "\"2087cb-9c236-491f554595bc0\"",
+    "last_modified": "Wed, 06 Oct 2010 16:32:55 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54324.pdf": {
+    "etag": "\"2087a6-174a8f-491f5590ecd80\"",
+    "last_modified": "Wed, 06 Oct 2010 16:34:14 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54325.pdf": {
+    "etag": "\"208a14-1f9b08-491f55b24dc40\"",
+    "last_modified": "Wed, 06 Oct 2010 16:34:49 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54326.pdf": {
+    "etag": "\"208476-2f076-491f55dc43f40\"",
+    "last_modified": "Wed, 06 Oct 2010 16:35:33 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54348.pdf": {
+    "etag": "\"208a34-13e522-49208c38c7b40\"",
+    "last_modified": "Thu, 07 Oct 2010 15:44:05 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54349.pdf": {
+    "etag": "\"208940-a2b61-49208c509f380\"",
+    "last_modified": "Thu, 07 Oct 2010 15:44:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54350.pdf": {
+    "etag": "\"2089de-a2b61-49208c668e740\"",
+    "last_modified": "Thu, 07 Oct 2010 15:44:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54351.pdf": {
+    "etag": "\"2087dc-1995cd-49208c832aac0\"",
+    "last_modified": "Thu, 07 Oct 2010 15:45:23 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54441.pdf": {
     "etag": "\"2082fa-17b130-4925b2daf8740\"",
     "last_modified": "Mon, 11 Oct 2010 18:03:33 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54442.pdf": {
+    "etag": "\"208a29-59232-4925b32743b40\"",
+    "last_modified": "Mon, 11 Oct 2010 18:04:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54443.pdf": {
+    "etag": "\"208930-105307-4925b4483a500\"",
+    "last_modified": "Mon, 11 Oct 2010 18:09:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54444.pdf": {
+    "etag": "\"208923-273dcd-4925b476f5340\"",
+    "last_modified": "Mon, 11 Oct 2010 18:10:45 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54445.pdf": {
+    "etag": "\"208a4a-24ffa3-4925b49761fc0\"",
+    "last_modified": "Mon, 11 Oct 2010 18:11:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54446.pdf": {
+    "etag": "\"2082ed-15336c-4925b4a980a80\"",
+    "last_modified": "Mon, 11 Oct 2010 18:11:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54447.pdf": {
+    "etag": "\"20857d-f7140-4925b4da23d40\"",
+    "last_modified": "Mon, 11 Oct 2010 18:12:29 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54646.pdf": {
+    "etag": "\"2084e9-3fda3-492abf0cef300\"",
+    "last_modified": "Fri, 15 Oct 2010 18:24:44 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54647.pdf": {
+    "etag": "\"2083a2-1a1990-492abf3ab5f00\"",
+    "last_modified": "Fri, 15 Oct 2010 18:25:32 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54648.pdf": {
+    "etag": "\"208502-1a097b-492abf4dc8c00\"",
+    "last_modified": "Fri, 15 Oct 2010 18:25:52 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54649.pdf": {
+    "etag": "\"20838b-1a012f-492abf62c3d80\"",
+    "last_modified": "Fri, 15 Oct 2010 18:26:14 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54650.pdf": {
+    "etag": "\"208786-34773-492abf74e2840\"",
+    "last_modified": "Fri, 15 Oct 2010 18:26:33 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54651.pdf": {
+    "etag": "\"2083c4-1b9276-492abfa679d40\"",
+    "last_modified": "Fri, 15 Oct 2010 18:27:25 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54652.pdf": {
+    "etag": "\"20896b-1cb77c-492abfbf457c0\"",
+    "last_modified": "Fri, 15 Oct 2010 18:27:51 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54653.pdf": {
+    "etag": "\"20883e-1f968b-492ac057dbfc0\"",
+    "last_modified": "Fri, 15 Oct 2010 18:30:31 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54654.pdf": {
+    "etag": "\"208869-27ae03-492ac076607c0\"",
+    "last_modified": "Fri, 15 Oct 2010 18:31:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54655.pdf": {
+    "etag": "\"20895d-253009-492ac0a60f840\"",
+    "last_modified": "Fri, 15 Oct 2010 18:31:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54656.pdf": {
+    "etag": "\"2083f3-1b9a50-492ac0ba16780\"",
+    "last_modified": "Fri, 15 Oct 2010 18:32:14 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54657.pdf": {
+    "etag": "\"208776-b5711-492ac0cf11900\"",
+    "last_modified": "Fri, 15 Oct 2010 18:32:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54658.pdf": {
+    "etag": "\"208417-c7f91-492ac0e6e9140\"",
+    "last_modified": "Fri, 15 Oct 2010 18:33:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54659.pdf": {
+    "etag": "\"208755-18d905-492ac10755dc0\"",
+    "last_modified": "Fri, 15 Oct 2010 18:33:35 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54690.pdf": {
+    "etag": "\"2084b9-299249-492e6fc5e1440\"",
+    "last_modified": "Mon, 18 Oct 2010 16:51:21 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54691.pdf": {
+    "etag": "\"2083ac-1d2b28-492e6fdadc5c0\"",
+    "last_modified": "Mon, 18 Oct 2010 16:51:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54692.pdf": {
+    "etag": "\"208acd-d597d-492e7003de680\"",
+    "last_modified": "Mon, 18 Oct 2010 16:52:26 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54693.pdf": {
+    "etag": "\"2088a2-43be11-492e701e92580\"",
+    "last_modified": "Mon, 18 Oct 2010 16:52:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54694.pdf": {
+    "etag": "\"208892-43c6f0-492e703575b80\"",
+    "last_modified": "Mon, 18 Oct 2010 16:53:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54695.pdf": {
+    "etag": "\"208af1-43d09b-492e70497cac0\"",
+    "last_modified": "Mon, 18 Oct 2010 16:53:39 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54696.pdf": {
+    "etag": "\"20839d-7e4d2-492e70718a940\"",
+    "last_modified": "Mon, 18 Oct 2010 16:54:21 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54697.pdf": {
+    "etag": "\"2084e4-7f83e-492e708962180\"",
+    "last_modified": "Mon, 18 Oct 2010 16:54:46 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54756.pdf": {
+    "etag": "\"2082ff-21bcb2-492faf8c54600\"",
+    "last_modified": "Tue, 19 Oct 2010 16:42:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54819.pdf": {
+    "etag": "\"20840b-27eea-4930f20078980\"",
+    "last_modified": "Wed, 20 Oct 2010 16:44:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54867.pdf": {
+    "etag": "\"208819-240e1-49323ae0bf400\"",
+    "last_modified": "Thu, 21 Oct 2010 17:16:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo54868.pdf": {
+    "etag": "\"208961-37a01-49323af1e9c80\"",
+    "last_modified": "Thu, 21 Oct 2010 17:16:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55026.pdf": {
+    "etag": "\"2087be-1ad49f-4933904281fc0\"",
+    "last_modified": "Fri, 22 Oct 2010 18:43:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55027.pdf": {
+    "etag": "\"2089f3-1c36f1-493390b4f2dc0\"",
+    "last_modified": "Fri, 22 Oct 2010 18:45:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55028.pdf": {
+    "etag": "\"2087da-1c4845-49339229d5d80\"",
+    "last_modified": "Fri, 22 Oct 2010 18:51:50 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55029.pdf": {
+    "etag": "\"2089db-444cb-493392457dec0\"",
+    "last_modified": "Fri, 22 Oct 2010 18:52:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55030.pdf": {
+    "etag": "\"20894b-12b1d7-49339264f6900\"",
+    "last_modified": "Fri, 22 Oct 2010 18:52:52 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55031.pdf": {
+    "etag": "\"208a3b-1f0b4-4933928a280c0\"",
+    "last_modified": "Fri, 22 Oct 2010 18:53:31 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55032.pdf": {
+    "etag": "\"208310-8af94-4933929f23240\"",
+    "last_modified": "Fri, 22 Oct 2010 18:53:53 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55169.pdf": {
     "etag": "\"208a37-1b2611-49389143a2480\"",
     "last_modified": "Tue, 26 Oct 2010 18:14:26 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55170.pdf": {
+    "etag": "\"2087de-6c5d8-4938916503340\"",
+    "last_modified": "Tue, 26 Oct 2010 18:15:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55171.pdf": {
+    "etag": "\"2089e0-39374-4938917af2700\"",
+    "last_modified": "Tue, 26 Oct 2010 18:15:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55172.pdf": {
+    "etag": "\"208445-44f7e-493891a300580\"",
+    "last_modified": "Tue, 26 Oct 2010 18:16:06 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55173.pdf": {
+    "etag": "\"2085e8-6d956-493891c184d80\"",
+    "last_modified": "Tue, 26 Oct 2010 18:16:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55174.pdf": {
+    "etag": "\"2085d4-185459-493891ec6f2c0\"",
+    "last_modified": "Tue, 26 Oct 2010 18:17:23 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55211.pdf": {
+    "etag": "\"2085b0-1be1e1-4939bce779500\"",
+    "last_modified": "Wed, 27 Oct 2010 16:35:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55212.pdf": {
+    "etag": "\"2087ab-1771a8-4939bd2d17940\"",
+    "last_modified": "Wed, 27 Oct 2010 16:36:13 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55371.pdf": {
     "etag": "\"208808-769c7-4942bc526c6c0\"",
     "last_modified": "Wed, 03 Nov 2010 20:20:19 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55372.pdf": {
+    "etag": "\"20874a-7b61d-4942bc7a7a540\"",
+    "last_modified": "Wed, 03 Nov 2010 20:21:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55373.pdf": {
+    "etag": "\"208407-ddde5-4942bc9622680\"",
+    "last_modified": "Wed, 03 Nov 2010 20:21:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55374.pdf": {
+    "etag": "\"208433-41fc4-4942bcadf9ec0\"",
+    "last_modified": "Wed, 03 Nov 2010 20:21:55 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55375.pdf": {
+    "etag": "\"208611-60715-4942bcc4dd4c0\"",
+    "last_modified": "Wed, 03 Nov 2010 20:22:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55376.pdf": {
+    "etag": "\"208833-37034-4942bcd8e4400\"",
+    "last_modified": "Wed, 03 Nov 2010 20:22:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55377.pdf": {
+    "etag": "\"208995-5e371-4942bd0e4c200\"",
+    "last_modified": "Wed, 03 Nov 2010 20:23:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55378.pdf": {
+    "etag": "\"208853-5f85e-4942bd215ef00\"",
+    "last_modified": "Wed, 03 Nov 2010 20:23:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55379.pdf": {
+    "etag": "\"208980-138cc3-4942bd365a080\"",
+    "last_modified": "Wed, 03 Nov 2010 20:24:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55380.pdf": {
+    "etag": "\"208534-cd02f-4942bd4e318c0\"",
+    "last_modified": "Wed, 03 Nov 2010 20:24:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55381.pdf": {
+    "etag": "\"20834b-17d14f-4942bd754b500\"",
+    "last_modified": "Wed, 03 Nov 2010 20:25:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55382.pdf": {
+    "etag": "\"208a6c-1743fb-4942bda312100\"",
+    "last_modified": "Wed, 03 Nov 2010 20:26:12 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55383.pdf": {
+    "etag": "\"208916-f91af-4942bdc0a26c0\"",
+    "last_modified": "Wed, 03 Nov 2010 20:26:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55384.pdf": {
+    "etag": "\"2088ee-35a53-4942bdec80e40\"",
+    "last_modified": "Wed, 03 Nov 2010 20:27:29 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55616.pdf": {
+    "etag": "\"208a55-1cdba9-4948ee11ec680\"",
+    "last_modified": "Mon, 08 Nov 2010 18:34:50 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55643.pdf": {
     "etag": "\"2083da-beb5-4b96db3811e40\"",
     "last_modified": "Mon, 20 Feb 2012 23:32:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55939.pdf": {
+    "etag": "\"20835c-424d6-495c0b6719880\"",
+    "last_modified": "Tue, 23 Nov 2010 23:27:14 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55940.pdf": {
+    "etag": "\"2088db-e4954-495c0b8b56e00\"",
+    "last_modified": "Tue, 23 Nov 2010 23:27:52 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55941.pdf": {
+    "etag": "\"208a99-e4954-495c0bb0885c0\"",
+    "last_modified": "Tue, 23 Nov 2010 23:28:31 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55942.pdf": {
+    "etag": "\"208380-138ec7-495c0be407f40\"",
+    "last_modified": "Tue, 23 Nov 2010 23:29:25 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo55943.pdf": {
+    "etag": "\"2084f9-eea39-495c0c0d0a000\"",
+    "last_modified": "Tue, 23 Nov 2010 23:30:08 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56062.pdf": {
     "etag": "\"208800-17067b-49638830f5e00\"",
@@ -1222460,6 +1222896,86 @@
     "etag": "\"208908-5d306-496389ac85d80\"",
     "last_modified": "Mon, 29 Nov 2010 22:29:26 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56075.pdf": {
+    "etag": "\"208a5a-126bf9-496389e98ed80\"",
+    "last_modified": "Mon, 29 Nov 2010 22:30:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56076.pdf": {
+    "etag": "\"208338-e57e0-49638a8225580\"",
+    "last_modified": "Mon, 29 Nov 2010 22:33:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56077.pdf": {
+    "etag": "\"208523-166de5-49638a9be5240\"",
+    "last_modified": "Mon, 29 Nov 2010 22:33:37 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56078.pdf": {
+    "etag": "\"2082e5-15a0c9-49638ab975800\"",
+    "last_modified": "Mon, 29 Nov 2010 22:34:08 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56079.pdf": {
+    "etag": "\"208573-176212-49638ad058e00\"",
+    "last_modified": "Mon, 29 Nov 2010 22:34:32 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56159.pdf": {
+    "etag": "\"208938-4f200-4964a7d503f40\"",
+    "last_modified": "Tue, 30 Nov 2010 19:49:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56160.pdf": {
+    "etag": "\"208379-7a053-4964a7f47c980\"",
+    "last_modified": "Tue, 30 Nov 2010 19:50:14 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56161.pdf": {
+    "etag": "\"2084f7-48753-4964a80977b00\"",
+    "last_modified": "Tue, 30 Nov 2010 19:50:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56162.pdf": {
+    "etag": "\"2088d6-16ed47-4964a83a1adc0\"",
+    "last_modified": "Tue, 30 Nov 2010 19:51:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56163.pdf": {
+    "etag": "\"208a96-d991a-4964a84d2dac0\"",
+    "last_modified": "Tue, 30 Nov 2010 19:51:47 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56164.pdf": {
+    "etag": "\"208ac3-d991a-4964a865f9540\"",
+    "last_modified": "Tue, 30 Nov 2010 19:52:13 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56165.pdf": {
+    "etag": "\"2088ca-f9e2c-4964a880ad440\"",
+    "last_modified": "Tue, 30 Nov 2010 19:52:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56166.pdf": {
+    "etag": "\"20851e-28753-4964a8a8bb2c0\"",
+    "last_modified": "Tue, 30 Nov 2010 19:53:23 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56167.pdf": {
+    "etag": "\"20836c-bd9e8-4964a8c186d40\"",
+    "last_modified": "Tue, 30 Nov 2010 19:53:49 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56168.pdf": {
+    "etag": "\"2084c8-2eb99-4964a8d776100\"",
+    "last_modified": "Tue, 30 Nov 2010 19:54:12 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56169.pdf": {
+    "etag": "\"2083c0-48d2ba-4964a911a2a40\"",
+    "last_modified": "Tue, 30 Nov 2010 19:55:13 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56170.pdf": {
+    "etag": "\"208745-1929fe-4964a9297a280\"",
+    "last_modified": "Tue, 30 Nov 2010 19:55:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56171.pdf": {
+    "etag": "\"208403-1f14bd-4964a94eaba40\"",
+    "last_modified": "Tue, 30 Nov 2010 19:56:17 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56172.pdf": {
+    "etag": "\"2089a2-1bda51-4964a9658f040\"",
+    "last_modified": "Tue, 30 Nov 2010 19:56:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56174.pdf": {
+    "etag": "\"20882f-2f294-4964a98507a80\"",
+    "last_modified": "Tue, 30 Nov 2010 19:57:14 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56322.pdf": {
     "etag": "\"208adf-b7cfe-49686cbb0fa80\"",
     "last_modified": "Fri, 03 Dec 2010 19:46:34 GMT"
@@ -1222471,6 +1222987,86 @@
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56324.pdf": {
     "etag": "\"2088a9-e191d-49686cf630600\"",
     "last_modified": "Fri, 03 Dec 2010 19:47:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56325.pdf": {
+    "etag": "\"208ad4-1d2fe-49686d1f326c0\"",
+    "last_modified": "Fri, 03 Dec 2010 19:48:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56326.pdf": {
+    "etag": "\"2083b8-3aa5b-49686d342d840\"",
+    "last_modified": "Fri, 03 Dec 2010 19:48:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56327.pdf": {
+    "etag": "\"2084c4-165639-49686d595f000\"",
+    "last_modified": "Fri, 03 Dec 2010 19:49:20 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56328.pdf": {
+    "etag": "\"208363-167c2e-49686d816ce80\"",
+    "last_modified": "Fri, 03 Dec 2010 19:50:02 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56329.pdf": {
+    "etag": "\"208515-3101e-49686d9573dc0\"",
+    "last_modified": "Fri, 03 Dec 2010 19:50:23 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56330.pdf": {
+    "etag": "\"2083ec-15fbf-49686dad4b600\"",
+    "last_modified": "Fri, 03 Dec 2010 19:50:48 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56331.pdf": {
+    "etag": "\"20876b-1b2ee9-49686dc8f3740\"",
+    "last_modified": "Fri, 03 Dec 2010 19:51:17 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56332.pdf": {
+    "etag": "\"208860-180b8b-49686dfb7ee80\"",
+    "last_modified": "Fri, 03 Dec 2010 19:52:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56333.pdf": {
+    "etag": "\"208954-196b8f-49686e45e1e00\"",
+    "last_modified": "Fri, 03 Dec 2010 19:53:28 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56334.pdf": {
+    "etag": "\"208983-2ad91-49686e73a8a00\"",
+    "last_modified": "Fri, 03 Dec 2010 19:54:16 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56335.pdf": {
+    "etag": "\"208855-2ad91-49686e88a3b80\"",
+    "last_modified": "Fri, 03 Dec 2010 19:54:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56336.pdf": {
+    "etag": "\"208799-17cfbc-496871e10a000\"",
+    "last_modified": "Fri, 03 Dec 2010 20:09:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56337.pdf": {
+    "etag": "\"2083db-4197ec-496872157dbc0\"",
+    "last_modified": "Fri, 03 Dec 2010 20:10:31 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56338.pdf": {
+    "etag": "\"208615-bbbc6-49687226a8440\"",
+    "last_modified": "Fri, 03 Dec 2010 20:10:49 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56339.pdf": {
+    "etag": "\"208436-23db4a-496872415c340\"",
+    "last_modified": "Fri, 03 Dec 2010 20:11:17 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56340.pdf": {
+    "etag": "\"208818-1730c6-4968725933b80\"",
+    "last_modified": "Fri, 03 Dec 2010 20:11:42 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56341.pdf": {
+    "etag": "\"2089b3-2a5c2-4968729548940\"",
+    "last_modified": "Fri, 03 Dec 2010 20:12:45 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56342.pdf": {
+    "etag": "\"20841d-19b5b4-496872d8fe900\"",
+    "last_modified": "Fri, 03 Dec 2010 20:13:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56343.pdf": {
+    "etag": "\"20875e-6adb0-496872ec11600\"",
+    "last_modified": "Fri, 03 Dec 2010 20:14:16 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56344.pdf": {
+    "etag": "\"208607-2f84a-496873010c780\"",
+    "last_modified": "Fri, 03 Dec 2010 20:14:38 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56832.pdf": {
     "etag": "\"20879a-de063-4991ebb393600\"",
@@ -1222484,9 +1223080,137 @@
     "etag": "\"2083ee-146931-4991eca99fa80\"",
     "last_modified": "Wed, 05 Jan 2011 19:57:14 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56835.pdf": {
+    "etag": "\"20876d-4477f-4991ecd57e200\"",
+    "last_modified": "Wed, 05 Jan 2011 19:58:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56836.pdf": {
+    "etag": "\"208867-792bb-4991ece985140\"",
+    "last_modified": "Wed, 05 Jan 2011 19:58:21 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56837.pdf": {
+    "etag": "\"208956-5d7a3-4991ed052d280\"",
+    "last_modified": "Wed, 05 Jan 2011 19:58:50 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56838.pdf": {
+    "etag": "\"208811-c1b18-4991ed2e2f340\"",
+    "last_modified": "Wed, 05 Jan 2011 19:59:33 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56839.pdf": {
+    "etag": "\"2089ac-63575-4991ed49d7480\"",
+    "last_modified": "Wed, 05 Jan 2011 20:00:02 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56840.pdf": {
+    "etag": "\"208609-67bd7-4991ed62a2f00\"",
+    "last_modified": "Wed, 05 Jan 2011 20:00:28 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56841.pdf": {
+    "etag": "\"208429-35265-4991ed821b940\"",
+    "last_modified": "Wed, 05 Jan 2011 20:01:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56842.pdf": {
+    "etag": "\"208990-35265-4991eec37ef80\"",
+    "last_modified": "Wed, 05 Jan 2011 20:06:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56843.pdf": {
+    "etag": "\"20882c-5c125-4991eed4a9800\"",
+    "last_modified": "Wed, 05 Jan 2011 20:06:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56844.pdf": {
+    "etag": "\"208821-32c0e-4991eee8b0740\"",
+    "last_modified": "Wed, 05 Jan 2011 20:07:17 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56845.pdf": {
+    "etag": "\"2089bb-462746-4991ef0270400\"",
+    "last_modified": "Wed, 05 Jan 2011 20:07:44 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56846.pdf": {
+    "etag": "\"20841f-2819f0-4991ef20009c0\"",
+    "last_modified": "Wed, 05 Jan 2011 20:08:15 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56847.pdf": {
+    "etag": "\"208760-100a6d-4991ef5380340\"",
+    "last_modified": "Wed, 05 Jan 2011 20:09:09 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56848.pdf": {
+    "etag": "\"2083fd-1a931-4991ef6d40000\"",
+    "last_modified": "Wed, 05 Jan 2011 20:09:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56849.pdf": {
+    "etag": "\"20877e-13844a-4991ef832f3c0\"",
+    "last_modified": "Wed, 05 Jan 2011 20:09:59 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56850.pdf": {
+    "etag": "\"208350-2f6cf-4991f05e87940\"",
+    "last_modified": "Wed, 05 Jan 2011 20:13:49 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56851.pdf": {
+    "etag": "\"208504-1daa8f-4991f0f9fa800\"",
+    "last_modified": "Wed, 05 Jan 2011 20:16:32 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56852.pdf": {
+    "etag": "\"2088b0-1dd04a-4991f14de6e00\"",
+    "last_modified": "Wed, 05 Jan 2011 20:18:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56853.pdf": {
+    "etag": "\"208aa6-67948a-4992fef7864c0\"",
+    "last_modified": "Thu, 06 Jan 2011 16:24:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56854.pdf": {
+    "etag": "\"208a9a-5de465-4992ff18e7380\"",
+    "last_modified": "Thu, 06 Jan 2011 16:25:02 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56855.pdf": {
+    "etag": "\"2088da-165790-4992ff339b280\"",
+    "last_modified": "Thu, 06 Jan 2011 16:25:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56856.pdf": {
+    "etag": "\"2084fa-11d3bc-4992ff4f433c0\"",
+    "last_modified": "Thu, 06 Jan 2011 16:25:59 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo56857.pdf": {
+    "etag": "\"20837d-6d37c-4992ffb089940\"",
+    "last_modified": "Thu, 06 Jan 2011 16:27:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57046.pdf": {
+    "etag": "\"208749-b0dc1-49981bb0f0fc0\"",
+    "last_modified": "Mon, 10 Jan 2011 17:59:35 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57047.pdf": {
+    "etag": "\"208406-f469b-49981befe2440\"",
+    "last_modified": "Mon, 10 Jan 2011 18:00:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57048.pdf": {
+    "etag": "\"208764-970b6-49981c03e9380\"",
+    "last_modified": "Mon, 10 Jan 2011 18:01:02 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57049.pdf": {
+    "etag": "\"2083e7-12a6bd-49981c1bc0bc0\"",
+    "last_modified": "Mon, 10 Jan 2011 18:01:27 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57156.pdf": {
     "etag": "\"208470-74156-499a9b80990c0\"",
     "last_modified": "Wed, 12 Jan 2011 17:42:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57157.pdf": {
+    "etag": "\"2085d9-10ab6e-499a9bb9d17c0\"",
+    "last_modified": "Wed, 12 Jan 2011 17:43:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57158.pdf": {
+    "etag": "\"20848b-a5c11-499a9bdd1ab00\"",
+    "last_modified": "Wed, 12 Jan 2011 17:43:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57159.pdf": {
+    "etag": "\"2085c0-16469b-499a9c0158080\"",
+    "last_modified": "Wed, 12 Jan 2011 17:44:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57160.pdf": {
+    "etag": "\"2089b8-120072-499a9c155efc0\"",
+    "last_modified": "Wed, 12 Jan 2011 17:44:39 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57161.pdf": {
+    "etag": "\"20881b-b6786-499a9c2f1ec80\"",
+    "last_modified": "Wed, 12 Jan 2011 17:45:06 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57403.pdf": {
     "etag": "\"208541-39630c-49a10a61e4b00\"",
@@ -1222508,37 +1223232,661 @@
     "etag": "\"20891b-4df30-49a10aba95c40\"",
     "last_modified": "Mon, 17 Jan 2011 20:31:37 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57408.pdf": {
+    "etag": "\"208a53-5c7498-49a10af0f1c80\"",
+    "last_modified": "Mon, 17 Jan 2011 20:32:34 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57409.pdf": {
+    "etag": "\"20892e-4c742d-49a10b143afc0\"",
+    "last_modified": "Mon, 17 Jan 2011 20:33:11 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57410.pdf": {
+    "etag": "\"2089bf-3fe6f3-49a10b2c12800\"",
+    "last_modified": "Mon, 17 Jan 2011 20:33:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57411.pdf": {
+    "etag": "\"2087f1-396308-49a10b410d980\"",
+    "last_modified": "Mon, 17 Jan 2011 20:33:58 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57412.pdf": {
+    "etag": "\"2085c4-22fca3-49a10b57f0f80\"",
+    "last_modified": "Mon, 17 Jan 2011 20:34:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57413.pdf": {
+    "etag": "\"208456-211a72-49a10b6b03c80\"",
+    "last_modified": "Mon, 17 Jan 2011 20:34:42 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57414.pdf": {
+    "etag": "\"20844b-e1302-49a10b7d22740\"",
+    "last_modified": "Mon, 17 Jan 2011 20:35:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57415.pdf": {
+    "etag": "\"2085ef-4df31-49a10b8e4cfc0\"",
+    "last_modified": "Mon, 17 Jan 2011 20:35:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57416.pdf": {
+    "etag": "\"2087e6-4df31-49a10bd6c7ac0\"",
+    "last_modified": "Mon, 17 Jan 2011 20:36:35 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57417.pdf": {
+    "etag": "\"2089e5-4df2f-49a10be9da7c0\"",
+    "last_modified": "Mon, 17 Jan 2011 20:36:55 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57418.pdf": {
+    "etag": "\"2087c9-a433b-49a10c00bddc0\"",
+    "last_modified": "Mon, 17 Jan 2011 20:37:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57419.pdf": {
+    "etag": "\"208a00-138f07-49a10c15b8f40\"",
+    "last_modified": "Mon, 17 Jan 2011 20:37:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57421.pdf": {
+    "etag": "\"208431-bc07b-49a10c380e040\"",
+    "last_modified": "Mon, 17 Jan 2011 20:38:17 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57423.pdf": {
+    "etag": "\"208832-ba9b9-49a10c4a2cb00\"",
+    "last_modified": "Mon, 17 Jan 2011 20:38:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57424.pdf": {
+    "etag": "\"208807-1120b8-49a10c5a63140\"",
+    "last_modified": "Mon, 17 Jan 2011 20:38:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57427.pdf": {
+    "etag": "\"20874c-233844-49a10ca2ddc40\"",
+    "last_modified": "Mon, 17 Jan 2011 20:40:09 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57429.pdf": {
+    "etag": "\"208767-137a90-49a10cc9f7880\"",
+    "last_modified": "Mon, 17 Jan 2011 20:40:50 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57589.pdf": {
+    "etag": "\"2088ea-114b7d-49a386f993400\"",
+    "last_modified": "Wed, 19 Jan 2011 19:58:08 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57590.pdf": {
+    "etag": "\"208a03-1090b6-49a3871817c00\"",
+    "last_modified": "Wed, 19 Jan 2011 19:58:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57591.pdf": {
+    "etag": "\"2087cc-13d5b4-49a3872e06fc0\"",
+    "last_modified": "Wed, 19 Jan 2011 19:59:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57592.pdf": {
+    "etag": "\"2085a2-32e6a0-49a3877a523c0\"",
+    "last_modified": "Wed, 19 Jan 2011 20:00:23 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57593.pdf": {
+    "etag": "\"2084aa-32d9f6-49a3879abf040\"",
+    "last_modified": "Wed, 19 Jan 2011 20:00:57 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57594.pdf": {
+    "etag": "\"208477-117f25-49a387b296880\"",
+    "last_modified": "Wed, 19 Jan 2011 20:01:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57595.pdf": {
+    "etag": "\"2085ac-5953f-49a387fdeda40\"",
+    "last_modified": "Wed, 19 Jan 2011 20:02:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57617.pdf": {
+    "etag": "\"208820-77f6b-49a4a4869e700\"",
+    "last_modified": "Thu, 20 Jan 2011 17:15:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57665.pdf": {
+    "etag": "\"208866-e2302-49a9a640c2040\"",
+    "last_modified": "Mon, 24 Jan 2011 16:50:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57666.pdf": {
+    "etag": "\"208770-23ee4-49a9a652e0b00\"",
+    "last_modified": "Mon, 24 Jan 2011 16:50:20 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57667.pdf": {
+    "etag": "\"2083f0-8a4f9-49a9a67be2bc0\"",
+    "last_modified": "Mon, 24 Jan 2011 16:51:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57755.pdf": {
+    "etag": "\"2083b0-c96a8-49aafffa80b80\"",
+    "last_modified": "Tue, 25 Jan 2011 18:36:46 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57756.pdf": {
+    "etag": "\"208acf-1246c8-49ab0020a6580\"",
+    "last_modified": "Tue, 25 Jan 2011 18:37:26 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57757.pdf": {
+    "etag": "\"2088a5-13ed0e-49ab006cf1980\"",
+    "last_modified": "Tue, 25 Jan 2011 18:38:46 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57758.pdf": {
+    "etag": "\"208ab1-13ed0e-49ab0083d4f80\"",
+    "last_modified": "Tue, 25 Jan 2011 18:39:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57759.pdf": {
+    "etag": "\"2088b9-13ed0e-49ab0096e7c80\"",
+    "last_modified": "Tue, 25 Jan 2011 18:39:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57760.pdf": {
+    "etag": "\"2082e7-15a713-49ab00c78af40\"",
+    "last_modified": "Tue, 25 Jan 2011 18:40:21 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57808.pdf": {
+    "etag": "\"208a64-a18f2-49ad96c83cb80\"",
+    "last_modified": "Thu, 27 Jan 2011 20:02:06 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57809.pdf": {
+    "etag": "\"20890e-a18f2-49ad96f603780\"",
+    "last_modified": "Thu, 27 Jan 2011 20:02:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57810.pdf": {
+    "etag": "\"208a1c-1a2af2-49ad98f15e480\"",
+    "last_modified": "Thu, 27 Jan 2011 20:11:46 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57811.pdf": {
+    "etag": "\"2087ae-116559-49ad990fe2c80\"",
+    "last_modified": "Thu, 27 Jan 2011 20:12:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57812.pdf": {
+    "etag": "\"2085b3-21ea9-49ad9925d2040\"",
+    "last_modified": "Thu, 27 Jan 2011 20:12:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57813.pdf": {
+    "etag": "\"20847a-116559-49ad99ac49d80\"",
+    "last_modified": "Thu, 27 Jan 2011 20:15:02 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57814.pdf": {
+    "etag": "\"20848c-ff930-49ad99c32d380\"",
+    "last_modified": "Thu, 27 Jan 2011 20:15:26 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57815.pdf": {
+    "etag": "\"208588-239e58-49ad99e2a5dc0\"",
+    "last_modified": "Thu, 27 Jan 2011 20:15:59 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57816.pdf": {
+    "etag": "\"2087bb-dc3a1-49ad9a1aea280\"",
+    "last_modified": "Thu, 27 Jan 2011 20:16:58 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57817.pdf": {
+    "etag": "\"2089ed-e5e8b-49ad9a560ae00\"",
+    "last_modified": "Thu, 27 Jan 2011 20:18:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo57818.pdf": {
+    "etag": "\"2087d5-2ac43-49ad9a6bfa1c0\"",
+    "last_modified": "Thu, 27 Jan 2011 20:18:23 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58075.pdf": {
     "etag": "\"2083b5-a5e56-49b3e563da200\"",
     "last_modified": "Tue, 01 Feb 2011 20:25:44 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58076.pdf": {
+    "etag": "\"208ad6-2a4c3-49b3e5853b0c0\"",
+    "last_modified": "Tue, 01 Feb 2011 20:26:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58077.pdf": {
+    "etag": "\"2088ab-cd486-49b3e59c1e6c0\"",
+    "last_modified": "Tue, 01 Feb 2011 20:26:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58078.pdf": {
+    "etag": "\"208abc-3a70c-49b3e5c520780\"",
+    "last_modified": "Tue, 01 Feb 2011 20:27:26 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58079.pdf": {
+    "etag": "\"2088c5-13104a-49b3e5f2e7380\"",
+    "last_modified": "Tue, 01 Feb 2011 20:28:14 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58080.pdf": {
+    "etag": "\"2084a6-fe336-49b3e606ee2c0\"",
+    "last_modified": "Tue, 01 Feb 2011 20:28:35 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58081.pdf": {
+    "etag": "\"2085a0-17eabd-49b3e63979a00\"",
+    "last_modified": "Tue, 01 Feb 2011 20:29:28 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58082.pdf": {
+    "etag": "\"2087ce-13905a-49b3e65cc2d40\"",
+    "last_modified": "Tue, 01 Feb 2011 20:30:05 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58112.pdf": {
+    "etag": "\"208a7c-f0ad8-49b515fb200c0\"",
+    "last_modified": "Wed, 02 Feb 2011 19:08:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58113.pdf": {
+    "etag": "\"2088f4-10ce2e-49b51616c8200\"",
+    "last_modified": "Wed, 02 Feb 2011 19:08:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58211.pdf": {
+    "etag": "\"2085f8-140eb2-49bc9cda95100\"",
+    "last_modified": "Tue, 08 Feb 2011 18:49:08 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58212.pdf": {
+    "etag": "\"2087e8-6e41e-49bc9cf731480\"",
+    "last_modified": "Tue, 08 Feb 2011 18:49:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58349.pdf": {
+    "etag": "\"2085fc-1e7b42-49bdf995f1400\"",
+    "last_modified": "Wed, 09 Feb 2011 20:49:20 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58350.pdf": {
+    "etag": "\"208301-282a73-49bdf9b475c00\"",
+    "last_modified": "Wed, 09 Feb 2011 20:49:52 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58351.pdf": {
+    "etag": "\"208558-16a57b-49bdf9c5a0480\"",
+    "last_modified": "Wed, 09 Feb 2011 20:50:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58447.pdf": {
+    "etag": "\"208803-1814be-49c0644fcd600\"",
+    "last_modified": "Fri, 11 Feb 2011 18:57:28 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58448.pdf": {
+    "etag": "\"208a25-11c244-49c0646b75740\"",
+    "last_modified": "Fri, 11 Feb 2011 18:57:57 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58450.pdf": {
+    "etag": "\"208a56-4c42c3-49c0649ef50c0\"",
+    "last_modified": "Fri, 11 Feb 2011 18:58:51 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58451.pdf": {
+    "etag": "\"208906-4c476e-49c064b3f0240\"",
+    "last_modified": "Fri, 11 Feb 2011 18:59:13 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58452.pdf": {
+    "etag": "\"20851f-33064d-49c064c7f7180\"",
+    "last_modified": "Fri, 11 Feb 2011 18:59:34 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58453.pdf": {
+    "etag": "\"208334-275634-49c064e39f2c0\"",
+    "last_modified": "Fri, 11 Feb 2011 19:00:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58454.pdf": {
+    "etag": "\"208324-18397e-49c064fb76b00\"",
+    "last_modified": "Fri, 11 Feb 2011 19:00:28 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58455.pdf": {
+    "etag": "\"208545-129647-49c065162aa00\"",
+    "last_modified": "Fri, 11 Feb 2011 19:00:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58456.pdf": {
+    "etag": "\"2088f9-2d0893-49c06543f1600\"",
+    "last_modified": "Fri, 11 Feb 2011 19:01:44 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58457.pdf": {
+    "etag": "\"208a80-1604a6-49c0657b41880\"",
+    "last_modified": "Fri, 11 Feb 2011 19:02:42 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58458.pdf": {
+    "etag": "\"20893f-5104c-49c065c0dfcc0\"",
+    "last_modified": "Fri, 11 Feb 2011 19:03:55 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58459.pdf": {
+    "etag": "\"208a31-50e3a-49c065d6cf080\"",
+    "last_modified": "Fri, 11 Feb 2011 19:04:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58460.pdf": {
+    "etag": "\"2084fc-3e37c-49c065f2771c0\"",
+    "last_modified": "Fri, 11 Feb 2011 19:04:47 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58461.pdf": {
+    "etag": "\"208382-2b7d4-49c0660772340\"",
+    "last_modified": "Fri, 11 Feb 2011 19:05:09 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58660.pdf": {
+    "etag": "\"208348-1189a1-49c45cc5a7780\"",
+    "last_modified": "Mon, 14 Feb 2011 22:45:02 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58661.pdf": {
     "etag": "\"208531-122e2e-49c45cf73ec80\"",
     "last_modified": "Mon, 14 Feb 2011 22:45:54 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58843.pdf": {
+    "etag": "\"2085a4-440c8a-49c80614c9b40\"",
+    "last_modified": "Thu, 17 Feb 2011 20:38:29 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58844.pdf": {
+    "etag": "\"2085af-441591-49c80635367c0\"",
+    "last_modified": "Thu, 17 Feb 2011 20:39:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58845.pdf": {
+    "etag": "\"208479-3d8186-49c80652c6d80\"",
+    "last_modified": "Thu, 17 Feb 2011 20:39:34 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58846.pdf": {
+    "etag": "\"208a19-3a47bd-49c8067427c40\"",
+    "last_modified": "Thu, 17 Feb 2011 20:40:09 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58847.pdf": {
+    "etag": "\"2087ac-1f67b7-49c80692ac440\"",
+    "last_modified": "Thu, 17 Feb 2011 20:40:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58848.pdf": {
+    "etag": "\"2089ca-1e2dc3-49c806b03ca00\"",
+    "last_modified": "Thu, 17 Feb 2011 20:41:12 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58849.pdf": {
+    "etag": "\"2087f8-1c79f0-49c806c908480\"",
+    "last_modified": "Thu, 17 Feb 2011 20:41:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58850.pdf": {
+    "etag": "\"208a49-120d87-49c806e78cc80\"",
+    "last_modified": "Thu, 17 Feb 2011 20:42:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58851.pdf": {
+    "etag": "\"208924-38f54-49c8070334dc0\"",
+    "last_modified": "Thu, 17 Feb 2011 20:42:39 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58852.pdf": {
+    "etag": "\"20857c-44739-49c80722ad800\"",
+    "last_modified": "Thu, 17 Feb 2011 20:43:12 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58853.pdf": {
+    "etag": "\"2082ee-9f028-49c8074132000\"",
+    "last_modified": "Thu, 17 Feb 2011 20:43:44 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58854.pdf": {
+    "etag": "\"2082fb-12df0f-49c8076fece40\"",
+    "last_modified": "Thu, 17 Feb 2011 20:44:33 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58855.pdf": {
+    "etag": "\"208556-26ecd1-49c8079059ac0\"",
+    "last_modified": "Thu, 17 Feb 2011 20:45:07 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58856.pdf": {
+    "etag": "\"208931-5f8bd-49c807ab0d9c0\"",
+    "last_modified": "Thu, 17 Feb 2011 20:45:35 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58857.pdf": {
+    "etag": "\"208a28-de523-49c807d1333c0\"",
+    "last_modified": "Thu, 17 Feb 2011 20:46:15 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58928.pdf": {
+    "etag": "\"2083e9-1ea1cc-49ccfdce4fb40\"",
+    "last_modified": "Mon, 21 Feb 2011 19:28:05 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58929.pdf": {
+    "etag": "\"208769-1e1bd-49ccfdefb0a00\"",
+    "last_modified": "Mon, 21 Feb 2011 19:28:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58930.pdf": {
+    "etag": "\"208369-3bad9-49ccfe4585480\"",
+    "last_modified": "Mon, 21 Feb 2011 19:30:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58931.pdf": {
+    "etag": "\"20851a-1b2f2e-49ccfe6221800\"",
+    "last_modified": "Mon, 21 Feb 2011 19:30:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58932.pdf": {
+    "etag": "\"2088c6-174ac8-49ccfe7fb1dc0\"",
+    "last_modified": "Mon, 21 Feb 2011 19:31:11 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58936.pdf": {
+    "etag": "\"2084f2-1f9fcc-49cd00f059f80\"",
+    "last_modified": "Mon, 21 Feb 2011 19:42:06 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58937.pdf": {
+    "etag": "\"208375-21d1c7-49cd01036cc80\"",
+    "last_modified": "Mon, 21 Feb 2011 19:42:26 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58995.pdf": {
     "etag": "\"2084e6-a4a24-49cf76b8b7780\"",
     "last_modified": "Wed, 23 Feb 2011 18:39:42 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58996.pdf": {
+    "etag": "\"208898-42a57a-49cf76e67e380\"",
+    "last_modified": "Wed, 23 Feb 2011 18:40:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58997.pdf": {
+    "etag": "\"208af5-424d2d-49cf76f89ce40\"",
+    "last_modified": "Wed, 23 Feb 2011 18:40:49 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58998.pdf": {
+    "etag": "\"2088e5-425e75-49cf770d97fc0\"",
+    "last_modified": "Wed, 23 Feb 2011 18:41:11 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo58999.pdf": {
+    "etag": "\"208aa3-28934-49cf77256f800\"",
+    "last_modified": "Wed, 23 Feb 2011 18:41:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59000.pdf": {
+    "etag": "\"2089a3-12bb3c-49cf7759e33c0\"",
+    "last_modified": "Wed, 23 Feb 2011 18:42:31 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59001.pdf": {
+    "etag": "\"208804-12bb3c-49cf776dea300\"",
+    "last_modified": "Wed, 23 Feb 2011 18:42:52 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59229.pdf": {
+    "etag": "\"2084b4-10ce2e-49d6fbede1a00\"",
+    "last_modified": "Tue, 01 Mar 2011 18:12:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59230.pdf": {
+    "etag": "\"20841e-1ebba2-49d6fc04c5000\"",
+    "last_modified": "Tue, 01 Mar 2011 18:13:20 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59231.pdf": {
+    "etag": "\"20875c-d5bed-49d6fc1f78f00\"",
+    "last_modified": "Tue, 01 Mar 2011 18:13:48 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59232.pdf": {
+    "etag": "\"20881a-1f84f7-49d6fc5110400\"",
+    "last_modified": "Tue, 01 Mar 2011 18:14:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59233.pdf": {
+    "etag": "\"2089b2-e2ee6-49d6fc7735e00\"",
+    "last_modified": "Tue, 01 Mar 2011 18:15:20 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59312.pdf": {
     "etag": "\"208612-1be11-5463b937cd5c0\"",
     "last_modified": "Mon, 16 Jan 2017 19:56:15 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59313.pdf": {
+    "etag": "\"208432-1ae8f3-49d977a84f900\"",
+    "last_modified": "Thu, 03 Mar 2011 17:37:08 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59385.pdf": {
+    "etag": "\"208493-379d7-49dae71258fc0\"",
+    "last_modified": "Fri, 04 Mar 2011 21:00:55 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59386.pdf": {
+    "etag": "\"2089f0-2ce4e-49dae734ae0c0\"",
+    "last_modified": "Fri, 04 Mar 2011 21:01:31 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59387.pdf": {
     "etag": "\"2087bc-154268-49dae7551ad40\"",
     "last_modified": "Fri, 04 Mar 2011 21:02:05 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59523.pdf": {
+    "etag": "\"2084bf-15332f-49e126ea8d180\"",
+    "last_modified": "Wed, 09 Mar 2011 20:18:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59524.pdf": {
+    "etag": "\"2084cd-153507-49e12715776c0\"",
+    "last_modified": "Wed, 09 Mar 2011 20:19:15 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59525.pdf": {
+    "etag": "\"20838c-81e9d-49e1273aa8e80\"",
+    "last_modified": "Wed, 09 Mar 2011 20:19:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59526.pdf": {
+    "etag": "\"208adc-82235-49e1275098240\"",
+    "last_modified": "Wed, 09 Mar 2011 20:20:17 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59527.pdf": {
+    "etag": "\"20887e-3523f-49e12763aaf40\"",
+    "last_modified": "Wed, 09 Mar 2011 20:20:37 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59747.pdf": {
     "etag": "\"20844d-16db65-49e9be838d200\"",
     "last_modified": "Wed, 16 Mar 2011 16:19:20 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59748.pdf": {
+    "etag": "\"20859a-81e9d-49e9ca3db7d00\"",
+    "last_modified": "Wed, 16 Mar 2011 17:11:48 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59749.pdf": {
+    "etag": "\"2084a1-82235-49e9ca50caa00\"",
+    "last_modified": "Wed, 16 Mar 2011 17:12:08 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59750.pdf": {
+    "etag": "\"208544-3523f-49e9ca6e5afc0\"",
+    "last_modified": "Wed, 16 Mar 2011 17:12:39 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59751.pdf": {
+    "etag": "\"208322-3d91a-49e9cbb66b5c0\"",
+    "last_modified": "Wed, 16 Mar 2011 17:18:23 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59752.pdf": {
+    "etag": "\"208a7a-a2349-49e9cbe8f6d00\"",
+    "last_modified": "Wed, 16 Mar 2011 17:19:16 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59753.pdf": {
+    "etag": "\"2088f2-227d5-49e9cc2caccc0\"",
+    "last_modified": "Wed, 16 Mar 2011 17:20:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59754.pdf": {
+    "etag": "\"208919-227d6-49e9cc466c980\"",
+    "last_modified": "Wed, 16 Mar 2011 17:20:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59755.pdf": {
+    "etag": "\"208a71-174e25-49e9cc7eb0e40\"",
+    "last_modified": "Wed, 16 Mar 2011 17:21:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59756.pdf": {
+    "etag": "\"20834e-174e25-49e9cc93abfc0\"",
+    "last_modified": "Wed, 16 Mar 2011 17:22:15 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59757.pdf": {
+    "etag": "\"208538-1b0915-49e9ccaa8f5c0\"",
+    "last_modified": "Wed, 16 Mar 2011 17:22:39 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59758.pdf": {
+    "etag": "\"2082f9-1af837-49e9ccc44f280\"",
+    "last_modified": "Wed, 16 Mar 2011 17:23:06 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59759.pdf": {
+    "etag": "\"208585-1aefeb-49e9ccd8561c0\"",
+    "last_modified": "Wed, 16 Mar 2011 17:23:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59760.pdf": {
+    "etag": "\"208ac0-204d42-49e9cd118e8c0\"",
+    "last_modified": "Wed, 16 Mar 2011 17:24:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59761.pdf": {
+    "etag": "\"2088c7-1bfa02-49e9cd2c427c0\"",
+    "last_modified": "Wed, 16 Mar 2011 17:24:55 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59821.pdf": {
     "etag": "\"2089e7-3d647-49eb1ad13d240\"",
     "last_modified": "Thu, 17 Mar 2011 18:17:37 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo59822.pdf": {
+    "etag": "\"208451-12bf6c-49eb1afa3f300\"",
+    "last_modified": "Thu, 17 Mar 2011 18:18:20 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60054.pdf": {
     "etag": "\"208903-192bf7-49f51a9df6580\"",
     "last_modified": "Fri, 25 Mar 2011 17:09:58 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60059.pdf": {
+    "etag": "\"20856d-414e1-49f3f976b72c0\"",
+    "last_modified": "Thu, 24 Mar 2011 19:36:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60060.pdf": {
+    "etag": "\"208aa1-54f1e-49f3f98d9a8c0\"",
+    "last_modified": "Thu, 24 Mar 2011 19:36:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60061.pdf": {
+    "etag": "\"2088e1-49bad-49f3f9be3db80\"",
+    "last_modified": "Thu, 24 Mar 2011 19:37:34 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60062.pdf": {
+    "etag": "\"2084fe-2cc00-49f3f9dad9f00\"",
+    "last_modified": "Thu, 24 Mar 2011 19:38:04 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60063.pdf": {
+    "etag": "\"208383-130760-49f3f9f682040\"",
+    "last_modified": "Thu, 24 Mar 2011 19:38:33 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60064.pdf": {
+    "etag": "\"208354-16fb7a-49f3fa2448c40\"",
+    "last_modified": "Thu, 24 Mar 2011 19:39:21 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60068.pdf": {
+    "etag": "\"2088a3-3b166-49f3fa605da00\"",
+    "last_modified": "Thu, 24 Mar 2011 19:40:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60071.pdf": {
+    "etag": "\"2089b0-48d98-49f3fa900ca80\"",
+    "last_modified": "Thu, 24 Mar 2011 19:41:14 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60074.pdf": {
+    "etag": "\"208603-347d1-49f3fab53e240\"",
+    "last_modified": "Thu, 24 Mar 2011 19:41:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60077.pdf": {
+    "etag": "\"208826-ac80e-49f3fb0189640\"",
+    "last_modified": "Thu, 24 Mar 2011 19:43:13 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60079.pdf": {
+    "etag": "\"208845-2df21e-49f3fb186cc40\"",
+    "last_modified": "Thu, 24 Mar 2011 19:43:37 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60081.pdf": {
+    "etag": "\"208525-2df21f-49f3fb2f50240\"",
+    "last_modified": "Thu, 24 Mar 2011 19:44:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60083.pdf": {
+    "etag": "\"208a5c-2df220-49f3fb453f600\"",
+    "last_modified": "Thu, 24 Mar 2011 19:44:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60085.pdf": {
+    "etag": "\"208902-2df21e-49f3fb5852300\"",
+    "last_modified": "Thu, 24 Mar 2011 19:44:44 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60360.pdf": {
+    "etag": "\"208824-1bff72-49fcc916fa340\"",
+    "last_modified": "Thu, 31 Mar 2011 19:47:49 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60361.pdf": {
+    "etag": "\"208989-3bd59-49fcc930ba000\"",
+    "last_modified": "Thu, 31 Mar 2011 19:48:16 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60363.pdf": {
+    "etag": "\"2085fe-18f581-49fcc9cf09580\"",
+    "last_modified": "Thu, 31 Mar 2011 19:51:02 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60364.pdf": {
+    "etag": "\"208752-18c8f9-49fcc9ec99b40\"",
+    "last_modified": "Thu, 31 Mar 2011 19:51:33 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60365.pdf": {
+    "etag": "\"208413-18d6db-49fcca074da40\"",
+    "last_modified": "Thu, 31 Mar 2011 19:52:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60366.pdf": {
+    "etag": "\"2089af-3a05f2-49fcca22f5b80\"",
+    "last_modified": "Thu, 31 Mar 2011 19:52:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60367.pdf": {
+    "etag": "\"208814-270ad-49fcca3237f80\"",
+    "last_modified": "Thu, 31 Mar 2011 19:52:46 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60368.pdf": {
+    "etag": "\"20895f-270ad-49fcca454ac80\"",
+    "last_modified": "Thu, 31 Mar 2011 19:53:06 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60373.pdf": {
+    "etag": "\"20835a-b8ca0-49fddfe7c7240\"",
+    "last_modified": "Fri, 01 Apr 2011 16:35:13 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60374.pdf": {
+    "etag": "\"208388-471f2-49fde013a59c0\"",
+    "last_modified": "Fri, 01 Apr 2011 16:35:59 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60438.pdf": {
+    "etag": "\"20856b-165060-4a01aa7d21700\"",
+    "last_modified": "Mon, 04 Apr 2011 16:57:32 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60439.pdf": {
+    "etag": "\"208314-1d21d2-4a01aa9e825c0\"",
+    "last_modified": "Mon, 04 Apr 2011 16:58:07 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60440.pdf": {
     "etag": "\"20892d-206643-4a01aaca60d40\"",
@@ -1222547,6 +1223895,66 @@
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60441.pdf": {
     "etag": "\"208a54-1804cf-4a01aae238580\"",
     "last_modified": "Mon, 04 Apr 2011 16:59:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60486.pdf": {
+    "etag": "\"208a10-23f4ca-4a041e0c26fc0\"",
+    "last_modified": "Wed, 06 Apr 2011 15:45:11 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60487.pdf": {
+    "etag": "\"2087a1-18d90e-4a041e26daec0\"",
+    "last_modified": "Wed, 06 Apr 2011 15:45:39 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60551.pdf": {
+    "etag": "\"20889e-272d9-4a0a9fd27be00\"",
+    "last_modified": "Mon, 11 Apr 2011 19:57:44 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60552.pdf": {
+    "etag": "\"2084b8-30356-4a0a9ff4d0f00\"",
+    "last_modified": "Mon, 11 Apr 2011 19:58:20 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60553.pdf": {
+    "etag": "\"2083a9-325d1-4a0ab43d92a40\"",
+    "last_modified": "Mon, 11 Apr 2011 21:29:05 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60554.pdf": {
+    "etag": "\"20839c-2d462-4a0ab44dc9080\"",
+    "last_modified": "Mon, 11 Apr 2011 21:29:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60555.pdf": {
+    "etag": "\"2084e2-24798-4a0ab46e35d00\"",
+    "last_modified": "Mon, 11 Apr 2011 21:29:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60556.pdf": {
+    "etag": "\"20888c-24f61-4a0ab4cf7c280\"",
+    "last_modified": "Mon, 11 Apr 2011 21:31:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60557.pdf": {
+    "etag": "\"208aec-41f67-4a0ab541ed080\"",
+    "last_modified": "Mon, 11 Apr 2011 21:33:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60558.pdf": {
+    "etag": "\"2088dc-1d21d2-4a0ab56cd75c0\"",
+    "last_modified": "Mon, 11 Apr 2011 21:34:23 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60559.pdf": {
+    "etag": "\"208a9b-173674-4a0ab5878b4c0\"",
+    "last_modified": "Mon, 11 Apr 2011 21:34:51 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60560.pdf": {
+    "etag": "\"20855e-16d1bb-4a0ab59a9e1c0\"",
+    "last_modified": "Mon, 11 Apr 2011 21:35:11 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60561.pdf": {
+    "etag": "\"20830a-165060-4a0ab5ef7ea00\"",
+    "last_modified": "Mon, 11 Apr 2011 21:36:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60894.pdf": {
+    "etag": "\"208330-f7f4b-4a1fedc8f8140\"",
+    "last_modified": "Thu, 28 Apr 2011 18:38:21 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60895.pdf": {
+    "etag": "\"208552-120516-4a1fedf2ee440\"",
+    "last_modified": "Thu, 28 Apr 2011 18:39:05 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60896.pdf": {
     "etag": "\"208900-2ba0-4b97d2171cf80\"",
@@ -1222568,9 +1223976,61 @@
     "etag": "\"2087b6-2f93e-4a21109b76400\"",
     "last_modified": "Fri, 29 Apr 2011 16:19:28 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60901.pdf": {
+    "etag": "\"208a24-1ffae-4a1ff023b0f40\"",
+    "last_modified": "Thu, 28 Apr 2011 18:48:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60902.pdf": {
+    "etag": "\"208489-277b40-4a1ff05bf5400\"",
+    "last_modified": "Thu, 28 Apr 2011 18:49:52 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60903.pdf": {
+    "etag": "\"2085be-3dea1-4a1ff08ba4480\"",
+    "last_modified": "Thu, 28 Apr 2011 18:50:42 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60904.pdf": {
+    "etag": "\"208594-1ef263-4a1ff0adf9580\"",
+    "last_modified": "Thu, 28 Apr 2011 18:51:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60905.pdf": {
+    "etag": "\"20849b-462f6-4a1ff0ca95900\"",
+    "last_modified": "Thu, 28 Apr 2011 18:51:48 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60906.pdf": {
+    "etag": "\"2089f9-15fbec-4a1ff0ea0e340\"",
+    "last_modified": "Thu, 28 Apr 2011 18:52:21 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60907.pdf": {
+    "etag": "\"2087c7-76113-4a1ff0fffd700\"",
+    "last_modified": "Thu, 28 Apr 2011 18:52:44 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60908.pdf": {
+    "etag": "\"2089e2-16fc1a-4a1ff118c9180\"",
+    "last_modified": "Thu, 28 Apr 2011 18:53:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60909.pdf": {
+    "etag": "\"2087e3-1b0ed1-4a1ff13565500\"",
+    "last_modified": "Thu, 28 Apr 2011 18:53:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60910.pdf": {
+    "etag": "\"208a32-1ab8b2-4a1ff1791b4c0\"",
+    "last_modified": "Thu, 28 Apr 2011 18:54:51 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60911.pdf": {
+    "etag": "\"20893e-20487f-4a1ff1a6e20c0\"",
+    "last_modified": "Thu, 28 Apr 2011 18:55:39 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60963.pdf": {
     "etag": "\"2088e9-36e2d-4a24e2fdcf040\"",
     "last_modified": "Mon, 02 May 2011 17:16:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60964.pdf": {
+    "etag": "\"208912-306df-4a24e3342b080\"",
+    "last_modified": "Mon, 02 May 2011 17:17:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo60965.pdf": {
+    "etag": "\"208a67-1c023f-4a24e3a1d7340\"",
+    "last_modified": "Mon, 02 May 2011 17:19:33 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61258.pdf": {
     "etag": "\"208844-ee999-4a30179e22080\"",
@@ -1222580,9 +1224040,45 @@
     "etag": "\"20896f-140623-4a3017bbb2640\"",
     "last_modified": "Wed, 11 May 2011 15:11:13 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61260.pdf": {
+    "etag": "\"2085da-8e744-4a3017ff68600\"",
+    "last_modified": "Wed, 11 May 2011 15:12:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61261.pdf": {
+    "etag": "\"20843c-1dd107-4a3018a64cfc0\"",
+    "last_modified": "Wed, 11 May 2011 15:15:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61264.pdf": {
+    "etag": "\"2087fb-132d42-4a301a6592f00\"",
+    "last_modified": "Wed, 11 May 2011 15:23:08 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61265.pdf": {
+    "etag": "\"2089cd-132d42-4a301a7a8e080\"",
+    "last_modified": "Wed, 11 May 2011 15:23:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61266.pdf": {
+    "etag": "\"208464-10b8fa-4a301ab97f500\"",
+    "last_modified": "Wed, 11 May 2011 15:24:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61373.pdf": {
+    "etag": "\"208999-ec548-4a367d6a5ed40\"",
+    "last_modified": "Mon, 16 May 2011 17:18:05 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61374.pdf": {
     "etag": "\"2089a8-12ead9-4a367d8e9c2c0\"",
     "last_modified": "Mon, 16 May 2011 17:18:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61375.pdf": {
+    "etag": "\"20880b-112881-4a367daffd180\"",
+    "last_modified": "Mon, 16 May 2011 17:19:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61376.pdf": {
+    "etag": "\"20874e-10d236-4a367dcba52c0\"",
+    "last_modified": "Mon, 16 May 2011 17:19:47 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61377.pdf": {
+    "etag": "\"20840c-e66e0-4a367df68f800\"",
+    "last_modified": "Mon, 16 May 2011 17:20:32 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61441.pdf": {
     "etag": "\"208499-c5fbf-4a37ca841cf40\"",
@@ -1222591,6 +1224087,14 @@
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61442.pdf": {
     "etag": "\"2089f4-3904e-4a37ca9ce89c0\"",
     "last_modified": "Tue, 17 May 2011 18:08:47 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61463.pdf": {
+    "etag": "\"2084de-114eeb-4a38ea887d3c0\"",
+    "last_modified": "Wed, 18 May 2011 15:36:55 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61542.pdf": {
+    "etag": "\"208ad9-24c4c-4a3a3983d6600\"",
+    "last_modified": "Thu, 19 May 2011 16:35:36 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61543.pdf": {
     "etag": "\"2088ae-433f0-4a3a39f08e680\"",
@@ -1222616,13 +1224120,249 @@
     "etag": "\"2084f3-41921-4a3a3a93a2740\"",
     "last_modified": "Thu, 19 May 2011 16:40:21 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61550.pdf": {
+    "etag": "\"2083d3-3c1dd-4a3a3b4228300\"",
+    "last_modified": "Thu, 19 May 2011 16:43:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61551.pdf": {
+    "etag": "\"208791-eaedb-4a3a3b6feef00\"",
+    "last_modified": "Thu, 19 May 2011 16:44:12 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61754.pdf": {
+    "etag": "\"2087c4-d7f99-4a481e95152c0\"",
+    "last_modified": "Mon, 30 May 2011 17:49:39 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61755.pdf": {
+    "etag": "\"2089f7-cb7f1-4a481ea91c200\"",
+    "last_modified": "Mon, 30 May 2011 17:50:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61756.pdf": {
+    "etag": "\"20849d-380ba7-4a481ec0f3a40\"",
+    "last_modified": "Mon, 30 May 2011 17:50:25 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61757.pdf": {
+    "etag": "\"208596-4823d5-4a481ede84000\"",
+    "last_modified": "Mon, 30 May 2011 17:50:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61758.pdf": {
+    "etag": "\"208449-4823f2-4a481ef74fa80\"",
+    "last_modified": "Mon, 30 May 2011 17:51:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61759.pdf": {
+    "etag": "\"2085ed-4823e3-4a481f12f7bc0\"",
+    "last_modified": "Mon, 30 May 2011 17:51:51 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61760.pdf": {
+    "etag": "\"208974-482407-4a481f317c3c0\"",
+    "last_modified": "Mon, 30 May 2011 17:52:23 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61762.pdf": {
+    "etag": "\"208789-4823e2-4a481f4c302c0\"",
+    "last_modified": "Mon, 30 May 2011 17:52:51 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61763.pdf": {
+    "etag": "\"2083cd-48240c-4a481f64fbd40\"",
+    "last_modified": "Mon, 30 May 2011 17:53:17 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61765.pdf": {
+    "etag": "\"208778-4823e2-4a481f7dc77c0\"",
+    "last_modified": "Mon, 30 May 2011 17:53:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61766.pdf": {
+    "etag": "\"208876-4823eb-4a481f987b6c0\"",
+    "last_modified": "Mon, 30 May 2011 17:54:11 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61767.pdf": {
+    "etag": "\"208962-4823d0-4a481fbea10c0\"",
+    "last_modified": "Mon, 30 May 2011 17:54:51 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61768.pdf": {
+    "etag": "\"20881c-482413-4a481fdd258c0\"",
+    "last_modified": "Mon, 30 May 2011 17:55:23 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61769.pdf": {
+    "etag": "\"2089b9-48241c-4a481ff9c1c40\"",
+    "last_modified": "Mon, 30 May 2011 17:55:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61770.pdf": {
+    "etag": "\"2088a0-4823d3-4a48201569d80\"",
+    "last_modified": "Mon, 30 May 2011 17:56:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61772.pdf": {
+    "etag": "\"2083a6-4823e1-4a482035d6a00\"",
+    "last_modified": "Mon, 30 May 2011 17:56:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61773.pdf": {
+    "etag": "\"2084b3-4ec29-4a48204bc5dc0\"",
+    "last_modified": "Mon, 30 May 2011 17:57:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61774.pdf": {
+    "etag": "\"2084e1-56cdf-4a48206585a80\"",
+    "last_modified": "Mon, 30 May 2011 17:57:46 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61776.pdf": {
+    "etag": "\"208aee-6c258-4a48207c69080\"",
+    "last_modified": "Mon, 30 May 2011 17:58:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61777.pdf": {
+    "etag": "\"20888e-860ce-4a48209dc9f40\"",
+    "last_modified": "Mon, 30 May 2011 17:58:45 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61779.pdf": {
+    "etag": "\"2088de-17127-4a4820b972080\"",
+    "last_modified": "Mon, 30 May 2011 17:59:14 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61780.pdf": {
+    "etag": "\"208484-11307f-4a4820d23db00\"",
+    "last_modified": "Mon, 30 May 2011 17:59:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61784.pdf": {
+    "etag": "\"2089f6-44eeb3-4a482157c1600\"",
+    "last_modified": "Mon, 30 May 2011 18:02:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61785.pdf": {
+    "etag": "\"2087c0-17f782-4a482195be840\"",
+    "last_modified": "Mon, 30 May 2011 18:03:05 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61787.pdf": {
+    "etag": "\"208496-17f782-4a4821cef6f40\"",
+    "last_modified": "Mon, 30 May 2011 18:04:05 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61788.pdf": {
+    "etag": "\"2085e6-d4758-4a4821e7c29c0\"",
+    "last_modified": "Mon, 30 May 2011 18:04:31 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo61790.pdf": {
+    "etag": "\"208561-11723f-4a4822167d800\"",
+    "last_modified": "Mon, 30 May 2011 18:05:20 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62095.pdf": {
     "etag": "\"208aaf-2d981-4a54aa0d020c0\"",
     "last_modified": "Thu, 09 Jun 2011 17:17:31 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62096.pdf": {
+    "etag": "\"208356-4fe0d6-4a54aa3e995c0\"",
+    "last_modified": "Thu, 09 Jun 2011 17:18:23 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62097.pdf": {
+    "etag": "\"208507-4bbe39-4a54aa65b3200\"",
+    "last_modified": "Thu, 09 Jun 2011 17:19:04 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62098.pdf": {
+    "etag": "\"2083ad-4a7935-4a54aa7e7ec80\"",
+    "last_modified": "Thu, 09 Jun 2011 17:19:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62099.pdf": {
+    "etag": "\"2084ba-482e9d-4a54aa9a26dc0\"",
+    "last_modified": "Thu, 09 Jun 2011 17:19:59 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62100.pdf": {
+    "etag": "\"2083d1-453d59-4a54aab4dacc0\"",
+    "last_modified": "Thu, 09 Jun 2011 17:20:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62101.pdf": {
+    "etag": "\"20878e-3d7341-4a54aad35f4c0\"",
+    "last_modified": "Thu, 09 Jun 2011 17:20:59 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62102.pdf": {
+    "etag": "\"20884e-37a74d-4a54aaee133c0\"",
+    "last_modified": "Thu, 09 Jun 2011 17:21:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62103.pdf": {
+    "etag": "\"20897a-32c9f0-4a54ab0d8be00\"",
+    "last_modified": "Thu, 09 Jun 2011 17:22:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62104.pdf": {
+    "etag": "\"208964-2c3665-4a54ab283fd00\"",
+    "last_modified": "Thu, 09 Jun 2011 17:22:28 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62105.pdf": {
+    "etag": "\"208878-25524f-4a54ab46c4500\"",
+    "last_modified": "Thu, 09 Jun 2011 17:23:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62106.pdf": {
+    "etag": "\"208780-192510-4a54ab663cf40\"",
+    "last_modified": "Thu, 09 Jun 2011 17:23:33 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62107.pdf": {
+    "etag": "\"2083ff-cb98e-4a54ab84c1740\"",
+    "last_modified": "Thu, 09 Jun 2011 17:24:05 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62108.pdf": {
+    "etag": "\"208761-90ae3-4a54aba251d00\"",
+    "last_modified": "Thu, 09 Jun 2011 17:24:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62109.pdf": {
+    "etag": "\"208420-11718a-4a54abbd05c00\"",
+    "last_modified": "Thu, 09 Jun 2011 17:25:04 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62110.pdf": {
+    "etag": "\"2084af-4aa45-4a54abd7b9b00\"",
+    "last_modified": "Thu, 09 Jun 2011 17:25:32 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62111.pdf": {
+    "etag": "\"2083a5-4aa44-4a54abef91340\"",
+    "last_modified": "Thu, 09 Jun 2011 17:25:57 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62112.pdf": {
+    "etag": "\"208ac5-4a98f-4a54ac0b39480\"",
+    "last_modified": "Thu, 09 Jun 2011 17:26:26 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62113.pdf": {
+    "etag": "\"20889a-267e0-4a54ac474e240\"",
+    "last_modified": "Thu, 09 Jun 2011 17:27:29 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62114.pdf": {
+    "etag": "\"20888a-702bd-4a54ac7050300\"",
+    "last_modified": "Thu, 09 Jun 2011 17:28:12 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62115.pdf": {
+    "etag": "\"208ae9-702bd-4a54ac8de08c0\"",
+    "last_modified": "Thu, 09 Jun 2011 17:28:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62116.pdf": {
+    "etag": "\"208399-1a3a8b-4a54acad59300\"",
+    "last_modified": "Thu, 09 Jun 2011 17:29:16 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62139.pdf": {
+    "etag": "\"2087df-427a0-4a59a4ed57040\"",
+    "last_modified": "Mon, 13 Jun 2011 16:21:13 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62140.pdf": {
+    "etag": "\"20845e-10f34a-4a59a4da44340\"",
+    "last_modified": "Mon, 13 Jun 2011 16:20:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62206.pdf": {
+    "etag": "\"2083ab-1494a3-4a5b0421f0940\"",
+    "last_modified": "Tue, 14 Jun 2011 18:32:29 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62207.pdf": {
+    "etag": "\"2084b5-1dc336-4a5b044351800\"",
+    "last_modified": "Tue, 14 Jun 2011 18:33:04 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62348.pdf": {
+    "etag": "\"2083f8-152c5b-4a63acee0de00\"",
+    "last_modified": "Tue, 21 Jun 2011 15:50:16 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62349.pdf": {
+    "etag": "\"208777-12d33c-4a63b04580040\"",
+    "last_modified": "Tue, 21 Jun 2011 16:05:13 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62350.pdf": {
+    "etag": "\"208359-24ab87-4a63b06c99c80\"",
+    "last_modified": "Tue, 21 Jun 2011 16:05:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62351.pdf": {
+    "etag": "\"20850c-1b1003-4a63b09c48d00\"",
+    "last_modified": "Tue, 21 Jun 2011 16:06:44 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62352.pdf": {
     "etag": "\"2088b4-15fc55-4a63b0d0bc8c0\"",
     "last_modified": "Tue, 21 Jun 2011 16:07:39 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62353.pdf": {
+    "etag": "\"208aab-ffffb-4a63b0f4f9e40\"",
+    "last_modified": "Tue, 21 Jun 2011 16:08:17 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62442.pdf": {
     "etag": "\"2083e2-18694-4b97d22c18100\"",
@@ -1222632,6 +1224372,50 @@
     "etag": "\"2083d4-ab156-4a650d5f46200\"",
     "last_modified": "Wed, 22 Jun 2011 18:07:04 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62446.pdf": {
+    "etag": "\"20897f-274eb-4a6510973fa00\"",
+    "last_modified": "Wed, 22 Jun 2011 18:21:28 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62447.pdf": {
+    "etag": "\"208852-2600f6-4a6510c041ac0\"",
+    "last_modified": "Wed, 22 Jun 2011 18:22:11 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62448.pdf": {
+    "etag": "\"208994-1b94fe-4a6510d630e80\"",
+    "last_modified": "Wed, 22 Jun 2011 18:22:34 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62449.pdf": {
+    "etag": "\"208830-178f4a-4a6510eff0b40\"",
+    "last_modified": "Wed, 22 Jun 2011 18:23:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62450.pdf": {
+    "etag": "\"208ae8-cb147-4a651108bc5c0\"",
+    "last_modified": "Wed, 22 Jun 2011 18:23:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62451.pdf": {
+    "etag": "\"208886-84b849-4a6511400c840\"",
+    "last_modified": "Wed, 22 Jun 2011 18:24:25 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62452.pdf": {
+    "etag": "\"2084d8-835dec-4a6511653e000\"",
+    "last_modified": "Wed, 22 Jun 2011 18:25:04 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62453.pdf": {
+    "etag": "\"208392-835e4d-4a65118887340\"",
+    "last_modified": "Wed, 22 Jun 2011 18:25:41 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62454.pdf": {
+    "etag": "\"2083bd-18cce2-4a6511a5236c0\"",
+    "last_modified": "Wed, 22 Jun 2011 18:26:11 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62695.pdf": {
+    "etag": "\"208486-167c10-4a67813201a80\"",
+    "last_modified": "Fri, 24 Jun 2011 16:55:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62697.pdf": {
+    "etag": "\"2087b3-94e57-4a67815fc8680\"",
+    "last_modified": "Fri, 24 Jun 2011 16:56:42 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo62698.pdf": {
     "etag": "\"2089d3-e09f6-4a67818ba6e00\"",
     "last_modified": "Fri, 24 Jun 2011 16:57:28 GMT"
@@ -1222640,9 +1224424,97 @@
     "etag": "\"208a89-b6219-4a6781b59d100\"",
     "last_modified": "Fri, 24 Jun 2011 16:58:12 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63080.pdf": {
+    "etag": "\"208a8e-247686-4a7428a4fac40\"",
+    "last_modified": "Mon, 04 Jul 2011 18:28:57 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63081.pdf": {
+    "etag": "\"2088ce-220a41-4a7428cb20640\"",
+    "last_modified": "Mon, 04 Jul 2011 18:29:37 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63082.pdf": {
+    "etag": "\"2084ed-2e7749-4a7428f23a280\"",
+    "last_modified": "Mon, 04 Jul 2011 18:30:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63083.pdf": {
+    "etag": "\"208370-2d0346-4a74290fca840\"",
+    "last_modified": "Mon, 04 Jul 2011 18:30:49 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63103.pdf": {
     "etag": "\"2083bb-c9145-4a75485756f40\"",
     "last_modified": "Tue, 05 Jul 2011 15:56:05 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63252.pdf": {
+    "etag": "\"20852a-1f8c27-4a7925589ca40\"",
+    "last_modified": "Fri, 08 Jul 2011 17:40:49 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63253.pdf": {
+    "etag": "\"20833e-c5361-4a7925725c700\"",
+    "last_modified": "Fri, 08 Jul 2011 17:41:16 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63254.pdf": {
+    "etag": "\"20832e-b9785-4a79259f2f0c0\"",
+    "last_modified": "Fri, 08 Jul 2011 17:42:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63255.pdf": {
+    "etag": "\"208553-1f6015-4a7925bcbf680\"",
+    "last_modified": "Fri, 08 Jul 2011 17:42:34 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63256.pdf": {
+    "etag": "\"2088ff-1eac0d-4a7925dd2c300\"",
+    "last_modified": "Fri, 08 Jul 2011 17:43:08 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63257.pdf": {
+    "etag": "\"208a86-37e16c-4a79264613a80\"",
+    "last_modified": "Fri, 08 Jul 2011 17:44:58 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63258.pdf": {
+    "etag": "\"20894a-21e227-4a792676b6d40\"",
+    "last_modified": "Fri, 08 Jul 2011 17:45:49 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63339.pdf": {
+    "etag": "\"20837e-11b1c1-4a7f8adf3b2c0\"",
+    "last_modified": "Wed, 13 Jul 2011 19:46:59 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63340.pdf": {
+    "etag": "\"2088be-1f9d67-4a7f8b09315c0\"",
+    "last_modified": "Wed, 13 Jul 2011 19:47:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63391.pdf": {
+    "etag": "\"2088c2-23b9f6-4a81dc4cb0500\"",
+    "last_modified": "Fri, 15 Jul 2011 16:01:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63668.pdf": {
+    "etag": "\"20882e-34c6e2-4a9145c7d53c0\"",
+    "last_modified": "Wed, 27 Jul 2011 22:13:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63669.pdf": {
+    "etag": "\"208992-183f0e-4a9145e936280\"",
+    "last_modified": "Wed, 27 Jul 2011 22:14:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63670.pdf": {
+    "etag": "\"208883-6a6a28-4a9146263f280\"",
+    "last_modified": "Wed, 27 Jul 2011 22:15:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63671.pdf": {
+    "etag": "\"208ae5-20bb96-4a91466348280\"",
+    "last_modified": "Wed, 27 Jul 2011 22:16:26 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63672.pdf": {
+    "etag": "\"208394-2d40b2-4a91468879a40\"",
+    "last_modified": "Wed, 27 Jul 2011 22:17:05 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63673.pdf": {
+    "etag": "\"2084da-18a8a1-4a9146a239700\"",
+    "last_modified": "Wed, 27 Jul 2011 22:17:32 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63674.pdf": {
+    "etag": "\"2084cc-1eded7-4a9146c85f100\"",
+    "last_modified": "Wed, 27 Jul 2011 22:18:12 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo63675.pdf": {
+    "etag": "\"2083be-24702b-4a9146e8cbd80\"",
+    "last_modified": "Wed, 27 Jul 2011 22:18:46 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo64859.pdf": {
     "etag": "\"20880c-b34c0-4ad9eb9d49f40\"",
@@ -1222655,6 +1224527,10 @@
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo65189.pdf": {
     "etag": "\"2088e7-bbf7-4b97d18627980\"",
     "last_modified": "Tue, 21 Feb 2012 17:53:58 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo65190.pdf": {
+    "etag": "\"208a09-90ae3-4aebd4f47cc40\"",
+    "last_modified": "Fri, 07 Oct 2011 22:53:29 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Documentos/Estatal/Estado%20de%20Mexico/wo69031.pdf": {
     "etag": "\"20886b-75d0-4b97d49242a00\"",
@@ -1259272,6 +1261148,378 @@
     "etag": "\"1a6de0-a8984-4683de6c7f340\"",
     "last_modified": "Thu, 23 Apr 2009 19:29:41 GMT"
    },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU01.pdf": {
+    "etag": "\"1a7594-26338-42744a710d440\"",
+    "last_modified": "Wed, 17 Jan 2007 23:15:21 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU02.pdf": {
+    "etag": "\"1a758e-175c3-42744a7201680\"",
+    "last_modified": "Wed, 17 Jan 2007 23:15:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU11.pdf": {
+    "etag": "\"1a75a7-b45c-43b99a1a7b3c0\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:15 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU12.pdf": {
+    "etag": "\"1a7573-8fd7-43b99a1a7b3c0\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:15 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU13.pdf": {
+    "etag": "\"1a7586-903c-43b99a1b6f600\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:16 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU14.pdf": {
+    "etag": "\"1a7587-7ef0-43b99a1c63840\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:17 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU140.pdf": {
+    "etag": "\"1a7591-159e5-44143e9aebd80\"",
+    "last_modified": "Fri, 14 Dec 2007 19:17:26 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU141.pdf": {
+    "etag": "\"1a75a3-8f82-445078a3a3240\"",
+    "last_modified": "Thu, 31 Jan 2008 16:56:33 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU142.pdf": {
+    "etag": "\"1a757d-e188-445078a67f900\"",
+    "last_modified": "Thu, 31 Jan 2008 16:56:36 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU143.pdf": {
+    "etag": "\"1a758c-172e0-4451e40e61ac0\"",
+    "last_modified": "Fri, 01 Feb 2008 20:02:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU144.pdf": {
+    "etag": "\"1a758b-198d5-44714a9692180\"",
+    "last_modified": "Tue, 26 Feb 2008 19:26:14 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU145.pdf": {
+    "etag": "\"1a757f-18821-44714a97863c0\"",
+    "last_modified": "Tue, 26 Feb 2008 19:26:15 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU146.pdf": {
+    "etag": "\"1a75a2-17f61-4493337baee80\"",
+    "last_modified": "Mon, 24 Mar 2008 18:43:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU147.pdf": {
+    "etag": "\"1a7593-50681-44c07ea95a3c0\"",
+    "last_modified": "Tue, 29 Apr 2008 19:19:51 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU148.pdf": {
+    "etag": "\"1a75a1-2a477-44c07eaa4e600\"",
+    "last_modified": "Tue, 29 Apr 2008 19:19:52 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU149.pdf": {
+    "etag": "\"1a7595-1e541-44c07eaa4e600\"",
+    "last_modified": "Tue, 29 Apr 2008 19:19:52 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU15.pdf": {
+    "etag": "\"1a7572-bff2-43b99a1c63840\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:17 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU150.pdf": {
+    "etag": "\"1a75a4-16635-44c07eab42840\"",
+    "last_modified": "Tue, 29 Apr 2008 19:19:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU151.pdf": {
+    "etag": "\"1a759e-1ac02-44c07eac36a80\"",
+    "last_modified": "Tue, 29 Apr 2008 19:19:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU152.pdf": {
+    "etag": "\"1a7588-1f7a9-44daf18785f00\"",
+    "last_modified": "Tue, 20 May 2008 20:12:12 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU153.pdf": {
+    "etag": "\"1a7571-1a745-44e4f75d32f40\"",
+    "last_modified": "Wed, 28 May 2008 19:31:33 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU154.pdf": {
+    "etag": "\"1a7570-15a1a-4518aa5b0b280\"",
+    "last_modified": "Tue, 08 Jul 2008 22:23:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU155.pdf": {
+    "etag": "\"1a758a-7465-452b176f06e40\"",
+    "last_modified": "Wed, 23 Jul 2008 14:07:45 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU156.pdf": {
+    "etag": "\"1a759d-1a3a8-45354dd4cd180\"",
+    "last_modified": "Thu, 31 Jul 2008 17:04:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU157.pdf": {
+    "etag": "\"1a75a6-1e656-4545eb5b464c0\"",
+    "last_modified": "Wed, 13 Aug 2008 22:14:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU159.pdf": {
+    "etag": "\"1a75a8-14df3-45b806ea39b40\"",
+    "last_modified": "Wed, 12 Nov 2008 16:24:37 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU16.pdf": {
+    "etag": "\"1a75a9-8225-43b99a1d57a80\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU160.pdf": {
+    "etag": "\"1a7581-7af9-46452dc106340\"",
+    "last_modified": "Wed, 04 Mar 2009 22:49:09 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU161.pdf": {
+    "etag": "\"1a7579-1a2b7-46801408bc380\"",
+    "last_modified": "Mon, 20 Apr 2009 19:08:14 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU17.pdf": {
+    "etag": "\"1a759b-a4c9-43b99a1e4bcc0\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU18.pdf": {
+    "etag": "\"1a75a5-7e18-43b99a1e4bcc0\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:19 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU19.pdf": {
+    "etag": "\"1a759f-39439-43b99a1f3ff00\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:20 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU20.pdf": {
+    "etag": "\"1a7576-33cc8-43b99a2034140\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:21 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU21.pdf": {
+    "etag": "\"1a7584-1a9d5-43b99a2034140\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:21 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU22.pdf": {
+    "etag": "\"1a759a-e445-43b99a2128380\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU23.pdf": {
+    "etag": "\"1a75aa-13a0d-43b99a2128380\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU24.pdf": {
+    "etag": "\"1a75ab-9812-43b99a2128380\"",
+    "last_modified": "Wed, 03 Oct 2007 17:02:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU25.pdf": {
+    "etag": "\"1a7599-d7a3-43b99dd51c000\"",
+    "last_modified": "Wed, 03 Oct 2007 17:18:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU26.pdf": {
+    "etag": "\"1a7585-15b78-43b99dce6f040\"",
+    "last_modified": "Wed, 03 Oct 2007 17:18:49 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU27.pdf": {
+    "etag": "\"1a7574-3dde3-43b99dcf63280\"",
+    "last_modified": "Wed, 03 Oct 2007 17:18:50 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU28.pdf": {
+    "etag": "\"1a7580-1a817-43b99dd0574c0\"",
+    "last_modified": "Wed, 03 Oct 2007 17:18:51 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU29.pdf": {
+    "etag": "\"1a7578-1b376-43b99dd14b700\"",
+    "last_modified": "Wed, 03 Oct 2007 17:18:52 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU30.pdf": {
+    "etag": "\"1a758f-1be01-43b99dd23f940\"",
+    "last_modified": "Wed, 03 Oct 2007 17:18:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Acuerdos/MICHACU31.pdf": {
+    "etag": "\"1a757b-1ca87-43b99dd23f940\"",
+    "last_modified": "Wed, 03 Oct 2007 17:18:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Bandos/MICHBAN01.pdf": {
+    "etag": "\"1a7914-28304-4451c01b6ca40\"",
+    "last_modified": "Fri, 01 Feb 2008 17:21:37 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV01.pdf": {
+    "etag": "\"1a7554-f0e78-42744699d0480\"",
+    "last_modified": "Wed, 17 Jan 2007 22:58:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV02.pdf": {
+    "etag": "\"1a755e-9199-42744699d0480\"",
+    "last_modified": "Wed, 17 Jan 2007 22:58:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV03.pdf": {
+    "etag": "\"1a7564-1b275-42744699d0480\"",
+    "last_modified": "Wed, 17 Jan 2007 22:58:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV10.pdf": {
+    "etag": "\"1a7558-1a2fd-4482dc2192a80\"",
+    "last_modified": "Tue, 11 Mar 2008 18:47:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV11.pdf": {
+    "etag": "\"1a7550-1f4cc-44f56f6c91e40\"",
+    "last_modified": "Tue, 10 Jun 2008 21:53:53 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV12.pdf": {
+    "etag": "\"1a7560-1168c-44ff773abd4c0\"",
+    "last_modified": "Wed, 18 Jun 2008 21:22:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV13.pdf": {
+    "etag": "\"1a755d-114da-4550071e47080\"",
+    "last_modified": "Thu, 21 Aug 2008 23:11:46 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV16.pdf": {
+    "etag": "\"1a7551-4af84-46452de44f680\"",
+    "last_modified": "Wed, 04 Mar 2009 22:49:46 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV17.pdf": {
+    "etag": "\"1a7557-bbec-4680141cc32c0\"",
+    "last_modified": "Mon, 20 Apr 2009 19:08:35 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV18.pdf": {
+    "etag": "\"1a754f-17df3-4680141cc32c0\"",
+    "last_modified": "Mon, 20 Apr 2009 19:08:35 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV19.pdf": {
+    "etag": "\"1a7559-a00c-46b61ce4d1300\"",
+    "last_modified": "Tue, 02 Jun 2009 18:35:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Convenios/MICHCONV20.pdf": {
+    "etag": "\"1a7562-20879-46b61ce4d1300\"",
+    "last_modified": "Tue, 02 Jun 2009 18:35:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC07.pdf": {
+    "etag": "\"1a74ba-1cb99-43904a7d13240\"",
+    "last_modified": "Fri, 31 Aug 2007 20:27:45 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC08.pdf": {
+    "etag": "\"1a74a9-174ec-43a70734cbe00\"",
+    "last_modified": "Tue, 18 Sep 2007 22:29:12 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC18.pdf": {
+    "etag": "\"1a74be-d2d7-43b3956022b40\"",
+    "last_modified": "Fri, 28 Sep 2007 22:09:09 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC19.pdf": {
+    "etag": "\"1a74b4-22ab4-43c2af16406c0\"",
+    "last_modified": "Wed, 10 Oct 2007 22:24:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC20.pdf": {
+    "etag": "\"1a74cb-2f7a-43c2af16406c0\"",
+    "last_modified": "Wed, 10 Oct 2007 22:24:03 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC39.pdf": {
+    "etag": "\"1a74e1-12435-43efcb1c4fb80\"",
+    "last_modified": "Thu, 15 Nov 2007 19:29:02 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC40.pdf": {
+    "etag": "\"1a74b8-208bf-43f7a106d4840\"",
+    "last_modified": "Thu, 22 Nov 2007 01:03:21 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC41.pdf": {
+    "etag": "\"1a74ad-17c55-43fa1d9d8ef00\"",
+    "last_modified": "Sat, 24 Nov 2007 00:31:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC42.pdf": {
+    "etag": "\"1a74e2-aa4b-44003b5dbc0c0\"",
+    "last_modified": "Wed, 28 Nov 2007 21:16:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC49.pdf": {
+    "etag": "\"1a74b9-74f0-443525c31f600\"",
+    "last_modified": "Wed, 09 Jan 2008 23:22:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC52.pdf": {
+    "etag": "\"1a74cf-18fde-4459647089b80\"",
+    "last_modified": "Thu, 07 Feb 2008 19:14:06 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC53.pdf": {
+    "etag": "\"1a74d5-178fa-44714a837f480\"",
+    "last_modified": "Tue, 26 Feb 2008 19:25:54 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC54.pdf": {
+    "etag": "\"1a74d6-178fa-44714a84736c0\"",
+    "last_modified": "Tue, 26 Feb 2008 19:25:55 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC55.pdf": {
+    "etag": "\"1a74cd-1ab58-447e1b5d9b4c0\"",
+    "last_modified": "Sat, 08 Mar 2008 00:04:11 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC56.pdf": {
+    "etag": "\"1a74c5-1ab58-447e1b5e8f700\"",
+    "last_modified": "Sat, 08 Mar 2008 00:04:12 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC57.pdf": {
+    "etag": "\"1a74ae-1b184-449d5c877d1c0\"",
+    "last_modified": "Tue, 01 Apr 2008 20:40:47 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC58.pdf": {
+    "etag": "\"1a74c2-1b184-449d5c8871400\"",
+    "last_modified": "Tue, 01 Apr 2008 20:40:48 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC60.pdf": {
+    "etag": "\"1a74c7-1b18a-449d5c8965640\"",
+    "last_modified": "Tue, 01 Apr 2008 20:40:49 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC61.pdf": {
+    "etag": "\"1a74db-16da0-44daf17d08640\"",
+    "last_modified": "Tue, 20 May 2008 20:12:01 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC62.pdf": {
+    "etag": "\"1a74b6-161c7-44f56f7803940\"",
+    "last_modified": "Tue, 10 Jun 2008 21:54:05 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC63.pdf": {
+    "etag": "\"1a74bd-1b12e-44ff778db5880\"",
+    "last_modified": "Wed, 18 Jun 2008 21:23:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC65.pdf": {
+    "etag": "\"1a74b5-15f72-459caf656eb80\"",
+    "last_modified": "Tue, 21 Oct 2008 22:29:18 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC66.pdf": {
+    "etag": "\"1a74dc-1881b-45500715b1c40\"",
+    "last_modified": "Thu, 21 Aug 2008 23:11:37 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC68.pdf": {
+    "etag": "\"1a74d9-1ea7c-459caf6757000\"",
+    "last_modified": "Tue, 21 Oct 2008 22:29:20 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC70.pdf": {
+    "etag": "\"1a74de-1e1e4-46311ddb40900\"",
+    "last_modified": "Mon, 16 Feb 2009 23:51:32 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC71.pdf": {
+    "etag": "\"1a74d2-5e6a-469bb6f5cdbc0\"",
+    "last_modified": "Tue, 12 May 2009 18:40:55 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC72.pdf": {
+    "etag": "\"1a74bc-714f-46b4dbb11c380\"",
+    "last_modified": "Mon, 01 Jun 2009 18:38:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC73.pdf": {
+    "etag": "\"1a74a8-c07b-46b61cd777380\"",
+    "last_modified": "Tue, 02 Jun 2009 18:35:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC74.pdf": {
+    "etag": "\"1a74aa-7ca1-46b61cd777380\"",
+    "last_modified": "Tue, 02 Jun 2009 18:35:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC75.pdf": {
+    "etag": "\"1a74bb-77d2-46b61cd86b5c0\"",
+    "last_modified": "Tue, 02 Jun 2009 18:35:11 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC76.pdf": {
+    "etag": "\"1a74d3-1684f-46b62f00a0c40\"",
+    "last_modified": "Tue, 02 Jun 2009 19:56:25 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC77.pdf": {
+    "etag": "\"1a74dd-9824-46b62f0194e80\"",
+    "last_modified": "Tue, 02 Jun 2009 19:56:26 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC79.pdf": {
+    "etag": "\"1a74e0-113b1-46b8ed9982ec0\"",
+    "last_modified": "Fri, 05 Jun 2009 00:19:47 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC80.pdf": {
+    "etag": "\"1a74c3-c394-46b8ed9a77100\"",
+    "last_modified": "Fri, 05 Jun 2009 00:19:48 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Decretos/MICHDEC81.pdf": {
+    "etag": "\"1a74af-c812-46b8ed9a77100\"",
+    "last_modified": "Fri, 05 Jun 2009 00:19:48 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Diversos/MICHDIV01.pdf": {
+    "etag": "\"1a74e6-61d6-469bb6f5cdbc0\"",
+    "last_modified": "Tue, 12 May 2009 18:40:55 GMT"
+   },
    "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Estatutos/MICHEST01.pdf": {
     "etag": "\"1a754d-19be5-43fa1da347c80\"",
     "last_modified": "Sat, 24 Nov 2007 00:31:30 GMT"
@@ -1259315,6 +1261563,130 @@
    "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Leyes/MICHLEY93.pdf": {
     "etag": "\"1a749a-2ef77-443525b2e8fc0\"",
     "last_modified": "Wed, 09 Jan 2008 23:21:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Manuales/MICHMAN09.pdf": {
+    "etag": "\"1a790c-2491e-44008705e8000\"",
+    "last_modified": "Thu, 29 Nov 2007 02:54:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Manuales/MICHMAN10.pdf": {
+    "etag": "\"1a7908-205be-44008705e8000\"",
+    "last_modified": "Thu, 29 Nov 2007 02:54:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Manuales/MICHMAN11.pdf": {
+    "etag": "\"1a7909-25109-446346f09ce80\"",
+    "last_modified": "Fri, 15 Feb 2008 15:55:22 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Manuales/MICHMAN12.pdf": {
+    "etag": "\"1a790e-1e347-446346f285300\"",
+    "last_modified": "Fri, 15 Feb 2008 15:55:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Manuales/MICHMAN13.pdf": {
+    "etag": "\"1a7910-abdd-446346f285300\"",
+    "last_modified": "Fri, 15 Feb 2008 15:55:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Manuales/MICHMAN14.pdf": {
+    "etag": "\"1a7911-150ba-446346f46d780\"",
+    "last_modified": "Fri, 15 Feb 2008 15:55:26 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Manuales/MICHMAN15.pdf": {
+    "etag": "\"1a790d-c5c1-446346f5619c0\"",
+    "last_modified": "Fri, 15 Feb 2008 15:55:27 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Manuales/MICHMAN16.pdf": {
+    "etag": "\"1a790a-16e1a-446346f749e40\"",
+    "last_modified": "Fri, 15 Feb 2008 15:55:29 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Manuales/MICHMAN17.pdf": {
+    "etag": "\"1a7907-1913e-446346f83e080\"",
+    "last_modified": "Fri, 15 Feb 2008 15:55:30 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Manuales/MICHMAN18.pdf": {
+    "etag": "\"1a790b-244a1-44714aa3ec100\"",
+    "last_modified": "Tue, 26 Feb 2008 19:26:28 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Manuales/MICHMAN19.pdf": {
+    "etag": "\"1a7906-1b65e-46b62f074dc00\"",
+    "last_modified": "Tue, 02 Jun 2009 19:56:32 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Planes/MICHPLAN01.pdf": {
+    "etag": "\"1a754c-113803-451b57161ae00\"",
+    "last_modified": "Fri, 11 Jul 2008 01:27:20 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG01.pdf": {
+    "etag": "\"1a74f0-3d77b-43a08bc2c1e80\"",
+    "last_modified": "Thu, 13 Sep 2007 18:44:58 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG04.pdf": {
+    "etag": "\"1a74f9-8221-43c3ca5c99b00\"",
+    "last_modified": "Thu, 11 Oct 2007 19:31:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG07.pdf": {
+    "etag": "\"1a74f6-3ba62-4447bdd1a5800\"",
+    "last_modified": "Thu, 24 Jan 2008 18:18:08 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG08.pdf": {
+    "etag": "\"1a74ef-3428f-4447bdd299a40\"",
+    "last_modified": "Thu, 24 Jan 2008 18:18:09 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG09.pdf": {
+    "etag": "\"1a74f7-1f916-4447bdd38dc80\"",
+    "last_modified": "Thu, 24 Jan 2008 18:18:10 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG10.pdf": {
+    "etag": "\"1a74ed-1d025-45354de31b340\"",
+    "last_modified": "Thu, 31 Jul 2008 17:04:37 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG11.pdf": {
+    "etag": "\"1a74f2-1e659-4545eb6d64f80\"",
+    "last_modified": "Wed, 13 Aug 2008 22:14:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG12.pdf": {
+    "etag": "\"1a74fb-29d50-469bb6f6c1e00\"",
+    "last_modified": "Tue, 12 May 2009 18:40:56 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG13.pdf": {
+    "etag": "\"1a7504-29d52-469bb6f7b6040\"",
+    "last_modified": "Tue, 12 May 2009 18:40:57 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG14.pdf": {
+    "etag": "\"1a7505-22218-46b4e725a8a40\"",
+    "last_modified": "Mon, 01 Jun 2009 19:29:37 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG15.pdf": {
+    "etag": "\"1a74fa-23446-46b4e725a8a40\"",
+    "last_modified": "Mon, 01 Jun 2009 19:29:37 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG17.pdf": {
+    "etag": "\"1a74ec-98881-46b4e72885100\"",
+    "last_modified": "Mon, 01 Jun 2009 19:29:40 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG18.pdf": {
+    "etag": "\"1a74f1-76ae8-46b4e72a6d580\"",
+    "last_modified": "Mon, 01 Jun 2009 19:29:42 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG19.pdf": {
+    "etag": "\"1a74ee-28b2a-46b4e72a6d580\"",
+    "last_modified": "Mon, 01 Jun 2009 19:29:42 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG20.pdf": {
+    "etag": "\"1a74fd-b2fa-46b4e72b617c0\"",
+    "last_modified": "Mon, 01 Jun 2009 19:29:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG21.pdf": {
+    "etag": "\"1a7502-a012-46b4e72b617c0\"",
+    "last_modified": "Mon, 01 Jun 2009 19:29:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG22.pdf": {
+    "etag": "\"1a74eb-c763-46b4e72b617c0\"",
+    "last_modified": "Mon, 01 Jun 2009 19:29:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG23.pdf": {
+    "etag": "\"1a74f4-b084-46b4e72b617c0\"",
+    "last_modified": "Mon, 01 Jun 2009 19:29:43 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Programas/MICHPROG24.pdf": {
+    "etag": "\"1a74f5-a6ea-46b4e72b617c0\"",
+    "last_modified": "Mon, 01 Jun 2009 19:29:43 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Reglamentos/MICHREG01.pdf": {
     "etag": "\"1a7528-dfb2-427432121d4c0\"",
@@ -1259531,6 +1261903,30 @@
    "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Reglamentos/MICHREG98.pdf": {
     "etag": "\"1a753b-127bb-445fb5110b580\"",
     "last_modified": "Tue, 12 Feb 2008 19:46:46 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Reglas/MICHREGLAS03.pdf": {
+    "etag": "\"1a7568-1b1fd-43c2976205a00\"",
+    "last_modified": "Wed, 10 Oct 2007 20:38:00 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Reglas/MICHREGLAS05.pdf": {
+    "etag": "\"1a7567-3df7c-444812defc1c0\"",
+    "last_modified": "Fri, 25 Jan 2008 00:38:39 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Reglas/MICHREGLAS06.pdf": {
+    "etag": "\"1a756c-1d659-45354e0fedd00\"",
+    "last_modified": "Thu, 31 Jul 2008 17:05:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Reglas/MICHREGLAS08.pdf": {
+    "etag": "\"1a756b-1d659-45354e0fedd00\"",
+    "last_modified": "Thu, 31 Jul 2008 17:05:24 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Reglas/MICHREGLAS09a.pdf": {
+    "etag": "\"1a756a-30301-46801458d8080\"",
+    "last_modified": "Mon, 20 Apr 2009 19:09:38 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/MICHOACAN/Reglas/MICHREGLAS10.pdf": {
+    "etag": "\"1a756e-31d38-46f7b0ecfc2c0\"",
+    "last_modified": "Fri, 24 Jul 2009 22:23:47 GMT"
    },
    "https://www.ordenjuridico.gob.mx/Estatal/NAYARIT/Estatutos/ESTNAY01.pdf": {
     "etag": "\"1a7490-44e1a-431a06393c680\"",
@@ -1259955,6 +1262351,10 @@
    "https://www.ordenjuridico.gob.mx/Estatal/QUERETARO/Leyes/QUERLEY81.pdf": {
     "etag": "\"1a65ca-1a1f6-44daccc786ac0\"",
     "last_modified": "Tue, 20 May 2008 17:27:47 GMT"
+   },
+   "https://www.ordenjuridico.gob.mx/Estatal/QUERETARO/Leyes/QUERLEY82.pdf": {
+    "etag": null,
+    "last_modified": null
    },
    "https://www.ordenjuridico.gob.mx/Estatal/QUERETARO/Leyes/QUERLEY83.pdf": {
     "etag": "\"1a660a-2508c-46d80e390c600\"",
