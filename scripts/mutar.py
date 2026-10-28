@@ -22,8 +22,11 @@ PY = sys.executable
 # Sorted (file, anchor, replacement) and kept sorted by tests/test_mutar.py: each PR inserts its mutants in place
 # instead of appending at the end, so parallel PRs stop colliding on the last line of this list (2026-10-21).
 MUT = [
+ ('.github/workflows/auditor.yml', '                "completed "*) echo "#$pr head $sha fails CI ($ci): no LLM audit"; echo run=false >> "$GITHUB_OUTPUT"; exit 0 ;;\n', ''),
+ ('.github/workflows/auditor.yml', '                "completed success") break ;;\n', ''),
  ('.github/workflows/auditor.yml', '          echo "verdict=$verdict" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both\n', '          echo "verdict=PASS" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both\n'),
  ('.github/workflows/auditor.yml', '          echo "verdict=$verdict" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both (a skipped', '          echo "verdict=PASS" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both (a skipped'),
+ ('.github/workflows/auditor.yml', '          if [ "$EVENT" != issue_comment ]; then\n            for _ in', '          if true; then\n            for _ in'),
  ('.github/workflows/auditor.yml', "        env: { SHA: '${{ needs.gate.outputs.sha }}' }", "        env: { GH_TOKEN: '${{ github.token }}', SHA: '${{ needs.gate.outputs.sha }}' }"),
  ('.github/workflows/auditor.yml', '        with: { ref: main, fetch-depth: 0, persist-credentials: false }', "        with: { ref: '${{ needs.gate.outputs.sha }}', fetch-depth: 0, persist-credentials: false }"),
  ('.github/workflows/auditor.yml', "    concurrency: { group: 'auditor-gpt-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }", "    concurrency: { group: 'auditor-gpt-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }\n    env: { OPENAI_API_KEY: '${{ secrets.OPENAI_API_KEY }}' }"),

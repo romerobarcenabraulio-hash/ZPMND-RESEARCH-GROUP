@@ -32,7 +32,7 @@ permissions: {}
 jobs:
   gate:
     runs-on: ubuntu-24.04
-    permissions: { pull-requests: read, issues: read }
+    permissions: { pull-requests: read, issues: read, checks: read }
     outputs:
       run: ${{ steps.g.outputs.run }}
       pr: ${{ steps.g.outputs.pr }}
@@ -79,6 +79,20 @@ jobs:
           if [ "$EVENT" != issue_comment ] && [ "$revise" -ge 3 ]; then
             echo "#$pr has $revise REVISE verdicts: the next round waits for the owner's 'otra ronda'"
             echo run=false >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # No LLM audit of a head CI already rejects (Braulio, 2026-10-28: spend tokens only where a rule cannot decide):
+          # a push waits for ci.yml's checks job on this head, 15 minutes at most; red means no audit until a head passes
+          # (CI says why), unfinished in time means the audit runs. A check of that name forged by a branch can only make
+          # an audit run, or skip its own PR's. The owner's "otra ronda" always audits.
+          if [ "$EVENT" != issue_comment ]; then
+            for _ in $(seq 1 60); do
+              ci=$(gh api "repos/$REPO/commits/$sha/check-runs?check_name=checks" --jq '[.check_runs[]] | max_by(.id) // {} | "\(.status // "") \(.conclusion // "")"' || true)  # unreadable: keep waiting
+              case "$ci" in
+                "completed success") break ;;
+                "completed "*) echo "#$pr head $sha fails CI ($ci): no LLM audit"; echo run=false >> "$GITHUB_OUTPUT"; exit 0 ;;
+              esac
+              sleep 15
+            done
           fi
           { echo run=true; echo "pr=$pr"; echo "sha=$sha"; } >> "$GITHUB_OUTPUT"
 
