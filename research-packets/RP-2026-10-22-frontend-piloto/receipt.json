@@ -1,0 +1,430 @@
+{
+ "request_id": "RR-2026-10-22-frontend-piloto",
+ "fetched": [
+  {
+   "url": "https://base44.com/terms-of-service",
+   "status": 200,
+   "error": null,
+   "sha256": "d2ebe8bf32a914ea3326541f0e77e7e9fd39c2ea15b9a61ca6338c49568e7473",
+   "bytes": 450359,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:37Z",
+   "text_status": "ok",
+   "text_chars": 79282
+  },
+  {
+   "url": "https://base44.com/privacy-policy",
+   "status": 200,
+   "error": null,
+   "sha256": "69bd312e3ef8ff2e524fd8243bccd7d9e71ee2008c01b9452854223a99a948a1",
+   "bytes": 383622,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:39Z",
+   "text_status": "ok",
+   "text_chars": 14074
+  },
+  {
+   "url": "https://base44.com/pricing",
+   "status": 200,
+   "error": null,
+   "sha256": "d582e9272e523f2578dd1ae3093e9a2e161a0c459093af9d6f3429e7a811022d",
+   "bytes": 479599,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:41Z",
+   "text_status": "ok",
+   "text_chars": 7532
+  },
+  {
+   "url": "https://docs.base44.com/Integrations/github-connector.md",
+   "status": 200,
+   "error": null,
+   "sha256": "93ea34758129897669978ded9ddb5d51829c4353a41ecf4d70007490488291fe",
+   "bytes": 5735,
+   "media_type": "text/markdown",
+   "retrieved_at": "2026-10-28T05:31:42Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 5735
+  },
+  {
+   "url": "https://docs.base44.com/Building-your-app/Managing-your-app-data.md",
+   "status": 200,
+   "error": null,
+   "sha256": "ec87455cfd28fc410f274310acaaeb1d3a8396f8f8291c7e8f57c3d599d1e549",
+   "bytes": 28066,
+   "media_type": "text/markdown",
+   "retrieved_at": "2026-10-28T05:31:43Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 28038
+  },
+  {
+   "url": "https://vercel.com/legal/terms",
+   "status": 200,
+   "error": null,
+   "sha256": "ba36c0c5ce712a00c8788587483e50b4d8d3829f5a2dfc8a2e321da0821e085b",
+   "bytes": 868612,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:44Z",
+   "text_status": "ok",
+   "text_chars": 55224
+  },
+  {
+   "url": "https://vercel.com/legal/privacy-policy",
+   "status": 200,
+   "error": null,
+   "sha256": "c37ac1f75f973b9f68a251386effff8623282a530526f7434a2c39b98e7df558",
+   "bytes": 834589,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:45Z",
+   "text_status": "ok",
+   "text_chars": 53689
+  },
+  {
+   "url": "https://v0.app/pricing",
+   "status": 200,
+   "error": null,
+   "sha256": "214ed31c38e7c0f00402c4e76e5adcea7b0ff29b46aa9bc2e477efd3c6417d95",
+   "bytes": 283337,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:47Z",
+   "text_status": "ok",
+   "text_chars": 3173
+  },
+  {
+   "url": "https://v0.app/docs/github.md",
+   "status": 200,
+   "error": null,
+   "sha256": "a7d9d641eb3a92db40707a2420cca26fad43bbec3a82b2fb92a111e3f651ac80",
+   "bytes": 9415,
+   "media_type": "text/markdown",
+   "retrieved_at": "2026-10-28T05:31:48Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 9403
+  },
+  {
+   "url": "https://v0.app/docs/faqs.md",
+   "status": 200,
+   "error": null,
+   "sha256": "3b5d6393fd38eb9340cdb3822430d64669a403b664503d1c15e2d16b39825fef",
+   "bytes": 17891,
+   "media_type": "text/markdown",
+   "retrieved_at": "2026-10-28T05:31:49Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 17876
+  },
+  {
+   "url": "https://stackblitz.com/terms-of-service",
+   "status": 200,
+   "error": null,
+   "sha256": "3a8400afe28208851561343e9c25842478c62a4b97dd39f72252b66be17f7432",
+   "bytes": 75645,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:50Z",
+   "text_status": "ok",
+   "text_chars": 49885
+  },
+  {
+   "url": "https://stackblitz.com/privacy-policy",
+   "status": 200,
+   "error": null,
+   "sha256": "3eb1b7dae516102d4c4c38a5529ca37a8c52c720bc54c78f1eba314b18cb9756",
+   "bytes": 63089,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:51Z",
+   "text_status": "ok",
+   "text_chars": 36361
+  },
+  {
+   "url": "https://bolt.new/pricing",
+   "status": 200,
+   "error": null,
+   "sha256": "999aaaf8c855d94aa36c5ce64cc9ea5484c29be18f220db8a9f9d7254f021bf1",
+   "bytes": 170961,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:52Z",
+   "text_status": "ok",
+   "text_chars": 5581
+  },
+  {
+   "url": "https://support.bolt.new/integrations/git.md",
+   "status": 200,
+   "error": null,
+   "sha256": "7256083eae05adcc6428639d3e53da585e60d08b5873e64cf517885217b35a15",
+   "bytes": 12546,
+   "media_type": "text/markdown",
+   "retrieved_at": "2026-10-28T05:31:54Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 12546
+  },
+  {
+   "url": "https://support.bolt.new/bolt-cloud/database/security.md",
+   "status": 200,
+   "error": null,
+   "sha256": "c031f30d9826c093d2aba78c3a5f09a6398b6893a1fcc987e923e9a0bfb07890",
+   "bytes": 7677,
+   "media_type": "text/markdown",
+   "retrieved_at": "2026-10-28T05:31:55Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 7677
+  },
+  {
+   "url": "https://www.anthropic.com/legal/consumer-terms",
+   "status": 200,
+   "error": null,
+   "sha256": "f3a5988c4557b99d15f2e2f5c4d7ded2cab308df86d3f9630f940d7e4729986e",
+   "bytes": 541632,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:56Z",
+   "text_status": "ok",
+   "text_chars": 29760
+  },
+  {
+   "url": "https://www.anthropic.com/legal/commercial-terms",
+   "status": 200,
+   "error": null,
+   "sha256": "2938ea916fab3798990bdcc2acd0551b94a826353bb3d254f2788a04d6ec975d",
+   "bytes": 243588,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:57Z",
+   "text_status": "ok",
+   "text_chars": 25182
+  },
+  {
+   "url": "https://www.anthropic.com/legal/privacy",
+   "status": 200,
+   "error": null,
+   "sha256": "1c6637a8a6d307613fb1ed1f24223924919d068dbcbe089b5ce2ae5b6c087bf3",
+   "bytes": 1255969,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:58Z",
+   "text_status": "ok",
+   "text_chars": 41273
+  },
+  {
+   "url": "https://claude.com/pricing",
+   "status": 200,
+   "error": null,
+   "sha256": "62920ffb3f66032f90a05d3560785e2402220e31ce530407d7e75e3051e0b80f",
+   "bytes": 1245298,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:31:59Z",
+   "text_status": "ok",
+   "text_chars": 23334
+  },
+  {
+   "url": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them",
+   "status": 200,
+   "error": null,
+   "sha256": "0adb7f29e7ddfd197e0f633ee500f85b80d1e2b7b2fcfbd6d4bad03d0826373e",
+   "bytes": 292307,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-28T05:32:01Z",
+   "text_status": "ok",
+   "text_chars": 19732
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/40638465701",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "Base44: los términos otorgan al proveedor y a terceros una licencia perpetua e irrevocable sobre los Customer Data y el Generated Output, que incluye entrenar modelos de IA.",
+    "now": "Base44: los términos permiten entrenar las herramientas de software de la empresa (p. ej. modelos de IA y aprendizaje automático).",
+    "cut": "licencia perpetua e irrevocable, a terceros, sobre Customer Data y Generated Output"
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "Base44: el cliente garantiza que no compartirá con la plataforma datos sensibles protegidos por legislación especial (como salud o tarjetas) salvo acuerdo previo por escrito.",
+    "now": "Base44: no se compartirán con la plataforma datos sensibles protegidos por legislación especial que requieren tratamiento único (como información de salud o datos de tarjetas).",
+    "cut": "garantía del cliente y excepción por acuerdo previo por escrito"
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "Base44: el cliente es dueño del código y las aplicaciones generados, en la medida que la ley lo permita.",
+    "now": "Base44: el cliente es dueño de todos los derechos sobre el código y las aplicaciones generados por la plataforma.",
+    "cut": "en la medida que la ley lo permita"
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "Base44: tras terminar la suscripción, la empresa no garantiza acceso a los datos.",
+    "now": "Base44: la empresa no garantiza acceso continuo a los datos del cliente almacenados en la plataforma.",
+    "cut": "tras terminar la suscripción"
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "Base44: el cliente es responsable de la configuración de seguridad, incluidos ajustes que por defecto pueden permitir acceso público a los datos.",
+    "now": "Base44: se mencionan ajustes de la plataforma que pueden, por defecto o de otro modo, permitir acceso público a los datos o aplicaciones del cliente.",
+    "cut": "que el cliente es responsable de la configuración de seguridad"
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "Base44: describe que construye frontend, backend, base de datos y autenticación de usuarios en su propia plataforma.",
+    "now": "Base44: describe que construye todo: frontend, backend, base de datos, autenticación de usuarios y pagos.",
+    "cut": "en su propia plataforma"
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "Base44: SSO se ofrece en el plan Enterprise.",
+    "now": "Base44: se mencionan créditos personalizados, arquitecto dedicado, SSO y controles de seguridad avanzados.",
+    "cut": "que sea del plan Enterprise"
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "Base44: el patrón multi-inquilino se hace con entidades propias y seguridad a nivel de fila dentro de Base44.",
+    "now": "Base44: los permisos de datos aseguran que personas de una empresa no puedan ver los datos de otra.",
+    "cut": "patrón multi-inquilino con entidades propias y seguridad a nivel de fila"
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "v0: Vercel tiene SOC 2 Type 2 y v0 está en el alcance del informe.",
+    "now": "v0: está incluido en el alcance del informe SOC 2 de Vercel.",
+    "cut": "Type 2"
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "v0: los términos de Vercel obligan al cliente a configurar el contenido para no exponer datos personales sin consentimiento.",
+    "now": "v0: Vercel indica que no se expondrán datos personales sin el consentimiento adecuado de las personas según la ley aplicable.",
+    "cut": "obligación del cliente de configurar el contenido"
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "v0: el aviso de Vercel dice que para Hobby y Pro, según preferencias del equipo, puede divulgar información desidentificada a socios de IA para entrenar modelos.",
+    "now": "v0: el aviso de Vercel dice que para usuarios Hobby y Pro, según las preferencias del equipo, puede divulgar información desidentificada.",
+    "cut": "a socios de IA para entrenar modelos"
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "v0: el plan Business incluye opt-out de entrenamiento por defecto.",
+    "now": "v0: la página de precios menciona exclusión de entrenamiento por defecto.",
+    "cut": "que sea del plan Business"
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "v0: Business cuesta $100 por usuario al mes.",
+    "now": "v0: la página de precios muestra $100 por usuario al mes.",
+    "cut": "que sea el plan Business"
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "v0: Enterprise incluye SAML SSO y control de acceso por roles.",
+    "now": "v0: la página de precios menciona SAML SSO y control de acceso por roles.",
+    "cut": "que sea del plan Enterprise"
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "v0: la página de precios muestra Plus como \"$30$90/user/month\" (ambiguo).",
+    "now": "v0: la página de precios muestra \"$30$90/user/month\".",
+    "cut": "que sea el plan Plus"
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "v0: respeta las reglas del repositorio de GitHub, como checks y revisiones requeridos.",
+    "now": "v0: sigue las reglas del repositorio de GitHub.",
+    "cut": "ejemplos de checks y revisiones requeridos"
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "Bolt: con opt-out, StackBlitz puede licenciar datasets derivados de contenido de Bolt a terceros, incluso a cambio de compensación.",
+    "now": "Bolt: StackBlitz puede preparar, comercializar, licenciar y distribuir a terceros datasets derivados de Bolt Model Development Content elegible según la Sección 3.5(d), incluso a cambio de compensación.",
+    "cut": "con opt-out"
+   },
+   {
+    "id": "confirmed[33]",
+    "claim": "Bolt: las cuentas gestionadas por organizaciones (Teams y Enterprise) quedan excluidas de la sección 3.5.",
+    "now": "Bolt: se mencionan las cuentas gestionadas por organizaciones, incluidos los espacios Teams y Enterprise.",
+    "cut": "que queden excluidas de la sección 3.5"
+   },
+   {
+    "id": "confirmed[35]",
+    "claim": "Bolt: no se usa el contenido de cuentas de EEE, Reino Unido o Suiza para entrenamiento ni licenciamiento.",
+    "now": "Bolt: StackBlitz no usa el Bolt Model Development Content asociado a una Restricted Region Account, incluido el contenido de Forge.",
+    "cut": "EEE, Reino Unido, Suiza; entrenamiento y licenciamiento"
+   },
+   {
+    "id": "confirmed[37]",
+    "claim": "Bolt: al suspender o terminar sin causa, el proveedor ofrece 30 días para exportar el contenido.",
+    "now": "Bolt: durante treinta días tras la terminación o suspensión, el proveedor pone a disposición un medio razonable para recuperar o exportar el User Content.",
+    "cut": "sin causa"
+   },
+   {
+    "id": "confirmed[38]",
+    "claim": "Bolt: los archivos adjuntados a un prompt pueden transmitirse en parte a proveedores de IA externos.",
+    "now": "Bolt: partes relevantes de esos archivos pueden transmitirse a proveedores de IA externos solo para generar respuestas.",
+    "cut": "adjuntados a un prompt"
+   },
+   {
+    "id": "confirmed[39]",
+    "claim": "Bolt: los proveedores de IA externos tienen prohibido contractualmente usar el AI Input para entrenar sus propios modelos.",
+    "now": "Bolt: se prohíbe contractualmente usarlo para entrenar sus propios modelos.",
+    "cut": "proveedores de IA externos y AI Input"
+   },
+   {
+    "id": "confirmed[42]",
+    "claim": "Bolt: los audit logs aparecen solo en Enterprise.",
+    "now": "Bolt: la fila de Audit Logs muestra tres columnas \"Not included\" y una \"Included\".",
+    "cut": "que la última columna sea Enterprise"
+   },
+   {
+    "id": "confirmed[43]",
+    "claim": "Bolt: el plan Pro permite elegir proveedor de base de datos.",
+    "now": "Bolt: la página de precios menciona elección de proveedor de base de datos.",
+    "cut": "que sea del plan Pro"
+   },
+   {
+    "id": "confirmed[44]",
+    "claim": "Bolt: el plan Enterprise ofrece infraestructura dedicada.",
+    "now": "Bolt: la página de precios menciona infraestructura dedicada y gestor de cuenta.",
+    "cut": "que sea del plan Enterprise"
+   },
+   {
+    "id": "confirmed[45]",
+    "claim": "Bolt: si Bolt y GitHub se actualizan casi a la vez, Bolt mantiene sus cambios y sobrescribe la versión de GitHub.",
+    "now": "Bolt: Bolt mantiene sus cambios y sobrescribe la versión de GitHub.",
+    "cut": "si se actualizan casi a la vez"
+   },
+   {
+    "id": "confirmed[46]",
+    "claim": "Bolt: puede escribir políticas RLS que permiten a cualquier visitante ver, agregar, cambiar y borrar datos si no hay login.",
+    "now": "Bolt: puede escribir políticas que permiten a cualquier visitante ver, agregar, cambiar y borrar los datos de la base de datos.",
+    "cut": "si no hay login"
+   },
+   {
+    "id": "confirmed[48]",
+    "claim": "Claude Consumer: aun con opt-out, Anthropic usa los Materials para entrenar si hay Feedback o revisión de seguridad.",
+    "now": "Claude Consumer: aun con opt-out, Anthropic usará los Materials para entrenar modelos cuando el usuario le dé Feedback sobre ellos.",
+    "cut": "revisión de seguridad"
+   },
+   {
+    "id": "confirmed[53]",
+    "claim": "Claude pricing: el plan Team indica que no hay entrenamiento con el contenido por defecto.",
+    "now": "Claude pricing: la página indica que no hay entrenamiento con el contenido por defecto.",
+    "cut": "que sea del plan Team"
+   },
+   {
+    "id": "confirmed[54]",
+    "claim": "Claude pricing: en los planes individuales el entrenamiento aparece como opt-out.",
+    "now": "Claude pricing: la fila de entrenamiento de modelos muestra Opt-out en cuatro columnas.",
+    "cut": "que sean los planes individuales"
+   },
+   {
+    "id": "confirmed[55]",
+    "claim": "Claude pricing: Pro cuesta $17 al mes con descuento anual y $20 si se factura mensualmente.",
+    "now": "Claude pricing: con descuento por suscripción anual son $200 facturados por adelantado; $20 al mes si se factura mensualmente.",
+    "cut": "plan Pro y $17 al mes"
+   },
+   {
+    "id": "confirmed[56]",
+    "claim": "Claude pricing: el plan Enterprise incluye acceso basado en roles con permisos finos.",
+    "now": "Claude pricing: se menciona acceso basado en roles con permisos finos.",
+    "cut": "que sea del plan Enterprise"
+   },
+   {
+    "id": "conflicting[0]",
+    "claim": "Base44 se presenta como sin amarre en su página de precios, mientras sus términos dejan la exportación de datos a riesgo del cliente y sin garantía de acceso tras terminar. Las dos posturas están en fuentes del proveedor.",
+    "now": "Base44: los términos indican que cualquier Customer Data exportado de la plataforma antes de la terminación o expiración se exporta bajo el exclusivo riesgo y responsabilidad del cliente.",
+    "cut": "contraste con la página de precios (sin amarre) y la falta de garantía de acceso tras terminar"
+   }
+  ]
+ }
+}
