@@ -187,7 +187,7 @@ Total de registros: **966865**. Conteos calculados de los registros; nada resumi
 
 | categoría | registros |
 |---|---:|
-| mx.ojn-estatal | VIGENTE | 28409 |
+| mx.ojn-estatal | VIGENTE | 28981 |
 | mx.ojn-municipal | VIGENTE | 6684 |
 | mx.leyes-federales | VIGENTE | 315 |
 | mx.reglamentos-federales | VIGENTE | 138 |
@@ -201,21 +201,21 @@ Total de registros: **966865**. Conteos calculados de los registros; nada resumi
 
 | categoría | registros |
 |---|---:|
-| mx.dof | pending | 540156 |
+| mx.dof | pending | 538799 |
 | mx.dof | metadata_only | 260037 |
 | mx.hf-tesis-scjn | stored | 51189 |
-| mx.dof | stored | 44051 |
+| mx.dof | stored | 45406 |
 | mx.banxico-sie | stored | 33501 |
-| mx.ojn-estatal | stored | 28361 |
+| mx.ojn-estatal | stored | 28934 |
 | mx.ojn-municipal | stored | 6649 |
-| mx.ojn-estatal | pending | 1460 |
+| mx.ojn-estatal | pending | 887 |
 | mx.inegi-bie | stored | 693 |
 | mx.leyes-federales | stored | 318 |
 | mx.reglamentos-federales | stored | 150 |
-| mx.dof | failed | 139 |
-| mx.ojn-estatal | failed | 113 |
+| mx.dof | failed | 141 |
+| mx.ojn-estatal | failed | 112 |
 | mx.ojn-municipal | failed | 38 |
-| mx.ojn-estatal | no_text_link | 10 |
+| mx.ojn-estatal | no_text_link | 11 |
 
 ## Por año (publicación u original)
 
