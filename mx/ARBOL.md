@@ -2,8 +2,8 @@
 
 País → ámbito → estado → municipio → poder → dependencia → tipo. Conteos de los registros; "(sin dato en la fuente)" marca un nivel que la fuente no publica (nunca se infiere).
 
-- país: MX — 966866
-  - ámbito: federal — 930235
+- país: MX — 966867
+  - ámbito: federal — 930236
     - poder: CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO — 333936
       - dependencia: AVISOS — 333847
         - tipo: CONVOCATORIA DE ADQUISICIONES — 333847
@@ -843,12 +843,12 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAMENTO — 1
       - dependencia: TRIBUNAL SUPERIOR AGRARIO — 1
         - tipo: SENTENCIA — 1
-    - poder: (sin dato en la fuente) — 85852
+    - poder: (sin dato en la fuente) — 85853
       - dependencia: Tribunales Colegiados de Circuito — 33971
         - tipo: TESIS AISLADA — 30995
         - tipo: JURISPRUDENCIA — 2976
-      - dependencia: Banco de México — 33502
-        - tipo: INDICADOR ECONOMICO — 33502
+      - dependencia: Banco de México — 33503
+        - tipo: INDICADOR ECONOMICO — 33503
       - dependencia: Primera Sala — 6980
         - tipo: TESIS AISLADA — 4130
         - tipo: JURISPRUDENCIA — 2850
