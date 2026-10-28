@@ -267,12 +267,29 @@ class Assemble(Base):
         folder = inv.assemble(RR, rows, answer(), self.work, self.out, 'modelo de prueba', '2026-10-23T00:00:00Z')
         self.assertEqual([f.name for f in (folder / 'raw').rglob('*') if f.is_file()], [f'{SHA_PAGE}.html'])
 
-    def test_a_run_goes_to_the_model_only_with_something_downloaded_that_fits_one_prompt(self):
+    def test_a_run_goes_to_the_model_only_with_something_downloaded(self):
         rows = self.fetch()
         self.assertTrue(inv.fetch_ok(rows))
         self.assertFalse(inv.fetch_ok([r for r in rows if not r.get('artifact_id')]))
+        self.assertTrue(inv.whole(rows))
         with mock.patch.object(inv, 'MAX_TEXT_CHARS', inv.text_chars(rows) - 1):
-            self.assertFalse(inv.fetch_ok(rows))
+            self.assertTrue(inv.fetch_ok(rows))  # too much text no longer stops it: shares() cuts each fairly
+            self.assertFalse(inv.whole(rows))  # and fetch says so
+        self.assertFalse(inv.whole([r for r in rows if not r.get('artifact_id')]))
+
+    def test_shares_keep_every_text_whole_while_they_fit_and_cut_only_the_longest_otherwise(self):
+        sizes = [900, 30, 400, 10, 250, 70, 5, 600]  # eight, out of order: the allocation never depends on row order
+        rows = [{'artifact_id': f'SA-{i}', 'text_chars': n} for i, n in enumerate(sizes)] + [{'artifact_id': 'SA-x'}, {'url': 'u'}]
+        with mock.patch.object(inv, 'MAX_TEXT_CHARS', sum(sizes)):
+            self.assertEqual(inv.shares(rows), {f'SA-{i}': n for i, n in enumerate(sizes)})
+            self.assertEqual(inv.cut(rows), [])
+        with mock.patch.object(inv, 'MAX_TEXT_CHARS', 1000):
+            got = inv.shares(rows)
+            # 5, 10, 30 and 70 whole (115); the 885 left go to the four longest, 221 each, the last one 222
+            self.assertEqual(got, {'SA-0': 222, 'SA-1': 30, 'SA-2': 221, 'SA-3': 10, 'SA-4': 221, 'SA-5': 70, 'SA-6': 5, 'SA-7': 221})
+            self.assertEqual(sum(got.values()), 1000)
+            self.assertEqual(inv.cut(rows), [{'artifact_id': f'SA-{i}', 'read': got[f'SA-{i}'], 'of': sizes[i]} for i in (0, 2, 4, 7)])
+            self.assertEqual(inv.shares(list(reversed(rows))), got)
 
     def test_nothing_is_assembled_when_nothing_was_downloaded(self):
         rows = [r for r in self.fetch() if not r.get('artifact_id')]
@@ -437,8 +454,28 @@ class Model(Base):
         self.assertIn(f'===== FUENTE {A_PAGE}', user)
         self.assertIn(QUOTE, user)
         self.assertIn('"nota": "datos abiertos"', user)
-        with mock.patch.object(inv, 'MAX_TEXT_CHARS', inv.text_chars(rows) - 1), self.assertRaises(ValueError):
-            inv.prompt(RR, rows, self.work)
+        with mock.patch.object(inv, 'MAX_TEXT_CHARS', inv.text_chars(rows) - 1):
+            _, cut_user = inv.prompt(RR, rows, self.work)  # one character short: the longest text loses its last one
+        longest = max((r for r in rows if r.get('text_chars')), key=lambda r: (r['text_chars'], r['artifact_id']))
+        self.assertIn(f"RECORTADA: sus primeros {longest['text_chars'] - 1} de {longest['text_chars']} caracteres", cut_user)
+        self.assertEqual(cut_user.count('RECORTADA'), 1)
+        whole = (self.work / 'texto' / f"{longest['artifact_id']}.txt").read_text(encoding='utf-8')
+        self.assertIn(whole[:-1], cut_user)
+        self.assertNotIn(whole, cut_user)  # its last character is the one left out
+
+    def test_a_cut_source_is_named_and_its_quotes_still_checked_against_the_whole_text(self):
+        rows = self.fetch()
+        with mock.patch.object(inv, 'MAX_TEXT_CHARS', inv.text_chars(rows) - 1):
+            folder = inv.assemble(RR, rows, answer(), self.work, self.out, 'm', '2026-10-23T00:00:00Z')
+        packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        receipt = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))
+        self.assertEqual(len(receipt['cut']), 1)
+        self.assertEqual(receipt['cut'][0]['read'], receipt['cut'][0]['of'] - 1)
+        self.assertEqual(sum('se leyeron solo desde su inicio' in x for x in packet['limitations']), 1)
+        self.assertEqual(len(packet['findings']['confirmed']), 2)  # both quotes verified against the whole texts
+        whole = json.loads((inv.assemble(RR, rows, answer(), self.work, self.out / 'b', 'm', '2026-10-23T00:00:00Z')
+                            / 'receipt.json').read_text(encoding='utf-8'))
+        self.assertNotIn('cut', whole)
 
     def test_nothing_goes_to_the_model_when_no_source_has_text(self):
         rows = self.fetch({**PLAN, 'sources': [{**PLAN['sources'][0], 'url': 'https://a.gob.mx/roto.pdf'}]})
