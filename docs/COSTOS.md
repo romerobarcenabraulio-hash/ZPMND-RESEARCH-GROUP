@@ -13,8 +13,11 @@ minutos y $49.98 de excedente, a ~$0.006 por minuto. Una corrida del catálogo d
 
 **`chain`.** Una corrida "deja trabajo" si su propio manifiesto (el que escribió después de empezar, nunca uno anterior)
 dice `request budget reached`; eso cubre también el corte por tiempo (`--deadline-minutes`), que el `Fetcher` reporta
-igual. El job `chain` solo tiene `actions: write`, despacha este mismo flujo desde `main` con una corrida menos, y no
-corre si la corrida falló. Riesgo aceptado: si un despacho programado llega mientras una corrida encadenada espera, la
+igual. El job `chain` solo tiene `actions: write` y despacha este mismo flujo desde `main` con una corrida menos. No
+corre si la corrida se rompió: si truena (salida 1), si el escaneo encuentra un token o si falla la subida o el push (sin
+`published`). Un hallazgo de datos (salida 3, cobertura; 4, cuarentena) sigue marcando la corrida en rojo y queda en su
+manifiesto, pero ya no detiene la puesta al día: el 2026-10-27 un solo título de NOM sin código leído, entre 218,376
+registros, la tenía parada desde el 21. Riesgo aceptado: si un despacho programado llega mientras una corrida encadenada espera, la
 reemplaza y la cadena termina; la corrida programada sigue el trabajo. El job `run` solo corre en `main`.
 
 **Runner propio (PR aparte).** El rastreo es casi todo espera y un servidor propio no cobra por minuto (Braulio renta
