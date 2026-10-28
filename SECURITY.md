@@ -9,7 +9,7 @@ told. Every control below has a check that fails without it.
 | # | Threat | Control | Check |
 |---|---|---|---|
 | T1 | A packet claims truth, canon or authority | `status` is the constant `CANDIDATE`; no unknown field at any depth | `tests/test_schemas.py` NoAuthority |
-| T2 | Invented or untraceable sources | every finding cites hashed artifacts present in the packet; confirmed findings need a primary source | `tests/test_schemas.py` Provenance |
+| T2 | Invented or untraceable sources | every finding cites hashed artifacts present in the packet; each confirmed finding cites a primary source (rg.schemas, per finding), and investigar keeps it only when its quote is in the text of a primary source it cites (otherwise it leaves the packet, listed in receipt.json under dropped); a conflicting finding is reviewed like a confirmed one | `tests/test_schemas.py` Provenance, `tests/test_investigar.py` Backed |
 | T3 | Hidden instructions travel into ZPMND | visible-text only (no zero-width, bidi, control chars), quotes ≤ 300 chars, size cap | `tests/test_schemas.py` HiddenContent |
 | T4 | Private data enters the research world | requests are `PUBLIC`/`ABSTRACTED` only, issued by ZPMND or the owner; RG never reads ZPMND; repo private as defense in depth | `tests/test_schemas.py` PrivacyAndRights |
 | T5 | Vulnerable or tampered substrate | OpenClaw 2026.10.5: signed tag 1b58cb9a; npm tarball sha256 matches the signed release manifest; 564 deps pinned by lockfile, `npm ci --ignore-scripts`; base image pinned by digest | `tests/test_advisories.py`, `python -m rg.advisories --fetch` (CI weekly) |

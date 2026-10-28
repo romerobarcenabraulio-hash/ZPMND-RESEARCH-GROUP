@@ -81,10 +81,10 @@ MODEL_SCHEMA = {
 # still wrote claims that say more than their quotes, about one in three. A reviewer that sees only each claim and its
 # quote judges what a reader of the packet can check, and cuts the claim down to it. Confirmed findings only.
 _REVIEW = {'type': 'object', 'additionalProperties': False, 'required': ['id', 'fits', 'claim', 'cut'],
-           'properties': {'id': {'type': 'string', 'pattern': r'^confirmed\[[0-9]{1,2}\]$'},
+           'properties': {'id': {'type': 'string', 'pattern': r'^(confirmed|conflicting)\[[0-9]{1,2}\]$'},
                           'fits': {'type': 'boolean'}, 'claim': _TEXT, 'cut': _TEXT}}
 REVIEW_SCHEMA = {'type': 'object', 'additionalProperties': False, 'required': ['reviews'],
-                 'properties': {'reviews': {'type': 'array', 'maxItems': 60, 'items': _REVIEW}}}  # MODEL_SCHEMA: 60 confirmed
+                 'properties': {'reviews': {'type': 'array', 'maxItems': 90, 'items': _REVIEW}}}  # MODEL_SCHEMA: 60 + 30
 OPTIONAL_LISTS = ('candidate_claims', 'candidate_methods', 'candidate_controls', 'candidate_tests',
                   'possible_implications_for_zpmnd', 'affected_existing_concepts', 'hypotheses_generated')
 
@@ -328,7 +328,11 @@ Write it in Spanish:
   a list goes into a claim only if it is in that claim's own quote; a list needs a quote that holds the whole list,
   or one finding per item. The machine checks that the quote exists, not that it supports the claim, so this is on
   you. What you connect or deduce across quotes goes to candidate_claims, starting with "INTERPRETACIÓN:".
-- findings.conflicting: where sources disagree, with the quote of one side.
+- Every confirmed finding cites at least one source the request lists as primary (its header says primary); what only
+  a secondary source states goes to candidate_claims, starting with "SECUNDARIA:" and naming that source.
+- findings.conflicting: where sources disagree, only when the quote itself shows the disagreement (one source saying
+  another is wrong, or two positions in the same text). Otherwise put each side as its own confirmed finding and the
+  tension in candidate_claims, starting with "INTERPRETACIÓN:".
 - findings.unknown: what the request asks that these sources do not answer. Not finding something is not proof that
   it does not exist: say what was read.
 - limitations: honest, at least one.
@@ -366,10 +370,12 @@ def review_prompt(answer, rows=(), work=None):
     fit(answer)
     items = [{'id': f'confirmed[{i}]', 'claim': f['claim'], 'quote': f['quote']}
              for i, f in enumerate(answer['findings']['confirmed'])]
+    items += [{'id': f'conflicting[{i}]', 'claim': f['claim'], 'quote': f['quote']}  # GPT, REVISE of #52: reviewed too
+              for i, f in enumerate(answer['findings']['conflicting'])]
     named = {r['artifact_id']: f"{r.get('title') or ''} <{r.get('final_url') or r.get('url')}>".strip()
              for r in rows if r.get('artifact_id')}
     texts = _texts(rows, work) if work else {}
-    for item, f in zip(items, answer['findings']['confirmed']):
+    for item, f in zip(items, answer['findings']['confirmed'] + answer['findings']['conflicting']):
         q = fold(f['quote'])
         item['source'] = [named[a] for a in f['artifact_ids'] if a in named and q in texts.get(a, '')]
     system = f"""You review a RESEARCH GROUP packet before it is published. You have no tools. The user message is a JSON
@@ -386,6 +392,8 @@ One review per finding, every id once:
   source's title or address may give. Nothing else comes from them: no license, version, date, number, plan or condition.
 - fits false: claim is the claim rewritten in Spanish to say only what the quote says, adding nothing; cut is what
   was taken out. fits true: claim and cut are empty.
+- A conflicting finding states a disagreement and quotes one side: the same rule holds. The disagreement, and whatever
+  it says about the other side, must be in its quote; if not, cut it down to what the quote says.
 """
     return system, json.dumps(items, ensure_ascii=False, indent=0)
 
@@ -401,24 +409,27 @@ def apply_review(answer, review):
     except jsonschema.ValidationError as exc:
         raise ValueError(f'the review does not fit its schema: {exc.message[:200]}') from None
     ids = [f'confirmed[{i}]' for i in range(len(answer['findings']['confirmed']))]
+    ids += [f'conflicting[{i}]' for i in range(len(answer['findings']['conflicting']))]
     got = [r['id'] for r in review['reviews']]
     if sorted(got) != sorted(ids):
         raise ValueError(f'the review must cover each finding once: {len(got)} reviews for {len(ids)} findings')
     out = copy.deepcopy(answer)
-    cuts, gone = [], set()
+    cuts, gone, gone_conflicting = [], set(), set()
     for r in review['reviews']:
         if r['fits']:
             continue
-        i = int(r['id'][len('confirmed['):-1])
-        finding = out['findings']['confirmed'][i]
+        group, i = r['id'][:-1].split('[')
+        i = int(i)
+        finding = out['findings'][group][i]
         if not r['claim'].strip() or not r['cut'].strip():
             if not r['claim'].strip():
                 cuts.append({'id': r['id'], 'claim': finding['claim'], 'now': None, 'cut': finding['claim']})
-                gone.add(i)
+                (gone if group == 'confirmed' else gone_conflicting).add(i)
                 continue
         cuts.append({'id': r['id'], 'claim': finding['claim'], 'now': r['claim'], 'cut': r['cut']})
         finding['claim'] = r['claim']
     out['findings']['confirmed'] = [f for i, f in enumerate(out['findings']['confirmed']) if i not in gone]
+    out['findings']['conflicting'] = [f for i, f in enumerate(out['findings']['conflicting']) if i not in gone_conflicting]
     return out, cuts
 
 
@@ -426,6 +437,25 @@ def _texts(rows, work):
     """{artifact id: its folded text} from the run's own extraction (work/texto), as the gate folds it."""
     return {r['artifact_id']: fold((Path(work) / 'texto' / f"{r['artifact_id']}.txt").read_text(encoding='utf-8'))
             for r in rows if r.get('artifact_id') and r.get('text_chars')}
+
+
+def unbacked(answer, rows, work):
+    """(answer without the confirmed findings whose quote is in no primary source they cite, those findings): SECURITY
+    T2 holds per finding (GPT, REVISE of #51), and citing some primary source does not satisfy it: the quote has to be
+    in that source's text. rg.schemas checks the citation again in the gate."""
+    primary = {r['artifact_id'] for r in rows if r.get('artifact_id') and r.get('role') == 'primary'}
+    texts = _texts(rows, work)
+    out, dropped = copy.deepcopy(answer), []
+    keep = []
+    for i, f in enumerate(answer['findings']['confirmed']):
+        q = fold(f['quote'])
+        if any(q in texts[a] for a in f['artifact_ids'] if a in primary and a in texts):
+            keep.append(f)
+        else:
+            dropped.append({'id': f'confirmed[{i}]', 'claim': f['claim'], 'quote': f['quote'], 'artifact_ids': f['artifact_ids'],
+                            'reason': 'solo fuentes secundarias'})
+    out['findings']['confirmed'] = keep
+    return out, dropped
 
 
 def unfound(answer, rows, work):
@@ -503,6 +533,11 @@ def assemble(rr, rows, answer, work, out_root, model_label, produced_at=None, re
         answer['limitations'] = answer['limitations'] + [
             f'Se descartaron {len(dropped)} hallazgos cuya cita no aparece tal cual en el texto de la fuente que citan '
             '(detalle en receipt.json): sin su cita no son hechos.']
+    answer, secondary = unbacked(answer, rows, work)
+    if secondary:
+        answer['limitations'] = answer['limitations'] + [
+            f'Se descartaron {len(secondary)} hallazgos confirmados cuya cita no está en una fuente primaria (T2; detalle '
+            'en receipt.json).']
     rid = 'RP-' + rr['request_id'][3:]
     folder = Path(out_root) / 'research-packets' / rid
     artifacts = []
@@ -537,6 +572,8 @@ def assemble(rr, rows, answer, work, out_root, model_label, produced_at=None, re
         receipt['review'] = {'model': review[1], 'cuts': cuts}
     if dropped:
         receipt['dropped'] = dropped
+    if secondary:
+        receipt['dropped'] = receipt.get('dropped', []) + secondary
     if discovery is not None:
         receipt['discovery'] = discovery
     (folder / 'receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')

@@ -53,7 +53,7 @@ PLAN = {'request_id': 'RR-2026-10-23-prueba', 'sources': [
     {'url': 'https://a.gob.mx/privado/x', 'publisher': 'Gobierno', 'source_type': 'primary_official',
      'license': 'x', 'redistribution': 'allowed', 'role': 'primary'},
     {'url': 'https://b.example.org/datos.json', 'publisher': 'Ejemplo', 'source_type': 'dataset',
-     'license': 'CC BY 4.0', 'redistribution': 'allowed', 'role': 'secondary'},
+     'license': 'CC BY 4.0', 'redistribution': 'allowed', 'role': 'primary'},  # T2: each confirmed quote in a primary
 ]}
 CLOSED = {'url': 'https://b.example.org/cerrado.json', 'publisher': 'Ejemplo', 'source_type': 'dataset',
           'license': 'todos los derechos reservados', 'redistribution': 'metadata_only', 'role': 'secondary'}
@@ -242,7 +242,7 @@ class Assemble(Base):
         arts = {a['artifact_id']: a for a in p['artifacts']}
         self.assertEqual((arts[A_PAGE]['sha256'], arts[A_PAGE]['stored_at']), (SHA_PAGE, 'repo'))
         self.assertEqual((arts[A_DATA]['redistribution'], arts[A_DATA]['stored_at']), ('allowed', 'repo'))
-        self.assertEqual(p['sources'], {'primary': [A_PAGE], 'secondary': [A_DATA]})
+        self.assertEqual(p['sources'], {'primary': [A_PAGE, A_DATA], 'secondary': []})
         kept = sorted(f.name for f in (folder / 'raw').rglob('*') if f.is_file())
         self.assertEqual(kept, sorted([f'{SHA_PAGE}.html', f'{SHA_DATA}.json']))
         self.assertEqual(json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))['fetched'][1]['status'], 'refused')
@@ -523,8 +523,11 @@ class Review(Base):
         tension = self.wide()
         tension['findings']['conflicting'] = [{'claim': 'Dos fuentes difieren sobre la política.', 'artifact_ids': [A_PAGE],
                                                'quote': QUOTE, 'locator': 'numeral 5.1'}]
-        # a conflicting finding names a disagreement and quotes one side: never reviewed, never cut
-        self.assertEqual([i['id'] for i in json.loads(inv.review_prompt(tension, rows, self.work)[1])], ['confirmed[0]', 'confirmed[1]'])
+        # a conflicting finding is reviewed too (GPT, REVISE of #52): its disagreement must be in its quote
+        items = json.loads(inv.review_prompt(tension, rows, self.work)[1])
+        self.assertEqual([i['id'] for i in items], ['confirmed[0]', 'confirmed[1]', 'conflicting[0]'])
+        self.assertEqual(items[2]['source'], ['Norma de prueba <https://a.gob.mx/nota>'])
+        self.assertIn('A conflicting finding states a disagreement and quotes one side: the same rule holds.', system)
         with self.assertRaises(ValueError):
             inv.review_prompt({'findings': {'confirmed': 'x'}})
 
@@ -560,6 +563,24 @@ class Review(Base):
         limits = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))['limitations']
         self.assertEqual(sum('recortó 0 de 2' in x for x in limits), 1)
 
+    def test_a_conflicting_finding_is_cut_or_dropped_like_a_confirmed_one_and_must_be_reviewed(self):
+        rows = self.fetch()
+        ans = self.wide()
+        ans['findings']['conflicting'] = [
+            {'claim': 'La norma contradice a otra fuente.', 'artifact_ids': [A_PAGE], 'quote': QUOTE, 'locator': '5.1'},
+            {'claim': 'Otra contradicción.', 'artifact_ids': [A_PAGE], 'quote': QUOTE, 'locator': '5.1'}]
+        ok0, ok1 = ('confirmed[0]', True, '', ''), ('confirmed[1]', True, '', '')
+        with self.assertRaises(ValueError):  # a conflicting finding left out of the review stops the run
+            inv.assemble(RR, rows, ans, self.work, self.out / 'x', 'm', review=(review(ok0, ok1), 'r'))
+        rev = review(ok0, ok1, ('conflicting[0]', False, 'La norma obliga a una política escrita.', 'que contradice a otra fuente'),
+                     ('conflicting[1]', False, '', 'todo'))
+        folder = inv.assemble(RR, rows, ans, self.work, self.out, 'm', '2026-10-23T00:00:00Z', review=(rev, 'r'))
+        packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        self.assertEqual([f['claim'] for f in packet['findings']['conflicting']], ['La norma obliga a una política escrita.'])
+        cuts = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))['review']['cuts']
+        self.assertEqual([(c['id'], c['now']) for c in cuts], [('conflicting[0]', 'La norma obliga a una política escrita.'),
+                                                               ('conflicting[1]', None)])
+
     def test_a_review_that_leaves_nothing_drops_its_finding_and_one_without_its_cut_still_stands(self):
         # run 40548398494: one such review stopped the whole OmniRoute run; it is about one finding
         rows = self.fetch()
@@ -594,6 +615,39 @@ class Review(Base):
         packet = json.loads((self.out / 'research-packets' / 'RP-2026-10-23-prueba' / 'packet.json').read_text(encoding='utf-8'))
         self.assertEqual(packet['findings']['confirmed'][0]['claim'], self.NARROW)
         self.assertEqual(len(rows), len(json.loads((self.work / 'fuentes.json').read_text(encoding='utf-8'))))
+
+
+class Backed(Base):
+    """SECURITY T2 per finding (GPT, REVISE of #51): a confirmed quote must be in a primary source it cites."""
+
+    def plan(self):
+        return {**PLAN, 'sources': [PLAN['sources'][0], {**PLAN['sources'][2], 'role': 'secondary'}]}
+
+    def test_a_confirmed_finding_whose_quote_is_only_in_a_secondary_source_leaves_the_packet(self):
+        rows = self.fetch(self.plan())
+        ans = answer()
+        ans['findings']['confirmed'].append(dict(ans['findings']['confirmed'][1], artifact_ids=[A_DATA, A_PAGE]))  # a primary named, not quoted
+        folder = inv.assemble(RR, rows, ans, self.work, self.out, 'm', '2026-10-23T00:00:00Z')
+        packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        self.assertEqual([f['artifact_ids'] for f in packet['findings']['confirmed']], [[A_PAGE]])
+        receipt = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))
+        self.assertEqual([(d['id'], d['reason']) for d in receipt['dropped']],
+                         [('confirmed[1]', 'solo fuentes secundarias'), ('confirmed[2]', 'solo fuentes secundarias')])
+        self.assertEqual(sum('Se descartaron 2 hallazgos confirmados cuya cita no está en una fuente primaria' in x
+                             for x in packet['limitations']), 1)
+        self.assertEqual(packets.check(folder)[0], [])
+
+    def test_the_schema_holds_t2_for_each_confirmed_finding(self):
+        rows = self.fetch(self.plan())
+        folder = inv.assemble(RR, rows, answer(), self.work, self.out, 'm', '2026-10-23T00:00:00Z')
+        packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        packet['findings']['confirmed'].append({'claim': 'x', 'artifact_ids': [A_DATA], 'quote': '"nota": "datos abiertos"', 'locator': 'raíz'})
+        self.assertIn('findings.confirmed[1]: cites no primary source', validate('research_packet', packet))
+
+    def test_the_model_is_told_to_keep_secondary_facts_and_unshown_conflicts_out_of_the_findings(self):
+        system, _ = inv.prompt(RR, self.fetch(), self.work)
+        self.assertIn('Every confirmed finding cites at least one source the request lists as primary', system)
+        self.assertIn('only when the quote itself shows the disagreement', system)
 
 
 class Unfound(Base):
