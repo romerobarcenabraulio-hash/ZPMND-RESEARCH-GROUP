@@ -29,10 +29,10 @@ jobs:
     timeout-minutes: 90  # private runners have 2 cores: ~55 mutants took over 30 min on one runner (2026-10-21)
     strategy:
       fail-fast: false  # every shard reports all of its mutants
-      matrix: { shard: [0, 1, 2, 3] }  # 4 runners in parallel
+      matrix: { shard: [0, 1, 2, 3, 4, 5, 6, 7] }  # 8 runners in parallel (public repo: standard runners are free)
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
-        with: { persist-credentials: false }
+        with: { persist-credentials: false, fetch-depth: 0 }  # the base, to see what the PR changed
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with: { python-version: '3.12' }
       - run: pip install -r requirements-dev.txt
@@ -40,3 +40,4 @@ jobs:
       - run: python scripts/mutar.py
         env:  # index/total come from the matrix itself, so no shard can be skipped or run twice
           RG_SHARD: '${{ strategy.job-index }}/${{ strategy.job-total }}'
+          RG_BASE: '${{ github.event.pull_request.base.sha }}'  # a PR of data only skips: no code or test changed
