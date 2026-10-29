@@ -42,7 +42,7 @@ ResearchRequest ──► RESEARCH GROUP (agents, tools, sources)
                          ▼
                  ResearchPacket  (status: CANDIDATE, always)
                  + SourceArtifacts (url, date, sha256, license, redistribution)
-                         │  committed under research-packets/ and manifests/
+                         │  committed under research-packets/ (Git is the outbox: docs/OUTBOX.md)
                          ▼
                  ZPMND airlock (ZPMND's own code and judgment)
                          │
