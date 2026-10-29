@@ -5,8 +5,9 @@
 Runs from main (workflow_run) each time ci or auditor finishes for a commit. Each open PR into main whose head is that
 commit is merged, pinned to it, only when all of this holds; anything else leaves the PR to the owner:
 - it comes from a branch of this repository (a fork never qualifies), is not a draft and still has that head;
-- every file it touches is data: added or modified (never removed or renamed) under research-packets/<RP>/, or a
-  source plan requests/plans/<RR>.json. Never code, workflows, docs, tests or mutants;
+- every file it touches is data: added (never modified, removed or renamed) under research-packets/<RP>/ for an <RP>
+  main does not have yet, since a packet on main never changes, not even by a file added beside it (docs/OUTBOX.md), or
+  added or modified as a source plan requests/plans/<RR>.json. Never code, workflows, docs, tests or mutants;
 - the trusted runs on that commit for that PR passed (TRUSTED): the newest run of .github/workflows/auditor.yml for
   pull_request_target (whose file always comes from main) and of .github/workflows/ci.yml for pull_request (the PR's
   copy, which a data-only PR cannot change) both finished success, and every job in them succeeded, none skipped, among
@@ -19,6 +20,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 
 API = 'https://api.github.com'
@@ -31,6 +33,7 @@ TRUSTED = {  # workflow file -> (the event of its trusted run, jobs that run mus
     '.github/workflows/ci.yml': ('pull_request', {'checks'}),
 }
 MAX_FILES = 3000  # the files API lists at most 3,000 per PR: a longer list could hide one
+PACKET = re.compile(r'^research-packets/(RP-[A-Za-z0-9._-]{3,64})/')
 
 
 def data_only(files):
@@ -45,6 +48,8 @@ def data_only(files):
             return f"{name}: {f.get('status')} (only added or modified data merges by itself)"
         if not DATA.match(name) or any(part in ('.', '..') for part in name.split('/')):
             return f'{name}: not data'
+        if name.startswith('research-packets/') and f.get('status') != 'added':
+            return f'{name}: {f.get("status")} (a packet on main never changes; only a new one merges by itself)'
     return None
 
 
@@ -74,7 +79,22 @@ def verified(runs, jobs_of, sha, n):
     return None
 
 
-def decide(pr, files, runs, jobs_of, repo, sha):
+def republished(files, exists, branch=''):
+    """None when the PR writes no packet, or exactly one packet folder new on main from that packet's own branch
+    investigar/<RP>; else why not. exists(rp) says whether main has research-packets/<rp>/. The branch rule closes the
+    race between this check and the merge: investigar pushes each investigar/<RP> once (create-only), so no other PR
+    that merges by itself can write that folder meanwhile; one the owner merges is the owner's to order."""
+    rps = sorted({m.group(1) for f in files for m in [PACKET.match(f.get('filename', ''))] if m})
+    if not rps:
+        return None
+    if len(rps) > 1 or branch != f'investigar/{rps[0]}':
+        return f"{', '.join(rps)} from {branch or 'no branch'}: a packet merges by itself only alone, from investigar/<its RP>"
+    if exists(rps[0]):
+        return f'research-packets/{rps[0]}/ is already on main (a packet on main never changes)'
+    return None
+
+
+def decide(pr, files, runs, jobs_of, repo, sha, *, exists):
     """None to merge; else the reason the PR stays with the owner."""
     head = pr.get('head') or {}
     if pr.get('state') != 'open' or pr.get('draft'):
@@ -87,6 +107,9 @@ def decide(pr, files, runs, jobs_of, repo, sha):
         return 'it comes from a fork'
     if pr.get('changed_files') != len(files):
         return f"{pr.get('changed_files')} changed files, {len(files)} listed"
+    already = republished(files, exists, head.get('ref') or '')
+    if already:
+        return already
     return data_only(files) or verified(runs, jobs_of, sha, pr.get('number'))
 
 
@@ -123,12 +146,21 @@ def main(env=None, call=None):
     def jobs_of(run_id):
         return pages(call, f'/repos/{repo}/actions/runs/{int(run_id)}/jobs?filter=latest', 'jobs')
 
+    def exists(rp):  # any answer but GitHub's 404 stops the run: the PR stays with the owner
+        try:
+            call('GET', f'/repos/{repo}/contents/research-packets/{rp}?ref=main')
+            return True
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                return False
+            raise
+
     for listed in call('GET', f'/repos/{repo}/commits/{sha}/pulls'):
         n = listed.get('number')
         if listed.get('state') != 'open' or not isinstance(n, int):
             continue
         pr = call('GET', f'/repos/{repo}/pulls/{n}')
-        why = decide(pr, pages(call, f'/repos/{repo}/pulls/{n}/files'), runs, jobs_of, repo, sha)
+        why = decide(pr, pages(call, f'/repos/{repo}/pulls/{n}/files'), runs, jobs_of, repo, sha, exists=exists)
         if why:
             print(f'#{n} stays with the owner: {why}')
             continue

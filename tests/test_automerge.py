@@ -6,6 +6,7 @@ their jobs), and a fake caller that records what would be sent. No network.
 import copy
 import importlib.util
 import unittest
+import urllib.error
 from pathlib import Path
 
 import yaml
@@ -32,8 +33,8 @@ PR = {'number': 7, 'state': 'open', 'draft': False, 'title': 'Paquete RP-2026-10
       'base': {'ref': 'main'}, 'head': {'sha': SHA, 'ref': 'investigar/RP-2026-10-27-x', 'repo': {'full_name': REPO}}}
 
 
-def decide(pr=PR, files=FILES, runs=RUNS, jobs=JOBS):
-    return am.decide(pr, files, runs, lambda rid: jobs.get(rid, []), REPO, SHA)
+def decide(pr=PR, files=FILES, runs=RUNS, jobs=JOBS, on_main=()):
+    return am.decide(pr, files, runs, lambda rid: jobs.get(rid, []), REPO, SHA, exists=lambda rp: rp in on_main)
 
 
 def change(pr=None, **head):
@@ -54,6 +55,22 @@ def jobs(rid, name, conclusion='success', drop=False):
 
 
 class Decide(unittest.TestCase):
+    def test_a_packet_merges_by_itself_only_alone_and_from_its_own_branch(self):
+        two = FILES + [{'filename': 'research-packets/RP-2026-10-27-y/packet.json', 'status': 'added'}]
+        self.assertIn('only alone, from investigar/<its RP>', decide(change({'changed_files': 4}), two))
+        for ref in ('investigar/RP-2026-10-27-y', 'otra', ''):
+            with self.subTest(ref=ref):
+                self.assertIn('only alone, from investigar/<its RP>', decide(change(ref=ref)))
+        plan = [{'filename': 'requests/plans/RR-2026-10-27-x.json', 'status': 'modified'}]
+        self.assertIsNone(decide(change({'changed_files': 1}, ref='plan-x'), plan))  # a plan alone: any branch of this repo
+
+    def test_a_file_added_to_a_packet_already_on_main_stays_with_the_owner(self):
+        for files in (FILES, [{'filename': 'research-packets/RP-2026-10-27-x/receipt.json', 'status': 'added'}]):
+            with self.subTest(files=files):
+                self.assertEqual(decide(change({'changed_files': len(files)}), files, on_main={'RP-2026-10-27-x'}),
+                                 'research-packets/RP-2026-10-27-x/ is already on main (a packet on main never changes)')
+        self.assertIsNone(decide(on_main={'RP-2026-10-27-otro'}))  # another packet on main changes nothing
+
     def test_a_data_pr_from_this_repo_passed_twice_and_green_merges(self):
         self.assertIsNone(decide())
 
@@ -75,11 +92,22 @@ class Decide(unittest.TestCase):
                 files = FILES + [{'filename': name, 'status': 'modified'}]
                 self.assertIn('not data', decide(change({'changed_files': 4}), files))
 
+    def test_a_packet_file_main_already_holds_never_changes_by_itself(self):
+        # a packet on main never changes (docs/OUTBOX.md): a modified packet file stays with the owner; a plan may change
+        for i in (0, 1):
+            with self.subTest(FILES[i]['filename']):
+                files = [dict(f, status='modified') if k == i else f for k, f in enumerate(FILES)]
+                self.assertEqual(decide(files=files), f"{FILES[i]['filename']}: modified (a packet on main never changes; "
+                                                      'only a new one merges by itself)')
+        self.assertEqual(FILES[2]['status'], 'modified')
+        self.assertIsNone(decide())
+
     def test_a_removal_or_a_rename_stays_with_the_owner_even_inside_data(self):
         for status in ('removed', 'renamed', 'copied', 'changed', None):
             with self.subTest(status):
-                files = [dict(FILES[0], status=status)] + FILES[1:]
-                self.assertIsNotNone(decide(files=files))
+                for i in (0, 2):  # a packet file and a plan alike
+                    files = [dict(f, status=status) if k == i else f for k, f in enumerate(FILES)]
+                    self.assertIsNotNone(decide(files=files))
 
     def test_an_empty_or_possibly_cut_file_list_stays_with_the_owner(self):
         self.assertIsNotNone(decide(change({'changed_files': 0}), []))
@@ -142,7 +170,7 @@ class Decide(unittest.TestCase):
 
 
 class Main(unittest.TestCase):
-    def caller(self, pr=PR, pulls=None):
+    def caller(self, pr=PR, pulls=None, on_main=(), contents_error=404):
         sent = []
         listing = [{'number': pr['number'], 'state': pr['state']}] if pulls is None else pulls
 
@@ -159,6 +187,12 @@ class Main(unittest.TestCase):
                     return {'jobs': JOBS[rid]}
             if method == 'GET' and path.endswith(f"/pulls/{pr['number']}"):
                 return pr
+            if method == 'GET' and '/contents/research-packets/' in path:
+                rp = path.split('/contents/research-packets/')[1].split('?')[0]
+                assert path.endswith('?ref=main'), path
+                if rp in on_main:
+                    return [{'name': 'packet.json'}]
+                raise urllib.error.HTTPError(path, contents_error, 'x', None, None)
             return None
         return call, sent
 
@@ -180,6 +214,15 @@ class Main(unittest.TestCase):
                 call, sent = self.caller(pr, pulls)
                 self.assertEqual(self.run_main(call), 0)
                 self.assertEqual([s for s in sent if s[0] != 'GET'], [])
+
+    def test_a_packet_folder_main_has_or_cannot_be_checked_is_not_merged(self):
+        call, sent = self.caller(on_main={'RP-2026-10-27-x'})
+        self.assertEqual(self.run_main(call), 0)
+        self.assertEqual([s for s in sent if s[0] != 'GET'], [])
+        call, sent = self.caller(contents_error=500)
+        with self.assertRaises(urllib.error.HTTPError):
+            self.run_main(call)
+        self.assertEqual([s for s in sent if s[0] != 'GET'], [])
 
     def test_inputs_are_checked_before_any_call(self):
         for env in ({'REPO': REPO, 'SHA': 'main'}, {'REPO': 'x/y/../z', 'SHA': SHA}, {}):

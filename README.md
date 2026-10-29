@@ -25,7 +25,7 @@ ResearchRequest (from ZPMND or Braulio) ──► RESEARCH GROUP ──► Resea
 | `rg/catalog/` | guarded fetcher, site adapters (SIDOF/DOF, LeyesBiblio, OJN; SCJN tesis from a secondary Hugging Face dataset; Banxico SIE and INEGI BIE (INPC) indicators, active), fixed doc-type table, store, run with coverage reconciliation |
 | `rg/text/` | text of each stored raw by pinned extractor (HTML, DOCX, PDF text layer), one status per raw, quote check ([docs/TEXTO.md](docs/TEXTO.md)) |
 | `tests/` | one failing case per guard |
-| `requests/`, `knowledge-demand/`, `research-packets/`, `manifests/`, `hooks/research-goodware/` | next steps; see the contract, section 5 |
+| `requests/`, `knowledge-demand/`, `research-packets/`, `hooks/research-goodware/` | next steps; see the contract, section 5. A packet on main is published: Git is the outbox ([docs/OUTBOX.md](docs/OUTBOX.md)) |
 
 Raw downloads, the agent workspace and run outputs live in `work/`. That folder is never committed.
 
