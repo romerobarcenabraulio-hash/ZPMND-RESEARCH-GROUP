@@ -893,7 +893,7 @@ class Workflow(unittest.TestCase):
         self.assertIn('mkdir -p "$RUNNER_TEMP/vacio-revision" && cd "$RUNNER_TEMP/vacio-revision"', reviewer['run'])
         self.assertIn('"$RUNNER_TEMP/cc/package/claude" -p --tools "" --max-turns 3 --strict-mcp-config ', reviewer['run'])
         for step in with_secret:
-            self.assertEqual(set(step['env']), {'CLAUDE_CODE_OAUTH_TOKEN', 'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC',
+            self.assertEqual(set(step['env']), {'RG_SUSCRIPCION', 'RG_API', 'RG_ORDEN', 'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC',
                                                 'DISABLE_AUTOUPDATER'})
             for word in ('Read', 'Grep', 'Glob', 'allowedTools', 'add-dir', ' --mcp-config', 'dangerously', 'python'):
                 self.assertNotIn(word, step['run'])
@@ -910,8 +910,7 @@ class Workflow(unittest.TestCase):
         self.assertLess(model, prompt)
         self.assertLess(prompt, reviewer)
         self.assertNotIn('secrets.', json.dumps(steps[prompt]))  # the step that parses the model's answer holds no secret
-        self.assertIn('--system-prompt "$(cat "$GITHUB_WORKSPACE/work/revision-system.txt")" \\\n'
-                      '  < "$GITHUB_WORKSPACE/work/revision-user.txt" > "$GITHUB_WORKSPACE/work/revision-cli.json"',
+        self.assertIn('turno "$GITHUB_WORKSPACE/work/revision-cli.json" "$GITHUB_WORKSPACE/work/revision-user.txt" \\\n',
                       steps[reviewer]['run'])
         up = next(s for s in steps if 'upload-artifact' in s.get('uses', ''))
         self.assertEqual(up['with']['path'].split(), ['work/modelo-cli.json', 'work/revision-cli.json'])
@@ -926,7 +925,8 @@ class Workflow(unittest.TestCase):
             with self.subTest(out):
                 run = step['run']
                 self.assertIn(filt, run)  # structure only: no text of the result, not even an error's (GPT, #53)
-                self.assertIn(f'> "$GITHUB_WORKSPACE/work/{out}" \\\n  || {{ rc=$?; diagnose "$GITHUB_WORKSPACE/work/{out}"; exit $rc; }}', run)
+                self.assertIn(f'turno "$GITHUB_WORKSPACE/work/{out}" ', run)
+                self.assertIn(f'.txt")" \\\n  || {{ rc=$?; diagnose "$GITHUB_WORKSPACE/work/{out}"; exit $rc; }}', run)
                 self.assertLess(run.index('diagnose() {'), run.index('"$RUNNER_TEMP/cc/package/claude"'))
 
     def test_discovery_searches_the_web_and_nothing_else_and_fetch_gets_one_checked_plan(self):
@@ -935,7 +935,7 @@ class Workflow(unittest.TestCase):
         self.assertEqual(len(with_secret), 1)  # only the researcher holds the subscription token
         researcher = with_secret[0]
         self.assertEqual(researcher['if'], '${{ inputs.discover }}')
-        self.assertEqual(set(researcher['env']), {'CLAUDE_CODE_OAUTH_TOKEN', 'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC',
+        self.assertEqual(set(researcher['env']), {'RG_SUSCRIPCION', 'RG_API', 'RG_ORDEN', 'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC',
                                                   'DISABLE_AUTOUPDATER'})
         run = researcher['run']
         self.assertIn('mkdir -p "$RUNNER_TEMP/vacio-descubrir" && cd "$RUNNER_TEMP/vacio-descubrir"', run)
@@ -960,6 +960,26 @@ class Workflow(unittest.TestCase):
         run = '\n'.join(s.get('run', '') for s in fetch['steps'])
         self.assertIn('python -m rg.investigar fetch --request "requests/$RID.json" --plan plan/plan.json --out work', run)
         self.assertNotIn('requests/plans', run)  # the fetch job reads the checked plan, never the repo's directly
+
+    def test_heavy_calls_on_the_subscription_light_ones_on_the_api_one_credential_each(self):
+        # Braulio, 2026-10-28: "lo más pesado aquí y lo menos allá, que si no será un gastadero"
+        calls = {s['name']: s for j in ('plan', 'analyze') for s in self.jobs[j]['steps'] if 'scripts/turno.sh' in s.get('run', '')}
+        self.assertEqual(len(calls), 3)
+        heavy = [s for s in calls.values() if 'vacio-revision' not in s['run']]
+        light = [s for s in calls.values() if 'vacio-revision' in s['run']]
+        for step in heavy:  # the researcher and the model: the key reaches them only when sent there on purpose
+            self.assertEqual(step['env']['RG_API'], "${{ vars.RG_ORDEN_INVESTIGAR == 'api' && secrets.ANTHROPIC_API_KEY || '' }}")
+            self.assertEqual(step['env']['RG_ORDEN'], '${{ vars.RG_ORDEN_INVESTIGAR }}')
+        [review] = light
+        self.assertEqual((review['env']['RG_API'], review['env']['RG_ORDEN']), ('${{ secrets.ANTHROPIC_API_KEY }}', 'api'))
+        for step in calls.values():
+            self.assertEqual(step['env']['RG_SUSCRIPCION'], '${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}')
+            self.assertNotIn('ANTHROPIC_API_KEY', step['env'])  # the CLI gets its one credential from turno, never from the step
+            self.assertNotIn('CLAUDE_CODE_OAUTH_TOKEN', step['env'])
+            self.assertLess(step['run'].index('. "$GITHUB_WORKSPACE/scripts/turno.sh"'), step['run'].index('turno "'))
+            self.assertIn('total_cost_usd', step['run'])  # every call's cost in the log, its metadata only
+        self.assertEqual(self.text.count('secrets.ANTHROPIC_API_KEY'), 3)
+        self.assertEqual(self.text.count('secrets.CLAUDE_CODE_OAUTH_TOKEN'), 3)
 
     @unittest.skipUnless(shutil.which('bash') and shutil.which('jq'), 'needs bash and jq, as on the runner')
     def test_the_diagnosis_never_prints_the_results_text_and_keeps_the_exit_code(self):

@@ -64,6 +64,7 @@ MUT = [
  ('.github/workflows/indicadores-mx.yml', 'if grep -rqF -- "$t" out raw; then', 'if false; then'),
  ('.github/workflows/investigar.yml', '            --json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")" \\\n', ''),
  ('.github/workflows/investigar.yml', '            work/revision-cli.json\n', ''),
+ ('.github/workflows/investigar.yml', '          RG_ORDEN: api  # light', '          RG_ORDEN: suscripcion  # light'),
  ('.github/workflows/investigar.yml', '          rm -rf work && mv "$RUNNER_TEMP/sobre" work', '          true'),
  ('.github/workflows/investigar.yml', "      - name: Open the work folder (the only step with the artifact key)\n        env: { RG_ARTIFACT_KEY: '${{ secrets.RG_ARTIFACT_KEY }}' }", '      - name: Open the work folder (the only step with the artifact key)\n        env: {}'),
  ('.github/workflows/investigar.yml', "      - name: Open the work folder (the only step with the artifact key, before anything is parsed)\n        env: { RG_ARTIFACT_KEY: '${{ secrets.RG_ARTIFACT_KEY }}' }", '      - name: Open the work folder (the only step with the artifact key, before anything is parsed)\n        env: {}'),
@@ -570,6 +571,13 @@ MUT = [
  ('scripts/sondear_inegi.py', "out(f'refused {shown} {redact(str(exc), token)[:160]}')", "out(f'refused {shown} {str(exc)[:160]}')"),
  ('scripts/sondear_inegi.py', 'return sum(len(shapes(i)) for i in series_ids) + 1', 'return 10 * len(series_ids)'),
  ('scripts/sondear_inegi.py', 'secrets={token: HOST})', ')'),
+ ('scripts/turno.sh', '      [ -n "$api" ] || continue\n', '      :\n'),
+ ('scripts/turno.sh', '      [ -n "$sub" ] || continue\n', '      :\n'),
+ ('scripts/turno.sh', '  if [ "${RG_ORDEN:-}" = api ]; then', '  if [ "${RG_ORDEN:-}" != api ]; then'),
+ ('scripts/turno.sh', '  unset RG_API RG_SUSCRIPCION\n', '  :\n'),
+ ('scripts/turno.sh', '( unset ANTHROPIC_API_KEY; export CLAUDE_CODE_OAUTH_TOKEN="$sub"; exec "$@" )', '( export CLAUDE_CODE_OAUTH_TOKEN="$sub"; exec "$@" )'),
+ ('scripts/turno.sh', '( unset CLAUDE_CODE_OAUTH_TOKEN; export ANTHROPIC_API_KEY="$api"; exec "$@" )', '( export ANTHROPIC_API_KEY="$api"; exec "$@" )'),
+ ('scripts/turno.sh', "else order='suscripcion'; fi", "else order='suscripcion api'; fi"),
 ]
 
 
