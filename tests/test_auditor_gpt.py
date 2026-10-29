@@ -520,5 +520,20 @@ class Packets(Base):
         self.assertIn('sin resultado de la compuerta de paquetes', http.calls[0]['payload']['input'])
 
 
+
+class CriteriaFit(unittest.TestCase):
+    """The reviewer reads main's criteria files capped at CRITERIA_CAP; one that does not fit is read cut, and a cut
+    criterion makes every review REVISE (2026-10-29: SECURITY.md at 17,006 characters against 15,000)."""
+
+    WHERE = {'README.md': 'README.md', 'RESEARCH_CONTRACT.md': 'RESEARCH_CONTRACT.md', 'SECURITY.md': 'SECURITY.md',
+             'REGLAS.md': 'docs/REGLAS.md'}
+
+    def test_every_criteria_file_of_this_tree_fits_the_cap(self):
+        self.assertEqual(sorted(self.WHERE), sorted(gpt.CRITERIA))
+        for name, rel in self.WHERE.items():
+            with self.subTest(name):
+                size = len((ROOT / rel).read_text(encoding='utf-8'))
+                self.assertLessEqual(size, gpt.CRITERIA_CAP, f'{rel} has {size} characters: shorten it or raise CRITERIA_CAP')
+
 if __name__ == '__main__':
     unittest.main()
