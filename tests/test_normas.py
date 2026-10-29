@@ -48,6 +48,84 @@ REAL_SEPARATORS = [
 ]
 
 
+# Real DOF titles of 1993-2004 (one reprinted in 2017) that failed 'titulos con NOM sin codigo leido' on 2026-10-29
+# (88 titles once the catalog reached 1993), with their real ids and official dates.
+OLDER = [
+    note(4670808, 'PROYECTO de Norma Oficial Mexicana NOM-051-SSA1-93, jeringas estériles desechables de plástico.',
+         '1994-02-18'),
+    note(4677076, 'PROYECTO de Norma Oficial Mexicana NOM-038-SSA I-1993, Bienes y servicios, materias primas para '
+             'alimentos, productos de perfumería y belleza, colorantes orgánicos sintéticos y especificaciones '
+             'sanitarias.',
+         '1994-03-11'),
+    note(4697265, 'RESPUESTA a los comentarios del Proyecto de Norma Oficial Mexicana NOM-005-SSA 2- 1993, de los '
+             'Servicios de Planificación Familiar',
+         '1994-05-20'),
+    note(4732595, 'NORMA Oficial Mexicana (con carácter de emergencia) NOM-EM-004 FITO-1994, Requisitos '
+             'fitosanitarios y procedimientos para la movilización de frutos cítricos para exportación y '
+             'mercado nacional.',
+         '1994-08-26'),
+    note(4794338, 'NORMA Oficial Mexicana NOM-1811-SCFI-1993 Recipientes portátiles para contener gas L.P. no '
+             'expuestos a calentamiento por medios artificiales - fabricación.',
+         '1993-10-19'),
+    note(4954245, 'Norma Oficial Mexicana Emergente NOM-EM-0000-SCT/3-99, Que establece medidas y actividades que '
+             'los concesionarios y permisionarios de servicios de transporte aéreo y operadores de aeronaves, '
+             'deben adoptar para asegurar que los sistemas de informática que se utilicen en sus aeronaves y '
+             'que estén implicados en la operación, mantenimiento, comunicaciones y navegación a bordo de las '
+             'mismas, no se afecten por el cambio al año 2000 y permitan la continuidad en la prestación de '
+             'servicios con altos niveles de seguridad y calidad',
+         '1999-09-20'),
+    note(5469372, 'Proyecto de Modificación a la Norma Oficial Mexicana NOM-025/ 1-NUCL-2000, Requisitos para '
+             'equipo de radiografía industrial. Parte 1: Requisitos generales',
+         '2017-01-19'),
+    note(4762178, 'PROYECTO de Norma Oficial Mexicana NOM-034-STPS, Higiene Industrial - Medio Ambiente Laboral - '
+             'Determinación de Niebla de Aceite Mineral en el Aire - Método Espectrofotométrico de '
+             'Fluorescencia.',
+         '1993-07-21'),
+    note(661160, 'Respuesta a los comentarios y modificaciones al Proyecto de Modificación a la Norma Oficial '
+             'Mexicana PROY-NOM-013-2004, Que regula sanitariamente la importación de árboles de navidad '
+             'naturales de las especies de los géneros Pinus y Abies y la especie Pseudotsuga menziesii, '
+             'publicado el 21 de junio de 2004',
+         '2004-09-27'),
+]
+
+
+class OlderPrintings(unittest.TestCase):
+    def test_each_older_printing_yields_its_code_as_printed(self):
+        want = {'mx.dof:4670808': ('NOM-051-SSA1', 1993, 'NOM-051-SSA1-93'),  # a year of two digits
+                'mx.dof:4677076': ('NOM-038-SSAI', 1993, 'NOM-038-SSA I-1993'),  # SSA I is SSAI, never SSA1
+                'mx.dof:4697265': ('NOM-005-SSA2', 1993, 'NOM-005-SSA 2- 1993'),
+                'mx.dof:4732595': ('NOM-EM-004-FITO', 1994, 'NOM-EM-004 FITO-1994'),  # a space for the hyphen
+                'mx.dof:4794338': ('NOM-1811-SCFI', 1993, 'NOM-1811-SCFI-1993'),  # four digits
+                'mx.dof:4954245': ('NOM-EM-000-SCT/3', 1999, 'NOM-EM-0000-SCT/3-99'),
+                'mx.dof:5469372': ('NOM-025/1-NUCL', 2000, 'NOM-025/ 1-NUCL-2000')}  # a space after the slash
+        by = {e['entry_id']: e for e in OLDER}
+        for i, code in want.items():
+            with self.subTest(i):
+                self.assertEqual([c[:3] for c in normas.codes(by[i]['title'])], [code])
+        self.assertEqual(normas.unparsed(OLDER), [])
+
+    def test_a_code_without_its_year_or_its_issuer_still_yields_nothing_and_its_review_holds_for_that_title(self):
+        by = {e['entry_id']: e for e in OLDER}
+        for i in ('mx.dof:4762178', 'mx.dof:661160'):  # NOM-034-STPS, PROY-NOM-013-2004
+            with self.subTest(i):
+                self.assertEqual(normas.codes(by[i]['title']), [])
+                self.assertEqual(normas.unparsed([by[i]]), [])
+                self.assertEqual(normas.unparsed([{**by[i], 'entry_id': 'mx.dof:99'}]), ['mx.dof:99'])
+
+    def test_a_two_digit_year_outside_the_1990s_is_never_read(self):
+        odd = [note(41, 'Norma Oficial Mexicana NOM-051-SSA1-05, texto construido.', '2006-01-01'),  # CONSTRUIDO
+               note(42, 'Norma Oficial Mexicana NOM-052-SSA 1-05, texto construido.', '2006-01-01')]  # another old feature
+        for e in odd:
+            self.assertEqual(normas.codes(e['title']), [])
+        self.assertEqual(normas.unparsed(odd), ['mx.dof:41', 'mx.dof:42'])
+
+    def test_the_older_branch_changes_nothing_already_read(self):
+        before = normas.lineages(REAL + REAL_SEPARATORS)
+        new = {c[0] for e in OLDER for c in normas.codes(e['title'])}
+        after = [r for r in normas.lineages(REAL + REAL_SEPARATORS + OLDER) if r['lineage'] not in new]
+        self.assertEqual(after, before)
+
+
 class Lineages(unittest.TestCase):
     def setUp(self):
         self.by = {r['lineage']: r for r in normas.lineages(REAL)}

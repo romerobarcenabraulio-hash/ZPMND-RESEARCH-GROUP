@@ -94,8 +94,13 @@ VARIANTES = [
     note(5636929, 'Decreto por el que se aprueba el Anexo IV "Reglas para Prevenir la Contaminación por las Aguas Sucias de los Buques" del Convenio Internacional para Prevenir la Contaminación por los Buques, 1973, modificado por el Protocolo de 1978.',
          '2021-12-01'),
 ]
-MEMORANDO = note(9, 'Decreto Promulgatorio del Memorándum de Entendimiento X, hecho en Roma, el uno de enero de dos '
-                   'mil veinticinco.', '2026-05-04')  # CONSTRUIDO: a promulgation of something outside the table
+# CONSTRUIDO: a promulgation of something outside the table (a Memorándum was until 2026-10-29: mx.dof:2051858)
+MEMORANDO = note(9, 'Decreto Promulgatorio del Comunicado Conjunto X, hecho en Roma, el uno de enero de dos mil '
+                   'veinticinco.', '2026-05-04')
+# CONSTRUIDO: a form the table reads and the title check does not (the real ones carry a conclusion clause)
+SIN_EFECTO = note(11, 'Decreto por el cual el Convenio de Ejemplo entre los Estados Unidos Mexicanos y la República X, '
+                      'quedará sin efectos en los Estados Unidos Mexicanos, a partir del uno de enero de dos mil '
+                      'veintisiete.', '2026-05-06')
 DESALINEADO = note(8, 'Decreto Promulgatorio del´Acuerdo X, hecho en Roma, el uno de enero de dos mil veinticinco.',
                    '2026-05-03')
 
@@ -170,20 +175,234 @@ class IndependentCheck(unittest.TestCase):
                                                 'la Capa de Ozono'))  # the amended instrument, cut at «, aprobada en»
 
     def test_a_reviewed_disagreement_is_not_reported_and_a_new_one_with_its_title_is(self):
-        self.assertEqual(sorted(tratados.REVIEWED), ['mx.dof:5636928', 'mx.dof:5636929'])
+        self.assertEqual(sorted(tratados.REVIEWED), ['mx.dof:4719647', 'mx.dof:4720018', 'mx.dof:5078128', 'mx.dof:5129541',
+                                                     'mx.dof:5339485', 'mx.dof:5672145', 'mx.dof:5759498', 'mx.dof:762740',
+                                                     'mx.dof:770677'])
         for i, annex in (('mx.dof:5636928', 'Anexo III'), ('mx.dof:5636929', 'Anexo IV')):
-            with self.subTest(i):
+            with self.subTest(i):  # reviewed until 2026-10-29; the title check now reads an approval naming an Annex
                 anexo = next(e for e in VARIANTES if e['entry_id'] == i)
                 stage, name = tratados.classify(anexo['title'])
                 self.assertEqual((stage, name.startswith(f'{annex} "Reglas para Prevenir')), ('aprobacion_senado', True))
-                self.assertIsNone(tratados.LOOKS_LIKE.search(tratados.fold(anexo['title'])))  # the disagreement reviewed
+                self.assertIsNotNone(tratados.LOOKS_LIKE.search(tratados.fold(anexo['title'])))
                 self.assertEqual(tratados.unreconciled([anexo]), [])
-                self.assertEqual(tratados.unreconciled([{**anexo, 'entry_id': 'mx.dof:99'}]), ['mx.dof:99'])
-                # GPT #44: the review holds for the title read, not for the id; a corrected title is checked again
-                self.assertEqual(tratados.unreconciled([{**anexo, 'title': anexo['title'].replace('1978', '1997')}]), [i])
+        ajustes, i = OLDER_BY['mx.dof:4719647'], 'mx.dof:4719647'  # a disagreement a person reviewed
+        self.assertEqual((tratados.classify(ajustes['title']), bool(tratados.LOOKS_LIKE.search(tratados.fold(ajustes['title'])))),
+                         (None, True))
+        self.assertEqual(tratados.unreconciled([ajustes]), [])
+        self.assertEqual(tratados.unreconciled([{**ajustes, 'entry_id': 'mx.dof:99'}]), ['mx.dof:99'])
+        # GPT #44: the review holds for the title read, not for the id; a corrected title is checked again
+        self.assertEqual(tratados.unreconciled([{**ajustes, 'title': ajustes['title'].replace('2A', '3A')}]), [i])
 
     def test_a_classified_title_that_does_not_look_like_a_treaty_decree_is_reported(self):
+        self.assertEqual(tratados.classify(SIN_EFECTO['title'])[0], 'retiro_o_denuncia')
+        self.assertIsNone(tratados.LOOKS_LIKE.search(tratados.fold(SIN_EFECTO['title'])))
+        self.assertEqual(tratados.unreconciled(REAL + [SIN_EFECTO]), ['mx.dof:11'])
+
+    def test_an_agreement_between_mexican_states_is_not_a_treaty_and_the_check_still_sees_it(self):
+        self.assertIsNone(tratados.classify(LIMITES['title']))  # Constitución art. 46: a 'convenio amistoso'
         self.assertEqual(tratados.unreconciled(REAL + [LIMITES]), ['mx.dof:7'])
+        limites = OLDER_BY['mx.dof:4720018']  # the real one (1994): in the view until 2026-10-29, now left out
+        self.assertIsNone(tratados.classify(limites['title']))
+        self.assertIsNotNone(tratados.LOOKS_LIKE.search(tratados.fold(limites['title'])))
+        self.assertEqual(tratados.unreconciled([limites]), [])  # reviewed: the table's answer stands
+        self.assertEqual(tratados.unreconciled([{**limites, 'entry_id': 'mx.dof:99'}]), ['mx.dof:99'])
+
+
+def filed(i, title, published, issuer):
+    """A note with the desk the DOF filed it under (category.issuer), as the catalog holds it."""
+    return {**note(i, title, published), 'category': {'issuer': issuer}}
+
+
+# Real DOF titles (1993-2014), copied verbatim with their ids, dates and desks, from the forms the catalog met when it
+# reached 1993: the run of 2026-10-29 counted 1484 vs 1561 (341 disagreements over 844,383 DOF titles).
+OLDER = [
+    filed(4906649, 'DECRETO por el que se aprueban el Reglamento General y de las Resoluciones de la Unión Postal de las '
+             'Américas, España y Portugal, adoptados durante el XVI Congreso de la Unión Postal de las Américas, España '
+             'y Portugal.', '1996-12-12', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(4863279, 'DECRETO de Promulgación del Reglamento General y las Resoluciones de la Unión Postal de las Américas, '
+             'España y Portugal, adoptados durante el XVI Congreso de la Unión Postal de las Américas, España y '
+             'Portugal, celebrado en la Ciudad de México, Distrito Federal.', '1998-01-12',
+          issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(5094444, 'Decreto por el que se determina que el Acuerdo por el que se crea la Organización Internacional de la '
+             'Viña y el Vino, suscrito en la ciudad de París, Francia, el tres de abril de dos mil uno, queda sin efectos '
+             'en México a partir del treinta de junio de dos mil nueve', '2009-06-15',
+          issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(4863233, 'DECRETO de Promulgación de la Convención Interamericana contra la Corrupción, adoptada por la '
+             'Conferencia Especializada sobre Corrupción de la Organización de los Estados Americanos, en la '
+             'ciudad de Caracas, Venezuela.',
+         '1998-01-09', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(4796074, 'DECRETO de promulgación de las enmiendas al Tratado para la Proscripción de las Armas Nucleares '
+             'en la América Latina.',
+         '1993-10-25', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(2044527, 'Decreto Promulgatorio de las Modificaciones al Anexo 401 del Tratado de Libre Comercio de '
+             'América del Norte, formalizadas mediante intercambio de comunicaciones los días ocho y veintidós '
+             'de octubre y quince de noviembre de dos mil cuatro, entre los Gobiernos de los Estados Unidos de '
+             'América, Canadá y los Estados Unidos Mexicanos, respectivamente',
+         '2005-06-14', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(670047, 'Fe de errata al Decreto Promulgatorio del Acuerdo de Coproducción Cinematográfica entre los '
+             'Estados Unidos Mexicanos y el Reino de España, firmado en la ciudad de Madrid, España, el ocho '
+             'de abril de dos mil tres, publicado el 17 de marzo de 2004',
+         '2004-05-06', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(4710809, 'DECRETO por el que se aprueba el texto de la Convención Marco de las Naciones Unidas sobre el '
+             'Cambio Climático.',
+         '1993-01-13', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(737415, 'Decreto por el que se aprueba la adhesión al Protocolo de Firma Facultativa sobre Jurisdicción '
+             'Obligatoria para la Solución de Controversias de la Convención de Viena sobre Relaciones '
+             'Consulares, adoptado en Viena, el veinticuatro de abril de mil novecientos sesenta y tres',
+         '2002-01-16', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(5197492, 'Decreto por que se aprueba el Convenio entre el Gobierno de los Estados Unidos Mexicanos y el '
+             'Gobierno del Estado de Kuwait para evitar la doble imposición y prevenir la evasión fiscal en '
+             'materia de impuestos sobre la renta, firmado en la Ciudad de Kuwait, el veintisiete de octubre '
+             'de dos mil nueve',
+         '2011-06-22', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(2035614, 'Decreto por el cual el Convenio sobre Transporte Marítimo entre los Estados Unidos Mexicanos y '
+             'el Reino de los Países Bajos, firmado en la ciudad de La Haya, el dieciocho de octubre de mil '
+             'novecientos ochenta y cuatro, quedará sin efectos en los Estados Unidos Mexicanos, a partir del '
+             'veinte de octubre de dos mil cinco',
+         '2005-05-06', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(4937867, 'Decreto por el que se determina que el Tratado de Libre Comercio entre los Estados Unidos '
+             'Mexicanos, la República de Colombia y la República de Venezuela, firmado en la ciudad de '
+             'Cartagena de Indias, Colombia, el trece de junio de mil novecientos noventa y cuatro, queda sin '
+             'efectos entre los Estados Unidos Mexicanos y la República Bolivariana de Venezuela, a partir del '
+             'diecinueve de noviembre de dos mil seis',
+         '2006-11-17', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(4871130, 'DECRETO por el que se deja sin efectos en los Estados Unidos Mexicanos la Convención sobre '
+             'Nacionalidad, firmada en Montevideo, el veintiséis de diciembre de 1933.',
+         '1998-03-24', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(774728, 'Decreto por el que se aprueban el Decimoquinto Protocolo Modificatorio y el Decimosexto '
+             'Protocolo Adicional, ambos del Acuerdo de Complementación Económica número 5 celebrado entre los '
+             'Estados Unidos Mexicanos y la República Oriental del Uruguay',
+         '2001-01-26', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(2058439, 'Decreto por el que se aprueba el Arreglo de Locarno que establece una Clasificación '
+             'Internacional para los Dibujos y Modelos Industriales, firmado en Locarno el 8 de octubre de '
+             '1968 y enmendado el 28 de septiembre de 1979',
+         '2000-08-07', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(2091187, 'Decreto por el que se aprueba el Estatuto de Roma de la Corte Penal Internacional, adoptado en '
+             'la ciudad de Roma, el diecisiete de julio de mil novecientos noventa y ocho',
+         '2005-09-07', issuer='SECRETARIA DE GOBERNACION'),
+    filed(4874903, 'DECRETO de promulgación del Mandato del Grupo Internacional de Estudio sobre el Cobre.',
+         '1995-06-02', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(5155445, 'Decreto Promulgatorio de la denuncia de los Estados Unidos Mexicanos al Convenio Constitutivo de '
+             'la Unión Latina, adoptado en Madrid el 15 de mayo de 1954',
+         '2010-08-16', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(4740197, 'DECRETO que reforma el diverso que establece las preferencias porcentuales a las mercancías que '
+             'se importen al amparo del Acuerdo Comercial número 27 de la Industria del Vidrio, suscrito por '
+             'los Estados Unidos Mexicanos y las Repúblicas Federativa del Brasil y Venezuela.',
+         '1993-05-27', issuer='SECRETARIA DE COMERCIO Y FOMENTO INDUSTRIAL'),
+    filed(5342343, 'Decreto por el que se declara el 2014 como "Año del Bicentenario de la Promulgación de la '
+             'Constitución de Apatzingán."',
+         '2014-04-28', issuer='SECRETARIA DE GOBERNACION'),
+    filed(5028840, 'Decreto por el que se aprueba el Programa Sectorial de Relaciones Exteriores 2007-2012',
+         '2008-01-23', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(4720018, 'DECRETO por el que se aprueba el Convenio Amistoso para la Precisión y Reconocimiento de sus '
+             'respectivos Límites Territoriales, celebrado por el Estado Libre y Soberano de México y por el '
+             'DEPARTAMENTO DEL DISTRITO FEDERAL',
+         '1994-07-27', issuer='SECRETARIA DE GOBERNACION'),
+    filed(4719647, 'DECRETO por el que se aprueba el texto de los ajustes a los artículos 2A y 2B del Protocolo de '
+             'Montreal, relativo a las sustancias que agotan la capa de ozono.',
+         '1994-07-25', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+    filed(5028716, 'Decreto por el que se aprueban las Enmiendas a la Constitución de la Organización Internacional '
+             'para las Migraciones, adoptadas durante la Septuagésima Sexta Reunión de su Consejo, el '
+             'veinticuatro de noviembre de mil novecientos noventa y ocho',
+         '2008-01-21', issuer='SECRETARIA DE RELACIONES EXTERIORES'),
+]
+OLDER_BY = {e['entry_id']: e for e in OLDER}
+NOT_TREATIES_OLDER = ('mx.dof:4740197', 'mx.dof:5342343', 'mx.dof:5028840', 'mx.dof:4720018')
+SRE = tratados.DESK
+
+
+class OlderPrintings(unittest.TestCase):
+    def test_each_older_form_gives_its_stage_and_the_name_as_printed(self):
+        want = {'mx.dof:4863233': ('promulgacion', 'Convención Interamericana contra la Corrupción'),
+                'mx.dof:4796074': ('enmienda', 'Tratado para la Proscripción de las Armas Nucleares en la América Latina'),
+                'mx.dof:2044527': ('enmienda', 'Anexo 401 del Tratado de Libre Comercio de América del Norte'),
+                'mx.dof:670047': ('fe_de_erratas', 'Acuerdo de Coproducción Cinematográfica entre los Estados Unidos'),
+                'mx.dof:4710809': ('aprobacion_senado', 'Convención Marco de las Naciones Unidas sobre el Cambio Climático'),
+                'mx.dof:737415': ('aprobacion_senado', 'Protocolo de Firma Facultativa sobre Jurisdicción Obligatoria'),
+                'mx.dof:5197492': ('aprobacion_senado', 'Convenio entre el Gobierno de los Estados Unidos Mexicanos y el '
+                                                        'Gobierno del Estado de Kuwait'),  # 'Decreto por que', as printed
+                'mx.dof:2035614': ('retiro_o_denuncia', 'Convenio sobre Transporte Marítimo entre los Estados Unidos'),
+                'mx.dof:4937867': ('retiro_o_denuncia', 'Tratado de Libre Comercio entre los Estados Unidos Mexicanos, la '
+                                                        'República de Colombia y la República de Venezuela'),
+                'mx.dof:4871130': ('retiro_o_denuncia', 'Convención sobre Nacionalidad'),
+                'mx.dof:774728': ('aprobacion_senado', 'Decimoquinto Protocolo Modificatorio'),
+                'mx.dof:2058439': ('aprobacion_senado', 'Arreglo de Locarno'),
+                'mx.dof:2091187': ('aprobacion_senado', 'Estatuto de Roma de la Corte Penal Internacional'),
+                'mx.dof:4874903': ('promulgacion', 'Mandato del Grupo Internacional de Estudio sobre el Cobre'),
+                'mx.dof:5155445': ('retiro_o_denuncia', 'Convenio Constitutivo de la Unión Latina'),
+                'mx.dof:5028716': ('enmienda', 'Constitución de la Organización Internacional para las Migraciones'),
+                'mx.dof:4906649': ('aprobacion_senado', 'Reglamento General y de las Resoluciones de la Unión Postal'),
+                'mx.dof:4863279': ('promulgacion', 'Reglamento General y las Resoluciones de la Unión Postal'),
+                'mx.dof:5094444': ('retiro_o_denuncia', 'Acuerdo por el que se crea la Organización Internacional de la '
+                                                        'Viña y el Vino')}
+        for i, (stage, start) in want.items():
+            with self.subTest(i):
+                got = tratados.classify(OLDER_BY[i]['title'])
+                self.assertEqual(got[0], stage)
+                self.assertTrue(got[1].startswith(start), got[1])
+
+    def test_a_decree_by_which_an_instrument_is_not_ended_is_no_termination_and_the_check_sees_it(self):
+        # GPT REVISE 467c3ff: CONSTRUIDO; 'por el cual' without 'sin efectos' gave retiro_o_denuncia
+        for i, title in ((14, 'Decreto por el cual el Convenio de Ejemplo, firmado en Roma, se modifica.'),
+                         (15, 'Decreto por el que se determina que el Acuerdo de Ejemplo, firmado en Roma, sigue vigente.'),
+                         # GPT REVISE 2421f83: 'sin efectos' that ends an article, not the instrument
+                         (17, 'Decreto por el cual el Convenio de Ejemplo, firmado en Roma, se modifica para dejar sin '
+                              'efectos su artículo 2.')):
+            with self.subTest(title):
+                e = note(i, title, '2026-05-08')
+                self.assertIsNone(tratados.classify(title))
+                self.assertEqual(tratados.unreconciled([e]), [f'mx.dof:{i}'])  # the clause still flags it
+
+    def test_a_mexican_reglamento_is_no_treaty_and_the_check_sees_it(self):
+        # GPT REVISE 2421f83: CONSTRUIDO; REGLAMENTO is also a Mexican legal form, read only as a name in tratados.NAMED
+        domestic = filed(18, 'Decreto por el que se aprueba el Reglamento Interior de la Secretaría de Salud.', '2026-05-10',
+                         'SECRETARIA DE SALUD')
+        self.assertIsNone(tratados.classify(domestic['title']))
+        self.assertEqual(tratados.unreconciled([domestic]), ['mx.dof:18'])  # left out, and reported: the run exits 3
+
+    def test_a_continuation_of_a_decree_is_an_act_for_the_desk_check(self):
+        # GPT REVISE 467c3ff: CONSTRUIDO; 'Continuación del texto del Decreto ...' needs no 'al'
+        odd = filed(16, 'Continuación del texto del Decreto por el que se aprueba el Comunicado Conjunto X.', '2026-05-09', SRE)
+        self.assertEqual((tratados.classify(odd['title']), tratados.unreconciled([odd])), (None, []))
+        self.assertEqual(tratados.desk([odd]), ['mx.dof:16'])
+
+    def test_a_termination_with_an_approved_or_celebrated_clause_is_read_by_that_clause(self):
+        # CONSTRUIDO on the real form of mx.dof:2035614 ('Decreto por el cual el Convenio ..., firmado en ...'): only the
+        # clause ', celebrado en' tells the title check it is a treaty decree.
+        celebrado = note(13, 'Decreto por el cual el Convenio de Ejemplo, celebrado en Roma el uno de enero de mil '
+                             'novecientos noventa, quedará sin efectos en los Estados Unidos Mexicanos, a partir del uno '
+                             'de enero de dos mil veintisiete.', '2026-05-07')
+        self.assertEqual(tratados.classify(celebrado['title']), ('retiro_o_denuncia', 'Convenio de Ejemplo'))
+        self.assertEqual(tratados.unreconciled([celebrado]), [])
+
+    def test_both_checks_reconcile_the_older_forms(self):
+        self.assertEqual(tratados.unreconciled(OLDER), [])
+        self.assertEqual(tratados.desk(OLDER), [])
+        self.assertEqual(tratados.unreconciled(REAL + VARIANTES + NOT_TREATIES + OLDER), [])
+
+    def test_goods_imported_under_a_treaty_an_anniversary_and_a_programme_are_not_treaty_decrees(self):
+        for i in ('mx.dof:4740197', 'mx.dof:5342343', 'mx.dof:5028840'):  # 'al amparo del Acuerdo Comercial ...',
+            with self.subTest(i):                                          # 'Año ... de la Promulgación de la Constitución'
+                title = OLDER_BY[i]['title']
+                self.assertIsNone(tratados.classify(title))
+                self.assertIsNone(tratados.LOOKS_LIKE.search(tratados.fold(title)))
+        self.assertEqual(tratados.desk([OLDER_BY['mx.dof:5028840']]), [])  # a programme the Ministry files and approves
+
+    def test_a_word_that_would_rename_an_amendment_already_read_is_not_an_instrument(self):
+        self.assertNotIn('ARTICULO', tratados.INSTRUMENTS)  # 'la Enmienda del Artículo XVII (f) del Acuerdo ...' keeps its name
+        ajustes = OLDER_BY['mx.dof:4719647']  # 'los ajustes a los artículos 2A y 2B del Protocolo de Montreal'
+        self.assertIsNone(tratados.classify(ajustes['title']))
+        self.assertEqual(tratados.unreconciled([ajustes]), [])  # reviewed, that exact title
+        self.assertEqual(tratados.desk([ajustes]), [])
+
+    def test_the_desk_check_reports_a_foreign_ministry_act_the_table_and_the_title_check_both_miss(self):
+        odd = filed(12, 'Decreto por el que se aprueba el Comunicado Conjunto X.', '2026-05-05', SRE)  # CONSTRUIDO
+        self.assertIsNone(tratados.classify(odd['title']))
+        self.assertEqual(tratados.unreconciled([odd]), [])  # the title check agrees with the table: both miss it
+        self.assertEqual(tratados.desk([odd]), ['mx.dof:12'])  # the DOF's own filing does not
+        self.assertEqual(tratados.desk([{**odd, 'category': {'issuer': 'PRESIDENCIA DE LA REPUBLICA'}}]), [])
+        self.assertEqual(tratados.desk([{k: v for k, v in odd.items() if k != 'category'}]), [])
+        self.assertEqual(tratados.desk([{**odd, 'source_id': 'mx.otro'}]), [])
 
 
 class RunHook(unittest.TestCase):
@@ -222,6 +441,21 @@ class RunHook(unittest.TestCase):
         self.assertEqual(m['treaty_instruments'], 3)
         self.assertIn({'source_id': 'mx.tratados', 'scope': 'decretos de tratado: chequeo independiente vs tabla fija',
                        'expected': 4, 'extracted': 4, 'ok': True, 'entries': []}, m['coverage'])
+
+    def test_a_foreign_ministry_act_the_table_misses_fails_the_run_on_the_desk_check(self):
+        odd = filed(12, 'Decreto por el que se aprueba el Comunicado Conjunto X.', '2026-05-05', SRE)  # CONSTRUIDO
+        with tempfile.TemporaryDirectory() as d:
+            self.assertEqual(self.run_main(d + '/out', REAL + [{**odd, 'category': {**self.ROW['category'], 'issuer': SRE}}]), 3)
+            bad = [c for c in self.manifests(d + '/out')[-1]['coverage'] if not c['ok']]
+        self.assertEqual([(c['source_id'], c['scope'][:24], c['entries']) for c in bad],
+                         [('mx.tratados', 'decretos de la SRE con a', ['mx.dof:12'])])
+
+    def test_a_continued_foreign_ministry_act_the_table_misses_fails_the_run(self):
+        odd = filed(16, 'Continuación del texto del Decreto por el que se aprueba el Comunicado Conjunto X.', '2026-05-09', SRE)
+        with tempfile.TemporaryDirectory() as d:
+            self.assertEqual(self.run_main(d + '/out', REAL + [{**odd, 'category': {**self.ROW['category'], 'issuer': SRE}}]), 3)
+            bad = [c for c in self.manifests(d + '/out')[-1]['coverage'] if not c['ok']]
+        self.assertEqual([c['entries'] for c in bad], [['mx.dof:16']])
 
     def test_an_unclassified_treaty_decree_fails_the_run(self):
         with tempfile.TemporaryDirectory() as d:
