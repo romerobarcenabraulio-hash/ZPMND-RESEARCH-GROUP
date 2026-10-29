@@ -149,6 +149,17 @@ número de 2 o 3 dígitos y un año de 4: letras y dígitos no se mezclan, así 
 en dígito (`SSA12024`: ¿SSA1 + 2024 o SSA + 12024?) no se adivina. Queda en la cobertura `titulos con NOM sin codigo
 leido` y la corrida sale con código 3.
 
+Cuando el catálogo llegó a 1993 (corrida del 2026-10-29) aparecieron 88 títulos con impresiones viejas. Una tercera rama
+las lee solo si traen un rasgo viejo, así que nunca lee lo que ya lee la primera:
+- año de dos dígitos de los noventa: `NOM-051-SSA1-93` es 1993, y ningún otro año de dos dígitos se lee;
+- espacio en vez de guion: `NOM-EM-004 FITO-1994`;
+- último carácter del emisor tras un espacio: `SSA I` queda como `SSAI`, nunca `SSA1`;
+- número de cuatro dígitos: `NOM-1811-SCFI-1993`;
+- espacio tras la barra: `NOM-025/ 1-NUCL-2000`.
+
+Sobre los 844,383 títulos del DOF, ningún código ya leído cambió y se leen 81 más. Los 7 que no traen año o emisor
+(`NOM-034-STPS`, `PROY-NOM-013-2004`…) quedan en `REVIEWED`, cada uno con el sha256 de su título.
+
 ## Tesis de la SCJN: fuente secundaria (`mx.hf-tesis-scjn`)
 
 El Semanario de la SCJN responde 403 a robots.txt y no se rodea. Mientras tanto las tesis entran desde el dataset
@@ -231,16 +242,43 @@ Cada corrida escribe `mx/tratados/tratados.jsonl`, justo después del catálogo,
 anti-bots no se rodea). Todo tratado vigente en México pasa por el DOF: el decreto del Senado que lo aprueba
 ("Decreto por el que se aprueba el Convenio…") y el decreto que lo promulga ("Decreto Promulgatorio del Tratado…").
 - **Selección y etapa:** tabla fija de aperturas del título (`rg/catalog/tratados.py`): acto, artículo y una palabra de
-  instrumento (Tratado, Convenio, Convención, Acuerdo, Protocolo, Enmienda). Etapas: `promulgacion`,
+  instrumento (Tratado, Convenio, Convención, Acuerdo, Protocolo, Enmienda; desde 2026-10-29 también Arreglo, Estatuto,
+  Decisión, Resolución, Memorándum, Notas, Reserva, la Constitución de un organismo…). Etapas: `promulgacion`,
   `aprobacion_senado`, `enmienda`, `retiro_o_denuncia`, `fe_de_erratas`, `aclaracion`. Gana la apertura más larga
   seguida de un instrumento.
 - **Nombre:** se copia del título, desde después del artículo hasta la cláusula de conclusión (", adoptado en",
   ", firmado en", ", hecho en", ", suscrito en"), o hasta el final sin el punto.
 - **Agrupación y orden:** una línea por nombre exacto plegado (sin acentos, mayúsculas, espacios simples), con sus notas
   ordenadas por fecha oficial. No se calcula vigencia, no se adivinan partes y no se unen nombres distintos.
-- **Chequeo independiente:** una regex más laxa ("decreto" con "promulgatorio" o con cláusula de conclusión) debe
-  seleccionar exactamente los mismos títulos que la tabla. Cualquier diferencia, en un sentido o en el otro, queda en
-  `coverage` (`mx.tratados`) y la corrida sale con código 3.
+- **Chequeo independiente:** una regex más laxa debe seleccionar exactamente los mismos títulos que la tabla. Pide
+  "decreto" con "promulgatorio" o "de promulgación", una aprobación que nombre un instrumento en cualquier parte del
+  título, o una cláusula de conclusión. No cuenta lo que "se importe al amparo de" un tratado, que es una medida
+  arancelaria. Cualquier diferencia, en un sentido o en el otro, queda en `coverage` (`mx.tratados`) y la corrida sale
+  con código 3.
+- **Chequeo por emisor:** el DOF archiva cada nota bajo su emisor (`category.issuer`), un dato que no sale del título.
+  Todo decreto de la SRE que promulga, aprueba, deja sin efectos o denuncia algo tiene que estar en la tabla, salvo un
+  programa que la SRE aprueba. Si falta uno, la corrida sale con código 3.
+- **Desde 1993 (corrida del 2026-10-29: 1484 contra 1561).** Al llegar a 1993 aparecieron formas viejas:
+  - "DECRETO de Promulgación…", con 202 notas;
+  - terminaciones ("se deja sin efectos…", y "por el cual el Convenio…" o "se determina que…" solo en la forma fija que
+    imprimen las 13 notas reales: ", quedará sin efectos en los Estados Unidos Mexicanos | en México | entre los Estados
+    Unidos Mexicanos y …, a partir del…"; "sin efectos" en otro lugar, como "se modifica para dejar sin efectos su
+    artículo 2", no es terminación y el cuadre lo reporta);
+  - "Reglamento" es también forma jurídica mexicana: cuenta solo como uno de los nombres de la tabla fija `NAMED` (los
+    de la UPAEP, `mx.dof:4906649` y `4863279`); "se aprueba el Reglamento Interior de la Secretaría de Salud" queda
+    fuera y el cuadre lo reporta;
+  - "el texto de…", adhesiones y ajustes;
+  - "Fe de errata" en singular;
+  - erratas de impresión del propio DOF ("Decreto por que se aprueba").
+
+  Cada forma nueva cita una nota que lee. Se leen solo formas y palabras que no cambian lo ya leído: ARTICULO
+  renombraba 19 enmiendas, así que no es instrumento. Sobre los 844,383 títulos del DOF, cuadran las dos
+  verificaciones. Respecto de antes cambian tres notas:
+  - un "Convenio Amistoso" de límites entre estados (art. 46 constitucional, `mx.dof:4720018`) deja la vista porque es
+    doméstico;
+  - dos enmiendas a la Constitución de la OIM quedan bajo esa Constitución.
+
+  Nueve notas sin una forma fija quedan en `REVIEWED` con el sha256 de su título.
 - La carpeta es una vista: `Catalog` nunca la lee como registros (`store.DERIVED`).
 
 ## Programación
