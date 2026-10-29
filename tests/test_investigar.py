@@ -4,8 +4,10 @@ Built here (CONSTRUIDO): a two-host web served by a fake opener, a short officia
 broken PDF, a request and a plan, and model answers. No network and no model: the model's answer is a literal, which
 is the point, since the gate must hold whatever the model says.
 """
+import contextlib
 import copy
 import hashlib
+import io
 import json
 import os
 import shutil
@@ -687,6 +689,181 @@ class Backed(Base):
         self.assertIn('only when the quote itself shows the disagreement', system)
 
 
+class FullCorpus(Base):
+    """Every text read whole, in parts, when one prompt cannot hold them (windows, partitions, prompt_part, reduce)."""
+
+    def small(self):
+        # a budget smaller than the page: the quote falls past what one prompt's fair share (shares) would read
+        return mock.patch.multiple(inv, MAX_TEXT_CHARS=120, OVERLAP=90)
+
+    def fake_model(self, rows, parts):
+        """Per part, what a model can only find in what it was given: the page's quote or the dataset's note, if whole."""
+        answers = []
+        for k in range(len(parts)):
+            _, user = inv.prompt_part(RR, rows, self.work, parts, k)
+            found = [f for f in answer()['findings']['confirmed'] if f['quote'] in user]
+            answers.append({'scope': f'parte {k}', 'findings': {'confirmed': found, 'conflicting': [], 'unknown': [f'no en parte {k}']},
+                            'limitations': ['Prueba.']})
+        return answers
+
+    def test_decisive_evidence_past_the_prefix_reaches_the_packet(self):
+        # E2: the falsifier of full-corpus reading
+        rows = self.fetch()
+        with self.small():
+            _, single = inv.prompt(RR, rows, self.work)
+            self.assertNotIn(QUOTE, single)  # one prompt's fair share never reads it
+            parts = inv.read_in_parts(rows)
+            self.assertGreater(len(parts), 1)
+            for k, part in enumerate(parts):  # each part holds its windows and nothing else of the source
+                _, user = inv.prompt_part(RR, rows, self.work, parts, k)
+                for aid, start, end in part:
+                    text = (self.work / 'texto' / f'{aid}.txt').read_text(encoding='utf-8')
+                    self.assertIn(text[start:end], user)
+                    if start > 0:
+                        self.assertNotIn(text[:start], user)
+            left = {}
+            merged = inv.reduce(self.fake_model(rows, parts), left)
+            (self.work / 'partes-fuera.json').write_text(json.dumps(left), encoding='utf-8')  # as the reduce command writes it
+            self.assertIn(QUOTE, [f['quote'] for f in merged['findings']['confirmed']])
+            whole_ids = {aid for part in parts for aid, _, _ in part}
+            read = [{**r, 'read_whole': True} if r.get('artifact_id') in whole_ids else r for r in rows]
+            folder = inv.assemble(RR, read, merged, self.work, self.out, 'm', '2026-10-23T00:00:00Z', parts=parts)
+        packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
+        receipt = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))
+        self.assertIn(QUOTE, [f['quote'] for f in packet['findings']['confirmed']])  # checked by the gate against the whole text
+        self.assertEqual(packets.check(folder)[0], [])
+        self.assertEqual((receipt['partes'], 'cut' in receipt), (parts, False))
+        self.assertFalse(any('se leyeron solo desde su inicio' in x for x in packet['limitations']))
+        self.assertEqual(sum('se leyeron completas en' in x for x in packet['limitations']), 1)
+
+    def test_windows_cover_every_text_and_hold_every_short_quote_whole(self):
+        rows = [{'artifact_id': 'SA-a', 'text_chars': 1000}, {'artifact_id': 'SA-b', 'text_chars': 50}, {'artifact_id': 'SA-c'}, {'url': 'u'}]
+        with mock.patch.multiple(inv, MAX_TEXT_CHARS=300, OVERLAP=100):
+            got = inv.windows(rows)
+            self.assertEqual(got, [('SA-a', 0, 300), ('SA-a', 200, 500), ('SA-a', 400, 700), ('SA-a', 600, 900), ('SA-a', 800, 1000),
+                                   ('SA-b', 0, 50)])
+            for start in range(0, 1000 - 100):  # any span up to OVERLAP lies whole inside one window
+                self.assertTrue(any(a == 'SA-a' and s <= start and start + 100 <= e for a, s, e in got), start)
+            parts = inv.partitions(rows)
+            self.assertEqual(parts, [[['SA-a', 0, 300]], [['SA-a', 200, 500]], [['SA-a', 400, 700]], [['SA-a', 600, 900]],
+                                     [['SA-a', 800, 1000], ['SA-b', 0, 50]]])
+            self.assertTrue(all(sum(e - s for _, s, e in p) <= 300 for p in parts))
+
+    def test_one_prompt_when_everything_fits_or_when_the_parts_would_be_too_many(self):
+        rows = [{'artifact_id': 'SA-a', 'text_chars': 250}, {'artifact_id': 'SA-b', 'text_chars': 200}]
+        with mock.patch.multiple(inv, MAX_TEXT_CHARS=300, OVERLAP=100):
+            self.assertEqual(len(inv.read_in_parts(rows)), 2)
+            self.assertEqual(inv.read_in_parts(rows[:1]), [])  # it fits: one prompt
+            with mock.patch.object(inv, 'MAX_PARTS', 1):
+                self.assertEqual(inv.read_in_parts(rows), [])  # beyond MAX_PARTS: one prompt, each text its fair share
+        self.assertEqual(inv.cut([{'artifact_id': 'SA-a', 'text_chars': inv.MAX_TEXT_CHARS * 2, 'read_whole': True}]), [])
+
+    def test_reduce_joins_without_rewriting_and_keeps_each_finding_once(self):
+        f = lambda n: {'claim': f'c{n}', 'artifact_ids': [A_PAGE], 'quote': f'{QUOTE} {n}'[:300], 'locator': 'x'}
+        one = {'scope': 'a', 'findings': {'confirmed': [f(0), f(1)], 'conflicting': [f(9)], 'unknown': ['u1', 'u2']},
+               'candidate_claims': ['k1'], 'limitations': ['L1']}
+        two = {'scope': 'b', 'findings': {'confirmed': [f(1), f(2)], 'conflicting': [], 'unknown': ['u2', 'u3']},
+               'candidate_claims': ['k1', 'k2'], 'limitations': ['L1', 'L2']}
+        got = inv.reduce([one, two])
+        self.assertEqual(got, {'scope': 'a / b', 'findings': {'confirmed': [f(0), f(1), f(2)], 'conflicting': [f(9)], 'unknown': ['u1', 'u2', 'u3']},
+                               'candidate_claims': ['k1', 'k2'],
+                               'limitations': ['Las fuentes se leyeron completas en 2 partes, una llamada por parte; un "unknown" de una parte '
+                                               'puede estar respondido en otra.', 'L1', 'L2']})
+        many = {'scope': 'a', 'findings': {'confirmed': [f(n) for n in range(70)], 'conflicting': [], 'unknown': []}, 'limitations': ['L']}
+        left = {}
+        got = inv.reduce([many, many], left)
+        self.assertEqual(len(got['findings']['confirmed']), 60)  # what MODEL_SCHEMA cannot hold is left out and said
+        self.assertEqual(left, {'confirmed': [f(n) for n in range(60, 70)]})
+        self.assertIn('Al unir las partes no cupo en el esquema: 10 confirmed; está completo en receipt.json (partes_fuera).', got['limitations'])
+        left = {}
+        got = inv.reduce([{**one, 'scope': 'a' * 1500}, {**two, 'scope': 'b' * 1500}], left)
+        self.assertEqual((got['scope'], left), ('a' * 1500 + ' / ' + 'b' * 497, {'scope': ['a' * 1500 + ' / ' + 'b' * 1500]}))
+        self.assertIn('1 scope', got['limitations'][1])  # a scope cut to fit is kept whole and said, like any other item
+
+    def test_reduce_never_drops_a_list_item_or_a_limitation_without_saying_so(self):
+        # each answer valid on its own (30 limitations, 30 of each list); together they overflow every cap
+        lists = ('candidate_claims', 'candidate_methods', 'candidate_controls', 'candidate_tests',
+                 'possible_implications_for_zpmnd', 'affected_existing_concepts', 'hypotheses_generated')
+        def answer(tag):
+            return {'scope': tag, 'findings': {'confirmed': [], 'conflicting': [], 'unknown': [f'{tag}u{n}' for n in range(30)]},
+                    'limitations': [f'{tag}L{n}' for n in range(30)], **{name: [f'{tag}{name}{n}' for n in range(30)] for name in lists}}
+        left = {}
+        got = inv.reduce([answer('a'), answer('b')], left)
+        self.assertEqual(len(got['limitations']), 30)
+        self.assertTrue(got['limitations'][1].startswith('Al unir las partes no cupo en el esquema: '))  # never crowded out
+        self.assertEqual(left['limitations'], [f'aL{n}' for n in range(28, 30)] + [f'bL{n}' for n in range(30)])
+        for name in lists + ('unknown',):
+            self.assertEqual(len(left[name]), 30, name)  # every item left out is kept for receipt.json
+        for name in lists:
+            self.assertEqual(got[name], [f'a{name}{n}' for n in range(30)])
+        # a first part that alone fills the limitations still leaves room for the second's warning to be counted
+        left = {}
+        got = inv.reduce([{**answer('a'), **{name: [] for name in lists}, 'findings': {'confirmed': [], 'conflicting': [], 'unknown': []}},
+                          {'scope': 'b', 'findings': {'confirmed': [], 'conflicting': [], 'unknown': []}, 'limitations': ['la salvedad de b']}], left)
+        self.assertEqual(left, {'limitations': ['aL28', 'aL29', 'la salvedad de b']})
+        self.assertIn('3 limitations', got['limitations'][1])
+
+    def test_the_command_line_writes_each_part_and_joins_the_answers(self):
+        rows = self.fetch()
+        req = self.tmp / 'rr.json'
+        req.write_text(json.dumps(RR), encoding='utf-8')
+        with self.small(), contextlib.redirect_stdout(io.StringIO()) as out:
+            self.assertEqual(inv.main(['prompt', '--request', str(req), '--work', str(self.work)]), 0)
+            parts = inv.read_in_parts(rows)
+        self.assertEqual(json.loads(out.getvalue()), {'parts': len(parts)})
+        self.assertEqual(json.loads((self.work / 'partes.json').read_text(encoding='utf-8')), parts)
+        for k in range(len(parts)):
+            self.assertIn(f'part {k + 1} of {len(parts)}', (self.work / 'partes' / f'{k}-system.txt').read_text(encoding='utf-8'))
+        with self.small():
+            answers = self.fake_model(rows, parts)
+        for k, a in enumerate(answers):
+            (self.work / f'modelo-cli-{k}.json').write_text(json.dumps({'type': 'result', 'is_error': False, 'structured_output': a,
+                                                                        'modelUsage': {f'claude-x-{k % 2}': {}}}), encoding='utf-8')
+        self.assertEqual(inv.main(['reduce', '--work', str(self.work)]), 0)
+        joined = json.loads((self.work / 'modelo-cli.json').read_text(encoding='utf-8'))
+        self.assertEqual(joined['structured_output'], inv.reduce(answers))
+        self.assertEqual(set(joined['modelUsage']), {'claude-x-0', 'claude-x-1'})
+        rcli = self.tmp / 'revision-cli.json'
+        oks = [(f'confirmed[{i}]', True, '', '') for i in range(len(joined['structured_output']['findings']['confirmed']))]
+        rcli.write_text(json.dumps({'type': 'result', 'is_error': False, 'structured_output': review(*oks)}), encoding='utf-8')
+        with self.small(), contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(inv.main(['assemble', '--request', str(req), '--work', str(self.work), '--model-output',
+                                       str(self.work / 'modelo-cli.json'), '--review-output', str(rcli), '--out', str(self.out)]), 0)
+        receipt = json.loads(next(self.out.rglob('receipt.json')).read_text(encoding='utf-8'))
+        self.assertEqual(receipt['partes_fuera'], {})  # the join's record of what it left out reaches the receipt, empty here
+        receipt = json.loads((self.out / 'research-packets' / 'RP-2026-10-23-prueba' / 'receipt.json').read_text(encoding='utf-8'))
+        self.assertEqual((receipt['partes'], 'cut' in receipt), (parts, False))  # read whole, never reported as cut
+        joined_cli, fuera = self.work / 'modelo-cli.json', self.work / 'partes-fuera.json'
+        assemble = lambda out: inv.main(['assemble', '--request', str(req), '--work', str(self.work), '--model-output', str(joined_cli),
+                                         '--review-output', str(rcli), '--out', str(out)])
+        # the join's record must travel with the answer: missing, malformed or not what the answer says, no packet at all
+        for name, body in (('missing', None), ('not an object', '[]'), ('garbled', '{'), ('an empty field', '{"confirmed": []}'),
+                           ('items the answer never mentions', '{"candidate_tests": ["t"]}')):
+            with self.subTest(name):
+                fuera.unlink(missing_ok=True)
+                if body is not None:
+                    fuera.write_text(body, encoding='utf-8')
+                out = self.tmp / f'out-{len(body or "")}-{name[:3]}'
+                with self.small(), contextlib.redirect_stdout(io.StringIO()), self.assertRaises(ValueError):
+                    assemble(out)
+                self.assertEqual(list(out.rglob('*.json')), [])
+        # what was left out and said in the answer reaches the receipt whole
+        cli = json.loads(joined_cli.read_text(encoding='utf-8'))
+        cli['structured_output']['limitations'].insert(1, inv.left_out({'candidate_tests': ['t']}))
+        joined_cli.write_text(json.dumps(cli), encoding='utf-8')
+        fuera.write_text('{"candidate_tests": ["t"]}', encoding='utf-8')
+        with self.small(), contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(assemble(self.tmp / 'out-dicho'), 0)
+        receipt = json.loads(next((self.tmp / 'out-dicho').rglob('receipt.json')).read_text(encoding='utf-8'))
+        self.assertEqual(receipt['partes_fuera'], {'candidate_tests': ['t']})
+        fuera.write_text('{"candidate_tests": "t"}', encoding='utf-8')  # the same count, but not a list of items
+        with self.small(), contextlib.redirect_stdout(io.StringIO()), self.assertRaises(ValueError):
+            assemble(self.tmp / 'out-texto')
+        fuera.write_text('{}', encoding='utf-8')  # and the answer saying so with nothing left out is refused too
+        with self.small(), contextlib.redirect_stdout(io.StringIO()), self.assertRaises(ValueError):
+            assemble(self.tmp / 'out-sin')
+
+
 class Unfound(Base):
     """A finding whose quote is not in its source leaves the packet, instead of the gate dropping the whole run."""
     MISS = {'claim': 'Inventado.', 'artifact_ids': [A_PAGE], 'quote': 'El patrón podrá omitir la política.', 'locator': '5.1'}
@@ -885,16 +1062,21 @@ class Workflow(unittest.TestCase):
     def test_the_model_has_no_tool_no_repository_and_no_github_token(self):
         steps = self.jobs['analyze']['steps']
         with_secret = [s for s in steps if 'secrets.CLAUDE_CODE_OAUTH_TOKEN' in json.dumps(s)]
-        self.assertEqual(len(with_secret), 2)  # the reading and the review, each the CLI and nothing else
-        model, reviewer = with_secret
+        self.assertEqual(len(with_secret), 3)  # the reading (one prompt, or one call per part) and the review: the CLI only
+        model, parts, reviewer = with_secret
+        self.assertEqual((model['if'], parts['if']), ("steps.prompt.outputs.parts == '0'", "steps.prompt.outputs.parts != '0'"))
+        self.assertIn('( cd "$RUNNER_TEMP/vacio-partes/$k" && turno "$GITHUB_WORKSPACE/work/modelo-cli-$k.json" "$GITHUB_WORKSPACE/work/partes/$k.txt" \\\n'
+                          '      "$RUNNER_TEMP/cc/package/claude" -p --max-turns 3 --tools "" --strict-mcp-config ', parts['run'])
+        self.assertIn('--json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")"', parts['run'])
+        self.assertIn('[[ "$PARTS" =~ ^[2-9]$ ]] || exit 2', parts['run'])
         self.assertIn('cd "$RUNNER_TEMP/vacio"', model['run'])
         self.assertIn('"$RUNNER_TEMP/cc/package/claude" -p --tools "" --strict-mcp-config ', model['run'])
         self.assertIn('--json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")"', model['run'])
         self.assertIn('mkdir -p "$RUNNER_TEMP/vacio-revision" && cd "$RUNNER_TEMP/vacio-revision"', reviewer['run'])
         self.assertIn('"$RUNNER_TEMP/cc/package/claude" -p --tools "" --max-turns 3 --strict-mcp-config ', reviewer['run'])
         for step in with_secret:
-            self.assertEqual(set(step['env']), {'RG_SUSCRIPCION', 'RG_API', 'RG_ORDEN', 'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC',
-                                                'DISABLE_AUTOUPDATER'})
+            self.assertEqual(set(step['env']) - {'PARTS'}, {'RG_SUSCRIPCION', 'RG_API', 'RG_ORDEN', 'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC',
+                                                         'DISABLE_AUTOUPDATER'})
             for word in ('Read', 'Grep', 'Glob', 'allowedTools', 'add-dir', ' --mcp-config', 'dangerously', 'python'):
                 self.assertNotIn(word, step['run'])
             self.assertNotIn('uses', step)  # the CLI itself, not an action that adds tools of its own
@@ -913,7 +1095,8 @@ class Workflow(unittest.TestCase):
         self.assertIn('turno "$GITHUB_WORKSPACE/work/revision-cli.json" "$GITHUB_WORKSPACE/work/revision-user.txt" \\\n',
                       steps[reviewer]['run'])
         up = next(s for s in steps if 'upload-artifact' in s.get('uses', ''))
-        self.assertEqual(up['with']['path'].split(), ['work/modelo-cli.json', 'work/revision-cli.json'])
+        # what the join of parts left out travels with the answer, or the gate job, which builds the receipt, never sees it
+        self.assertEqual(up['with']['path'].split(), ['work/modelo-cli.json', 'work/revision-cli.json', 'work/partes-fuera.json'])
         gate = '\n'.join(s.get('run', '') for s in self.jobs['gate']['steps'])
         self.assertIn('--model-output work/modelo-cli.json --review-output work/revision-cli.json --out out', gate)
 
@@ -921,13 +1104,45 @@ class Workflow(unittest.TestCase):
         # run 40548392438: the model step failed with exit 1 and no reason, because its output is a sealed file
         steps = [s for s in self.jobs['analyze']['steps'] if 'secrets.CLAUDE_CODE_OAUTH_TOKEN' in json.dumps(s)]
         filt = "jq -c '{type, subtype, is_error, num_turns, duration_ms}' \"$1\" 2>/dev/null"
-        for step, out in zip(steps, ('modelo-cli.json', 'revision-cli.json')):
+        model, parts, reviewer = steps
+        for step, out in ((model, 'modelo-cli.json'), (reviewer, 'revision-cli.json')):
             with self.subTest(out):
                 run = step['run']
                 self.assertIn(filt, run)  # structure only: no text of the result, not even an error's (GPT, #53)
                 self.assertIn(f'turno "$GITHUB_WORKSPACE/work/{out}" ', run)
                 self.assertIn(f'.txt")" \\\n  || {{ rc=$?; diagnose "$GITHUB_WORKSPACE/work/{out}"; exit $rc; }}', run)
                 self.assertLess(run.index('diagnose() {'), run.index('"$RUNNER_TEMP/cc/package/claude"'))
+        run = parts['run']  # each part's call, failed, says why the same way
+        self.assertIn(filt, run)
+        self.assertIn('wait "${pids[$k]}" || { r=$?; diagnose "$GITHUB_WORKSPACE/work/modelo-cli-$k.json"; rc=$r; }', run)
+        self.assertLess(run.index('diagnose() {'), run.index('"$RUNNER_TEMP/cc/package/claude"'))
+
+    @unittest.skipUnless(shutil.which('bash') and shutil.which('jq'), 'needs bash and jq, as on the runner')
+    def test_one_part_failing_waits_for_the_others_and_ends_with_its_code(self):
+        # the parts step itself, run by bash: part 0 fails at once, part 1 is still running then and answers later
+        run = next(s for s in self.jobs['analyze']['steps'] if 'pids+=($!)' in s.get('run', ''))['run']
+        fake = '#!/bin/bash\ncat > /dev/null\nif [ "$(basename "$PWD")" = 0 ]; then echo \'{"is_error": true}\'; exit 7; fi\n' \
+               'sleep 1; echo \'{"num_turns": 1, "duration_ms": 5, "total_cost_usd": 0.5}\'\n'
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            (d / 'ws' / 'scripts').mkdir(parents=True)
+            shutil.copy(ROOT / 'scripts' / 'turno.sh', d / 'ws' / 'scripts' / 'turno.sh')
+            (d / 'ws' / 'work' / 'partes').mkdir(parents=True)
+            (d / 'ws' / 'work' / 'schema.json').write_text('{}')
+            for k in (0, 1):
+                (d / 'ws' / 'work' / 'partes' / f'{k}.txt').write_text('parte')
+                (d / 'ws' / 'work' / 'partes' / f'{k}-system.txt').write_text('sistema')
+            cli = d / 'tmp' / 'cc' / 'package' / 'claude'
+            cli.parent.mkdir(parents=True)
+            cli.write_text(fake)
+            cli.chmod(0o755)
+            env = {'PATH': os.environ['PATH'], 'GITHUB_WORKSPACE': str(d / 'ws'), 'RUNNER_TEMP': str(d / 'tmp'), 'PARTS': '2',
+                   'RG_SUSCRIPCION': 'SUB', 'RG_ORDEN': ''}
+            r = subprocess.run(['bash', '-c', run], env=env, capture_output=True, text=True, timeout=30)
+            self.assertEqual(r.returncode, 7)  # the failed part's code
+            self.assertEqual(json.loads((d / 'ws' / 'work' / 'modelo-cli-1.json').read_text())['total_cost_usd'], 0.5)  # waited for
+            self.assertIn('"total_cost_usd":0.5', r.stdout)  # and its cost printed after the failure
+            self.assertIn('"is_error":true', r.stdout)  # the failed one said why from its structure
 
     def test_discovery_searches_the_web_and_nothing_else_and_fetch_gets_one_checked_plan(self):
         steps = self.jobs['plan']['steps']
@@ -964,7 +1179,7 @@ class Workflow(unittest.TestCase):
     def test_heavy_calls_on_the_subscription_light_ones_on_the_api_one_credential_each(self):
         # Braulio, 2026-10-28: "lo más pesado aquí y lo menos allá, que si no será un gastadero"
         calls = {s['name']: s for j in ('plan', 'analyze') for s in self.jobs[j]['steps'] if 'scripts/turno.sh' in s.get('run', '')}
-        self.assertEqual(len(calls), 3)
+        self.assertEqual(len(calls), 4)  # the researcher, the model, the parts, the reviewer
         heavy = [s for s in calls.values() if 'vacio-revision' not in s['run']]
         light = [s for s in calls.values() if 'vacio-revision' in s['run']]
         for step in heavy:  # the researcher and the model: the key reaches them only when sent there on purpose
@@ -978,14 +1193,14 @@ class Workflow(unittest.TestCase):
             self.assertNotIn('CLAUDE_CODE_OAUTH_TOKEN', step['env'])
             self.assertLess(step['run'].index('. "$GITHUB_WORKSPACE/scripts/turno.sh"'), step['run'].index('turno "'))
             self.assertIn('total_cost_usd', step['run'])  # every call's cost in the log, its metadata only
-        self.assertEqual(self.text.count('secrets.ANTHROPIC_API_KEY'), 3)
-        self.assertEqual(self.text.count('secrets.CLAUDE_CODE_OAUTH_TOKEN'), 3)
+        self.assertEqual(self.text.count('secrets.ANTHROPIC_API_KEY'), 4)
+        self.assertEqual(self.text.count('secrets.CLAUDE_CODE_OAUTH_TOKEN'), 4)
 
     @unittest.skipUnless(shutil.which('bash') and shutil.which('jq'), 'needs bash and jq, as on the runner')
     def test_the_diagnosis_never_prints_the_results_text_and_keeps_the_exit_code(self):
         # GPT, #53: run what the step runs; a marker in .result (error or not) never reaches the log
         steps = [s for j in ('plan', 'analyze') for s in self.jobs[j]['steps'] if 'secrets.CLAUDE_CODE_OAUTH_TOKEN' in json.dumps(s)]
-        self.assertEqual(len(steps), 3)
+        self.assertEqual(len(steps), 4)
         for step in steps:
             body = step['run'][:step['run'].index('mkdir -p')]  # set -euo pipefail and diagnose(), nothing else
             for result in ({'type': 'result', 'is_error': True, 'subtype': 'error_during_execution', 'result': 'MARCA-SECRETA cita'},

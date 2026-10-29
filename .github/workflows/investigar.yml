@@ -166,11 +166,15 @@ jobs:
         env: { RG_ARTIFACT_KEY: '${{ secrets.RG_ARTIFACT_KEY }}' }
         run: bash scripts/sobre.sh open sobre work
       - name: Prompt (instructions and schema; the request and the texts as data)
+        id: prompt
         env: { RID: '${{ inputs.request_id }}' }
         run: |
           set -euo pipefail
           [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
-          python -m rg.investigar prompt --request "requests/$RID.json" --work work
+          python -m rg.investigar prompt --request "requests/$RID.json" --work work > "$RUNNER_TEMP/partes.json"
+          parts=$(jq -r .parts "$RUNNER_TEMP/partes.json")
+          [[ "$parts" =~ ^[0-9]$ ]] || exit 2
+          echo "parts=$parts" >> "$GITHUB_OUTPUT"  # 0: one prompt; more: the texts read whole in that many parts
       - name: Claude Code CLI, pinned by version and by the npm integrity of its Linux build
         run: |
           set -euo pipefail
@@ -180,6 +184,7 @@ jobs:
           [ "sha512-$(openssl dgst -sha512 -binary "$tgz" | base64 -w0)" = "$CC_INTEGRITY" ] || { echo 'integrity mismatch'; exit 2; }
           mkdir cc && tar -xzf "$tgz" -C cc && chmod 755 cc/package/claude
       - name: The model (no tools, an empty folder, no GitHub token)
+        if: steps.prompt.outputs.parts == '0'
         env:
           RG_SUSCRIPCION: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           RG_API: ${{ vars.RG_ORDEN_INVESTIGAR == 'api' && secrets.ANTHROPIC_API_KEY || '' }}  # heavy: the key only when sent there on purpose
@@ -200,6 +205,43 @@ jobs:
             --system-prompt "$(cat "$GITHUB_WORKSPACE/work/system.txt")" \
             || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/modelo-cli.json"; exit $rc; }
           jq -c '{num_turns, duration_ms, total_cost_usd}' "$GITHUB_WORKSPACE/work/modelo-cli.json"  # what it cost (no text)
+      - name: The model, one call per part at once (the same CLI and flags, each from its own empty folder)
+        if: steps.prompt.outputs.parts != '0'
+        env:
+          RG_SUSCRIPCION: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          RG_API: ${{ vars.RG_ORDEN_INVESTIGAR == 'api' && secrets.ANTHROPIC_API_KEY || '' }}  # heavy: the key only when sent there on purpose
+          RG_ORDEN: ${{ vars.RG_ORDEN_INVESTIGAR }}
+          CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
+          DISABLE_AUTOUPDATER: '1'
+          PARTS: '${{ steps.prompt.outputs.parts }}'
+        run: |
+          set -euo pipefail
+          diagnose() {  # a failed call says why from the result's structure only, never any of its text (GPT, #53)
+            jq -c '{type, subtype, is_error, num_turns, duration_ms}' "$1" 2>/dev/null \
+              || echo "no JSON result from the CLI"
+          }
+          mkdir -p "$RUNNER_TEMP/vacio-partes"
+          [[ "$PARTS" =~ ^[2-9]$ ]] || exit 2
+          . "$GITHUB_WORKSPACE/scripts/turno.sh"
+          pids=()
+          for k in $(seq 0 $((PARTS - 1))); do
+            mkdir -p "$RUNNER_TEMP/vacio-partes/$k"
+            ( cd "$RUNNER_TEMP/vacio-partes/$k" && turno "$GITHUB_WORKSPACE/work/modelo-cli-$k.json" "$GITHUB_WORKSPACE/work/partes/$k.txt" \
+                "$RUNNER_TEMP/cc/package/claude" -p --max-turns 3 --tools "" --strict-mcp-config \
+                --output-format json --json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")" \
+                --system-prompt "$(cat "$GITHUB_WORKSPACE/work/partes/$k-system.txt")" ) &
+            pids+=($!)
+          done
+          rc=0  # every part is waited for, also after one failed: none is left running, each one's cost is printed (GPT, #69)
+          for k in "${!pids[@]}"; do wait "${pids[$k]}" || { r=$?; diagnose "$GITHUB_WORKSPACE/work/modelo-cli-$k.json"; rc=$r; }; done
+          for k in "${!pids[@]}"; do
+            jq -c '{num_turns, duration_ms, total_cost_usd}' "$GITHUB_WORKSPACE/work/modelo-cli-$k.json" 2>/dev/null \
+              || echo "parte $k: sin resultado JSON"  # what each cost (no text)
+          done
+          exit $rc
+      - name: Join the parts' answers, changing none (no model, no secret)
+        if: steps.prompt.outputs.parts != '0'
+        run: python -m rg.investigar reduce --work work
       - name: Review prompt (each claim beside its quote, nothing else)
         run: python -m rg.investigar review-prompt --work work --model-output work/modelo-cli.json
       - name: The reviewer (the same CLI, no tools, an empty folder of its own; it sees claims and quotes only)
@@ -229,6 +271,7 @@ jobs:
           path: |
             work/modelo-cli.json
             work/revision-cli.json
+            work/partes-fuera.json
           retention-days: 1
           if-no-files-found: error
 

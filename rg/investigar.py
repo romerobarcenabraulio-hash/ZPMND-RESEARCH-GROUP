@@ -325,9 +325,124 @@ def shares(rows):
 
 
 def cut(rows):
-    """[{artifact_id, read, of}] of each text the model read only in part (shares)."""
+    """[{artifact_id, read, of}] of each text the model read only in part (shares). A text read whole across
+    partitions (read_whole) is never cut."""
+    rows = [r for r in rows if not r.get('read_whole')]
     return [{'artifact_id': r['artifact_id'], 'read': share, 'of': r['text_chars']} for r in rows
             if r.get('artifact_id') and r.get('text_chars') and (share := shares(rows)[r['artifact_id']]) < r['text_chars']]
+
+
+OVERLAP = 1_000  # characters each window of a long text shares with the next: a quote (300 at most) never falls between
+MAX_PARTS = 4  # model calls one run may spend reading its texts whole; HIPÓTESIS of cost until a measured run says otherwise
+
+
+def windows(rows):
+    """[(artifact id, start, end)] covering every text whole: a text up to MAX_TEXT_CHARS is one window, a longer one
+    is cut into windows of MAX_TEXT_CHARS that overlap by OVERLAP characters, so every quote lies whole inside one."""
+    out = []
+    for r in rows:
+        if not (r.get('artifact_id') and r.get('text_chars')):
+            continue
+        n, step = r['text_chars'], MAX_TEXT_CHARS - OVERLAP
+        for start in range(0, n, step):
+            out.append((r['artifact_id'], start, min(n, start + MAX_TEXT_CHARS)))
+            if start + MAX_TEXT_CHARS >= n:
+                break
+    return out
+
+
+def partitions(rows):
+    """[[(artifact id, start, end)]]: the windows in order, packed into parts of at most MAX_TEXT_CHARS each. Every
+    text is read whole across them; each part is one model call (prompt_part), and reduce() joins the answers."""
+    parts, size = [], 0
+    for aid, start, end in windows(rows):
+        if not parts or size + (end - start) > MAX_TEXT_CHARS:
+            parts.append([])
+            size = 0
+        parts[-1].append([aid, start, end])
+        size += end - start
+    return parts
+
+
+def read_in_parts(rows):
+    """The parts the texts are read in, or [] for one prompt: one when everything fits (whole), and also when even
+    MAX_PARTS parts would not hold it (then prompt() gives each text its fair share, shares())."""
+    parts = partitions(rows)
+    return parts if 1 < len(parts) <= MAX_PARTS else []  # everything that fits one prompt packs into one part
+
+
+def prompt_part(rr, rows, work, parts, k):
+    """(system, user) for part k of `parts`: the same instructions and schema as prompt(), told it reads one part of
+    the sources and that another call reads the rest; the user message holds the request and this part's windows."""
+    system, _ = prompt(rr, [r for r in rows if r.get('artifact_id') in {aid for aid, _, _ in parts[k]}], work)
+    system += (f"\nThis call reads part {k + 1} of {len(parts)} of the sources; other calls read the rest and a later step "
+               "joins the answers without changing them. Each text below says which characters of its source it holds. "
+               "Put in findings.unknown only what the request asks that this part does not answer.\n")
+    by_id = {r['artifact_id']: r for r in rows if r.get('artifact_id')}
+    request = {key: rr[key] for key in ('request_id', 'question', 'desired_evidence', 'risk_if_wrong')}
+    out = [f'SOLICITUD (datos): {json.dumps(request, ensure_ascii=False)}\n']
+    for aid, start, end in parts[k]:
+        r = by_id[aid]
+        text = (Path(work) / 'texto' / f'{aid}.txt').read_text(encoding='utf-8')
+        out.append(f"===== FUENTE {aid}: {r.get('title') or r['url']} ({r['publisher']}; {r['source_type']}; {r['role']}; "
+                   f"PARTE: caracteres {start} a {end} de {len(text)}) =====\n{text[start:end]}\n===== FIN DE {aid} =====\n")
+    return system, '\n'.join(out)
+
+
+def left_out(left):
+    """The limitation that says what the join of the parts left out (`left`, by field), or None when nothing was."""
+    if not left:
+        return None
+    return ('Al unir las partes no cupo en el esquema: ' + ', '.join(f'{len(v)} {k}' for k, v in sorted(left.items()))
+            + '; está completo en receipt.json (partes_fuera).')
+
+
+def reduce(answers, left=None):
+    """One answer from the answers of every part, in their order, changing none: the findings and the lists joined,
+    each kept once (by its folded text, and for a finding its quote and sources too), never rewritten or invented. What
+    MODEL_SCHEMA cannot hold is left out of the answer, never silently: a limitation the parts cannot crowd out counts
+    it by field, and `left` (a dict the caller passes) receives every item left out, for receipt.json."""
+    left = {} if left is None else left
+    caps = {'confirmed': 60, 'conflicting': 30}
+    scope = ' / '.join(dict.fromkeys(a['scope'] for a in answers))
+    if len(scope) > 2000:
+        left['scope'] = [scope]  # the whole of it, the answer holds its first 2000 characters
+    out = {'scope': scope[:2000],
+           'findings': {'confirmed': [], 'conflicting': [], 'unknown': []}, 'limitations': []}
+    seen = set()
+    for a in answers:
+        for group in ('confirmed', 'conflicting'):
+            for f in a['findings'][group]:
+                key = (group, fold(f['claim']), fold(f['quote']), tuple(sorted(f['artifact_ids'])))
+                if key in seen:
+                    continue
+                seen.add(key)
+                if len(out['findings'][group]) < caps[group]:
+                    out['findings'][group].append(f)
+                else:
+                    left.setdefault(group, []).append(f)
+    lists = ('candidate_claims', 'candidate_methods', 'candidate_controls', 'candidate_tests',
+             'possible_implications_for_zpmnd', 'affected_existing_concepts', 'hypotheses_generated')
+    for name, items in [('unknown', [x for a in answers for x in a['findings']['unknown']])] + \
+            [(name, [x for a in answers for x in a.get(name, [])]) for name in lists]:
+        unique = list(dict.fromkeys(items))
+        if len(unique) > 30:
+            left[name] = unique[30:]
+        if name == 'unknown':
+            out['findings']['unknown'] = unique[:30]
+        elif unique:
+            out[name] = unique[:30]
+    from_parts = list(dict.fromkeys(x for a in answers for x in a['limitations']))
+    room = 29 if not left and len(from_parts) <= 29 else 28  # the first one or two are this function's, never cut
+    if len(from_parts) > room:
+        left['limitations'] = from_parts[room:]
+    head = [f'Las fuentes se leyeron completas en {len(answers)} partes, una llamada por parte; un "unknown" de una parte '
+            'puede estar respondido en otra.']
+    if left:
+        head.append(left_out(left))
+    out['limitations'] = head + [x for x in from_parts[:room] if x not in head]
+    fit(out)
+    return out
 
 
 def prompt(rr, rows, work):
@@ -526,7 +641,19 @@ def fit(answer):
         raise ValueError(f'the model answer does not fit the schema: {exc.message[:200]}') from None
 
 
-def assemble(rr, rows, answer, work, out_root, model_label, produced_at=None, review=None):
+def parts_left(work):
+    """partes-fuera.json, which reduce() always writes: {field: [items]}. ValueError when it is missing or not that, so a
+    join whose record of what it left out did not travel never becomes a packet that points at it."""
+    try:
+        left = json.loads((Path(work) / 'partes-fuera.json').read_text(encoding='utf-8'))
+    except (OSError, ValueError) as exc:
+        raise ValueError(f'partes-fuera.json cannot be read: {type(exc).__name__}') from None
+    if not isinstance(left, dict) or not all(isinstance(k, str) and isinstance(v, list) and v for k, v in left.items()):
+        raise ValueError('partes-fuera.json is not {field: [items]}')
+    return left
+
+
+def assemble(rr, rows, answer, work, out_root, model_label, produced_at=None, review=None, parts=None):
     """The packet folder research-packets/<RP>/ (packet.json, raws, receipt.json). ValueError if the answer does not
     fit MODEL_SCHEMA, cites an artifact that was not downloaded, or its review (review: the reviewer's answer and its
     model label; the command line always passes one) does not hold."""
@@ -539,6 +666,12 @@ def assemble(rr, rows, answer, work, out_root, model_label, produced_at=None, re
             unknown = [a for a in finding['artifact_ids'] if a not in arts]
             if unknown:
                 raise ValueError(f'{group}[{i}] cites artifacts that were not downloaded: {unknown}')
+    if parts:  # checked before anything is written: no packet without the record its limitation points at
+        fuera = parts_left(work)
+        note = left_out(fuera)
+        said = [x for x in answer['limitations'] if x.startswith('Al unir las partes no cupo en el esquema: ')]
+        if said != ([note] if note else []):
+            raise ValueError('the answer and partes-fuera.json disagree on what the join left out')
     agents = [{'agent': 'rg-investigar', 'model': model_label, 'substrate': 'GitHub Actions: investigar.yml'}]
     if review is not None:
         reviewed = len(answer['findings']['confirmed'])
@@ -612,6 +745,9 @@ def assemble(rr, rows, answer, work, out_root, model_label, produced_at=None, re
         receipt['discovery'] = discovery
     if cut(rows):
         receipt['cut'] = cut(rows)
+    if parts:
+        receipt['partes'] = parts  # read whole: each part one model call, joined by reduce()
+        receipt['partes_fuera'] = fuera  # what the join could not hold, every item of it
     (folder / 'receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     return folder
 
@@ -643,10 +779,23 @@ def main(argv=None):
     dd.add_argument('--request', required=True)
     dd.add_argument('--discovery', required=True)
     dd.add_argument('--out', required=True)
+    rd = sub.add_parser('reduce')  # the answers of every part (modelo-cli-<k>.json) into modelo-cli.json
+    rd.add_argument('--work', required=True)
     v = sub.add_parser('review-prompt')
     v.add_argument('--work', required=True)
     v.add_argument('--model-output', required=True)
     x = a.parse_args(argv)
+    if x.cmd == 'reduce':
+        work = Path(x.work)
+        parts = json.loads((work / 'partes.json').read_text(encoding='utf-8'))
+        clis = [json.loads((work / f'modelo-cli-{k}.json').read_text(encoding='utf-8')) for k in range(len(parts))]
+        left = {}
+        merged = reduce([model_answer(c)[0] for c in clis], left)
+        (work / 'partes-fuera.json').write_text(json.dumps(left, ensure_ascii=False), encoding='utf-8')
+        usage = {m: {} for c in clis for m in (c.get('modelUsage') or {}) if MODEL.match(m)}
+        (work / 'modelo-cli.json').write_text(json.dumps({'type': 'result', 'is_error': False, 'structured_output': merged,
+                                                           'modelUsage': usage}, ensure_ascii=False), encoding='utf-8')
+        return 0
     if x.cmd == 'review-prompt':
         rows = json.loads((Path(x.work) / 'fuentes.json').read_text(encoding='utf-8'))
         system, user = review_prompt(model_answer(json.loads(Path(x.model_output).read_text(encoding='utf-8')))[0], rows, x.work)
@@ -687,10 +836,21 @@ def main(argv=None):
         (Path(x.work) / 'system.txt').write_text(system, encoding='utf-8')
         (Path(x.work) / 'user.txt').write_text(user, encoding='utf-8')
         (Path(x.work) / 'schema.json').write_text(json.dumps(MODEL_SCHEMA, ensure_ascii=False), encoding='utf-8')
+        parts = read_in_parts(rows)
+        (Path(x.work) / 'partes').mkdir(exist_ok=True)
+        for k in range(len(parts)):
+            system, user = prompt_part(rr, rows, x.work, parts, k)
+            (Path(x.work) / 'partes' / f'{k}-system.txt').write_text(system, encoding='utf-8')
+            (Path(x.work) / 'partes' / f'{k}.txt').write_text(user, encoding='utf-8')
+        (Path(x.work) / 'partes.json').write_text(json.dumps(parts), encoding='utf-8')
+        print(json.dumps({'parts': len(parts)}))
         return 0
     answer, label = model_answer(json.loads(Path(x.model_output).read_text(encoding='utf-8')))
     review = model_answer(json.loads(Path(x.review_output).read_text(encoding='utf-8')))
-    print(assemble(rr, rows, answer, x.work, x.out, label, review=review).name)
+    parts = read_in_parts(rows)  # the same parts the analyze job read, computed again from the fetch record
+    whole_ids = {aid for part in parts for aid, _, _ in part}
+    rows = [{**r, 'read_whole': True} if r.get('artifact_id') in whole_ids else r for r in rows]  # windows cover each whole
+    print(assemble(rr, rows, answer, x.work, x.out, label, review=review, parts=parts).name)
     return 0
 
 
