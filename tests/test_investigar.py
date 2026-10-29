@@ -999,6 +999,17 @@ class Workflow(unittest.TestCase):
                     self.assertNotIn('MARCA-SECRETA', r.stdout + r.stderr)
                     self.assertTrue(r.stdout.strip())
 
+    def test_every_job_that_parses_hostile_raws_does_it_as_another_user(self):
+        # GPT, REVISEs of #56: a parser taken over must own nothing the run trusts (rg.text.isolated, SECURITY T12)
+        for job, marker in (('fetch', 'rg.investigar fetch'), ('gate', 'rg.packets')):
+            with self.subTest(job):
+                steps = self.jobs[job]['steps']
+                parse = next(i for i, s in enumerate(steps) if marker in s.get('run', ''))
+                user = next(i for i, s in enumerate(steps) if 'useradd' in s.get('run', ''))
+                self.assertEqual(steps[user]['run'], 'sudo useradd --system --no-create-home --shell /usr/sbin/nologin rgparse')
+                self.assertLess(user, parse)
+                self.assertEqual(steps[parse]['env']['RG_EXTRACT_AS'], 'rgparse')
+
     def test_the_cli_is_pinned_by_version_and_integrity(self):
         env = self.jobs['analyze']['env']
         self.assertRegex(env['CC_VERSION'], r'^\d+\.\d+\.\d+$')

@@ -127,8 +127,10 @@ jobs:
       - run: pip install -r requirements-dev.txt
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
         with: { name: investigar-plan, path: plan }
+      - name: The extractor's own user (it parses hostile raws and owns nothing here; SECURITY T12)
+        run: sudo useradd --system --no-create-home --shell /usr/sbin/nologin rgparse
       - name: Fetch the plan's sources (no secrets)
-        env: { RID: '${{ inputs.request_id }}' }
+        env: { RID: '${{ inputs.request_id }}', RG_EXTRACT_AS: rgparse }
         run: |
           [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || { echo "request_id: RR-..."; exit 2; }
           mkdir -p work && { [ ! -f plan/descubrimiento.json ] || cp plan/descubrimiento.json work/; }  # sealed with the rest
@@ -250,9 +252,12 @@ jobs:
         run: bash scripts/sobre.sh open sobre work
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
         with: { name: investigar-modelo, path: work }
+      - name: The extractor's own user (it parses hostile raws and owns nothing here; SECURITY T12)
+        run: sudo useradd --system --no-create-home --shell /usr/sbin/nologin rgparse
       - name: Build the packet and run the gate (no model, no write token)
         id: build
         env:
+          RG_EXTRACT_AS: rgparse  # the gate's quote check parses the raws as that user, never as this job's
           RID: '${{ inputs.request_id }}'
           RUN_URL: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}'
         run: |

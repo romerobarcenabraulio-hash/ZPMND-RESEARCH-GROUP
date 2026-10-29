@@ -21,22 +21,35 @@ import json
 import multiprocessing as mp
 import os
 import re
+import select
+import shutil
+import subprocess
 import sys
+import tempfile
 import time
+import uuid
 from collections import Counter, deque
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor
+from concurrent.futures import wait as wait_futures
 from datetime import datetime, timezone
 from multiprocessing.connection import wait
 from pathlib import Path
 
 from ..catalog.store import row_files
-from .extract import FAILED, HEAD, VERSIONS, extract, extractor, failed, too_large
+from .extract import FAILED, HEAD, OK, STATUSES, VERSIONS, extract, extractor, failed, too_large
 from .store import TextStore, read_manifest, text_sha, write_manifest
 
 MAX_BYTES = 200_000_000  # a raw larger than this is not read whole (extract.too_large)
 TIMEOUT = 300  # seconds per raw file; HIPÓTESIS until measured on the whole store
 MAX_MEMORY = 2_000_000_000  # bytes of address space per worker; HIPÓTESIS until measured on the whole store
+MAX_ANSWER = 64_000_000  # bytes of one isolated child's answer read at most; HIPÓTESIS: a longer one is a fallo
+MAX_CONTAINERS = 200_000  # JSON lists and objects an answer may hold before it is parsed (a PDF's page offsets fit)
 NAME = re.compile(r'^([0-9a-f]{64})\.[a-z0-9]{1,5}$')
 RAW_PATH = re.compile(r'^sha256/[0-9a-f]{2}/([0-9a-f]{64})\.[a-z0-9]{1,5}$')
+EXTRACT_AS = 'RG_EXTRACT_AS'  # env: the OS user hostile raws are parsed as (rg.text.isolated); unset: this process
+USER = re.compile(r'^[a-z_][a-z0-9_-]{0,31}$')
+ANSWER = {'format': str, 'status': str, 'text': (str, type(None)), 'invisibles_removed': int, 'charset': str,
+          'pages': list, 'pages_without_text': list, 'error': str}  # what the isolated child may say, and its type
 LINE_KEYS = ('raw_sha256', 'bytes', 'format', 'status', 'extractor', 'invisibles_removed')
 OPTIONAL_KEYS = ('charset', 'pages', 'pages_without_text', 'error')
 
@@ -101,11 +114,174 @@ def _context():
     return mp.get_context('spawn')
 
 
+def answer(out, path):
+    """The isolated child's printed result, read as data: a JSON object with only the extraction fields, each of its
+    type, and a known status. The extractor is named from the format here and the raw's sha256 and size come from the
+    parent's own hashing of the file it copied, never from the child. ValueError otherwise."""
+    if out.count(b'[' if isinstance(out, bytes) else '[') + out.count(b'{' if isinstance(out, bytes) else '{') > MAX_CONTAINERS:
+        raise ValueError('too many JSON containers to parse')  # counted before json builds them, in this process's memory
+    res = json.loads(out)
+    if not isinstance(res, dict) or res.get('status') not in STATUSES or not isinstance(res.get('format'), str):
+        raise ValueError('not an extraction result')
+    kept = {}
+    for key, value in res.items():
+        if key in ('raw_sha256', 'bytes', 'extractor'):
+            continue  # the parent's to say
+        if key not in ANSWER or not isinstance(value, ANSWER[key]) or isinstance(value, bool):
+            raise ValueError(f'{key}: not an extraction field of its type')
+        kept[key] = value
+    if not all(isinstance(p, list) and len(p) == 2 and all(_count(n) for n in p) for p in kept.get('pages', [])):
+        raise ValueError('pages: not [start, end) offsets')
+    if not all(_count(n) for n in kept.get('pages_without_text', [])):
+        raise ValueError('pages_without_text: not page numbers')
+    missing = {'format', 'status', 'text', 'invisibles_removed'} - kept.keys()
+    if missing or (kept['status'] == OK and not isinstance(kept['text'], str)) or (kept['status'] == FAILED and not isinstance(kept.get('error'), str)):
+        raise ValueError(f'not a whole extraction result (missing {sorted(missing)})')  # what every line needs, by its status
+    return {**kept, 'extractor': extractor(kept['format']), 'raw_sha256': _sha_file(path), 'bytes': os.path.getsize(path)}
+
+
+def _count(n):
+    return isinstance(n, int) and not isinstance(n, bool) and n >= 0
+
+
+def scratch(base):
+    """A folder the isolated user can read and not write: a read-only copy of rg/ (the code it runs) and in/ (the raw
+    copies). Everything here belongs to this process; directories 0755 (in/ 0711), files 0444."""
+    base = Path(base)
+    shutil.copytree(Path(__file__).resolve().parents[1], base / 'code' / 'rg', ignore=shutil.ignore_patterns('__pycache__'))
+    (base / 'in').mkdir()
+    for d, _, files in os.walk(base):
+        os.chmod(d, 0o755)
+        for f in files:
+            os.chmod(Path(d) / f, 0o444)
+    os.chmod(base / 'in', 0o711)  # a child reaches its copy by a random name and cannot list the others
+    return base
+
+
+def as_user(user, path, base, timeout, max_bytes=MAX_BYTES, max_memory=MAX_MEMORY, child='rg.text.isolated',
+            max_answer=MAX_ANSWER):
+    """(path, result) of one raw extracted by `child` running as `user` on a 0444 copy in base/in, from base/code,
+    killed after `timeout` seconds; its answer is read up to max_answer bytes (stderr discarded), so a child that floods
+    cannot fill this process; anything but a valid answer in time is a fallo."""
+    copy = Path(base) / 'in' / f'{uuid.uuid4().hex}{Path(path).suffix[:6]}'
+    argv = ['sudo', '-n', '-u', user, '--', 'timeout', '-s', 'KILL', str(int(timeout)), sys.executable, '-m', child,
+            str(copy), str(max_bytes), str(max_memory)]
+    try:
+        try:
+            shutil.copyfile(path, copy)
+            os.chmod(copy, 0o444)
+        except OSError as e:  # no copy to hand over (disk full, the raw unreadable): this file's fallo, from the original
+            return path, _lost(path, f'could not prepare the copy ({type(e).__name__})')
+        out, code, why = bounded(argv, Path(base) / 'code', timeout + 30, max_answer)
+        if why:
+            return path, _lost(copy, f'timeout ({timeout} s)' if why == 'timeout' else f'answer over {max_answer} bytes')
+        return path, answer(out, copy) if code == 0 else _lost(copy, f'isolated extractor exit {code}')
+    except (ValueError, UnicodeDecodeError, RecursionError, MemoryError, OSError) as e:  # a hostile answer is its file's fallo, never the run's
+        return path, _lost(copy, f'isolated extractor answered no result ({type(e).__name__})')
+    finally:
+        copy.unlink(missing_ok=True)
+
+
+def bounded(argv, cwd, seconds, limit):
+    """(stdout, exit code, None) of argv; (None, None, 'timeout' or 'too much') when it is not over within `seconds` or
+    writes more than `limit` bytes: then it is killed and nothing more is read. stderr goes nowhere, never to memory."""
+    p = subprocess.Popen(argv, cwd=cwd, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+    end, out, why = time.monotonic() + seconds, bytearray(), None
+    try:
+        while why is None:
+            left = end - time.monotonic()
+            if left <= 0 or not select.select([p.stdout], [], [], left)[0]:
+                why = 'timeout'
+                break
+            chunk = os.read(p.stdout.fileno(), 1 << 20)
+            if not chunk:
+                return bytes(out), p.wait(timeout=max(0.1, end - time.monotonic())), None
+            out += chunk
+            if len(out) > limit:
+                why = 'too much'
+    except subprocess.TimeoutExpired:
+        why = 'timeout'
+    finally:
+        if p.poll() is None:
+            try:
+                p.kill()
+                p.wait(timeout=5)
+            except (OSError, subprocess.TimeoutExpired):  # sudo may not be ours to signal; its `timeout -s KILL` ends the child
+                pass
+        p.stdout.close()
+    return None, None, why
+
+
+def _extract_as(user, paths, workers, timeout, deadline, max_bytes, max_memory, child):
+    """extract_all's results with each raw parsed by `user` (as_user), at most `workers` at once."""
+    if not USER.match(user):
+        raise ValueError(f'{EXTRACT_AS}: not a user name')
+    todo = deque(paths)
+    try:
+        with tempfile.TemporaryDirectory(prefix='rg-extract-') as tmp, ThreadPoolExecutor(max(1, workers)) as pool:
+            base, running = scratch(tmp), set()
+            while todo or running:
+                while todo and len(running) < max(1, workers) and (deadline is None or deadline > time.monotonic()):
+                    running.add(pool.submit(as_user, user, todo.popleft(), base, timeout, max_bytes, max_memory, child))
+                if not running:
+                    return
+                done, running = wait_futures(running, return_when=FIRST_COMPLETED)
+                for future in done:
+                    yield future.result()
+    finally:
+        left = reap(user)
+        if left:  # a process of the isolated user outlived every kill, or ps could not say: the run stops here
+            raise RuntimeError(f'{EXTRACT_AS}: processes of {user} still running after the extraction: {" ".join(left)}')
+
+
+def reap(user, tries=50, sleep=time.sleep):
+    """Kill every process still running as `user` (a parser can leave a detached child behind), once no extraction of
+    this call is under way, by pid, until ps shows none that can run (a zombie runs nothing and is its parent's to
+    collect). The isolated user is RG's alone, so all of its processes are this run's to end. Returns what still runs
+    after `tries` rounds (['?'] when ps cannot say), printed too, never hidden."""
+    for _ in range(tries):
+        alive = running(user)
+        if alive == []:
+            return []
+        if alive is None:
+            break
+        try:
+            subprocess.run(['sudo', '-n', '-u', user, '--', 'kill', '-s', 'KILL', '--', *alive], stdin=subprocess.DEVNULL,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+        except (OSError, subprocess.TimeoutExpired):  # one that ended first is not an error; ps says what is left
+            pass
+        sleep(0.1)
+    left = running(user)
+    left = ['?'] if left is None else left
+    if left:
+        print(f'reap: still running as {user}: {" ".join(left)}', file=sys.stderr)
+    return left
+
+
+def running(user):
+    """The pids of `user`'s processes that can still run (zombies left out), as ps lists them; None when ps cannot say
+    (it did not run, or failed: ps exits 1 when the user has no process at all, with nothing printed)."""
+    try:
+        r = subprocess.run(['ps', '-u', user, '-o', 'pid=,stat='], capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    out = r.stdout
+    if r.returncode not in (0, 1) or (r.returncode == 1 and out.strip()):
+        return None
+    return [pid for pid, stat in (line.split()[:2] for line in out.splitlines() if len(line.split()) >= 2)
+            if pid.isdigit() and not stat.startswith('Z')]
+
+
 def extract_all(paths, workers=1, timeout=TIMEOUT, deadline=None, max_bytes=MAX_BYTES, target=_child,
-                max_memory=MAX_MEMORY):
+                max_memory=MAX_MEMORY, user=None, child='rg.text.isolated'):
     """Yield (path, result) for each path, each in its own process under a `max_memory` address-space cap, at most
     `workers` at once, each killed after `timeout` seconds. Once time.monotonic() passes `deadline`, no new path is
-    started (those are not yielded)."""
+    started (those are not yielded). With a user (or RG_EXTRACT_AS in the environment), each runs as that OS user
+    instead (as_user): the workflows that read hostile raws parse them so, never as the job's own user."""
+    user = os.environ.get(EXTRACT_AS, '') if user is None else user
+    if user:
+        yield from _extract_as(user, paths, workers, timeout, deadline, max_bytes, max_memory, child)
+        return
     ctx, todo, running = _context(), deque(paths), {}
     while todo or running:
         while todo and len(running) < workers and (deadline is None or time.monotonic() < deadline):
