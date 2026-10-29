@@ -27,7 +27,11 @@ concurrency:
 jobs:
   run:
     if: github.ref == 'refs/heads/main'  # a dispatch of any other branch never writes the data branch
-    runs-on: ubuntu-24.04
+    # A polite crawl is mostly waiting, and GitHub bills the waiting: the repo variable CATALOG_RUNS_ON (a JSON label or
+    # label list, the same switch texto-mx.yml uses) moves this job to our own runner; unset, GitHub's. The machine itself
+    # refuses any job that is not this workflow or texto-mx.yml from main, started by schedule or by dispatch (the guard
+    # scripts/runner_setup.sh installs), because a branch can carry its own copy of this file.
+    runs-on: ${{ fromJSON(vars.CATALOG_RUNS_ON || '"ubuntu-24.04"') }}
     timeout-minutes: 300
     permissions:
       contents: write   # push to the data branch and upload release assets; nothing else
@@ -41,8 +45,16 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { ref: catalog, path: data, persist-credentials: false }  # no write token on disk while hostile pages are parsed
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        if: runner.environment == 'github-hosted'
         with: { python-version: '3.12' }
+      - name: Python on our own runner (the system's python3, 3.12 or later, in a venv that dies with the job; the tests run on it first)
+        if: runner.environment != 'github-hosted'
+        run: python3 -m venv "$RUNNER_TEMP/venv" && echo "$RUNNER_TEMP/venv/bin" >> "$GITHUB_PATH"
+      - name: Start clean on our own runner (a cancelled run must not leave raw files for the next one to upload)
+        if: runner.environment != 'github-hosted'
+        run: rm -rf raw
       - name: Free runner disk (the raw corpus and its parts need the room)
+        if: runner.environment == 'github-hosted'
         run: |
           df -h / | tail -1
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL

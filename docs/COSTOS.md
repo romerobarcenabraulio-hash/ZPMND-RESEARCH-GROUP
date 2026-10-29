@@ -20,9 +20,22 @@ manifiesto, pero ya no detiene la puesta al día: el 2026-10-27 un solo título 
 registros, la tenía parada desde el 21. Riesgo aceptado: si un despacho programado llega mientras una corrida encadenada espera, la
 reemplaza y la cadena termina; la corrida programada sigue el trabajo. El job `run` solo corre en `main`.
 
-**Runner propio (PR aparte).** El rastreo es casi todo espera y un servidor propio no cobra por minuto (Braulio renta
-uno, 2026-10-21). Antes de usarlo hace falta endurecerlo por construcción: árbol del runner de root y solo lectura para el
-usuario de los jobs, guardia de ejecución en un archivo de root, y actualizaciones verificadas. Va en su propio PR para no
-mezclar ese riesgo con estos recortes.
+**Runner propio (`scripts/runner_setup.sh`).** El rastreo es casi todo espera y un servidor propio no cobra por minuto
+(Braulio renta uno en Vultr desde 2026-10-21). `catalog-mx.yml` y `texto-mx.yml` corren ahí cuando la variable del repo
+`CATALOG_RUNS_ON` vale `["self-hosted","rg-catalog"]`; sin ella, en los runners de GitHub. Lo endurece el script, por
+construcción:
+- los jobs corren como el usuario `rg`, sin sudo y con contraseña bloqueada;
+- el árbol del runner (`/opt/actions-runner`) es de root y de solo lectura para `rg`: ningún job puede cambiar el runner,
+  su configuración ni el guardia; `rg` solo escribe su carpeta de trabajo, los logs y sus propios archivos de registro;
+- un guardia de root (`/opt/rg/runner_guard.sh`) corre antes de cada job y lo rechaza si no es `catalog-mx.yml` o
+  `texto-mx.yml` de `refs/heads/main`, lanzado por `schedule` o por despacho: una rama o un PR pueden traer su propia
+  copia de un flujo que nombre las etiquetas del runner, y el guardia es lo que lo impide;
+- el runner va fijado por versión y sha256, sin autoactualización: actualizarlo es correr el script otra vez con el pin
+  nuevo (un PR);
+- el token de registro (una hora) se pide sin mostrarlo y llega a `config.sh` por su entrada de entorno, nunca como
+  argumento.
+Se instala y se verifica así: el script, bajado por el commit exacto de `main` y comprobado por su sha256, corre como root
+en el servidor; GitHub muestra el runner en línea; un despacho de `catalog-mx` corre ahí y uno de cualquier otro flujo es
+rechazado por el guardia.
 
 **Siguiente recorte (PR #20):** la evidencia del auditor corre solo los mutantes de `main` que el PR quitó o cambió.
