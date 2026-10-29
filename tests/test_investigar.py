@@ -1030,11 +1030,29 @@ class Workflow(unittest.TestCase):
         self.assertEqual(self.wf['permissions'], {})
         self.assertEqual({j: v['permissions'] for j, v in self.jobs.items()},
                          {'plan': {'contents': 'read'}, 'fetch': {'contents': 'read'}, 'analyze': {'contents': 'read'},
-                          'gate': {'contents': 'read'}, 'publish': {'contents': 'write'}})
+                          'gate': {'contents': 'read'}, 'publish': {'contents': 'write'}, 'pr': {}})
         self.assertEqual(self.jobs['fetch']['if'], "github.ref == 'refs/heads/main'")
         self.assertEqual(self.jobs['plan']['if'], "${{ github.ref == 'refs/heads/main' }}")
         with_secrets = [j for j, v in self.jobs.items() if 'secrets.' in json.dumps(v)]
-        self.assertEqual(with_secrets, ['plan', 'analyze', 'gate'])  # fetch, which parses the web, holds none
+        self.assertEqual(with_secrets, ['plan', 'analyze', 'gate', 'pr'])  # fetch, which parses the web, holds none
+
+    def test_only_the_last_job_mints_the_apps_token_and_it_parses_nothing(self):
+        # a PR opened with GITHUB_TOKEN starts no workflow; the App's token opens it, after the gate and the push only
+        job = self.jobs['pr']
+        self.assertEqual((job['needs'], job['environment'], job['permissions']), (['gate', 'publish'], 'rg-pr', {}))
+        self.assertNotIn('actions/checkout', json.dumps(job))  # no repository code, nothing parsed
+        mint = next(s for s in job['steps'] if s.get('uses', '').startswith('actions/create-github-app-token@'))
+        self.assertEqual(mint['uses'], 'actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510')
+        self.assertEqual(mint['with'], {'client-id': '${{ vars.RG_APP_CLIENT_ID }}', 'private-key': '${{ secrets.RG_APP_PRIVATE_KEY }}',
+                                        'permission-pull-requests': 'write', 'permission-contents': 'read'})
+        self.assertEqual(mint['if'], "steps.app.outputs.ok == 'true'")
+        others = {j: v for j, v in self.jobs.items() if j != 'pr'}
+        self.assertNotIn('RG_APP', json.dumps(others))  # no other job names the App or its key
+        run = job['steps'][-1]['run']
+        self.assertLess(run.index('[[ "$RP" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]] || { echo "bad packet id"; exit 2; }'), run.index('gh pr create'))
+        self.assertIn('gh pr create -R "$REPO" --base main --head "investigar/$RP"', run)
+        self.assertNotIn('python', run)
+        self.assertEqual(self.wf['run-name'], 'investigar ${{ inputs.request_id }}')  # scripts/noche.py reads it
 
     def test_the_work_folder_travels_sealed_and_is_opened_before_anything_reads_it(self):
         seal = next(s for s in self.jobs['fetch']['steps'] if 'sobre.sh seal' in s.get('run', ''))
