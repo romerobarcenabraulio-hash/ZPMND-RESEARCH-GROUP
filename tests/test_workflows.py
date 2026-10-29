@@ -111,6 +111,10 @@ class AuditorGpt(unittest.TestCase):
         self.assertNotIn('python', with_token[0]['run'])  # the token fetches; it is never where raws are parsed
         gate_step = next(s for s in job['steps'] if 'packet_gate.py' in s.get('run', ''))
         self.assertEqual(gate_step['env'], {'SHA': '${{ needs.gate.outputs.sha }}'})
+        self.assertEqual(job['env'], {'RG_EXTRACT_AS': 'rgparse'})  # every step of the job, the gate's included
+        user = next(i for i, s in enumerate(job['steps']) if 'useradd' in s.get('run', ''))  # raws parsed as another user
+        self.assertEqual(job['steps'][user]['run'], 'sudo useradd --system --no-create-home --shell /usr/sbin/nologin rgparse')
+        self.assertLess(user, job['steps'].index(gate_step))
         upload = next(s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/upload-artifact@'))
         self.assertEqual(upload['name'], 'packet-gate')
 
