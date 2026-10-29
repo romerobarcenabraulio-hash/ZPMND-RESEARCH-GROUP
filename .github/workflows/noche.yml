@@ -1,0 +1,84 @@
+name: noche
+# The night (docs/NOCHE.md): at 23:30 Mexico City, scripts/noche.py despachar starts the pending ResearchRequests'
+# investigar runs (at most 4, priority then oldest; Git and GitHub's own state are the queue, and each started run is
+# waited for until GitHub lists it, so a later dispatcher starts nothing twice); at 07:00, resumen writes what the night did as JSON and Markdown. Main's code only;
+# GITHUB_TOKEN with actions: write (to dispatch investigar.yml) or read; no model, no secret, nothing is parsed but
+# main's own request files and GitHub's answers.
+run-name: noche ${{ inputs.mode || (github.event.schedule == '0 13 * * *' && 'resumen' || 'despachar') }}${{ inputs.dry_run && ' (prueba)' || '' }}
+on:
+  schedule:
+    - cron: '30 5 * * *'   # 23:30 America/Mexico_City
+    - cron: '0 13 * * *'   # 07:00 America/Mexico_City
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'despachar or resumen'
+        type: choice
+        options: [despachar, resumen]
+        default: despachar
+      max:
+        description: 'despachar: at most this many runs (0-10)'
+        default: '4'
+      dry_run:
+        description: 'despachar: say what would start, start nothing'
+        type: boolean
+        default: false
+permissions: {}
+concurrency:
+  group: noche
+  cancel-in-progress: false
+jobs:
+  despachar:
+    if: github.ref == 'refs/heads/main' && (inputs.mode == 'despachar' || github.event.schedule == '30 5 * * *')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: { contents: read, actions: write, pull-requests: read }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - name: Start the pending investigations
+        timeout-minutes: 8  # a slow GitHub fails this step, never the job: the record below is still uploaded
+        env:
+          GH_TOKEN: '${{ github.token }}'
+          REPO: '${{ github.repository }}'
+          MAX: '${{ inputs.max || 4 }}'
+          DRY: '${{ inputs.dry_run && ''--dry-run'' || '''' }}'
+        run: |
+          set -euo pipefail
+          [[ "$MAX" =~ ^[0-9]{1,2}$ ]] || { echo "max must be a number"; exit 2; }
+          [[ -z "$DRY" || "$DRY" == "--dry-run" ]] || exit 2
+          python3 scripts/noche.py despachar --max "$MAX" $DRY | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        if: always()  # the record of what did start, also when one dispatch failed or the step ran out of time
+        with: { name: noche-despacho, path: despacho.json, retention-days: 7, if-no-files-found: error }
+
+  resumen:
+    if: github.ref == 'refs/heads/main' && (inputs.mode == 'resumen' || github.event.schedule == '0 13 * * *')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: { contents: read, actions: read, pull-requests: read }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - name: What the night did
+        env:
+          GH_TOKEN: '${{ github.token }}'
+          REPO: '${{ github.repository }}'
+        run: |
+          set -uo pipefail
+          mkdir -p noche despacho
+          # a record before anything can fail (GPT on b262a77): whatever stops this step, the upload below still has one
+          # that says the night is not known; noche.py replaces it whole once it has read the night
+          printf '%s\n' '{"error": "el resumen no terminó: falló antes de leer la noche"}' > noche/noche.json
+          printf '%s\n' '# Noche' '' 'El resumen no terminó: falló antes de leer la noche. Nada de esta noche está contado.' > noche/noche.md
+          # the last real dispatch's record (never a dry run's, "noche despachar (prueba)"; also one that ended red, whose
+          # record of what did start was uploaded anyway); a listing or a download that fails is said in the record
+          listado=ok
+          id=$(gh run list -R "$REPO" -w noche.yml -b main --limit 20 --json databaseId,displayTitle,status \
+               -q '[.[] | select(.displayTitle == "noche despachar" and .status == "completed")][0].databaseId // empty') || { listado=fallo; id=''; }
+          if [ -n "$id" ]; then gh run download "$id" -R "$REPO" -n noche-despacho -D despacho || echo "no se bajó el registro del despacho $id"; fi
+          python3 scripts/noche.py resumen --despacho despacho/despacho.json --despacho-run "$id" --despacho-listado "$listado" --out noche \
+            | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        if: always()  # also when a receipt could not be read: the step is red and the record is still kept
+        with: { name: noche-resumen, path: noche/, retention-days: 30, if-no-files-found: error }

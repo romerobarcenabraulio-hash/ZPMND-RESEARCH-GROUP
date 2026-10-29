@@ -20,12 +20,15 @@ name: investigar
 #   licenses never come from the model) and runs rg.packets: schema, only declared files, sha256 of every raw, every
 #   quote in the extracted text of its source (the run's raws at hand, also those a metadata_only packet never keeps).
 # - publish: contents: write and nothing else. Parses nothing; pushes only research-packets/<RP>/, to a new branch only.
-# A branch pushed with GITHUB_TOKEN starts no workflow, so the owner opens the PR (and with it CI and both auditors):
-# the job summary prints the command.
+# - pr (last): a branch or PR made with GITHUB_TOKEN starts no workflow, so this job alone mints a short-lived token of
+#   the repository's GitHub App (pull-requests: write, contents: read; secrets in the environment rg-pr, main only)
+#   after the gate passed and the branch was pushed, parses nothing, and opens the PR: CI, both auditors and the
+#   data-only automerge take it from there. Without the App configured it opens nothing and says so; the owner can.
 # - plan (first): the reviewed plan on main, or, with discover, the sources a web search proposes from the request alone
 #   (no URL given): the same pinned CLI, WebSearch its only tool, from an empty folder, no GitHub token, answering
 #   through DISCOVERY_SCHEMA; plan_from_discovery keeps public https hosts only and makes every source metadata_only.
 #   Either way the fetch job gets one plan that passed load_plan, and nothing else about it changes.
+run-name: investigar ${{ inputs.request_id }}  # scripts/noche.py finds a request's queued or running run by this name
 on:
   workflow_dispatch:
     inputs:
@@ -347,5 +350,42 @@ jobs:
             GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 | tr -d '\n')" \
             git push --force-with-lease="refs/heads/investigar/$RP:" origin "investigar/$RP" \
             || { echo "investigar/$RP ya existe: cierra su PR y borra la rama antes de repetir el pedido"; exit 3; }
-          { echo "Rama investigar/$RP lista. Abre el PR para que corran CI y los dos auditores:"
-            echo '```'; echo "gh pr create -R $REPO --base main --head investigar/$RP --fill"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          echo "Rama investigar/$RP lista; el job pr abre su PR." >> "$GITHUB_STEP_SUMMARY"
+
+  pr:
+    needs: [gate, publish]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    environment: rg-pr  # the App's key lives here, for main only; no other job names it
+    permissions: {}
+    steps:
+      - name: Is the repository's App configured
+        id: app
+        env: { CLIENT_ID: '${{ vars.RG_APP_CLIENT_ID }}' }
+        run: echo "ok=$([ -n "$CLIENT_ID" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510  # v3.3.0
+        id: token
+        if: steps.app.outputs.ok == 'true'
+        with:
+          client-id: '${{ vars.RG_APP_CLIENT_ID }}'
+          private-key: '${{ secrets.RG_APP_PRIVATE_KEY }}'
+          permission-pull-requests: write
+          permission-contents: read
+      - name: Open the packet's PR (CI, both auditors and the data-only automerge go on from there)
+        env:
+          GH_TOKEN: '${{ steps.token.outputs.token }}'
+          OK: '${{ steps.app.outputs.ok }}'
+          RP: '${{ needs.gate.outputs.rp }}'
+          REPO: '${{ github.repository }}'
+          RUN: '${{ github.run_id }}'
+        run: |
+          set -euo pipefail
+          [[ "$RP" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]] || { echo "bad packet id"; exit 2; }
+          if [ "$OK" != true ]; then
+            { echo "Sin la App del repositorio configurada no se abre el PR. A mano:"; echo '```'
+              echo "gh pr create -R $REPO --base main --head investigar/$RP --fill"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          gh pr create -R "$REPO" --base main --head "investigar/$RP" --title "Paquete $RP (investigar.yml)" \
+            --body "Paquete $RP de la corrida $RUN de investigar.yml, abierto por la App del repositorio. Es CANDIDATE: lo revisan CI y los dos auditores; si es solo de datos y pasa, automerge lo fusiona." \
+            | tee -a "$GITHUB_STEP_SUMMARY"
