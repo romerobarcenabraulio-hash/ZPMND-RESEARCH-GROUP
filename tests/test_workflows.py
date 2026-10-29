@@ -146,6 +146,7 @@ case "$*" in
   *isCrossRepository*) printf '%s' "$STUB_CROSS" ;;
   *headRefOid*) echo 0123456789abcdef0123456789abcdef01234567 ;;
   *comments*) echo '{"comments": []}' ;;
+  *check-runs*) [ "$STUB_CI" = down ] && exit 1; printf '%s' "$STUB_CI" ;;
   *) exit 9 ;;
 esac
 """
@@ -156,21 +157,32 @@ class AuditorGate(unittest.TestCase):
     """The repo is public since 2026-10-22: a fork's PR must never reach the jobs that hold the Claude and OpenAI
     secrets. The gate's own script runs here against a stub gh."""
 
-    def gate(self, cross):
+    def gate(self, cross, ci='completed success', event='pull_request_target'):
         script = yaml.safe_load(AUDITOR.read_text(encoding='utf-8'))['jobs']['gate']['steps'][0]['run']
         with tempfile.TemporaryDirectory() as d:
             (Path(d) / 'gh').write_text(GH_STUB, encoding='utf-8')
             (Path(d) / 'gh').chmod(0o755)
+            (Path(d) / 'sleep').write_text('#!/bin/sh\necho slept >> "$SLEPT"\n', encoding='utf-8')  # no test waits for real
+            (Path(d) / 'sleep').chmod(0o755)
             out = Path(d) / 'out'
             out.write_text('', encoding='utf-8')
             env = {**os.environ, 'PATH': d + os.pathsep + os.environ['PATH'], 'GITHUB_OUTPUT': str(out),
-                   'STUB_CROSS': cross, 'EVENT': 'pull_request_target', 'PR_EVENT': '7', 'REPO': 'o/r', 'OWNER': 'o'}
+                   'STUB_CROSS': cross, 'EVENT': event, 'PR_EVENT': '7', 'REPO': 'o/r', 'OWNER': 'o', 'STUB_CI': ci,
+                   'SLEPT': str(Path(d) / 'slept'), 'PR_ISSUE': '7', 'ON_PR': 'true', 'ASSOC': 'OWNER', 'BODY': 'otra ronda'}
             r = subprocess.run(['bash', '-c', script], env=env, capture_output=True, text=True, timeout=60)
             self.assertEqual(r.returncode, 0, r.stderr)
             return dict(l.split('=', 1) for l in out.read_text(encoding='utf-8').split())
 
     def test_a_branch_of_this_repo_is_audited(self):
         self.assertEqual(self.gate('false'), {'run': 'true', 'pr': '7', 'sha': '0123456789abcdef0123456789abcdef01234567'})
+
+    def test_no_llm_audit_of_a_head_ci_rejects_and_a_wait_that_runs_out_audits(self):
+        audited = {'run': 'true', 'pr': '7', 'sha': '0123456789abcdef0123456789abcdef01234567'}
+        for ci, want in (('completed failure', {'run': 'false'}), ('completed cancelled', {'run': 'false'}),
+                         ('completed success', audited), ('in_progress ', audited), ('down', audited)):
+            with self.subTest(ci=ci):
+                self.assertEqual(self.gate('false', ci=ci), want)
+        self.assertEqual(self.gate('false', ci='completed failure', event='issue_comment'), audited)  # the owner's "otra ronda"
 
     def test_a_fork_is_never_audited(self):
         self.assertEqual(self.gate('true'), {'run': 'false'})
