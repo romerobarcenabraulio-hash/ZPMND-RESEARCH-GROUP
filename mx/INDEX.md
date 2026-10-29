@@ -201,16 +201,16 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 
 | categoría | registros |
 |---|---:|
-| mx.dof | pending | 516129 |
+| mx.dof | pending | 514820 |
 | mx.dof | metadata_only | 260037 |
-| mx.dof | stored | 68030 |
+| mx.dof | stored | 69336 |
 | mx.hf-tesis-scjn | stored | 51189 |
 | mx.banxico-sie | stored | 33503 |
 | mx.ojn-estatal | stored | 29822 |
 | mx.ojn-municipal | stored | 6649 |
 | mx.inegi-bie | stored | 693 |
 | mx.leyes-federales | stored | 318 |
-| mx.dof | failed | 187 |
+| mx.dof | failed | 190 |
 | mx.reglamentos-federales | stored | 150 |
 | mx.ojn-estatal | failed | 104 |
 | mx.ojn-municipal | failed | 38 |
