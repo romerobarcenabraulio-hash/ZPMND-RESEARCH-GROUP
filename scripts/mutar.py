@@ -8,8 +8,13 @@ Each mutant runs in its own throwaway copy with `git init` and NO remote (a muta
 every mutant look killed (2026-10-20, REGLAS 16b). The property test runs with fewer scenarios here
 (RG_PROPERTY_SCENARIOS) to keep the run short; the full suite runs it in full. A mutant's suite stops at its first
 failing test (-f): the verdict is only "some test failed", so stopping there changes no verdict, only the time.
+For the same reason a mutant first runs the test modules that name its file (related()): if one fails it is killed;
+if none does, the whole suite decides. Same verdict, a few seconds instead of the whole suite for most mutants.
+With RG_BASE set (CI on a pull request), a change that touches only data (DATA: packets, requests, plans, docs) skips
+the run: no code or test changed, so every mutant's verdict is main's.
 """
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -63,7 +68,9 @@ MUT = [
  ('.github/workflows/catalog-mx.yml', 'for d in data raw;', 'for d in raw;'),
  ('.github/workflows/catalog-mx.yml', 'for t in "$BANXICO_TOKEN" "$INEGI_TOKEN"; do', 'for t in "$BANXICO_TOKEN"; do'),
  ('.github/workflows/catalog-mx.yml', 'fromJSON(\'["0", "3", "4"]\')', 'fromJSON(\'["0", "1", "3", "4"]\')'),
+ ('.github/workflows/ci.yml', "          RG_BASE: '${{ github.event.pull_request.base.sha }}'", "          RG_OTHER: '${{ github.event.pull_request.base.sha }}'"),
  ('.github/workflows/ci.yml', "    if: github.event_name == 'pull_request'", "    if: github.event_name != 'schedule'"),
+ ('.github/workflows/ci.yml', 'with: { persist-credentials: false, fetch-depth: 0 }  # the base', 'with: { persist-credentials: false }  # the base'),
  ('.github/workflows/indicadores-mx.yml', "          INEGI_TOKEN: ${{ secrets.INEGI_TOKEN }}   # sent only", "          INEGI_TOKEN_UNUSED: ${{ secrets.INEGI_TOKEN }}   # sent only"),
  ('.github/workflows/indicadores-mx.yml', 'if grep -rqF -- "$t" out raw; then', 'if false; then'),
  ('.github/workflows/investigar.yml', '            --json-schema "$(cat "$GITHUB_WORKSPACE/work/schema.json")" \\\n', ''),
@@ -596,6 +603,15 @@ MUT = [
  ('scripts/automerge.py', "\\.json)$')", "\\.json)')"),
  ('scripts/automerge.py', "and r.get('event') == event and r.get('head_sha') == sha\n", "and r.get('head_sha') == sha\n"),
  ('scripts/automerge.py', "{'sha': sha, 'merge_method': 'squash',", "{'merge_method': 'squash',"),
+ ('scripts/mutar.py', '            ran[near] = suite(base, modules=list(near)).returncode == 0\n', '            ran[near] = True\n'),
+ ('scripts/mutar.py', '        out[f] = list(near) if near and ran[near] else []\n', '        out[f] = list(near)\n'),
+ ('scripts/mutar.py', '    if data_only(paths):\n', '    if False:\n'),
+ ('scripts/mutar.py', '    if near and suite(d, failfast=True, modules=near).returncode != 0:\n        return True\n', '    if False:\n        return True\n'),
+ ('scripts/mutar.py', "    out = subprocess.run(['git', 'diff', '--name-only', '--no-renames', f'{base}...HEAD'], cwd=repo, capture_output=True,\n", "    out = subprocess.run(['git', 'diff', '--name-only', f'{base}...HEAD'], cwd=repo, capture_output=True,\n"),
+ ('scripts/mutar.py', '    return bool(paths) and all(DATA.fullmatch(p) for p in paths)\n', '    return all(DATA.fullmatch(p) for p in paths)\n'),
+ ('scripts/mutar.py', "if word.search(t.read_text(encoding='utf-8')))\n", 'if False)\n'),
+ ('scripts/mutar.py', "|[^/]+\\.md')", "')"),
+ ('scripts/mutar.py', "|[^/]+\\.md')", "|.+\\.md')"),
  ('scripts/packet_gate.py', '        big = [p for *_, size, p in rows if not 0 <= size <= MAX_BLOB]', '        big = []'),
  ('scripts/packet_gate.py', "        if not rows:\n            return {'packet': rp, 'status': 'removed'}, 0", "        if False:\n            return {'packet': rp, 'status': 'removed'}, 0"),
  ('scripts/packet_gate.py', '        if ok:\n            for f in sorted', '        if True:\n            for f in sorted'),
@@ -638,13 +654,57 @@ def shard(items, spec):
     return [(i, m) for i, m in enumerate(items, 1) if i % n == k]
 
 
-def suite(d, failfast=False):
+DATA = re.compile(r'(research-packets|requests|docs|knowledge-demand)/.+|[^/]+\.md')
+
+
+def data_only(paths):
+    """True when every changed path is data the mutants do not read: packets, requests and plans, docs, top-level .md."""
+    return bool(paths) and all(DATA.fullmatch(p) for p in paths)
+
+
+def changed(base, repo=R):
+    """Every path the change touches. --no-renames: a rename lists both its old and new paths, so code moved to docs/
+    is never read as a data-only change (Claude, REVISE of #43)."""
+    out = subprocess.run(['git', 'diff', '--name-only', '--no-renames', f'{base}...HEAD'], cwd=repo, capture_output=True,
+                         text=True, check=True)
+    return [line for line in out.stdout.splitlines() if line]
+
+
+def suite(d, failfast=False, modules=None):
     env = {**os.environ, 'RG_PROPERTY_SCENARIOS': '4'}
+    target = list(modules) if modules else ['discover', '-s', 'tests', '-t', '.']
     try:  # a mutant that hangs the suite is detected, not waited on until the job limit
-        return subprocess.run([PY, '-m', 'unittest', 'discover', '-s', 'tests', '-t', '.'] + ['-f'] * failfast, cwd=d, env=env,
+        return subprocess.run([PY, '-m', 'unittest'] + target + ['-f'] * failfast, cwd=d, env=env,
                               capture_output=True, text=True, timeout=600)
     except subprocess.TimeoutExpired:
         return subprocess.CompletedProcess([], 124, '', 'timeout')
+
+
+def related(d, f):
+    """Test modules that name the mutated file (its name without extensions): the likeliest to kill its mutants."""
+    word = re.compile(rf'\b{re.escape(Path(f).name.split(".")[0])}\b')  # 'ci' names ci.yml, not 'decide'
+    return sorted(f'tests.{t.stem}' for t in (Path(d) / 'tests').glob('test_*.py') if word.search(t.read_text(encoding='utf-8')))
+
+
+def baseline_related(base, files):
+    """{file: its related modules, only if they pass on the unmutated copy}. A selection that fails there by itself
+    (an import, an order, a fixture another module prepares) would call every mutant of that file killed, so it is
+    never used: the whole suite decides for that file (GPT, REVISE of #43). Each selection runs once."""
+    ran, out = {}, {}
+    for f in sorted(files):
+        near = tuple(related(base, f))
+        if near and near not in ran:
+            ran[near] = suite(base, modules=list(near)).returncode == 0
+        out[f] = list(near) if near and ran[near] else []
+    return out
+
+
+def killed(d, near):
+    """Some test fails on the mutant: its related modules first (passed on the unmutated copy), the whole suite only if
+    none of them failed."""
+    if near and suite(d, failfast=True, modules=near).returncode != 0:
+        return True
+    return suite(d, failfast=True).returncode != 0
 
 
 def copy(d):
@@ -654,7 +714,7 @@ def copy(d):
 
 
 def mutant(args):
-    i, (f, a, b), tmp = args
+    i, (f, a, b), tmp, near = args
     d = Path(tmp) / f'm{i}'
     copy(d)
     p = d / f
@@ -662,12 +722,17 @@ def mutant(args):
     if s.count(a) != 1:
         return i, f, a, 'NOT FOUND'
     p.write_text(s.replace(a, b), encoding='utf-8')
-    killed = suite(d, failfast=True).returncode != 0
+    dead = killed(d, near)
     shutil.rmtree(d)
-    return i, f, a, 'KILLED' if killed else 'ALIVE'
+    return i, f, a, 'KILLED' if dead else 'ALIVE'
 
 
 def main():
+    since = os.environ.get('RG_BASE')
+    paths = changed(since) if since else []
+    if data_only(paths):
+        print(f'skipped: the change touches only data ({", ".join(paths)}); every mutant keeps main\'s verdict')
+        return
     mine = shard(MUT, os.environ.get('RG_SHARD') or '0/1')
     with tempfile.TemporaryDirectory() as tmp:
         base = Path(tmp) / 'base'
@@ -675,9 +740,10 @@ def main():
         b = suite(base)
         if b.returncode != 0:
             sys.exit('baseline fails in the copy: ' + b.stderr[-600:])
+        near = baseline_related(base, {m[0] for _, m in mine})
         shutil.rmtree(base)
         with ThreadPoolExecutor(max_workers=max(1, os.cpu_count() or 1)) as pool:  # one suite per core
-            results = list(pool.map(mutant, [(i, m, tmp) for i, m in mine]))
+            results = list(pool.map(mutant, [(i, m, tmp, near[m[0]]) for i, m in mine]))
     bad = 0
     for i, f, a, verdict in results:
         bad += verdict != 'KILLED'
