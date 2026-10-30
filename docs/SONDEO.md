@@ -1,0 +1,25 @@
+# Sondeo del registro de fuentes
+
+Braulio, 2026-10-30: el tablero tenía 200 de 234 subáreas "por medir"; las cifras las debe poner el dato, no la mano, y el
+registro debe llegar al detalle (qué libros, qué bases de datos), de más a menos: RG mapea el mundo entero y ZPMND lo
+recorta para cada cliente y país (campos `alcance` e `idiomas`).
+
+**Registro** (`sources/registro/<letra>.json`, una familia de NORTE §3 por archivo). Cada fuente candidata dice su
+subárea del tablero (`subarea`, A01..P99), su clase (libro, base de datos, API, catálogo, dataset, repositorio, portal
+oficial, diario oficial, revista, video, foro, curso, documentación, registro), su editor, su URL base, sus hosts, su
+alcance, sus idiomas y su licencia. Todo es candidato (`status: candidate`) hasta que el sondeo la alcanza. Las fuentes
+de México que ya adquiere el catálogo viven en `sources/mx.json`; un id nombra una sola fuente en todo RG.
+
+**Contador.** Solo si la fuente declara su tamaño en un lugar fijo: `json` (un número entero en una ruta de su respuesta
+JSON) o `contar` (cuántas veces aparece un texto fijo, por ejemplo `<rfc-entry>` en el índice de RFC). Nada más se
+interpreta. Sin contador, el sondeo pide la URL base y guarda solo su respuesta HTTP (`existe` con un 200): así se ve
+pronto un libro o una base mal nombrados.
+
+**Corrida.** `sondeo.yml` cada lunes y a mano, con el código de `main`, sin secretos. Escribe `sondeo/<fecha>.json` y
+`sondeo/ultimo.json` en la rama `sondeo`: por fuente, estado (`medido`, `existe`, `http`, `rechazado`, `ilegible`,
+`error`), valor, unidad, URL, estado HTTP, bytes, sha256 y fecha; y un resumen por familia. Claude pasa esas cifras al
+tablero (pestaña Desglose). Lo que pide llave (Banxico, INEGI, DENUE) llega en un PR aparte, con el secreto solo en su
+paso.
+
+**Crecer el registro** es solo datos: un PR por familia o grupo de familias, cada uno bajo el tope de lectura del revisor
+GPT, que agrega fuentes con nombre (libros, bases, APIs, catálogos) y su contador cuando la fuente lo tiene.

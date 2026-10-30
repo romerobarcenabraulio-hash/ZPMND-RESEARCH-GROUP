@@ -1,0 +1,108 @@
+{
+ "familia": "C",
+ "nombre": "C. Ingeniería",
+ "fuentes": [
+  {
+   "source_id": "int.nist-webbook",
+   "status": "candidate",
+   "subarea": "C05",
+   "clase": "base_de_datos",
+   "title": "NIST Chemistry WebBook",
+   "publisher": "NIST",
+   "base_url": "https://webbook.nist.gov",
+   "allowed_hosts": [
+    "webbook.nist.gov"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público (EE. UU.)"
+  },
+  {
+   "source_id": "int.materials-project",
+   "status": "candidate",
+   "subarea": "C06",
+   "clase": "base_de_datos",
+   "title": "Materials Project",
+   "publisher": "Lawrence Berkeley National Laboratory",
+   "base_url": "https://next-gen.materialsproject.org",
+   "allowed_hosts": [
+    "next-gen.materialsproject.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY (por verificar)"
+  },
+  {
+   "source_id": "int.libretexts-eng",
+   "status": "candidate",
+   "subarea": "C01",
+   "clase": "libro",
+   "title": "LibreTexts Engineering (biblioteca de libros abiertos)",
+   "publisher": "LibreTexts",
+   "base_url": "https://eng.libretexts.org",
+   "allowed_hosts": [
+    "eng.libretexts.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "abierta (licencia por libro)"
+  },
+  {
+   "source_id": "mx.ntc-cdmx",
+   "status": "candidate",
+   "subarea": "C02",
+   "clase": "portal_oficial",
+   "title": "Normas Técnicas Complementarias del Reglamento de Construcciones",
+   "publisher": "Gobierno de la Ciudad de México",
+   "base_url": "https://www.isc.cdmx.gob.mx",
+   "allowed_hosts": [
+    "www.isc.cdmx.gob.mx"
+   ],
+   "alcance": "México · CDMX",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial"
+  },
+  {
+   "source_id": "us.epa-methods",
+   "status": "candidate",
+   "subarea": "C08",
+   "clase": "catalogo",
+   "title": "Métodos analíticos de la EPA",
+   "publisher": "U.S. Environmental Protection Agency",
+   "base_url": "https://www.epa.gov",
+   "allowed_hosts": [
+    "www.epa.gov"
+   ],
+   "alcance": "Internacional · EE. UU.",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público"
+  },
+  {
+   "source_id": "int.pubchem",
+   "status": "candidate",
+   "subarea": "C05",
+   "clase": "base_de_datos",
+   "title": "PubChem",
+   "publisher": "NCBI / NIH",
+   "base_url": "https://pubchem.ncbi.nlm.nih.gov",
+   "allowed_hosts": [
+    "pubchem.ncbi.nlm.nih.gov"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público (EE. UU.)"
+  }
+ ]
+}

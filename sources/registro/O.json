@@ -1,0 +1,76 @@
+{
+ "familia": "O",
+ "nombre": "O. Manuales y fabricantes",
+ "fuentes": [
+  {
+   "source_id": "int.ti",
+   "status": "candidate",
+   "subarea": "O01",
+   "clase": "catalogo",
+   "title": "Texas Instruments: hojas de datos",
+   "publisher": "Texas Instruments",
+   "base_url": "https://www.ti.com",
+   "allowed_hosts": [
+    "www.ti.com"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "según documento (por revisar)"
+  },
+  {
+   "source_id": "int.st",
+   "status": "candidate",
+   "subarea": "O01",
+   "clase": "catalogo",
+   "title": "STMicroelectronics: documentación técnica",
+   "publisher": "STMicroelectronics",
+   "base_url": "https://www.st.com",
+   "allowed_hosts": [
+    "www.st.com"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "según documento (por revisar)"
+  },
+  {
+   "source_id": "int.schneider",
+   "status": "candidate",
+   "subarea": "O02",
+   "clase": "catalogo",
+   "title": "Schneider Electric: biblioteca de documentos",
+   "publisher": "Schneider Electric",
+   "base_url": "https://www.se.com",
+   "allowed_hosts": [
+    "www.se.com"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "según documento (por revisar)"
+  },
+  {
+   "source_id": "int.siemens-sios",
+   "status": "candidate",
+   "subarea": "O02",
+   "clase": "catalogo",
+   "title": "Siemens Industry Online Support",
+   "publisher": "Siemens",
+   "base_url": "https://support.industry.siemens.com",
+   "allowed_hosts": [
+    "support.industry.siemens.com"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "según documento (por revisar)"
+  }
+ ]
+}

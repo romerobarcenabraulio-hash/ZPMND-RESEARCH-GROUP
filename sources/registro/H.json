@@ -1,0 +1,75 @@
+{
+ "familia": "H",
+ "nombre": "H. Management y organización",
+ "fuentes": [
+  {
+   "source_id": "int.openstax-management",
+   "status": "candidate",
+   "subarea": "H01",
+   "clase": "libro",
+   "title": "OpenStax: Principles of Management",
+   "publisher": "OpenStax, Rice University",
+   "base_url": "https://openstax.org",
+   "allowed_hosts": [
+    "openstax.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY"
+  },
+  {
+   "source_id": "int.oecd-gobierno-corporativo",
+   "status": "candidate",
+   "subarea": "H08",
+   "clase": "documentacion",
+   "title": "Principios de Gobierno Corporativo G20/OCDE",
+   "publisher": "OCDE",
+   "base_url": "https://www.oecd.org",
+   "allowed_hosts": [
+    "www.oecd.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "términos por revisar"
+  },
+  {
+   "source_id": "mx.compras-mx",
+   "status": "candidate",
+   "subarea": "H02",
+   "clase": "portal_oficial",
+   "title": "Compras MX (contrataciones públicas)",
+   "publisher": "Gobierno de México",
+   "base_url": "https://comprasmx.buengobierno.gob.mx",
+   "allowed_hosts": [
+    "comprasmx.buengobierno.gob.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial"
+  },
+  {
+   "source_id": "int.openstax-orgbehavior",
+   "status": "candidate",
+   "subarea": "H04",
+   "clase": "libro",
+   "title": "OpenStax: Organizational Behavior",
+   "publisher": "OpenStax, Rice University",
+   "base_url": "https://openstax.org",
+   "allowed_hosts": [
+    "openstax.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY"
+  }
+ ]
+}

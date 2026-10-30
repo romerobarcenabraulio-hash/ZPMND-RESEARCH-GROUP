@@ -1,0 +1,127 @@
+{
+ "familia": "N",
+ "nombre": "N. Datos públicos",
+ "fuentes": [
+  {
+   "source_id": "int.worldbank-indicadores",
+   "status": "candidate",
+   "subarea": "N10",
+   "clase": "api",
+   "title": "Banco Mundial: catálogo de indicadores",
+   "publisher": "Banco Mundial",
+   "base_url": "https://data.worldbank.org",
+   "allowed_hosts": [
+    "api.worldbank.org",
+    "data.worldbank.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "CC BY 4.0",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.worldbank.org/v2/indicator?format=json&per_page=1",
+    "ruta": [
+     0,
+     "total"
+    ],
+    "unidad": "indicadores"
+   }
+  },
+  {
+   "source_id": "int.who-gho",
+   "status": "candidate",
+   "subarea": "N14",
+   "clase": "api",
+   "title": "OMS: Global Health Observatory (indicadores)",
+   "publisher": "Organización Mundial de la Salud",
+   "base_url": "https://www.who.int",
+   "allowed_hosts": [
+    "ghoapi.azureedge.net",
+    "www.who.int"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY-NC-SA (por verificar)",
+   "contador": {
+    "tipo": "contar",
+    "url": "https://ghoapi.azureedge.net/api/Indicator",
+    "literal": "\"IndicatorCode\"",
+    "unidad": "indicadores"
+   }
+  },
+  {
+   "source_id": "int.eurostat",
+   "status": "candidate",
+   "subarea": "N15",
+   "clase": "api",
+   "title": "Eurostat",
+   "publisher": "Comisión Europea",
+   "base_url": "https://ec.europa.eu",
+   "allowed_hosts": [
+    "ec.europa.eu"
+   ],
+   "alcance": "Internacional · UE",
+   "idiomas": [
+    "en",
+    "multi"
+   ],
+   "license": "reutilización permitida (por verificar)"
+  },
+  {
+   "source_id": "int.imf-data",
+   "status": "candidate",
+   "subarea": "N11",
+   "clase": "api",
+   "title": "FMI: datos (SDMX)",
+   "publisher": "Fondo Monetario Internacional",
+   "base_url": "https://data.imf.org",
+   "allowed_hosts": [
+    "data.imf.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar"
+  },
+  {
+   "source_id": "int.oecd-data",
+   "status": "candidate",
+   "subarea": "N12",
+   "clase": "api",
+   "title": "OCDE: Data Explorer (SDMX)",
+   "publisher": "OCDE",
+   "base_url": "https://data-explorer.oecd.org",
+   "allowed_hosts": [
+    "data-explorer.oecd.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar"
+  },
+  {
+   "source_id": "mx.inegi-marco-geo",
+   "status": "candidate",
+   "subarea": "N04",
+   "clase": "dataset",
+   "title": "Marco Geoestadístico",
+   "publisher": "INEGI",
+   "base_url": "https://www.inegi.org.mx",
+   "allowed_hosts": [
+    "www.inegi.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "abierta (términos INEGI)"
+  }
+ ]
+}

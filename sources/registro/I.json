@@ -1,0 +1,277 @@
+{
+ "familia": "I",
+ "nombre": "I. Ciencia y academia",
+ "fuentes": [
+  {
+   "source_id": "int.openalex",
+   "status": "candidate",
+   "subarea": "I01",
+   "clase": "api",
+   "title": "OpenAlex: obras",
+   "publisher": "OurResearch",
+   "base_url": "https://openalex.org",
+   "allowed_hosts": [
+    "api.openalex.org",
+    "openalex.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "multi"
+   ],
+   "license": "CC0 (metadatos)",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.openalex.org/works?per-page=1",
+    "ruta": [
+     "meta",
+     "count"
+    ],
+    "unidad": "obras"
+   }
+  },
+  {
+   "source_id": "int.crossref",
+   "status": "candidate",
+   "subarea": "I02",
+   "clase": "api",
+   "title": "Crossref: obras con DOI",
+   "publisher": "Crossref",
+   "base_url": "https://www.crossref.org",
+   "allowed_hosts": [
+    "api.crossref.org",
+    "www.crossref.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "multi"
+   ],
+   "license": "metadatos abiertos",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.crossref.org/works?rows=0",
+    "ruta": [
+     "message",
+     "total-results"
+    ],
+    "unidad": "obras"
+   }
+  },
+  {
+   "source_id": "int.pubmed",
+   "status": "candidate",
+   "subarea": "I03",
+   "clase": "api",
+   "title": "PubMed",
+   "publisher": "NCBI / NLM",
+   "base_url": "https://pubmed.ncbi.nlm.nih.gov",
+   "allowed_hosts": [
+    "eutils.ncbi.nlm.nih.gov",
+    "pubmed.ncbi.nlm.nih.gov"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público (metadatos)",
+   "contador": {
+    "tipo": "json",
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=all%5Bsb%5D&retmode=json&retmax=0",
+    "ruta": [
+     "esearchresult",
+     "count"
+    ],
+    "unidad": "citas"
+   }
+  },
+  {
+   "source_id": "int.pmc-oa",
+   "status": "candidate",
+   "subarea": "I03",
+   "clase": "api",
+   "title": "PubMed Central (acceso abierto)",
+   "publisher": "NCBI / NLM",
+   "base_url": "https://pmc.ncbi.nlm.nih.gov",
+   "allowed_hosts": [
+    "eutils.ncbi.nlm.nih.gov",
+    "pmc.ncbi.nlm.nih.gov"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "según artículo",
+   "contador": {
+    "tipo": "json",
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pmc&term=open+access%5Bfilter%5D&retmode=json&retmax=0",
+    "ruta": [
+     "esearchresult",
+     "count"
+    ],
+    "unidad": "artículos"
+   }
+  },
+  {
+   "source_id": "int.arxiv",
+   "status": "candidate",
+   "subarea": "I04",
+   "clase": "repositorio",
+   "title": "arXiv",
+   "publisher": "Cornell University",
+   "base_url": "https://arxiv.org",
+   "allowed_hosts": [
+    "arxiv.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "según paper"
+  },
+  {
+   "source_id": "int.doaj",
+   "status": "candidate",
+   "subarea": "I07",
+   "clase": "api",
+   "title": "DOAJ: revistas de acceso abierto",
+   "publisher": "Directory of Open Access Journals",
+   "base_url": "https://doaj.org",
+   "allowed_hosts": [
+    "doaj.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "multi"
+   ],
+   "license": "CC0 (metadatos)",
+   "contador": {
+    "tipo": "json",
+    "url": "https://doaj.org/api/search/journals/%2A?pageSize=1",
+    "ruta": [
+     "total"
+    ],
+    "unidad": "revistas"
+   }
+  },
+  {
+   "source_id": "int.datacite",
+   "status": "candidate",
+   "subarea": "I08",
+   "clase": "api",
+   "title": "DataCite: DOI de datasets y más",
+   "publisher": "DataCite",
+   "base_url": "https://datacite.org",
+   "allowed_hosts": [
+    "api.datacite.org",
+    "datacite.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "multi"
+   ],
+   "license": "CC0 (metadatos)",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.datacite.org/dois?page%5Bsize%5D=1",
+    "ruta": [
+     "meta",
+     "total"
+    ],
+    "unidad": "DOI"
+   }
+  },
+  {
+   "source_id": "int.zenodo",
+   "status": "candidate",
+   "subarea": "I08",
+   "clase": "api",
+   "title": "Zenodo",
+   "publisher": "CERN",
+   "base_url": "https://zenodo.org",
+   "allowed_hosts": [
+    "zenodo.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "multi"
+   ],
+   "license": "según registro",
+   "contador": {
+    "tipo": "json",
+    "url": "https://zenodo.org/api/records?size=1",
+    "ruta": [
+     "hits",
+     "total"
+    ],
+    "unidad": "registros"
+   }
+  },
+  {
+   "source_id": "int.doab",
+   "status": "candidate",
+   "subarea": "I10",
+   "clase": "catalogo",
+   "title": "Directory of Open Access Books",
+   "publisher": "DOAB Foundation",
+   "base_url": "https://directory.doabooks.org",
+   "allowed_hosts": [
+    "directory.doabooks.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "multi"
+   ],
+   "license": "abierta (licencia por libro)"
+  },
+  {
+   "source_id": "mx.redalyc",
+   "status": "candidate",
+   "subarea": "I11",
+   "clase": "base_de_datos",
+   "title": "Redalyc",
+   "publisher": "Universidad Autónoma del Estado de México",
+   "base_url": "https://www.redalyc.org",
+   "allowed_hosts": [
+    "www.redalyc.org"
+   ],
+   "alcance": "México y LATAM",
+   "idiomas": [
+    "es"
+   ],
+   "license": "abierta (por revista)"
+  },
+  {
+   "source_id": "mx.scielo",
+   "status": "candidate",
+   "subarea": "I11",
+   "clase": "base_de_datos",
+   "title": "SciELO México",
+   "publisher": "UNAM",
+   "base_url": "https://www.scielo.org.mx",
+   "allowed_hosts": [
+    "www.scielo.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "abierta (por revista)"
+  },
+  {
+   "source_id": "mx.tesiunam",
+   "status": "candidate",
+   "subarea": "I12",
+   "clase": "base_de_datos",
+   "title": "TESIUNAM",
+   "publisher": "Dirección General de Bibliotecas, UNAM",
+   "base_url": "https://tesiunam.dgb.unam.mx",
+   "allowed_hosts": [
+    "tesiunam.dgb.unam.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "según tesis"
+  }
+ ]
+}

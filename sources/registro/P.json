@@ -1,0 +1,85 @@
+{
+ "familia": "P",
+ "nombre": "P. Conocimiento práctico",
+ "fuentes": [
+  {
+   "source_id": "int.stackoverflow",
+   "status": "candidate",
+   "subarea": "P04",
+   "clase": "api",
+   "title": "Stack Overflow: preguntas",
+   "publisher": "Stack Exchange",
+   "base_url": "https://stackoverflow.com",
+   "allowed_hosts": [
+    "api.stackexchange.com",
+    "stackoverflow.com"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY-SA",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.stackexchange.com/2.3/info?site=stackoverflow",
+    "ruta": [
+     "items",
+     0,
+     "total_questions"
+    ],
+    "unidad": "preguntas"
+   }
+  },
+  {
+   "source_id": "int.mit-ocw",
+   "status": "candidate",
+   "subarea": "P03",
+   "clase": "curso",
+   "title": "MIT OpenCourseWare",
+   "publisher": "Massachusetts Institute of Technology",
+   "base_url": "https://ocw.mit.edu",
+   "allowed_hosts": [
+    "ocw.mit.edu"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY-NC-SA"
+  },
+  {
+   "source_id": "int.khan",
+   "status": "candidate",
+   "subarea": "P03",
+   "clase": "curso",
+   "title": "Khan Academy (español)",
+   "publisher": "Khan Academy",
+   "base_url": "https://es.khanacademy.org",
+   "allowed_hosts": [
+    "es.khanacademy.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es"
+   ],
+   "license": "términos por revisar"
+  },
+  {
+   "source_id": "int.usenix",
+   "status": "candidate",
+   "subarea": "P02",
+   "clase": "catalogo",
+   "title": "USENIX: charlas y papers",
+   "publisher": "USENIX Association",
+   "base_url": "https://www.usenix.org",
+   "allowed_hosts": [
+    "www.usenix.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "abierta (acceso abierto USENIX)"
+  }
+ ]
+}

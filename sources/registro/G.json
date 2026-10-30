@@ -1,0 +1,92 @@
+{
+ "familia": "G",
+ "nombre": "G. Contabilidad y fiscal",
+ "fuentes": [
+  {
+   "source_id": "mx.sat-cfdi",
+   "status": "candidate",
+   "subarea": "G04",
+   "clase": "documentacion",
+   "title": "CFDI: Anexo 20 y esquemas",
+   "publisher": "Servicio de Administración Tributaria",
+   "base_url": "https://www.sat.gob.mx",
+   "allowed_hosts": [
+    "www.sat.gob.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial"
+  },
+  {
+   "source_id": "int.ifrs",
+   "status": "candidate",
+   "subarea": "G02",
+   "clase": "catalogo",
+   "title": "Normas NIIF (IFRS Accounting Standards)",
+   "publisher": "IFRS Foundation",
+   "base_url": "https://www.ifrs.org",
+   "allowed_hosts": [
+    "www.ifrs.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "consulta gratuita con registro"
+  },
+  {
+   "source_id": "int.iaasb",
+   "status": "candidate",
+   "subarea": "G08",
+   "clase": "catalogo",
+   "title": "Normas Internacionales de Auditoría (manual del IAASB)",
+   "publisher": "IAASB / IFAC",
+   "base_url": "https://www.iaasb.org",
+   "allowed_hosts": [
+    "www.iaasb.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "descarga gratuita (por verificar)"
+  },
+  {
+   "source_id": "int.openstax-accounting",
+   "status": "candidate",
+   "subarea": "G09",
+   "clase": "libro",
+   "title": "OpenStax: Principles of Accounting (vol. 1 y 2)",
+   "publisher": "OpenStax, Rice University",
+   "base_url": "https://openstax.org",
+   "allowed_hosts": [
+    "openstax.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY"
+  },
+  {
+   "source_id": "mx.cinif",
+   "status": "candidate",
+   "subarea": "G01",
+   "clase": "catalogo",
+   "title": "Normas de Información Financiera (NIF)",
+   "publisher": "CINIF",
+   "base_url": "https://www.cinif.org.mx",
+   "allowed_hosts": [
+    "www.cinif.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "solo metadatos (de pago)"
+  }
+ ]
+}
