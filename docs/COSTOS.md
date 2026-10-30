@@ -23,7 +23,9 @@ reemplaza y la cadena termina; la corrida programada sigue el trabajo. El job `r
 **Runner propio (`scripts/runner_setup.sh`, `scripts/runner_controller.sh`).** Corrección medida el 2026-10-30: RG es
 público y sus minutos de GitHub cuestan $0 netos (18,381 minutos del 25 al 29 de octubre, API de facturación por
 repositorio); el excedente que motivó rentar el servidor era de un repositorio privado. En RG el runner propio ya no
-ahorra dinero: lo que da es rastrear sin el tope de 6 horas por job de los runners de GitHub, día y noche. Se enciende con
+ahorra dinero: lo que da son corridas de hasta 23 horas (en GitHub el job se corta a las 6), día y noche; cada corrida
+tiene su propio plazo (1320 minutos el catálogo, 1300 el texto) para publicar lo que encontró antes de ese tope, y la
+unidad de systemd del job se corta a las 24 horas por fuera de ambos. En GitHub siguen los 300 minutos y la cadena. Se enciende con
 la variable del repo `CATALOG_RUNS_ON` = `["self-hosted","rg-catalog"]`; sin ella todo corre en GitHub. Es seguro por
 construcción (GPT en 2308494 mostró que un runner que vive entre jobs y comparte usuario con ellos puede ser copiado y
 reemplazado por un job comprometido, así que aquí ningún runner vive más que su job):
@@ -32,12 +34,15 @@ reemplazado por un job comprometido, así que aquí ningún runner vive más que
   toma un solo job y GitHub lo borra;
 - cada job corre como `rgjob`, sin sudo, en una unidad de systemd propia, con una copia nueva del runner, una carpeta
   vacía y un home vacío; al terminar se matan sus procesos y se borran las dos carpetas: nada de un job llega al
-  siguiente (ni un proceso, ni un venv, ni un `.pth`), y si un proceso sobrevive el servicio se detiene;
+  siguiente (ni un proceso, ni un venv, ni un `.pth`); si un proceso sobrevive, o si no se puede matar o comprobar que no
+  queda ninguno, el servicio se detiene sin borrar ni empezar nada;
 - el guardia de root rechaza cualquier otro job antes de su primer paso;
 - el token (fino, solo este repositorio, Administration escritura y Actions lectura) vive en `/etc/rg/auth-header`, de
   root y oculto para la unidad; nunca va en una línea de comandos.
-Se instala así: `runner_setup.sh` y `runner_controller.sh`, bajados por el commit exacto de `main` y comprobados por su
-sha256, corren como root en el servidor y piden el token sin mostrarlo; luego se fija `CATALOG_RUNS_ON`; un despacho de
+Se instala así: `runner_setup.sh`, `runner_controller.sh` y `runner_reach.sh`, bajados por el commit exacto de `main` y
+comprobados por su sha256, corren como root en el servidor y piden el token sin mostrarlo; antes de encender nada el
+instalador prueba que `rgjob` no entra a `/etc/rg` ni escribe el runner, el controlador, el guardia ni el servicio, y si
+esa prueba no puede terminar, falla; luego se fija `CATALOG_RUNS_ON`; un despacho de
 `catalog-mx` corre en el servidor y uno de cualquier otro flujo nunca recibe runner (y si lo recibiera, el guardia lo
 rechaza).
 

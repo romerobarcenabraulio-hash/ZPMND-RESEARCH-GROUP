@@ -28,11 +28,13 @@ jobs:
   run:
     if: github.ref == 'refs/heads/main'  # a dispatch of any other branch never writes the data branch
     # The repo variable CATALOG_RUNS_ON (a JSON label or label list, the same switch texto-mx.yml uses) moves this job to
-    # our own runner, which has no 6-hour cap; unset, GitHub's. There each job gets a one-job runner of its own, started
+    # our own runner, where a run may last 23 hours; unset, GitHub's. There each job gets a one-job runner of its own, started
     # only for this workflow or texto-mx.yml on main by schedule or dispatch, and a guard refuses any other job before its
     # first step (scripts/runner_controller.sh, runner_setup.sh), because a branch can carry its own copy of this file.
     runs-on: ${{ fromJSON(vars.CATALOG_RUNS_ON || '"ubuntu-24.04"') }}
-    timeout-minutes: 300
+    # 23 hours on our own runner (scripts/runner_controller.sh caps its unit at 24), GitHub's 300 minutes elsewhere; the
+    # run's own deadline below follows the same switch, so it ends and publishes before either cap (GPT on fa742b6)
+    timeout-minutes: ${{ contains(vars.CATALOG_RUNS_ON || '', 'self-hosted') && 1380 || 300 }}
     permissions:
       contents: write   # push to the data branch and upload release assets; nothing else
     outputs:
@@ -68,6 +70,7 @@ jobs:
         id: catalog
         env:
           BUDGET: ${{ inputs.budget }}   # passed as data, never interpolated into the script
+          DEADLINE_MINUTES: ${{ contains(vars.CATALOG_RUNS_ON || '', 'self-hosted') && '1320' || '240' }}
           INDEX_DAYS: ${{ inputs.index_days }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}   # read-only; the Fetcher sends it only to huggingface.co (mx.hf-tesis-scjn)
           BANXICO_TOKEN: ${{ secrets.BANXICO_TOKEN }}   # sent only to www.banxico.org.mx, header Bmx-Token (mx.banxico-sie)
@@ -78,7 +81,7 @@ jobs:
           set +e
           day=$(date -u +%F)
           marker=$(mktemp)  # only a manifest written after this instant is this run's
-          python -m rg.catalog.run --country mx --out data --raw raw ${BUDGET:+--budget "$BUDGET"} ${INDEX_DAYS:+--index-days "$INDEX_DAYS"} --deadline-minutes 240
+          python -m rg.catalog.run --country mx --out data --raw raw ${BUDGET:+--budget "$BUDGET"} ${INDEX_DAYS:+--index-days "$INDEX_DAYS"} --deadline-minutes "$DEADLINE_MINUTES"
           echo "rc=$?" >> "$GITHUB_OUTPUT"
           # more = this run stopped with work left: a source reached its request budget or the run deadline (both are
           # 'request budget reached' in the manifest). No manifest of this run means no more, never an older one's.

@@ -18,7 +18,9 @@ jobs:
   run:
     # Same runner switch as the catalog (CATALOG_RUNS_ON, a JSON label or label list); unset, GitHub's runner.
     runs-on: ${{ fromJSON(vars.CATALOG_RUNS_ON || '"ubuntu-24.04"') }}
-    timeout-minutes: 300
+    # 23 hours on our own runner (scripts/runner_controller.sh caps its unit at 24), GitHub's 300 minutes elsewhere; the
+    # run's own deadline below follows the same switch, so it ends and publishes before either cap (GPT on fa742b6)
+    timeout-minutes: ${{ contains(vars.CATALOG_RUNS_ON || '', 'self-hosted') && 1380 || 300 }}
     permissions:
       contents: write   # read raw-mx, upload to text-mx, push the data branch; nothing else
     steps:
@@ -64,9 +66,11 @@ jobs:
         run: python -m rg.text.bundles unpack --dir bundles --raw raw --record unpacked.json --delete
       - name: Extract text
         id: texto
+        env:
+          DEADLINE_MINUTES: ${{ contains(vars.CATALOG_RUNS_ON || '', 'self-hosted') && '1300' || '200' }}
         run: |
           set +e
-          python -m rg.text.run --catalog data/mx --raw raw --out data/mx/texto --text texto --bundles-done unpacked.json --deadline-minutes 200
+          python -m rg.text.run --catalog data/mx --raw raw --out data/mx/texto --text texto --bundles-done unpacked.json --deadline-minutes "$DEADLINE_MINUTES"
           echo "rc=$?" >> "$GITHUB_OUTPUT"
       - name: Upload new texts before the commit, so a manifest line never names an unpublished text
         env: { GH_TOKEN: '${{ github.token }}', GH_REPO: '${{ github.repository }}' }

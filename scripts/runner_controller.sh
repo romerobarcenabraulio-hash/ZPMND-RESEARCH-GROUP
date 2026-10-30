@@ -42,9 +42,13 @@ allowed_queued() {  # queued jobs that may run here: catalog-mx.yml or texto-mx.
 
 clean() {  # nothing of a job outlives it: its unit, its processes, its folder, its home
   systemctl stop 'rg-job-*.service' >/dev/null 2>&1 || true
-  pkill -KILL -u "$JOBUSER" >/dev/null 2>&1 || true
+  pkill -KILL -u "$JOBUSER" >/dev/null 2>&1
+  local rc=$?  # 0 killed some, 1 none were left; anything else means it could not kill (GPT on fa742b6)
+  [ "$rc" -le 1 ] || { echo "could not kill $JOBUSER's processes (pkill $rc): stopping"; exit 1; }
   sleep 1
-  if pgrep -u "$JOBUSER" >/dev/null; then echo "a process of $JOBUSER survived its job: stopping"; exit 1; fi
+  pgrep -u "$JOBUSER" >/dev/null
+  rc=$?  # only 1, no process, lets the next job start: 0 is a survivor, anything else means we could not tell
+  [ "$rc" = 1 ] || { echo "a process of $JOBUSER survived its job, or pgrep could not tell ($rc): stopping"; exit 1; }
   rm -rf "$JOB" "$JOBHOME"
 }
 
@@ -64,7 +68,7 @@ run_one() {  # one just-in-time runner, one job, then nothing left
   printf '%s' "$jit" > "$JOB/jit"  # the job's own one-job credential, deleted with the folder
   chown -R "$JOBUSER:$JOBGROUP" "$JOB/runner"
   systemd-run --unit="rg-job-$id" --uid="$JOBUSER" --gid="$JOBGROUP" --collect --quiet \
-    -p WorkingDirectory="$JOB/runner" -p Environment=HOME="$JOBHOME" -p RuntimeMaxSec=21600 \
+    -p WorkingDirectory="$JOB/runner" -p Environment=HOME="$JOBHOME" -p RuntimeMaxSec=86400 \
     -p KillMode=control-group -p NoNewPrivileges=yes -p PrivateTmp=yes -p ProtectSystem=strict \
     -p ReadWritePaths="$JOB" -p ReadWritePaths="$JOBHOME" -p InaccessiblePaths="$(dirname "$HEADER")" \
     -p RestrictSUIDSGID=yes -p ProtectKernelTunables=yes -p ProtectControlGroups=yes \

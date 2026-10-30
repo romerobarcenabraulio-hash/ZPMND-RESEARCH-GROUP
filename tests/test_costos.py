@@ -166,10 +166,14 @@ class OwnRunner(unittest.TestCase):
         self.assertNotIn('--token', self.script)
         self.assertEqual(self.script.count('Bearer'), 1)  # written once, into the root-only file
 
-    def test_the_installer_proves_the_jobs_user_reaches_none_of_it(self):
-        self.assertIn('if runuser -u rgjob -- test -r /etc/rg/auth-header; then echo "rgjob can read the token"; exit 1; fi', self.script)
-        self.assertIn('runuser -u rgjob -- find "$DIR" /opt/rg /etc/rg /etc/systemd/system/rg-runner.service -writable -print', self.script)
-        self.assertLess(self.script.index('systemctl enable --now rg-runner'), self.script.index('rgjob can read the token'))
+    def test_the_installer_proves_the_jobs_user_reaches_none_of_it_before_starting_anything(self):
+        check = 'bash "$HERE/runner_reach.sh" rgjob /etc/rg "$DIR" /opt/rg /var/lib/rg /etc/systemd/system/rg-runner.service\n'
+        self.assertIn(check, self.script)
+        # set -e makes a failed check the end of the install, and nothing is enabled or started before it (GPT on fa742b6)
+        self.assertIn('set -euo pipefail\n', self.script)
+        self.assertLess(self.script.index(check), self.script.index('systemctl enable --now rg-runner'))
+        self.assertLess(self.script.index('systemctl disable --now rg-runner'), self.script.index(check))
+        self.assertEqual(self.script.count('systemctl enable'), 1)
         self.assertIn('chown -R root:root "$DIR"', self.script)
         self.assertIn('chown root:root /opt/rg/runner_guard.sh && chmod 755 /opt/rg/runner_guard.sh', self.script)
         self.assertIn('install -o root -g root -m 755 "$HERE/runner_controller.sh" /opt/rg/runner_controller.sh', self.script)
@@ -235,6 +239,71 @@ exit 0
 """
 
 
+@unittest.skipIf(os.geteuid() == 0, 'root ignores the permissions this proves')
+class Reach(unittest.TestCase):
+    """scripts/runner_reach.sh, run for real against real permissions as the current user (GPT on fa742b6: a check that
+    cannot finish must refuse, not abort or pass)."""
+
+    def setUp(self):
+        import getpass
+        self.user = getpass.getuser()
+        self.t = Path(tempfile.mkdtemp())
+        self.secret = self.t / 'secret'; self.secret.mkdir(); (self.secret / 'auth-header').write_text('x')
+        self.tree = self.t / 'tree'; (self.tree / 'sub').mkdir(parents=True); (self.tree / 'sub' / 'f').write_text('x')
+        self.lock()
+
+    def lock(self):
+        (self.tree / 'sub' / 'f').chmod(0o444); (self.tree / 'sub').chmod(0o555); self.tree.chmod(0o555); self.secret.chmod(0o000)
+
+    def tearDown(self):
+        for p in (self.secret, self.tree, self.tree / 'sub'):
+            p.chmod(0o755)
+        import shutil
+        shutil.rmtree(self.t)
+
+    def reach(self):
+        return subprocess.run(['bash', str(WF.parents[1] / 'scripts' / 'runner_reach.sh'), self.user, str(self.secret),
+                               str(self.tree)], capture_output=True, text=True, timeout=30)
+
+    def test_nothing_reachable_passes(self):
+        r = self.reach()
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
+    def test_an_enterable_secret_folder_fails(self):
+        self.secret.chmod(0o700)
+        r = self.reach()
+        self.assertEqual(r.returncode, 1); self.assertIn('can enter', r.stdout)
+
+    def test_a_writable_file_fails(self):
+        (self.tree / 'sub').chmod(0o755); (self.tree / 'sub' / 'f').chmod(0o644); (self.tree / 'sub').chmod(0o555)
+        r = self.reach()
+        self.assertEqual(r.returncode, 1); self.assertIn('can write', r.stdout)
+
+    def test_a_folder_it_cannot_read_fails_instead_of_passing(self):
+        (self.tree / 'sub').chmod(0o000)
+        r = self.reach()
+        self.assertEqual(r.returncode, 1); self.assertIn('could not check', r.stdout)
+
+class Limits(unittest.TestCase):
+    """GPT on fa742b6: the long runs the server is for must exist: on our own runner the job may last 23 hours, each run's
+    own deadline ends it before that, and the unit's 24-hour cap is outside both; GitHub's runners keep 300 minutes."""
+
+    def test_the_run_deadline_fits_inside_the_job_and_the_job_inside_the_unit(self):
+        import re
+        unit = int(re.search(r'RuntimeMaxSec=(\d+)', (WF.parents[1] / 'scripts' / 'runner_controller.sh').read_text()).group(1))
+        for wf in ('catalog-mx.yml', 'texto-mx.yml'):
+            with self.subTest(wf=wf):
+                text = (WF / wf).read_text(encoding='utf-8')
+                switch = "contains(vars.CATALOG_RUNS_ON || '', 'self-hosted')"
+                own, hosted = map(int, re.search(r"timeout-minutes: \$\{\{ " + re.escape(switch) + r" && (\d+) \|\| (\d+) \}\}", text).groups())
+                d_own, d_hosted = map(int, re.search(r"DEADLINE_MINUTES: \$\{\{ " + re.escape(switch) + r" && '(\d+)' \|\| '(\d+)' \}\}", text).groups())
+                self.assertIn('--deadline-minutes "$DEADLINE_MINUTES"', text)
+                self.assertEqual(hosted, 300)
+                self.assertLessEqual(d_hosted + 60, hosted)   # an hour to publish what the run found
+                self.assertLessEqual(d_own + 60, own)
+                self.assertLess(own * 60, unit)
+                self.assertGreater(own, 360)                   # longer than GitHub's six hours, or the server buys nothing
+
 class Controller(unittest.TestCase):
     """scripts/runner_controller.sh, one pass, against stubs of GitHub's API and systemd."""
     REPO = OwnRunner.REPO
@@ -249,7 +318,8 @@ class Controller(unittest.TestCase):
         self.stubs = self.t / 'stubs'; self.stubs.mkdir()
         bin_ = self.t / 'bin'; bin_.mkdir()
         for name, body in (('curl', STUB_CURL), ('systemd-run', STUB_SYSTEMD_RUN), ('systemctl', STUB_SYSTEMCTL),
-                           ('pkill', '#!/bin/bash\nexit 1\n'), ('pgrep', '#!/bin/bash\n[ -n "${STUB_SURVIVOR:-}" ]\n')):
+                           ('pkill', '#!/bin/bash\nexit "${STUB_PKILL_RC:-1}"\n'),
+                           ('pgrep', '#!/bin/bash\n[ -z "${STUB_SURVIVOR:-}" ] || exit 0\nexit "${STUB_PGREP_RC:-1}"\n')):
             (bin_ / name).write_text(body); (bin_ / name).chmod(0o755)
         (self.t / 'etc-rg').mkdir()
         self.header = self.t / 'etc-rg' / 'auth-header'
@@ -288,7 +358,7 @@ class Controller(unittest.TestCase):
         argv = (self.stubs / 'systemd-run.argv').read_text().split('\n')
         for want in ('--unit=rg-job-77', f'--uid={self.env["RG_JOB_USER"]}', 'KillMode=control-group', 'NoNewPrivileges=yes',
                      'PrivateTmp=yes', 'ProtectSystem=strict', f'ReadWritePaths={self.job}', f'ReadWritePaths={self.home}',
-                     f'InaccessiblePaths={self.header.parent}', 'RestrictSUIDSGID=yes', 'RuntimeMaxSec=21600'):
+                     f'InaccessiblePaths={self.header.parent}', 'RestrictSUIDSGID=yes', 'RuntimeMaxSec=86400'):
             self.assertIn(want, argv)
         self.assertEqual((self.stubs / 'jit.mode').read_text().strip(), '600')
         self.assertEqual((self.stubs / 'home.before').read_text(), '')  # the job starts from an empty home
@@ -308,6 +378,17 @@ class Controller(unittest.TestCase):
         self.assertEqual(r.returncode, 1)
         self.assertIn('survived', r.stdout)
         self.assertFalse(self.started())  # caught by the clean pass before any runner starts
+
+    def test_a_cleanup_that_cannot_tell_or_cannot_kill_stops_the_service(self):
+        # GPT on fa742b6: only pgrep's 1 (no process) may let the next job in; an error is not an empty list
+        for extra in ({'STUB_PGREP_RC': '2'}, {'STUB_PGREP_RC': '3'}, {'STUB_PKILL_RC': '2'}, {'STUB_PKILL_RC': '3'}):
+            with self.subTest(**extra):
+                self.job.mkdir(exist_ok=True)
+                r = self.run_pass(**extra)
+                self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+                self.assertIn('stopping', r.stdout)
+                self.assertFalse(self.started())
+                self.assertTrue(self.job.exists())  # nothing is deleted or reused on a cleanup that could not finish
 
     def test_the_token_never_reaches_a_command_line(self):
         self.run_pass()
