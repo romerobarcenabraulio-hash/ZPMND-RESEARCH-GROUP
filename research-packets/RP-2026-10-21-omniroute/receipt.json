@@ -1,0 +1,538 @@
+{
+ "request_id": "RR-2026-10-21-omniroute",
+ "fetched": [
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/README.md",
+   "status": 200,
+   "error": null,
+   "sha256": "7d2115b406f482420f805c9b85676d98c78b056bac262ceac338322470a8ab9c",
+   "bytes": 142312,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:46Z",
+   "text_status": "ok",
+   "text_chars": 69561
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/SECURITY.md",
+   "status": 200,
+   "error": null,
+   "sha256": "3125bbf19857b46162a81613de383f85902c3ea042fbbdab9d8adfae40c49856",
+   "bytes": 16925,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:47Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 16768
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/LICENSE",
+   "status": 200,
+   "error": null,
+   "sha256": "5f3caa52b2c2ce5dfb40c85404a370d23b6dc3e26a1447d17dc7e56f773b91de",
+   "bytes": 1069,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:48Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1069
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/THIRD_PARTY_NOTICES.md",
+   "status": 200,
+   "error": null,
+   "sha256": "17b296424841266ce12d47019b69373e8f243c03264f5bce48d13543c264db90",
+   "bytes": 17202,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:49Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 17202
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/package.json",
+   "status": 200,
+   "error": null,
+   "sha256": "2062232926759a82bfcabad156191e46f58319262401939454c58edd76b1e1c6",
+   "bytes": 38633,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:50Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 38633
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/.npmignore",
+   "status": 200,
+   "error": null,
+   "sha256": "8576dcef9181ebb92d7466f7325fbea471bb982f7e2b62a74a09bcded266e5d7",
+   "bytes": 2655,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:51Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 2649
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/Dockerfile",
+   "status": 200,
+   "error": null,
+   "sha256": "0ee207ca379e40672b58e2af8339890271b8757ea09bade1bb8e436d7c26f714",
+   "bytes": 24800,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:52Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 24358
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/.github/workflows/npm-publish.yml",
+   "status": 200,
+   "error": null,
+   "sha256": "438211cd7d5a739838bf1d0fd1e130dfd54d9758b625cbbae637daf0ba9f6643",
+   "bytes": 32935,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:53Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 32783
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/.github/workflows/docker-publish.yml",
+   "status": 200,
+   "error": null,
+   "sha256": "66df44622b0c6bf4d1c4278b9fa14e971dab4849becc85ffe636156de696dc8a",
+   "bytes": 35696,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:54Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 35650
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/encryption.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "630c8e0e3061bc634fcbeb1b1eb6e1443a52b76c7404af5964c1de9c411aa2ed",
+   "bytes": 20230,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:55Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 19888
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/secrets.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "b2f25111c55460374cd1438654cee17e2501322b25d2ed5e2408409b29fb1617",
+   "bytes": 1716,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:56Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1714
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/apiKeys/secretAtRest.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "82dce1b987cc5926934172878e4f30779cb063e1a10b610fbb006e734c779723",
+   "bytes": 4300,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:57Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 4292
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/providers/providerSpecificDataSecrets.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "2d99d23e646285cc16157ef6f3b853baf28b2e8fcf7fbc9f9d11fd706cec2743",
+   "bytes": 7493,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:58Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 7483
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/cacheSecrets.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "12bd7c06231dda9b83bc30f7f3fc97aedd372f27a9554c510d474c0ca63b566d",
+   "bytes": 3733,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:31:59Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 3733
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/encryption.mjs",
+   "status": 200,
+   "error": null,
+   "sha256": "a38c87374af722f2f2eac32b5ee25ec97602fd480ea7fe547a90382251bd7a8b",
+   "bytes": 2277,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:00Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 2277
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/utils/storageKeyProvision.mjs",
+   "status": 200,
+   "error": null,
+   "sha256": "7ba47d99f8e5e45137008d325028789dd5c8c16ef8be41606f005b40d356442e",
+   "bytes": 1436,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:01Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1430
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/open-sse/config/credentialLoader.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "32244cd41497e4e01816e7923a75f11bfa04127c0b62ec3a51885b47b1d79b2a",
+   "bytes": 4065,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:02Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 4061
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/cloudAgent/credentials.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "54fb5cc461d95d4e86a2940af2ad5d7cd06d7833c992650bd8d0c8c93fa27b61",
+   "bytes": 2979,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:03Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 2975
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/cloudSync.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "9276055f78af0fdcc83d7b7e3b185b96801e3e3881f0079d0d3d4d486887aa29",
+   "bytes": 10446,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:04Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 10421
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/sync/tokens.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "7e949a9fa663be8a8aa057c9a993cb8e405be0c25038fe85aac90f81936dbc60",
+   "bytes": 7363,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:05Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 7355
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/open-sse/utils/requestLogger.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "2b29bea9dc3dd2bdd037a135d1527abac25af8ce2ec08468a734331a806f3962",
+   "bytes": 20117,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:06Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 20107
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/open-sse/utils/providerRequestLogging.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "97b47777f6460001b7a62f71d71a4bfe8c4744ae297d183d421f7499dd77609b",
+   "bytes": 11191,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:07Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 11185
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/usage/callLogArtifactWriter.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "0eabf2558e89c75f04a15c1a62b529f4beedec8c208273cb99a499ee6d03d1ce",
+   "bytes": 8687,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:08Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 8687
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/usage/callLogRetention.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "66e7532fab913d2bf199cde5f1a312116027607696cb8d698f8e189a1807a2f0",
+   "bytes": 914,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:09Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 914
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/piiSettings.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "c4433a60442c24eebe5751f36731bac055c15d53aef8aaf1a45d9e4390f6e283",
+   "bytes": 3257,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:10Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 3251
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/logExportDestinations.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "d26fc82aec2a53ef87c7e5386bb389d45dd17c87f302f8fc0c3b0c82a968a252",
+   "bytes": 6656,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:11Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 6654
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/logExport/secrets.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "c9670b453e624aaa2bf961028ab5a032b7f2be321358c2a55f51e2a3b2b855ba",
+   "bytes": 3638,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:12Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 3636
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/webhooks.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "7f29ee289e2f548816cb902e5fe981590bf0d2a858b509705b65a15b14c572c9",
+   "bytes": 5183,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:13Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 5183
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/commands/telemetry.mjs",
+   "status": 200,
+   "error": null,
+   "sha256": "eb826782c9a01932639ad7564c09c0ef3415b6a83d78d2504da8dbdfa101c968",
+   "bytes": 2667,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:14Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 2660
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/api-commands/telemetry.mjs",
+   "status": 200,
+   "error": null,
+   "sha256": "3241b0c402e67a33ff8749f44629c9ae2b83bdf6c6b5fc86ea7a711868557ca4",
+   "bytes": 1104,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:15Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1104
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/@omniroute/opencode-plugin/src/telemetry.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "3db4431a2f4b9fc7a1fa76356e24cb33aaf155fc0d4fd6eaa2abf2c66a388bef",
+   "bytes": 7989,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:16Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 7989
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/shared/utils/requestTelemetry.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "c3f09a86c6edcd341fcb9c8eb4cc26f354d32e1211e77049a0a00cb9b5f2de2f",
+   "bytes": 4747,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:17Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 4679
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/docs/OMNIROUTE_QUOTA_TELEMETRY.md",
+   "status": 200,
+   "error": null,
+   "sha256": "6a4983441e4d0f21d61de35841d265d96668153938f633650fbf6bee96d473a4",
+   "bytes": 935,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:18Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 935
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/radar/sync.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "e89da394a69c3d6fca1683b5bedfbaed8d71ea1abd812c85da3370c2611c3530",
+   "bytes": 11669,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:19Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 11657
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/radar/verify.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "7ed91ccd2866aa4ba20fcaf57e53620bfef5977eba553243d3c2be77c1c767dc",
+   "bytes": 1291,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:20Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1285
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/radar/pinnedKeys.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "827eaab5bd93dca0ad116d9caea3fb7c5cc6cf815fac231aeda34d592eda3cde",
+   "bytes": 1933,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:21Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 1927
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/versionManager/binaryManager.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "3eec7bdcae739ffb37707693b69ee9fb6ab04db493a5edd229ca6f07a5d1d2ee",
+   "bytes": 10387,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:22Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 10377
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/freeProxies.ts",
+   "status": 200,
+   "error": null,
+   "sha256": "9dd9df9a71a884036aa836fe5bd5802a7969f6ea90953a1d202d0d95c7f68d99",
+   "bytes": 14415,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-10-28T05:32:23Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 14411
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/40638472930",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "El repositorio declara licencia MIT.",
+    "now": "El repositorio contiene un texto de licencia que concede permiso, sin costo, a cualquier persona que obtenga una copia.",
+    "cut": "Se quitó que la licencia sea MIT; la cita no nombra la licencia."
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "El cifrado en reposo de credenciales usa AES-256-GCM, pero sin STORAGE_ENCRYPTION_KEY opera en modo passthrough (texto plano).",
+    "now": "Si STORAGE_ENCRYPTION_KEY no está definida, opera en modo passthrough.",
+    "cut": "Se quitó AES-256-GCM, el cifrado de credenciales y que passthrough sea texto plano."
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "En producción sin clave de cifrado, el servidor sigue arrancando y guarda credenciales en texto plano, solo avisa por log.",
+    "now": "Los datos se almacenarán en texto plano.",
+    "cut": "Se quitó que sea en producción, que el servidor siga arrancando, que se trate de credenciales y que solo avise por log."
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "Radar es opt-in y el README afirma que el cliente no sube prompts, tráfico, configuración de proveedores ni telemetría de uso.",
+    "now": "El cliente de OmniRoute no sube prompts, tráfico, configuración de proveedores ni telemetría de uso.",
+    "cut": "Se quitó que Radar sea opt-in y que sea una afirmación del README."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "La sincronización de Radar es el único módulo que toca la red para Radar; la URL por defecto es radar.omniroute.online y se verifica una firma Ed25519.",
+    "now": "La URL base por defecto del feed es https://radar.omniroute.online.",
+    "cut": "Se quitó que sea el único módulo que toca la red y la verificación de firma Ed25519."
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "La sincronización con la nube solo cambia credenciales si se activa OMNIROUTE_CLOUD_SYNC_SECRETS=true; por defecto sincroniza solo metadatos.",
+    "now": "CLOUD_SYNC_SECRETS_ENABLED es verdadero solo si OMNIROUTE_CLOUD_SYNC_SECRETS es igual a \"true\".",
+    "cut": "Se quitó que por defecto sincronice solo metadatos y el efecto sobre credenciales."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "Sin secreto configurado, la verificación de firma de la nube pasa en modo legado no verificado.",
+    "now": "La sincronización de tokens se ejecuta en modo legado no verificado.",
+    "cut": "Se quitó la condición de que no haya secreto configurado y que se trate de la verificación de firma."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "El registro de peticiones guarda el cuerpo de las peticiones (prompts) en artefactos acotados y enmascara cabeceras sensibles.",
+    "now": "El registro de peticiones guarda el cuerpo acotado para log (cloneBoundedForLog).",
+    "cut": "Se quitó que sean prompts, los artefactos y el enmascaramiento de cabeceras sensibles."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "SECURITY.md documenta retención de logs y opción noLog por llave de API.",
+    "now": "Una bandera noLog por llave de API desactiva el registro de peticiones.",
+    "cut": "Se quitó la retención de logs y que SECURITY.md la documente."
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "Hay destinos de exportación de logs con opción de incluir cuerpos.",
+    "now": "Existe un campo include_bodies en los destinos de exportación de logs.",
+    "cut": "Se quitó que sea una opción para incluir cuerpos."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "El README admite que las cifras de niveles gratuitos son agregados de terceros, que cada proveedor controla sus términos y que los números cambian.",
+    "now": "Cada proveedor controla sus límites, disponibilidad y términos.",
+    "cut": "Se quitó que las cifras sean agregados de terceros y que los números cambien."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "La imagen publicada se establece con REQUIRE_API_KEY=true por defecto.",
+    "now": "El Dockerfile establece ENV REQUIRE_API_KEY=true.",
+    "cut": "Se quitó que sea la imagen publicada y que sea un valor por defecto."
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "El Dockerfile desactiva la telemetría de Next.js en el build.",
+    "now": "El Dockerfile establece ENV NEXT_TELEMETRY_DISABLED=1.",
+    "cut": "Se quitó que sea durante el build y que desactive la telemetría de Next.js."
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "El flujo npm publica con provenance (Trusted Publishing/OIDC).",
+    "now": "El flujo ejecuta npm publish con --provenance, acceso público y --ignore-scripts.",
+    "cut": "Se quitó Trusted Publishing/OIDC."
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "El flujo Docker publica a Docker Hub y GHCR para amd64 y arm64.",
+    "now": "El flujo Docker define GHCR_IMAGE_NAME como ghcr.io/cheaper-inference/omniroute.",
+    "cut": "Se quitó Docker Hub y las arquitecturas amd64 y arm64."
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "El paquete npm ejecuta un postinstall y lista dependencias opcionales nativas, incluido wreq-js 3.2.0.",
+    "now": "El package.json define un script postinstall que ejecuta node scripts/build/postinstall.mjs.",
+    "cut": "Se quitó la lista de dependencias opcionales nativas y wreq-js 3.2.0."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "El repositorio npm figura bajo la organización cheaper-inference.",
+    "now": "El package.json indica la URL del repositorio https://github.com/cheaper-inference/OmniRoute.",
+    "cut": "Se quitó que sea el repositorio npm y la mención de la organización como tal."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "El README presenta como patrocinador a Cheaper Inference, un gateway que revende modelos.",
+    "now": "Cheaper Inference es un gateway ordenado por costo que revende 42 modelos de frontera.",
+    "cut": "Se quitó que el README lo presente como patrocinador."
+   }
+  ]
+ }
+}
