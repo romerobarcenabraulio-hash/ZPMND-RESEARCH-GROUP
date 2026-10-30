@@ -236,6 +236,61 @@ la SCJN cuando la fuente primaria abra.
 - Texto de los crudos: manifiesto en `mx/texto/` (un estado por crudo) y textos en el release `text-mx`. Lo produce el flujo manual `texto-mx.yml`; formatos, estados y la brecha de OCR están en [TEXTO.md](TEXTO.md).
 - Cada registro lleva url, fecha de recuperación, sha256, tamaño, tipo, licencia y la ruta de su crudo. Las versiones de leyes y ordenamientos estatales se acumulan; nunca se borran.
 
+## Base de datos (Postgres en Supabase: `rg/catalog/db.py`, flujo `db-mx.yml`)
+
+El catálogo también vive en una base de datos Postgres (Supabase, plan Pro, contratado por Braulio el 2026-10-29), en el
+esquema `catalogo`. Se carga en un runner de GitHub tras cada corrida del catálogo, o a mano (`gh workflow run db-mx.yml`),
+desde la rama `catalog`. Se reconstruye entera cada vez: las filas de la rama siguen siendo el registro y la base es una
+vista de ellas que cualquier agente o app puede consultar.
+
+Cómo está organizada:
+- `documento`: un renglón por documento oficial (nota del DOF, ley, reglamento, ordenamiento estatal, tesis), con sus
+  coordenadas: país, ámbito, estado, municipio, poder, dependencia y tipo; sus fechas y su estado impreso; su url y su
+  crudo. `listing` va entero como JSON. `titulo_busqueda` es el título sin acentos para buscar
+  (`to_tsvector('simple', titulo_busqueda)`); nunca se lee de regreso como dato.
+- `fuente`: las fuentes registradas en `sources/mx.json`, con su estado, licencia y redistribución.
+- `version`: cada versión de texto recuperada de un documento. `observacion`: cada valor de indicador como lo sirvió
+  la API (texto, nunca número).
+- `nom`, `nom_nota`, `nom_relacion`: cada NOM con sus notas por etapa y sus relaciones (`cancela`, `menciona`).
+  `tratado`, `tratado_nota`: cada tratado con sus decretos por etapa.
+- `corrida`, `cobertura`: el manifiesto de cada corrida y sus cuadres.
+- `arbol`: la vista de conteos por nivel.
+
+Nada se calcula ni se clasifica al cargarla: cada columna se copia de una fila, de una vista o de un manifiesto. Un
+campo nuevo del esquema que no tenga columna detiene la carga (una prueba fija que cada campo tiene lugar).
+
+Se carga en un esquema aparte (`catalogo_nuevo`) y entra en vivo, en una sola transacción, solo si pasan estos chequeos;
+si no, el catálogo en vivo se queda como estaba, el cargado queda como `catalogo_rechazado` para revisarlo y la corrida
+sale en rojo (código 3):
+- **Cuenta independiente:** renglones por fuente en la base contra líneas por fuente en disco, contadas sin parsear
+  ninguna fila; ningún `entry_id` repetido.
+- **Ida y vuelta:** cada fila en disco contra la entrada que la base devuelve para su id (por huella sha256). Un campo
+  ausente y uno nulo se leen igual ("sin dato en la fuente").
+- **Vistas completas:** cada tabla de NOM, tratados, corridas y cobertura tiene los renglones que su vista declara.
+- **Referencias:** ninguna nota, versión u observación apunta a un documento que falte, y ningún documento ni cuadre
+  de cobertura es de una fuente sin registrar (un cuadre sin fuente cuenta como "(sin fuente)").
+- **Nunca menos:** ninguna fuente tiene menos renglones que en el catálogo en vivo (las filas solo crecen; un checkout
+  parcial o un archivo truncado se rechaza). Una carga sin una sola fila ni siquiera toca la base (GPT en 358b5d8).
+
+**Lectores.** El rol `zppmnd_lectura` (pedido de ZPPMND, 2026-10-29) entra con contraseña y solo puede hacer `SELECT`
+sobre `catalogo`: sin otros esquemas, sin escritura, sin crear nada, sesiones de solo lectura con límite de 60 s por
+consulta y 5 a la vez. Sus permisos se dan sobre el esquema nuevo antes del intercambio, así que ninguna carga se los
+quita, y nunca sobre `catalogo_rechazado`. `modo: lector` del flujo crea o actualiza el rol con `RG_LECTURA_PASSWORD`
+(la contraseña viaja a la base solo como su verificador SCRAM) y corre su prueba de aceptación como el propio rol: un
+`SELECT` a `catalogo` funciona, un `INSERT` falla y un `SELECT` a otro esquema falla. Límite: como todo rol de
+Postgres, puede leer `pg_catalog` e `information_schema` (nombres de esquemas y tablas, no sus filas) y crear tablas
+temporales de su sesión.
+
+**TLS.** Toda conexión a un host que no sea local verifica al servidor por nombre (`sslmode=verify-full`) contra la
+raíz de Supabase incluida en el repo (`rg/catalog/supabase-prod-ca-2021.crt`, "Supabase Root 2021 CA", sha256
+`700723581420dd1ac98fd7e9ac529f0ef210eadcaf87fc868a3ad7d114c2f3b7`; verificó tres session poolers el 2026-10-30). Una
+URI que trae sus propias opciones TLS o `hostaddr` se rechaza. Quien lea con `zppmnd_lectura` necesita esa misma raíz.
+
+La conexión es el secreto `RG_DB_URL` (la URI del Session pooler de Supabase); solo el paso que carga lo recibe, por su
+entorno; `RG_LECTURA_PASSWORD` llega a ese paso solo en `modo: lector`. `python -m rg.catalog.db ping` (o el flujo con `modo: ping`) dice si conecta y la versión del servidor, nunca
+la URI; un error de conexión imprime solo su tipo. Una prueba impide que una URI con contraseña para un host remoto
+entre al repo. Las pruebas corren en CI contra un Postgres desechable.
+
 ## Tratados internacionales: vista derivada del DOF
 
 Cada corrida escribe `mx/tratados/tratados.jsonl`, justo después del catálogo, sin tocar el sitio de la SRE (su reto
