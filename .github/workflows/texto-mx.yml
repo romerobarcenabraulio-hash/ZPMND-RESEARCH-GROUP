@@ -21,6 +21,9 @@ jobs:
     # 23 hours on our own runner (scripts/runner_controller.sh caps its unit at 24), GitHub's 300 minutes elsewhere; the
     # run's own deadline below follows the same switch, so it ends and publishes before either cap (GPT on fa742b6)
     timeout-minutes: ${{ contains(vars.CATALOG_RUNS_ON || '', 'self-hosted') && 1380 || 300 }}
+    env:  # the run's own deadline, on the same switch as the timeout; a job-level value, so no step that touches raw files
+      # gets an env of its own (tests.test_texto: no token while raw files are unpacked or parsed)
+      DEADLINE_MINUTES: ${{ contains(vars.CATALOG_RUNS_ON || '', 'self-hosted') && '1300' || '200' }}
     permissions:
       contents: write   # read raw-mx, upload to text-mx, push the data branch; nothing else
     steps:
@@ -66,8 +69,6 @@ jobs:
         run: python -m rg.text.bundles unpack --dir bundles --raw raw --record unpacked.json --delete
       - name: Extract text
         id: texto
-        env:
-          DEADLINE_MINUTES: ${{ contains(vars.CATALOG_RUNS_ON || '', 'self-hosted') && '1300' || '200' }}
         run: |
           set +e
           python -m rg.text.run --catalog data/mx --raw raw --out data/mx/texto --text texto --bundles-done unpacked.json --deadline-minutes "$DEADLINE_MINUTES"
