@@ -1,0 +1,48 @@
+name: constancia
+# Constancia de origen (asked by ZPPMND, 2026-10-30; SECURITY.md T20, docs/OUTBOX.md). Every file under research-packets/
+# on main gets a Sigstore provenance attestation signed by this workflow, so a consumer checks by itself that a file is
+# byte for byte what RG main published:
+#   gh attestation verify <file> -R romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP --source-ref refs/heads/main
+#     --signer-workflow romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/.github/workflows/constancia.yml
+# Only files no attestation covers yet are attested, so running it again costs nothing. Packets reach main by the
+# owner's merge (push) or by automerge.yml, whose GITHUB_TOKEN merge starts no push workflow (hence workflow_run); the
+# daily schedule catches anything both missed. Every run ends by verifying all packet files, and a copy with one byte
+# changed, the way a consumer would.
+on:
+  push:
+    branches: [main]
+    paths: ['research-packets/**']
+  workflow_run:
+    workflows: [automerge]
+    types: [completed]
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+permissions: {}
+concurrency: { group: constancia, cancel-in-progress: false }
+jobs:
+  constancia:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04  # GitHub's runner, never the rented one: the check refuses self-hosted signers
+    timeout-minutes: 60
+    permissions:
+      contents: read
+      id-token: write      # the OIDC token Sigstore signs with; this job runs main's script and no PR or packet code
+      attestations: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - name: Packet files with no attestation yet
+        id: faltan
+        env: { GH_TOKEN: '${{ github.token }}', REPO: '${{ github.repository }}' }
+        run: |
+          n=$(bash scripts/constancia.sh faltan "$RUNNER_TEMP/sujetos.sha256")
+          echo "$n" | tee -a "$GITHUB_OUTPUT"
+      - name: Attest them
+        if: steps.faltan.outputs.n != '0'
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8  # v4.2.2
+        with:
+          subject-checksums: ${{ runner.temp }}/sujetos.sha256
+      - name: Every packet file verifies and a copy with one byte changed does not
+        env: { GH_TOKEN: '${{ github.token }}', REPO: '${{ github.repository }}' }
+        run: bash scripts/constancia.sh comprobar
