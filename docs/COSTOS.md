@@ -20,22 +20,25 @@ manifiesto, pero ya no detiene la puesta al día: el 2026-10-27 un solo título 
 registros, la tenía parada desde el 21. Riesgo aceptado: si un despacho programado llega mientras una corrida encadenada espera, la
 reemplaza y la cadena termina; la corrida programada sigue el trabajo. El job `run` solo corre en `main`.
 
-**Runner propio (`scripts/runner_setup.sh`).** El rastreo es casi todo espera y un servidor propio no cobra por minuto
-(Braulio renta uno en Vultr desde 2026-10-21). `catalog-mx.yml` y `texto-mx.yml` corren ahí cuando la variable del repo
-`CATALOG_RUNS_ON` vale `["self-hosted","rg-catalog"]`; sin ella, en los runners de GitHub. Lo endurece el script, por
-construcción:
-- los jobs corren como el usuario `rg`, sin sudo y con contraseña bloqueada;
-- el árbol del runner (`/opt/actions-runner`) es de root y de solo lectura para `rg`: ningún job puede cambiar el runner,
-  su configuración ni el guardia; `rg` solo escribe su carpeta de trabajo, los logs y sus propios archivos de registro;
-- un guardia de root (`/opt/rg/runner_guard.sh`) corre antes de cada job y lo rechaza si no es `catalog-mx.yml` o
-  `texto-mx.yml` de `refs/heads/main`, lanzado por `schedule` o por despacho: una rama o un PR pueden traer su propia
-  copia de un flujo que nombre las etiquetas del runner, y el guardia es lo que lo impide;
-- el runner va fijado por versión y sha256, sin autoactualización: actualizarlo es correr el script otra vez con el pin
-  nuevo (un PR);
-- el token de registro (una hora) se pide sin mostrarlo y llega a `config.sh` por su entrada de entorno, nunca como
-  argumento.
-Se instala y se verifica así: el script, bajado por el commit exacto de `main` y comprobado por su sha256, corre como root
-en el servidor; GitHub muestra el runner en línea; un despacho de `catalog-mx` corre ahí y uno de cualquier otro flujo es
-rechazado por el guardia.
+**Runner propio (`scripts/runner_setup.sh`, `scripts/runner_controller.sh`).** Corrección medida el 2026-10-30: RG es
+público y sus minutos de GitHub cuestan $0 netos (18,381 minutos del 25 al 29 de octubre, API de facturación por
+repositorio); el excedente que motivó rentar el servidor era de un repositorio privado. En RG el runner propio ya no
+ahorra dinero: lo que da es rastrear sin el tope de 6 horas por job de los runners de GitHub, día y noche. Se enciende con
+la variable del repo `CATALOG_RUNS_ON` = `["self-hosted","rg-catalog"]`; sin ella todo corre en GitHub. Es seguro por
+construcción (GPT en 2308494 mostró que un runner que vive entre jobs y comparte usuario con ellos puede ser copiado y
+reemplazado por un job comprometido, así que aquí ningún runner vive más que su job):
+- no hay runner permanente: un servicio de root (`rg-runner.service`) pide a GitHub un runner just-in-time solo cuando ve
+  en la cola un job de `catalog-mx.yml` o `texto-mx.yml` de `main`, lanzado por `schedule` o por despacho; ese runner
+  toma un solo job y GitHub lo borra;
+- cada job corre como `rgjob`, sin sudo, en una unidad de systemd propia, con una copia nueva del runner, una carpeta
+  vacía y un home vacío; al terminar se matan sus procesos y se borran las dos carpetas: nada de un job llega al
+  siguiente (ni un proceso, ni un venv, ni un `.pth`), y si un proceso sobrevive el servicio se detiene;
+- el guardia de root rechaza cualquier otro job antes de su primer paso;
+- el token (fino, solo este repositorio, Administration escritura y Actions lectura) vive en `/etc/rg/auth-header`, de
+  root y oculto para la unidad; nunca va en una línea de comandos.
+Se instala así: `runner_setup.sh` y `runner_controller.sh`, bajados por el commit exacto de `main` y comprobados por su
+sha256, corren como root en el servidor y piden el token sin mostrarlo; luego se fija `CATALOG_RUNS_ON`; un despacho de
+`catalog-mx` corre en el servidor y uno de cualquier otro flujo nunca recibe runner (y si lo recibiera, el guardia lo
+rechaza).
 
 **Siguiente recorte (PR #20):** la evidencia del auditor corre solo los mutantes de `main` que el PR quitó o cambió.

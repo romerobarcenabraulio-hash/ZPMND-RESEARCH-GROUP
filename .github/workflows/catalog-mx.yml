@@ -27,10 +27,10 @@ concurrency:
 jobs:
   run:
     if: github.ref == 'refs/heads/main'  # a dispatch of any other branch never writes the data branch
-    # A polite crawl is mostly waiting, and GitHub bills the waiting: the repo variable CATALOG_RUNS_ON (a JSON label or
-    # label list, the same switch texto-mx.yml uses) moves this job to our own runner; unset, GitHub's. The machine itself
-    # refuses any job that is not this workflow or texto-mx.yml from main, started by schedule or by dispatch (the guard
-    # scripts/runner_setup.sh installs), because a branch can carry its own copy of this file.
+    # The repo variable CATALOG_RUNS_ON (a JSON label or label list, the same switch texto-mx.yml uses) moves this job to
+    # our own runner, which has no 6-hour cap; unset, GitHub's. There each job gets a one-job runner of its own, started
+    # only for this workflow or texto-mx.yml on main by schedule or dispatch, and a guard refuses any other job before its
+    # first step (scripts/runner_controller.sh, runner_setup.sh), because a branch can carry its own copy of this file.
     runs-on: ${{ fromJSON(vars.CATALOG_RUNS_ON || '"ubuntu-24.04"') }}
     timeout-minutes: 300
     permissions:
@@ -47,9 +47,11 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         if: runner.environment == 'github-hosted'
         with: { python-version: '3.12' }
-      - name: Python on our own runner (the system's python3, 3.12 or later, in a venv that dies with the job; the tests run on it first)
+      - name: Python on our own runner (the system's python3, 3.12 or later, in a venv the job creates; the tests run on it first)
         if: runner.environment != 'github-hosted'
-        run: python3 -m venv "$RUNNER_TEMP/venv" && echo "$RUNNER_TEMP/venv/bin" >> "$GITHUB_PATH"
+        run: |  # the runner is new for every job (scripts/runner_controller.sh), so a venv already here means it is not
+          [ ! -e "$RUNNER_TEMP/venv" ] || { echo "a venv is already here: this runner is not fresh"; exit 1; }
+          python3 -m venv "$RUNNER_TEMP/venv" && echo "$RUNNER_TEMP/venv/bin" >> "$GITHUB_PATH"
       - name: Start clean on our own runner (a cancelled run must not leave raw files for the next one to upload)
         if: runner.environment != 'github-hosted'
         run: rm -rf raw

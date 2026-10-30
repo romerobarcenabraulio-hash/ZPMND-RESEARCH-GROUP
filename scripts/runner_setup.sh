@@ -1,75 +1,68 @@
 #!/bin/bash
-# scripts/runner_setup.sh: turn the rented Ubuntu server into RG's own runner for the long, polite crawls (docs/COSTOS.md).
-# Run as root on the server, once, and again to update the runner (a PR bumps RUNNER_VERSION and RUNNER_SHA256):
+# scripts/runner_setup.sh: turn the rented Ubuntu server into RG's own runner for the long, polite crawls (docs/COSTOS.md),
+# one throwaway runner per job. Run as root on the server, once (and again to update the runner: a PR bumps the pin), from
+# a folder holding this file and runner_controller.sh, both downloaded by main's exact commit and checked by sha256:
 #   bash runner_setup.sh
-# It asks for the one-hour registration token and never echoes it, writes it to disk or puts it on a command line.
-# What it builds, by construction:
-#   - user rg, locked password, no sudo: every job runs as rg;
-#   - the runner in /opt/actions-runner, owned by root and read-only for rg, so no job can change the runner, its
-#     settings (.runner, .env, .path), its credentials or the guard: rg reads its settings and credentials and writes
-#     only its work folder (/home/rg/_work) and the runner's logs (_diag);
-#   - a guard (/opt/rg/runner_guard.sh, root's) the runner runs before every job: it refuses any job that is not
-#     catalog-mx.yml or texto-mx.yml from refs/heads/main, started by schedule or by the owner's dispatch. A branch or
-#     a pull request can carry its own workflow naming this machine's labels; the guard is what stops it;
-#   - the runner pinned by version and sha256, self-update off: an update is this script again, with the new pin.
+# It asks once for a fine-grained GitHub token of this repository only (Administration: read and write, to create the
+# one-job runners; Actions: read, to see queued jobs) and never echoes it or puts it on a command line or near a job.
+# What it builds, by construction (SECURITY.md T19; GPT on 2308494: a long-lived runner whose jobs share its user can be
+# copied and replaced by any job that goes wrong, so here no runner lives longer than its one job):
+#   - a root service (rg-runner.service, /opt/rg/runner_controller.sh) that starts a just-in-time runner only while
+#     GitHub shows a queued job of catalog-mx.yml or texto-mx.yml on main, from schedule or dispatch; GitHub registers it
+#     for that one job and removes it after, so its credential dies with the job;
+#   - every job runs as rgjob (locked password, no sudo, no new privileges) in a systemd unit of its own, from a fresh copy
+#     of the runner in an empty folder with an empty home; when it ends, the unit's processes are killed and both folders
+#     deleted, so nothing a job leaves (a process, a venv, a .pth) reaches the next one;
+#   - rgjob can read neither the token (/etc/rg, root 700, hidden from the unit) nor write the runner, the controller or
+#     the guard (root's); a root-owned guard (/opt/rg/runner_guard.sh) refuses any other job before its first step;
+#   - the master copy of the runner pinned by version and sha256 (a PR bumps it); if GitHub requires a newer one, a job's
+#     own copy updates itself and is deleted with the job, the master copy never changes.
 set -euo pipefail
 RUNNER_VERSION=2.338.2
 RUNNER_SHA256=baebf204307bac6193480852732f0aba2ae97b6c5597c244f4d5558390147c40  # actions/runner release notes, linux-x64
 REPO=romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP
 DIR=/opt/actions-runner
-WORK=/home/rg/_work
-NAME=rg-catalog-vultr
-LABELS=rg-catalog
+HERE=$(cd "$(dirname "$0")" && pwd)
 
 [ "$(id -u)" = 0 ] || { echo "run it as root"; exit 1; }
 . /etc/os-release
 [ "${ID:-}" = ubuntu ] || { echo "Ubuntu only (this is ${ID:-unknown})"; exit 1; }
 command -v python3 >/dev/null && python3 -c 'import sys; sys.exit(sys.version_info < (3, 12))' \
   || { echo "the system python3 must be 3.12 or later: the catalog job runs on it, after its tests"; exit 1; }
+command -v systemd-run >/dev/null || { echo "systemd-run is missing: every job runs in a systemd unit of its own"; exit 1; }
+[ -f "$HERE/runner_controller.sh" ] || { echo "runner_controller.sh must sit next to this script"; exit 1; }
 
-token="${RUNNER_TOKEN:-}"
-unset RUNNER_TOKEN
-if [ -z "$token" ]; then
-  read -rsp 'Registration token (GitHub: Settings > Actions > Runners > New self-hosted runner): ' token
-  echo
-fi
-[[ "$token" =~ ^[A-Z0-9]{20,64}$ ]] || { echo "that is not a runner registration token"; exit 1; }
+read -rsp "Fine-grained GitHub token of $REPO only (Administration: read and write; Actions: read): " token
+echo
+[[ "$token" =~ ^github_pat_[A-Za-z0-9_]{50,255}$ ]] || { echo "that is not a fine-grained GitHub token (github_pat_...)"; exit 1; }
 
 apt-get update -q
 DEBIAN_FRONTEND=noninteractive apt-get install -yq ca-certificates curl git jq python3 python3-venv python3-pip
-id rg >/dev/null 2>&1 || useradd --create-home --shell /bin/bash rg
-passwd -l rg >/dev/null
-gpasswd -d rg sudo >/dev/null 2>&1 || true
-install -d -o rg -g rg -m 700 "$WORK"
+id rgjob >/dev/null 2>&1 || useradd --create-home --shell /bin/bash rgjob
+passwd -l rgjob >/dev/null
+gpasswd -d rgjob sudo >/dev/null 2>&1 || true
+
+# The token, root's alone, as a header file curl reads with -H @file: never an argument, never in a job's reach.
+install -d -o root -g root -m 700 /etc/rg
+(umask 077 && printf 'Authorization: Bearer %s\n' "$token" > /etc/rg/auth-header)
+unset token
+chown root:root /etc/rg/auth-header && chmod 600 /etc/rg/auth-header
+curl -fsS -o /dev/null -H @/etc/rg/auth-header -H 'Accept: application/vnd.github+json' \
+  "https://api.github.com/repos/$REPO/actions/runners" || { echo "GitHub refused the token for $REPO's runners"; exit 1; }
 
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 curl -fsSL -o "$tmp/runner.tgz" "https://github.com/actions/runner/releases/download/v$RUNNER_VERSION/actions-runner-linux-x64-$RUNNER_VERSION.tar.gz"
 echo "$RUNNER_SHA256  $tmp/runner.tgz" | sha256sum -c -
-if [ -x "$DIR/svc.sh" ]; then (cd "$DIR" && { ./svc.sh stop || true; ./svc.sh uninstall || true; }); fi
+systemctl stop rg-runner >/dev/null 2>&1 || true
 rm -rf "$DIR"
-install -d -o rg -g rg -m 755 "$DIR"
+install -d -o root -g root -m 755 "$DIR"
 tar -xzf "$tmp/runner.tgz" -C "$DIR"
-chown -R rg:rg "$DIR"
+chown -R root:root "$DIR"  # the master copy: each job gets its own copy, deleted after
 "$DIR/bin/installdependencies.sh" >/dev/null
 
-# Registration as rg (the runner refuses root). The token reaches config.sh through its documented environment input,
-# never its arguments, and leaves the environment right after.
-export ACTIONS_RUNNER_INPUT_TOKEN="$token"
-(cd "$DIR" && runuser -u rg -- ./config.sh --unattended --replace --disableupdate --url "https://github.com/$REPO" \
-   --name "$NAME" --labels "$LABELS" --work "$WORK")
-unset ACTIONS_RUNNER_INPUT_TOKEN token
-
-# The runner's tree becomes root's. rg keeps write access to its logs only; its settings and credentials it can read,
-# never change (GPT on cf3e36e: a job that rewrote .runner would steer every later start).
-chown -R root:root "$DIR"
-install -d -o rg -g rg -m 755 "$DIR/_diag"
-for f in .runner .credentials .credentials_rsaparams; do
-  if [ -e "$DIR/$f" ]; then chown root:rg "$DIR/$f" && chmod 640 "$DIR/$f"; fi
-done
-
-# The guard, before every job, in files no job can edit.
-install -d -o root -g root -m 755 /opt/rg
+# The guard and the controller, in files no job can edit.
+install -d -o root -g root -m 755 /opt/rg /var/lib/rg
 cat > /opt/rg/runner_guard.sh <<'GUARD'
 #!/bin/bash
 set -u
@@ -85,16 +78,27 @@ esac
 echo "runner guard: ${GITHUB_WORKFLOW_REF} (${GITHUB_EVENT_NAME}) allowed"
 GUARD
 chown root:root /opt/rg/runner_guard.sh && chmod 755 /opt/rg/runner_guard.sh
-cd "$DIR"
-touch .env && { grep -v '^ACTIONS_RUNNER_HOOK_JOB_STARTED=' .env > .env.new || true; }
-echo 'ACTIONS_RUNNER_HOOK_JOB_STARTED=/opt/rg/runner_guard.sh' >> .env.new
-mv .env.new .env && chown root:root .env && chmod 644 .env  # the runner reads it; no job can rewrite it
+install -o root -g root -m 755 "$HERE/runner_controller.sh" /opt/rg/runner_controller.sh
 
-./svc.sh install rg
-./svc.sh start
+cat > /etc/systemd/system/rg-runner.service <<'UNIT'
+[Unit]
+Description=RG: one just-in-time GitHub runner per allowed job (scripts/runner_controller.sh)
+After=network-online.target
+Wants=network-online.target
+[Service]
+ExecStart=/opt/rg/runner_controller.sh
+Restart=always
+RestartSec=60
+[Install]
+WantedBy=multi-user.target
+UNIT
+systemctl daemon-reload
+systemctl enable --now rg-runner
 sleep 5
-./svc.sh status | tail -n 3
-# What the jobs' user can change in the runner: nothing but its logs. A file it could write is a failure here.
-writable=$(runuser -u rg -- find "$DIR" -path "$DIR/_diag" -prune -o -writable -print | head -n 5)
-[ -z "$writable" ] || { echo "rg can write in the runner: $writable"; exit 1; }
-echo "runner $NAME ($LABELS) installed; jobs run as rg; guard: /opt/rg/runner_guard.sh"
+systemctl --no-pager --lines=3 status rg-runner || true
+
+# What the jobs' user can reach: not the token, not the runner, not the controller, not the guard. Either is a failure.
+if runuser -u rgjob -- test -r /etc/rg/auth-header; then echo "rgjob can read the token"; exit 1; fi
+writable=$(runuser -u rgjob -- find "$DIR" /opt/rg /etc/rg /etc/systemd/system/rg-runner.service -writable -print 2>/dev/null | head -n 5)
+[ -z "$writable" ] || { echo "rgjob can write: $writable"; exit 1; }
+echo "rg-runner is on: one just-in-time runner per allowed job, as rgjob; guard: /opt/rg/runner_guard.sh"

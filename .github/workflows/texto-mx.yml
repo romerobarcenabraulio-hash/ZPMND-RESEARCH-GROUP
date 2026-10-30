@@ -29,9 +29,11 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         if: runner.environment == 'github-hosted'
         with: { python-version: '3.12' }
-      - name: Python on our own runner (the system's 3.12 in a venv that dies with the job)
+      - name: Python on our own runner (the system's python3, 3.12 or later, in a venv the job creates)
         if: runner.environment != 'github-hosted'
-        run: python3 -m venv "$RUNNER_TEMP/venv" && echo "$RUNNER_TEMP/venv/bin" >> "$GITHUB_PATH"
+        run: |  # the runner is new for every job (scripts/runner_controller.sh), so a venv already here means it is not
+          [ ! -e "$RUNNER_TEMP/venv" ] || { echo "a venv is already here: this runner is not fresh"; exit 1; }
+          python3 -m venv "$RUNNER_TEMP/venv" && echo "$RUNNER_TEMP/venv/bin" >> "$GITHUB_PATH"
       - name: Free runner disk (raw bundles and their unpacked files need the room)
         if: runner.environment == 'github-hosted'
         run: |

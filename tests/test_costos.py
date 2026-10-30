@@ -124,7 +124,8 @@ class ThisRunsManifest(unittest.TestCase):
 
 
 class OwnRunner(unittest.TestCase):
-    """scripts/runner_setup.sh and the catalog job: only main's catalog and text runs reach the rented server."""
+    """scripts/runner_setup.sh and the catalog job: only main's catalog and text runs reach the rented server, each in a
+    runner that lives for one job (GPT on 2308494)."""
     REPO = 'romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP'
 
     def setUp(self):
@@ -155,54 +156,202 @@ class OwnRunner(unittest.TestCase):
         self.assertFalse(self.allowed('workflow_dispatch', f'otro/repo/.github/workflows/catalog-mx.yml@refs/heads/main'))
         self.assertFalse(self.allowed(None, None))  # missing context fails closed
 
-    def test_the_guard_runs_before_every_job_from_files_only_root_can_change(self):
-        self.assertIn("echo 'ACTIONS_RUNNER_HOOK_JOB_STARTED=/opt/rg/runner_guard.sh' >> .env.new", self.script)
-        self.assertIn('mv .env.new .env && chown root:root .env && chmod 644 .env', self.script)
-        self.assertIn('chown root:root /opt/rg/runner_guard.sh && chmod 755 /opt/rg/runner_guard.sh', self.script)
-        self.assertIn('chown -R root:root "$DIR"', self.script)  # the runner's tree: rg cannot edit the runner or its settings
-        self.assertLess(self.script.index('chown -R root:root "$DIR"'), self.script.index('./svc.sh install rg'))
-        # GPT on cf3e36e: settings and credentials readable by rg, never writable; nothing but _diag writable, checked
-        self.assertIn('if [ -e "$DIR/$f" ]; then chown root:rg "$DIR/$f" && chmod 640 "$DIR/$f"; fi', self.script)
-        self.assertNotIn('chown rg:rg "$DIR/$f"', self.script)
-        self.assertIn('runuser -u rg -- find "$DIR" -path "$DIR/_diag" -prune -o -writable -print', self.script)
+    def test_the_token_is_roots_alone_and_never_an_argument(self):
+        self.assertIn('read -rsp', self.script)
+        self.assertIn('[[ "$token" =~ ^github_pat_[A-Za-z0-9_]{50,255}$ ]]', self.script)
+        self.assertIn("(umask 077 && printf 'Authorization: Bearer %s\\n' \"$token\" > /etc/rg/auth-header)", self.script)
+        self.assertIn('install -d -o root -g root -m 700 /etc/rg', self.script)
+        self.assertIn('chown root:root /etc/rg/auth-header && chmod 600 /etc/rg/auth-header', self.script)
+        self.assertLess(self.script.index('unset token'), self.script.index('curl -fsS -o /dev/null -H @/etc/rg/auth-header'))
+        self.assertNotIn('--token', self.script)
+        self.assertEqual(self.script.count('Bearer'), 1)  # written once, into the root-only file
 
-    def test_the_settings_lock_leaves_the_jobs_user_nothing_to_write(self):
-        # the lock itself, run on a copy: settings and credentials end root:rg 640, so another user can read, never write
-        import re
-        import stat
-        lock = re.search(r'(for f in \.runner \.credentials \.credentials_rsaparams; do\n.*?\ndone)', self.script, re.S).group(1)
-        with tempfile.TemporaryDirectory() as d:
-            for f in ('.runner', '.credentials', '.credentials_rsaparams'):
-                Path(d, f).write_text('{}')
-            subprocess.run(['bash', '-c', lock.replace('chown root:rg "$DIR/$f" && ', '')], env={**os.environ, 'DIR': d},
-                           check=True, timeout=10)
-            for f in ('.runner', '.credentials', '.credentials_rsaparams'):
-                mode = stat.S_IMODE(os.stat(Path(d, f)).st_mode)
-                self.assertEqual(mode, 0o640, f)  # group reads, nobody but the owner (root on the server) writes
+    def test_the_installer_proves_the_jobs_user_reaches_none_of_it(self):
+        self.assertIn('if runuser -u rgjob -- test -r /etc/rg/auth-header; then echo "rgjob can read the token"; exit 1; fi', self.script)
+        self.assertIn('runuser -u rgjob -- find "$DIR" /opt/rg /etc/rg /etc/systemd/system/rg-runner.service -writable -print', self.script)
+        self.assertLess(self.script.index('systemctl enable --now rg-runner'), self.script.index('rgjob can read the token'))
+        self.assertIn('chown -R root:root "$DIR"', self.script)
+        self.assertIn('chown root:root /opt/rg/runner_guard.sh && chmod 755 /opt/rg/runner_guard.sh', self.script)
+        self.assertIn('install -o root -g root -m 755 "$HERE/runner_controller.sh" /opt/rg/runner_controller.sh', self.script)
+        self.assertNotIn('svc.sh', self.script)  # no long-lived runner service: only the controller's one-job runners
+        self.assertNotIn('config.sh', self.script)
 
     def test_the_installer_refuses_a_python_older_than_the_one_ci_tests(self):
         self.assertIn("python3 -c 'import sys; sys.exit(sys.version_info < (3, 12))'", self.script)
         self.assertLess(self.script.index('sys.version_info < (3, 12)'), self.script.index('apt-get update'))
 
-    def test_the_runner_is_verified_and_the_token_never_reaches_a_command_line(self):
+    def test_the_runner_is_verified(self):
         self.assertIn('echo "$RUNNER_SHA256  $tmp/runner.tgz" | sha256sum -c -', self.script)
         self.assertRegex(self.script, r'RUNNER_SHA256=[0-9a-f]{64}\b')
-        self.assertIn("read -rsp", self.script)
-        self.assertIn('export ACTIONS_RUNNER_INPUT_TOKEN="$token"', self.script)
-        self.assertIn('unset ACTIONS_RUNNER_INPUT_TOKEN token', self.script)
-        self.assertNotIn('--token', self.script)
-        self.assertIn('runuser -u rg -- ./config.sh --unattended --replace --disableupdate', self.script)
 
-    def test_the_catalog_job_moves_to_our_runner_only_by_the_variable_and_only_from_main(self):
+    def test_the_catalog_and_text_jobs_move_only_by_the_variable_and_start_from_a_fresh_venv(self):
         run = load('catalog-mx.yml')['jobs']['run']
         self.assertEqual(run['if'], "github.ref == 'refs/heads/main'")
         self.assertEqual(run['runs-on'], """${{ fromJSON(vars.CATALOG_RUNS_ON || '"ubuntu-24.04"') }}""")
         by = {s.get('name') or s.get('uses'): s for s in run['steps']}
-        self.assertEqual(by["Python on our own runner (the system's python3, 3.12 or later, in a venv that dies with the job; the tests run on it first)"]['if'],
-                         "runner.environment != 'github-hosted'")
         self.assertEqual(by['Free runner disk (the raw corpus and its parts need the room)']['if'], "runner.environment == 'github-hosted'")
         setup = next(s for s in run['steps'] if s.get('uses', '').startswith('actions/setup-python@'))
         self.assertEqual(setup['if'], "runner.environment == 'github-hosted'")
+        for wf, job in (('catalog-mx.yml', 'run'), ('texto-mx.yml', next(iter(load('texto-mx.yml')['jobs'])))):
+            step = next(s for s in load(wf)['jobs'][job]['steps'] if s.get('name', '').startswith('Python on our own runner'))
+            self.assertEqual(step['if'], "runner.environment != 'github-hosted'", wf)
+            with tempfile.TemporaryDirectory() as d:  # a venv left by an earlier job stops this one
+                Path(d, 'venv').mkdir()
+                r = subprocess.run(['bash', '-c', step['run']], env={**os.environ, 'RUNNER_TEMP': d, 'GITHUB_PATH': os.devnull},
+                                   capture_output=True, text=True, timeout=60)
+                self.assertNotEqual(r.returncode, 0, wf)
+                self.assertIn('this runner is not fresh', r.stdout, wf)
+
+
+STUB_CURL = r"""#!/bin/bash
+printf '%s\n' "$*" >> "$STUBS/curl.argv"
+url=; method=GET; body=
+while [ $# -gt 0 ]; do
+  case "$1" in -X) method=$2; shift ;; --data) body=$(cat); ;; https://*) url=$1 ;; esac; shift
+done
+case "$method $url" in
+  "GET "*"/runs?status=queued"*) cat "$STUBS/runs_queued.json" ;;
+  "GET "*"/runs?status=in_progress"*) cat "$STUBS/runs_progress.json" ;;
+  "GET "*"/runs/"*"/jobs"*) id=${url##*/runs/}; id=${id%%/*}; cat "$STUBS/jobs_$id.json" 2>/dev/null || exit 22 ;;
+  "POST "*"/runners/generate-jitconfig") printf '%s' "$body" > "$STUBS/jit.body"; cat "$STUBS/jit.json" || exit 22 ;;
+  "GET "*"/runners/"*) echo '{"busy": true}' ;;
+  "DELETE "*"/runners/"*) echo "${url##*/}" >> "$STUBS/deleted" ;;
+  *) exit 22 ;;
+esac
+"""
+STUB_SYSTEMD_RUN = r"""#!/bin/bash
+printf '%s\n' "$@" > "$STUBS/systemd-run.argv"
+stat -c '%a' "$RG_JOB_DIR/jit" > "$STUBS/jit.mode" 2>/dev/null || stat -f '%Lp' "$RG_JOB_DIR/jit" > "$STUBS/jit.mode"
+ls -A "$RG_JOB_HOME" > "$STUBS/home.before"
+cp "$RG_JOB_DIR/runner/.env" "$STUBS/env.file"
+mkdir -p "$RG_JOB_HOME/.local/lib" "$RG_JOB_DIR/runner/_work/_temp/venv"   # what a job could leave behind
+echo 'import os' > "$RG_JOB_HOME/.local/lib/evil.pth"; echo x > "$RG_JOB_DIR/runner/_work/_temp/venv/evil.pth"
+exit "${STUB_RUN_RC:-0}"
+"""
+STUB_SYSTEMCTL = r"""#!/bin/bash
+printf '%s\n' "$*" >> "$STUBS/systemctl.argv"
+[ "$1" = is-active ] && exit 3
+exit 0
+"""
+
+
+class Controller(unittest.TestCase):
+    """scripts/runner_controller.sh, one pass, against stubs of GitHub's API and systemd."""
+    REPO = OwnRunner.REPO
+    TOKEN = 'github_pat_' + 'S3CRET' * 12
+
+    def setUp(self):
+        import grp
+        import json
+        import pwd
+        self.json = json
+        self.t = Path(tempfile.mkdtemp())
+        self.stubs = self.t / 'stubs'; self.stubs.mkdir()
+        bin_ = self.t / 'bin'; bin_.mkdir()
+        for name, body in (('curl', STUB_CURL), ('systemd-run', STUB_SYSTEMD_RUN), ('systemctl', STUB_SYSTEMCTL),
+                           ('pkill', '#!/bin/bash\nexit 1\n'), ('pgrep', '#!/bin/bash\n[ -n "${STUB_SURVIVOR:-}" ]\n')):
+            (bin_ / name).write_text(body); (bin_ / name).chmod(0o755)
+        (self.t / 'etc-rg').mkdir()
+        self.header = self.t / 'etc-rg' / 'auth-header'
+        self.header.write_text(f'Authorization: Bearer {self.TOKEN}\n')
+        runner = self.t / 'runner'; runner.mkdir(); (runner / 'run.sh').write_text('#!/bin/bash\n')
+        self.job, self.home = self.t / 'job', self.t / 'home'
+        self.env = {**os.environ, 'PATH': f'{bin_}:{os.environ["PATH"]}', 'STUBS': str(self.stubs), 'RG_CONTROLLER_ONCE': '1',
+                    'RG_AUTH_HEADER': str(self.header), 'RG_RUNNER_DIR': str(runner), 'RG_JOB_DIR': str(self.job),
+                    'RG_JOB_HOME': str(self.home), 'RG_JOB_USER': pwd.getpwuid(os.getuid()).pw_name,
+                    'RG_JOB_GROUP': grp.getgrgid(os.getgid()).gr_name}
+        self.queue(run={})
+        (self.stubs / 'jit.json').write_text('{"runner": {"id": 77}, "encoded_jit_config": "Sk1U"}')
+
+    def queue(self, run=None, job=None):
+        base = {'id': 5, 'path': '.github/workflows/catalog-mx.yml', 'event': 'schedule', 'head_branch': 'main',
+                'repository': {'full_name': self.REPO}, 'head_repository': {'full_name': self.REPO}}
+        runs = [] if run is None else [{**base, **run}]
+        (self.stubs / 'runs_queued.json').write_text(self.json.dumps({'workflow_runs': runs}))
+        (self.stubs / 'runs_progress.json').write_text('{"workflow_runs": []}')
+        j = {'status': 'queued', 'labels': ['self-hosted', 'rg-catalog'], **(job or {})}
+        (self.stubs / 'jobs_5.json').write_text(self.json.dumps({'jobs': [j]}))
+
+    def run_pass(self, **extra):
+        return subprocess.run(['bash', str(WF.parents[1] / 'scripts' / 'runner_controller.sh')], env={**self.env, **extra},
+                              capture_output=True, text=True, timeout=60)
+
+    def started(self):
+        return (self.stubs / 'systemd-run.argv').exists()
+
+    def test_an_allowed_queued_job_gets_one_runner_for_one_job(self):
+        r = self.run_pass()
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        body = self.json.loads((self.stubs / 'jit.body').read_text())
+        self.assertEqual({k: body[k] for k in ('runner_group_id', 'labels', 'work_folder')},
+                         {'runner_group_id': 1, 'labels': ['self-hosted', 'rg-catalog'], 'work_folder': '_work'})
+        argv = (self.stubs / 'systemd-run.argv').read_text().split('\n')
+        for want in ('--unit=rg-job-77', f'--uid={self.env["RG_JOB_USER"]}', 'KillMode=control-group', 'NoNewPrivileges=yes',
+                     'PrivateTmp=yes', 'ProtectSystem=strict', f'ReadWritePaths={self.job}', f'ReadWritePaths={self.home}',
+                     f'InaccessiblePaths={self.header.parent}', 'RestrictSUIDSGID=yes', 'RuntimeMaxSec=21600'):
+            self.assertIn(want, argv)
+        self.assertEqual((self.stubs / 'jit.mode').read_text().strip(), '600')
+        self.assertEqual((self.stubs / 'home.before').read_text(), '')  # the job starts from an empty home
+        self.assertEqual((self.stubs / 'deleted').read_text().split(), ['77'])
+        self.assertEqual((self.stubs / 'env.file').read_text(), 'ACTIONS_RUNNER_HOOK_JOB_STARTED=/opt/rg/runner_guard.sh\n')
+
+    def test_nothing_a_job_leaves_reaches_the_next_one_even_when_it_fails(self):
+        for rc in ('0', '1'):
+            with self.subTest(rc=rc):
+                r = self.run_pass(STUB_RUN_RC=rc)
+                self.assertFalse(self.job.exists(), r.stdout + r.stderr)   # its folder, with the seeded venv and .pth
+                self.assertFalse(self.home.exists())  # its home, with the seeded .pth
+                (self.stubs / 'systemd-run.argv').unlink(missing_ok=True)
+
+    def test_a_process_that_survives_its_job_stops_the_service(self):
+        r = self.run_pass(STUB_SURVIVOR='1')
+        self.assertEqual(r.returncode, 1)
+        self.assertIn('survived', r.stdout)
+        self.assertFalse(self.started())  # caught by the clean pass before any runner starts
+
+    def test_the_token_never_reaches_a_command_line(self):
+        self.run_pass()
+        argv = (self.stubs / 'curl.argv').read_text()
+        self.assertIn(f'-H @{self.header}', argv)
+        self.assertNotIn(self.TOKEN, argv)
+        self.assertNotIn(self.TOKEN, (self.stubs / 'systemd-run.argv').read_text())
+
+    def test_no_runner_for_anything_else(self):
+        cases = {'no queued run': None,
+                 'another workflow': {'path': '.github/workflows/ci.yml'},
+                 'a pull request': {'event': 'pull_request'},
+                 'a push': {'event': 'push'},
+                 'a branch': {'head_branch': 'feature'},
+                 'a fork': {'head_repository': {'full_name': 'otro/repo'}}}
+        for name, run in cases.items():
+            with self.subTest(name=name):
+                self.queue(run=run)
+                r = self.run_pass()
+                self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+                self.assertFalse((self.stubs / 'jit.body').exists())
+                self.assertFalse(self.started())
+        for name, job in {'another label': {'labels': ['ubuntu-24.04']}, 'already running': {'status': 'in_progress'}}.items():
+            with self.subTest(name=name):
+                self.queue(run={}, job=job)
+                self.run_pass()
+                self.assertFalse((self.stubs / 'jit.body').exists())
+
+    def test_github_not_answering_or_giving_no_runner_starts_nothing(self):
+        (self.stubs / 'runs_queued.json').unlink()
+        r = self.run_pass()
+        self.assertIn('GitHub did not answer', r.stdout)
+        self.assertFalse(self.started())
+        self.queue(run={})
+        (self.stubs / 'jit.json').write_text('{"message": "Bad credentials"}')
+        r = self.run_pass()
+        self.assertIn('GitHub gave no runner', r.stdout)
+        self.assertFalse(self.started())
+
+    def test_no_token_no_service(self):
+        self.header.unlink()
+        r = self.run_pass()
+        self.assertEqual(r.returncode, 1)
+        self.assertIn('no token', r.stdout)
 
 
 if __name__ == '__main__':
