@@ -37,6 +37,7 @@ MUT = [
  ('.github/workflows/auditor.yml', '-f context=auditor-gpt -f description="GPT REVIEW: $verdict"', '-f context=auditor -f description="GPT REVIEW: $verdict"'),
  ('.github/workflows/auditor.yml', '= "GPT REVIEW: $verdict $SHA" ]', '= "AUDIT VERDICT: $verdict $SHA" ]'),
  ('.github/workflows/auditor.yml', """[ "$(grep -ci 'AUDIT VERDICT' verdict.md)" = 0 ] || { echo "the comment names an AUDIT VERDICT: not posted"; exit 1; }""", 'true'),
+ ('.github/workflows/auditor.yml', 'base=$(git merge-base origin/main HEAD) && git show "$base:scripts/mutar.py"', 'base=$(git merge-base origin/main HEAD) && git show "origin/main:scripts/mutar.py"'),
  ('.github/workflows/auditor.yml', 'if [ "$cross" != false ]; then', 'if false; then'),
  ('.github/workflows/auditor.yml', 'python3 -I scripts/auditor_gpt.py --inputs', 'python3 scripts/auditor_gpt.py --inputs'),
  ('.github/workflows/automerge.yml', '        with: { persist-credentials: false }\n', '        with: { persist-credentials: true }\n'),

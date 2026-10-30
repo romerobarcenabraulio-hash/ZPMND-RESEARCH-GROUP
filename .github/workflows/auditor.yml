@@ -109,7 +109,12 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { ref: '${{ needs.gate.outputs.sha }}', persist-credentials: false, fetch-depth: 0 }
       - name: Take main's mutant list before any PR code runs
-        run: git show origin/main:scripts/mutar.py > "$RUNNER_TEMP/mutar_main.py" 2>/dev/null || rm -f "$RUNNER_TEMP/mutar_main.py"
+        # as it was where this branch left main, the same point the reviewed diff (origin/main...HEAD) starts from: a
+        # mutant main added later is not one this PR dropped, and read from today's main it ran NOT FOUND on every PR
+        # behind main (GPT on 2de8c8d, #74). A guard main added later is not in this PR's diff, so a merge keeps it.
+        run: |
+          base=$(git merge-base origin/main HEAD) && git show "$base:scripts/mutar.py" > "$RUNNER_TEMP/mutar_main.py" 2>/dev/null \
+            || rm -f "$RUNNER_TEMP/mutar_main.py"
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with: { python-version: '3.12' }
       - run: pip install -r requirements-dev.txt

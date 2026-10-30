@@ -75,5 +75,25 @@ class MissingFromThePR(unittest.TestCase):
         self.assertIn('if [[ "$n" == all ]] || ! [[ "$n" =~ ^[0-9]+$ ]]; then', self.run_text)
 
 
+class MainsListAtTheBranchPoint(unittest.TestCase):
+    """GPT on 2de8c8d (#74): a PR one commit behind main got main's newer mutants as 'dropped', all NOT FOUND."""
+
+    def test_the_list_is_mains_where_the_branch_left_it_not_todays(self):
+        jobs = yaml.safe_load((ROOT / '.github' / 'workflows' / 'auditor.yml').read_text(encoding='utf-8'))['jobs']
+        step = next(s for s in jobs['evidence']['steps'] if s.get('name') == "Take main's mutant list before any PR code runs")
+        with tempfile.TemporaryDirectory() as d:
+            g = lambda *a: subprocess.run(['git', '-C', d, *a], check=True, capture_output=True, text=True).stdout.strip()
+            g('init', '-q', '-b', 'main'); g('config', 'user.email', 't@t'); g('config', 'user.name', 't')
+            (Path(d) / 'scripts').mkdir()
+            mut = Path(d) / 'scripts' / 'mutar.py'
+            mut.write_text('MUT = [("a", "x", "y")]\n'); g('add', '-A'); g('commit', '-qm', 'base')
+            g('checkout', '-qb', 'pr'); (Path(d) / 'f').write_text('pr'); g('add', '-A'); g('commit', '-qm', 'pr')
+            g('checkout', '-q', 'main'); mut.write_text('MUT = [("a", "x", "y"), ("b", "later", "z")]\n')
+            g('commit', '-qam', 'main adds a mutant'); g('update-ref', 'refs/remotes/origin/main', 'main'); g('checkout', '-q', 'pr')
+            out = Path(d) / 'runner'; out.mkdir()
+            subprocess.run(['bash', '-c', step['run']], cwd=d, check=True, env={'PATH': '/usr/bin:/bin', 'RUNNER_TEMP': str(out)})
+            self.assertEqual((out / 'mutar_main.py').read_text(), 'MUT = [("a", "x", "y")]\n')
+
+
 if __name__ == '__main__':
     unittest.main()
