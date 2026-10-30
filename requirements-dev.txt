@@ -7,3 +7,7 @@ attrs==26.1.0
 pyyaml==6.0.3
 # PDF text layer for rg.text (docs/TEXTO.md): BSD-3-Clause, pure Python, no dependencies on Python >= 3.11.
 pypdf==6.21.1
+# Postgres driver for rg/catalog/db.py (the catalog database, docs/CATALOGO.md): LGPL-3.0, binary wheel with libpq.
+psycopg==3.2.12
+psycopg-binary==3.2.12
+typing-extensions==4.14.0

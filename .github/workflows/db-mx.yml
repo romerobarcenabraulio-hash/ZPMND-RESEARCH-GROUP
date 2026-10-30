@@ -1,0 +1,61 @@
+name: db-mx
+# The catalog in Postgres (Supabase; rg/catalog/db.py; docs/CATALOGO.md, "Base de datos"), loaded on a GitHub runner
+# from branch catalog after every catalog run, or by hand. It is rebuilt whole in a schema of its own and goes live only
+# when its checks say it holds every row (an empty checkout never touches it); otherwise the live catalog stays and the
+# run is red. Mode lector creates ZPPMND's read-only role and runs its acceptance test as that role. Code from main; no
+# source is fetched. Braulio, 2026-10-29: "debemos de usar una base de datos ya", "correr todo en el servidor".
+on:
+  workflow_run:
+    workflows: [catalog-mx]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'cargar (load the catalog), ping (connection check: prints only success and the server version) or lector (create or update ZPPMND''s read-only role and test it as itself)'
+        type: choice
+        options: [cargar, ping, lector]
+        default: cargar
+permissions:
+  contents: read
+concurrency:
+  group: db-mx
+  cancel-in-progress: false
+jobs:
+  cargar:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion != 'cancelled'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { ref: main, persist-credentials: false }
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { ref: catalog, path: catalog, persist-credentials: false }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - name: Load the catalog rows into the database (or check the connection)
+        id: cargar
+        env:
+          RG_DB_URL: ${{ secrets.RG_DB_URL }}
+          RG_LECTURA_PASSWORD: ${{ inputs.modo == 'lector' && secrets.RG_LECTURA_PASSWORD || '' }}  # only for the role
+          MODO: ${{ inputs.modo || 'cargar' }}
+        run: |
+          set -uo pipefail
+          if [ "$MODO" = ping ] || [ "$MODO" = lector ]; then
+            python -m rg.catalog.db "$MODO" > db-informe.json
+          else
+            python -m rg.catalog.db cargar --catalog catalog --country mx --sources sources/mx.json > db-informe.json
+          fi
+          rc=$?
+          cat db-informe.json
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+          [ "$rc" = 0 ] || [ "$rc" = 3 ]  # 3: the load did not hold every row; the live catalog stays, reported below
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        if: always()
+        with: { name: db-informe, path: db-informe.json, retention-days: 30, if-no-files-found: ignore }
+      - name: Fail when the database would not hold every row
+        if: steps.cargar.outputs.rc != '0'
+        run: |
+          echo "the load report says rows are missing, extra, repeated, dangling or differ: see db-informe.json"
+          exit 1
