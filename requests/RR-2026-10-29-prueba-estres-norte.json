@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-10-29-prueba-estres-norte",
+ "issued_by": "OWNER",
+ "issued_at": "2026-10-29T23:00:00Z",
+ "question": "Prueba de estrés del norte de RG (docs/NORTE.md, §75): con las mismas piezas (Fetcher, RawStore, SourceArtifact, ResearchPacket), ¿qué puede RG preservar y verificar de cada uno de estos 8 tipos de fuente: una ley mexicana, la ficha de un estándar ISO, un paper, un dataset económico oficial, la documentación de una API, una herramienta en GitHub, la hoja de datos de un fabricante y un video? Para cada uno: quién lo publica, qué versión o fecha imprime, qué licencia declara, qué relaciones nombra (otras normas, versiones, dependencias), y qué no se pudo leer y por qué.",
+ "why_needed": "Braulio (2026-10-29): RG quedó pensado solo para leyes de México, cuando su norte (NORTE.md, 2026-10-23) pide el conocimiento útil del mundo en 16 familias. §75 dice probar el mismo RG con 8 tipos de fuente antes de construir más scrapers de dominio: lo que esta corrida no pueda preservar o leer es exactamente lo que está hecho a la medida de México.",
+ "affected_component": "sustrato general de adquisición de RG (NORTE §74-75)",
+ "desired_evidence": [
+  "por fuente: si se bajó, su tipo de medio, su sha256 y si se extrajo texto (o por qué no: robots, formato, tamaño, falta de adaptador)",
+  "por fuente: editor, versión o fecha y licencia tal como la fuente las imprime, con cita literal",
+  "por fuente: relaciones que la fuente nombra (normas que cita, versiones previas, dependencias), con cita literal",
+  "lo que el mismo flujo no pudo preservar o verificar, nombrado por fuente, como hueco del sustrato",
+  "lo no determinable, como desconocido"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Seguir construyendo extractores a la medida de México creyendo que RG ya es general, o declarar general un flujo que no lee video, datasets, repositorios ni hojas de datos.",
+ "privacy_class": "PUBLIC"
+}
