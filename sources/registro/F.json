@@ -1,0 +1,79 @@
+{
+ "familia": "F",
+ "nombre": "F. Economía",
+ "fuentes": [
+  {
+   "source_id": "int.core-econ",
+   "status": "candidate",
+   "subarea": "F01",
+   "clase": "libro",
+   "title": "CORE Econ: The Economy 2.0",
+   "publisher": "CORE Econ",
+   "base_url": "https://www.core-econ.org",
+   "allowed_hosts": [
+    "www.core-econ.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "CC BY-NC-ND (por verificar)",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.repec",
+   "status": "candidate",
+   "subarea": "F09",
+   "clase": "catalogo",
+   "title": "RePEc / IDEAS",
+   "publisher": "RePEc, Federal Reserve Bank of St. Louis",
+   "base_url": "https://ideas.repec.org",
+   "allowed_hosts": [
+    "ideas.repec.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "metadatos abiertos (por verificar)",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.nber",
+   "status": "candidate",
+   "subarea": "F09",
+   "clase": "catalogo",
+   "title": "NBER Working Papers",
+   "publisher": "National Bureau of Economic Research",
+   "base_url": "https://www.nber.org",
+   "allowed_hosts": [
+    "www.nber.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "metadatos",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.openstax-economics",
+   "status": "candidate",
+   "subarea": "F01",
+   "clase": "libro",
+   "title": "OpenStax: Principles of Economics 3e",
+   "publisher": "OpenStax, Rice University",
+   "base_url": "https://openstax.org/details/books/principles-economics-3e",
+   "allowed_hosts": [
+    "openstax.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY",
+   "via": "rastreo"
+  }
+ ]
+}

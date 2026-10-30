@@ -1,0 +1,262 @@
+{
+ "familia": "A",
+ "nombre": "A. Derecho y regulación",
+ "fuentes": [
+  {
+   "source_id": "us.federal-register",
+   "status": "candidate",
+   "subarea": "A20",
+   "clase": "api",
+   "title": "Federal Register (API)",
+   "publisher": "Office of the Federal Register / GPO",
+   "base_url": "https://www.federalregister.gov",
+   "allowed_hosts": [
+    "www.federalregister.gov"
+   ],
+   "alcance": "Internacional · EE. UU.",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=1",
+    "ruta": [
+     "count"
+    ],
+    "unidad": "documentos"
+   }
+  },
+  {
+   "source_id": "us.ecfr",
+   "status": "candidate",
+   "subarea": "A20",
+   "clase": "api",
+   "title": "Electronic Code of Federal Regulations (API)",
+   "publisher": "Office of the Federal Register / GPO",
+   "base_url": "https://www.ecfr.gov",
+   "allowed_hosts": [
+    "www.ecfr.gov"
+   ],
+   "alcance": "Internacional · EE. UU.",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://www.ecfr.gov/api/versioner/v1/titles.json",
+    "ruta": [
+     "titles"
+    ],
+    "medida": "longitud",
+    "unidad": "títulos"
+   }
+  },
+  {
+   "source_id": "us.uscode",
+   "status": "candidate",
+   "subarea": "A19",
+   "clase": "portal_oficial",
+   "title": "United States Code (descarga XML)",
+   "publisher": "Office of the Law Revision Counsel",
+   "base_url": "https://uscode.house.gov",
+   "allowed_hosts": [
+    "uscode.house.gov"
+   ],
+   "alcance": "Internacional · EE. UU.",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público",
+   "via": "volcado"
+  },
+  {
+   "source_id": "eu.eur-lex",
+   "status": "candidate",
+   "subarea": "A21",
+   "clase": "base_de_datos",
+   "title": "EUR-Lex",
+   "publisher": "Oficina de Publicaciones de la UE",
+   "base_url": "https://eur-lex.europa.eu",
+   "allowed_hosts": [
+    "eur-lex.europa.eu"
+   ],
+   "alcance": "Internacional · UE",
+   "idiomas": [
+    "es",
+    "en",
+    "multi"
+   ],
+   "license": "reutilización permitida (por verificar)",
+   "via": "api"
+  },
+  {
+   "source_id": "es.boe",
+   "status": "candidate",
+   "subarea": "A22",
+   "clase": "diario_oficial",
+   "title": "Boletín Oficial del Estado (datos abiertos)",
+   "publisher": "Agencia Estatal BOE",
+   "base_url": "https://www.boe.es",
+   "allowed_hosts": [
+    "www.boe.es"
+   ],
+   "alcance": "Internacional · España",
+   "idiomas": [
+    "es"
+   ],
+   "license": "reutilización permitida (por verificar)",
+   "via": "api"
+  },
+  {
+   "source_id": "cl.leychile",
+   "status": "candidate",
+   "subarea": "A23",
+   "clase": "base_de_datos",
+   "title": "Ley Chile",
+   "publisher": "Biblioteca del Congreso Nacional de Chile",
+   "base_url": "https://www.bcn.cl",
+   "allowed_hosts": [
+    "www.bcn.cl"
+   ],
+   "alcance": "Internacional · Chile",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial (por verificar)",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "ar.infoleg",
+   "status": "candidate",
+   "subarea": "A23",
+   "clase": "base_de_datos",
+   "title": "InfoLEG",
+   "publisher": "Ministerio de Justicia de Argentina",
+   "base_url": "https://www.infoleg.gob.ar",
+   "allowed_hosts": [
+    "www.infoleg.gob.ar"
+   ],
+   "alcance": "Internacional · Argentina",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial (por verificar)",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "co.suin",
+   "status": "candidate",
+   "subarea": "A23",
+   "clase": "base_de_datos",
+   "title": "SUIN-Juriscol",
+   "publisher": "Ministerio de Justicia de Colombia",
+   "base_url": "https://www.suin-juriscol.gov.co",
+   "allowed_hosts": [
+    "www.suin-juriscol.gov.co"
+   ],
+   "alcance": "Internacional · Colombia",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial (por verificar)",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "br.lexml",
+   "status": "candidate",
+   "subarea": "A23",
+   "clase": "base_de_datos",
+   "title": "LexML Brasil",
+   "publisher": "Senado Federal de Brasil",
+   "base_url": "https://www.lexml.gov.br",
+   "allowed_hosts": [
+    "www.lexml.gov.br"
+   ],
+   "alcance": "Internacional · Brasil",
+   "idiomas": [
+    "pt"
+   ],
+   "license": "oficial (por verificar)",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "uk.legislation",
+   "status": "candidate",
+   "subarea": "A24",
+   "clase": "api",
+   "title": "legislation.gov.uk",
+   "publisher": "The National Archives",
+   "base_url": "https://www.legislation.gov.uk",
+   "allowed_hosts": [
+    "www.legislation.gov.uk"
+   ],
+   "alcance": "Internacional · Reino Unido",
+   "idiomas": [
+    "en"
+   ],
+   "license": "Open Government Licence (por verificar)",
+   "via": "api"
+  },
+  {
+   "source_id": "ca.justice-laws",
+   "status": "candidate",
+   "subarea": "A24",
+   "clase": "portal_oficial",
+   "title": "Justice Laws Website",
+   "publisher": "Department of Justice Canada",
+   "base_url": "https://laws-lois.justice.gc.ca",
+   "allowed_hosts": [
+    "laws-lois.justice.gc.ca"
+   ],
+   "alcance": "Internacional · Canadá",
+   "idiomas": [
+    "en",
+    "fr"
+   ],
+   "license": "licencia abierta de gobierno (por verificar)",
+   "via": "volcado"
+  },
+  {
+   "source_id": "un.treaties",
+   "status": "candidate",
+   "subarea": "A25",
+   "clase": "base_de_datos",
+   "title": "United Nations Treaty Collection",
+   "publisher": "Naciones Unidas",
+   "base_url": "https://treaties.un.org",
+   "allowed_hosts": [
+    "treaties.un.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.ilo-normlex",
+   "status": "candidate",
+   "subarea": "A26",
+   "clase": "base_de_datos",
+   "title": "NORMLEX",
+   "publisher": "Organización Internacional del Trabajo",
+   "base_url": "https://normlex.ilo.org",
+   "allowed_hosts": [
+    "normlex.ilo.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "es",
+    "en",
+    "fr"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  }
+ ]
+}

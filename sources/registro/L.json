@@ -1,0 +1,97 @@
+{
+ "familia": "L",
+ "nombre": "L. Apps y SaaS",
+ "fuentes": [
+  {
+   "source_id": "int.odoo-docs",
+   "status": "candidate",
+   "subarea": "L01",
+   "clase": "documentacion",
+   "title": "Odoo: documentación de aplicaciones",
+   "publisher": "Odoo S.A.",
+   "base_url": "https://www.odoo.com",
+   "allowed_hosts": [
+    "www.odoo.com"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.n8n-integrations",
+   "status": "candidate",
+   "subarea": "L11",
+   "clase": "catalogo",
+   "title": "n8n: catálogo de integraciones",
+   "publisher": "n8n GmbH",
+   "base_url": "https://n8n.io",
+   "allowed_hosts": [
+    "n8n.io"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.zapier-apps",
+   "status": "candidate",
+   "subarea": "L11",
+   "clase": "catalogo",
+   "title": "Zapier: directorio de apps",
+   "publisher": "Zapier",
+   "base_url": "https://zapier.com",
+   "allowed_hosts": [
+    "zapier.com"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "mx.contpaqi",
+   "status": "candidate",
+   "subarea": "L03",
+   "clase": "documentacion",
+   "title": "CONTPAQi: productos y documentación",
+   "publisher": "CONTPAQi",
+   "base_url": "https://www.contpaqi.com",
+   "allowed_hosts": [
+    "www.contpaqi.com"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "mx.aspel",
+   "status": "candidate",
+   "subarea": "L03",
+   "clase": "documentacion",
+   "title": "Aspel: productos",
+   "publisher": "Aspel (Siigo)",
+   "base_url": "https://www.aspel.com.mx",
+   "allowed_hosts": [
+    "www.aspel.com.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  }
+ ]
+}
