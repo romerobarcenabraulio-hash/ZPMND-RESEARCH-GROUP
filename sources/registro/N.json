@@ -50,9 +50,12 @@
    "license": "CC BY-NC-SA (por verificar)",
    "via": "api",
    "contador": {
-    "tipo": "contar",
+    "tipo": "json",
     "url": "https://ghoapi.azureedge.net/api/Indicator",
-    "literal": "\"IndicatorCode\"",
+    "ruta": [
+     "value"
+    ],
+    "medida": "longitud",
     "unidad": "indicadores"
    }
   },

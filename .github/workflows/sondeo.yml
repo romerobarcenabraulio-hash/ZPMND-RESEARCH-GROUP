@@ -26,11 +26,14 @@ jobs:
       - name: Tests of the sounding before any source is asked
         run: python -m unittest tests.test_sondeo
       - name: Ask every registered source
+        timeout-minutes: 45  # the sounding stops itself at 40 (rg/sondeo.py PLAZO) and saves after every source
         run: python -m rg.sondeo --registro sources/registro --out "$RUNNER_TEMP/sondeo.json"
       - name: Commit the result to the data branch
+        if: always()  # a run cut short still publishes what it measured (GPT on bff3bed)
         env: { GH_TOKEN: '${{ github.token }}' }
         run: |
           set -euo pipefail
+          [ -s "$RUNNER_TEMP/sondeo.json" ] || { echo "nothing was measured: nothing to publish"; exit 1; }
           day=$(date -u +%F)
           git init -q datos && cd datos
           git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"

@@ -46,9 +46,12 @@
    "license": "dominio público",
    "via": "api",
    "contador": {
-    "tipo": "contar",
+    "tipo": "json",
     "url": "https://www.ecfr.gov/api/versioner/v1/titles.json",
-    "literal": "\"number\"",
+    "ruta": [
+     "titles"
+    ],
+    "medida": "longitud",
     "unidad": "títulos"
    }
   },

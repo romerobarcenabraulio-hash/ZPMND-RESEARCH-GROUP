@@ -22,6 +22,7 @@
    "contador": {
     "tipo": "contar",
     "url": "https://www.rfc-editor.org/rfc-index.xml",
+    "marca": "<rfc-index",
     "literal": "<rfc-entry>",
     "unidad": "RFC"
    }

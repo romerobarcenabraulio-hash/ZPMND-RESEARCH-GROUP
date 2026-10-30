@@ -17,13 +17,17 @@ El registro incluye las clasificaciones oficiales que son el esqueleto del mapa:
 productos), CIUO, ESCO, O*NET y SINCO (ocupaciones), M49 (países).
 
 **Contador.** Solo si la fuente declara su tamaño en un lugar fijo: `json` (un número entero en una ruta de su respuesta
-JSON) o `contar` (cuántas veces aparece un texto fijo, por ejemplo `<rfc-entry>` en el índice de RFC). Nada más se
-interpreta. Sin contador, el sondeo pide la URL base y guarda solo su respuesta HTTP (`existe` con un 200): así se ve
-pronto un libro o una base mal nombrados.
+JSON, o con `medida: longitud` cuántos elementos tiene la lista en esa ruta) o, solo para índices de texto o XML sin JSON,
+`contar` (cuántas veces aparece un texto fijo, por ejemplo `<rfc-entry>`, dentro de un documento que trae su `marca`, por
+ejemplo `<rfc-index`). Una página que no es el documento esperado (mantenimiento, un reto) o un conteo de texto en cero es
+`ilegible`, nunca un cero medido. Sin contador, el sondeo pide la URL base y guarda solo su respuesta HTTP (`accesible`
+con un 200): acredita esa URL, no la obra; por eso cada libro apunta a su propia página, no a la portada del editor.
+La corrida para de preguntar a los 40 minutos, guarda después de cada fuente y publica aunque se corte: lo que no alcanzó
+queda `pendiente`.
 
 **Corrida.** `sondeo.yml` cada lunes y a mano, con el código de `main`, sin secretos. Escribe `sondeo/<fecha>.json` y
-`sondeo/ultimo.json` en la rama `sondeo`: por fuente, estado (`medido`, `existe`, `http`, `rechazado`, `ilegible`,
-`error`), valor, unidad, URL, estado HTTP, bytes, sha256 y fecha; y un resumen por familia. Claude pasa esas cifras al
+`sondeo/ultimo.json` en la rama `sondeo`: por fuente, estado (`medido`, `accesible`, `http`, `rechazado`, `ilegible`,
+`error`, `pendiente`), valor, unidad, URL, estado HTTP, bytes, sha256 y fecha; y un resumen por familia. Claude pasa esas cifras al
 tablero (pestaña Desglose). Lo que pide llave (Banxico, INEGI, DENUE) llega en un PR aparte, con el secreto solo en su
 paso.
 

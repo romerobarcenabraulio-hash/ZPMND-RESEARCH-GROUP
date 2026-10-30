@@ -164,9 +164,12 @@
    "license": "CC BY 3.0",
    "via": "volcado",
    "contador": {
-    "tipo": "contar",
+    "tipo": "json",
     "url": "https://raw.githubusercontent.com/spdx/license-list-data/main/json/licenses.json",
-    "literal": "\"licenseId\"",
+    "ruta": [
+     "licenses"
+    ],
+    "medida": "longitud",
     "unidad": "licencias"
    }
   }

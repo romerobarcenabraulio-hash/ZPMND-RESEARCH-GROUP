@@ -53,10 +53,13 @@ class Registro(unittest.TestCase):
             'url host': lambda: bad(lambda f: f['contador'].update(url='https://otro.org/x')),
             'url https': lambda: bad(lambda f: f['contador'].update(url='http://api.ejemplo.org/x')),
             'unidad': lambda: bad(lambda f: f['contador'].pop('unidad')),
-            'ruta empty': lambda: bad(lambda f: f['contador'].update(ruta=[])),
             'ruta bool': lambda: bad(lambda f: f['contador'].update(ruta=['meta', True])),
             'literal short': lambda: bad(lambda f: f.update(contador={'tipo': 'contar', 'url': 'https://ejemplo.org/i',
-                                                                     'literal': 'ab', 'unidad': 'x'})),
+                                                                     'marca': '<idx', 'literal': 'ab', 'unidad': 'x'})),
+            'marca missing': lambda: bad(lambda f: f.update(contador={'tipo': 'contar', 'url': 'https://ejemplo.org/i',
+                                                                     'literal': '<entry>', 'unidad': 'x'})),
+            'medida': lambda: bad(lambda f: f['contador'].update(medida='suma')),
+            'ruta empty without longitud': lambda: bad(lambda f: f['contador'].update(ruta=[])),
         }
         for name, run in cases.items():
             with self.subTest(name):
@@ -93,9 +96,25 @@ class Leer(unittest.TestCase):
         with self.assertRaises(ValueError):
             sondeo.leer(b'[1]', {'tipo': 'json', 'ruta': [5]})
 
-    def test_contar_counts_the_literal_and_nothing_is_parsed(self):
-        body = b'<rfc-index><rfc-entry>a</rfc-entry><rfc-entry>b</rfc-entry><!ENTITY x "<rfc-entry>"></rfc-index>'
-        self.assertEqual(sondeo.leer(body, {'tipo': 'contar', 'literal': '<rfc-entry>'}), 3)  # text, not XML: no entities
+    C = {'tipo': 'contar', 'marca': '<rfc-index', 'literal': '<rfc-entry>'}
+
+    def test_contar_counts_records_only_inside_the_expected_document(self):
+        self.assertEqual(sondeo.leer(b'<?xml?><rfc-index><rfc-entry>a</rfc-entry><rfc-entry>b</rfc-entry></rfc-index>', self.C), 2)
+
+    def test_a_page_that_is_not_the_document_or_holds_no_record_is_never_a_measured_zero(self):
+        # GPT on bff3bed: a maintenance page or a challenge served with 200 would have published valor 0
+        for body in (b'<html><body>Under maintenance</body></html>', b'', b'<rfc-index></rfc-index>',
+                     b'<html><p>Example: <rfc-entry>x</rfc-entry></p></html>'):  # the record text, but not the document
+            with self.subTest(body=body), self.assertRaises(ValueError):
+                sondeo.leer(body, self.C)
+
+    def test_longitud_counts_the_items_of_the_list_at_the_path(self):
+        L = {'tipo': 'json', 'ruta': ['licenses'], 'medida': 'longitud'}
+        self.assertEqual(sondeo.leer(b'{"licenses": [{"a": 1}, {"b": 2}]}', L), 2)
+        self.assertEqual(sondeo.leer(b'{"0": {}, "1": {}, "2": {}}', {**L, 'ruta': []}), 3)
+        for body in (b'{"licenses": 5}', b'{"licenses": "x"}', b'<html>', b'{}'):
+            with self.subTest(body=body), self.assertRaises(ValueError):
+                sondeo.leer(body, L)
 
 
 class Sondear(unittest.TestCase):
@@ -126,7 +145,7 @@ class Sondear(unittest.TestCase):
                                                       'https://otro.org': (200, b'<html>')})
         self.assertEqual([r['source_id'] for r in res], ['int.ejemplo', 'int.otro'])  # sorted
         self.assertEqual((res[0]['estado'], res[0]['valor'], res[0]['unidad']), ('medido', 5, 'obras'))
-        self.assertEqual(res[1]['estado'], 'existe')
+        self.assertEqual(res[1]['estado'], 'accesible')
         self.assertNotIn('valor', res[1])  # no count is ever guessed
         self.assertEqual(self.calls, [(('ejemplo.org', 'api.ejemplo.org'), 5_000_000), (('otro.org',), 5_000_000)])
 
@@ -154,16 +173,38 @@ class Sondear(unittest.TestCase):
             sondeo.sondear([('I', GOOD)])
         self.assertEqual(made[0][0], GOOD['allowed_hosts'])
         self.assertEqual((made[0][1]['budget'], made[0][1]['max_bytes']), (6, 5_000_000))
+        self.assertIn('deadline', made[0][1])  # no request of the Fetcher starts past the run's deadline either
+
+    def test_past_the_deadline_nothing_is_asked_and_what_was_measured_is_saved_after_every_source(self):
+        # GPT on bff3bed: a run cut by the job's limit lost everything it had measured
+        others = [{**GOOD, 'source_id': f'int.ejemplo{i}'} for i in range(3)]
+        now, saved = [0.0], []
+
+        def reloj():
+            now[0] += 10
+            return now[0]
+        res = sondeo.sondear([('I', f) for f in others], self.fetcher({GOOD['contador']['url']: (200, b'{"meta": {"count": 1}}')}),
+                             ahora=lambda: 't', plazo=15, reloj=reloj, guardar=lambda r: saved.append([x['estado'] for x in r]))
+        self.assertEqual([r['estado'] for r in res], ['medido', 'pendiente', 'pendiente'])
+        self.assertEqual(saved, [['medido'], ['medido', 'pendiente'], ['medido', 'pendiente', 'pendiente']])
+        self.assertEqual(len(self.calls), 1)
 
     def test_the_command_writes_the_results_and_a_summary(self):
         with tempfile.TemporaryDirectory() as d:
             (Path(d) / 'I.json').write_text(json.dumps(doc(GOOD)))
             out = Path(d) / 'out.json'
-            with mock.patch.object(sondeo, 'sondear', lambda f: [{'source_id': x['source_id'], 'familia': l, 'estado': 'medido'}
-                                                                 for l, x in f]):
+            seen = []
+
+            def fake(f, guardar):
+                res = [{'source_id': x['source_id'], 'familia': l, 'estado': 'pendiente'} for l, x in f]
+                guardar(res); seen.append(json.loads(out.read_text()))  # on disk after the first source already
+                return [{**r, 'estado': 'medido'} for r in res]
+            with mock.patch.object(sondeo, 'sondear', fake):
                 self.assertEqual(sondeo.main(['--registro', d, '--out', str(out)]), 0)
+            self.assertFalse(seen[0]['completo'])
             got = json.loads(out.read_text())
-            self.assertEqual(got['resumen'], {'I': {'fuentes': 1, 'medidas': 1, 'existen': 0, 'fallidas': 0, 'vias': {'?': 1}}})
+            self.assertTrue(got['completo'])
+            self.assertEqual(got['resumen'], {'I': {'fuentes': 1, 'medidas': 1, 'accesibles': 0, 'pendientes': 0, 'fallidas': 0, 'vias': {'?': 1}}})
 
     def test_every_result_carries_the_sources_fastest_route_and_the_summary_counts_them(self):
         res = sondeo.sondear([('I', GOOD)], self.fetcher({GOOD['contador']['url']: (200, b'{"meta": {"count": 1}}')}))
@@ -197,6 +238,10 @@ class Workflow(unittest.TestCase):
         self.assertIn('git push -q origin HEAD:sondeo', run)
         self.assertEqual(run.count('git push'), 1)
         self.assertNotIn('${{', run)
+        self.assertEqual(holders[0]['if'], 'always()')  # a run cut short still publishes what it measured
+        ask = next(s for s in self.job['steps'] if s.get('name') == 'Ask every registered source')
+        self.assertLess(ask['timeout-minutes'] * 60, self.job['timeout-minutes'] * 60)
+        self.assertLess(sondeo.PLAZO, ask['timeout-minutes'] * 60)
 
 
 if __name__ == '__main__':
