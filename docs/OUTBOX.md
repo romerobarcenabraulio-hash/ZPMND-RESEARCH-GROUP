@@ -47,6 +47,25 @@ es su rechazo y los demás siguen. Un `packet.json` que no se puede leer como JS
 compuerta, así que llegó cortado. El token, si hace falta, sale de `GH_TOKEN` o `GITHUB_TOKEN`, nunca de la línea de
 comandos; una redirección solo se sigue a https, y el token se quita si lleva a otro host.
 
+## Constancia de origen
+
+Cada archivo de `research-packets/` en `main` lleva una constancia firmada (Sigstore, la de GitHub) por
+`.github/workflows/constancia.yml`, corrida desde `main` en un runner de GitHub (SECURITY T20). Con ella el consumidor
+comprueba por su cuenta, sin creerle a RG, que un archivo es byte por byte el que publicó `main`:
+
+```
+gh attestation verify research-packets/<RP>/packet.json -R romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP \
+  --signer-workflow romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/.github/workflows/constancia.yml \
+  --source-ref refs/heads/main --deny-self-hosted-runners
+```
+
+Pasa con el archivo publicado y falla con una copia a la que le cambió un solo byte; cada corrida del flujo hace esas dos
+pruebas al final y se pone en rojo si alguna no da. Solo `-R` ya prueba que lo firmó un flujo de este repositorio; los
+otros tres fijan cuál (este), desde dónde (`main`) y en qué máquina (las de GitHub). La constancia llega minutos después
+del merge (al empujar a `main`, al terminar `automerge.yml`, y cada día por si se escapó alguno): un archivo que todavía no
+la tiene falla la verificación, y se vuelve a intentar después. Prueba origen e integridad, no verdad: el paquete sigue
+siendo `CANDIDATE`.
+
 ## Probarlo
 
 ```
