@@ -50,7 +50,7 @@ class Script(unittest.TestCase):
     def run_script(self, *args, all_verify=False):
         self.work.mkdir(exist_ok=True)
         env = {'PATH': f'{self.tmp / "bin"}:{os.environ["PATH"]}', 'REPO': REPO, 'GH_TOKEN': 'x',
-               'STUB_STORE': str(self.store), 'STUB_LOG': str(self.log), 'HOME': str(self.tmp)}
+               'STUB_STORE': str(self.store), 'STUB_LOG': str(self.log), 'HOME': str(self.tmp), 'RG_RETRY_SLEEP': '0'}
         if all_verify:
             env['STUB_ALL'] = '1'
         return subprocess.run(['bash', str(SCRIPT), *args], cwd=self.work, env=env, capture_output=True, text=True,
@@ -90,6 +90,24 @@ class Script(unittest.TestCase):
                 self.assertEqual(r.returncode, 1)
                 self.assertIn('characters outside', r.stderr)
                 self.assertFalse(self.log.exists())
+
+    def test_a_name_with_a_newline_is_one_name_and_stops_the_run(self):  # GPT on e0aa9d7
+        self.packet({'RP-a/raw/a': b'1', 'RP-a/raw/b': b'2',
+                     'RP-a/raw/a\nresearch-packets/RP-a/raw/b': b'3'})  # listed by line, it would read as a and b
+        self.attest('RP-a/raw/a', 'RP-a/raw/b')
+        for mode in (('faltan', str(self.tmp / 'sujetos')), ('comprobar',)):
+            with self.subTest(mode=mode[0]):
+                r = self.run_script(*mode)
+                self.assertEqual(r.returncode, 1, r.stdout)
+                self.assertIn('characters outside', r.stderr)
+                self.assertFalse(self.log.exists())
+
+    def test_the_changed_copy_never_becomes_another_attested_file(self):  # GPT on e0aa9d7: x and y differ by one bit
+        self.packet({'RP-a/a.txt': b'x', 'RP-a/b.txt': b'y', 'RP-a/c.txt': b'xz'})
+        self.attest('RP-a/a.txt', 'RP-a/b.txt', 'RP-a/c.txt')
+        r = self.run_script('comprobar')
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn('3 packet files verified', r.stdout)
 
     def test_more_than_one_attestation_holds_stops(self):
         self.packet({f'RP-a/raw/{i}.txt': str(i).encode() for i in range(1025)})
