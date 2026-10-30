@@ -92,7 +92,7 @@ class Catalog:
 
 READER = P + 'lector'
 PASSWORD = 'a1' * 20
-REMOTE = 'postgresql://postgres.abcdefghijklmnop:clave-secreta@aws-0-us-east-1.pooler.supabase.com:5432/postgres'
+REMOTE = 'postgresql://postgres.abcdefghijklmnop@aws-0-us-east-1.pooler.supabase.com:5432/postgres'  # no password: test_no_secrets
 
 
 class Connection(unittest.TestCase):
@@ -126,7 +126,7 @@ class Connection(unittest.TestCase):
                         mock.patch.object(db, 'connect', side_effect=AssertionError('no call')), self.assertRaises(SystemExit) as e:
                     db.main(['ping'])
                 self.assertIn('sets options RG sets or refuses', str(e.exception))
-                self.assertNotIn('clave-secreta', str(e.exception))
+                self.assertNotIn('pooler.supabase.com', str(e.exception))  # the URI is never echoed
 
     def test_the_reader_logs_in_as_the_pooler_names_it(self):
         self.assertEqual(db.reader_user(REMOTE), 'zppmnd_lectura.abcdefghijklmnop')
