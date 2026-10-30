@@ -1,0 +1,77 @@
+{
+ "request_id": "RR-2026-10-29-prueba-estres-norte",
+ "sources": [
+  {
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+   "title": "Ley Federal del Trabajo (texto vigente)",
+   "publisher": "Cámara de Diputados del H. Congreso de la Unión",
+   "source_type": "primary_official",
+   "license": "LFDA art. 14 fr. VIII (texto oficial); en esta prueba solo se cita: no se republica",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://www.iso.org/standard/27001",
+   "title": "ISO/IEC 27001:2022 Information security management systems — Requirements (ficha)",
+   "publisher": "International Organization for Standardization (ISO)",
+   "source_type": "standard",
+   "license": "NO VERIFICADA: se lee literal de la ficha pública al adquirirla; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://arxiv.org/abs/1706.03762",
+   "title": "arXiv 1706.03762: Attention Is All You Need",
+   "publisher": "arXiv (preprint de sus autores)",
+   "source_type": "preprint",
+   "license": "NO VERIFICADA: se lee literal de su página de arXiv al adquirirla; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.MKTP.CD?format=json&per_page=100",
+   "title": "World Bank WDI: PIB de México en US$ corrientes (NY.GDP.MKTP.CD), API",
+   "publisher": "The World Bank",
+   "source_type": "dataset",
+   "license": "NO VERIFICADA: se lee literal de los términos del Banco Mundial al adquirirla; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://docs.github.com/en/rest/repos/repos",
+   "title": "GitHub REST API: endpoints de repositorios",
+   "publisher": "GitHub",
+   "source_type": "vendor_doc",
+   "license": "NO VERIFICADA: se lee literal de la documentación de GitHub al adquirirla; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://github.com/pypa/pip",
+   "title": "pypa/pip: el instalador de paquetes de Python (repositorio)",
+   "publisher": "Python Packaging Authority (PyPA)",
+   "source_type": "code",
+   "license": "NO VERIFICADA: se lee literal del archivo de licencia de su repositorio al adquirirla; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://www.ti.com/lit/ds/symlink/lm317.pdf",
+   "title": "LM317 3-Terminal Adjustable Regulator (hoja de datos)",
+   "publisher": "Texas Instruments",
+   "source_type": "vendor_doc",
+   "license": "NO VERIFICADA: se lee literal del aviso del propio documento al adquirirlo; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
+   "title": "Let's build GPT: from scratch, in code, spelled out (video)",
+   "publisher": "Andrej Karpathy (canal de YouTube)",
+   "source_type": "other",
+   "license": "NO VERIFICADA: se lee literal de la página del video al adquirirla; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "role": "primary"
+  }
+ ]
+}
