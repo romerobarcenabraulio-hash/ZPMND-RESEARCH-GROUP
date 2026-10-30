@@ -17,7 +17,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "CC BY"
+   "license": "CC BY",
+   "via": "rastreo"
   },
   {
    "source_id": "int.oecd-gobierno-corporativo",
@@ -35,7 +36,8 @@
     "es",
     "en"
    ],
-   "license": "términos por revisar"
+   "license": "términos por revisar",
+   "via": "rastreo"
   },
   {
    "source_id": "mx.compras-mx",
@@ -52,7 +54,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "oficial"
+   "license": "oficial",
+   "via": "rastreo"
   },
   {
    "source_id": "int.openstax-orgbehavior",
@@ -69,7 +72,93 @@
    "idiomas": [
     "en"
    ],
-   "license": "CC BY"
+   "license": "CC BY",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.isco-08",
+   "status": "candidate",
+   "subarea": "H11",
+   "clase": "dataset",
+   "title": "CIUO-08 (ISCO): clasificación internacional de ocupaciones",
+   "publisher": "Organización Internacional del Trabajo",
+   "base_url": "https://www.ilo.org",
+   "allowed_hosts": [
+    "www.ilo.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "volcado",
+   "nota": "10 grandes grupos, 43 subgrupos principales, 130 subgrupos, 436 grupos primarios (publicación de la OIT)"
+  },
+  {
+   "source_id": "int.esco",
+   "status": "candidate",
+   "subarea": "H11",
+   "clase": "api",
+   "title": "ESCO: ocupaciones, competencias y cualificaciones",
+   "publisher": "Comisión Europea",
+   "base_url": "https://esco.ec.europa.eu",
+   "allowed_hosts": [
+    "ec.europa.eu",
+    "esco.ec.europa.eu"
+   ],
+   "alcance": "Internacional · UE",
+   "idiomas": [
+    "es",
+    "en",
+    "multi"
+   ],
+   "license": "reutilización permitida (por verificar)",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://ec.europa.eu/esco/api/search?type=occupation&language=es",
+    "ruta": [
+     "total"
+    ],
+    "unidad": "ocupaciones"
+   }
+  },
+  {
+   "source_id": "us.onet",
+   "status": "candidate",
+   "subarea": "H11",
+   "clase": "dataset",
+   "title": "O*NET: base de datos de ocupaciones",
+   "publisher": "U.S. Department of Labor / O*NET Center",
+   "base_url": "https://www.onetcenter.org",
+   "allowed_hosts": [
+    "www.onetcenter.org"
+   ],
+   "alcance": "Internacional · EE. UU.",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY 4.0",
+   "via": "volcado"
+  },
+  {
+   "source_id": "mx.sinco",
+   "status": "candidate",
+   "subarea": "H11",
+   "clase": "dataset",
+   "title": "SINCO: Sistema Nacional de Clasificación de Ocupaciones",
+   "publisher": "INEGI",
+   "base_url": "https://www.inegi.org.mx",
+   "allowed_hosts": [
+    "www.inegi.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "abierta (términos INEGI)",
+   "via": "volcado"
   }
  ]
 }

@@ -18,6 +18,7 @@
     "es"
    ],
    "license": "abierta (términos INEGI)",
+   "via": "api",
    "nota": "La API pide token: contador con secreto en un PR aparte"
   },
   {
@@ -36,6 +37,7 @@
     "en"
    ],
    "license": "dominio público",
+   "via": "volcado",
    "contador": {
     "tipo": "contar",
     "url": "https://www.sec.gov/files/company_tickers.json",
@@ -58,7 +60,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "abierta"
+   "license": "abierta",
+   "via": "volcado"
   },
   {
    "source_id": "mx.cofece",
@@ -75,7 +78,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "oficial"
+   "license": "oficial",
+   "via": "rastreo"
   },
   {
    "source_id": "int.wipo-patentscope",
@@ -94,7 +98,83 @@
     "en",
     "multi"
    ],
-   "license": "términos por revisar"
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.isic-rev4",
+   "status": "candidate",
+   "subarea": "M13",
+   "clase": "dataset",
+   "title": "CIIU Rev. 4 (ISIC): clasificación industrial internacional",
+   "publisher": "División de Estadística de la ONU",
+   "base_url": "https://unstats.un.org",
+   "allowed_hosts": [
+    "unstats.un.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "volcado",
+   "nota": "21 secciones, 88 divisiones, 238 grupos, 419 clases (publicación de la ONU)"
+  },
+  {
+   "source_id": "int.cpc",
+   "status": "candidate",
+   "subarea": "M13",
+   "clase": "dataset",
+   "title": "Clasificación Central de Productos (CPC)",
+   "publisher": "División de Estadística de la ONU",
+   "base_url": "https://unstats.un.org",
+   "allowed_hosts": [
+    "unstats.un.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "volcado"
+  },
+  {
+   "source_id": "us.naics",
+   "status": "candidate",
+   "subarea": "M13",
+   "clase": "dataset",
+   "title": "NAICS: clasificación industrial de América del Norte (EE. UU.)",
+   "publisher": "U.S. Census Bureau",
+   "base_url": "https://www.census.gov",
+   "allowed_hosts": [
+    "www.census.gov"
+   ],
+   "alcance": "Internacional · EE. UU.",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público",
+   "via": "volcado"
+  },
+  {
+   "source_id": "mx.scian",
+   "status": "candidate",
+   "subarea": "M13",
+   "clase": "dataset",
+   "title": "SCIAN México",
+   "publisher": "INEGI",
+   "base_url": "https://www.inegi.org.mx",
+   "allowed_hosts": [
+    "www.inegi.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "abierta (términos INEGI)",
+   "via": "volcado"
   }
  ]
 }

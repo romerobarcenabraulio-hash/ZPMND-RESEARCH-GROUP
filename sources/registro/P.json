@@ -19,6 +19,7 @@
     "en"
    ],
    "license": "CC BY-SA",
+   "via": "volcado",
    "contador": {
     "tipo": "json",
     "url": "https://api.stackexchange.com/2.3/info?site=stackoverflow",
@@ -45,7 +46,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "CC BY-NC-SA"
+   "license": "CC BY-NC-SA",
+   "via": "rastreo"
   },
   {
    "source_id": "int.khan",
@@ -62,7 +64,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "términos por revisar"
+   "license": "términos por revisar",
+   "via": "rastreo"
   },
   {
    "source_id": "int.usenix",
@@ -79,7 +82,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "abierta (acceso abierto USENIX)"
+   "license": "abierta (acceso abierto USENIX)",
+   "via": "rastreo"
   }
  ]
 }

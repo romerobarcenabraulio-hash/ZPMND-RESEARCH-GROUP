@@ -18,6 +18,7 @@
     "en"
    ],
    "license": "dominio público",
+   "via": "api",
    "contador": {
     "tipo": "json",
     "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=1",
@@ -43,6 +44,7 @@
     "en"
    ],
    "license": "dominio público",
+   "via": "api",
    "contador": {
     "tipo": "contar",
     "url": "https://www.ecfr.gov/api/versioner/v1/titles.json",
@@ -65,7 +67,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "dominio público"
+   "license": "dominio público",
+   "via": "volcado"
   },
   {
    "source_id": "eu.eur-lex",
@@ -84,7 +87,8 @@
     "en",
     "multi"
    ],
-   "license": "reutilización permitida (por verificar)"
+   "license": "reutilización permitida (por verificar)",
+   "via": "api"
   },
   {
    "source_id": "es.boe",
@@ -101,7 +105,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "reutilización permitida (por verificar)"
+   "license": "reutilización permitida (por verificar)",
+   "via": "api"
   },
   {
    "source_id": "cl.leychile",
@@ -118,7 +123,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "oficial (por verificar)"
+   "license": "oficial (por verificar)",
+   "via": "rastreo"
   },
   {
    "source_id": "ar.infoleg",
@@ -135,7 +141,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "oficial (por verificar)"
+   "license": "oficial (por verificar)",
+   "via": "rastreo"
   },
   {
    "source_id": "co.suin",
@@ -152,7 +159,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "oficial (por verificar)"
+   "license": "oficial (por verificar)",
+   "via": "rastreo"
   },
   {
    "source_id": "br.lexml",
@@ -169,7 +177,8 @@
    "idiomas": [
     "pt"
    ],
-   "license": "oficial (por verificar)"
+   "license": "oficial (por verificar)",
+   "via": "rastreo"
   },
   {
    "source_id": "uk.legislation",
@@ -186,7 +195,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "Open Government Licence (por verificar)"
+   "license": "Open Government Licence (por verificar)",
+   "via": "api"
   },
   {
    "source_id": "ca.justice-laws",
@@ -204,7 +214,8 @@
     "en",
     "fr"
    ],
-   "license": "licencia abierta de gobierno (por verificar)"
+   "license": "licencia abierta de gobierno (por verificar)",
+   "via": "volcado"
   },
   {
    "source_id": "un.treaties",
@@ -221,7 +232,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "términos por revisar"
+   "license": "términos por revisar",
+   "via": "rastreo"
   },
   {
    "source_id": "int.ilo-normlex",
@@ -240,7 +252,8 @@
     "en",
     "fr"
    ],
-   "license": "términos por revisar"
+   "license": "términos por revisar",
+   "via": "rastreo"
   }
  ]
 }

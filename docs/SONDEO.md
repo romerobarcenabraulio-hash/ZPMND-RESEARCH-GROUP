@@ -10,6 +10,12 @@ oficial, diario oficial, revista, video, foro, curso, documentación, registro),
 alcance, sus idiomas y su licencia. Todo es candidato (`status: candidate`) hasta que el sondeo la alcanza. Las fuentes
 de México que ya adquiere el catálogo viven en `sources/mx.json`; un id nombra una sola fuente en todo RG.
 
+**Vía** (obligatoria): la ruta más rápida que ofrece la fuente, de mejor a peor: `volcado` (millones de registros en
+una descarga), `api`, `sitemap`, `rastreo` (página por página) o `manual` (compra o persona). La adquisición se planea en
+ese orden y el resumen del sondeo las cuenta por familia (Braulio, 2026-10-30: "extraer información mucho más rápido").
+El registro incluye las clasificaciones oficiales que son el esqueleto del mapa: CIIU, CPC, NAICS y SCIAN (industrias y
+productos), CIUO, ESCO, O*NET y SINCO (ocupaciones), M49 (países).
+
 **Contador.** Solo si la fuente declara su tamaño en un lugar fijo: `json` (un número entero en una ruta de su respuesta
 JSON) o `contar` (cuántas veces aparece un texto fijo, por ejemplo `<rfc-entry>` en el índice de RFC). Nada más se
 interpreta. Sin contador, el sondeo pide la URL base y guarda solo su respuesta HTTP (`existe` con un 200): así se ve

@@ -18,6 +18,7 @@
     "en"
    ],
    "license": "metadatos abiertos",
+   "via": "volcado",
    "contador": {
     "tipo": "json",
     "url": "https://crates.io/api/v1/summary",
@@ -44,6 +45,7 @@
     "en"
    ],
    "license": "metadatos abiertos",
+   "via": "api",
    "contador": {
     "tipo": "json",
     "url": "https://replicate.npmjs.com/",
@@ -68,7 +70,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "metadatos abiertos"
+   "license": "metadatos abiertos",
+   "via": "api"
   },
   {
    "source_id": "int.nvd",
@@ -87,6 +90,7 @@
     "en"
    ],
    "license": "dominio público",
+   "via": "api",
    "contador": {
     "tipo": "json",
     "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=1",
@@ -111,7 +115,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "CC BY (por verificar)"
+   "license": "CC BY (por verificar)",
+   "via": "volcado"
   },
   {
    "source_id": "int.apis-guru",
@@ -130,6 +135,7 @@
     "en"
    ],
    "license": "CC0 (por verificar)",
+   "via": "api",
    "contador": {
     "tipo": "json",
     "url": "https://api.apis.guru/v2/metrics.json",
@@ -156,6 +162,7 @@
     "en"
    ],
    "license": "CC BY 3.0",
+   "via": "volcado",
    "contador": {
     "tipo": "contar",
     "url": "https://raw.githubusercontent.com/spdx/license-list-data/main/json/licenses.json",

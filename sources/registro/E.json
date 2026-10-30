@@ -18,6 +18,7 @@
     "es"
    ],
    "license": "oficial",
+   "via": "api",
    "nota": "El catálogo pide token: contador con secreto en un PR aparte"
   },
   {
@@ -35,7 +36,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "oficial"
+   "license": "oficial",
+   "via": "rastreo"
   },
   {
    "source_id": "mx.cnbv-portafolio",
@@ -52,7 +54,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "oficial"
+   "license": "oficial",
+   "via": "rastreo"
   },
   {
    "source_id": "int.bis",
@@ -69,7 +72,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "términos por revisar"
+   "license": "términos por revisar",
+   "via": "rastreo"
   }
  ]
 }

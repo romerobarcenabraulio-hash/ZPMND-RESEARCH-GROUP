@@ -28,11 +28,15 @@ FAMILIAS = tuple('ABCDEFGHIJKLMNOP')
 TIPOS = ('json', 'contar')
 CLASES = ('libro', 'base_de_datos', 'api', 'catalogo', 'dataset', 'repositorio', 'portal_oficial', 'diario_oficial',
           'revista', 'video', 'foro', 'curso', 'documentacion', 'registro')
+# The fastest route each source offers, best first (Braulio, 2026-10-30: "extraer información mucho más rápido"): a bulk
+# dump gives millions of records in one download, an API pages through them, a sitemap lists every page, a crawl walks
+# them one by one, and manual means a purchase or a person. Acquisition is planned in this order.
+VIAS = ('volcado', 'api', 'sitemap', 'rastreo', 'manual')
 CAP = {'json': 5_000_000, 'contar': 40_000_000, 'base': 5_000_000}  # bytes: an index or a page, never a corpus
 ID = re.compile(r'[a-z]{2,3}\.[a-z0-9][a-z0-9.-]{1,60}')
 SUB = re.compile(r'[A-PST]\d{2}')  # the board's sub-area (desglose): A01..P99
 HOST = re.compile(r'[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?(\.[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)+')
-REQUIRED = ('source_id', 'subarea', 'clase', 'title', 'publisher', 'base_url', 'allowed_hosts', 'alcance', 'license')
+REQUIRED = ('source_id', 'subarea', 'clase', 'title', 'publisher', 'base_url', 'allowed_hosts', 'alcance', 'license', 'via')
 
 
 def errores(doc, letra):
@@ -59,6 +63,8 @@ def errores(doc, letra):
         seen.add(sid)
         if f.get('subarea') and not (SUB.fullmatch(str(f['subarea'])) and str(f['subarea'])[0] == letra):
             out.append(f'{where}: subarea must be {letra}NN')
+        if f.get('via') and f['via'] not in VIAS:
+            out.append(f'{where}: via not one of {VIAS}')
         if f.get('clase') and f['clase'] not in CLASES:
             out.append(f'{where}: clase not one of {CLASES}')
         hosts = f.get('allowed_hosts') or []
@@ -139,7 +145,7 @@ def sondear(fuentes, nuevo_fetcher=None, ahora=None):
     ahora = ahora or (lambda: datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
     out = []
     for letra, f in sorted(fuentes, key=lambda x: x[1]['source_id']):
-        r = {'source_id': f['source_id'], 'familia': letra, 'subarea': f['subarea'], 'title': f['title']}
+        r = {'source_id': f['source_id'], 'familia': letra, 'subarea': f['subarea'], 'title': f['title'], 'via': f['via']}
         c = f.get('contador')
         url = c['url'] if c else f['base_url']
         r.update(url=url, fecha=ahora(), **({'unidad': c['unidad']} if c else {}))
@@ -162,11 +168,14 @@ def sondear(fuentes, nuevo_fetcher=None, ahora=None):
 
 
 def resumen(resultados):
+    """Per family: sources, measured, existing, failed; and how many offer each route (the speed of the map)."""
     por = {}
     for r in resultados:
         x = por.setdefault(r['familia'], {'fuentes': 0, 'medidas': 0, 'existen': 0, 'fallidas': 0})
         x['fuentes'] += 1
         x['medidas' if r['estado'] == 'medido' else 'existen' if r['estado'] == 'existe' else 'fallidas'] += 1
+        vias = x.setdefault('vias', {})
+        vias[r.get('via', '?')] = vias.get(r.get('via', '?'), 0) + 1
     return dict(sorted(por.items()))
 
 

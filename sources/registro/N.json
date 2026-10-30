@@ -20,6 +20,7 @@
     "en"
    ],
    "license": "CC BY 4.0",
+   "via": "api",
    "contador": {
     "tipo": "json",
     "url": "https://api.worldbank.org/v2/indicator?format=json&per_page=1",
@@ -47,6 +48,7 @@
     "en"
    ],
    "license": "CC BY-NC-SA (por verificar)",
+   "via": "api",
    "contador": {
     "tipo": "contar",
     "url": "https://ghoapi.azureedge.net/api/Indicator",
@@ -70,7 +72,8 @@
     "en",
     "multi"
    ],
-   "license": "reutilización permitida (por verificar)"
+   "license": "reutilización permitida (por verificar)",
+   "via": "api"
   },
   {
    "source_id": "int.imf-data",
@@ -87,7 +90,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "términos por revisar"
+   "license": "términos por revisar",
+   "via": "api"
   },
   {
    "source_id": "int.oecd-data",
@@ -104,7 +108,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "términos por revisar"
+   "license": "términos por revisar",
+   "via": "api"
   },
   {
    "source_id": "mx.inegi-marco-geo",
@@ -121,7 +126,27 @@
    "idiomas": [
     "es"
    ],
-   "license": "abierta (términos INEGI)"
+   "license": "abierta (términos INEGI)",
+   "via": "volcado"
+  },
+  {
+   "source_id": "int.un-m49",
+   "status": "candidate",
+   "subarea": "N22",
+   "clase": "dataset",
+   "title": "M49: códigos de países y regiones de la ONU",
+   "publisher": "División de Estadística de la ONU",
+   "base_url": "https://unstats.un.org",
+   "allowed_hosts": [
+    "unstats.un.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "volcado"
   }
  ]
 }

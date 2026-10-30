@@ -17,7 +17,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "dominio público (EE. UU.)"
+   "license": "dominio público (EE. UU.)",
+   "via": "rastreo"
   },
   {
    "source_id": "int.materials-project",
@@ -34,7 +35,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "CC BY (por verificar)"
+   "license": "CC BY (por verificar)",
+   "via": "api"
   },
   {
    "source_id": "int.libretexts-eng",
@@ -51,7 +53,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "abierta (licencia por libro)"
+   "license": "abierta (licencia por libro)",
+   "via": "rastreo"
   },
   {
    "source_id": "mx.ntc-cdmx",
@@ -68,7 +71,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "oficial"
+   "license": "oficial",
+   "via": "rastreo"
   },
   {
    "source_id": "us.epa-methods",
@@ -85,7 +89,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "dominio público"
+   "license": "dominio público",
+   "via": "rastreo"
   },
   {
    "source_id": "int.pubchem",
@@ -102,7 +107,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "dominio público (EE. UU.)"
+   "license": "dominio público (EE. UU.)",
+   "via": "volcado"
   }
  ]
 }

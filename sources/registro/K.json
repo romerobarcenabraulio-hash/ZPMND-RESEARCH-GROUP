@@ -17,7 +17,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "según modelo"
+   "license": "según modelo",
+   "via": "api"
   },
   {
    "source_id": "int.mcp-registry",
@@ -34,7 +35,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "términos por revisar"
+   "license": "términos por revisar",
+   "via": "api"
   },
   {
    "source_id": "int.anthropic-docs",
@@ -51,7 +53,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "términos por revisar"
+   "license": "términos por revisar",
+   "via": "rastreo"
   },
   {
    "source_id": "int.openai-docs",
@@ -68,7 +71,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "términos por revisar"
+   "license": "términos por revisar",
+   "via": "rastreo"
   },
   {
    "source_id": "int.vllm",
@@ -85,7 +89,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "Apache-2.0"
+   "license": "Apache-2.0",
+   "via": "rastreo"
   }
  ]
 }

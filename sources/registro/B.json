@@ -18,6 +18,7 @@
     "en"
    ],
    "license": "abierta (IETF Trust)",
+   "via": "volcado",
    "contador": {
     "tipo": "contar",
     "url": "https://www.rfc-editor.org/rfc-index.xml",
@@ -42,6 +43,7 @@
     "en"
    ],
    "license": "abierta (W3C)",
+   "via": "api",
    "contador": {
     "tipo": "json",
     "url": "https://api.w3.org/specifications?items=1",
@@ -67,6 +69,7 @@
     "en"
    ],
    "license": "solo metadatos (texto de pago)",
+   "via": "volcado",
    "nota": "Contador por definir al leer la página de datos abiertos"
   },
   {
@@ -85,7 +88,8 @@
     "es",
     "en"
    ],
-   "license": "gratuita (por verificar)"
+   "license": "gratuita (por verificar)",
+   "via": "rastreo"
   },
   {
    "source_id": "int.nfpa-codes",
@@ -102,7 +106,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "solo metadatos (texto de pago)"
+   "license": "solo metadatos (texto de pago)",
+   "via": "manual"
   },
   {
    "source_id": "mx.dgn-normas",
@@ -119,7 +124,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "oficial"
+   "license": "oficial",
+   "via": "rastreo"
   }
  ]
 }

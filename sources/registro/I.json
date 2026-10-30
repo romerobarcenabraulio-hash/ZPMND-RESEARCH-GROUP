@@ -19,6 +19,7 @@
     "multi"
    ],
    "license": "CC0 (metadatos)",
+   "via": "volcado",
    "contador": {
     "tipo": "json",
     "url": "https://api.openalex.org/works?per-page=1",
@@ -46,6 +47,7 @@
     "multi"
    ],
    "license": "metadatos abiertos",
+   "via": "volcado",
    "contador": {
     "tipo": "json",
     "url": "https://api.crossref.org/works?rows=0",
@@ -73,6 +75,7 @@
     "en"
    ],
    "license": "dominio público (metadatos)",
+   "via": "volcado",
    "contador": {
     "tipo": "json",
     "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=all%5Bsb%5D&retmode=json&retmax=0",
@@ -100,6 +103,7 @@
     "en"
    ],
    "license": "según artículo",
+   "via": "volcado",
    "contador": {
     "tipo": "json",
     "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pmc&term=open+access%5Bfilter%5D&retmode=json&retmax=0",
@@ -125,7 +129,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "según paper"
+   "license": "según paper",
+   "via": "volcado"
   },
   {
    "source_id": "int.doaj",
@@ -143,6 +148,7 @@
     "multi"
    ],
    "license": "CC0 (metadatos)",
+   "via": "api",
    "contador": {
     "tipo": "json",
     "url": "https://doaj.org/api/search/journals/%2A?pageSize=1",
@@ -169,6 +175,7 @@
     "multi"
    ],
    "license": "CC0 (metadatos)",
+   "via": "api",
    "contador": {
     "tipo": "json",
     "url": "https://api.datacite.org/dois?page%5Bsize%5D=1",
@@ -195,6 +202,7 @@
     "multi"
    ],
    "license": "según registro",
+   "via": "api",
    "contador": {
     "tipo": "json",
     "url": "https://zenodo.org/api/records?size=1",
@@ -220,7 +228,8 @@
    "idiomas": [
     "multi"
    ],
-   "license": "abierta (licencia por libro)"
+   "license": "abierta (licencia por libro)",
+   "via": "api"
   },
   {
    "source_id": "mx.redalyc",
@@ -237,7 +246,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "abierta (por revista)"
+   "license": "abierta (por revista)",
+   "via": "rastreo"
   },
   {
    "source_id": "mx.scielo",
@@ -254,7 +264,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "abierta (por revista)"
+   "license": "abierta (por revista)",
+   "via": "rastreo"
   },
   {
    "source_id": "mx.tesiunam",
@@ -271,7 +282,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "según tesis"
+   "license": "según tesis",
+   "via": "rastreo"
   }
  ]
 }

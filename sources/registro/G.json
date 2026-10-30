@@ -17,7 +17,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "oficial"
+   "license": "oficial",
+   "via": "rastreo"
   },
   {
    "source_id": "int.ifrs",
@@ -35,7 +36,8 @@
     "es",
     "en"
    ],
-   "license": "consulta gratuita con registro"
+   "license": "consulta gratuita con registro",
+   "via": "manual"
   },
   {
    "source_id": "int.iaasb",
@@ -52,7 +54,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "descarga gratuita (por verificar)"
+   "license": "descarga gratuita (por verificar)",
+   "via": "rastreo"
   },
   {
    "source_id": "int.openstax-accounting",
@@ -69,7 +72,8 @@
    "idiomas": [
     "en"
    ],
-   "license": "CC BY"
+   "license": "CC BY",
+   "via": "rastreo"
   },
   {
    "source_id": "mx.cinif",
@@ -86,7 +90,8 @@
    "idiomas": [
     "es"
    ],
-   "license": "solo metadatos (de pago)"
+   "license": "solo metadatos (de pago)",
+   "via": "manual"
   }
  ]
 }

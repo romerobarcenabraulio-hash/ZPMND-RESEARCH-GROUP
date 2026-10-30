@@ -15,7 +15,7 @@ from rg.catalog.fetch import FetchRefused, Response
 ROOT = Path(__file__).resolve().parents[1]
 GOOD = {'source_id': 'int.ejemplo', 'status': 'candidate', 'subarea': 'I01', 'clase': 'api', 'title': 'Ejemplo',
         'publisher': 'Quien', 'base_url': 'https://ejemplo.org', 'allowed_hosts': ['ejemplo.org', 'api.ejemplo.org'],
-        'alcance': 'Mundo', 'license': 'CC0',
+        'alcance': 'Mundo', 'license': 'CC0', 'via': 'api',
         'contador': {'tipo': 'json', 'url': 'https://api.ejemplo.org/obras', 'ruta': ['meta', 'count'], 'unidad': 'obras'}}
 
 
@@ -44,6 +44,8 @@ class Registro(unittest.TestCase):
             'source_id': lambda: bad(lambda f: f.update(source_id='Sin Punto')),
             'subarea': lambda: bad(lambda f: f.update(subarea='J01')),
             'clase': lambda: bad(lambda f: f.update(clase='rumor')),
+            'via missing': lambda: bad(lambda f: f.pop('via')),
+            'via': lambda: bad(lambda f: f.update(via='telepatia')),
             'host names': lambda: bad(lambda f: f.update(allowed_hosts=['https://ejemplo.org'])),
             'base_url must be https': lambda: bad(lambda f: f.update(base_url='http://ejemplo.org')),
             'base_url host': lambda: bad(lambda f: f.update(base_url='https://otro.org')),
@@ -161,7 +163,14 @@ class Sondear(unittest.TestCase):
                                                                  for l, x in f]):
                 self.assertEqual(sondeo.main(['--registro', d, '--out', str(out)]), 0)
             got = json.loads(out.read_text())
-            self.assertEqual(got['resumen'], {'I': {'fuentes': 1, 'medidas': 1, 'existen': 0, 'fallidas': 0}})
+            self.assertEqual(got['resumen'], {'I': {'fuentes': 1, 'medidas': 1, 'existen': 0, 'fallidas': 0, 'vias': {'?': 1}}})
+
+    def test_every_result_carries_the_sources_fastest_route_and_the_summary_counts_them(self):
+        res = sondeo.sondear([('I', GOOD)], self.fetcher({GOOD['contador']['url']: (200, b'{"meta": {"count": 1}}')}))
+        self.assertEqual(res[0]['via'], 'api')
+        self.assertEqual(sondeo.resumen(res)['I']['vias'], {'api': 1})
+        for letra, f in sondeo.cargar(ROOT / 'sources' / 'registro'):
+            self.assertIn(f['via'], sondeo.VIAS, f['source_id'])
 
 
 class Workflow(unittest.TestCase):
