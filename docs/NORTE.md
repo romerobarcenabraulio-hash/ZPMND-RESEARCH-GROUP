@@ -527,3 +527,36 @@ decidir qué es verdad o qué debe hacer la organización.
 **Siguiente paso propuesto (§74-75):** correr la primera prueba de estrés con un artefacto de cada uno de los ocho
 tipos, sobre el mismo `RawStore`, `SourceArtifact` y `ResearchPacket`. Así se ve qué está codificado a la medida de
 México y qué ya es general. México sigue catalogándose en segundo plano mientras tanto.
+
+## Estado verificado (2026-10-31): lo que mostró la primera prueba de estrés
+
+Braulio, 2026-10-31: "si no has logrado diseñar correctamente el sistema de RG, hay que verificar qué está pendiente".
+Verificado contra el código de `main` (a6d1697) y contra el recibo de la prueba de §75 (#80, corrida 41235552368).
+
+**El diseño de hoy son dos sistemas, no uno.** (1) El catálogo de México adquiere en masa, pero con un adaptador en
+código por fuente: 7 adaptadores (`sidof`, `ojn`, `leyesbiblio`, `hf_tesis`, `normas`, `tratados`, `indicadores`,
+~1,200 líneas) sobre un núcleo general (`fetch`, `store`, `run`, ~1,400). Cada fuente nueva pide código nuevo: justo lo
+que §74 y §79 dicen que no debe pasar. (2) `investigar` es general (plan, adquisición, análisis, compuerta, paquete) y
+la prueba lo confirmó: 7 de 8 tipos de fuente con las mismas piezas. Pero es para una pregunta a la vez, no para cargar
+el mundo. Falta el puente: un registro único que mande la adquisición en masa por la vía de cada fuente (volcado, API,
+sitemap, rastreo), con la lógica de cada fuente como datos y no como código. El sondeo (#79) es su primer paso: mide;
+todavía no adquiere.
+
+**Pendiente de diseño, en orden** (cada uno con la evidencia que lo muestra):
+1. Adquisición declarativa por registro: un solo registro (`sources/mx.json` y `sources/registro/`) y adaptadores
+   genéricos por vía, para que ninguna fuente nueva pida código. Hoy: 7 adaptadores a la medida de México.
+2. Licencia leída de la fuente en el SourceArtifact (§7, §29): en #80 todos los artefactos dicen "NO VERIFICADA";
+   ningún módulo lee una licencia literal.
+3. Compuerta que verifica citas sin republicar el crudo: con fuentes solo-metadatos la compuerta verificó 0 de 42 citas
+   (#80); debe bajar el crudo de nuevo, comprobar su sha256 y leer ahí, sin publicarlo.
+4. Presupuesto de lectura por fuente en el análisis: el PDF de la ley (1,368,763 caracteres) llenó partes enteras y dejó
+   fuera a las demás fuentes (limitaciones de #80).
+5. Cambios como eventos (§21-23): `change_event.schema.json` existe, pero ningún vigía lo produce; las sustituciones
+   solo existen para NOM.
+6. Linaje, deduplicación y resolución de entidades entre fuentes (§12-13, §46): sin código fuera de los linajes NOM.
+7. Mapa de cobertura como código (§19): hoy vive en el tablero (5 de 5,300 celdas), no en el repo.
+8. Frescura (§20), búsqueda negativa (§15), caza de contradicciones (§14) y explorador de capacidades (§34-36) como
+   flujos: no hay código.
+
+**Pendiente de operación** (diseñado, en revisión): base de datos (#73), noche (#77, #61), servidor (#75), sondeo (#79),
+filtro y evidencia del auditor (#81, #82).
