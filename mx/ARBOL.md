@@ -2,18 +2,18 @@
 
 País → ámbito → estado → municipio → poder → dependencia → tipo. Conteos de los registros; "(sin dato en la fuente)" marca un nivel que la fuente no publica (nunca se infiere).
 
-- país: MX — 966867
-  - ámbito: federal — 930236
-    - poder: CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO — 333936
-      - dependencia: AVISOS — 333847
-        - tipo: CONVOCATORIA DE ADQUISICIONES — 333847
+- país: MX — 967127
+  - ámbito: federal — 930456
+    - poder: CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO — 334001
+      - dependencia: AVISOS — 333912
+        - tipo: CONVOCATORIA DE ADQUISICIONES — 333912
       - dependencia: (sin dato en la fuente) — 87
         - tipo: CONVOCATORIA DE ADQUISICIONES — 87
       - dependencia: NULLS — 2
         - tipo: CONVOCATORIA DE ADQUISICIONES — 2
-    - poder: AVISOS JUDICIALES Y GENERALES — 260037
-      - dependencia: AVISOS — 236883
-        - tipo: AVISO — 236883
+    - poder: AVISOS JUDICIALES Y GENERALES — 260144
+      - dependencia: AVISOS — 236990
+        - tipo: AVISO — 236990
       - dependencia: AVISOS JUDICIALES Y GENERALES — 23084
         - tipo: OTRO — 22167
         - tipo: AVISO — 871
@@ -27,7 +27,7 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: OTRO — 2
       - dependencia: NULLS — 4
         - tipo: AVISO — 4
-    - poder: PODER EJECUTIVO — 165795
+    - poder: PODER EJECUTIVO — 165818
       - dependencia: SECRETARIA DE LA REFORMA AGRARIA — 23480
         - tipo: AVISO — 11677
         - tipo: DECRETO — 4402
@@ -44,9 +44,9 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: MANUAL — 13
         - tipo: ESTATUTO — 2
         - tipo: PROGRAMA — 2
-      - dependencia: SECRETARIA DE HACIENDA Y CREDITO PUBLICO — 21889
-        - tipo: ACUERDO — 6241
-        - tipo: OTRO — 5152
+      - dependencia: SECRETARIA DE HACIENDA Y CREDITO PUBLICO — 21896
+        - tipo: ACUERDO — 6247
+        - tipo: OTRO — 5153
         - tipo: OFICIO — 2673
         - tipo: RESOLUCION — 2543
         - tipo: CIRCULAR — 1636
@@ -96,13 +96,13 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: RESPUESTA A COMENTARIOS — 2
         - tipo: SENTENCIA — 2
         - tipo: ESTATUTO — 1
-      - dependencia: SECRETARIA DE SALUD — 13901
+      - dependencia: SECRETARIA DE SALUD — 13902
         - tipo: CONVENIO — 8494
         - tipo: OTRO — 2281
         - tipo: ACUERDO — 1211
         - tipo: PROYECTO DE NORMA OFICIAL MEXICANA — 379
+        - tipo: AVISO — 359
         - tipo: NORMA OFICIAL MEXICANA — 359
-        - tipo: AVISO — 358
         - tipo: RESPUESTA A COMENTARIOS — 267
         - tipo: DECRETO — 256
         - tipo: ACLARACION — 85
@@ -118,10 +118,10 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: CODIGO — 4
         - tipo: LEY — 4
         - tipo: EDICTO — 3
-      - dependencia: SECRETARIA DE ECONOMIA — 13430
-        - tipo: ACUERDO — 2583
+      - dependencia: SECRETARIA DE ECONOMIA — 13433
+        - tipo: ACUERDO — 2585
         - tipo: DECLARATORIA — 2417
-        - tipo: AVISO — 2235
+        - tipo: AVISO — 2236
         - tipo: OTRO — 1854
         - tipo: RESOLUCION — 1763
         - tipo: CONVENIO — 869
@@ -222,11 +222,11 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: CODIGO — 5
         - tipo: ESTATUTO — 3
         - tipo: DISPOSICIONES — 1
-      - dependencia: SECRETARIA DE MEDIO AMBIENTE Y RECURSOS NATURALES — 4040
-        - tipo: ACUERDO — 1966
+      - dependencia: SECRETARIA DE MEDIO AMBIENTE Y RECURSOS NATURALES — 4043
+        - tipo: ACUERDO — 1968
         - tipo: CONVENIO — 560
         - tipo: DECRETO — 390
-        - tipo: AVISO — 388
+        - tipo: AVISO — 389
         - tipo: OTRO — 190
         - tipo: NORMA OFICIAL MEXICANA — 143
         - tipo: PROYECTO DE NORMA OFICIAL MEXICANA — 93
@@ -330,8 +330,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAS — 2
         - tipo: PRESUPUESTO — 1
         - tipo: RESOLUCION — 1
-      - dependencia: SECRETARIA DEL TRABAJO Y PREVISION SOCIAL — 3325
-        - tipo: CONVENIO — 1234
+      - dependencia: SECRETARIA DEL TRABAJO Y PREVISION SOCIAL — 3326
+        - tipo: CONVENIO — 1235
         - tipo: OTRO — 792
         - tipo: ACUERDO — 384
         - tipo: CONVOCATORIA — 232
@@ -349,8 +349,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: RESOLUCION — 5
         - tipo: DISPOSICIONES — 2
         - tipo: OFICIO — 2
-      - dependencia: SECRETARIA DE ENERGIA — 2078
-        - tipo: ACUERDO — 302
+      - dependencia: SECRETARIA DE ENERGIA — 2079
+        - tipo: ACUERDO — 303
         - tipo: AVISO — 266
         - tipo: NORMA OFICIAL MEXICANA — 229
         - tipo: PROYECTO DE NORMA OFICIAL MEXICANA — 225
@@ -542,11 +542,11 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: OFICIO — 5
         - tipo: LEY — 2
         - tipo: SENTENCIA — 1
-      - dependencia: SECRETARIA DE MARINA — 687
-        - tipo: AVISO — 208
+      - dependencia: SECRETARIA DE MARINA — 689
+        - tipo: AVISO — 209
         - tipo: ACUERDO — 169
         - tipo: DECRETO — 110
-        - tipo: OTRO — 78
+        - tipo: OTRO — 79
         - tipo: REGLAMENTO — 38
         - tipo: DECLARATORIA — 19
         - tipo: ACLARACION — 13
@@ -637,6 +637,15 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: OTRO — 2
         - tipo: DECRETO — 1
         - tipo: REGLAS — 1
+      - dependencia: SECRETARIA ANTICORRUPCION Y BUEN GOBIERNO — 388
+        - tipo: CIRCULAR — 332
+        - tipo: ACUERDO — 41
+        - tipo: OFICIO — 8
+        - tipo: AVISO — 2
+        - tipo: OTRO — 2
+        - tipo: CODIGO — 1
+        - tipo: DECRETO — 1
+        - tipo: MANUAL — 1
       - dependencia: COMISION REGULADORA DE ENERGIA — 384
         - tipo: ACUERDO — 229
         - tipo: RESOLUCION — 97
@@ -651,15 +660,6 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: CODIGO — 1
         - tipo: MANUAL — 1
         - tipo: PROYECTO DE NORMA OFICIAL MEXICANA — 1
-      - dependencia: SECRETARIA ANTICORRUPCION Y BUEN GOBIERNO — 384
-        - tipo: CIRCULAR — 328
-        - tipo: ACUERDO — 41
-        - tipo: OFICIO — 8
-        - tipo: AVISO — 2
-        - tipo: OTRO — 2
-        - tipo: CODIGO — 1
-        - tipo: DECRETO — 1
-        - tipo: MANUAL — 1
       - dependencia: SECRETARIA DE CULTURA — 343
         - tipo: ACUERDO — 153
         - tipo: AVISO — 59
@@ -741,8 +741,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: DECRETO — 4
         - tipo: REGLAMENTO — 4
         - tipo: OFICIO — 1
-      - dependencia: SECRETARIA DE CIENCIA, HUMANIDADES, TECNOLOGIA E INNOVACION — 87
-        - tipo: ACUERDO — 48
+      - dependencia: SECRETARIA DE CIENCIA, HUMANIDADES, TECNOLOGIA E INNOVACION — 88
+        - tipo: ACUERDO — 49
         - tipo: PROGRAMA — 19
         - tipo: AVISO — 10
         - tipo: REGLAS — 4
@@ -843,12 +843,12 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAMENTO — 1
       - dependencia: TRIBUNAL SUPERIOR AGRARIO — 1
         - tipo: SENTENCIA — 1
-    - poder: (sin dato en la fuente) — 85853
+    - poder: (sin dato en la fuente) — 85862
       - dependencia: Tribunales Colegiados de Circuito — 33971
         - tipo: TESIS AISLADA — 30995
         - tipo: JURISPRUDENCIA — 2976
-      - dependencia: Banco de México — 33503
-        - tipo: INDICADOR ECONOMICO — 33503
+      - dependencia: Banco de México — 33512
+        - tipo: INDICADOR ECONOMICO — 33512
       - dependencia: Primera Sala — 6980
         - tipo: TESIS AISLADA — 4130
         - tipo: JURISPRUDENCIA — 2850
@@ -875,9 +875,9 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: ORDENANZA — 1
         - tipo: OTRO — 1
         - tipo: PRESUPUESTO — 1
-    - poder: ORGANISMOS AUTONOMOS — 44882
-      - dependencia: BANCO DE MEXICO — 26684
-        - tipo: INDICADOR ECONOMICO — 22933
+    - poder: ORGANISMOS AUTONOMOS — 44893
+      - dependencia: BANCO DE MEXICO — 26690
+        - tipo: INDICADOR ECONOMICO — 22939
         - tipo: OTRO — 3215
         - tipo: CIRCULAR — 327
         - tipo: CONVOCATORIA — 58
@@ -910,10 +910,10 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAMENTO — 2
         - tipo: DECLARATORIA — 1
         - tipo: EXTRACTO — 1
-      - dependencia: INSTITUTO NACIONAL ELECTORAL — 3545
+      - dependencia: INSTITUTO NACIONAL ELECTORAL — 3549
         - tipo: ACUERDO — 1967
-        - tipo: OTRO — 912
-        - tipo: EXTRACTO — 297
+        - tipo: OTRO — 913
+        - tipo: EXTRACTO — 300
         - tipo: RESOLUCION — 297
         - tipo: AVISO — 54
         - tipo: CIRCULAR — 9
@@ -1013,9 +1013,9 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: CONVOCATORIA — 1
         - tipo: DISPOSICIONES — 1
         - tipo: ESTATUTO — 1
-      - dependencia: FISCALIA GENERAL DE LA REPUBLICA — 204
+      - dependencia: FISCALIA GENERAL DE LA REPUBLICA — 205
         - tipo: ACUERDO — 92
-        - tipo: OTRO — 33
+        - tipo: OTRO — 34
         - tipo: CIRCULAR — 25
         - tipo: LINEAMIENTOS — 18
         - tipo: AVISO — 12
@@ -1775,7 +1775,7 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: AVISO — 1
       - dependencia: SERVICIO GEOLOGICO MEXICANO — 1
         - tipo: OTRO — 1
-    - poder: PODER JUDICIAL — 7981
+    - poder: PODER JUDICIAL — 7985
       - dependencia: CONSEJO DE LA JUDICATURA FEDERAL — 4356
         - tipo: ACUERDO — 2681
         - tipo: AVISO — 662
@@ -1792,9 +1792,9 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAS — 3
         - tipo: DISPOSICIONES — 2
         - tipo: CODIGO — 1
-      - dependencia: SUPREMA CORTE DE JUSTICIA DE LA NACION — 2784
-        - tipo: SENTENCIA — 1662
-        - tipo: ACUERDO — 563
+      - dependencia: SUPREMA CORTE DE JUSTICIA DE LA NACION — 2787
+        - tipo: SENTENCIA — 1664
+        - tipo: ACUERDO — 564
         - tipo: OTRO — 431
         - tipo: AVISO — 48
         - tipo: ACLARACION — 20
@@ -1819,8 +1819,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAMENTO — 3
         - tipo: CONVOCATORIA — 2
         - tipo: EXTRACTO — 1
-      - dependencia: ORGANO DE ADMINISTRACION JUDICIAL — 93
-        - tipo: ACUERDO — 65
+      - dependencia: ORGANO DE ADMINISTRACION JUDICIAL — 94
+        - tipo: ACUERDO — 66
         - tipo: OTRO — 20
         - tipo: AVISO — 6
         - tipo: ACLARACION — 1
@@ -1857,10 +1857,10 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: ACUERDO — 1
       - dependencia: TRIBUNAL SUPERIOR AGRARIO — 1
         - tipo: EDICTO — 1
-    - poder: PODER LEGISLATIVO — 1270
-      - dependencia: AUDITORIA SUPERIOR DE LA FEDERACION — 467
+    - poder: PODER LEGISLATIVO — 1271
+      - dependencia: AUDITORIA SUPERIOR DE LA FEDERACION — 468
         - tipo: CONVENIO — 163
-        - tipo: ACUERDO — 127
+        - tipo: ACUERDO — 128
         - tipo: OTRO — 96
         - tipo: MANUAL — 21
         - tipo: LINEAMIENTOS — 12
@@ -2077,7 +2077,7 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
     - poder: TRIBUNAL FEDERAL DE CONCILIACION Y ARBITRAJE — 1
       - dependencia: ORGANISMOS AUTONOMOS — 1
         - tipo: ACUERDO — 1
-  - ámbito: estatal — 29944
+  - ámbito: estatal — 29984
     - estado: Ciudad de México — 5647
       - poder: PODER EJECUTIVO — 4709
         - dependencia: (sin dato en la fuente) — 4709
@@ -2534,9 +2534,9 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
           - tipo: CODIGO — 1
           - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
           - tipo: FE DE ERRATAS — 1
-    - estado: Aguascalientes — 1558
-      - poder: PODER EJECUTIVO — 922
-        - dependencia: (sin dato en la fuente) — 922
+    - estado: Aguascalientes — 1598
+      - poder: PODER EJECUTIVO — 962
+        - dependencia: (sin dato en la fuente) — 962
           - tipo: ACUERDO — 202
           - tipo: REGLAMENTO — 139
           - tipo: CONVENIO — 109
@@ -2547,9 +2547,11 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
           - tipo: REGLA — 32
           - tipo: DISPOSICIONES DIVERSAS — 29
           - tipo: LINEAMIENTO — 27
+          - tipo: ACLARACION — 26
           - tipo: PROGRAMA — 23
           - tipo: AVISO — 22
           - tipo: ANEXO — 18
+          - tipo: LEY — 18
           - tipo: INFORME — 17
           - tipo: FE DE ERRATAS — 13
           - tipo: DECRETO — 12
@@ -2562,7 +2564,6 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
           - tipo: PLAN — 5
           - tipo: PROTOCOLO — 4
           - tipo: BASE — 3
-          - tipo: LEY — 3
           - tipo: NORMA — 3
           - tipo: ADICION — 2
           - tipo: CATALOGO — 2
@@ -2570,7 +2571,6 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
           - tipo: DISPOSICION INTERNA — 2
           - tipo: FORMATO — 2
           - tipo: PRESUPUESTO — 2
-          - tipo: ACLARACION — 1
           - tipo: CONVENCION — 1
           - tipo: DECLARATORIA — 1
           - tipo: DECRETO LEGISLATIVO — 1

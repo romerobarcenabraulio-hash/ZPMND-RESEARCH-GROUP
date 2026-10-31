@@ -1,15 +1,15 @@
 # Catálogo MX
 
-Total de registros: **966867**. Conteos calculados de los registros; nada resumido ni interpretado.
+Total de registros: **967127**. Conteos calculados de los registros; nada resumido ni interpretado.
 
 ## Por fuente
 
 | categoría | registros |
 |---|---:|
-| mx.dof | 844383 |
+| mx.dof | 844594 |
 | mx.hf-tesis-scjn | 51189 |
-| mx.banxico-sie | 33503 |
-| mx.ojn-estatal | 29944 |
+| mx.banxico-sie | 33512 |
+| mx.ojn-estatal | 29984 |
 | mx.ojn-municipal | 6687 |
 | mx.inegi-bie | 693 |
 | mx.leyes-federales | 318 |
@@ -19,26 +19,26 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 
 | categoría | registros |
 |---|---:|
-| mx.dof | CONVOCATORIA DE ADQUISICIONES | 333936 |
-| mx.dof | AVISO | 264247 |
-| mx.dof | OTRO | 50512 |
-| mx.dof | ACUERDO | 42174 |
+| mx.dof | CONVOCATORIA DE ADQUISICIONES | 334001 |
+| mx.dof | AVISO | 264358 |
+| mx.dof | OTRO | 50516 |
+| mx.dof | ACUERDO | 42189 |
 | mx.hf-tesis-scjn | TESIS AISLADA | 37947 |
-| mx.banxico-sie | INDICADOR ECONOMICO | 33503 |
-| mx.dof | CONVENIO | 24532 |
-| mx.dof | INDICADOR ECONOMICO | 24308 |
+| mx.banxico-sie | INDICADOR ECONOMICO | 33512 |
+| mx.dof | CONVENIO | 24533 |
+| mx.dof | INDICADOR ECONOMICO | 24314 |
 | mx.dof | CONVOCATORIA DE PLAZAS | 19819 |
 | mx.dof | DECRETO | 16372 |
 | mx.hf-tesis-scjn | JURISPRUDENCIA | 13242 |
 | mx.dof | RESOLUCION | 11802 |
-| mx.dof | CIRCULAR | 11478 |
-| mx.dof | EXTRACTO | 10421 |
+| mx.dof | CIRCULAR | 11482 |
+| mx.dof | EXTRACTO | 10424 |
 | mx.dof | DECLARATORIA | 9013 |
 | mx.ojn-estatal | ACUERDO | 7769 |
-| mx.dof | SENTENCIA | 5959 |
+| mx.dof | SENTENCIA | 5961 |
 | mx.dof | OFICIO | 4317 |
 | mx.ojn-estatal | REGLAMENTO | 4175 |
-| mx.ojn-estatal | LEY | 3983 |
+| mx.ojn-estatal | LEY | 3998 |
 | mx.ojn-municipal | REGLAMENTO | 3464 |
 | mx.ojn-estatal | DECRETO LEGISLATIVO | 3149 |
 | mx.dof | ACLARACION | 2424 |
@@ -96,6 +96,7 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 | mx.dof | PRESUPUESTO | 43 |
 | mx.ojn-estatal | PROCEDIMIENTO | 43 |
 | mx.ojn-estatal | PUNTO RESOLUTIVO | 43 |
+| mx.ojn-estatal | ACLARACION | 42 |
 | mx.ojn-estatal | PROTOCOLO | 41 |
 | mx.ojn-municipal | PROGRAMA | 40 |
 | mx.ojn-estatal | LISTADO | 39 |
@@ -108,7 +109,6 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 | mx.ojn-municipal | REFORMA | 22 |
 | mx.ojn-estatal | JURISPRUDENCIA | 21 |
 | mx.ojn-estatal | ACUERDO DE COORDINACION | 19 |
-| mx.ojn-estatal | ACLARACION | 17 |
 | mx.ojn-estatal | ADENDA | 17 |
 | mx.ojn-estatal | OFICIO | 17 |
 | mx.ojn-estatal | RELACION | 15 |
@@ -187,7 +187,7 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 
 | categoría | registros |
 |---|---:|
-| mx.ojn-estatal | VIGENTE | 29868 |
+| mx.ojn-estatal | VIGENTE | 29908 |
 | mx.ojn-municipal | VIGENTE | 6684 |
 | mx.leyes-federales | VIGENTE | 315 |
 | mx.reglamentos-federales | VIGENTE | 138 |
@@ -201,18 +201,18 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 
 | categoría | registros |
 |---|---:|
-| mx.dof | pending | 514820 |
-| mx.dof | metadata_only | 260037 |
-| mx.dof | stored | 69336 |
+| mx.dof | pending | 513618 |
+| mx.dof | metadata_only | 260144 |
+| mx.dof | stored | 70639 |
 | mx.hf-tesis-scjn | stored | 51189 |
-| mx.banxico-sie | stored | 33503 |
-| mx.ojn-estatal | stored | 29822 |
+| mx.banxico-sie | stored | 33512 |
+| mx.ojn-estatal | stored | 29858 |
 | mx.ojn-municipal | stored | 6649 |
 | mx.inegi-bie | stored | 693 |
 | mx.leyes-federales | stored | 318 |
-| mx.dof | failed | 190 |
+| mx.dof | failed | 193 |
 | mx.reglamentos-federales | stored | 150 |
-| mx.ojn-estatal | failed | 104 |
+| mx.ojn-estatal | failed | 108 |
 | mx.ojn-municipal | failed | 38 |
 | mx.ojn-estatal | no_text_link | 18 |
 
@@ -225,7 +225,7 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 | mx.dof | 2013 | 34472 |
 | mx.dof | 2011 | 34234 |
 | mx.dof | 2015 | 33983 |
-| mx.banxico-sie | ???? | 33503 |
+| mx.banxico-sie | ???? | 33512 |
 | mx.dof | 2016 | 32633 |
 | mx.dof | 2017 | 31104 |
 | mx.dof | 2008 | 30731 |
@@ -249,7 +249,7 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 | mx.dof | 2021 | 23406 |
 | mx.dof | 2024 | 23403 |
 | mx.dof | 2020 | 19889 |
-| mx.dof | 2026 | 18848 |
+| mx.dof | 2026 | 19059 |
 | mx.dof | 1996 | 13754 |
 | mx.dof | 1998 | 12921 |
 | mx.dof | 1997 | 12598 |
@@ -308,6 +308,7 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 | mx.ojn-estatal | 2024 | 48 |
 | mx.ojn-estatal | 1989 | 46 |
 | mx.ojn-estatal | 1988 | 44 |
+| mx.ojn-estatal | 2026 | 40 |
 | mx.ojn-estatal | 1981 | 33 |
 | mx.ojn-estatal | 1983 | 30 |
 | mx.ojn-estatal | 1984 | 30 |
@@ -506,19 +507,19 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 
 | categoría | registros |
 |---|---:|
-| CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO | AVISOS | 333847 |
-| AVISOS JUDICIALES Y GENERALES | AVISOS | 236883 |
+| CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO | AVISOS | 333912 |
+| AVISOS JUDICIALES Y GENERALES | AVISOS | 236990 |
 | - | Tribunales Colegiados de Circuito | 33971 |
-| - | Banco de México | 33503 |
-| ORGANISMOS AUTONOMOS | BANCO DE MEXICO | 26684 |
+| - | Banco de México | 33512 |
+| ORGANISMOS AUTONOMOS | BANCO DE MEXICO | 26690 |
 | PODER EJECUTIVO | SECRETARIA DE LA REFORMA AGRARIA | 23480 |
 | AVISOS JUDICIALES Y GENERALES | AVISOS JUDICIALES Y GENERALES | 23084 |
-| PODER EJECUTIVO | SECRETARIA DE HACIENDA Y CREDITO PUBLICO | 21889 |
+| PODER EJECUTIVO | SECRETARIA DE HACIENDA Y CREDITO PUBLICO | 21896 |
 | CONVOCATORIAS PARA CONCURSOS DE PLAZAS VACANTES DEL SERVICIO PROFESIONAL DE CARRERA EN LA ADMINISTRACION PUBLICA FEDERAL | AVISOS | 19815 |
-| PODER EJECUTIVO | - | 17553 |
+| PODER EJECUTIVO | - | 17593 |
 | PODER EJECUTIVO | SECRETARIA DE GOBERNACION | 16828 |
-| PODER EJECUTIVO | SECRETARIA DE SALUD | 13901 |
-| PODER EJECUTIVO | SECRETARIA DE ECONOMIA | 13430 |
+| PODER EJECUTIVO | SECRETARIA DE SALUD | 13902 |
+| PODER EJECUTIVO | SECRETARIA DE ECONOMIA | 13433 |
 | PODER EJECUTIVO | SECRETARIA DE LA FUNCION PUBLICA | 12554 |
 | PODER LEGISLATIVO | - | 9388 |
 | PODER EJECUTIVO | SECRETARIA DE DESARROLLO AGRARIO, TERRITORIAL Y URBANO | 8848 |
@@ -529,17 +530,17 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 | - | Segunda Sala | 5586 |
 | ORGANISMOS AUTONOMOS | TRIBUNAL SUPERIOR AGRARIO | 4815 |
 | PODER JUDICIAL | CONSEJO DE LA JUDICATURA FEDERAL | 4356 |
-| PODER EJECUTIVO | SECRETARIA DE MEDIO AMBIENTE Y RECURSOS NATURALES | 4040 |
+| PODER EJECUTIVO | SECRETARIA DE MEDIO AMBIENTE Y RECURSOS NATURALES | 4043 |
 | PODER EJECUTIVO | SECRETARIA DE COMERCIO Y FOMENTO INDUSTRIAL | 3708 |
 | PODER EJECUTIVO | SECRETARIA DE AGRICULTURA, GANADERIA, DESARROLLO RURAL, PESCA Y ALIMENTACION | 3674 |
-| ORGANISMOS AUTONOMOS | INSTITUTO NACIONAL ELECTORAL | 3545 |
+| ORGANISMOS AUTONOMOS | INSTITUTO NACIONAL ELECTORAL | 3549 |
 | PODER EJECUTIVO | SECRETARIA DE EDUCACION PUBLICA | 3536 |
 | PODER EJECUTIVO | SECRETARIA DE DESARROLLO SOCIAL | 3501 |
-| PODER EJECUTIVO | SECRETARIA DEL TRABAJO Y PREVISION SOCIAL | 3325 |
+| PODER EJECUTIVO | SECRETARIA DEL TRABAJO Y PREVISION SOCIAL | 3326 |
 | ORGANISMOS AUTONOMOS | INSTITUTO FEDERAL ELECTORAL | 3282 |
-| PODER JUDICIAL | SUPREMA CORTE DE JUSTICIA DE LA NACION | 2784 |
+| PODER JUDICIAL | SUPREMA CORTE DE JUSTICIA DE LA NACION | 2787 |
 | ORGANOS AUTONOMOS | - | 2214 |
-| PODER EJECUTIVO | SECRETARIA DE ENERGIA | 2078 |
+| PODER EJECUTIVO | SECRETARIA DE ENERGIA | 2079 |
 | - | Pleno | 2066 |
 | - | Plenos de Circuito | 1703 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | COMISION NACIONAL PARA EL DESARROLLO DE LOS PUEBLOS INDIGENAS | 1641 |
@@ -561,7 +562,7 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 | PODER EJECUTIVO | SECRETARIA DE AGRICULTURA Y RECURSOS HIDRAULICOS | 702 |
 | - | Instituto Nacional de Estadística y Geografía (INEGI) | 693 |
 | ORGANISMOS AUTONOMOS | INSTITUTO FEDERAL DE TELECOMUNICACIONES | 691 |
-| PODER EJECUTIVO | SECRETARIA DE MARINA | 687 |
+| PODER EJECUTIVO | SECRETARIA DE MARINA | 689 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO | 682 |
 | PODER JUDICIAL | TRIBUNAL ELECTORAL DEL PODER JUDICIAL DE LA FEDERACION | 643 |
 | PODER EJECUTIVO | SECRETARIA DE SEGURIDAD PUBLICA | 640 |
@@ -573,12 +574,12 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 | ORGANISMOS AUTONOMOS | CONSEJO DE SALUBRIDAD GENERAL | 470 |
 | PODER EJECUTIVO | CONSEJO DE SALUBRIDAD GENERAL | 470 |
 | PODER EJECUTIVO | SECRETARIA DE LAS MUJERES | 470 |
-| PODER LEGISLATIVO | AUDITORIA SUPERIOR DE LA FEDERACION | 467 |
+| PODER LEGISLATIVO | AUDITORIA SUPERIOR DE LA FEDERACION | 468 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | INSTITUTO MEXICANO DE LA PROPIEDAD INDUSTRIAL | 449 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | COMISION REGULADORA DE ENERGIA | 432 |
 | ORGANISMOS AUTONOMOS | TRIBUNAL UNITARIO AGRARIO | 421 |
+| PODER EJECUTIVO | SECRETARIA ANTICORRUPCION Y BUEN GOBIERNO | 388 |
 | PODER EJECUTIVO | COMISION REGULADORA DE ENERGIA | 384 |
-| PODER EJECUTIVO | SECRETARIA ANTICORRUPCION Y BUEN GOBIERNO | 384 |
 | ORGANISMOS AUTONOMOS | INSTITUTO NACIONAL DE TRANSPARENCIA, ACCESO A LA INFORMACION Y PROTECCION DE DATOS PERSONALES | 379 |
 | PODER LEGISLATIVO | CAMARA DE DIPUTADOS | 364 |
 | ORGANISMOS AUTONOMOS | COMISION FEDERAL DE COMPETENCIA ECONOMICA | 362 |
@@ -597,7 +598,7 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | COMISION FEDERAL DE TELECOMUNICACIONES | 215 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | INSTITUTO PARA LA PROTECCION AL AHORRO BANCARIO | 213 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | COMISION NACIONAL PARA LA PROTECCION Y DEFENSA DE LOS USUARIOS DE SERVICIOS FINANCIEROS | 210 |
-| ORGANISMOS AUTONOMOS | FISCALIA GENERAL DE LA REPUBLICA | 204 |
+| ORGANISMOS AUTONOMOS | FISCALIA GENERAL DE LA REPUBLICA | 205 |
 | ORGANISMOS AUTONOMOS | TRIBUNAL FEDERAL DE CONCILIACION Y ARBITRAJE | 193 |
 | EMPRESAS PRODUCTIVAS DEL ESTADO | COMISION FEDERAL DE ELECTRICIDAD | 184 |
 | PODER EJECUTIVO | COMISION NACIONAL DE HIDROCARBUROS | 177 |
@@ -612,12 +613,12 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 | PODER LEGISLATIVO | CONGRESO DE LA UNION | 101 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | SERVICIO DE ADMINISTRACION Y ENAJENACION DE BIENES | 99 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | CONSEJO NACIONAL DE NORMALIZACION Y CERTIFICACION DE COMPETENCIAS LABORALES | 98 |
-| PODER JUDICIAL | ORGANO DE ADMINISTRACION JUDICIAL | 93 |
+| PODER JUDICIAL | ORGANO DE ADMINISTRACION JUDICIAL | 94 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | COMISION EJECUTIVA DE ATENCION A VICTIMAS | 92 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | CENTRO FEDERAL DE CONCILIACION Y REGISTRO LABORAL | 90 |
 | EMPRESAS PRODUCTIVAS DEL ESTADO | PETROLEOS MEXICANOS | 88 |
+| PODER EJECUTIVO | SECRETARIA DE CIENCIA, HUMANIDADES, TECNOLOGIA E INNOVACION | 88 |
 | CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO | - | 87 |
-| PODER EJECUTIVO | SECRETARIA DE CIENCIA, HUMANIDADES, TECNOLOGIA E INNOVACION | 87 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | INSTITUTO NACIONAL DE LAS MUJERES | 85 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | CONSEJO NACIONAL PARA PREVENIR LA DISCRIMINACION | 84 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | CONSEJO NACIONAL DE HUMANIDADES, CIENCIAS Y TECNOLOGIAS | 83 |
@@ -819,7 +820,7 @@ Total de registros: **966867**. Conteos calculados de los registros; nada resumi
 | mx.ojn-estatal | Coahuila de Zaragoza | 2665 |
 | mx.ojn-estatal | Jalisco | 2131 |
 | mx.ojn-estatal | Estado de México | 1795 |
-| mx.ojn-estatal | Aguascalientes | 1558 |
+| mx.ojn-estatal | Aguascalientes | 1598 |
 | mx.ojn-municipal | Veracruz | 1556 |
 | mx.ojn-estatal | Chihuahua | 1493 |
 | mx.ojn-municipal | Jalisco | 1438 |
