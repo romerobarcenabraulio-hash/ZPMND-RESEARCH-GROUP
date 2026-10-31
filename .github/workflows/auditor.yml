@@ -296,7 +296,8 @@ jobs:
           flat = re.sub(r'[^a-z0-9]', '', text.lower())
           def entropy(s):
               return -sum(s.count(c) / len(s) * math.log2(s.count(c) / len(s)) for c in set(s))
-          bad = 'skantoat' in flat or 'skantapi' in flat or 'ghs' + '_' in text or 'github_pat' in text.lower()
+          # a GitHub token is its prefix and the characters after it, not the word alone (scripts/auditor_gpt.py, 2026-10-31)
+          bad = 'skantoat' in flat or 'skantapi' in flat or bool(re.search(r'(?:github_pat_|gh[pousr]_)[A-Za-z0-9_]{20,}', text, re.I))
           for run in re.findall(r'[A-Za-z0-9+=_-]{32,}', text):
               if re.fullmatch(r'[0-9a-f]{40}', run):
                   continue  # a commit SHA

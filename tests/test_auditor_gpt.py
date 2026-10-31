@@ -248,6 +248,8 @@ def credential_bodies():
         'openai key, low entropy': 'la llave: ' + 'sk-' + 'proj-' + 'abcd' * 10,
         'anthropic oauth': 'token ' + 'sk-' + 'ant-' + 'oat01-' + 'Ab' * 20,
         'github app token': 'ghs' + '_' + 'x' * 36,
+        'github fine-grained token': 'github' + '_pat_' + '11ABCDEFG0' * 8,
+        'github oauth token': 'gho' + '_' + 'Ab9' * 12,
         'random secret': 'valor ' + ''.join(rnd.choices(string.ascii_letters + string.digits, k=48)),
         'long hex': 'h ' + '0123456789abcdef' * 3,
     }
@@ -260,6 +262,29 @@ class Credentials(Base):
                 r = self.run_audit(FakeHTTP(response(answer(body=body))))
                 self.assertRevise(r, 'Cuerpo retenido')
                 self.assertNotIn(body, r['comment'])
+
+    def test_a_review_that_names_a_token_prefix_without_a_token_is_published(self):
+        # every GPT review of #75 was withheld for naming the prefix of the fine-grained tokens it validates
+        body = (f'Revisé el commit {SHA}. NON-BLOCKING: el instalador valida `^' + 'github' + '_pat_[A-Za-z0-9_]{50,255}$` '
+                'y el prefijo ' + 'github' + '_pat_ nunca va en una línea de comandos; ' + 'ghs' + '_ es otro tipo de token.')
+        r = self.run_audit(FakeHTTP(response(answer(body=body))))
+        self.assertEqual(r['verdict'], 'PASS')
+        self.assertIn(body, r['comment'])
+
+    def test_the_claude_auditors_post_filter_reads_the_same_shapes(self):
+        import re as re_, subprocess, sys as sys_, tempfile as tf, textwrap, yaml as yaml_
+        wf = (ROOT / '.github' / 'workflows' / 'auditor.yml').read_text(encoding='utf-8')
+        snippet = textwrap.dedent(re_.search(r"python3 - body.md <<'PY'\n(.*?)\n\s*PY\n", wf, re_.S).group(1))
+        def withheld(body):
+            with tf.NamedTemporaryFile('w', suffix='.md', delete=False) as f:
+                f.write(body)
+            return subprocess.run([sys_.executable, '-I', '-', f.name], input=snippet, text=True).returncode == 1
+        for name, body in credential_bodies().items():
+            if name.startswith('openai'):
+                continue  # OpenAI key prefixes are the GPT job's own addition: only that job holds an OpenAI key
+            with self.subTest(name):
+                self.assertTrue(withheld(body))
+        self.assertFalse(withheld('el prefijo ' + 'github' + '_pat_ y la expresión `^' + 'github' + '_pat_[A-Za-z0-9_]{50,255}$`'))
 
     def test_ordinary_review_text_is_published(self):
         body = (f'Revisé `scripts/auditor_gpt.py:120` en el commit {SHA}. NON-BLOCKING: '
