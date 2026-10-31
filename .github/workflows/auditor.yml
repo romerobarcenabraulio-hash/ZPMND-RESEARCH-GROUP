@@ -105,6 +105,17 @@ jobs:
     # (run 40441783078) was cancelled at 90 min; CI's shards measure ~1.7 min per mutant per core, so ~3 h on 4 cores
     permissions: { contents: read }
     concurrency: { group: 'auditor-evidence-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }
+    # the throwaway Postgres of ci.yml (this PR adds both), so the evidence the reviewers read runs the database tests
+    # instead of skipping them (GPT on d974ef0, #73); its password is the container's, never a real one
+    services:
+      postgres:
+        image: postgres:16-alpine  # alpine: uid 70, never the extraction user tests/test_aislamiento.py kills (ci.yml)
+        env: { POSTGRES_PASSWORD: postgres }
+        ports: ['5432:5432']
+        options: --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      RG_TEST_DB_URL: postgresql://postgres:postgres@localhost:5432/postgres
+      RG_REQUIRE_DB_TESTS: '1'  # tests/test_postgres.py fails instead of skipping when the Postgres is missing
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { ref: '${{ needs.gate.outputs.sha }}', persist-credentials: false, fetch-depth: 0 }
