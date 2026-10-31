@@ -484,7 +484,7 @@ MUT = [
  ('rg/sondeo.py', "    if longitud and not (isinstance(c.get('registro'), str)", "    if False and not (isinstance(c.get('registro'), str)"),
  ('rg/sondeo.py', '    if n <= 0:', '    if n < 0:'),
  ('rg/sondeo.py', "    if not c.get('unidad'):", '    if False:'),
- ('rg/sondeo.py', '    if not fuentes:  # GPT on ee5296e', '    if False:  # GPT on ee5296e'),
+ ('rg/sondeo.py', '    if not fuentes:  # a wrong path, or a --solo', '    if False:  # a wrong path, or a --solo'),
  ('rg/sondeo.py', "    if parts.scheme != 'https' or (parts.hostname or '') not in hosts:", '    if False:'),
  ('rg/sondeo.py', "    probs += [f'{i}: source_id in more than one file' for i in sorted({i for i in ids if ids.count(i) > 1})]", '    pass'),
  ('rg/sondeo.py', "'alcance', 'license', 'via')", "'alcance', 'license')"),

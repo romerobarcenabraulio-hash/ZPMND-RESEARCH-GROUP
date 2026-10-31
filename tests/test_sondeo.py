@@ -213,9 +213,15 @@ class Sondear(unittest.TestCase):
         self.assertEqual([u for u, _ in opener.calls].count('https://ejemplo.org/robots.txt'), 1)
         self.assertIn(5.0, slept)  # the second source waited the site's Crawl-delay after the first
 
-    def test_an_empty_registry_never_publishes_a_complete_run(self):
+    def test_an_empty_registry_or_selection_never_publishes_a_complete_run(self):
         with tempfile.TemporaryDirectory() as d, self.assertRaises(SystemExit):
             sondeo.main(['--registro', d, '--out', str(Path(d) / 'out.json')])
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / 'I.json').write_text(json.dumps(doc(GOOD)))
+            for solo in (['int.no-existe'], []):  # GPT on a7b4b11: --solo could empty a valid registry
+                with self.subTest(solo=solo), self.assertRaises(SystemExit):
+                    sondeo.main(['--registro', d, '--out', str(Path(d) / 'out.json'), '--solo', *solo])
+                self.assertFalse((Path(d) / 'out.json').exists())
 
     def test_the_command_writes_the_results_and_a_summary(self):
         with tempfile.TemporaryDirectory() as d:

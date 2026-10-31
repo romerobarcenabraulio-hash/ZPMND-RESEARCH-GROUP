@@ -237,10 +237,10 @@ def main(argv=None):
     a.add_argument('--solo', nargs='*', default=None, help='only these source_ids')
     x = a.parse_args(argv)
     fuentes = cargar(x.registro)
-    if not fuentes:  # GPT on ee5296e: a wrong path must not publish an empty run as complete
-        raise SystemExit(f'registro vacío: {x.registro}')
     if x.solo is not None:
         fuentes = [(l, f) for l, f in fuentes if f['source_id'] in set(x.solo)]
+    if not fuentes:  # a wrong path, or a --solo naming nothing that exists, never publishes an empty run as complete
+        raise SystemExit(f'nada que sondear: {x.registro} {x.solo or ""}'.strip())  # GPT on ee5296e and a7b4b11
     out = Path(x.out)
 
     def guardar(res):  # after every source, whole or not at all: a run cut short keeps what it measured
