@@ -148,7 +148,7 @@ class _PublicHTTPS(urllib.request.HTTPSHandler):
 class Fetcher:
     def __init__(self, allowed_hosts, budget=3000, min_interval=1.0, max_bytes=60_000_000, timeout=60,
                  opener=None, clock=time.monotonic, sleep=time.sleep, retries=2, deadline=None, robots_log=None,
-                 secrets=None):
+                 secrets=None, compartido=None):
         self.allowed_hosts = {h.lower() for h in allowed_hosts}
         self.budget = budget
         self.used = 0
@@ -158,9 +158,12 @@ class Fetcher:
         self.retries = retries  # network errors and 5xx are retried with growing pauses; 4xx is final
         self._opener = opener or urllib.request.build_opener(_NoRedirect, _PublicHTTPS)  # env proxies (HTTPS_PROXY) apply
         self._clock, self._sleep = clock, sleep
-        self._last = {}
-        self._robots = {}
-        self._robots_status = {}
+        # compartido: a dict several Fetchers share so the pause per host (and Crawl-delay) and robots.txt hold across them;
+        # each keeps its own allowed hosts, budget and deadline (rg/sondeo.py asks many sources of one host: GPT on ee5296e)
+        c = {} if compartido is None else compartido
+        self._last = c.setdefault('last', {})
+        self._robots = c.setdefault('robots', {})
+        self._robots_status = c.setdefault('robots_status', {})
         self.deadline = deadline  # clock() value after which no request is sent (job time limit)
         self.robots_log = {} if robots_log is None else robots_log  # origin -> final robots URL, status, redirects
         self.secrets = {v: h.lower() for v, h in (secrets or {}).items() if v}  # credential -> the only host it may reach
