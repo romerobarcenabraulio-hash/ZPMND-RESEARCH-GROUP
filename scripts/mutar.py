@@ -29,6 +29,7 @@ MUT = [
  ('.github/workflows/auditor.yml', '          if [ "$EVENT" != issue_comment ]; then\n            for _ in', '          if true; then\n            for _ in'),
  ('.github/workflows/auditor.yml', "        env: { SHA: '${{ needs.gate.outputs.sha }}' }", "        env: { GH_TOKEN: '${{ github.token }}', SHA: '${{ needs.gate.outputs.sha }}' }"),
  ('.github/workflows/auditor.yml', '        with: { ref: main, fetch-depth: 0, persist-credentials: false }', "        with: { ref: '${{ needs.gate.outputs.sha }}', fetch-depth: 0, persist-credentials: false }"),
+ ('.github/workflows/auditor.yml', "      RG_REQUIRE_DB_TESTS: '1'  # tests/test_postgres.py fails instead of skipping when the Postgres is missing\n    steps:", '    steps:'),
  ('.github/workflows/auditor.yml', "    concurrency: { group: 'auditor-gpt-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }", "    concurrency: { group: 'auditor-gpt-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }\n    env: { OPENAI_API_KEY: '${{ secrets.OPENAI_API_KEY }}' }"),
  ('.github/workflows/auditor.yml', "    env: { RG_EXTRACT_AS: rgparse }  # hostile raws are parsed as that user", "    env: { RG_EXTRACT_NOT: rgparse }  # hostile raws are parsed as that user"),
  ('.github/workflows/auditor.yml', "    if: needs.post.outputs.verdict == 'PASS' && needs.post-gpt.outputs.verdict == 'PASS'\n", "    if: needs.post.outputs.verdict == 'PASS'\n"),

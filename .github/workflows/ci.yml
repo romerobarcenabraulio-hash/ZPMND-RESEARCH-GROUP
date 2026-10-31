@@ -10,6 +10,17 @@ permissions:
 jobs:
   checks:
     runs-on: ubuntu-24.04
+    services:  # a throwaway Postgres for the database tests (tests/test_postgres.py); its password is the container's, never a real one
+      postgres:
+        # alpine: its postgres user is uid 70. Debian's is 999, the uid `useradd --system` gives the extraction user of
+        # tests/test_aislamiento.py, whose kill-every-process-of-the-user check then killed this database (2026-10-29)
+        image: postgres:16-alpine
+        env: { POSTGRES_PASSWORD: postgres }
+        ports: ['5432:5432']
+        options: --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      RG_TEST_DB_URL: postgresql://postgres:postgres@localhost:5432/postgres
+      RG_REQUIRE_DB_TESTS: '1'  # tests/test_postgres.py fails instead of skipping when the Postgres is missing
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { persist-credentials: false }
@@ -30,6 +41,17 @@ jobs:
     strategy:
       fail-fast: false  # every shard reports all of its mutants
       matrix: { shard: [0, 1, 2, 3] }  # 4 runners in parallel
+    services:  # a throwaway Postgres for the database tests (tests/test_postgres.py); its password is the container's, never a real one
+      postgres:
+        # alpine: its postgres user is uid 70. Debian's is 999, the uid `useradd --system` gives the extraction user of
+        # tests/test_aislamiento.py, whose kill-every-process-of-the-user check then killed this database (2026-10-29)
+        image: postgres:16-alpine
+        env: { POSTGRES_PASSWORD: postgres }
+        ports: ['5432:5432']
+        options: --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      RG_TEST_DB_URL: postgresql://postgres:postgres@localhost:5432/postgres
+      RG_REQUIRE_DB_TESTS: '1'  # tests/test_postgres.py fails instead of skipping when the Postgres is missing
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { persist-credentials: false }
