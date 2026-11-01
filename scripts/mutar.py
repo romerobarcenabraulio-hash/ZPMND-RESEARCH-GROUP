@@ -24,6 +24,7 @@ PY = sys.executable
 MUT = [
  ('.github/workflows/auditor.yml', '                "completed "*) echo "#$pr head $sha fails CI ($ci): no LLM audit"; echo run=false >> "$GITHUB_OUTPUT"; exit 0 ;;\n', ''),
  ('.github/workflows/auditor.yml', '                "completed success") break ;;\n', ''),
+ ('.github/workflows/auditor.yml', '          Never write a credential, a token or a key prefix literally (GitHub, OpenAI, Anthropic): name its kind, as in\n', ''),
  ('.github/workflows/auditor.yml', '          echo "verdict=$verdict" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both\n', '          echo "verdict=PASS" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both\n'),
  ('.github/workflows/auditor.yml', '          echo "verdict=$verdict" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both (a skipped', '          echo "verdict=PASS" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both (a skipped'),
  ('.github/workflows/auditor.yml', '          if [ "$EVENT" != issue_comment ]; then\n            for _ in', '          if true; then\n            for _ in'),
