@@ -89,6 +89,8 @@ def errores(doc, letra):
         c = f.get('contador')
         if c is not None:
             out += [f'{where}: contador {e}' for e in _contador_errores(c, hosts)]
+        if f.get('adquisicion') is not None:
+            out += [f'{where}: adquisicion {e}' for e in _adquisicion_errores(f['adquisicion'], f, hosts)]
     return out
 
 
@@ -114,6 +116,32 @@ def _contador_errores(c, hosts):
             if not (isinstance(c.get(k), str) and 3 <= len(c[k]) <= 200):
                 out.append(f'{k} must be text of 3 to 200 characters')
     return out
+
+
+def _adquisicion_errores(a, f, hosts):
+    """docs/ADQUISICION.md: the block's shape is schemas/adquisicion.schema.json; what a schema cannot say is checked
+    here: the block's route is the source's route, and every URL in it reaches only the source's own hosts."""
+    from rg.schemas import validate
+    errs = validate('adquisicion', a) if isinstance(a, dict) else ['must be an object']
+    if errs:
+        return errs[:5]
+    out = []
+    if a['via'] != f.get('via'):
+        out.append(f"via {a['via']} is not the source's via {f.get('via')}")
+    for u in _urls(a):
+        if (urlsplit(u).hostname or '') not in hosts:
+            out.append(f'{u[:80]}: host not in allowed_hosts')
+    return out
+
+
+def _urls(x):
+    if isinstance(x, str):
+        return [x] if x.startswith('https://') else []
+    if isinstance(x, dict):
+        return [u for v in x.values() for u in _urls(v)]
+    if isinstance(x, list):
+        return [u for v in x for u in _urls(v)]
+    return []
 
 
 def cargar(carpeta):

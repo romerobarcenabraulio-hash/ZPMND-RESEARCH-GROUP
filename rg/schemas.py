@@ -1,7 +1,7 @@
 """Validate RG artifacts against schemas/ (JSON Schema 2020-12) plus the checks a schema cannot express.
 
 The ZPMND airlock must run its own validation; passing here makes a packet well-formed, never true.
-Usage: python -m rg.schemas <kind> <file.json>   kinds: research_request, research_packet, source_artifact, knowledge_demand, catalog_entry, change_event, relation
+Usage: python -m rg.schemas <kind> <file.json>   kinds: research_request, research_packet, source_artifact, knowledge_demand, catalog_entry, change_event, relation, adquisicion
 """
 import json
 import sys
@@ -15,7 +15,7 @@ from rg.quotes import _fold as fold
 
 SCHEMAS = Path(__file__).resolve().parent.parent / 'schemas'
 KINDS = ('research_request', 'research_packet', 'source_artifact', 'knowledge_demand', 'catalog_entry', 'change_event',
-         'relation')
+         'relation', 'adquisicion')
 MAX_BYTES = 512 * 1024
 
 
