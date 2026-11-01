@@ -1,0 +1,503 @@
+{
+ "research_id": "RP-2026-10-21-odoo-community-funciones",
+ "request_id": "RR-2026-10-21-odoo-community-funciones",
+ "status": "CANDIDATE",
+ "produced_at": "2026-10-28T05:33:21Z",
+ "question": "¿Qué funciones de recursos humanos y operación trae gratis Odoo Community 17 (empleados, asistencias, ausencias, nómina, proyectos u otras), qué modelos de datos expone cada una por su API externa y cuáles son exclusivas de Enterprise?",
+ "why_zpmnd_needs_it": "Antes de construir una capacidad, ZPMND revisa si una app gratuita ya la tiene; Odoo es su primera app y hoy solo lee tres modelos.",
+ "scope": "Lectura de manifiestos y ACL (ir.model.access.csv) de Odoo 17.0 para hr, hr_attendance, hr_holidays, hr_contract, hr_work_entry, project, hr_timesheet y hr_skills; LICENSE LGPL; documentación de la API externa y del módulo Payroll. No se leyó ningún listado oficial Community vs Enterprise ni las definiciones de campos de los modelos.",
+ "sources": {
+  "primary": [
+   "SA-37425daa3f9339592650a1fe",
+   "SA-b8c35ba02fd9c075c78097c5",
+   "SA-c79d1b4939c6be83e7dd08e8",
+   "SA-b36a5369b3ab9a25b783cbb3",
+   "SA-037e72e153a425c6de92ec3a",
+   "SA-1131de0d272d50c0f95a4512",
+   "SA-46ed579436e0c06ad5925bf5",
+   "SA-d215abd31d03d27588e7d06d",
+   "SA-a06eda17816585213f3c7602",
+   "SA-102c1a7619621105c0c3db80",
+   "SA-765f2d2940ce95958e04d5ec",
+   "SA-2a8f2f2f6b485c26c50de8f0",
+   "SA-c41389a673a2c31ef12b1999",
+   "SA-f26e563e35bb160b54b41455",
+   "SA-1ac5099c9af2938b6c892129",
+   "SA-abc09dad5f84a76e1b027923",
+   "SA-feb2d58ab234aa5458fb93f1",
+   "SA-8c84c16d8b4c84ff0cb463c3"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-37425daa3f9339592650a1fe",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr/__manifest__.py",
+   "retrieved_at": "2026-10-28T05:31:28Z",
+   "sha256": "37425daa3f9339592650a1fecdcd0c8d8cccec436712b9a0ec12c181c0223a67",
+   "bytes": 1880,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr/__manifest__.py (Employees)"
+  },
+  {
+   "artifact_id": "SA-b8c35ba02fd9c075c78097c5",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_attendance/__manifest__.py",
+   "retrieved_at": "2026-10-28T05:31:29Z",
+   "sha256": "b8c35ba02fd9c075c78097c589e664db31d533f0d72768a46cc0c433e31eb5b5",
+   "bytes": 3632,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr_attendance/__manifest__.py (Attendances)"
+  },
+  {
+   "artifact_id": "SA-c79d1b4939c6be83e7dd08e8",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_holidays/__manifest__.py",
+   "retrieved_at": "2026-10-28T05:31:30Z",
+   "sha256": "c79d1b4939c6be83e7dd08e800d342a35f81caaa38f7406b08b191d7ce2efa91",
+   "bytes": 3424,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr_holidays/__manifest__.py (Time Off)"
+  },
+  {
+   "artifact_id": "SA-b36a5369b3ab9a25b783cbb3",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_contract/__manifest__.py",
+   "retrieved_at": "2026-10-28T05:31:31Z",
+   "sha256": "b36a5369b3ab9a25b783cbb38d03a0d1fbee2882613d9917667d9f4eda8e5489",
+   "bytes": 1268,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr_contract/__manifest__.py (Employee Contracts)"
+  },
+  {
+   "artifact_id": "SA-037e72e153a425c6de92ec3a",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_work_entry/__manifest__.py",
+   "retrieved_at": "2026-10-28T05:31:32Z",
+   "sha256": "037e72e153a425c6de92ec3a8fcc7d1973592f2e76dc67f1dfdd23dec1fc0ed8",
+   "bytes": 700,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr_work_entry/__manifest__.py (Work Entries)"
+  },
+  {
+   "artifact_id": "SA-1131de0d272d50c0f95a4512",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/project/__manifest__.py",
+   "retrieved_at": "2026-10-28T05:31:33Z",
+   "sha256": "1131de0d272d50c0f95a45122bda311532f4f6b52aca811222bfc3a8c67e3d51",
+   "bytes": 8941,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 project/__manifest__.py (Project)"
+  },
+  {
+   "artifact_id": "SA-46ed579436e0c06ad5925bf5",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_timesheet/__manifest__.py",
+   "retrieved_at": "2026-10-28T05:31:34Z",
+   "sha256": "46ed579436e0c06ad5925bf55a2e510926ad9d3770d7d10661c8d0d85f2a5244",
+   "bytes": 2303,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr_timesheet/__manifest__.py (Task Logs)"
+  },
+  {
+   "artifact_id": "SA-d215abd31d03d27588e7d06d",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_skills/__manifest__.py",
+   "retrieved_at": "2026-10-28T05:31:35Z",
+   "sha256": "d215abd31d03d27588e7d06dc874ae01a46d3eba3781f0ec7cff095ac104d3a2",
+   "bytes": 1883,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0 (declarado en el manifiesto)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr_skills/__manifest__.py (Skills Management)"
+  },
+  {
+   "artifact_id": "SA-a06eda17816585213f3c7602",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr/security/ir.model.access.csv",
+   "retrieved_at": "2026-10-28T05:31:36Z",
+   "sha256": "a06eda17816585213f3c76023aacd1290982b3ad7cf9f9a09ffd020208edd733",
+   "bytes": 1761,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr/security/ir.model.access.csv"
+  },
+  {
+   "artifact_id": "SA-102c1a7619621105c0c3db80",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_attendance/security/ir.model.access.csv",
+   "retrieved_at": "2026-10-28T05:31:37Z",
+   "sha256": "102c1a7619621105c0c3db804a022675b10c29e43d213290c900fc1fd3fcb831",
+   "bytes": 793,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr_attendance/security/ir.model.access.csv"
+  },
+  {
+   "artifact_id": "SA-765f2d2940ce95958e04d5ec",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_holidays/security/ir.model.access.csv",
+   "retrieved_at": "2026-10-28T05:31:38Z",
+   "sha256": "765f2d2940ce95958e04d5ec0869e5e05895981a92429cf955534ca0c5bc76d2",
+   "bytes": 3358,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr_holidays/security/ir.model.access.csv"
+  },
+  {
+   "artifact_id": "SA-2a8f2f2f6b485c26c50de8f0",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_contract/security/ir.model.access.csv",
+   "retrieved_at": "2026-10-28T05:31:39Z",
+   "sha256": "2a8f2f2f6b485c26c50de8f0c54deecdad7f23751c5adb0f71c730fe357fc0b8",
+   "bytes": 1051,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr_contract/security/ir.model.access.csv"
+  },
+  {
+   "artifact_id": "SA-c41389a673a2c31ef12b1999",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_work_entry/security/ir.model.access.csv",
+   "retrieved_at": "2026-10-28T05:31:40Z",
+   "sha256": "c41389a673a2c31ef12b199939596b4c682e9d603db0b04a00a4ee7d21a9c125",
+   "bytes": 639,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr_work_entry/security/ir.model.access.csv"
+  },
+  {
+   "artifact_id": "SA-f26e563e35bb160b54b41455",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/project/security/ir.model.access.csv",
+   "retrieved_at": "2026-10-28T05:31:41Z",
+   "sha256": "f26e563e35bb160b54b41455d908abb3a9616e5e64d84cfbbf6a6595e9a30de7",
+   "bytes": 5722,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 project/security/ir.model.access.csv"
+  },
+  {
+   "artifact_id": "SA-1ac5099c9af2938b6c892129",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/addons/hr_timesheet/security/ir.model.access.csv",
+   "retrieved_at": "2026-10-28T05:31:42Z",
+   "sha256": "1ac5099c9af2938b6c8921293f8971205b01fb4854af9bbeaeb2d703541cc70b",
+   "bytes": 1044,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "LGPL-3.0",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 hr_timesheet/security/ir.model.access.csv"
+  },
+  {
+   "artifact_id": "SA-abc09dad5f84a76e1b027923",
+   "url": "https://raw.githubusercontent.com/odoo/odoo/17.0/LICENSE",
+   "retrieved_at": "2026-10-28T05:31:43Z",
+   "sha256": "abc09dad5f84a76e1b0279237053cae16c03228ab27d8d467677054c2bd17eeb",
+   "bytes": 43529,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "Odoo S.A. (repositorio odoo/odoo)",
+   "license": "texto de la LGPL-3.0 (copia literal permitida)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 LICENSE (GNU LGPL v3)"
+  },
+  {
+   "artifact_id": "SA-feb2d58ab234aa5458fb93f1",
+   "url": "https://raw.githubusercontent.com/odoo/documentation/17.0/content/developer/reference/external_api.rst",
+   "retrieved_at": "2026-10-28T05:31:44Z",
+   "sha256": "feb2d58ab234aa5458fb93f1ab14bc0416ed9e62ed1905d6b8b5fcd48bdf7e1e",
+   "bytes": 46548,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "Odoo S.A. (repositorio odoo/documentation)",
+   "license": "CC BY-SA 4.0",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 documentation: External API"
+  },
+  {
+   "artifact_id": "SA-8c84c16d8b4c84ff0cb463c3",
+   "url": "https://raw.githubusercontent.com/odoo/documentation/17.0/content/applications/hr/payroll.rst",
+   "retrieved_at": "2026-10-28T05:31:45Z",
+   "sha256": "8c84c16d8b4c84ff0cb463c38d3229385117c34ee13bd40d2481d8043d56ae13",
+   "bytes": 46823,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "Odoo S.A. (repositorio odoo/documentation)",
+   "license": "CC BY-SA 4.0",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Odoo 17.0 documentation: Payroll"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El módulo Employees (hr) de Odoo 17 está licenciado LGPL-3.",
+    "artifact_ids": [
+     "SA-37425daa3f9339592650a1fe"
+    ],
+    "quote": "'license': 'LGPL-3',",
+    "locator": "hr/__manifest__.py, última línea"
+   },
+   {
+    "claim": "Odoo 17 se publica bajo LGPLv3 según su archivo LICENSE.",
+    "artifact_ids": [
+     "SA-abc09dad5f84a76e1b027923"
+    ],
+    "quote": "Odoo is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3",
+    "locator": "LICENSE, párrafo inicial"
+   },
+   {
+    "claim": "El módulo Attendances (hr_attendance) es LGPL-3.",
+    "artifact_ids": [
+     "SA-b8c35ba02fd9c075c78097c5"
+    ],
+    "quote": "'license': 'LGPL-3',",
+    "locator": "hr_attendance/__manifest__.py"
+   },
+   {
+    "claim": "El módulo Time Off (hr_holidays) es LGPL-3.",
+    "artifact_ids": [
+     "SA-c79d1b4939c6be83e7dd08e8"
+    ],
+    "quote": "'license': 'LGPL-3',",
+    "locator": "hr_holidays/__manifest__.py"
+   },
+   {
+    "claim": "El módulo Project es LGPL-3.",
+    "artifact_ids": [
+     "SA-1131de0d272d50c0f95a4512"
+    ],
+    "quote": "'license': 'LGPL-3',",
+    "locator": "project/__manifest__.py"
+   },
+   {
+    "claim": "El módulo Employee Contracts (hr_contract) permite varios contratos por empleado.",
+    "artifact_ids": [
+     "SA-b36a5369b3ab9a25b783cbb3"
+    ],
+    "quote": "You can assign several contracts per employee.",
+    "locator": "hr_contract/__manifest__.py, description"
+   },
+   {
+    "claim": "hr_work_entry se describe como gestor de work entries.",
+    "artifact_ids": [
+     "SA-037e72e153a425c6de92ec3a"
+    ],
+    "quote": "'summary': 'Manage work entries',",
+    "locator": "hr_work_entry/__manifest__.py"
+   },
+   {
+    "claim": "El módulo de hojas de horas (hr_timesheet, 'Task Logs') depende de hr, hr_hourly_cost, analytic, project y uom.",
+    "artifact_ids": [
+     "SA-46ed579436e0c06ad5925bf5"
+    ],
+    "quote": "'depends': ['hr', 'hr_hourly_cost', 'analytic', 'project', 'uom'],",
+    "locator": "hr_timesheet/__manifest__.py"
+   },
+   {
+    "claim": "hr_skills gestiona habilidades y currículum de empleados.",
+    "artifact_ids": [
+     "SA-d215abd31d03d27588e7d06d"
+    ],
+    "quote": "'summary': 'Manage skills, knowledge and resume of your employees',",
+    "locator": "hr_skills/__manifest__.py"
+   },
+   {
+    "claim": "El módulo hr define ACL para el modelo hr.employee.",
+    "artifact_ids": [
+     "SA-a06eda17816585213f3c7602"
+    ],
+    "quote": "access_hr_employee_user,hr.employee user,model_hr_employee,group_hr_user,1,1,1,1",
+    "locator": "hr/security/ir.model.access.csv"
+   },
+   {
+    "claim": "hr_attendance define ACL para el modelo hr.attendance.",
+    "artifact_ids": [
+     "SA-102c1a7619621105c0c3db80"
+    ],
+    "quote": "access_hr_attendance_admin,hr.attendance.admin,model_hr_attendance,group_hr_attendance_manager,1,1,1,1",
+    "locator": "hr_attendance/security/ir.model.access.csv"
+   },
+   {
+    "claim": "hr_holidays define ACL para el modelo hr.leave.",
+    "artifact_ids": [
+     "SA-765f2d2940ce95958e04d5ec"
+    ],
+    "quote": "access_hr_holidays_manager_request,hr.holidays.manager.request,model_hr_leave,hr_holidays.group_hr_holidays_manager,1,1,1,1",
+    "locator": "hr_holidays/security/ir.model.access.csv"
+   },
+   {
+    "claim": "hr_holidays define ACL para planes de acumulación (hr.leave.accrual.plan).",
+    "artifact_ids": [
+     "SA-765f2d2940ce95958e04d5ec"
+    ],
+    "quote": "access_hr_leave_accrual_plan_manager,hr.leave.accrual.plan.manager,model_hr_leave_accrual_plan,hr_holidays.group_hr_holidays_manager,1,1,1,1",
+    "locator": "hr_holidays/security/ir.model.access.csv"
+   },
+   {
+    "claim": "hr_contract define ACL para el modelo hr.contract.",
+    "artifact_ids": [
+     "SA-2a8f2f2f6b485c26c50de8f0"
+    ],
+    "quote": "access_hr_contract_manager,hr.contract.manager,model_hr_contract,hr_contract.group_hr_contract_manager,1,1,1,1",
+    "locator": "hr_contract/security/ir.model.access.csv"
+   },
+   {
+    "claim": "hr_work_entry define ACL para el modelo hr.work.entry.",
+    "artifact_ids": [
+     "SA-c41389a673a2c31ef12b1999"
+    ],
+    "quote": "access_hr_work_entry_officer,access_hr_work_entry_officer,model_hr_work_entry,hr.group_hr_user,1,1,1,0",
+    "locator": "hr_work_entry/security/ir.model.access.csv"
+   },
+   {
+    "claim": "El módulo project define ACL para el modelo project.task.",
+    "artifact_ids": [
+     "SA-f26e563e35bb160b54b41455"
+    ],
+    "quote": "access_project_task,project.task,model_project_task,project.group_project_user,1,1,1,1",
+    "locator": "project/security/ir.model.access.csv"
+   },
+   {
+    "claim": "hr_timesheet registra horas en account.analytic.line mediante ACL.",
+    "artifact_ids": [
+     "SA-1ac5099c9af2938b6c892129"
+    ],
+    "quote": "access_account_analytic_line_user,analytic.account.analytic.line.timesheet.user,analytic.model_account_analytic_line,hr_timesheet.group_hr_timesheet_user,1,1,1,1",
+    "locator": "hr_timesheet/security/ir.model.access.csv"
+   },
+   {
+    "claim": "El acceso a datos mediante la API externa solo está disponible en los planes de precios Custom de Odoo.",
+    "artifact_ids": [
+     "SA-feb2d58ab234aa5458fb93f1"
+    ],
+    "quote": "Access to data via the external API is only available on *Custom* Odoo pricing plans.",
+    "locator": "External API, nota inicial"
+   },
+   {
+    "claim": "fields_get sirve para inspeccionar los campos de un modelo por la API externa.",
+    "artifact_ids": [
+     "SA-feb2d58ab234aa5458fb93f1"
+    ],
+    "quote": "can be used to inspect\na model's fields and check which ones seem to be of interest.",
+    "locator": "External API, List record fields"
+   },
+   {
+    "claim": "read por defecto devuelve todos los campos que el usuario actual puede leer.",
+    "artifact_ids": [
+     "SA-feb2d58ab234aa5458fb93f1"
+    ],
+    "quote": "By default, it fetches all the fields the current user can read,",
+    "locator": "External API, Read records"
+   },
+   {
+    "claim": "La documentación de Payroll describe que la app procesa work entries y crea nóminas.",
+    "artifact_ids": [
+     "SA-8c84c16d8b4c84ff0cb463c3"
+    ],
+    "quote": "Odoo *Payroll* is used to process work entries and create payslips for employees.",
+    "locator": "Payroll, introducción"
+   },
+   {
+    "claim": "La documentación de Payroll indica que el módulo Salary Configurator (hr_contract_salary) debe estar instalado.",
+    "artifact_ids": [
+     "SA-8c84c16d8b4c84ff0cb463c3"
+    ],
+    "quote": "the *Salary Configurator* (`hr_contract_salary`) module **must** be",
+    "locator": "Payroll, Contracts > Templates"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Qué módulos son exclusivos de Enterprise: no hay en las fuentes una lista oficial. No se leyó el manifiesto de hr_payroll ni de ningún módulo Enterprise.",
+   "Los campos concretos de hr.employee, hr.attendance, hr.leave, hr.contract, project.task, etc.: solo se leyeron las ACL, no las definiciones de modelo.",
+   "Si la nómina (hr.payslip) existe en Community 17: las fuentes no lo establecen; la documentación de Payroll no indica edición.",
+   "Si la API externa está disponible en Community autoalojado: la nota solo cubre planes de Odoo Online.",
+   "La licencia de Enterprise (propietaria): no hay fuente."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: los módulos hr, hr_attendance, hr_holidays, hr_contract, hr_work_entry, project y hr_skills están en el repositorio odoo/odoo bajo LGPL-3, por lo que es probable que vengan en Community 17.",
+  "INTERPRETACIÓN: no encontrar hr_payroll en las fuentes leídas no prueba que sea exclusivo de Enterprise; hay que verificarlo.",
+  "INTERPRETACIÓN: la ACL de hr_contract referencia hr.payroll.structure.type, lo que sugiere un vínculo con nómina en el código abierto, pero el modelo se define en otro módulo no leído."
+ ],
+ "candidate_tests": [
+  "Instalar Community 17 y consultar ir.module.module para listar los módulos disponibles, y ir.model para listar modelos hr.* y project.*.",
+  "Llamar fields_get sobre hr.employee, hr.attendance, hr.leave, hr.contract y project.task en una instancia Community autoalojada para confirmar campos y acceso a la API."
+ ],
+ "limitations": [
+  "Solo se leyeron manifiestos, ACL, la licencia y dos páginas de documentación; no hay definiciones de modelos ni campos.",
+  "No se leyó ninguna fuente que diga qué incluye Community frente a Enterprise; la edición solo se infiere de la licencia del repositorio.",
+  "La nota sobre la API externa habla de planes de Odoo Online; su aplicación a Community autoalojado no está establecida.",
+  "La documentación de Payroll no indica edición.",
+  "La fuente de la API muestra ejemplos con versión 13.0 en la salida; se usó solo como documentación general.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 2 de 22 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
