@@ -11,7 +11,7 @@ públicos (3). Son 2,316 celdas. Cada capa trae su consulta fija, por ejemplo `{
 
 **Búsqueda** (`python -m rg.descubrir buscar`). Una búsqueda por celda con la Search API de Perplexity
 (`POST https://api.perplexity.ai/search`, documentación consultada el 2026-11-01): devuelve resultados rankeados (URL,
-título, extracto, fecha), no una respuesta escrita por un modelo, así que no hay nada inventado que filtrar. Precio
+título, extracto, fecha), no una respuesta escrita por un modelo; aun así son candidatos sin verificar: solo se comprueba su forma, su URL y que contesten, nunca su contenido ni que sean oficiales (GPT en 98c41b2). Precio
 publicado: $5 por cada 1,000 búsquedas con `search_type: web` y $1 con `fast`; el mapa completo cuesta unos $11.60 en
 `web`. La consulta solo lleva el nombre del país y la redacción fija de la capa: ninguna pregunta de ZPMND sale de RG.
 Un país empieza solo si todas las capas que le faltan caben en el tope de búsquedas y en el plazo. Una capa que ya

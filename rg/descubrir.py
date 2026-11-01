@@ -254,10 +254,15 @@ def _leer(path):
 
 
 def pendientes(cob, carpeta):
-    """Countries lacking an answered layer of the current map, in its order: a failed layer, a layer added to the map or
-    a changed query is asked again (GPT on 41182c5), whatever an older file says of itself."""
-    por_pais = len(capas(cob))
-    return [p for p in cob['paises'] if len(hechas(_leer(carpeta / f"{p['iso3']}.json"), p, cob)) < por_pais]
+    """Countries lacking an answered layer of the current map: a failed layer, a layer added to the map or a changed query
+    is asked again (GPT on 41182c5), whatever an older file says of itself. Countries never asked come first, in the map's
+    order, then the ones already tried: a country that keeps failing never starves the rest (GPT on 98c41b2)."""
+    por_pais, nuevos, reintentos = len(capas(cob)), [], []
+    for p in cob['paises']:
+        previo = _leer(carpeta / f"{p['iso3']}.json")
+        if len(hechas(previo, p, cob)) < por_pais:
+            (reintentos if previo is not None else nuevos).append(p)
+    return nuevos + reintentos
 
 
 def correr_busqueda(cob, carpeta, key, max_busquedas, tipo, ahora=None, buscar=buscar, sleep=time.sleep,

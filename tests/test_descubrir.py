@@ -26,6 +26,7 @@ MINI = {'paises': [{'iso2': 'KE', 'iso3': 'KEN', 'nombre': 'Kenya'}, {'iso2': 'M
                                                             'consulta': '{pais} official gazette'}]},
                  {'id': 'datos', 'nombre': 'Datos', 'capas': [{'id': 'estadistica', 'nombre': 'Estadística',
                                                                'consulta': '{pais} national statistics office'}]}]}
+SOLO_KEN = dict(MINI, paises=MINI['paises'][:1])  # one country: the order of retries plays no part
 HIT = {'title': 'Kenya Gazette', 'url': 'https://kenyalaw.org/kenya_gazette/', 'snippet': 'Official gazette', 'date': None}
 AHORA = lambda: '2026-11-01T00:00:00Z'  # noqa: E731
 KEY = 'pplx-TEST-0000-key'  # never a substring of the fixtures
@@ -218,8 +219,8 @@ class Pais(unittest.TestCase):
 
 
 class Corrida(unittest.TestCase):
-    def run_(self, carpeta, max_b, buscar, reloj=lambda: 0.0):
-        return d.correr_busqueda(MINI, carpeta, KEY, max_b, 'web', AHORA, buscar, sleep=lambda s: None, reloj=reloj)
+    def run_(self, carpeta, max_b, buscar, reloj=lambda: 0.0, cob=None):
+        return d.correr_busqueda(cob or MINI, carpeta, KEY, max_b, 'web', AHORA, buscar, sleep=lambda s: None, reloj=reloj)
 
     def test_whole_countries_only_and_a_complete_country_is_never_asked_again(self):
         with tempfile.TemporaryDirectory() as t:
@@ -242,10 +243,10 @@ class Corrida(unittest.TestCase):
                 if fail['n'] == 1:
                     raise http_error(500)
                 return {'results': [HIT]}
-            self.run_(c, 2, buscar)
+            self.run_(c, 2, buscar, cob=SOLO_KEN)
             self.assertFalse(json.loads((c / 'KEN.json').read_text())['completo'])
             asked = []
-            out = self.run_(c, 2, lambda q, *a: asked.append(q) or buscar(q, *a))
+            out = self.run_(c, 2, lambda q, *a: asked.append(q) or buscar(q, *a), cob=SOLO_KEN)
             self.assertEqual((out['paises'], asked), (['KEN'], ['Kenya official gazette']))  # the answered one is kept
             self.assertTrue(json.loads((c / 'KEN.json').read_text())['completo'])
 
@@ -270,8 +271,9 @@ class Corrida(unittest.TestCase):
     def test_a_stop_never_drops_a_layer_paid_in_an_earlier_run(self):
         with tempfile.TemporaryDirectory() as t:
             c = Path(t)
-            self.run_(c, 2, lambda q, *a: (_ for _ in ()).throw(http_error(500)) if 'gazette' in q else {'results': [HIT]})
-            out = self.run_(c, 2, lambda *a: (_ for _ in ()).throw(http_error(429)))
+            self.run_(c, 2, lambda q, *a: (_ for _ in ()).throw(http_error(500)) if 'gazette' in q else {'results': [HIT]},
+                      cob=SOLO_KEN)
+            out = self.run_(c, 2, lambda *a: (_ for _ in ()).throw(http_error(429)), cob=SOLO_KEN)
             self.assertEqual(out['alto'], 'http 429')
             ken = json.loads((c / 'KEN.json').read_text())
             self.assertEqual([(x['capa'], x['estado']) for x in ken['capas']], [('estadistica', 'ok')])
@@ -285,13 +287,28 @@ class Corrida(unittest.TestCase):
                 if 'statistics' in q:
                     raise http.client.IncompleteRead(b'{"res')
                 return {'results': [HIT]}
-            self.run_(c, 2, buscar)
+            self.run_(c, 2, buscar, cob=SOLO_KEN)
             ken = json.loads((c / 'KEN.json').read_text())
             self.assertEqual([(x['capa'], x['estado'], x.get('error')) for x in ken['capas']],
                              [('diario', 'ok', None), ('estadistica', 'error', 'IncompleteRead')])
             asked = []
-            self.run_(c, 2, lambda q, *a: asked.append(q) or {'results': [HIT]})
+            self.run_(c, 2, lambda q, *a: asked.append(q) or {'results': [HIT]}, cob=SOLO_KEN)
             self.assertEqual(asked, ['Kenya national statistics office'])
+
+    def test_a_country_that_keeps_failing_never_starves_the_ones_after_it(self):
+        # GPT on 98c41b2: KEN fails every run; with a budget for one country, MEX must still be asked
+        with tempfile.TemporaryDirectory() as t:
+            c, asked = Path(t), []
+
+            def buscar(q, *a):
+                asked.append(q)
+                if q.startswith('Kenya'):
+                    raise http_error(500)
+                return {'results': [HIT]}
+            self.run_(c, 2, buscar)  # run 1: KEN, which fails
+            self.run_(c, 2, buscar)  # run 2: MEX, never asked, before KEN again
+            self.assertTrue(any(q.startswith('Mexico') for q in asked))
+            self.assertEqual([p['iso3'] for p in d.pendientes(MINI, c)], ['KEN'])
 
     def test_no_country_starts_past_the_deadline(self):
         with tempfile.TemporaryDirectory() as t:
@@ -313,7 +330,7 @@ class Mapa2(unittest.TestCase):
         with tempfile.TemporaryDirectory() as b:
             rama = Path(b)
             (rama / 'KEN.json').write_text(json.dumps(dict(self.ken(self.DIARIO), completo=True)))
-            self.assertEqual([p['iso3'] for p in d.pendientes(MINI, rama)], ['KEN', 'MEX'])
+            self.assertEqual([p['iso3'] for p in d.pendientes(MINI, rama)], ['MEX', 'KEN'])  # never asked first
 
 class Verificacion(unittest.TestCase):
     def setUp(self):
