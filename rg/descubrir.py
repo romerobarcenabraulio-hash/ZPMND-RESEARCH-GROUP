@@ -94,13 +94,17 @@ def consulta(capa, pais):
     return capa['consulta'].replace('{pais}', pais['nombre'])  # replace, not format: no field of the map is code
 
 
+ESPERA = 10  # seconds one wait on the socket may last; the whole answer has `timeout`
+
+
 def _abrir(req, timeout, reloj=time.monotonic):
-    """No redirect, public addresses only, at most MAX_RESPUESTA bytes and `timeout` seconds in all: the socket timeout
-    bounds one wait, not an answer that trickles in, so the whole read has its own deadline (GPT on cb11715)."""
+    """No redirect, public addresses only, at most MAX_RESPUESTA bytes and `timeout` seconds in all. A socket timeout
+    bounds one wait, not an answer that trickles in, and read(n) waits for n bytes; read1 returns what has arrived, so
+    each turn of the loop lasts at most ESPERA and checks the whole deadline (GPT on cb11715 and 9829c21)."""
     fin = reloj() + timeout
     body = b''
-    with urllib.request.build_opener(_NoRedirect, _PublicHTTPS).open(req, timeout=timeout) as r:
-        while chunk := r.read(64 * 1024):
+    with urllib.request.build_opener(_NoRedirect, _PublicHTTPS).open(req, timeout=min(timeout, ESPERA)) as r:
+        while chunk := r.read1(64 * 1024):
             body += chunk
             if len(body) > MAX_RESPUESTA:
                 raise ValueError(f'answer larger than {MAX_RESPUESTA} bytes')
@@ -304,10 +308,8 @@ def resumen(cob, carpeta):
     """Per layer: countries searched, countries with a candidate that answers 200. Candidates, never coverage."""
     out = {f"{e['id']}/{c['id']}": {'buscados': 0, 'con_candidato_accesible': 0} for e, c in capas(cob)}
     for p in cob['paises']:
-        for capa in (_leer(carpeta / f"{p['iso3']}.json") or {}).get('capas', []):
-            x = out.get(f"{capa.get('eje')}/{capa.get('capa')}")
-            if x is None or capa.get('estado') != 'ok':
-                continue
+        for capa in hechas(_leer(carpeta / f"{p['iso3']}.json"), p, cob).values():  # current queries only (GPT on 9829c21)
+            x = out[f"{capa['eje']}/{capa['capa']}"]
             x['buscados'] += 1
             x['con_candidato_accesible'] += any((r.get('verificacion') or {}).get('estado') == 'accesible'
                                                 for r in capa.get('resultados', []))

@@ -6,6 +6,7 @@ import http.client
 import json
 import os
 import subprocess
+import time
 import sys
 import tempfile
 import unittest
@@ -81,7 +82,7 @@ class Busqueda(unittest.TestCase):
             def __init__(self, body): self.body = body
             def __enter__(self): return self
             def __exit__(self, *a): return False
-            def read(self, n): out, self.body = self.body[:n], self.body[n:]; return out
+            def read1(self, n): out, self.body = self.body[:n], self.body[n:]; return out
         opener = mock.Mock()
         with mock.patch('urllib.request.build_opener', return_value=opener) as build:
             opener.open.return_value = Resp(b'{"results": []}')
@@ -119,20 +120,35 @@ class Busqueda(unittest.TestCase):
         self.assertTrue(d._contiene(deep, KEY))  # too deep to read whole counts as holding it
 
     def test_an_answer_that_trickles_in_past_its_deadline_is_cut(self):
-        # GPT on cb11715: the socket timeout bounds one wait, not the whole answer
-        class Lenta:
-            def __init__(self): self.n = 0
-            def __enter__(self): return self
-            def __exit__(self, *a): return False
-            def read(self, n): self.n += 1; return b'x' if self.n < 1000 else b''
-        clock = iter(range(0, 10000, 7))
-        opener = mock.Mock(); opener.open.return_value = Lenta()
-        with mock.patch('urllib.request.build_opener', return_value=opener), self.assertRaises(TimeoutError):
-            d._abrir('req', 60, reloj=lambda: next(clock))
-        opener.open.return_value = Lenta()
-        clock = iter([0] * 2000)
-        with mock.patch('urllib.request.build_opener', return_value=opener):
-            self.assertEqual(len(d._abrir('req', 60, reloj=lambda: next(clock))), 999)
+        # GPT on cb11715 and 9829c21: a real server that drips one byte every 0.2 s, far under each socket wait
+        import http.server, socketserver, threading
+        class Gotea(http.server.BaseHTTPRequestHandler):
+            def do_GET(self):
+                self.send_response(200); self.send_header('Content-Length', '100000'); self.end_headers()
+                try:
+                    for _ in range(100000):
+                        self.wfile.write(b'x'); self.wfile.flush(); time.sleep(0.2)
+                except OSError:
+                    pass
+            def log_message(self, *a): pass
+        srv = socketserver.ThreadingTCPServer(('127.0.0.1', 0), Gotea)
+        srv.daemon_threads = True
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        self.addCleanup(srv.server_close); self.addCleanup(srv.shutdown)
+        req = urllib.request.Request(f'http://127.0.0.1:{srv.server_address[1]}/')
+        got = []
+
+        def leer():  # in a thread of its own, so a read that never returns fails this test instead of hanging the suite
+            try:
+                d._abrir(req, 2)
+                got.append('read whole')
+            except Exception as e:  # noqa: BLE001
+                got.append(type(e).__name__)
+        with mock.patch('urllib.request.build_opener', return_value=urllib.request.build_opener()):
+            hilo = threading.Thread(target=leer, daemon=True)
+            hilo.start()
+            hilo.join(8)  # the 2 s deadline plus at most one wait of the socket
+        self.assertEqual(got, ['TimeoutError'])
 
     def test_only_https_results_on_a_host_name_are_kept(self):
         hits = [dict(HIT, url=u) for u in ('http://gov.ke/', 'https://10.0.0.1/', 'https://[::1]/', 'https://gov.ke:8443/',
@@ -293,7 +309,8 @@ class Verificacion(unittest.TestCase):
         self.t = tempfile.TemporaryDirectory()
         self.c = Path(self.t.name)
         res = [dict(HIT, rank=i + 1, host='kenyalaw.org', url=f'https://kenyalaw.org/{i}') for i in range(3)]
-        doc = {'completo': True, 'capas': [{'eje': 'ley', 'capa': 'diario', 'estado': 'ok', 'resultados': res}]}
+        doc = {'completo': True, 'capas': [{'eje': 'ley', 'capa': 'diario', 'consulta': 'Kenya official gazette', 'estado': 'ok',
+                                            'resultados': res}]}
         (self.c / 'KEN.json').write_text(json.dumps(doc), encoding='utf-8')
 
     def tearDown(self):
@@ -343,6 +360,13 @@ class Verificacion(unittest.TestCase):
     def test_nothing_is_asked_past_the_deadline(self):
         clock = iter([0.0, d.PLAZO_VERIFICAR + 1, d.PLAZO_VERIFICAR + 1, d.PLAZO_VERIFICAR + 1])
         self.assertEqual(d.verificar(self.c, 2, mock.Mock(), AHORA, reloj=clock.__next__), 0)
+
+    def test_the_summary_counts_only_layers_of_the_current_map(self):
+        # GPT on 9829c21: a layer whose query changed is pending, never counted with its old answer
+        cambiado = {'paises': MINI['paises'], 'ejes': [dict(MINI['ejes'][0], capas=[dict(MINI['ejes'][0]['capas'][0],
+                                                                                         consulta='{pais} gazette new')])]}
+        d.verificar(self.c, 1, lambda h: mock.Mock(get=mock.Mock(return_value=Response(200, b'', 'u'))), AHORA)
+        self.assertEqual(d.resumen(cambiado, self.c)['ley/diario'], {'buscados': 0, 'con_candidato_accesible': 0})
 
     def test_the_summary_counts_candidates_never_coverage(self):
         d.verificar(self.c, 1, lambda h: mock.Mock(get=mock.Mock(return_value=Response(200, b'', 'u'))), AHORA)
