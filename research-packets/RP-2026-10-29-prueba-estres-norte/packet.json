@@ -1,0 +1,527 @@
+{
+ "research_id": "RP-2026-10-29-prueba-estres-norte",
+ "request_id": "RR-2026-10-29-prueba-estres-norte",
+ "status": "CANDIDATE",
+ "produced_at": "2026-10-31T19:46:48Z",
+ "question": "Prueba de estrés del norte de RG (docs/NORTE.md, §75): con las mismas piezas (Fetcher, RawStore, SourceArtifact, ResearchPacket), ¿qué puede RG preservar y verificar de cada uno de estos 8 tipos de fuente: una ley mexicana, la ficha de un estándar ISO, un paper, un dataset económico oficial, la documentación de una API, una herramienta en GitHub, la hoja de datos de un fabricante y un video? Para cada uno: quién lo publica, qué versión o fecha imprime, qué licencia declara, qué relaciones nombra (otras normas, versiones, dependencias), y qué no se pudo leer y por qué.",
+ "why_zpmnd_needs_it": "Braulio (2026-10-29): RG quedó pensado solo para leyes de México, cuando su norte (NORTE.md, 2026-10-23) pide el conocimiento útil del mundo en 16 familias. §75 dice probar el mismo RG con 8 tipos de fuente antes de construir más scrapers de dominio: lo que esta corrida no pueda preservar o leer es exactamente lo que está hecho a la medida de México.",
+ "scope": "Parte 1 de 3: solo se leyó el texto de la Ley Federal del Trabajo (SA-12f09393a1951a91c3f57f57), caracteres 0 a 600000 de 1368763. Cubre únicamente el caso \"ley mexicana\" de los 8 tipos de fuente (editor, fecha de reforma, relaciones nombradas). No hay en esta parte datos de descarga (sha256, tipo de medio, robots) ni de los otros 7 tipos. / Parte 2 de 3 de la Ley Federal del Trabajo (caracteres 599000-1199000 de 1368763): fuente primaria oficial de la Cámara de Diputados. Solo se evalúa lo que el texto imprime (editor, fecha de reforma, relaciones). Las otras 7 fuentes del estrés (ISO, paper, dataset, API, GitHub, hoja de datos, video) no están en esta parte. / Parte 3 de 3. Se leyeron: final de la Ley Federal del Trabajo (arts. 991 Bis–1010, transitorios y decretos de reforma), arXiv 1706.03762 (completo), WDI PIB México (completo), documentación REST de GitHub (completa), página GitHub de pypa/pip (completa), hoja de datos TI LM317 (completa) y la página del video de YouTube (completa, 164 caracteres). La ficha ISO no aparece en esta parte. Los hashes sha256 y los tipos de medio no vienen en los textos.",
+ "sources": {
+  "primary": [
+   "SA-12f09393a1951a91c3f57f57",
+   "SA-af8c8702f1c65b70972fefe2",
+   "SA-350cdd655f06994f50df718c",
+   "SA-cb84b1cfb3daeaa5f67b2f8b",
+   "SA-5ef20d32b2c359489ee1083e",
+   "SA-1646fb2e4f8cf8c2cbd93aaf",
+   "SA-20c42d19ec9359bb5d69c301"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-12f09393a1951a91c3f57f57",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+   "retrieved_at": "2026-10-31T19:43:52Z",
+   "sha256": "12f09393a1951a91c3f57f579bf611b034edf1a5f78cdbfb828e23ff3a9acbf7",
+   "bytes": 4225835,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "Cámara de Diputados del H. Congreso de la Unión",
+   "license": "LFDA art. 14 fr. VIII (texto oficial); en esta prueba solo se cita: no se republica",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Ley Federal del Trabajo (texto vigente)"
+  },
+  {
+   "artifact_id": "SA-af8c8702f1c65b70972fefe2",
+   "url": "https://arxiv.org/abs/1706.03762",
+   "retrieved_at": "2026-10-31T19:43:54Z",
+   "sha256": "af8c8702f1c65b70972fefe2118fa8cc09a609999b1d612be5e02986162e6326",
+   "bytes": 43071,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv (preprint de sus autores)",
+   "license": "NO VERIFICADA: se lee literal de su página de arXiv al adquirirla; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv 1706.03762: Attention Is All You Need"
+  },
+  {
+   "artifact_id": "SA-350cdd655f06994f50df718c",
+   "url": "https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.MKTP.CD?format=json&per_page=100",
+   "retrieved_at": "2026-10-31T19:44:09Z",
+   "sha256": "350cdd655f06994f50df718c6b2ea7e013c86831eb97c0739a27fe2371a06de5",
+   "bytes": 13603,
+   "media_type": "application/json",
+   "source_type": "dataset",
+   "publisher": "The World Bank",
+   "license": "NO VERIFICADA: se lee literal de los términos del Banco Mundial al adquirirla; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "World Bank WDI: PIB de México en US$ corrientes (NY.GDP.MKTP.CD), API"
+  },
+  {
+   "artifact_id": "SA-cb84b1cfb3daeaa5f67b2f8b",
+   "url": "https://docs.github.com/en/rest/repos/repos",
+   "retrieved_at": "2026-10-31T19:44:10Z",
+   "sha256": "cb84b1cfb3daeaa5f67b2f8bab86c5fcb443c551fc80b943a87fc8862ab4c760",
+   "bytes": 1410241,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "GitHub",
+   "license": "NO VERIFICADA: se lee literal de la documentación de GitHub al adquirirla; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "GitHub REST API: endpoints de repositorios"
+  },
+  {
+   "artifact_id": "SA-5ef20d32b2c359489ee1083e",
+   "url": "https://github.com/pypa/pip",
+   "retrieved_at": "2026-10-31T19:44:12Z",
+   "sha256": "5ef20d32b2c359489ee1083e398491389ec06d1cd4437d73c8c9af5c785e8e00",
+   "bytes": 273287,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "Python Packaging Authority (PyPA)",
+   "license": "NO VERIFICADA: se lee literal del archivo de licencia de su repositorio al adquirirla; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "pypa/pip: el instalador de paquetes de Python (repositorio)"
+  },
+  {
+   "artifact_id": "SA-1646fb2e4f8cf8c2cbd93aaf",
+   "url": "https://www.ti.com/lit/ds/symlink/lm317.pdf",
+   "retrieved_at": "2026-10-31T19:44:13Z",
+   "sha256": "1646fb2e4f8cf8c2cbd93aaf22edad368571619ad062476deca8ee29f95c65d3",
+   "bytes": 2578150,
+   "media_type": "application/pdf",
+   "source_type": "vendor_doc",
+   "publisher": "Texas Instruments",
+   "license": "NO VERIFICADA: se lee literal del aviso del propio documento al adquirirlo; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "LM317 3-Terminal Adjustable Regulator (hoja de datos)"
+  },
+  {
+   "artifact_id": "SA-20c42d19ec9359bb5d69c301",
+   "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
+   "retrieved_at": "2026-10-31T19:44:15Z",
+   "sha256": "20c42d19ec9359bb5d69c3017c86710738d8b7fb310b58f5724f69743f277425",
+   "bytes": 1715306,
+   "media_type": "text/html",
+   "source_type": "other",
+   "publisher": "Andrej Karpathy (canal de YouTube)",
+   "license": "NO VERIFICADA: se lee literal de la página del video al adquirirla; solo se cita, no se republica",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Let's build GPT: from scratch, in code, spelled out (video)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El documento imprime: Cámara de Diputados del H. Congreso de la Unión, Secretaría General, Secretaría de Servicios Parlamentarios.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN\nSecretaría General\nSecretaría de Servicios Parlamentarios",
+    "locator": "Encabezado de página 1 de 457"
+   },
+   {
+    "claim": "El documento imprime como fecha de última reforma el 14-05-2026 (DOF).",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Última Reforma DOF 14-05-2026",
+    "locator": "Encabezado de página 1 de 457"
+   },
+   {
+    "claim": "El texto declara su publicación original en el DOF el 1º de abril de 1970.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Nueva Ley publicada en el Diario Oficial de la Federación el 1º de abril de 1970",
+    "locator": "Página 1 de 457"
+   },
+   {
+    "claim": "El texto anota un párrafo como reformado con fecha del DOF 15-01-2026.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Párrafo reformado DOF 15-01-2026",
+    "locator": "Art. 2o, página 1"
+   },
+   {
+    "claim": "El texto nombra otras normas con las que se relaciona, p. ej. la Ley del Mercado de Valores.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Se entenderá por grupo empresarial lo establecido en el artículo 2, fracción X de la Ley del Mercado de Valores.",
+    "locator": "Art. 13, página 5"
+   },
+   {
+    "claim": "El texto nombra la Ley del Seguro Social como norma relacionada.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "La licencia a que se refiere el artículo 140 Bis de la Ley del Seguro Social.",
+    "locator": "Art. 42, fracc. IX, página 14"
+   },
+   {
+    "claim": "El texto remite a la Ley General de Transparencia y Acceso a la Información Pública.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "en términos del artículo 8o. constitucional y de lo dispuesto por la Ley General de Transparencia y Acceso a la Información Pública",
+    "locator": "Art. 365 Bis, página 111"
+   },
+   {
+    "claim": "El texto cita un código CIE-11 (1F68).",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Código CIE-11: 1F68",
+    "locator": "Art. 513, Tabla de enfermedades de trabajo, página 150"
+   },
+   {
+    "claim": "El texto imprime: Cámara de Diputados del H. Congreso de la Unión, Secretaría General, Secretaría de Servicios Parlamentarios, y la última reforma DOF 14-05-2026.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN\nSecretaría General\nSecretaría de Servicios Parlamentarios\nÚltima Reforma DOF 14-05-2026",
+    "locator": "Encabezado repetido de página, p. 195 de 457 y siguientes"
+   },
+   {
+    "claim": "El texto imprime la fecha de última reforma como DOF 14-05-2026.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Última Reforma DOF 14-05-2026",
+    "locator": "Encabezado de página, p. 195 de 457"
+   },
+   {
+    "claim": "El texto marca el historial de reformas por artículo, con fechas de DOF (versiones previas).",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Artículo reformado DOF 30-11-2012, 01-05-2019. Reformado en su totalidad con “Tabla de enfermedades de trabajo” y “Tabla para la valuación de incapacidades permanentes resultantes de los riesgos de trabajo” DOF 04-12-2023",
+    "locator": "Antes del art. 514"
+   },
+   {
+    "claim": "El texto remite a la Ley del Seguro Social y a la ley del INFONAVIT.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "conforme a la Ley del Seguro Social y la Ley del Instituto del Fondo\nNacional de la Vivienda para los Trabajadores",
+    "locator": "Art. 899-A"
+   },
+   {
+    "claim": "El texto cita el código CIE-11 EJ7Z para la dermatosis por radiación ionizante, sin especificación.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "99. Dermatosis por radiación ionizante, sin especificación\n\nCódigo CIE-11: EJ7Z",
+    "locator": "Tabla de enfermedades de trabajo, núm. 99"
+   },
+   {
+    "claim": "El texto contiene la fórmula MELD Score = 9,57 Ln (Creat) + 3,78 Ln (Bili) + 11,2 Ln (INR) + 6,43.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "MELD Score = 9,57 Ln (Creat) + 3,78 Ln (Bili) + 11,2 Ln (INR) + 6,43",
+    "locator": "Tabla VIII, p. 254 de 457"
+   },
+   {
+    "claim": "El texto nombra el «Catálogo de las Cédulas para la Valuación de las Enfermedades de Trabajo».",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Catálogo de las Cédulas para la Valuación de las Enfermedades de Trabajo",
+    "locator": "Tabla de enfermedades, repetido; art. 514"
+   },
+   {
+    "claim": "El texto indica una nota de vigencia sobre el art. 641-A (la reforma de 2019 no lo derogó).",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Nota: El decreto de reforma DOF 01-05-2019 no derogó el artículo 641-A de esta Ley.",
+    "locator": "Tras art. 641-A"
+   },
+   {
+    "claim": "La LFT impresa indica como fecha de última reforma el DOF 14-05-2026.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Última Reforma DOF 14-05-2026",
+    "locator": "Pie de página, p. 396 de 457"
+   },
+   {
+    "claim": "La LFT imprime «Cámara de Diputados del H. Congreso de la Unión».",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "CÁMARA DE DIPUTADOS DEL H. CONGRESO DE LA UNIÓN",
+    "locator": "Encabezado de página, p. 396 de 457"
+   },
+   {
+    "claim": "La LFT nombra una ley anterior que abroga (versión previa).",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Se abroga la Ley Federal del Trabajo de 18 de agosto de 1931",
+    "locator": "Transitorios, Artículo 2º"
+   },
+   {
+    "claim": "La LFT nombra relaciones con otras normas, por ejemplo la Ley General de Responsabilidades Administrativas.",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Ley General de Responsabilidades Administrativas",
+    "locator": "Art. 1005, p. 400"
+   },
+   {
+    "claim": "La LFT indica algo «Publicado en el Diario Oficial de la Federación el 14 de mayo de 2026».",
+    "artifact_ids": [
+     "SA-12f09393a1951a91c3f57f57"
+    ],
+    "quote": "Publicado en el Diario Oficial de la Federación el 14 de mayo de 2026",
+    "locator": "Decretos de reforma, p. 457"
+   },
+   {
+    "claim": "La ficha de arXiv imprime fecha de envío y versión (v7 revisada el 2 Aug 2023).",
+    "artifact_ids": [
+     "SA-af8c8702f1c65b70972fefe2"
+    ],
+    "quote": "[Submitted on 12 Jun 2017 (v1), last revised 2 Aug 2023 (this version, v7)]",
+    "locator": "Cabecera de la página arXiv"
+   },
+   {
+    "claim": "arXiv imprime los autores del paper.",
+    "artifact_ids": [
+     "SA-af8c8702f1c65b70972fefe2"
+    ],
+    "quote": "Authors:Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin",
+    "locator": "Cabecera"
+   },
+   {
+    "claim": "arXiv imprime un DOI.",
+    "artifact_ids": [
+     "SA-af8c8702f1c65b70972fefe2"
+    ],
+    "quote": "https://doi.org/10.48550/arXiv.1706.03762",
+    "locator": "Bloque Cite as"
+   },
+   {
+    "claim": "La página de arXiv ofrece un enlace «view license» junto a «TeX Source».",
+    "artifact_ids": [
+     "SA-af8c8702f1c65b70972fefe2"
+    ],
+    "quote": "TeX Source\n\nview license",
+    "locator": "Full-text links"
+   },
+   {
+    "claim": "El JSON del WDI imprime fecha de última actualización.",
+    "artifact_ids": [
+     "SA-350cdd655f06994f50df718c"
+    ],
+    "quote": "\"sourceid\":\"2\",\"lastupdated\":\"2026-10-08\"",
+    "locator": "Encabezado del JSON"
+   },
+   {
+    "claim": "El JSON del WDI identifica el indicador NY.GDP.MKTP.CD.",
+    "artifact_ids": [
+     "SA-350cdd655f06994f50df718c"
+    ],
+    "quote": "\"indicator\":{\"id\":\"NY.GDP.MKTP.CD\",\"value\":\"GDP (current US$)\"}",
+    "locator": "Primer registro"
+   },
+   {
+    "claim": "La documentación de la API de GitHub imprime la versión de API 2026-03-10.",
+    "artifact_ids": [
+     "SA-cb84b1cfb3daeaa5f67b2f8b"
+    ],
+    "quote": "API Version: 2026-03-10 (latest)",
+    "locator": "Cabecera"
+   },
+   {
+    "claim": "La documentación de GitHub declara que sus docs son de código abierto.",
+    "artifact_ids": [
+     "SA-cb84b1cfb3daeaa5f67b2f8b"
+    ],
+    "quote": "All Docs are open source.",
+    "locator": "Pie de página"
+   },
+   {
+    "claim": "La documentación de GitHub imprime el titular del copyright.",
+    "artifact_ids": [
+     "SA-cb84b1cfb3daeaa5f67b2f8b"
+    ],
+    "quote": "GitHub Inc. © 2026",
+    "locator": "Pie de página"
+   },
+   {
+    "claim": "La documentación GitHub declara que la API está versionada.",
+    "artifact_ids": [
+     "SA-cb84b1cfb3daeaa5f67b2f8b"
+    ],
+    "quote": "The REST API is now versioned.",
+    "locator": "Inicio del contenido"
+   },
+   {
+    "claim": "La página de pip imprime la licencia MIT.",
+    "artifact_ids": [
+     "SA-5ef20d32b2c359489ee1083e"
+    ],
+    "quote": "MIT license\n\nCode of conduct",
+    "locator": "Sección About / Resources"
+   },
+   {
+    "claim": "La página de pip imprime el repositorio pypa/pip.",
+    "artifact_ids": [
+     "SA-5ef20d32b2c359489ee1083e"
+    ],
+    "quote": "GitHub - pypa/pip: The Python package installer",
+    "locator": "Título de la página"
+   },
+   {
+    "claim": "La página de pip imprime el conteo de commits.",
+    "artifact_ids": [
+     "SA-5ef20d32b2c359489ee1083e"
+    ],
+    "quote": "16,382 Commits",
+    "locator": "Listado de archivos"
+   },
+   {
+    "claim": "La página de pip nombra el código de conducta de la PSF.",
+    "artifact_ids": [
+     "SA-5ef20d32b2c359489ee1083e"
+    ],
+    "quote": "expected to follow the PSF Code of Conduct",
+    "locator": "README"
+   },
+   {
+    "claim": "La hoja de datos LM317 imprime número de documento y fechas de revisión.",
+    "artifact_ids": [
+     "SA-1646fb2e4f8cf8c2cbd93aaf"
+    ],
+    "quote": "SLVS044Z – SEPTEMBER 1997 – REVISED APRIL 2025",
+    "locator": "Primera página"
+   },
+   {
+    "claim": "La hoja de datos imprime el copyright de Texas Instruments.",
+    "artifact_ids": [
+     "SA-1646fb2e4f8cf8c2cbd93aaf"
+    ],
+    "quote": "Copyright © 2025 Texas Instruments Incorporated",
+    "locator": "Pie de página"
+   },
+   {
+    "claim": "La hoja de datos dice que no se concede licencia sobre ningún otro derecho de propiedad intelectual de TI.",
+    "artifact_ids": [
+     "SA-1646fb2e4f8cf8c2cbd93aaf"
+    ],
+    "quote": "No license is granted to any other TI intellectual property right",
+    "locator": "IMPORTANT NOTICE AND DISCLAIMER"
+   },
+   {
+    "claim": "La hoja de datos nombra una revisión previa.",
+    "artifact_ids": [
+     "SA-1646fb2e4f8cf8c2cbd93aaf"
+    ],
+    "quote": "Changes from Revision Y (April 2020) to Revision Z (April 2025)",
+    "locator": "Sección 10 Revision History"
+   },
+   {
+    "claim": "La hoja de datos cita normas externas como ANSI/ESDA/JEDEC JS-001.",
+    "artifact_ids": [
+     "SA-1646fb2e4f8cf8c2cbd93aaf"
+    ],
+    "quote": "per ANSI/ESDA/JEDEC JS-001",
+    "locator": "Sección 6.2 ESD Ratings"
+   },
+   {
+    "claim": "La hoja de datos nombra un documento relacionado (AN-1028).",
+    "artifact_ids": [
+     "SA-1646fb2e4f8cf8c2cbd93aaf"
+    ],
+    "quote": "See the AN-1028 Maximum Power Enhancement Techniques for Power Packages",
+    "locator": "Sección 8.5.1.1.2.1"
+   },
+   {
+    "claim": "El texto extraído de la página de YouTube contiene «© 2026 Google LLC».",
+    "artifact_ids": [
+     "SA-20c42d19ec9359bb5d69c301"
+    ],
+    "quote": "© 2026 Google LLC",
+    "locator": "Texto completo (164 caracteres)"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Sha256, tipo de medio, y si hubo descarga con robots.txt de la ley: no figuran en el texto recibido (solo texto extraído).",
+   "Licencia que declara la ley o el sitio de la Cámara de Diputados: no aparece en los caracteres 0-600000; podría estar en el pie del PDF o la página web, no leídos.",
+   "Todo lo pedido para ISO, paper, dataset, API, GitHub, hoja de datos y video: no está en esta parte.",
+   "Qué no pudo leerse de la ley: el texto está incluido hasta el carácter 600000 de 1368763; el resto no se leyó en esta llamada.",
+   "Esta parte no permite saber si el fetch se hizo, ni el sha256, el tipo de medio, el estado de robots o el tamaño: son metadatos del flujo, no del texto.",
+   "No hay licencia declarada en esta parte; no se leyó el inicio ni el final del documento, donde podría estar.",
+   "Las otras 7 fuentes (ISO, paper, dataset, API, GitHub, hoja de datos, video) no están en esta parte.",
+   "No consta si el texto vigente de la fuente es idéntico al publicado por el DOF.",
+   "Ficha de estándar ISO: no está en esta parte.",
+   "sha256 y tipo de medio de cada fuente: los textos no los traen.",
+   "Si hubo robots.txt, tamaño o fallo de descarga por fuente: no consta en los textos.",
+   "Editor, fecha y licencia del video de YouTube: no determinables con el texto extraído.",
+   "Licencia y editor del dataset WDI: el JSON leído no los imprime.",
+   "Dependencias del repositorio pip: no impresas en la página leída."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: para una ley mexicana, RG puede preservar texto extraído y verificar editor, fecha de última reforma y citas a otras normas con cita literal; las relaciones de versión aparecen como anotaciones 'reformado DOF fecha' dentro del texto.",
+  "INTERPRETACIÓN: el PDF contiene encabezados repetidos en cada página y palabras partidas por la extracción (p. ej. 'd e'), lo que ensucia la extracción de texto y puede dificultar la verificación literal por máquina.",
+  "HIPÓTESIS: las referencias a otras normas (Ley del Seguro Social, etc.) se nombran por título, no por identificador estable, lo que exige un extractor de relaciones específico del dominio legal.",
+  "INTERPRETACIÓN: Para una ley mexicana, el encabezado de página repetido da editor y fecha de última reforma de forma verificable, pero la licencia no aparece en esta parte.",
+  "INTERPRETACIÓN: Las referencias cruzadas (artículos, leyes, Constitución) están en texto libre y exigirían un extractor de relaciones; la fuente no las entrega estructuradas.",
+  "INTERPRETACIÓN: Las tablas numéricas se aplanan en texto, de modo que RG preserva los bytes pero no la estructura tabular.",
+  "INTERPRETACIÓN: Un documento extenso como este se lee por tramos; la verificación por parte exige un hash de la fuente completa, no del tramo.",
+  "INTERPRETACIÓN: La LFT, arXiv y la hoja de datos TI se extraen con texto útil, con fecha/versión impresa; la LFT y la hoja de datos nombran además normas y revisiones previas.",
+  "INTERPRETACIÓN: El video llega como texto sin contenido del video (solo pie de plataforma); haber preservado el HTML no equivale a haber leído el video.",
+  "INTERPRETACIÓN: El JSON del WDI conserva datos y fecha de actualización pero no licencia ni editor; esos metadatos viven fuera del archivo descargado.",
+  "INTERPRETACIÓN: La página GitHub de pip muestra licencia pero no versión ni dependencias; están en archivos del repositorio que no se bajaron."
+ ],
+ "possible_implications_for_zpmnd": [
+  "INTERPRETACIÓN: el caso ley mexicana funciona con las piezas actuales, pero no demuestra generalidad; los otros 7 tipos deben evaluarse con sus propias fuentes antes de declarar RG general.",
+  "Esta parte no puede confirmar que RG sea general; solo muestra que el caso de la ley mexicana funciona para editor y fecha.",
+  "INTERPRETACIÓN: RG aún no es general: video, repositorios (árbol de archivos) y dependencias requieren adaptadores propios; datasets requieren capturar metadatos de licencia por separado."
+ ],
+ "limitations": [
+  "Las fuentes se leyeron completas en 3 partes, una llamada por parte; un \"unknown\" de una parte puede estar respondido en otra.",
+  "Solo se leyó la parte 1 (caracteres 0-600000 de 1368763) de una única fuente; las otras 7 fuentes no están en esta parte.",
+  "La fuente está recortada: la licencia, los transitorios y las relaciones restantes pueden estar en la parte no leída.",
+  "No se dispone de metadatos de descarga (sha256, content-type, robots), por lo que no se afirma nada sobre ellos.",
+  "El texto es extraído de PDF; no se verifica contra el original binario.",
+  "Solo se leyeron los caracteres 599000-1199000 de 1368763; falta el inicio y el final del documento.",
+  "Solo hay una fuente en esta parte; la prueba de estrés exige ocho tipos y no se puede concluir sobre los otros siete.",
+  "No se vio ningún metadato del flujo (sha256, media type, robots), solo texto.",
+  "Las citas se tomaron del texto aplanado, con saltos de línea y espacios irregulares por la extracción.",
+  "La LFT fue leída solo en su tramo final (caracteres 1198000–1368763); los artículos anteriores no se leyeron en esta parte.",
+  "Los textos son extracciones; no se pudo verificar sha256, tipos de medio ni robots.",
+  "La ficha ISO no estaba en esta parte.",
+  "Las figuras de la hoja de datos LM317 no se extrajeron como texto útil.",
+  "Algunas citas de arXiv incluyen saltos de línea que dependen del formato de la extracción.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 13 de 45 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Se descartaron 3 hallazgos cuya cita no aparece tal cual en el texto de la fuente que citan (detalle en receipt.json): sin su cita no son hechos.",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.iso.org/standard/27001 (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
