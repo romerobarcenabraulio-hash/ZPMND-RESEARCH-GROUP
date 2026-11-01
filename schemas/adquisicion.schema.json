@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zpmnd-research-group/schemas/adquisicion.schema.json",
+  "title": "Adquisición declarativa de una fuente del registro (docs/ADQUISICION.md)",
+  "description": "Cómo se carga una fuente sin código propio: su vía y lo que la vía necesita. Las URLs van en https y en los allowed_hosts de la fuente (lo comprueba rg/sondeo.py).",
+  "type": "object",
+  "oneOf": [
+    {
+      "title": "volcado: una o varias descargas completas",
+      "type": "object",
+      "required": ["via", "registro", "frecuencia"],
+      "additionalProperties": false,
+      "properties": {
+        "via": {"const": "volcado"},
+        "archivos": {"type": "array", "minItems": 1, "maxItems": 500, "items": {"$ref": "#/$defs/archivo"}},
+        "indice": {
+          "description": "Una página que lista los archivos: se toman los enlaces que terminan en `sufijo` (texto fijo).",
+          "type": "object", "required": ["url", "sufijo", "formato"], "additionalProperties": false,
+          "properties": {"url": {"$ref": "#/$defs/https"}, "sufijo": {"type": "string", "minLength": 2, "maxLength": 40},
+                         "formato": {"$ref": "#/$defs/formato"}, "compresion": {"$ref": "#/$defs/compresion"},
+                         "max_archivos": {"type": "integer", "minimum": 1, "maximum": 5000}}
+        },
+        "registro": {"$ref": "#/$defs/registro"},
+        "tope_bytes": {"type": "integer", "minimum": 1, "maximum": 500000000000},
+        "frecuencia": {"$ref": "#/$defs/frecuencia"},
+        "licencia_url": {"$ref": "#/$defs/https"}
+      },
+      "oneOf": [{"required": ["archivos"]}, {"required": ["indice"]}]
+    },
+    {
+      "title": "api: páginas de una API pública",
+      "type": "object",
+      "required": ["via", "url", "paginacion", "registro", "frecuencia"],
+      "additionalProperties": false,
+      "properties": {
+        "via": {"const": "api"},
+        "url": {"$ref": "#/$defs/https"},
+        "paginacion": {
+          "type": "object", "required": ["tipo", "ruta_items", "max_paginas"], "additionalProperties": false,
+          "properties": {
+            "tipo": {"enum": ["cursor", "pagina", "offset", "ninguna"]},
+            "parametro": {"type": "string", "minLength": 1, "maxLength": 40},
+            "tamano_parametro": {"type": "string", "minLength": 1, "maxLength": 40},
+            "tamano": {"type": "integer", "minimum": 1, "maximum": 10000},
+            "ruta_items": {"$ref": "#/$defs/ruta"},
+            "ruta_siguiente": {"$ref": "#/$defs/ruta"},
+            "max_paginas": {"type": "integer", "minimum": 1, "maximum": 1000000}
+          }
+        },
+        "registro": {"$ref": "#/$defs/registro"},
+        "frecuencia": {"$ref": "#/$defs/frecuencia"},
+        "licencia_url": {"$ref": "#/$defs/https"}
+      }
+    },
+    {
+      "title": "sitemap: las páginas que la fuente lista en su sitemap",
+      "type": "object",
+      "required": ["via", "url", "prefijo", "max_urls", "frecuencia"],
+      "additionalProperties": false,
+      "properties": {
+        "via": {"const": "sitemap"},
+        "url": {"$ref": "#/$defs/https"},
+        "prefijo": {"$ref": "#/$defs/https"},
+        "max_urls": {"type": "integer", "minimum": 1, "maximum": 10000000},
+        "frecuencia": {"$ref": "#/$defs/frecuencia"},
+        "licencia_url": {"$ref": "#/$defs/https"}
+      }
+    },
+    {
+      "title": "rastreo: enlaces desde unas semillas, solo bajo un prefijo",
+      "type": "object",
+      "required": ["via", "semillas", "prefijo", "profundidad_max", "max_paginas", "frecuencia"],
+      "additionalProperties": false,
+      "properties": {
+        "via": {"const": "rastreo"},
+        "semillas": {"type": "array", "minItems": 1, "maxItems": 100, "items": {"$ref": "#/$defs/https"}},
+        "prefijo": {"$ref": "#/$defs/https"},
+        "profundidad_max": {"type": "integer", "minimum": 0, "maximum": 5},
+        "max_paginas": {"type": "integer", "minimum": 1, "maximum": 1000000},
+        "frecuencia": {"$ref": "#/$defs/frecuencia"},
+        "licencia_url": {"$ref": "#/$defs/https"}
+      }
+    },
+    {
+      "title": "manual: una compra o una persona",
+      "type": "object",
+      "required": ["via", "quien", "nota"],
+      "additionalProperties": false,
+      "properties": {
+        "via": {"const": "manual"},
+        "quien": {"type": "string", "minLength": 2, "maxLength": 120},
+        "nota": {"type": "string", "minLength": 5, "maxLength": 500}
+      }
+    }
+  ],
+  "$defs": {
+    "https": {"type": "string", "pattern": "^https://[^\\s]{3,2000}$"},
+    "ruta": {"type": "array", "maxItems": 12, "items": {"oneOf": [{"type": "string", "minLength": 1, "maxLength": 80}, {"type": "integer"}]}},
+    "formato": {"enum": ["json", "jsonl", "csv", "tsv", "xml", "txt", "pdf", "html"]},
+    "compresion": {"enum": ["ninguna", "gz", "zip", "bz2", "xz", "tar.gz"]},
+    "frecuencia": {"enum": ["diaria", "semanal", "mensual", "trimestral", "anual", "irregular"]},
+    "archivo": {
+      "type": "object", "required": ["url", "formato"], "additionalProperties": false,
+      "properties": {
+        "url": {"$ref": "#/$defs/https"},
+        "formato": {"$ref": "#/$defs/formato"},
+        "compresion": {"$ref": "#/$defs/compresion"},
+        "checksum": {
+          "type": "object", "required": ["algoritmo"], "additionalProperties": false,
+          "properties": {"algoritmo": {"enum": ["sha256", "md5"]}, "valor": {"type": "string", "pattern": "^[0-9a-f]{32,64}$"},
+                         "url": {"$ref": "#/$defs/https"}},
+          "oneOf": [{"required": ["valor"]}, {"required": ["url"]}]
+        }
+      }
+    },
+    "registro": {
+      "description": "Dónde está cada registro y su identificador nativo (§8): una ruta JSON, una columna o un elemento XML.",
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "id_ruta": {"$ref": "#/$defs/ruta"},
+        "id_columna": {"type": "string", "minLength": 1, "maxLength": 80},
+        "elemento": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_.:-]{0,60}$"},
+        "id_elemento": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_.:-]{0,60}$"},
+        "un_documento_por_archivo": {"const": true}
+      },
+      "oneOf": [{"required": ["id_ruta"]}, {"required": ["id_columna"]}, {"required": ["elemento", "id_elemento"]},
+                {"required": ["un_documento_por_archivo"]}]
+    }
+  }
+}
