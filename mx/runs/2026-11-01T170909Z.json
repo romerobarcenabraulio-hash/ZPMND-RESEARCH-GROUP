@@ -1,0 +1,2076 @@
+{
+ "country": "MX",
+ "coverage": [
+  {
+   "expected": 59678,
+   "extracted": 59678,
+   "ok": true,
+   "scope": "tesis_scjn_v5_complete.json @ f233341df3b9 (total_points declarado vs filas leídas)",
+   "source_id": "mx.hf-tesis-scjn"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 1 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 1 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 51189,
+   "extracted": 51189,
+   "ok": true,
+   "scope": "tesis_scjn_v5_complete.json @ f233341df3b9 (registros digitales distintos vs catalogados)",
+   "source_id": "mx.hf-tesis-scjn"
+  },
+  {
+   "expected": 319,
+   "extracted": 319,
+   "ok": true,
+   "scope": "index.htm (every PDF on the page accounted for)",
+   "source_id": "mx.leyes-federales"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 1 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 1 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 8790,
+   "extracted": 8790,
+   "ok": true,
+   "scope": "SF43718 1991-11-12..2026-11-01 (observaciones servidas vs catalogadas)",
+   "source_id": "mx.banxico-sie"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 1 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 1 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 693,
+   "extracted": 693,
+   "ok": true,
+   "scope": "910392 serie histórica completa (observaciones servidas vs catalogadas)",
+   "source_id": "mx.inegi-bie"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 1 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 1 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 11535,
+   "extracted": 11535,
+   "ok": true,
+   "scope": "SP68257 1995-04-04..2026-11-01 (observaciones servidas vs catalogadas)",
+   "source_id": "mx.banxico-sie"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 2 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 2 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 5238,
+   "extracted": 5238,
+   "ok": true,
+   "scope": "SF331451 2006-01-02..2026-11-01 (observaciones servidas vs catalogadas)",
+   "source_id": "mx.banxico-sie"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 2 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 2 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 86,
+   "extracted": 86,
+   "ok": true,
+   "scope": "2026-10-30",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 86,
+   "extracted": 86,
+   "ok": true,
+   "scope": "2026-10-30 fecha oficial",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 7950,
+   "extracted": 7950,
+   "ok": true,
+   "scope": "SF43783 1995-03-23..2026-11-01 (observaciones servidas vs catalogadas)",
+   "source_id": "mx.banxico-sie"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 2 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 2 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 86,
+   "extracted": 86,
+   "ok": true,
+   "scope": "2026-10-31",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 86,
+   "extracted": 86,
+   "ok": true,
+   "scope": "2026-10-31 fecha oficial",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 2 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 2 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 3 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 3 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 86,
+   "extracted": 86,
+   "ok": true,
+   "scope": "2026-11-01",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 86,
+   "extracted": 86,
+   "ok": true,
+   "scope": "2026-11-01 fecha oficial",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 150,
+   "extracted": 150,
+   "ok": true,
+   "scope": "edo 3 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 150,
+   "extracted": 150,
+   "ok": true,
+   "scope": "edo 3 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 3 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 3 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 3 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 3 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 4 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 4 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 4 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 4 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 4 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 4 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 4 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 4 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 5 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 5 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 5 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 5 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 5 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 5 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 5 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 5 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 6 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 6 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 6 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 6 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 6 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 6 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 6 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 6 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 7 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 7 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 7 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 7 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 7 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 7 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 7 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 7 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 8 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 8 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 8 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 8 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 8 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 8 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 8 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 8 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 9 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 9 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 9 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 9 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 9 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 9 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 9 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 9 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 10 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 10 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 10 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 10 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 10 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 10 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 10 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 10 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 11 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 11 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 11 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 11 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 11 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 11 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 11 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 11 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 12 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 12 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 12 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 12 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 12 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 12 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 12 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 12 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 13 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 13 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 13 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 13 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 13 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 13 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 13 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 13 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 14 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 14 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 14 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 14 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 14 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 14 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 14 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 14 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 15 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 15 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 15 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 15 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 15 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 15 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 15 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 15 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 16 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 16 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 16 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 16 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 16 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 16 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 16 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 16 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 17 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 17 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 17 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 17 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 17 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 17 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 17 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 17 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 18 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 18 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 18 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 18 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 18 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 18 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 18 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 18 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 19 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 19 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 19 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 19 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 19 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 19 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 19 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 19 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 20 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 20 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 20 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 20 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 20 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 20 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 20 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 20 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 209,
+   "extracted": 209,
+   "ok": true,
+   "scope": "edo 21 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 209,
+   "extracted": 209,
+   "ok": true,
+   "scope": "edo 21 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 21 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 21 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 21 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 21 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 21 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 21 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 22 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 22 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 22 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 22 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 22 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 22 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 22 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 22 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 303,
+   "extracted": 303,
+   "ok": true,
+   "scope": "edo 23 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 303,
+   "extracted": 303,
+   "ok": true,
+   "scope": "edo 23 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 226,
+   "extracted": 226,
+   "ok": true,
+   "scope": "edo 23 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 226,
+   "extracted": 226,
+   "ok": true,
+   "scope": "edo 23 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 23 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 23 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 23 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 23 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 182,
+   "extracted": 182,
+   "ok": true,
+   "scope": "edo 24 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 182,
+   "extracted": 182,
+   "ok": true,
+   "scope": "edo 24 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 202,
+   "extracted": 202,
+   "ok": true,
+   "scope": "edo 24 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 202,
+   "extracted": 202,
+   "ok": true,
+   "scope": "edo 24 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 24 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 24 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 24 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 24 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 342,
+   "extracted": 342,
+   "ok": true,
+   "scope": "edo 25 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 342,
+   "extracted": 342,
+   "ok": true,
+   "scope": "edo 25 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 264,
+   "extracted": 264,
+   "ok": true,
+   "scope": "edo 25 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 264,
+   "extracted": 264,
+   "ok": true,
+   "scope": "edo 25 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 25 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 25 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 25 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 25 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 73,
+   "extracted": 73,
+   "ok": true,
+   "scope": "edo 26 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 73,
+   "extracted": 73,
+   "ok": true,
+   "scope": "edo 26 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 3,
+   "extracted": 3,
+   "ok": true,
+   "scope": "edo 26 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 3,
+   "extracted": 3,
+   "ok": true,
+   "scope": "edo 26 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 26 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 26 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 26 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 26 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 190,
+   "extracted": 190,
+   "ok": true,
+   "scope": "edo 27 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 188,
+   "extracted": 188,
+   "ok": true,
+   "scope": "edo 27 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 152,
+   "extracted": 152,
+   "ok": true,
+   "scope": "edo 27 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 142,
+   "extracted": 142,
+   "ok": true,
+   "scope": "edo 27 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 27 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 27 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 27 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 27 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 391,
+   "extracted": 391,
+   "ok": true,
+   "scope": "edo 28 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 391,
+   "extracted": 391,
+   "ok": true,
+   "scope": "edo 28 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 258,
+   "extracted": 258,
+   "ok": true,
+   "scope": "edo 28 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 258,
+   "extracted": 258,
+   "ok": true,
+   "scope": "edo 28 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 28 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 28 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 28 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 28 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 62,
+   "extracted": 62,
+   "ok": true,
+   "scope": "edo 29 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 62,
+   "extracted": 62,
+   "ok": true,
+   "scope": "edo 29 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 107,
+   "extracted": 107,
+   "ok": true,
+   "scope": "edo 29 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 106,
+   "extracted": 106,
+   "ok": true,
+   "scope": "edo 29 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 29 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 29 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 29 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 29 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 1305,
+   "extracted": 1305,
+   "ok": true,
+   "scope": "edo 30 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 1305,
+   "extracted": 1305,
+   "ok": true,
+   "scope": "edo 30 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 1372,
+   "extracted": 1372,
+   "ok": true,
+   "scope": "edo 30 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 1372,
+   "extracted": 1372,
+   "ok": true,
+   "scope": "edo 30 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 30 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 30 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 30 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 30 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 181,
+   "extracted": 181,
+   "ok": true,
+   "scope": "edo 31 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 181,
+   "extracted": 181,
+   "ok": true,
+   "scope": "edo 31 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 163,
+   "extracted": 163,
+   "ok": true,
+   "scope": "edo 31 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 163,
+   "extracted": 163,
+   "ok": true,
+   "scope": "edo 31 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 31 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 31 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 31 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 31 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 166,
+   "extracted": 166,
+   "ok": true,
+   "scope": "edo 32 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 166,
+   "extracted": 166,
+   "ok": true,
+   "scope": "edo 32 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 196,
+   "extracted": 196,
+   "ok": true,
+   "scope": "edo 32 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 196,
+   "extracted": 196,
+   "ok": true,
+   "scope": "edo 32 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 32 poder 3 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 32 poder 3 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": -1,
+   "extracted": 0,
+   "ok": false,
+   "scope": "edo 32 poder 4 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "edo 32 poder 4 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 163,
+   "extracted": 163,
+   "ok": true,
+   "scope": "regla.htm (every PDF on the page accounted for)",
+   "source_id": "mx.reglamentos-federales"
+  },
+  {
+   "entries": [],
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "titulos con NOM sin codigo leido",
+   "source_id": "mx.normas"
+  },
+  {
+   "entries": [],
+   "expected": 1940,
+   "extracted": 1931,
+   "ok": true,
+   "scope": "decretos de tratado: chequeo independiente vs tabla fija",
+   "source_id": "mx.tratados"
+  },
+  {
+   "entries": [],
+   "expected": 1908,
+   "extracted": 1902,
+   "ok": true,
+   "scope": "decretos de la SRE con acto sobre un instrumento: emisor vs tabla fija",
+   "source_id": "mx.tratados"
+  }
+ ],
+ "errors": [
+  "refused https://www.ordenjuridico.gob.mx/Documentos/Estatal/Jalisco/wo108402.pdf: response larger than 60000000 bytes: https://www.ordenjuridico.gob.mx/Documentos/Estatal/Jalisco/wo108402.pdf",
+  "refused https://www.ordenjuridico.gob.mx/Documentos/Estatal/Distrito%20Federal/wo105444.pdf: response larger than 60000000 bytes: https://www.ordenjuridico.gob.mx/Documentos/Estatal/Distrito%20Federal/wo105444.pdf",
+  "refused https://www.ordenjuridico.gob.mx/Documentos/Estatal/Distrito%20Federal/wo105445.pdf: response larger than 60000000 bytes: https://www.ordenjuridico.gob.mx/Documentos/Estatal/Distrito%20Federal/wo105445.pdf",
+  "refused https://www.ordenjuridico.gob.mx/Documentos/Estatal/Jalisco/wo104831.pdf: response larger than 60000000 bytes: https://www.ordenjuridico.gob.mx/Documentos/Estatal/Jalisco/wo104831.pdf",
+  "refused https://www.ordenjuridico.gob.mx/Documentos/Estatal/Tabasco/wo108874.pdf: response larger than 60000000 bytes: https://www.ordenjuridico.gob.mx/Documentos/Estatal/Tabasco/wo108874.pdf",
+  "mx.dof: request budget reached (continues next run)"
+ ],
+ "finished_at": "2026-11-01T17:38:16Z",
+ "invisible_chars_removed": 0,
+ "nom_lineages": 1945,
+ "planned_sources": {
+  "mx.conamer-cnartys": "catalogonacional.gob.mx answers robots.txt with 403 and cna.conamer.gob.mx does not resolve (2026-10-19).",
+  "mx.congresos-locales": "32 different sites and formats; the OJN compilation (mx.ojn-estatal) covers state legislation meanwhile",
+  "mx.datos-gob": "robots.txt disallows /api/ and asks Crawl-Delay 10; no bulk export found (data.json, catalog.json: 404). Needs an operator-approved export or permission.",
+  "mx.normas-nom-nmx": "www.sinec.gob.mx and sinec.gob.mx do not resolve (2026-10-19); the OJN NOM catalog page is from 2014. NOMs, PROY-NOMs and comment responses are catalogued from the DOF (doc_type NORMA OFICIAL MEXICANA, PROYECTO DE NORMA OFICIAL MEXICANA, RESPUESTA A COMENTARIOS). NMX texts are often sold: metadata only.",
+  "mx.periodicos-oficiales-estatales": "32 different sites and formats; one adapter per format",
+  "mx.scjn-sjf": "sjf2.scjn.gob.mx answers robots.txt with 403 (JSON, looks like a firewall), 2026-10-19; access method and terms not yet reviewed. Sentences of the SCJN Pleno published in the DOF are already catalogued (doc_type SENTENCIA). Tesis are catalogued meanwhile from the secondary source mx.hf-tesis-scjn.",
+  "mx.tratados-sre": "cja.sre.gob.mx/tratadosmexico serves a Radware bot-protection challenge page (2026-10-19); bot protection is never bypassed. Needs an official export or operator permission. The OJN treaty list is a 2012 compilation (stale), not used as primary."
+ },
+ "quarantined": {},
+ "raw_new_files": 1307,
+ "requests_total": 2403,
+ "robots": {
+  "https://huggingface.co": {
+   "redirects": 0,
+   "status": 200,
+   "url": "https://huggingface.co/robots.txt"
+  },
+  "https://sidof.segob.gob.mx": {
+   "redirects": 0,
+   "status": 200,
+   "url": "https://sidof.segob.gob.mx/robots.txt"
+  },
+  "https://www.banxico.org.mx": {
+   "redirects": 1,
+   "status": 200,
+   "url": "https://anterior.banxico.org.mx/robots.txt"
+  },
+  "https://www.diputados.gob.mx": {
+   "redirects": 0,
+   "status": 404,
+   "url": "https://www.diputados.gob.mx/robots.txt"
+  },
+  "https://www.inegi.org.mx": {
+   "redirects": 0,
+   "status": 200,
+   "url": "https://www.inegi.org.mx/robots.txt"
+  },
+  "https://www.ordenjuridico.gob.mx": {
+   "redirects": 0,
+   "status": 404,
+   "url": "https://www.ordenjuridico.gob.mx/robots.txt"
+  }
+ },
+ "run_id": "2026-11-01T170909Z",
+ "sources": {
+  "mx.banxico-sie": {
+   "entries_changed": 0,
+   "entries_new": 1,
+   "observations_served": 33513,
+   "raw": {
+    "SF331451": "sha256/c8/c8b7edc4fd4e5f3db54a3bd772c62a5261f58b7b8712561832e38e0be64c3157.json",
+    "SF43718": "sha256/29/29b21274bd78081d33818333248963b27f225bbd37f94d6703a62023e38c93f8.json",
+    "SF43783": "sha256/17/1737ef04e9178d3fd6731f794abde7cb1069dbd5ced5f2477f64551bf505ef4b.json",
+    "SP68257": "sha256/11/118cd7c6853621e1b8d7294d2e8b618b56eb0e9d82a838152bd984ebcebf30c3.json",
+    "metadatos": "sha256/75/7574135b8740c2ccddd0456fbc342916c7367433fa821f3a2eb3fb0bcc13d7fc.json"
+   },
+   "raw_stored": 5,
+   "requests": 7,
+   "series": 4
+  },
+  "mx.dof": {
+   "days_indexed": 3,
+   "days_owed_at_end": 0,
+   "days_requeued": 0,
+   "days_short_unresolved": 0,
+   "notes_dated_by_page": 0,
+   "notes_new": 0,
+   "raw_failed": 195,
+   "raw_robots_disallowed": 0,
+   "raw_skipped_metadata_only": 260144,
+   "raw_stored": 1301,
+   "requests": 1500
+  },
+  "mx.hf-tesis-scjn": {
+   "distinct": 0,
+   "downloaded": false,
+   "new_entries": 0,
+   "requests": 2,
+   "rows_read": 0,
+   "source_repeated_rows": 0,
+   "source_rows_without_registro": 0,
+   "source_rows_without_registro_point_ids": [],
+   "source_rows_without_rubro": 0,
+   "source_rows_without_rubro_point_ids": []
+  },
+  "mx.inegi-bie": {
+   "entries_changed": 0,
+   "entries_new": 0,
+   "observations_served": 693,
+   "raw": {
+    "910392": "sha256/8a/8ad0a8b1013348720e34fb6804d24d7ebb35481f5deac78338ac2458308f2710.json"
+   },
+   "raw_stored": 1,
+   "requests": 2,
+   "series": 1
+  },
+  "mx.leyes-federales": {
+   "listed": 318,
+   "new_instruments": 0,
+   "new_versions": 0,
+   "raw_failed": 0,
+   "requests": 320,
+   "unchanged": 318
+  },
+  "mx.ojn-estatal": {
+   "listed": 6484,
+   "listings": 128,
+   "new_instruments": 0,
+   "no_document_link": 2,
+   "raw_failed": 106,
+   "raw_stored": 0,
+   "raw_unchanged": 0,
+   "reform_changed": 0,
+   "requests": 343,
+   "source_repeated_rows": 13
+  },
+  "mx.ojn-municipal": {
+   "listed": 0,
+   "municipalities_listed": 0,
+   "new_instruments": 0,
+   "no_document_link": 0,
+   "raw_failed": 38,
+   "raw_stored": 0,
+   "raw_unchanged": 0,
+   "requests": 77,
+   "states": 0
+  },
+  "mx.reglamentos-federales": {
+   "listed": 150,
+   "new_instruments": 0,
+   "new_versions": 0,
+   "raw_failed": 0,
+   "requests": 152,
+   "unchanged": 150
+  }
+ },
+ "started_at": "2026-11-01T17:09:09Z",
+ "treaty_instruments": 1131
+}

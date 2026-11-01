@@ -1,6 +1,6 @@
 # Catálogo MX
 
-Total de registros: **967127**. Conteos calculados de los registros; nada resumido ni interpretado.
+Total de registros: **967128**. Conteos calculados de los registros; nada resumido ni interpretado.
 
 ## Por fuente
 
@@ -8,7 +8,7 @@ Total de registros: **967127**. Conteos calculados de los registros; nada resumi
 |---|---:|
 | mx.dof | 844594 |
 | mx.hf-tesis-scjn | 51189 |
-| mx.banxico-sie | 33512 |
+| mx.banxico-sie | 33513 |
 | mx.ojn-estatal | 29984 |
 | mx.ojn-municipal | 6687 |
 | mx.inegi-bie | 693 |
@@ -24,7 +24,7 @@ Total de registros: **967127**. Conteos calculados de los registros; nada resumi
 | mx.dof | OTRO | 50516 |
 | mx.dof | ACUERDO | 42189 |
 | mx.hf-tesis-scjn | TESIS AISLADA | 37947 |
-| mx.banxico-sie | INDICADOR ECONOMICO | 33512 |
+| mx.banxico-sie | INDICADOR ECONOMICO | 33513 |
 | mx.dof | CONVENIO | 24533 |
 | mx.dof | INDICADOR ECONOMICO | 24314 |
 | mx.dof | CONVOCATORIA DE PLAZAS | 19819 |
@@ -201,20 +201,20 @@ Total de registros: **967127**. Conteos calculados de los registros; nada resumi
 
 | categoría | registros |
 |---|---:|
-| mx.dof | pending | 513618 |
+| mx.dof | pending | 512315 |
 | mx.dof | metadata_only | 260144 |
-| mx.dof | stored | 70639 |
+| mx.dof | stored | 71940 |
 | mx.hf-tesis-scjn | stored | 51189 |
-| mx.banxico-sie | stored | 33512 |
+| mx.banxico-sie | stored | 33513 |
 | mx.ojn-estatal | stored | 29858 |
 | mx.ojn-municipal | stored | 6649 |
 | mx.inegi-bie | stored | 693 |
 | mx.leyes-federales | stored | 318 |
-| mx.dof | failed | 193 |
+| mx.dof | failed | 195 |
 | mx.reglamentos-federales | stored | 150 |
-| mx.ojn-estatal | failed | 108 |
+| mx.ojn-estatal | failed | 106 |
 | mx.ojn-municipal | failed | 38 |
-| mx.ojn-estatal | no_text_link | 18 |
+| mx.ojn-estatal | no_text_link | 20 |
 
 ## Por año (publicación u original)
 
@@ -225,7 +225,7 @@ Total de registros: **967127**. Conteos calculados de los registros; nada resumi
 | mx.dof | 2013 | 34472 |
 | mx.dof | 2011 | 34234 |
 | mx.dof | 2015 | 33983 |
-| mx.banxico-sie | ???? | 33512 |
+| mx.banxico-sie | ???? | 33513 |
 | mx.dof | 2016 | 32633 |
 | mx.dof | 2017 | 31104 |
 | mx.dof | 2008 | 30731 |
@@ -510,18 +510,18 @@ Total de registros: **967127**. Conteos calculados de los registros; nada resumi
 | CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO | AVISOS | 333912 |
 | AVISOS JUDICIALES Y GENERALES | AVISOS | 236990 |
 | - | Tribunales Colegiados de Circuito | 33971 |
-| - | Banco de México | 33512 |
+| - | Banco de México | 33513 |
 | ORGANISMOS AUTONOMOS | BANCO DE MEXICO | 26690 |
 | PODER EJECUTIVO | SECRETARIA DE LA REFORMA AGRARIA | 23480 |
 | AVISOS JUDICIALES Y GENERALES | AVISOS JUDICIALES Y GENERALES | 23084 |
 | PODER EJECUTIVO | SECRETARIA DE HACIENDA Y CREDITO PUBLICO | 21896 |
 | CONVOCATORIAS PARA CONCURSOS DE PLAZAS VACANTES DEL SERVICIO PROFESIONAL DE CARRERA EN LA ADMINISTRACION PUBLICA FEDERAL | AVISOS | 19815 |
-| PODER EJECUTIVO | - | 17593 |
+| PODER EJECUTIVO | - | 17596 |
 | PODER EJECUTIVO | SECRETARIA DE GOBERNACION | 16828 |
 | PODER EJECUTIVO | SECRETARIA DE SALUD | 13902 |
 | PODER EJECUTIVO | SECRETARIA DE ECONOMIA | 13433 |
 | PODER EJECUTIVO | SECRETARIA DE LA FUNCION PUBLICA | 12554 |
-| PODER LEGISLATIVO | - | 9388 |
+| PODER LEGISLATIVO | - | 9418 |
 | PODER EJECUTIVO | SECRETARIA DE DESARROLLO AGRARIO, TERRITORIAL Y URBANO | 8848 |
 | PODER EJECUTIVO | SECRETARIA DE RELACIONES EXTERIORES | 7196 |
 | - | - | 7155 |
@@ -539,7 +539,7 @@ Total de registros: **967127**. Conteos calculados de los registros; nada resumi
 | PODER EJECUTIVO | SECRETARIA DEL TRABAJO Y PREVISION SOCIAL | 3326 |
 | ORGANISMOS AUTONOMOS | INSTITUTO FEDERAL ELECTORAL | 3282 |
 | PODER JUDICIAL | SUPREMA CORTE DE JUSTICIA DE LA NACION | 2787 |
-| ORGANOS AUTONOMOS | - | 2214 |
+| ORGANOS AUTONOMOS | - | 2198 |
 | PODER EJECUTIVO | SECRETARIA DE ENERGIA | 2079 |
 | - | Pleno | 2066 |
 | - | Plenos de Circuito | 1703 |
@@ -557,7 +557,7 @@ Total de registros: **967127**. Conteos calculados de los registros; nada resumi
 | - | Plenos Regionales | 883 |
 | ORGANISMOS AUTONOMOS | TRIBUNAL FEDERAL DE JUSTICIA ADMINISTRATIVA | 834 |
 | PODER EJECUTIVO | BANCO DE MEXICO | 823 |
-| PODER JUDICIAL | - | 808 |
+| PODER JUDICIAL | - | 791 |
 | PODER EJECUTIVO | SECRETARIA DE AGRICULTURA, GANADERIA Y DESARROLLO RURAL | 755 |
 | PODER EJECUTIVO | SECRETARIA DE AGRICULTURA Y RECURSOS HIDRAULICOS | 702 |
 | - | Instituto Nacional de Estadística y Geografía (INEGI) | 693 |

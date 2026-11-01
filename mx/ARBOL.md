@@ -2,8 +2,8 @@
 
 País → ámbito → estado → municipio → poder → dependencia → tipo. Conteos de los registros; "(sin dato en la fuente)" marca un nivel que la fuente no publica (nunca se infiere).
 
-- país: MX — 967127
-  - ámbito: federal — 930456
+- país: MX — 967128
+  - ámbito: federal — 930457
     - poder: CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO — 334001
       - dependencia: AVISOS — 333912
         - tipo: CONVOCATORIA DE ADQUISICIONES — 333912
@@ -843,12 +843,12 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAMENTO — 1
       - dependencia: TRIBUNAL SUPERIOR AGRARIO — 1
         - tipo: SENTENCIA — 1
-    - poder: (sin dato en la fuente) — 85862
+    - poder: (sin dato en la fuente) — 85863
       - dependencia: Tribunales Colegiados de Circuito — 33971
         - tipo: TESIS AISLADA — 30995
         - tipo: JURISPRUDENCIA — 2976
-      - dependencia: Banco de México — 33512
-        - tipo: INDICADOR ECONOMICO — 33512
+      - dependencia: Banco de México — 33513
+        - tipo: INDICADOR ECONOMICO — 33513
       - dependencia: Primera Sala — 6980
         - tipo: TESIS AISLADA — 4130
         - tipo: JURISPRUDENCIA — 2850
@@ -2909,11 +2909,11 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
           - tipo: CODIGO — 2
           - tipo: LEY — 1
     - estado: Tamaulipas — 797
-      - poder: PODER EJECUTIVO — 386
-        - dependencia: (sin dato en la fuente) — 386
+      - poder: PODER EJECUTIVO — 388
+        - dependencia: (sin dato en la fuente) — 388
           - tipo: ACUERDO — 103
           - tipo: DECRETO ADMINISTRATIVO — 83
-          - tipo: REGLAMENTO — 56
+          - tipo: REGLAMENTO — 58
           - tipo: CONVOCATORIA — 45
           - tipo: CONVENIO — 38
           - tipo: DISPOSICIONES DIVERSAS — 21
@@ -2929,34 +2929,33 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
           - tipo: PLAN — 1
           - tipo: PROGRAMA — 1
           - tipo: REGLA — 1
-      - poder: PODER LEGISLATIVO — 249
-        - dependencia: (sin dato en la fuente) — 249
-          - tipo: LEY — 95
+      - poder: PODER LEGISLATIVO — 258
+        - dependencia: (sin dato en la fuente) — 258
+          - tipo: LEY — 101
           - tipo: DECRETO LEGISLATIVO — 87
           - tipo: DECRETO — 25
           - tipo: ACUERDO — 22
+          - tipo: CODIGO — 8
           - tipo: DECRETO ADMINISTRATIVO — 8
-          - tipo: CODIGO — 5
           - tipo: REGLAMENTO — 3
           - tipo: DISPOSICIONES DIVERSAS — 2
           - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
           - tipo: CONVOCATORIA — 1
-      - poder: ORGANOS AUTONOMOS — 119
-        - dependencia: (sin dato en la fuente) — 119
+      - poder: ORGANOS AUTONOMOS — 113
+        - dependencia: (sin dato en la fuente) — 113
           - tipo: ACUERDO — 95
-          - tipo: REGLAMENTO — 8
-          - tipo: LEY — 7
+          - tipo: REGLAMENTO — 6
           - tipo: DISPOSICIONES DIVERSAS — 4
+          - tipo: LEY — 3
           - tipo: CONVENIO — 2
           - tipo: CONVOCATORIA — 2
           - tipo: LINEAMIENTO — 1
-      - poder: PODER JUDICIAL — 43
-        - dependencia: (sin dato en la fuente) — 43
+      - poder: PODER JUDICIAL — 38
+        - dependencia: (sin dato en la fuente) — 38
           - tipo: ACUERDO — 28
-          - tipo: CODIGO — 5
           - tipo: REGLAMENTO — 4
           - tipo: DISPOSICIONES DIVERSAS — 3
-          - tipo: LEY — 2
+          - tipo: CODIGO — 2
           - tipo: FE DE ERRATAS — 1
     - estado: Sinaloa — 711
       - poder: PODER EJECUTIVO — 342
@@ -3388,12 +3387,12 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
           - tipo: ACUERDO — 1
           - tipo: DISPOSICION GENERAL — 1
     - estado: Baja California Sur — 260
-      - poder: PODER LEGISLATIVO — 146
-        - dependencia: (sin dato en la fuente) — 146
+      - poder: PODER LEGISLATIVO — 150
+        - dependencia: (sin dato en la fuente) — 150
           - tipo: LEY — 121
           - tipo: DECRETO LEGISLATIVO — 21
+          - tipo: CODIGO — 5
           - tipo: ACUERDO — 1
-          - tipo: CODIGO — 1
           - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
           - tipo: DECRETO ADMINISTRATIVO — 1
       - poder: PODER EJECUTIVO — 80
@@ -3418,11 +3417,11 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
           - tipo: REGLAMENTO — 15
           - tipo: PROGRAMA — 7
           - tipo: ESTATUTO — 2
-      - poder: PODER JUDICIAL — 10
-        - dependencia: (sin dato en la fuente) — 10
-          - tipo: CODIGO — 5
+      - poder: PODER JUDICIAL — 6
+        - dependencia: (sin dato en la fuente) — 6
           - tipo: LEY — 3
           - tipo: ACUERDO — 1
+          - tipo: CODIGO — 1
           - tipo: REGLAMENTO — 1
     - estado: Guerrero — 252
       - poder: PODER EJECUTIVO — 128
@@ -3482,31 +3481,28 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
           - tipo: CODIGO — 2
           - tipo: REGLAMENTO — 1
     - estado: Tlaxcala — 175
-      - poder: PODER LEGISLATIVO — 89
-        - dependencia: (sin dato en la fuente) — 89
-          - tipo: LEY — 80
-          - tipo: CODIGO — 2
+      - poder: PODER LEGISLATIVO — 106
+        - dependencia: (sin dato en la fuente) — 106
+          - tipo: LEY — 93
+          - tipo: CODIGO — 6
           - tipo: REGLAMENTO — 2
           - tipo: ACUERDO — 1
           - tipo: CONSTITUCION POLITICA DEL ESTADO / ESTATUTO DE GOBIERNO — 1
           - tipo: DECRETO LEGISLATIVO — 1
           - tipo: PLAN — 1
           - tipo: PRESUPUESTO — 1
-      - poder: PODER EJECUTIVO — 60
-        - dependencia: (sin dato en la fuente) — 60
-          - tipo: REGLAMENTO — 56
+      - poder: PODER EJECUTIVO — 61
+        - dependencia: (sin dato en la fuente) — 61
+          - tipo: REGLAMENTO — 57
           - tipo: LINEAMIENTO — 3
           - tipo: PLAN — 1
-      - poder: ORGANOS AUTONOMOS — 17
-        - dependencia: (sin dato en la fuente) — 17
-          - tipo: LEY — 8
-          - tipo: REGLAMENTO — 6
-          - tipo: CODIGO — 2
+      - poder: ORGANOS AUTONOMOS — 7
+        - dependencia: (sin dato en la fuente) — 7
+          - tipo: REGLAMENTO — 5
           - tipo: ACUERDO — 1
-      - poder: PODER JUDICIAL — 9
-        - dependencia: (sin dato en la fuente) — 9
-          - tipo: LEY — 5
-          - tipo: CODIGO — 3
+          - tipo: CODIGO — 1
+      - poder: PODER JUDICIAL — 1
+        - dependencia: (sin dato en la fuente) — 1
           - tipo: REGLAMENTO — 1
     - estado: Sonora — 84
       - poder: PODER EJECUTIVO — 73
