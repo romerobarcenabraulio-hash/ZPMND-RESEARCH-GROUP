@@ -1,0 +1,878 @@
+{
+ "research_id": "RP-2026-10-22-frontend-piloto",
+ "request_id": "RR-2026-10-22-frontend-piloto",
+ "status": "CANDIDATE",
+ "produced_at": "2026-10-28T05:36:50Z",
+ "question": "Comparar, para construir la vista del piloto de ZPMND (una pantalla con el gemelo de la organizacion, sus Work Pins con cita legal, la verificacion por relectura y el tablero de complejidad absorbida, alimentada por la API FastAPI existente): Base44, v0 (Vercel), Bolt, Claude Design / Artifacts y construir el frontend dentro del propio repositorio. Lovable queda fuera por decision del dueno. Para cada opcion: donde quedan los datos que muestra y si pueden quedarse en la frontera de ZPMND (sin que datos de clientes pasen por el proveedor), si el codigo se exporta completo y se puede revisar con pruebas y auditoria propias, autenticacion y multi-inquilino, costo mensual realista para un piloto, amarre al proveedor y terminos de servicio sobre datos.",
+ "why_zpmnd_needs_it": "El dueno quiere aprovechar herramientas expertas en frontend en lugar de construir la interfaz desde cero, pero sin decidir a la ligera: la vista muestra datos de clientes y obligaciones legales, y todo lo que entra a ZPMND pasa por compuertas (CI, mutacion, auditoria).",
+ "scope": "Comparación documental (términos, privacidad, precios, docs de proveedor) de Base44, v0, Bolt y Claude Artifacts/Design para el frontend del piloto ZPMND. La opción \"frontend en el repo propio\" no tiene fuente: queda como INTERPRETACIÓN. No se hizo prueba en sandbox ni se calculó sha256: solo se leyó texto.",
+ "sources": {
+  "primary": [
+   "SA-d2ebe8bf32a914ea3326541f",
+   "SA-69bd312e3ef8ff2e524fd824",
+   "SA-d582e9272e523f2578dd1ae3",
+   "SA-93ea34758129897669978ded",
+   "SA-ec87455cfd28fc410f274310",
+   "SA-ba36c0c5ce712a00c8788587",
+   "SA-c37ac1f75f973b9f68a25138",
+   "SA-214ed31c38e7c0f00402c4e7",
+   "SA-a7d9d641eb3a92db40707a24",
+   "SA-3b5d6393fd38eb9340cdb382",
+   "SA-3a8400afe28208851561343e",
+   "SA-3eb1b7dae516102d4c4c38a5",
+   "SA-999aaaf8c855d94aa36c5ce6",
+   "SA-7256083eae05adcc6428639d",
+   "SA-c031f30d9826c093d2aba78c",
+   "SA-f3a5988c4557b99d15f2e2f5",
+   "SA-2938ea916fab3798990bdcc2",
+   "SA-1c6637a8a6d307613fb1ed1f",
+   "SA-62920ffb3f66032f90a05d35",
+   "SA-0adb7f29e7ddfd197e0f633e"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-d2ebe8bf32a914ea3326541f",
+   "url": "https://base44.com/about-us/legal/terms-of-service",
+   "retrieved_at": "2026-10-28T05:31:37Z",
+   "sha256": "d2ebe8bf32a914ea3326541f0e77e7e9fd39c2ea15b9a61ca6338c49568e7473",
+   "bytes": 450359,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Base44",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Base44: Terms of Service"
+  },
+  {
+   "artifact_id": "SA-69bd312e3ef8ff2e524fd824",
+   "url": "https://base44.com/about-us/legal/privacy-policy",
+   "retrieved_at": "2026-10-28T05:31:39Z",
+   "sha256": "69bd312e3ef8ff2e524fd8243bccd7d9e71ee2008c01b9452854223a99a948a1",
+   "bytes": 383622,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Base44",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Base44: Privacy Policy"
+  },
+  {
+   "artifact_id": "SA-d582e9272e523f2578dd1ae3",
+   "url": "https://base44.com/pricing",
+   "retrieved_at": "2026-10-28T05:31:41Z",
+   "sha256": "d582e9272e523f2578dd1ae3093e9a2e161a0c459093af9d6f3429e7a811022d",
+   "bytes": 479599,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Base44",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Base44: Pricing"
+  },
+  {
+   "artifact_id": "SA-93ea34758129897669978ded",
+   "url": "https://docs.base44.com/Integrations/github-connector.md",
+   "retrieved_at": "2026-10-28T05:31:42Z",
+   "sha256": "93ea34758129897669978ded9ddb5d51829c4353a41ecf4d70007490488291fe",
+   "bytes": 5735,
+   "media_type": "text/markdown",
+   "source_type": "vendor_doc",
+   "publisher": "Base44",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Base44 docs: GitHub connector"
+  },
+  {
+   "artifact_id": "SA-ec87455cfd28fc410f274310",
+   "url": "https://docs.base44.com/Building-your-app/Managing-your-app-data.md",
+   "retrieved_at": "2026-10-28T05:31:43Z",
+   "sha256": "ec87455cfd28fc410f274310acaaeb1d3a8396f8f8291c7e8f57c3d599d1e549",
+   "bytes": 28066,
+   "media_type": "text/markdown",
+   "source_type": "vendor_doc",
+   "publisher": "Base44",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Base44 docs: Managing your app data"
+  },
+  {
+   "artifact_id": "SA-ba36c0c5ce712a00c8788587",
+   "url": "https://vercel.com/legal/terms",
+   "retrieved_at": "2026-10-28T05:31:44Z",
+   "sha256": "ba36c0c5ce712a00c8788587483e50b4d8d3829f5a2dfc8a2e321da0821e085b",
+   "bytes": 868612,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Vercel",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Vercel: Terms of Service (v0)"
+  },
+  {
+   "artifact_id": "SA-c37ac1f75f973b9f68a25138",
+   "url": "https://vercel.com/legal/privacy-notice",
+   "retrieved_at": "2026-10-28T05:31:45Z",
+   "sha256": "c37ac1f75f973b9f68a251386effff8623282a530526f7434a2c39b98e7df558",
+   "bytes": 834589,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Vercel",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Vercel: Privacy Notice (v0)"
+  },
+  {
+   "artifact_id": "SA-214ed31c38e7c0f00402c4e7",
+   "url": "https://v0.app/pricing",
+   "retrieved_at": "2026-10-28T05:31:47Z",
+   "sha256": "214ed31c38e7c0f00402c4e76e5adcea7b0ff29b46aa9bc2e477efd3c6417d95",
+   "bytes": 283337,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Vercel",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "v0: Pricing"
+  },
+  {
+   "artifact_id": "SA-a7d9d641eb3a92db40707a24",
+   "url": "https://v0.app/docs/github.md",
+   "retrieved_at": "2026-10-28T05:31:48Z",
+   "sha256": "a7d9d641eb3a92db40707a2420cca26fad43bbec3a82b2fb92a111e3f651ac80",
+   "bytes": 9415,
+   "media_type": "text/markdown",
+   "source_type": "vendor_doc",
+   "publisher": "Vercel",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "v0 docs: GitHub"
+  },
+  {
+   "artifact_id": "SA-3b5d6393fd38eb9340cdb382",
+   "url": "https://v0.app/docs/faqs.md",
+   "retrieved_at": "2026-10-28T05:31:49Z",
+   "sha256": "3b5d6393fd38eb9340cdb3822430d64669a403b664503d1c15e2d16b39825fef",
+   "bytes": 17891,
+   "media_type": "text/markdown",
+   "source_type": "vendor_doc",
+   "publisher": "Vercel",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "v0 docs: FAQs"
+  },
+  {
+   "artifact_id": "SA-3a8400afe28208851561343e",
+   "url": "https://stackblitz.com/terms-of-service",
+   "retrieved_at": "2026-10-28T05:31:50Z",
+   "sha256": "3a8400afe28208851561343e9c25842478c62a4b97dd39f72252b66be17f7432",
+   "bytes": 75645,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "StackBlitz",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "StackBlitz: Terms of Service (Bolt)"
+  },
+  {
+   "artifact_id": "SA-3eb1b7dae516102d4c4c38a5",
+   "url": "https://stackblitz.com/privacy-policy",
+   "retrieved_at": "2026-10-28T05:31:51Z",
+   "sha256": "3eb1b7dae516102d4c4c38a5529ca37a8c52c720bc54c78f1eba314b18cb9756",
+   "bytes": 63089,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "StackBlitz",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "StackBlitz: Privacy Policy (Bolt)"
+  },
+  {
+   "artifact_id": "SA-999aaaf8c855d94aa36c5ce6",
+   "url": "https://bolt.new/pricing",
+   "retrieved_at": "2026-10-28T05:31:52Z",
+   "sha256": "999aaaf8c855d94aa36c5ce64cc9ea5484c29be18f220db8a9f9d7254f021bf1",
+   "bytes": 170961,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "StackBlitz",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Bolt: Pricing"
+  },
+  {
+   "artifact_id": "SA-7256083eae05adcc6428639d",
+   "url": "https://support.bolt.new/integrations/git.md",
+   "retrieved_at": "2026-10-28T05:31:54Z",
+   "sha256": "7256083eae05adcc6428639d3e53da585e60d08b5873e64cf517885217b35a15",
+   "bytes": 12546,
+   "media_type": "text/markdown",
+   "source_type": "vendor_doc",
+   "publisher": "StackBlitz",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Bolt docs: Git integration"
+  },
+  {
+   "artifact_id": "SA-c031f30d9826c093d2aba78c",
+   "url": "https://support.bolt.new/bolt-cloud/database/security.md",
+   "retrieved_at": "2026-10-28T05:31:55Z",
+   "sha256": "c031f30d9826c093d2aba78c3a5f09a6398b6893a1fcc987e923e9a0bfb07890",
+   "bytes": 7677,
+   "media_type": "text/markdown",
+   "source_type": "vendor_doc",
+   "publisher": "StackBlitz",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Bolt docs: Bolt Cloud database security"
+  },
+  {
+   "artifact_id": "SA-f3a5988c4557b99d15f2e2f5",
+   "url": "https://www.anthropic.com/legal/consumer-terms",
+   "retrieved_at": "2026-10-28T05:31:56Z",
+   "sha256": "f3a5988c4557b99d15f2e2f5c4d7ded2cab308df86d3f9630f940d7e4729986e",
+   "bytes": 541632,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Anthropic",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Anthropic: Consumer Terms of Service (Claude)"
+  },
+  {
+   "artifact_id": "SA-2938ea916fab3798990bdcc2",
+   "url": "https://www.anthropic.com/legal/commercial-terms",
+   "retrieved_at": "2026-10-28T05:31:57Z",
+   "sha256": "2938ea916fab3798990bdcc2acd0551b94a826353bb3d254f2788a04d6ec975d",
+   "bytes": 243588,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Anthropic",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Anthropic: Commercial Terms of Service"
+  },
+  {
+   "artifact_id": "SA-1c6637a8a6d307613fb1ed1f",
+   "url": "https://www.anthropic.com/legal/privacy",
+   "retrieved_at": "2026-10-28T05:31:58Z",
+   "sha256": "1c6637a8a6d307613fb1ed1f24223924919d068dbcbe089b5ce2ae5b6c087bf3",
+   "bytes": 1255969,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Anthropic",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Anthropic: Privacy Policy"
+  },
+  {
+   "artifact_id": "SA-62920ffb3f66032f90a05d35",
+   "url": "https://claude.com/pricing",
+   "retrieved_at": "2026-10-28T05:31:59Z",
+   "sha256": "62920ffb3f66032f90a05d3560785e2402220e31ce530407d7e75e3051e0b80f",
+   "bytes": 1245298,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Anthropic",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Claude: Pricing"
+  },
+  {
+   "artifact_id": "SA-0adb7f29e7ddfd197e0f633e",
+   "url": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them",
+   "retrieved_at": "2026-10-28T05:32:01Z",
+   "sha256": "0adb7f29e7ddfd197e0f633ee500f85b80d1e2b7b2fcfbd6d4bad03d0826373e",
+   "bytes": 292307,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Anthropic",
+   "license": "texto protegido por derechos de autor del proveedor; solo metadatos y citas breves con atribución (LFDA art. 148)",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Claude Help Center: What are artifacts"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "Base44: los términos permiten entrenar las herramientas de software de la empresa (p. ej. modelos de IA y aprendizaje automático).",
+    "artifact_ids": [
+     "SA-d2ebe8bf32a914ea3326541f"
+    ],
+    "quote": "(5) train Company software tools (e.g. artificial intelligence and machine learning models)",
+    "locator": "ToS Base44 §4.2"
+   },
+   {
+    "claim": "Base44: no se compartirán con la plataforma datos sensibles protegidos por legislación especial que requieren tratamiento único (como información de salud o datos de tarjetas).",
+    "artifact_ids": [
+     "SA-d2ebe8bf32a914ea3326541f"
+    ],
+    "quote": "no sensitive data that is protected under special legislation and requires unique treatment (such as protected health information or credit, debit or other payment card data) will be shared with the Platform",
+    "locator": "ToS Base44 §4.3(iii)"
+   },
+   {
+    "claim": "Base44: el cliente es dueño de todos los derechos sobre el código y las aplicaciones generados por la plataforma.",
+    "artifact_ids": [
+     "SA-d2ebe8bf32a914ea3326541f"
+    ],
+    "quote": "the Customer owns all rights, title and interest in the code and applications generated by the Platform (\"Generated Output\")",
+    "locator": "ToS Base44 §5.3"
+   },
+   {
+    "claim": "Base44: la empresa no garantiza acceso continuo a los datos del cliente almacenados en la plataforma.",
+    "artifact_ids": [
+     "SA-d2ebe8bf32a914ea3326541f"
+    ],
+    "quote": "Company does not guarantee continued access to Customer Data stored on the Platform or Website (if exists)",
+    "locator": "ToS Base44 §11.5"
+   },
+   {
+    "claim": "Base44: el proveedor puede cambiar sus tarifas en cualquier momento.",
+    "artifact_ids": [
+     "SA-d2ebe8bf32a914ea3326541f"
+    ],
+    "quote": "Company reserves the right to change its Fees, and any other additional payments, at any time in its sole discretion.",
+    "locator": "ToS Base44 §10.3"
+   },
+   {
+    "claim": "Base44: los términos desaconsejan usar el código generado en dominios de alto riesgo, entre ellos el legal.",
+    "artifact_ids": [
+     "SA-d2ebe8bf32a914ea3326541f"
+    ],
+    "quote": "Customer is not recommended to use Generated Output in high-risk domains (such as medical, legal, or financial fields)",
+    "locator": "ToS Base44 §5.4"
+   },
+   {
+    "claim": "Base44: se mencionan ajustes de la plataforma que pueden, por defecto o de otro modo, permitir acceso público a los datos o aplicaciones del cliente.",
+    "artifact_ids": [
+     "SA-d2ebe8bf32a914ea3326541f"
+    ],
+    "quote": "including any Platform settings that may, by default or otherwise, permit public access to Customer Data or applications",
+    "locator": "ToS Base44 §2.3"
+   },
+   {
+    "claim": "Base44: los términos prohíben sondear, escanear o probar la vulnerabilidad de la plataforma.",
+    "artifact_ids": [
+     "SA-d2ebe8bf32a914ea3326541f"
+    ],
+    "quote": "Probe, scan, or test the vulnerability of the Platform, the Website, or any network connected to the Platform or Website",
+    "locator": "ToS Base44 §6"
+   },
+   {
+    "claim": "Base44: la política de privacidad remite a un DPA para los datos de los usuarios de las apps construidas.",
+    "artifact_ids": [
+     "SA-69bd312e3ef8ff2e524fd824"
+    ],
+    "quote": "All collection or usage of Users-of-Users personal information shall be in accordance with our Data Processing Addendum.",
+    "locator": "Privacy Base44, 'How we protect your information'"
+   },
+   {
+    "claim": "Base44: la página de precios afirma que la sincronización con GitHub exporta el código fuente completo.",
+    "artifact_ids": [
+     "SA-d582e9272e523f2578dd1ae3"
+    ],
+    "quote": "Two-way GitHub sync exports the full source code to your own repo at any time. Nothing is locked to the platform.",
+    "locator": "Pricing Base44, FAQ 'Do I own my app'"
+   },
+   {
+    "claim": "Base44: el plan Builder cuesta $40/mes facturado anualmente, con 250 créditos de mensaje.",
+    "artifact_ids": [
+     "SA-d582e9272e523f2578dd1ae3"
+    ],
+    "quote": "$40/mo\nBilled annually\n\n250 message credits/mo",
+    "locator": "Pricing Base44, plan Builder"
+   },
+   {
+    "claim": "Base44: describe que construye todo: frontend, backend, base de datos, autenticación de usuarios y pagos.",
+    "artifact_ids": [
+     "SA-d582e9272e523f2578dd1ae3"
+    ],
+    "quote": "Base44 builds the full thing: frontend, backend, database, user auth, payments, all of it.",
+    "locator": "Pricing Base44, FAQ"
+   },
+   {
+    "claim": "Base44: se mencionan créditos personalizados, arquitecto dedicado, SSO y controles de seguridad avanzados.",
+    "artifact_ids": [
+     "SA-d582e9272e523f2578dd1ae3"
+    ],
+    "quote": "Custom credits, a dedicated architect, SSO, advanced security controls",
+    "locator": "Pricing Base44, Enterprise"
+   },
+   {
+    "claim": "Base44: consultar APIs externas desde funciones de backend requiere plan Builder o superior.",
+    "artifact_ids": [
+     "SA-ec87455cfd28fc410f274310"
+    ],
+    "quote": "Connecting to external APIs requires the **Builder plan** or higher.",
+    "locator": "Docs Base44 Managing app data, FAQ"
+   },
+   {
+    "claim": "Base44: los permisos de datos aseguran que personas de una empresa no puedan ver los datos de otra.",
+    "artifact_ids": [
+     "SA-ec87455cfd28fc410f274310"
+    ],
+    "quote": "Data permissions make sure people from one company cannot see another company’s data.",
+    "locator": "Docs Base44 Managing app data, FAQ roles"
+   },
+   {
+    "claim": "v0: los términos de Vercel permiten usar Your Content para entrenar modelos de IA en los planes Hobby y Pro de prueba.",
+    "artifact_ids": [
+     "SA-ba36c0c5ce712a00c8788587"
+    ],
+    "quote": "if you are on a Hobby plan or trial Pro plan, you agree that we may use Your Content to train our artificial intelligence (“AI”) and machine learning models",
+    "locator": "ToS Vercel §3"
+   },
+   {
+    "claim": "v0: en el plan Pro de pago el entrenamiento no está activado por defecto y se puede activar por opt-in.",
+    "artifact_ids": [
+     "SA-ba36c0c5ce712a00c8788587"
+    ],
+    "quote": "If you are on a paid Pro plan, Model Training is not enabled by default and you may opt in to Model Training.",
+    "locator": "ToS Vercel §3"
+   },
+   {
+    "claim": "v0: está incluido en el alcance del informe SOC 2 de Vercel.",
+    "artifact_ids": [
+     "SA-3b5d6393fd38eb9340cdb382"
+    ],
+    "quote": "v0 is included in the scope of Vercel's SOC 2 report.",
+    "locator": "Docs v0 FAQs, 'Is v0 compliant?'"
+   },
+   {
+    "claim": "v0: los términos de Vercel prohíben alojar información HIPAA salvo aprobación previa por escrito.",
+    "artifact_ids": [
+     "SA-ba36c0c5ce712a00c8788587"
+    ],
+    "quote": "You shall not use the Services to host any Protected Health Information or information that is subject to the Health Insurance Portability and Accountability Act (HIPAA), unless you first obtain Vercel's prior written approval.",
+    "locator": "ToS Vercel §10.3"
+   },
+   {
+    "claim": "v0: Vercel indica que no se expondrán datos personales sin el consentimiento adecuado de las personas según la ley aplicable.",
+    "artifact_ids": [
+     "SA-ba36c0c5ce712a00c8788587"
+    ],
+    "quote": "will not expose personal data or personal information without proper consent from individuals as determined by applicable law",
+    "locator": "ToS Vercel §10.1"
+   },
+   {
+    "claim": "v0: el aviso de privacidad de Vercel lista a proveedores de IA entre los terceros a quienes se divulga información.",
+    "artifact_ids": [
+     "SA-c37ac1f75f973b9f68a25138"
+    ],
+    "quote": "AI providers in connection with providing you Vercel's AI Products and Services.",
+    "locator": "Privacy Vercel, 'How We Disclose Information'"
+   },
+   {
+    "claim": "v0: el aviso de Vercel dice que para usuarios Hobby y Pro, según las preferencias del equipo, puede divulgar información desidentificada.",
+    "artifact_ids": [
+     "SA-c37ac1f75f973b9f68a25138"
+    ],
+    "quote": "For Hobby and Pro plan users, subject to your data preferences in your team settings, we may disclose de-identified information",
+    "locator": "Privacy Vercel, 'How We Disclose Information'"
+   },
+   {
+    "claim": "v0: la página de precios menciona exclusión de entrenamiento por defecto.",
+    "artifact_ids": [
+     "SA-214ed31c38e7c0f00402c4e7"
+    ],
+    "quote": "Training opt-out by default",
+    "locator": "Pricing v0, plan Business"
+   },
+   {
+    "claim": "v0: la página de precios muestra $100 por usuario al mes.",
+    "artifact_ids": [
+     "SA-214ed31c38e7c0f00402c4e7"
+    ],
+    "quote": "$100/user/month",
+    "locator": "Pricing v0, plan Business"
+   },
+   {
+    "claim": "v0: la página de precios menciona SAML SSO y control de acceso por roles.",
+    "artifact_ids": [
+     "SA-214ed31c38e7c0f00402c4e7"
+    ],
+    "quote": "SAML SSO\n\nRole-based access control",
+    "locator": "Pricing v0, plan Enterprise"
+   },
+   {
+    "claim": "v0: la página de precios muestra \"$30$90/user/month\".",
+    "artifact_ids": [
+     "SA-214ed31c38e7c0f00402c4e7"
+    ],
+    "quote": "$30$90/user/month",
+    "locator": "Pricing v0, plan Plus"
+   },
+   {
+    "claim": "v0: al conectar GitHub crea un repositorio privado con el código actual.",
+    "artifact_ids": [
+     "SA-a7d9d641eb3a92db40707a24"
+    ],
+    "quote": "v0 creates a private repository and pushes the project's current code to it.",
+    "locator": "Docs v0 GitHub, 'Connect a project to GitHub'"
+   },
+   {
+    "claim": "v0: sigue las reglas del repositorio de GitHub.",
+    "artifact_ids": [
+     "SA-a7d9d641eb3a92db40707a24"
+    ],
+    "quote": "v0 follows the repository's GitHub rules.",
+    "locator": "Docs v0 GitHub, 'Branch protection and blocked publishes'"
+   },
+   {
+    "claim": "v0: la FAQ dice que v0 nunca empuja directamente a main.",
+    "artifact_ids": [
+     "SA-3b5d6393fd38eb9340cdb382"
+    ],
+    "quote": "v0 never pushes directly to `main`",
+    "locator": "Docs v0 FAQs, 'What can I do with Git in v0?'"
+   },
+   {
+    "claim": "v0: las vistas previas corren en Vercel Sandbox, una máquina virtual aislada.",
+    "artifact_ids": [
+     "SA-3b5d6393fd38eb9340cdb382"
+    ],
+    "quote": "v0 uses [Vercel Sandbox](https://vercel.com/blog/vercel-sandbox-is-now-generally-available)—a lightweight virtual machine that runs your app in an isolated environment.",
+    "locator": "Docs v0 FAQs, 'How do previews work now?'"
+   },
+   {
+    "claim": "v0: la documentación dice que se puede exportar el código y desplegar en otro lugar.",
+    "artifact_ids": [
+     "SA-3b5d6393fd38eb9340cdb382"
+    ],
+    "quote": "You can still export code and deploy elsewhere.",
+    "locator": "Docs v0 FAQs, 'Do I need Vercel?'"
+   },
+   {
+    "claim": "v0: la FAQ dice que no se usa para entrenar el contenido de clientes Enterprise ni de quien haya optado por no participar.",
+    "artifact_ids": [
+     "SA-3b5d6393fd38eb9340cdb382"
+    ],
+    "quote": "Content of v0 Enterprise customers, or any customer that has opted out of model training in their Vercel settings, is not used for training.",
+    "locator": "Docs v0 FAQs, 'Will my generations be used for training?'"
+   },
+   {
+    "claim": "Bolt: StackBlitz puede preparar, comercializar, licenciar y distribuir a terceros datasets derivados de Bolt Model Development Content elegible según la Sección 3.5(d), incluso a cambio de compensación.",
+    "artifact_ids": [
+     "SA-3a8400afe28208851561343e"
+    ],
+    "quote": "to prepare, market, license, and distribute datasets derived from Bolt Model Development Content that is eligible under Section 3.5(d) to third parties, including for compensation",
+    "locator": "ToS StackBlitz §3.5(b)"
+   },
+   {
+    "claim": "Bolt: se mencionan las cuentas gestionadas por organizaciones, incluidos los espacios Teams y Enterprise.",
+    "artifact_ids": [
+     "SA-3a8400afe28208851561343e"
+    ],
+    "quote": "organization-managed accounts, including Teams and Enterprise workspaces",
+    "locator": "ToS StackBlitz §3.5(h)"
+   },
+   {
+    "claim": "Bolt: el opt-out no aplica al contenido de Forge mientras Forge esté activo.",
+    "artifact_ids": [
+     "SA-3a8400afe28208851561343e"
+    ],
+    "quote": "The opt-out in Section 3.5(c) does not apply to Forge Content while Forge is enabled",
+    "locator": "ToS StackBlitz §3.6"
+   },
+   {
+    "claim": "Bolt: StackBlitz no usa el Bolt Model Development Content asociado a una Restricted Region Account, incluido el contenido de Forge.",
+    "artifact_ids": [
+     "SA-3a8400afe28208851561343e"
+    ],
+    "quote": "Stackblitz does not use Bolt Model Development Content associated with a Restricted Region Account, including Forge Content",
+    "locator": "ToS StackBlitz §3.5(e)"
+   },
+   {
+    "claim": "Bolt: el usuario retiene la titularidad de su User Content.",
+    "artifact_ids": [
+     "SA-3a8400afe28208851561343e"
+    ],
+    "quote": "you retain all right, title, and interest in and to your User Content",
+    "locator": "ToS StackBlitz §3.2"
+   },
+   {
+    "claim": "Bolt: durante treinta días tras la terminación o suspensión, el proveedor pone a disposición un medio razonable para recuperar o exportar el User Content.",
+    "artifact_ids": [
+     "SA-3a8400afe28208851561343e"
+    ],
+    "quote": "for a period of thirty (30) days following the effective date of such termination or suspension, make available to you a reasonable means to retrieve or export your User Content",
+    "locator": "ToS StackBlitz §1.2"
+   },
+   {
+    "claim": "Bolt: partes relevantes de esos archivos pueden transmitirse a proveedores de IA externos solo para generar respuestas.",
+    "artifact_ids": [
+     "SA-3eb1b7dae516102d4c4c38a5"
+    ],
+    "quote": "relevant portions of those files may be transmitted to third-party AI service providers solely to generate responses",
+    "locator": "Privacy StackBlitz §3.B"
+   },
+   {
+    "claim": "Bolt: se prohíbe contractualmente usarlo para entrenar sus propios modelos.",
+    "artifact_ids": [
+     "SA-3eb1b7dae516102d4c4c38a5"
+    ],
+    "quote": "are contractually prohibited from using it to train their own models",
+    "locator": "Privacy StackBlitz §5.D"
+   },
+   {
+    "claim": "Bolt: su política de privacidad no cubre datos personales procesados por clientes en las apps que construyen.",
+    "artifact_ids": [
+     "SA-3eb1b7dae516102d4c4c38a5"
+    ],
+    "quote": "It does not apply to personal data processed by our customers within applications they build or deploy using the Services",
+    "locator": "Privacy StackBlitz §2"
+   },
+   {
+    "claim": "Bolt: Teams cuesta $30/mes por miembro, facturado mensualmente.",
+    "artifact_ids": [
+     "SA-999aaaf8c855d94aa36c5ce6"
+    ],
+    "quote": "Teams\n$30*/month\n\nPer member, billed monthly",
+    "locator": "Pricing Bolt, plan Teams"
+   },
+   {
+    "claim": "Bolt: la fila de Audit Logs muestra tres columnas \"Not included\" y una \"Included\".",
+    "artifact_ids": [
+     "SA-999aaaf8c855d94aa36c5ce6"
+    ],
+    "quote": "Audit Logs\t—Not included\t—Not included\t—Not included\tIncluded",
+    "locator": "Pricing Bolt, comparación, Security & Support"
+   },
+   {
+    "claim": "Bolt: la página de precios menciona elección de proveedor de base de datos.",
+    "artifact_ids": [
+     "SA-999aaaf8c855d94aa36c5ce6"
+    ],
+    "quote": "Choice of database provider",
+    "locator": "Pricing Bolt, plan Pro"
+   },
+   {
+    "claim": "Bolt: la página de precios menciona infraestructura dedicada y gestor de cuenta.",
+    "artifact_ids": [
+     "SA-999aaaf8c855d94aa36c5ce6"
+    ],
+    "quote": "Dedicated infrastructure and account manager",
+    "locator": "Pricing Bolt, plan Enterprise"
+   },
+   {
+    "claim": "Bolt: Bolt mantiene sus cambios y sobrescribe la versión de GitHub.",
+    "artifact_ids": [
+     "SA-7256083eae05adcc6428639d"
+    ],
+    "quote": "Bolt keeps your changes and overwrites the GitHub version.",
+    "locator": "Docs Bolt Git, 'Committing and fetching'"
+   },
+   {
+    "claim": "Bolt: puede escribir políticas que permiten a cualquier visitante ver, agregar, cambiar y borrar los datos de la base de datos.",
+    "artifact_ids": [
+     "SA-c031f30d9826c093d2aba78c"
+    ],
+    "quote": "Bolt might write policies that allow any visitor to view, add, change, and delete the data in your database.",
+    "locator": "Docs Bolt database security, 'RLS policies on sites without sign-in'"
+   },
+   {
+    "claim": "Bolt: una tabla sin RLS puede ser leída y modificada por cualquiera.",
+    "artifact_ids": [
+     "SA-c031f30d9826c093d2aba78c"
+    ],
+    "quote": "A table without RLS can be read and changed by anyone.",
+    "locator": "Docs Bolt database security"
+   },
+   {
+    "claim": "Claude Consumer: aun con opt-out, Anthropic usará los Materials para entrenar modelos cuando el usuario le dé Feedback sobre ellos.",
+    "artifact_ids": [
+     "SA-f3a5988c4557b99d15f2e2f5"
+    ],
+    "quote": "Even if you opt out, we will use Materials for model training when: (1) you provide Feedback to us regarding any Materials",
+    "locator": "Consumer ToS §4"
+   },
+   {
+    "claim": "Claude Consumer: Anthropic cede al usuario sus derechos sobre los Outputs.",
+    "artifact_ids": [
+     "SA-f3a5988c4557b99d15f2e2f5"
+    ],
+    "quote": "we assign to you all of our right, title, and interest—if any—in Outputs",
+    "locator": "Consumer ToS §4"
+   },
+   {
+    "claim": "Claude Commercial: Anthropic no puede entrenar modelos con el Customer Content.",
+    "artifact_ids": [
+     "SA-2938ea916fab3798990bdcc2"
+    ],
+    "quote": "Anthropic may not train models on Customer Content from Services.",
+    "locator": "Commercial ToS §B"
+   },
+   {
+    "claim": "Claude Commercial: Claude.ai individual se rige por los términos de consumidor, no por los comerciales.",
+    "artifact_ids": [
+     "SA-2938ea916fab3798990bdcc2"
+    ],
+    "quote": "Our consumer offerings (e.g., Claude.ai) are governed by our Consumer Terms of Service instead.",
+    "locator": "Commercial ToS, preámbulo"
+   },
+   {
+    "claim": "Claude Commercial: los datos se procesan según el DPA de Anthropic.",
+    "artifact_ids": [
+     "SA-2938ea916fab3798990bdcc2"
+    ],
+    "quote": "Data submitted through the Services will be processed in accordance with the Anthropic Data Processing Addendum",
+    "locator": "Commercial ToS §C"
+   },
+   {
+    "claim": "Claude pricing: la página indica que no hay entrenamiento con el contenido por defecto.",
+    "artifact_ids": [
+     "SA-62920ffb3f66032f90a05d35"
+    ],
+    "quote": "No model training on your content by default",
+    "locator": "Pricing Claude, plan Team"
+   },
+   {
+    "claim": "Claude pricing: la fila de entrenamiento de modelos muestra Opt-out en cuatro columnas.",
+    "artifact_ids": [
+     "SA-62920ffb3f66032f90a05d35"
+    ],
+    "quote": "Model trainingMore information\nOpt-out\tOpt-out\tOpt-out\tOpt-out",
+    "locator": "Pricing Claude, comparación individual"
+   },
+   {
+    "claim": "Claude pricing: con descuento por suscripción anual son $200 facturados por adelantado; $20 al mes si se factura mensualmente.",
+    "artifact_ids": [
+     "SA-62920ffb3f66032f90a05d35"
+    ],
+    "quote": "Per month with annual subscription discount ($200 billed up front). $20 if billed monthly.",
+    "locator": "Pricing Claude, plan Pro"
+   },
+   {
+    "claim": "Claude pricing: se menciona acceso basado en roles con permisos finos.",
+    "artifact_ids": [
+     "SA-62920ffb3f66032f90a05d35"
+    ],
+    "quote": "Role-based access with fine grained permissioning",
+    "locator": "Pricing Claude, plan Enterprise"
+   },
+   {
+    "claim": "Claude Artifacts: el almacenamiento de datos tiene límite de 20 MB por artefacto y solo texto.",
+    "artifact_ids": [
+     "SA-0adb7f29e7ddfd197e0f633e"
+    ],
+    "quote": "Storage has a 20 MB limit per artifact and accepts text only, no images, files, or binary data.",
+    "locator": "Help Center artifacts, 'Store data in an artifact'"
+   },
+   {
+    "claim": "Claude Artifacts: las apps que llaman a Claude corren en infraestructura de Anthropic y usan login con cuenta Claude.",
+    "artifact_ids": [
+     "SA-0adb7f29e7ddfd197e0f633e"
+    ],
+    "quote": "the app runs on Anthropic's infrastructure. People using it sign in with their Claude account",
+    "locator": "Help Center artifacts, 'Artifacts that use Claude'"
+   }
+  ],
+  "conflicting": [
+   {
+    "claim": "Base44: los términos indican que cualquier Customer Data exportado de la plataforma antes de la terminación o expiración se exporta bajo el exclusivo riesgo y responsabilidad del cliente.",
+    "artifact_ids": [
+     "SA-d582e9272e523f2578dd1ae3",
+     "SA-d2ebe8bf32a914ea3326541f"
+    ],
+    "quote": "any Customer Data you export from the Platform or Website prior to termination or expiration is exported at Customer’s sole risk and responsibility",
+    "locator": "ToS Base44 §11.5 vs. Pricing FAQ 'Nothing is locked to the platform'"
+   }
+  ],
+  "unknown": [
+   "Hosts a los que sale cada herramienta y dónde se guardan físicamente los datos en una prueba real: no hubo sandbox ni datos sintéticos; solo se leyó texto.",
+   "sha256 de los documentos: no se calculó.",
+   "Si el código exportado de Base44, v0 o Bolt llega completo y compila fuera de la plataforma: solo hay afirmaciones del proveedor.",
+   "Si el frontend de Base44 puede llamar a una API FastAPI externa sin pasar datos por su backend o base: las fuentes no lo tratan.",
+   "Términos de los DPA de Base44, Vercel, StackBlitz y Anthropic: no se leyeron.",
+   "Región y residencia de datos de cada proveedor: las fuentes leídas no lo precisan.",
+   "Costo real de v0 y Bolt por consumo (tokens y créditos) para un piloto: solo hay precios de lista.",
+   "Opción frontend dentro del repo propio: ninguna fuente la cubre.",
+   "Qué plan de Claude (Team/Enterprise o API comercial) cubre Artifacts y Design bajo términos comerciales: la página de precios no lo aclara.",
+   "Si una vista de Artifacts puede consumir una API FastAPI propia con control de hosts: no hay evidencia en las fuentes."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Las plataformas gestionadas (Base44, v0, Bolt) pasan prompts y código por el proveedor y sus proveedores de IA; si se pegan contratos, citas legales o esquemas de clientes en los prompts, la frontera de ZPMND se rompe. Usarlas solo con datos sintéticos y sin secretos es consistente con las fuentes.",
+  "INTERPRETACIÓN: Base44 incluye backend y base de datos propios; usarlo como vista de la API FastAPI implica decidir qué datos se duplican en entidades de Base44, y ahí residirían en el proveedor.",
+  "INTERPRETACIÓN: v0 y Bolt llevan el código a GitHub, de modo que las pruebas y la auditoría de ZPMND pueden correr en CI propio. Solo es verificable con una prueba real.",
+  "INTERPRETACIÓN: para evitar entrenamiento con el contenido, v0 requiere Business o Enterprise, Bolt requiere cuenta de organización, ubicación en EEE/UK/Suiza o acuerdo escrito, Claude requiere Team o Enterprise (o términos comerciales); en Base44 las fuentes leídas no muestran opt-out.",
+  "INTERPRETACIÓN: la licencia de Base44 es la más amplia de las leídas (perpetua, irrevocable, con entrenamiento) y sus términos prohíben probar vulnerabilidades, lo que choca con la auditoría propia que pide ZPMND.",
+  "INTERPRETACIÓN: Claude Design/Artifacts parece apto para maquetar; las fuentes lo describen con login Claude y almacenamiento de texto de 20 MB, lo que no encaja con una vista productiva multi-inquilino con login propio.",
+  "HIPÓTESIS: el frontend dentro del repo propio es la única opción donde datos, pruebas y auditoría quedan en la frontera de ZPMND; su costo sería de horas de ingeniería, y se podría usar IA solo con datos sintéticos para acelerar.",
+  "SECUNDARIA: no se usó ninguna fuente secundaria."
+ ],
+ "candidate_methods": [
+  "Sandbox con datos sintéticos por plataforma: capturar tráfico de red (hosts), exportar el código, compilarlo en CI propio y comprobar dónde persisten los datos.",
+  "Matriz de decisión con criterios: dónde viven los datos, exportación completa, auditoría propia, auth y multi-inquilino, costo y amarre.",
+  "Guardar para cada proveedor fecha de captura y sha256 de términos, privacidad y precios para detectar cambios."
+ ],
+ "candidate_controls": [
+  "Regla: ningún dato real de cliente ni cita legal real entra en prompts ni se almacena en plataformas gestionadas durante el piloto.",
+  "Todo código generado entra por pull request al repo de ZPMND y pasa pruebas, lint y auditoría propia antes de mezclarse.",
+  "Confirmar por escrito que el entrenamiento está desactivado antes de cualquier uso y registrar el plan contratado."
+ ],
+ "candidate_tests": [
+  "Prueba de red: ejecutar el frontend exportado con un proxy y listar los hosts contactados; esperado: solo la API FastAPI propia.",
+  "Prueba de exportación: reconstruir el frontend desde el repo exportado sin acceso al proveedor.",
+  "Prueba multi-inquilino: dos inquilinos sintéticos; A no debe ver datos de B por la API ni por la vista.",
+  "Prueba de relectura: el Work Pin muestra la cita legal y su verificación sin intervención del proveedor."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Para el piloto, la opción que mejor protege la frontera es el frontend en el repo propio; v0 o Bolt servirían solo para generar código con datos sintéticos y revisarlo en el repo.",
+  "Base44 queda como la de mayor riesgo para datos de clientes por su licencia amplia, su backend propio y la dependencia de su base.",
+  "Claude Artifacts/Design se acepta como herramienta de maqueta, no como vista productiva."
+ ],
+ "affected_existing_concepts": [
+  "Frontera de ZPMND (datos de clientes no pasan por proveedor no calificado)",
+  "Work Pins con cita legal",
+  "Verificación por relectura",
+  "Tablero de complejidad absorbida"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: el costo mensual de un piloto con los planes de entrada (Base44 Builder $40, v0 Business $100 por usuario, Bolt Teams $30 por miembro, Claude Pro $17) va de unos $17 a $100 por persona, pero el consumo real puede ser mayor.",
+  "HIPÓTESIS: el amarre de Base44 es el más alto porque los datos viven en sus entidades; v0 y Bolt tendrían un amarre medio al sincronizar con un repo propio; el de Claude Artifacts sería alto para la app y bajo para un HTML exportado."
+ ],
+ "limitations": [
+  "Solo se leyó texto de las páginas dadas: sin sandbox, sin tráfico de red y sin verificar exportaciones.",
+  "No se calcularon sha256; las fechas son las que figuran en cada texto (ToS Base44 22/06/2026, privacidad Base44 10/09/2026, ToS Vercel 19/10/2026, ToS StackBlitz actualizado 22/09/2026, Anthropic Commercial 17/06/2025, Consumer 08/10/2025).",
+  "Los precios son de lista y pueden cambiar; el costo realista depende del consumo, que no se midió.",
+  "La página de precios de v0 muestra Plus como «$30$90», ambiguo; se cita tal cual.",
+  "La opción de construir dentro del repo propio no tiene fuente y es solo inferencia.",
+  "No se confirmó qué términos de Anthropic rigen Claude Design bajo planes Team/Enterprise.",
+  "Las fuentes son del propio proveedor; las afirmaciones de portabilidad y seguridad son de marketing o documentación suya y no se verificaron.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 33 de 59 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
