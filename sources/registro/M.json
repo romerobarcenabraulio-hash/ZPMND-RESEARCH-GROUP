@@ -26,7 +26,7 @@
    "status": "candidate",
    "subarea": "M03",
    "clase": "dataset",
-   "title": "SEC EDGAR: emisoras",
+   "title": "SEC EDGAR: índice de tickers",
    "publisher": "U.S. Securities and Exchange Commission",
    "base_url": "https://www.sec.gov",
    "allowed_hosts": [
@@ -44,7 +44,7 @@
     "ruta": [],
     "medida": "longitud",
     "registro": "cik_str",
-    "unidad": "emisoras"
+    "unidad": "tickers"
    }
   },
   {

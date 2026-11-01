@@ -17,7 +17,7 @@ El registro incluye las clasificaciones oficiales que son el esqueleto del mapa:
 productos), CIUO, ESCO, O*NET y SINCO (ocupaciones), M49 (países).
 
 **Contador.** Solo si la fuente declara su tamaño en un lugar fijo: `json` (un número entero en una ruta de su respuesta
-JSON, o con `medida: longitud` cuántos registros, objetos con la clave que declara `registro`, tiene la lista en esa ruta, o los valores del objeto en esa ruta, como el índice por posición de EDGAR `{"0": {"cik_str": ...}}`; todos deben ser registros) o, solo para índices de texto o XML sin JSON,
+JSON, o con `medida: longitud` cuántos registros, objetos con la clave que declara `registro`, tiene la lista en esa ruta, o los valores del objeto en esa ruta, como el índice por posición de EDGAR `{"0": {"cik_str": ...}}`; todos deben ser registros). La `unidad` dice exactamente qué se cuenta, no la cosa que esas entradas nombran: el índice de EDGAR tiene un ticker por entrada y una emisora puede tener varios (GOOG y GOOGL), así que su unidad es `tickers`, no emisoras (GPT en e64f0ea) o, solo para índices de texto o XML sin JSON,
 `contar` (cuántas veces aparece un texto fijo, por ejemplo `<rfc-entry>`, dentro de un documento que trae su `marca`, por
 ejemplo `<rfc-index`). Una página que no es el documento esperado (mantenimiento, un reto) o un conteo de texto en cero es
 `ilegible`, nunca un cero medido; y cero nunca es el tamaño de una fuente. Sin contador, el sondeo pide la URL base y guarda solo su respuesta HTTP (`accesible`
