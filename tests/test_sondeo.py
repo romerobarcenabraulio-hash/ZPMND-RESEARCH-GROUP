@@ -24,9 +24,9 @@ def doc(*fuentes, familia='I'):
 
 
 class Registro(unittest.TestCase):
-    def test_the_registry_in_the_repo_loads(self):
+    def test_the_registry_in_the_repo_loads_and_covers_every_family(self):
         fuentes = sondeo.cargar(ROOT / 'sources' / 'registro')
-        self.assertTrue(fuentes)
+        self.assertEqual({l for l, _ in fuentes}, set(sondeo.FAMILIAS))  # the world, from more to less (NORTE §3)
         mx = json.loads((ROOT / 'sources' / 'mx.json').read_text(encoding='utf-8'))
         catalogo = {s['source_id'] for k in ('sources', 'secondary_sources') for s in mx.get(k, [])}
         self.assertFalse(catalogo & {f['source_id'] for _, f in fuentes})  # one id names one source in all of RG

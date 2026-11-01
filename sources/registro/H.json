@@ -1,0 +1,164 @@
+{
+ "familia": "H",
+ "nombre": "H. Management y organización",
+ "fuentes": [
+  {
+   "source_id": "int.openstax-management",
+   "status": "candidate",
+   "subarea": "H01",
+   "clase": "libro",
+   "title": "OpenStax: Principles of Management",
+   "publisher": "OpenStax, Rice University",
+   "base_url": "https://openstax.org/details/books/principles-management",
+   "allowed_hosts": [
+    "openstax.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.oecd-gobierno-corporativo",
+   "status": "candidate",
+   "subarea": "H08",
+   "clase": "documentacion",
+   "title": "Principios de Gobierno Corporativo G20/OCDE",
+   "publisher": "OCDE",
+   "base_url": "https://www.oecd.org",
+   "allowed_hosts": [
+    "www.oecd.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "mx.compras-mx",
+   "status": "candidate",
+   "subarea": "H02",
+   "clase": "portal_oficial",
+   "title": "Compras MX (contrataciones públicas)",
+   "publisher": "Gobierno de México",
+   "base_url": "https://comprasmx.buengobierno.gob.mx",
+   "allowed_hosts": [
+    "comprasmx.buengobierno.gob.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.openstax-orgbehavior",
+   "status": "candidate",
+   "subarea": "H04",
+   "clase": "libro",
+   "title": "OpenStax: Organizational Behavior",
+   "publisher": "OpenStax, Rice University",
+   "base_url": "https://openstax.org/details/books/organizational-behavior",
+   "allowed_hosts": [
+    "openstax.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.isco-08",
+   "status": "candidate",
+   "subarea": "H11",
+   "clase": "dataset",
+   "title": "CIUO-08 (ISCO): clasificación internacional de ocupaciones",
+   "publisher": "Organización Internacional del Trabajo",
+   "base_url": "https://www.ilo.org",
+   "allowed_hosts": [
+    "www.ilo.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "volcado",
+   "nota": "10 grandes grupos, 43 subgrupos principales, 130 subgrupos, 436 grupos primarios (publicación de la OIT)"
+  },
+  {
+   "source_id": "int.esco",
+   "status": "candidate",
+   "subarea": "H11",
+   "clase": "api",
+   "title": "ESCO: ocupaciones, competencias y cualificaciones",
+   "publisher": "Comisión Europea",
+   "base_url": "https://esco.ec.europa.eu",
+   "allowed_hosts": [
+    "ec.europa.eu",
+    "esco.ec.europa.eu"
+   ],
+   "alcance": "Internacional · UE",
+   "idiomas": [
+    "es",
+    "en",
+    "multi"
+   ],
+   "license": "reutilización permitida (por verificar)",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://ec.europa.eu/esco/api/search?type=occupation&language=es",
+    "ruta": [
+     "total"
+    ],
+    "unidad": "ocupaciones"
+   }
+  },
+  {
+   "source_id": "us.onet",
+   "status": "candidate",
+   "subarea": "H11",
+   "clase": "dataset",
+   "title": "O*NET: base de datos de ocupaciones",
+   "publisher": "U.S. Department of Labor / O*NET Center",
+   "base_url": "https://www.onetcenter.org",
+   "allowed_hosts": [
+    "www.onetcenter.org"
+   ],
+   "alcance": "Internacional · EE. UU.",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY 4.0",
+   "via": "volcado"
+  },
+  {
+   "source_id": "mx.sinco",
+   "status": "candidate",
+   "subarea": "H11",
+   "clase": "dataset",
+   "title": "SINCO: Sistema Nacional de Clasificación de Ocupaciones",
+   "publisher": "INEGI",
+   "base_url": "https://www.inegi.org.mx",
+   "allowed_hosts": [
+    "www.inegi.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "abierta (términos INEGI)",
+   "via": "volcado"
+  }
+ ]
+}

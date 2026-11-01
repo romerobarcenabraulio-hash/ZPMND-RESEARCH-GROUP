@@ -1,0 +1,78 @@
+{
+ "familia": "D",
+ "nombre": "D. Finanzas",
+ "fuentes": [
+  {
+   "source_id": "int.damodaran",
+   "status": "candidate",
+   "subarea": "D01",
+   "clase": "dataset",
+   "title": "Damodaran Online: datos de valuación",
+   "publisher": "Aswath Damodaran, NYU Stern",
+   "base_url": "https://pages.stern.nyu.edu",
+   "allowed_hosts": [
+    "pages.stern.nyu.edu"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "uso abierto citando (por verificar)",
+   "via": "volcado"
+  },
+  {
+   "source_id": "int.french-data",
+   "status": "candidate",
+   "subarea": "D04",
+   "clase": "dataset",
+   "title": "Kenneth R. French Data Library",
+   "publisher": "Tuck School of Business, Dartmouth",
+   "base_url": "https://mba.tuck.dartmouth.edu",
+   "allowed_hosts": [
+    "mba.tuck.dartmouth.edu"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "uso abierto citando (por verificar)",
+   "via": "volcado"
+  },
+  {
+   "source_id": "int.openstax-finance",
+   "status": "candidate",
+   "subarea": "D01",
+   "clase": "libro",
+   "title": "OpenStax: Principles of Finance",
+   "publisher": "OpenStax, Rice University",
+   "base_url": "https://openstax.org/details/books/principles-finance",
+   "allowed_hosts": [
+    "openstax.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "mx.shcp-datos",
+   "status": "candidate",
+   "subarea": "D08",
+   "clase": "portal_oficial",
+   "title": "Transparencia Presupuestaria: datos abiertos",
+   "publisher": "SHCP",
+   "base_url": "https://www.transparenciapresupuestaria.gob.mx",
+   "allowed_hosts": [
+    "www.transparenciapresupuestaria.gob.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial",
+   "via": "rastreo"
+  }
+ ]
+}

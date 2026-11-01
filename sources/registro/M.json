@@ -1,0 +1,182 @@
+{
+ "familia": "M",
+ "nombre": "M. Mercados e industrias",
+ "fuentes": [
+  {
+   "source_id": "mx.denue",
+   "status": "candidate",
+   "subarea": "M01",
+   "clase": "api",
+   "title": "DENUE: Directorio Estadístico Nacional de Unidades Económicas",
+   "publisher": "INEGI",
+   "base_url": "https://www.inegi.org.mx",
+   "allowed_hosts": [
+    "www.inegi.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "abierta (términos INEGI)",
+   "via": "api",
+   "nota": "La API pide token: contador con secreto en un PR aparte"
+  },
+  {
+   "source_id": "us.edgar",
+   "status": "candidate",
+   "subarea": "M03",
+   "clase": "dataset",
+   "title": "SEC EDGAR: emisoras",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "base_url": "https://www.sec.gov",
+   "allowed_hosts": [
+    "www.sec.gov"
+   ],
+   "alcance": "Internacional · EE. UU.",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público",
+   "via": "volcado",
+   "contador": {
+    "tipo": "json",
+    "url": "https://www.sec.gov/files/company_tickers.json",
+    "ruta": [],
+    "medida": "longitud",
+    "registro": "cik_str",
+    "unidad": "emisoras"
+   }
+  },
+  {
+   "source_id": "mx.profeco-qqp",
+   "status": "candidate",
+   "subarea": "M04",
+   "clase": "dataset",
+   "title": "Quién es Quién en los Precios",
+   "publisher": "PROFECO",
+   "base_url": "https://www.profeco.gob.mx",
+   "allowed_hosts": [
+    "www.profeco.gob.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "abierta",
+   "via": "volcado"
+  },
+  {
+   "source_id": "mx.cofece",
+   "status": "candidate",
+   "subarea": "M08",
+   "clase": "portal_oficial",
+   "title": "COFECE: resoluciones y estudios de mercado",
+   "publisher": "COFECE",
+   "base_url": "https://www.cofece.mx",
+   "allowed_hosts": [
+    "www.cofece.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.wipo-patentscope",
+   "status": "candidate",
+   "subarea": "M07",
+   "clase": "base_de_datos",
+   "title": "PATENTSCOPE",
+   "publisher": "OMPI",
+   "base_url": "https://patentscope.wipo.int",
+   "allowed_hosts": [
+    "patentscope.wipo.int"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en",
+    "multi"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.isic-rev4",
+   "status": "candidate",
+   "subarea": "M13",
+   "clase": "dataset",
+   "title": "CIIU Rev. 4 (ISIC): clasificación industrial internacional",
+   "publisher": "División de Estadística de la ONU",
+   "base_url": "https://unstats.un.org",
+   "allowed_hosts": [
+    "unstats.un.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "volcado",
+   "nota": "21 secciones, 88 divisiones, 238 grupos, 419 clases (publicación de la ONU)"
+  },
+  {
+   "source_id": "int.cpc",
+   "status": "candidate",
+   "subarea": "M13",
+   "clase": "dataset",
+   "title": "Clasificación Central de Productos (CPC)",
+   "publisher": "División de Estadística de la ONU",
+   "base_url": "https://unstats.un.org",
+   "allowed_hosts": [
+    "unstats.un.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "volcado"
+  },
+  {
+   "source_id": "us.naics",
+   "status": "candidate",
+   "subarea": "M13",
+   "clase": "dataset",
+   "title": "NAICS: clasificación industrial de América del Norte (EE. UU.)",
+   "publisher": "U.S. Census Bureau",
+   "base_url": "https://www.census.gov",
+   "allowed_hosts": [
+    "www.census.gov"
+   ],
+   "alcance": "Internacional · EE. UU.",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público",
+   "via": "volcado"
+  },
+  {
+   "source_id": "mx.scian",
+   "status": "candidate",
+   "subarea": "M13",
+   "clase": "dataset",
+   "title": "SCIAN México",
+   "publisher": "INEGI",
+   "base_url": "https://www.inegi.org.mx",
+   "allowed_hosts": [
+    "www.inegi.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "abierta (términos INEGI)",
+   "via": "volcado"
+  }
+ ]
+}

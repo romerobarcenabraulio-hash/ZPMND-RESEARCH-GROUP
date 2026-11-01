@@ -1,0 +1,79 @@
+{
+ "familia": "E",
+ "nombre": "E. Banca",
+ "fuentes": [
+  {
+   "source_id": "mx.banxico-sie-catalogo",
+   "status": "candidate",
+   "subarea": "E01",
+   "clase": "api",
+   "title": "Banxico SIE: catálogo de series",
+   "publisher": "Banco de México",
+   "base_url": "https://www.banxico.org.mx",
+   "allowed_hosts": [
+    "www.banxico.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial",
+   "via": "api",
+   "nota": "El catálogo pide token: contador con secreto en un PR aparte"
+  },
+  {
+   "source_id": "mx.condusef",
+   "status": "candidate",
+   "subarea": "E04",
+   "clase": "portal_oficial",
+   "title": "CONDUSEF: comisiones y productos",
+   "publisher": "CONDUSEF",
+   "base_url": "https://www.condusef.gob.mx",
+   "allowed_hosts": [
+    "www.condusef.gob.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "mx.cnbv-portafolio",
+   "status": "candidate",
+   "subarea": "E07",
+   "clase": "base_de_datos",
+   "title": "Portafolio de Información de la CNBV",
+   "publisher": "CNBV",
+   "base_url": "https://portafoliodeinformacion.cnbv.gob.mx",
+   "allowed_hosts": [
+    "portafoliodeinformacion.cnbv.gob.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.bis",
+   "status": "candidate",
+   "subarea": "E08",
+   "clase": "catalogo",
+   "title": "Publicaciones del Comité de Basilea",
+   "publisher": "Banco de Pagos Internacionales",
+   "base_url": "https://www.bis.org",
+   "allowed_hosts": [
+    "www.bis.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  }
+ ]
+}
