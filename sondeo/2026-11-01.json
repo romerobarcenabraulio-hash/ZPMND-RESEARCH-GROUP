@@ -1,0 +1,178 @@
+{
+ "completo": true,
+ "generado": "2026-11-01T00:04:43Z",
+ "resultados": [
+  {
+   "bytes": 37290,
+   "estado": "accesible",
+   "familia": "I",
+   "fecha": "2026-11-01T00:02:27Z",
+   "http": 200,
+   "sha256": "4d846ef3a843d9c8ea6a3fe4540f43b058de193e080425ae29b5f9b4a4d5baea",
+   "source_id": "int.arxiv",
+   "subarea": "I04",
+   "title": "arXiv",
+   "url": "https://arxiv.org",
+   "via": "volcado"
+  },
+  {
+   "bytes": 194,
+   "estado": "medido",
+   "familia": "I",
+   "fecha": "2026-11-01T00:02:42Z",
+   "http": 200,
+   "sha256": "c7839bd4ed233fcc8c0e82a2326a278e22f248a8b0f221d2e294ae05ad8749b1",
+   "source_id": "int.crossref",
+   "subarea": "I02",
+   "title": "Crossref: obras con DOI",
+   "unidad": "obras",
+   "url": "https://api.crossref.org/works?rows=0",
+   "valor": 188308419,
+   "via": "volcado"
+  },
+  {
+   "bytes": 2859,
+   "estado": "medido",
+   "familia": "I",
+   "fecha": "2026-11-01T00:02:44Z",
+   "http": 200,
+   "sha256": "d411409c4bfc6891dbfcc68fe8f37dcbaa3f8f218997809355e142780d2e13f8",
+   "source_id": "int.datacite",
+   "subarea": "I08",
+   "title": "DataCite: DOI de datasets y más",
+   "unidad": "DOI",
+   "url": "https://api.datacite.org/dois?page%5Bsize%5D=1",
+   "valor": 140757651,
+   "via": "api"
+  },
+  {
+   "bytes": 37120,
+   "estado": "accesible",
+   "familia": "I",
+   "fecha": "2026-11-01T00:02:46Z",
+   "http": 200,
+   "sha256": "a25adf80641d7a7162a8a868e11b6c49114d5bf1cb8868416e7897591ce24870",
+   "source_id": "int.doab",
+   "subarea": "I10",
+   "title": "Directory of Open Access Books",
+   "url": "https://directory.doabooks.org",
+   "via": "api"
+  },
+  {
+   "bytes": 507,
+   "estado": "http",
+   "familia": "I",
+   "fecha": "2026-11-01T00:03:01Z",
+   "http": 403,
+   "sha256": "135011ed813bfc27384bf1e38d6d7ed8c6fdab7000ff9a25ad47dc8eb98acede",
+   "source_id": "int.doaj",
+   "subarea": "I07",
+   "title": "DOAJ: revistas de acceso abierto",
+   "unidad": "revistas",
+   "url": "https://doaj.org/api/search/journals/%2A?pageSize=1",
+   "via": "api"
+  },
+  {
+   "bytes": 20326,
+   "estado": "medido",
+   "familia": "I",
+   "fecha": "2026-11-01T00:03:02Z",
+   "http": 200,
+   "sha256": "1ca5f6b973db4f725236a5d5122c5ffc7d4c3ae8078a81218578879f3cb93a78",
+   "source_id": "int.openalex",
+   "subarea": "I01",
+   "title": "OpenAlex: obras",
+   "unidad": "obras",
+   "url": "https://api.openalex.org/works?per-page=1",
+   "valor": 329080310,
+   "via": "volcado"
+  },
+  {
+   "error": "robots.txt disallows https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pmc&term=open+access%5Bfilter%5D&retmode=json&retmax=0",
+   "estado": "rechazado",
+   "familia": "I",
+   "fecha": "2026-11-01T00:03:04Z",
+   "source_id": "int.pmc-oa",
+   "subarea": "I03",
+   "title": "PubMed Central (acceso abierto)",
+   "unidad": "artículos",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pmc&term=open+access%5Bfilter%5D&retmode=json&retmax=0",
+   "via": "volcado"
+  },
+  {
+   "error": "robots.txt disallows https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=all%5Bsb%5D&retmode=json&retmax=0",
+   "estado": "rechazado",
+   "familia": "I",
+   "fecha": "2026-11-01T00:03:04Z",
+   "source_id": "int.pubmed",
+   "subarea": "I03",
+   "title": "PubMed",
+   "unidad": "citas",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=all%5Bsb%5D&retmode=json&retmax=0",
+   "via": "volcado"
+  },
+  {
+   "error": "robots.txt disallows https://zenodo.org/api/records?size=1",
+   "estado": "rechazado",
+   "familia": "I",
+   "fecha": "2026-11-01T00:03:04Z",
+   "source_id": "int.zenodo",
+   "subarea": "I08",
+   "title": "Zenodo",
+   "unidad": "registros",
+   "url": "https://zenodo.org/api/records?size=1",
+   "via": "api"
+  },
+  {
+   "bytes": 131488,
+   "estado": "accesible",
+   "familia": "I",
+   "fecha": "2026-11-01T00:03:05Z",
+   "http": 200,
+   "sha256": "ab2cb870eed2bc2635d2330c98dc48b4d124e85e86c1024fdad919a15065fee2",
+   "source_id": "mx.redalyc",
+   "subarea": "I11",
+   "title": "Redalyc",
+   "url": "https://www.redalyc.org",
+   "via": "rastreo"
+  },
+  {
+   "error": "robots.txt disallows https://www.scielo.org.mx",
+   "estado": "rechazado",
+   "familia": "I",
+   "fecha": "2026-11-01T00:03:11Z",
+   "source_id": "mx.scielo",
+   "subarea": "I11",
+   "title": "SciELO México",
+   "url": "https://www.scielo.org.mx",
+   "via": "rastreo"
+  },
+  {
+   "bytes": 37261,
+   "estado": "accesible",
+   "familia": "I",
+   "fecha": "2026-11-01T00:04:42Z",
+   "http": 200,
+   "sha256": "76c6995ce846f09d358243ca359edf13460ff66ce1903696561ddefb83c1268f",
+   "source_id": "mx.tesiunam",
+   "subarea": "I12",
+   "title": "TESIUNAM",
+   "url": "https://tesiunam.dgb.unam.mx",
+   "via": "rastreo"
+  }
+ ],
+ "resumen": {
+  "I": {
+   "accesibles": 4,
+   "fallidas": 5,
+   "fuentes": 12,
+   "medidas": 3,
+   "pendientes": 0,
+   "vias": {
+    "api": 4,
+    "rastreo": 3,
+    "volcado": 5
+   }
+  }
+ }
+}
