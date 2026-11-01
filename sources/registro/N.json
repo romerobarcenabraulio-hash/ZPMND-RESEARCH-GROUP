@@ -1,0 +1,1038 @@
+{
+ "familia": "N",
+ "nombre": "N. Datos públicos",
+ "fuentes": [
+  {
+   "source_id": "int.worldbank-indicadores",
+   "status": "candidate",
+   "subarea": "N10",
+   "clase": "api",
+   "title": "Banco Mundial: catálogo de indicadores",
+   "publisher": "Banco Mundial",
+   "base_url": "https://data.worldbank.org",
+   "allowed_hosts": [
+    "api.worldbank.org",
+    "data.worldbank.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "CC BY 4.0",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.worldbank.org/v2/indicator?format=json&per_page=1",
+    "ruta": [
+     0,
+     "total"
+    ],
+    "unidad": "indicadores"
+   }
+  },
+  {
+   "source_id": "int.who-gho",
+   "status": "candidate",
+   "subarea": "N14",
+   "clase": "api",
+   "title": "OMS: Global Health Observatory (indicadores)",
+   "publisher": "Organización Mundial de la Salud",
+   "base_url": "https://www.who.int",
+   "allowed_hosts": [
+    "ghoapi.azureedge.net",
+    "www.who.int"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY-NC-SA (por verificar)",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://ghoapi.azureedge.net/api/Indicator",
+    "ruta": [
+     "value"
+    ],
+    "medida": "longitud",
+    "registro": "IndicatorCode",
+    "unidad": "indicadores"
+   }
+  },
+  {
+   "source_id": "int.eurostat",
+   "status": "candidate",
+   "subarea": "N15",
+   "clase": "api",
+   "title": "Eurostat",
+   "publisher": "Comisión Europea",
+   "base_url": "https://ec.europa.eu",
+   "allowed_hosts": [
+    "ec.europa.eu"
+   ],
+   "alcance": "Internacional · UE",
+   "idiomas": [
+    "en",
+    "multi"
+   ],
+   "license": "reutilización permitida (por verificar)",
+   "via": "api"
+  },
+  {
+   "source_id": "int.imf-data",
+   "status": "candidate",
+   "subarea": "N11",
+   "clase": "api",
+   "title": "FMI: datos (SDMX)",
+   "publisher": "Fondo Monetario Internacional",
+   "base_url": "https://data.imf.org",
+   "allowed_hosts": [
+    "data.imf.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "api"
+  },
+  {
+   "source_id": "int.oecd-data",
+   "status": "candidate",
+   "subarea": "N12",
+   "clase": "api",
+   "title": "OCDE: Data Explorer (SDMX)",
+   "publisher": "OCDE",
+   "base_url": "https://data-explorer.oecd.org",
+   "allowed_hosts": [
+    "data-explorer.oecd.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "api"
+  },
+  {
+   "source_id": "mx.inegi-marco-geo",
+   "status": "candidate",
+   "subarea": "N04",
+   "clase": "dataset",
+   "title": "Marco Geoestadístico",
+   "publisher": "INEGI",
+   "base_url": "https://www.inegi.org.mx",
+   "allowed_hosts": [
+    "www.inegi.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "abierta (términos INEGI)",
+   "via": "volcado"
+  },
+  {
+   "source_id": "int.un-m49",
+   "status": "candidate",
+   "subarea": "N22",
+   "clase": "dataset",
+   "title": "M49: códigos de países y regiones de la ONU",
+   "publisher": "División de Estadística de la ONU",
+   "base_url": "https://unstats.un.org",
+   "allowed_hosts": [
+    "unstats.un.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "volcado"
+  },
+  {
+   "source_id": "int.worldbank-fuentes",
+   "status": "candidate",
+   "subarea": "N10",
+   "clase": "api",
+   "title": "Banco Mundial: fuentes de datos (bases)",
+   "publisher": "Banco Mundial",
+   "base_url": "https://data.worldbank.org",
+   "allowed_hosts": [
+    "api.worldbank.org",
+    "data.worldbank.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "CC BY 4.0",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.worldbank.org/v2/sources?format=json&per_page=1",
+    "ruta": [
+     0,
+     "total"
+    ],
+    "unidad": "bases"
+   }
+  },
+  {
+   "source_id": "int.worldbank-paises",
+   "status": "candidate",
+   "subarea": "N10",
+   "clase": "api",
+   "title": "Banco Mundial: países y agregados",
+   "publisher": "Banco Mundial",
+   "base_url": "https://data.worldbank.org",
+   "allowed_hosts": [
+    "api.worldbank.org",
+    "data.worldbank.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "CC BY 4.0",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.worldbank.org/v2/country?format=json&per_page=1",
+    "ruta": [
+     0,
+     "total"
+    ],
+    "unidad": "países y agregados"
+   }
+  },
+  {
+   "source_id": "int.worldbank-microdatos",
+   "status": "candidate",
+   "subarea": "N10",
+   "clase": "catalogo",
+   "title": "Banco Mundial: Microdata Library",
+   "publisher": "Banco Mundial",
+   "base_url": "https://microdata.worldbank.org",
+   "allowed_hosts": [
+    "microdata.worldbank.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "según encuesta",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.oecd-dataflows",
+   "status": "candidate",
+   "subarea": "N12",
+   "clase": "api",
+   "title": "OCDE: flujos de datos SDMX",
+   "publisher": "OCDE",
+   "base_url": "https://sdmx.oecd.org",
+   "allowed_hosts": [
+    "sdmx.oecd.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "api",
+   "contador": {
+    "tipo": "contar",
+    "url": "https://sdmx.oecd.org/public/rest/dataflow/all",
+    "marca": "<message:Structure",
+    "literal": "<structure:Dataflow ",
+    "unidad": "flujos de datos"
+   }
+  },
+  {
+   "source_id": "int.eurostat-toc",
+   "status": "candidate",
+   "subarea": "N15",
+   "clase": "catalogo",
+   "title": "Eurostat: tabla de contenidos (datasets)",
+   "publisher": "Comisión Europea",
+   "base_url": "https://ec.europa.eu",
+   "allowed_hosts": [
+    "ec.europa.eu"
+   ],
+   "alcance": "Internacional · UE",
+   "idiomas": [
+    "en"
+   ],
+   "license": "reutilización permitida (por verificar)",
+   "via": "rastreo",
+   "contador": {
+    "tipo": "contar",
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/catalogue/toc/txt?lang=en",
+    "marca": "\"code\"",
+    "literal": "\"dataset\"",
+    "unidad": "entradas de tipo dataset en el índice"
+   }
+  },
+  {
+   "source_id": "int.un-sdg",
+   "status": "candidate",
+   "subarea": "N13",
+   "clase": "api",
+   "title": "ONU: indicadores ODS (series)",
+   "publisher": "División de Estadística de la ONU",
+   "base_url": "https://unstats.un.org",
+   "allowed_hosts": [
+    "unstats.un.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en",
+    "es"
+   ],
+   "license": "términos por revisar",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://unstats.un.org/sdgapi/v1/sdg/Series/List",
+    "ruta": [],
+    "medida": "longitud",
+    "registro": "code",
+    "unidad": "series"
+   }
+  },
+  {
+   "source_id": "int.undata",
+   "status": "candidate",
+   "subarea": "N13",
+   "clase": "portal_oficial",
+   "title": "UNdata",
+   "publisher": "División de Estadística de la ONU",
+   "base_url": "https://data.un.org",
+   "allowed_hosts": [
+    "data.un.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.un-comtrade",
+   "status": "candidate",
+   "subarea": "N13",
+   "clase": "base_de_datos",
+   "title": "UN Comtrade",
+   "publisher": "División de Estadística de la ONU",
+   "base_url": "https://comtradeplus.un.org",
+   "allowed_hosts": [
+    "comtradeplus.un.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "api",
+   "nota": "La API pide llave: contador en el PR de fuentes con llave"
+  },
+  {
+   "source_id": "int.unctadstat",
+   "status": "candidate",
+   "subarea": "N13",
+   "clase": "base_de_datos",
+   "title": "UNCTADstat",
+   "publisher": "UNCTAD",
+   "base_url": "https://unctadstat.unctad.org",
+   "allowed_hosts": [
+    "unctadstat.unctad.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.faostat",
+   "status": "candidate",
+   "subarea": "N14",
+   "clase": "base_de_datos",
+   "title": "FAOSTAT",
+   "publisher": "FAO",
+   "base_url": "https://www.fao.org",
+   "allowed_hosts": [
+    "www.fao.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "CC BY 4.0 (por verificar)",
+   "via": "volcado"
+  },
+  {
+   "source_id": "int.ilostat",
+   "status": "candidate",
+   "subarea": "N13",
+   "clase": "base_de_datos",
+   "title": "ILOSTAT",
+   "publisher": "Organización Internacional del Trabajo",
+   "base_url": "https://ilostat.ilo.org",
+   "allowed_hosts": [
+    "ilostat.ilo.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "CC BY 4.0 (por verificar)",
+   "via": "volcado"
+  },
+  {
+   "source_id": "int.owid",
+   "status": "candidate",
+   "subarea": "N13",
+   "clase": "dataset",
+   "title": "Our World in Data",
+   "publisher": "Global Change Data Lab",
+   "base_url": "https://ourworldindata.org",
+   "allowed_hosts": [
+    "ourworldindata.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY 4.0",
+   "via": "volcado"
+  },
+  {
+   "source_id": "int.fred",
+   "status": "candidate",
+   "subarea": "N16",
+   "clase": "api",
+   "title": "FRED (Reserva Federal de St. Louis)",
+   "publisher": "Federal Reserve Bank of St. Louis",
+   "base_url": "https://fred.stlouisfed.org",
+   "allowed_hosts": [
+    "fred.stlouisfed.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "según serie",
+   "via": "api",
+   "nota": "La API pide llave: contador en el PR de fuentes con llave"
+  },
+  {
+   "source_id": "us.data-gov",
+   "status": "candidate",
+   "subarea": "N19",
+   "clase": "api",
+   "title": "data.gov",
+   "publisher": "Gobierno de EE. UU. (GSA)",
+   "base_url": "https://catalog.data.gov",
+   "allowed_hosts": [
+    "catalog.data.gov"
+   ],
+   "alcance": "Internacional · EE. UU.",
+   "idiomas": [
+    "en"
+   ],
+   "license": "según conjunto (mayoría dominio público)",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://catalog.data.gov/api/3/action/package_search?rows=0",
+    "ruta": [
+     "result",
+     "count"
+    ],
+    "unidad": "conjuntos de datos"
+   }
+  },
+  {
+   "source_id": "us.census-api",
+   "status": "candidate",
+   "subarea": "N19",
+   "clase": "api",
+   "title": "U.S. Census Bureau: conjuntos de su API",
+   "publisher": "U.S. Census Bureau",
+   "base_url": "https://api.census.gov",
+   "allowed_hosts": [
+    "api.census.gov"
+   ],
+   "alcance": "Internacional · EE. UU.",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.census.gov/data.json",
+    "ruta": [
+     "dataset"
+    ],
+    "medida": "longitud",
+    "registro": "identifier",
+    "unidad": "conjuntos de datos"
+   }
+  },
+  {
+   "source_id": "uk.data-gov",
+   "status": "candidate",
+   "subarea": "N19",
+   "clase": "api",
+   "title": "data.gov.uk",
+   "publisher": "Gobierno del Reino Unido",
+   "base_url": "https://www.data.gov.uk",
+   "allowed_hosts": [
+    "data.gov.uk",
+    "www.data.gov.uk"
+   ],
+   "alcance": "Internacional · Reino Unido",
+   "idiomas": [
+    "en"
+   ],
+   "license": "Open Government Licence (por conjunto)",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://data.gov.uk/api/action/package_search?rows=0",
+    "ruta": [
+     "result",
+     "count"
+    ],
+    "unidad": "conjuntos de datos"
+   }
+  },
+  {
+   "source_id": "ca.open-canada",
+   "status": "candidate",
+   "subarea": "N19",
+   "clase": "api",
+   "title": "Open Government Portal (Canadá)",
+   "publisher": "Gobierno de Canadá",
+   "base_url": "https://open.canada.ca",
+   "allowed_hosts": [
+    "open.canada.ca"
+   ],
+   "alcance": "Internacional · Canadá",
+   "idiomas": [
+    "en",
+    "fr"
+   ],
+   "license": "Open Government Licence – Canada",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://open.canada.ca/data/api/action/package_search?rows=0",
+    "ruta": [
+     "result",
+     "count"
+    ],
+    "unidad": "conjuntos de datos"
+   }
+  },
+  {
+   "source_id": "eu.data-europa",
+   "status": "candidate",
+   "subarea": "N19",
+   "clase": "api",
+   "title": "data.europa.eu",
+   "publisher": "Oficina de Publicaciones de la UE",
+   "base_url": "https://data.europa.eu",
+   "allowed_hosts": [
+    "data.europa.eu"
+   ],
+   "alcance": "Internacional · UE",
+   "idiomas": [
+    "multi"
+   ],
+   "license": "según conjunto",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://data.europa.eu/api/hub/search/search?limit=0",
+    "ruta": [
+     "result",
+     "count"
+    ],
+    "unidad": "conjuntos de datos"
+   }
+  },
+  {
+   "source_id": "cl.datos-gob",
+   "status": "candidate",
+   "subarea": "N19",
+   "clase": "api",
+   "title": "datos.gob.cl",
+   "publisher": "Gobierno de Chile",
+   "base_url": "https://datos.gob.cl",
+   "allowed_hosts": [
+    "datos.gob.cl"
+   ],
+   "alcance": "Internacional · Chile",
+   "idiomas": [
+    "es"
+   ],
+   "license": "según conjunto",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://datos.gob.cl/api/3/action/package_search?rows=0",
+    "ruta": [
+     "result",
+     "count"
+    ],
+    "unidad": "conjuntos de datos"
+   }
+  },
+  {
+   "source_id": "ar.datos-gob",
+   "status": "candidate",
+   "subarea": "N19",
+   "clase": "api",
+   "title": "datos.gob.ar",
+   "publisher": "Gobierno de Argentina",
+   "base_url": "https://datos.gob.ar",
+   "allowed_hosts": [
+    "datos.gob.ar"
+   ],
+   "alcance": "Internacional · Argentina",
+   "idiomas": [
+    "es"
+   ],
+   "license": "según conjunto",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://datos.gob.ar/api/3/action/package_search?rows=0",
+    "ruta": [
+     "result",
+     "count"
+    ],
+    "unidad": "conjuntos de datos"
+   }
+  },
+  {
+   "source_id": "es.datos-gob",
+   "status": "candidate",
+   "subarea": "N19",
+   "clase": "portal_oficial",
+   "title": "datos.gob.es",
+   "publisher": "Gobierno de España",
+   "base_url": "https://datos.gob.es",
+   "allowed_hosts": [
+    "datos.gob.es"
+   ],
+   "alcance": "Internacional · España",
+   "idiomas": [
+    "es"
+   ],
+   "license": "reutilización permitida (por verificar)",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "co.datos-gov",
+   "status": "candidate",
+   "subarea": "N19",
+   "clase": "portal_oficial",
+   "title": "Datos Abiertos Colombia",
+   "publisher": "Gobierno de Colombia (MinTIC)",
+   "base_url": "https://www.datos.gov.co",
+   "allowed_hosts": [
+    "www.datos.gov.co"
+   ],
+   "alcance": "Internacional · Colombia",
+   "idiomas": [
+    "es"
+   ],
+   "license": "según conjunto",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "br.dados-gov",
+   "status": "candidate",
+   "subarea": "N19",
+   "clase": "portal_oficial",
+   "title": "Portal Brasileiro de Dados Abertos",
+   "publisher": "Gobierno de Brasil",
+   "base_url": "https://dados.gov.br",
+   "allowed_hosts": [
+    "dados.gov.br"
+   ],
+   "alcance": "Internacional · Brasil",
+   "idiomas": [
+    "pt"
+   ],
+   "license": "según conjunto",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "mx.datos-cdmx",
+   "status": "candidate",
+   "subarea": "N19",
+   "clase": "api",
+   "title": "Portal de Datos Abiertos de la Ciudad de México",
+   "publisher": "Gobierno de la Ciudad de México (ADIP)",
+   "base_url": "https://datos.cdmx.gob.mx",
+   "allowed_hosts": [
+    "datos.cdmx.gob.mx"
+   ],
+   "alcance": "México · CDMX",
+   "idiomas": [
+    "es"
+   ],
+   "license": "según conjunto",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://datos.cdmx.gob.mx/api/3/action/package_search?rows=0",
+    "ruta": [
+     "result",
+     "count"
+    ],
+    "unidad": "conjuntos de datos"
+   }
+  },
+  {
+   "source_id": "int.re3data",
+   "status": "candidate",
+   "subarea": "N21",
+   "clase": "registro",
+   "title": "re3data: registro de repositorios de datos de investigación",
+   "publisher": "DataCite",
+   "base_url": "https://www.re3data.org",
+   "allowed_hosts": [
+    "www.re3data.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC0 (metadatos)",
+   "via": "api",
+   "contador": {
+    "tipo": "contar",
+    "url": "https://www.re3data.org/api/v1/repositories",
+    "marca": "<list",
+    "literal": "<repository>",
+    "unidad": "repositorios"
+   }
+  },
+  {
+   "source_id": "int.harvard-dataverse",
+   "status": "candidate",
+   "subarea": "N21",
+   "clase": "api",
+   "title": "Harvard Dataverse",
+   "publisher": "Harvard University",
+   "base_url": "https://dataverse.harvard.edu",
+   "allowed_hosts": [
+    "dataverse.harvard.edu"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "según dataset",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://dataverse.harvard.edu/api/search?q=*&type=dataset&per_page=1",
+    "ruta": [
+     "data",
+     "total_count"
+    ],
+    "unidad": "datasets"
+   }
+  },
+  {
+   "source_id": "int.icpsr",
+   "status": "candidate",
+   "subarea": "N21",
+   "clase": "catalogo",
+   "title": "ICPSR: datos de ciencias sociales",
+   "publisher": "University of Michigan",
+   "base_url": "https://www.icpsr.umich.edu",
+   "allowed_hosts": [
+    "www.icpsr.umich.edu"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "según estudio",
+   "via": "manual"
+  },
+  {
+   "source_id": "int.ipums",
+   "status": "candidate",
+   "subarea": "N21",
+   "clase": "dataset",
+   "title": "IPUMS: microdatos censales armonizados",
+   "publisher": "University of Minnesota",
+   "base_url": "https://www.ipums.org",
+   "allowed_hosts": [
+    "www.ipums.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "manual",
+   "nota": "Incluye censos de México armonizados"
+  },
+  {
+   "source_id": "int.gbif-ocurrencias",
+   "status": "candidate",
+   "subarea": "N20",
+   "clase": "api",
+   "title": "GBIF: registros de ocurrencia de especies",
+   "publisher": "GBIF",
+   "base_url": "https://www.gbif.org",
+   "allowed_hosts": [
+    "api.gbif.org",
+    "www.gbif.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC0 / CC BY (por registro)",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.gbif.org/v1/occurrence/search?limit=0",
+    "ruta": [
+     "count"
+    ],
+    "unidad": "registros"
+   }
+  },
+  {
+   "source_id": "int.gbif-datasets",
+   "status": "candidate",
+   "subarea": "N20",
+   "clase": "api",
+   "title": "GBIF: conjuntos de datos",
+   "publisher": "GBIF",
+   "base_url": "https://www.gbif.org",
+   "allowed_hosts": [
+    "api.gbif.org",
+    "www.gbif.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "según conjunto",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.gbif.org/v1/dataset/search?limit=0",
+    "ruta": [
+     "count"
+    ],
+    "unidad": "conjuntos de datos"
+   }
+  },
+  {
+   "source_id": "int.nasa-earthdata",
+   "status": "candidate",
+   "subarea": "N17",
+   "clase": "catalogo",
+   "title": "NASA Earthdata (CMR)",
+   "publisher": "NASA",
+   "base_url": "https://www.earthdata.nasa.gov",
+   "allowed_hosts": [
+    "www.earthdata.nasa.gov"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público (mayoría)",
+   "via": "api",
+   "nota": "El total va en un encabezado HTTP, no en el cuerpo: el contador espera soporte de encabezados"
+  },
+  {
+   "source_id": "int.copernicus-cds",
+   "status": "candidate",
+   "subarea": "N17",
+   "clase": "catalogo",
+   "title": "Copernicus Climate Data Store",
+   "publisher": "ECMWF / Comisión Europea",
+   "base_url": "https://cds.climate.copernicus.eu",
+   "allowed_hosts": [
+    "cds.climate.copernicus.eu"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "licencia Copernicus (por verificar)",
+   "via": "api"
+  },
+  {
+   "source_id": "int.noaa-ncei",
+   "status": "candidate",
+   "subarea": "N17",
+   "clase": "portal_oficial",
+   "title": "NOAA NCEI: datos climáticos",
+   "publisher": "NOAA",
+   "base_url": "https://www.ncei.noaa.gov",
+   "allowed_hosts": [
+    "www.ncei.noaa.gov"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público",
+   "via": "volcado"
+  },
+  {
+   "source_id": "int.osm-planet",
+   "status": "candidate",
+   "subarea": "N18",
+   "clase": "dataset",
+   "title": "OpenStreetMap: planet y extractos",
+   "publisher": "OpenStreetMap Foundation",
+   "base_url": "https://planet.openstreetmap.org",
+   "allowed_hosts": [
+    "planet.openstreetmap.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "ODbL",
+   "via": "volcado"
+  },
+  {
+   "source_id": "int.geonames",
+   "status": "candidate",
+   "subarea": "N18",
+   "clase": "dataset",
+   "title": "GeoNames",
+   "publisher": "GeoNames",
+   "base_url": "https://www.geonames.org",
+   "allowed_hosts": [
+    "www.geonames.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY 4.0",
+   "via": "volcado"
+  },
+  {
+   "source_id": "mx.inegi-microdatos",
+   "status": "candidate",
+   "subarea": "N03",
+   "clase": "catalogo",
+   "title": "INEGI: programas de información (censos y encuestas)",
+   "publisher": "INEGI",
+   "base_url": "https://www.inegi.org.mx",
+   "allowed_hosts": [
+    "www.inegi.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "abierta (términos INEGI)",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "mx.coneval",
+   "status": "candidate",
+   "subarea": "N07",
+   "clase": "portal_oficial",
+   "title": "CONEVAL: medición de pobreza",
+   "publisher": "CONEVAL",
+   "base_url": "https://www.coneval.org.mx",
+   "allowed_hosts": [
+    "www.coneval.org.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "mx.smn",
+   "status": "candidate",
+   "subarea": "N08",
+   "clase": "portal_oficial",
+   "title": "Servicio Meteorológico Nacional",
+   "publisher": "CONAGUA",
+   "base_url": "https://smn.conagua.gob.mx",
+   "allowed_hosts": [
+    "smn.conagua.gob.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "mx.conapo",
+   "status": "candidate",
+   "subarea": "N09",
+   "clase": "portal_oficial",
+   "title": "CONAPO: proyecciones de población",
+   "publisher": "CONAPO",
+   "base_url": "https://www.gob.mx",
+   "allowed_hosts": [
+    "www.gob.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial",
+   "via": "rastreo",
+   "nota": "Sitio dentro de gob.mx"
+  },
+  {
+   "source_id": "mx.sesnsp",
+   "status": "candidate",
+   "subarea": "N13",
+   "clase": "dataset",
+   "title": "SESNSP: incidencia delictiva",
+   "publisher": "Secretariado Ejecutivo del SNSP",
+   "base_url": "https://www.gob.mx",
+   "allowed_hosts": [
+    "www.gob.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial",
+   "via": "volcado",
+   "nota": "Datos abiertos de incidencia en gob.mx"
+  }
+ ]
+}

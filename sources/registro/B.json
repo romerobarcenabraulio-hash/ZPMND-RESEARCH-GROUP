@@ -1,0 +1,132 @@
+{
+ "familia": "B",
+ "nombre": "B. Estándares técnicos",
+ "fuentes": [
+  {
+   "source_id": "int.rfc-index",
+   "status": "candidate",
+   "subarea": "B13",
+   "clase": "catalogo",
+   "title": "Índice de RFC (rfc-index.xml)",
+   "publisher": "RFC Editor / IETF",
+   "base_url": "https://www.rfc-editor.org",
+   "allowed_hosts": [
+    "www.rfc-editor.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "abierta (IETF Trust)",
+   "via": "volcado",
+   "contador": {
+    "tipo": "contar",
+    "url": "https://www.rfc-editor.org/rfc-index.xml",
+    "marca": "<rfc-index",
+    "literal": "<rfc-entry>",
+    "unidad": "RFC"
+   }
+  },
+  {
+   "source_id": "int.w3c-specs",
+   "status": "candidate",
+   "subarea": "B14",
+   "clase": "api",
+   "title": "Especificaciones del W3C (API)",
+   "publisher": "World Wide Web Consortium",
+   "base_url": "https://www.w3.org",
+   "allowed_hosts": [
+    "api.w3.org",
+    "www.w3.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "abierta (W3C)",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.w3.org/specifications?items=1",
+    "ruta": [
+     "total"
+    ],
+    "unidad": "especificaciones"
+   }
+  },
+  {
+   "source_id": "int.iso-open-data",
+   "status": "candidate",
+   "subarea": "B02",
+   "clase": "catalogo",
+   "title": "ISO Open Data (catálogo de entregables)",
+   "publisher": "ISO",
+   "base_url": "https://www.iso.org",
+   "allowed_hosts": [
+    "www.iso.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "solo metadatos (texto de pago)",
+   "via": "volcado",
+   "nota": "Contador por definir al leer la página de datos abiertos"
+  },
+  {
+   "source_id": "int.itu-t-recs",
+   "status": "candidate",
+   "subarea": "B14",
+   "clase": "catalogo",
+   "title": "Recomendaciones UIT-T",
+   "publisher": "Unión Internacional de Telecomunicaciones",
+   "base_url": "https://www.itu.int",
+   "allowed_hosts": [
+    "www.itu.int"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "es",
+    "en"
+   ],
+   "license": "gratuita (por verificar)",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.nfpa-codes",
+   "status": "candidate",
+   "subarea": "B06",
+   "clase": "catalogo",
+   "title": "Códigos y normas NFPA (lectura gratuita)",
+   "publisher": "NFPA",
+   "base_url": "https://www.nfpa.org",
+   "allowed_hosts": [
+    "www.nfpa.org"
+   ],
+   "alcance": "Internacional",
+   "idiomas": [
+    "en"
+   ],
+   "license": "solo metadatos (texto de pago)",
+   "via": "manual"
+  },
+  {
+   "source_id": "mx.dgn-normas",
+   "status": "candidate",
+   "subarea": "B01",
+   "clase": "catalogo",
+   "title": "Catálogo de Normas (NOM y NMX)",
+   "publisher": "Dirección General de Normas, Secretaría de Economía",
+   "base_url": "https://www.sinec.gob.mx",
+   "allowed_hosts": [
+    "www.sinec.gob.mx"
+   ],
+   "alcance": "México",
+   "idiomas": [
+    "es"
+   ],
+   "license": "oficial",
+   "via": "rastreo"
+  }
+ ]
+}

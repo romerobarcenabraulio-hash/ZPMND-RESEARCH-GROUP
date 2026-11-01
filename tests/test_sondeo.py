@@ -24,9 +24,9 @@ def doc(*fuentes, familia='I'):
 
 
 class Registro(unittest.TestCase):
-    def test_the_registry_in_the_repo_loads(self):
+    def test_the_registry_in_the_repo_loads_and_covers_every_family(self):
         fuentes = sondeo.cargar(ROOT / 'sources' / 'registro')
-        self.assertTrue(fuentes)
+        self.assertEqual({l for l, _ in fuentes}, set(sondeo.FAMILIAS))  # the world, from more to less (NORTE §3)
         mx = json.loads((ROOT / 'sources' / 'mx.json').read_text(encoding='utf-8'))
         catalogo = {s['source_id'] for k in ('sources', 'secondary_sources') for s in mx.get(k, [])}
         self.assertFalse(catalogo & {f['source_id'] for _, f in fuentes})  # one id names one source in all of RG
@@ -114,8 +114,13 @@ class Leer(unittest.TestCase):
         self.assertEqual(sondeo.leer(b'{"licenses": [{"licenseId": "MIT"}, {"licenseId": "0BSD"}]}', L), 2)
         E = {**L, 'ruta': [], 'registro': 'cik_str'}
         self.assertEqual(sondeo.leer(b'{"0": {"cik_str": 1}, "1": {"cik_str": 2}}', E), 2)
+        # GPT on e64f0ea: it counts entries, not distinct values: two tickers of one issuer are two, so the unit says so
+        self.assertEqual(sondeo.leer(b'{"0": {"cik_str": 1, "ticker": "GOOG"}, "1": {"cik_str": 1, "ticker": "GOOGL"}}', E), 2)
+        edgar = next(f for _, f in sondeo.cargar(ROOT / 'sources' / 'registro') if f['source_id'] == 'us.edgar')
+        self.assertEqual(edgar['contador']['unidad'], 'tickers')
         # GPT on ee5296e: an error object or an empty answer served with 200 is not a count of anything
         for body, c in ((b'{"error": "maintenance"}', E), (b'{}', E), (b'{"0": {"ticker": "X"}}', E),
+                        (b'{"0": {"cik_str": 1}, "1": "x"}', E), (b'{"0": {"cik_str": 1}, "1": {"ticker": "X"}}', E),
                         (b'{"licenses": [{"licenseId": "MIT"}, "x"]}', L), (b'{"licenses": []}', L),
                         (b'{"licenses": 5}', L), (b'<html>', L)):
             with self.subTest(body=body), self.assertRaises(ValueError):

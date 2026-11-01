@@ -1,0 +1,96 @@
+{
+ "familia": "K",
+ "nombre": "K. Ecosistema de IA",
+ "fuentes": [
+  {
+   "source_id": "int.hf-hub",
+   "status": "candidate",
+   "subarea": "K01",
+   "clase": "repositorio",
+   "title": "Hugging Face Hub: modelos",
+   "publisher": "Hugging Face",
+   "base_url": "https://huggingface.co",
+   "allowed_hosts": [
+    "huggingface.co"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "según modelo",
+   "via": "api"
+  },
+  {
+   "source_id": "int.mcp-registry",
+   "status": "candidate",
+   "subarea": "K04",
+   "clase": "registro",
+   "title": "Registro oficial de servidores MCP",
+   "publisher": "Model Context Protocol",
+   "base_url": "https://registry.modelcontextprotocol.io",
+   "allowed_hosts": [
+    "registry.modelcontextprotocol.io"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "api"
+  },
+  {
+   "source_id": "int.anthropic-docs",
+   "status": "candidate",
+   "subarea": "K08",
+   "clase": "documentacion",
+   "title": "Documentación de Claude y su API",
+   "publisher": "Anthropic",
+   "base_url": "https://docs.anthropic.com",
+   "allowed_hosts": [
+    "docs.anthropic.com"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.openai-docs",
+   "status": "candidate",
+   "subarea": "K08",
+   "clase": "documentacion",
+   "title": "Documentación de la plataforma OpenAI",
+   "publisher": "OpenAI",
+   "base_url": "https://platform.openai.com",
+   "allowed_hosts": [
+    "platform.openai.com"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "términos por revisar",
+   "via": "rastreo"
+  },
+  {
+   "source_id": "int.vllm",
+   "status": "candidate",
+   "subarea": "K07",
+   "clase": "repositorio",
+   "title": "vLLM",
+   "publisher": "vLLM project",
+   "base_url": "https://docs.vllm.ai",
+   "allowed_hosts": [
+    "docs.vllm.ai"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "Apache-2.0",
+   "via": "rastreo"
+  }
+ ]
+}

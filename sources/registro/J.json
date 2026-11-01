@@ -1,0 +1,178 @@
+{
+ "familia": "J",
+ "nombre": "J. Software",
+ "fuentes": [
+  {
+   "source_id": "int.crates",
+   "status": "candidate",
+   "subarea": "J02",
+   "clase": "api",
+   "title": "crates.io",
+   "publisher": "Rust Foundation",
+   "base_url": "https://crates.io",
+   "allowed_hosts": [
+    "crates.io"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "metadatos abiertos",
+   "via": "volcado",
+   "contador": {
+    "tipo": "json",
+    "url": "https://crates.io/api/v1/summary",
+    "ruta": [
+     "num_crates"
+    ],
+    "unidad": "paquetes"
+   }
+  },
+  {
+   "source_id": "int.npm",
+   "status": "candidate",
+   "subarea": "J02",
+   "clase": "api",
+   "title": "Registro de npm",
+   "publisher": "GitHub / npm",
+   "base_url": "https://www.npmjs.com",
+   "allowed_hosts": [
+    "replicate.npmjs.com",
+    "www.npmjs.com"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "metadatos abiertos",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://replicate.npmjs.com/",
+    "ruta": [
+     "doc_count"
+    ],
+    "unidad": "documentos de la base del registro"
+   }
+  },
+  {
+   "source_id": "int.pypi",
+   "status": "candidate",
+   "subarea": "J02",
+   "clase": "repositorio",
+   "title": "PyPI",
+   "publisher": "Python Software Foundation",
+   "base_url": "https://pypi.org",
+   "allowed_hosts": [
+    "pypi.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "metadatos abiertos",
+   "via": "api"
+  },
+  {
+   "source_id": "int.nvd",
+   "status": "candidate",
+   "subarea": "J04",
+   "clase": "api",
+   "title": "National Vulnerability Database: CVE",
+   "publisher": "NIST",
+   "base_url": "https://nvd.nist.gov",
+   "allowed_hosts": [
+    "nvd.nist.gov",
+    "services.nvd.nist.gov"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "dominio público",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?resultsPerPage=1",
+    "ruta": [
+     "totalResults"
+    ],
+    "unidad": "CVE"
+   }
+  },
+  {
+   "source_id": "int.osv",
+   "status": "candidate",
+   "subarea": "J04",
+   "clase": "base_de_datos",
+   "title": "OSV: vulnerabilidades de código abierto",
+   "publisher": "Google / OpenSSF",
+   "base_url": "https://osv.dev",
+   "allowed_hosts": [
+    "osv.dev"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY (por verificar)",
+   "via": "volcado"
+  },
+  {
+   "source_id": "int.apis-guru",
+   "status": "candidate",
+   "subarea": "J05",
+   "clase": "api",
+   "title": "APIs.guru: directorio OpenAPI",
+   "publisher": "APIs.guru",
+   "base_url": "https://apis.guru",
+   "allowed_hosts": [
+    "api.apis.guru",
+    "apis.guru"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC0 (por verificar)",
+   "via": "api",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.apis.guru/v2/metrics.json",
+    "ruta": [
+     "numAPIs"
+    ],
+    "unidad": "APIs"
+   }
+  },
+  {
+   "source_id": "int.spdx",
+   "status": "candidate",
+   "subarea": "J10",
+   "clase": "dataset",
+   "title": "SPDX License List",
+   "publisher": "Linux Foundation",
+   "base_url": "https://spdx.org",
+   "allowed_hosts": [
+    "raw.githubusercontent.com",
+    "spdx.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC BY 3.0",
+   "via": "volcado",
+   "contador": {
+    "tipo": "json",
+    "url": "https://raw.githubusercontent.com/spdx/license-list-data/main/json/licenses.json",
+    "ruta": [
+     "licenses"
+    ],
+    "medida": "longitud",
+    "registro": "licenseId",
+    "unidad": "licencias"
+   }
+  }
+ ]
+}
