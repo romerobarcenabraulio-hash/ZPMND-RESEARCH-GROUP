@@ -19,7 +19,7 @@
     "multi"
    ],
    "license": "CC0 (metadatos)",
-   "via": "volcado",
+   "via": "api",
    "contador": {
     "tipo": "json",
     "url": "https://api.openalex.org/works?per-page=1",
@@ -47,7 +47,7 @@
     "multi"
    ],
    "license": "metadatos abiertos",
-   "via": "volcado",
+   "via": "api",
    "contador": {
     "tipo": "json",
     "url": "https://api.crossref.org/works?rows=0",

@@ -12,7 +12,7 @@ de México que ya adquiere el catálogo viven en `sources/mx.json`; un id nombra
 
 **Vía** (obligatoria): la ruta más rápida que ofrece la fuente, de mejor a peor: `volcado` (millones de registros en
 una descarga), `api`, `sitemap`, `rastreo` (página por página) o `manual` (compra o persona). La adquisición se planea en
-ese orden y el resumen del sondeo las cuenta por familia (Braulio, 2026-10-30: "extraer información mucho más rápido").
+ese orden y el resumen del sondeo las cuenta por familia (Braulio, 2026-10-30: "extraer información mucho más rápido"). Un agregador con API que da sus conteos y pagina con cursor (OpenAlex, Crossref) se consulta dirigido por su `api`: RG no lo espeja; trae el conteo de cada celda y el subconjunto que se pide, con su consulta y fecha (Braulio, 2026-11-01: "Open Alex no la vamos a descargar sino saber usar").
 El registro incluye las clasificaciones oficiales que son el esqueleto del mapa: CIIU, CPC, NAICS y SCIAN (industrias y
 productos), CIUO, ESCO, O*NET y SINCO (ocupaciones), M49 (países).
 
