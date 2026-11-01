@@ -305,7 +305,11 @@ def _entropy(s):
 def looks_like_credential(text):
     """The post job's filter (auditor.yml), plus OpenAI key prefixes since this job holds an OpenAI key."""
     flat = re.sub(r'[^a-z0-9]', '', text.lower())
-    if 'skantoat' in flat or 'skantapi' in flat or 'ghs' + '_' in text or 'github_pat' in text.lower():
+    if 'skantoat' in flat or 'skantapi' in flat:
+        return True
+    # a GitHub token is its prefix AND the characters after it; the word alone is how a review of token handling talks
+    # (every GPT review of #75, which validates fine-grained tokens, was withheld for naming the prefix: 2026-10-31)
+    if re.search(r'(?:github_pat_|gh[pousr]_)[A-Za-z0-9_]{20,}', text, re.I):
         return True
     if re.search(r'(?<![A-Za-z0-9])sk-[A-Za-z0-9_-]{20,}', text):
         return True
