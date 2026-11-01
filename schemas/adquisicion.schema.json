@@ -44,12 +44,18 @@
             "tamano": {"type": "integer", "minimum": 1, "maximum": 10000},
             "ruta_items": {"$ref": "#/$defs/ruta"},
             "ruta_siguiente": {"$ref": "#/$defs/ruta"},
+            "inicio": {"type": "string", "minLength": 1, "maxLength": 80, "description": "el primer valor del cursor (OpenAlex: *)"},
             "max_paginas": {"type": "integer", "minimum": 1, "maximum": 1000000}
           }
         },
         "registro": {"$ref": "#/$defs/registro"},
         "frecuencia": {"$ref": "#/$defs/frecuencia"},
-        "licencia_url": {"$ref": "#/$defs/https"}
+        "licencia_url": {"$ref": "#/$defs/https"},
+        "credencial": {
+          "description": "una llave del repo (secreto de Actions) que viaja solo en el encabezado Authorization: Bearer, solo al host de url",
+          "type": "object", "required": ["secreto"], "additionalProperties": false,
+          "properties": {"secreto": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,60}$"}}
+        }
       }
     },
     {

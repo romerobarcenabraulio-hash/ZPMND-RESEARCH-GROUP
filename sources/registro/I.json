@@ -284,6 +284,234 @@
    ],
    "license": "según tesis",
    "via": "rastreo"
+  },
+  {
+   "source_id": "int.openalex-dominios",
+   "status": "candidate",
+   "subarea": "I01",
+   "clase": "api",
+   "publisher": "OurResearch",
+   "base_url": "https://openalex.org",
+   "allowed_hosts": [
+    "api.openalex.org",
+    "openalex.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC0 (metadatos)",
+   "via": "api",
+   "title": "OpenAlex: dominios de su clasificación",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.openalex.org/domains?per-page=1",
+    "ruta": [
+     "meta",
+     "count"
+    ],
+    "unidad": "dominios"
+   },
+   "adquisicion": {
+    "via": "api",
+    "url": "https://api.openalex.org/domains?select=id,display_name,description,works_count,cited_by_count,updated_date",
+    "paginacion": {
+     "tipo": "cursor",
+     "parametro": "cursor",
+     "inicio": "*",
+     "tamano_parametro": "per-page",
+     "tamano": 100,
+     "ruta_items": [
+      "results"
+     ],
+     "ruta_siguiente": [
+      "meta",
+      "next_cursor"
+     ],
+     "max_paginas": 2
+    },
+    "registro": {
+     "id_ruta": [
+      "id"
+     ]
+    },
+    "frecuencia": "mensual",
+    "licencia_url": "https://openalex.org/terms",
+    "credencial": {
+     "secreto": "OPENALEX_API_KEY"
+    }
+   }
+  },
+  {
+   "source_id": "int.openalex-campos",
+   "status": "candidate",
+   "subarea": "I01",
+   "clase": "api",
+   "publisher": "OurResearch",
+   "base_url": "https://openalex.org",
+   "allowed_hosts": [
+    "api.openalex.org",
+    "openalex.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC0 (metadatos)",
+   "via": "api",
+   "title": "OpenAlex: campos de su clasificación",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.openalex.org/fields?per-page=1",
+    "ruta": [
+     "meta",
+     "count"
+    ],
+    "unidad": "campos"
+   },
+   "adquisicion": {
+    "via": "api",
+    "url": "https://api.openalex.org/fields?select=id,display_name,description,domain,works_count,cited_by_count,updated_date",
+    "paginacion": {
+     "tipo": "cursor",
+     "parametro": "cursor",
+     "inicio": "*",
+     "tamano_parametro": "per-page",
+     "tamano": 100,
+     "ruta_items": [
+      "results"
+     ],
+     "ruta_siguiente": [
+      "meta",
+      "next_cursor"
+     ],
+     "max_paginas": 2
+    },
+    "registro": {
+     "id_ruta": [
+      "id"
+     ]
+    },
+    "frecuencia": "mensual",
+    "licencia_url": "https://openalex.org/terms",
+    "credencial": {
+     "secreto": "OPENALEX_API_KEY"
+    }
+   }
+  },
+  {
+   "source_id": "int.openalex-subcampos",
+   "status": "candidate",
+   "subarea": "I01",
+   "clase": "api",
+   "publisher": "OurResearch",
+   "base_url": "https://openalex.org",
+   "allowed_hosts": [
+    "api.openalex.org",
+    "openalex.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC0 (metadatos)",
+   "via": "api",
+   "title": "OpenAlex: subcampos de su clasificación",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.openalex.org/subfields?per-page=1",
+    "ruta": [
+     "meta",
+     "count"
+    ],
+    "unidad": "subcampos"
+   },
+   "adquisicion": {
+    "via": "api",
+    "url": "https://api.openalex.org/subfields?select=id,display_name,description,field,domain,works_count,cited_by_count,updated_date",
+    "paginacion": {
+     "tipo": "cursor",
+     "parametro": "cursor",
+     "inicio": "*",
+     "tamano_parametro": "per-page",
+     "tamano": 100,
+     "ruta_items": [
+      "results"
+     ],
+     "ruta_siguiente": [
+      "meta",
+      "next_cursor"
+     ],
+     "max_paginas": 5
+    },
+    "registro": {
+     "id_ruta": [
+      "id"
+     ]
+    },
+    "frecuencia": "mensual",
+    "licencia_url": "https://openalex.org/terms",
+    "credencial": {
+     "secreto": "OPENALEX_API_KEY"
+    }
+   }
+  },
+  {
+   "source_id": "int.openalex-temas",
+   "status": "candidate",
+   "subarea": "I01",
+   "clase": "api",
+   "publisher": "OurResearch",
+   "base_url": "https://openalex.org",
+   "allowed_hosts": [
+    "api.openalex.org",
+    "openalex.org"
+   ],
+   "alcance": "Mundo",
+   "idiomas": [
+    "en"
+   ],
+   "license": "CC0 (metadatos)",
+   "via": "api",
+   "title": "OpenAlex: temas de su clasificación",
+   "contador": {
+    "tipo": "json",
+    "url": "https://api.openalex.org/topics?per-page=1",
+    "ruta": [
+     "meta",
+     "count"
+    ],
+    "unidad": "temas"
+   },
+   "adquisicion": {
+    "via": "api",
+    "url": "https://api.openalex.org/topics?select=id,display_name,description,keywords,subfield,field,domain,works_count,cited_by_count,updated_date",
+    "paginacion": {
+     "tipo": "cursor",
+     "parametro": "cursor",
+     "inicio": "*",
+     "tamano_parametro": "per-page",
+     "tamano": 100,
+     "ruta_items": [
+      "results"
+     ],
+     "ruta_siguiente": [
+      "meta",
+      "next_cursor"
+     ],
+     "max_paginas": 60
+    },
+    "registro": {
+     "id_ruta": [
+      "id"
+     ]
+    },
+    "frecuencia": "mensual",
+    "licencia_url": "https://openalex.org/terms",
+    "credencial": {
+     "secreto": "OPENALEX_API_KEY"
+    }
+   }
   }
  ]
 }
