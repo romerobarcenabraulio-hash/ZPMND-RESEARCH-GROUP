@@ -1,0 +1,813 @@
+{
+ "research_id": "RP-2026-10-21-omniroute",
+ "request_id": "RR-2026-10-21-omniroute",
+ "status": "CANDIDATE",
+ "produced_at": "2026-10-28T05:33:42Z",
+ "question": "Evaluar el repositorio diegosouzapw/OmniRoute (gateway de IA con un endpoint para ~375 proveedores, licencia MIT segun GitHub): que hace exactamente, como guarda y usa las llaves y cuentas de proveedores, que registra o envia a terceros (prompts, telemetria, logs), que dependencias y procedencia tiene su paquete npm e imagen Docker, que terminos de servicio de los proveedores de nivel gratuito permiten o prohiben el uso que propone (acumular niveles gratuitos, cuentas multiples), y como se comporta en un sandbox sin llaves reales.",
+ "why_zpmnd_needs_it": "ZPMND quiere aprovechar modelos gratuitos y enrutar cada tarea al modelo mas barato que alcance la calidad (inteligencia elastica), pero un gateway ve todos los prompts y todas las llaves: antes de usarlo necesita saber su riesgo, su legalidad y su comportamiento real.",
+ "scope": "Evaluación parcial de OmniRoute (commit d049df5, v3.8.53) solo con lo leído: README, SECURITY, LICENSE, package.json, Dockerfile, flujos de publicación npm y Docker, y módulos de cifrado, registro, Radar y nube. No se leyeron términos de servicio de proveedores, no se ejecutó sandbox y no se calculó sha256.",
+ "sources": {
+  "primary": [
+   "SA-7d2115b406f482420f805c9b",
+   "SA-3125bbf19857b46162a81613",
+   "SA-5f3caa52b2c2ce5dfb40c854",
+   "SA-17b296424841266ce12d4701",
+   "SA-2062232926759a82bfcabad1",
+   "SA-8576dcef9181ebb92d7466f7",
+   "SA-0ee207ca379e40672b58e2af",
+   "SA-438211cd7d5a739838bf1d0f",
+   "SA-66df44622b0c6bf4d1c4278b",
+   "SA-630c8e0e3061bc634fcbeb1b",
+   "SA-b2f25111c55460374cd14386",
+   "SA-82dce1b987cc592693417287",
+   "SA-2d99d23e646285cc16157ef6",
+   "SA-12bd7c06231dda9b83bc30f7",
+   "SA-a38c87374af722f2f2eac32b",
+   "SA-7ba47d99f8e5e45137008d32",
+   "SA-32244cd41497e4e01816e792",
+   "SA-54fb5cc461d95d4e86a2940a",
+   "SA-9276055f78af0fdcc83d7b7e",
+   "SA-7e949a9fa663be8a8aa057c9",
+   "SA-2b29bea9dc3dd2bdd037a135",
+   "SA-97b47777f6460001b7a62f71",
+   "SA-0eabf2558e89c75f04a15c1a",
+   "SA-66e7532fab913d2bf199cde5",
+   "SA-c4433a60442c24eebe5751f3",
+   "SA-d26fc82aec2a53ef87c7e538",
+   "SA-c9670b453e624aaa2bf96102",
+   "SA-7f29ee289e2f548816cb902e",
+   "SA-eb826782c9a01932639ad756",
+   "SA-3241b0c402e67a33ff8749f4",
+   "SA-3db4431a2f4b9fc7a1fa7635",
+   "SA-c3f09a86c6edcd341fcb9c8e",
+   "SA-6a4983441e4d0f21d61de358",
+   "SA-e89da394a69c3d6fca1683b5",
+   "SA-7ed91ccd2866aa4ba20fcaf5",
+   "SA-827eaab5bd93dca0ad116d9c",
+   "SA-3eec7bdcae739ffb37707693",
+   "SA-9dd9df9a71a884036aa836fe"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-7d2115b406f482420f805c9b",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/README.md",
+   "retrieved_at": "2026-10-28T05:31:46Z",
+   "sha256": "7d2115b406f482420f805c9b85676d98c78b056bac262ceac338322470a8ab9c",
+   "bytes": 142312,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 README.md (README: qué hace y cómo se usa)"
+  },
+  {
+   "artifact_id": "SA-3125bbf19857b46162a81613",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/SECURITY.md",
+   "retrieved_at": "2026-10-28T05:31:47Z",
+   "sha256": "3125bbf19857b46162a81613de383f85902c3ea042fbbdab9d8adfae40c49856",
+   "bytes": 16925,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 SECURITY.md (Política de seguridad)"
+  },
+  {
+   "artifact_id": "SA-5f3caa52b2c2ce5dfb40c854",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/LICENSE",
+   "retrieved_at": "2026-10-28T05:31:48Z",
+   "sha256": "5f3caa52b2c2ce5dfb40c85404a370d23b6dc3e26a1447d17dc7e56f773b91de",
+   "bytes": 1069,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 LICENSE (Licencia MIT del repositorio)"
+  },
+  {
+   "artifact_id": "SA-17b296424841266ce12d4701",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/THIRD_PARTY_NOTICES.md",
+   "retrieved_at": "2026-10-28T05:31:49Z",
+   "sha256": "17b296424841266ce12d47019b69373e8f243c03264f5bce48d13543c264db90",
+   "bytes": 17202,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 THIRD_PARTY_NOTICES.md (Avisos de terceros (licencias incluidas))"
+  },
+  {
+   "artifact_id": "SA-2062232926759a82bfcabad1",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/package.json",
+   "retrieved_at": "2026-10-28T05:31:50Z",
+   "sha256": "2062232926759a82bfcabad156191e46f58319262401939454c58edd76b1e1c6",
+   "bytes": 38633,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 package.json (package.json: dependencias, scripts y archivos publicados)"
+  },
+  {
+   "artifact_id": "SA-8576dcef9181ebb92d7466f7",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/.npmignore",
+   "retrieved_at": "2026-10-28T05:31:51Z",
+   "sha256": "8576dcef9181ebb92d7466f7325fbea471bb982f7e2b62a74a09bcded266e5d7",
+   "bytes": 2655,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 .npmignore (.npmignore: qué queda fuera del paquete npm)"
+  },
+  {
+   "artifact_id": "SA-0ee207ca379e40672b58e2af",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/Dockerfile",
+   "retrieved_at": "2026-10-28T05:31:52Z",
+   "sha256": "0ee207ca379e40672b58e2af8339890271b8757ea09bade1bb8e436d7c26f714",
+   "bytes": 24800,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 Dockerfile (Dockerfile de la imagen)"
+  },
+  {
+   "artifact_id": "SA-438211cd7d5a739838bf1d0f",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/.github/workflows/npm-publish.yml",
+   "retrieved_at": "2026-10-28T05:31:53Z",
+   "sha256": "438211cd7d5a739838bf1d0fd1e130dfd54d9758b625cbbae637daf0ba9f6643",
+   "bytes": 32935,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 .github/workflows/npm-publish.yml (Flujo de publicación npm (procedencia))"
+  },
+  {
+   "artifact_id": "SA-66df44622b0c6bf4d1c4278b",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/.github/workflows/docker-publish.yml",
+   "retrieved_at": "2026-10-28T05:31:54Z",
+   "sha256": "66df44622b0c6bf4d1c4278b9fa14e971dab4849becc85ffe636156de696dc8a",
+   "bytes": 35696,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 .github/workflows/docker-publish.yml (Flujo de publicación de la imagen Docker (procedencia))"
+  },
+  {
+   "artifact_id": "SA-630c8e0e3061bc634fcbeb1b",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/encryption.ts",
+   "retrieved_at": "2026-10-28T05:31:55Z",
+   "sha256": "630c8e0e3061bc634fcbeb1b1eb6e1443a52b76c7404af5964c1de9c411aa2ed",
+   "bytes": 20230,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/db/encryption.ts (Cifrado de columnas en la base local)"
+  },
+  {
+   "artifact_id": "SA-b2f25111c55460374cd14386",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/secrets.ts",
+   "retrieved_at": "2026-10-28T05:31:56Z",
+   "sha256": "b2f25111c55460374cd1438654cee17e2501322b25d2ed5e2408409b29fb1617",
+   "bytes": 1716,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/db/secrets.ts (Secretos en la base local)"
+  },
+  {
+   "artifact_id": "SA-82dce1b987cc592693417287",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/apiKeys/secretAtRest.ts",
+   "retrieved_at": "2026-10-28T05:31:57Z",
+   "sha256": "82dce1b987cc5926934172878e4f30779cb063e1a10b610fbb006e734c779723",
+   "bytes": 4300,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/db/apiKeys/secretAtRest.ts (Llaves de API en reposo)"
+  },
+  {
+   "artifact_id": "SA-2d99d23e646285cc16157ef6",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/providers/providerSpecificDataSecrets.ts",
+   "retrieved_at": "2026-10-28T05:31:58Z",
+   "sha256": "2d99d23e646285cc16157ef6f3b853baf28b2e8fcf7fbc9f9d11fd706cec2743",
+   "bytes": 7493,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/db/providers/providerSpecificDataSecrets.ts (Secretos por proveedor)"
+  },
+  {
+   "artifact_id": "SA-12bd7c06231dda9b83bc30f7",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/cacheSecrets.ts",
+   "retrieved_at": "2026-10-28T05:31:59Z",
+   "sha256": "12bd7c06231dda9b83bc30f7f3fc97aedd372f27a9554c510d474c0ca63b566d",
+   "bytes": 3733,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/db/cacheSecrets.ts (Secretos en caché)"
+  },
+  {
+   "artifact_id": "SA-a38c87374af722f2f2eac32b",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/encryption.mjs",
+   "retrieved_at": "2026-10-28T05:32:00Z",
+   "sha256": "a38c87374af722f2f2eac32b5ee25ec97602fd480ea7fe547a90382251bd7a8b",
+   "bytes": 2277,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 bin/cli/encryption.mjs (CLI: cifrado)"
+  },
+  {
+   "artifact_id": "SA-7ba47d99f8e5e45137008d32",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/utils/storageKeyProvision.mjs",
+   "retrieved_at": "2026-10-28T05:32:01Z",
+   "sha256": "7ba47d99f8e5e45137008d325028789dd5c8c16ef8be41606f005b40d356442e",
+   "bytes": 1436,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 bin/cli/utils/storageKeyProvision.mjs (CLI: aprovisionamiento de la llave de almacenamiento)"
+  },
+  {
+   "artifact_id": "SA-32244cd41497e4e01816e792",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/open-sse/config/credentialLoader.ts",
+   "retrieved_at": "2026-10-28T05:32:02Z",
+   "sha256": "32244cd41497e4e01816e7923a75f11bfa04127c0b62ec3a51885b47b1d79b2a",
+   "bytes": 4065,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 open-sse/config/credentialLoader.ts (Carga de credenciales de proveedores)"
+  },
+  {
+   "artifact_id": "SA-54fb5cc461d95d4e86a2940a",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/cloudAgent/credentials.ts",
+   "retrieved_at": "2026-10-28T05:32:03Z",
+   "sha256": "54fb5cc461d95d4e86a2940af2ad5d7cd06d7833c992650bd8d0c8c93fa27b61",
+   "bytes": 2979,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/cloudAgent/credentials.ts (Credenciales de agentes en la nube)"
+  },
+  {
+   "artifact_id": "SA-9276055f78af0fdcc83d7b7e",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/cloudSync.ts",
+   "retrieved_at": "2026-10-28T05:32:04Z",
+   "sha256": "9276055f78af0fdcc83d7b7e3b185b96801e3e3881f0079d0d3d4d486887aa29",
+   "bytes": 10446,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/cloudSync.ts (Sincronización con la nube)"
+  },
+  {
+   "artifact_id": "SA-7e949a9fa663be8a8aa057c9",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/sync/tokens.ts",
+   "retrieved_at": "2026-10-28T05:32:05Z",
+   "sha256": "7e949a9fa663be8a8aa057c9a993cb8e405be0c25038fe85aac90f81936dbc60",
+   "bytes": 7363,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/sync/tokens.ts (Tokens de sincronización)"
+  },
+  {
+   "artifact_id": "SA-2b29bea9dc3dd2bdd037a135",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/open-sse/utils/requestLogger.ts",
+   "retrieved_at": "2026-10-28T05:32:06Z",
+   "sha256": "2b29bea9dc3dd2bdd037a135d1527abac25af8ce2ec08468a734331a806f3962",
+   "bytes": 20117,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 open-sse/utils/requestLogger.ts (Registro de peticiones)"
+  },
+  {
+   "artifact_id": "SA-97b47777f6460001b7a62f71",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/open-sse/utils/providerRequestLogging.ts",
+   "retrieved_at": "2026-10-28T05:32:07Z",
+   "sha256": "97b47777f6460001b7a62f71d71a4bfe8c4744ae297d183d421f7499dd77609b",
+   "bytes": 11191,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 open-sse/utils/providerRequestLogging.ts (Registro de peticiones a proveedores)"
+  },
+  {
+   "artifact_id": "SA-0eabf2558e89c75f04a15c1a",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/usage/callLogArtifactWriter.ts",
+   "retrieved_at": "2026-10-28T05:32:08Z",
+   "sha256": "0eabf2558e89c75f04a15c1a62b529f4beedec8c208273cb99a499ee6d03d1ce",
+   "bytes": 8687,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/usage/callLogArtifactWriter.ts (Escritura de artefactos de llamadas (prompts y respuestas))"
+  },
+  {
+   "artifact_id": "SA-66e7532fab913d2bf199cde5",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/usage/callLogRetention.ts",
+   "retrieved_at": "2026-10-28T05:32:09Z",
+   "sha256": "66e7532fab913d2bf199cde5f1a312116027607696cb8d698f8e189a1807a2f0",
+   "bytes": 914,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/usage/callLogRetention.ts (Retención de registros de llamadas)"
+  },
+  {
+   "artifact_id": "SA-c4433a60442c24eebe5751f3",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/piiSettings.ts",
+   "retrieved_at": "2026-10-28T05:32:10Z",
+   "sha256": "c4433a60442c24eebe5751f36731bac055c15d53aef8aaf1a45d9e4390f6e283",
+   "bytes": 3257,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/db/piiSettings.ts (Ajustes de datos personales (PII))"
+  },
+  {
+   "artifact_id": "SA-d26fc82aec2a53ef87c7e538",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/logExportDestinations.ts",
+   "retrieved_at": "2026-10-28T05:32:11Z",
+   "sha256": "d26fc82aec2a53ef87c7e5386bb389d45dd17c87f302f8fc0c3b0c82a968a252",
+   "bytes": 6656,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/db/logExportDestinations.ts (Destinos de exportación de registros)"
+  },
+  {
+   "artifact_id": "SA-c9670b453e624aaa2bf96102",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/logExport/secrets.ts",
+   "retrieved_at": "2026-10-28T05:32:12Z",
+   "sha256": "c9670b453e624aaa2bf961028ab5a032b7f2be321358c2a55f51e2a3b2b855ba",
+   "bytes": 3638,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/logExport/secrets.ts (Secretos de la exportación de registros)"
+  },
+  {
+   "artifact_id": "SA-7f29ee289e2f548816cb902e",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/webhooks.ts",
+   "retrieved_at": "2026-10-28T05:32:13Z",
+   "sha256": "7f29ee289e2f548816cb902e5fe981590bf0d2a858b509705b65a15b14c572c9",
+   "bytes": 5183,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/db/webhooks.ts (Webhooks)"
+  },
+  {
+   "artifact_id": "SA-eb826782c9a01932639ad756",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/commands/telemetry.mjs",
+   "retrieved_at": "2026-10-28T05:32:14Z",
+   "sha256": "eb826782c9a01932639ad7564c09c0ef3415b6a83d78d2504da8dbdfa101c968",
+   "bytes": 2667,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 bin/cli/commands/telemetry.mjs (CLI: telemetría)"
+  },
+  {
+   "artifact_id": "SA-3241b0c402e67a33ff8749f4",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/bin/cli/api-commands/telemetry.mjs",
+   "retrieved_at": "2026-10-28T05:32:15Z",
+   "sha256": "3241b0c402e67a33ff8749f44629c9ae2b83bdf6c6b5fc86ea7a711868557ca4",
+   "bytes": 1104,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 bin/cli/api-commands/telemetry.mjs (CLI (API): telemetría)"
+  },
+  {
+   "artifact_id": "SA-3db4431a2f4b9fc7a1fa7635",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/@omniroute/opencode-plugin/src/telemetry.ts",
+   "retrieved_at": "2026-10-28T05:32:16Z",
+   "sha256": "3db4431a2f4b9fc7a1fa76356e24cb33aaf155fc0d4fd6eaa2abf2c66a388bef",
+   "bytes": 7989,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 @omniroute/opencode-plugin/src/telemetry.ts (Plugin opencode: telemetría)"
+  },
+  {
+   "artifact_id": "SA-c3f09a86c6edcd341fcb9c8e",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/shared/utils/requestTelemetry.ts",
+   "retrieved_at": "2026-10-28T05:32:17Z",
+   "sha256": "c3f09a86c6edcd341fcb9c8eb4cc26f354d32e1211e77049a0a00cb9b5f2de2f",
+   "bytes": 4747,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/shared/utils/requestTelemetry.ts (Telemetría de peticiones)"
+  },
+  {
+   "artifact_id": "SA-6a4983441e4d0f21d61de358",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/docs/OMNIROUTE_QUOTA_TELEMETRY.md",
+   "retrieved_at": "2026-10-28T05:32:18Z",
+   "sha256": "6a4983441e4d0f21d61de35841d265d96668153938f633650fbf6bee96d473a4",
+   "bytes": 935,
+   "media_type": "text/plain",
+   "source_type": "vendor_doc",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 docs/OMNIROUTE_QUOTA_TELEMETRY.md (Documento: telemetría de cuotas)"
+  },
+  {
+   "artifact_id": "SA-e89da394a69c3d6fca1683b5",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/radar/sync.ts",
+   "retrieved_at": "2026-10-28T05:32:19Z",
+   "sha256": "e89da394a69c3d6fca1683b5bedfbaed8d71ea1abd812c85da3370c2611c3530",
+   "bytes": 11669,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/radar/sync.ts (Radar: sincronización de feeds remotos)"
+  },
+  {
+   "artifact_id": "SA-7ed91ccd2866aa4ba20fcaf5",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/radar/verify.ts",
+   "retrieved_at": "2026-10-28T05:32:20Z",
+   "sha256": "7ed91ccd2866aa4ba20fcaf57e53620bfef5977eba553243d3c2be77c1c767dc",
+   "bytes": 1291,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/radar/verify.ts (Radar: verificación de feeds)"
+  },
+  {
+   "artifact_id": "SA-827eaab5bd93dca0ad116d9c",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/radar/pinnedKeys.ts",
+   "retrieved_at": "2026-10-28T05:32:21Z",
+   "sha256": "827eaab5bd93dca0ad116d9caea3fb7c5cc6cf815fac231aeda34d592eda3cde",
+   "bytes": 1933,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/radar/pinnedKeys.ts (Radar: llaves fijadas)"
+  },
+  {
+   "artifact_id": "SA-3eec7bdcae739ffb37707693",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/versionManager/binaryManager.ts",
+   "retrieved_at": "2026-10-28T05:32:22Z",
+   "sha256": "3eec7bdcae739ffb37707693b69ee9fb6ab04db493a5edd229ca6f07a5d1d2ee",
+   "bytes": 10387,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/versionManager/binaryManager.ts (Gestor de versiones: descarga de binarios)"
+  },
+  {
+   "artifact_id": "SA-9dd9df9a71a884036aa836fe",
+   "url": "https://raw.githubusercontent.com/cheaper-inference/OmniRoute/d049df5b7c5ac6e15fb03ad4372027a250ab520b/src/lib/db/freeProxies.ts",
+   "retrieved_at": "2026-10-28T05:32:23Z",
+   "sha256": "9dd9df9a71a884036aa836fe5bd5802a7969f6ea90953a1d202d0d95c7f68d99",
+   "bytes": 14415,
+   "media_type": "text/plain",
+   "source_type": "code",
+   "publisher": "cheaper-inference/OmniRoute en GitHub (antes diegosouzapw/OmniRoute; GitHub redirige el nombre viejo)",
+   "license": "MIT (LICENSE del repositorio en ese commit)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "OmniRoute d049df5 src/lib/db/freeProxies.ts (Proxies gratuitos)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El repositorio contiene un texto de licencia que concede permiso, sin costo, a cualquier persona que obtenga una copia.",
+    "artifact_ids": [
+     "SA-5f3caa52b2c2ce5dfb40c854"
+    ],
+    "quote": "Permission is hereby granted, free of charge, to any person obtaining a copy",
+    "locator": "LICENSE"
+   },
+   {
+    "claim": "Si STORAGE_ENCRYPTION_KEY no está definida, opera en modo passthrough.",
+    "artifact_ids": [
+     "SA-630c8e0e3061bc634fcbeb1b"
+    ],
+    "quote": "If STORAGE_ENCRYPTION_KEY is not set, operates in passthrough mode",
+    "locator": "src/lib/db/encryption.ts, cabecera"
+   },
+   {
+    "claim": "Los datos se almacenarán en texto plano.",
+    "artifact_ids": [
+     "SA-630c8e0e3061bc634fcbeb1b"
+    ],
+    "quote": "will be stored in plaintext. An empty key is the",
+    "locator": "assertEncryptionKeyConfiguredForProduction"
+   },
+   {
+    "claim": "El cliente de OmniRoute no sube prompts, tráfico, configuración de proveedores ni telemetría de uso.",
+    "artifact_ids": [
+     "SA-7d2115b406f482420f805c9b"
+    ],
+    "quote": "The OmniRoute client does not upload prompts, traffic, provider configuration, usage telemetry",
+    "locator": "README, sección OmniRoute Radar"
+   },
+   {
+    "claim": "La URL base por defecto del feed es https://radar.omniroute.online.",
+    "artifact_ids": [
+     "SA-e89da394a69c3d6fca1683b5"
+    ],
+    "quote": "const DEFAULT_FEED_BASE_URL = \"https://radar.omniroute.online\";",
+    "locator": "src/lib/radar/sync.ts"
+   },
+   {
+    "claim": "CLOUD_SYNC_SECRETS_ENABLED es verdadero solo si OMNIROUTE_CLOUD_SYNC_SECRETS es igual a \"true\".",
+    "artifact_ids": [
+     "SA-9276055f78af0fdcc83d7b7e"
+    ],
+    "quote": "const CLOUD_SYNC_SECRETS_ENABLED = process.env.OMNIROUTE_CLOUD_SYNC_SECRETS === \"true\";",
+    "locator": "src/lib/cloudSync.ts"
+   },
+   {
+    "claim": "La sincronización de tokens se ejecuta en modo legado no verificado.",
+    "artifact_ids": [
+     "SA-9276055f78af0fdcc83d7b7e"
+    ],
+    "quote": "Token sync runs in legacy unverified mode",
+    "locator": "verifyCloudSignature"
+   },
+   {
+    "claim": "El registro de peticiones guarda el cuerpo acotado para log (cloneBoundedForLog).",
+    "artifact_ids": [
+     "SA-2b29bea9dc3dd2bdd037a135"
+    ],
+    "quote": "body: cloneBoundedForLog(body),",
+    "locator": "open-sse/utils/requestLogger.ts, logClientRawRequest"
+   },
+   {
+    "claim": "Una bandera noLog por llave de API desactiva el registro de peticiones.",
+    "artifact_ids": [
+     "SA-3125bbf19857b46162a81613"
+    ],
+    "quote": "Per API key `noLog` flag disables request logging",
+    "locator": "SECURITY.md, Compliance"
+   },
+   {
+    "claim": "El README anuncia exportación programada de logs a BigQuery.",
+    "artifact_ids": [
+     "SA-7d2115b406f482420f805c9b"
+    ],
+    "quote": "scheduled log export to BigQuery",
+    "locator": "README, What's New"
+   },
+   {
+    "claim": "Existe un campo include_bodies en los destinos de exportación de logs.",
+    "artifact_ids": [
+     "SA-d26fc82aec2a53ef87c7e538"
+    ],
+    "quote": "include_bodies",
+    "locator": "src/lib/db/logExportDestinations.ts"
+   },
+   {
+    "claim": "Cada proveedor controla sus límites, disponibilidad y términos.",
+    "artifact_ids": [
+     "SA-7d2115b406f482420f805c9b"
+    ],
+    "quote": "each provider controls its limits, availability, and terms",
+    "locator": "README, cabecera"
+   },
+   {
+    "claim": "Proveedores marcados tos: avoid se excluyen del enrutamiento automático por defecto.",
+    "artifact_ids": [
+     "SA-7d2115b406f482420f805c9b"
+    ],
+    "quote": "Providers marked `tos: avoid`, including Kiro, are excluded from automatic routing by default",
+    "locator": "README, Install"
+   },
+   {
+    "claim": "El producto usa suplantación de huella TLS para reducir detección de bots.",
+    "artifact_ids": [
+     "SA-3125bbf19857b46162a81613"
+    ],
+    "quote": "Browser-like TLS fingerprint spoofing to reduce bot detection",
+    "locator": "SECURITY.md, Network Security"
+   },
+   {
+    "claim": "La imagen Docker se basa en node:26-trixie-slim.",
+    "artifact_ids": [
+     "SA-0ee207ca379e40672b58e2af"
+    ],
+    "quote": "FROM node:26-trixie-slim AS base",
+    "locator": "Dockerfile, línea 1"
+   },
+   {
+    "claim": "El Dockerfile establece ENV REQUIRE_API_KEY=true.",
+    "artifact_ids": [
+     "SA-0ee207ca379e40672b58e2af"
+    ],
+    "quote": "ENV REQUIRE_API_KEY=true",
+    "locator": "Dockerfile, runner-base"
+   },
+   {
+    "claim": "El Dockerfile establece ENV NEXT_TELEMETRY_DISABLED=1.",
+    "artifact_ids": [
+     "SA-0ee207ca379e40672b58e2af"
+    ],
+    "quote": "ENV NEXT_TELEMETRY_DISABLED=1",
+    "locator": "Dockerfile, builder"
+   },
+   {
+    "claim": "El flujo ejecuta npm publish con --provenance, acceso público y --ignore-scripts.",
+    "artifact_ids": [
+     "SA-438211cd7d5a739838bf1d0f"
+    ],
+    "quote": "npm publish \"$TARBALL\" --provenance --access public --tag \"$TAG\" --ignore-scripts",
+    "locator": "npm-publish.yml, job stage-npm"
+   },
+   {
+    "claim": "El flujo de npm genera un SBOM CycloneDX.",
+    "artifact_ids": [
+     "SA-438211cd7d5a739838bf1d0f"
+    ],
+    "quote": "name: Generate CycloneDX SBOM (npm)",
+    "locator": "npm-publish.yml"
+   },
+   {
+    "claim": "El flujo Docker define GHCR_IMAGE_NAME como ghcr.io/cheaper-inference/omniroute.",
+    "artifact_ids": [
+     "SA-66df44622b0c6bf4d1c4278b"
+    ],
+    "quote": "GHCR_IMAGE_NAME: ghcr.io/cheaper-inference/omniroute",
+    "locator": "docker-publish.yml, job build"
+   },
+   {
+    "claim": "El package.json define un script postinstall que ejecuta node scripts/build/postinstall.mjs.",
+    "artifact_ids": [
+     "SA-2062232926759a82bfcabad1"
+    ],
+    "quote": "\"postinstall\": \"node scripts/build/postinstall.mjs\"",
+    "locator": "package.json, scripts"
+   },
+   {
+    "claim": "El package.json indica la URL del repositorio https://github.com/cheaper-inference/OmniRoute.",
+    "artifact_ids": [
+     "SA-2062232926759a82bfcabad1"
+    ],
+    "quote": "\"url\": \"https://github.com/cheaper-inference/OmniRoute\"",
+    "locator": "package.json, repository"
+   },
+   {
+    "claim": "Cheaper Inference es un gateway ordenado por costo que revende 42 modelos de frontera.",
+    "artifact_ids": [
+     "SA-7d2115b406f482420f805c9b"
+    ],
+    "quote": "Cheaper Inference is a cost-ranked gateway that resells 42 frontier models",
+    "locator": "README, Open Source Friends"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Términos de servicio vigentes de cualquier proveedor de nivel gratuito: no se proporcionó ninguno.",
+   "Si acumular niveles gratuitos o usar varias cuentas por proveedor viola sus términos: no determinable con estas fuentes.",
+   "Comportamiento en sandbox: puertos, escrituras en disco y hosts de salida no se midieron.",
+   "sha256 del código, del tarball npm y de la imagen Docker: no calculados.",
+   "Contenido real del tarball npm publicado y de la imagen en Docker Hub, y si coinciden con el commit analizado.",
+   "Qué hosts contacta realmente el código de cada proveedor, y si hay llamadas salientes no leídas en los módulos no incluidos.",
+   "Doc FREE_TIERS.md y la lista de ~375 proveedores no fueron leídos."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Con la clave de cifrado sin configurar (valor por defecto documentado), llaves de proveedores y tokens OAuth quedan en texto plano en SQLite dentro del volumen de datos.",
+  "INTERPRETACIÓN: Los prompts pueden persistir en disco en los logs de llamadas y salir a terceros si el operador configura exportación de logs, webhooks o sincronización con la nube; esto es configuración, no comportamiento por defecto verificado.",
+  "INTERPRETACIÓN: La suplantación de huella TLS y el soporte de proveedores marcados tos: avoid sugieren riesgo de violar términos de proveedores; requiere revisar los términos reales."
+ ],
+ "candidate_tests": [
+  "Ejecutar la imagen fijada por digest en un contenedor con --network=none y un volumen vacío, y registrar puertos, escrituras y los intentos de conexión DNS/TCP.",
+  "Repetir con red permitida hacia un proxy de captura y llaves falsas, para listar los hosts de salida al arrancar con Radar y la nube desactivados y activados.",
+  "Comparar el tarball npm publicado (sha256 y provenance) con una construcción del commit d049df5."
+ ],
+ "limitations": [
+  "Solo se leyó una selección de archivos del commit d049df5; la mayor parte del código (ejecutores, enrutamiento, MITM, MCP) no se vio.",
+  "El README es autodescriptivo; sus afirmaciones de privacidad no están verificadas por ejecución.",
+  "No hubo sandbox ni análisis de red, de disco ni de procedencia real de artefactos.",
+  "El repositorio aparece bajo cheaper-inference y el paquete/imagen bajo diegosouzapw: la titularidad y el vínculo con un patrocinador comercial no se evaluaron.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 18 de 23 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
