@@ -253,6 +253,8 @@ jobs:
           head_sha: ${SHA}. criteria_quote: the first line of .audit-criteria/README.md, copied exactly.
           body: markdown under 600 words, findings marked BLOCKING / NON-BLOCKING with file:line, failure scenario and
           smallest fix, then what you could not check.
+          Never write a credential, a token or a key prefix literally (GitHub, OpenAI, Anthropic): name its kind, as in
+          "the fine-grained GitHub token prefix". The post step withholds any body that contains one and publishes REVISE.
           EOF
             echo 'PROMPT_END'
           } >> "$GITHUB_OUTPUT"

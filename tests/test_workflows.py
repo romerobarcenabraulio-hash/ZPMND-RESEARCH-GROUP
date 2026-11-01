@@ -135,6 +135,13 @@ class AuditorGpt(unittest.TestCase):
         # one runner; cancelled at 90 min, it left the PR with no audit at all.
         self.assertGreaterEqual(self.jobs['evidence']['timeout-minutes'], 300)
 
+    def test_the_claude_auditor_is_told_to_name_credential_prefixes_by_their_kind(self):
+        # #81 (2026-11-01): its PASS on b09ea34 was withheld by the post filter because the review wrote a token prefix
+        # literally; a review of a change to that filter always talks about the prefixes, so the prompt asks for their kind
+        prompt = next(s['run'] for s in self.jobs['audit']['steps'] if 'You are the independent auditor' in s.get('run', ''))
+        self.assertIn('Never write a credential, a token or a key prefix literally', prompt)
+        self.assertIn('withholds any body that contains one', prompt)
+
     def test_the_claude_auditor_keeps_its_format_and_status(self):
         run = self.jobs['post']['steps'][0]['run']
         self.assertIn('echo "AUDIT VERDICT: $verdict $SHA"; echo', run)
