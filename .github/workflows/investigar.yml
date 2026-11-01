@@ -1,4 +1,5 @@
 name: investigar
+run-name: investigar ${{ inputs.request_id }}  # scripts/noche.py titulo(): how the dispatcher finds its runs
 # Autonomous research run (docs/INVESTIGAR.md): a ResearchRequest on main plus its reviewed source plan
 # (requests/plans/<RR>.json: all redistributable sources, or all metadata_only ones) -> branch investigar/<RP> with the
 # packet folder. The repository and its artifacts are public, so the work folder (bodies and texts) travels sealed
