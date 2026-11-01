@@ -89,7 +89,7 @@ class Busqueda(unittest.TestCase):
             self.assertEqual(d._abrir('req', 60), b'{"results": []}')
             build.assert_called_with(_NoRedirect, _PublicHTTPS)
             opener.open.return_value = Resp(b'x' * (d.MAX_RESPUESTA + 1))
-            with self.assertRaises(ValueError):
+            with self.assertRaises(ValueError):  # raised in the worker, handed to the caller as it is
                 d._abrir('req', 60)
 
     def test_a_key_in_what_would_be_kept_refuses_that_layer_however_it_came(self):
@@ -119,36 +119,47 @@ class Busqueda(unittest.TestCase):
             deep = {'x': deep}
         self.assertTrue(d._contiene(deep, KEY))  # too deep to read whole counts as holding it
 
-    def test_an_answer_that_trickles_in_past_its_deadline_is_cut(self):
-        # GPT on cb11715 and 9829c21: a real server that drips one byte every 0.2 s, far under each socket wait
-        import http.server, socketserver, threading
-        class Gotea(http.server.BaseHTTPRequestHandler):
-            def do_GET(self):
-                self.send_response(200); self.send_header('Content-Length', '100000'); self.end_headers()
+    def gotero(self, inicio, goteo):
+        """A real local server that answers `inicio`, then one byte of `goteo` every 0.2 s, forever."""
+        import socketserver, threading as th
+
+        class H(socketserver.StreamRequestHandler):
+            def handle(self):
+                while self.rfile.readline() not in (b'\r\n', b'\n', b''):
+                    pass
                 try:
-                    for _ in range(100000):
-                        self.wfile.write(b'x'); self.wfile.flush(); time.sleep(0.2)
+                    self.wfile.write(inicio); self.wfile.flush()
+                    while True:
+                        self.wfile.write(goteo); self.wfile.flush(); time.sleep(0.2)
                 except OSError:
                     pass
-            def log_message(self, *a): pass
-        srv = socketserver.ThreadingTCPServer(('127.0.0.1', 0), Gotea)
+        srv = socketserver.ThreadingTCPServer(('127.0.0.1', 0), H)
         srv.daemon_threads = True
-        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        th.Thread(target=srv.serve_forever, daemon=True).start()
         self.addCleanup(srv.server_close); self.addCleanup(srv.shutdown)
-        req = urllib.request.Request(f'http://127.0.0.1:{srv.server_address[1]}/')
-        got = []
+        return urllib.request.Request(f'http://127.0.0.1:{srv.server_address[1]}/')
 
-        def leer():  # in a thread of its own, so a read that never returns fails this test instead of hanging the suite
-            try:
-                d._abrir(req, 2)
-                got.append('read whole')
-            except Exception as e:  # noqa: BLE001
-                got.append(type(e).__name__)
-        with mock.patch('urllib.request.build_opener', return_value=urllib.request.build_opener()):
-            hilo = threading.Thread(target=leer, daemon=True)
-            hilo.start()
-            hilo.join(8)  # the 2 s deadline plus at most one wait of the socket
-        self.assertEqual(got, ['TimeoutError'])
+    def test_an_answer_that_trickles_in_anywhere_is_cut_at_its_deadline(self):
+        # GPT on cb11715, 9829c21 and f6f0c66: the body, a header, or a chunk-size line that never ends
+        import threading as th
+        casos = {'body': (b'HTTP/1.1 200 OK\r\nContent-Length: 100000\r\n\r\n', b'x'),
+                 'header': (b'HTTP/1.1 200 OK\r\nX-Lento: ', b'a'),
+                 'chunk size': (b'HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\n\r\n', b'1')}
+        for name, (inicio, goteo) in casos.items():
+            with self.subTest(name):
+                req, got = self.gotero(inicio, goteo), []
+
+                def leer(req=req):  # its own thread: a read that never returns fails the test instead of hanging the suite
+                    try:
+                        d._abrir(req, 2)
+                        got.append('read whole')
+                    except Exception as e:  # noqa: BLE001
+                        got.append(type(e).__name__)
+                with mock.patch('urllib.request.build_opener', return_value=urllib.request.build_opener()):
+                    hilo = th.Thread(target=leer, daemon=True)
+                    hilo.start()
+                    hilo.join(6)
+                self.assertEqual(got, ['TimeoutError'])
 
     def test_only_https_results_on_a_host_name_are_kept(self):
         hits = [dict(HIT, url=u) for u in ('http://gov.ke/', 'https://10.0.0.1/', 'https://[::1]/', 'https://gov.ke:8443/',

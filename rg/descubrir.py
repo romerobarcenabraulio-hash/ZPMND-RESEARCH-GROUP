@@ -27,6 +27,7 @@ import json
 import os
 import re
 import sys
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -94,23 +95,40 @@ def consulta(capa, pais):
     return capa['consulta'].replace('{pais}', pais['nombre'])  # replace, not format: no field of the map is code
 
 
-ESPERA = 10  # seconds one wait on the socket may last; the whole answer has `timeout`
+ESPERA = 10  # seconds one wait on the socket may last
 
 
-def _abrir(req, timeout, reloj=time.monotonic):
-    """No redirect, public addresses only, at most MAX_RESPUESTA bytes and `timeout` seconds in all. A socket timeout
-    bounds one wait, not an answer that trickles in, and read(n) waits for n bytes; read1 returns what has arrived, so
-    each turn of the loop lasts at most ESPERA and checks the whole deadline (GPT on cb11715 and 9829c21)."""
-    fin = reloj() + timeout
+def _peticion(req, timeout):
+    """No redirect, public addresses only, at most MAX_RESPUESTA bytes, read as it arrives (read1)."""
     body = b''
     with urllib.request.build_opener(_NoRedirect, _PublicHTTPS).open(req, timeout=min(timeout, ESPERA)) as r:
         while chunk := r.read1(64 * 1024):
             body += chunk
             if len(body) > MAX_RESPUESTA:
                 raise ValueError(f'answer larger than {MAX_RESPUESTA} bytes')
-            if reloj() > fin:
-                raise TimeoutError(f'answer still arriving after {timeout} s')
     return body
+
+
+def _abrir(req, timeout):
+    """The whole request, opening, headers, chunk framing and body, within `timeout` seconds: it runs in a thread of its
+    own and the caller stops waiting at the deadline, whatever the server drips (GPT on cb11715, 9829c21 and f6f0c66: a
+    socket timeout bounds one wait, and read1 does not return while a chunk-size line or a header trickles in). A
+    request left behind dies with the process; its answer is never read."""
+    out = {}
+
+    def trabajo():
+        try:
+            out['body'] = _peticion(req, timeout)
+        except BaseException as e:  # noqa: BLE001 - handed to the caller as it is
+            out['error'] = e
+    hilo = threading.Thread(target=trabajo, daemon=True)
+    hilo.start()
+    hilo.join(timeout)
+    if hilo.is_alive():
+        raise TimeoutError(f'no whole answer within {timeout} s')
+    if 'error' in out:
+        raise out['error']
+    return out['body']
 
 
 def buscar(query, iso2, key, tipo, abrir=_abrir):
