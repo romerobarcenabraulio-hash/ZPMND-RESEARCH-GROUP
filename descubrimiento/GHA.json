@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "Parliament of Ghana\n# Parliament of Ghana\n# Acts\nPage:\n...\n|Covid-19 Health Recovery Levy Act|KEN OFORI-ATTA|20-02-2021|31-03-2021|31-03-2021| |",
      "title": "Acts",
-     "url": "https://www.parliament.gh/docs?type=Acts&OT"
+     "url": "https://www.parliament.gh/docs?type=Acts&OT",
+     "verificacion": {
+      "bytes": 38867,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:44:41Z",
+      "http": 200,
+      "sha256": "2409425443c057be1652fc17add21f1e6d45bda17560d201a1b7f232f40d7e80"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,12 @@
      "rank": 2,
      "snippet": "# THE CONSTITUTION OF THE REPUBLIC OF GHANA 1992\n...\n**\nTHE CONSTITUTION**\n...\n(2) This Constitution shall be the supreme law of Ghana and any other law found to be inconsistent with any provision of this Constitution shall, to the extent of the inconsistency, be void.",
      "title": "The Constitution - Judiciary of Ghana",
-     "url": "https://judicial.gov.gh/jsweb/index.php/the-constitution"
+     "url": "https://judicial.gov.gh/jsweb/index.php/the-constitution",
+     "verificacion": {
+      "error": "robots.txt disallows https://judicial.gov.gh/jsweb/index.php/the-constitution",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:46:12Z"
+     }
     },
     {
      "date": "",
@@ -64,7 +76,12 @@
      "rank": 1,
      "snippet": "LEGISLATIVE INSTRUMENTS-4TH REPUBLIC\nhttp://hdl.handle.net/123456789/2352\nLegislative Instruments of the Fourth Republic of Ghana 1993-\n2025-10-29T21:03:58Z\n...\nParliament of Ghana\n...\n…",
      "title": "LEGISLATIVE INSTRUMENTS-4TH REPUBLIC",
-     "url": "https://ir.parliament.gh/feed/rss_1.0/123456789/2352"
+     "url": "https://ir.parliament.gh/feed/rss_1.0/123456789/2352",
+     "verificacion": {
+      "error": "robots.txt disallows https://ir.parliament.gh/feed/rss_1.0/123456789/2352",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:46:16Z"
+     }
     },
     {
      "date": "2024-01-01",
@@ -72,7 +89,14 @@
      "rank": 2,
      "snippet": "|--|--|\n...\n|18|COCOA INDUSTRY (AMENDMENT) REGULATIONS, 1968 L.I 586|\n|19|Cocoa Industry (Regulation) (Consolidation) Decree, 1968 (LI 598)|\nLI 482|",
      "title": "Legislative Instruments - BRR Portal - Reforming to Transform",
-     "url": "https://www.brr.gov.gh/business_reg?id=NQ=="
+     "url": "https://www.brr.gov.gh/business_reg?id=NQ==",
+     "verificacion": {
+      "bytes": 215828,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:19Z",
+      "http": 200,
+      "sha256": "c2ba632df8afb0b2482027a810398c4484399e2c9b5ace1498d668d59fe18fea"
+     }
     },
     {
      "date": "2024-06-14",
@@ -106,7 +130,12 @@
      "rank": 1,
      "snippet": "We publish in the Gazette: Change of Name of Person,\nPlace of Birth, Change of Name of Company, School,\nAppointment of Marriage Officer, Public Place of Worship, etc.\n...\nWe are the only constitutionally mandated institution required by law to issue gazettes on behalf of the Republic of Ghana.",
      "title": "Ghana Publishing Company – Ghana's premier printing and ...",
-     "url": "https://ghanapublishing.gov.gh/"
+     "url": "https://ghanapublishing.gov.gh/",
+     "verificacion": {
+      "error": "robots.txt disallows https://ghanapublishing.gov.gh/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:46:22Z"
+     }
     },
     {
      "date": "",
@@ -114,7 +143,12 @@
      "rank": 2,
      "snippet": "## Contact Info\n...\n- Address: Ghana Publishing Company Ltd. ( Assembly Press) Barnes Road P.O. Box GP 124, Accra Opposite Accra City Hotel & Adjt Accra Technical University\n- Telephone: +233 501 305 050\n- Email: info@ghanapublishing.com",
      "title": "Gazettes – Ghana Publishing Company",
-     "url": "https://www.ghanapublishing.gov.gh/gazettes/"
+     "url": "https://www.ghanapublishing.gov.gh/gazettes/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ghanapublishing.gov.gh/gazettes/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:46:25Z"
+     }
     },
     {
      "date": "",
@@ -156,7 +190,12 @@
      "rank": 1,
      "snippet": "Supreme Court e-Judgment\n|Search Database Decision By Year Case Name Beginning With Decision By Subject Matter  From:\n…",
      "title": "Supreme Court e-Judgment - Judiciary of Ghana",
-     "url": "https://judicial.gov.gh/e-judgment/"
+     "url": "https://judicial.gov.gh/e-judgment/",
+     "verificacion": {
+      "error": "robots.txt disallows https://judicial.gov.gh/e-judgment/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:46:25Z"
+     }
     },
     {
      "date": "",
@@ -164,7 +203,12 @@
      "rank": 2,
      "snippet": "The E-judgment website provides access to case law from all the jurisdictions in Ghana, and the various specialised courts.\nIt has several value added features to the judgments such as head notes connected to key words and search links.\n...\nIt is an electronic research tool designed especially for y",
      "title": "e-Judgment",
-     "url": "https://judicial.gov.gh/jsweb/e-judgment/index.php"
+     "url": "https://judicial.gov.gh/jsweb/e-judgment/index.php",
+     "verificacion": {
+      "error": "robots.txt disallows https://judicial.gov.gh/jsweb/e-judgment/index.php",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:46:25Z"
+     }
     },
     {
      "date": "",
@@ -206,7 +250,14 @@
      "rank": 1,
      "snippet": "Parliament of Ghana\n# Parliament of Ghana\n# Bills\nPage:\n...\n|Title|Laid by|Laid on|Gazetted on| |\n...\n|University of Engineering and Agricultural Sciences Bill.\n2025|Hon.\n...\nParliament House, Accra\ninfo@parliament.gh",
      "title": "Bills",
-     "url": "https://www.parliament.gh/docs?type=Bills&OT"
+     "url": "https://www.parliament.gh/docs?type=Bills&OT",
+     "verificacion": {
+      "bytes": 44445,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:26Z",
+      "http": 200,
+      "sha256": "2a2c936eb72ab5f1b395e8527662dbb88538caddd9076c267660a2570b566831"
+     }
     },
     {
      "date": "",
@@ -214,7 +265,14 @@
      "rank": 2,
      "snippet": "GhaLII\n# Welcome to the Ghana Legal Information Institute\nGhaLII digitises and publishes the law of Ghana for free access to all, in partnership with the Judicial Service of Ghana.\n...\nGhaLII works in partnership with the Judicial Service of Ghana.",
      "title": "Welcome to the Ghana Legal Information Institute",
-     "url": "https://www.ghalii.org/"
+     "url": "https://www.ghalii.org/",
+     "verificacion": {
+      "bytes": 55916,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:27Z",
+      "http": 200,
+      "sha256": "9c0a7616773d78901eb794998a5bdfb6e69a17ab1ecf52658d15fa1777ef1838"
+     }
     },
     {
      "date": "",
@@ -256,7 +314,14 @@
      "rank": 1,
      "snippet": "###### Ga East Municipal Assembly (Regulation of Slaughter Houses) Bye-Law, 2016\n...\n**Ga\n...\nIn exercise of the powers conferred on the Ga East Municipal Assembly by section 181 of the Local Governance Act, 2016 (Act 936) this Bye-law is hereby made.",
      "title": "Ga East Municipal Assembly (Regulation of Slaughter ...",
-     "url": "https://www.brr.gov.gh/reg_details?id=MzE1"
+     "url": "https://www.brr.gov.gh/reg_details?id=MzE1",
+     "verificacion": {
+      "bytes": 56569,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:29Z",
+      "http": 200,
+      "sha256": "c5076dea33e27f1ac2e4ad456df7be4f88e7fb8faf7c1c11f6f7f96ba576a3a7"
+     }
     },
     {
      "date": "2026-09-11",
@@ -264,7 +329,12 @@
      "rank": 2,
      "snippet": "LOCAL GOVERNMENT SERVICE\n...\n## OHLGS, Celltel Sign MoU to Build Smart Assemblies Across 261 Districts\n### Western North\nEmail: **ohlgs@lgs.gov.gh",
      "title": "LOCAL GOVERNMENT SERVICE",
-     "url": "https://lgs.gov.gh/"
+     "url": "https://lgs.gov.gh/",
+     "verificacion": {
+      "error": "robots.txt disallows https://lgs.gov.gh/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:46:32Z"
+     }
     },
     {
      "date": "2017-01-01",
@@ -306,7 +376,12 @@
      "rank": 1,
      "snippet": "Ghana issues its own standards for many products under the auspices of the Ghana Standards Authority (GSA).\nThe GSA has promulgated more than 500 Ghanaian standards and adopted more than 2,000 international standards, including European Union and U.S. standards for certification purposes.\n...\n- GRA",
      "title": "2026 Investment Climate Statements: Ghana",
-     "url": "https://www.state.gov/reports/2026-investment-climate-statements/ghana/"
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/ghana/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/ghana/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:46:32Z"
+     }
     },
     {
      "date": "",
@@ -314,7 +389,14 @@
      "rank": 2,
      "snippet": "The General Labeling Rules (1992): Ghana’s General Labeling Rules (1992) regulate the labeling of products to ensure that consumers receive accurate and sufficient information about the products they purchase.\n...\n…\n...\nThe Ghana Environmental Protection Agency (Ghana EPA) is the national authority ",
      "title": "Report Name: FAIRS Country Report Annual - 2026",
-     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS+Country+Report+Annual_Accra_Ghana_GH2026-0018.pdf"
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS+Country+Report+Annual_Accra_Ghana_GH2026-0018.pdf",
+     "verificacion": {
+      "bytes": 590603,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:32Z",
+      "http": 200,
+      "sha256": "2a69a5529eb0b97c9c1696f83b303f488732bc2be445aceb34133f6b763ff623"
+     }
     },
     {
      "date": "2020-01-18",
@@ -356,7 +438,14 @@
      "rank": 1,
      "snippet": "CATALOGUE OF GHANA \nSTANDARDS \nPUBLISHED BY THE GHANA STANDARDS AUTHORITY  \nAdjacent the Gulf House,Okponglo.\nP.O.BOX MB 245, ACCRA – GHANA  \n...\nFAX (+233) 0302 500231",
      "title": "CATALOGUE OF GHANA STANDARDS 2019 - GSA",
-     "url": "https://gsa.gov.gh/wp-content/uploads/2019/06/CATALOGUE-2019_04_03.pdf"
+     "url": "https://gsa.gov.gh/wp-content/uploads/2019/06/CATALOGUE-2019_04_03.pdf",
+     "verificacion": {
+      "bytes": 4910748,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:35Z",
+      "http": 200,
+      "sha256": "b155b94c5581f6c8850f55d46d6495d870e5569537739c7bbb33356aaf0e00f1"
+     }
     },
     {
      "date": "2018-04-08",
@@ -364,7 +453,14 @@
      "rank": 2,
      "snippet": "To get an approved standard, a client can get a printed or electronic copy of the standard after payment.\nStandards and their prices are available through our online standards catalogue.\n...\nP.O. Box M245\nAccra\nEmail: info@gsa,gov.gh / nep@gsa.gov.gh",
      "title": "Standards",
-     "url": "https://gsa.gov.gh/standards/"
+     "url": "https://gsa.gov.gh/standards/",
+     "verificacion": {
+      "bytes": 128707,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:36Z",
+      "http": 200,
+      "sha256": "f2f7bfaee696811efd5d2f99f6557f674754a3cea00bb94057ab46978daa2d19"
+     }
     },
     {
      "date": "",
@@ -406,7 +502,14 @@
      "rank": 1,
      "snippet": "ENERGY COMMISSION( ELECTRICAL WIRING CABLES AND ELECTRICAL WIRING ACCESSORIES) REGULATIONS, 2023\nL.I.2478.pdf\n...\nElectricity Transmission(Technical,Operational and Standards of Performance) Rules,2008(L.I.1934)\n...\nDownload",
      "title": "Electricity",
-     "url": "https://www.energycom.gov.gh/index.php/regulation/electricity-transmission-and-distribution"
+     "url": "https://www.energycom.gov.gh/index.php/regulation/electricity-transmission-and-distribution",
+     "verificacion": {
+      "bytes": 104609,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:40Z",
+      "http": 200,
+      "sha256": "49db0219252a5c0bf80baf769b714cdc6433a83226b5b5f81db66e1e52cc1726"
+     }
     },
     {
      "date": "2025-10-10",
@@ -414,7 +517,14 @@
      "rank": 2,
      "snippet": "Energy Commission (Energy Efficiency Standards and Labelling(Public lighting) Regulations, 2022(LI 2453)\n...\nSet-Top Boxes regulations 2022.pdf\n...\nEnergy Commission (Energy Efficiency Standards and Labelling(Television set and monitors) Regulations, 2022(LI 2455)",
      "title": "Energy Efficiency",
-     "url": "https://www.energycom.gov.gh/index.php/regulation/energy-efficiency-ie"
+     "url": "https://www.energycom.gov.gh/index.php/regulation/energy-efficiency-ie",
+     "verificacion": {
+      "bytes": 131064,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:42Z",
+      "http": 200,
+      "sha256": "91abb78c6930333e90e36ba655fffcfcf76c5e4dfc060327ca915bc2792cddfe"
+     }
     },
     {
      "date": "2025-10-10",
@@ -456,7 +566,14 @@
      "rank": 1,
      "snippet": "Ghana Statistical Service\nGhana Statistical Service\nFinance Drive, Accra\nP.O.Box GP 1098\ninfo@statsghana.gov.gh\nTel: +233302664304\nUseful Links\nGhana Statistical Service © 2026 | Ghana\n...\n## Data Portals\n### National Reporting Platform",
      "title": "Ghana Statistical Service",
-     "url": "https://statsghana.gov.gh/"
+     "url": "https://statsghana.gov.gh/",
+     "verificacion": {
+      "bytes": 228845,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:44Z",
+      "http": 200,
+      "sha256": "e860d4b394525a719cf440e96d89a0d0743944296533e8a71a22a2800fb51b0e"
+     }
     },
     {
      "date": "",
@@ -464,7 +581,14 @@
      "rank": 2,
      "snippet": "Ghana in Numbers 2025 | Ghana Statistical Service\nGhana Statistical Service\nFinance Drive, Accra\nP.O.Box GP 1098\ninfo@statsghana.gov.gh\nTel: +233302664304\nUseful Links\nHome/Highlights/Ghana in Numbers 2025",
      "title": "Ghana in Numbers 2025",
-     "url": "https://statsghana.gov.gh/highlights/GiNs-2025"
+     "url": "https://statsghana.gov.gh/highlights/GiNs-2025",
+     "verificacion": {
+      "bytes": 91473,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:45Z",
+      "http": 200,
+      "sha256": "04044439fc9082d44673c25aeb87a65d04d0e498e41ed6a6f7825389f1d5d645"
+     }
     },
     {
      "date": "",
@@ -498,7 +622,14 @@
      "rank": 1,
      "snippet": "Summary of Economic and Financial Data – Bank of Ghana\n# Archives: Summary of Economic and Financial Data\nfor adding new Summary of Economic and Financial Data\n## Summary of Economic and Financial Data – September 2026\n...\n## Charts: Summary of Economic and Financial Charts – September 2026\n...\n####",
      "title": "Archives: Summary of Economic and Financial Data",
-     "url": "https://www.bog.gov.gh/econ_fin_data/"
+     "url": "https://www.bog.gov.gh/econ_fin_data/",
+     "verificacion": {
+      "bytes": 173447,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:51Z",
+      "http": 200,
+      "sha256": "0bd9f59e6df7231b9add837faba0a27b5f4d7f3e78bb22445669698f58a6c375"
+     }
     },
     {
      "date": "",
@@ -506,7 +637,14 @@
      "rank": 2,
      "snippet": "Economic Data – Bank of Ghana\n...\nFrequency: Monthly.\n## Monetary Survey (In Millions of Ghana Cedis)\nFrequency: Monthly.\n## Exchange Rates\n...\n## Real Sector Indicators\nFrequency: Monthly, Quarterly, and Yearly.\n## Commodity Prices\nFrequency: Monthly.\n...\n## Time Series",
      "title": "Economic Data - Accra",
-     "url": "https://www.bog.gov.gh/economic-data/"
+     "url": "https://www.bog.gov.gh/economic-data/",
+     "verificacion": {
+      "bytes": 208281,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:46:56Z",
+      "http": 200,
+      "sha256": "f67beec2e061c5c60bf51ba4ed91ae7cd61d000490b8b9713d91d8ce7bfb95d3"
+     }
     },
     {
      "date": "",
@@ -548,7 +686,12 @@
      "rank": 1,
      "snippet": "## ANALYTICS\n912 Resources\n271 Catalogs\n22 Ministries/Agencies\n...\n## Ghana SDG platform\nVisit the Ghana Sustainable Development Goal (SGD) indicator platform to see Ghana’s progress in achieving Ghana’s targets with the SDGs.",
      "title": "Ghana Open Data Initiative | Ghana's Open Data Portal",
-     "url": "https://data.gov.gh/"
+     "url": "https://data.gov.gh/",
+     "verificacion": {
+      "error": "robots.txt disallows https://data.gov.gh/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:46:59Z"
+     }
     },
     {
      "date": "2026-07-18",
@@ -556,7 +699,14 @@
      "rank": 2,
      "snippet": "|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|",
      "title": "electricsheepafrica/africa-ghana-population-by-sex-birthplace-and-region-f4a94f50 · Datasets at Hugging Face",
-     "url": "https://huggingface.co/datasets/electricsheepafrica/africa-ghana-population-by-sex-birthplace-and-region-f4a94f50"
+     "url": "https://huggingface.co/datasets/electricsheepafrica/africa-ghana-population-by-sex-birthplace-and-region-f4a94f50",
+     "verificacion": {
+      "bytes": 1040826,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:47:00Z",
+      "http": 200,
+      "sha256": "c0f7a3dbf4ebd3bcdaca7b7a5143c63cae4612281b9ac9bf60d8975fc21e929d"
+     }
     },
     {
      "date": "",

@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "Direktori dokumen hukum berisi daftar jenis dokumen hukum yang diorganisasi secara sistematis berdasarkan, tajuk entri utama dan tahun penerbitan.\nMelalui direktori ini setiap item dapat dilakukan penelusuran lebih lanjut.\n...\n04 Des 1954\n2\n...\n3\n...\n521",
      "title": "Direktori | JDIH Kementerian Keuangan",
-     "url": "https://jdih.kemenkeu.go.id/direktori"
+     "url": "https://jdih.kemenkeu.go.id/direktori",
+     "verificacion": {
+      "bytes": 253518,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:00:39Z",
+      "http": 200,
+      "sha256": "741dadbb800893665cc9adc9bb41069680080a8fc84e6de84b56603eb099c9fc"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,12 @@
      "rank": 2,
      "snippet": "#### 1.926 Peraturan ditemukan\n...\nUndang-Undang Nomor 1 Tahun 2026\n...\n…\n...\n…\n...\nUndang-Undang Nomor 3 Tahun 2025\nPerubahan Atas Undang-undang Nomor 34 Tahun 2004 Tentang Tentara Nasional Indonesia",
      "title": "Undang-Undang - [PERATURAN.GO.ID]",
-     "url": "https://peraturan.go.id/uu"
+     "url": "https://peraturan.go.id/uu",
+     "verificacion": {
+      "error": "robots.txt disallows https://peraturan.go.id/uu",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:02:10Z"
+     }
     },
     {
      "date": "",
@@ -64,7 +76,14 @@
      "rank": 1,
      "snippet": "2065 TAHUN 2026\nDitetapkan 29 October 2026\nKeputusan Menteri Perdagangan Republik Indonesia Nomor 2065 Tahun 2026 tentang Daftar Merek Refined, Bleached, and…\n...\n104.052 kali diakses\n...\n102.731 kali diakses",
      "title": "Beranda - JDIH Kementerian Perdagangan RI",
-     "url": "https://jdih.kemendag.go.id/"
+     "url": "https://jdih.kemendag.go.id/",
+     "verificacion": {
+      "bytes": 417095,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:02:18Z",
+      "http": 200,
+      "sha256": "b690657186cd937db5106caf7ec211a5ef60cf0f83335d092e3b1dc8f9a6ea9c"
+     }
     },
     {
      "date": "2026-04-25",
@@ -72,7 +91,12 @@
      "rank": 2,
      "snippet": "### DATABASE PERATURAN PERUNDANG-UNDANGAN\nSilahkan cari peraturan perundang-undangan\n- **61.910** Peraturan\n- **57.257** Berlaku\n- **5.038** Tidak Berlaku\n...\nSilahkan cari informasi peraturan melalui menu pencarian",
      "title": "[PDF] PERATURAN MENTERI PEMUDA DAN OLAHRAGA REPUBLIK ...",
-     "url": "https://peraturan.go.id/"
+     "url": "https://peraturan.go.id/",
+     "verificacion": {
+      "error": "robots.txt disallows https://peraturan.go.id/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:02:18Z"
+     }
     },
     {
      "date": "",
@@ -114,7 +138,14 @@
      "rank": 1,
      "snippet": "# Indonesia Republic of Indonesia / Republik Indonesia\n## Legislative\n- OFFICIAL GAZETTE: Lembaran Negara Republik Indonesia; Berita Negara Republik Indonesia (LC Online Catalog)",
      "title": "Guide to Law Online: Indonesia | Law Library of Congress",
-     "url": "https://wwws.loc.gov/law/help/guide/nations/indonesia.php"
+     "url": "https://wwws.loc.gov/law/help/guide/nations/indonesia.php",
+     "verificacion": {
+      "bytes": 24310,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:02:19Z",
+      "http": 200,
+      "sha256": "8c874e2f2f525627f847fe6741dfe64fcd10e61031e09f3fbbbc5d129b280d39"
+     }
     },
     {
      "date": "",
@@ -122,7 +153,14 @@
      "rank": 2,
      "snippet": "# Indonesia\n## Indonesia: legislation: official gazette\n...\n3 titles containing the official gazette for Indonesia from 1816 to 1845 and 1954 to 1976 (partly on microform).\nAll are official publications.\nThe earliest publication is in Dutch, and the others are in Indonesian.",
      "title": "Digital Resources",
-     "url": "https://resources.ials.sas.ac.uk/flag-country/indonesia?page=0"
+     "url": "https://resources.ials.sas.ac.uk/flag-country/indonesia?page=0",
+     "verificacion": {
+      "bytes": 33415,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:02:20Z",
+      "http": 200,
+      "sha256": "fff19d4e87b04da0855b991b859e118eb545bc40de2139d57069457ff8e2fbaa"
+     }
     },
     {
      "date": "",
@@ -164,7 +202,14 @@
      "rank": 1,
      "snippet": "Database Peraturan ini merupakan bagian dari pelaksanaan JDIH di lingkungan MA RI.\nSecara khusus dimaksudkan untuk menyebarluaskan informasi peraturan perundang-undangan dan dokumentasi hukum secara mudah, cepat dan akurat kepada para pengguna baik kalangan internal MA RI maupun masyarakat.",
      "title": "JDIH MAHKAMAH AGUNG RI",
-     "url": "https://jdih.mahkamahagung.go.id/index.php"
+     "url": "https://jdih.mahkamahagung.go.id/index.php",
+     "verificacion": {
+      "bytes": 5580,
+      "estado": "http",
+      "fecha": "2026-11-02T09:02:21Z",
+      "http": 403,
+      "sha256": "ea7ffdf3eef7198598af5e62cf3451cc40be49209d9c70d9552ce0c1e81acd4e"
+     }
     },
     {
      "date": "",
@@ -172,7 +217,14 @@
      "rank": 2,
      "snippet": "Aplikasi memuat informasi putusan yaitu tanggal putusan, amar putusan, tanggal minutasi dan salinan putusan elektronik dapat diunduh melalui aplikasi ini.\n...\n### Email\n...\nhttps://ecourt.mahkamahagung.go.id\nVersi 5.0.0\n…",
      "title": "e Court Mahkamah Agung RI | Electronics Justice System",
-     "url": "https://ecourt.mahkamahagung.go.id/"
+     "url": "https://ecourt.mahkamahagung.go.id/",
+     "verificacion": {
+      "bytes": 30105,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:02:27Z",
+      "http": 200,
+      "sha256": "9a1ea9afe7e6e3aad77809ebf5cb5cfa2776d87a5605bc356e7743aa8e1cb548"
+     }
     },
     {
      "date": "",
@@ -214,7 +266,14 @@
      "rank": 1,
      "snippet": "# ID\n# JDIH Provinsi Bali\nJaringan Dokumentasi dan Informasi Hukum Provinsi Bali\n...\nInfo dokumen hukum menyajikan berbagai dokumen hukum seperti peraturan perundang-undangan, artikel hukum, monografi hukum, maupun putusan peradilan yang terbaru dan paling populer.",
      "title": "JDIH PROVINSI BALI",
-     "url": "https://jdih.baliprov.go.id/"
+     "url": "https://jdih.baliprov.go.id/",
+     "verificacion": {
+      "bytes": 67058,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:02:30Z",
+      "http": 200,
+      "sha256": "183a8ca91def9a8b8610ba1f3b11df402fd5f86ebc4f9ba05684db0bfe0cbe15"
+     }
     },
     {
      "date": "",
@@ -222,7 +281,12 @@
      "rank": 2,
      "snippet": "Undang-Undang Nomor 1 Tahun 2026\nPenyesuaian Pidana\n- Dokumen :\n- Pemerintah Pusat\nUU 2025\nUndang-Undang Nomor 5 Tahun 2025\nKota Gorontalo Provinsi Gorontalo",
      "title": "Undang-Undang - [PERATURAN.GO.ID]",
-     "url": "https://peraturan.go.id/uu"
+     "url": "https://peraturan.go.id/uu",
+     "verificacion": {
+      "error": "robots.txt disallows https://peraturan.go.id/uu",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:02:30Z"
+     }
     },
     {
      "date": "2026-04-02",
@@ -264,7 +328,12 @@
      "rank": 1,
      "snippet": "#### 19738 Perda ditemukan\n-\n...\nPERDA 2025\n...\nPERDA 2025\nPeraturan Wali Kota Padang Panjang Nomor 2 Tahun 2025\n...\nPERDA 2025\nPeraturan Daerah Kota Padang Nomor 1 Tahun 2025",
      "title": "Peraturan Daerah - [PERATURAN.GO.ID]",
-     "url": "https://peraturan.go.id/perda"
+     "url": "https://peraturan.go.id/perda",
+     "verificacion": {
+      "error": "robots.txt disallows https://peraturan.go.id/perda",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:02:30Z"
+     }
     },
     {
      "date": "2026-02-12",
@@ -272,7 +341,14 @@
      "rank": 2,
      "snippet": "Merupakan wadah pendayagunaan bersama atas dokumen hukum di bidang Infrastruktur dan Pembangunan Kewilayahan secara tertib, terpadu, berkesinambungan, serta merupakan sarana pemberian pelayanan informasi hukum secara lengkap, akurat, mudah dan cepat",
      "title": "Jaringan Dokumentasi dan Informasi Hukum Kemenko Infra",
-     "url": "https://jdih.kemenkoinfra.go.id/"
+     "url": "https://jdih.kemenkoinfra.go.id/",
+     "verificacion": {
+      "bytes": 117457,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:02:37Z",
+      "http": 200,
+      "sha256": "c4863b1bf7c8526231268df48dd0b41b8df8619a8d4fda4637f14b6205cfe8b3"
+     }
     },
     {
      "date": "2026-04-25",
@@ -314,7 +390,12 @@
      "rank": 1,
      "snippet": "- Bank Indonesia Regulation Number 2/11/PBI/2000\n...\n- Portal OJK - Otoritas Jasa Keuangan\nOtoritas Jasa Keuangan, Gedung Sumitro Djojohadikusumo\n...\nJakarta 10710\n...\n- humas@ojk.go.id",
      "title": "Skip Navigation LinksRegulasi",
-     "url": "https://ojk.go.id/id/lists/regulasi/allitems.aspx"
+     "url": "https://ojk.go.id/id/lists/regulasi/allitems.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://ojk.go.id/id/lists/regulasi/allitems.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:04:08Z"
+     }
     },
     {
      "date": "2026-04-25",
@@ -322,7 +403,12 @@
      "rank": 2,
      "snippet": "### DATABASE PERATURAN PERUNDANG-UNDANGAN\nSilahkan cari peraturan perundang-undangan\n...\n- **57.257** Berlaku\n...\nPeraturan Badan Pemeriksa Keuangan Nomor 1 Tahun 2026\nStandar Pemeriksaan Keuangan Negara\n...\n### Cari Peraturan",
      "title": "[PDF] PERATURAN MENTERI PEMUDA DAN OLAHRAGA REPUBLIK ...",
-     "url": "https://peraturan.go.id/"
+     "url": "https://peraturan.go.id/",
+     "verificacion": {
+      "error": "robots.txt disallows https://peraturan.go.id/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:04:08Z"
+     }
     },
     {
      "date": "",
@@ -364,7 +450,12 @@
      "rank": 1,
      "snippet": "Daftar Usulan PNPS\n...\nSNI\nDaftar SNI",
      "title": "Daftar SNI - SISPK - Badan Standardisasi Nasional",
-     "url": "https://sispk-v2.bsn.go.id/sni/index"
+     "url": "https://sispk-v2.bsn.go.id/sni/index",
+     "verificacion": {
+      "error": "robots.txt disallows https://sispk-v2.bsn.go.id/sni/index",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:05:39Z"
+     }
     },
     {
      "date": "",
@@ -372,7 +463,12 @@
      "rank": 2,
      "snippet": "## SNI\nSDi sini pengunjung dapat melihat daftar koleksi standar SNI sekaligus membaca versi e-book dokumen SNI terpilih secara lebih mudah.\n...\n…\n...\nMerupakan Penelusuran Informasi Perpustakaan Badan Standardisasi Nasional.",
      "title": "SNI",
-     "url": "https://portalsnicorner.bsn.go.id/"
+     "url": "https://portalsnicorner.bsn.go.id/",
+     "verificacion": {
+      "error": "robots.txt disallows https://portalsnicorner.bsn.go.id/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:07:11Z"
+     }
     },
     {
      "date": "",
@@ -406,7 +502,14 @@
      "rank": 1,
      "snippet": "Ditetapkan 29 September 2026\nPeraturan Menteri Perdagangan Republik Indonesia Nomor 25 Tahun 2026 Tentang Petunjuk Teknis Pengelolaan Konflik Kepentingan…SIMPLIFIKASI\nBerikut adalah Total Jumlah Peraturan yang ada.",
      "title": "Beranda - JDIH Kementerian Perdagangan RI",
-     "url": "https://jdih.kemendag.go.id/"
+     "url": "https://jdih.kemendag.go.id/",
+     "verificacion": {
+      "bytes": 417095,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:07:18Z",
+      "http": 200,
+      "sha256": "6391b5017e19202072d628a8944d3340fd98dba9831a077bb678f481b71eb1a4"
+     }
     },
     {
      "date": "2026-05-04",
@@ -414,7 +517,14 @@
      "rank": 2,
      "snippet": "Peraturan BPOM No. 8 tahun 2026 tentang Sertifikasi Cara Pembuatan Kosmetik yang Baik.\nPeraturan ini mencabut PerBPOM No. 33 tahun 2021 tentang Sertifikasi CPKB, dan mulai berlaku tanggal 29 April 2026.",
      "title": "Regulasi - Direktorat Standardisasi Obat Tradisional ...",
-     "url": "https://standar-otskk.pom.go.id/regulasi"
+     "url": "https://standar-otskk.pom.go.id/regulasi",
+     "verificacion": {
+      "bytes": 90839,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:07:22Z",
+      "http": 200,
+      "sha256": "3d147225a03f6c47c5e2400285d563c31af5e87512bdbb406df3410c77359281"
+     }
     },
     {
      "date": "2026-09-11",
@@ -456,7 +566,12 @@
      "rank": 1,
      "snippet": "Badan Pusat Statistik\nBadan Pusat Statistik(BPS - Statistics Indonesia)\nJl.\nDr. Sutomo 6-8\nJakarta 10710 Indonesia\n...\nFaks (62-21) 3857046\nMailbox : bpshq@bps.go.id",
      "title": "Badan Pusat Statistik Indonesia",
-     "url": "https://bps.go.id/"
+     "url": "https://bps.go.id/",
+     "verificacion": {
+      "error": "robots.txt disallows https://bps.go.id/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:07:23Z"
+     }
     },
     {
      "date": "2025-07-25",
@@ -464,7 +579,12 @@
      "rank": 2,
      "snippet": "**Product > Directory**.\nClick here to access the page.\n...\nBPS-Statistics Indonesia\nBadan Pusat Statistik(BPS - Statistics Indonesia)\nJl.\nDr. Sutomo 6-8\nJakarta 10710 Indonesia\n...\nMailbox : bpshq@bps.go.id",
      "title": "Poverty Rate Continues to Decline - News and Press ...",
-     "url": "https://www.bps.go.id/en/news/2025/07/25/731/poverty-rate-continues-to-decline.html"
+     "url": "https://www.bps.go.id/en/news/2025/07/25/731/poverty-rate-continues-to-decline.html",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.bps.go.id/en/news/2025/07/25/731/poverty-rate-continues-to-decline.html",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:07:23Z"
+     }
     },
     {
      "date": "2025-11-05",
@@ -506,7 +626,14 @@
      "rank": 1,
      "snippet": "…\n-\n- - PSFMI link:\n**\nhttps://www.bi.go.id/en/statistik/ekonomi-keuangan/spip**\n-\n- - PSFMI\npublication\nschedule:   **ARC SPIP\nTahun 2026**\n...\n## Monthly Statistic\nPublication Date",
      "title": "Indonesia Financial System Statistics - Bank Indonesia",
-     "url": "https://www.bi.go.id/en/statistik/ekonomi-keuangan/sski/default.aspx"
+     "url": "https://www.bi.go.id/en/statistik/ekonomi-keuangan/sski/default.aspx",
+     "verificacion": {
+      "bytes": 734060,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:07:27Z",
+      "http": 200,
+      "sha256": "26c65a47d33fd653eccbff6a58112cf42d68fe196be8b2b4dd9d2f7cc9712b68"
+     }
     },
     {
      "date": "2026-10-31",
@@ -514,7 +641,14 @@
      "rank": 2,
      "snippet": "# Statistics\n...\nIn the execution of duties as a central bank, Bank\nIndonesia actively publishes and disseminates\nstatistical information in the form of indicators\nthat reflect economic conditions in Indonesia.\nIn\naddition, such indicators can be used to portray the\neconomic outlook and future devel",
      "title": "Contact Lisa",
-     "url": "https://www.bi.go.id/en/statistik/Default.aspx"
+     "url": "https://www.bi.go.id/en/statistik/Default.aspx",
+     "verificacion": {
+      "bytes": 617819,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:07:35Z",
+      "http": 200,
+      "sha256": "a77d6d27b360713083e0697dd009f6248c0a4b3234b64fc53a6bb8233d71b3c3"
+     }
     },
     {
      "date": "2026-10-31",
@@ -556,7 +690,14 @@
      "rank": 1,
      "snippet": "Portal Satu Data Indonesia - Homepage\n# Cari Data Apa Hari Ini ?\n# Mudah, Cepat, dan Akurat\nInfo data dan informasi resmi publik dari pemerintah Indonesia untuk Kamu!\nSaat ini sedang dilakukan  kurasi dataset pada Portal data.go.id.\n...\nDataset Tersedia",
      "title": "Portal Satu Data Indonesia - Homepage",
-     "url": "https://data.go.id/"
+     "url": "https://data.go.id/",
+     "verificacion": {
+      "bytes": 226833,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:07:38Z",
+      "http": 200,
+      "sha256": "cabb80a201fee64a00ca0f56f219c6dd7081f8aa7e72497c82079b7166fc18b1"
+     }
     },
     {
      "date": "2023-01-10",
@@ -564,7 +705,14 @@
      "rank": 2,
      "snippet": "Portal Satu Data Indonesia merupakan portal resmi data terbuka Indonesia yang dikelola oleh Sekretariat Satu Data Indonesia tingkat Pusat, Kementerian Perencanaan Pembangunan Nasional / Bappenas.\n...\nsdi@bappenas.go.id+62 821-2019-4130",
      "title": "Portal Satu Data Indonesia - Tentang",
-     "url": "https://data.go.id/about"
+     "url": "https://data.go.id/about",
+     "verificacion": {
+      "bytes": 44140,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:07:39Z",
+      "http": 200,
+      "sha256": "1f3ba5fd5afb9a4abf94dfd5b87cfc8321e557c4ab6e6cfa326f49a167212a79"
+     }
     },
     {
      "date": "",

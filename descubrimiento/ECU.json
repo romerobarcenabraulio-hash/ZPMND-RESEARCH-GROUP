@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "INICIO - Corte Constitucional del Ecuador\n# Eventos\n## BIENVENIDOS Y BIENVENIDAS AL\n# Portal Institucional de la Corte Constitucional del Ecuador",
      "title": "INICIO - Corte Constitucional del Ecuador",
-     "url": "https://www.corteconstitucional.gob.ec/"
+     "url": "https://www.corteconstitucional.gob.ec/",
+     "verificacion": {
+      "bytes": 342557,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:09Z",
+      "http": 200,
+      "sha256": "845cd54292f0ae219160846ed492bf50edb5a792cc0bf2fc2b1652ebf2dc28e5"
+     }
     },
     {
      "date": "2026-02-01",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "Carta Suprema;Constitucion de la Republica del Ecuador;https://institutodemocracia.gob.ec/wp-content/uploads/2025/06/Constitucion_de_la_Republica_del_Ecuador_30052024.pdf;;;;;;;;;;;;;;;;;;;;;;\n…\n...\n…",
      "title": "1.2.-CONJUNTO-DE-DATOS.csv",
-     "url": "https://institutodemocracia.gob.ec/wp-content/uploads/2026/02/1.2.-CONJUNTO-DE-DATOS.csv"
+     "url": "https://institutodemocracia.gob.ec/wp-content/uploads/2026/02/1.2.-CONJUNTO-DE-DATOS.csv",
+     "verificacion": {
+      "bytes": 27081,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:11Z",
+      "http": 200,
+      "sha256": "d9b3d19a1127425d28e7e76d9d2042848b83bd1b96c42317768ff6716cc1dcb0"
+     }
     },
     {
      "date": "",
@@ -64,7 +78,12 @@
      "rank": 1,
      "snippet": "TIPO;DESCRIPCIÓN DE REGULACIÓN;ENLACE A REGULACIÓN;;;;;;;;;;;;;;;;;;;;;;\n...\nLey Orgánica;Ley Orgánica del Sistema Nacional de Contratación Pública ;https://www.cosede.gob.ec/wp-content/uploads/2024/03/LOSNCP.pdf ;;;;;;;;;;;;;;;;;;;;;;",
      "title": "CONJUNTO-DE-DATOS.csv",
-     "url": "https://www.cosede.gob.ec/wp-content/uploads/2024/07/CONJUNTO-DE-DATOS.csv"
+     "url": "https://www.cosede.gob.ec/wp-content/uploads/2024/07/CONJUNTO-DE-DATOS.csv",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.cosede.gob.ec/wp-content/uploads/2024/07/CONJUNTO-DE-DATOS.csv",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:16:12Z"
+     }
     },
     {
      "date": "",
@@ -72,7 +91,14 @@
      "rank": 2,
      "snippet": "Diciembre | Registro Oficial\n## Suplemento al Registro Oficial No. 455\npor admin_portal_corte | 12 Dic 2023 | Suplemento",
      "title": "Diciembre",
-     "url": "https://www.registroficial.gob.ec/mes_post_imagen/diciembre/page/110/"
+     "url": "https://www.registroficial.gob.ec/mes_post_imagen/diciembre/page/110/",
+     "verificacion": {
+      "bytes": 179378,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:14Z",
+      "http": 200,
+      "sha256": "1c1415c856395919cfb65c154ad5c8a1437d5bcff76614beadbc5608e13dd308"
+     }
     },
     {
      "date": "",
@@ -114,7 +140,14 @@
      "rank": 1,
      "snippet": "2026 | Registro Oficial\n## Cuarto Suplemento No. 382\npor Moises Gutierrez | 2 Oct 2026 | Suplemento",
      "title": "Cuarto Suplemento No. 382",
-     "url": "https://www.registroficial.gob.ec/year_post_imagen/2026/page/56/"
+     "url": "https://www.registroficial.gob.ec/year_post_imagen/2026/page/56/",
+     "verificacion": {
+      "bytes": 179204,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:16Z",
+      "http": 200,
+      "sha256": "59f581e15e5919da5691929ca36615431c20087276d3500f6f153b08b1e751bd"
+     }
     },
     {
      "date": "2026-09-17",
@@ -122,7 +155,14 @@
      "rank": 2,
      "snippet": "Registro Oficial No. 371 | Registro Oficial\n# Registro Oficial No. 371\npor Moises Gutierrez | 17 Sep 2026 | Registro Oficial\nFUNCIÓN EJECUTIVA\nACUERDOS:\nMINISTERIO DE GOBIERNO:",
      "title": "Registro Oficial No. 371",
-     "url": "https://www.registroficial.gob.ec/registro-oficial-no-371-21/"
+     "url": "https://www.registroficial.gob.ec/registro-oficial-no-371-21/",
+     "verificacion": {
+      "bytes": 180513,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:17Z",
+      "http": 200,
+      "sha256": "921dfe31d390cecb70951a74d4721ed1768b000b536ea39e47fe4b6cdc14d483"
+     }
     },
     {
      "date": "2025-11-26",
@@ -164,7 +204,14 @@
      "rank": 1,
      "snippet": "# Eventos\n## BIENVENIDOS Y BIENVENIDAS AL\n# Portal Institucional de la Corte Constitucional del Ecuador",
      "title": "INICIO - Corte Constitucional del Ecuador",
-     "url": "https://www.corteconstitucional.gob.ec/"
+     "url": "https://www.corteconstitucional.gob.ec/",
+     "verificacion": {
+      "bytes": 342557,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:18Z",
+      "http": 200,
+      "sha256": "845cd54292f0ae219160846ed492bf50edb5a792cc0bf2fc2b1652ebf2dc28e5"
+     }
     },
     {
      "date": "",
@@ -172,7 +219,14 @@
      "rank": 2,
      "snippet": "Buscadores | Corte Constitucional del Ecuador\nEncuentra tus sentencias y casos en el buscador de la CCE\nSentencias / Causas\n...\nbuscadores@cce.gob.ec\nBuscador de sentencias de la\n**Corte Nacional de Justicia**\nCorte Constitucional del Ecuador",
      "title": "Buscadores | Corte Constitucional del Ecuador",
-     "url": "https://buscador.corteconstitucional.gob.ec/"
+     "url": "https://buscador.corteconstitucional.gob.ec/",
+     "verificacion": {
+      "bytes": 925,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:20Z",
+      "http": 200,
+      "sha256": "3168356e857fb581ec61196a4eaaa9d1f71271758c828bc0d54671e2cea18811"
+     }
     },
     {
      "date": "2008-01-01",
@@ -214,7 +268,14 @@
      "rank": 1,
      "snippet": "Buscar | Asamblea Nacional del Ecuador\n# Buscar | Asamblea Nacional del Ecuador\n## Buscar\n## Resultados de la búsqueda\n1. ### Ley Orgánica Reformatoria a la Ley Orgánica de Transporte Terrestre, Tránsito y Seguridad Vial\n...",
      "title": "Asamblea Nacional del Ecuador",
-     "url": "https://www.asambleanacional.gob.ec/es/search/node/LEY?page=221"
+     "url": "https://www.asambleanacional.gob.ec/es/search/node/LEY?page=221",
+     "verificacion": {
+      "bytes": 40427,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:26Z",
+      "http": 200,
+      "sha256": "00c275c6f8f3d14f62d71e80df7555cfdd2cc7585f14fd6506a375efe5527735"
+     }
     },
     {
      "date": "",
@@ -222,7 +283,14 @@
      "rank": 2,
      "snippet": "Diciembre | Registro Oficial\n## Edición Especial No. 873\npor Moises Gutierrez | 31 Dic 2025 | Edición Especial",
      "title": "Edición Especial No. 873",
-     "url": "https://www.registroficial.gob.ec/mes_post_imagen/diciembre/page/3/"
+     "url": "https://www.registroficial.gob.ec/mes_post_imagen/diciembre/page/3/",
+     "verificacion": {
+      "bytes": 179092,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:27Z",
+      "http": 200,
+      "sha256": "884c655f2f5b40d8a79b750dad1a6829f5e87fe4469c8eac92f4977abaa7e3e1"
+     }
     },
     {
      "date": "",
@@ -264,7 +332,14 @@
      "rank": 1,
      "snippet": "Diciembre | Registro Oficial\n## Edición Especial No. 873\npor Moises Gutierrez | 31 Dic 2025 | Edición Especial",
      "title": "Edición Especial No. 873",
-     "url": "https://www.registroficial.gob.ec/mes_post_imagen/diciembre/page/3/"
+     "url": "https://www.registroficial.gob.ec/mes_post_imagen/diciembre/page/3/",
+     "verificacion": {
+      "bytes": 179092,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:28Z",
+      "http": 200,
+      "sha256": "884c655f2f5b40d8a79b750dad1a6829f5e87fe4469c8eac92f4977abaa7e3e1"
+     }
     },
     {
      "date": "2020-12-09",
@@ -272,7 +347,14 @@
      "rank": 2,
      "snippet": "Las ordenanzas son leyes locales emitidas por los Gobiernos Municipales en Ecuador, sirven para establecer regulaciones específicas para los cantones.\n...\nUtiliza el buscador de Ordenanzas y Gacetas, escribe la palabra clave del tema que necesitas y se mostrarán todos los documentos relacionados.",
      "title": "Gacetas y Ordenanzas – Alcaldía de Guayaquil",
-     "url": "https://guayaquil.gob.ec/gacetas-y-ordenanzas/"
+     "url": "https://guayaquil.gob.ec/gacetas-y-ordenanzas/",
+     "verificacion": {
+      "bytes": 341950,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:33Z",
+      "http": 200,
+      "sha256": "626f592b6b4295b8b905ce43267aadc6539a607e64b7c75ad730928cffb423b3"
+     }
     },
     {
      "date": "",
@@ -314,7 +396,14 @@
      "rank": 1,
      "snippet": "products.\n...\n…\n...\nCode (ROE 351, December 29, 2010), COMEX approves commercial policies and coordinates foreign\ntrade.\n...\nInvestments, SENAE is responsible for borders and ports.\nIt enforces the collection of import duties and \ntaxes.",
      "title": "Food and Agricultural Import Regulations and Standards ...",
-     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Food%20and%20Agricultural%20Import%20Regulations%20and%20Standards%20Country%20Report_Quito_Ecuador_EC2022-0010.pdf"
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Food%20and%20Agricultural%20Import%20Regulations%20and%20Standards%20Country%20Report_Quito_Ecuador_EC2022-0010.pdf",
+     "verificacion": {
+      "bytes": 819903,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:33Z",
+      "http": 200,
+      "sha256": "b720b53a7c5ce77ba79cb8e8cce3242929102285361c0427a49e77e6367727a5"
+     }
     },
     {
      "date": "",
@@ -322,7 +411,14 @@
      "rank": 2,
      "snippet": "- Ley de Medicamentos Genéricos\n- Decreto Ejecutivo 392_Reglamento a la Ley de Medicamentos Genéricos de uso humano\n- Decreto Ejecutivo 1899_ Reglamento para la adquisición de medicamentos del Cuadro Nacional de Medicamentos Básicos\n...\n…",
      "title": "Normativa – Instructivos",
-     "url": "https://www.controlsanitario.gob.ec/documentos-vigentes/"
+     "url": "https://www.controlsanitario.gob.ec/documentos-vigentes/",
+     "verificacion": {
+      "bytes": 478665,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:37Z",
+      "http": 200,
+      "sha256": "a8d2f46206e3bada7f1ef16f8738b04ad097a6e6d69484b7b7b78c99aaea36b4"
+     }
     },
     {
      "date": "",
@@ -364,7 +460,14 @@
      "rank": 1,
      "snippet": "Ecuadorian National Standards Institute (INEN): Ecuador’s technical standards setting body.\nEcuador’s technical standards, called NTEs, define the characteristics of raw materials, intermediate products, and finished products marketed in Ecuador.\nINEN establishes inspection, analysis, measurement, a",
      "title": "[PDF] FAIRS Country Report Annual - USDA Foreign Agricultural Service",
-     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS%20Country%20Report%20Annual_Quito_Ecuador_EC2024-0005"
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS%20Country%20Report%20Annual_Quito_Ecuador_EC2024-0005",
+     "verificacion": {
+      "bytes": 852663,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:16:37Z",
+      "http": 200,
+      "sha256": "fba213958f1ba1f2da5d0dcd8d0e6dca08face3a38b3e6cc27c41ebc139de560"
+     }
     },
     {
      "date": "2025-06-01",
@@ -372,7 +475,12 @@
      "rank": 2,
      "snippet": "**NORMAS TÉCNICAS ECUATORIANAS OFICIALIZADAS**\nPara acceder al catálogo normativo vigente por favor ingrese al Buscador de normas del INEN (clic aquí).\nEn este enlace podrá visualizar los extractos de las normas técnicos ecuatorianas INEN.",
      "title": "Normas Oficializadas",
-     "url": "https://www.normalizacion.gob.ec/normas-oficializadas/"
+     "url": "https://www.normalizacion.gob.ec/normas-oficializadas/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.normalizacion.gob.ec/normas-oficializadas/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:18:08Z"
+     }
     },
     {
      "date": "2025-06-01",
@@ -414,7 +522,12 @@
      "rank": 1,
      "snippet": "Establece los requisitos mínimos de seguridad que deben cumplir los vehículos automotores\n...\n2010-12-30\nReglamento Técnico Ecuatoriano RTE INEN 038 (2R):2011\n...\nNorma Técnica Ecuatoriana NTE INEN 2 477:2009",
      "title": "Seguridad",
-     "url": "https://www.ant.gob.ec/regulacion/seguridad/"
+     "url": "https://www.ant.gob.ec/regulacion/seguridad/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ant.gob.ec/regulacion/seguridad/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:19:40Z"
+     }
     },
     {
      "date": "2021-09-01",
@@ -422,7 +535,12 @@
      "rank": 2,
      "snippet": "### Reglamentos Técnicos Ecuatorianos\nContáctenos a través del correo electrónico: reglamentacion@normalizacion.gob.ec\nBase Legal - Reglamentos Técnicos Ecuatorianos\nListado de situación de RTE INEN y PRTE INEN",
      "title": "Dirección Técnica de Reglamentación",
-     "url": "https://www.normalizacion.gob.ec/direccion-tecnica-de-reglamentacion/"
+     "url": "https://www.normalizacion.gob.ec/direccion-tecnica-de-reglamentacion/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.normalizacion.gob.ec/direccion-tecnica-de-reglamentacion/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:19:40Z"
+     }
     },
     {
      "date": "2025-06-01",
@@ -464,7 +582,12 @@
      "rank": 1,
      "snippet": "Inicio - Censo Ecuador\n...\n#### El INEC ratificó la validez, veracidad y confiabilidad del Censo Ecuador 2022\n...\n###### Accede a las bases censales del Ecuador 2022 en los diferentes niveles de desagregación geográfica y en el formato de tu preferencia.",
      "title": "Inicio - Censo Ecuador",
-     "url": "https://www.censoecuador.gob.ec/"
+     "url": "https://www.censoecuador.gob.ec/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.censoecuador.gob.ec/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:19:41Z"
+     }
     },
     {
      "date": "",
@@ -472,7 +595,14 @@
      "rank": 2,
      "snippet": "home – Instituto Nacional de Estadística y Censos\n# Instituto Nacional de Estadística y Censos\nInstituto Nacional de Estadística y Censos\n...\n# pie de pagina\nJuan Larrea N15-36 y José Riofrío\nCódigo Postal: 170402 / Quito - Ecuador",
      "title": "Instituto Nacional de Estadística y Censos: home",
-     "url": "https://www.ecuadorencifras.gob.ec/institucional/home/"
+     "url": "https://www.ecuadorencifras.gob.ec/institucional/home/",
+     "verificacion": {
+      "bytes": 45893,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:19:45Z",
+      "http": 200,
+      "sha256": "9f4d76a52c2025fd3a4cf83395aa161a1233098937bf87df3d6c3cf0bfe09e3d"
+     }
     },
     {
      "date": "",
@@ -514,7 +644,12 @@
      "rank": 1,
      "snippet": "BCE - Banco Central del Ecuador\nRENDICIÓN DE CUENTAS 2025\n...\n**PIB Nominal**\nAnual 2025 (prel) en millones de USD\n130.320,6\n**Inflación Mensual**\nSeptiembre 2026\n…",
      "title": "BCE - Banco Central del Ecuador",
-     "url": "https://www.bce.fin.ec/"
+     "url": "https://www.bce.fin.ec/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.bce.fin.ec/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:20:31Z"
+     }
     },
     {
      "date": "",
@@ -522,7 +657,14 @@
      "rank": 2,
      "snippet": "BCEData – Portal WEB de Información Económica del Banco Central del Ecuador\nPortal WEB de Información Económica del Banco Central del Ecuador - BCEData Grid Portal WEB de Información Económica del Banco Central del Ecuador\nÍNDICE ESTADÍSTICO\nBanco Central del Ecuador\n...\n…",
      "title": "BCEData – Portal WEB de Información Económica del Banco ...",
-     "url": "https://contenido.bce.fin.ec/bcedata/"
+     "url": "https://contenido.bce.fin.ec/bcedata/",
+     "verificacion": {
+      "bytes": 221303,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:20:33Z",
+      "http": 200,
+      "sha256": "d9a1432ac19584528fbc74dc4d4179e4e9312041b44e8c6301729ffca1f537d2"
+     }
     },
     {
      "date": "",
@@ -564,7 +706,14 @@
      "rank": 1,
      "snippet": "Conjunto de datos - Datos Abiertos Ecuador\n# Catálogo de Datos Abiertos\nExplora más de 1595 conjuntos de datos de más de 98 instituciones.\n...\n- ODS\n...\n- Teléfono: 593-2 382-7000\n- www.presidencia.gob.ec",
      "title": "Catálogo de datos abiertos",
-     "url": "https://www.datosabiertos.gob.ec/dataset/"
+     "url": "https://www.datosabiertos.gob.ec/dataset/",
+     "verificacion": {
+      "bytes": 155288,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:20:45Z",
+      "http": 200,
+      "sha256": "ab79cd22a903690ffa080c0c9f1c9f2528852524d05bee1650f0c7da54c0f4b1"
+     }
     },
     {
      "date": "",
@@ -572,7 +721,14 @@
      "rank": 2,
      "snippet": "Bienvenida - Datos Abiertos Ecuador\n# Busca en nuestro catálogo de Datos Abiertos\n...\nmás de 1595 conjuntos de datos abiertos de 98 instituciones.\n...\n…\nAccede a visores, catalogos, geoportales, geoservicios y demás recursos de datos geográficos del Ecuador.",
      "title": "Datos Abiertos Ecuador: Bienvenida",
-     "url": "https://www.datosabiertos.gob.ec/"
+     "url": "https://www.datosabiertos.gob.ec/",
+     "verificacion": {
+      "bytes": 79548,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:20:55Z",
+      "http": 200,
+      "sha256": "94d879a3bfa358b4e9449bcfbad5f4a12e94c8ca07b397b9ac6a796990eee206"
+     }
     },
     {
      "date": "",

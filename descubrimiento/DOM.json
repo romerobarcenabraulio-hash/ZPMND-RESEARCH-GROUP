@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "|Constitución 2024|27 de octubre de 2024|Constitución de la República Dominicana 2024|Visualizar|\n...\n|Constitución 2010|26 de enero de 2010|Constitución de la República Dominicana 2010|Visualizar|",
      "title": "Evolución Constitucional",
-     "url": "https://consultoria.gov.do/consultas?tab=constituciones"
+     "url": "https://consultoria.gov.do/consultas?tab=constituciones",
+     "verificacion": {
+      "bytes": 14451,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:42Z",
+      "http": 200,
+      "sha256": "558f357d15210c9ff5f3ac54e72ec0c60313438c10e288f6e76ed277b4e0b1cb"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "Transparencia Poder Judicial\nEsta es una web oficial del Poder Judicial de la República Dominicana\n...\n# Leyes\nviernes, 8 de agosto de 2014\nLey 172-13, sobre Protección de Datos Personales.\n*(209 KB )*\ndomingo, 15 de diciembre de 2013",
      "title": "Leyes",
-     "url": "https://transparencia.poderjudicial.gob.do/transparencia/consultas/leyes/leyes_marco_legal"
+     "url": "https://transparencia.poderjudicial.gob.do/transparencia/consultas/leyes/leyes_marco_legal",
+     "verificacion": {
+      "bytes": 236025,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:44Z",
+      "http": 200,
+      "sha256": "a1aa1565cbf697e071cbcbac0d677ce1081ca10b8d08dae3c7ddc1b19a37dc68"
+     }
     },
     {
      "date": "",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "Transparencia Poder Judicial\nEsta es una web oficial del Poder Judicial de la República Dominicana\n- Escuela Nacional\n# Decretos\nSe pueden consultar los Decretos por uno o varios de los siguientes criterios de búsqueda: número de documento, título, año, mes",
      "title": "Transparencia Poder Judicial",
-     "url": "https://transparencia.poderjudicial.gob.do/consultas/decretos/decretos"
+     "url": "https://transparencia.poderjudicial.gob.do/consultas/decretos/decretos",
+     "verificacion": {
+      "bytes": 231817,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:45Z",
+      "http": 200,
+      "sha256": "7f0ebca7b0c4b021dd22259ec63344e759efe4dc45a925334174ed27d27eb57b"
+     }
     },
     {
      "date": "2022-02-25",
@@ -72,7 +93,14 @@
      "rank": 2,
      "snippet": "|Título|Tamaño|Publicación|Descargar|\n...\n|Decreto 403-2026 - Establece el marco nacional de interoperabilidad y gobernanza de datos de la adm.\npública|2.70 MB|14-07-2026|DescargarVista previa|",
      "title": "Decretos » Portal de Transparencia del Ministerio de Administración ...",
-     "url": "https://map.gob.do/transparencia/marco-legal-del-sistema-de-transparencia/decretos/"
+     "url": "https://map.gob.do/transparencia/marco-legal-del-sistema-de-transparencia/decretos/",
+     "verificacion": {
+      "bytes": 227043,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:47Z",
+      "http": 200,
+      "sha256": "8c85f7bfd47063b691777d155c81ec3433a77b5d10f85466e0677d42d714927a"
+     }
     },
     {
      "date": "2025-12-12",
@@ -114,7 +142,14 @@
      "rank": 1,
      "snippet": "# Normativas y documentos oficiales\nConsulte leyes, decretos presidenciales, gacetas oficiales, constituciones históricas y colabore con aportes en las consultas públicas legislativas.\nGaceta Oficial\nCentro de Consultas\n## Gaceta Oficial\nRepositorio histórico de publicaciones de normas oficiales",
      "title": "Consultoría Jurídica del Poder Ejecutivo | República Dominicana",
-     "url": "https://www.consultoria.gov.do/consultas?tab=gacetas"
+     "url": "https://www.consultoria.gov.do/consultas?tab=gacetas",
+     "verificacion": {
+      "bytes": 14451,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:49Z",
+      "http": 200,
+      "sha256": "6e46ecfe0373825810d9ae26c1c1d2618215fd7d1b231a9db89acfa0ac19b174"
+     }
     },
     {
      "date": "",
@@ -122,7 +157,14 @@
      "rank": 2,
      "snippet": "Gaceta Oficial\nLa Gaceta Oficial es una publicación oficial del Estado donde se publican las leyes, constituciones, tratados, decretos, reglamentos y otros actos de naturaleza jurídica que deben hacerse de conocimiento público.\n…\n...\nAv. Enrique Jiménez Moya, Esq.",
      "title": "Biblioteca del Congreso Nacional JPD",
-     "url": "https://bibliotecadelcongreso.gob.do/gaceta.htm"
+     "url": "https://bibliotecadelcongreso.gob.do/gaceta.htm",
+     "verificacion": {
+      "bytes": 22187,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:50Z",
+      "http": 200,
+      "sha256": "71fa54770d7366dcb6f942bf57450bc5786da47f90f9417eac307891cf5a1137"
+     }
     },
     {
      "date": "",
@@ -164,7 +206,12 @@
      "rank": 1,
      "snippet": "Consulta para acceder a las sentencias, expedientes incompletos, boletines Judiciales y otras decisiones emanadas de la Suprema Corte de Justicia a través de diversos criterios de búsqueda.\nEntre las opciones disponibles se encuentran Sala, Materia, Año y Mes.\n...\n## Procedimiento para obtener el se",
      "title": "Consulta de la Suprema Corte de Justicia - Poder Judicial",
-     "url": "https://poderjudicial.gob.do/consultas/consulta-de-la-suprema-corte-de-justicia/"
+     "url": "https://poderjudicial.gob.do/consultas/consulta-de-la-suprema-corte-de-justicia/",
+     "verificacion": {
+      "error": "robots.txt disallows https://poderjudicial.gob.do/consultas/consulta-de-la-suprema-corte-de-justicia/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:05:50Z"
+     }
     },
     {
      "date": "",
@@ -172,7 +219,12 @@
      "rank": 2,
      "snippet": "# Consultas\n### Consulta de la Suprema Corte de Justicia\nConsulta las sentencias, boletines judiciales, resoluciones y listado de Expedientes Incompletos de la SCJ.\n### Portal de Transparencia\nServicio permanente y actualizado de información pública del Poder Judicial.",
      "title": "Consultas - Poder Judicial",
-     "url": "https://poderjudicial.gob.do/consultas/"
+     "url": "https://poderjudicial.gob.do/consultas/",
+     "verificacion": {
+      "error": "robots.txt disallows https://poderjudicial.gob.do/consultas/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:05:50Z"
+     }
     },
     {
      "date": "",
@@ -214,7 +266,14 @@
      "rank": 1,
      "snippet": "## Leyes\n...\n###### Ley 47-25. Ley de Contrataciones Públicas.\n...\n…\n###### Ley 498-06 de Planificación e Inversión Pública.\n...\nEn este enlace podrás descargar el documento referente a la Ley 498-06 de Planificación e Inversión Pública.",
      "title": "Leyes",
-     "url": "https://www.dgcp.gob.do/transparencia/marco-legal/leyes"
+     "url": "https://www.dgcp.gob.do/transparencia/marco-legal/leyes",
+     "verificacion": {
+      "bytes": 131535,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:52Z",
+      "http": 200,
+      "sha256": "87d059ee2aa1e98612e95e3794e527649ce8711231c1d6b953353db88f5dcd65"
+     }
     },
     {
      "date": "",
@@ -222,7 +281,14 @@
      "rank": 2,
      "snippet": "Acceda a nuestro portal de consultas legales y legislativas para consultar leyes, decretos, gacetas oficiales, directorios jurídicos, históricos de consultores y participar en consultas públicas sobre nuevas propuestas normativas.\n### Consulta de legislación\nMotor de búsqueda avanzado para leyes, de",
      "title": "Normativas y documentos oficiales",
-     "url": "https://www.consultoria.gov.do/consultas?tab=inicio"
+     "url": "https://www.consultoria.gov.do/consultas?tab=inicio",
+     "verificacion": {
+      "bytes": 14451,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:52Z",
+      "http": 200,
+      "sha256": "b6df68b9f46725a32545e7ed3334629bf7281a9161136f799350ac74d0817204"
+     }
     },
     {
      "date": "2026-01-06",
@@ -264,7 +330,14 @@
      "rank": 1,
      "snippet": "leyes y reglamentos | Portal Único de Transparencia\n...\n# leyes y reglamentos - resultados de la busqueda\n### Consulta de Leyes, Decretos, Reglamentos y Documentos Jurídicos del Poder Ejecutivo\nenero 6, 2026 0\nIr a la Consulta Oficial",
      "title": "leyes y reglamentos | Portal Único de Transparencia",
-     "url": "https://transparencia.gob.do/search/leyes+y+reglamentos/"
+     "url": "https://transparencia.gob.do/search/leyes+y+reglamentos/",
+     "verificacion": {
+      "bytes": 286443,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:53Z",
+      "http": 200,
+      "sha256": "5dca383429bb2b3d686b6b65acb947e78db2cb76b1d279037e37d066410f919d"
+     }
     },
     {
      "date": "",
@@ -272,7 +345,14 @@
      "rank": 2,
      "snippet": "# Reglamentos y Resoluciones\nReglamentos, normas y resoluciones que completan el marco legal municipal dominicano, de 2004 a 2018.\n...\n**7** documentosde 2004 a 2017\n...\n## Esta es una biblioteca libre",
      "title": "Reglamentos y Resoluciones · Marco Legal | Biblioteca.do",
-     "url": "https://biblioteca.do/categoria/marco-legal/reglamentos-y-resoluciones/"
+     "url": "https://biblioteca.do/categoria/marco-legal/reglamentos-y-resoluciones/",
+     "verificacion": {
+      "bytes": 76985,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:55Z",
+      "http": 200,
+      "sha256": "40718b4bbd730b6a5e8770bc852227eab4c3b9460918d1b5c5060d3326388395"
+     }
     },
     {
      "date": "",
@@ -314,7 +394,14 @@
      "rank": 1,
      "snippet": "Mejora Regulatoria – Ministerio de Administración Pública\n...\n|Dec. núm.\n486-22 establece el Reglamento de Aplicación de la Ley núm.\n167-21|1.10 MB|DownloadPreview|\n...\nTel. 809-682-3298\n[email protected]",
      "title": "Mejora Regulatoria – Ministerio de Administración Pública",
-     "url": "https://map.gob.do/mejora-regulatoria/"
+     "url": "https://map.gob.do/mejora-regulatoria/",
+     "verificacion": {
+      "bytes": 168945,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:56Z",
+      "http": 200,
+      "sha256": "e5d70f081fd3027e30a24184093f2681bd7cdf40886b708a60a2f61438ff0285"
+     }
     },
     {
      "date": "2026-01-06",
@@ -322,7 +409,14 @@
      "rank": 2,
      "snippet": "### Consulta de Leyes, Decretos, Reglamentos y Documentos Jurídicos del Poder Ejecutivo\n...\nLa Comisión Nacional de Espectáculos Públicos y Radiofonía (CNEPR) es un organismo estatal dominicano encargado de regular, fiscalizar y promover el desarrollo del sector...\n…",
      "title": "leyes y reglamentos | Portal Único de Transparencia",
-     "url": "https://transparencia.gob.do/search/leyes+y+reglamentos/"
+     "url": "https://transparencia.gob.do/search/leyes+y+reglamentos/",
+     "verificacion": {
+      "bytes": 286443,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:56Z",
+      "http": 200,
+      "sha256": "5dca383429bb2b3d686b6b65acb947e78db2cb76b1d279037e37d066410f919d"
+     }
     },
     {
      "date": "2026-10-26",
@@ -364,7 +458,14 @@
      "rank": 1,
      "snippet": "OSMETICOS - DIRECTRICES DE BUENAS PRÁCTICAS DE MANUFACTURA.\n(BPM)|71.100.70|29|January 1, 1900|1RA.|CTE- 005-2016|April 6, 2016| |",
      "title": "Catálogo de Normas",
-     "url": "https://indocal.gob.do/publicaciones/catalogo-de-normas/"
+     "url": "https://indocal.gob.do/publicaciones/catalogo-de-normas/",
+     "verificacion": {
+      "bytes": 694149,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:58Z",
+      "http": 200,
+      "sha256": "17ff49542195296673e5a77ee0d7004b195bc5c468637ab031afb0d61442ae4c"
+     }
     },
     {
      "date": "",
@@ -372,7 +473,14 @@
      "rank": 2,
      "snippet": "##### Organizaciones\n269\n##### Certificaciones\n784\n...\n#### Oficina Gubernamental de Tecnologías de la Información y Comunicación (OGTIC)\nAv. 27 de Febrero #419 casi esquina Núñez de Cáceres, Santo Domingo,\nRepública Dominicana\n...\ninfo@ogtic.gob.do",
      "title": "Nortic OGTIC",
-     "url": "https://nortic.ogtic.gob.do/"
+     "url": "https://nortic.ogtic.gob.do/",
+     "verificacion": {
+      "bytes": 13133,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:05:59Z",
+      "http": 200,
+      "sha256": "fd780c4a93ed33de7da452a816877c2d1190c33eadf17900421af3b492b9044e"
+     }
     },
     {
      "date": "2025-03-01",
@@ -414,7 +522,14 @@
      "rank": 1,
      "snippet": "Reglamento para el Análisis y Diseño Sísmico de Estructuras.\nCódigo R-001, Decreto 201-11\n...\nCódigo R-004, Decreto 232-17\n...\nCódigo R-008, Decreto 572-10\n...\nCódigo R-007, Decreto 284-91",
      "title": "Descargar Reglamentos Técnicos",
-     "url": "https://mivhed.gob.do/catalogo-de-servicios/enlaces-y-recursos/direccion-de-normas-y-reglamentaciones/descargar-reglamentos-tecnicos/"
+     "url": "https://mivhed.gob.do/catalogo-de-servicios/enlaces-y-recursos/direccion-de-normas-y-reglamentaciones/descargar-reglamentos-tecnicos/",
+     "verificacion": {
+      "bytes": 1319957,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:06:01Z",
+      "http": 200,
+      "sha256": "84602a1b4da6053f6d05ec1b4f0d80c59379052bdf44e7c6109acd6d9a4f54f7"
+     }
     },
     {
      "date": "2026-09-10",
@@ -422,7 +537,14 @@
      "rank": 2,
      "snippet": "# Regulaciones\n## 2025\n|Titulo|Description|Versión|Tamaño|Contador|Fecha|Descargar|\n|--|--|--|--|--|--|--|\n...\n## Reglamentos",
      "title": "Regulaciones - Ministerio de Medio Ambiente y Recursos Naturales",
-     "url": "https://ambiente.gob.do/regulaciones/"
+     "url": "https://ambiente.gob.do/regulaciones/",
+     "verificacion": {
+      "bytes": 488526,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:06:04Z",
+      "http": 200,
+      "sha256": "3fac2cdb6e45a22697226995f4581a8f3bd38901a7713b390ab5d2b389c28f51"
+     }
     },
     {
      "date": "2023-12-18",
@@ -464,7 +586,14 @@
      "rank": 1,
      "snippet": "# Presentación sub-portal Almacén de Datos\nLa información incluida en el Datawarehouse recoge las estadísticas oficiales que producen los integrantes del Sistema Estadístico Nacional (SEN) y del ente coordinador que es la Oficina Nacional de Estadística (ONE).",
      "title": "Oficina Nacional de Estadística (ONE)",
-     "url": "https://estadisticas.one.gob.do/"
+     "url": "https://estadisticas.one.gob.do/",
+     "verificacion": {
+      "bytes": 5187,
+      "estado": "http",
+      "fecha": "2026-11-02T08:06:05Z",
+      "http": 403,
+      "sha256": "d0a45afa13f7c561db5598718ff8f9a88f1bd4c76a576450b3190489ea77e889"
+     }
     },
     {
      "date": "",
@@ -472,7 +601,14 @@
      "rank": 2,
      "snippet": "#### La Oficina Nacional de Estadística revela Puerto Plata es la segunda provincia con mayor cantidad de pescadores en el país\n##### Encuesta Nacional de Actividad Económica, ENAE 2025 Sector Información y comunicaciones",
      "title": "Oficina Nacional de Estadística (ONE)",
-     "url": "https://www.one.gob.do/"
+     "url": "https://www.one.gob.do/",
+     "verificacion": {
+      "bytes": 5187,
+      "estado": "http",
+      "fecha": "2026-11-02T08:06:06Z",
+      "http": 403,
+      "sha256": "b4ec865343f3d2bb9a6f46f0dc8c3d8e8d0f945760736946f674d2525a39556e"
+     }
     },
     {
      "date": "2023-06-22",
@@ -514,7 +650,14 @@
      "rank": 1,
      "snippet": "|** Producto Interno Bruto (variación % interanual) **|** Producto Interno Bruto (variación % interanual) **|\n...\n|** PIB anual (variación % interanual) **|** PIB anual (variación % interanual) **|",
      "title": "Banco Central de la República Dominicana",
-     "url": "https://bancentral.gov.do/"
+     "url": "https://bancentral.gov.do/",
+     "verificacion": {
+      "bytes": 149260,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:06:09Z",
+      "http": 200,
+      "sha256": "dda229081899ef5559e53416892a5b0e498fd7435fe16ac563c4c999bac258d6"
+     }
     },
     {
      "date": "",
@@ -522,7 +665,14 @@
      "rank": 2,
      "snippet": "…\n|Producto Interno Bruto (PIB).\n...\n|Producto Interno Bruto (PIB) per Cápita, RD$ y US$|1991-2025| |\n|Indicador Mensual de Actividad Económica (IMAE)|2007-2026| |",
      "title": "Estadísticas",
-     "url": "https://bancentral.gov.do/a/d/2533"
+     "url": "https://bancentral.gov.do/a/d/2533",
+     "verificacion": {
+      "bytes": 95072,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:06:10Z",
+      "http": 200,
+      "sha256": "b22a026de41de66b23095f0eccf8ecf9510b7cbfaa30ae1a0bc75090889c4939"
+     }
     },
     {
      "date": "2023-06-22",
@@ -564,7 +714,14 @@
      "rank": 1,
      "snippet": "Portal de Datos Abiertos del Gobierno\n# Portal Nacional de Datos Abiertos de la República Dominicana\nAccede a información pública, conjuntos de datos y recursos del gobierno\npara promover la transparencia y la innovación.\n...\n## Acerca de Datos Abiertos\n...\nTel: 809-685-7135",
      "title": "Portal Nacional de Datos Abiertos de la República Dominicana",
-     "url": "https://www.datos.gob.do/"
+     "url": "https://www.datos.gob.do/",
+     "verificacion": {
+      "bytes": 36237,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:06:21Z",
+      "http": 200,
+      "sha256": "67ad039db5a75449684cab57b971febe4d87dd770e979630955b8b3ceb1465cc"
+     }
     },
     {
      "date": "",
@@ -572,7 +729,14 @@
      "rank": 2,
      "snippet": "### PUBLICACIÓN EN PORTAL DE DATOS ABIERTOS\n**Datos.gob.do** es el portal oficial de datos abiertos del gobierno de la República Dominicana.\nEn él, las organizaciones públicas pueden gestionar y publicar sus conjuntos de datos en formatos abiertos.",
      "title": "Datos abiertos",
-     "url": "https://tesoreria.gob.do/transparencia/index.php/datos-abrierto"
+     "url": "https://tesoreria.gob.do/transparencia/index.php/datos-abrierto",
+     "verificacion": {
+      "bytes": 42325,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:06:24Z",
+      "http": 200,
+      "sha256": "1128451dfc465a4026f5982f84c56da3eb4c7acd7ea070d4bdffac996e8f16d7"
+     }
     },
     {
      "date": "",

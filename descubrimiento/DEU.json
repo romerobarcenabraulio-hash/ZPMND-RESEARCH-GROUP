@@ -87,7 +87,12 @@
      "rank": 2,
      "snippet": "Das Bundesministerium der Justiz und das Bundesamt für Justiz stellen für interessierte Bürgerinnen und Bürger\n**nahezu das gesamte aktuelle Bundesrecht kostenlos im Internet** bereit.\nDie Gesetze und Rechtsverordnungen können in ihrer jeweils geltenden Fassung\nabgerufen werden.",
      "title": "Gesetze im Internet",
-     "url": "https://www.gesetze-im-internet.de/"
+     "url": "https://www.gesetze-im-internet.de/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gesetze-im-internet.de/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:57:51Z"
+     }
     },
     {
      "date": "",
@@ -129,7 +134,14 @@
      "rank": 1,
      "snippet": "The Federal Gazette (Bundesanzeiger) is the central platform for pronouncements and announcements, as well as for legally relevant company news.\n...\nPublications in the Official Section are normally depicted in an accessible HTML file.\nIn addition, each individual publication contains a link to a no",
      "title": "Official Section of the Federal Gazette",
-     "url": "https://www.bundesanzeiger.de/pub/en/amtlicher-teil?0&year=2026&edition=BAnz+AT+21.10.2026"
+     "url": "https://www.bundesanzeiger.de/pub/en/amtlicher-teil?0&year=2026&edition=BAnz+AT+21.10.2026",
+     "verificacion": {
+      "bytes": 60673,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:57:53Z",
+      "http": 200,
+      "sha256": "0ae1f81f49fdb2fd66a75bb82a15ecc8efa38189d093ad424b5493a8d508e026"
+     }
     },
     {
      "date": "",
@@ -137,7 +149,14 @@
      "rank": 2,
      "snippet": "The Federal Gazette (Bundesanzeiger) is an official promulgation and announcement organ of the Federal Republic of Germany and is published by the Federal Ministry of Justice and Consumer Protection.\n...\nPublication in the Federal Gazette takes place Monday to Friday, with the exception of public ho",
      "title": "Search",
-     "url": "https://www.bundesanzeiger.de/pub/en/start?0&0=null"
+     "url": "https://www.bundesanzeiger.de/pub/en/start?0&0=null",
+     "verificacion": {
+      "bytes": 31859,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:57:54Z",
+      "http": 200,
+      "sha256": "e2cef7eee70f6b0f7901b6ebebca69c582f996cd24dc63840aafb99e1c87652f"
+     }
     },
     {
      "date": "2025-07-15",
@@ -179,7 +198,14 @@
      "rank": 1,
      "snippet": "# Recherchehinweise für die Entscheidungsdatenbank des Bundesgerichtshofs ab dem Jahr 2000\nIn dieser Datenbank finden Sie Entscheidungen des Bundesgerichtshofs ab dem 1. Januar 2000.\nNicht enthalten sind Entscheidungen ohne eine über den Gesetzestext hinausgehende Begründung.",
      "title": "Der Bundesgerichtshof - Entscheidungen : Recherchehinweise",
-     "url": "https://www.bundesgerichtshof.de/DE/Entscheidungen/HinweiseNutzung/hinweiseNutzung_node.html"
+     "url": "https://www.bundesgerichtshof.de/DE/Entscheidungen/HinweiseNutzung/hinweiseNutzung_node.html",
+     "verificacion": {
+      "bytes": 31073,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:58:31Z",
+      "http": 200,
+      "sha256": "8f9b60556819f5cf6d7ce60a41e2044fd76396442dc4a42e2ea66f2b4f1b3964"
+     }
     },
     {
      "date": "",
@@ -187,7 +213,14 @@
      "rank": 2,
      "snippet": "# Entscheidungen\n- Das Bundesverfassungsgericht veröffentlicht auf seinen Internetseiten alle wesentlichen Entscheidungen ab 1998 und einige ältere Entscheidungen.\n...\nDie Entscheidungen des Bundesverfassungsgerichts (BVerfGE) sind eine autorisierte Sammlung der wichtigen Entscheidungen des Bundesve",
      "title": "Bundesverfassungsgericht - Entscheidungen",
-     "url": "https://www.bundesverfassungsgericht.de/DE/Entscheidungen/entscheidungen_node.html"
+     "url": "https://www.bundesverfassungsgericht.de/DE/Entscheidungen/entscheidungen_node.html",
+     "verificacion": {
+      "bytes": 101851,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:59:04Z",
+      "http": 200,
+      "sha256": "58e01f43c666386bf9659c575a37d53d46b8bb3b8be8247c5f2f155678d236d8"
+     }
     },
     {
      "date": "",
@@ -229,7 +262,14 @@
      "rank": 1,
      "snippet": "dem Portal für Verkündungen und amtliche Veröffentlichungen des Landes Nordrhein-Westfalen sowie für Recherchen im Landesrecht\n## Landesrecht für Nordrhein-Westfalen\nHier finden Sie das geltende und historische Landesrecht, wie zum Beispiel Gesetze, Rechtsverordnungen und Verwaltungsvorschriften.",
      "title": "Willkommen im Service-Portal RECHT.NRW | RECHT.NRW.DE",
-     "url": "https://recht.nrw.de/"
+     "url": "https://recht.nrw.de/",
+     "verificacion": {
+      "bytes": 21951,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:59:05Z",
+      "http": 200,
+      "sha256": "dfd6bebad78f0d6e461b4ffa4f200a54253dde18d076ed0dcc7c5d82d9ba7def"
+     }
     },
     {
      "date": "",
@@ -237,7 +277,14 @@
      "rank": 2,
      "snippet": "Das Bundesministerium der Justiz und die Landesverwaltungen stellen interessierten Bürgerinnen und Bürgern Gesetzestexte im Internet zur Verfügung.\nDie Angebote sind teilweise kostenpflichtig.\n- Bund\n- Baden-Württemberg\n- Bayern\n...\n- Rheinland-Pfalz\n- Saarland\n- Sachsen\n...\n- Thüringen",
      "title": "Justizportal des Bundes und der Länder: Startseite",
-     "url": "https://justiz.de/onlinedienste/bundesundlandesrecht/index.php"
+     "url": "https://justiz.de/onlinedienste/bundesundlandesrecht/index.php",
+     "verificacion": {
+      "bytes": 57487,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:59:07Z",
+      "http": 200,
+      "sha256": "71b912cb94c2587e820df7af8548dfe0d72c3d748a5461d30685b0dadd589807"
+     }
     },
     {
      "date": "",
@@ -279,7 +326,14 @@
      "rank": 1,
      "snippet": "In dieser zum Teil auch auf deren Internetseiten einsehbaren Publikation finden Sie amtliche Bekanntmachungen der Gemeinde wie beispielsweise Bebauungspläne, Abgabesatzungen und sonstiges örtliches Satzungsrecht, ggf. auch Ausschreibungen und Beschlüsse des Gemeinderats.",
      "title": "Amtliche Bekanntmachungen der Gemeinde; Einsicht und Erhalt",
-     "url": "https://verwaltung.bund.de/leistungsverzeichnis/de/leistung/99094003140000/herausgeber/BY-25551/region/090000000000"
+     "url": "https://verwaltung.bund.de/leistungsverzeichnis/de/leistung/99094003140000/herausgeber/BY-25551/region/090000000000",
+     "verificacion": {
+      "bytes": 63081,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:59:09Z",
+      "http": 200,
+      "sha256": "e48e051fa7ae874d42c6bdd8fd1d8efad809df781f4e7b9546b1581a595f6be3"
+     }
     },
     {
      "date": "2026-10-08",
@@ -287,7 +341,14 @@
      "rank": 2,
      "snippet": "10-1 Main statutes of the City of Bonn | Bundesstadt Bonn\n...\n|Bylaws effective as of|Entered into force|Amended Provisions|\n...\nCity of Bonn\n...\n## Contact.\n- New window: Service portal (online services) (opens in a new tab)\n- Sitemap www.bonn.de",
      "title": "10-1 Main statutes of the City of Bonn",
-     "url": "https://www.bonn.de/service-bieten/stadtpolitik-ortsrecht/ortsrecht/rat-ausschuesse-allgemeines/hauptsatzung.php?loc=en"
+     "url": "https://www.bonn.de/service-bieten/stadtpolitik-ortsrecht/ortsrecht/rat-ausschuesse-allgemeines/hauptsatzung.php?loc=en",
+     "verificacion": {
+      "bytes": 109872,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:59:11Z",
+      "http": 200,
+      "sha256": "416cb419cda221887fa882f63dde1bcd75746fa7d12d0538e2a1c1152447cbc0"
+     }
     },
     {
      "date": "2024-04-25",
@@ -329,7 +390,12 @@
      "rank": 1,
      "snippet": "Das Bundesministerium der Justiz und das Bundesamt für Justiz stellen für interessierte Bürgerinnen und Bürger\n**nahezu das gesamte aktuelle Bundesrecht kostenlos im Internet** bereit.\nDie Gesetze und Rechtsverordnungen können in ihrer jeweils geltenden Fassung\nabgerufen werden.",
      "title": "Gesetze im Internet",
-     "url": "https://www.gesetze-im-internet.de/"
+     "url": "https://www.gesetze-im-internet.de/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gesetze-im-internet.de/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:59:11Z"
+     }
     },
     {
      "date": "",
@@ -337,7 +403,14 @@
      "rank": 2,
      "snippet": "**Landwirtschaft, BMVEL**\n(Federal Ministry of Consumer Protection, Food and Agriculture\n...\n1\n...\nFax: (49-228) 529-4262\n...\n**Bundesamt fuer Verbraucherschutz und Lebensmittelsicherheit, BVL**\n(Federal Office of Consumer Protection and Food Safety)",
      "title": "146107104.doc",
-     "url": "https://apps.fas.usda.gov/gainfiles/200408/146107104.doc"
+     "url": "https://apps.fas.usda.gov/gainfiles/200408/146107104.doc",
+     "verificacion": {
+      "bytes": 216576,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:59:12Z",
+      "http": 200,
+      "sha256": "5c0fc574dc31920f9fd770c4a84533c6a8e5a22981135600bb18b22ddec700e0"
+     }
     },
     {
      "date": "2021-10-07",
@@ -379,7 +452,14 @@
      "rank": 1,
      "snippet": "Finden Sie hier alle Regelwerke, die bei DIN Media verfügbar sind.\nKlappen Sie dazu die folgenden Listen auf oder nutzen Sie – zur gezielten Recherche – einfach unser Suchfenster oben.\n...\nAlle aufgeführten Regelwerke sind im DIN Media Webshop recherchierbar",
      "title": "Verfügbare Normen und Regelwerke im Überblick - DIN Media",
-     "url": "https://www.dinmedia.de/de/normen-produkte/normen-regelwerke"
+     "url": "https://www.dinmedia.de/de/normen-produkte/normen-regelwerke",
+     "verificacion": {
+      "bytes": 211818,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:59:14Z",
+      "http": 200,
+      "sha256": "cccf56a7c30076b8e3927cac143b2e5120bf3f424600dcde9d69627490558b48"
+     }
     },
     {
      "date": "",
@@ -387,7 +467,14 @@
      "rank": 2,
      "snippet": "Bei rund 35.000 Normen fällt es manchmal nicht ganz leicht, die für den eigenen Bedarf richtigen herauszufinden.\nUnterstützung bieten Informationsportale, die Normen und Standards zu bestimmten Themen bündeln.\n## Normungsportal Baugewerbe\n...\n## Normungsportal Gesundheit",
      "title": "Normungsportale bei DIN",
-     "url": "https://www.din.de/de/service-fuer-anwender/normungsportale"
+     "url": "https://www.din.de/de/service-fuer-anwender/normungsportale",
+     "verificacion": {
+      "bytes": 223064,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:59:17Z",
+      "http": 200,
+      "sha256": "a148b11ed40a45ddbd932229ddba976e1b7b4334bf30b2504ac420e1438121e8"
+     }
     },
     {
      "date": "",
@@ -429,7 +516,14 @@
      "rank": 1,
      "snippet": "Nachfolgend aufgeführte UN-Regelungen sind über einen externen Link am Ende des Beitrags abrufbar.\n- R 0 Einheitliche Vorschriften für die internationale Typgenehmigung für das Gesamtfahrzeug\n- R 1 Kfz-Scheinwerfer\n...\nBundesministerium für Verkehr",
      "title": "UN-Regelungen",
-     "url": "https://www.bmv.de/SharedDocs/DE/Artikel/StV/Strassenverkehr/un-ece-regelungen.html"
+     "url": "https://www.bmv.de/SharedDocs/DE/Artikel/StV/Strassenverkehr/un-ece-regelungen.html",
+     "verificacion": {
+      "bytes": 194586,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:59:19Z",
+      "http": 200,
+      "sha256": "e257e2ef13ae06f3289233ba11b748e5d61be4832027768e62424a570fcfba6d"
+     }
     },
     {
      "date": "",
@@ -437,7 +531,14 @@
      "rank": 2,
      "snippet": "# hEN-Liste\n|EN  997:2012/AC:2012 WC-Becken und WC-Anlagen mit angeformtem Geruchverschluss WC pans and WC suites with integral trap|EN  997:2003| | |2018/C 092/06|",
      "title": "hEN-Liste",
-     "url": "https://www.dibt.de/de/service/listen-und-verzeichnisse/hen-liste"
+     "url": "https://www.dibt.de/de/service/listen-und-verzeichnisse/hen-liste",
+     "verificacion": {
+      "bytes": 348144,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:59:21Z",
+      "http": 200,
+      "sha256": "73228e3dc544b84dfae14c551d009f1cd3a4dfeb9734f955cc84c43fb966f536"
+     }
     },
     {
      "date": "",
@@ -479,7 +580,14 @@
      "rank": 1,
      "snippet": "Startseite - Statistisches Bundesamt\n# Statistisches Bundesamt\n## Suche\n- 0,2 % Wirtschaftswachstum\n...\n### Anschrift\nStatistisches Bundesamt\nGustav-Stresemann-Ring 11\n65189 Wiesbaden",
      "title": "Startseite - Statistisches Bundesamt",
-     "url": "https://www.destatis.de/DE/Home/_inhalt.html"
+     "url": "https://www.destatis.de/DE/Home/_inhalt.html",
+     "verificacion": {
+      "bytes": 104851,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:59:52Z",
+      "http": 200,
+      "sha256": "a4634719c593f5b0afb63669cda35668a6ef34475c9e9b5325229cb41216eed9"
+     }
     },
     {
      "date": "2025-12-04",
@@ -487,7 +595,14 @@
      "rank": 2,
      "snippet": "Homepage - German Federal Statistical Office\n# Federal Statistical Office of Germany\n## Search\n...\n## Data and Analysis\n### Address\nStatistisches Bundesamt\nGustav-Stresemann-Ring 11\n65189 Wiesbaden",
      "title": "Homepage",
-     "url": "https://www.destatis.de/EN/Home/_node.htm"
+     "url": "https://www.destatis.de/EN/Home/_node.htm",
+     "verificacion": {
+      "bytes": 55079,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:00:22Z",
+      "http": 200,
+      "sha256": "3de8327b44a919901efc318749f6b57222031d21271ad336cd20811c1baf25af"
+     }
     },
     {
      "date": "2026-08-28",
@@ -529,7 +644,14 @@
      "rank": 1,
      "snippet": "Statistiken der Bundesbank | Statistiken der Bundesbank\n- Statistiken der Bundesbank\n...\nBundesbank SDMX Webservice\n...\n|statistiken.bundesbank.de\nStatistische Veröffentlichungstermine\nfür Tabellen, Zeitreihen und neueste Daten für ausgewählte Statistiken.",
      "title": "Statistiken der Bundesbank",
-     "url": "https://statistiken.bundesbank.de/statistiken-de"
+     "url": "https://statistiken.bundesbank.de/statistiken-de",
+     "verificacion": {
+      "bytes": 270649,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:00:24Z",
+      "http": 200,
+      "sha256": "e5cd9d8b7f95271c4c05f0246816f52ec3c9e2d2663c4a6c5921bb18cd3443fa"
+     }
     },
     {
      "date": "2025-03-31",
@@ -537,7 +659,14 @@
      "rank": 2,
      "snippet": "# Logo\nDie aktuellen makroökonomischen Statistiken und Echtzeitdaten der Deutschen Bundesbank werden in Form von Zeitreihen bereitgestellt.\n...\nstatistiken.bundesbank.de statistiken.bundesbank.de",
      "title": "Zeitreihen und Echtzeitdaten | Deutsche Bundesbank",
-     "url": "https://www.bundesbank.de/de/statistiken/zeitreihen-und-echtzeitdaten"
+     "url": "https://www.bundesbank.de/de/statistiken/zeitreihen-und-echtzeitdaten",
+     "verificacion": {
+      "bytes": 344054,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:00:26Z",
+      "http": 200,
+      "sha256": "1baf15ef1669d0d345c7e49d739c1d65ea6927e40f9fbaeaedc839445cdbbe98"
+     }
     },
     {
      "date": "2026-09-03",
@@ -579,7 +708,12 @@
      "rank": 1,
      "snippet": "GovData - Das Datenportal für Deutschland\n# Das Datenportal für Deutschland\nOpen Government: Verwaltungsdaten transparent, offen und frei nutzbar",
      "title": "GovData - Das Datenportal für Deutschland",
-     "url": "https://www.govdata.de/"
+     "url": "https://www.govdata.de/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.govdata.de/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:00:27Z"
+     }
     },
     {
      "date": "2026-10-26",
@@ -587,7 +721,14 @@
      "rank": 2,
      "snippet": "Open Data Portal |\nDaten\n# Daten\nIn der angezeigten Liste finden Sie alle Datensätze dieses Portals.\nDie Datensätze lassen sich mittels Volltextsuche sowie mit den unten aufgeführten Filtern durchsuchen.",
      "title": "Open Data Portal | Daten",
-     "url": "https://daten.bundeswirtschaftsministerium.de/ODP/Navigation/DE/Daten/daten.html"
+     "url": "https://daten.bundeswirtschaftsministerium.de/ODP/Navigation/DE/Daten/daten.html",
+     "verificacion": {
+      "bytes": 118413,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:00:29Z",
+      "http": 200,
+      "sha256": "7fa85e08af9b24fdbb5afd9d12fb5631deaade8e127cad51e9ec43333cbeae40"
+     }
     },
     {
      "date": "",

@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "Legislation.gov.uk\n...\n- Browse UK Legislation\n...\nLegislation.gov.uk carries most (but not all) types of legislation and their accompanying explanatory documents.\n...\nTo find an item of legislation you can browse by legislation type and category or use our advanced search to explore by title or key",
      "title": "Legislation.gov.uk",
-     "url": "https://www.legislation.gov.uk/"
+     "url": "https://www.legislation.gov.uk/",
+     "verificacion": {
+      "bytes": 18513,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:40:34Z",
+      "http": 200,
+      "sha256": "011dd7af190e12812aaa7d4c9959265a23c386dc19e247721a6879ae6253d653"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "# Search Results\n## Your search for English language has returned more than 200 results.\n...\n### Legislation by Type\n- Regulations originating from the EU (124855)\n- Regulations originating from the EU that are amended by the UK (3684)\n...\n- UK Statutory Instruments (109382)",
      "title": "www.legislation.gov.uk · legislationLegislation.gov.uk",
-     "url": "https://www.legislation.gov.uk/legislation"
+     "url": "https://www.legislation.gov.uk/legislation",
+     "verificacion": {
+      "bytes": 0,
+      "estado": "http",
+      "fecha": "2026-11-02T08:42:09Z",
+      "http": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     }
     },
     {
      "date": "",
@@ -64,7 +78,12 @@
      "rank": 1,
      "snippet": "Statutory Instruments - UK Parliament\n# Statutory Instruments\n...\n## Find a Statutory Instrument\nTotal results **7651** (page **1** of **383**), most recently laid first\n...\nIndividual Savings Account (Amendment) (No. 3) Regulations 2026",
      "title": "Statutory Instruments - UK Parliament",
-     "url": "https://statutoryinstruments.parliament.uk/"
+     "url": "https://statutoryinstruments.parliament.uk/",
+     "verificacion": {
+      "error": "robots.txt disallows https://statutoryinstruments.parliament.uk/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:42:09Z"
+     }
     },
     {
      "date": "",
@@ -72,7 +91,14 @@
      "rank": 2,
      "snippet": "## Narrow results by:\n### Legislation by Type\n- Regulations originating from the EU (124855)\n- Regulations originating from the EU that are amended by the UK (3684)\n- Regulations originating from the EU that are not amended by the UK (121171)\n- UK Statutory Instruments (109382)",
      "title": "www.legislation.gov.uk · legislationLegislation.gov.uk",
-     "url": "https://www.legislation.gov.uk/legislation"
+     "url": "https://www.legislation.gov.uk/legislation",
+     "verificacion": {
+      "bytes": 58859,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:11Z",
+      "http": 200,
+      "sha256": "a3e590cdd291838681c04fff64ffc02998f7fb590351c6b406bcf707cde6aff6"
+     }
     },
     {
      "date": "",
@@ -114,7 +140,14 @@
      "rank": 1,
      "snippet": "The London Gazette | The Gazette\n...\nThe Gazette is published by TSO (The Stationery Office) under the superintendence of His Majesty's Stationery Office (HMSO), part of The National Archives\n# The London Gazette\n- **Publication date**\n22 April 2025\n...\n999",
      "title": "The London Gazette",
-     "url": "https://www.thegazette.co.uk/London/issue/900371/supplement/999"
+     "url": "https://www.thegazette.co.uk/London/issue/900371/supplement/999",
+     "verificacion": {
+      "bytes": 25946,
+      "estado": "http",
+      "fecha": "2026-11-02T08:42:21Z",
+      "http": 400,
+      "sha256": "a583f1062b7785ab982fe41b7f77b1379fa455b4df59d1ecc98af61d54fc3afd"
+     }
     },
     {
      "date": "2026-10-26",
@@ -122,7 +155,14 @@
      "rank": 2,
      "snippet": "The Gazette is published by TSO (The Stationery Office) under the superintendence of His Majesty's Stationery Office (HMSO), part of The National Archives\nThe place for public notices and key updates\nBrowse public notices, publications, archives or place your notice.\n...\n## The Gazette Publications",
      "title": "Homepage | The Gazette",
-     "url": "https://www.thegazette.co.uk/"
+     "url": "https://www.thegazette.co.uk/",
+     "verificacion": {
+      "bytes": 53863,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:31Z",
+      "http": 200,
+      "sha256": "d498e10e186ac2d99f5a18f8fcb2ff9eeb0c2b8abb0636d81d21b6b57064d18d"
+     }
     },
     {
      "date": "2026-05-07",
@@ -164,7 +204,14 @@
      "rank": 1,
      "snippet": "The Supreme Court of the United Kingdom\n# The Supreme Court of the United Kingdom\nWe are the final court of appeal in the UK for civil cases, and for criminal cases from England, Wales and Northern Ireland.\nThe Supreme Court hears cases of the greatest public or constitutional importance affecting t",
      "title": "The Supreme Court of the United Kingdom",
-     "url": "https://supremecourt.uk/"
+     "url": "https://supremecourt.uk/",
+     "verificacion": {
+      "bytes": 681482,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:33Z",
+      "http": 200,
+      "sha256": "73cc637ead39fb051c5d3c7ce876df2d3f316884b93bf2d6aa75fbaa32dec1b7"
+     }
     },
     {
      "date": "2026-09-09",
@@ -172,7 +219,14 @@
      "rank": 2,
      "snippet": "## Coverage on Find Case Law\n...\n**Completeness** — Comprehensive coverage of all Supreme Court judgments since the court’s establishment.\n...\nAll substantive judgments.\n...\nUse the search box to find specific cases from the United Kingdom Supreme Court, or visit Advanced search to combine court fil",
      "title": "United Kingdom Supreme Court - Find Case Law - The National ...",
-     "url": "https://caselaw.nationalarchives.gov.uk/courts-and-tribunals/uksc"
+     "url": "https://caselaw.nationalarchives.gov.uk/courts-and-tribunals/uksc",
+     "verificacion": {
+      "bytes": 24514,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:35Z",
+      "http": 200,
+      "sha256": "7f23825fd9433d0fce339443671e64716cbd15a9674ef62a54667a6216de7a2d"
+     }
     },
     {
      "date": "2024-10-02",
@@ -214,7 +268,14 @@
      "rank": 1,
      "snippet": "Legislation.gov.uk\n# New Legislation\n## Official place of publication for newly enacted legislation\nStay up to date with newly enacted legislation for the UK, Scotland, Wales and Northern Ireland as it is published to this site, by selecting a date below or using the free of charge subscription feed",
      "title": "New Legislation",
-     "url": "https://www.legislation.gov.uk/new/nisr/2023-12-20"
+     "url": "https://www.legislation.gov.uk/new/nisr/2023-12-20",
+     "verificacion": {
+      "bytes": 19052,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:35Z",
+      "http": 200,
+      "sha256": "ebc8513c9249484eacd408f3bdb7b2215c950b87060fad6df2155ec2ff271edb"
+     }
     },
     {
      "date": "",
@@ -222,7 +283,14 @@
      "rank": 2,
      "snippet": "Legislation.gov.uk\n# New Legislation\n## Official place of publication for newly enacted legislation\nStay up to date with newly enacted legislation for the UK, Scotland, Wales and Northern Ireland as it is published to this site, by selecting a date below or using the free of charge subscription feed",
      "title": "New Legislation",
-     "url": "https://www.legislation.gov.uk/new/2023-05-12"
+     "url": "https://www.legislation.gov.uk/new/2023-05-12",
+     "verificacion": {
+      "bytes": 20377,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:40Z",
+      "http": 200,
+      "sha256": "39797d52aa6b85b2423c6c6e2ca1e274cf0956160ad381657fa6f195bcc313f0"
+     }
     },
     {
      "date": "",
@@ -264,7 +332,14 @@
      "rank": 1,
      "snippet": "# Local government legislation: byelaws\nGuidance for councils on making, amending and revoking byelaws.\n...\nThe Byelaws (Alternative Procedure) (England) Regulations 2016 introduce new arrangements for byelaws.\n...\nOr emailed to byelaws@communities.gov.uk.",
      "title": "Local government legislation: byelaws",
-     "url": "https://www.gov.uk/guidance/local-government-legislation-byelaws"
+     "url": "https://www.gov.uk/guidance/local-government-legislation-byelaws",
+     "verificacion": {
+      "bytes": 139244,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:42Z",
+      "http": 200,
+      "sha256": "1c459b49bb3e1ae4d0af545afba444faeb0b232ba3bf0da9710a16f4c1509595"
+     }
     },
     {
      "date": "",
@@ -272,7 +347,14 @@
      "rank": 2,
      "snippet": "Legislation.gov.uk\n# Search Results\n## Your search for English language Secondary Legislation with a subject starting with LOCAL GOVERNMENT, ENGLAND has returned more than 200 results.",
      "title": "Search Results",
-     "url": "https://www.legislation.gov.uk/secondary/local%20government,%20england"
+     "url": "https://www.legislation.gov.uk/secondary/local%20government,%20england",
+     "verificacion": {
+      "bytes": 28266,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:47Z",
+      "http": 200,
+      "sha256": "58bee3fbf81dbc2a4506d37c771536c22229687681d3aa130712fff9f065401f"
+     }
     },
     {
      "date": "2016-02-26",
@@ -314,7 +396,14 @@
      "rank": 1,
      "snippet": "# List of UK regulators\nThe list of regulators contains UK bodies that can be considered to have statutory regulatory functions.\n...\n|Regulator|Purpose|\n|--|--|\n|Animal and Plant Health Agency|Safeguards animal and plant health for the benefit of people, the environment and the economy.|",
      "title": "List of UK regulators - GOV.UK",
-     "url": "https://www.gov.uk/government/publications/list-of-uk-regulators"
+     "url": "https://www.gov.uk/government/publications/list-of-uk-regulators",
+     "verificacion": {
+      "bytes": 215197,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:47Z",
+      "http": 200,
+      "sha256": "5869bedab51deab618877ef24a05c645fb82e3f2d6833d3dfefca4d104173776"
+     }
     },
     {
      "date": "",
@@ -322,7 +411,14 @@
      "rank": 2,
      "snippet": "# OFFICIAL-SENSITIVE\n...\nAnimal and Plant Health Agency | Safeguards animal and plant health for the benefit of people, the environment and the economy.\n...\nEnvironment Agency | Protects and improves the environment in England by regulating certain activities that have the potential to harm the envi",
      "title": "https://assets.publishing.service.gov.uk/media/69c...",
-     "url": "https://assets.publishing.service.gov.uk/media/69c6b1eecdfd19de13d0f805/list-of-uk-regulatory-organisations.ods"
+     "url": "https://assets.publishing.service.gov.uk/media/69c6b1eecdfd19de13d0f805/list-of-uk-regulatory-organisations.ods",
+     "verificacion": {
+      "bytes": 33769,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:49Z",
+      "http": 200,
+      "sha256": "71c207a5ab5ae3e3ea8b48bd9a690001d5bf05700d8a593b81716c11cbb7ec25"
+     }
     },
     {
      "date": "",
@@ -364,7 +460,14 @@
      "rank": 1,
      "snippet": "2. Government\n...\nThis publication is available at https://www.gov.uk/government/publications/data-standards-authority-standards-catalogue/standards-catalogue\n...\nThe Data Standards Catalogue currently contains the standards listed below.\nWe also have a list of external standards catalogues.",
      "title": "Standards Catalogue",
-     "url": "https://www.gov.uk/government/publications/data-standards-authority-standards-catalogue/standards-catalogue"
+     "url": "https://www.gov.uk/government/publications/data-standards-authority-standards-catalogue/standards-catalogue",
+     "verificacion": {
+      "bytes": 129803,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:49Z",
+      "http": 200,
+      "sha256": "be8690cd6c28da55962bf93b18e5643bd091ff53f45756efc2d52481393e6199"
+     }
     },
     {
      "date": "",
@@ -372,7 +475,14 @@
      "rank": 2,
      "snippet": "BSI standards catalogue / British Standards Institution | Catalogue | National Library of Australia\n# BSI standards catalogue / British Standards Institution\n...\n- **Format:**\nJournal\n- **Description:**\n- London : The Institution, 1987-1994 - 8 v.\n; 30 cm.",
      "title": "BSI standards catalogue / British Standards Institution",
-     "url": "https://catalogue.nla.gov.au/catalog/367006"
+     "url": "https://catalogue.nla.gov.au/catalog/367006",
+     "verificacion": {
+      "bytes": 7517,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:51Z",
+      "http": 200,
+      "sha256": "ea146c1047034d5f326c6e2da7e5a36debe57355f57399b3d06c6f47f64f6f21"
+     }
     },
     {
      "date": "",
@@ -414,7 +524,14 @@
      "rank": 1,
      "snippet": "|Construction Product Regulations 2011|Construction Products – Regulation (EU) 2011/305 and Regulation (EU) 2024/3110| |\n...\n|Electrical Equipment (Safety) Regulations 2016|Low Voltage Directive 2014/35/EU| |\n…",
      "title": "Product regulations by sector and current approaches to ...",
-     "url": "https://www.gov.uk/government/publications/product-regulations-by-sector-and-current-approaches-to-product-marking-ukca-and-ce-regimes/product-regulations-by-sector-and-current-approaches-to-product-marking-ukca-and-ce-regimes"
+     "url": "https://www.gov.uk/government/publications/product-regulations-by-sector-and-current-approaches-to-product-marking-ukca-and-ce-regimes/product-regulations-by-sector-and-current-approaches-to-product-marking-ukca-and-ce-regimes",
+     "verificacion": {
+      "bytes": 248823,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:53Z",
+      "http": 200,
+      "sha256": "58f676d75860428950538cee8eb0589e658f7439446256a913fc28a534dc479f"
+     }
     },
     {
      "date": "2020-12-31",
@@ -422,7 +539,14 @@
      "rank": 2,
      "snippet": "…\n...\n…\n...\n- Pressure Equipment (Safety) Regulations 2016/1105\n- Pyrotechnic Articles (Safety) Regulations 2015/1553\n- Recreational Craft Regulations 2017/737\n...\n- Simple Pressure Vessels (Safety) Regulations 2016/1092",
      "title": "Placing manufactured products on the market in Great Britain",
-     "url": "https://www.gov.uk/guidance/placing-manufactured-goods-on-the-market-in-great-britain"
+     "url": "https://www.gov.uk/guidance/placing-manufactured-goods-on-the-market-in-great-britain",
+     "verificacion": {
+      "bytes": 134127,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:53Z",
+      "http": 200,
+      "sha256": "86c074be848a3e4c90cb561ba47ca23d7fa2f0db3027023cd340069820e6320d"
+     }
     },
     {
      "date": "2019-03-29",
@@ -464,7 +588,14 @@
      "rank": 1,
      "snippet": "Supplementary tables - Office for National Statistics\n...\nData and analysis from Census 2021\n1. Home\n2. Economy\n3. Gross Domestic Product (GDP)\n4. UK National Accounts, The Blue Book\n5. Supplementary tables\n...\nblue.book.coordination@ons.gov.uk",
      "title": "Supplementary tables",
-     "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/compendium/unitedkingdomnationalaccountsthebluebook/2026/supplementarytables"
+     "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/compendium/unitedkingdomnationalaccountsthebluebook/2026/supplementarytables",
+     "verificacion": {
+      "bytes": 34132,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:54Z",
+      "http": 200,
+      "sha256": "03053fc8b7f3b0947e7da61a92c99909713e9486f90229eec6dbe344f5be2145"
+     }
     },
     {
      "date": "",
@@ -472,7 +603,14 @@
      "rank": 2,
      "snippet": "Home\n- Office for National Statistics\nData and analysis from Census 2021\n# Main figures\n## Explore local statistics\nFind, compare and visualise statistics about places within the UK.",
      "title": "Office for National Statistics: Home",
-     "url": "https://www.ons.gov.uk/"
+     "url": "https://www.ons.gov.uk/",
+     "verificacion": {
+      "bytes": 81037,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:55Z",
+      "http": 200,
+      "sha256": "ad9f1ee850b9b399d73a976b50257144856590c72e6bb2869549249ff9c730b4"
+     }
     },
     {
      "date": "",
@@ -514,7 +652,14 @@
      "rank": 1,
      "snippet": "Statistics | Bank of England – the UK's central bank\n# Statistics\nWe publish statistics on the monetary and financial system which are relevant to our policy and regulatory responsibilities\n…\n...\nEach month we publish statistics on borrowing and deposits by households and businesses from banks and o",
      "title": "Statistics - Bank of England",
-     "url": "https://www.bankofengland.co.uk/statistics%20"
+     "url": "https://www.bankofengland.co.uk/statistics%20",
+     "verificacion": {
+      "bytes": 131183,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:57Z",
+      "http": 200,
+      "sha256": "fffac911ba02fb297cfcabccc756118cd69724c0e796f7c9d226c8c677e323dc"
+     }
     },
     {
      "date": "2026-10-30",
@@ -522,7 +667,14 @@
      "rank": 2,
      "snippet": "Credit union quarterly statistics - 2026 Q4 (to be published at 9.30am) | Bank of England – the UK's central bank\n...\n2. Statistics\n...\nThe credit union quarterly statistics are statistics aggregated from the quarterly (CQ) returns submitted by authorised credit unions in the United Kingdom.\nPublish",
      "title": "Credit union quarterly statistics - 2026 Q4 (to be published ...",
-     "url": "https://www.bankofengland.co.uk/statistics/credit-union/2026/2026-q4"
+     "url": "https://www.bankofengland.co.uk/statistics/credit-union/2026/2026-q4",
+     "verificacion": {
+      "bytes": 73302,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:58Z",
+      "http": 200,
+      "sha256": "ff92745fa892b4f0b098d57b66e547781dccca407ab4709ff124c471f7fc0565"
+     }
     },
     {
      "date": "",
@@ -564,7 +716,14 @@
      "rank": 1,
      "snippet": "National Data Library - The home of UK public data - data.gov.uk\n# The home of UK public data to inform decisions and build services\nFind out more about the National Data Library\n## Collections\nCurated collections of high-quality, accessible data",
      "title": "National Data Library - The home of UK public data - data.gov.uk",
-     "url": "https://www.data.gov.uk/"
+     "url": "https://www.data.gov.uk/",
+     "verificacion": {
+      "bytes": 19728,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:42:59Z",
+      "http": 200,
+      "sha256": "3afbce6450d777f5b28e8006a7e28fe6ebb59b51a18862eafa52b2c4e3f8a753"
+     }
     },
     {
      "date": "",
@@ -572,7 +731,14 @@
      "rank": 2,
      "snippet": "-\n...\nIn 2012, the United Kingdom amended the Freedom of Information Act to cover open data.\n...\nFurthermore, the government portal site, Data.gov.uk, has been in operation since 2010, providing over 9,000 data sets (Figure 2-1-2-14).",
      "title": "Efforts of Local Public Entities and Other Countries",
-     "url": "https://www.soumu.go.jp/menu_seisaku/ictseisaku/ictriyou/opendata/eng/opendata04_e.html"
+     "url": "https://www.soumu.go.jp/menu_seisaku/ictseisaku/ictriyou/opendata/eng/opendata04_e.html",
+     "verificacion": {
+      "bytes": 36827,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:43:00Z",
+      "http": 200,
+      "sha256": "6477f0720422130c70b6267b15140e900920226f2aefdbc331de7a2146f20056"
+     }
     },
     {
      "date": "2019-03-04",

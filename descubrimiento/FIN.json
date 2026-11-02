@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "# Finlex\nFinlex is a free, public online database of legal information owned by the Ministry of Justice\nUp-to-date legislation and the Statute Book of Finland.\n...\nFinlex is a free, public online database of legal information owned by the Ministry of Justice.",
      "title": "Finlex",
-     "url": "https://www.finlex.fi/en"
+     "url": "https://www.finlex.fi/en",
+     "verificacion": {
+      "bytes": 191584,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:30:50Z",
+      "http": 200,
+      "sha256": "8cc8bdb541868b658fdf16dc86f380d0583f8be4aafbfa7b5aee77d698792e4b"
+     }
     },
     {
      "date": "2026-10-30",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "Up-to-date legislation and the Statute Book of Finland\n...\nStatutes published in the Statute Book of Finland as text and as PDF facsimiles\n...\nFinlex is a free, public online database of legal information owned by the Ministry of Justice.\n...\nFinlex is maintained by the Legal Register Centre.",
      "title": "Legislation - Finlex",
-     "url": "https://www.finlex.fi/en/legislation"
+     "url": "https://www.finlex.fi/en/legislation",
+     "verificacion": {
+      "bytes": 209449,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:30:52Z",
+      "http": 200,
+      "sha256": "62c87782c2a555ac6009cb33df22b6aa9ff8439cb7bdbcac6b96a580e99ba6f5"
+     }
     },
     {
      "date": "2026-10-30",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "# Finlands författningssamling\nFörfattningarna i Finlands författningssamling både i textform och som tryckoptimerade pdf-filer\n...\n- ### 933/2026\n...\nFinlex är en offentlig och gratis webbtjänst för rättsligt material.",
      "title": "Finlands författningssamling - Finlex",
-     "url": "https://www.finlex.fi/sv/lagstiftning/forfattningssamling"
+     "url": "https://www.finlex.fi/sv/lagstiftning/forfattningssamling",
+     "verificacion": {
+      "bytes": 190293,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:30:53Z",
+      "http": 200,
+      "sha256": "641040c648c1fb5de8fb77a7c550578bd3d5511d896c22e88efff490399209dd"
+     }
     },
     {
      "date": "2026-10-27",
@@ -72,7 +93,14 @@
      "rank": 2,
      "snippet": "## Collections of regulations\nDecrees of ministries, and regulations, instructions, decisions and communications of other central government authorities published in the collections of regulations\n...\nFinlex is a free, public online database of legal information owned by the Ministry of Justice.\n...",
      "title": "Authorities",
-     "url": "https://www.finlex.fi/en/authorities"
+     "url": "https://www.finlex.fi/en/authorities",
+     "verificacion": {
+      "bytes": 152818,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:30:54Z",
+      "http": 200,
+      "sha256": "b8bf84f2b8148fb3f0f2f0fe5baaec18af9b43c7c28c515f4cd766e2eb9b61ce"
+     }
     },
     {
      "date": "2026-10-30",
@@ -114,7 +142,14 @@
      "rank": 1,
      "snippet": "# Finland Republic of Finland / Suomen Tasavalta / Republiken Finland\n## Legislative\n- OFFICIAL GAZETTE: Official Journal (external link) [Finnish] / Official Journal (external link) [Swedish]\n- PARLIAMENT: Suomen Eduskunta (external link)",
      "title": "Guide to Law Online: Finland | Law Library of Congress",
-     "url": "https://wwws.loc.gov/law/help/guide/nations/finland.php"
+     "url": "https://wwws.loc.gov/law/help/guide/nations/finland.php",
+     "verificacion": {
+      "bytes": 17,
+      "estado": "http",
+      "fecha": "2026-11-02T08:30:54Z",
+      "http": 429,
+      "sha256": "e395ad55dd18b1bf23944d00b156714accfae4ec834df208053575542dfae602"
+     }
     },
     {
      "date": "2026-03-25",
@@ -122,7 +157,14 @@
      "rank": 2,
      "snippet": "Government gazette of Finland\n- Officiella tidningen\n...\n|English|Virallinen lehti|Government gazette of Finland|- Officiella tidningen|\n...\nplace of publication\nHelsinki\ncountry of origin\nFinland\n...\nofficial website\nhttp://www.virallinenlehti.fi/",
      "title": "Virallinen lehti - Wikidata",
-     "url": "https://www.wikidata.org/wiki/Q7933628"
+     "url": "https://www.wikidata.org/wiki/Q7933628",
+     "verificacion": {
+      "bytes": 88242,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:30:54Z",
+      "http": 200,
+      "sha256": "5cc3d178d2841604900d230941f366517e34c9a630e35beb1a3b7bc2b4f0fcfb"
+     }
     },
     {
      "date": "2024-05-19",
@@ -164,7 +206,14 @@
      "rank": 1,
      "snippet": "# Supreme Court:\n...\n- Finlex\n## Precedents\nThe Supreme Court publishes the full texts of its rulings on its website.\nThe Supreme Court yearbooks include the title or description of the ruling in the table of contents for 1926–1979 and the full text from 1980 onwards",
      "title": "Supreme Court",
-     "url": "https://www.finlex.fi/en/case-law/supreme-court"
+     "url": "https://www.finlex.fi/en/case-law/supreme-court",
+     "verificacion": {
+      "bytes": 148151,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:30:55Z",
+      "http": 200,
+      "sha256": "1d2c8baf4aac5bbd18e176e6f1c5e081cb1c56da27a2afc922658d8ec803b865"
+     }
     },
     {
      "date": "2026-10-29",
@@ -172,7 +221,14 @@
      "rank": 2,
      "snippet": "- Finlex\n...\nKorkeimman oikeuden verkkosivuilla ja vuosikirjassa julkaistut ratkaisut kokoteksteinä vuodesta 1980 alkaen.\nVuosilta 1926–1979 näkyvissä on ainoastaan otsikko tai hakemistoteksti",
      "title": "Korkein Oikeus",
-     "url": "https://www.finlex.fi/fi/oikeuskaytanto/korkein-oikeus"
+     "url": "https://www.finlex.fi/fi/oikeuskaytanto/korkein-oikeus",
+     "verificacion": {
+      "bytes": 149698,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:30:56Z",
+      "http": 200,
+      "sha256": "559360f2c5c81d25998dbf7b7ebeff8b56f2e30d14c409c5adb06d21e5af32bb"
+     }
     },
     {
      "date": "2026-10-29",
@@ -214,7 +270,14 @@
      "rank": 1,
      "snippet": "2026 Updated legislation | Finlex\n# 2026\nUp-to-date statute texts including the amendments\n...\nStatutes published in the Statute Book of Finland as text and as PDF facsimiles\n...\nFinlex is a free, public online database of legal information owned by the Ministry of Justice.",
      "title": "2026 Updated legislation",
-     "url": "https://www.finlex.fi/en/legislation/2026"
+     "url": "https://www.finlex.fi/en/legislation/2026",
+     "verificacion": {
+      "bytes": 453419,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:30:57Z",
+      "http": 200,
+      "sha256": "d36bad9ddf592e4d1bd2b08830883017d9010e33c330a819dc0a50a9aff7a1d6"
+     }
     },
     {
      "date": "2026-10-30",
@@ -222,7 +285,14 @@
      "rank": 2,
      "snippet": "Up-to-date statute texts including the amendments\n- Finlex\n- Legislation\n...\n## Statute Book of Finland\nStatutes published in the Statute Book of Finland as text and as PDF facsimiles\n...\nFinlex is a free, public online database of legal information owned by the Ministry of Justice.",
      "title": "1872 Updated legislation",
-     "url": "https://www.finlex.fi/en/legislation/1872"
+     "url": "https://www.finlex.fi/en/legislation/1872",
+     "verificacion": {
+      "bytes": 183614,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:30:58Z",
+      "http": 200,
+      "sha256": "3ad177a1196a5e247619d8d140e94d692a9f3293f59a654947af49e8c044bd0b"
+     }
     },
     {
      "date": "2026-10-29",
@@ -264,7 +334,14 @@
      "rank": 1,
      "snippet": "# Rakennusvalvontaviranomaisen 30.10.2026 oikaisuvaatimus\nOlet Tampereen kaupungin virallisilla verkkosivuilla.",
      "title": "Rakennusvalvontaviranomaisen 30.10.2026 oikaisuvaatimus [Tampereen kaupunki]",
-     "url": "https://www.tampere.fi/ilmoitustaulu/rakennusvalvontaviranomaisen-30102026-oikaisuvaatimus"
+     "url": "https://www.tampere.fi/ilmoitustaulu/rakennusvalvontaviranomaisen-30102026-oikaisuvaatimus",
+     "verificacion": {
+      "bytes": 945277,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:00Z",
+      "http": 200,
+      "sha256": "2d6e8c18a4bf1c15276f47ac713d3204840e590da53e74270549312297ac6273"
+     }
     },
     {
      "date": "2026-03-12",
@@ -272,7 +349,14 @@
      "rank": 2,
      "snippet": "# Municipalities and local government\nFinland has around 300 municipalities.\nUnder the Constitution of Finland, municipalities are self-governing units and they have the right to tax their residents.\nThe state may only intervene in municipal activities in certain cases.",
      "title": "Municipalities and local government - Rights and ... - Suomi.fi",
-     "url": "https://www.suomi.fi/citizen/rights-and-participation-in-society/legal-and-consumer-protection/guide/how-finlands-public-administration-works/municipalities-and-local-government"
+     "url": "https://www.suomi.fi/citizen/rights-and-participation-in-society/legal-and-consumer-protection/guide/how-finlands-public-administration-works/municipalities-and-local-government",
+     "verificacion": {
+      "bytes": 302575,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:02Z",
+      "http": 200,
+      "sha256": "5b13cda722c54ba82f4ca9ec00579a352f8f8905a2a85923944ba979bc632b67"
+     }
     },
     {
      "date": "",
@@ -314,7 +398,14 @@
      "rank": 1,
      "snippet": "TRAFICOM/54045/03.04.05.00/2020 \n54 C/2021 M \n...\nIn this Regulation, the Finnish Transport and \nCommunications Agency (Traficom) specifies those provisions of the Act that concern disturbances in telecommunications services.\n...\nANNEX 2",
      "title": "Regulation on resilience of communications networks and ...",
-     "url": "https://www.traficom.fi/files/media/regulation/Memorandum_Regulation_on_resilience_of_communications_networks_and_services_and_of_synchronisation_of_communications_networks.pdf"
+     "url": "https://www.traficom.fi/files/media/regulation/Memorandum_Regulation_on_resilience_of_communications_networks_and_services_and_of_synchronisation_of_communications_networks.pdf",
+     "verificacion": {
+      "bytes": 1320281,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:06Z",
+      "http": 200,
+      "sha256": "3d13db4a1badd2bee4c1b786cad0e697d09ae40817f024372d3a8fbef7bb8471"
+     }
     },
     {
      "date": "2026-10-28",
@@ -322,7 +413,14 @@
      "rank": 2,
      "snippet": "Financial Supervisory Authority - www.finanssivalvonta.fi\n...\n# Financial Supervisory Authority\n## Search the FIN-FSA regulations and guidelines\nThe set of FIN-FSA regulations and guidelines includes both legally binding regulations and recommendatory guidelines issued by the FIN-FSA.\nSearch the FIN",
      "title": "Financial Supervisory Authority - www.finanssivalvonta.fi",
-     "url": "https://www.finanssivalvonta.fi/en/"
+     "url": "https://www.finanssivalvonta.fi/en/",
+     "verificacion": {
+      "bytes": 216698,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:08Z",
+      "http": 200,
+      "sha256": "c012d2e1ab433433377b636108ac12bf96624819560dd839fbdc18a1a0a0e55b"
+     }
     },
     {
      "date": "",
@@ -364,7 +462,14 @@
      "rank": 1,
      "snippet": "**• A wide range of standards:** SFS, SFS-Electrical, SFS-EN, ISO, IEC, BSI, ASTM, ASME, SAE, IEEE – international, European, and national standards.\n**• Finnish translations** of key standards and publications.",
      "title": "SFS Suomen Standardit. Buy & subscribe to standards. Buy ...",
-     "url": "https://store.sfs.fi/en/"
+     "url": "https://store.sfs.fi/en/",
+     "verificacion": {
+      "bytes": 19865,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:10Z",
+      "http": 200,
+      "sha256": "0784b623c16463377d2e3ce3d8a39abcc11d7337ebc7fe358ded4e0d32bbea31"
+     }
     },
     {
      "date": "",
@@ -372,7 +477,14 @@
      "rank": 2,
      "snippet": "The SFS Store serves as a standards database: you are free to browse reference details and price information of all our standards as well as their scopes and lists of content without registering.\n...\nUsing the query function, you can filter your search according to product group, publisher or time o",
      "title": "You can buy standards from the SFS Shop",
-     "url": "https://sfs.fi/en/buy-a-standard/"
+     "url": "https://sfs.fi/en/buy-a-standard/",
+     "verificacion": {
+      "bytes": 52023,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:12Z",
+      "http": 200,
+      "sha256": "e81aba4e6685a7730ab488ad3bc033c5f4e97d6477225a8248df60214b1f2990"
+     }
     },
     {
      "date": "",
@@ -414,7 +526,14 @@
      "rank": 1,
      "snippet": "# Technical operability in telecommunications\n## Regulations concerning technical operability\n...\nTraficom's regulations concern the quality of the service provided in communications networks and universal service, interoperability of communications networks and services, and technical characteristi",
      "title": "Technical operability in telecommunications | Traficom",
-     "url": "https://traficom.fi/en/communications-networks/technical-operability-telecommunications"
+     "url": "https://traficom.fi/en/communications-networks/technical-operability-telecommunications",
+     "verificacion": {
+      "bytes": 495823,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:14Z",
+      "http": 200,
+      "sha256": "6b07d9cd5ceabf4ac953d5402bf8467adea0ea43222460fc88a0f86775d9fdea"
+     }
     },
     {
      "date": "",
@@ -422,7 +541,12 @@
      "rank": 2,
      "snippet": "gliders \n...\nLand Use and Building Act \n(132/1999) \nThe essential technical \nrequirements for construction, which are also related to product requirements:\nhttps://ym.fi/rakentamismaaraykset  \nThe essential technical \nrequirements concerning \nproducts:",
      "title": "Taulukko kansallisista tuotevaatimuksista",
-     "url": "https://tukes.fi/documents/5470659/82244982/Tuotevaatimukset_taulukko_EN.pdf/8bd072b3-84c3-e40f-7a13-601b53f03e40/Tuotevaatimukset_taulukko_EN.pdf?t=1624869998957"
+     "url": "https://tukes.fi/documents/5470659/82244982/Tuotevaatimukset_taulukko_EN.pdf/8bd072b3-84c3-e40f-7a13-601b53f03e40/Tuotevaatimukset_taulukko_EN.pdf?t=1624869998957",
+     "verificacion": {
+      "error": "robots.txt disallows https://tukes.fi/documents/5470659/82244982/Tuotevaatimukset_taulukko_EN.pdf/8bd072b3-84c3-e40f-7a13-601b53f03e40/Tuotevaatimukset_taulukko_EN.pdf?t=1624869998957",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:31:15Z"
+     }
     },
     {
      "date": "",
@@ -456,7 +580,14 @@
      "rank": 1,
      "snippet": "Statistics Finland\n# Statistics Finland - Home\nKnowledge for the future — for the common good\n...\n## Statistical figures in the StatFin database\nThe StatFin database is a key source of Finnish statistical data.\nExtract the data you need into tables, view the data as charts or download the data for y",
      "title": "Statistics Finland",
-     "url": "https://stat.fi/en"
+     "url": "https://stat.fi/en",
+     "verificacion": {
+      "bytes": 551736,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:18Z",
+      "http": 200,
+      "sha256": "9f958b28b250ef6e834820d24266d4b8a34f293bb36395cdefd65aecac125d24"
+     }
     },
     {
      "date": "",
@@ -464,7 +595,14 @@
      "rank": 2,
      "snippet": "# Concepts and definitions\nOfficial Statistics of Finland (OSF):\nPreliminary population statistics [e-publication].\nISSN=2243-3627.\nHelsinki: Statistics Finland [referred: 30.10.2026].\nAccess method: http://stat.fi/til/vamuu/kas_en.html",
      "title": "Statistics by topic - Preliminary population statistics",
-     "url": "https://stat.fi/til/vamuu/kas_en.html"
+     "url": "https://stat.fi/til/vamuu/kas_en.html",
+     "verificacion": {
+      "bytes": 1145700,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:19Z",
+      "http": 200,
+      "sha256": "bbe4794203964fd3dd803e5253df38b96d1a6b6608130eda7328a9b76ae2c362"
+     }
     },
     {
      "date": "",
@@ -506,7 +644,14 @@
      "rank": 1,
      "snippet": "# Statistics\nThe Bank of Finland attends to users’ information needs by actively developing statistics and ensuring their up-to-dateness and coverage in a changing operating environment.\n...\n### Statistical news\n‘Statistical news’ is published regularly for each subject area.\nThe ‘Publication calend",
      "title": "Statistics - suomenpankki.fi",
-     "url": "https://www.suomenpankki.fi/en/Statistics/"
+     "url": "https://www.suomenpankki.fi/en/Statistics/",
+     "verificacion": {
+      "bytes": 143620,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:21Z",
+      "http": 200,
+      "sha256": "e30f5891045f5e3b9807b3da46c9d6e4c5453bfe79bf191f76e702258e0f6f02"
+     }
     },
     {
      "date": "",
@@ -514,7 +659,14 @@
      "rank": 2,
      "snippet": "The Bank of Finland collects statistical data from different reporting institutions.\nThe data collected are used to carry out the tasks of the European System of Central Banks (ESCB) and the Bank of Finland, to meet the statistical requirements of international organizations and for national needs.\n",
      "title": "To the reporter",
-     "url": "https://www.suomenpankki.fi/en/statistics/to-the-reporter/"
+     "url": "https://www.suomenpankki.fi/en/statistics/to-the-reporter/",
+     "verificacion": {
+      "bytes": 132066,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:22Z",
+      "http": 200,
+      "sha256": "1a1be22eb3da7a8291ff7b801789e0cdaa191e60f9d85afcec09d6c0af78c5d4"
+     }
     },
     {
      "date": "2026-03-04",
@@ -556,7 +708,14 @@
      "rank": 1,
      "snippet": "# Suomi.fi Open Data e-service\n- E-services\nYou can add, edit, search and view open data files.\nThe service acts as a national open data portal.\nThe service also contains interoperability tools, that is data suitable for information management in public administration and management by information.\n",
      "title": "Suomi.fi Open Data e-service - Digital and Population Data ...",
-     "url": "https://www.suomi.fi/services/eservice/suomi-fi-open-data-e-service-digital-and-population-data-services-agency/6180d972-a4b3-4812-a924-b35a1b377ad2"
+     "url": "https://www.suomi.fi/services/eservice/suomi-fi-open-data-e-service-digital-and-population-data-services-agency/6180d972-a4b3-4812-a924-b35a1b377ad2",
+     "verificacion": {
+      "bytes": 195784,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:23Z",
+      "http": 200,
+      "sha256": "2de15010db741e74bc0f5366c804b7ca2910c79aaa1dfa561476dc66554f0ced"
+     }
     },
     {
      "date": "",
@@ -564,7 +723,14 @@
      "rank": 2,
      "snippet": "# Suomi.fi-öppnadata\n...\n## Alla finska öppna data på en portal\nSuomi.fi-öppnadata är en portal och datakatalog för öppna data som produceras av Myndigheten för digitalisering och befolkningsdata.",
      "title": "Suomi.fi-öppnadata - Suomi.fi för tjänsteutvecklare",
-     "url": "https://kehittajille.suomi.fi/tjanster/suomi-fi-oppnadata"
+     "url": "https://kehittajille.suomi.fi/tjanster/suomi-fi-oppnadata",
+     "verificacion": {
+      "bytes": 243761,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:31:25Z",
+      "http": 200,
+      "sha256": "1af017b005be63944975e6c50200fbe455177c05d4e01b49ccfc1e59dfbf4a9d"
+     }
     },
     {
      "date": "",

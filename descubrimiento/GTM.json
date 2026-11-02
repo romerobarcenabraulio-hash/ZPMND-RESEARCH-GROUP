@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "# Legislación\nEn esta página encontrará todas las leyes que rigen al Ministerio de Gobernación, disponibles para su uso o divulgación.\nPresione sobre el título que le interese en el siguiente listado.\n...\nTel. 2413-8888\nConstitución Política de la República de Guatemala (1985)",
      "title": "Legislación",
-     "url": "https://mingob.gob.gt/legislacion/"
+     "url": "https://mingob.gob.gt/legislacion/",
+     "verificacion": {
+      "bytes": 364044,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:52:57Z",
+      "http": 200,
+      "sha256": "fd22c9be73ba75d551ad53382a2df8ee8e7790f059648599b792e5b4ff8f6b8e"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "LEYES Y REGLAMENTOS – Contraloria General De Cuentas\n# LEYES Y REGLAMENTOS\nCONSTITUCIÓN POLÍTICA DE LA REPÚBLICA DE GUATEMALA 1985.pdf\n...\n…\n...\nContraloría General de Cuentas | 7a.",
      "title": "LEYES Y REGLAMENTOS – Contraloria General De Cuentas",
-     "url": "https://www.contraloria.gob.gt/index.php/lesyes-y-reglamentos/"
+     "url": "https://www.contraloria.gob.gt/index.php/lesyes-y-reglamentos/",
+     "verificacion": {
+      "bytes": 5644,
+      "estado": "http",
+      "fecha": "2026-11-02T08:52:58Z",
+      "http": 403,
+      "sha256": "8c41a5b01557b25f0f2cb4aa4b14f8e9cc3b3ad8c1010849b87f84b60c971ed0"
+     }
     },
     {
      "date": "2018-12-01",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "Documentos:\n...\n|1|Decreto 90-2005 - Ley del Registro Nacional de las Personas.|176.84 KB|Descargar|\n|2|Decreto 14-2006, Reformas a la Ley del Registro Nacional de las Personas.|21.02 KB|Descargar|",
      "title": "Marco normativo - Decretos | RENAP",
-     "url": "https://www.renap.gob.gt/informacion-publica/marco-normativo-decretos"
+     "url": "https://www.renap.gob.gt/informacion-publica/marco-normativo-decretos",
+     "verificacion": {
+      "bytes": 44204,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:09Z",
+      "http": 200,
+      "sha256": "83b51053e549558d52c38127e2fb6cc472deaf2424a9f052e7434b84519a5ae6"
+     }
     },
     {
      "date": "",
@@ -72,7 +93,14 @@
      "rank": 2,
      "snippet": "## Decretos\n...\n|--|--|--|\n|Decreto Ley 114-97|Ley del Organismo Ejecutivo| |\n...\n|Decreto No. 7-2020|Ley de Protección para el Cultivo del Plátano y el Banano en la República de Guatemala| |",
      "title": "Decretos - Normativas",
-     "url": "https://apps.maga.gob.gt/normativas/Normativas?page=2&sortOrder=Resumen_desc&categoriaId=5"
+     "url": "https://apps.maga.gob.gt/normativas/Normativas?page=2&sortOrder=Resumen_desc&categoriaId=5",
+     "verificacion": {
+      "bytes": 18385,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:17Z",
+      "http": 200,
+      "sha256": "a6a368aa195aac8838f947962a9a6167aff9f083e5225473995b331ae1e2bcc0"
+     }
     },
     {
      "date": "",
@@ -114,7 +142,14 @@
      "rank": 1,
      "snippet": "# Guatemala Republic of Guatemala / República de Guatemala\n## Legislative\n- OFFICIAL GAZETTE: Diario de Centro America / El Guatemalteco, Gaceta Oficial\n- PARLIAMENT: Congreso de la República (external link)",
      "title": "Guide to Law Online: Guatemala | Law Library of Congress",
-     "url": "https://wwws.loc.gov/law/help/guide/nations/guatemala.php"
+     "url": "https://wwws.loc.gov/law/help/guide/nations/guatemala.php",
+     "verificacion": {
+      "bytes": 22497,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:17Z",
+      "http": 200,
+      "sha256": "c81d4510ade6e21126659dc5cf85e56fe3f996d61a75c24c39f70d3ec0a06366"
+     }
     },
     {
      "date": "2026-10-21",
@@ -122,7 +157,12 @@
      "rank": 2,
      "snippet": "The Congress often does not disclose last-minute amendments before congressional decisions.\nFinal versions of laws, once signed by the President, must be published in the official gazette before entering into force.\nCongress publishes scanned versions of all laws that are published in the official g",
      "title": "2026 Investment Climate Statements: Guatemala",
-     "url": "https://www.state.gov/reports/2026-investment-climate-statements/guatemala/"
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/guatemala/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/guatemala/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:53:17Z"
+     }
     },
     {
      "date": "",
@@ -164,7 +204,14 @@
      "rank": 1,
      "snippet": "## CONSULTA DE EXPEDIENTES ARCHIVADOS\n| |###### Nota: Ingrese sin espacios el número de expediente, separando con un guión el año.\nEjemplo: 3296-2014.\nTambién puede ingresar un año determinado para ver todos los expedientes de ese año.",
      "title": "consulta de expedientes archivados",
-     "url": "https://jurisprudencia.cc.gob.gt/ConsArch/WebForms/Consulta/wfConsultaExp.aspx"
+     "url": "https://jurisprudencia.cc.gob.gt/ConsArch/WebForms/Consulta/wfConsultaExp.aspx",
+     "verificacion": {
+      "bytes": 5402,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:19Z",
+      "http": 200,
+      "sha256": "c34b51d9b207213034cdd0f25311f8fe8c048a3981d40c3d156afb751b53dc6d"
+     }
     },
     {
      "date": "",
@@ -172,7 +219,14 @@
      "rank": 2,
      "snippet": "##### Resoluciones de interés\n...\n|6175-2023 Asistencia para la debida ejecución de sentencia estimativa de amparo - Anulación de partido político \"Movimiento Semilla\" por juez del orden penal|Debida ejecución de sentencia| | |Atributos|Visualizar|\n...\n…",
      "title": "PORTAL | Jurisprudencia",
-     "url": "https://jurisprudencia.cc.gob.gt/ptmp/ResolucionInteres.aspx"
+     "url": "https://jurisprudencia.cc.gob.gt/ptmp/ResolucionInteres.aspx",
+     "verificacion": {
+      "bytes": 125827,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:20Z",
+      "http": 200,
+      "sha256": "04dbc18c79cbcc32c71f5a84e7852d0f69535156bd6229f1f1a709bae4f669f0"
+     }
     },
     {
      "date": "",
@@ -206,7 +260,14 @@
      "rank": 1,
      "snippet": "# Legislación\nEn esta página encontrará todas las leyes que rigen al Ministerio de Gobernación, disponibles para su uso o divulgación.\nPresione sobre el título que le interese en el siguiente listado.\nPara cualquier duda o consulta visítenos en:\n...\nTel. 2413-8888",
      "title": "Legislación",
-     "url": "https://mingob.gob.gt/legislacion/"
+     "url": "https://mingob.gob.gt/legislacion/",
+     "verificacion": {
+      "bytes": 364044,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:21Z",
+      "http": 200,
+      "sha256": "fd22c9be73ba75d551ad53382a2df8ee8e7790f059648599b792e5b4ff8f6b8e"
+     }
     },
     {
      "date": "",
@@ -214,7 +275,14 @@
      "rank": 2,
      "snippet": "LEYES Y REGLAMENTOS – Contraloria General De Cuentas\n# LEYES Y REGLAMENTOS\n...\nLEY ORGÁNICA DE LA CONTRALORÍA GENERAL DE CUENTAS, DECRETO 31-2002 DEL CONGRESO DE LA REPÚBLICA.pdf",
      "title": "LEYES Y REGLAMENTOS – Contraloria General De Cuentas",
-     "url": "https://www.contraloria.gob.gt/index.php/lesyes-y-reglamentos/"
+     "url": "https://www.contraloria.gob.gt/index.php/lesyes-y-reglamentos/",
+     "verificacion": {
+      "bytes": 5644,
+      "estado": "http",
+      "fecha": "2026-11-02T08:53:21Z",
+      "http": 403,
+      "sha256": "a7d713957f5c54203cd2bf6047d457e256497cff746547b8f7c408c9197ce4bf"
+     }
     },
     {
      "date": "",
@@ -256,7 +324,14 @@
      "rank": 1,
      "snippet": "- Muni San Juan LL Reglamento y Manual de procedimiento para la administración, operación y mantenimiento del servicio de agua potable\n- Muni San Juan LL Reglamento para el Uso de calles y avenidas del municipio de San Juan\n...\n- Reglamento de Agua Potable 06-12-2022\n...\n## Contacto",
      "title": "Reglamentos y Ordenanzas - AMSCLAE",
-     "url": "https://www.amsclae.gob.gt/reglamentos-y-ordenanzas/"
+     "url": "https://www.amsclae.gob.gt/reglamentos-y-ordenanzas/",
+     "verificacion": {
+      "bytes": 120106,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:22Z",
+      "http": 200,
+      "sha256": "dda7f2a058d02aae6ecd428155b2eaf67a21c105e2ed3ac304a22ef3e66f2991"
+     }
     },
     {
      "date": "",
@@ -264,7 +339,14 @@
      "rank": 2,
      "snippet": "**Decretos:**\n**5-2026**\nMartes, 24 de febrero de 2026\nReforma al Decreto Número 12-2002 del Congreso de la República, Código Municipal\n...\nReformas al Decreto Número 12-2002 del Congreso de la República, Código Municipal",
      "title": "Listado Decreto - Congreso de la República de Guatemala",
-     "url": "https://www.congreso.gob.gt/buscador_decretos/decreto"
+     "url": "https://www.congreso.gob.gt/buscador_decretos/decreto",
+     "verificacion": {
+      "bytes": 2905130,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:24Z",
+      "http": 200,
+      "sha256": "d2e15dd6e7a1b8870f1aabebc96c69b8d8d0238b728ea8aaaa20556109216e65"
+     }
     },
     {
      "date": "",
@@ -306,7 +388,12 @@
      "rank": 1,
      "snippet": "The Así Se Hace website run by the Ministry of Economy publicizes:\n- laws,\n- procedures, and\n- registration requirements applicable to investors\nincluding:\n- fees and documental requirements,\n...\nGuatemala has a registry for intellectual property.",
      "title": "2025 Investment Climate Statements: Guatemala - State Department",
-     "url": "https://www.state.gov/reports/2025-investment-climate-statements/guatemala"
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/guatemala",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2025-investment-climate-statements/guatemala",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:53:24Z"
+     }
     },
     {
      "date": "",
@@ -314,7 +401,14 @@
      "rank": 2,
      "snippet": "In general, the Ministry of \n...\nThe Plant and Animal Health Directorate of VISAR regulates pesticides and veterinary drugs.\nGuatemala rules maximum residue levels (MRLs) through Ministerial Decree 343-2019, which spells out that local tolerance levels of pesticides in basic grains, fruits, and vege",
      "title": "Report Name: FAIRS Country Report Annual",
-     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS+Country+Report+Annual_Guatemala+City_Guatemala_GT2025-0010.pdf"
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS+Country+Report+Annual_Guatemala+City_Guatemala_GT2025-0010.pdf",
+     "verificacion": {
+      "bytes": 1630715,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:25Z",
+      "http": 200,
+      "sha256": "4f066ca28e4a58f4e722bcceeb3be7bb9120465a2ae8a91a9e5b877d9a3127f8"
+     }
     },
     {
      "date": "2024-09-18",
@@ -356,7 +450,14 @@
      "rank": 1,
      "snippet": "Normas Guatemaltecas Obligatorias (NGO)\n...\nIndustrias Pesqueras\n...\nEnsayos de Materiales\nTuberías y bridas, válvulas y accesorios y órganos diversos de distribución de fluidos y de riego\n...\nNormalización, Metrología y Ciencias Sociales",
      "title": "Normas Guatemaltecas Obligatorias (NGO)",
-     "url": "https://cretec.org.gt/normas-guatemaltecas-obligatorias-ngo/"
+     "url": "https://cretec.org.gt/normas-guatemaltecas-obligatorias-ngo/",
+     "verificacion": {
+      "bytes": 5549,
+      "estado": "http",
+      "fecha": "2026-11-02T08:53:26Z",
+      "http": 403,
+      "sha256": "78014eadb514492f631ac95a96f589553874e938f5c673cc58846d534777b4b5"
+     }
     },
     {
      "date": "",
@@ -364,7 +465,14 @@
      "rank": 2,
      "snippet": "NTG ISO 14046 \nGestión ambiental, Huella del Agua – Principios, requisitos y directrices \n2021-04-09 \n...\nGestión de la calidad--Directrices para la gestión de la calidad en proyectos.\n...\nNTG ISO 5667-5 \n...\n…",
      "title": "catalogo-normas-coguanor.pdf - DSNC",
-     "url": "https://tramites.dsnc.gob.gt/catalogo-normas-coguanor.pdf"
+     "url": "https://tramites.dsnc.gob.gt/catalogo-normas-coguanor.pdf",
+     "verificacion": {
+      "bytes": 2347394,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:27Z",
+      "http": 200,
+      "sha256": "49fd913dd360c30bfd728a9d5dbcfba4c93afb9f2186245b8b41ee6f8ece60ea"
+     }
     },
     {
      "date": "2022-10-20",
@@ -406,7 +514,14 @@
      "rank": 1,
      "snippet": "### RTCA\n...\n|Resolución COMIECO 339-2014 (182.90 kB)Aprobación de reglamento técnico centroamericano, RTCA 11.03.42.07, Buenas practicas de manufactura para la industria Farmacéutica.| | | | |\n...\n…",
      "title": "R.T.C.A.",
-     "url": "https://medicamentos.mspas.gob.gt/index.php/legislacion-vigente/resoluciones-comieco"
+     "url": "https://medicamentos.mspas.gob.gt/index.php/legislacion-vigente/resoluciones-comieco",
+     "verificacion": {
+      "bytes": 104548,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:29Z",
+      "http": 200,
+      "sha256": "05ac11c2084e716c238bef706a0d9fbf3b93f698beb74803b1df703345aa7238"
+     }
     },
     {
      "date": "2023-03-15",
@@ -414,7 +529,14 @@
      "rank": 2,
      "snippet": "Normas técnicas – Departamento de Tránsito de la Policía Nacional Civil\n# Normas técnicas\nSon instrumentos técnicos los cuales contienen especificaciones que deben cumplir los aparatos tecnológicos para poder ser operados en Guatemala.",
      "title": "Normas técnicas",
-     "url": "https://transito.gob.gt/reglamentos-tecnicos/"
+     "url": "https://transito.gob.gt/reglamentos-tecnicos/",
+     "verificacion": {
+      "bytes": 81853,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:31Z",
+      "http": 200,
+      "sha256": "45a7b8fb0daf11f0d0eb3349fba4824f8c5e649c5d0a072313a03e9bb1329244"
+     }
     },
     {
      "date": "2026-10-31",
@@ -456,7 +578,14 @@
      "rank": 1,
      "snippet": "Bases de Datos – Instituto Nacional de Estadística\ninfo@ine.gob.gt +502 2315 4700\n## Bases de Datos\n*\nEn este apartado se puede tener acceso a las bases de datos de estadísticas continuas y encuestas de hogares.\n...\n- *\n* info@ine.gob.gt",
      "title": "www.ine.gob.gt › bases-de-datosBases de Datos – Instituto Nacional de Estadística",
-     "url": "https://www.ine.gob.gt/bases-de-datos/"
+     "url": "https://www.ine.gob.gt/bases-de-datos/",
+     "verificacion": {
+      "bytes": 50824,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:33Z",
+      "http": 200,
+      "sha256": "dc92630e7f87b4b159789bca41d200aef251505e8d320ee3302ff59be5226296"
+     }
     },
     {
      "date": "",
@@ -464,7 +593,12 @@
      "rank": 2,
      "snippet": "Instituto Nacional de Estadística – Instituto Nacional de Estadística Guatemala\ninfo@ine.gob.gt +502 2315 4700\n...\n### Otras Estadísticas\nAccede a las diversas estadísticas: nacimientos, defunciones, entre otras\n…\n### SEN\nPortal del Sistema Estadistico Nacional",
      "title": "Instituto Nacional de Estadística – Instituto Nacional de ...",
-     "url": "https://www.ine.gob.gt/"
+     "url": "https://www.ine.gob.gt/",
+     "verificacion": {
+      "error": "host not in allowlist: validate.perfdrive.com",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:53:34Z"
+     }
     },
     {
      "date": "",
@@ -506,7 +640,14 @@
      "rank": 1,
      "snippet": "¿Dónde puedo consultar las estadísticas económicas?\nLas estadísticas económicas pueden consultarse en la sección de Estadísticas Macroeconómicas del sitio web del Banco de Guatemala, donde pueden encontrarse series históricas, cuadros, presentaciones, indicadores, documentos metodológicos y módulos ",
      "title": "Banco de Guatemala",
-     "url": "https://www.banguat.gob.gt/"
+     "url": "https://www.banguat.gob.gt/",
+     "verificacion": {
+      "bytes": 110486,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:35Z",
+      "http": 200,
+      "sha256": "9a73ff3078315b965f557f0dfb2c62f545c69fd0bd9dd615f761c20c3bd14ffe"
+     }
     },
     {
      "date": "",
@@ -514,7 +655,14 @@
      "rank": 2,
      "snippet": "Economic Statistics | Banco de Guatemala\n# Economic Statistics\n|Monthly Index of Economic Activity -MIEA-|\n|--|\n|Gross domestic product (GDP) by sector, market prices|",
      "title": "Economic Statistics | Banco de Guatemala",
-     "url": "https://banguat.gob.gt/page/economic-statistics"
+     "url": "https://banguat.gob.gt/page/economic-statistics",
+     "verificacion": {
+      "bytes": 85996,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:37Z",
+      "http": 200,
+      "sha256": "6477f3403e705932058811cf21bfe7d34c04b7967274c71b4894a5a92f571df4"
+     }
     },
     {
      "date": "",
@@ -556,7 +704,14 @@
      "rank": 1,
      "snippet": "Datos Abiertos - MINFIN\n…\n### Comité de usuarios\n...\nMinisterio de Finanzas Públicas 8a Avenida 20-59 Zona 1, Centro Cívico, Guatemala-01001\nPBX: +502 2374-3000\nhttps://www.minfin.gob.gt/",
      "title": "Interactúa",
-     "url": "https://datos.minfin.gob.gt/"
+     "url": "https://datos.minfin.gob.gt/",
+     "verificacion": {
+      "bytes": 5509,
+      "estado": "http",
+      "fecha": "2026-11-02T08:53:38Z",
+      "http": 403,
+      "sha256": "01a7c295a4d65b3afe47e9443e1ec0035afe33f0197db2f2ec50e2d68b08599d"
+     }
     },
     {
      "date": "2026-10-22",
@@ -564,7 +719,14 @@
      "rank": 2,
      "snippet": "Estrategia Nacional de Datos Abiertos garantiza un gobierno más transparente - Ministerio de Gobernación\n# Estrategia Nacional de Datos Abiertos garantiza un gobierno más transparente\n### Noticias Recientes\nMinisterio de Gobernación, Guatemala.",
      "title": "Estrategia Nacional de Datos Abiertos garantiza un gobierno más transparente",
-     "url": "https://mingob.gob.gt/estrategia-nacional-de-datos-abiertos-garantiza-un-gobierno-mas-transparente/"
+     "url": "https://mingob.gob.gt/estrategia-nacional-de-datos-abiertos-garantiza-un-gobierno-mas-transparente/",
+     "verificacion": {
+      "bytes": 401140,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:53:38Z",
+      "http": 200,
+      "sha256": "c985c1c114a74bc912e895fdf21ae3d1f8e0739cc69fdef2b0b5d69a39cce45e"
+     }
     }
    ]
   }

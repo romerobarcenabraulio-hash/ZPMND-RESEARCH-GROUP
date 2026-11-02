@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "L'initiative de la révision de la Constitution appartient concurremment au Président de la République sur proposition du Premier ministre et aux membres du Parlement.",
      "title": "Texte intégral de la Constitution du 4 octobre 1958 en ...",
-     "url": "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
+     "url": "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur",
+     "verificacion": {
+      "bytes": 138077,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:08Z",
+      "http": 200,
+      "sha256": "22e7ebea3698cd6c75cb53c5ca3eb29b5f51dddf2e16909052461350d371ccd1"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "# Constitution of 4 October 1958\n...\n- Copier l'URLhttps://www.conseil-constitutionnel.fr/en/constitution-of-4-october-1958\n...\n- Télécharger\n...\nPDF Version\nConstitution of October 4, 1958Pdf 272.75 KB",
      "title": "Constitution of 4 October 1958",
-     "url": "https://www.conseil-constitutionnel.fr/en/constitution-of-4-october-1958"
+     "url": "https://www.conseil-constitutionnel.fr/en/constitution-of-4-october-1958",
+     "verificacion": {
+      "bytes": 116712,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:09Z",
+      "http": 200,
+      "sha256": "d2c845bfe08ccc4def680f340f06e56562d85fea498cade13a54b42fbd49aff3"
+     }
     },
     {
      "date": "2023-02-13",
@@ -64,7 +78,12 @@
      "rank": 1,
      "snippet": "# 2902953 résultats trouvés\nTriés par pertinence\nLa liste sera mise à\n...\n## Abonnez-vous au Journal officiel de la République française\n...\nLe site Légifrance est placé sous la responsabilité éditoriale du Secrétariat général du Gouvernement (SGG).",
      "title": "Résultats de recherche, page 1",
-     "url": "https://www.legifrance.gouv.fr/search"
+     "url": "https://www.legifrance.gouv.fr/search",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.legifrance.gouv.fr/search",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:34:10Z"
+     }
     },
     {
      "date": "2025-05-08",
@@ -72,7 +91,14 @@
      "rank": 2,
      "snippet": "La présente interface vous permet d’accéder aux versions électroniques du Journal officiel de la République française, publiées depuis le 2 juin 2004, dans le cas où survient une indisponibilité technique, partielle ou totale, du site Légifrance.",
      "title": "Légifrance",
-     "url": "https://journal-officiel.legifrance.gouv.fr/"
+     "url": "https://journal-officiel.legifrance.gouv.fr/",
+     "verificacion": {
+      "bytes": 5564,
+      "estado": "http",
+      "fecha": "2026-11-02T08:34:11Z",
+      "http": 403,
+      "sha256": "e60c5aca2e437772d593f680035f2b02457a1d9e53e53bc2c4b2064c6bc2c154"
+     }
     },
     {
      "date": "2025-08-29",
@@ -114,7 +140,14 @@
      "rank": 1,
      "snippet": "La présente interface vous permet d’accéder aux versions électroniques du Journal officiel de la République française, publiées depuis le 2 juin 2004, dans le cas où survient une indisponibilité technique, partielle ou totale, du site Légifrance.",
      "title": "Légifrance",
-     "url": "https://journal-officiel.legifrance.gouv.fr/"
+     "url": "https://journal-officiel.legifrance.gouv.fr/",
+     "verificacion": {
+      "bytes": 5564,
+      "estado": "http",
+      "fecha": "2026-11-02T08:34:12Z",
+      "http": 403,
+      "sha256": "d76f73a5d40a6528b8430b4d6511628c5d7bd85bfdff842ec096a231ed76d49b"
+     }
     },
     {
      "date": "2023-02-13",
@@ -122,7 +155,12 @@
      "rank": 2,
      "snippet": "## Journal officiel de la République française (JORF)\n- JORF n° 0199\ndu 28 août 2025\n...\ndu 26 août 2025\n...\ndu 24 août 2025\n...\n- JORF n° 0194\ndu 22 août 2025",
      "title": "Votre avis nous intéresse !",
-     "url": "https://www.legifrance.gouv.fr/"
+     "url": "https://www.legifrance.gouv.fr/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.legifrance.gouv.fr/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:34:12Z"
+     }
     },
     {
      "date": "",
@@ -164,7 +202,14 @@
      "rank": 1,
      "snippet": "# Judilibre\n## Accès rapide aux décisions de la Cour de cassation\n### Par chambre\n- Assemblée plénière\n- Chambre mixte\n...\n- Chambre sociale\n- Chambre criminelle\n### Par date\n- Par dates décroissantes\n- Par dates croissantes",
      "title": "Judilibre",
-     "url": "https://www.courdecassation.fr/acces-rapide-judilibre"
+     "url": "https://www.courdecassation.fr/acces-rapide-judilibre",
+     "verificacion": {
+      "bytes": 244,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:14Z",
+      "http": 200,
+      "sha256": "953becd6b039728d1bcb272228f74050f74004fba6ec73c100b455e39528e3a7"
+     }
     },
     {
      "date": "",
@@ -172,7 +217,14 @@
      "rank": 2,
      "snippet": "Page 1 sur 56952 - Recherche Judilibre | Cour de cassation\n1. Accueil\n2. Recherche Judilibre\n# Recherche Judilibre\n## 569520 résultat(s) - 56952 page(s)",
      "title": "Page 1 sur 56952 - Recherche Judilibre",
-     "url": "https://www.courdecassation.fr/recherche-judilibre"
+     "url": "https://www.courdecassation.fr/recherche-judilibre",
+     "verificacion": {
+      "bytes": 241,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:15Z",
+      "http": 200,
+      "sha256": "388a6cc7e59511a1494d9003fc07fb3c297b29c94ea9910ae23a11791a08be96"
+     }
     },
     {
      "date": "",
@@ -214,7 +266,12 @@
      "rank": 1,
      "snippet": "## Journal officiel de la République française (JORF)\n- JORF n° 0199\n...\n- JORF n° 0198",
      "title": "Votre avis nous intéresse !",
-     "url": "https://www.legifrance.gouv.fr/"
+     "url": "https://www.legifrance.gouv.fr/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.legifrance.gouv.fr/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:34:15Z"
+     }
     },
     {
      "date": "2025-08-29",
@@ -222,7 +279,12 @@
      "rank": 2,
      "snippet": "# Journal officiel \"Lois et Décrets\"\n...\nELI: https://www.legifrance.gouv.fr/eli/jo/2025/8/29/0200Télécharger le Journal officiel authentifié PDF - 12,2 Mo\n…",
      "title": "Journal officiel \"Lois et Décrets\"",
-     "url": "https://www.legifrance.gouv.fr/jorf/jo"
+     "url": "https://www.legifrance.gouv.fr/jorf/jo",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.legifrance.gouv.fr/jorf/jo",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:34:15Z"
+     }
     },
     {
      "date": "2004-06-02",
@@ -264,7 +326,14 @@
      "rank": 1,
      "snippet": "…\n| | |**Vous êtes un particulier :** vous avez des projets de construction ou d’extension ? Consultez les règlements d’urbanisme qui s’appliquent sur votre parcelle ou votre commune|\nPubliez vos données sur le Géoportail de l’urbanisme »|",
      "title": "Géoportail de l'Urbanisme: Accueil",
-     "url": "https://www.geoportail-urbanisme.gouv.fr/"
+     "url": "https://www.geoportail-urbanisme.gouv.fr/",
+     "verificacion": {
+      "bytes": 33491,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:17Z",
+      "http": 200,
+      "sha256": "96e903d79623f91cd209dd0c1546ec2279fe57f873afe3e3ea5eab93f28c6a56"
+     }
     },
     {
      "date": "2026-08-05",
@@ -272,7 +341,14 @@
      "rank": 2,
      "snippet": "## Textes de loi et références\n...\n- Code général des collectivités territoriales : article R2131-1\nCommune - Mise à disposition des actes publiés sous forme électronique sur le site internet de la commune (article R2131-1)",
      "title": "Comment consulter les décisions de sa mairie, son ...",
-     "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2513"
+     "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2513",
+     "verificacion": {
+      "bytes": 119429,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:19Z",
+      "http": 200,
+      "sha256": "7e91f3bed168e810f3c46f3dbd260753e21d59d0bb9e5d0e486975cce7470d46"
+     }
     },
     {
      "date": "",
@@ -314,7 +390,14 @@
      "rank": 1,
      "snippet": "- Autorité de contrôle des nuisances aéroportuaires\n- Autorité de régulation des communications électroniques, des postes et de la distribution de la presse (ARCEP)\n- Autorité de la concurrence\n...\n- Autorité de régulation de la communication audiovisuelle et numérique (Arcom)\n...\n…",
      "title": "Autorités indépendantes",
-     "url": "https://lannuaire.service-public.gouv.fr/navigation/autorites-independantes"
+     "url": "https://lannuaire.service-public.gouv.fr/navigation/autorites-independantes",
+     "verificacion": {
+      "bytes": 50740,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:20Z",
+      "http": 200,
+      "sha256": "4aa0bfb63181e519f5e3b226d2b0df2600e7051cfb2965cddd9c4b9ddada6097"
+     }
     },
     {
      "date": "2026-10-30",
@@ -322,7 +405,14 @@
      "rank": 2,
      "snippet": "The AMF publishes its recommendations on the liquidity of Money Market Funds\n...\nThe Autorité des marchés financiers (AMF) is publishing its recommendations on the liquidity of money market funds, following a public consultation conducted during the summer of 2026.",
      "title": "The AMF publishes its recommendations on the liquidity of ...",
-     "url": "https://www.amf-france.org/en/news-publications/news/amf-publishes-its-recommendations-liquidity-money-market-funds"
+     "url": "https://www.amf-france.org/en/news-publications/news/amf-publishes-its-recommendations-liquidity-money-market-funds",
+     "verificacion": {
+      "bytes": 66999,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:22Z",
+      "http": 200,
+      "sha256": "6af02ce45a92c54077b4a260c152e74243ce721c80d771e3ec1d6810685f5b06"
+     }
     },
     {
      "date": "2026-09-11",
@@ -364,7 +454,14 @@
      "rank": 1,
      "snippet": "Norme en conception\nLes normes sont élaborées par des commissions de normalisation, gérées par AFNOR et les Bureaux de normalisation sectoriels, qui rassemblent des représentants de toutes les parties intéressées (producteurs, utilisateurs, pouvoirs publics, associations, centres techniques, …).\n...",
      "title": "Norm'Info - Structures et Normes",
-     "url": "https://norminfo.afnor.org/search"
+     "url": "https://norminfo.afnor.org/search",
+     "verificacion": {
+      "bytes": 86896,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:24Z",
+      "http": 200,
+      "sha256": "9b7bb3ea1bd3562351e3ad66628a5401295144510e2d176fc3b13c7f7e259c51"
+     }
     },
     {
      "date": "",
@@ -372,7 +469,14 @@
      "rank": 2,
      "snippet": "Bienvenue sur la boutique AFNOR\nDistributeur officiel des normes en France\nDécouvrez plus de 100 000 normes françaises européennes et internationales, notre collection de livres ainsi que nos différentes solutions d’abonnements adaptées à chacun de vos besoins.\n...\nLes normes Retrouvez toutes les no",
      "title": "www.boutique.afnor.orgAccueil - AFNOR Editions",
-     "url": "https://www.boutique.afnor.org/?reloadInfos=true&Culture=fr-FR"
+     "url": "https://www.boutique.afnor.org/?reloadInfos=true&Culture=fr-FR",
+     "verificacion": {
+      "bytes": 68441,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:35Z",
+      "http": 200,
+      "sha256": "2c779d1bcfb7eb099971d2166111719946bb930476401c18351ee6497bd982c0"
+     }
     },
     {
      "date": "",
@@ -414,7 +518,12 @@
      "rank": 1,
      "snippet": "Ces normes d’application obligatoire sont consultables sur le site de l’AFNOR en cliquant sur la référence de la norme figurant dans la colonne de gauche du tableau ci-joint, qui les recense.",
      "title": "Normes AFNOR d'application obligatoire",
-     "url": "https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/entreprises/normes-afnor-d-application-obligatoire"
+     "url": "https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/entreprises/normes-afnor-d-application-obligatoire",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/entreprises/normes-afnor-d-application-obligatoire",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T08:34:35Z"
+     }
     },
     {
      "date": "2022-11-14",
@@ -422,7 +531,14 @@
      "rank": 2,
      "snippet": "## Réglementation générale applicable aux matériels électriques et électroniques\n...\nSi le produit comporte des composants électroniques actifs, il relève du décret n°2015-1084 du 27 août 2015, transposition de la directive compatibilité électromagnétique 2014/30/UE.",
      "title": "Réglementation applicable aux matériels électriques et ...",
-     "url": "https://www.entreprises.gouv.fr/espace-entreprises/s-informer-sur-la-reglementation/reglementation-applicable-aux-materiels"
+     "url": "https://www.entreprises.gouv.fr/espace-entreprises/s-informer-sur-la-reglementation/reglementation-applicable-aux-materiels",
+     "verificacion": {
+      "bytes": 65931,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:37Z",
+      "http": 200,
+      "sha256": "91fc3da5cb54cf5674c095e632829e0310d18f0ff7b533fb4859bff6b85abf6d"
+     }
     },
     {
      "date": "2025-02-05",
@@ -464,7 +580,14 @@
      "rank": 1,
      "snippet": "Accueil − Insee − Institut national de la statistique et des études économiques | Insee\n## L’Institut national de la statistique et des études économiques collecte, produit, analyse et diffuse des informations sur l’économie et la société françaises",
      "title": "www.insee.fr · fr · accueilAccueil - Insee - Institut national de la statistique et des ...",
-     "url": "https://www.insee.fr/fr/accueil?fr=nav"
+     "url": "https://www.insee.fr/fr/accueil?fr=nav",
+     "verificacion": {
+      "bytes": 65864,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:39Z",
+      "http": 200,
+      "sha256": "46cb2d22e43ea292ddfab56721ff12c64cc0f4ba7c8c28df7e34136bb09f4d83"
+     }
     },
     {
      "date": "",
@@ -472,7 +595,14 @@
      "rank": 2,
      "snippet": "Catalogue de données | Insee\n1. Accueil insee.fr\n2. Catalogue\n# Catalogue de données\nmelodi\nL'application Melodi (Mon Espace de Livraison en Open Data de l'Insee) met à disposition des jeux de données statistiques en open data.",
      "title": "Catalogue de données - INSEE",
-     "url": "https://catalogue-donnees.insee.fr/fr/catalogue/recherche"
+     "url": "https://catalogue-donnees.insee.fr/fr/catalogue/recherche",
+     "verificacion": {
+      "bytes": 1078,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:41Z",
+      "http": 200,
+      "sha256": "ba4ef4bce74d52bf8944593550c3da675c558a3e986cb28c6afd000b8bac8f7f"
+     }
     },
     {
      "date": "2026-10-23",
@@ -514,7 +644,14 @@
      "rank": 1,
      "snippet": "Statistiques | Banque de France\n1. Publications et statistiques\n2. Statistiques\n# Statistiques\nDécouvrez toutes les publications statistiques régulières de la Banque de France : ces publications vous offrent un aperçu des dernières tendances économiques et vous aident à mieux les comprendre grâce au",
      "title": "Statistiques page 1 sur 911",
-     "url": "https://www.banque-france.fr/fr/publications-et-statistiques/statistiques"
+     "url": "https://www.banque-france.fr/fr/publications-et-statistiques/statistiques",
+     "verificacion": {
+      "bytes": 711714,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:42Z",
+      "http": 200,
+      "sha256": "3ec339dccbfcaf1330feefa68a13e660959a44ee69dac0165dbd8dd283f5f8c5"
+     }
     },
     {
      "date": "",
@@ -522,7 +659,14 @@
      "rank": 2,
      "snippet": "Statistiques | Banque de France\n...\n- CCSF\n...\n# Statistiques\nDécouvrez toutes les publications statistiques régulières de la Banque de France : ces publications vous offrent un aperçu des dernières tendances économiques et vous aident à mieux les comprendre grâce aux analyses des Stat Info.\nUtilise",
      "title": "Statistiques | Banque de France",
-     "url": "https://acpr.banque-france.fr/fr/publications-et-statistiques/statistiques?page=1"
+     "url": "https://acpr.banque-france.fr/fr/publications-et-statistiques/statistiques?page=1",
+     "verificacion": {
+      "bytes": 175069,
+      "estado": "http",
+      "fecha": "2026-11-02T08:34:45Z",
+      "http": 403,
+      "sha256": "23b5e245f81c9bb6f2608a15ac439d28e7cf32cefec2c59df2b5baf2f18129b7"
+     }
     },
     {
      "date": "",
@@ -564,7 +708,14 @@
      "rank": 1,
      "snippet": "Catalogue des jeux de données publics - data.gouv.fr\n1. Accueil\n...\n# Rechercher un jeu de données\nparmi les 74995 jeux de données sur data.gouv.fr\n…\n...\nInstitut national de la statistique et des études économiques (Insee)\n...\n- API du portail",
      "title": "Catalogue des jeux de données publics - data.gouv.fr",
-     "url": "https://www.data.gouv.fr/datasets"
+     "url": "https://www.data.gouv.fr/datasets",
+     "verificacion": {
+      "bytes": 328120,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:47Z",
+      "http": 200,
+      "sha256": "cb6db56f645b1258c125b7eb079620af4d7eef06a5b82dadc48ed84634df731e"
+     }
     },
     {
      "date": "",
@@ -572,7 +723,14 @@
      "rank": 2,
      "snippet": "# Accéder aux données publiques françaises data.gouv.fr\n- DINUM\n...\n- Agents publics\n...\n(Ouvre une nouvelle fenêtre) **data.gouv.fr** est la plateforme ouverte et communautaire qui vise à centraliser et structurer les données ouvertes en France.",
      "title": "Accéder aux données publiques françaises data.gouv.fr",
-     "url": "https://www.numerique.gouv.fr/offre-accompagnement/offre-data-gouv/"
+     "url": "https://www.numerique.gouv.fr/offre-accompagnement/offre-data-gouv/",
+     "verificacion": {
+      "bytes": 29313,
+      "estado": "accesible",
+      "fecha": "2026-11-02T08:34:49Z",
+      "http": 200,
+      "sha256": "6a941d3ffd1dde5d302f192f452f9e7c8d935b7e100252c86011ce87f3ecc224"
+     }
     },
     {
      "date": "2026-11-01",

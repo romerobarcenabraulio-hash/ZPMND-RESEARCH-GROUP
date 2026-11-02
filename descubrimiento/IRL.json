@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "# Constitution of Ireland\n...\nThe version of the Constitution below is a copy of the most recently prepared version of the Popular Edition of the Constitution of Ireland (January 2020).\nBunreacht na hÉireann\nView the file View\nA HTML version is also available here.",
      "title": "Constitution of Ireland - Government of Ireland",
-     "url": "https://www.gov.ie/en/department-of-the-taoiseach/publications/constitution-of-ireland/"
+     "url": "https://www.gov.ie/en/department-of-the-taoiseach/publications/constitution-of-ireland/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.ie/en/department-of-the-taoiseach/publications/constitution-of-ireland/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:12:06Z"
+     }
     },
     {
      "date": "",
@@ -22,7 +27,14 @@
      "rank": 2,
      "snippet": "The electronic Irish Statute Book (eISB) includes Acts of the Oireachtas and Statutory Instruments, the official versions of which remain the printed versions published by Government Publications.",
      "title": "electronic Irish Statute Book (eISB)",
-     "url": "https://www.irishstatutebook.ie/"
+     "url": "https://www.irishstatutebook.ie/",
+     "verificacion": {
+      "bytes": 25511,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:08Z",
+      "http": 200,
+      "sha256": "08d3d51cc939af936ff4f2b87f3b3da4447580b89fd7554a8435e126429a94fe"
+     }
     },
     {
      "date": "2025-04-11",
@@ -64,7 +76,14 @@
      "rank": 1,
      "snippet": "|2|Rules of the Superior Courts (Bankruptcy) 2026.| |\n|3|European Union (Restrictive Measures Concerning Haiti) Regulations 2026.| |\n...\n|7|European Communities (Pesticide Residues) (Amendment) Regulations 2026.| |",
      "title": "Statutory Instruments - Irish Statute Book",
-     "url": "https://www.irishstatutebook.ie/eli/statutory.html"
+     "url": "https://www.irishstatutebook.ie/eli/statutory.html",
+     "verificacion": {
+      "bytes": 319111,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:09Z",
+      "http": 200,
+      "sha256": "4eedd1b90bc6b0c8c857f91152e9ea40774329c900e6254c743cf374a62e4313"
+     }
     },
     {
      "date": "",
@@ -72,7 +91,14 @@
      "rank": 2,
      "snippet": "Statutory Instruments\n...\n../pdf/2026/en.si.2026.0008.pdf\nS.I. No. 8/2026 - European Union (Temporary Increase of Official Controls and Emergency Measures on Imports of Food and Feed of Non-Animal Origin) (Amendment) Regulations 2026",
      "title": "[XML] index-recentLegislation.xml - Irish Statute Book",
-     "url": "https://www.irishstatutebook.ie/static/assets/language/en_IE/index-recentLegislation.xml"
+     "url": "https://www.irishstatutebook.ie/static/assets/language/en_IE/index-recentLegislation.xml",
+     "verificacion": {
+      "bytes": 1982,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:10Z",
+      "http": 200,
+      "sha256": "03046fec3fa0973b1245d217af871ec6e785d288bfb31f21a620c0fb43456f3a"
+     }
     },
     {
      "date": "2025-04-11",
@@ -114,7 +140,14 @@
      "rank": 1,
      "snippet": "# Legal Website Links\n## Ireland\n### State Organisations\nIris OifigiúilThis is the official Irish State gazette.\nThe website contains copies of all issues since 2002.\n...\n## Subscription Services\nBlackhall Place, Dublin 7\n+353 1 672 4800",
      "title": "Legal Website Links - Law Society of Ireland",
-     "url": "https://www.lawsociety.ie/Public/Legal-guides/Links/"
+     "url": "https://www.lawsociety.ie/Public/Legal-guides/Links/",
+     "verificacion": {
+      "bytes": 163642,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:11Z",
+      "http": 200,
+      "sha256": "2d34d326e30c5c25286fca399a8d526ff3acb14fe22d195815412a7e0efbe573"
+     }
     },
     {
      "date": "2023-08-29",
@@ -122,7 +155,12 @@
      "rank": 2,
      "snippet": "The Office also publishes Iris Oifigiúil, the State's official gazette, which is published twice weekly on Tuesday and Friday in hard copy and online.\n...\n- **Website:**\nhttps://www.gov.ie/en/service/00fdf-government-publications/\n...\n046 9423100",
      "title": "Government Publications",
-     "url": "https://www.gov.ie/en/office-of-public-works/services/government-publications/"
+     "url": "https://www.gov.ie/en/office-of-public-works/services/government-publications/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.ie/en/office-of-public-works/services/government-publications/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:12:11Z"
+     }
     },
     {
      "date": "",
@@ -164,7 +202,12 @@
      "rank": 1,
      "snippet": "## Decisions and Recordings\nView judgments, determinations and audiovisual broadcasts",
      "title": "Supreme Court",
-     "url": "https://courts.ie/supreme-court"
+     "url": "https://courts.ie/supreme-court",
+     "verificacion": {
+      "error": "host not in allowlist: www.supremecourt.ie",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:12:21Z"
+     }
     },
     {
      "date": "",
@@ -172,7 +215,14 @@
      "rank": 2,
      "snippet": "## Decisions and recordings\nAccess Supreme Court decisions, determinations, and official recordings of court proceedings.\nThese materials are published to promote transparency and support understanding of the Court’s work.\n...\n## Judgments\nRead written judgments of the Supreme Court, setting out the",
      "title": "Decisions and Recordings - Courts.ie",
-     "url": "https://courts.ie/decisions/decisions-and-recordings"
+     "url": "https://courts.ie/decisions/decisions-and-recordings",
+     "verificacion": {
+      "bytes": 22975,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:31Z",
+      "http": 200,
+      "sha256": "330b9624d86ecbe8600fc9d67daa690f89d34677c241fe1c528ed5e901a2b37a"
+     }
     },
     {
      "date": "",
@@ -214,7 +264,12 @@
      "rank": 1,
      "snippet": "Access to the Electronic Irish Statute Book (eISB), which includes the Acts of the Oireachtas and statutory instruments.\nUsers can also track amendments to legislation, and access the Constitution, revised Acts and a selection of pre-1922 legislation.\nLinks to external legislation resources are also",
      "title": "Access the Electronic Irish Statute Book (eISB)",
-     "url": "https://www.gov.ie/en/office-of-the-attorney-general/services/access-the-electronic-irish-statute-book-eisb/"
+     "url": "https://www.gov.ie/en/office-of-the-attorney-general/services/access-the-electronic-irish-statute-book-eisb/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.ie/en/office-of-the-attorney-general/services/access-the-electronic-irish-statute-book-eisb/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:12:31Z"
+     }
     },
     {
      "date": "",
@@ -222,7 +277,14 @@
      "rank": 2,
      "snippet": "Welcome to the Law Reform Commission's online Classified List of In-Force Legislation.\n...\n- a searchable list of in-force Acts and statutory instruments organised under 36 Subject Headings.\n...\n- a search facility that allows you to search for either:\n- - the name of any Act or statutory instrument",
      "title": "Classified List",
-     "url": "https://revisedacts.lawreform.ie/classlist/intro"
+     "url": "https://revisedacts.lawreform.ie/classlist/intro",
+     "verificacion": {
+      "bytes": 21790,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:33Z",
+      "http": 200,
+      "sha256": "3e176747ce90876162bc0ed5a5ade3b3faf58c4310aa28721a76ed839751daf3"
+     }
     },
     {
      "date": "",
@@ -256,7 +318,14 @@
      "rank": 1,
      "snippet": "Read the local bye-laws created by Dublin City Council for the benefit of our communities.\nThey govern the likes of parking control, speed limits and waste management in the city.\n...\nRead the bye-laws which outline unacceptable behaviour and offences for members of the public who access and use Dub",
      "title": "Local Bye-Laws",
-     "url": "https://www.dublincity.ie/ga/node/11026"
+     "url": "https://www.dublincity.ie/ga/node/11026",
+     "verificacion": {
+      "bytes": 185604,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:35Z",
+      "http": 200,
+      "sha256": "1920684c11e91d940ffcd0524175b17d0e8b6d42875eb5f0fc0c6962ab1aaa76"
+     }
     },
     {
      "date": "2026-09-30",
@@ -264,7 +333,12 @@
      "rank": 2,
      "snippet": "Ireland has 31 local authorities that are responsible for a range of local services, including:\n...\nTwo months before making a bye-law, the local authority must publish a notice in a local newspaper.\nThe public is entitled to inspect the proposed bye-law and make submissions about it before it comes",
      "title": "The role of the Chief Executive",
-     "url": "https://www.citizensinformation.ie/en/government-in-ireland/how-government-works/local-and-regional-government/functions-of-local-authorities/"
+     "url": "https://www.citizensinformation.ie/en/government-in-ireland/how-government-works/local-and-regional-government/functions-of-local-authorities/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.citizensinformation.ie/en/government-in-ireland/how-government-works/local-and-regional-government/functions-of-local-authorities/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:12:35Z"
+     }
     },
     {
      "date": "",
@@ -306,7 +380,12 @@
      "rank": 1,
      "snippet": "They are responsible for regulating broadcasters, video-on-demand providers and online platforms established in Ireland.\n...\nComReg is the statutory body responsible for the regulation of the electronic communications sector (telecommunications, radio communications, broadcasting transmission and pr",
      "title": "State agencies and bodies under the department's aegis",
-     "url": "https://www.gov.ie/en/department-of-culture-communications-and-sport/organisation-information/state-agencies-and-bodies-under-the-departments-aegis/"
+     "url": "https://www.gov.ie/en/department-of-culture-communications-and-sport/organisation-information/state-agencies-and-bodies-under-the-departments-aegis/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.ie/en/department-of-culture-communications-and-sport/organisation-information/state-agencies-and-bodies-under-the-departments-aegis/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:12:35Z"
+     }
     },
     {
      "date": "",
@@ -314,7 +393,14 @@
      "rank": 2,
      "snippet": "The Central Bank of Ireland has a number of statutory codes of conduct.\nThese codes of conduct are set out below.\n...\n- Consumer Protection Code\n- Insurance Requirements Regulations 2022\n- Consumer Protection Code for Licensed Moneylenders\n- Code of Conduct on Mortgage Arrears (Revoked)",
      "title": "Consumer Protection Codes and Regulations | Central Bank of Ireland",
-     "url": "https://www.centralbank.ie/regulation/consumer-protection/consumer-protection-codes-regulations"
+     "url": "https://www.centralbank.ie/regulation/consumer-protection/consumer-protection-codes-regulations",
+     "verificacion": {
+      "bytes": 166212,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:37Z",
+      "http": 200,
+      "sha256": "5458d012d0f3cd520985055c2e6471c43d86ee659a4b3c03c547b3f3f1b11379"
+     }
     },
     {
      "date": "",
@@ -356,7 +442,14 @@
      "rank": 1,
      "snippet": "National Standards Authority of Ireland New Standards Shop\n...\n##### SWiFT 19:2020+AC1:2020 Barrier masks for consumers - Requirements\n...\n##### I.S. 465:2018+A1:2020 Assessment, testing and categorisation of damaged buildings incorporating concrete blocks containing certain deleterious materials",
      "title": "NSAI Public Good Standards - National Standards Authority of Ireland",
-     "url": "https://www.nsai.ie/standards/search-buy-standards/featured-standards/"
+     "url": "https://www.nsai.ie/standards/search-buy-standards/featured-standards/",
+     "verificacion": {
+      "bytes": 100389,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:41Z",
+      "http": 200,
+      "sha256": "5520565d0e16ee5a65a3d8caa2b6069f9f3543620e651ef5f06fe222d4f665b0"
+     }
     },
     {
      "date": "",
@@ -364,7 +457,14 @@
      "rank": 2,
      "snippet": "Our vast electronic library stores over 600,000 standards, published by 250 major standards authorities from across the globe.\n...\nThe NSAI standards database includes all:\n- Indigenous Irish Standards (I.S.)\n- Adopted European Standards (I.S. EN; I.S. EN ISO/IEC)",
      "title": "Search and buy standards | NSAI",
-     "url": "https://www.nsai.ie/standards/search-buy-standards/"
+     "url": "https://www.nsai.ie/standards/search-buy-standards/",
+     "verificacion": {
+      "bytes": 96511,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:43Z",
+      "http": 200,
+      "sha256": "8a8e5448fbef598754ef205cdb2d8f0383b005cf3074ebb84446d513994c4839"
+     }
     },
     {
      "date": "",
@@ -406,7 +506,12 @@
      "rank": 1,
      "snippet": "### Three primary pieces of road traffic legislation\nS.I. 190 of 1963 - Road Traffic Construction, Equipment and Use of Vehicles Regulations (as amended) sets out the requirements for the construction, equipment and use of vehicles (including large public service vehicles and small public service ve",
      "title": "Road traffic legislation and type approval vehicle legislation. - RSA",
-     "url": "https://www.rsa.ie/road-safety/road-users/legislation"
+     "url": "https://www.rsa.ie/road-safety/road-users/legislation",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.rsa.ie/road-safety/road-users/legislation",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:12:44Z"
+     }
     },
     {
      "date": "",
@@ -414,7 +519,14 @@
      "rank": 2,
      "snippet": "…\n|### Standard Number|### Title|\n|--|--|\n|EN 12100|Safety of Machinery - General Principles for Design.\nRisk Assessment and Risk Reduction|\nElectrical equipment of machines|\n...\n|I.S. 10101|National Rules for Electrical Installations|",
      "title": "Irish Legislation, EU Directives & Standards",
-     "url": "https://www.hsa.ie/topics/atex/atex_delivery_guide/irish_legislation_eu_directives_standards/"
+     "url": "https://www.hsa.ie/topics/atex/atex_delivery_guide/irish_legislation_eu_directives_standards/",
+     "verificacion": {
+      "bytes": 999865,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:46Z",
+      "http": 200,
+      "sha256": "ba49532fa472db13779fa62a8a9915e10a43f8f7e3f9e3e038f035342c52a99b"
+     }
     },
     {
      "date": "",
@@ -456,7 +568,14 @@
      "rank": 1,
      "snippet": "Home - CSO - Central Statistics Office\n- ### 5.5%\n...\n## Contact us\n**Central Statistics Office**\nSkehard Road, Cork T12 X00E, Ireland",
      "title": "Home - CSO - Central Statistics Office",
-     "url": "https://www.cso.ie/en/index"
+     "url": "https://www.cso.ie/en/index",
+     "verificacion": {
+      "bytes": 62653,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:48Z",
+      "http": 200,
+      "sha256": "7812a9b6e2533a8b26f1e2c28acab9cda3aed9f982f13daa549a3a0d1fde44f3"
+     }
     },
     {
      "date": "",
@@ -464,7 +583,14 @@
      "rank": 2,
      "snippet": "Population - CSO - Central Statistics Office\nYou are here: Home / Statistics / Population\n# Population\n## Census of Population\n- Census 2022 Reports\n- Census 2016 Reports\n...\n## Contact us\n**Central Statistics Office**\nSkehard Road, Cork T12 X00E, Ireland",
      "title": "Population",
-     "url": "https://www.cso.ie/en/statistics/population/"
+     "url": "https://www.cso.ie/en/statistics/population/",
+     "verificacion": {
+      "bytes": 61234,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:49Z",
+      "http": 200,
+      "sha256": "c99c5d117926fe88f51f0a30af86f810a26811ef4e80d3fde38505f85cf5b77c"
+     }
     },
     {
      "date": "",
@@ -506,7 +632,14 @@
      "rank": 1,
      "snippet": "Data & Analysis | Central Bank of Ireland\n- ### Statistics\n...\nWe publish and provide data and commentary on a broad range of financial developments in Ireland.\nOur statistical analysis assists policy makers, financial market participants and the public.\n...\nThe credit and banking section includes s",
      "title": "Data & Analysis | Central Bank of Ireland",
-     "url": "https://www.centralbank.ie/statistics/data-and-analysis"
+     "url": "https://www.centralbank.ie/statistics/data-and-analysis",
+     "verificacion": {
+      "bytes": 118230,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:49Z",
+      "http": 200,
+      "sha256": "baeab8d8ad1d494be2caa6bb61ff162eb3dfbd7bdfb51464bb2379753182c749"
+     }
     },
     {
      "date": "",
@@ -514,7 +647,14 @@
      "rank": 2,
      "snippet": "Statistics | Central Bank of Ireland\n...\nWe are the main compiler of Irish financial statistics.\n...\nWe publish and provide data and commentary on a broad range of financial developments in Ireland.\nOur analysis assists policy makers, financial market participants and the public.\n- Credit and Bankin",
      "title": "Statistics",
-     "url": "https://www.centralbank.ie/statistics"
+     "url": "https://www.centralbank.ie/statistics",
+     "verificacion": {
+      "bytes": 116381,
+      "estado": "accesible",
+      "fecha": "2026-11-02T09:12:50Z",
+      "http": 200,
+      "sha256": "7ef2d1d96c77ac448d5b0f7cd9f6efba2b803caaaf41812f3d2c688be594a036"
+     }
     },
     {
      "date": "",
@@ -556,7 +696,14 @@
      "rank": 1,
      "snippet": "Datasets - data.gov.ie\n…\n...\nThe Houses of the Oireachtas are providing these APIs to allow our datasets to be retrieved and reused as widely as possible.\nThey are intended to be used in conjunction with https://data.oireachtas.ie, from where our datasets can be accessed directly.",
      "title": "Datasets - Data.gov.ie",
-     "url": "https://data.gov.ie/dataset"
+     "url": "https://data.gov.ie/dataset",
+     "verificacion": {
+      "bytes": 169,
+      "estado": "http",
+      "fecha": "2026-11-02T09:12:52Z",
+      "http": 429,
+      "sha256": "456ff4524e380c7efcd33a5fff4d2fe46c257fc941d853731dc4dd3d332ac95a"
+     }
     },
     {
      "date": "2019-02-27",
@@ -564,7 +711,12 @@
      "rank": 2,
      "snippet": "# Open Data in Ireland\n## Open Data Portal\nThe Department of Public Expenditure, Infrastructure, Public Service Digitalisation and Reform has policy responsibility for Ireland’s open data policy.\nA key output has been our national open data portal, which provides access to official non-personal gove",
      "title": "Open Data in Ireland",
-     "url": "https://www.gov.ie/en/department-of-public-expenditure-infrastructure-public-service-reform-and-digitalisation/policy-information/open-data-in-ireland/"
+     "url": "https://www.gov.ie/en/department-of-public-expenditure-infrastructure-public-service-reform-and-digitalisation/policy-information/open-data-in-ireland/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.ie/en/department-of-public-expenditure-infrastructure-public-service-reform-and-digitalisation/policy-information/open-data-in-ireland/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T09:12:52Z"
+     }
     },
     {
      "date": "2019-04-04",
