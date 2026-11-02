@@ -1,0 +1,509 @@
+{
+ "raw-mx-2026-10-19-dof.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 3132,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-19-dof.tar"
+  ]
+ },
+ "raw-mx-2026-10-19.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 3298,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-19.tar"
+  ]
+ },
+ "raw-mx-2026-10-21-39644985129-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 17067,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-21-39644985129-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-25-40204440474-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 3269,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-25-40204440474-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-27-40533700699-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1899,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-27-40533700699-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-27-40598674864-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 366,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-27-40598674864-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40634564213-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 439,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40634564213-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40639800196-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 610,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40639800196-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40645170647-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 451,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40645170647-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40649762108-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 684,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40649762108-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40655786058-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 2047,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40655786058-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40664360721-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 2074,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40664360721-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40670840821-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 2054,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40670840821-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40676359964-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1914,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40676359964-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40683341523-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1868,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40683341523-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40690261608-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1582,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40690261608-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40696300799-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1926,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40696300799-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40703215444-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1932,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40703215444-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40710609961-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1932,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40710609961-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40719743253-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1907,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40719743253-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40729933029-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1610,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40729933029-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40738450993-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1351,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40738450993-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40744991592-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1350,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40744991592-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40752473859-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1347,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40752473859-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40758648764-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1341,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40758648764-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40767072601-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1339,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40767072601-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40774105558-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1338,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40774105558-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40780369328-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1337,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40780369328-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-28-40785442786-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1336,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-28-40785442786-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-29-40791015387-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1335,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-29-40791015387-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-29-40795681333-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1335,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-29-40795681333-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-29-40800240944-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1331,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-29-40800240944-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-29-40805807438-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1326,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-29-40805807438-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-29-40810624752-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1323,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-29-40810624752-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-29-40815665854-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1316,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-29-40815665854-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-29-40820513516-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1315,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-29-40820513516-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-29-40825337188-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1312,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-29-40825337188-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-31-41217459788-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1328,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-10-31-41217459788-1.tar"
+  ]
+ },
+ "raw-mx-2026-11-01-41329499070-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1307,
+  "run_id": "2026-11-02T190928Z",
+  "tars": [
+   "raw-mx-2026-11-01-41329499070-1.tar"
+  ]
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "already_current": 0,
+ "bundle_errors": [
+  "raw-mx-2026-10-22-39691250207-1.tar.sha256: ValueError: ./sha256/e1/e15eb8ff72b0f64e51a3cd0b6f462c668cc32ebaab4faaecba4ca09ef5959887.json: 3638883446 bytes, over the limit (200000000 per member, 32638490363 left in the run)",
+  "raw-mx-2026-10-23-39876138130-1.tar.sha256: ValueError: ./sha256/e1/e15eb8ff72b0f64e51a3cd0b6f462c668cc32ebaab4faaecba4ca09ef5959887.json: 3638883446 bytes, over the limit (200000000 per member, 32572399054 left in the run)"
+ ],
+ "coverage": {
+  "first": {
+   "name_mismatch": [],
+   "referenced_without_status": [
+    "00007014ebc872f899a1a5e9ca202ad8939121ce48e93d876fa66cede60180db",
+    "00020c20954eb06009667a68175e0376ce37bbd7d781614c3193a76a6017d38a",
+    "000362fc9e2727f2948ce9122cbdd5c8f0b7fec147cb097d6865fe3a91fa338d",
+    "0003d1cf5721f5ecc115869648fed7d06eb55f75220183b5287bda954d4aa0ce",
+    "0007d0611565e06a495de7f519b0d8fa9376b3caf494b717ed90442525a97d7f",
+    "000b63476a9fea75e80c07cbe2744af466eec6e2fde3d1a9c688e7fff80efe6a",
+    "0010f96e23bb34d92fc4eedbd75a70d89a8c87eb4f4ab3c5662fd1252895b2b5",
+    "00115e60d89b737d29c254b83b9ee92c2b95ffc5fc22cd07bbd9b6d6cbdd1663",
+    "001314262531582ba45dac4535327af82131d12de59151002ec3019e7db51c56",
+    "001705491d80a968b6e2faf7642fe5a0db71e46eaa4590ebe247e3299c30c751",
+    "0019933c9ad3ab299b58858d12ad7e61a634c72ae74c02dc0e5ad466e7ddad96",
+    "001a4d30506ca25168d5359d627e22401e5a5a5c1c6cdaa61c1e003d4204da5b",
+    "001afe7176447a10f90665243170ad95a663ec56e030f0493b3a3bf9ffc7f93a",
+    "001b192a883ca144c50385b2e87d930c02794c627faacb49f8d3c637ca523499",
+    "001b73506899d0a1fc262bbe7235950128e81d9a59d0a8fa2e527c6ed494e000",
+    "001b9083c9844093b3e6966ca3057b526164a8af0815cb3ccca9b97ea32cea09",
+    "001bcb9f7b832bde869726e00e0c684d63228ebd09b6a24ad90aa4a2ff42d1ad",
+    "001c2425a9cfbcd223bf36b69473228f742bd350a8f925a1ef069635c4e7c9f6",
+    "001d7062a34c2acb555d2c764272a6664e9afd74d64db915099daeb8215c0f63",
+    "002121dba2fbef5fa0843204b8c76603f60833e03482300ddbd88f9ed79cb524"
+   ],
+   "repeated_lines": [],
+   "stale_extractor": [],
+   "stored_without_status": [],
+   "texts_not_matching": []
+  },
+  "in_store": 76131,
+  "lines": 76131,
+  "name_mismatch": 0,
+  "ok": false,
+  "referenced": 105203,
+  "referenced_without_status": 29098,
+  "repeated_lines": 0,
+  "stale_extractor": 0,
+  "stored_without_status": 0,
+  "texts_not_matching": 0
+ },
+ "errors": [],
+ "extractors": {
+  "docx": "rg-docx==1",
+  "html": "rg-html==1",
+  "json": "rg-sniff==1",
+  "ole2": "rg-sniff==1",
+  "otro": "rg-sniff==1",
+  "pdf": "rg-pdf==1+pypdf.6.21.1",
+  "rtf": "rg-sniff==1"
+ },
+ "finished_at": "2026-11-02T21:46:51Z",
+ "format": {
+  "docx": 2960,
+  "html": 54042,
+  "json": 46,
+  "ole2": 1767,
+  "otro": 30,
+  "pdf": 17278,
+  "rtf": 8
+ },
+ "max_memory_bytes": 2000000000,
+ "new_texts": 71536,
+ "run_id": "2026-11-02T190928Z",
+ "started_at": "2026-11-02T19:09:28Z",
+ "status": {
+  "fallo": 254,
+  "formato_no_soportado": 1851,
+  "necesita_ocr": 1106,
+  "ok": 72920
+ },
+ "status_referenced": {
+  "fallo": 254,
+  "formato_no_soportado": 1825,
+  "necesita_ocr": 1106,
+  "ok": 72920
+ },
+ "timeout_s": 300,
+ "to_extract": 76131,
+ "workers": 4
+}
