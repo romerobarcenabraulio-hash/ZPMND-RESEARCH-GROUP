@@ -14,7 +14,9 @@
 - Two jobs (issue #90): `preparar` opens the PDFs and .doc files and runs Tesseract and LibreOffice with no key in its
   job; `nvidia` runs in another job with the key, reads only the JPEGs `preparar` left (JPEG magic and size checked) and
   never opens a PDF. The key goes only to integrate.api.nvidia.com in the Authorization header; an error body is never
-  read.
+  read, and an answer that holds the key is refused before anything is written or derived from it.
+- Each parser's output is read up to SALIDA_MAX bytes within its timeout; the key phase saves after every page and
+  starts no page after PLAZO_FASE, so a job cut short keeps what it measured.
 Output: <salida>/medicion.json (per page and per document: engine, version, characters, seconds, repeatable, agreement
 between engines) plus every page image and text, named by sha256, for the hand check that gives the error rate.
 """
@@ -22,10 +24,12 @@ import argparse
 import base64
 import difflib
 import hashlib
+import http.client
 import json
 import os
 import re
 import resource
+import selectors
 import signal
 import stat
 import subprocess
@@ -44,6 +48,15 @@ IMG_MAX = 175_000  # bytes of the JPEG sent inline (the hosted API's inline limi
 TIPOS = {'application/pdf': 'pdf', 'application/msword': 'doc'}
 MAX_RESPUESTA = 2_000_000  # bytes of one NVIDIA answer
 MEMORIA = 2 * 1024 ** 3  # bytes each parser may take
+SALIDA_MAX = 16 * 1024 ** 2  # bytes of one parser's output kept: a page's text or a .doc's is far less
+MAX_PAGINAS = 40
+PLAZO_LLAMADA = 30  # seconds for one whole NVIDIA answer: MAX_PAGINAS x 2 calls x 30 s = 40 min, inside PLAZO_FASE
+PLAZO_FASE = 45 * 60  # no page starts after this; one more page (2 x 30 s) still ends inside the step's 50 minutes
+_CADENA = re.compile(r'"(?:[^"\\]|\\.)*"', re.S)  # one JSON string literal, escapes included
+
+
+class SalidaGrande(ValueError):
+    """A parser wrote more than its cap: its process group is killed and the file is its own result."""
 
 
 def muestra(filas):
@@ -70,18 +83,38 @@ def _limites():
     resource.setrlimit(resource.RLIMIT_AS, (MEMORIA, MEMORIA))
 
 
-def correr(cmd, timeout=300):
-    """A parser in a session of its own, with a memory cap; at the timeout its whole process group is killed."""
-    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, start_new_session=True,
-                         preexec_fn=_limites)
+def correr(cmd, timeout=300, tope=SALIDA_MAX):
+    """A parser in a session of its own, with a memory cap; its output is read up to `tope` bytes within `timeout`
+    seconds in all, and past either, or when it ends, its whole process group is killed (GPT on 2b460e3: communicate()
+    kept all of it)."""
+    p = subprocess.Popen(cmd, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                         start_new_session=True, preexec_fn=_limites)
+    fin, out = time.monotonic() + timeout, bytearray()
     try:
-        out, _ = p.communicate(timeout=timeout)
-    except subprocess.TimeoutExpired:
-        os.killpg(p.pid, signal.SIGKILL); p.communicate()
-        raise
+        with selectors.DefaultSelector() as sel:
+            sel.register(p.stdout, selectors.EVENT_READ)
+            while True:
+                quedan = fin - time.monotonic()
+                if quedan <= 0:
+                    raise subprocess.TimeoutExpired(cmd, timeout)
+                if not sel.select(quedan):
+                    continue
+                chunk = os.read(p.stdout.fileno(), 64 * 1024)
+                if not chunk:
+                    break
+                out += chunk
+                if len(out) > tope:
+                    raise SalidaGrande(f'{cmd[0]}: more than {tope} bytes')
+        p.wait(max(fin - time.monotonic(), 0))
+    finally:
+        try:
+            os.killpg(p.pid, signal.SIGKILL)  # the whole group: at the deadline, past the cap, or a child left behind
+        except (ProcessLookupError, PermissionError):
+            pass
+        p.kill(); p.wait(); p.stdout.close()
     if p.returncode != 0:
         raise subprocess.CalledProcessError(p.returncode, cmd)
-    return out
+    return bytes(out)
 
 
 def leer_respuesta(resp):
@@ -121,22 +154,40 @@ def _post(req, timeout):
     return out['body']
 
 
-def nvidia(jpeg, key, post=_post):
+def _eco(body, key):
+    """True when the key is in the body's bytes or in any of its JSON string literals, each decoded on its own: the raw
+    text, not the decoded tree, so no repeated property, nesting or escape hides it (the check reviewed in PR #89,
+    rg/adquirir.py). A body that is not UTF-8 JSON counts as holding it."""
+    if key.encode('utf-8') in body:
+        return True
+    try:
+        texto = body.decode('utf-8')
+        json.loads(texto)  # JSON only: outside JSON the escapes this scan decodes mean nothing
+        return any(key in json.loads(c) for c in _CADENA.findall(texto) if '\\' in c)
+    except (ValueError, UnicodeDecodeError, RecursionError):
+        return True
+
+
+def nvidia(jpeg, key, post=None):
     """(text or None, status) of nemotron-parse on one page image. A redirect is an error, never followed (the key
-    would go with it: auditor and GPT on 212e8f8)."""
+    would go with it: auditor and GPT on 212e8f8); an answer that holds the key, or cannot be checked whole for it, is
+    refused before anything is read from it (GPT on 2b460e3: a 200 that echoed it went to .nvidia.md)."""
     url = 'data:image/jpeg;base64,' + base64.b64encode(jpeg).decode('ascii')
     payload = {'model': MODELO, 'max_tokens': 8192,
                'messages': [{'role': 'user', 'content': [{'type': 'image_url', 'image_url': {'url': url}}]}]}
     req = urllib.request.Request(API_URL, data=json.dumps(payload).encode('utf-8'), method='POST',
                                  headers={'Authorization': f'Bearer {key}', 'Content-Type': 'application/json'})
     try:
-        texto = leer_respuesta(json.loads(post(req, 180).decode('utf-8')))
+        body = (post or _post)(req, PLAZO_LLAMADA)
+        if _eco(body, key):
+            return None, 'rechazada: trae la llave o no se puede revisar entera'
+        texto = leer_respuesta(json.loads(body.decode('utf-8')))
         return texto, 'ok' if texto is not None else 'sin texto'
     except urllib.error.HTTPError as e:  # a 3xx too; its body is never read: it could echo part of the key
         e.close()
         return None, f'http {e.code}'
-    except (urllib.error.URLError, OSError, ValueError, TimeoutError) as e:
-        return None, type(e).__name__
+    except (urllib.error.URLError, OSError, ValueError, TimeoutError, http.client.HTTPException) as e:
+        return None, type(e).__name__  # a body cut short (IncompleteRead) is this call's error, not the phase's
 
 
 def jpeg_bajo_limite(pdf, pagina, d):
@@ -227,32 +278,47 @@ def preparar(catalogo, salida, paginas, docs):
     return out
 
 
-def fase_nvidia(salida, key):
-    """Adds NVIDIA's reading of every page `preparar` left as a JPEG; opens no PDF."""
+def _una_pagina(fila, salida, key):
+    """NVIDIA's entry for one page `preparar` left, its JPEG checked again; read twice, and repeatable only when both
+    readings are text (GPT on 2b460e3: two equal errors were 'repetible')."""
+    sha, pag = fila.get('sha256'), fila.get('pagina')
+    if not isinstance(sha, str) or not re.fullmatch(r'[0-9a-f]{64}', sha) or isinstance(pag, bool) or not isinstance(pag, int):
+        return {'estado': 'nombre inesperado'}
+    nombre = f'{sha}-p{pag}'
+    try:
+        st = os.lstat(salida / f'{nombre}.jpg')
+    except OSError:
+        return {'estado': 'falta la imagen'}
+    if not stat.S_ISREG(st.st_mode) or st.st_size > IMG_MAX:  # a symlink or a big file is not what preparar left
+        return {'estado': 'imagen inesperada'}
+    jpeg = (salida / f'{nombre}.jpg').read_bytes()
+    if not jpeg.startswith(b'\xff\xd8\xff') or len(jpeg) > IMG_MAX:  # data from the other job, checked again
+        return {'estado': 'imagen inesperada'}
+    t0 = time.monotonic(); t1, estado = nvidia(jpeg, key); s = round(time.monotonic() - t0, 2)
+    t2, estado_2 = nvidia(jpeg, key)
+    r = {'estado': estado, 'estado_2': estado_2, 'caracteres': len(t1 or ''), 'segundos': s,
+         'repetible': t1 == t2 if t1 is not None and t2 is not None else None, 'tablas': (t1 or '').count('\n|')}
+    if t1 is not None:
+        (salida / f'{nombre}.nvidia.md').write_text(t1, encoding='utf-8')
+        fila['parecido'] = parecido((salida / f'{nombre}.tesseract.txt').read_text(encoding='utf-8'), t1)
+    return r
+
+
+def fase_nvidia(salida, key, reloj=time.monotonic):
+    """Adds NVIDIA's reading of every page `preparar` left as a JPEG; opens no PDF. Saved after every page, and no page
+    starts after PLAZO_FASE: the rest stay 'pendiente' (GPT on 2b460e3: a job cut short lost every reading)."""
     salida = Path(salida); out = json.loads((salida / 'medicion.json').read_text(encoding='utf-8'))
+    fin = reloj() + PLAZO_FASE
     for fila in out['paginas']:
         if 'nvidia' in fila:
             continue
-        sha, pag = fila.get('sha256'), fila.get('pagina')
-        if not isinstance(sha, str) or not re.fullmatch(r'[0-9a-f]{64}', sha) or isinstance(pag, bool) or not isinstance(pag, int):
-            fila['nvidia'] = {'estado': 'nombre inesperado'}; continue
-        img = salida / f'{sha}-p{pag}.jpg'
         try:
-            st = os.lstat(img)
-        except OSError:
-            fila['nvidia'] = {'estado': 'falta la imagen'}; continue
-        if not stat.S_ISREG(st.st_mode) or st.st_size > IMG_MAX:  # a symlink or a big file is not what preparar left
-            fila['nvidia'] = {'estado': 'imagen inesperada'}; continue
-        nombre, jpeg = f'{sha}-p{pag}', img.read_bytes()
-        if not jpeg.startswith(b'\xff\xd8\xff') or len(jpeg) > IMG_MAX:  # data from the other job, checked again
-            fila['nvidia'] = {'estado': 'imagen inesperada'}; continue
-        (t_nv, estado), s_nv, rep_nv = dos_veces(lambda: nvidia(jpeg, key))
-        fila['nvidia'] = {'estado': estado, 'caracteres': len(t_nv or ''), 'segundos': s_nv, 'repetible': rep_nv,
-                          'tablas': (t_nv or '').count('\n|')}
-        if t_nv is not None:
-            (salida / f'{nombre}.nvidia.md').write_text(t_nv, encoding='utf-8')
-            fila['parecido'] = parecido((salida / f'{nombre}.tesseract.txt').read_text(encoding='utf-8'), t_nv)
-    (salida / 'medicion.json').write_text(json.dumps(out, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+            fila['nvidia'] = (_una_pagina(fila, salida, key) if reloj() < fin else
+                              {'estado': 'pendiente', 'motivo': 'plazo de la fase'})
+        except (OSError, ValueError) as e:  # a page whose files cannot be read is its own result, never the phase's
+            fila['nvidia'] = {'estado': type(e).__name__}
+        _guardar(salida, out)  # after every page: a job cut short keeps what was read
+    _guardar(salida, out)
     return out
 
 
@@ -267,7 +333,7 @@ def main(argv=None):
     if a.fase == 'preparar':
         if os.environ.get('NVIDIA_API_KEY'):
             sys.exit('preparar opens hostile files: it never runs where the NVIDIA key is')
-        out = preparar(a.catalogo, a.salida, min(a.paginas, 40), min(a.docs, 10))
+        out = preparar(a.catalogo, a.salida, min(a.paginas, MAX_PAGINAS), min(a.docs, 10))
         if not out['paginas'] and not out['documentos']:
             sys.exit('nothing was measured: every file was skipped or none was selected')  # never a green run with no data
     else:
@@ -275,6 +341,8 @@ def main(argv=None):
         if not key:
             sys.exit('no NVIDIA_API_KEY')
         out = fase_nvidia(a.salida, key)
+        if not any((p.get('nvidia') or {}).get('estado') == 'ok' for p in out['paginas']):
+            sys.exit('NVIDIA gave no reading: red, with what it answered saved')  # GPT on 2b460e3: all 401 was green
     print(json.dumps({'paginas': len(out['paginas']), 'documentos': len(out['documentos']), 'saltados': len(out['saltados'])}))
     return 0
 
