@@ -338,7 +338,9 @@ jobs:
     # objects with git cat-file, byte for byte (never git archive, which applies the head's export attributes); no PR
     # code is checked out or run. No secrets; the read-only token exists only in the fetch step, never where the raw
     # files, hostile input, are parsed (SECURITY T12). A gate problem or error is a result in packets.json, not a job
-    # failure, so audit-gpt gets it: there a raw this gate passed arrives as one line instead of its bytes.
+    # failure, so audit-gpt gets it: there a raw this gate passed arrives as one line instead of its bytes. A raw a quote
+    # cites and the packet does not keep is downloaded again from its own url (rg.recrudo, SECURITY T29) into data/,
+    # which is never uploaded; citas.jsonl, one line per artifact and per quote as each is decided, is.
     needs: gate
     if: needs.gate.outputs.run == 'true'
     runs-on: ubuntu-24.04
@@ -369,9 +371,16 @@ jobs:
           [[ "$SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "bad head"; exit 1; }
           d="$RUNNER_TEMP/packet-gate"
           rm -rf "$d"; mkdir -p "$d/data"
-          python scripts/packet_gate.py --base origin/main --sha "$SHA" --data "$d/data" --out "$d/packets.json"
+          python scripts/packet_gate.py --base origin/main --sha "$SHA" --data "$d/data" --out "$d/packets.json" --recibo "$d/citas.jsonl"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
-        with: { name: packet-gate, path: '${{ runner.temp }}/packet-gate/packets.json', retention-days: 7, if-no-files-found: error }
+        if: always()  # what the gate decided before a cut still travels
+        with:
+          name: packet-gate
+          path: |
+            ${{ runner.temp }}/packet-gate/packets.json
+            ${{ runner.temp }}/packet-gate/citas.jsonl
+          retention-days: 7
+          if-no-files-found: error
 
   audit-gpt:
     # Second, independent opinion. Checks out main only: the PR head is fetched as git objects for the diff, never
