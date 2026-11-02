@@ -35,7 +35,7 @@ class Falso:
         if 'per-page=1' in url and 'cursor' not in url:
             return Response(200, json.dumps({'meta': {'count': self.declarado}}).encode(), url)
         cuerpo = self.cuerpos.pop(0)
-        if isinstance(cuerpo, Exception):
+        if isinstance(cuerpo, BaseException):
             raise cuerpo
         return Response(self.status, cuerpo, url)
 
@@ -51,9 +51,12 @@ class Api(unittest.TestCase):
         return q.adquirir(fuente, self.out, entorno={'OPENALEX_API_KEY': KEY} if entorno is None else entorno,
                           nuevo_fetcher=lambda: self.fx, ahora=AHORA, **kw)
 
-    def registros(self):
-        with gzip.open(self.out / 'int.openalex-temas' / 'registros.jsonl.gz', 'rt') as fh:
-            return [json.loads(line)['id'] for line in fh]
+    def registros(self, sid='int.openalex-temas'):
+        out = []
+        for f in sorted((self.out / sid / 'registros').glob('*.jsonl.gz')):
+            with gzip.open(f, 'rt') as fh:
+                out += [json.loads(line)['id'] for line in fh]
+        return out
 
     def test_cursor_pages_until_the_last_one_and_squares_with_the_declared_size(self):
         m = self.run_([pagina(['T1', 'T2'], 'c2'), pagina(['T3'], None)])
@@ -121,8 +124,48 @@ class Api(unittest.TestCase):
         self.assertEqual(self.run_([FetchRefused('host not in allowlist: x.org')])['estado'], 'rechazado')
         self.assertEqual(self.run_([BudgetExhausted('run deadline reached')])['estado'], 'pendiente')
         self.assertEqual(self.run_([pagina(['T1'], None)], status=503)['estado'], 'http')
-        clock = iter([0, 0, q.PLAZO + 1])
+        clock = iter([0, 0, 0, q.PLAZO + 1])
         self.assertEqual(self.run_([pagina(['T1'], 'c2'), pagina(['T2'], None)], reloj=lambda: next(clock))['estado'], 'pendiente')
+
+    def test_a_cursor_that_is_not_text_is_unreadable(self):
+        # GPT on d705bce: [] or {} raised TypeError and ended the whole run
+        for cursor in ([], {}, 7):
+            with self.subTest(cursor=cursor):
+                m = self.run_([pagina(['T1'], cursor)], declarado=1)
+                self.assertEqual((m['estado'], m['motivo']), ('ilegible', 'cursor con forma inesperada'))
+
+    def test_every_record_the_manifest_announces_is_on_disk_even_when_the_run_dies(self):
+        # GPT on d705bce: the records file stayed open and buffered until the source ended
+        with self.assertRaises(KeyboardInterrupt):
+            self.run_([pagina(['T1', 'T2'], 'c2'), KeyboardInterrupt()])
+        m = json.loads((self.out / 'int.openalex-temas' / 'manifiesto.json').read_text())
+        self.assertEqual(sum(p['nuevos'] for p in m['paginas']), m['distintos'])
+        self.assertEqual(self.registros(), ['T1', 'T2'])
+
+    def test_every_source_of_a_run_shares_one_deadline(self):
+        # GPT on d705bce: each source had a fresh 100 minutes inside a 110-minute step
+        reloj = iter([0] + [q.PLAZO + 1] * 50)
+        with tempfile.TemporaryDirectory() as t, mock.patch('time.monotonic', lambda: next(reloj)), \
+                mock.patch.object(q, 'Fetcher') as F, mock.patch('sys.stdout'), \
+                mock.patch.dict('os.environ', {'OPENALEX_API_KEY': KEY}):
+            rc = q.main(['--solo', 'int.openalex-temas', 'int.openalex-campos', '--salida', t])
+            estados = [json.loads((Path(t) / s / 'manifiesto.json').read_text())['estado']
+                       for s in ('int.openalex-temas', 'int.openalex-campos')]
+        self.assertEqual((rc, estados), (3, ['pendiente', 'pendiente']))
+        F.return_value.get.assert_not_called()
+
+    def test_one_source_that_breaks_never_stops_the_others(self):
+        calls = iter([RuntimeError('boom'), {'source_id': 'int.openalex-campos', 'estado': 'completo'}])
+
+        def una(f, *a, **k):
+            r = next(calls)
+            if isinstance(r, Exception):
+                raise r
+            return r
+        with tempfile.TemporaryDirectory() as t, mock.patch.object(q, 'adquirir', side_effect=una), \
+                mock.patch('sys.stdout') as out:
+            self.assertEqual(q.main(['--solo', 'int.openalex-temas', 'int.openalex-campos', '--salida', t]), 3)
+        self.assertIn('"estado": "error"', ''.join(str(c.args[0]) for c in out.write.call_args_list if c.args))
 
     def test_page_and_offset_routes_advance_and_stop_on_a_short_page(self):
         for tipo, segundo in (('pagina', 'page=2'), ('offset', 'offset=2')):
@@ -143,6 +186,42 @@ class Api(unittest.TestCase):
         with mock.patch.object(q, '_escribir', side_effect=lambda p, d: saved.append(d['distintos']) or real(p, d)):
             self.run_([pagina(['T1', 'T2'], 'c2'), pagina(['T3'], None)])
         self.assertEqual(saved[:2], [2, 3])
+
+
+class Reales(unittest.TestCase):
+    """Answers captured from api.openalex.org on 2026-11-01 (tests/fixtures/openalex): their real shape, count and end."""
+    FX = ROOT / 'tests' / 'fixtures' / 'openalex'
+
+    def correr(self, fuente, paginas, count):
+        cuerpos = [(self.FX / p).read_bytes() for p in paginas]
+        contador = (self.FX / count).read_bytes()
+
+        class Real:
+            def __init__(self): self.pedidos = []
+            def get(self, url, auth=None):
+                self.pedidos.append(url)
+                if '/' + fuente['contador']['url'].split('/')[-1] == '/' + url.split('/')[-1]:
+                    return Response(200, contador, url)
+                cuerpo = cuerpos.pop(0)
+                return Response(401 if b'API key required' in cuerpo else 200, cuerpo, url)
+        with tempfile.TemporaryDirectory() as t:
+            return q.adquirir(fuente, t, entorno={'OPENALEX_API_KEY': KEY}, nuevo_fetcher=Real, ahora=AHORA)
+
+    def test_the_four_domains_end_on_their_real_last_page_and_square(self):
+        m = self.correr(FUENTES['int.openalex-dominios'], ['domains-p1.json'], 'domains-count.json')
+        self.assertEqual((m['estado'], m['declarado'], m['distintos']), ('completo', 4, 4))
+
+    def test_the_26_fields_by_page_number_end_on_the_short_page_and_square(self):
+        f = copy.deepcopy(FUENTES['int.openalex-campos'])
+        f['adquisicion']['paginacion'] = {'tipo': 'pagina', 'parametro': 'page', 'tamano_parametro': 'per-page', 'tamano': 10,
+                                          'ruta_items': ['results'], 'max_paginas': 5}
+        m = self.correr(f, ['fields-page1.json', 'fields-page2.json', 'fields-page3.json'], 'fields-count.json')
+        self.assertEqual((m['estado'], m['declarado'], m['distintos'], len(m['paginas'])), ('completo', 26, 26, 3))
+
+    def test_a_second_cursor_page_without_the_key_is_a_401_never_a_record(self):
+        # captured: OpenAlex refuses cursor paging past page one without a key
+        m = self.correr(FUENTES['int.openalex-campos'], ['fields-cursor-p1.json', 'cursor-sin-llave.json'], 'fields-count.json')
+        self.assertEqual((m['estado'], m.get('http'), m['distintos']), ('http', 401, 10))
 
 
 class Contrato(unittest.TestCase):

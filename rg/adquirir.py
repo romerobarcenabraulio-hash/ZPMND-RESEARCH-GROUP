@@ -15,7 +15,9 @@ budget of max_paginas plus a few, the pause per host):
 - a credential (`credencial.secreto`, the name of an environment variable the workflow sets from a repo secret) goes
   only in the header Authorization: Bearer, only to the host of `url` (Fetcher secrets): never in a URL, a manifest or
   a message; a page whose body holds it, raw or JSON-decoded, is refused and nothing of it is kept.
-The manifest is written after every page (os.replace), so a run cut short keeps what it read.
+Each page's new records go to registros/<n>.jsonl.gz, written whole (os.replace) before the manifest names them, and
+the manifest is written after every page: a run cut short keeps every record its manifest announces (GPT on d705bce).
+Every source of a run shares one deadline (main's), so the last one never outlives the step.
 """
 import argparse
 import gzip
@@ -81,8 +83,9 @@ def _escribir(path, doc):
     os.replace(tmp, path)
 
 
-def adquirir(f, salida, entorno=None, nuevo_fetcher=None, ahora=None, reloj=time.monotonic, plazo=PLAZO):
-    """One source by its `api` declaration; returns its manifest (also written to <salida>/<source_id>/manifiesto.json)."""
+def adquirir(f, salida, entorno=None, nuevo_fetcher=None, ahora=None, reloj=time.monotonic, fin=None):
+    """One source by its `api` declaration until `fin` (a reloj() value, the run's deadline); returns its manifest (also
+    written to <salida>/<source_id>/manifiesto.json)."""
     a, entorno = f['adquisicion'], os.environ if entorno is None else entorno
     pag = a['paginacion']
     ahora = ahora or (lambda: datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
@@ -97,7 +100,9 @@ def adquirir(f, salida, entorno=None, nuevo_fetcher=None, ahora=None, reloj=time
         key = entorno.get(a['credencial']['secreto'], '')
         if not key:  # nothing is asked without the key the declaration names
             m.update(estado='sin_credencial'); guardar(); return m
-    fin = reloj() + plazo
+    fin = reloj() + PLAZO if fin is None else fin
+    if reloj() >= fin:  # the run's deadline came before this source: nothing is asked
+        m.update(estado='pendiente', motivo='plazo de la corrida'); guardar(); return m
     nuevo_fetcher = nuevo_fetcher or (lambda: Fetcher(f['allowed_hosts'], budget=pag['max_paginas'] + 8, max_bytes=CAP,
                                                       timeout=60, retries=2, clock=reloj, deadline=fin,
                                                       secrets={key: host} if key else None))
@@ -109,50 +114,57 @@ def adquirir(f, salida, entorno=None, nuevo_fetcher=None, ahora=None, reloj=time
             r = fx.get(c['url'], auth=auth if urlsplit(c['url']).hostname == host else None)
             m['declarado'] = sondeo.leer(r.body, c) if r.status == 200 and not _eco(r.body, key) else None
         url, valor, n = a['url'], _primero(pag), 0
-        registros = gzip.open(carpeta / 'registros.jsonl.gz', 'wt', encoding='utf-8')
-        with registros:
-            while True:
-                if reloj() >= fin:
-                    m.update(estado='pendiente', motivo='plazo de la corrida'); break
-                if n >= pag['max_paginas']:
-                    m.update(estado='incompleto', motivo='max_paginas'); break
-                params = {pag['tamano_parametro']: pag['tamano']} if pag.get('tamano_parametro') and pag.get('tamano') else {}
-                if pag['tipo'] != 'ninguna' and valor is not None:
-                    params[pag['parametro']] = valor
-                r = fx.get(_con(url, **params), auth=auth)
-                n += 1
-                if r.status != 200:
-                    m.update(estado='http', http=r.status); break
-                if _eco(r.body, key):
-                    m.update(estado='rechazado', motivo='la respuesta contiene la llave: no se guarda'); break
-                sha, rel = raws.put(r.body, 'json')
-                m['paginas'].append({'n': n, 'sha256': sha, 'crudo': rel, 'bytes': len(r.body)})
-                doc = json.loads(r.body.decode('utf-8'))
-                items = _ruta(doc, pag['ruta_items'])
-                if not isinstance(items, list):  # an item without its id (not an object, no id) is caught below
-                    m.update(estado='ilegible', motivo='la página no trae una lista de registros'); break
-                for i in items:
-                    rid = _ruta(i, a['registro']['id_ruta'])
-                    if isinstance(rid, bool) or not isinstance(rid, (str, int)):
-                        raise ValueError('un registro sin su id')
-                    m['leidos'] += 1
-                    if rid in ids:
-                        m['repetidos'] += 1; continue
-                    ids.add(rid)
-                    registros.write(json.dumps({'id': rid, 'registro': i}, ensure_ascii=False, sort_keys=True) + '\n')
-                m['distintos'] = len(ids)
-                guardar()
-                if pag['tipo'] == 'ninguna' or not items or (pag['tipo'] != 'cursor' and len(items) < pag.get('tamano', 1)):
-                    m.update(estado='fin'); break  # nothing more, or a short last page
-                if pag['tipo'] == 'cursor':
-                    valor = _ruta(doc, pag['ruta_siguiente'])
-                    if valor in (None, ''):
-                        m.update(estado='fin'); break
-                    if valor in vistos:
-                        m.update(estado='incompleto', motivo='cursor repetido'); break
-                    vistos.add(valor)
-                else:
-                    valor += 1 if pag['tipo'] == 'pagina' else pag['tamano']
+        (carpeta / 'registros').mkdir(exist_ok=True)
+        while True:
+            if reloj() >= fin:
+                m.update(estado='pendiente', motivo='plazo de la corrida'); break
+            if n >= pag['max_paginas']:
+                m.update(estado='incompleto', motivo='max_paginas'); break
+            params = {pag['tamano_parametro']: pag['tamano']} if pag.get('tamano_parametro') and pag.get('tamano') else {}
+            if pag['tipo'] != 'ninguna' and valor is not None:
+                params[pag['parametro']] = valor
+            r = fx.get(_con(url, **params), auth=auth)
+            n += 1
+            if r.status != 200:
+                m.update(estado='http', http=r.status); break
+            if _eco(r.body, key):
+                m.update(estado='rechazado', motivo='la respuesta contiene la llave: no se guarda'); break
+            sha, rel = raws.put(r.body, 'json')
+            m['paginas'].append({'n': n, 'sha256': sha, 'crudo': rel, 'bytes': len(r.body)})
+            doc = json.loads(r.body.decode('utf-8'))
+            items = _ruta(doc, pag['ruta_items'])
+            if not isinstance(items, list):  # an item without its id (not an object, no id) is caught below
+                m.update(estado='ilegible', motivo='la página no trae una lista de registros'); break
+            nuevos = []
+            for i in items:
+                rid = _ruta(i, a['registro']['id_ruta'])
+                if isinstance(rid, bool) or not isinstance(rid, (str, int)):
+                    raise ValueError('un registro sin su id')
+                m['leidos'] += 1
+                if rid in ids:
+                    m['repetidos'] += 1; continue
+                ids.add(rid)
+                nuevos.append(json.dumps({'id': rid, 'registro': i}, ensure_ascii=False, sort_keys=True))
+            rel_r = f'registros/{n:05d}.jsonl.gz'
+            tmp = carpeta / (rel_r + '.tmp')
+            tmp.write_bytes(gzip.compress(''.join(x + '\n' for x in nuevos).encode('utf-8'), mtime=0))
+            os.replace(tmp, carpeta / rel_r)  # whole on disk before the manifest names it
+            m['paginas'][-1].update(registros=rel_r, nuevos=len(nuevos))
+            m['distintos'] = len(ids)
+            guardar()
+            if pag['tipo'] == 'ninguna' or not items or (pag['tipo'] != 'cursor' and len(items) < pag.get('tamano', 1)):
+                m.update(estado='fin'); break  # nothing more, or a short last page
+            if pag['tipo'] == 'cursor':
+                valor = _ruta(doc, pag['ruta_siguiente'])
+                if valor in (None, ''):
+                    m.update(estado='fin'); break
+                if not isinstance(valor, str) or len(valor) > 2000:  # GPT on d705bce: [] or {} is not a cursor
+                    m.update(estado='ilegible', motivo='cursor con forma inesperada'); break
+                if valor in vistos:
+                    m.update(estado='incompleto', motivo='cursor repetido'); break
+                vistos.add(valor)
+            else:
+                valor += 1 if pag['tipo'] == 'pagina' else pag['tamano']
     except BudgetExhausted as e:  # the Fetcher's deadline (the run's) or its request budget
         m.update(estado='pendiente' if 'deadline' in str(e) else 'incompleto', motivo=str(e)[:200])
     except FetchRefused as e:
@@ -190,7 +202,12 @@ def main(argv=None):
     faltan = [s for s in x.solo if s not in fuentes or (fuentes[s].get('adquisicion') or {}).get('via') != 'api']
     if faltan:
         raise SystemExit(f'not registered with an api acquisition: {" ".join(faltan)}')
-    res = [adquirir(fuentes[s], x.salida) for s in x.solo]
+    fin, res = time.monotonic() + PLAZO, []  # one deadline for the whole run (GPT on d705bce)
+    for s in x.solo:
+        try:
+            res.append(adquirir(fuentes[s], x.salida, fin=fin))
+        except Exception as e:  # noqa: BLE001 - one source's failure is its own result; the others still run
+            res.append({'source_id': s, 'estado': 'error', 'motivo': type(e).__name__})
     print(json.dumps([{k: r.get(k) for k in ('source_id', 'estado', 'motivo', 'declarado', 'distintos', 'repetidos')}
                       for r in res], ensure_ascii=False))
     return 0 if all(r['estado'] == 'completo' for r in res) else 3

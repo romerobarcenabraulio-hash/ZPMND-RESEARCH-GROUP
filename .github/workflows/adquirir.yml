@@ -68,8 +68,9 @@ jobs:
           fi
           for d in "$RUNNER_TEMP"/salida/*/; do
             s=$(basename "$d"); mkdir -p "adquisicion/$s"
+            rm -rf "adquisicion/$s/registros"
             cp "$d/manifiesto.json" "adquisicion/$s/"
-            [ -f "$d/registros.jsonl.gz" ] && cp "$d/registros.jsonl.gz" "adquisicion/$s/"
+            if [ -d "$d/registros" ]; then cp -R "$d/registros" "adquisicion/$s/"; fi
           done
           git config user.name "rg-adquirir-bot"
           git config user.email "rg-adquirir-bot@users.noreply.github.com"

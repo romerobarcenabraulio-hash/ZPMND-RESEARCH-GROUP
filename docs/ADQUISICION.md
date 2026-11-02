@@ -49,7 +49,7 @@ Construido el 2026-11-01. Además de lo de arriba, la vía `api` admite:
   no se pide nada.
 Cada fuente termina en `completo` solo si llegó a su última página y sus registros distintos son los que declara su
 `contador` (`no_cuadra` si difieren, `sin_conteo` si no declara tamaño). Cualquier otro final dice su motivo
-(`max_paginas`, `cursor repetido`, `ilegible`, `bloqueada_por_robots`, `pendiente` al plazo). Los registros y el
+(`max_paginas`, `cursor repetido`, `ilegible`, `bloqueada_por_robots`, `pendiente` al plazo). Los registros de cada página se escriben enteros (`registros/<n>.jsonl.gz`) antes de que el manifiesto los nombre, y todas las fuentes de una corrida comparten un solo plazo. Los registros y el
 manifiesto van a la rama `adquisicion`; las páginas crudas, al artefacto de la corrida (90 días), con su sha256 en el
 manifiesto. Primer uso: la clasificación de OpenAlex (dominios, campos, subcampos, temas), que el registro declara en
 `sources/registro/I.json`.
