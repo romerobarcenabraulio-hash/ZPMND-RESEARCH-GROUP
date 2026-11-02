@@ -22,10 +22,12 @@ PY = sys.executable
 # Sorted (file, anchor, replacement) and kept sorted by tests/test_mutar.py: each PR inserts its mutants in place
 # instead of appending at the end, so parallel PRs stop colliding on the last line of this list (2026-10-21).
 MUT = [
+ ('.github/workflows/adquirir.yml', "        if: always() && steps.adquirir.outcome != 'skipped'\n        env: { GH_TOKEN", '        env: { GH_TOKEN'),
  ('.github/workflows/adquirir.yml', '        run: exit 1\n', '        run: exit 0\n'),
  ('.github/workflows/adquirir.yml', '        with: { ref: main, persist-credentials: false }', '        with: { ref: main }'),
  ('.github/workflows/adquirir.yml', "    if: github.ref == 'refs/heads/main'\n", ''),
  ('.github/workflows/adquirir.yml', 'env -u GH_TOKEN PYTHONPATH', 'PYTHONPATH'),
+ ('.github/workflows/adquirir.yml', 'python -P -c', 'python -c'),
  ('.github/workflows/auditor.yml', '                "completed "*) echo "#$pr head $sha fails CI ($ci): no LLM audit"; echo run=false >> "$GITHUB_OUTPUT"; exit 0 ;;\n', ''),
  ('.github/workflows/auditor.yml', '                "completed success") break ;;\n', ''),
  ('.github/workflows/auditor.yml', '          Never write a credential, a token or a key prefix literally (GitHub, OpenAI, Anthropic): name its kind, as in\n', ''),
@@ -142,6 +144,7 @@ MUT = [
  ('rg/adquirir.py', '                                                      secrets={key: host} if key else None,\n', '                                                      secrets=None,\n'),
  ('rg/adquirir.py', "                       'completo' if m['declarado'] == m['distintos'] else 'no_cuadra')", "                       'completo')"),
  ('rg/adquirir.py', '                if not isinstance(valor, str) or len(valor) > 2000:', '                if False:'),
+ ('rg/adquirir.py', '                if not isinstance(valor, str) or len(valor) > 2000:', '                if not isinstance(valor, str):'),
  ('rg/adquirir.py', '                if rid in ids:\n', '                if False:\n'),
  ('rg/adquirir.py', '                if valor in vistos:', '                if False:'),
  ('rg/adquirir.py', '                if valor is _FALTA:', '                if False:'),
@@ -164,8 +167,8 @@ MUT = [
  ('rg/adquirir.py', "        return int(pag.get('inicio') or 1)", "        return int(pag.get('inicio') or 0)"),
  ('rg/adquirir.py', '        shutil.rmtree(dest, ignore_errors=True)  # nothing of an older', '        pass  # nothing of an older'),
  ('rg/adquirir.py', '    carpeta.mkdir(parents=True)  # a folder of its own', '    carpeta.mkdir(parents=True, exist_ok=True)  # a folder of its own'),
+ ('rg/adquirir.py', '    except (ValueError, UnicodeDecodeError, RecursionError):\n        return True', '    except (ValueError, UnicodeDecodeError, RecursionError):\n        return False'),
  ('rg/adquirir.py', "    fx, auth = nuevo_fetcher(), (f'Bearer {key}' if key else None)", '    fx, auth = nuevo_fetcher(), None'),
- ('rg/adquirir.py', "    if key.encode('utf-8') in body:\n        return True", '    if False:\n        return True'),
  ('rg/adquirir.py', '    if len(set(x.solo)) != len(x.solo):', '    if False:'),
  ('rg/adquirir.py', "    if reloj() >= fin:  # the run's deadline came before this source", "    if False:  # the run's deadline came before this source"),
  ('rg/adquirir.py', '    if ya:\n', '    if False:\n'),

@@ -98,7 +98,9 @@ class Api(unittest.TestCase):
         self.assertEqual((m['estado'], m['motivo']), ('incompleto', 'max_paginas'))
         m = self.run_([pagina(['T1'], 'c2'), pagina(['T2'], 'c2'), pagina(['T3'], None)])
         self.assertEqual((m['estado'], m['motivo']), ('incompleto', 'cursor repetido'))
-        for cuerpo in (b'{"results": [1, 2]}', b'{"results": {"a": 1}}', b'<html>', b'{"results": [{"name": "sin id"}]}'):
+        sin = copy.deepcopy(TEMAS); del sin['adquisicion']['credencial']  # without a key a page that is not JSON is unreadable
+        self.assertEqual(self.run_([b'<html>'], fuente=sin, entorno={})['estado'], 'ilegible')
+        for cuerpo in (b'{"results": [1, 2]}', b'{"results": {"a": 1}}', b'{"results": [{"name": "sin id"}]}'):
             with self.subTest(cuerpo=cuerpo):
                 self.assertEqual(self.run_([cuerpo])['estado'], 'ilegible')
 
@@ -124,6 +126,16 @@ class Api(unittest.TestCase):
                 self.assertEqual((m['estado'], m['paginas'], m['distintos']), ('rechazado', [], 0))
                 self.assertNotIn(KEY, (self.out / SID / 'manifiesto.json').read_text())
 
+    def test_a_page_that_cannot_be_checked_whole_for_the_key_is_refused_and_nothing_of_it_is_kept(self):
+        # GPT on bbf8695: a nesting too deep for the decoder hid a \\u-escaped key and its raw page was kept
+        escapada = KEY.replace('o', '\\u006f').encode()
+        hondo = b'{"meta": {"next_cursor": null}, "results": [{"id": "T1", "x": ' + b'[' * 5000 + b'"' + escapada + b'"' + b']' * 5000 + b'}]}'
+        for cuerpo in (hondo, b'<html>', b'\xff\xfe'):
+            with self.subTest(cuerpo=cuerpo[:20]):
+                m = self.run_([cuerpo], declarado=1)
+                self.assertEqual((m['estado'], m['paginas']), ('rechazado', []))
+                self.assertEqual(list((self.out / SID / 'crudos').rglob('*.*')), [])
+
     def test_robots_a_refusal_a_status_and_the_deadline_each_end_the_source_with_their_reason(self):
         self.assertEqual(self.run_([FetchRefused('robots.txt disallows https://api.openalex.org/topics')])['estado'],
                          'bloqueada_por_robots')
@@ -139,6 +151,8 @@ class Api(unittest.TestCase):
             with self.subTest(cursor=cursor):
                 m = self.run_([pagina(['T1'], cursor)], declarado=1)
                 self.assertEqual((m['estado'], m['motivo']), ('ilegible', 'cursor con forma inesperada'))
+        m = self.run_([pagina(['T1'], 'c' * 2001), pagina(['T2'], None)], declarado=2)  # GPT on bbf8695: too long a cursor
+        self.assertEqual((m['estado'], m['motivo'], len(self.fx.pedidos)), ('ilegible', 'cursor con forma inesperada', 2))
 
     def test_only_the_next_cursor_ends_a_cursor_route(self):
         # GPT on 17d66b3: an empty page that still named a next cursor ended the source, and a missing field read as null
@@ -354,7 +368,8 @@ class Workflow(unittest.TestCase):
 
     def test_it_publishes_through_publicar_without_the_token_and_by_default_only_sources_with_real_pages(self):
         publish = next(s for s in self.job['steps'] if s.get('name', '').startswith('Publish'))
-        self.assertIn('env -u GH_TOKEN PYTHONPATH="$GITHUB_WORKSPACE" python -c', publish['run'])
+        self.assertIn('env -u GH_TOKEN PYTHONPATH="$GITHUB_WORKSPACE" python -P -c', publish['run'])  # never the data branch's
+        self.assertEqual(publish['if'], "always() && steps.adquirir.outcome != 'skipped'")  # a partial run publishes too
         self.assertIn('from rg.adquirir import publicar', publish['run'])
         self.assertNotIn('cp -R', publish['run'])
         self.assertEqual(self.doc[True]['workflow_dispatch']['inputs']['fuentes']['default'],

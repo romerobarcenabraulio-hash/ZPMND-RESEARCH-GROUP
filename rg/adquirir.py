@@ -138,7 +138,7 @@ def adquirir(f, salida, entorno=None, nuevo_fetcher=None, ahora=None, reloj=None
             if r.status != 200:
                 m.update(estado='http', http=r.status); break
             if _eco(r.body, key):
-                m.update(estado='rechazado', motivo='la respuesta contiene la llave: no se guarda'); break
+                m.update(estado='rechazado', motivo='la respuesta contiene la llave o no se puede revisar entera: no se guarda'); break
             sha, rel = raws.put(r.body, 'json')
             m['paginas'].append({'n': n, 'sha256': sha, 'crudo': rel, 'bytes': len(r.body)})
             doc = json.loads(r.body.decode('utf-8'))
@@ -195,15 +195,15 @@ def adquirir(f, salida, entorno=None, nuevo_fetcher=None, ahora=None, reloj=None
 
 
 def _eco(body, key):
-    """True when a body holds the key, as bytes or once decoded as JSON (\\u escapes)."""
+    """True when a body holds the key in any text once decoded as JSON (\\u escapes included). With a key, a body that
+    cannot be decoded whole counts as holding it, so a key outside a JSON string, in a page that is not JSON or under a
+    nesting too deep for the decoder is never kept (GPT on bbf8695); a separate bytes search would add nothing."""
     if not key:
         return False
-    if key.encode('utf-8') in body:
-        return True
     try:
         return _contiene(json.loads(body.decode('utf-8')), key)
     except (ValueError, UnicodeDecodeError, RecursionError):
-        return False
+        return True
 
 
 def publicar(salida, destino):

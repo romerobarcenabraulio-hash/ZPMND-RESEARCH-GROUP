@@ -67,8 +67,9 @@ jobs:
           else
             echo "branch adquisicion could not be read (git exit $rc)"; exit 1
           fi
-          # main's code, without the token: only what each manifest names; a partial run never replaces complete records
-          env -u GH_TOKEN PYTHONPATH="$GITHUB_WORKSPACE" python -c 'import sys; from rg.adquirir import publicar; publicar(*sys.argv[1:])' \
+          # main's code, without the token and never from this data branch (-P): only what each manifest names; a partial
+          # run never replaces complete records
+          env -u GH_TOKEN PYTHONPATH="$GITHUB_WORKSPACE" python -P -c 'import sys; from rg.adquirir import publicar; publicar(*sys.argv[1:])' \
             "$RUNNER_TEMP/salida" adquisicion
           git config user.name "rg-adquirir-bot"
           git config user.email "rg-adquirir-bot@users.noreply.github.com"
