@@ -39,6 +39,21 @@ se guarda junto a su crudo (hueco 2: la licencia leída de la fuente, no supuest
 - **Plazo y guardado** como el sondeo: plazo propio menor al del job, guardado tras cada archivo o página, publicación
   aunque se corte.
 
+## Motor `api` (rg/adquirir.py, workflow adquirir.yml)
+
+Construido el 2026-11-01. Además de lo de arriba, la vía `api` admite:
+- `paginacion.inicio`: el primer valor del cursor (OpenAlex: `*`). Sin él, una página empieza en 1 y un offset en 0.
+- `credencial.secreto`: el nombre de un secreto del repo que el workflow pone en el entorno de un solo paso. La llave
+  viaja solo en el encabezado `Authorization: Bearer`, solo al host de `url` (el Fetcher se niega a mandarla a otro), y
+  nunca va en una URL, un manifiesto ni un mensaje. Una página que la contenga se rechaza entera. Sin la llave declarada
+  no se pide nada.
+Cada fuente termina en `completo` solo si llegó a su última página y sus registros distintos son los que declara su
+`contador` (`no_cuadra` si difieren, `sin_conteo` si no declara tamaño). Cualquier otro final dice su motivo
+(`max_paginas`, `cursor repetido`, `ilegible`, `bloqueada_por_robots`, `pendiente` al plazo). Los registros de cada página se escriben enteros (`registros/<n>.jsonl.gz`) antes de que el manifiesto los nombre, y todas las fuentes de una corrida comparten un solo plazo. Los registros y el
+manifiesto van a la rama `adquisicion`; las páginas crudas, al artefacto de la corrida (90 días), con su sha256 en el
+manifiesto. Primer uso: la clasificación de OpenAlex (dominios, campos, subcampos, temas), que el registro declara en
+`sources/registro/I.json`.
+
 ## Orden de construcción
 
 1. `volcado` (más conocimiento por hora), probado con fuentes reales que ya publican volcados (índice de RFC, licencias

@@ -1,0 +1,88 @@
+name: adquirir
+# Loads registered sources by their api declaration (rg/adquirir.py, docs/ADQUISICION.md) and publishes each one's
+# records and manifest to branch adquisicion as adquisicion/<source_id>/; its raw pages go to this run's artifact.
+# Code from main only, by dispatch, never for a PR. The OpenAlex key reaches only the step that acquires, through its
+# environment; the push token only the step that pushes.
+on:
+  workflow_dispatch:
+    inputs:
+      fuentes:
+        description: 'source_ids of sources/registro/ with an api acquisition, separated by spaces'
+        required: true
+        default: 'int.openalex-dominios int.openalex-campos int.openalex-subcampos int.openalex-temas'
+permissions: {}
+concurrency:
+  group: adquirir
+  cancel-in-progress: false
+jobs:
+  adquirir:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    permissions:
+      contents: write  # push branch adquisicion; nothing else
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { ref: main, persist-credentials: false }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - name: Tests of the acquisition before anything is asked
+        run: python -m unittest tests.test_adquirir
+      - name: Acquire (the only step with the key)
+        id: adquirir
+        timeout-minutes: 110  # the run stops itself at 100 (rg/adquirir.py PLAZO) and saves after every page
+        env:
+          OPENALEX_API_KEY: '${{ secrets.OPENALEX_API_KEY }}'
+          FUENTES: '${{ inputs.fuentes }}'
+        run: |
+          set -euo pipefail
+          for f in $FUENTES; do [[ "$f" =~ ^[a-z]{2,3}\.[a-z0-9][a-z0-9.-]{1,60}$ ]] || { echo "not a source_id: $f"; exit 2; }; done
+          rc=0
+          python -m rg.adquirir --solo $FUENTES --salida "$RUNNER_TEMP/salida" || rc=$?
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+      - name: Keep the raw pages
+        if: always() && steps.adquirir.outcome != 'skipped'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with: { name: crudos, path: '${{ runner.temp }}/salida/*/crudos', retention-days: 90, if-no-files-found: ignore }
+      - name: Publish records and manifests to the data branch
+        if: always() && steps.adquirir.outcome != 'skipped'
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          set -euo pipefail
+          [ -d "$RUNNER_TEMP/salida" ] || { echo "nothing was acquired"; exit 1; }
+          git init -q "$RUNNER_TEMP/datos" && cd "$RUNNER_TEMP/datos"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          rc=0
+          GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader GIT_CONFIG_VALUE_0="$auth" \
+            git ls-remote --exit-code --heads origin adquisicion >/dev/null || rc=$?
+          if [ "$rc" = 0 ]; then
+            GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader GIT_CONFIG_VALUE_0="$auth" \
+              git fetch -q --depth 1 origin adquisicion
+            git checkout -q -b adquisicion FETCH_HEAD
+          elif [ "$rc" = 2 ]; then
+            git checkout -q --orphan adquisicion
+          else
+            echo "branch adquisicion could not be read (git exit $rc)"; exit 1
+          fi
+          for d in "$RUNNER_TEMP"/salida/*/; do
+            s=$(basename "$d"); mkdir -p "adquisicion/$s"
+            rm -rf "adquisicion/$s/registros"
+            cp "$d/manifiesto.json" "adquisicion/$s/"
+            if [ -d "$d/registros" ]; then cp -R "$d/registros" "adquisicion/$s/"; fi
+          done
+          git config user.name "rg-adquirir-bot"
+          git config user.email "rg-adquirir-bot@users.noreply.github.com"
+          git add -A adquisicion
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -q -m "adquisicion: run ${GITHUB_RUN_ID}"
+          for i in 1 2 3; do
+            GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader GIT_CONFIG_VALUE_0="$auth" \
+              git push -q origin HEAD:adquisicion && exit 0
+            sleep $((i * 20))
+          done
+          echo "the push failed three times"; exit 1
+      - name: A source that did not end complete turns the run red
+        if: steps.adquirir.outputs.rc != '0'
+        run: exit 1
