@@ -1,0 +1,72 @@
+name: ocr-medir
+# Measures OCR on Orden Jurídico Nacional's own files (scripts/ocr_medir.py): Tesseract against NVIDIA's nemotron-parse
+# on scanned PDF pages, and LibreOffice on .doc. Main's code only, by dispatch. Two jobs (issue #90): the one that opens
+# the files has no key; the one with the NVIDIA key opens no file but the JPEGs the first left. Results: the artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      paginas:
+        description: 'scanned PDF pages to measure, 1 to 40'
+        required: true
+        default: '10'
+permissions: {}
+concurrency:
+  group: ocr-medir
+  cancel-in-progress: false
+jobs:
+  preparar:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    permissions: { contents: read }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { ref: main, persist-credentials: false }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - name: Engines as Ubuntu 24.04 ships them (their exact apt versions go to the result, or preparar fails)
+        run: sudo apt-get update -q && sudo apt-get install -y -q tesseract-ocr tesseract-ocr-spa poppler-utils libreoffice-writer-nogui
+      - name: The parsers' own user, which owns nothing in the checkout or the results (SECURITY T12, T25)
+        run: sudo useradd --system --no-create-home --shell /usr/sbin/nologin rgparse
+      - name: Tests before anything is fetched; the real write attempt as rgparse runs here and is never skipped
+        env: { RG_OCR_EXIGIR_AISLADO: '1' }
+        run: python -m unittest tests.test_ocr_medir
+      - name: The catalog's OJN entries (branch catalog, public, read as data)
+        run: |
+          set -euo pipefail
+          git fetch --quiet --depth 1 origin catalog
+          d="$RUNNER_TEMP/ojn"; mkdir -p "$d"
+          for f in $(git ls-tree --name-only FETCH_HEAD mx/ojn-estatal/ mx/ojn-municipal/); do
+            [[ "$f" =~ ^mx/ojn-(estatal|municipal)/[0-9]{2}\.jsonl$ ]] || continue
+            git show "FETCH_HEAD:$f" > "$d/${f//\//_}"
+          done
+      - name: Fetch, select and read with Tesseract and LibreOffice (no key in this job; every parser as rgparse)
+        timeout-minutes: 40  # nothing starts after 30 min (PLAZO_PREPARAR) and no parser runs past it
+        env: { PAGINAS: '${{ inputs.paginas }}', RG_EXTRACT_AS: rgparse }
+        run: |
+          set -euo pipefail
+          [[ "$PAGINAS" =~ ^[0-9]{1,2}$ ]] && [ "$PAGINAS" -ge 1 ] && [ "$PAGINAS" -le 40 ] || { echo "paginas: 1 to 40"; exit 2; }
+          python scripts/ocr_medir.py preparar --catalogo "$RUNNER_TEMP/ojn" --salida "$RUNNER_TEMP/ocr" --paginas "$PAGINAS"
+      - if: always()  # what was measured before a failure is kept
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with: { name: ocr-preparado, path: '${{ runner.temp }}/ocr', retention-days: 30 }
+
+  nvidia:
+    needs: preparar
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    permissions: { contents: read }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { ref: main, persist-credentials: false }
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with: { name: ocr-preparado, path: '${{ runner.temp }}/ocr' }
+      - name: NVIDIA reads the JPEGs (the only step with the key; it opens no PDF)
+        timeout-minutes: 50  # no page starts after 45 min (PLAZO_FASE); the last one takes at most 2 x 30 s more
+        env: { NVIDIA_API_KEY: '${{ secrets.NVIDIA_API_KEY }}' }
+        run: python3 -I scripts/ocr_medir.py nvidia --salida "$RUNNER_TEMP/ocr"
+      - if: always()  # what was measured before a failure is kept
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with: { name: ocr-medicion, path: '${{ runner.temp }}/ocr', retention-days: 30 }
