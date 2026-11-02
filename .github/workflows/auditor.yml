@@ -381,8 +381,6 @@ jobs:
     timeout-minutes: 20
     permissions: { contents: read }
     concurrency: { group: 'auditor-gpt-${{ needs.gate.outputs.pr }}', cancel-in-progress: true }
-    outputs:
-      result: ${{ steps.gpt.outputs.result }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { ref: main, fetch-depth: 0, persist-credentials: false }
@@ -422,7 +420,10 @@ jobs:
           out="$RUNNER_TEMP/gpt-result.json"
           python3 -I scripts/auditor_gpt.py --inputs "$RUNNER_TEMP/gpt-audit" --pr "$PR" --sha "$SHA" --out "$out"
           [ "$(wc -l < "$out")" -eq 1 ] || { echo "result is not one line"; exit 1; }
-          echo "result=$(cat "$out")" >> "$GITHUB_OUTPUT"
+      # The result travels as a file: GitHub drops a job output it suspects of holding a secret, and three GPT REVISE were
+      # lost that way (#73 f6c1e87, #89 4197c37, #91 e08a1d9); an artifact is never cut. Uploaded after the step with the key.
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with: { name: gpt-result, path: '${{ runner.temp }}/gpt-result.json', retention-days: 7 }
 
   post-gpt:
     needs: [gate, audit-gpt]
@@ -431,6 +432,8 @@ jobs:
     outputs:
       verdict: ${{ steps.post.outputs.verdict }}
     steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with: { name: gpt-result, path: '${{ runner.temp }}/gpt' }
       - name: Validate and post the second opinion
         id: post
         env:
@@ -438,9 +441,11 @@ jobs:
           REPO: ${{ github.repository }}
           PR: ${{ needs.gate.outputs.pr }}
           SHA: ${{ needs.gate.outputs.sha }}
-          RESULT: ${{ needs.audit-gpt.outputs.result }}
         run: |
           set -euo pipefail
+          f="$RUNNER_TEMP/gpt/gpt-result.json"
+          [ "$(wc -l < "$f")" -eq 1 ] || { echo "result is not one line"; exit 1; }
+          RESULT=$(cat "$f")
           verdict=$(printf '%s' "$RESULT" | jq -r '.verdict')
           if [ "$verdict" = SKIPPED ]; then  # no model configured: say so on the commit; the workflow does not fail
             desc=$(printf '%s' "$RESULT" | jq -r '.description' | cut -c1-140)

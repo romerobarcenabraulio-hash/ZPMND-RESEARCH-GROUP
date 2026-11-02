@@ -159,13 +159,13 @@ class Decide(unittest.TestCase):
             with self.subTest(job):
                 j = wf['jobs'][job]
                 self.assertEqual(j['outputs'], {'verdict': '${{ steps.post.outputs.verdict }}'})
-                step = j['steps'][0]
+                step = next(s for s in j['steps'] if s.get('id') == 'post')  # post-gpt first downloads its result
                 self.assertEqual(step['id'], 'post')
                 lines = step['run'].rstrip('\n').split('\n')
                 # the verdict goes out last, after it was posted and its status set; the skipped path exits before it
                 self.assertTrue(lines[-1].startswith('echo "verdict=$verdict" >> "$GITHUB_OUTPUT"'), lines[-1])
                 self.assertIn(f'-f context={context} -f description=', lines[-2])
-        skipped = wf['jobs']['post-gpt']['steps'][0]['run']
+        skipped = next(s for s in wf['jobs']['post-gpt']['steps'] if s.get('id') == 'post')['run']
         self.assertLess(skipped.index('exit 0'), skipped.index('echo "verdict=$verdict"'))
 
 
