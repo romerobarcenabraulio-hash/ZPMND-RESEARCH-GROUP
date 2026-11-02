@@ -16,6 +16,7 @@ VIGILADOS = (('catalog-mx.yml', 2), ('texto-mx.yml', 8), ('indicadores-mx.yml', 
              ('descubrir.yml', 2), ('sondeo-inegi.yml', 35))
 TITULO = 'Vigía de producción'
 AUTOR = 'github-actions[bot]'  # the issue this workflow opened; anyone can open one with the same title
+POR_PAGINA, PAGINAS = 100, 30  # per_page of vigia.yml's listing of open issues, and the most pages it reads
 EVENTOS = ('schedule', 'workflow_dispatch')  # the triggers of every watched workflow (tests/test_vigia.py)
 EN_CURSO = ('queued', 'in_progress', 'waiting', 'requested', 'pending')
 CONCLUSIONES = ('success', 'failure', 'cancelled', 'timed_out', 'action_required', 'neutral', 'skipped', 'stale', 'startup_failure')
@@ -108,17 +109,29 @@ def elegir_issue(issues):
     return min(nums) if nums else None
 
 
+def issue_de(paginas):
+    """'mas' while the last page read is full (the next one is read too), then the vigía issue among every page or ''.
+    A page that is not a list (gh failed) or more than PAGINAS full pages stops it, so nothing is written."""
+    if not paginas or not all(isinstance(p, list) for p in paginas):
+        raise ValueError('not pages of issues')
+    if len(paginas[-1]) >= POR_PAGINA:
+        if len(paginas) >= PAGINAS:
+            raise ValueError(f'more than {PAGINAS} pages of open issues')
+        return 'mas'
+    n = elegir_issue([i for p in paginas for i in p])
+    return '' if n is None else str(n)
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__.split('\n')[0])
-    p.add_argument('orden', choices=('lista', 'decidir', 'issue'))  # lista | decidir --repo OWNER/NAME --dir DIR | issue --issues FILE
-    for opcion, tipo in (('--repo', str), ('--dir', Path), ('--issues', Path)):
+    p.add_argument('orden', choices=('lista', 'decidir', 'issue'))  # lista | decidir --repo O/N --dir DIR | issue --dir DIR --paginas N
+    for opcion, tipo in (('--repo', str), ('--dir', Path), ('--paginas', int)):
         p.add_argument(opcion, type=tipo)
     a = p.parse_args(argv)
     if a.orden == 'lista':
         print('\n'.join(n for n, _ in VIGILADOS))
     elif a.orden == 'issue':
-        n = elegir_issue(json.loads(a.issues.read_text(encoding='utf-8')))
-        print('' if n is None else n)
+        print(issue_de([json.loads((a.dir / f'issues-{k}.json').read_text(encoding='utf-8')) for k in range(1, a.paginas + 1)]))
     else:
         datos = {n: json.loads((a.dir / f'{n}.json').read_text(encoding='utf-8')) for n, _ in VIGILADOS}
         alerta, texto = revisar(datos, datetime.now(timezone.utc), a.repo)

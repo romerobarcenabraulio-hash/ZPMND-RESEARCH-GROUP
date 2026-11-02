@@ -5,6 +5,7 @@ import importlib.util
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -63,6 +64,7 @@ class Decision(unittest.TestCase):
             self.assertEqual(estado(run(1, status=s)), 'en_curso')
         d = vigia.decidir({'workflow_runs': [run(1, hace=5 * D), run(2, status='in_progress')]}, 2, AHORA)
         self.assertEqual((d['estado'], d['corrida']['id'], d['exito']['id']), ('en_curso', 2, 1))
+        self.assertEqual(estado(run(1, status='queued', hace=2 * D)), 'en_curso')  # the cap's edge
         self.assertEqual(estado(run(1, status='in_progress', hace=3 * D)), 'sin_correr')
 
     def test_the_newest_run_decides_whatever_the_order_of_the_answer_and_a_rerun_counts_from_its_start(self):
@@ -121,6 +123,13 @@ class Issue(unittest.TestCase):
             self.assertIsNone(vigia.elegir_issue([i]), i)
         self.assertRaises(ValueError, vigia.elegir_issue, {'items': []})
 
+    def test_every_page_is_read_before_choosing_and_too_many_or_an_unreadable_one_stops_it(self):
+        llena = [issue(1000 + k, title='otra') for k in range(vigia.POR_PAGINA)]
+        self.assertEqual([vigia.issue_de(p) for p in ([llena], [llena, [issue(7)]], [llena, []], [llena] * (vigia.PAGINAS - 1))],
+                         ['mas', '7', '', 'mas'])
+        for malas in ([], [llena, {'message': 'Server Error'}], [llena] * vigia.PAGINAS):
+            self.assertRaises(ValueError, vigia.issue_de, malas)
+
 
 class Workflow(unittest.TestCase):
     def test_the_watched_workflows_and_their_caps_are_fixed_and_start_only_by_schedule_or_dispatch(self):
@@ -138,7 +147,8 @@ class Workflow(unittest.TestCase):
         self.assertEqual(JOB['if'], "github.ref == 'refs/heads/main'")
         self.assertEqual(JOB['steps'][0]['with'], {'ref': 'main', 'persist-credentials': False})
         self.assertEqual(WF['concurrency'], {'group': 'vigia', 'cancel-in-progress': False})
-        self.assertEqual((WF['permissions'], JOB['permissions']), ({}, {'actions': 'read', 'issues': 'write'}))
+        # with permissions set, any left out is none: contents read is what lets the checkout of main read the code
+        self.assertEqual((WF['permissions'], JOB['permissions']), ({}, {'actions': 'read', 'contents': 'read', 'issues': 'write'}))
         self.assertNotIn('secrets.', TEXT)
         for s in JOB['steps']:
             self.assertNotIn('${{', s.get('run', ''))
@@ -148,59 +158,107 @@ class Workflow(unittest.TestCase):
         self.assertEqual((JOB['steps'][-1]['if'], JOB['steps'][-1]['run']), ("steps.decidir.outputs.alerta != 'false'", 'exit 1'))
 
 
-GH = """#!/bin/bash
-printf '%s\\n' "$*" >> "$STUB_LOG"
-case "$2" in
-  repos/o/r/actions/workflows/*) f=${2#repos/o/r/actions/workflows/}; cat "$STUB_RUNS/${f%%/*}.json" ;;
-  'repos/o/r/issues?state=open'*) cat "$STUB_ISSUES" ;;
-esac
-prev=; for a in "$@"; do [ "$prev" = --input ] && printf 'INPUT %s\\n' "$(cat "$a")" >> "$STUB_LOG"; prev=$a; done; true
+GH = """import json, os, sys
+from urllib.parse import parse_qs, urlsplit
+a = sys.argv[1:]
+metodo, url = (a[2], a[3]) if a[1] == '-X' else ('GET', a[1])
+ruta, q = urlsplit(url).path.split('/'), parse_qs(urlsplit(url).query)
+carga = json.load(open(a[a.index('--input') + 1])) if '--input' in a else {}
+campos = dict(a[k + 1].split('=') for k in range(len(a)) if a[k] == '-f')
+with open(os.environ['STUB_LOG'], 'a') as f:
+    f.write(json.dumps([metodo, url, carga or campos]) + '\\n')
+issues = json.load(open(os.environ['STUB_ISSUES']))
+if ruta[3:5] == ['actions', 'workflows']:
+    print(open(os.path.join(os.environ['STUB_RUNS'], ruta[5] + '.json')).read())
+elif metodo == 'GET':  # every open issue, newest first as the API answers; the page in STUB_FALLA fails as gh does
+    if q['page'] == [os.environ['STUB_FALLA']]:
+        print('{"message": "Server Error"}')
+        sys.exit(1)
+    k, n = int(q['page'][0]), int(q['per_page'][0])
+    abiertas = [i for i in issues if i['state'] == 'open']  # the API's creator filter is not relied on
+    print(json.dumps(sorted(abiertas, key=lambda i: -i['number'])[(k - 1) * n:k * n]))
+elif metodo == 'POST' and len(ruta) == 4:
+    issues.append({'number': max([i['number'] for i in issues], default=0) + 1, 'state': 'open',
+                   'user': {'login': 'github-actions[bot]'}, **carga})
+elif metodo == 'PATCH':
+    next(i for i in issues if i['number'] == int(ruta[4])).update(carga or campos)
+json.dump(issues, open(os.environ['STUB_ISSUES'], 'w'))
 """
+RUNS = [f'repos/o/r/actions/workflows/{n}/runs?branch=main&per_page=20' for n, _ in vigia.VIGILADOS]
+PAGINA = 'repos/o/r/issues?state=open&creator=github-actions%5Bbot%5D&per_page=100&page={}'
 
 
 class Pasos(unittest.TestCase):
-    """The workflow's own steps, in order, against a stub gh that serves the runs and the open issues."""
+    """The workflow's own steps, in order, against a stub gh that serves the runs and keeps the repo's issues."""
 
-    def correr(self, rojo, issues, alerta=None):
-        with tempfile.TemporaryDirectory() as t:
-            t = Path(t)
-            (t / 'bin').mkdir(); (t / 'runs').mkdir()
-            for name, body in (('gh', GH), ('python3', f'#!/bin/sh\nexec "{sys.executable}" "$@"\n')):
-                (t / 'bin' / name).write_text(body); (t / 'bin' / name).chmod(0o755)
-            ahora = datetime.now(timezone.utc)
-            for n, _ in vigia.VIGILADOS:
-                runs = [run(2, 'failure', ahora=ahora)] if n in rojo else [run(1, ahora=ahora)]
-                (t / 'runs' / f'{n}.json').write_text(json.dumps({'workflow_runs': runs}))
-            (t / 'issues.json').write_text(json.dumps(issues))
-            env = {'PATH': f'{t / "bin"}:{os.environ["PATH"]}', 'HOME': str(t), 'RUNNER_TEMP': str(t), 'REPO': 'o/r',
-                   'GH_TOKEN': 'x', 'GITHUB_OUTPUT': str(t / 'out'), 'GITHUB_STEP_SUMMARY': str(t / 'summary'),
-                   'STUB_LOG': str(t / 'log'), 'STUB_RUNS': str(t / 'runs'), 'STUB_ISSUES': str(t / 'issues.json')}
-            for s in JOB['steps'][1:-1]:
-                if 'ALERTA' in s.get('env', {}):
-                    env['ALERTA'] = (t / 'out').read_text().strip().split('=')[1] if alerta is None else alerta
-                r = subprocess.run(['bash', '-e', '-c', s['run']], cwd=ROOT, env=env, capture_output=True, text=True, timeout=60)
-                self.assertEqual(r.returncode, 0, r.stderr)
-            self.assertIn('| `catalog-mx.yml` |', (t / 'summary').read_text())
-            log = (t / 'log').read_text().replace(str(t / 'vigia'), '$d').splitlines()
-        reads = [f'api repos/o/r/actions/workflows/{n}/runs?branch=main&per_page=20' for n, _ in vigia.VIGILADOS]
-        self.assertEqual(log[:7], reads + ['api repos/o/r/issues?state=open&creator=github-actions%5Bbot%5D&per_page=100'])
-        return [json.loads(x[6:]) if x.startswith('INPUT ') else x for x in log[7:]]
+    def setUp(self):
+        t = self.t = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, t)
+        (t / 'bin').mkdir(); (t / 'runs').mkdir(); (t / 'gh.py').write_text(GH)
+        for name, cmd in (('gh', f'"{sys.executable}" "{t / "gh.py"}"'), ('python3', f'"{sys.executable}"')):
+            (t / 'bin' / name).write_text(f'#!/bin/sh\nexec {cmd} "$@"\n'); (t / 'bin' / name).chmod(0o755)
+        self.poner([])
+
+    def poner(self, issues):
+        (self.t / 'issues.json').write_text(json.dumps(issues))
+
+    def abiertas(self):
+        return [i['number'] for i in json.loads((self.t / 'issues.json').read_text()) if i['state'] == 'open']
+
+    def correr(self, rojo, alerta=None, falla=0):
+        """One run on a fresh runner; the calls that write, (method, path, payload). Only an unreadable page fails a step."""
+        t, ahora = self.t, datetime.now(timezone.utc)
+        for n, _ in vigia.VIGILADOS:
+            runs = [run(2, 'failure', ahora=ahora)] if n in rojo else [run(1, ahora=ahora)]
+            (t / 'runs' / f'{n}.json').write_text(json.dumps({'workflow_runs': runs}))
+        shutil.rmtree(t / 'vigia', ignore_errors=True)
+        for f in ('log', 'out', 'summary'):
+            (t / f).write_text('')
+        env = {'PATH': f'{t / "bin"}:{os.environ["PATH"]}', 'HOME': str(t), 'RUNNER_TEMP': str(t), 'REPO': 'o/r',
+               'GH_TOKEN': 'x', 'GITHUB_OUTPUT': str(t / 'out'), 'GITHUB_STEP_SUMMARY': str(t / 'summary'),
+               'STUB_LOG': str(t / 'log'), 'STUB_RUNS': str(t / 'runs'), 'STUB_ISSUES': str(t / 'issues.json'), 'STUB_FALLA': str(falla)}
+        for s in JOB['steps'][1:-1]:
+            if 'ALERTA' in s.get('env', {}):
+                env['ALERTA'] = (t / 'out').read_text().strip().split('=')[1] if alerta is None else alerta
+            r = subprocess.run(['bash', '-e', '-c', s['run']], cwd=ROOT, env=env, capture_output=True, text=True, timeout=60)
+            self.assertEqual(r.returncode != 0, falla > 0 and 'ALERTA' in s['env'], r.stderr)
+        self.assertIn('| `catalog-mx.yml` |', (t / 'summary').read_text())
+        log = [json.loads(x) for x in (t / 'log').read_text().splitlines()]
+        self.lecturas = [u for m, u, _ in log if m == 'GET']
+        return [(m, u, c) for m, u, c in log if m != 'GET']
 
     def test_red_opens_the_issue_or_updates_ours_and_never_touches_an_outsiders(self):
-        self.assertEqual(self.correr({'catalog-mx.yml'}, []), ['api -X POST repos/o/r/issues --input $d/nueva.json', {
-            'title': vigia.TITULO, 'body': mock.ANY}])
-        calls = self.correr({'texto-mx.yml'}, [issue(3, 'alguien'), issue(7)])
-        self.assertEqual(calls, ['api -X PATCH repos/o/r/issues/7 --input $d/cuerpo.json', {'body': mock.ANY}])
-        self.assertIn('| `texto-mx.yml` | rojo |', calls[1]['body'])
+        self.assertEqual(self.correr({'catalog-mx.yml'}), [('POST', 'repos/o/r/issues', {'title': vigia.TITULO, 'body': mock.ANY})])
+        self.assertEqual(self.lecturas, RUNS + [PAGINA.format(1)])
+        self.poner([issue(3, 'alguien'), issue(7)])
+        escritas = self.correr({'texto-mx.yml'})
+        self.assertEqual(escritas, [('PATCH', 'repos/o/r/issues/7', {'body': mock.ANY})])
+        self.assertIn('| `texto-mx.yml` | rojo |', escritas[0][2]['body'])
 
     def test_all_well_closes_ours_with_a_comment_and_an_undecided_run_writes_nothing(self):
-        self.assertEqual(self.correr(set(), []), [])
-        calls = self.correr(set(), [issue(7)])
-        self.assertEqual(calls, ['api -X POST repos/o/r/issues/7/comments --input $d/cierre.json', {'body': mock.ANY},
-                                 'api -X PATCH repos/o/r/issues/7 -f state=closed -f state_reason=completed'])
-        self.assertTrue(calls[1]['body'].startswith('Todo en orden'))
-        self.assertEqual(self.correr(set(), [issue(7)], alerta=''), [])
+        self.assertEqual(self.correr(set()), [])
+        self.poner([issue(7)])
+        self.assertEqual(self.correr(set(), alerta=''), [])
+        escritas = self.correr(set())
+        self.assertEqual(escritas, [('POST', 'repos/o/r/issues/7/comments', {'body': mock.ANY}),
+                                    ('PATCH', 'repos/o/r/issues/7', {'state': 'closed', 'state_reason': 'completed'})])
+        self.assertTrue(escritas[0][2]['body'].startswith('Todo en orden'))
 
+    def test_one_open_issue_per_state_not_per_run(self):
+        """The owner's order: red twice is one issue, all well closes it, red again opens one; never two open."""
+        for rojo, metodos, abiertas in (({'catalog-mx.yml'}, ['POST'], [1]), ({'sondeo.yml'}, ['PATCH'], [1]),
+                                        (set(), ['POST', 'PATCH'], []), ({'descubrir.yml'}, ['POST'], [2])):
+            self.assertEqual(([m for m, _, _ in self.correr(rojo)], self.abiertas()), (metodos, abiertas), rojo)
+
+    def test_every_page_of_open_issues_is_read_first_and_an_unreadable_page_writes_nothing(self):
+        otras = [issue(n, title=f'otra {n}') for n in range(8, 160)]  # 152 newer issues of the bot: ours is on page 2
+        self.poner([issue(7)] + otras)
+        self.assertEqual(self.correr({'catalog-mx.yml'}), [('PATCH', 'repos/o/r/issues/7', {'body': mock.ANY})])
+        self.assertEqual(self.lecturas, RUNS + [PAGINA.format(1), PAGINA.format(2)])
+        self.assertEqual(self.correr({'catalog-mx.yml'}, falla=2), [])  # ours on the unreadable page: no second issue
+        self.poner([issue(200)] + otras)
+        self.assertEqual(self.correr(set(), falla=2), [])  # ours on page 1 and page 2 unreadable: not closed
+        self.assertEqual(sorted(self.abiertas()), [*range(8, 160), 200])
 
 if __name__ == '__main__':
     unittest.main()

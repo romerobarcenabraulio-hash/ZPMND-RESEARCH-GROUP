@@ -2,7 +2,8 @@ name: vigia
 # Vigía de producción (SECURITY.md T26): daily, the last runs on main of every production workflow (list and caps in
 # scripts/vigia.py); ONE open issue "Vigía de producción" while any is red or has not finished a run within its cap,
 # closed with a comment when all are ok or running; only fixed names, states, dates and this repo's run numbers and
-# links reach it. The job ends red while anything is red or not running. Main's code, no secret, runs read, issues write.
+# links reach it. The job ends red while anything is red or not running. Main's code, no secret, contents and runs
+# read, issues write; it reads every page of open issues before choosing one.
 on:
   schedule:
     - cron: '37 23 * * *'  # daily 23:37 UTC, after catalog-mx's usual window
@@ -16,6 +17,7 @@ jobs:
     timeout-minutes: 10
     permissions:
       actions: read   # the runs of the watched workflows
+      contents: read   # the checkout of main
       issues: write   # the one vigía issue; nothing else
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
@@ -40,9 +42,12 @@ jobs:
         env: { GH_TOKEN: '${{ github.token }}', REPO: '${{ github.repository }}', ALERTA: '${{ steps.decidir.outputs.alerta }}' }
         run: |
           set -euo pipefail
-          d="$RUNNER_TEMP/vigia"
-          gh api "repos/$REPO/issues?state=open&creator=github-actions%5Bbot%5D&per_page=100" > "$d/issues.json"
-          n=$(python3 -I scripts/vigia.py issue --issues "$d/issues.json")
+          d="$RUNNER_TEMP/vigia"; p=0; n=mas
+          while [ "$n" = mas ]; do  # every page before choosing; gh or vigia.py failing here stops it with nothing written
+            p=$((p + 1))
+            gh api "repos/$REPO/issues?state=open&creator=github-actions%5Bbot%5D&per_page=100&page=$p" > "$d/issues-$p.json"
+            n=$(python3 -I scripts/vigia.py issue --dir "$d" --paginas "$p")
+          done
           if [ "$ALERTA" = true ] && [ -n "$n" ]; then
             gh api -X PATCH "repos/$REPO/issues/$n" --input "$d/cuerpo.json" > /dev/null
           elif [ "$ALERTA" = true ]; then
