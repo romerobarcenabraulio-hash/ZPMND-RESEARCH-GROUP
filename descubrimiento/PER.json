@@ -1,0 +1,589 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Peru constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "leyes.congreso.gob.pe",
+     "rank": 1,
+     "snippet": "12Archivo Digital de la Legislación del Perú\n...\nEl Archivo Digital de la Legislación del Perú contiene principalmente las normas con rango de ley que pertenecen al sistema normativo peruano, así como las Leyes de Indias.\nEn definitiva, información indispensable para el conocimiento de la normativid",
+     "title": "12Archivo Digital De La Legislación Del Perú",
+     "url": "https://leyes.congreso.gob.pe/index.html"
+    },
+    {
+     "date": "2026-06-23",
+     "host": "www.gob.pe",
+     "rank": 2,
+     "snippet": "Podrás encontrar:\n- Constitución Política (1993 y 1979).\n...\n- Leyes Orgánicas.\n...\nPara que tengas acceso a la totalidad de los documentos incluidos en el SPIJ (normas y jurisprudencia), es necesario que te suscribas y realices un pago por licencia.",
+     "title": "Acceder al Sistema Peruano de Información Jurídica (SPIJ)",
+     "url": "https://www.gob.pe/748-acceder-al-sistema-peruano-de-informacion-juridica-spij"
+    },
+    {
+     "date": "",
+     "host": "www.gob.pe",
+     "rank": 3,
+     "snippet": "# Ediciones Oficiales\n...\n12 de diciembre de 2025\n...\nDisponible en formato PDF\n10 de diciembre de 2025\n...\nDisponible en formato PDF\n3 de octubre de 2025\nConstitución Política del Perú, que incluye su adaptación a un lenguaje llano.\n...\nDisponible en formato PDF",
+     "title": "Ediciones Oficiales",
+     "url": "https://www.gob.pe/institucion/minjus/colecciones/2135-ediciones-oficiales"
+    },
+    {
+     "date": "2025-07-12",
+     "host": "www.gob.pe",
+     "rank": 4,
+     "snippet": "# Congreso de la República\n# Normas y documentos legales\n## Destacados\n### Ley N.° 30057Ley del Servicio CivilDescargar\n### Ley N.° 27785Ley Orgánica del Sistema Nacional de Control y de la Contraloría General de la RepúblicaDescargar",
+     "title": "Normas y documentos legales - Congreso de la República - Gobierno del Perú",
+     "url": "https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/"
+    },
+    {
+     "date": "2026-05-19",
+     "host": "www.gob.pe",
+     "rank": 5,
+     "snippet": "Al respecto, en el SPIJ encontramos:\n- Constitución Política (1979 y 1993) y doce (12) Códigos.\n- Normas con rango de Ley desde 1904, así como normativa reglamentaria desde 1978.\n- Normativa de carácter particular.",
+     "title": "Dirección de Sistematización Jurídica y Difusión - Sistema Peruano ...",
+     "url": "https://www.gob.pe/11896-ministerio-de-justicia-y-derechos-humanos-sistema-peruano-de-informacion-juridica"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Peru national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "leyes.congreso.gob.pe",
+     "rank": 1,
+     "snippet": "Archivo Digital de la Legislación del Perú\nEl Archivo Digital de la Legislación del Perú contiene principalmente las normas con rango de ley que pertenecen al sistema normativo peruano, así como las Leyes de Indias.\nEn definitiva, información indispensable para el conocimiento de la normatividad nac",
+     "title": "12Archivo Digital De La Legislación Del Perú",
+     "url": "https://leyes.congreso.gob.pe/index.html"
+    },
+    {
+     "date": "2026-07-10",
+     "host": "www.gob.pe",
+     "rank": 2,
+     "snippet": "# Ministerio de Justicia y Derechos Humanos\n# Decreto Supremo\n...\n…\n...\n- Decreto Supremo N.° 009-2024-JUSReglamento que establece disposiciones relativas a la publicidad, publicación de Proyectos Normativos y difusión de Normas Legales de Carácter General.Descargar",
+     "title": "Decreto Supremo - Normas y documentos legales - Ministerio de ...",
+     "url": "https://www.gob.pe/institucion/minjus/normas-legales/tipos/9-decreto-supremo"
+    },
+    {
+     "date": "2025-02-25",
+     "host": "spijweb.minjus.gob.pe",
+     "rank": 3,
+     "snippet": "El Sistema Peruano de Información Jurídica (SPIJ) es el medio informático con carácter de edición oficial para la difusión de las normas jurídicas de carácter general que integran la legislación nacional, debidamente sistematizada, concordada y actualizada.",
+     "title": "SISTEMA PERUANO DE INFORMACIÓN JURÍDICA - SPIJ",
+     "url": "https://spijweb.minjus.gob.pe/"
+    },
+    {
+     "date": "2025-09-02",
+     "host": "www.datosabiertos.gob.pe",
+     "rank": 4,
+     "snippet": "Dispositivos Legales publicados en el Diario Oficial El Peruano, que son emitidos por las Entidades del Estado.\nEstas pueden ser leyes, resoluciones, decretos, acuerdos, etc.\nEn este DataSet se detalla:\n...\n…\n...\n|Public Access Level|Public|",
+     "title": "Dispositivos Legales | Plataforma Nacional de Datos Abiertos",
+     "url": "https://www.datosabiertos.gob.pe/dataset/dispositivos-legales"
+    },
+    {
+     "date": "2021-05-20",
+     "host": "www.gob.pe",
+     "rank": 5,
+     "snippet": "- Decreto Supremo N.° 005-2021-SA\nDecreto Supremo que aprueba el Reglamento de la Ley Nº 30421\n...\nDecreto que aprueba la Ley de Transparencia y Acceso a la Información Pública.\n...\nAprueba el Reglamento para la categorización y calificación turística de restaurantes",
+     "title": "Decreto Supremo - Normas y documentos legales",
+     "url": "https://www.gob.pe/institucion/presidencia/normas-legales/tipos/9-decreto-supremo"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Peru official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "diariooficial.elperuano.pe",
+     "rank": 1,
+     "snippet": "**DOMINGO 01**\nde noviembre de 2026\n...\nDescargue edición impresa\nCotizador de avisos comerciales\nBuscar por Orden de Publicación\n...\nEditora Perú Av. Alfonso Ugarte 873, Lima 1 Central Telefónica (51-1) 3150400",
+     "title": "Diario Oficial El Peruano | Boletin Oficial | El Peruano | Decretos | Normas Legales | Separatas Especiales | Normas Legales del día| Derecho | TUPA | Sentencias en Casación | Jurisprudencia | Proceso",
+     "url": "https://diariooficial.elperuano.pe/"
+    },
+    {
+     "date": "",
+     "host": "www3.congreso.gob.pe",
+     "rank": 2,
+     "snippet": "Diario Oficial El Peruano\n...\nDiario Oficial El Peruano\n...\n## NOVEDADES\nwww.congreso.gob.pe\nCongreso de la República\nPlaza de la Constitución, Av. Abancay s/n - Lima, Perú\nCentral telefónica: 311-7777",
+     "title": "Diario Oficial El Peruano",
+     "url": "https://www3.congreso.gob.pe/biblioteca/el-peruano/"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "andina.pe",
+     "rank": 3,
+     "snippet": "# Editora Perú joins \"Marca Perú\" due to its corporate track record and country contribution\n## The company received a license to use the \"Marca Perú\" brand for \"El Peruano\" and \"Agencia Andina\"",
+     "title": "Editora Perú joins \"Marca Perú\" due to its corporate track record and country contribution",
+     "url": "https://andina.pe/agencia/noticia-editora-peru-joins-marca-peru-due-to-its-corporate-track-record-and-country-contribution-1097376.aspx"
+    },
+    {
+     "date": "",
+     "host": "diariooficial.elperuano.pe",
+     "rank": 4,
+     "snippet": "## Normas Legales\nUse un Rango de Fechas personalizado para filtrar su resultado.\nCargando Normas Legales...\nCotizador de avisos comerciales\nBuscar por Orden de Publicación\n...\nGerente de Publicaciones Oficiales: Ricardo Montero Reyes",
+     "title": "diariooficial.elperuano.pe › normasDiario Oficial El Peruano | Boletin Oficial | El Peruano |...",
+     "url": "https://diariooficial.elperuano.pe/normas"
+    },
+    {
+     "date": "",
+     "host": "busquedas.elperuano.pe",
+     "rank": 5,
+     "snippet": "1\nEl Peruano\nDIARIO OFICIAL DEL BICENTENARIO\n...\nresolución en el Diario Ofi cial “El Peruano” y en la sede digital de la Autoridad de Transporte Urbano para Lima y\nCallao - ATU (https://www.gob.pe/atu).",
+     "title": "Diario Oficial El Peruano - Lima",
+     "url": "https://busquedas.elperuano.pe/api/archivo/file/2k0unvX_Kx68S3yPcs4R4a/*/NL20261019.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Peru supreme court decisions official database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-07-24",
+     "host": "www.gob.pe",
+     "rank": 1,
+     "snippet": "Podrás encontrar las sentencias o ejecutorias emitidas por esta corte desde el año 2013.\n...\n## Modalidad: Online\n## Antes de iniciar, debes saber:\n...\nSi eliges la búsqueda **General**, ingresa un texto del tema de tu interés, y selecciona **Buscar**.",
+     "title": "Consultar Jurisprudencia Nacional Sistematizada - GOB.PE",
+     "url": "https://www.gob.pe/114703-consultar-jurisprudencia-nacional-sistematizada"
+    },
+    {
+     "date": "2026-08-05",
+     "host": "www.gob.pe",
+     "rank": 2,
+     "snippet": "# Consultar expedientes judiciales de la Corte Suprema\nIr al servicio\nMediante esta plataforma, podrás buscar expedientes tramitados ante la Corte Suprema de la República.\n...\nLlena los campos que te solicita el servicio y coloca el código catpcha.\nFinalmente, selecciona “Buscar”.",
+     "title": "Consultar expedientes judiciales de la Corte Suprema",
+     "url": "https://www.gob.pe/13741-consultar-expedientes-judiciales-de-la-corte-suprema"
+    },
+    {
+     "date": "2026-03-31",
+     "host": "www.gob.pe",
+     "rank": 3,
+     "snippet": "Ir al servicio\nMediante este registro, puedes acceder en forma sencilla a todas y cada una de las decisiones jurisdiccionales que jueces o tribunales emiten en un proceso judicial (autos y sentencias), las cuales son publicadas en el día de votación del juzgado.",
+     "title": "Consultar módulo de sentido de decisiones judiciales",
+     "url": "https://www.gob.pe/13739-consultar-modulo-de-sentido-de-decisiones-judiciales"
+    },
+    {
+     "date": "",
+     "host": "www.tc.gob.pe",
+     "rank": 4,
+     "snippet": "Publicadas en la Web | TC\n...\n- Búsqueda\n...\n# Detalle resolución\nDetalle de resolución: Martes, 07 de Marzo del 2023\n...\n- Sentencias (4)\n...\n|Item|Nro.Expediente|Colegiado|Demandante|Demandado|Enlace|",
+     "title": "Detalle resolución",
+     "url": "https://www.tc.gob.pe/resolucion/publicadas-en-la-web/?action=detalle&dia=07&mes=03&anio=2023"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Peru state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.leyes.congreso.gob.pe",
+     "rank": 1,
+     "snippet": "# CONGRESO de la REPÚBLICA del PERÚ\nArchivo Digital de la Legislación del Perú\nEl Archivo Digital de la Legislación del Perú contiene principalmente las normas con rango de ley que pertenecen al sistema normativo peruano, así como las Leyes de Indias.",
+     "title": "12Archivo Digital de la Legislación del Perú",
+     "url": "https://www.leyes.congreso.gob.pe/index.html"
+    },
+    {
+     "date": "",
+     "host": "www3.congreso.gob.pe",
+     "rank": 2,
+     "snippet": "ormativo\nPresupuesto-2026-Proyectos-de-ley\nLeyes, Reglamentos y Disposiciones Especiales\nFunción del Control Político\nwww.congreso.gob.pe\nCongreso de la República\nPlaza de la Constitución, Av. Abancay s/n - Lima, Perú",
+     "title": "LEYES, REGLAMENTOS Y DISPOSICIONES ESPECIALES Año ...",
+     "url": "https://www3.congreso.gob.pe/DIDP/seguimiento-reglamentacion-leyes/leyes-reglamentos-disposiciones-2026/"
+    },
+    {
+     "date": "",
+     "host": "www.gob.pe",
+     "rank": 3,
+     "snippet": "# ¡Estás en Gob.pe!\nEsta es la Plataforma Digital Única del Estado Peruano, donde encontrarás información sobre trámites, servicios, normas y más.\n...\n- ## Poder Legislativo\nAccede a información oficial del Congreso de la República.Congreso de la RepúblicaDirectorio de congresistasVer más",
+     "title": "Plataforma del Estado Peruano",
+     "url": "https://www.gob.pe/"
+    },
+    {
+     "date": "2026-06-23",
+     "host": "www.gob.pe",
+     "rank": 4,
+     "snippet": "# Acceder al Sistema Peruano de Información Jurídica (SPIJ)\n...\n## Antes de iniciar, debes saber:\nPara acceder a ella, ingresa a la página del SPIJ y haz clic sobre **Normativa de Acceso Libre.** Elige entre normativa de carácter general, Gobierno regional y Gobierno local.",
+     "title": "Acceder al Sistema Peruano de Información Jurídica (SPIJ)",
+     "url": "https://www.gob.pe/748-acceder-al-sistema-peruano-de-informacion-juridica-spij"
+    },
+    {
+     "date": "2018-04-24",
+     "host": "spijweb.minjus.gob.pe",
+     "rank": 5,
+     "snippet": "Publicaciones de normas legales de carácter general, realizadas y aprobadas por el Ministerio de Justicia y Derechos Humanos, que reproducen fidedignamente los textos de las\nnormas publicadas en el diario oficial El Peruano e incorporadas en el Sistema Peruano de Información Jurídica.",
+     "title": "Ediciones Oficiales",
+     "url": "https://spijweb.minjus.gob.pe/ediciones-oficiales/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Peru municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.tc.gob.pe",
+     "rank": 1,
+     "snippet": "Ordenanzas municipales y su pre publicación | TC\n- 922-017-711\n...\n# Ordenanzas municipales y su pre publicación\n...\nOficina de Gestión Documental y Atención a la Ciudadanía\nTlf.\n(01) 221-0202 Anexo 454 / 448",
+     "title": "www.tc.gob.pe › estadof › ordenanzas-municipales-y-su-pre-publicacionOrdenanzas municipales y su pre publicación | TC",
+     "url": "https://www.tc.gob.pe/estadof/ordenanzas-municipales-y-su-pre-publicacion/"
+    },
+    {
+     "date": "",
+     "host": "portal.imp.gob.pe",
+     "rank": 2,
+     "snippet": "## Ate\nMunicipalidad Distrital de Ate PLANOS Y ORDENANZAS\n## Ancón\n...\n## Lima Cercado\nMunicipalidad Metropolitana de Lima PLANOS Y ORDENANZAS\n** Enlaces IMP\n- ** mesa_de_partes_virtual@imp.gob.pe",
+     "title": "Ate",
+     "url": "https://portal.imp.gob.pe/blog/category/distritos/page/5/"
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.gob.pe",
+     "rank": 3,
+     "snippet": "ORDENANZA MUNICIPAL QUE MODIFICA E INCORPORA PROCEDIMIENTOS EN EL TEXTO UNICO DE PROCEDIMIENTOS ADMINISTRATIVOS (TUPA); DE LA MUNICIPALIDAD PROVINCIAL DE SECHURA",
+     "title": "Ordenanza Municipal N.° 015-2026-MPS",
+     "url": "https://www.gob.pe/institucion/munisechura/normas-legales/8768685-015-2026-mps"
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.gob.pe",
+     "rank": 4,
+     "snippet": "Resolución de Alcaldía N.° 466-2026\nResolución de Alcaldía N 466-2026\nPDF\n2.2 MB\nDescargar",
+     "title": "Resolución de Alcaldía N.° 0466-2026",
+     "url": "https://www.gob.pe/institucion/munilima/normas-legales/8771797-0466-2026"
+    },
+    {
+     "date": "2020-08-20",
+     "host": "www.gob.pe",
+     "rank": 5,
+     "snippet": "Sede Central: Jr.\nConde de Superunda N° 141.\nLima 1 - Perú\n...\n#### Resolución de la Oficina General de Administración N.° 099-2026-OGA\n...\n- Normas y documentos legales\n…",
+     "title": "Municipalidad Metropolitana de Lima - MML - Plataforma del ...",
+     "url": "https://www.gob.pe/munilima"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Peru regulatory agencies official regulations",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-21",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "### Transparency of the Regulatory System\n...\nEl Peruano, the government’s official gazette, publishes regulations at the national, regional, and municipal level.\nMinistries generally maintain current regulations on their websites.\nRule-making and regulatory authority also exists through executive a",
+     "title": "2026 Investment Climate Statements: Peru",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/peru"
+    },
+    {
+     "date": "2026-07-31",
+     "host": "www.gob.pe",
+     "rank": 2,
+     "snippet": "# Consultar los Reglamentos Técnicos Peruanos de MINCETUR\n...\nPodrás buscar los reglamentos técnicos peruanos a través de las siguientes opciones:\n- Entidad reguladora.\n...\n- Título.\n...\n- Vigilancia (control de aduanas, vigilancia en mercados, ambos).",
+     "title": "Consultar los Reglamentos Técnicos Peruanos de MINCETUR",
+     "url": "https://www.gob.pe/7729-consultar-los-reglamentos-tecnicos-peruanos-de-mincetur"
+    },
+    {
+     "date": "",
+     "host": "www.leyes.congreso.gob.pe",
+     "rank": 3,
+     "snippet": "El Archivo Digital de la Legislación del Perú contiene principalmente las normas con rango de ley que pertenecen al sistema normativo peruano, así como las Leyes de Indias.\n...\nEsta búsqueda comprende las normas con rango o fuerza de ley desde el año 1904 hasta la fecha.",
+     "title": "Archivo Digital de la Legislación del Perú",
+     "url": "https://www.leyes.congreso.gob.pe/"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 4,
+     "snippet": "Ministry of Health’s Directorate General for Environmental Health (Dirección General de Salud \n...\nThe Ministry of \nAgriculture’s National Food Safety and Quality Service (Servicio Nacional de Sanidad y Calidad \nAgroalimentaria - SENASA) develops and implements Peru’s sanitary and phytosanitary regu",
+     "title": "[PDF] Report Name: FAIRS Annual Country Report Annual",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS%20Annual%20Country%20Report%20Annual_Lima_Peru_PE2023-0022"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Peru national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2025-03-21",
+     "host": "www.gob.pe",
+     "rank": 1,
+     "snippet": "## Descripción\nEste servicio gratuito, a cargo del\n**Centro de Información y Documentación del Instituto Nacional de Calidad ( Inacal)**, te permitirá gestionar la búsqueda de documentos técnicos, para así obtener información preliminar y un breve resumen de su contenido.\nPuedes buscar por palabra c",
+     "title": "Acceder al catálogo virtual de Normas técnicas peruanas y textos afines",
+     "url": "https://www.gob.pe/institucion/inacal/pages/13452-acceder-al-catalogo-virtual-de-normas-tecnicas-peruanas-y-textos-afines"
+    },
+    {
+     "date": "2025-10-10",
+     "host": "www.gob.pe",
+     "rank": 2,
+     "snippet": "# Normas\nCatálogos virtuales de proyectos y normas a disposición de la ciudadanía.\n...\nSi deseas acceder a las Normas Técnicas Peruanas y Normas ISO, puedes hacerlo libremente a...- ### Acceder al catálogo virtual de Normas técnicas peruanas y textos afines",
+     "title": "Normas - Categorías - Instituto Nacional de Calidad",
+     "url": "https://www.gob.pe/institucion/inacal/tema/normas"
+    },
+    {
+     "date": "2026-07-10",
+     "host": "www.gob.pe",
+     "rank": 3,
+     "snippet": "Ir al servicio\n...\nEste servicio gratuito, a cargo del **Centro de Información y Documentación del Instituto Nacional de Calidad ( Inacal)**, te permitirá gestionar la búsqueda de documentos técnicos, para así obtener información preliminar y un breve resumen de su contenido.\nPuedes buscar por palab",
+     "title": "Acceder al catálogo virtual de Normas técnicas peruanas y ...",
+     "url": "https://www.gob.pe/13452-acceder-al-catalogo-virtual-de-normas-tecnicas-peruanas-y-textos-afines"
+    },
+    {
+     "date": "",
+     "host": "servicios.inacal.gob.pe",
+     "rank": 4,
+     "snippet": "Norma Técnica Peruana Anulada Obligatoria\nProyecto de Norma Técnica Peruana\n...\nInstituto Nacional de Calidad - INACAL\nCentro de Información y Documentación\nDirección: Calle Las Camelias N° 817 - San Isidro | Teléfono: (511) 640-8820 |",
+     "title": "INACAL",
+     "url": "https://servicios.inacal.gob.pe/cidalerta/buscadoc.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.inacal.gob.pe",
+     "rank": 5,
+     "snippet": "Sala de Lectura Virtual | Inacal Perú\n...\nEs una plataforma en línea donde podrá acceder a más de 5,000 Normas Técnicas Peruanas y textos afines distribuidos en diferentes actividades econónicas.\n...\nAtención : lunes a viernes de 8:30 a 16:30",
+     "title": "www.inacal.gob.pe › cid › categoriaSala de Lectura Virtual | Inacal Perú",
+     "url": "https://www.inacal.gob.pe/cid/categoria/saladelectura/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Peru mandatory technical regulations official list",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2025-11-06",
+     "host": "www.gob.pe",
+     "rank": 1,
+     "snippet": "Podrás buscar los reglamentos técnicos peruanos a través de las siguientes opciones:\n...\n- Dispositivo (Decreto Supremo, Resolución Ministerial, Resolución Directoral, Resolución Jefatural, Decreto Legislativo, Resolución).\n- Número de dispositivo.\n...\n- Fecha de emisión.",
+     "title": "Consultar los Reglamentos Técnicos Peruanos de MINCETUR",
+     "url": "https://www.gob.pe/7729-ministerio-de-comercio-exterior-y-turismo-requisitos-tecnicos-peruanos"
+    },
+    {
+     "date": "2026-07-10",
+     "host": "www.gob.pe",
+     "rank": 2,
+     "snippet": "Ir al servicio\n...\nEste servicio gratuito, a cargo del **Centro de Información y Documentación del Instituto Nacional de Calidad ( Inacal)**, te permitirá gestionar la búsqueda de documentos técnicos, para así obtener información preliminar y un breve resumen de su contenido.\nPuedes buscar por palab",
+     "title": "Acceder al catálogo virtual de Normas técnicas peruanas y ...",
+     "url": "https://www.gob.pe/13452-acceder-al-catalogo-virtual-de-normas-tecnicas-peruanas-y-textos-afines"
+    },
+    {
+     "date": "2026-08-10",
+     "host": "www.gob.pe",
+     "rank": 3,
+     "snippet": "## Trámites y servicios\n### Normas y documentos\n#### Listado de Normas Técnicas Peruanas que se encuentran referidas en dispositivos de carácter obligatorio\nEl Instituto Nacional de Calidad (Inacal) pone a disposición de la ciudadanía el listado de normas...",
+     "title": "Instituto Nacional de Calidad - INACAL - Plataforma del ...",
+     "url": "https://www.gob.pe/inacal"
+    },
+    {
+     "date": "",
+     "host": "www.inacal.gob.pe",
+     "rank": 4,
+     "snippet": "La presente publicación muestra una agrupación temática de las últimas Normas Técnicas Peruanas y Textos Afines, aprobadas por la Dirección de Normalización.\n2026:\nBoletín 005 descargar\n...\n2025:\nBoletín 005 descargar\n...\nBoletín 001 descargar",
+     "title": "www.inacal.gob.pe › cid › categoriaBoletín de Normas Técnicas Peruanas y textos afines - INACAL",
+     "url": "https://www.inacal.gob.pe/cid/categoria/boletinnormas"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Peru national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-03-02",
+     "host": "www.gob.pe",
+     "rank": 1,
+     "snippet": "## Principales indicadores\nEstimación oficial de la población, al 30 de junio de cada año.",
+     "title": "Instituto Nacional de Estadística e Informática - INEI",
+     "url": "https://www.gob.pe/inei"
+    },
+    {
+     "date": "",
+     "host": "www.inei.gob.pe",
+     "rank": 2,
+     "snippet": "PERÚ Instituto Nacional de Estadística e Informática\n...\nAhora desde tu celular podrás estar al día con la última información estadística producida y difundida por el INEI como son:\n...\nVisítanos desde tu iPhone, Blackberry o cualquier otro dispositivo móvil en m.inei.gob.pe",
+     "title": "ESTADÍSTICAS",
+     "url": "https://www.inei.gob.pe/buscador/289/?tbusqueda="
+    },
+    {
+     "date": "",
+     "host": "www.inei.gob.pe",
+     "rank": 3,
+     "snippet": "PERÚ Instituto Nacional de Estadística e Informática\n...\n## BOLETINES\nAhora desde tu celular podrás estar al día con la última información estadística producida y difundida por el INEI como son:\n...\nVisítanos desde tu iPhone, Blackberry o cualquier otro dispositivo móvil en m.inei.gob.pe",
+     "title": "www.inei.gob.pe › biblioteca-virtual › boletinesPERÚ Instituto Nacional de Estadística e Informática",
+     "url": "https://www.inei.gob.pe/biblioteca-virtual/boletines/"
+    },
+    {
+     "date": "",
+     "host": "censos2025.inei.gob.pe",
+     "rank": 4,
+     "snippet": "Censos Nacionales 2025 | Inicio\n# CENSOS NACIONALES 2025\nRESULTADOS IR A REDATAM\n...\nInstituto Nacional de Estadística e Informática – INEI\nAv. General Garzón 658.\nJesús María.\nLima - Perú",
+     "title": "Censos Nacionales 2025 | Inicio",
+     "url": "https://censos2025.inei.gob.pe/"
+    },
+    {
+     "date": "",
+     "host": "censos2025.inei.gob.pe",
+     "rank": 5,
+     "snippet": "Resultados\nCENSOS 2025\nPlataforma de Resultados\n# Censos Nacionales 2025\n...\nInstituto Nacional de Estadística e Informática – INEI\nAv. General Garzón 658.\nJesús María.\nLima - Perú",
+     "title": "Resultados",
+     "url": "https://censos2025.inei.gob.pe/resultados"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Peru central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "estadisticas.bcrp.gob.pe",
+     "rank": 1,
+     "snippet": "BCRP - Series mensuales\nBANCO CENTRAL DE RESERVA DEL PERÚ\nGerencia Central de Estudios Económicos\n- # BCRP - Series mensuales\n...\n…\nFuente: BCRP.|\n...\nJr.\n...\nTeléfono: (511) 613 2000",
+     "title": "BCRP - Series mensuales",
+     "url": "https://estadisticas.bcrp.gob.pe/estadisticas/series/mensuales/cuentas-monetarias-del-bcrp-m"
+    },
+    {
+     "date": "",
+     "host": "estadisticas.bcrp.gob.pe",
+     "rank": 2,
+     "snippet": "PBI por sectores\nBANCO CENTRAL DE RESERVA DEL PERÚ\nGerencia Central de Estudios Económicos\n- # PBI por sectores\n# PBI por sectores\n|- Inicio - / PBI por Sectores (Mensuales) Desde: Hasta:\n...\n|--|\nJr.",
+     "title": "PBI por sectores - BCRP – Estadísticas",
+     "url": "https://estadisticas.bcrp.gob.pe/estadisticas/series/mensuales/pbi-por-sectores"
+    },
+    {
+     "date": "",
+     "host": "estadisticas.bcrp.gob.pe",
+     "rank": 3,
+     "snippet": "- # BCRP - Series diarias\n# BCRP - Series diarias\n|# Series Diarias (129 series)\n…\nFuente: BCRP.\n...\nFuente: BCRP.\n...\nFuente: BCRP.|",
+     "title": "BCRP - Series diarias",
+     "url": "https://estadisticas.bcrp.gob.pe/estadisticas/series/diarias/"
+    },
+    {
+     "date": "",
+     "host": "estadisticas.bcrp.gob.pe",
+     "rank": 4,
+     "snippet": "BASE DE DATOS DE ESTADÍSTICAS DEL BCRP\nBANCO CENTRAL DE RESERVA DEL PERÚ\nGerencia Central de Estudios Económicos\n…\n...\nEstadísticas de 100 años del BCRP (información actualizada al 29 de diciembre de 2022)",
+     "title": "BASE DE DATOS DE ESTADÍSTICAS DEL BCRP",
+     "url": "https://estadisticas.bcrp.gob.pe/estadisticas/series/index"
+    },
+    {
+     "date": "",
+     "host": "estadisticas.bcrp.gob.pe",
+     "rank": 5,
+     "snippet": "- # BASE DE DATOS DE ESTADÍSTICAS DEL BCRP",
+     "title": "BASE DE DATOS DE ESTAD�STICAS DEL BCRP",
+     "url": "https://estadisticas.bcrp.gob.pe/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Peru government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-08-04",
+     "host": "www.gob.pe",
+     "rank": 1,
+     "snippet": "# Portal de Datos Abiertos\n...\n## Requisitos\nNinguno.\n...\n## Modalidad: Online\nSelecciona la categoría y el año del archivo ZIP que deseas consultar.\nAl hacer clic, se iniciará la descarga automática del archivo comprimido que contiene las bases de datos en formato CSV.",
+     "title": "Portal de Datos Abiertos",
+     "url": "https://www.gob.pe/116129-portal-de-datos-abiertos"
+    },
+    {
+     "date": "2023-04-24",
+     "host": "www.gob.pe",
+     "rank": 2,
+     "snippet": "# Plataforma Nacional de Datos Abiertos (PNDA)\nDatos gubernamentales en formato digital, estandarizados, comparables y accesibles\nAccede al servicio\n...\nContacto\nEnvíanos un correo\nPlataforma de Datos Abiertos\nNuestro correo:\ncontacto@datosabiertos.gob.pe",
+     "title": "Plataforma Nacional de Datos Abiertos (PNDA)",
+     "url": "https://www.gob.pe/institucion/pcm/campa%C3%B1as/5904-portal-nacional-de-datos-abiertos-pnda"
+    },
+    {
+     "date": "1999-02-22",
+     "host": "datosabiertos.gob.pe",
+     "rank": 3,
+     "snippet": "## Proyectos de Investigación Sector Minería en Arequipa\nRelación de participación de deportistas en eventos deportivos internacionales autorizados por el IPD, desde el año 2014 hasta el 31 de diciembre de 2024.",
+     "title": "Tipos de contenido",
+     "url": "https://datosabiertos.gob.pe/"
+    },
+    {
+     "date": "",
+     "host": "www.transparencia.gob.pe",
+     "rank": 4,
+     "snippet": "Portal del Estado Peruano - Portal de Transparencia Estándar - PTE\n1. Portal de Transparencia Estándar\nAccede a toda la información pública de las entidades del Estado Peruano.\nIngrese el nombre de la Entidad Pública\n...\n### Datos generales\n...\n### Acceso a la Información Pública",
+     "title": "Portal del Estado Peruano - Portal de Transparencia Estándar ...",
+     "url": "https://www.transparencia.gob.pe/"
+    },
+    {
+     "date": "2026-05-07",
+     "host": "www.gob.pe",
+     "rank": 5,
+     "snippet": "# Obtener datos abiertos del gobierno\nSi deseas obtener datos gubernamentales de distintas temáticas para tus proyectos de investigación, innovación, estudios, tesis, reportajes y más, puedes acceder al Plataforma Nacional de Datos Abiertos (PNDA).\n...\nSolo debes descargarlos en el formato correspon",
+     "title": "Obtener datos abiertos del gobierno - Plataforma del Estado Peruano",
+     "url": "https://www.gob.pe/7381-obtener-datos-abiertos-del-gobierno"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:10:07Z",
+ "pais": {
+  "iso2": "PE",
+  "iso3": "PER",
+  "nombre": "Peru"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

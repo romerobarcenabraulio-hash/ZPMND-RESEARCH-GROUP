@@ -1,0 +1,761 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Cyprus constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.law.gov.cy",
+     "rank": 1,
+     "snippet": "The Constitution of the Republic of Cyprus | Law Office of the Republic\n...\n** The Constitution of the Republic of Cyprus as amended until 2013.pdf (File Size: 424.13Kb)\n** The Constitution of the Republic of Cyprus.pdf (File Size: 451.4Kb)",
+     "title": "The Constitution of the Republic of Cyprus",
+     "url": "https://www.law.gov.cy/LAW/LAW.NSF/constitution-en/constitution-en?OpenDocument",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.law.gov.cy/LAW/LAW.NSF/constitution-en/constitution-en?OpenDocument",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:49:56Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cylaw.org",
+     "rank": 2,
+     "snippet": "##### Η Κυπριακή Πηγή Νομικής Πληροφόρησης\n#### Bρες τα κείμενα που περιέχουν:\n**Για τη Συλλογή της Κυπριακής Νομοθεσίας μεταβείτε στον Κατάλογο της Νομοθεσίας**",
+     "title": "CyLaw - Παγκύπριος Δικηγορικός Σύλλογος - Η Κυπριακή Πηγή ...",
+     "url": "https://www.cylaw.org/",
+     "verificacion": {
+      "bytes": 10101,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:49:57Z",
+      "http": 200,
+      "sha256": "b0eb9653df4fd286365fe7179b6d4339a5e2a84c49939f37335822cc2d4deb8b"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.gov.cy",
+     "rank": 3,
+     "snippet": "The present publication provides a comprehensive, consolidated text of the \nConstitution of the Republic of Cyprus in the English language, encompassing its provisions from the date it came into operation on 16 August 1960 to its most recent\namendment as of 7th  November 2025.",
+     "title": "[PDF] CONSTITUTION OF THE REPUBLIC OF CYPRUS",
+     "url": "https://www.gov.cy/media/sites/287/2026/06/CONSTITUTION.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 4,
+     "snippet": "Constitution of the Republic of Cyprus, Cyprus, WIPO Lex\n# Constitution of the Republic of Cyprus, Cyprus\nLatest Version in WIPO Lex\n...\nYear of Version 2023\nDates\nEntry into force: August 16, 1960\nAdopted: July 6, 1960",
+     "title": "Constitution of the Republic of Cyprus, Cyprus, WIPO Lex",
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/22793"
+    },
+    {
+     "date": "",
+     "host": "www.supremecourt.gov.cy",
+     "rank": 5,
+     "snippet": "The current legal framework of the Republic of Cyprus is composed of the following sources of law:\n- - - • The Constitution of the Republic of Cyprus, as the supreme law of the state.\n-\n- • The laws preserved in force pursuant to Article 188 of the Constitution.",
+     "title": "www.supremecourt.gov.cy · Judicial · SCLegal System - supremecourt.gov.cy",
+     "url": "https://www.supremecourt.gov.cy/Judicial/SC.nsf/DMLLegSystem_en/DMLLegSystem_en"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Cyprus national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2004-01-01",
+     "host": "www.data.gov.cy",
+     "rank": 1,
+     "snippet": "…\nΑποφάσεις Υπουργικού Συμβουλίου 2004-2024\n...\n|Organization|Υπουργικό Συμβούλιο|\n|Modified|13/01/2025|\n|Release Date|13/12/2024|\n|Frequency|Ετήσια|",
+     "title": "Αποφάσεις Υπουργικού Συμβουλίου 2004-2024",
+     "url": "https://www.data.gov.cy/index.php/el/dataset/apofaseis-ypoyrgikoy-symboylioy-2004-2024",
+     "verificacion": {
+      "bytes": 76447,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:00Z",
+      "http": 200,
+      "sha256": "7de20f2664dfad23354d93f3d9e1f7bc40756dd7239c480ca4f54c722afe8f18"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.gov.cy",
+     "rank": 2,
+     "snippet": "06/07/26  |  Information\n- Housing Scheme for the Revitalization of Mountainous, Near the Buffer Zone and Disadvantaged Areas (6th Edition)\n06/07/26  |  Information\n...\n16/03/26  |  Information",
+     "title": "Documents - Ministry of Interior - Gov.cy",
+     "url": "https://www.gov.cy/moi/en/documents/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.cy/moi/en/documents/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:50:00Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.gov.cy",
+     "rank": 3,
+     "snippet": "## Άρθρα και κείμενα\nΝέα Αναβαθμισμένη Έκδοση της Εθνικής Διαδικτυακής Πύλης Ανοικτών Δεδομένων",
+     "title": "Αρχική",
+     "url": "https://data.gov.cy/"
+    },
+    {
+     "date": "2024-07-08",
+     "host": "www.gov.cy",
+     "rank": 4,
+     "snippet": "Government Gazette - Gov.cy\n1. Home\n...\n# Government Gazette\n...\nYou can search the various issues and annexes of the Government Gazette and find information (in Greek) about legislative acts, vacancies, public tenders, appointments, etc.\n...\n#### Working hours\n8:00 - 15:00",
+     "title": "Government Gazette - Gov.cy",
+     "url": "https://www.gov.cy/en/service/episimi-efimerida-tis-dimokratias/"
+    },
+    {
+     "date": "",
+     "host": "www.companies.gov.cy",
+     "rank": 5,
+     "snippet": "Knowledgebase, Legislation | Companies Section, Department of Registrar of Companies and Intellectual Property\nFind everything about business entities, **fast, easy and smart!**\n...\n### The Companies Regulations\n**Regulations**\nNo.: **113**\n### The Companies (Fees and Rights) Regulations\n**Regulatio",
+     "title": "Knowledgebase",
+     "url": "https://www.companies.gov.cy/en/knowledgebase/legislation"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Cyprus official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-10-07",
+     "host": "www.companies.gov.cy",
+     "rank": 1,
+     "snippet": "# Knowledgebase\n## Gazette\n### Επίσημη Εφημερίδα της Κυπριακής Δημοκρατίας - Παράρτημα Πέμπτο - Μέρος (Ι)\nPUBLICATION NUMBER **4575**\nPUBLICATION DATE: **02-10-2026**\n...\n**Details**",
+     "title": "Επίσημη Εφημερίδα της Κυπριακής Δημοκρατίας - Παράρτημα Πέμπτο - Μέρος (Ι)",
+     "url": "https://www.companies.gov.cy/en/knowledgebase/gazette/2400/?ctype=ar",
+     "verificacion": {
+      "bytes": 121083,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:02Z",
+      "http": 200,
+      "sha256": "4d634042545ea35b416c74031963a35accd2835bb754fd200eee0154f4bfe62e"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mof.gov.cy",
+     "rank": 2,
+     "snippet": "Official Gazette of the Republic of Cyprus | Government Printing Office\n# Official Gazette of the Republic of Cyprus\n...\n- Address: 30 Solomou Solomou Street, 2037 Strovolos\n...\n- Fax: +357 22303175\n- Email Address: director@gpo.mof.gov.cy",
+     "title": "Official Gazette of the Republic of Cyprus",
+     "url": "https://www.mof.gov.cy/mof/gpo/gazette.nsf/officialgazette-en/officialgazette-en?OpenDocument",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mof.gov.cy/mof/gpo/gazette.nsf/officialgazette-en/officialgazette-en?OpenDocument",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:50:03Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mof.gov.cy",
+     "rank": 3,
+     "snippet": "Επίσημη Εφημερίδα της Κυπριακής Δημοκρατίας | Κυβερνητικό Τυπογραφείο\n…\n# Στοιχεία Επικοινωνίας\n...\n- Ηλεκτρονική Διεύθυνση: director@gpo.mof.gov.cy",
+     "title": "Αρχική / Επίσημη Εφημερίδα της Κυπριακής Δημοκρατίας",
+     "url": "https://www.mof.gov.cy/mof/gpo/gazette.nsf/officialgazette-el/officialgazette-el?OpenDocument"
+    },
+    {
+     "date": "",
+     "host": "www.companies.gov.cy",
+     "rank": 4,
+     "snippet": "## Gazette\n...\nPUBLICATION NUMBER **4575**\nPUBLICATION DATE: **02-10-2026**\n...\nPUBLICATION TITLE: **Επίσημη Εφημερίδα της Κυπριακής Δημοκρατίας - Παράρτημα Πέμπτο - Μέρος (Ι)**",
+     "title": "Knowledgebase, Gazette | Companies Section, Department of ...",
+     "url": "https://www.companies.gov.cy/en/knowledgebase/gazette"
+    },
+    {
+     "date": "",
+     "host": "www.mof.gov.cy",
+     "rank": 5,
+     "snippet": "- Τηλεομοιότυπο: +357 22303175\n- Ηλεκτρονική Διεύθυνση: director@gpo.mof.gov.cy\n...\nΟ ταχυδρομικός κώδικας είναι 2037.",
+     "title": "Στοιχεία Επικοινωνίας",
+     "url": "https://www.mof.gov.cy/mof/gpo/gazette.nsf/dmlgazette_archive_gr/dmlgazette_archive_gr?OpenForm&Start=1&Count=9999&Expand=2.12.2&Seq=1473"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Cyprus supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.supremecourt.gov.cy",
+     "rank": 1,
+     "snippet": "Ανώτατο Δικαστήριο - Κυπριακή Δημοκρατία Κυπριακή Δημοκρατία\n...\n…",
+     "title": "Ανώτατο Δικαστήριο - Κυπριακή Δημοκρατία Κυπριακή Δημοκρατία",
+     "url": "https://www.supremecourt.gov.cy/judicial/sc.nsf/DMLindex_gr/href=",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.supremecourt.gov.cy/judicial/sc.nsf/DMLindex_gr/href=",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:50:04Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.supremecourt.gov.cy",
+     "rank": 2,
+     "snippet": "2025 Πολ.\nΑίτ.\n209-24 Χ.\nΑ. - 13-1-25| |\n...\nΑίτ.\n...\n|**2024**|**2024**| | |\n| | |27/12/2024 Πολ.\nΑιτ.",
+     "title": "Certiorari - Πρωτόδικη δικαιοδοσία - Αιτήσεις για άδεια",
+     "url": "https://www.supremecourt.gov.cy/judicial/sc.nsf/DMLprint5p_gr/DMLprint5p_gr?OpenDocument",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.supremecourt.gov.cy/judicial/sc.nsf/DMLprint5p_gr/DMLprint5p_gr?OpenDocument",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:50:04Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.supremecourt.gov.cy",
+     "rank": 3,
+     "snippet": "Supreme Court - Republic of Cyprus Αιτ 296-25 Σ.",
+     "title": "Supreme Court - Republic of Cyprus",
+     "url": "https://www.supremecourt.gov.cy/JUDICIAL/SC.NSF/All/FFA1FFA1B0DBB506C2258D71002EBC3C?OpenDocument"
+    },
+    {
+     "date": "",
+     "host": "www.supremecourt.gov.cy",
+     "rank": 4,
+     "snippet": "Supreme Court - Republic of Cyprus Case Law Reports -\n- - - - - Applications for leave\n- Applications for an order\n...\n33/64)+ Second Instance Civil Cases (Article 23 (1)(b)of L. 33/64)33/64)",
+     "title": "Supreme Court",
+     "url": "https://www.supremecourt.gov.cy/Judicial/SC.nsf/DMLprint6q_en/DMLprint6q_en?OpenDocument"
+    },
+    {
+     "date": "",
+     "host": "www.cylaw.org",
+     "rank": 5,
+     "snippet": "**Judgments of the Supreme Court (JSC)**\n- Αριθμός αποφάσεων: 2535\n- Ημερομηνία πιο πρόσφατης απόφασης: (1988) JSC 201\n- **Αποφάσεις για τα έτη ...**",
+     "title": "Κατάλογος JSC - CyLaw",
+     "url": "https://www.cylaw.org/jsc/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Cyprus state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-08-07",
+     "host": "portal.dls.moi.gov.cy",
+     "rank": 1,
+     "snippet": "\"νόμος\" - DLS Portal\n17100\n### Δημόσια Διαβούλευση για τον περί Επιτάξεως Ιδιοκτησίας δια Σκοπούς Δημόσιας Ωφελείας (Τροποποιητικός) Νόμος του 2026",
+     "title": "\"νόμος\" - DLS Portal",
+     "url": "https://portal.dls.moi.gov.cy/en/search/%CE%BD%CF%8C%CE%BC%CE%BF%CF%82",
+     "verificacion": {
+      "bytes": 1016955,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:10Z",
+      "http": 200,
+      "sha256": "ee6a2a64069de807954172d509dbe86c4da72acf89c1c0d1510efd4bec409e44"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cylaw.org",
+     "rank": 2,
+     "snippet": "##### Η Κυπριακή Πηγή Νομικής Πληροφόρησης\n#### Bρες τα κείμενα που περιέχουν:\n**Για τη Συλλογή της Κυπριακής Νομοθεσίας μεταβείτε στον Κατάλογο της Νομοθεσίας**",
+     "title": "CyLaw - Παγκύπριος Δικηγορικός Σύλλογος - Η Κυπριακή Πηγή Νομικής...",
+     "url": "https://www.cylaw.org/index.html",
+     "verificacion": {
+      "bytes": 10101,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:10Z",
+      "http": 200,
+      "sha256": "b0eb9653df4fd286365fe7179b6d4339a5e2a84c49939f37335822cc2d4deb8b"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.companies.gov.cy",
+     "rank": 3,
+     "snippet": "Knowledgebase, Legislation | Companies Section, Department of Registrar of Companies and Intellectual Property\nFind everything about business entities, **fast, easy and smart!**\n...\n### The Companies Law\n**Law**\nNo.: **113**\n### The Companies Regulations\n**Regulations**\n...\n**Law**",
+     "title": "Knowledgebase",
+     "url": "https://www.companies.gov.cy/en/knowledgebase/legislation"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.mlsi.gov.cy",
+     "rank": 4,
+     "snippet": "Republic of Cyprus - Department of Labour Inspection - Legislation\n# Legislation\n**The Safety and Health at Work legislation**\n**Protection of Young Persons/Maternity Protection**\nProtection of Young Persons\nMaternity Protection\nStatistical Data\n...\nTeleworking\nGood Practice\nPhoto Album\nREACH\nCLP",
+     "title": "Legislation",
+     "url": "https://www.mlsi.gov.cy/mlsi/dli/dliup.nsf/All/BA15D8062D0E1F58C2257E280030B7E2?OpenDocument"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.mlsi.gov.cy",
+     "rank": 5,
+     "snippet": "Republic of Cyprus - Department of Labour Inspection - Legislation\n# Legislation\n- The Employer's Liability (Compulsory Insurance) Law of 1989 (Law 174/1989)\n...\n- Limitation of Actionable Rights Law of 2012 (Law 66(I)/2012)",
+     "title": "Republic of Cyprus - Legislation",
+     "url": "https://www.mlsi.gov.cy/mlsi/dli/dliup.nsf/All/22A3D782A6359520C2257E2800314ED9?OpenDocument"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Cyprus municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2026-01-29",
+     "host": "ucm.org.cy",
+     "rank": 1,
+     "snippet": "Νομοθεσία - Ένωση Δήμων Κύπρου\nΤηλ: +357 22 445170 | Email: endeky@ucm.org.cy",
+     "title": "Νομοθεσία",
+     "url": "https://ucm.org.cy/nomothesia/",
+     "verificacion": {
+      "bytes": 161362,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:16Z",
+      "http": 200,
+      "sha256": "5a13363122ff71a72c2338e6b6768a266d569f9ac3eaf543efce6184cabf2ce7"
+     }
+    },
+    {
+     "date": "2026-03-09",
+     "host": "www.gov.cy",
+     "rank": 2,
+     "snippet": "Αρχική - Τμήμα Πολεοδομίας και Οικήσεως - Gov.cy",
+     "title": "Αρχική - Τμήμα Πολεοδομίας και Οικήσεως - Gov.cy",
+     "url": "https://www.gov.cy/moi-tph/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.cy/moi-tph/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:50:16Z"
+     }
+    },
+    {
+     "date": "2023-06-19",
+     "host": "www.gov.cy",
+     "rank": 3,
+     "snippet": "Κυβερνητική Πύλη - Gov.cy\n# Κυβερνητική Πύλη\n## Υπηρεσίες\nΤο **gov** **.** **cy** είναι η νέα διαδικτυακή πύλη της Κυπριακής Δημοκρατίας.",
+     "title": "Κυβερνητική Πύλη - Gov.cy",
+     "url": "https://www.gov.cy/"
+    },
+    {
+     "date": "2018-08-29",
+     "host": "ucm.org.cy",
+     "rank": 4,
+     "snippet": "Legislation - Ένωση Δήμων Κύπρου\n...\n**Various**\n- The Municipalities Law 111 of 1985 – 16/02/2011\nThis translation of the Municipalities Law no: 111 of 1985 has been prepared by the Union of Cyprus Municipalities.",
+     "title": "Legislation",
+     "url": "https://ucm.org.cy/en/legislation/"
+    },
+    {
+     "date": "2026-08-07",
+     "host": "portal.dls.moi.gov.cy",
+     "rank": 5,
+     "snippet": "\"νόμος\" - DLS Portal\n17100\n…\n...\n##### © 2026 Republic of Cyprus, Ministry of Interior, Department of Lands and Surveys. All rights reserved.",
+     "title": "\"νόμος\" - DLS Portal",
+     "url": "https://portal.dls.moi.gov.cy/en/search/%CE%BD%CF%8C%CE%BC%CE%BF%CF%82"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Cyprus regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2024-10-10",
+     "host": "www.cysec.gov.cy",
+     "rank": 1,
+     "snippet": "Cyprus Securities and Exchange Commission | Regulatory Framework\n...\n…\n|Documentation and Useful Links|\n|--|\n|Notifications|\n|Main Legislation|\n|--|\n|Secondary Legislation|\n|Notifications-Forms|\n|Circulars|\n|Policy Statements|\n...\n|PRIIPs|",
+     "title": "Regulatory Framework",
+     "url": "https://www.cysec.gov.cy/en-GB/legislation/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.cysec.gov.cy/en-GB/legislation/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:50:17Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cysec.gov.cy",
+     "rank": 2,
+     "snippet": "The Cyprus Securities and Exchange Commission, publishes this Policy Statement to inform prospective Crowdfunding Service Providers, which intend to provide their services from\nCyprus, and existing Crowdfunding Service Providers previously authorised under National \n...\nEuropean Crowdfunding Service",
+     "title": "Policy Statement on the application of Regulation (EU) ...",
+     "url": "https://www.cysec.gov.cy/CMSPages/GetFile.aspx?guid=e76bb2a6-24aa-488c-91f8-3d3e066e7595",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.cysec.gov.cy/CMSPages/GetFile.aspx?guid=e76bb2a6-24aa-488c-91f8-3d3e066e7595",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:50:17Z"
+     }
+    },
+    {
+     "date": "2024-10-10",
+     "host": "www.cysec.gov.cy",
+     "rank": 3,
+     "snippet": "Amending L.\n183(I)/2025 regarding the provision of investment services, the exercise of investment activities and the operation of regulated markets (only in Greek)\n...\nCommission Delegated Regulation (EU) 2017/578 with regard to regulatory technical standards specifying the requirements on market m",
+     "title": "Investment Services Law",
+     "url": "https://www.cysec.gov.cy/en-GB/legislation/services-markets/epey/"
+    },
+    {
+     "date": "2024-10-10",
+     "host": "www.cysec.gov.cy",
+     "rank": 4,
+     "snippet": "Directives for the Prevention and Suppression of Money Laundering and Terrorist Financing (Register of Beneficial Owners of Express Trusts and Similar Legal Arrangements) of 2021 to 2025 (unofficial consolidation up to R.A.D. 77/2025) (only in Greek)",
+     "title": "Cyprus Securities and Exchange Commission | Secondary Legislation",
+     "url": "https://www.cysec.gov.cy/en-GB/legislation/financial-crimes/secondary-legislation/"
+    },
+    {
+     "date": "2016-05-10",
+     "host": "www.cera.org.cy",
+     "rank": 5,
+     "snippet": "Οι πιο κάτω αναθεωρημένοι Κανόνες Προμήθειας έχουν δεσμευτική ισχύ από την ημερομηνία δημοσίευσής τους, 31/12/2024:\n...\nCyprus Energy Regulatory Authority\nAgias Paraskevis 20,",
+     "title": "CERA - Legislation",
+     "url": "https://www.cera.org.cy/en-gb/nomothesia/1159/hlektrismos-nomos"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Cyprus national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.cys.org.cy",
+     "rank": 1,
+     "snippet": "All individuals and organizations have direct access to standards via the Search & Buy facility (Standards Catalogue).\nYou can also acquire standards through the subscription service provided by CYS (more information about subscription services on the “Subscription Schemes page“).\n...\n#### Contact U",
+     "title": "Standards: Buy & Access",
+     "url": "https://www.cys.org.cy/en/protypa-typopoiisi/anazitisi-agora-protypon/",
+     "verificacion": {
+      "bytes": 274604,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:23Z",
+      "http": 200,
+      "sha256": "f9029c119bb111605fe7ad7a834f9bb8e97037df945d5d33fdb3df0011aa1cd2"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cys.org.cy",
+     "rank": 2,
+     "snippet": "You can search for standards using the standards indexing system\n## Who are we\nThe Cyprus Organization for Standardization (CYS) is the National Standardization Body of Cyprus, since January 1, 2005, and is responsible for all Standardization activities based on Law 156 (I)/2002.",
+     "title": "Ποιοί Είμαστε",
+     "url": "https://www.cys.org.cy/en/o-organismos/poioi-eimaste/",
+     "verificacion": {
+      "bytes": 282362,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:28Z",
+      "http": 200,
+      "sha256": "b1122b61fc0dc2db72c3202e9dc6e8db58b74fc519e22b9c8bfa749636f3de5e"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.etsi.org",
+     "rank": 3,
+     "snippet": "CYS actively participates in International and European Standardization as a full member of the International Standardization Organizations ISO,IEC and ITU, as well as the European Standardization Organizations CEN, CENELEC and ETSI.",
+     "title": "NSOs details_2024",
+     "url": "https://www.etsi.org/images/articles/NSOs/NSOs-detailed_profiles_and_information.xlsx"
+    },
+    {
+     "date": "2026-09-24",
+     "host": "tbtcode.iso.org",
+     "rank": 4,
+     "snippet": "C196 - Cyprus - CYS\n# WTO ISO Standards Information Gateway\n## CYS\n### Cyprus Organization for Standardization\n### Cyprus\n...\n- Type of standardizing body:\nNon-governmental\n...\nTel: +357 22 41 14 11\n...\nWebsite: http://www.cys.org.cy",
+     "title": "C196 - Cyprus - CYS - WTO ISO Standards Information Gateway",
+     "url": "https://tbtcode.iso.org/contents/json/42.html"
+    },
+    {
+     "date": "",
+     "host": "nvlpubs.nist.gov",
+     "rank": 5,
+     "snippet": "3.4\nCYPRUS\nCyprus Organization for Standards and Control\nof Quality\n[CYS]\nMinistry\nof Commerce\nand Industry\nNicosia\nCyprus\n[Information Source:\nNBS Collection of International/National Standards]\nCYS\n51\n:\n1978",
+     "title": "International and national standards on dimensional ...",
+     "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/IR/nbsir79-1791.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Cyprus mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2026-10-26",
+     "host": "www.mlsi.gov.cy",
+     "rank": 1,
+     "snippet": "# Legislation\n- The Essential Requirements to be fulfilled by Specific Product Categories Law of 2002 (Law 30(Ι)/2002)\n- The Essential Requirements to be fulfilled by Specific Product Categories Order of 2004 (R.A.A. 247/2004)\n...\n…",
+     "title": "Republic of Cyprus - Department of Labour Inspection - Legislation",
+     "url": "https://www.mlsi.gov.cy/mlsi/dli/dliup.nsf/All/8F18B190A9239404C2257E2800365C48?OpenDocument",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mlsi.gov.cy/mlsi/dli/dliup.nsf/All/8F18B190A9239404C2257E2800365C48?OpenDocument",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:50:28Z"
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "host": "www.mlsi.gov.cy",
+     "rank": 2,
+     "snippet": "# Legislation\n**Personal Protective Equipment**\n- The Essential Requirements (Personal Protection Equipment) Regulations of 2018 (R.A.A. 205/2018)\n- The Essential Requirements (Personal Protection Equipment – Harmonised Standards) Notification of 2010 (R.A.A. 179/2010)",
+     "title": "Legislation",
+     "url": "https://www.mlsi.gov.cy/mlsi/dli/dliup.nsf/All/9E3C0BB990FE1281C2257E2800369052?OpenDocument",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mlsi.gov.cy/mlsi/dli/dliup.nsf/All/9E3C0BB990FE1281C2257E2800369052?OpenDocument",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:50:28Z"
+     }
+    },
+    {
+     "date": "2026-10-07",
+     "host": "www.mlsi.gov.cy",
+     "rank": 3,
+     "snippet": "The legislation that regulates the free movement of certain categories of products, for which the CE marking is required, is the Essential Requirements to be fulfilled by Specific Categories of Products Law of 2002, as amended, as well a series of specific Regulations for everyone of the 21 categori",
+     "title": "Republic of Cyprus - Department of Labour Inspection ...",
+     "url": "https://www.mlsi.gov.cy/mlsi/dli/dliup.nsf/pagem7_en/pagem7_en"
+    },
+    {
+     "date": "2026-10-16",
+     "host": "www.mlsi.gov.cy",
+     "rank": 4,
+     "snippet": "Republic of Cyprus - Department of Labour Inspection - Legislation\n# Legislation\n**The Market Surveillance legislation**\n**Pressure Equipment**\n- The Essential Requirements (Pressure Equipment) Regulations of 2017 (R.A.A. 130/2017)",
+     "title": "Republic of Cyprus - Legislation",
+     "url": "https://www.mlsi.gov.cy/mlsi/dli/dliup.nsf/All/5059E265C5BF2952C2257E280036819E?OpenDocument"
+    },
+    {
+     "date": "",
+     "host": "commission.europa.eu",
+     "rank": 5,
+     "snippet": "The Department of Electrical and Mechanical Services of the Ministry of Transport, \nCommunications and Works is the competent authority responsible for the implementation of the following Directives:\n- \nLow Voltage (2014/35/EU)\n...\nConsumer Protection Service: www.consumer.gov.cy\n•",
+     "title": "[PDF] CYPRUS - European Commission",
+     "url": "https://commission.europa.eu/system/files/2021-07/country_fiche_cyprus_0.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Cyprus national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "library.cystat.gov.cy",
+     "rank": 1,
+     "snippet": "Address:  Michael Karaoli Str., 1444 Nicosia, Cyprus \nTel.:  22 602129, E-mail:  enquiries@cystat.mof.gov.cy \nWeb site: http://www.cystat.gov.cy \n...\n1444 NICOSIA",
+     "title": "PRESS RELEASE CENSUS OF POPULATION AND HOUSING 2021 FINAL RESULTS",
+     "url": "https://library.cystat.gov.cy/NEW/Census2021-Final_Results-EN-090824.pdf",
+     "verificacion": {
+      "bytes": 440781,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:31Z",
+      "http": 200,
+      "sha256": "8748a4db1f53a7d11203deef6a53c126c996344b4217d789d1de99ed9d7037bd"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cystat.gov.cy",
+     "rank": 2,
+     "snippet": "##### Στοιχεία Επικοινωνίας\nΟδός Μιχαήλ Καραολή\n1444 Λευκωσία, Κύπρος\nT: +357 22602129\nE: enquiries@cystat.mof.gov.cy",
+     "title": "Στατιστική Υπηρεσία - Αρχική",
+     "url": "https://www.cystat.gov.cy/el/default",
+     "verificacion": {
+      "bytes": 3291246,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:34Z",
+      "http": 200,
+      "sha256": "641d4c79f34f4fe946f61747b5df0e52b0f267e1d73e856019d81fd4dbbc1878"
+     }
+    },
+    {
+     "date": "",
+     "host": "library.cystat.gov.cy",
+     "rank": 3,
+     "snippet": "Address: Michael Karaoli Str., 1444 Nicosia, Cyprus \nTel.: 22 602129, E-mail: enquiries@cystat.mof.gov.cy \nWeb Portal: http://www.cystat.gov.cy \n...\n1444 NICOSIA",
+     "title": "Tourist Arrivals and Returns of Residents of Cyprus from ...",
+     "url": "https://library.cystat.gov.cy/NEW/Tourists_Arrivals&Residents_Returns-Dec25-EN-190126.pdf"
+    },
+    {
+     "date": "",
+     "host": "library.cystat.gov.cy",
+     "rank": 4,
+     "snippet": "CY-1444 Nicosia\nCyprus\n...\nE-mail: enquiries@cystat.mof.gov.cy\nWebsite: www.cystat.gov.cy \nTwitter: @CYSTAT_EN\n...\n• CYSTAT’s website (www.cystat.gov.cy) under the section \n...\n form",
+     "title": "2019 EDITION",
+     "url": "https://library.cystat.gov.cy/Documents/Publication/CYPRUS_IN_FIGURES-2019-EN-201219.pdf"
+    },
+    {
+     "date": "",
+     "host": "library.cystat.gov.cy",
+     "rank": 5,
+     "snippet": "Address: Michael Karaoli Str., 1444 Nicosia, Cyprus \nTel.: 22 602129, E-mail: enquiries@cystat.mof.gov.cy \nWeb Portal: http://www.cystat.gov.cy",
+     "title": "PRESS RELEASE - library.cystat.gov.cy",
+     "url": "https://library.cystat.gov.cy/NEW/Cy_Figures-2025-EN-121225.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Cyprus central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-23",
+     "host": "www.centralbank.cy",
+     "rank": 1,
+     "snippet": "Central Bank of Cyprus - Annual Economic Indicators\nPrint\n...\nThe table titled “Annual Economic Indicators” provides annual time series of a selection of the latest available annual data for the Cyprus economy (international reserves, tourism, current account balance, inflation, unemployment, GDP, g",
+     "title": "Annual Economic Indicators",
+     "url": "https://www.centralbank.cy/en/statistics/economic-indicators/annual-economic-indicators",
+     "verificacion": {
+      "bytes": 49750,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:36Z",
+      "http": 200,
+      "sha256": "55a8add9f16ec6a864c7522f65d9b71126f88ec6b4faaf50692a23dd82f9fbfe"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.centralbank.cy",
+     "rank": 2,
+     "snippet": "Cyprus\n...\nWebsite\nhttps://www.centralbank.cy/\n...\n1. Monetary and Financial Institutions (MFI) Statistics https://www.centralbank.cy/en/statistics/money-and-banking-statistics-and-financial-accounts/data/«monetary-financial-statistics»-publication\n...\n5. External Statistics",
+     "title": "STATISTICAL",
+     "url": "https://www.centralbank.cy/images/media/pdf/Statistical_Bulletin_Oct_2026_en.pdf",
+     "verificacion": {
+      "bytes": 3899366,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:37Z",
+      "http": 200,
+      "sha256": "fafeeb8d07dfc78d6d27ed7aabc20288320cbf60ce074d0a74769224fafa03dd"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.centralbank.cy",
+     "rank": 3,
+     "snippet": "# Changes in external statistics\nThe Central Bank of Cyprus (CBC) implemented the shift of external statistics compilation to the BPM6 framework in June 2014.\nAt the same time, the CBC has discontinued the compilation of the said data using BPM5.\nPublication of external statistics data using BPM6 ha",
+     "title": "Changes in external statistics",
+     "url": "https://www.centralbank.cy/en/statistics/external-statistics/changes-in-external-statistics"
+    },
+    {
+     "date": "",
+     "host": "www.centralbank.cy",
+     "rank": 4,
+     "snippet": "Central Bank of Cyprus - Key Statistics – SDDS\n# Key Statistics – SDDS\nThe National Summary Data Page (NSDP) is compiled by a large number of countries in the framework of agreements with the International Monetary Fund.\nIt contains daily updated macro-economic and financial economic key indicators.",
+     "title": "Central Bank of Cyprus - Key Statistics – SDDS",
+     "url": "https://www.centralbank.cy/en/statistics/key-statistics-sdds"
+    },
+    {
+     "date": "",
+     "host": "www.centralbank.cy",
+     "rank": 5,
+     "snippet": "The main types of statistics produced are the following:\n**Monetary and Financial Statistics**\nMonetary Financial Institutions (MFIs) balance sheet statistics, both stocks and flows adjustments, are collected by the Central Bank of Cyprus from all MFIs operating in Cyprus.\n...\n# Contact Details\nPOST",
+     "title": "Central Bank of Cyprus - Monetary and Financial Statistics ...",
+     "url": "https://www.centralbank.cy/en/statistics/money-and-banking-statistics-and-financial-accounts"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Cyprus government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "data.gov.cy",
+     "rank": 1,
+     "snippet": "## Organisations\n© 2014 - 2026 Republic of Cyprus,\nDeputy Ministry of Research, Innovation and Digital Policy,\nDirectorate for Digital Policy and Communications,\nNational Open Data Portal\n@OpenDataCy",
+     "title": "Home | National Opendata Portal - data.gov.cy",
+     "url": "https://data.gov.cy/en",
+     "verificacion": {
+      "bytes": 57714,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:43Z",
+      "http": 200,
+      "sha256": "16ea9295d87f07525fd048b560923cd7957564c2fb3f55891090263be29aaf09"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.gov.cy",
+     "rank": 2,
+     "snippet": "## Additonal Information\n© 2014 - 2026 Republic of Cyprus,\nDeputy Ministry of Research, Innovation and Digital Policy,\nDirectorate for Digital Policy and Communications,\nNational Open Data Portal\n@OpenData",
+     "title": "Δημόσιες Συμβάσεις που Κατακυρώθηκαν 2025",
+     "url": "https://data.gov.cy/en/resource/4304",
+     "verificacion": {
+      "bytes": 91266,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:44Z",
+      "http": 200,
+      "sha256": "1e198a9a27ac88c182e98194b9bef316a27afa7de6a3bc3d184d40f759416565"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.gov.cy",
+     "rank": 3,
+     "snippet": "Search | National Opendata Portal\n**National Open\nData Portal**\n...\n#### Pagination\n© 2014 - 2026 Republic of Cyprus,\nDeputy Ministry of Research, Innovation and Digital Policy,\nDirectorate for Digital Policy and Communications,\nNational Open Data Portal",
+     "title": "Search | National Opendata Portal",
+     "url": "https://data.gov.cy/en/search"
+    },
+    {
+     "date": "",
+     "host": "data.gov.cy",
+     "rank": 4,
+     "snippet": "Data Portal**\n...\n## INSPIRE - Utility and governmental services (Download Data Service)\nhttp://eservices.dls.moi.gov.cy/geoportal_inspire/catalog/search/resource/details.page?uuid=%7B6DF3E782-4AFE-49F5-A981-…hello",
+     "title": "National Opendata Portal",
+     "url": "https://data.gov.cy/en/resource/1294"
+    },
+    {
+     "date": "",
+     "host": "data.gov.cy",
+     "rank": 5,
+     "snippet": "National Opendata Portal\n**National Open\nData Portal**\n1. Home\n...\nhttp://eservices.dls.moi.gov.cy/geoportal_inspire/rest/document?id=%7BDC0DCEA9-E701-410B-8071-4FA0B996811F%7Dhello",
+     "title": "INSPIRE - Metadata",
+     "url": "https://data.gov.cy/en/resource/1370"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:33:36Z",
+ "pais": {
+  "iso2": "CY",
+  "iso3": "CYP",
+  "nombre": "Cyprus"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

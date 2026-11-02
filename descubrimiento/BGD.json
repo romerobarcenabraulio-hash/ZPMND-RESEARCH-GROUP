@@ -1,0 +1,681 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Bangladesh constitution and national laws official legal database",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2026-11-01",
+     "host": "bdlaws.minlaw.gov.bd",
+     "rank": 1,
+     "snippet": "### The Constitution of the People’s Republic of Bangladesh\n**\n...\nIn our Constituent Assembly, this eighteenth day of Kartick, 1379 B.S., corresponding to the fourth day of November, 1972 A.D., do hereby adopt, enact and give to ourselves this Constitution.",
+     "title": "Print - Laws of Bangladesh",
+     "url": "https://bdlaws.minlaw.gov.bd/act-print-367/section-print-24707.html",
+     "verificacion": {
+      "bytes": 13193,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:04:50Z",
+      "http": 200,
+      "sha256": "2e37c15bed14424ca86e54be84450d81fc9cbba0028bc70e0ff0b83d77d5599c"
+     }
+    },
+    {
+     "date": "",
+     "host": "bdlaws.minlaw.gov.bd",
+     "rank": 2,
+     "snippet": "The Constitution of the People’s Republic of Bangladesh | [THE NATIONAL PARTY-Omitted]\n...\n### The Constitution of the People’s Republic of Bangladesh\nPart VIA\n...\nMinistry of Law, Justice and Parliamentary Affairs\nBangladesh Secretariat, Dhaka - 1000, Bangladesh.",
+     "title": "The Constitution of the People’s Republic of Bangladesh",
+     "url": "https://bdlaws.minlaw.gov.bd/act-367/part-details-415.html",
+     "verificacion": {
+      "bytes": 49808,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:04:53Z",
+      "http": 200,
+      "sha256": "3c89443cd750d0d143f32906cad8f740fd99b1bfb65afa868c71f041bf6473c6"
+     }
+    },
+    {
+     "date": "",
+     "host": "bdlaws.minlaw.gov.bd",
+     "rank": 3,
+     "snippet": "Laws of Bangladesh\nAdvanced\n...\n|Part No| |Chapter No| | | |\n|Section No| | | | | |\n|Search By Text|Search By Text|Search By Text|Search By Text|Search By Text|Search By Text|\n### No Result",
+     "title": "Laws of Bangladesh",
+     "url": "https://bdlaws.minlaw.gov.bd/search.html"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Bangladesh national regulations decrees official government database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bdlaws.minlaw.gov.bd",
+     "rank": 1,
+     "snippet": "নির্দিষ্টকরণ আইন, ২০২৪\n### নির্দিষ্টকরণ আইন, ২০২৪\n#### ( ২০২৪ সনের ০৬ নং আইন )\n...\nMinistry of Law, Justice and Parliamentary Affairs\nBangladesh Secretariat, Dhaka - 1000, Bangladesh.",
+     "title": "নির্দিষ্টকরণ আইন, ২০২৪",
+     "url": "https://bdlaws.minlaw.gov.bd/act-details-1492.html",
+     "verificacion": {
+      "bytes": 56744,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:04:55Z",
+      "http": 200,
+      "sha256": "33b9f9de54d286a9da9e335ee9fd2c8cbdc0e49631d24e337a38375db2589b0f"
+     }
+    },
+    {
+     "date": "",
+     "host": "nbr.gov.bd",
+     "rank": 2,
+     "snippet": "#### Income Tax SROs\n...\n|2|S.R.O No 212-Ain/Aykor-3/2026|11/06/2026|Grant of income tax exemption on the income earned by edible oil manufacturing industries that use locally produced oilseeds as raw materials.| | |",
+     "title": "Redirecting... - NBR",
+     "url": "https://nbr.gov.bd/regulations/sros/income-tax-sros/eng/eng",
+     "verificacion": {
+      "bytes": 263764,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:00Z",
+      "http": 200,
+      "sha256": "f22ede96f7fb93de910e885ddbbc31dfb15b4130a9d8090c437c17653b2ef966"
+     }
+    },
+    {
+     "date": "",
+     "host": "bangladesh.gov.bd",
+     "rank": 3,
+     "snippet": "সরকারি অফিসের নতুন ওয়েবসাইটের আবেদন\nআরও\nসংক্ষিপ্ত\n৫৭\nমন্ত্রণালয় ও বিভাগ\n৮১\nঅধিদপ্তর\n৮\nবিভাগ\n৬৪\nজেলা\n৪৯৯\nউপজেলা",
+     "title": "আইন | বাংলাদেশ জাতীয় তথ্য বাতায়ন",
+     "url": "https://bangladesh.gov.bd/pages/laws/"
+    },
+    {
+     "date": "",
+     "host": "bdlaws.minlaw.gov.bd",
+     "rank": 4,
+     "snippet": "##### (Alphabetical)\n[Repealed]|15|1973|\n...\n|Bangladesh Bank (Amendment) Act, 2020|১২|২০২০|\n|Bangladesh Bank (Amendment) Act, 2026|৮৩|২০২৬|\n...\n|Bangladesh Bridge Authority Ordi",
+     "title": "Index of Laws of Bangladesh",
+     "url": "https://bdlaws.minlaw.gov.bd/laws-of-bangladesh-alphabetical-index.html"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Bangladesh official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.dpp.gov.bd",
+     "rank": 1,
+     "snippet": "Weekly Gazettes Vol-42 : October 15, 2026\n...\n|Part I|Statutory notifications containing rules and orders issued by all Ministries and Divisions of the Government of the People’s Republic of Bangladesh and their attached and subordinate offices and the Supreme Court of Bangladesh.|883-905|\n...\n…",
+     "title": "Department of Printing and Publications",
+     "url": "https://www.dpp.gov.bd/bgpress/index.php/document/get_gazette_part/42/2026-10-15",
+     "verificacion": {
+      "bytes": 49876,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:04Z",
+      "http": 200,
+      "sha256": "6242a7b93f2fcdb47e84b6a4398ec103fd626be46cc1a727a0103aea8c234ec1"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.dpp.gov.bd",
+     "rank": 2,
+     "snippet": "|October 20, 2026 ** These Gazettes are published in October 2026 **|\n|--|\n...\nPage **1/3495**  1 2 3 Next Last › Total **52415** records found\n...\n- APA 2024-25",
+     "title": "Gazettes Archive",
+     "url": "https://www.dpp.gov.bd/bgpress/index.php/document/gazettes/140/publication_date/",
+     "verificacion": {
+      "bytes": 59234,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:07Z",
+      "http": 200,
+      "sha256": "021eb4131425bfdae9c0778db302c6c9a7ad2ff6bcc0791e3c13d7170b2c80da"
+     }
+    },
+    {
+     "date": "",
+     "host": "bangladesh.gov.bd",
+     "rank": 3,
+     "snippet": "হোম | বাংলাদেশ জাতীয় তথ্য বাতায়ন\n৩১ অক্টোবর ২০২৬\n...\n## সরকারি সেবাসমূহ\n...\n© 2026 সর্বস্বত্ব সংরক্ষিত বাংলাদেশ.গভ.বিডি (জাতীয় পোর্টাল)",
+     "title": "হোম | বাংলাদেশ জাতীয় তথ্য বাতায়ন",
+     "url": "https://bangladesh.gov.bd/"
+    },
+    {
+     "date": "",
+     "host": "www.dpp.gov.bd",
+     "rank": 4,
+     "snippet": "|November 01, 2026 ** These Gazettes are published in November 2026 **|\n|--|\n...\nPage **1/3498**  1 2 3 Next Last › Total **52462** records found\n...\n- APA 2024-25",
+     "title": "Gazettes Archive - Bangladesh Government Press",
+     "url": "https://www.dpp.gov.bd/bgpress/index.php/document/gazettes/140"
+    },
+    {
+     "date": "",
+     "host": "www.dpp.gov.bd",
+     "rank": 5,
+     "snippet": "|নভেম্বর ০১, ২০২৬ ** এই গেজেট ২০২৬ নভেম্বর এ প্রকাশিত হয়েছে **|\n...\n…\nপেজ **১/৩৪৯৮**  ১ ২ ৩ পরবর্তী শেষ মোট **৫২৪৬২** টি রেকর্ড পাওয়া গেছে",
+     "title": "সরকারী গেজেট আর্কাইভ",
+     "url": "https://www.dpp.gov.bd/bgpress/bangla/index.php/document/gazettes/140"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Bangladesh supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2015-06-15",
+     "host": "www.supremecourt.gov.bd",
+     "rank": 1,
+     "snippet": "Home : Supreme Court of Bangladesh\n...\n…\n...\n…\n...\nDeveloped By : ICT Department, Supreme Court of Bangladesh **</td></tr></table> </td></tr></table>|",
+     "title": "Home : Supreme Court of Bangladesh - Dhaka",
+     "url": "https://www.supremecourt.gov.bd/web/index.php?page=judgments.php&menu=00&div_id=1&type_id=5&lang=",
+     "verificacion": {
+      "bytes": 138664,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:11Z",
+      "http": 200,
+      "sha256": "ec4d49272149acfb43348cc5b810f770a67c7c5d05185020514888dbd755859d"
+     }
+    },
+    {
+     "date": "",
+     "host": "supremecourt.gov.bd",
+     "rank": 2,
+     "snippet": "|\n...\n…\n...\ntr><tr><td></td><td> In the case of High Court Case, use a colon (:) after case type, and use a / between case number and year.\n...\n…",
+     "title": "Home",
+     "url": "https://supremecourt.gov.bd/web/index.php/resources/rules/web/web/web/web/resources/resources/web/Vacation?page=case_search.php&menu=11",
+     "verificacion": {
+      "bytes": 54922,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:16Z",
+      "http": 200,
+      "sha256": "8939890f076dd0377970ab80e4e57b031d30789b42f64f7dbd9a44cdbddc75d8"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.supremecourt.gov.bd",
+     "rank": 3,
+     "snippet": "Home : Supreme Court of Bangladesh\n...\n…\n...\n\nDeveloped By : ICT Department, Supreme Court of Bangladesh **</td></tr></table> </td></tr></table>|",
+     "title": "Home : Supreme Court of Bangladesh",
+     "url": "https://www.supremecourt.gov.bd/web/index.php/web/contents/resources/articles/web/?page=judgments.php&menu=00&div_id=2&type_id=5"
+    },
+    {
+     "date": "",
+     "host": "www.supremecourt.gov.bd",
+     "rank": 4,
+     "snippet": "IN THE SUPREME COURT OF BANGLADESH \nHIGH COURT DIVISION \n(CIVIL REVISIONAL JURISDICTION) \n...\nMr. Justice Md.\n...\nAnd \nJudgment Delivered On: 28th  Day of July 2025.",
+     "title": "In the Supreme court of Bangladesh",
+     "url": "https://www.supremecourt.gov.bd/resources/documents/2346473_C.R.4014of2022.pdf"
+    },
+    {
+     "date": "",
+     "host": "judiciary.gov.bd",
+     "rank": 5,
+     "snippet": "Precedent\nDecisions of Appellate Division\nDecisions of High Court Division\nSupreme Court Online Bulletin\nNotice",
+     "title": "Judiciary: Bangladesh",
+     "url": "https://judiciary.gov.bd/en/search"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Bangladesh state or provincial legislation official portal",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bdlaws.minlaw.gov.bd",
+     "rank": 1,
+     "snippet": "বান্দরবান পার্বত্য জেলা পরিষদ আইন, ১৯৮৯ | ৭৬৷ রহিতকরণ ও হেফাজত\n...\n## Related Links\n- Bangladesh Government Official Web Site\n- Legislative and Parliamentary Affairs Division",
+     "title": "বান্দরবান পার্বত্য জেলা পরিষদ আইন, ১৯৮৯",
+     "url": "https://bdlaws.minlaw.gov.bd/act-726/section-34965.html",
+     "verificacion": {
+      "bytes": 53644,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:18Z",
+      "http": 200,
+      "sha256": "3c258ad6ee5a032048efd5108173697df7e87a4e714b12767c4520795d71e3ce"
+     }
+    },
+    {
+     "date": "",
+     "host": "bdlaws.minlaw.gov.bd",
+     "rank": 2,
+     "snippet": "Laws of Bangladesh\n### Laws of Bangladesh\nAct No. XXVI of 1974 to Ordinance No. L of 1976\n…\n...\n|1976|The Newspapers (Annulment of Declaration) (Repeal) Ordinance, 1976|L|",
+     "title": "Laws of Bangladesh - bdlaws.minlaw.gov.bd",
+     "url": "https://bdlaws.minlaw.gov.bd/volume-19.html",
+     "verificacion": {
+      "bytes": 170240,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:21Z",
+      "http": 200,
+      "sha256": "ca3b4134fcf1c93f44bd9a78c1b48cce0d1724dc22eb8b8bf8f87cdd18be3f43"
+     }
+    },
+    {
+     "date": "",
+     "host": "bpsc.gov.bd",
+     "rank": 3,
+     "snippet": "# বাংলাদেশ সরকারী কর্ম কমিশন\nগণপ্রজাতন্ত্রী বাংলাদেশ সরকার",
+     "title": "আইন - বাংলাদেশ সরকারী কর্ম কমিশন",
+     "url": "https://bpsc.gov.bd/pages/laws"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Bangladesh municipal bylaws regulations official portal",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "lgd.gov.bd",
+     "rank": 1,
+     "snippet": "হোম | স্থানীয় সরকার বিভাগ\n# স্থানীয় সরকার বিভাগ\n## গ্রাম সরকার আইন, ২০২৬ (খসড়া) বিষয়ে মতামত প্রদানের অনুরোধ [ lgup1@lgd.gov.bd, lgup2@lgd.gov.bd ]",
+     "title": "হোম | স্থানীয় সরকার বিভাগ",
+     "url": "https://lgd.gov.bd/",
+     "verificacion": {
+      "bytes": 161980,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:24Z",
+      "http": 200,
+      "sha256": "3016273f0ad3f2c75bdf29df48864adb43aafca12e3187e036087547dbcf880d"
+     }
+    },
+    {
+     "date": "",
+     "host": "lgd.gov.bd",
+     "rank": 2,
+     "snippet": "# স্থানীয় সরকার বিভাগ\nগণপ্রজাতন্ত্রী বাংলাদেশ সরকার\n...\n## পৌরসভা\nপরিকল্পনা এবং বাস্তবায়ন: মন্ত্রিপরিষদ বিভাগ, এটুআই, বিসিসি, ডিওআইসিটি ও বেসিস।",
+     "title": "আইন ও বিধিমালা ( সিটি কর্পোরেশন / পৌরসভা ) - স্থানীয় সরকার বিভাগ",
+     "url": "https://lgd.gov.bd/pages/static-pages/6941401fc4774958d7b54aea",
+     "verificacion": {
+      "bytes": 122432,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:26Z",
+      "http": 200,
+      "sha256": "7f8696c52444b72ff1a9f1471ce324a005e358b4042b8e6236df82424f26341e"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mygov.bd",
+     "rank": 3,
+     "snippet": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+     "title": "myGov - মাইগভ | এক ঠিকানায় সরকারি সেবা",
+     "url": "https://www.mygov.bd/"
+    },
+    {
+     "date": "",
+     "host": "bdlaws.minlaw.gov.bd",
+     "rank": 4,
+     "snippet": "স্থানীয় সরকার (সিটি কর্পোরেশন) (সংশোধন) অধ্যাদেশ, ২০২৫",
+     "title": "স্থানীয় সরকার (সিটি কর্পোরেশন) (সংশোধন) অধ্যাদেশ, ২০২৫",
+     "url": "https://bdlaws.minlaw.gov.bd/act-details-1556.html"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Bangladesh regulatory agencies official regulations",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bb.org.bd",
+     "rank": 1,
+     "snippet": "FE Circular No.34 \nDate: September 02, 2025  \nAll Authorized Dealers in \nForeign Exchange in Bangladesh \nDear Sirs, \nForeign exchange regulations regarding loans, overdrafts, guarantees, and external borrowings\n...\nBoard of Investment \nPrime Minister's Office",
+     "title": "Foreign exchange regulations regarding loans, overdrafts, ...",
+     "url": "https://www.bb.org.bd/mediaroom/circulars/fepd/sep022025fepd34e.pdf",
+     "verificacion": {
+      "bytes": 3048913,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:35Z",
+      "http": 200,
+      "sha256": "c418df1d5c2aa393253f2eecaed85c91302b1118907d0cb03362b71d65f967ea"
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.state.gov",
+     "rank": 2,
+     "snippet": "The Financial Reporting Act (2015) created the Financial Reporting Council, which is responsible for transparency and accountability in the accounting and auditing system.\n...\nThe stock exchanges are regulated by the Bangladesh Securities and Exchange Commission (BSEC) which joined the International",
+     "title": "Bangladesh - United States Department of State",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/bangladesh/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/bangladesh/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:05:35Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bb.org.bd",
+     "rank": 3,
+     "snippet": "### Related links\n- Regulations and Guidelines\n- Draft Guidelines and Notifications\n...\n- Payment and Settlement System Act, 2024\n- The Secured Transactions (Movable Property) Act, 2023\nOn the other hand, regulations and guidelines broadly include Bangladesh Bank Regulations and Foreign Exchange Reg",
+     "title": "Bangladesh Bank",
+     "url": "https://www.bb.org.bd/en/index.php/about/lawsnacts"
+    },
+    {
+     "date": "2020-07-01",
+     "host": "www.trade.gov",
+     "rank": 4,
+     "snippet": "BSTI inspects products for conformity with applicable product standards and safety regulations, and issues product certifications.\n...\nThe Bangladesh Government Press, the government printing office, publishes the weekly “Bangladesh Gazette” every Thursday.\nThe gazette provides official notice of go",
+     "title": "Bangladesh -Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/bangladesh-standards-trade"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Bangladesh national standards body standards catalogue",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2024-12-06",
+     "host": "bcc.gov.bd",
+     "rank": 1,
+     "snippet": "|--|\n|1.||BDS ISO/IEC 24787:2014ISO/IEC 24787:2010|\n...\n|6||ISO/IEC 9798-1:2010(E)|\n|7||ISO/IEC 9798-2:1999(E)|",
+     "title": "Information Technology (It) Related Bangladesh Standards | পাতা",
+     "url": "https://bcc.gov.bd/pages/static-pages/688a355cf1fb5aa36c85a107",
+     "verificacion": {
+      "error": "robots.txt disallows https://bcc.gov.bd/pages/static-pages/688a355cf1fb5aa36c85a107",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:05:38Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "ec.eservice.bsti.gov.bd",
+     "rank": 2,
+     "snippet": "Implemented &\nSupported by\n© 2026 - Maintained by the Bangladesh Standards &\nTesting Institution (BSTI).",
+     "title": "Agriculture and Food",
+     "url": "https://ec.eservice.bsti.gov.bd/bds-search?category=agriculture-and-food",
+     "verificacion": {
+      "bytes": 561621,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:42Z",
+      "http": 200,
+      "sha256": "1b5ad813f1e5c8cb8362d0091be156bcab006f72b01314509c575927aaddac72"
+     }
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 3,
+     "snippet": "…\n...\nNote: Bangladesh Standard Catalog 2018, http://www.bsti.gov.bd/site/page/d5235f4d-9528-45cd-89b1-9930ff0d1c6b/Standards-\nCatalouge-2018\n…",
+     "title": "Bangladesh Food and Agricultural Import Regulations and ...",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Food%20and%20Agricultural%20Import%20Regulations%20and%20Standards%20Report_Dhaka_Bangladesh_4-15-2019.pdf"
+    },
+    {
+     "date": "",
+     "host": "rise.esmap.org",
+     "rank": 4,
+     "snippet": "Bangladesh Standards (BDS) have been classified in the following ‘Price \nSchedule’.\nThe prices of all standards are indicated by an alphabetic code instead of a monetary value.\n...\nBDS 1103:1984 \nAscorbic acid, food grade \n...\nacid.\n...\n…",
+     "title": "BSTI STANDARDS CATALOGUE 2018",
+     "url": "https://rise.esmap.org/sites/default/files/library/bangladesh/Clean%20Cooking/Bangladesh_Bangladesh%20Standard%20and%20Testing%20Institution%20Standards%20Catalogue_2018.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Bangladesh mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2025-02-24",
+     "host": "hub.bangladeshcustoms.gov.bd",
+     "rank": 1,
+     "snippet": "## Bangladesh Standards and Testing Institution (BSTI)\n**Bangladesh Standards and Testing Institution Act, 2018 [English | Bangla]**\nBangladesh Standards and Testing Institution (Management System Certification) Regulations, 2009 [Bangla]\nBangladesh Standards and Testing Institution Regulations, 202",
+     "title": "Legislations",
+     "url": "https://hub.bangladeshcustoms.gov.bd/resource/legislations",
+     "verificacion": {
+      "bytes": 71074,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:46Z",
+      "http": 200,
+      "sha256": "f5a784a63c14c2df7820ed246987ccb2d651351d57a13d2a8ad443c773336a2c"
+     }
+    },
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 2,
+     "snippet": "|Bangladesh|G/TBT/N/BGD/11 ** Bangladesh Standard Specification for Wafer Biscuits (Draft for Second revision) Notified document (1)|23/04/2025|Wafer Biscuits, ICS 67.060|",
+     "title": "Members - ePing SPS&TBT platform",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C050",
+     "verificacion": {
+      "bytes": 154704,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:46Z",
+      "http": 200,
+      "sha256": "60078724b3122e26abe2ada09c323206cf977f5ebadc5732c3232aad62876bcc"
+     }
+    },
+    {
+     "date": "",
+     "host": "nbr.gov.bd",
+     "rank": 3,
+     "snippet": "### Regulations\nYear:\n|Sl.|SRO No.|Date|Description|Amended by|Download|\n...\n|42|187-Ain/2026/42/Customs|11/06/2026|Fire Fighting equipment related SRO (Del-New)| | |\n...\n…",
+     "title": "Regulations - National Board of Revenue (NBR), Bangladesh",
+     "url": "https://nbr.gov.bd/regulations/sros/customs-sros/40/bangladesh-customs"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 4,
+     "snippet": "The long list of admitted insecticides, fungicides, and herbicides can be found in the regulation, which follows CODEX standards.\n...\nPlant Quarantine Rules, 2018 (Bangla, Partly\n...\nList of mandatory products under import policy, available here.\nAll acts and rules are available here.",
+     "title": "Report Name: FAIRS Annual Country Report Annual",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS+Annual+Country+Report+Annual_Dhaka_Bangladesh_BG2023-0014.pdf"
+    },
+    {
+     "date": "",
+     "host": "nbr.gov.bd",
+     "rank": 5,
+     "snippet": "### আইন\n#### কাস্টমস এসআরও\n|১৯|২৩৫-আইন/২০২৬/৬৫/কাস্টমস|১১/০৮/২০২৬|Raw materials related SRO (Amendment SRO)|151-AIN/2026/06/customs| |",
+     "title": "কাস্টমস এসআরও - National Board of Revenue (NBR), Bangladesh",
+     "url": "https://nbr.gov.bd/regulations/sros/customs-sros/ban"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Bangladesh national statistics office official website",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-18",
+     "host": "www.sesric.org",
+     "rank": 1,
+     "snippet": "## Information on National Statistical Offices Located in Bangladesh\n|Organization :|Bangladesh Bureau of Statistics (BBS)|\n|--|--|\n...\n|Fax :|(+880) 2 550 070 69|\n|Web Site :|http://www.bbs.gov.bd|",
+     "title": "Information on National Statistical Offices Located in",
+     "url": "https://www.sesric.org/databases-nso-detail.php?c_code=8",
+     "verificacion": {
+      "bytes": 69964,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:05:47Z",
+      "http": 200,
+      "sha256": "67542c2700f1f269963458a1e8805af6cdfd0fc73cfed60caa3fb8ade221b90f"
+     }
+    },
+    {
+     "date": "",
+     "host": "ghdx.healthdata.org",
+     "rank": 2,
+     "snippet": "Bangladesh Bureau of Statistics (BBS) | GHDx\n...\n# Bangladesh Bureau of Statistics (BBS)\nAcronym\nBBS\nCity\nDhaka\nCountry\nBangladesh\nRelated organizations\nPopulation Census Commission (Bangladesh)\nWebsite\nhttp://www.bbs.gov.bd",
+     "title": "Bangladesh Bureau of Statistics (BBS) | GHDx",
+     "url": "https://ghdx.healthdata.org/organizations/bangladesh-bureau-statistics-bbs",
+     "verificacion": {
+      "bytes": 185750,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:06:00Z",
+      "http": 200,
+      "sha256": "4e4ceaade984134c2aca20cee88ad5381fef252e02e1e22f78c1a1468d24fec5"
+     }
+    },
+    {
+     "date": "2015-12-16",
+     "host": "www.measureevaluation.org",
+     "rank": 3,
+     "snippet": "# Bangladesh: HIS Indicators\n|13.\nCountry has national statistics office|Yes|http://www.bbs.gov.bd| |\n...\n|15.",
+     "title": "Bangladesh: HIS Indicators",
+     "url": "https://www.measureevaluation.org/his-strengthening-resource-center/country-profiles-1/bangladesh.html"
+    },
+    {
+     "date": "",
+     "host": "objectstorage.ap-dcc-gazipur-1.oraclecloud15.com",
+     "rank": 4,
+     "snippet": "Bangladesh Bureau of Statistics  \nStatistics and Informatics Division  \nMinistry of Planning  \nwww.bbs.gov.bd\n…\n...\nThis publication is also available at www.bbs.gov.bd.\n...\nBangladesh Bureau of Statistics (BBS), visit www.bbs.gov.bd",
+     "title": "2025 Statistical Pocketbook",
+     "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/7/656b606f-12aa-441b-a3c7-f5fac7fc2d26.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Bangladesh central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bb.org.bd",
+     "rank": 1,
+     "snippet": "Bangladesh Bank Open Data Initiative\nBangladesh Bank took another step forward in making its vast repository of data\naccessible to the general public.\n...\nThis file will be updated monthly.\n...\nThe Bank also compiles and publishes a range of economic data in html format.\n...\nE-mail: webmaster@bb.org",
+     "title": "Bangladesh Bank",
+     "url": "https://www.bb.org.bd/en/index.php/econdata/",
+     "verificacion": {
+      "bytes": 70399,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:06:01Z",
+      "http": 200,
+      "sha256": "961783961d54e6d303b6c75308b3acf00d8b57694d3cad6a121984c1338e8421"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bb.org.bd",
+     "rank": 2,
+     "snippet": "Recent Publications\n...\n|--|--|--|--|\n|11|2026-10-19|Major Economic Indicators detail..|September 2026|\n|12|2026-10-19|Islamic Banking and Finance Statistics (IBFS) detail..|August 2026|",
+     "title": "Recent Publications",
+     "url": "https://www.bb.org.bd/en/index.php/publication/recent_publications",
+     "verificacion": {
+      "bytes": 46695,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:06:02Z",
+      "http": 200,
+      "sha256": "5ffb6469837e2f825473e27df3ba0c00a8b16662fa43e8b95a2cd17083f34984"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bb.org.bd",
+     "rank": 3,
+     "snippet": "## Contact\nBangladesh Bank, Motijheel, Dhaka\nPhone: +880-255665001-6\nE-mail: webmaster@bb.org.bd",
+     "title": "Selected Indicators - Bangladesh Bank",
+     "url": "https://www.bb.org.bd/en/index.php/publication/publictn/5/27"
+    },
+    {
+     "date": "2026-02-15",
+     "host": "www.bb.org.bd",
+     "rank": 4,
+     "snippet": "# 9.22\nBangladesh Bank, Motijheel, Dhaka\nPhone: +880-255665001-6\nE-mail: webmaster@bb.org.bd",
+     "title": "Bangladesh Bank",
+     "url": "https://www.bb.org.bd/en/"
+    },
+    {
+     "date": "",
+     "host": "www.bb.org.bd",
+     "rank": 5,
+     "snippet": "Bangladesh Bank\n...\nScheduled Banks Statistics\n|Publications|Archive/Other files|\n|--|--|\n|April-June, 2026.\ndetail..\n[download]|Download|\n|January-March, 2026.\ndetail..\n[download]|Download|",
+     "title": "Scheduled Banks Statistics",
+     "url": "https://www.bb.org.bd/en/index.php/publication/publictn/2/14"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Bangladesh government open data portal",
+   "descartados": 3,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.data.gov.bd",
+     "rank": 1,
+     "snippet": "Bangladesh Open Data | Data For All\n## Bangladesh Open Data\nBangladesh by Numbers\n...\n- ###### GDP Growth Rate in Bangladesh - Dataset\n- ###### Bangladesh Population by Gender - Dataset\n- ###### National E-Service List - Dataset",
+     "title": "Bangladesh Open Data",
+     "url": "https://www.data.gov.bd/",
+     "verificacion": {
+      "bytes": 35889,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:06:13Z",
+      "http": 200,
+      "sha256": "b16fe9f11fe65006bd9df60b824a9bf72e17854c38da7103a2935adf5615144c"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.gov.bd",
+     "rank": 2,
+     "snippet": "Groups | Bangladesh Open Data\n## Groups\n...\n## স্থানীয় সরকার\nAdministrative law, local government, planning law",
+     "title": "Groups",
+     "url": "https://data.gov.bd/Groups",
+     "verificacion": {
+      "bytes": 32022,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:06:24Z",
+      "http": 200,
+      "sha256": "533ee961d69a4ea5622a86e1a9bf0e97aea37c15dea9dde6444d8cf7561a5fd6"
+     }
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:21:26Z",
+ "pais": {
+  "iso2": "BD",
+  "iso3": "BGD",
+  "nombre": "Bangladesh"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

@@ -1,0 +1,757 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Austria constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ris.bka.gv.at",
+     "rank": 1,
+     "snippet": "RIS - Information about the Legal Information System\n…\nSince June 1997 the RIS, which was previously only accessible to the public administration, became available to the general public online and free of charge.\n...\nThis database contains the judicature of the Constitutional Court (nearly all rulin",
+     "title": "RIS - Information about the Legal Information System",
+     "url": "https://ris.bka.gv.at/UI/Erv/Info.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://ris.bka.gv.at/UI/Erv/Info.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:14Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "ris.bka.gv.at",
+     "rank": 2,
+     "snippet": "The Legal Information System of the Republic of Austria is a platform and data base providing information on Austrian law.\nIts main contents are legislation in its current version (federal and state), law gazettes (federal and state) and case law.\n...\nFor a selection of Austrian Laws in English tran",
+     "title": "Important Information",
+     "url": "https://ris.bka.gv.at/defaultEn.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://ris.bka.gv.at/defaultEn.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:14Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ris.bka.gv.at",
+     "rank": 3,
+     "snippet": "# Herzlich willkommen!\nDas Rechtsinformationssystem des Bundes (RIS) dient ua der rechtlich verbindlichen Kundmachung der im Bundesgesetzblatt (seit 2004) und in den Landesgesetzblättern der\n...\nverlautbarenden Rechtsvorschriften.",
+     "title": "Herzlich willkommen!",
+     "url": "https://www.ris.bka.gv.at/"
+    },
+    {
+     "date": "",
+     "host": "www.ris.bka.gv.at",
+     "rank": 4,
+     "snippet": "Hier finden Sie das österreichische Bundesrecht in konsolidierter Fassung, wobei Konsolidierung bedeutet, dass in einer Rechtsvorschrift sämtliche später kundgemachten Änderungen und Berichtigungen eingearbeitet wurden.\n...\nHier finden Sie das Bundesgesetzblatt in seiner **rechtlich verbindlichen** ",
+     "title": "Bund - Übersicht",
+     "url": "https://www.ris.bka.gv.at/Bund/"
+    },
+    {
+     "date": "",
+     "host": "www.ris.bka.gv.at",
+     "rank": 5,
+     "snippet": "RIS - Bund - Index\n...\nDer INDEX des österreichischen Bundesrechts ist nach einer numerischen Klassifikation in Sachgebiete, Hauptgruppen und Untergruppen gegliedert:\n...\n### 10 VERFASSUNGSRECHT\n- 10/01 Bundes-Verfassungsgesetz (B-VG)",
+     "title": "RIS - Bund - Index",
+     "url": "https://www.ris.bka.gv.at/UI/Bund/Bundesnormen/IndexBundesrecht.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Austria national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ris.bka.gv.at",
+     "rank": 1,
+     "snippet": "Included are decrees (by the provincial governor, the provincial government, the provincial office or by any other provincial authority), which are not promulgated in its authentic state Law Gazette and are not decrees of district administrative authorities.\n...\nYou can find search terms in all or s",
+     "title": "RIS - Information about the Legal Information System",
+     "url": "https://ris.bka.gv.at/UI/Erv/Info.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://ris.bka.gv.at/UI/Erv/Info.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:14Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ris.bka.gv.at",
+     "rank": 2,
+     "snippet": "…\n# Allgemeine Informationen\n## Hintergrundinformationen zum RIS\nDas RIS ist auch auf der Open Government Plattform (OGD) vertreten.\nAnfragen zum RIS wären zu richten an: ris.it@bka.gv.at\nBeim Rechtsinformationssystem handelt es sich um eine Dokumentation des österreichischen Rechts.",
+     "title": "Über Das RIS",
+     "url": "https://www.ris.bka.gv.at/UI/Info.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ris.bka.gv.at/UI/Info.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:17Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "ris.bka.gv.at",
+     "rank": 3,
+     "snippet": "The Legal Information System of the Republic of Austria is a platform and data base providing information on Austrian law.\nIts main contents are legislation in its current version (federal and state), law gazettes (federal and state) and case law.\n...\nFor a selection of Austrian Laws in English tran",
+     "title": "Important Information",
+     "url": "https://ris.bka.gv.at/defaultEn.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.ris.bka.gv.at",
+     "rank": 4,
+     "snippet": "# Herzlich willkommen!\nDas Rechtsinformationssystem des Bundes (RIS) dient ua der rechtlich verbindlichen Kundmachung der im Bundesgesetzblatt (seit 2004) und in den Landesgesetzblättern der\n...\nverlautbarenden Rechtsvorschriften.",
+     "title": "Herzlich willkommen!",
+     "url": "https://www.ris.bka.gv.at/"
+    },
+    {
+     "date": "",
+     "host": "www.evi.gv.at",
+     "rank": 5,
+     "snippet": "## Über evi.gv.at\nSeit dem 1. Juli 2023 ersetzt evi.gv.at das gedruckte Amtsblatt zur Wiener Zeitung und ist damit die zentrale Plattform für rechtsverbindliche und gesetzlich vorgeschriebene Veröffentlichungen – transparent, kostenfrei und digital für alle zugänglich.",
+     "title": "evi.gv.at | Das digitale Amtsblatt Österreichs",
+     "url": "https://www.evi.gv.at/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Austria official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.evi.gv.at",
+     "rank": 1,
+     "snippet": "evi.gv.at | Das digitale Amtsblatt Österreichs\n# evi.gv.at – Die Elektronische Verlautbarungs- und Informationsplattform des Bundes\n...\nDie Elektronische Verlautbarungs- und Informationsplattform des Bundes ist das offizielle Amtsblatt der Republik Österreich.",
+     "title": "evi.gv.at | Das digitale Amtsblatt Österreichs",
+     "url": "https://www.evi.gv.at/",
+     "verificacion": {
+      "bytes": 109980,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:18Z",
+      "http": 200,
+      "sha256": "91d2cdb531bc4f45462e12fd8610ac2bb835ea6651016b783949b35904cdef1b"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ris.bka.gv.at",
+     "rank": 2,
+     "snippet": "|1| |BGBl.\nI Nr. 89/2026|19.10.2026|Aufhebung des § 5 Abs. 1 Z 17 und des § 722 Abs. 2 des Allgemeinen Sozialversicherungsgesetzes durch den Verfassungsgerichtshof| |",
+     "title": "RIS - Bundesgesetzblatt authentisch ab 2004 - Trefferliste",
+     "url": "https://www.ris.bka.gv.at/eli/bgbl/I/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ris.bka.gv.at/eli/bgbl/I/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:18Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 3,
+     "snippet": "# Austria: legislation: official gazette\nDescription:\n1 title containing the official gazette for Austria from 1924 to 1948.\nIt is an official publication and the text is in German.\nNew material is no longer added.\n...\nAustria",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag/austria-legislation-officiaresfolgo5e1-42"
+    },
+    {
+     "date": "",
+     "host": "ris.bka.gv.at",
+     "rank": 4,
+     "snippet": "# Important Information\nIts main contents are legislation in its current version (federal and state), law gazettes (federal and state) and case law.\nThe Legal Information System also serves as the framework for the authentic electronic publication of the Federal Law Gazette and of the State Law Gaze",
+     "title": "Important Information",
+     "url": "https://ris.bka.gv.at/defaultEn.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.patentamt.at",
+     "rank": 5,
+     "snippet": "# Patent and Utility Model Gazette\n...\nThe Patent Gazette provides information on current developments in the field of patents:\n...\nThe Patent and Utility Model Gazettes are published regularly on the 15th of each month.\nThe current issues are available for download here.\nNotice: downloads are avail",
+     "title": "Patent & Utility Model Gazette - Austrian Patent Office",
+     "url": "https://www.patentamt.at/en/manage-preserve-protection/inventions/patent-utility-model-gazettes"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Austria supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-08-26",
+     "host": "www.ogh.gv.at",
+     "rank": 1,
+     "snippet": "Der Oberste Gerichtshof | ogh.gv.at\nDer Oberste Gerichtshof\n...\nDer Oberste Gerichtshof ist das österreichische Höchstgericht in zivilrechtlichen und strafrechtlichen Angelegenheiten.\nSeine Entscheidungen sind unanfechtbar und für alle Verfahren richtungsweisend.",
+     "title": "OGH",
+     "url": "https://www.ogh.gv.at/",
+     "verificacion": {
+      "bytes": 65453,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:23Z",
+      "http": 200,
+      "sha256": "edfa620feffa04975d7c748426a40bab3af8d47b799d21946c7cc38f893af3cd"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ris.bka.gv.at",
+     "rank": 2,
+     "snippet": "RIS - Judikatur - Übersicht\n# Judikatur\n## Verfassungsgerichtshof (VfGH)\nHier finden Sie ausgewählte Entscheidungen des Verfassungsgerichtshofes (VfGH) ab dem Jahr 1919.",
+     "title": "Judikatur - Übersicht - RIS",
+     "url": "https://www.ris.bka.gv.at/judikatur/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ris.bka.gv.at/judikatur/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:23Z"
+     }
+    },
+    {
+     "date": "2026-10-20",
+     "host": "www.ogh.gv.at",
+     "rank": 3,
+     "snippet": "## Entscheidungen des OGH\nDie Entscheidungen des OGH sind im Volltext im Rechtsinformation Justiz abrufbar.\nÄltere, dort noch nicht erfasste Entscheidungen können gegen Kostenersatz im Präsidium des OGH bestellt werden (ogh.praesidium@ogh.gv.at).",
+     "title": "Entscheidungen des OGH | Der Oberste Gerichtshof | ogh.gv.at",
+     "url": "https://www.ogh.gv.at/entscheidungen/"
+    },
+    {
+     "date": "",
+     "host": "www.ogh.gv.at",
+     "rank": 4,
+     "snippet": "Dies geschieht im Rahmen einer allgemein zugänglichen Datenbank (RIS-Justiz).\n...\n#### Entscheidungen des Obersten Gerichtshofs\n...\nInsgesamt stehen mehr als 130.000 Entscheidungen des Obersten Gerichtshofs im Volltext im RIS-Justiz zur Verfügung.",
+     "title": "Wissenschaftlicher Dienst (Evidenzbüro) | ogh.gv.at",
+     "url": "https://www.ogh.gv.at/service/evidenzbuero/"
+    },
+    {
+     "date": "",
+     "host": "ris.bka.gv.at",
+     "rank": 5,
+     "snippet": "…\n- **Justiz (= Judicature of the Supreme Court, Regional Appeal Courts and other courts)**\nThis database covers the judicature of the Supreme Court and other courts and comprises the decisions of civil and criminal law.\n...\nYou can find search terms in all or selected RIS-applications.",
+     "title": "RIS - Information about the Legal Information System",
+     "url": "https://ris.bka.gv.at/UI/Erv/Info.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Austria state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.ris.bka.gv.at",
+     "rank": 1,
+     "snippet": "# Landesrecht\nHier finden Sie die Rechtsvorschriften der österreichischen Bundesländer.\n...\n…\n...\nDie Spalte \"Landesgesetzblätter im ALEX (extern)\" führt zum – besonders weit zurückreichenden – Internetangebot der Österreichischen Nationalbibliothek.",
+     "title": "Landesrecht",
+     "url": "https://www.ris.bka.gv.at/Land/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ris.bka.gv.at/Land/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:24Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "ris.bka.gv.at",
+     "rank": 2,
+     "snippet": "**Landesgesetzblatt authentisch (= Authentic State Law Gazettes)**\n...\n- **Verordnungsblätter authentisch (= Authentic Law Gazettes of provincial administrative authorities)**\nThis database contains legally binding promulgated law gazettes of provincial administrative authorities (since January 1st ",
+     "title": "RIS - Information about the Legal Information System",
+     "url": "https://ris.bka.gv.at/UI/Erv/Info.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://ris.bka.gv.at/UI/Erv/Info.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:24Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "vorarlberg.at",
+     "rank": 3,
+     "snippet": "- Provincial gazette and legal documentation\nHere you will find Vorarlberg's State law (VORIS) and the legal gazettes (link to German page):\nIndex des Vorarlberger Landesrechts\nVorarlberger Landesrecht - RIS, geltende Fassung\n...\n#### Gesetzgebung",
+     "title": "https://vorarlberg.at/-/legislation-tasks-and-services",
+     "url": "https://vorarlberg.at/-/legislation-tasks-and-services"
+    },
+    {
+     "date": "2025-03-08",
+     "host": "www.ris.bka.gv.at",
+     "rank": 4,
+     "snippet": "Landesgesetzblatt authentisch\n...\nWien\n...\nKundmachungen (K)\n...\nWebseiten\nBundeskanzleramt\nOesterreich.gv.at\nLand Burgenland\nLand Kärnten\nLand Niederösterreich\nLand Oberösterreich\nLand Salzburg\nLand Steiermark\nLand Tirol",
+     "title": "Landesgesetzblatt authentisch",
+     "url": "https://www.ris.bka.gv.at/LgblAuth/"
+    },
+    {
+     "date": "",
+     "host": "ris.bka.gv.at",
+     "rank": 5,
+     "snippet": "Sie befinden sich im Rechtsinformationssystem des Bundes (RIS), das vom österreichischen Bundeskanzleramt im Internet zur Verfügung gestellt wird.\n...\n…\n...\n-\n…\nHier finden Sie das nicht authentische Landesgesetzblatt mit Ausnahme von Wien.",
+     "title": "RIS - Allgemeine Informationen",
+     "url": "https://ris.bka.gv.at/UI/Info.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Austria municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2025-09-08",
+     "host": "www.ris.bka.gv.at",
+     "rank": 1,
+     "snippet": "Gemeinderecht\n...\n0 Vertretungskörper und allgemeine Verwaltung\n1 Öffentliche Ordnung und Sicherheit\n...\nBundeskanzleramt\nOesterreich.gv.at\nÖsterreichische Gemeindebund\nÖsterreichische Städtebund\n...\nVerzeichnis der Kärntner Gemeinden\nIndex des Gemeinderechts",
+     "title": "Gemeinderecht - Suche - RIS",
+     "url": "https://www.ris.bka.gv.at/gemeinderecht",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ris.bka.gv.at/gemeinderecht",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:24Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ris.bka.gv.at",
+     "rank": 2,
+     "snippet": "Hier finden Sie ausgewählte Rechtsnormen von Gemeinden (entweder in der Form von konsolidierten Texten oder Stammfassungen und Kundmachungen der Novellen) folgender Bundesländer:\n...\n- Salzburg\n...\nHier finden Sie rechtsverbindliche Kundmachungen, insbesondere Verordnungen, von Gemeinden.",
+     "title": "Gemeinden",
+     "url": "https://www.ris.bka.gv.at/Gemeinde/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ris.bka.gv.at/Gemeinde/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:24Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "ris.bka.gv.at",
+     "rank": 3,
+     "snippet": "## Category „Gemeinden“ (= Municipal Law)\nThis database contains the law of some Austrian municipalities.\n...\nYou can find search terms in all or selected RIS-applications.\n...\nFor inquiries, please contact:\nris.it@bka.gv.at\nFederal Chancellery of Austria, Vienna",
+     "title": "RIS - Information about the Legal Information System",
+     "url": "https://ris.bka.gv.at/UI/Erv/Info.aspx"
+    },
+    {
+     "date": "",
+     "host": "ris.bka.gv.at",
+     "rank": 4,
+     "snippet": "Gemeinderecht authentisch\n...\nWebseiten\nBundeskanzleramt\nÖsterreichischer Gemeindebund\nÖsterreichischer Städtebund\nOesterreich.gv.at\nEU-Recht",
+     "title": "Gemeinderecht authentisch - Suche - RIS",
+     "url": "https://ris.bka.gv.at/GemeinderechtAuth/"
+    },
+    {
+     "date": "",
+     "host": "www.ris.bka.gv.at",
+     "rank": 5,
+     "snippet": "## Trefferliste\nDatentabelle\n...\nNr. 4/2025|Oberösterreich|Aspach|29.09.2025|Verordnung betreffend Auflassung öffentliche Verkehrsfläche Teilflächen Wegparzelle Nr. 2343/7 der KG 40202 Aspach| |",
+     "title": "Gemeinderecht authentisch - Trefferliste",
+     "url": "https://www.ris.bka.gv.at/Ergebnis.wxe?Abfrage=GemeinderechtAuth&Titel=&Bundesland=Ober%C3%B6sterreich&Bezirk=&Gemeinde=&GemeindeAsString=&Gemeindeverband=&GemeindeverbandAsString=&Kundmachungsnummer=&KundmachungsdatumVon=01.07.2023&KundmachungsdatumBis=21.01.2026&BundeslandDefault=&ImRisSeitVonDatum=&ImRisSeitBisDatum=&ImRisSeit=Undefined&ResultPageSize=100&Suchworte=&Position=2001&Sort=3%7CDesc"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Austria regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.basg.gv.at",
+     "rank": 1,
+     "snippet": "# Gesetzliche Grundlagen\n...\n…\n...\n- Arzneimittelgesetz (AMG)\n- Verordnung betreffend Arzneimittel aus menschlichem Blut\n- Arzneimittelbetriebsordnung 2009 (AMBO 2009)\n- Verordnung über das Arzneispezialitätenregister 2013",
+     "title": "Gesetzliche Grundlagen - BASG",
+     "url": "https://www.basg.gv.at/ueber-uns/gesetzliche-grundlagen",
+     "verificacion": {
+      "bytes": 202688,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:26Z",
+      "http": 200,
+      "sha256": "a2587ccdd1a765b4f5ba502c0fb63dc119673c69c38888ac1481dbcc71dccce0"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.basg.gv.at",
+     "rank": 2,
+     "snippet": "…\n...\n- Regulation on Medicinal Products derived from Human Blood\n...\n- Regulation concerning the Austrian Medicinal Product Index 2013\n...\n…\n...\n- Regulation (EU) 2023/607 amending Regulation (EU) 2017/745 and (EU) 2017/746 as regards the transitional provisions",
+     "title": "Legal basis",
+     "url": "https://www.basg.gv.at/en/about-us/legal-basis",
+     "verificacion": {
+      "bytes": 204173,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:27Z",
+      "http": 200,
+      "sha256": "a9c5bcd887e224239dd8b73503893590dcd37905d2494235e50e738a74f85b82"
+     }
+    },
+    {
+     "date": "2026-10-05",
+     "host": "www.eurofound.europa.eu",
+     "rank": 3,
+     "snippet": "## Public authorities involved in regulating working life\n...\n…\n...\nIt is also responsible for supervising the Public Employment Service (*Arbeitsmarktservice* *,* AMS), and hence unemployment insurance, and for organising the Labour Inspectorate (*Arbeitsinspektorat*); it is also responsible for la",
+     "title": "Actors and institutions in Austria | Eurofound - European Union",
+     "url": "https://www.eurofound.europa.eu/en/countries/austria/actors-and-institutions"
+    },
+    {
+     "date": "2026-06-10",
+     "host": "www.bavg.gv.at",
+     "rank": 4,
+     "snippet": "Bundesamt für Verbrauchergesundheit\n...\nDas BAVG kontrolliert in Österreich die Einfuhr von lebenden Tieren, Lebensmitteln und bestimmten Waren sowie von BIO-Produkten bei der Ein- und Durchfuhr bzw. bei der Wiedereinfuhr aus Drittländern.\n...\n## Qualitätsregelungen",
+     "title": "Bundesamt für Verbrauchergesundheit",
+     "url": "https://www.bavg.gv.at/"
+    },
+    {
+     "date": "",
+     "host": "www.usp.gv.at",
+     "rank": 5,
+     "snippet": "## General information\nThe respective transitional periods must also be taken into account.\n...\n…\n## Competent authority\n- The Offices of the state governments^German text^\n- The Federal Ministry of Agriculture and Forestry, Climate and Environmental Protection, Regions and Water Management (→ BMLUK",
+     "title": "www.usp.gv.at › en › themenHazardous chemicals – Classification, packaging, labelling...",
+     "url": "https://www.usp.gv.at/en/themen/betrieb-und-umwelt/laufender-betrieb/weitere-informationen-laufender-betrieb/gefaehrliche-chemikalien/einstufungs-verpackungs-kennzeichnungspflichten-einstufungsdaten.html"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Austria national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2026-09-01",
+     "host": "www.oesterreich.gv.at",
+     "rank": 1,
+     "snippet": "Hier geht es zur Normensuche bei Austrian Standards: Webshop - Austrian Standards\n...\n- ÖNORMEN, EN-Normen, ISO-Normen, IEC, ITU\n...\nSie entwickelt ÖNORMEN und stellt die Verbindung zur europäischen (CEN) und internationalen Normung (ISO) her.",
+     "title": "ÖNORMEN, OVE-Normen und Standards - Oesterreich GV",
+     "url": "https://www.oesterreich.gv.at/de/themen/gesetze_und_recht/oenormen-und-standards",
+     "verificacion": {
+      "bytes": 307092,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:30Z",
+      "http": 200,
+      "sha256": "5ca2a8472ef2bdb8ecbb6d90d82e499f633a54a3715687b79669c492bbdc2fa9"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.austrian-standards.at",
+     "rank": 2,
+     "snippet": "Österreichische Standards nennt man ÖNORMEN.\n...\nFinden Sie hier österreichische Regelwerke, die bei uns erhältlich sind.\nKlicken Sie auf das gewünschte Logo der Herausgeber, um zu den jeweiligen Standards zu kommen oder nutzen Sie unser Suchfenster im oberen Bereich unterhalb unseres Logos.",
+     "title": "Standards aus Österreich",
+     "url": "https://www.austrian-standards.at/de/produkte-loesungen/standards-aus-oesterreich",
+     "verificacion": {
+      "bytes": 137474,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:32Z",
+      "http": 200,
+      "sha256": "4ac452d5fd308a1666fa552512c2f23419b26848e9a98c6f0d3f21e028fe7b08"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.usp.gv.at",
+     "rank": 3,
+     "snippet": "Normen/Standards (→ oesterreich.gv.at) sind für alle zugänglich.\n...\nInsgesamt finden sich in den Online-Datenbanken von Austrian Standards mehr als 260.000 Normen und Regelwerke (Dokumente aus dem In- und Ausland).",
+     "title": "Normensuche",
+     "url": "https://www.usp.gv.at/themen/betrieb-und-umwelt/laufender-betrieb/weitere-informationen-laufender-betrieb/normensuche.html"
+    },
+    {
+     "date": "2026-09-01",
+     "host": "meinnormenradar.austrian-standards.at",
+     "rank": 4,
+     "snippet": "NORMEN (370 Treffer)\n## Suchergebnis\nNormprojekt initiieren Bestellen\n...\n**ÖNORM EN 2665-004:2026 09 01** (Normentwurf) Stellungnahme bis 22.10.2026 ASI Komitee 237",
+     "title": "Suche | meinNormenRadar | Austrian Standards",
+     "url": "https://meinnormenradar.austrian-standards.at/radar/RadarSearch.action?search=&q="
+    },
+    {
+     "date": "",
+     "host": "www.austrian-standards.at",
+     "rank": 5,
+     "snippet": "# Purchase standards\nAustrian Standards is your central point of contact for purchasing and managing standards.\nHere you will find all Austrian standards as well as numerous EU and international standards.\nBuy the documents directly from our online shop, use our convenient subscription services or t",
+     "title": "Purchase standards",
+     "url": "https://www.austrian-standards.at/en/products-solutions/purchase-standards"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Austria mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2024-12-03",
+     "host": "www.ris.bka.gv.at",
+     "rank": 1,
+     "snippet": "…\n...\n|2|OVE E 8101:2019-01-01|Elektrische Niederspannungsanlagen (ausgenommen Teil 1 Unterabschnitt 134.3 und Teil 6 Unterabschnitt 600.5 unbeschadet gesetzlicher oder behördlicher Vorgaben)|",
+     "title": "Elektrotechnikverordnung 2020 Anl. 2",
+     "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011222&Artikel=&Paragraf=&Anlage=2&Uebergangsrecht=&ShowPrintPreview=True",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011222&Artikel=&Paragraf=&Anlage=2&Uebergangsrecht=&ShowPrintPreview=True",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:32Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ris.bka.gv.at",
+     "rank": 2,
+     "snippet": "|Nr.|Bezeichnung|Titel|\n|--|--|--|\n...\n|2|OVE E 8014:2019-01-01|Fundamenterder und ergänzende Maßnahmen mit Erdung und Potentialausgleich für Einrichtungen der Informationstechnik|",
+     "title": "ETV 2020 - RIS Dokument",
+     "url": "https://www.ris.bka.gv.at/Dokumente/BgblAuth/BGBLA_2020_II_308/BGBLA_2020_II_308.html",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ris.bka.gv.at/Dokumente/BgblAuth/BGBLA_2020_II_308/BGBLA_2020_II_308.html",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:33Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bmwet.gv.at",
+     "rank": 3,
+     "snippet": "**Transportable Pressure Equipment Regulation (Ortsbewegliche Druckgeräte Verordnung, ODGV) 2011**, BGBl*.* II No 239/2011\nImplements Directive 2010/35/EU on transportable pressure equipment\n...\nAmendment(s):\n...\nAmendment(s):",
+     "title": "Laws_regulations",
+     "url": "https://www.bmwet.gv.at/en/Topics/Technical-Matters-and-Surveying/pressure-equipment/laws_regulations.html"
+    },
+    {
+     "date": "2026-09-01",
+     "host": "www.oesterreich.gv.at",
+     "rank": 4,
+     "snippet": "# ÖNORMEN, OVE -Normen und Standards – Orientierung und Zugang leicht gemacht\n## Was sind Normen – und warum sind sie wichtig?\n### Normungsorganisationen\nNormen im Bereich der Elektrotechnik werden vom OVE (Österreichischer Verband für Elektrotechnik) erstellt.",
+     "title": "ÖNORMEN, OVE-Normen und Standards - Oesterreich GV",
+     "url": "https://www.oesterreich.gv.at/de/themen/gesetze_und_recht/oenormen-und-standards"
+    },
+    {
+     "date": "",
+     "host": "ris.bka.gv.at",
+     "rank": 5,
+     "snippet": "Verordnung des Bundesministers für Wissenschaft, Forschung und Wirtschaft über elektromagnetische Verträglichkeit (Elektromagnetische Verträglichkeitsverordnung 2015 – EMVV 2015)\n...\nII Nr. 22/2016 [CELEX-Nr.: 32014L0030]",
+     "title": "Elektromagnetische Verträglichkeitsverordnung 2015 - RIS",
+     "url": "https://ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20009457"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Austria national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-20",
+     "host": "www.statistik.at",
+     "rank": 1,
+     "snippet": "Weitere Informationen zur Bevölkerungsprognose finden sich in der aktuellen Standarddokumentation auf der **Website** von Statistik Austria.\n...\n…\nStatistik Austria Bundesanstalt „Statistik Österreich”\nGuglgasse 13\n1110 Wien\nforschungundlehre@statistik.gv.at",
+     "title": "Scientific Use Files",
+     "url": "https://www.statistik.at/services/tools/datenzugang/center-wissenschaft/scientific-use-files",
+     "verificacion": {
+      "bytes": 182785,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:35Z",
+      "http": 200,
+      "sha256": "71c4e48524c2aa97cb3d0e74cf5bfdea6a600b39f1ca375b7346ac71ee1143b9"
+     }
+    },
+    {
+     "date": "2026-04-01",
+     "host": "www.statistik.at",
+     "rank": 2,
+     "snippet": "Startseite - STATISTIK AUSTRIA - Die Informationsmanager\n...\nIn dringenden Fällen kontaktieren Sie uns bitte per E-Mail: info@statistik.gv.at\n...\n# Unabhängige Statistiken für faktenbasierte Entscheidungen",
+     "title": "Homepage - STATISTICS AUSTRIA - The Information Manager",
+     "url": "https://www.statistik.at/",
+     "verificacion": {
+      "bytes": 123658,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:36Z",
+      "http": 200,
+      "sha256": "16bc26982b2f804408c57207444a3c3a39ab8780d6c0fb4e0f24d521af8cc7e1"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.statistik.gv.at",
+     "rank": 3,
+     "snippet": "Statistik Austria Open.data\n# Statistics Austria Open.data\n## General\nThe portal data.statistik.gv.at offers a range of data sets from the dictionary of official Austrian statistical data.",
+     "title": "Statistics Austria Open.data",
+     "url": "https://data.statistik.gv.at/web/"
+    },
+    {
+     "date": "2026-04-27",
+     "host": "www.wikidata.org",
+     "rank": 4,
+     "snippet": "Statistics Austria - Wikidata\n# Statistics Austria (Q358870)\nAustria's principal government institution in charge of statistics and census data\n- Bundesanstalt Statistik Österreich\n|Language|Label|Description|Also known as|\n...\n## Statements\nreference URL\n...\nofficial website\nhttps://www.statistik.a",
+     "title": "Statistics Austria",
+     "url": "https://www.wikidata.org/wiki/Q358870"
+    },
+    {
+     "date": "",
+     "host": "www.statistik.at",
+     "rank": 5,
+     "snippet": "STATISTICS AUSTRIA | Federal Institution under Public Law | Guglgasse 13 | 1110 Vienna | www.statistik.at  \nPress: phone: +43 1 711 28-7777 | e-mail: presse@statistik.gv.at\n© STATISTICS AUSTRIA",
+     "title": "Austrian economy grew by 0.6% in 2025",
+     "url": "https://www.statistik.at/fileadmin/announcement/2026/03/20260305BIP2025Q4EN.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Austria central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-09-16",
+     "host": "www.oenb.at",
+     "rank": 1,
+     "snippet": "Oesterreichische Nationalbank\n...\n- ### HVPI-Inflation\nVergleich zum Vorjahr\n- ### Entwicklung des BIP (real)\nVergleich zum Vorjahr\n- ### Arbeitslosenquote (Eurostat)\nVergleich zum Vormonat\n...\nVergleich zum Vormonat\n…",
+     "title": "Austrian National Bank",
+     "url": "https://www.oenb.at/",
+     "verificacion": {
+      "bytes": 137500,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:38Z",
+      "http": 200,
+      "sha256": "af0575c7b56635e2732fdd34d1fe31fefd5207f2120cd1afe00c898ad17fa12a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.oenb.at",
+     "rank": 2,
+     "snippet": "Datenangebot - Oesterreichische Nationalbank\n...\nDie Erstellung von Finanzstatistiken ist ein zentrales Aufgabengebiet der OeNB.\nDie OeNB stellt der Öffentlichkeit ein umfangreiches Datenangebot in aktueller und benutzerfreundlicher Form zur Verfügung.\n...\n- Geldmengen",
+     "title": "Datenangebot - Oesterreichische Nationalbank",
+     "url": "https://www.oenb.at/oenb25/daten-und-forschung/datenangebot",
+     "verificacion": {
+      "bytes": 102327,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:39Z",
+      "http": 200,
+      "sha256": "4fba7aa2ae03c26b7800c4a40190a5144d80c88174ccfb13a214f0ba8842f3d4"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.oenb.at",
+     "rank": 3,
+     "snippet": "false\nOesterreichische Nationalbank\n2026-10-20T19:13:22Z\nOeNB, Eurosystem and monetary indicators\n...\nDebt securities\nPrices, competitiveness\nEconomic and industry indicators\nGeneral government\nEconomic indicators\nFinancial accounts\nExternal sector\n...\nDirect investment\nPortfolio investment",
+     "title": "[XML] https://www.oenb.at/isadataservice/content?lang=EN",
+     "url": "https://www.oenb.at/isadataservice/content?lang=EN"
+    },
+    {
+     "date": "2026-09-17",
+     "host": "www.oenb.at",
+     "rank": 4,
+     "snippet": "Key economic indicators for Austria\n2023\n...\nQ4 25\nQ1 26\nQ2 26\nJune 26\nJuly 26\nAug. 26\nReal economy\nForecast of key economic indicators for Austria\n...\nx\n...\nCopyright (c) 2022 Oesterreichische Nationalbank",
+     "title": "DATA - Key economic indicators for Austria",
+     "url": "https://www.oenb.at/isawebstat/stabfrage/createReport;jsessionid=8C03B594B48470EF4141AA0D386C6DB5?lang=EN&report=9999"
+    },
+    {
+     "date": "",
+     "host": "www.oenb.at",
+     "rank": 5,
+     "snippet": "Selected economic measures - Oesterreichische Nationalbank\n...\n2. Data\n...\nThis embedded page cannot be displayed because JavaScript is disabled.\nOpen the page directly: https://www.oenb.at/isawebstat/stabfrage/createReport?lang=EN&amp;report=7.1\n…",
+     "title": "Selected economic measures - Oesterreichische Nationalbank",
+     "url": "https://www.oenb.at/en/daten-und-forschung/datenangebot/realwirtschaftliche-indikatoren/volkswirtschaftliche-kennziffern/7-1-ausgewaehlte-volkswirtschaftliche-Kennziffern.html"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Austria government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "data.statistik.gv.at",
+     "rank": 1,
+     "snippet": "Statistik Austria Open.data\n# Statistics Austria Open.data\n## General\nThe portal data.statistik.gv.at offers a range of data sets from the dictionary of official Austrian statistical data.\nThe data offered here conforms to the Principles Of Open Data, therefore being machine-readable.",
+     "title": "Statistics Austria Open.data",
+     "url": "https://data.statistik.gv.at/web/",
+     "verificacion": {
+      "bytes": 9762,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:41Z",
+      "http": 200,
+      "sha256": "25192fdd7e65d17350e7b3e797ccec2076280d2e15b313310ac1edda5476382c"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bundeskanzleramt.gv.at",
+     "rank": 2,
+     "snippet": "Data.gv.at is the Austrian metadata catalogue based on a cooperation agreement between the Federal State, cities, federal states and municipalities.\nThis portal is the single point of contact to the European data portal and provides access to numerous open datasets, services and applications of the ",
+     "title": "General-access databases - Federal Chancellery of Austria",
+     "url": "https://www.bundeskanzleramt.gv.at/en/services/federal-administrative-library/databases/general-access-databases.html",
+     "verificacion": {
+      "bytes": 74022,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:44Z",
+      "http": 200,
+      "sha256": "41516edc37f92155df21509d9dc2743be29c086c0134e3b85db3df342f090a72"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.europa.eu",
+     "rank": 3,
+     "snippet": "For Explanation:\n* If yes, please briefly specify.\",yes,The Austrian “Framework for Open Government Data Platforms” determines the obligation for publishing open government data via the data.gv.at portal.\nThis includes all levels of government (from the federal to the local level).,Confirm,,,,",
+     "title": "2024_odm_questionnaire_austria.xlsx",
+     "url": "https://data.europa.eu/sites/default/files/2025-06/2024_odm_questionnaire_austria.xlsx"
+    },
+    {
+     "date": "2011-10-31",
+     "host": "data.statistik.gv.at",
+     "rank": 4,
+     "snippet": "# JSON|\n#### Disclaimer Of Liability\nPlease send any correcture advice to open.data@statistik.gv.at.",
+     "title": "Datensätze",
+     "url": "https://data.statistik.gv.at/web/catalog.jsp"
+    },
+    {
+     "date": "",
+     "host": "www.bundeskanzleramt.gv.at",
+     "rank": 5,
+     "snippet": "### Open Government Data (OGD)\n...\nIn the interests of national visibility and transparency, the data portal data.gv.at was created in 2012 as a central catalogue for the metadata of the decentralised data catalogues of the administration in Austria.\n...\n…\nMore information on govercert.gv.at.",
+     "title": "Digitised Austria - Federal Chancellery of Austria",
+     "url": "https://www.bundeskanzleramt.gv.at/en/agenda/digitalisation/digitised-austria.html"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:19:51Z",
+ "pais": {
+  "iso2": "AT",
+  "iso3": "AUT",
+  "nombre": "Austria"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

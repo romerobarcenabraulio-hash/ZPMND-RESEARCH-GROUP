@@ -1,0 +1,767 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Chile constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 1,
+     "snippet": "la Biblioteca del Congreso Nacional que entrega acceso libre a más\nde 416.000 normas que integran el ordenamiento\njurídico nacional, a texto\ncompleto y actualizado, a Tratados Internacionales ratificados por Chile y a\n...\nla certeza jurídica, transparencia y democratización de la información",
+     "title": "www.bcn.cl › leychile › ConsultaLey Chile - Biblioteca del Congreso Nacional",
+     "url": "https://www.bcn.cl/leychile/Consulta/m/m/index",
+     "verificacion": {
+      "bytes": 9602,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:34Z",
+      "http": 200,
+      "sha256": "4ff75cdc3dade5550d6eee84a015e513a646a920e50ffce12cdea8cf379e9131"
+     }
+    },
+    {
+     "date": "2026-05-07",
+     "host": "www.senado.cl",
+     "rank": 2,
+     "snippet": "# Constitución Política\n...\n## Capítulo I: Bases de la Institucionalidad\nÚltima actualización del texto de la Constitución Política: Ley Nº 21.810,  del 16 de abril de 2026.",
+     "title": "Constitución Política | Senado República de Chile",
+     "url": "https://www.senado.cl/acerca-del-senado/normativa/constitucion-politica",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.senado.cl/acerca-del-senado/normativa/constitucion-politica",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:35:35Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 3,
+     "snippet": "Ley Chile - Biblioteca del Congreso Nacional\n...\n1. **Descarga con Firma Electrónica Avanzada (FEA)**\n- *Esta opción garantiza la autenticidad e integridad del documento mediante una firma\nelectrónica\n...\nPara su tranquilidad, Ley Chile se mantiene disponible y actualizado hasta el día de ayer.",
+     "title": "Ley Chile",
+     "url": "https://www.bcn.cl/leychile/Consulta/buscador_experto"
+    },
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 4,
+     "snippet": "Use nuestro buscador e ingrese los criterios del contenido que requiere.\nSi lo prefiere, puede ir a la portada del sitio Web de Ley Chile y desde allí llegar al contenido que busca.\n...\n1. **Descarga con Firma Electrónica Avanzada (FEA)**\n...\nelectrónica",
+     "title": "Ley Chile - Biblioteca del Congreso Nacional - BCN",
+     "url": "https://www.bcn.cl/leychile/consulta"
+    },
+    {
+     "date": "",
+     "host": "www.leychile.cl",
+     "rank": 5,
+     "snippet": "Leyes de consulta frecuente\nAcceda a aquellas normas m\ná\ns solicitadas de la base legislativa de la Biblioteca del Congreso Nacional.\nTexto completo y actualizado.\n...\nLeyes chilenas publicadas por el Diario Oficial en los\nú\nltimos 12 meses, ordenadas por n",
+     "title": "https://www.leychile.cl/Consulta/obtxml?opt=30&tipCat=0",
+     "url": "https://www.leychile.cl/Consulta/obtxml?opt=30&tipCat=0"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Chile national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.diariooficial.interior.gob.cl",
+     "rank": 1,
+     "snippet": "# Normativa Diario Oficial\nEn particular su artículo 3°, letra e).\n...\n**Normativa especial que obliga a publicar en el Diario Oficial**\nSe encuentran vigentes más de ciento cuarenta normas jurídicas que obligan a publicar en el Diario Oficial.\nA modo de ejemplo, entre ellas se cuentan:",
+     "title": "Normativa Diario Oficial - Diario Oficial – República de Chile",
+     "url": "https://www.diariooficial.interior.gob.cl/normativa/",
+     "verificacion": {
+      "bytes": 25734,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:37Z",
+      "http": 200,
+      "sha256": "0cd5e49224b01fa56a73b1c76a3ff59216faa90f6c53c6fc4219fcb99794dae5"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 2,
+     "snippet": "Ley Chile - Legislación Temática - Decretos - Biblioteca del Congreso Nacional\n...\n# Legislación Temática\nSelección de normas por tema y consulta frecuente.\nContiene texto completo actualizado.\n...\n## Decretos 7\nAciertos\n1 - 7\nde **7**",
+     "title": "www.bcn.cl › leychile › consultaLey Chile - Legislación Temática - Decretos - Biblioteca del...",
+     "url": "https://www.bcn.cl/leychile/consulta/listado_n_sel?agr=2&sub=1351",
+     "verificacion": {
+      "bytes": 9602,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:37Z",
+      "http": 200,
+      "sha256": "4ff75cdc3dade5550d6eee84a015e513a646a920e50ffce12cdea8cf379e9131"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 3,
+     "snippet": "Ley Chile - Búsqueda simple - Biblioteca del Congreso Nacional\n...\n…\n#### Decreto 177\n...\n24-SEP-2008\n## Decreto 177\n#### PROMULGA LA DECISIÓN Nº 2 SOBRE PROCEDIMIENTOS OPERACIONALES ENTRE LA REPÚBLICA DE CHILE Y JAPÓN",
+     "title": "Ley Chile - Búsqueda simple - Biblioteca del Congreso Nacional",
+     "url": "https://www.bcn.cl/leychile/consulta/listaresultadosimple?cadena=.vmo&itemsporpagina=10&npagina=1"
+    },
+    {
+     "date": "",
+     "host": "nuevo.leychile.cl",
+     "rank": 4,
+     "snippet": "Agrupador;Id Norma;Tipo Norma;Nro Norma;Fecha Publicación;Organismos;Titulo Norma;Materia;Parte;Url;Utlima Modificación;Url Utlima Modificación;\n...\n…",
+     "title": "https://nuevo.leychile.cl/servicios/Consulta/Agrup...",
+     "url": "https://nuevo.leychile.cl/servicios/Consulta/Agrupadores/expExcelSubAgrup?agr=1000&tipCat=2"
+    },
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 5,
+     "snippet": "la Biblioteca del Congreso Nacional que entrega acceso libre a más\nde 416.000 normas que integran el ordenamiento\njurídico nacional, a texto\ncompleto y actualizado, a Tratados Internacionales ratificados por Chile y a\n...\nla certeza jurídica, transparencia y democratización de la información",
+     "title": "www.bcn.cl › leychile › ConsultaLey Chile - Biblioteca del Congreso Nacional",
+     "url": "https://www.bcn.cl/leychile/Consulta/m/m/index"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Chile official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.diariooficial.interior.gob.cl",
+     "rank": 1,
+     "snippet": "Diario Oficial – República de Chile\n- Edición Núm.\n44.519.\n- **Viernes 07 de Agosto de 2026**\n- Sumario de la Edición\n...\nSitio Web:\nwww.diarioficial.cl\n...\nconsultas@diarioficial.cl",
+     "title": "www.diariooficial.interior.gob.cl",
+     "url": "https://www.diariooficial.interior.gob.cl/edicionelectronica/index.php?date=07-08-2026&edition=44519",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.diariooficial.interior.gob.cl/edicionelectronica/index.php?date=07-08-2026&edition=44519",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:35:37Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.diariooficial.interior.gob.cl",
+     "rank": 2,
+     "snippet": "Diario Oficial – República de Chile\n- Edición Núm.\n44.496.\n- **Viernes 10 de Julio de 2026**\n- Sumario de la Edición\n...\nSitio Web:\nwww.diarioficial.cl",
+     "title": "Diario Oficial – República de Chile - Ministerio del Interior",
+     "url": "https://www.diariooficial.interior.gob.cl/edicionelectronica/index.php/publicaciones_judiciales.php?date=10-07-2026&edition=44496",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.diariooficial.interior.gob.cl/edicionelectronica/index.php/publicaciones_judiciales.php?date=10-07-2026&edition=44496",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:35:37Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.diariooficial.interior.gob.cl",
+     "rank": 3,
+     "snippet": "Diario Oficial – República de Chile\n600 613 5700\n## Tutorial de como Publicar\n...\n- MARCAS Y PATENTES\n- CONCESIONES DE TELECOMUNICACIONES",
+     "title": "Diario Oficial – República de Chile",
+     "url": "https://www.diariooficial.interior.gob.cl/"
+    },
+    {
+     "date": "",
+     "host": "www.diariooficial.interior.gob.cl",
+     "rank": 4,
+     "snippet": "La edición del Diario Oficial se realiza mediante dos formatos:\n– Papel: En el caso de leyes, decretos, resoluciones, marcas y publicaciones judiciales.\n...\n– Electrónico, vía internet, tratándose de extractos de sociedades.\nLa periodicidad de su publicación es de lunes a sábado.",
+     "title": "Diario Oficial – República de Chile",
+     "url": "https://www.diariooficial.interior.gob.cl/presente/"
+    },
+    {
+     "date": "",
+     "host": "pagos.diarioficial.cl",
+     "rank": 5,
+     "snippet": "Las tarifas del Diario Oficial de la República de Chile a contar del mes de enero de 2026, se han ajustado de conformidad con lo dispuesto en el artículo 2° del Decreto Supremo N°1.227 del año 2017, del Ministerio del Interior y Seguridad Pública.",
+     "title": "Diario Oficial",
+     "url": "https://pagos.diarioficial.cl/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Chile supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.pjud.cl",
+     "rank": 1,
+     "snippet": "Contiene una selección de sentencias de la Corte Suprema, Cortes de Apelaciones, tribunales laborales, penales, de familia, cobranza y civiles de todo el país.\nSe encuentran disponibles en formato original o debidamente anonimizadas, cumpliendo con la normativa interna del Poder Judicial.",
+     "title": "Bases Jurisprudenciales",
+     "url": "https://www.pjud.cl/portal-unificado-sentencias",
+     "verificacion": {
+      "bytes": 43548,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:44Z",
+      "http": 200,
+      "sha256": "8eb16da6553152673bb9a2ff05a1bff8a2b964aebf0b1ae16d735bb05b858d32"
+     }
+    },
+    {
+     "date": "",
+     "host": "juris.pjud.cl",
+     "rank": 2,
+     "snippet": "** Avisos:\n- Desde el 1° de julio del 2025 sólo se publicarán en las bases jurisprudenciales a disposición de la comunidad, una selección de sentencias que ofrezcan un interés jurisprudencial.\n...\n##### Alerta!\nArt.\n4 inc.\nfinal Acta 164-2024.",
+     "title": "juris.pjud.cl › busquedajuris.pjud.cl",
+     "url": "https://juris.pjud.cl/busqueda?Corte_Suprema",
+     "verificacion": {
+      "error": "robots.txt disallows https://juris.pjud.cl/busqueda?Corte_Suprema",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:35:47Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.pjud.cl",
+     "rank": 3,
+     "snippet": "Poder Judicial - Resultados de la búsqueda: causas\n...\nPlataformas digitales destinadas a orientar y entregar información a todos los usuarios en materias judiciales.\n...\n2. Resultado de búsqueda para \"causas\".\nTotal de coincidencias: 633\n...\n### Causas Tercera Sala de la Corte Suprema",
+     "title": "www.pjud.cl › search › causaswww.pjud.cl",
+     "url": "https://www.pjud.cl/search/causas/"
+    },
+    {
+     "date": "",
+     "host": "juris.pjud.cl",
+     "rank": 4,
+     "snippet": "Buscador Unificado de Fallos del Poder Judicial\n| |Corte Suprema https://juris.pjud.cl/busqueda?Corte_Suprema|\n|--|--|",
+     "title": "juris.pjud.clBase Jurisprudencial del Poder Judicial",
+     "url": "https://juris.pjud.cl/"
+    },
+    {
+     "date": "2020-11-25",
+     "host": "juris.pjud.cl",
+     "rank": 5,
+     "snippet": "Base Jurisprudencial del Poder Judicial\n...\nINFORMACIÓN DE LA SENTENCIA\nDescargar\nImprimir\nSentencia original\nSentencia + información\nImprimir\n...\nDatos de la sentencia\n...\nArt.\n6 Acta 44-2022.\n(\ntransparencia@pjud.cl",
+     "title": "Base Jurisprudencial del Poder Judicial",
+     "url": "https://juris.pjud.cl/busqueda/pagina_detalle_sentencia?k=cjQyQnpIZmNJZUZoUCt4ZEYyVlBmUT09"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Chile state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 1,
+     "snippet": "Ley Chile - Códigos de la República - Biblioteca del Congreso Nacional\n...\n# Códigos de la República\nPromulgado el 14 de diciembre de 1855 y publicado el mismo día.\n...\nPara su tranquilidad, Ley Chile se mantiene disponible y actualizado hasta el día de ayer.",
+     "title": "Códigos de la República - Biblioteca del Congreso Nacional",
+     "url": "https://www.bcn.cl/leychile/codigos",
+     "verificacion": {
+      "bytes": 9602,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:47Z",
+      "http": 200,
+      "sha256": "4ff75cdc3dade5550d6eee84a015e513a646a920e50ffce12cdea8cf379e9131"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 2,
+     "snippet": "Ley Chile - Ley 21719 - Biblioteca del Congreso Nacional\n...\n…\n**Url:** https://www.bcn.cl/leychile/navegar?i=1209272&f=2026-12-01&p=10527468",
+     "title": "Ley Chile - Ley 21719 - Biblioteca del Congreso Nacional",
+     "url": "https://www.bcn.cl/leychile/Navegar/imprimir?idNorma=1209272&idParte=10527468&idVersion=2026-12-01",
+     "verificacion": {
+      "bytes": 9602,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:48Z",
+      "http": 200,
+      "sha256": "4ff75cdc3dade5550d6eee84a015e513a646a920e50ffce12cdea8cf379e9131"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.leychile.cl",
+     "rank": 3,
+     "snippet": "Ley Chile - DFL 1 30-MAY-2000 MINISTERIO DE JUSTICIA - Biblioteca del Congreso Nacional\n...\n…\n**Url:** https://www.leychile.cl/leychile/navegar?i=172986&f=2025-08-28\n…",
+     "title": "Ley Chile - DFL 1 30-MAY-2000 MINISTERIO DE JUSTICIA",
+     "url": "https://www.leychile.cl/leychile/Navegar/imprimir?idNorma=172986&idVersion=2025-08-28"
+    },
+    {
+     "date": "",
+     "host": "www.leychile.cl",
+     "rank": 4,
+     "snippet": "la Biblioteca del Congreso Nacional que entrega acceso libre a más\nde 416.000 normas que integran el ordenamiento\njurídico nacional, a texto\ncompleto y actualizado, a Tratados Internacionales ratificados por Chile y a\n...\nla certeza jurídica, transparencia y democratización de la información",
+     "title": "Biblioteca del Congreso Nacional - Ley Chile",
+     "url": "https://www.leychile.cl/leychile/"
+    },
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 5,
+     "snippet": "Ley Chile - Biblioteca del Congreso Nacional\n...\n#### Alternativas para descargar\nPara su tranquilidad, Ley Chile se mantiene disponible y actualizado hasta el día de ayer.",
+     "title": "Ley Chile - Biblioteca del Congreso Nacional",
+     "url": "https://www.bcn.cl/leychile/Navegar"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Chile municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "municipios.simple.digital.gob.cl",
+     "rank": 1,
+     "snippet": "Simple_digital\n# Listado de trámites disponibles\n## Otros trámites\n### Consideraciones Importantes\nSi el sistema presenta problemas comuníquese con nosotros escribiendo al siguiente correo\nrmontesdeoca@concepcion.cl",
+     "title": "Simple_digital",
+     "url": "https://municipios.simple.digital.gob.cl/",
+     "verificacion": {
+      "bytes": 414386,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:52Z",
+      "http": 200,
+      "sha256": "3e711487d4184e5efaf66e568345fc68520e83b1671ad967aa1ea8fdb048e9c9"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.minvu.gob.cl",
+     "rank": 2,
+     "snippet": "Leyes Ciudad archivos - Ministerio de Vivienda y Urbanismo\n...\n## D.F.L. N°458 DE 1976 Ley General de Urbanismo y Construcciones.\n...\n## LEY N°20.234\nEstablece un Procedimiento de Saneamiento y Regularización de Loteos.",
+     "title": "www.minvu.gob.cl › elementos-tecnicos › leyes-ciudadLeyes Ciudad archivos - Ministerio de Vivienda y Urbanismo",
+     "url": "https://www.minvu.gob.cl/elementos-tecnicos/leyes-ciudad/",
+     "verificacion": {
+      "bytes": 65193,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:53Z",
+      "http": 200,
+      "sha256": "f8ef1c0f5a56d690305a3eeaf981b4b821e8b71051161d105aeaaa2a6428b586"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 3,
+     "snippet": "Ley Chile - Legislación Temática - Municipalidades - Biblioteca del Congreso Nacional\n...\n# Legislación Temática\nSelección de normas por tema y consulta frecuente.\nContiene texto completo actualizado.\n...\n#### Ley 18883\nAPRUEBA ESTATUTO ADMINISTRATIVO PARA FUNCIONARIOS MUNICIPALES",
+     "title": "Ley Chile - Legislación Temática - Municipalidades",
+     "url": "https://www.bcn.cl/leychile/Consulta/listado_n_sel?comp=&agr=2&_grupo_aporte=&sub=1163"
+    },
+    {
+     "date": "",
+     "host": "datos.bcn.cl",
+     "rank": 4,
+     "snippet": "Obtén las ordenanzas municipales por comuna recorriendo el mapa de Chile.\nCada punto azul en el mapa indica el centro de una comuna . Haz clic sobre una , luego presiona \"ver ordenanzas\".\n...\n### Cargando datos\nBiblioteca del Congreso Nacional de Chile que cumple los estándares W3C -",
+     "title": "datos.bcn.cl › visualizaciones › normas-por-comunaPortal de datos enlazados de la BCN :: Visualizador de normas por...",
+     "url": "https://datos.bcn.cl/visualizaciones/normas-por-comuna/index2.php"
+    },
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 5,
+     "snippet": "##### Oficina de Partes\nDirección: Calle Huérfanos 1117, Piso 2, oficina 221, Santiago, Chile.\n** Correo electrónico: oficinadepartes@bcn.cl\n** Código postal: 8340369, clasificador: 1199",
+     "title": "Ordenanzas municipales -- Chile - Resultados de búsqueda",
+     "url": "https://www.bcn.cl/portal/resultado-busqueda?texto=Ordenanzas%20municipales%20--%20Chile&dc_source=&npagina=1&orden_por=1&orden_ad=desc"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Chile regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-21",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "However, Chile does not have a centralized regulatory oversight body.\nFour institutions play key roles in the rule-making process:\n- The Ministry General Secretariat of the Presidency (SEGPRES)\n- The Ministry of Finance\n- The Ministry of Economy and\n- The General Comptroller of the Republic",
+     "title": "Chile - United States Department of State",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/chile/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/chile/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:35:53Z"
+     }
+    },
+    {
+     "date": "2021-12-22",
+     "host": "energia.gob.cl",
+     "rank": 2,
+     "snippet": "Para efectos de contactarse con la Unidad de Coordinación Regulatoria, se pone a disposición el siguiente correo electrónico de contacto: reglamentos@minenergia.cl\n...\nAprueba reglamento de la Ley Nº 21.499, que regula los Biocombustibles Sólidos.\n...\n## 32",
+     "title": "Reglamentos",
+     "url": "https://energia.gob.cl/mini-sitio/reglamentos",
+     "verificacion": {
+      "error": "robots.txt disallows https://energia.gob.cl/mini-sitio/reglamentos",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:35:54Z"
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.bcentral.cl",
+     "rank": 3,
+     "snippet": "# Regulation\n## Economic rules\nThey are systematized and updated compilations of general regulations concerning specific matters, namely the Compendium of Monetary and Financial Regulations and its Manual, the Compendium of Financial Regulations, and the Compendium of International Exchange Regulati",
+     "title": "www.bcentral.cl › en › webRegulation - Banco Central de Chile",
+     "url": "https://www.bcentral.cl/en/web/banco-central/area/regulation"
+    },
+    {
+     "date": "",
+     "host": "www.diariooficial.interior.gob.cl",
+     "rank": 4,
+     "snippet": "Subsecretaría de Relaciones Económicas Internacionales\nAPRUEBA REGLAMENTO DEL ARTÍCULO 28 NUMERAL 11 DE LA LEY Nº 21.080,\nEN LO REFERENTE A LA NOTIFICACIÓN DE LOS REGLAMENTOS TÉCNICOS Y\n...\nELLO DERIVEN",
+     "title": "[PDF] Publicación del Viernes 7 de Julio de 2023 - Diario Oficial",
+     "url": "https://www.diariooficial.interior.gob.cl/publicaciones/2023/07/07/43595/01/2339759.pdf"
+    },
+    {
+     "date": "2025-01-10",
+     "host": "www.sag.gob.cl",
+     "rank": 5,
+     "snippet": "# Transparencia\n|Res.| |Modifica Resolución Exenta N°4703/2014 que crea el Departamento de Comunicaciones y crea el Subdepartamento de Transparencia y Participación Ciudadana|9.274|10/12/2015 - 12:00| |Vigente|",
+     "title": "Transparencia | SAG",
+     "url": "https://www.sag.gob.cl/ambitos-de-accion/transparencia/normativas?field_tipo_de_normativa_target_id=All&field_tema_relacionado_target_id=All&field_estado_value=All&field_n__value=&field_fecha_promulgaci_n_value=&title=&order=field_tema_relacionado&sort=asc&page=8"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Chile national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ecommerce.inn.cl",
+     "rank": 1,
+     "snippet": "## NCh3902:2025\n#### Pavimentos - Áridos artificiales en base a escorias del proceso siderúrgico para mezclas de pavimentación asfáltica\n...\nVigente\nIdioma: Español\n...\n## NCh3907:2025 ISO 21678:2020",
+     "title": "Normas Chilenas",
+     "url": "https://ecommerce.inn.cl/normas-chilenas?pagenumber=636&orderby=0&viewmode=grid",
+     "verificacion": {
+      "bytes": 40027,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:36:52Z",
+      "http": 200,
+      "sha256": "d08903d7b768cad85ddab335f8dd1fc5fed0da8e4327f7e6fb91d86f0035d0d5"
+     }
+    },
+    {
+     "date": "2026-11-01",
+     "host": "www.inn.cl",
+     "rank": 2,
+     "snippet": "|Código|Título|Estado|Carro de compras|\n...\n|NCh2856/22:2026 ISO/TR 10993-22:2017|Evaluación biológica de dispositivos médicos - Parte 22: Directrices sobre nanomateriales|Vigente| |\n...\n…",
+     "title": "NCh-Aprobadas - Normas Chilenas Publicadas",
+     "url": "https://www.inn.cl/nch-aprobadas/",
+     "verificacion": {
+      "bytes": 148391,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:36:54Z",
+      "http": 200,
+      "sha256": "462231ec2c45e3e24b5c16504f9a5279cbe39ef28e707d8d32d3b1c346abfeb3"
+     }
+    },
+    {
+     "date": "",
+     "host": "ceacgr.cl",
+     "rank": 3,
+     "snippet": "Contraloría General de la República - Biblioteca Digital\n|\nResultados de Búsqueda272 Registros **Chile.",
+     "title": "Contraloría General de la República - Biblioteca Digital - CEA",
+     "url": "https://ceacgr.cl/biblioteca/index.asp?param=o%A5%A6kWl%86%CC%AF%8E%C2%B9%84mb%5E%C0q%A5l%90%A1%8A%B0_%D2wh%98i%A6%A1%9F%ADe%8E&Op=120"
+    },
+    {
+     "date": "2026-09-24",
+     "host": "www.iconstruccion.cl",
+     "rank": 4,
+     "snippet": "## Listado Informativo de Normas Chilenas del Sector Construcción\n|2016-07-27|NCh3394:2016|Suelo salino - Requisitos geotécnicos y de instalaciones sanitarias",
+     "title": "Listado Informativo de Normas Chilenas del Sector Construcción",
+     "url": "https://www.iconstruccion.cl/listado-nch/"
+    },
+    {
+     "date": "",
+     "host": "ecommerce.inn.cl",
+     "rank": 5,
+     "snippet": "## NCh1408:1978\n#### Aleación cobre-zinc - Barras para la fabricación de cartuchos de armamento menor\n...\nVigente\nIdioma: Español\n...\n## NCh141:1999\n#### Yeso - Terminología\nYeso - Terminología\n...\nIdioma: Español",
+     "title": "ecommerce.inn.cl · normas-chilenasInstituto Nacional de Normalización. Normas Chilenas",
+     "url": "https://ecommerce.inn.cl/normas-chilenas?pagenumber=87"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Chile mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.diariooficial.interior.gob.cl",
+     "rank": 1,
+     "snippet": "Diseño sísmico de edificios.\nNCh223:2020\nConstrucción - Planchas acanaladas onduladas de acero recubiertas -\n...\nNCh523:2020\nCarpintería de aluminio - Puertas y ventanas - Requisitos - Requisitos.",
+     "title": "www.diariooficial.interior.gob.cl › publicaciones › 2026/08/10Publicación del Lunes 10 de Agosto de 2026",
+     "url": "https://www.diariooficial.interior.gob.cl/publicaciones/2026/08/10/44521/01/2850138.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.diariooficial.interior.gob.cl/publicaciones/2026/08/10/44521/01/2850138.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:36:54Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cne.cl",
+     "rank": 2,
+     "snippet": "Anexo Técnico: Determinación de Parámetros para los Procesos de Partida y Detención de Unidades Generadoras **\nVersión 2023\n...\nAnexo Técnico: Exigencias Mínimas de Diseño de Instalaciones de Transmisión **\nVersión enero 2025\n...\n**",
+     "title": "Normas Técnicas - Eléctrica - Comisión Nacional de Energía -",
+     "url": "https://www.cne.cl/en/normativas/electrica/normas-tecnicas/",
+     "verificacion": {
+      "bytes": 117305,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:36:58Z",
+      "http": 200,
+      "sha256": "23a1e4c8ca83731dab2b28ad5a0ccedf825026f958b4b368206e816fbeca834e"
+     }
+    },
+    {
+     "date": "",
+     "host": "nuevo.leychile.cl",
+     "rank": 3,
+     "snippet": "APRUEBA REGLAMENTO QUE ESTABLECE LA INTEROPERABILIDAD DE LOS\nSISTEMAS DE RECARGA DE VEHÍCULOS ELÉCTRICOS\nMINISTERIO DE ENERGÍA\n...\nTipo Versión: Única De : 18-NOV-2024\n...\n…",
+     "title": "[PDF] Decreto 12, ENERGÍA (2022) - Santiago - Ley Chile",
+     "url": "https://nuevo.leychile.cl/servicios/Consulta/Exportar?radioExportar=Normas&exportar_formato=pdf&nombrearchivo=Decreto-12_17-MAY-2023&exportar_con_notas_bcn=True&exportar_con_notas_originales=True&exportar_con_notas_al_pie=True&hddResultadoExportar=1192244..0.0%23"
+    },
+    {
+     "date": "",
+     "host": "www.sernac.cl",
+     "rank": 4,
+     "snippet": "# Normas de seguridad en Chile\n...\n### Decreto N° 160 de 2009, del Ministerio de Economía\n07 de julio de 2009\nReglamento de seguridad para instalaciones y operaciones de producción, refinación, transporte, almacenamiento, distribución y abastecimiento de combustibles líquidos.",
+     "title": "www.sernac.cl › portal › 619Normas de seguridad en Chile - Portal SERNAC - SERNAC:...",
+     "url": "https://www.sernac.cl/portal/619/w3-propertyvalue-22022.html"
+    },
+    {
+     "date": "",
+     "host": "www.bcn.cl",
+     "rank": 5,
+     "snippet": "# Decreto 14 ESTABLECE NORMA DE EMISIÓN DE RUIDO PARA FUENTES FIJAS, ELABORADO A PARTIR DE LA REVISIÓN DEL DECRETO SUPREMO N° 38, DE 2011, DEL MINISTERIO DEL MEDIO AMBIENTE",
+     "title": "Ley Chile - Decreto 14 27-FEB-2026 MINISTERIO DEL ...",
+     "url": "https://www.bcn.cl/leychile/Navegar/imprimir?idNorma=1221783&idParte=10585487&idVersion=2028-08-27"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Chile national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-15",
+     "host": "www.ine.gob.cl",
+     "rank": 1,
+     "snippet": "### Noticias Relacionadas\n###### Sistema de Atención Ciudadana a través de CRM\nDirección nacional: Morandé N°801, piso 2, Santiago, Chile\n...\nCódigo postal: 8340148\n**Horarios de atención**\n...\nCorreo: ine@ine.gob.cl",
+     "title": "Estadísticas Vitales - ine.gob.cl",
+     "url": "https://www.ine.gob.cl/estadisticas-por-tema/demografia-y-poblacion/estadisticas-vitales",
+     "verificacion": {
+      "bytes": 119082,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:01Z",
+      "http": 200,
+      "sha256": "ec70f5123665cabeb45342bdd1b65ed996c3d1ef53013dbfd0714c91c7385f8d"
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "host": "www.ine.gob.cl",
+     "rank": 2,
+     "snippet": "National Directorate\nMorandé 801\nFloor 2, Santiago, Chile\nRUT: 60.703.000-6\nPostal code: 8340148\n...\nFriday 9:00 to 16:00\nTelephone: 232461000\nE-mail: ine@ine.gob.cl",
+     "title": "Home",
+     "url": "https://www.ine.gob.cl/home",
+     "verificacion": {
+      "bytes": 56206,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:02Z",
+      "http": 200,
+      "sha256": "7ac48d362c7a210956ac46112bfadce99454fb76afbab60cbca84f866ce1fe97"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.ine.gob.cl",
+     "rank": 3,
+     "snippet": "Dirección nacional: Morandé N°801, piso 2, Santiago, Chile\nRUT: 60.703.000-6\nCódigo postal: 8340148\n**Horarios de atención**\n...\nFono : 232461000\nCorreo: ine@ine.gob.cl",
+     "title": "INE.cl",
+     "url": "https://www.ine.gob.cl/"
+    },
+    {
+     "date": "",
+     "host": "redatam-ine.ine.cl",
+     "rank": 4,
+     "snippet": "Instituto Nacional de Estadísticas de Chile\n**Redatam diseminación de datos**\n...\nCenso de población y vivienda 2024",
+     "title": "Instituto Nacional de Estadísticas de Chile - INE",
+     "url": "https://redatam-ine.ine.cl/"
+    },
+    {
+     "date": "2026-10-15",
+     "host": "www.ine.gob.cl",
+     "rank": 5,
+     "snippet": "# Demografía\n### Geodatos Abiertos\n###### Sistema de Atención Ciudadana a través de CRM\nDirección nacional: Morandé N°801, piso 2, Santiago, Chile\n...\nCódigo postal: 8340148\n**Horarios de atención**\n...\nCorreo: ine@ine.gob.cl",
+     "title": "Demografía",
+     "url": "https://www.ine.gob.cl/estadisticas-por-tema/demografia-y-poblacion/demografia"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Chile central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bcentral.cl",
+     "rank": 1,
+     "snippet": "### En esta página\n...\nEl Banco Central tiene entre sus funciones la publicación oportuna de las principales estadísticas macroeconómicas nacionales, incluyendo aquellas de carácter monetario y cambiario, de balanza de pagos y las cuentas nacionales, así como otros sistemas globales de contabilidad ",
+     "title": "Estadísticas y Datos - Banco Central de Chile",
+     "url": "https://www.bcentral.cl/areas/estadisticas",
+     "verificacion": {
+      "bytes": 310533,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:05Z",
+      "http": 200,
+      "sha256": "710cbb6867cffc6ff25c7f854369e470d49df2663b092a7ce0e2f2b3cd7098a5"
+     }
+    },
+    {
+     "date": "",
+     "host": "si3.bcentral.cl",
+     "rank": 2,
+     "snippet": "The NAIS are disseminated online on the CBCH website (\nhttps://www.bcentral.cl/ ):\n· Statistical bulletin, includes quarterly data in pdf, Excel and csv files in Spanish.\n· Statistics database, available in Spanish and English.\n· Statistics in Excel, available in Spanish and English",
+     "title": "[DOC] CHL_SDDS_DQAF_RLS_SBS0...",
+     "url": "https://si3.bcentral.cl/estadisticas/diario1/aplicaciones/NSDP/docs/CHL_SDDS_DQAF_RLS_SBS00_Sectoral%20stocks%20of%20financial%20assets%20and%20liabilities.doc",
+     "verificacion": {
+      "bytes": 258048,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:11Z",
+      "http": 200,
+      "sha256": "a8ff97d20f18ac6a1e779fd0962ab843ec01c9170f8a5ed571421a19c686808c"
+     }
+    },
+    {
+     "date": "",
+     "host": "si3.bcentral.cl",
+     "rank": 3,
+     "snippet": "2. Estadísticas\n...\nEsta publicación, creada en enero de 1928, contiene estadísticas de los principales indicadores de actividad, información monetaria y financiera, exportaciones e importaciones, balanza comercial, balanza de pagos, reservas internacionales, inversión extranjera, inversión chilena ",
+     "title": "Boletín Estadístico - Central Bank of Chile",
+     "url": "https://si3.bcentral.cl/estadisticas/Principal1/enlaces/Informes/BOLETIN/index_bm.html"
+    },
+    {
+     "date": "",
+     "host": "www.bcentral.cl",
+     "rank": 4,
+     "snippet": "Inicio - Banco Central de Chile\n...\n28 de octubre de 2026\n...\nInflación y TPM\nIPC (SEP) (Var.%)\n0,4\nMensual\n4,1\nAnual\nTPM (%)\n4,5%\n...\nBase de Datos Estadísticos (BDE) Educación financiera",
+     "title": "Inicio - Banco Central de Chile",
+     "url": "https://www.bcentral.cl/inicio"
+    },
+    {
+     "date": "",
+     "host": "si3.bcentral.cl",
+     "rank": 5,
+     "snippet": "- Estadísticas Históricas (2)\n- Indicadores Sectoriales (2)\n- Indicadores Mercado de la Vivienda (1)\n- Principales Estadísticas Macro (1)\n...\nTasa de política monetaria (TPM) (porcentaje)\n...\nFuente: Banco Central de Chile",
+     "title": "si3.bcentral.cl › Search › BuscarBuscador de series económicas - Central Bank of Chile",
+     "url": "https://si3.bcentral.cl/Search/Buscar/Index/?st=tasa&Idioma=ES"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Chile government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "datos.gob.cl",
+     "rank": 1,
+     "snippet": "Portal de Datos Abiertos\n...\nAccede a una gran variedad de conjuntos de datos abiertos proporcionados por instituciones públicas de Chile.\n...\nUtiliza este buscador para localizar fácilmente los conjuntos de datos que necesites.\n...\nHorario Lunes a Jueves\n8:30hrs - 17:30hrs",
+     "title": "Datos",
+     "url": "https://datos.gob.cl/dataset/",
+     "verificacion": {
+      "bytes": 8976,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:22Z",
+      "http": 200,
+      "sha256": "bab8667306e441211028faee9c9e430c5a68dce7a3601db516b22eaae836dced"
+     }
+    },
+    {
+     "date": "",
+     "host": "datos.gob.cl",
+     "rank": 2,
+     "snippet": "Portal de Datos Abiertos\n## Guías y Preguntas Frecuentes\n...\n## Tutoriales\n...\nPerteneciente al Ministerio de Hacienda.\nHorario Lunes a Jueves\n8:30hrs - 17:30hrs\nViernes 8:30hrs - 16:30hrs",
+     "title": "datos.gob.cl › ayudaPortal de Datos Abiertos",
+     "url": "https://datos.gob.cl/ayuda",
+     "verificacion": {
+      "bytes": 10498,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:32Z",
+      "http": 200,
+      "sha256": "2166936326d5b4926ef0bf4d6ffa7631573c937c71baea1a9f912d24cca674e9"
+     }
+    },
+    {
+     "date": "",
+     "host": "datos.gob.cl",
+     "rank": 3,
+     "snippet": "# Datos.Gob, el portal de datos abiertos del Estado.\nLa plataforma donde podrás buscar y descargar la información\nnecesaria para reutilizar y desarrollar tu aplicación e\ninvestigación, con datos abiertos del sector público.\n...\nEn esta sección encontrarás ayuda para el uso del portal de datos abiert",
+     "title": "Inicio Portal de Datos Abiertos",
+     "url": "https://datos.gob.cl/"
+    },
+    {
+     "date": "",
+     "host": "www.consejotransparencia.cl",
+     "rank": 4,
+     "snippet": "# Datos Abiertos\nNo es necesario registrarse para utilizarlos.\n...\n### 3.Portal de Transparencia del Estado\n|Detalle|Periodicidad| |\n|--|--|--|\n|#### Portal de Transparencia del Estado.",
+     "title": "Datos Abiertos",
+     "url": "https://www.consejotransparencia.cl/datosabiertos/"
+    },
+    {
+     "date": "",
+     "host": "bidat.gob.cl",
+     "rank": 5,
+     "snippet": "Datos abiertos - BIDAT\n...\n# Datos abiertos\nLos datos abiertos quedan a disposición de la ciudadanía para ser usados en estudios, o simplemente para informarse.\nEn este portal de datos abiertos puedes utilizar la función de búsqueda, o bien navegar las fuentes de datos disponibles.\n...\n**3.799** Dat",
+     "title": "Datos abiertos - BIDAT",
+     "url": "https://bidat.gob.cl/datos-abiertos"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:29:56Z",
+ "pais": {
+  "iso2": "CL",
+  "iso3": "CHL",
+  "nombre": "Chile"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

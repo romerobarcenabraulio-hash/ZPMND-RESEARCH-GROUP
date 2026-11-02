@@ -1,0 +1,662 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Cameroon constitution and national laws official legal database",
+   "descartados": 4,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2026-10-29",
+     "host": "www.assnat.cm",
+     "rank": 1,
+     "snippet": "**THE CONSTITUTION OF THE REPUBLIC OF CAMEROON**\n...\n…\n**[Download]**\n**THE ELECTORAL CODE**\n...\n**[Download]**\n...\n### All adopted and promulgated laws to be download at www.assnat.cm. Specify your search criterial to find laws.",
+     "title": "Governing Instrument",
+     "url": "https://www.assnat.cm/index.php/en/national-assembly/governing-instrument",
+     "verificacion": {
+      "bytes": 55489,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:21Z",
+      "http": 200,
+      "sha256": "9f7cf98fad94072fc8577595d51bcc51266a42dd1027157989c21185740e5fd1"
+     }
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Cameroon national regulations decrees official government database",
+   "descartados": 4,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.prc.cm",
+     "rank": 1,
+     "snippet": "## Decrees\n#### Decree No. 2025/210 of 19 May 2025 to appoint the President of the Cameroon Chamber of Commerce, Industry, Mines and Craft (CCIMA)\n...\n…\nPage 10 of 92\n- - - 5",
+     "title": "Decrees - PRC.cm",
+     "url": "https://www.prc.cm/en/news/the-acts/decrees?start=72",
+     "verificacion": {
+      "bytes": 32963,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:24Z",
+      "http": 200,
+      "sha256": "33c7f93beab06de6c5899f9a5c362df4eef0c22d232c2bf7a84bb0bc34fb13d0"
+     }
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Cameroon official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "prc.cm",
+     "rank": 1,
+     "snippet": "Decree No.\n...\nOF\n0 1JUL 2016\nto ratify the Protocol Agreement between the Government of the\n...\nof Agriculture.-\n...\nARTICLE 2: This decree shall be registered, published according to the\nprocedure of urgency and inserted in the Official Gazette in French and\nEnglish.",
+     "title": "REPUBLIC OF CAMEROON",
+     "url": "https://prc.cm/en/multimedia/documents?task=get.file&id=4733&file_type=1&time=1793512061&expire=d93892e76c7412b9cf00ea46b0d1a53c&format=raw",
+     "verificacion": {
+      "bytes": 0,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:26Z",
+      "http": 200,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     }
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 2,
+     "snippet": "Description:\n1 title containing the official gazette for Cameroon from 1941 to 1986.\nIt is an official publication and the text is in French only to 1961 then English and French.\nNew material is no longer added.\n...\nCountry:\nCameroon (French territories only)",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag/cameroon-legislation-officiogc40og402ogc403og-44",
+     "verificacion": {
+      "bytes": 13846,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:26Z",
+      "http": 200,
+      "sha256": "28ed581f5f5760f10b70f6ee14a8cefaf0b3f296535c24f44f3dc6a805f39819"
+     }
+    },
+    {
+     "date": "",
+     "host": "prc.cm",
+     "rank": 3,
+     "snippet": "(PMUD), is ordered. \nArticle 2: This Decree shall be registered, published according to the procedure of urgency and inserted in the Official Gazette in English and French.\nYaounde, .. 0 3 FE V 2026 \nwww.prc.cm",
+     "title": "2 0 2 s· / 11 5 1 0 3 FE V 2026",
+     "url": "https://prc.cm/files/a3/59/80/e8cb67f41e718294dcce01b5bbdb4f7b.pdf"
+    },
+    {
+     "date": "2021-02-12",
+     "host": "www.trade.gov",
+     "rank": 4,
+     "snippet": "Cameroon publishes new or revised regulations in the Official Gazette of the Republic of Cameroon, available in both French and English.\n...\nFinal regulations appear in the official gazette, and U.S. entities can submit comments through the U.S.  WTO Technical Barriers to Trade (TBT) Inquiry Point.",
+     "title": "Cameroon - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/cameroon-standards-trade"
+    },
+    {
+     "date": "",
+     "host": "www.prc.cm",
+     "rank": 5,
+     "snippet": "ARTICLE 2: This decree shall be registered, published according to the procedure of urgency and inserted in the Official Gazette in English and French.\nYaounde, \n1 0 SEPT 2025 \nTHE REPUBLIC \nwww.prc.cm",
+     "title": "1 0 SEPT 2025",
+     "url": "https://www.prc.cm/files/33/df/0c/c8d46a5e80448a982dd8c48d18e18a44.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Cameroon supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "coursupreme.cm",
+     "rank": 1,
+     "snippet": "Supreme Court Decisions\n...\n## Supreme Court Decisions\n## JUDGMENT N° 02/CIV du 05 janvier 2023\nNovember 1, 2026\n1909\n...\n## JUDGMENT N° 085/P/FD/2023 of 10 May 2023",
+     "title": "Arrêts de la Cour Suprême",
+     "url": "https://coursupreme.cm/publication/arret?page=4",
+     "verificacion": {
+      "bytes": 122584,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:30Z",
+      "http": 200,
+      "sha256": "b144d196dc2ef4c01cd0505311bd861bbd15dd4930fb5dce73e03d5a88aabb6e"
+     }
+    },
+    {
+     "date": "2026-10-31",
+     "host": "coursupreme.cm",
+     "rank": 2,
+     "snippet": "## JUDGMENT N° 085/P/FD/2023 of 10 May 2023 Font Size + –\nOctober 30, 2026\nDownload File in english here\n...\n…",
+     "title": "JUDGMENT N° 085/P/FD/2023 of 10 May 2023",
+     "url": "https://coursupreme.cm/publication/detail/Division-for-land-tenure-litigation/judgment-n%C2%B0-085pfd2023-of-10-may-2023",
+     "verificacion": {
+      "bytes": 127227,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:31Z",
+      "http": 200,
+      "sha256": "2846f23dbac5b553dd4998e7253b408c19a90ff5efaa35796b077cdea8bd3175"
+     }
+    },
+    {
+     "date": "2026-10-22",
+     "host": "coursupreme.cm",
+     "rank": 3,
+     "snippet": "CSC: JUDGMENT No 056/FF/2022 of 09 Mars 2022\n- ** contact@coursupreme.cm\n- - HOME\n- Division for tax and financial litigation\n- Article\n- Actualities\n- Decisions\n- Causes list",
+     "title": "JUDGMENT No 056/FF/2022 of 09 Mars 2022",
+     "url": "https://coursupreme.cm/publication/detail/Division-for-tax-and-financial-flitigation/judgment-no-056ff2022-of--09-mars-2022"
+    },
+    {
+     "date": "2026-11-01",
+     "host": "coursupreme.cm",
+     "rank": 4,
+     "snippet": "- Members of the Supreme Court of Cameroon\n...\n- Decisions\n...\n- JUDGEMENT N° 85/CIV of 04 April 2023 November 1, 2026\n- JUDGMENT N° 20/CIV of 04 April 2024 November 1, 2026",
+     "title": "Membres",
+     "url": "https://coursupreme.cm/membres"
+    },
+    {
+     "date": "2026-11-01",
+     "host": "coursupreme.cm",
+     "rank": 5,
+     "snippet": "|15|N°042/P/RG/202 2DU11/03/2022|Etat du Cameroun (MINDCAF)  C/ DIKOTTO Emmanuel Priso et autres| | | |\n|--|--|--|--|--|--|",
+     "title": "Audience publique de Vacation du Mercredi 05 Juillet 2023 de la Section du Contentieux des Affaires Foncières et Domaniales",
+     "url": "https://coursupreme.cm/publication/detail/Division-for-land-tenure-litigation/audience-publique-de-vacation-du-mercredi-05-juillet-2023-de-la-section-du-contentieux-des-affaires-foncieres-et-domaniales"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Cameroon state or provincial legislation official portal",
+   "descartados": 4,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-10-27",
+     "host": "www.assnat.cm",
+     "rank": 1,
+     "snippet": "L'Assemblée Nationale du Cameroun - LOI N°2016/016 DU 14 DEC 2016\n...\n### Direct access link\n- The National Assembly\n- Speaker and deputy-Speakers\n- Questors\n- Secretaries\n- Secretariat General\n- Members of National Assembly\n- Laws",
+     "title": "LOI N°2016/016 DU 14 DEC 2016",
+     "url": "https://www.assnat.cm/index.php/en/lois/lois-adoptees/loi-n-2016-016-du-14-dec-2016",
+     "verificacion": {
+      "bytes": 36638,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:31Z",
+      "http": 200,
+      "sha256": "e556eea5d2d1b6fc6fbaa8931b4971c0c9c008c9e68503105ac8ec5925cb4e51"
+     }
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Cameroon municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2020-01-08",
+     "host": "www.minddevel.gov.cm",
+     "rank": 1,
+     "snippet": "- **LOI N°2004_017 DU 22 JUIL 2004 D’ORIENTATION DE LA DECENTRALISATION**\n- **LOI N°2004_018 DU 22 JUIL 2004 FIXANT LES REGLES APPLICABLES AUX COMMUNES**",
+     "title": "Lois – Ministère de la Décentralisation et du Développement Local",
+     "url": "https://www.minddevel.gov.cm/lois/",
+     "verificacion": {
+      "bytes": 130529,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:35Z",
+      "http": 200,
+      "sha256": "a8cc0fed4b484263129e3e2cff450ab9b18ce6602284baa895c83d02241beabc"
+     }
+    },
+    {
+     "date": "2026-09-12",
+     "host": "legecam.cm",
+     "rank": 2,
+     "snippet": "Réglementations – Page 2 – GECAM\n...\ngecam@legecam.cm **\nAuthor: GECAM\n...\n## bb-mfd-12-loi-n-2013011-du-16-decembre-2013-regissant-les-zones-economiques-au-cameroun",
+     "title": "Réglementations – Page 2 - GECAM",
+     "url": "https://legecam.cm/sdm_categories/reglementations/page/2/",
+     "verificacion": {
+      "bytes": 144136,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:42Z",
+      "http": 200,
+      "sha256": "2a5eb31b5a79fc07c64356de61860462bb9d6fe5c3cd60f5b7a1056c201d5717"
+     }
+    },
+    {
+     "date": "2024-04-01",
+     "host": "www.minddevel.gov.cm",
+     "rank": 3,
+     "snippet": "Lois et Ordonnances – Ministère de la Décentralisation et du Développement Local\n1 novembre 2026\n# Lois et Ordonnances",
+     "title": "Lois et Ordonnances",
+     "url": "https://www.minddevel.gov.cm/lois-et-ordonnances/"
+    },
+    {
+     "date": "2023-04-10",
+     "host": "www.minhdu.gov.cm",
+     "rank": 4,
+     "snippet": "# Documentation\n## Décret n°2008-0732 Fixant les règles d’utilisation du sol et de la construction.\n...\n## Loi n°2009-009 Relative à la vente d’immeubles à construire.\n## Loi n°2004-003 Régissant l’urbanisme au Cameroun.",
+     "title": "Documentation - MINHDU",
+     "url": "https://www.minhdu.gov.cm/documentation/"
+    },
+    {
+     "date": "2026-09-12",
+     "host": "legecam.cm",
+     "rank": 5,
+     "snippet": "Réglementations – GECAM\n+237 242 233 001\ngecam@legecam.cm\nAuthor: GECAM",
+     "title": "Réglementations - GECAM",
+     "url": "https://legecam.cm/sdm_categories/reglementations/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Cameroon regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-15",
+     "host": "anor.cm",
+     "rank": 1,
+     "snippet": "Le Directeur Général (ai) de l'Agence des Normes et de la Qualité (ANOR) informe le public concerné de l'homologation de vingt-cinq (25) nouvelles normes camerounaises dans le domaine de la technologie et des produits alimentaires.\n...\nANOR\n...\nYaoundé",
+     "title": "ANOR - Agence des Normes et de la Qualité",
+     "url": "https://anor.cm/",
+     "verificacion": {
+      "bytes": 215073,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:44Z",
+      "http": 200,
+      "sha256": "a93a5f005d36c0fe6dba22049b0e2544c27ad1c335bd58f1a20129f54e93e552"
+     }
+    },
+    {
+     "date": "2025-05-07",
+     "host": "cnefcameroun.cm",
+     "rank": 2,
+     "snippet": "|**Règlement COBAC R-2009 / 0 2 / portant fixation des catégories des établissements de crédit, de leur forme juridique et des activités autorisées** 2.36 MB|Télécharger|\n|**REGLEMENT COBAC EMF 2002/01…",
+     "title": "Texte Réglementaire - Cnef",
+     "url": "https://cnefcameroun.cm/texte-reglementaire/",
+     "verificacion": {
+      "error": "robots.txt disallows https://cnefcameroun.cm/texte-reglementaire/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:39:47Z"
+     }
+    },
+    {
+     "date": "2026-09-12",
+     "host": "legecam.cm",
+     "rank": 3,
+     "snippet": "Réglementations – GECAM\n...\ngecam@legecam.cm\n...\n|Règlement N°0408 CEMAC/UMAC/COBAC relatif au Gouvernement d’entreprise dans les établissements de crédit de la Communauté Économique et Monétaire de l’Afrique Centrale|Téléchargez|",
+     "title": "Réglementations",
+     "url": "https://legecam.cm/reglementations/"
+    },
+    {
+     "date": "",
+     "host": "cnc.gov.cm",
+     "rank": 4,
+     "snippet": "##### Laws & Ordinances\n...\n…\n##### decrees\n...\n- Décret n°2000/158 du 03 avril 2000 fixant les conditions et les modalités de création et d’exploitation des entreprises privées de communication audiovisuelle au Cameroun;\n...\n- contact@cnc.gov.cm",
+     "title": "texte_en – Conseil National de la communication",
+     "url": "https://cnc.gov.cm/texte_en/"
+    },
+    {
+     "date": "2026-10-22",
+     "host": "www.antic.cm",
+     "rank": 5,
+     "snippet": "|Vous pouvez télécharger les textes suivants: **Lois **|Vous pouvez télécharger les textes suivants: **Lois **|\n...\n| |Décret N°2019/150 du 20 mars 2019 portant organisation et fonctionnement de l'Agence Nationale des Technologies de l'Information et de la Communication|",
+     "title": "Textes du secteur des TIC - ANTIC",
+     "url": "https://www.antic.cm/index.php/fr/info-tic/textes-du-secteur-des-tic.html"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Cameroon national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.anor.cm",
+     "rank": 1,
+     "snippet": "# Catalogue des Normes\nL'ANOR donne accès à ses clients aux normes camerounaises et internationales.\n...\nLa liste complète des normes camerounaises est disponible publiquement, démontrant notre engagement envers l'accessibilité et le développement des organisations camerounaises.\n...\n### Catalogue d",
+     "title": "Catalogue des Normes",
+     "url": "https://www.anor.cm/sygen/catalogue",
+     "verificacion": {
+      "bytes": 24371,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:48Z",
+      "http": 200,
+      "sha256": "7939e8fd68610c271e803f08bf7ffb871e907c0f60b83ff02331382234d16f04"
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "host": "anor.cm",
+     "rank": 2,
+     "snippet": "ANOR - Agence des Normes et de la Qualité\n...\nCes normes ont été élaborées et adoptées par le Comité Technique n°48 - Technologie et Produits Alimentaires, conformément aux procédures ISO/CEI en vigueur.\n...\nANOR\nAgence des Normes et de la Qualité",
+     "title": "ANOR - Agence des Normes et de la Qualité",
+     "url": "https://anor.cm/",
+     "verificacion": {
+      "bytes": 215073,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:49Z",
+      "http": 200,
+      "sha256": "a93a5f005d36c0fe6dba22049b0e2544c27ad1c335bd58f1a20129f54e93e552"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.anor.cm",
+     "rank": 3,
+     "snippet": "LISTE DES NORMES CAMEROUNAISES RENDUES D’APPLICATION OBLIGATOIRE \nN° \nRéférence du règlement technique \nDomaine d’activité \nN° \nRéférence des normes camerounaises continues dans le règlement technique\n01 \n...\n2",
+     "title": "LISTE DES NORMES CAMEROUNAISES RENDUES D ...",
+     "url": "https://www.anor.cm/uploads/normes-obligatoires.pdf"
+    },
+    {
+     "date": "2015-11-26",
+     "host": "anor.cm",
+     "rank": 4,
+     "snippet": "2. CATALOGUE DES NORMES\nTéléchargements\n# CATALOGUE DES NORMES\nCliquer içi pour télécharger\n26 novembre 20151331 vues\nCliquer içi pour télécharger\nANOR\nAgence des Normes et de la Qualité",
+     "title": "CATALOGUE DES NORMES - ANOR",
+     "url": "https://anor.cm/articles/catalogue-des-normes"
+    },
+    {
+     "date": "",
+     "host": "www.anor.cm",
+     "rank": 5,
+     "snippet": "# Accédez aux Normes Camerounaises\nExplorez notre catalogue complet, trouvez les normes camerounaises pertinentes et commandez facilement en ligne.\n...\n34\n...\nAccédez à une base de données exhaustive et à jour des normes, classées par secteurs et comités techniques pour une recherche facilitée.",
+     "title": "Sans titre",
+     "url": "https://www.anor.cm/sygen"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Cameroon mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2026-10-15",
+     "host": "anor.cm",
+     "rank": 1,
+     "snippet": "Le Directeur Général (ai) de l'Agence des Normes et de la Qualité (ANOR) informe le public concerné de l'homologation de vingt-cinq (25) nouvelles normes camerounaises dans le domaine de la technologie et des produits alimentaires.",
+     "title": "ANOR - Agence des Normes et de la Qualité",
+     "url": "https://anor.cm/",
+     "verificacion": {
+      "bytes": 215073,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:50Z",
+      "http": 200,
+      "sha256": "a93a5f005d36c0fe6dba22049b0e2544c27ad1c335bd58f1a20129f54e93e552"
+     }
+    },
+    {
+     "date": "2016-07-28",
+     "host": "www.anor.cm",
+     "rank": 2,
+     "snippet": "Liste des normes obligatoires - ANOR\n...\n# Liste des normes obligatoires\nCliquez ici pour télécharger la liste des no\n28 juillet 20164918 vues\nCliquez ici pour télécharger la liste des normes obligatoires\nANOR\nAgence des Normes et de la Qualité",
+     "title": "www.anor.cm · articles · liste-des-normes-obligatoiresListe des normes obligatoires - ANOR",
+     "url": "https://www.anor.cm/articles/liste-des-normes-obligatoires",
+     "verificacion": {
+      "bytes": 147030,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:51Z",
+      "http": 200,
+      "sha256": "d29e5bfa1c59c2e67cd97e24d3a40d57a6a171c0aad32d28d92efb1057acb9c6"
+     }
+    },
+    {
+     "date": "2021-02-12",
+     "host": "www.trade.gov",
+     "rank": 3,
+     "snippet": "U.S. exports to Cameroon must submit invoices, packing lists, and bills of lading to SGS, which conducts a documentary review—and, in some cases, a physical inspection—before issuing a Clean Report of Findings (CRF).",
+     "title": "Cameroon - Trade Barriers",
+     "url": "https://www.trade.gov/country-commercial-guides/cameroon-trade-barriers"
+    },
+    {
+     "date": "",
+     "host": "www.anor.cm",
+     "rank": 4,
+     "snippet": "TC-23: ENVIRONMENT AND NATURAL MILIEU (ENVIRONNEMENT ET MILIEU  \nNATUREL) .......................................................................................................................................\n39 \nTC-52: PETROLEUM TECHNOLOGY, GAS AND DERIVATIVES (TECHNOLOGIE\n…\n...\nMESSAGERIE)",
+     "title": "Agence des Normes et de la Qualité",
+     "url": "https://www.anor.cm/uploads/PNEN_FINAL.pdf"
+    },
+    {
+     "date": "2026-09-12",
+     "host": "legecam.cm",
+     "rank": 5,
+     "snippet": "|ARRETE N° 022/MINMEE du 28 Septembre 2001 précisant certaines conditions d’exercice des activtés du secteur pétrolier aval|Téléchargez|\n|--|--|\n...\n|LOI portant Code Gazier|Téléchargez|",
+     "title": "Réglementations",
+     "url": "https://legecam.cm/reglementations/"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Cameroon national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ins-cameroun.cm",
+     "rank": 1,
+     "snippet": "# Institut National de la Statistique du Cameroun\nL’Institut National de la Statistique (INS) est l’organisme public en charge de la production, de l’analyse et de la diffusion des données statistiques officielles au Cameroun.\nIl fournit des informations fiables pour éclairer les décisions publiques",
+     "title": "Institut National de la Statistique du Cameroun",
+     "url": "https://ins-cameroun.cm/",
+     "verificacion": {
+      "bytes": 265687,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:55Z",
+      "http": 200,
+      "sha256": "9205995ec32798691b912baf9692c4fe5414682a993d3e10b272e7d1c3b1bc54"
+     }
+    },
+    {
+     "date": "",
+     "host": "ins-cameroun.cm",
+     "rank": 2,
+     "snippet": "Bienvenue – Institut National de la Statistique du Cameroun\n...\n# Bienvenue\n## Dernières publications\nB.P. 134 Yaoundé - Cameroun Rue 3.025, quartier du lac (+237) 222 22 28 88 - 222 22 29 98",
+     "title": "Bienvenue – Institut National de la Statistique du Cameroun",
+     "url": "https://ins-cameroun.cm/welcome/",
+     "verificacion": {
+      "bytes": 192335,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:57Z",
+      "http": 200,
+      "sha256": "4b1d1a664f0c0656f6fcea973aee7d1f448745a13f7bf105a4400b5604ef5f07"
+     }
+    },
+    {
+     "date": "",
+     "host": "ins-cameroun.cm",
+     "rank": 3,
+     "snippet": "Bases de données – Institut National de la Statistique du Cameroun\n...\n…\n– Page Nationale Récapitulative des Données (PNRD): Donne accès aux principales données macroéconomiques et financières du Système Général de Diffusion de Données Amélioré (SGDD-a).",
+     "title": "Bases de données – Institut National de la Statistique du Cameroun",
+     "url": "https://ins-cameroun.cm/bases-de-donnees/"
+    },
+    {
+     "date": "",
+     "host": "ins-cameroun.cm",
+     "rank": 4,
+     "snippet": "#### 1. Présentation du site\nLe site officiel de l’**Institut national de la statistique du Cameroun (INS)** est accessible à l’adresse https://ins‑cameroun.cm.\nIl a pour objet de diffuser des statistiques officielles et des informations sur les missions de l’institution.",
+     "title": "Mentions légales",
+     "url": "https://ins-cameroun.cm/terms-conditions/"
+    },
+    {
+     "date": "",
+     "host": "ins-cameroun.cm",
+     "rank": 5,
+     "snippet": "Statistiques – Institut National de la Statistique du Cameroun\n- +(237) 222 22 28 88 ou 222 22 29 98\n...\nCourriel : infos@ins-cameroun.cm",
+     "title": "Statistiques – Institut National de la Statistique du Cameroun",
+     "url": "https://ins-cameroun.cm/statistiques/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Cameroon central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.beac.int",
+     "rank": 1,
+     "snippet": "Accueil > Économie et statistiques > Statistiques Monétaires\nÉconomie et statistiques\n## Statistiques Monétaires\n...\n|--|--|--|--|\n|Prévisions des statistiques monétaires du Cameroun - mars 2026|342 KB|Cameroun|2026|",
+     "title": "Statistiques Monétaires - BEAC",
+     "url": "https://www.beac.int/economie-stats/statistiques-monetaires/",
+     "verificacion": {
+      "bytes": 222647,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:02Z",
+      "http": 200,
+      "sha256": "c85d813e839c65e078aa4735fac5d0ccf922fe30155bcd8ec1589e5839f231ee"
+     }
+    },
+    {
+     "date": "",
+     "host": "ins-cameroun.cm",
+     "rank": 2,
+     "snippet": "Statistiques économiques – Institut National de la Statistique du Cameroun\n- +(237) 222 22 28 88 ou 222 22 29 98\n- ## Définitions & Méthodes\n# Statistiques économiques\n...\n## Statistiques",
+     "title": "Statistiques économiques – Institut National de la ...",
+     "url": "https://ins-cameroun.cm/domaine/statistiques-economiques/",
+     "verificacion": {
+      "bytes": 328991,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:03Z",
+      "http": 200,
+      "sha256": "927eeddede81f5b58ac3152e2f62eec558351ea738323c762d48fb0c1a95145a"
+     }
+    },
+    {
+     "date": "2025-05-09",
+     "host": "cnefcameroun.cm",
+     "rank": 3,
+     "snippet": "Statistiques - Monetaires - Cnef\n## COMITE NATIONAL ECONOMIQUE ET FINANCIER DU CAMEROUN\n# Statistiques Monétaires\n## Les statistiques par thématiques\n...\n** ** Taux d'inflation\n...\n** ** Indice du cours des produits de base exportés",
+     "title": "Statistiques - Monetaires - Cnef",
+     "url": "https://cnefcameroun.cm/statistiques-monetaires/"
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.worldbank.org",
+     "rank": 4,
+     "snippet": "# Cameroon\n## BY THE NUMBERS : CAMEROON\nExplore More Data\nhttps://data360.worldbank.org/en/economy/CMR",
+     "title": "Cameroon: Development news, research, data | World Bank",
+     "url": "https://www.worldbank.org/ext/en/country/cameroon"
+    },
+    {
+     "date": "2025-05-09",
+     "host": "cnefcameroun.cm",
+     "rank": 5,
+     "snippet": "Statistiques Financiere - Cnef\n## COMITE NATIONAL ECONOMIQUE ET FINANCIER DU CAMEROUN\n# Statistiques Financières\n## Les statistiques par thématiques\n** ** PIB\n** ** Taux d'inflation\n...\n** ** Évolution du total bilan des banques",
+     "title": "Statistiques Financiere - CNEF Cameroun",
+     "url": "https://cnefcameroun.cm/statistiques/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Cameroon government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ins-cameroun.cm",
+     "rank": 1,
+     "snippet": "…\n...\n– Plateforme Open Data de l’Institut National de la Statistique: Permet d’avoir accès aux principales données macroéconomiques et financières du Système Général de Diffusion de Données Amélioré (SGDD-a) produites par l’Institut National de la Statistiques.",
+     "title": "Bases de données – Institut National de la Statistique du Cameroun",
+     "url": "https://ins-cameroun.cm/bases-de-donnees/",
+     "verificacion": {
+      "bytes": 193085,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:04Z",
+      "http": 200,
+      "sha256": "d6ba4e455bc921f1d34be5b1585a45dea73b4a0aa58392693fb448aa7efebce1"
+     }
+    },
+    {
+     "date": "2018-11-07",
+     "host": "ins-cameroun.cm",
+     "rank": 2,
+     "snippet": "Databases – Institut National de la Statistique du Cameroun\n...\nThe INS offers several databases:\n...\n– Open Data Platform of the National Institute of Statistics: Allows access to the main macroeconomic and financial data of the Enhanced General Data Dissemination System (GDDS-a) produced by the Na",
+     "title": "Databases",
+     "url": "https://ins-cameroun.cm/en/databases/",
+     "verificacion": {
+      "bytes": 189100,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:06Z",
+      "http": 200,
+      "sha256": "e4bd35501393298a41713fb02b8ef908cad757e5cf1b7488bb7620a65bfbb873"
+     }
+    },
+    {
+     "date": "2025-04-08",
+     "host": "digitalidentityindex.com",
+     "rank": 3,
+     "snippet": "## Digital Citizen Engagement Index\n...\n|I-28|Is there an Open Government portal?|No|\n...\n|I-29|Is there an Open Data portal?|Yes|\n|I-29.1|Open Data portal URL|https://nso-cameroon.opendataforafrica.org/|",
+     "title": "Cameroon - The Global Digital Identity Index",
+     "url": "https://digitalidentityindex.com/countries/cameroon/govtech/"
+    },
+    {
+     "date": "",
+     "host": "dataportals.org",
+     "rank": 4,
+     "snippet": "Open Data for Cameroon\n- Data Portals\n# Open Data for Cameroon\n...\n## Description\nOpen data portal for Cameroon\n- **Area covered:**\nCameroon\n- **Publisher:**\nAfrican Development Bank Group\n- **URL:**\nhttps://cameroon.opendataforafrica.org/",
+     "title": "Open Data for Cameroon - Data Portals",
+     "url": "https://dataportals.org/portal/cameroon_opendataforafrica/"
+    },
+    {
+     "date": "",
+     "host": "raw.githubusercontent.com",
+     "rank": 5,
+     "snippet": "…\nData.gov.ph is the official open data portal of the Government of the Philippines and managed by the Open Data Philippines Task Force.\",,Other (Open),https://data.gov.ph/about/data-policy-statement,,Philippines,\"120.9842,14.5995\",PH,en,active,,,,,",
+     "title": "https://raw.githubusercontent.com/okfn/dataportals...",
+     "url": "https://raw.githubusercontent.com/okfn/dataportals.org/main/data/portals.csv"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:28:19Z",
+ "pais": {
+  "iso2": "CM",
+  "iso3": "CMR",
+  "nombre": "Cameroon"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

@@ -1,0 +1,771 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Angola constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.tribunalconstitucional.ao",
+     "rank": 1,
+     "snippet": "Portal do Tribunal Constitucional | Artigos da Constituição\n...\n##### (Estado Unitário)\nA República de Angola é um Estado unitário que respeita, na sua organização, os princípios da autonomia dos Órgãos do Poder Local e da desconcentração e descentralização administrativas, nos termos da Constituiçã",
+     "title": "Constituição da República de Angola",
+     "url": "https://www.tribunalconstitucional.ao/pt/artigos-da-constituicao/",
+     "verificacion": {
+      "bytes": 299908,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:29Z",
+      "http": 200,
+      "sha256": "87f9fdc60903c35a6b518e589672800efa33af3d00522e163e66ba4424c0d690"
+     }
+    },
+    {
+     "date": "2026-10-10",
+     "host": "angola.org",
+     "rank": 2,
+     "snippet": "# Constitution of the Republic\nThe Fundamental Law of the Republic of Angola, adopted in 2010.\nThe Constitution of the Republic of Angola was approved by the National Assembly on 21 January 2010 and promulgated on 5 February of the same year, replacing the Constitutional Law of 1992.",
+     "title": "Constitution of the Republic — Embassy of Angola",
+     "url": "https://angola.org/en/angola/constituicao",
+     "verificacion": {
+      "bytes": 97634,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:31Z",
+      "http": 200,
+      "sha256": "84d5761455193f86f6ffd2658e1f6f833ee6b688903b06d9a0c1c7db08eac872"
+     }
+    },
+    {
+     "date": "2024-09-05",
+     "host": "governo.gov.ao",
+     "rank": 3,
+     "snippet": "Documentos\n# Portal Oficial do Governo de Angola\n- Documentos\n- Legislação\n#### legislação\n...\n### NOVO CÓDIGO PENAL ANGOLANO\n** Lei n.º 38/20 de 11 de Novembro Novo Código Penal Angolano - **Legislação**\n...\n**",
+     "title": "Legislação",
+     "url": "https://governo.gov.ao/documentos/legisla%C3%A7%C3%A3o"
+    },
+    {
+     "date": "",
+     "host": "www.tribunalconstitucional.ao",
+     "rank": 4,
+     "snippet": "CONSTITUIÇÃO DA REPÚBLICA DE ANGOLA\n...\nDEPÓSITO LEGAL\n10664/2022\n...\nCONSTITUIÇÃO \nDA \n...\nEDIÇÃO ESPECIAL ACTUALIZADA\n2022\n...\nAprovamos a presente Constituição como Lei Suprema e Fundamental da República de Angola.",
+     "title": "edicao-especial-actualizada-2022.pdf",
+     "url": "https://www.tribunalconstitucional.ao/media/3nypgra0/edicao-especial-actualizada-2022.pdf"
+    },
+    {
+     "date": "2026-06-01",
+     "host": "lex.ao",
+     "rank": 5,
+     "snippet": "Bem-vindo ao Lex.AO | Direito Angolano: Acesso Fácil e Gratuito com o LEX.AO\n...\nExplore milhares de diplomas legais, leis, decretos e regulamentos angolanos.\nInformações jurídicas claras e atualizadas para empresários, advogados e cidadãos.\n...\nEntidades",
+     "title": "Bem-vindo ao Lex.AO | Direito Angolano: Acesso Fácil e ...",
+     "url": "https://lex.ao/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Angola national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2024-04-21",
+     "host": "governo.gov.ao",
+     "rank": 1,
+     "snippet": "# Portal Oficial do Governo de Angola\n- Documentos\n...\n### DECRETO PRESIDENCIAL N.º 131/23 - APROVA A ATRIBUIÇÃO DO SUBSÍDIO À GASOLINA\n...\n### PLANO NACIONAL DE FOMENTO PARA A PRODUÇÃO DE GRÃOS",
+     "title": "decreto presidencial - Angola",
+     "url": "https://governo.gov.ao/documentos/decreto-presidencial",
+     "verificacion": {
+      "bytes": 29724,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:33Z",
+      "http": 200,
+      "sha256": "cbf3a00f87f064e209917297c4b4b35e7a8e79b4b89230de191c59377c5da12a"
+     }
+    },
+    {
+     "date": "2024-09-05",
+     "host": "governo.gov.ao",
+     "rank": 2,
+     "snippet": "Documentos\n...\n### DECRETO EXECUTIVO N.º509/21 DE 11 DE OUTUBRO\n** REGULAMENTO SOBRE O RECONHECIMENTO DE PERSONALIDADE JURÍDICA CIVIL DE PESSOAS JURÍDICAS CANÓNICAS - **Legislação**",
+     "title": "Legislação",
+     "url": "https://governo.gov.ao/documentos/legisla%C3%A7%C3%A3o",
+     "verificacion": {
+      "bytes": 29606,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:34Z",
+      "http": 200,
+      "sha256": "0b1723b0fdde8a6215e0496394b9d664f04f8216e2a3e157396f01ea7c55dd80"
+     }
+    },
+    {
+     "date": "2022-12-31",
+     "host": "sme.gov.ao",
+     "rank": 3,
+     "snippet": "**Decreto Presidencial Nº 163/20, de 8 de Junho**\nRegulamento da Lei 13/19, de 23 de Maio\n…\n...\n**Decreto Presidencial n.º 21/19 de 14 de Janeiro**\n...\nDescarregar PDF [601 KB]",
+     "title": "Documentos - SME",
+     "url": "https://sme.gov.ao/ao/documentos/"
+    },
+    {
+     "date": "2023-01-16",
+     "host": "governo.gov.ao",
+     "rank": 4,
+     "snippet": "### DECRETO PRESIDENCIAL\n** DECRETO PRESIDENCIAL N.º 13/23 DE 6 DE JANEIRO DE 2023 - **Decreto Presidencial**\n...\n### DECRETO PRESIDENCIAL SOBRE SITUAÇÃO DE CALAMIDADE PÚBLICA",
+     "title": "Todos",
+     "url": "https://governo.gov.ao/documentos/todos?page=29"
+    },
+    {
+     "date": "2023-02-14",
+     "host": "governo.gov.ao",
+     "rank": 5,
+     "snippet": "# Portal Oficial do Governo de Angola\n- Documentos\n...\n** - **Decreto Presidencial**\n...\n### DECRETO PRESIDENCIAL\n** DECRETO PRESIDENCIAL N.º 13/23 DE 6 DE JANEIRO DE 2023 - **Decreto Presidencial**",
+     "title": "Documentos - Portal Oficial do Governo de Angola",
+     "url": "https://governo.gov.ao/documentos?page=28"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Angola official gazette",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.ucm.minfin.gov.ao",
+     "rank": 1,
+     "snippet": "Quinta-feira, 22 de Abril de 2021\nI Série – N.º 71\nDIÁRIO DA REPÚBLICA\nÓRGÃO OFICIAL DA REPÚBLICA DE ANGOLA\n...\nteleg.: «Imprensa».",
+     "title": "DIÁRIO DA REPÚBLICA - Gov",
+     "url": "https://www.ucm.minfin.gov.ao/cs/groups/public/documents/document/aw4x/mzg4/~edisp/minfin1388375.pdf",
+     "verificacion": {
+      "bytes": 1343174,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:39Z",
+      "http": 200,
+      "sha256": "19dc985374d21febe640d9f051c689cab8a8f3815aac4fe20aa6e49c315b65a3"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ucm.minfin.gov.ao",
+     "rank": 2,
+     "snippet": "Quinta-feira, 21 de Novembro de 2019  \nI Série – N.º 148\nDIÁRIO DA REPÚBLICA\nÓRGÃO OFICIAL DA REPÚBLICA DE ANGOLA\nPreço deste número - Kz: 1.870,00",
+     "title": "DIÁRIO DA REPUBLICA",
+     "url": "https://www.ucm.minfin.gov.ao/cs/groups/public/documents/document/zmlu/otux/~edisp/minfin951393.pdf",
+     "verificacion": {
+      "bytes": 428917,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:41Z",
+      "http": 200,
+      "sha256": "670e16c5ece2ce0f1e379fb2ea5a69549b745f998a03c113189ad0dde92bfe76"
+     }
+    },
+    {
+     "date": "",
+     "host": "gue.gov.ao",
+     "rank": 3,
+     "snippet": "DIÁRIO DA REPÚBLICA\nÓRGÃO OFICIAL DA REPÚBLICA DE ANGOLA\nQuarta-feira, 2 de Junho de 2021\nI Série – N.º  101\n...\nNacional - E.P., em Luanda, Rua Henrique de \n...\nteleg.:",
+     "title": "ÓRGÃO OFICIAL DA REPÚBLICA DE ANGOLA",
+     "url": "https://gue.gov.ao/portal/public/assets/pdf/legislacao/174593832711231.pdf"
+    },
+    {
+     "date": "2026-10-09",
+     "host": "www.state.gov",
+     "rank": 4,
+     "snippet": "No regulatory systems reform enforcement mechanisms have been implemented since the last ICS report.\nThe Diário da República (the national gazette) publishes official regulatory actions but is not publicly available and is not free of charge, though some decrees and regulatory actions are posted on ",
+     "title": "2026 Investment Climate Statements: Angola",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/angola"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Angola supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "tribunalconstitucional.ao",
+     "rank": 1,
+     "snippet": "Portal do Tribunal Constitucional | Acórdãos\n# Jurisprudência\nJurisprudência\n### Acórdãos\n- Início\n- Pesquisa Simples\n- Pesquisa Avançada\n- Listagem Geral\n#### Os 30 acórdãos mais recentes",
+     "title": "Portal do Tribunal Constitucional | Acórdãos",
+     "url": "https://tribunalconstitucional.ao/pt/jurisprudencia/acordaos/",
+     "verificacion": {
+      "bytes": 283397,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:44Z",
+      "http": 200,
+      "sha256": "a73dae3bb556c780eedc316241be06761641f0f55ffe5271ef203df8f31b1ac1"
+     }
+    },
+    {
+     "date": "2024-08-13",
+     "host": "tribunalsupremo.ao",
+     "rank": 2,
+     "snippet": "## Acórdãos Publicados recentemente\n### Processo n.º 6290/2024- Abuso Sexual de Menor de 14 anos\n3 de Julho, 2026\n...\n30 de Junho, 2026\n...\n29 de Junho, 2026\n…",
+     "title": "Processo n.º 6290/2024- Abuso Sexual de Menor de 14 anos",
+     "url": "https://tribunalsupremo.ao/",
+     "verificacion": {
+      "bytes": 292921,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:46Z",
+      "http": 200,
+      "sha256": "8364dc1f8afd42ff74a1dfdd446c622b88cc1eb1288f773552a48221b2a8bf5e"
+     }
+    },
+    {
+     "date": "2024-08-13",
+     "host": "tribunalsupremo.ao",
+     "rank": 3,
+     "snippet": "## Jurisprudência\n- Home Page\n...\n- JURISPRUDÊNCIA\n### Processo n.º 6290/2024- Abuso Sexual de Menor de 14 anos\n...\n### Processo nº 5/97- Recurso Contencioso de Impugnação de Acto Administrativo",
+     "title": "JURISPRUDÊNCIA – TRIBUNAL SUPREMO",
+     "url": "https://tribunalsupremo.ao/Categoria/jurisprudencia/"
+    },
+    {
+     "date": "2024-08-13",
+     "host": "tribunalsupremo.ao",
+     "rank": 4,
+     "snippet": "ACORDÃOS – TRIBUNAL SUPREMO\n...\n## Acórdãos\n## Contactos\n- geral@tribunalsupremo.ao",
+     "title": "ACORDÃOS – TRIBUNAL SUPREMO",
+     "url": "https://tribunalsupremo.ao/jurisprudencia/acordaos/"
+    },
+    {
+     "date": "2024-08-13",
+     "host": "tribunalsupremo.ao",
+     "rank": 5,
+     "snippet": "Tribunal Supremo da República de Angola Sumários de Decisões Identificação dos Autos 1529/2010 Tribunal de origem Sala do Cível e Administrativo do Tribunal Provincial de Benguela Relator Exma.\nConselheira Joaquina Nascimento Adjuntos Exma.\n...\n## Link Directos",
+     "title": "Dia: 25 de Junho, 2018",
+     "url": "https://tribunalsupremo.ao/2018/06/25/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Angola state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2024-09-05",
+     "host": "governo.gov.ao",
+     "rank": 1,
+     "snippet": "# Portal Oficial do Governo de Angola\n- Documentos\n- Legislação\n...\n** Legislação - **Legislação**\n...\n### NOVO CÓDIGO PENAL ANGOLANO\n...\n### DECRETO PRESIDENCIAL N.º 46/21 DE 23 DE FEVEREIRO",
+     "title": "Legislação",
+     "url": "https://governo.gov.ao/documentos/legisla%C3%A7%C3%A3o",
+     "verificacion": {
+      "bytes": 29606,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:47Z",
+      "http": 200,
+      "sha256": "0b1723b0fdde8a6215e0496394b9d664f04f8216e2a3e157396f01ea7c55dd80"
+     }
+    },
+    {
+     "date": "2026-06-01",
+     "host": "lex.ao",
+     "rank": 2,
+     "snippet": "Bem-vindo ao Lex.AO | Direito Angolano: Acesso Fácil e Gratuito com o LEX.AO\nPlataforma Jurídica de Angola\n...\nExplore milhares de diplomas legais, leis, decretos e regulamentos angolanos.\n...\n### Organizações\n...\nAcesso livre sem custos",
+     "title": "Bem-vindo ao Lex.AO | Direito Angolano: Acesso Fácil e ...",
+     "url": "https://lex.ao/",
+     "verificacion": {
+      "bytes": 28455,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:48Z",
+      "http": 200,
+      "sha256": "d096571ed0275889b53f0ceb9d8a6f609732e265b3f269abcbff96e3a3859c07"
+     }
+    },
+    {
+     "date": "2023-10-01",
+     "host": "transparenciapublica.ao",
+     "rank": 3,
+     "snippet": "Entende-se igualmente, igualmente, como sendo de interesse público, de entre outras, as notícias e informações:\nPORTAL DA TRANSPARÊNCIA PÚBLICA – ANGOLA\n...\nO PORTAL DA TRANSPARÊNCIA PÚBLICA É PROPRIEDADE DA PRO BONO ANGOLA",
+     "title": "Legislação - Portal da Transparência Pública",
+     "url": "https://transparenciapublica.ao/legislacao/"
+    },
+    {
+     "date": "",
+     "host": "angolex.com",
+     "rank": 4,
+     "snippet": "AngoLEX - Portal de Legislação Angolana\n## Portal da Legislação Angolana",
+     "title": "Legislações",
+     "url": "https://angolex.com/"
+    },
+    {
+     "date": "",
+     "host": "angolex.com",
+     "rank": 5,
+     "snippet": "Leis\nLegislação Angolana a distancia de um click\n## Portal da Legislação Angolana\n- PÁGINA INICIAL\n- ESTA PÁGINA",
+     "title": "Leis - AngoLEX",
+     "url": "https://angolex.com/paginas/tabelas-legislacoes/leis.html"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Angola municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "municipal.minfin.gov.ao",
+     "rank": 1,
+     "snippet": "REPUBLICA DE ANGOLA\nMINISTÉRIO DAS FINANÇAS",
+     "title": "contacto",
+     "url": "https://municipal.minfin.gov.ao/PortalMunicipal/",
+     "verificacion": {
+      "bytes": 3222,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:52Z",
+      "http": 200,
+      "sha256": "b4df5246b28afcd890466e6765ea88f3183a0595cfdb9eb0dfe0c33a11a1c955"
+     }
+    },
+    {
+     "date": "2026-06-01",
+     "host": "lex.ao",
+     "rank": 2,
+     "snippet": "Bem-vindo ao Lex.AO | Direito Angolano: Acesso Fácil e Gratuito com o LEX.AO\nPlataforma Jurídica de Angola\n...\nExplore milhares de diplomas legais, leis, decretos e regulamentos angolanos.\n...\n### Organizações\nAcesso livre sem custos",
+     "title": "Bem-vindo ao Lex.AO | Direito Angolano: Acesso Fácil e ...",
+     "url": "https://lex.ao/",
+     "verificacion": {
+      "bytes": 28455,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:52Z",
+      "http": 200,
+      "sha256": "d096571ed0275889b53f0ceb9d8a6f609732e265b3f269abcbff96e3a3859c07"
+     }
+    },
+    {
+     "date": "",
+     "host": "angolex.com",
+     "rank": 3,
+     "snippet": "|Alteração do Regimento do Conselho da República - Decreto Presidencial n.º 293/21, de 8 de Dezembro|D.R. n.º: 230, I Série, 08/12/2021|\n...\nTodos os direitos reservados © AngoLEX | 2022",
+     "title": "Todos",
+     "url": "https://angolex.com/paginas/tabelas-legislacoes/todos.html"
+    },
+    {
+     "date": "2019-09-05",
+     "host": "mat.gov.ao",
+     "rank": 4,
+     "snippet": "Portal - mat.gov.ao\n# Ministério da Administração do Território\n- Portais do Governo\n- Documentos\n#### Documentos\n**\n...\n### Lei n.º 7/16 de 01 de Junho Lei Orgânica Sobre a O. e F. das Comissões de Moradores",
+     "title": "Portal - mat.gov.ao",
+     "url": "https://mat.gov.ao/web/documentos?page=9&type=documentos"
+    },
+    {
+     "date": "",
+     "host": "angolex.com",
+     "rank": 5,
+     "snippet": "AngoLEX - Portal de Legislação Angolana\n## Portal da Legislação Angolana\n...\n# Legislações\n...\nDecretos Executivos\nDecretos Executivos Conjuntos\nRegulamentos\nResoluções\nAvisos\nInstrutivos\nLeis Revogadas",
+     "title": "Legislações",
+     "url": "https://angolex.com/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Angola regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-09",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "- Angola’s National Oil, Gas, and Biofuels Agency (ANPG) and\n...\n…\n...\nOther major regulatory bodies responsible for completing deals include:\n- The ANPG is the government hydrocarbon regulatory and oversight body responsible for regulating oil exploration, production activities, and concessionaire ",
+     "title": "2026 Investment Climate Statements: Angola",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/angola",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/angola",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:34:52Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 2,
+     "snippet": "Angolan food and agricultural import regulations and standards are developed and administered by two ministries: the Ministry of Agriculture and Forestry and the Ministry of Industry and Commerce.\n...\nMinistry of Agriculture and Forestry \n...\nMinistry of Industry and Commerce \nhttp://www.mindcom.gov",
+     "title": "Report Name: FAIRS Country Report Annual",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS+Country+Report+Annual_Luanda_Angola_AO2024-0006.pdf",
+     "verificacion": {
+      "bytes": 664286,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:54Z",
+      "http": 200,
+      "sha256": "a451880ac3505ea223f429c4b591f0c9fd41d16f704abe01e27a90b332e8e627"
+     }
+    },
+    {
+     "date": "",
+     "host": "rulemaking.worldbank.org",
+     "rank": 3,
+     "snippet": "## Angola\n|Are the laws that are currently in effect available in a single place?|Yes| |\n...\nPrivate sector publications|\n|Are the secondary regulations that are currently in effect codified and available in a single place?|Yes| |\n|Are these websites or registries updated regularly?|Yes| |",
+     "title": "Angola",
+     "url": "https://rulemaking.worldbank.org/en/data/explorecountries/angola"
+    },
+    {
+     "date": "",
+     "host": "www.cmc.ao",
+     "rank": 4,
+     "snippet": "Estabelece os princípios orientadores da actividade do Sistema Financeiro e regula o processo de estabelecimento, o exercício da actividade e a supervisão das instituições financeiras, o processo de intervenção correctiva e de resolução, bem como os regimes sancionatório, de resolução e de liquidaçã",
+     "title": "LEIS E DECRETOS",
+     "url": "https://www.cmc.ao/pt-pt/leis-e-decretos"
+    },
+    {
+     "date": "2024-09-05",
+     "host": "www.governo.gov.ao",
+     "rank": 5,
+     "snippet": "### ESTATUTO ORGÂNICO DOS MINISTÉRIOS DO AMBIENTE E DA AGRICULTURA E FLORESTAS\n**Legislação**\n...\n**Lei n.º 38/20 de 11 de Novembro Novo Código Penal Angolano**\n...\n**Legislação**",
+     "title": "Documentos",
+     "url": "https://www.governo.gov.ao/documentos/legisla%C3%A7%C3%A3o"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Angola national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2026-11-01",
+     "host": "corpus.data-landscapers.io",
+     "rank": 1,
+     "snippet": "# Status report i\n## Governance\n### Standards\nIts quality-infrastructure institute is an ISO correspondent member, a category carrying no vote on technical work, and published a 2026 national standards catalogue incorporating 140 new standards, stating that Angolan standards are voluntary unless leg",
+     "title": "Angola: status report",
+     "url": "https://corpus.data-landscapers.io/reports/AGO/AGO-status.html",
+     "verificacion": {
+      "bytes": 177147,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:55Z",
+      "http": 200,
+      "sha256": "ff4e9e94ea297ada5a62777a80686c1d3af3163209dd79dfdf558f74a508da4a"
+     }
+    },
+    {
+     "date": "2024-01-01",
+     "host": "pt.scribd.com",
+     "rank": 2,
+     "snippet": "## O catálogo de normas angolanas, apresenta uma lista de 524\nnormas angolanas, das diversas áreas de actividade, aprovadas\npelo Instituto Nacional das Infra-estruturas da Qualidade (INIQ).\n...\nParte 1: Sinalização padrão e 13.100",
+     "title": "Catálogo de Normas Angolanas 2024 | PDF | Metrologia | Gestão ...",
+     "url": "https://pt.scribd.com/document/801956976/Catalogo-Normas-INIQ-Versao-Actual-2024-1-1",
+     "verificacion": {
+      "bytes": 3038,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:56Z",
+      "http": 200,
+      "sha256": "4965d403ea8006362b7b9527e254092d06a584fa5335eddaca51255af1efe08e"
+     }
+    },
+    {
+     "date": "2019-10-31",
+     "host": "anyflip.com",
+     "rank": 3,
+     "snippet": "145 NA 73:2017 ambiente para prestação de serviços Em Vigor 24\n...\n148 NA 76:2017 Residencial, Lodge, Motel e afins 10\n...\nTelefone: +244 930011313/+244 914232088\n...\nSite: www.ianorq.gov.ao",
+     "title": "Catálogo_Normas_IANORQ - Flip eBook Pages 1-25",
+     "url": "https://anyflip.com/kbxkr/ntod/basic"
+    },
+    {
+     "date": "",
+     "host": "www.wto.org",
+     "rank": 4,
+     "snippet": "…\n...\n3.111.\nAccording to the authorities, Angola has 476 standards in force (November 2023).\nCompliance with INIQ standards is voluntary.\nDespite repeated attempts over the period \nJune-November 2023, the Secretariat could not access the online standards catalogue on INIQ's",
+     "title": "RESTRICTED - WT/TPR/S/452 12 February 2024",
+     "url": "https://www.wto.org/english/tratop_e/tpr_e/s452_e.pdf"
+    },
+    {
+     "date": "2025-09-16",
+     "host": "pt.scribd.com",
+     "rank": 5,
+     "snippet": "Catálogo - Normas - INIQ - 2025 - Actual\n...\n## NA 99:2020 Norma sobre tratamento de peixes frescos, Em vigor Ed.I 12p\ncongelados e picados\n...\npescado e produtos da pesca\n...\npesca para a Europa (UE).",
+     "title": "Catálogo_Normas - INIQ -2025 - Actual",
+     "url": "https://pt.scribd.com/document/881013201/Catalogo-Normas-INIQ-2025-Actual"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Angola mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "angolex.com",
+     "rank": 1,
+     "snippet": "useio e a Segurança de Asfaltos para a Pavimentação e a Manutenção de Estradas na República de Angola - Decreto Executivo n.º 29/21, de 21 de Janeiro|D.R. n.º: 14, I Série, 21/01/2021|",
+     "title": "Regulamentos - AngoLEX",
+     "url": "https://angolex.com/paginas/tabelas-legislacoes/regulamentos.html",
+     "verificacion": {
+      "bytes": 360195,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:57Z",
+      "http": 200,
+      "sha256": "a6024464b1620b2be56fb1abca8ba0c7791d6548a4407ad28e227a42ebba647c"
+     }
+    },
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 2,
+     "snippet": "|Angola|G/TBT/N/AGO/1 ** Obligation to affix high security tax stamps on medicines, beverages, alcoholic liquids, tobacco and its manufactured substitutes and other products listed in Annex I of the Decree.",
+     "title": "ePing SPS&TBT platform",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C024",
+     "verificacion": {
+      "bytes": 154704,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:57Z",
+      "http": 200,
+      "sha256": "5f57864af37b089e784657dbf8f61bbf2c856e4fed23d8894f5727a9d4c18eed"
+     }
+    },
+    {
+     "date": "2025-05-29",
+     "host": "inacom.gov.ao",
+     "rank": 3,
+     "snippet": "o limite percentual do ajuste.\n...\n- Despacho n.º 6/09 de 26 de Janeiro de 2009\nDetermina que todos os operadores de serviço de telecomunicações de uso público, obriga-se a liquidar junto do Instituto Angolano das Comunicações – INACOM.",
+     "title": "INACOM - Instituto Angolano das Comunicações",
+     "url": "https://inacom.gov.ao/legislacao-lista/"
+    },
+    {
+     "date": "2018-02-14",
+     "host": "minttics.gov.ao",
+     "rank": 4,
+     "snippet": "Decreto Presidencial n.º 137/17\nRegulamento das Servidões Radioelétricas\n...\nDecreto Presidencial n.º 108/16\nAprova o Regulamento Geral das Comunicações Electrónicas\nDecreto Presidencial n.º 95/16",
+     "title": "Ministério das Telecomunicações, Tecnologias de ... - Minttics",
+     "url": "https://minttics.gov.ao/ao/documentos/legislacao/pagina-2/"
+    },
+    {
+     "date": "",
+     "host": "arccla.gov.ao",
+     "rank": 5,
+     "snippet": "ARCCLA — Agência Reguladora de Certificação de Carga e Logística de Angola",
+     "title": "ARCCLA",
+     "url": "https://arccla.gov.ao/en/the-cnc/"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Angola national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "www.ine.gov.ao",
+     "rank": 1,
+     "snippet": "INE – National Institute of Statistics of Angola\nPhone: 924 354 015 | Email: geral@ine.gov.ao Sign in",
+     "title": "Publicação - INE-Instituto Nacional De Estatísticas",
+     "url": "https://www.ine.gov.ao/publicacoes/todas",
+     "verificacion": {
+      "bytes": 94753,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:35:04Z",
+      "http": 200,
+      "sha256": "1c4878150f5e233d692a8df94f06289526591cc76cae9fae3c0ca79ebd699f15"
+     }
+    },
+    {
+     "date": "2026-10-22",
+     "host": "ine.gov.ao",
+     "rank": 2,
+     "snippet": "INE – National Institute of Statistics of Angola\nPhone: 924 354 015 | Email: geral@ine.gov.ao Sign in\n...\n## Ongoing Activities\n#### Inquéritos Económicos - IE\nO Instituto Nacional de Estatística esta a recolher dados dos inquéritos económicos.",
+     "title": "National Institute of Statistics",
+     "url": "https://ine.gov.ao/",
+     "verificacion": {
+      "bytes": 150253,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:35:08Z",
+      "http": 200,
+      "sha256": "79136fa35769e40e1a07771f3fa85e21f2eb57e17c2d4e7f40ab571fce52722c"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.ine.gov.ao",
+     "rank": 3,
+     "snippet": "INE – National Institute of Statistics of Angola\nPhone: 924 354 015 | Email: geral@ine.gov.ao Sign in",
+     "title": "Anuário de Estatísticas Sociais 2017 - 2022, 2024",
+     "url": "https://www.ine.gov.ao/publicacoes/detalhes/MzczMzA="
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.ine.gov.ao",
+     "rank": 4,
+     "snippet": "INE – National Institute of Statistics of Angola\nPhone: 924 354 015 | Email: geral@ine.gov.ao Sign in",
+     "title": "INE-Instituto Nacional De Estatísticas",
+     "url": "https://www.ine.gov.ao/publicacoes/detalhes/NTM0NjU="
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.ine.gov.ao",
+     "rank": 5,
+     "snippet": "INE – National Institute of Statistics of Angola\nPhone: 924 354 015 | Email: geral@ine.gov.ao Sign in\n...\nO Instituto Nacional de Estatística (INE), órgão executivo central do Sistema Estatístico Nacional,",
+     "title": "resultados definitivos do Censo 2024",
+     "url": "https://www.ine.gov.ao/publicacoes/detalhes/NDc0MTE="
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Angola central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bna.ao",
+     "rank": 1,
+     "snippet": "# TAXAS\n###### Taxa BNA\n###### Taxa de Inflação\n###### Taxa de Câmbio\n...\n#### Taxa de Inflação\n|Dados Referentes ao Mês de|Taxa|\n|--|--|\n...\n#### EVOLUÇÃO DA TAXA DE INFLAÇÃO",
+     "title": "Banco Nacional de Angola",
+     "url": "https://www.bna.ao/",
+     "verificacion": {
+      "bytes": 7242,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:35:10Z",
+      "http": 200,
+      "sha256": "ccca4bc39bceb9bb44040835c66d8da26a32ced9c2ac9b850fc22c7252513f67"
+     }
+    },
+    {
+     "date": "",
+     "host": "dsbb.imf.org",
+     "rank": 2,
+     "snippet": "- **Hard copy - Other** *Annual Report, NBA, published in Portuguese and available by subscription.* - **Electronic - On-line bulletin or data** NBA Website http://www.bna.aoStatistical Information Notes are disseminated to announce new or improved data series or changes in the advance release calen",
+     "title": "IMF -GDDS DQAF Base (DSBB)",
+     "url": "https://dsbb.imf.org/egdds/dqaf-base/country/AGO/category/AAB00",
+     "verificacion": {
+      "bytes": 44059,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:35:12Z",
+      "http": 200,
+      "sha256": "7e67dd066e738ac499bf0f21fd4d283e4f0936a82bfdcc93f38f8ebee43f2f69"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.ine.gov.ao",
+     "rank": 3,
+     "snippet": "INE – National Institute of Statistics of Angola\nPhone: 924 354 015 | Email: geral@ine.gov.ao Sign in\n...\n## Contas Nacionais Trimestrais (PIB) , II Trimestre 2026\n...\n📎 Download link:",
+     "title": "INE-Instituto Nacional De Estatísticas",
+     "url": "https://www.ine.gov.ao/publicacoes/detalhes/NTU1MDU="
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.ine.gov.ao",
+     "rank": 4,
+     "snippet": "INE – National Institute of Statistics of Angola\nPhone: 924 354 015 | Email: geral@ine.gov.ao Sign in",
+     "title": "Publicação - INE-Instituto Nacional De Estatísticas",
+     "url": "https://www.ine.gov.ao/publicacoes/todas"
+    },
+    {
+     "date": "2006-12-02",
+     "host": "en.wikipedia.org",
+     "rank": 5,
+     "snippet": "Central bank of Angola\n**National Bank of Angola Banco Nacional de Angola**\n...\n|Reserves|$23.470 billion^[1]^|\n|Preceded by|Bank of Angola|\n|Website|bna.ao|\n...\n## External links\n- Official website (in Portuguese)",
+     "title": "National Bank of Angola",
+     "url": "https://en.wikipedia.org/wiki/National_Bank_of_Angola"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Angola government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "governo.gov.ao",
+     "rank": 1,
+     "snippet": "Portal Oficial do Governo de Angola\n# Portal Oficial do Governo de Angola",
+     "title": "Portal Oficial do Governo de Angola",
+     "url": "https://governo.gov.ao/",
+     "verificacion": {
+      "bytes": 49365,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:35:13Z",
+      "http": 200,
+      "sha256": "83ba2b19398b4a520212715da9158e11914142a3489b6ec6834bf35a246021b3"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.ine.gov.ao",
+     "rank": 2,
+     "snippet": "INE – National Institute of Statistics of Angola\nPhone: 924 354 015 | Email: geral@ine.gov.ao Sign in",
+     "title": "Publicação - INE-Instituto Nacional De Estatísticas",
+     "url": "https://www.ine.gov.ao/publicacoes/todas",
+     "verificacion": {
+      "bytes": 94753,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:35:15Z",
+      "http": 200,
+      "sha256": "8b02a72a7c36e8dbb50e6ae6a835fdc4b230a168c6c1f77ea037e72c445687f4"
+     }
+    },
+    {
+     "date": "2026-10-20",
+     "host": "countryportal.ascleiden.nl",
+     "rank": 3,
+     "snippet": "# Angola\n...\nThe platform also facilitates the collection, analysis, and sharing of data on topics such as food security, gender equality, and climate change.Open Data for Africa\n...\n- Offers access to a repository of open data on the African continent and maintained by Code for Africa as a public s",
+     "title": "Angola - ASCL Country Portal",
+     "url": "https://countryportal.ascleiden.nl/angola"
+    },
+    {
+     "date": "",
+     "host": "corpus.data-landscapers.io",
+     "rank": 4,
+     "snippet": "Open data\nAngola has no open data portal, and the sub-indicators covering what such a portal would publish are recorded as not applicable in consequence in the World Bank's 2025 GovTech assessment.\n...\n…",
+     "title": "[PDF] Angola: status report — Data Landscapers",
+     "url": "https://corpus.data-landscapers.io/reports/AGO/AGO-status-2026-10-04.pdf"
+    },
+    {
+     "date": "",
+     "host": "sepe.gov.ao",
+     "rank": 5,
+     "snippet": "SEPE - Portal dos Serviços Públicos Electrónicos do Governo de Angola.\n...\n# Serviços Públicos Electrónicos\n...\n## Para simplificar a sua vida, o SEPE.gov.ao reúne um grande número de eServiços",
+     "title": "SEPE - Portal dos Serviços Públicos Electrónicos do Governo ...",
+     "url": "https://sepe.gov.ao/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:17:49Z",
+ "pais": {
+  "iso2": "AO",
+  "iso3": "AGO",
+  "nombre": "Angola"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

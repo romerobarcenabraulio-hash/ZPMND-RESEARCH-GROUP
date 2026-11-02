@@ -1,0 +1,753 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Bulgaria constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2026-02-10",
+     "host": "iisda.government.bg",
+     "rank": 1,
+     "snippet": "# Конституция на Република България\n...\nКонституцията на Република България е върховен закон и другите закони не могат да й противоречат.\n...\nКонституция_на_Република_България_2536.pdf",
+     "title": "Нормативна уредба - Конституция на Република България",
+     "url": "https://iisda.government.bg/regulatory/85",
+     "verificacion": {
+      "bytes": 12760,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:06:27Z",
+      "http": 200,
+      "sha256": "8df0806f171f185979c5fccc1c87efddb55a0176a9c87bf9acbc97cc50374eec"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.parliament.bg",
+     "rank": 2,
+     "snippet": "# Constitution\n**Art.\n...\n(1) The Constitution shall be the supreme law, and no other law shall contravene it.\n(2) The provisions of the Constitution shall apply directly.\n...\n(3) Each passed act shall be promulgated in State Gazette within 15 days of being passed.",
+     "title": "CONSTITUTION OF THE REPUBLIC OF BULGARIA",
+     "url": "https://www.parliament.bg/en/const",
+     "verificacion": {
+      "bytes": 4304,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:06:28Z",
+      "http": 200,
+      "sha256": "bcc394f22ca90eb9dc5f96c0f91825de306b6219af5c16743237ad32f757cb69"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.parliament.bg",
+     "rank": 3,
+     "snippet": "null - Народно събрание на Република България\n# Народно събрание на Република България\n# Законодателство\n...\nНародно събрание на Република България",
+     "title": "Законодателство",
+     "url": "https://www.parliament.bg/bg/legislation"
+    },
+    {
+     "date": "",
+     "host": "www.parliament.bg",
+     "rank": 4,
+     "snippet": "|24|Закон за изменение и допълнение на Закона за държавния дълг|01/07/2026|\n...\n|26|Закон за изменение и допълнение на Наказателно-процесуалния кодекс|18/06/2026|",
+     "title": "- National Assembly of the Republic of Bulgaria",
+     "url": "https://www.parliament.bg/en/laws"
+    },
+    {
+     "date": "",
+     "host": "mjs.bg",
+     "rank": 5,
+     "snippet": "### Министерство на правосъдието\n#### Единен портал на органите на изпълнителната власт в сектор \"Правосъдие\"\n# Закони\n...\nЗакон за нормативните актове\n...\nЗакон за отговорността на държавата и общините за вреди",
+     "title": "Закони - Министерство на правосъдието - Република България",
+     "url": "https://mjs.bg/home/index/91b1726d-49c0-4c78-a0f4-ee8ed49299ff"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Bulgaria national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2008-06-15",
+     "host": "dv.parliament.bg",
+     "rank": 1,
+     "snippet": "Държавен вестник\n|\n...\nСъдържание на Държавен вестник, официален раздел <table><tr><td>**Народно събрание** Закон за изменение и допълнение на Кодекса за застраховането стр.",
+     "title": "Държавен вестник - National Assembly",
+     "url": "https://dv.parliament.bg/DVWeb/index.faces",
+     "verificacion": {
+      "error": "robots.txt disallows https://dv.parliament.bg/DVWeb/index.faces",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:07:14Z"
+     }
+    },
+    {
+     "date": "2026-08-28",
+     "host": "iisda.government.bg",
+     "rank": 2,
+     "snippet": "Административният регистър се поддържа чрез Интегрираната информационна система на държавната администрация (ИИСДА).\n...\n### Административен регистър\n- Интегрирана информационна система на държавната администрация",
+     "title": "Нормативна уредба - Административен регистър",
+     "url": "https://iisda.government.bg/adm_services/regulatories",
+     "verificacion": {
+      "bytes": 24058,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:07:15Z",
+      "http": 200,
+      "sha256": "33904651fd046c323aca928b4ab3ac320e8fadc1a020642b518da0bcb3890e6f"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.parliament.bg",
+     "rank": 3,
+     "snippet": "null - Народно събрание на Република България\n# Народно събрание на Република България\n# Законодателство\n...\nНародно събрание на Република България",
+     "title": "Законодателство",
+     "url": "https://www.parliament.bg/bg/legislation"
+    },
+    {
+     "date": "2023-10-03",
+     "host": "www.registryagency.bg",
+     "rank": 4,
+     "snippet": "Закон за кадастъра и имотния регистър\n...\nЗакон за регистър Булстат\n...\n…\n...\nУстройствен правилник на Агенцията по вписванията\nPDF файл, 187,8 KB, качен на 27.02.2024\n...\n…",
+     "title": "Нормативна уредба",
+     "url": "https://www.registryagency.bg/bg/za-agenciyata/normativna-uredba/"
+    },
+    {
+     "date": "2022-10-11",
+     "host": "www.mi.government.bg",
+     "rank": 5,
+     "snippet": "# Министерство на икономиката, инвестициите и индустрията\n** / Министерство / Нормативни документи / Закони\n# Закони\nОбщо намерени: 33\n...\n## Търговски закон\n...\n- ** e-docs@mi.government.bg",
+     "title": "Закони",
+     "url": "https://www.mi.government.bg/ministerstvo/normativni-dokumenti/zakoni/page/3/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Bulgaria official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2008-06-15",
+     "host": "dv.parliament.bg",
+     "rank": 1,
+     "snippet": "Държавен вестник\n|\n...\nСъдържание на Държавен вестник, официален раздел <table><tr><td>**Народно събрание** Закон за изменение и допълнение на Кодекса за застраховането стр.\n...\n…",
+     "title": "Държавен вестник - National Assembly",
+     "url": "https://dv.parliament.bg/DVWeb/index.faces",
+     "verificacion": {
+      "error": "robots.txt disallows https://dv.parliament.bg/DVWeb/index.faces",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:07:15Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "guides.loc.gov",
+     "rank": 2,
+     "snippet": "The Law Library of Congress has an extensive collection of Bulgarian laws, court decisions, commentaries, and a complete run of\n*Durzhaven vestnik* [Official gazette], from 1879 to the present day.",
+     "title": "Research Guides: Bulgarian Collections in the Library of Congress: Legal Materials",
+     "url": "https://guides.loc.gov/bulgarian-collections/special-collections/legal-materials",
+     "verificacion": {
+      "bytes": 40622,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:07:15Z",
+      "http": 200,
+      "sha256": "e954c454f24c5d85a203f46382f592aa1982c98b93fd36c935367961fb31f10c"
+     }
+    },
+    {
+     "date": "",
+     "host": "dv.parliament.bg",
+     "rank": 3,
+     "snippet": "ОФИЦИАЛНО ИЗДАНИЕ НА РЕПУБЛИКА БЪЛГАРИЯ\nДЪРЖАВЕН ВЕСТНИК\nБРОЙ \n52\n...\n…\n...\n3440\n...\n02 939-35-17",
+     "title": "[PDF] ДЪРЖАВЕН ВЕСТНИКБРОЙ - Народно събрание",
+     "url": "https://dv.parliament.bg/DVWeb/fileUploadShowing.jsp?idFileAtt=753462&allowCache=true&openDirectly=false"
+    },
+    {
+     "date": "2020-01-08",
+     "host": "n-lex.europa.eu",
+     "rank": 4,
+     "snippet": "# About the national database\nBulgarian government official journal is  **State Gazette**.\nOn this website you can find the entire content of all issues of Bulgarian State Gazette for the last 7 years in PDF format.\nThe site is open for the public, and is completely free of charge.",
+     "title": "About the national database",
+     "url": "https://n-lex.europa.eu/n-lex/info/info-bg/index?lang=en"
+    },
+    {
+     "date": "",
+     "host": "op.europa.eu",
+     "rank": 5,
+     "snippet": "Legal gazette\nDarzhaven vestnik: ofitsialno pechatno izdanie na Republika Bulgaria — ofitsialen\nrazdel\n...\nOfficial gazette\nDarzhaven vestnik: ofitsialno pechatno izdanie na Republika Bulgaria — neofitsialen razdel",
+     "title": "Directory of legal gazettes in Europe 7",
+     "url": "https://op.europa.eu/documents/2895081/3069147/directory2007.pdf/8e6bf1dd-1be3-49eb-b6a6-85619225cad8"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Bulgaria supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ecase.justice.bg",
+     "rank": 1,
+     "snippet": "# Единен портал за електронно правосъдие\n...\nВ оптимизирания Единен портал за електронно правосъдие имате възможност да прегледате основна информация за всички съдебни дела със свободен публичен достъп.",
+     "title": "Единен портал за електронно правосъдие :: ЕПЕП",
+     "url": "https://ecase.justice.bg/",
+     "verificacion": {
+      "bytes": 43245,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:07:17Z",
+      "http": 200,
+      "sha256": "4db35221b95b7ad5a86ae8d03860effb00e239148a919f7c4910e3b0737b7f5d"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.vks.bg",
+     "rank": 2,
+     "snippet": "ВКС\n# Върховен касационен съд\n## Резултати от търсене на съдебни актове\n...\nСтари търсачки:\nдела, деловодни данни, азбучник, ключови фрази",
+     "title": "ВКС - vks.bg",
+     "url": "https://www.vks.bg/spisak-aktove.jsp",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.vks.bg/spisak-aktove.jsp",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:08:48Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.vks.bg",
+     "rank": 3,
+     "snippet": "# ЕЛЕКТРОННО ПРАВОСЪДИЕ\n## Електронни съдебни дела ecase.justice.bg\n## Формуляри за достъп в единния портал за електронно правосъдие",
+     "title": "електронно правосъдие",
+     "url": "https://www.vks.bg/e-pravosadie.html"
+    },
+    {
+     "date": "2026-05-09",
+     "host": "github.com",
+     "rank": 4,
+     "snippet": "|**Върховен касационен съд (VKS) — Supreme Court of Cassation**|`http://www.vks.bg`|Judgments since 1 Oct 2008 in full text; bulletins; search by court/parties/case number.|",
+     "title": "awesome-bulgarian-open-data-index/README_ENG.md at main ...",
+     "url": "https://github.com/tignatov/awesome-bulgarian-open-data-index/blob/main/README_ENG.md"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Bulgaria state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.parliament.bg",
+     "rank": 1,
+     "snippet": "null - Народно събрание на Република България\n# Народно събрание на Република България\n# Законодателство",
+     "title": "Законодателство",
+     "url": "https://www.parliament.bg/bg/legislation",
+     "verificacion": {
+      "bytes": 4304,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:08:48Z",
+      "http": 200,
+      "sha256": "14bc95eae4888d83c3054c95d977c6556b5b9277aa026c43e6e720a46bb1a83b"
+     }
+    },
+    {
+     "date": "2026-06-05",
+     "host": "www.mlsp.government.bg",
+     "rank": 2,
+     "snippet": "## Кодекси\n...\n- Кодекс на труда (PDF)\n- Семеен кодекс\n- Административнопроцесуален кодекс (PDF)\n...\n© 2019 Република България Официален сайт на Министерство на труда и социалната политика.",
+     "title": "ДОКУМЕНТИ",
+     "url": "https://www.mlsp.government.bg/zakoni",
+     "verificacion": {
+      "bytes": 83640,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:08:52Z",
+      "http": 200,
+      "sha256": "6b92656e7049d8d2b43f1f88fe1feb1460e69f6c909c3cbc62af8d35f46a0895"
+     }
+    },
+    {
+     "date": "2022-10-11",
+     "host": "www.mi.government.bg",
+     "rank": 3,
+     "snippet": "# Министерство на икономиката, инвестициите и индустрията\n** / Министерство / Нормативни документи / Закони\n# Закони\nОбщо намерени: 33\n## Закон за потребителския кредит (2026 г.)\n...\nи доп.",
+     "title": "Закони",
+     "url": "https://www.mi.government.bg/ministerstvo/normativni-dokumenti/zakoni/page/3/"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.gov.bg",
+     "rank": 4,
+     "snippet": "### Новини\n##### Министерски съвет\nАдрес: бул.\n„Княз Александър Дондуков“ №1,\n1594 София, България\nTел.\n...\nДеловодство: Е-mail: ms_register@government.bg",
+     "title": "Министерски съвет",
+     "url": "https://www.gov.bg/"
+    },
+    {
+     "date": "",
+     "host": "www.mlsp.government.bg",
+     "rank": 5,
+     "snippet": "# Законодателство\n## Кодекси\n-\n- - Кодекс на труда (PDF)\n- Кодекс за социално осигуряване (PDF)\n…\n...\n© 2019 Република България Официален сайт на Министерство на труда и социалната политика.",
+     "title": "Законодателство - government.bg",
+     "url": "https://www.mlsp.government.bg/zakonodatelstvo"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Bulgaria municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2025-03-31",
+     "host": "burgascouncil.org",
+     "rank": 1,
+     "snippet": "# ОБЯВЕНИ НОРМАТИВНИ АКТОВЕ\n|ПУБЛИКУВАНО НА Sort ascending|ЗАГЛАВИЕ|\n...\nАДРЕС ЗА КОРЕСПОНДЕНЦИЯ:\n8000 БУРГАС",
+     "title": "ОБЯВЕНИ НОРМАТИВНИ АКТОВЕ",
+     "url": "https://burgascouncil.org/obyaveni-normativni-aktove",
+     "verificacion": {
+      "bytes": 51380,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:08:53Z",
+      "http": 200,
+      "sha256": "039f7b5aba0fc2fc5452380f9634fc5f397d4a08180115170f580a347a954c8a"
+     }
+    },
+    {
+     "date": "2026-07-10",
+     "host": "burgascouncil.org",
+     "rank": 2,
+     "snippet": "# ДЕЙСТВАЩИ НОРМАТИВНИ АКТОВЕ",
+     "title": "ДЕЙСТВАЩИ НОРМАТИВНИ АКТОВЕ",
+     "url": "https://burgascouncil.org/deystvasti_normativni-aktove",
+     "verificacion": {
+      "bytes": 59131,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:08:55Z",
+      "http": 200,
+      "sha256": "374acb0b3c518a2930c3258da9b4a7ddf0467c8c9b11f80a4976df6babf5545d"
+     }
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.mzh.government.bg",
+     "rank": 3,
+     "snippet": "Нормативни актове\n- ОСП 2021-2027\n...\nsignali_korupcia@\nmzh.government.bg\nhttps://edelivery.egov.bg/\nНормативни актове\n**НОРМАТИВНИ АКТОВЕ**",
+     "title": "Нормативни актове",
+     "url": "https://www.mzh.government.bg/odz-kustendil/bg/norm_aktove.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.apis.bg",
+     "rank": 4,
+     "snippet": "# Общински нормативни актове\n...\n…\nПриложенията на общините, **които вече са интегрирали услугата**, са достъпни на адрес: https://obshtini.bg/",
+     "title": "Общински нормативни актове | АПИС",
+     "url": "https://www.apis.bg/bg/municipal-norm-acts"
+    },
+    {
+     "date": "2026-07-02",
+     "host": "www.mrrb.bg",
+     "rank": 5,
+     "snippet": "Нормативни актове | МРРБ\n- Нормативни актове\n# Нормативни актове\n- Прикачени файлове (1)\n…\nПрикачени файлове (1)",
+     "title": "Нормативни актове | МРРБ - MRRB",
+     "url": "https://www.mrrb.bg/bg/normativni-aktove/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Bulgaria regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bda.bg",
+     "rank": 1,
+     "snippet": "Legal acts - Bulgarian Drug Agency\n...\nMEDICINAL PRODUCTS IN HUMAN MEDICINE ACT\nLAW FOR BLOOD, BLOOD DONATION AND BLOOD TRANSFUSION\nLAW ON MEDICAL DEVICES\n...\n- bda@bda.bg\n- 09:00 - 17:30",
+     "title": "Legal Acts",
+     "url": "https://www.bda.bg/en/legal-acts",
+     "verificacion": {
+      "bytes": 43483,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:08:57Z",
+      "http": 200,
+      "sha256": "e1ebdc8eeba0070a564088bcabbeb1e0ce572cc7282d67fec43b432c27f8948c"
+     }
+    },
+    {
+     "date": "2019-12-20",
+     "host": "www.trade.gov",
+     "rank": 2,
+     "snippet": "- The Bulgarian State Agency for Metrological and Technical Surveillance (SAMTS): supervises, administers, executes technical supervision and carries out policies, laws and regulations on products.\n...\nThe Ministry of Health handles certifications, registration, import licensing and establishing sta",
+     "title": "Bulgaria - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/bulgaria-standards-trade",
+     "verificacion": {
+      "bytes": 277970,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:08:57Z",
+      "http": 200,
+      "sha256": "5327a21d612e952e296aa2c3cfc706e8d39c15d7f7aa63975bf78916f64c067c"
+     }
+    },
+    {
+     "date": "",
+     "host": "parliament.bg",
+     "rank": 3,
+     "snippet": "- Archives State Agency\n...\n- Bulgarian State Agency For Tourism\n- Commission for Consumers Protection\n- Energy and water regulatory commission\n- State Commission on Information Security\n...\n- Financial Supervision Commission\n- Registry Agency\n...\n- Sustainable Energy Development Agency\n- National E",
+     "title": "Links - National Assembly of the Republic of Bulgaria",
+     "url": "https://parliament.bg/en/links"
+    },
+    {
+     "date": "2016-06-10",
+     "host": "www.bda.bg",
+     "rank": 4,
+     "snippet": "As of 13 June 2016, all periodic safety update reports (PSURs) for human medicines authorised in the European Union (EU) must be submitted to the PSUR repository,\nwhich has been developed by the European Medicines Agency (EMA) in close collaboration with EU Member States and the industry.",
+     "title": "Information for companies - Bulgarian Drug Agency",
+     "url": "https://www.bda.bg/en/information-for-companies"
+    },
+    {
+     "date": "2023-10-03",
+     "host": "www.registryagency.bg",
+     "rank": 5,
+     "snippet": "Устройствен правилник на Агенцията по вписванията\nPDF файл, 187,8 KB, качен на 27.02.2024\nВътрешни правила за организация на работата с предложенията и сигналите в Агенция по вписванията\n...\n…",
+     "title": "Нормативна уредба",
+     "url": "https://www.registryagency.bg/bg/za-agenciyata/normativna-uredba/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Bulgaria national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2025-01-01",
+     "host": "bds-bg.org",
+     "rank": 1,
+     "snippet": "The catalogue includes bibliographic information about the active and withdrawn Bulgarian standards and allows for searching by various criteria.\n...\nCatalogue of the Bulgarian standards for 2025 on CD - the price is for 2 editions.\n...\nUpdated every 6 months.\n...\n23 of the BDS Statute.*",
+     "title": "BDS Catalogue 2025 (CD)",
+     "url": "https://bds-bg.org/en/bds-catalogue-2024-cd_p5022.html",
+     "verificacion": {
+      "error": "robots.txt disallows https://bds-bg.org/en/bds-catalogue-2024-cd_p5022.html",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:08:57Z"
+     }
+    },
+    {
+     "date": "2024-01-01",
+     "host": "bds-bg.org",
+     "rank": 2,
+     "snippet": "**Sales of Bulgarian Standards**\n...\nBDS publishes Catalogue of Bulgarian standards in electronic format.\nIt includes bibliographical information about active and withdrawn Bulgarian standards.\nIts actualization is made every 6 months.\nBDS Catalogue can be purchased according to the Pricelist, appro",
+     "title": "Distribution and sales of standards",
+     "url": "https://bds-bg.org/en/razprostranenie-i-prodazhba-na-standarti_p48.html",
+     "verificacion": {
+      "error": "robots.txt disallows https://bds-bg.org/en/razprostranenie-i-prodazhba-na-standarti_p48.html",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:08:57Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "legacy.export.gov",
+     "rank": 3,
+     "snippet": "In certain areas, such as processed foods, beverages and pharmaceutical products, individual ministries or agencies issue sector-specific standards and certificates.\n...\n- Consult the Bulgarian Institute for Standardization: http://www.bds-bg.org/ or the Bulgarian Institute of Metrology at http://ww",
+     "title": "Bulgaria - Standards for Trade - export.gov",
+     "url": "https://legacy.export.gov/article?id=Bulgaria-Standards-for-Trade"
+    },
+    {
+     "date": "2026-03-23",
+     "host": "bds-bg.org",
+     "rank": 4,
+     "snippet": "#### Проекти и стандарти\nСтандартите се разработват и публикуват в интерес на обществото и представляват мощно средство за информация и взаимно разбиране между партньори.",
+     "title": "Български институт за стандартизация (БИС)",
+     "url": "https://bds-bg.org/bg/"
+    },
+    {
+     "date": "2026-05-22",
+     "host": "single-market-economy.ec.europa.eu",
+     "rank": 5,
+     "snippet": "# Work programmes of standardisation bodies\n## Work programmes of national standardisation bodies\n...\n|**Bulgaria**| |\n|БИС Български институт за стандартизация|Work programme|",
+     "title": "Work programmes of standardisation bodies",
+     "url": "https://single-market-economy.ec.europa.eu/single-market/goods/european-standards/notification-system/work-programmes-standardisation-bodies_en?prefLang=pt"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Bulgaria mandatory technical regulations official list",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.mrrb.bg",
+     "rank": 1,
+     "snippet": "Наредби - Нормативни актове\n- Нормативни актове",
+     "title": "Наредби - Нормативни актове",
+     "url": "https://www.mrrb.bg/bg/normativni-aktove/naredbi/",
+     "verificacion": {
+      "bytes": 163970,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:08:59Z",
+      "http": 200,
+      "sha256": "87c3d16012c21f4913695bdbbc6956364b45572e24e5bfc5dd451e79077e0623"
+     }
+    },
+    {
+     "date": "2022-06-10",
+     "host": "eur-lex.europa.eu",
+     "rank": 2,
+     "snippet": "Изисквания за устойчивостEN 55035:2017/A11:2020|\n...\n|3.|EN 61000-6-5:2015 Електромагнитна съвместимост (ЕМС).\nЧаст 6-5: Общи стандарти.",
+     "title": "Консолидиран ТЕКСТ: 32019D1326 — BG — 10.06.2022",
+     "url": "https://eur-lex.europa.eu/legal-content/BG/TXT/HTML/?uri=CELEX:02019D1326-20220610",
+     "verificacion": {
+      "error": "robots.txt disallows https://eur-lex.europa.eu/legal-content/BG/TXT/HTML/?uri=CELEX:02019D1326-20220610",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:09:00Z"
+     }
+    },
+    {
+     "date": "2022-10-11",
+     "host": "www.mi.government.bg",
+     "rank": 3,
+     "snippet": "Общо намерени: 78\n## ДЕЛЕГИРАН РЕГЛАМЕНТ (ЕС) 2025/928 НА КОМИСИЯТА от 21 май 2025 година\nза изменение на Регламент (ЕС) 2019/125",
+     "title": "Директиви и регламенти - Министерство на икономиката",
+     "url": "https://www.mi.government.bg/ministerstvo/normativni-dokumenti/direktivi-i-reglamenti/"
+    },
+    {
+     "date": "2022-10-11",
+     "host": "www.mi.government.bg",
+     "rank": 4,
+     "snippet": "# Laws\nTotal results: 49\n## Currency Act\nCurrency Act\n## Commission Implementing Regulation (EU) 2017/1185 of 20 April 2017",
+     "title": "Regulatory Documents",
+     "url": "https://www.mi.government.bg/en/ministry/regulatory-documents/laws/"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Bulgaria national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ec.europa.eu",
+     "rank": 1,
+     "snippet": "Bulgaria\nNational Statistical Institute\n...\nBG-1038 Sofia \nTel:\n+359 2 9857 771\nFax: +359 2 9857 640\nE-mail:\ninfo@nsi.bg\nWeb site: http://www.nsi.bg",
+     "title": "enlarging the eu statistical network - European Commission",
+     "url": "https://ec.europa.eu/eurostat/documents/3217494/5648193/KS-57-03-596-EN.PDF/5f917846-1959-4ec5-ab72-d5b4dc34b30e",
+     "verificacion": {
+      "bytes": 1880348,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:02Z",
+      "http": 200,
+      "sha256": "25823dfc3ba6d2a80a4ac2379fe253cc6d3c4a60c676e03e8e2caa00ae4bbbeb"
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.nsi.bg",
+     "rank": 2,
+     "snippet": "NSI - National statistical institute\n...\n- (02) 9857 111\nThe National Statistical Institute (NSI) is a state institution in Bulgaria that collects, processes and disseminates official statistical information on social, economic and demographic processes in the country.\n...\n### Contact number\n...\n[em",
+     "title": "National statistical institute: NSI",
+     "url": "https://www.nsi.bg/en",
+     "verificacion": {
+      "bytes": 75834,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:03Z",
+      "http": 200,
+      "sha256": "18d5a534993248a0d5bde12b95dae4423adfef2a0420119666834f611e655090"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.nsi.bg",
+     "rank": 3,
+     "snippet": "REPUBLIC OF BULGARIA \nNATIONAL STATISTICAL INSTITUTE \n www.nsi.bg \n www.census2021.bg \n...\nFOR THE PERIOD 2021 - 2027\n...\nThe NSI website is not only the main \n...\ndata.",
+     "title": "Sofia, 2021",
+     "url": "https://www.nsi.bg/sites/default/files/files/pages/uplf_e/Strategy2021-2027_EN.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.nsi.bg",
+     "rank": 4,
+     "snippet": "The National Statistical Institute (NSI) is a state institution in Bulgaria that collects, processes and disseminates official statistical information on social, economic and demographic processes in the country.\n...\n### Contact number\n(02) 9857 111\n...\n2, P. Volov Str. 1038 Sofia, Bulgaria",
+     "title": "Annual accounts of General Government",
+     "url": "https://www.nsi.bg/en/statistical-data/131"
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.nsi.bg",
+     "rank": 5,
+     "snippet": "- 2, P. Volov Str.2 1038 Sofia, Bulgaria\n- (02) 9857 111\nThe National Statistical Institute (NSI) is a state institution in Bulgaria that collects, processes and disseminates official statistical information on social, economic and demographic processes in the country.",
+     "title": "Press releases",
+     "url": "https://www.nsi.bg/en/press-release"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Bulgaria central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-21",
+     "host": "bnb.bg",
+     "rank": 1,
+     "snippet": "# Българска народна банка\n...\n## Статистика\n...\n52 от Закона за Българската народна банка и като член на Европейската система от централни банки (ЕСЦБ) в изпълнение на ангажиментите по чл.",
+     "title": "Статистика - БНБ",
+     "url": "https://bnb.bg/Statistics/index.htm",
+     "verificacion": {
+      "bytes": 37428,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:06Z",
+      "http": 200,
+      "sha256": "7c1a0b55fb81fc9b66cf1a7f8d804177b07800d932903e2e1c46b460efaa36af"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.bnb.bg",
+     "rank": 2,
+     "snippet": "# Българска народна банка\n...\n## Статистика\n...\n52 от Закона за Българската народна банка и като член на Европейската система от централни банки (ЕСЦБ) в изпълнение на ангажиментите по чл.",
+     "title": "Статистика",
+     "url": "https://www.bnb.bg/statistics/index.htm",
+     "verificacion": {
+      "bytes": 37428,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:08Z",
+      "http": 200,
+      "sha256": "bf105bbdf3e83c16ba1eb357afe901302bb86843fc60e345c1122b1433880744"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bnb.bg",
+     "rank": 3,
+     "snippet": "## Статистика на плащанията за България\nАктуални и исторически данни за статистиката на плащанията за България са поместени в публично достъпна база данни на ЕЦБ, която може да намерите тук (en).",
+     "title": "Статистика на плащанията за България",
+     "url": "https://www.bnb.bg/PaymentSystem/PSStatistics/PSPaymentsStatisticsForBulgaria/index.htm"
+    },
+    {
+     "date": "",
+     "host": "bnb.bg",
+     "rank": 4,
+     "snippet": "V. DATA DISSEMINATION \nThe Bulgarian National Bank disseminates the quarterly IIP data on its web site – http://www.bnb.bg.\nThe data is published also in the Bulgarian National Bank Monthly Bulletin.",
+     "title": "METHODOLOGICAL NOTES ON THE COMPILATION OF ...",
+     "url": "https://bnb.bg/bnbweb/groups/public/documents/bnb_download/st_m_instr_iip_6_en.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.bnb.bg",
+     "rank": 5,
+     "snippet": "The BNB collects, processes, analyses and disseminates official monetary118 and inter-est statistics119, external sector statistics120, quarterly financial accounts statistics for all institutional sectors121, statistics of non-bank financial institutions, including leas-\n…\n...\nAll statistical data ",
+     "title": "2025 Rep",
+     "url": "https://www.bnb.bg/bnbweb/groups/public/documents/bnb_publication/p_semianualreports_2025_en.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Bulgaria government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.mtc.government.bg",
+     "rank": 1,
+     "snippet": "· If yes,\n· What is the URL of the national Open Data portal?\nhttp://opendata.government.bg/\n...\nBulgarian open data portal:\nhttp://opendata.government.bg/",
+     "title": "open_data_questionaire_2016_23_june_en.doc",
+     "url": "https://www.mtc.government.bg/sites/default/files/open_data_questionaire_2016_23_june_en.doc",
+     "verificacion": {
+      "bytes": 377344,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:10Z",
+      "http": 200,
+      "sha256": "4996b5dc75a0747ea504850de38cc0e9d176ca87b3a57773ccab2e3d5af66817"
+     }
+    },
+    {
+     "date": "2016-05-10",
+     "host": "www.mtc.government.bg",
+     "rank": 2,
+     "snippet": "# Bulgaria in top 10 in Europe on Open data\nDuring the event  the progress of Bulgaria on the Open Data Platform (https://opendata.government.bg) was presented.\nBulgaria's Open Data Portal where state institutions publish sets of statistics and data.",
+     "title": "Bulgaria in top 10 in Europe on Open data",
+     "url": "https://www.mtc.government.bg/en/category/1/bulgaria-top-10-europe-open-data",
+     "verificacion": {
+      "bytes": 91399,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:11Z",
+      "http": 200,
+      "sha256": "c4653d42919e6ad69da5ee41455ef7193e15dbbc0019f705a03731a93a27b426"
+     }
+    },
+    {
+     "date": "2020-04-07",
+     "host": "data.egov.bg",
+     "rank": 3,
+     "snippet": "Правителство, публичен сектор\n...\nВисокостойностни набори от данни (HVD)",
+     "title": "Open Data Portal",
+     "url": "https://data.egov.bg/"
+    },
+    {
+     "date": "",
+     "host": "www.mtc.government.bg",
+     "rank": 4,
+     "snippet": "http://opendata.government.bg/ was launched\nin November 2014\nOpen Data Barometer Rank 2015: N/A\nOpen Data Index Rank: #16\nTop data set & domains\n...\nYes\nTransposition PSI Directive  \nNational guidelines on",
+     "title": "Standard Template",
+     "url": "https://www.mtc.government.bg/sites/default/files/country_factsheet_bulgaria.pdf"
+    },
+    {
+     "date": "",
+     "host": "link.springer.com",
+     "rank": 5,
+     "snippet": "Administrative Data in Bulgaria\nNikolay Netov\nAbstract The primary sources of open data in Bulgaria include the National Statis-tical Institute (NSI), the official government portal for open administrative data\n(https://data.egov.bg/) and the Bulgarian National Bank (BNB).\n...\n2",
+     "title": "On Some Aspects of Open Administrative Data in Bulgaria",
+     "url": "https://link.springer.com/content/pdf/10.1007/978-3-031-99032-8_4.pdf"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:26:15Z",
+ "pais": {
+  "iso2": "BG",
+  "iso3": "BGR",
+  "nombre": "Bulgaria"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

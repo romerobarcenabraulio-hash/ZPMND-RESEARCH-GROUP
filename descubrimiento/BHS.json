@@ -1,0 +1,671 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Bahamas constitution and national laws official legal database",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 1,
+     "snippet": "|1983-0001|The Bahamas Mortgage Corporation Act|\n...\n|1959-0021|The Bahamas National Trust Act|\n...\n|2020-0007|The Bahamas National Trust (Amendment) Act, 2019 (Appointed Day) Notice, 2020|",
+     "title": "in Alphabetical Order - Bahamas Laws",
+     "url": "https://laws.bahamas.gov.bs/cms/legislation/index/by-alphabetical.html",
+     "verificacion": {
+      "bytes": 806872,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:20Z",
+      "http": 200,
+      "sha256": "02c72e6524918c5af8bfb779f9dbaeca9955d8b87de0474054a9a7c7184d8987"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 2,
+     "snippet": "|**WELCOME**|**WELCOME**|\n|--|--|\n| | |\n...\nPlease feel free to send your feedback to lThis email address is being protected from spambots.",
+     "title": "Overview - Bahamas Laws",
+     "url": "https://laws.bahamas.gov.bs/cms/",
+     "verificacion": {
+      "bytes": 44525,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:22Z",
+      "http": 200,
+      "sha256": "c2fb4b4c00891997b6874f01309e352e3447a3a83fb218f919f6e1079044d232"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 3,
+     "snippet": "|**WELCOME**|**WELCOME**|\n|--|--|",
+     "title": "Bahamas Laws - Government of The Bahamas",
+     "url": "https://laws.bahamas.gov.bs/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Bahamas national regulations decrees official government database",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 1,
+     "snippet": "|2023-0016|Public Debt Management (Bahamas Registered Stock)(No. 1) 2024 and 2025 Directions, 2023|\n|2025-0093|Public Debt Management (Bahamas Zero Coupon Bond 2025) Directions, 2025|",
+     "title": "in Alphabetical Order - Bahamas Laws",
+     "url": "https://laws.bahamas.gov.bs/cms/legislation/index/by-alphabetical.html",
+     "verificacion": {
+      "bytes": 806872,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:30Z",
+      "http": 200,
+      "sha256": "0f9349c609e711792c4ccc5d3e75b541b9b4f61707d347f381319770c65d6e94"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 2,
+     "snippet": "Please feel free to send your feedback to lThis email address is being protected from spambots.",
+     "title": "Overview - laws.bahamas.gov.bs",
+     "url": "https://laws.bahamas.gov.bs/cms/index.php",
+     "verificacion": {
+      "bytes": 44534,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:32Z",
+      "http": 200,
+      "sha256": "b83f703a63b6751b5460c778fbf22d24c093f94f2b9a806f6ce8ead870863d65"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 3,
+     "snippet": "|**WELCOME**|**WELCOME**|\n|--|--|",
+     "title": "Bahamas Laws - Government of The Bahamas",
+     "url": "https://laws.bahamas.gov.bs/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Bahamas official gazette",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "opm.gov.bs",
+     "rank": 1,
+     "snippet": "OFFICIAL GAZETTE\nTHE BAHAMAS\nPUBLISHED BY AUTHORITY\nNASSAU \n       20th March, 2020 \n...\nEXTRAORDINARY\nOFFICIAL GAZETTE\nTHE BAHAMAS\nPUBLISHED BY AUTHORITY\nNASSAU",
+     "title": "[PDF] OFFICIAL GAZETTE THE BAHAMAS - Office of the Prime Minister",
+     "url": "https://opm.gov.bs/wp-content/uploads/2020/04/Exo-20-March-2020-A.pdf",
+     "verificacion": {
+      "bytes": 1268693,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:33Z",
+      "http": 200,
+      "sha256": "46bc96f41ae01de139b600df37f2840e160864b301cf5eb7a0e93b7eb0213cc0"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 2,
+     "snippet": "OFFICIAL GAZETTE\nTHE BAHAMAS\nPUBLISHED BY AUTHORITY\nNASSAU \n    14th August, 2026\nOFFICE OF THE GOVERNOR-GENERAL\nSigned\nCYNTHIA A.\nPRATT\nGovernor-General\nSigned",
+     "title": "laws.bahamas.gov.bs · cms · imagesEXTRAORDINARY - laws.bahamas.gov.bs",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/GAZETTES/2026/2026-0066/2026-0066.pdf",
+     "verificacion": {
+      "bytes": 1387542,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:36Z",
+      "http": 200,
+      "sha256": "c9f4ea3fa6c4aa55fd43ab072bc34f008b520e05eb67f6a9787666a724b11823"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 3,
+     "snippet": "OFFICIAL GAZETTE\nTHE BAHAMAS\nPUBLISHED BY AUTHORITY\nNASSAU \n    20th January, 2025\nPATENTS ACT, 2024\n(No. 45 of 2024)\n...\nSigned\nRYAN PINDER",
+     "title": "laws.bahamas.gov.bs › cms › imagesOFFICIAL GAZETTE THE BAHAMAS",
+     "url": "https://laws.bahamas.gov.bs/cms/images/LEGISLATION/SUBORDINATE/2025/2025-0003/2025-0003_1.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Bahamas supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2019-08-09",
+     "host": "courts.bs",
+     "rank": 1,
+     "snippet": "#### New Judgements\nBETWEEN West End Resort, Ltd.\nAND Island Ventures Resort & Club Ltd. - 2026/CLE/gen/FP/00017\n...\n#### Welcome From The Chief Justice\nWelcome to the website of the Supreme Court of The Commonwealth of The Bahamas.\nThe purpose…  #### Court Events",
+     "title": "The Judiciary of The Bahamas - The Supreme Court and The ...",
+     "url": "https://courts.bs/",
+     "verificacion": {
+      "bytes": 91737,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:37Z",
+      "http": 200,
+      "sha256": "a9bcbdb45e94df36116cce2ad6833d19416fa2d3f96992c9c7d9f7713fbe4d85"
+     }
+    },
+    {
+     "date": "",
+     "host": "courts.bs",
+     "rank": 2,
+     "snippet": "Judgements – Page 222 of 239 – The Judiciary of The Bahamas\n# Archives: Judgements\njudgement news and reviews\nScotia Bank (Bahamas) Limited V (1) Charles Sawyer (2) Sharon Sawyer – Final Judgment\n...\nSummit Insurance Company Limited v Heritage Insurance Company",
+     "title": "Judgements – Page 222 of 239 – The Judiciary of The Bahamas",
+     "url": "https://courts.bs/judgements-posts/page/222/",
+     "verificacion": {
+      "bytes": 53151,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:38Z",
+      "http": 200,
+      "sha256": "5788992c82980ce4a285cba2696e2c2a8c7378c51b40c26c3e67bb9f23e1c9e9"
+     }
+    },
+    {
+     "date": "",
+     "host": "courts.bs",
+     "rank": 3,
+     "snippet": "Judgements – Page 122 of 239 – The Judiciary of The Bahamas\n# Archives: Judgements\njudgement news and reviews\nBETWEEN Neil Campbell AND Lisa Rolle Campbell, Commissioner of Police and The Attorney General – 2019/CLE/gen/01643\n...\nBETWEEN Sunset Equities Ltd.",
+     "title": "Judgements – Page 122 of 239 – The Judiciary of The Bahamas",
+     "url": "https://courts.bs/judgements-posts/page/122/"
+    },
+    {
+     "date": "",
+     "host": "courts.bs",
+     "rank": 4,
+     "snippet": "Judgements – Page 7 of 239 – The Judiciary of The Bahamas\n# Archives: Judgements\njudgement news and reviews\nBETWEEN Trevor Russell AND The Royal Bahamas Police Force and The Attorney General – 2025/CLE/gen/00733\n...\n…\n...\n## Email:\ninfo@courts.bs",
+     "title": "Judgements – Page 7 of 239 – The Judiciary of The Bahamas",
+     "url": "https://courts.bs/judgements-posts/page/7/"
+    },
+    {
+     "date": "",
+     "host": "courts.bs",
+     "rank": 5,
+     "snippet": "Judgements – The Judiciary of The Bahamas\n# Archives: Judgements\njudgement news and reviews\nBETWEEN The Director of Public Prosecutions AND Javon Forbes – 15/1/2025\n...\nBETWEEN The King AND Charles Sealy III – VBI No.64/3/3035",
+     "title": "Judgements – The Judiciary of The Bahamas",
+     "url": "https://courts.bs/judgements-posts/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Bahamas state or provincial legislation official portal",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-10-28",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 1,
+     "snippet": "Acts\n1. Home\n2. Legislation\n3. Acts\n4. Starting with the Letter A\n5. for Wednesday, 28 October 2026\nCurrent Legislation for Wednesday, 28 October 2026\n…\n...\n|amended by...",
+     "title": "Acts - laws.bahamas.gov.bs",
+     "url": "https://laws.bahamas.gov.bs/cms/legislation/acts_only.html",
+     "verificacion": {
+      "bytes": 306312,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:41Z",
+      "http": 200,
+      "sha256": "9c3713a8b386427af474082e1bb9b4ef03f59c793ec62238dc512696f93ea4e7"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 2,
+     "snippet": "You need JavaScript enabled to view it..|We are pleased to announce that, effective the 25th day of November, 2024, Official Gazettes of The Bahamas (other than legislation) from the 1st day of January, 2021 are now available via the",
+     "title": "Overview - Bahamas Laws",
+     "url": "https://laws.bahamas.gov.bs/cms/",
+     "verificacion": {
+      "bytes": 44525,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:43Z",
+      "http": 200,
+      "sha256": "90a550edb2a7e8456f54e6f158ce88365ff11b50f6d642de3718a1211c6a5cfa"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 3,
+     "snippet": "by Category\n1. Legislation\n2. Index\n3. by Category\n...\n| | |\n|The Index of the Government of The Bahamas Legislation Saturday, 17 October 2026|The Index of the Government of The Bahamas Legislation Saturday, 17 October 2026|",
+     "title": "by Category - Bahamas Laws",
+     "url": "https://laws.bahamas.gov.bs/cms/legislation/index/by-category.html"
+    },
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 4,
+     "snippet": "Principal and Amending Acts Passed in the Year\n...\nAll **CURRENT**> Legislation is grouped under the **LEGISLATION > ACTS** [OR] **SUBSIDIARY > by Alphabetical Order** [OR] **by Category** menus.",
+     "title": "Acts - by Year - Bahamas Laws",
+     "url": "https://laws.bahamas.gov.bs/cms/legislation/acts_only/acts-by-year.html"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Bahamas municipal bylaws regulations official portal",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2025-05-28",
+     "host": "www.bahamas.gov.bs",
+     "rank": 1,
+     "snippet": "This site uses cookies to serve our services.\nBy using our site, you acknowledge that you have read and understand our Cookie Policy and Privacy Policy.",
+     "title": "Government Forms & Documents – Bahamas",
+     "url": "https://www.bahamas.gov.bs/index.php/document",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.bahamas.gov.bs/index.php/document",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:10:43Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 2,
+     "snippet": "1. Legislation\n2. Index\n3. in Alphabetical Order\n...\n| | |\n|The Index of the Government of The Bahamas Legislation Saturday, 17 October 2026|The Index of the Government of The Bahamas Legislation Saturday, 17 October 2026|",
+     "title": "in Alphabetical Order - Bahamas Laws",
+     "url": "https://laws.bahamas.gov.bs/cms/legislation/index/by-alphabetical.html",
+     "verificacion": {
+      "bytes": 806872,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:51Z",
+      "http": 200,
+      "sha256": "5ffa6a097f600f8de43f2577c1c9efbfc0b70de060af8c2e09c3ba0ad256198d"
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 3,
+     "snippet": "Legislation\n1. Home\n2. Legislation\n3. Acts\n4. Starting with the Letter A\n...\n|All Legislation © 2026 the Government of The Bahamas — iLAWS © 2026 WWT4 Pty Ltd - Version 5.0.1|",
+     "title": "Legislation - laws.bahamas.gov.bs",
+     "url": "https://laws.bahamas.gov.bs/cms/legislation.html"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Bahamas regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.centralbankbahamas.com",
+     "rank": 1,
+     "snippet": "Statutory and Regulatory Filing Requirements - Central Bank of the Bahamas\n# Bank Supervision\n## Statutory and Regulatory Filing Requirements\n...\n- ###### Banks and Trust Companies (Payment of Dividends) Regulations, 2025\n- ###### The Bahamas Capital Regulations, 2022\n...\n### Mailing Address",
+     "title": "Statutory and Regulatory Filing Requirements",
+     "url": "https://www.centralbankbahamas.com/bank-supervision/general-information/statutory-and-regulatory-filing-requirements",
+     "verificacion": {
+      "bytes": 1170272,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:52Z",
+      "http": 200,
+      "sha256": "002247b4fd82d8186b5adfbb6fb5004b479a26031bdbbbebcd3577c3ef4e0b5d"
+     }
+    },
+    {
+     "date": "",
+     "host": "moea.gov.bs",
+     "rank": 2,
+     "snippet": "#### The Bahamas Bureau of Standards & Quality (BBSQ)\n...\nThe BBSQ also has a regulatory responsibility for the operation of a legal metrology service, or for official controls including market surveillance of food and non-food products.\n...\n- Adopt CROSQ standards as our national standards.",
+     "title": "Agencies & Divisions - The Ministry of Economic Affairs",
+     "url": "https://moea.gov.bs/agencies-and-divisions/",
+     "verificacion": {
+      "bytes": 130960,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:11:06Z",
+      "http": 200,
+      "sha256": "e560760eb4cd3fae2bb79b033bbc8e66c5c8700db6652c833eda4c39316e9f6c"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.centralbankbahamas.com",
+     "rank": 3,
+     "snippet": "- ###### Guidelines for Assessing the Fitness and Propriety of Money Laundering Reporting Officers (MLRO) in The Bahamas\n- ###### Guidelines on the Relationship Between External Auditors of Licensees and the Central Bank\n...\n- ###### A Guide to the Central Bank's Ladder of Supervisory Intervention",
+     "title": "Banks and Trust Companies (Private Trust Companies) (Amendment) Regulations, 2012- Central Bank of the Bahamas",
+     "url": "https://www.centralbankbahamas.com/bank-supervision/financial-industry-regulations/banks-and-trust-companies-private-trust-companies-amendment-regulations-2012"
+    },
+    {
+     "date": "",
+     "host": "laws.bahamas.gov.bs",
+     "rank": 4,
+     "snippet": "|1927-0302|Stamp Rules|\n|2006-0002|Standards Act|\n...\n|1958-0178|Legitimacy Rules|\n...\n|2026-0028|amended by...Statute of Frauds (Amendment) Act, 2026|",
+     "title": "in Alphabetical Order - Bahamas Laws",
+     "url": "https://laws.bahamas.gov.bs/cms/legislation/index/by-alphabetical.html"
+    },
+    {
+     "date": "",
+     "host": "www.centralbankbahamas.com",
+     "rank": 5,
+     "snippet": "- ###### Guidelines for Assessing the Fitness and Propriety of Money Laundering Reporting Officers (MLRO) in The Bahamas\n...\n- ###### Guidelines for the Administration of Monetary Penalties\n...\n- ###### Banks and Trust Companies (Administrative Monetary Penalties) Regulations, 2016",
+     "title": "PUBLIC CONSULTATION on the Digital Assets Guidelines, ...",
+     "url": "https://www.centralbankbahamas.com/bank-supervision/consultation-documents/public-consultation-on-the-digital-assets-guidelines-2022"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Bahamas national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bbsq.bs",
+     "rank": 1,
+     "snippet": "Standards - The Bahamas Bureau of Standards and Quality (BBSQ)\n...\n###### BNS ISO 13485:2015 Medical Devices – Quality Management Systems – Requirements for Regulatory Purposes\n- ** $46.31\n...\nThe Bahamas\n...\n+1 (242) 362-1748 – 55",
+     "title": "Standards - The Bahamas Bureau of Standards and Quality (BBSQ)",
+     "url": "https://bbsq.bs/standards/",
+     "verificacion": {
+      "bytes": 166912,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:11:09Z",
+      "http": 200,
+      "sha256": "63c72fa120499813e8c1221fec8f8ef684a25746efd705357874b376c84a1045"
+     }
+    },
+    {
+     "date": "2026-10-13",
+     "host": "www.bbsq.bs",
+     "rank": 2,
+     "snippet": "### Our Popular Standards\n...\n###### ISO/IEC 17021-3:2017 Conformity Assessment – Requirements for Bodies providing Audit and Certification of Management Systems – Part 3: Competence Requirements for Auditing and Certification of Quality Management Systems\n- $28.07",
+     "title": "The Bahamas Bureau of Standards and Quality (BBSQ)",
+     "url": "https://www.bbsq.bs/",
+     "verificacion": {
+      "bytes": 253630,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:11:14Z",
+      "http": 200,
+      "sha256": "3a90a490d098f992fec5962ebd224f9779cdb8fce8593d80bb341fafd8c90bfe"
+     }
+    },
+    {
+     "date": "",
+     "host": "bbsq.bs",
+     "rank": 3,
+     "snippet": "Standards Under Development - The Bahamas Bureau of Standards and Quality (BBSQ)\n...\nAll\n...\n###### FDBNS OGC 20-057 (V1.0):2022 OGC API – TILES – PART 1: CORE\n...\n#### Environmental management – Water footprint – Principles, requirements and guidelines",
+     "title": "Standards Under Development",
+     "url": "https://bbsq.bs/standards/pending-standards/"
+    },
+    {
+     "date": "",
+     "host": "bbsq.bs",
+     "rank": 4,
+     "snippet": "BNS ISO/IEC 17021-3 :2017- Conformity assessment — Requirements for bodies providing audit and certification of management systems — Part 3: Competence requirements for auditing and certification of quality management systems\n...\nBNSCP 1:2014 Code of Hygiene Practice for Packaged Water",
+     "title": "Shop - The Bahamas Bureau of Standards and Quality (BBSQ)",
+     "url": "https://bbsq.bs/shop/?add-to-cart=18247&product-page=90"
+    },
+    {
+     "date": "",
+     "host": "bbsq.bs",
+     "rank": 5,
+     "snippet": "No part of this publication is to be reproduced without the prior written consent of BBSQ \nBAHAMAS NATIONAL STANDARD \nConformity assessment —Requirements for accreditation bodies accrediting conformity assessment bodies\nBNS ISO/IEC 17011:2017 \nFOR REVIEW ONLY\n...\nSource River Centre",
+     "title": "[PDF] BNS ISO/IEC 17011:2017",
+     "url": "https://bbsq.bs/wp-content/uploads/2023/09/BNS_ISO-IEC-17011_2017-cmpltd-1.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Bahamas mandatory technical regulations official list",
+   "descartados": 3,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bahamasmaritime.com",
+     "rank": 1,
+     "snippet": "## MN108 – Hatches, Lifting Appliances and Anchor Handling Winches\n...\n- **Date Posted**\n...\n## MN103 – Code of Safety for Special Purpose Ships (SPS Code)\n...\n## MN101 – The Merchant Shipping (Tonnage) Regulations 2026\n...\n## MN098 – Bahamas Yacht Codes",
+     "title": "Marine Notices Archives - Bahamas Maritime Authority",
+     "url": "https://www.bahamasmaritime.com/notices/marine-notices/",
+     "verificacion": {
+      "bytes": 314909,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:11:15Z",
+      "http": 200,
+      "sha256": "fbf37723994f409eb9eb9dc2f191c34e52efe42ecc3183a075d81181934a3fe1"
+     }
+    },
+    {
+     "date": "2020-10-20",
+     "host": "www.trade.gov",
+     "rank": 2,
+     "snippet": "Non-agricultural products such as gaming devices and pharmaceutical products are also subject to technical regulations.\nAs of 2024, BBSQ has declared 40 national standards for goods, services, practices, and processes to protect the health and safety of Bahamians.",
+     "title": "Bahamas - Labeling and Marking Requirements",
+     "url": "https://www.trade.gov/country-commercial-guides/bahamas-labeling-and-marking-requirements",
+     "verificacion": {
+      "bytes": 266752,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:11:15Z",
+      "http": 200,
+      "sha256": "0220b69e10dfaa6af712557f27866ccb8c277f0e064f9c15f309884caa0a2583"
+     }
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Bahamas national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "stats.gov.bs",
+     "rank": 1,
+     "snippet": "Bahamas National Statistical Institute – Delivering timely official statistics\nThe Government of the Bahamas\nBahamas National Statistical Institute\nDelivering timely official statistics\n...\n# Home\n### Census 2021",
+     "title": "Bahamas National Statistical Institute – Delivering timely ...",
+     "url": "https://stats.gov.bs/",
+     "verificacion": {
+      "bytes": 89666,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:11:53Z",
+      "http": 200,
+      "sha256": "5d19a51a4962ff0004c7796d66ab2d5dda18235b6273d5ea6ab636f41974cc03"
+     }
+    },
+    {
+     "date": "2026-03-31",
+     "host": "bnsistats.gov.bs",
+     "rank": 2,
+     "snippet": "Home – BNSI\n...\n# THE BAHAMAS NATIONAL STATISTICAL INSTITUTE\n...\nThe Bahamas National Statistical Institute (BNSI) is the official national statistics agency responsible\nfor collecting, analyzing, and disseminating trusted, high-quality data for the Commonwealth of The\nBahamas.",
+     "title": "THE BAHAMAS NATIONAL STATISTICAL INSTITUTE – BNSI",
+     "url": "https://bnsistats.gov.bs/",
+     "verificacion": {
+      "bytes": 78463,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:31Z",
+      "http": 200,
+      "sha256": "92db7543180dd896e1455cf8072fd9da3073de116aeadaf132ae0c41c9310b9f"
+     }
+    },
+    {
+     "date": "",
+     "host": "bnsistats.gov.bs",
+     "rank": 3,
+     "snippet": "Construction Statistics – BNSI\nThe Government of The Bahamas\n...\nFind construction industry indicators for The Bahamas.\n...\nThe Bahamas National Statistical Institute (BNSI) is the official national statistics agency responsible\nfor collecting, analyzing, and disseminating trusted, high-quality data",
+     "title": "Construction Statistics – BNSI",
+     "url": "https://bnsistats.gov.bs/statistics/construction-statistics"
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 4,
+     "snippet": "Country Profile of Bahamas\nMain statistical agency\nMain statistical agency name\nDepartment of Statistics\nWeb address\nhttp://statistics.bahamas.gov.bs/",
+     "title": "DNSS Document: Country Profile of Bahamas",
+     "url": "https://unstats.un.org/unsd/dnss/print.aspx?docID=531"
+    },
+    {
+     "date": "",
+     "host": "stats.gov.bs",
+     "rank": 5,
+     "snippet": "Publications – Bahamas National Statistical Institute\nThe Government of the Bahamas\nBahamas National Statistical Institute\nDelivering timely official statistics\nBahamas National Statistical Institute\nDelivering timely official statistics\n- Bahamas National Statistical Institute\n- Publications",
+     "title": "Publications",
+     "url": "https://stats.gov.bs/publications/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Bahamas central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.centralbankbahamas.com",
+     "rank": 1,
+     "snippet": "Money & Credit Aggregates - Central bank of the Bahamas\n# Core Functions\n...\n- Core Functions\n- Monetary Policy\n- Money & Credit Aggregates\n...\n### Mailing Address\nCentral Bank of The Bahamas\nP.O. Box N-4868\nNassau, N.P, Bahamas",
+     "title": "Money & Credit Aggregates - Central bank of the Bahamas",
+     "url": "https://www.centralbankbahamas.com/money-credit-aggregates/?skip=4",
+     "verificacion": {
+      "bytes": 409678,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:32Z",
+      "http": 200,
+      "sha256": "6aa62174e784fd4da9ca573d3aad12ca1e22bf0e72dded2debc9b18429b23ca9"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.centralbankbahamas.com",
+     "rank": 2,
+     "snippet": "# Statistics\n...\nThese include domestic banking statistics, specifically money and credit aggregates and movements in external reserves.\nThe Bank also publishes an Annual Report, Quarterly Statistical Digest, Quarterly Economic Review and Monthly Monetary Economic and Financial Developments.\nThese p",
+     "title": "Statistics",
+     "url": "https://www.centralbankbahamas.com/statistics",
+     "verificacion": {
+      "bytes": 391478,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:33Z",
+      "http": 200,
+      "sha256": "819772265e85c080e2558c9f75aa1dacd7be30b714659bfedf17782a54d624f3"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.centralbankbahamas.com",
+     "rank": 3,
+     "snippet": "- Resources\n...\nThe Quarterly Statistical Digest for May 2026 is now available.\nPlease click on the document below to view all tables on available monetary, financial, public debt and economic statistics through March 2026.\n...\n### Mailing Address\nCentral Bank of The Bahamas\n...\nNassau, N.P, Bahamas",
+     "title": "Quarterly Statistical Digest May 2026",
+     "url": "https://www.centralbankbahamas.com/publications/qsd/quarterly-statistical-digest-may-2026"
+    },
+    {
+     "date": "",
+     "host": "www.centralbankbahamas.com",
+     "rank": 4,
+     "snippet": "Quarterly Statistical Digest November 2025- Central Bank of the Bahamas\n...\n- Quarterly Statistical Digest\n...\nThe Quarterly Statistical Digest for November 2025 is now available.\nPlease click on the document below to review all tables on monetary, financial, public debt and economic statistics thro",
+     "title": "Quarterly Statistical Digest November 2025",
+     "url": "https://www.centralbankbahamas.com/publications/qsd/quarterly-statistical-digest-november-2025"
+    },
+    {
+     "date": "",
+     "host": "www.centralbankbahamas.com",
+     "rank": 5,
+     "snippet": "Quarterly Statistical Digest August 2025- Central Bank of the Bahamas\n...\n- Quarterly Statistical Digest\n...\nThe Quarterly Statistical Digest for August 2025 is now available.\nPlease click on the document below to review all tables on monetary, financial, public debt and economic statistics through ",
+     "title": "Quarterly Statistical Digest August 2025- Central Bank of the Bahamas",
+     "url": "https://www.centralbankbahamas.com/publications/qsd/quarterly-statistical-digest-august-2025-1?N=C&page=1"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Bahamas government open data portal",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2025-07-04",
+     "host": "www.bahamas.gov.bs",
+     "rank": 1,
+     "snippet": "The Constitution of the Bahamas is based on the Westminster Model; King Charles III, The Executive Branch, The Legislative Branch, and the Judicial Branch.",
+     "title": "Official Bahamas Government Website - Services, News & Resou",
+     "url": "https://www.bahamas.gov.bs/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.bahamas.gov.bs/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:12:33Z"
+     }
+    },
+    {
+     "date": "2022-03-07",
+     "host": "bahamas.bonfirehub.com",
+     "rank": 2,
+     "snippet": "For more technical details regarding the requirements please see the 'Minimum System Requirements' on our support page\nThe Government of The Bahamas",
+     "title": "The Government of The Bahamas (bonfirehub.com)",
+     "url": "https://bahamas.bonfirehub.com/portal/?tab=openOpportunities",
+     "verificacion": {
+      "error": "robots.txt disallows https://bahamas.bonfirehub.com/portal/?tab=openOpportunities",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:12:33Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bahamasopendata.com",
+     "rank": 3,
+     "snippet": "Bahamas\nOpenData\nDashboard\nHealth\nIncome\nGrand Bahama\nNational Budget\nPolls\nNews\nHot topics\nScorecards\nIntelligence\nExport Data\nBahamas\nOpenData\nHot\nTopics\nHigh-impact reports and studies on public procurement, accountability, and governance.",
+     "title": "Hot Topics - Bahamas Open Data | The Bahamas, in data",
+     "url": "https://www.bahamasopendata.com/hot"
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 4,
+     "snippet": "# Searching for datasets in Bahamas\nYou can browse the local catalogs listed below, but for the fastest and deepest results, use the Dateno search engine.\n...\n|`cdi00005121`|Bahamas National Geographic Information System Centre|Yes|71|Geoportal|Central government|ArcGIS Server|",
+     "title": "Dateno Registry and Dataset Search Engine",
+     "url": "https://dateno.io/registry/country/BS/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:20:39Z",
+ "pais": {
+  "iso2": "BS",
+  "iso3": "BHS",
+  "nombre": "Bahamas"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

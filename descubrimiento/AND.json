@@ -1,0 +1,773 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Andorra constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.consellgeneral.ad",
+     "rank": 1,
+     "snippet": "# Constitution\nPassed by a referendum on 14 March 1993, the Constitution was drawn up by a commission formed of three delegations, one from the General Council, one from the Spanish Co-Prince and one from the French Co-Prince.",
+     "title": "Constitution - consellgeneral.ad",
+     "url": "https://www.consellgeneral.ad/en/the-general-council/xxxx/constitution",
+     "verificacion": {
+      "bytes": 28770,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:14Z",
+      "http": 200,
+      "sha256": "7f9bbc2906772ec375061a4c4aa5173bbe1338824e0ef69918baa46c1f085f99"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 2,
+     "snippet": "**Article 63\n...\nThe Constitution shall come into effect immediately upon its\npublication in the Official Gazette of the Principality of Andorra.\nAnd we the Coprinces, after the adoption of the Constitution by\nthe Council in a solemn session on the second day of February of\n...\ndo order its publicat",
+     "title": "WIPO Lex",
+     "url": "https://www.wipo.int/wipolex/en/text/490200",
+     "verificacion": {
+      "bytes": 100202,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:15Z",
+      "http": 200,
+      "sha256": "de067ec46601a6017f94143f5cdff62425390f4f02c5fc0d37f234dd2bb24e24"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.consellgeneral.ad",
+     "rank": 3,
+     "snippet": "…\nDes d'aquest divendres, 26 de gener, es pot consultar de forma gratuïta la legislació actualitzada i consolidada del Principat d'Andorra al web portaljuridicandorra.ad.\n...\n…",
+     "title": "En marxa el Portal jurídic d'Andorra que permet consultar ...",
+     "url": "https://www.consellgeneral.ad/ca/noticies/en-marxa-el-portal-juridic-dandorra-que-permet-consultar-legislacio-actualitzada-i-consolidada-des-del-1989"
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 4,
+     "snippet": "**Article 3 1.** The present Constitution, which is the highest law in the legal system, binds all the public institutions as well as the individuals.\n...\nLa Constitution entre en vigueur le jour de sa publication au Bulletin Officiel de la Principauté d’Andorre.",
+     "title": "Constitución del Principado de Andorra, Andorra, WIPO Lex",
+     "url": "https://www.wipo.int/wipolex/es/legislation/details/6905"
+    },
+    {
+     "date": "",
+     "host": "www.govern.ad",
+     "rank": 5,
+     "snippet": "El portal web ofereix els textos refosos de lleis i reglaments vigents, així com les redaccions històriques de cada llei i reglament que hagin tingut modificacions.",
+     "title": "El Portal Jurídic incorpora l'accés gratuït a tota la legislació vigent ...",
+     "url": "https://www.govern.ad/ca/w/el-portal-juridic-incorpora-l-acces-gratuit-a-tota-la-legislacio-vigent-anterior-a-l-any-1989-i-una-nova-aplicacio-per-garantir-l-accessibilitat-universal"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Andorra national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2025-04-30",
+     "host": "www.govern.ad",
+     "rank": 1,
+     "snippet": "Decrets - Govern d’Andorra\n- - - Departament d’Estadística El Departament d’Estadística (DE), òrgan responsable de l’estadística oficial, té per missió gestionar el sistema estadístic d’Andorra.\n...\n- ## Decrets\n-\n…",
+     "title": "Decrets - Govern d'Andorra",
+     "url": "https://www.govern.ad/ca/ministeris-i-secretaries-d-estat/ministeri-de-justicia-i-interior/convenis-i-normativa/decrets",
+     "verificacion": {
+      "bytes": 668551,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:17Z",
+      "http": 200,
+      "sha256": "fd113c4ff59898f43e46c150fe1e9cfcc69f77161adf204014b88b3b53629486"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.govern.ad",
+     "rank": 2,
+     "snippet": "# Normativa específica\n### Pla nacional Contra les Drogodependències\n...\n- **Decret 234/2025, pel qual s’aprova el Pla nacional contra les drogodependències (PNCD).**",
+     "title": "Normativa específica - Govern d'Andorra",
+     "url": "https://www.govern.ad/ca/ministeris-i-secretaries-d-estat/ministeri-de-salut/convenis-i-normativa/normativa-especifica",
+     "verificacion": {
+      "bytes": 731118,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:18Z",
+      "http": 200,
+      "sha256": "e617f9147e25bcea10b4c4ce7cdf56c410162ac605f73cfa593f9e6d9502b249"
+     }
+    },
+    {
+     "date": "2025-03-19",
+     "host": "www.afa.ad",
+     "rank": 3,
+     "snippet": "…\n...\n# Regulations\nDecret 366/2026, del 23-9-2026, pel qual s’aprova el Pla comptable de les entitats asseguradores\n...\n30/09/2026 - Insurance and Reinsurance - Regulation - Regulation | Accounting regulations\n…\n...\n…",
+     "title": "Regulations — AFA - Andorran Financial Authority",
+     "url": "https://www.afa.ad/en/normativa/regulations"
+    },
+    {
+     "date": "",
+     "host": "www.govern.ad",
+     "rank": 4,
+     "snippet": "Legislació general - Govern d’Andorra\n...\n5. Legislació general\n...\n- ## General\n...\n- **Decret del 24-10-2012 pel qual es publica la modificació del Reglament de permisos administratius** BOPA 55 - 07/11/2012\n...\n…",
+     "title": "Legislació general - Govern d'Andorra",
+     "url": "https://www.govern.ad/ca/ministeris-i-secretaries-d-estat/ministeri-de-relacions-institucionals-educacio-i-universitats/convenis-i-normativa/legislacio-general"
+    },
+    {
+     "date": "",
+     "host": "www.govern.ad",
+     "rank": 5,
+     "snippet": "- Convenis i normativa Plataforma digital sobre convenis i normativa del Ministeri de Funció Pública i Transformació Digital del Govern d'Andorra.\nAccedeix al portal oficial i informa't.\n...\n# Normativa\n### Parc públic d'habitatge",
+     "title": "Normativa - Govern d'Andorra",
+     "url": "https://www.govern.ad/ca/tematiques/habitatge/normativa"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Andorra official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.consellgeneral.ad",
+     "rank": 1,
+     "snippet": "Núm.\n67 - Any 26 - 26.11.2014\nButlletí Oficial del Principat d’Andorra\nLlei 25/2014, \ndel 30 d’octubre, del \n...\nPrincipat d’Andorra\n...\n…",
+     "title": "Llei 25/2014, del 30 d'octubre, del Butlletí Oficial ...",
+     "url": "https://www.consellgeneral.ad/fitxers/documents/lleis-2014/llei-25-2014",
+     "verificacion": {
+      "bytes": 84915,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:19Z",
+      "http": 200,
+      "sha256": "6d1243523c2b8628026d2629673c68e41d22f75c7da1366b8fb8cb5b1808475b"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bopa.ad",
+     "rank": 2,
+     "snippet": "BOPA\nButlletí Oficial del Principat d'Andorra\nBOPA per data\n«‹octubre del 2026›»",
+     "title": "BOPA",
+     "url": "https://www.bopa.ad/",
+     "verificacion": {
+      "bytes": 995,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:21Z",
+      "http": 200,
+      "sha256": "dee059a4a976f134263a52cec534978b95639939b7eea3c4c0c726711d88c98d"
+     }
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 3,
+     "snippet": "Website of the Andorran Official Gazette, the primary source of law in Andorra.\nCopies of the Gazette are available back to 1990 and can be searched by official body, topic, date and keyword.\nThe issues can be viewed in full in a range of formats including Word and PDF.",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/eagle-i-country-origin/ad"
+    },
+    {
+     "date": "2019-12-23",
+     "host": "oecd.org",
+     "rank": 4,
+     "snippet": "## Andorra\nCopy link to Andorra\n...\nRulings issued in the form of written inquiries (binding consultations) are published online in anonymised form.\nRulings issued in the form of special agreements are published in the Andorran official gazette.1",
+     "title": "Andorra: Harmful Tax Practices – 2018 Peer Review Reports on the Exchange of Information on Tax Rulings",
+     "url": "https://oecd.org/en/publications/harmful-tax-practices-2018-peer-review-reports-on-the-exchange-of-information-on-tax-rulings_7cc5b1a2-en/full-report/andorra_a9e046d7.html"
+    },
+    {
+     "date": "2026-02-12",
+     "host": "ad.vlex.com",
+     "rank": 5,
+     "snippet": "February 12, 2026 - Butlletí Oficial del Principat d’Andorra - Legislation\n- Inicio\n- Legislation\n- Butlletí Oficial Del Principat D’Andorra\n# February 12, 2026\n** Contenido completo sólo para clientes",
+     "title": "February 12, 2026 - Butlletí Oficial del Principat d’Andorra ...",
+     "url": "https://ad.vlex.com/source/butlleti-oficial-principat-andorra-5714/issue/2026/02/12"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Andorra supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "jurisprudencia.ad",
+     "rank": 1,
+     "snippet": "Troba en segons el que abans trigaves hores.\n...\nJurisprudència.ad connecta 15.000+ sentències dels tribunals andorrans amb 100+ lleis i la Constitució per les relacions entre normes que citen, amb cerca intel·ligent.",
+     "title": "Jurisprudència.ad - La jurisprudència d'Andorra, resolta.",
+     "url": "https://jurisprudencia.ad/",
+     "verificacion": {
+      "bytes": 106185,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:22Z",
+      "http": 200,
+      "sha256": "8fb8bd5834977568f444fd7d30d9477cbd46bf52651864ec817b3f813ed78c13"
+     }
+    },
+    {
+     "date": "",
+     "host": "jurisprudencia.ad",
+     "rank": 2,
+     "snippet": "El cercador de jurisprudència de Jurisprudència.ad et permet trobar resolucions judicials andorranes de manera ràpida i precisa.\n...\nLa cobertura inclou sentències, autes i decrets de totes les branques del dret: civil, penal, administratiu, laboral i constitucional.",
+     "title": "Cercador de jurisprudència: troba el precedent exacte",
+     "url": "https://jurisprudencia.ad/recursos/guies/cercador-jurisprudencia",
+     "verificacion": {
+      "bytes": 100095,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:24Z",
+      "http": 200,
+      "sha256": "c0fab040374f2f101723a87b2ccba1c83ee4b49f9d5f6e14f207e0a57480d0b9"
+     }
+    },
+    {
+     "date": "",
+     "host": "jurisprudencia.ad",
+     "rank": 3,
+     "snippet": "Plataforma jurídica per al dret d'Andorra | Jurisprudència.ad\n...\nConsulta, els espais de treball privats, la cerca de sentències, el BOPA classificat, la normativa dels comuns, la cerca legal, l'anonimitzador i el digitalitzador de documents.",
+     "title": "Història Processal i Connexions Jurídiques d'Andorra",
+     "url": "https://jurisprudencia.ad/plataforma"
+    },
+    {
+     "date": "2026-02-23",
+     "host": "www.justicia.ad",
+     "rank": 4,
+     "snippet": "#### Recerca d'informació\nTrobeu tota la informació rellevant amb l’eina de cerca o l’apartat de jurisprudència.\n...\n## Tribunal Superior de Justícia\nEl Tribunal Superior constitueix la més alta instància de l’organització judicial del Principat.",
+     "title": "Justícia Andorra",
+     "url": "https://www.justicia.ad/"
+    },
+    {
+     "date": "",
+     "host": "jurisprudencia.ad",
+     "rank": 5,
+     "snippet": "Hi caben els documents del cas sencers, i al davant hi tens la legislació consolidada, els reglaments, les ordinacions dels comuns, el butlletí oficial i la jurisprudència andorrana.",
+     "title": "Espais privats per a assumptes jurídics",
+     "url": "https://jurisprudencia.ad/plataforma/espais"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Andorra state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.consellgeneral.ad",
+     "rank": 1,
+     "snippet": "consellgeneralandorra —\n- **Info**\n...\nCarrer de la Vall 9-13, AD500 Andorra la Vella · Principat d'Andorra\nTel.: +376 877 877 · Fax: +376 869 863 · consell.general@parlament.ad",
+     "title": "consellgeneralandorra —",
+     "url": "https://www.consellgeneral.ad/@@search?sort_on=relevance&b_start:int=14250&SearchableText=",
+     "verificacion": {
+      "bytes": 70315,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:24Z",
+      "http": 200,
+      "sha256": "0c6cb688a610409b80fba9bd91ac3517c913fc3a02fea44bc811dbb176b250f8"
+     }
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.consellgeneral.ad",
+     "rank": 2,
+     "snippet": "# Consell General d'Andorra\n...\n## Agenda\nCarrer de la Vall 9-13, AD500 Andorra la Vella · Principat d'Andorra\nTel.: +376 877 877 · Fax: +376 869 863 · consell.general@parlament.ad",
+     "title": "Consell General d'Andorra",
+     "url": "https://www.consellgeneral.ad/",
+     "verificacion": {
+      "bytes": 40525,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:25Z",
+      "http": 200,
+      "sha256": "350d6a6a509ae01921168c61b9d611e88b5d12aff649af0d687aa534e9a0daf6"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.consellgeneral.ad",
+     "rank": 3,
+     "snippet": "# Lleis 2022\n-\n...\n…\n- **Llei 44/2022, del 12 de desembre, de text consolidat qualificada del règim electoral i del referèndum.pdf**",
+     "title": "Lleis 2022 —",
+     "url": "https://www.consellgeneral.ad/fitxers/documents/lleis-2022"
+    },
+    {
+     "date": "",
+     "host": "www.govern.ad",
+     "rank": 4,
+     "snippet": "Normativa - Govern d’Andorra\n...\n- Convenis i normativa Plataforma digital sobre convenis i normativa del Ministeri de Funció Pública i Transformació Digital del Govern d'Andorra.\nAccedeix al portal oficial i informa't.\n...\n# Normativa\nNormativa relacionada amb l'habitatge",
+     "title": "Normativa - Govern d'Andorra",
+     "url": "https://www.govern.ad/ca/tematiques/habitatge/normativa"
+    },
+    {
+     "date": "2013-11-07",
+     "host": "www.govern.ad",
+     "rank": 5,
+     "snippet": "1297/13 - Govern d’Andorra\n...\n- Convenis i normativa Plataforma digital sobre convenis i normativa del Ministeri de Funció Pública i Transformació Digital del Govern d'Andorra.\nAccedeix al portal oficial i informa't.",
+     "title": "1297/13 - Govern d'Andorra",
+     "url": "https://www.govern.ad/ca/l/4578140"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Andorra municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "jurisprudencia.ad",
+     "rank": 1,
+     "snippet": "Ordinacions, reglaments, POUP i edictes dels set comuns publicats al BOPA, indexats i filtrables per parròquia, matèria i tipus de norma, amb el text complet i els annexos a un clic.",
+     "title": "Normativa dels comuns d'Andorra - Jurisprudència.ad",
+     "url": "https://jurisprudencia.ad/plataforma/comuns",
+     "verificacion": {
+      "bytes": 94286,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:26Z",
+      "http": 200,
+      "sha256": "605b36fa9982d3c581118e588941005be53d4adaa96c5880eed890161e7ead2e"
+     }
+    },
+    {
+     "date": "",
+     "host": "jurisprudencia.ad",
+     "rank": 2,
+     "snippet": "…\nJurisprudència.ad reuneix la normativa dels 7 Comuns en un únic punt d'accés, permetent-te cercar, filtrar i consultar totes les ordinacions, reglaments i edictes publicats.\n...\n…\n### Filtrar per Comú",
+     "title": "Normativa comunal: ordinacions dels 7 Comuns d'Andorra",
+     "url": "https://jurisprudencia.ad/recursos/guies/normativa-comunal",
+     "verificacion": {
+      "bytes": 96939,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:27Z",
+      "http": 200,
+      "sha256": "98e3db5dfbf46a921a5fd516c09e3b5cf25410877d00982fa156afca978eab55"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.andorralavella.ad",
+     "rank": 3,
+     "snippet": "Volum 4.\nOrdinacions reguladores \nVol. 4a.\nOrdinacions reguladores \nSetembre 2026\nPLA D’ORDENACIÓ I URBANISME PARROQUIAL D’ANDORRA LA VELLA",
+     "title": "Pla d’Ordenació i Urbanisme Parroquial d’Andorra la Vella",
+     "url": "https://www.andorralavella.ad/comu/sites/default/files/poupav_vol_4a_ordinacions_reguladores.pdf"
+    },
+    {
+     "date": "2017-12-20",
+     "host": "www.andorralavella.ad",
+     "rank": 4,
+     "snippet": "andorralavella.ad | Andorra la Vella\n# andorralavella.ad\n- ## COMÚ\nConeix la institució i efectua els tràmits de manera ràpida i senzilla Tràmits Pagaments Transparència Ofertes de feina\n- ## ESPORTS",
+     "title": "andorralavella.ad | Andorra la Vella",
+     "url": "https://www.andorralavella.ad/"
+    },
+    {
+     "date": "2016-06-15",
+     "host": "www.andorralavella.ad",
+     "rank": 5,
+     "snippet": "Tràmits | Comú\nwww.andorralavella.ad",
+     "title": "Tràmits | Comú",
+     "url": "https://www.andorralavella.ad/comu/tramits"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Andorra regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2025-03-19",
+     "host": "www.afa.ad",
+     "rank": 1,
+     "snippet": "Regulations — AFA - Andorran Financial Authority\n...\nDecret 366/2026, del 23-9-2026, pel qual s’aprova el Pla comptable de les entitats asseguradores\nDecret 366/2026, del 23-9-2026",
+     "title": "Regulations — AFA - Andorran Financial Authority",
+     "url": "https://www.afa.ad/en/normativa/regulations",
+     "verificacion": {
+      "bytes": 411667,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:30Z",
+      "http": 200,
+      "sha256": "5468e578bfca6b0b2dc3705e460946c182c58b8f74df9c2c29415df03a29f533"
+     }
+    },
+    {
+     "date": "2025-03-19",
+     "host": "www.afa.ad",
+     "rank": 2,
+     "snippet": "✉ recepcio@afa.ad / ☎(+376) 808 898\n...\n2. Normativa\n3. Reglaments\nReglaments https://www.afa.ad/ca/normativa/reglaments https://www.afa.ad/@@site-logo/logo_temp(1).png",
+     "title": "Reglaments — AFA - Autoritat Financera Andorrana",
+     "url": "https://www.afa.ad/ca/normativa/reglaments",
+     "verificacion": {
+      "bytes": 420515,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:32Z",
+      "http": 200,
+      "sha256": "d8fb4aa680e4e26f7fedebf3171af95e1b0de37169b1f2c4d42f636b6319fe6f"
+     }
+    },
+    {
+     "date": "2025-03-19",
+     "host": "www.afa.ad",
+     "rank": 3,
+     "snippet": "# Nueva normativa\nDecret 366/2026, del 23-9-2026, pel qual s’aprova el Pla comptable de les entitats asseguradores\n...\n30/09/2026 - Seguros y Reaseguros - Reglamento - Norma | Normativa contable",
+     "title": "Nueva normativa — AFA - Autoridad Financiera Andorrana",
+     "url": "https://www.afa.ad/es/categories-home/nova-normativa"
+    },
+    {
+     "date": "2025-03-19",
+     "host": "www.afa.ad",
+     "rank": 4,
+     "snippet": "Laws — AFA - Andorran Financial Authority\n...\n- National Risk Assessment (NRA) of AML/CFT (2020)\n...\nLaws https://www.afa.ad/en/normativa/laws https://www.afa.ad/@@site-logo/logo_temp(1).png\n# Laws",
+     "title": "Laws — AFA - Andorran Financial Authority",
+     "url": "https://www.afa.ad/en/normativa/laws"
+    },
+    {
+     "date": "2025-03-19",
+     "host": "www.afa.ad",
+     "rank": 5,
+     "snippet": "Reglamentos — AFA - Autoridad Financiera Andorrana\n...\n# Reglamentos\n...\n…\n...\n…\n...\n- 30 elementos siguientes",
+     "title": "Reglamentos — AFA - Autoridad Financiera Andorrana",
+     "url": "https://www.afa.ad/es/entitats-supervisades/entitats-financeres/entitats-bancaries/normativa/reglaments"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Andorra national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "app.croneri.co.uk",
+     "rank": 1,
+     "snippet": "403 Forbidden",
+     "title": "Andorra",
+     "url": "https://app.croneri.co.uk/countries/andorra",
+     "verificacion": {
+      "bytes": 1232,
+      "estado": "http",
+      "fecha": "2026-11-02T06:38:42Z",
+      "http": 403,
+      "sha256": "95d1d42253ee8762de3675e44248e3e33f86355a8f9b2ee83098210d2df5efca"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.consilium.europa.eu",
+     "rank": 2,
+     "snippet": "TECHNICAL REGULATIONS, STANDARDS, TESTING",
+     "title": "9663/24 ADD 4",
+     "url": "https://data.consilium.europa.eu/doc/document/ST-9663-2024-ADD-4/EN/pdf",
+     "verificacion": {
+      "bytes": 1469626,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:44Z",
+      "http": 200,
+      "sha256": "ce81431fa6e6043d8d97067b37c25355da0630b5fb0a1f8c0a8dc03d960f304b"
+     }
+    },
+    {
+     "date": "2024-01-30",
+     "host": "www.iso.org",
+     "rank": 3,
+     "snippet": "ISO - Search\n# Search\nAdvanced search for Standards\n### Looking for the finer details?\nCustomize your search by combining multiple criteria\n...\n#### Full text search\nSearch in the full text of standards using the Online Browsing platform\n#### Standards catalogue\nDiscover our catalogue of 25931 stand",
+     "title": "ISO - Search",
+     "url": "https://www.iso.org/search.html"
+    },
+    {
+     "date": "",
+     "host": "genorma.com",
+     "rank": 4,
+     "snippet": "# Standards search\nUse the form below to find particular standards or projects.\nEnter your criteria for searching (single or in combination) in the fields below and press the button “Search”.\nYou can also search using the Advance Search facility.",
+     "title": "Standards search",
+     "url": "https://genorma.com/en/project/list/23?status[0]"
+    },
+    {
+     "date": "",
+     "host": "www.govern.ad",
+     "rank": 5,
+     "snippet": "Normes internacionals d’auditoria i normes internacionals sobre control de qualitat emeses pel Consell de Normes Internacionals d’Auditoria i Assegurament: International Auditing and Assurance Standards Board (IAASB) (en llengua anglesa):",
+     "title": "Normativa internacional aplicable - Govern d'Andorra",
+     "url": "https://www.govern.ad/ca/ministeris-i-secretaries-d-estat/ministeri-de-finances/auditoria-de-comptes/normativa-internacional-aplicable"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Andorra mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "data.consilium.europa.eu",
+     "rank": 1,
+     "snippet": "ANEXO II – PROTOCOLO DE ANDORRA \nREGLAMENTACIONES TÉCNICAS, NORMAS, ENSAYOS  \nY CERTIFICACIÓN \nLista en virtud del artículo 13, apartado 1, letra b), del Acuerdo Marco\n…",
+     "title": "[PDF] 11787/24 ADD 5 RELEX 4 - Data",
+     "url": "https://data.consilium.europa.eu/doc/document/ST-11787-2024-ADD-5/es/pdf",
+     "verificacion": {
+      "bytes": 1634733,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:46Z",
+      "http": 200,
+      "sha256": "8000ec3c9cfd452be12cef546185388ba7bfbd41467d4cb2ea6c3f21ce8c31e0"
+     }
+    },
+    {
+     "date": "",
+     "host": "ec.europa.eu",
+     "rank": 2,
+     "snippet": "& /en 2 \nANNEX II – ANDORRA PROTOCOL \nTECHNICAL REGULATIONS, STANDARDS, TESTING  \nAND CERTIFICATION \nList provided for in Article 13(1), point (d), of the Framework Agreement  \n...\n1 \n...\n4",
+     "title": "EUROPEAN COMMISSION Brussels, 26.4.2024 COM(2024) 189 ...",
+     "url": "https://ec.europa.eu/transparency/documents-register/api/files/COM(2024)189_4/090166e50bcdee2d",
+     "verificacion": {
+      "bytes": 1095420,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:49Z",
+      "http": 200,
+      "sha256": "7dd7aa80c938058386d8bea804292b23c9f8c6bc7c868e71657124af4a109fdd"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.consilium.europa.eu",
+     "rank": 3,
+     "snippet": "32021 R 0535: Regulamento de Execução (UE) 2021/535 da Comissão, de 31 de março de \n2021, que estabelece as normas de execução do Regulamento (UE) 2019/2144 do Parlamento",
+     "title": "[PDF] 11787/24 ADD5 RELEX.4 - Data",
+     "url": "https://data.consilium.europa.eu/doc/document/ST-11787-2024-ADD-5/pt/pdf"
+    },
+    {
+     "date": "2026-10-24",
+     "host": "globalautoregs.com",
+     "rank": 4,
+     "snippet": "### Vehicle System Pages\n|UN R10 Electromagnetic Compatibility (from 10 Jun 2023)| | | |Uniform provisions concerning the approval of vehicles with regard to electromagnetic compatibility Electromagnetic Compatibility Electromagnetic Compatibility UN Regulation No. 10 UN R10|",
+     "title": "Upcoming Meetings",
+     "url": "https://globalautoregs.com/participants/592-andorra?show=rules"
+    },
+    {
+     "date": "",
+     "host": "data.consilium.europa.eu",
+     "rank": 5,
+     "snippet": "Die Verordnung (EG) Nr. 648/2004 gilt für die Zwecke dieses Abkommens mit folgender \nAnpassung: \n...\nDie Verordnung (EG) Nr. 1272/2008 gilt für die Zwecke dieses Abkommens mit folgenden \nAnpassungen:",
+     "title": "[PDF] 11787/24 ADD 5 RELEX.4 - Data",
+     "url": "https://data.consilium.europa.eu/doc/document/ST-11787-2024-ADD-5/de/pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Andorra national statistics office official website",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2025-01-01",
+     "host": "data.un.org",
+     "rank": 1,
+     "snippet": "Andorra - Departament d'Estadística\nNational Statistical Office of Andorra\nhttp://www.estadistica.ad/",
+     "title": "country profile | Andorra - UNdata",
+     "url": "https://data.un.org/CountryProfile.aspx/_Docs/CountryProfile.aspx?crName=Andorra",
+     "verificacion": {
+      "bytes": 3769,
+      "estado": "http",
+      "fecha": "2026-11-02T06:38:49Z",
+      "http": 404,
+      "sha256": "8ef3da215ff1000f05581814f1e5ef349a5f18b070b18bec5eb0507e967b1d8a"
+     }
+    },
+    {
+     "date": "",
+     "host": "w3.unece.org",
+     "rank": 2,
+     "snippet": "National currency Euro (EUR)\nNational statistical office www.estadistica.ad\nDepartament d'Estudis i d'Estadistica (DEE)",
+     "title": "ANDORRA - Statistical Database - United Nations Economic ...",
+     "url": "https://w3.unece.org/CountriesInFigures/en/Home/Index?countryCode=020",
+     "verificacion": {
+      "bytes": 28189,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:51Z",
+      "http": 200,
+      "sha256": "92445d651bf57a83cb9ee6275d7a508e7d7ac7685237d377fb656c295351e87a"
+     }
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 3,
+     "snippet": "Main statistical agency name\nDepartament d’Estadística (Statistics Department)\nWeb address\nwww.estadistica.ad/\n...\nPaper and electronic versions available.\nAll statistical information is available through the website under the Data Bank section.",
+     "title": "UNSD Document",
+     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=558"
+    },
+    {
+     "date": "",
+     "host": "www.govern.ad",
+     "rank": 4,
+     "snippet": "- - - Departament d’Estadística El Departament d’Estadística (DE), òrgan responsable de l’estadística oficial, té per missió gestionar el sistema estadístic d’Andorra.\n...\n# Estudis, estadístiques i enquestes",
+     "title": "Estudis, estadístiques i enquestes - Govern d'Andorra",
+     "url": "https://www.govern.ad/ca/ministeris-i-secretaries-d-estat/ministeri-d-afers-socials/estudis-estadistiques-i-enquestes"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Andorra central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2025-10-02",
+     "host": "www.afa.ad",
+     "rank": 1,
+     "snippet": "AFA - Autoritat Financera Andorrana\n...\nRegistres oficials de l’AFA que pots consultar a la nostra web",
+     "title": "AFA - Autoritat Financera Andorrana",
+     "url": "https://www.afa.ad/",
+     "verificacion": {
+      "bytes": 424861,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:52Z",
+      "http": 200,
+      "sha256": "cc798b36ab7dc7eeffa4cb1af5d542a8785369ccf9a07ab87c93a431b03cb738"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.govern.ad",
+     "rank": 2,
+     "snippet": "…\nLa pàgina web del Departament d’Estadística del Govern, www.estadistica.ad, ha incorporat millores i noves funcionalitats amb l’objectiu de facilitar la navegabilitat i millorar l’experiència dels usuaris.",
+     "title": "La web d'Estadística incorpora noves funcionalitats i ...",
+     "url": "https://www.govern.ad/ca/w/la-web-d-estadistica-incorpora-noves-funcionalitats-i-millores-per-facilitar-l-experiencia-i-la-interaccio-dels-usuaris-1",
+     "verificacion": {
+      "bytes": 661076,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:53Z",
+      "http": 200,
+      "sha256": "e55bc887a79a635c73fff4ca8f08baa9cd1d55711c0fbac3e66edda8407ab91f"
+     }
+    },
+    {
+     "date": "2026-03-29",
+     "host": "www.ccis.ad",
+     "rank": 3,
+     "snippet": "El Departament d’Estadística del Govern, la Cambra i Andorra Business elaboren de forma conjunta l’Andorra en xifres.\n...\n…\n...\nAplega les principals magnituds i dades generals del país, incloent-hi comparacions amb altres estats europeus.\n…",
+     "title": "Andorra en xifres",
+     "url": "https://www.ccis.ad/andorra-en-xifres/"
+    },
+    {
+     "date": "2024-12-19",
+     "host": "www.ebf.eu",
+     "rank": 4,
+     "snippet": "A, 2n pis\nAD500 Andorra la Vella Principat d’Andorra\nTel: +376 807 110\n#### Andorra’s banking sector: Facts & Figures\nUpdated December 2024 – For earlier editions of Facts & Figures click here",
+     "title": "ANDORRA",
+     "url": "https://www.ebf.eu/andorra/"
+    },
+    {
+     "date": "",
+     "host": "tradingeconomics.com",
+     "rank": 5,
+     "snippet": "Andorra Indicators\nOverview\nGDP\nGovernment\nLast\nPrevious\nHighest\nLowest\nGDP\n4.04\n3.79\n4.1\n0.08",
+     "title": "Andorra Indicators - Trading Economics",
+     "url": "https://tradingeconomics.com/andorra/indicators"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Andorra government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.govern.ad",
+     "rank": 1,
+     "snippet": "Portal oficial del Govern d'Andorra - Govern d’Andorra\n…\n...\nAccedeix al portal oficial i informa't.\n...\n…\n## Portal de transparència\n...\nInformació sobre la gestió pública amb rigor, veracitat i objectivitat.",
+     "title": "Govern d'Andorra: Portal oficial del Govern d'Andorra",
+     "url": "https://www.govern.ad/",
+     "verificacion": {
+      "bytes": 906444,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:57Z",
+      "http": 200,
+      "sha256": "4e0d9043f2f1a0d3b57112166cbaf0736bb185009809a3d6a6ddece98f2cb66f"
+     }
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 2,
+     "snippet": "This page presents the registry of data catalogs and data portals monitored by Dateno.\n...\n|`cdi00002474`|Infraestructura de dades espacials d’Andorra IDE Andorra metadata catalog|Yes|918|Geoportal|Central government|Andorra|GeoServer|",
+     "title": "Registry of Data Catalogs and Portals - Dateno",
+     "url": "https://dateno.io/registry/browse/?skip=800",
+     "verificacion": {
+      "bytes": 92665,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:38:59Z",
+      "http": 200,
+      "sha256": "a2ef01af2326ebeace6aacf054e2e183e458ea7da414fe707295d9540748ab2a"
+     }
+    },
+    {
+     "date": "2022-05-06",
+     "host": "www.imf.org",
+     "rank": 3,
+     "snippet": "…\nThe NSDP is hosted by the Statistics Department of the Government of Andorra, utilizing the Statistical Data and Metadata Exchange.\n...\nThe NSDP contains links to statistics published by the Statistics Department of the Government of Andorra and the Andorran Financial Authority.",
+     "title": "Principality of Andorra Implements the ...",
+     "url": "https://www.imf.org/en/news/articles/2022/05/06/pr22140-andorra-implements-international-monetary-fund-enhanced-general-data-dissemination-system"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.exteriores.gob.es",
+     "rank": 4,
+     "snippet": "# Enlaces de interés\n**GUBERNAMENTALES ANDORRA**\nGOVERN D'ANDORRA: https://www.govern.ad/\n...\n**TRÀMITS I SERVEIS EN LÍNIA (portal ciudadano):** https://www.tramits.ad",
+     "title": "Enlaces de interés",
+     "url": "https://www.exteriores.gob.es/Embajadas/andorra/es/ViajarA/Paginas/Enlaces-de-inter%C3%A9s.aspx"
+    },
+    {
+     "date": "2026-10-18",
+     "host": "www.technicalgis.com",
+     "rank": 5,
+     "snippet": "- ### IDE Andorra geoportal (opens in a new tab)\nWeb viewer Cost: Free\nGovern d'Andorra · Andorra\nSpatial data infrastructure geoportal with topographic maps and orthophotos.\n- Open data portal\n- **Licence**\nSee publisher terms\n...\nWMS",
+     "title": "Andorra GIS data: 5 sources (boundaries, DEM, imagery)",
+     "url": "https://www.technicalgis.com/data-sources/andorra/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:17:25Z",
+ "pais": {
+  "iso2": "AD",
+  "iso3": "AND",
+  "nombre": "Andorra"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

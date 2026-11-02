@@ -1,0 +1,755 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Bosnia and Herzegovina constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2026-09-16",
+     "host": "www.mpr.gov.ba",
+     "rank": 1,
+     "snippet": "Laws/Contracts\n|\nLaws and other regulations\n|\nConstitution of Bosnia and Herzegovina\n# Ustav BiH\n# Documents\nUSTAV_BOSNE_I_HERCEGOVINE",
+     "title": "Ustav BiH",
+     "url": "https://www.mpr.gov.ba/en/ustav-bih",
+     "verificacion": {
+      "bytes": 171845,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:35Z",
+      "http": 200,
+      "sha256": "26d0b304a4e00c12b07b9e1c22a8465ea0b789ce978ae33985c40c931af4f0a7"
+     }
+    },
+    {
+     "date": "2020-01-08",
+     "host": "n-lex.europa.eu",
+     "rank": 2,
+     "snippet": "**Organisation responsible for the website/database:** Council of Ministers of Bosnia and Herzegovina\n**URL:** http://www.regprev.dei.gov.ba/index.php?jezik=angl\n...\nRegister contains texts of legislation adopted at different levels of authority in Bosnia and Herzegovina and their translation into E",
+     "title": "N-Lex",
+     "url": "https://n-lex.europa.eu/n-lex/related_links/related_links;jsessionid=6376399280CC67FA14FD0B5D8799CB85",
+     "verificacion": {
+      "bytes": 117478,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:37Z",
+      "http": 200,
+      "sha256": "f6a5dbcf4ce0b7901305214389b58215f616ad0872d36f222b56e5079b85c780"
+     }
+    },
+    {
+     "date": "2011-07-06",
+     "host": "www.ohr.int",
+     "rank": 3,
+     "snippet": "# Constitutions\n...\n|--|--|--|\n...\n|**Constitution of Bosnia and Herzegovina**|not published|not published|\n|Amendment I to the Constitution of Bosnia and Herzegovina|BH, 25/09|31/03/2009|",
+     "title": "Constitutions",
+     "url": "https://www.ohr.int/laws-of-bih/constitutions-2/"
+    },
+    {
+     "date": "2026-10-31",
+     "host": "mpr.gov.ba",
+     "rank": 4,
+     "snippet": "# Library of laws and other legal regulations\n**This page provides an overview of all legal regulations of the Ministry of Justice of Bosnia and Herzegovina, as well as other important regulations of Bosnia and Herzegovina.**\n...\nThe official versions of the regulations are contained in the Official",
+     "title": "Library of laws and other legal regulations | Ministarstvo ...",
+     "url": "https://mpr.gov.ba/en/library-of-laws-and-other-legal-regulations"
+    },
+    {
+     "date": "",
+     "host": "www.ohr.int",
+     "rank": 5,
+     "snippet": "For the local language versions of documents provided herein,\nplease  refer  to  the  “Official  Gazette  of  Bosnia  and\nHerzegovina”,  “Official  Gazette  of  the  Republika  Srpska”,\n...\nHerzegovina”.\n...\nConstitutions\n...\n2.",
+     "title": "Laws of Bosnia and Herzegovina - ohr.int",
+     "url": "https://www.ohr.int/laws-of-bih/?print=pdf"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Bosnia and Herzegovina national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-10-28",
+     "host": "fbihvlada.gov.ba",
+     "rank": 1,
+     "snippet": "Hronološki registar zakona objavljenih u “Službenim novinama FBiH” u 2026. godini\nHronološki registar zakona objavljenih u \"Službenim novinama FBiH\", u 2025. godini\n...\n…",
+     "title": "Zakoni - Vlada Federacije Bosne i Hercegovine",
+     "url": "https://fbihvlada.gov.ba/bs/zakoni",
+     "verificacion": {
+      "bytes": 43956,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:43Z",
+      "http": 200,
+      "sha256": "559e59230975692389eeee1f157dd134dfa9ec283308f3d12ea582d2e2b20d00"
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "host": "fmeri.gov.ba",
+     "rank": 2,
+     "snippet": "# Zakonodavstvo\n##### Ministarstvo\n...\n- Zakon o energijskoj efikasnosti u Federaciji Bosne i Hercegovine\n...\n##### Pravilnici\n##### Ministarstvo\n- Pravilnik o zaštiti ličnih podataka u Federalnom ministarstvu energije, rudarstva i industrije",
+     "title": "Zakonodavstvo - FMERI.gov.ba",
+     "url": "https://fmeri.gov.ba/zakonodavstvo/",
+     "verificacion": {
+      "bytes": 81169,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:45Z",
+      "http": 200,
+      "sha256": "d246a27819f47893cd16898f13a1fc191e87babf777e83025ab91bf3ad67e0d0"
+     }
+    },
+    {
+     "date": "2026-10-19",
+     "host": "ipr.gov.ba",
+     "rank": 3,
+     "snippet": "# Pravna regulativa\n|Zakon o zaštiti topografija poluprovodničkih proizvoda (početak primjene zakona 20.6.2027. godine)|8|2026-09-21 13:59:00|** Preuzimanje|",
+     "title": "Pravna regulativa",
+     "url": "https://ipr.gov.ba/bs/pravna-regulativa"
+    },
+    {
+     "date": "2026-10-31",
+     "host": "mpr.gov.ba",
+     "rank": 4,
+     "snippet": "**This page provides an overview of all legal regulations of the Ministry of Justice of Bosnia and Herzegovina, as well as other important regulations of Bosnia and Herzegovina.**\n...\nThe official versions of the regulations are contained in the Official Gazette of BiH.\n...\n# Documents\n## Ustav Bosn",
+     "title": "Library of laws and other legal regulations | Ministarstvo ...",
+     "url": "https://mpr.gov.ba/en/library-of-laws-and-other-legal-regulations"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "fbihvlada.gov.ba",
+     "rank": 5,
+     "snippet": "Vlada Federacije Bosne i Hercegovine | Regulations\n#### BOSNIA AND HERZEGOVINA\n### Federation of Bosnia and Herzegovina\n## Government of Federation of Bosnia and Herzegovina\n# Regulations\n### 2026. godina",
+     "title": "Regulations - Vlada Federacije Bosne i Hercegovine",
+     "url": "https://fbihvlada.gov.ba/en/uredbe"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Bosnia and Herzegovina official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-10-19",
+     "host": "ipr.gov.ba",
+     "rank": 1,
+     "snippet": "1. **\n...\n3. Official Gazette\n# Official Gazette\n|Document| | | |\n...\n|Publication of requests for the extension of European patent applications 3/2026 – Q3|28|2026-10-19 13:09:00|** Download|\n...\nPublicationsOfficial Gazette",
+     "title": "Official Gazette",
+     "url": "https://ipr.gov.ba/en/forms-and-publications/official-gazette",
+     "verificacion": {
+      "bytes": 47792,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:47Z",
+      "http": 200,
+      "sha256": "1c4619b3a2f12743a56ec936d5f9437ceb7f04b571569ffbee15af99c14f3526"
+     }
+    },
+    {
+     "date": "",
+     "host": "tuzilastvobih.gov.ba",
+     "rank": 2,
+     "snippet": "Bosnia and Herzegovina, 28/00, 45/06 and 102/09), in Article 1, Paragraph (b), the words\n...\nThis Act shall enter into force on the eighth day following the date of publication in the \nOfficial Gazette of Bosnia and Herzegovina.",
+     "title": "\"Official Gazette of Bosnia and Herzegovina\", 62/11",
+     "url": "https://tuzilastvobih.gov.ba/files/docs/Zakon_o_slobodi_pristupa_informacijama_izmjene_62_11_eng.pdf",
+     "verificacion": {
+      "bytes": 51222,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:49Z",
+      "http": 200,
+      "sha256": "e99a05729ed0dc236c2479618b296415e9ad220bab26d564a9e868d15ecf603a"
+     }
+    },
+    {
+     "date": "2025-07-17",
+     "host": "www.ohr.int",
+     "rank": 3,
+     "snippet": "…\n...\nn. 19/25\n…\n...\nThis Law shall enter into force on the eighth day after its publication on the official website of the Office of the High Representative or the day following its publication in the “Official Gazette of Bosnia and Herzegovina”, whichever comes first.",
+     "title": "Decision Enacting the Law on Amendments to ...",
+     "url": "https://www.ohr.int/decision-enacting-the-law-on-amendments-to-the-law-on-financing-of-the-institutions-of-bosnia-and-herzegovina-official-gazette-of-bosnia-and-herzegovina-nos-61-04-49-09-42-12-87/"
+    },
+    {
+     "date": "2023-09-05",
+     "host": "vsud-fbih.pravosudje.ba",
+     "rank": 4,
+     "snippet": "# Law on Freedom of Access to Information at the level of institutions of Bosnia and Herzegovina\n...\nLaw on Freedom of Access to Information at the level of\ninstitutions of Bosnia and Herzegovina (\"Official Gazette of Bosnia and\nHerzegovina\", number 61/2023).\n...\nArticle available on:",
+     "title": "Law on Freedom of Access to Information at the level of institutions ...",
+     "url": "https://vsud-fbih.pravosudje.ba/vstvfo/E/10/article/120827"
+    },
+    {
+     "date": "2026-01-08",
+     "host": "derk.ba",
+     "rank": 5,
+     "snippet": "Home Legislation BIH Laws\nLAWS OF BOSNIA AND HERZEGOVINA\nLaw on Transmission of Electric Power, Regulator and System Operator of Bosnia and Herzegovina (\"Official Gazette BIH\", number 7/02)",
+     "title": "BIH Laws",
+     "url": "https://derk.ba/en/legislation/lawsinbih"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Bosnia and Herzegovina supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.ustavnisud.ba",
+     "rank": 1,
+     "snippet": "**BROJ PREDMETA** je najpouzdaniji način pretrage kako bi dobili tekst odluke koju tražite.\n...\n###### Filteri\n##### Vrsta predmeta\n##### Vrsta odluke/rješenja\n##### Ključne riječi\n##### Povrede",
+     "title": "Ustavni sud Bosne i Hercegovine | Odluke",
+     "url": "https://www.ustavnisud.ba/bs/odluke",
+     "verificacion": {
+      "bytes": 143939,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:51Z",
+      "http": 200,
+      "sha256": "90777729d61e10ba50a6010917a7c0c7285925397c3255717fc95107bc1ad937"
+     }
+    },
+    {
+     "date": "",
+     "host": "vsud-fbih.pravosudje.ba",
+     "rank": 2,
+     "snippet": "Napredna pretraga | pravosudje.ba\n### Supreme Court of Federation of Bosnia and Herzegovina\nVrhovni sud Federacije Bosne i Hercegovine\n...\n#### Rezultati pretrage\nNije pronađena nijedna vijest.\n...\n- 1",
+     "title": "Napredna pretraga | pravosudje.ba",
+     "url": "https://vsud-fbih.pravosudje.ba/vstvfo/E/70/napredna-pretraga",
+     "verificacion": {
+      "bytes": 190988,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:57Z",
+      "http": 200,
+      "sha256": "2653a39cf7d686985cffedd67a880e4f8435ad44d5496428127abcce603280bf"
+     }
+    },
+    {
+     "date": "2026-10-26",
+     "host": "vsud-fbih.pravosudje.ba",
+     "rank": 3,
+     "snippet": "### Supreme Court of Federation of Bosnia and Herzegovina\n- 30.10.2026.\nObjavljeno 20 novih sudskih odluka\n...\nUpravno odjeljenje Vrhovnog suda Federacije BiH zauzelo dva nova pravna shvatanja",
+     "title": "Vrhovni sud Federacije Bosne i Hercegovine | pravosudje.ba",
+     "url": "https://vsud-fbih.pravosudje.ba/vstvfo/E/70"
+    },
+    {
+     "date": "2026-06-29",
+     "host": "vstv.pravosudje.ba",
+     "rank": 4,
+     "snippet": "U bazi su vam dostupne meritorne odluke donesene u izabranom predmetu, kao i odluke Ustavnog suda Bosne i Hercegovine ukoliko je u konkretnom predmetu uložena apelacija ovom sudu.",
+     "title": "Novosti u Bazi sudskih odluka - vstv.pravosudje.ba",
+     "url": "https://vstv.pravosudje.ba/vstvfo/B/142/article/152154"
+    },
+    {
+     "date": "",
+     "host": "vsud-fbih.pravosudje.ba",
+     "rank": 5,
+     "snippet": "### Supreme Court of Federation of Bosnia and Herzegovina\n##### Court Staff",
+     "title": "Supreme Court of Federation of Bosnia and Herzegovina",
+     "url": "https://vsud-fbih.pravosudje.ba/vstvfo/E/70/navigacija?modul=9879"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Bosnia and Herzegovina state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-10-21",
+     "host": "mpr.gov.ba",
+     "rank": 1,
+     "snippet": "**This page provides an overview of all legal regulations of the Ministry of Justice of Bosnia and Herzegovina, as well as other important regulations of Bosnia and Herzegovina.**\n...\nThe official versions of the regulations are contained in the Official Gazette of BiH.\n...\nE-mail: info@mpr.gov.ba",
+     "title": "Regulations",
+     "url": "https://mpr.gov.ba/en/regulations",
+     "verificacion": {
+      "bytes": 164921,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:12:59Z",
+      "http": 200,
+      "sha256": "be12d4eda1a93bbeffae4c2baf07c96ad6a55678541ae4145836be7c89cc8b9a"
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "host": "fmeri.gov.ba",
+     "rank": 2,
+     "snippet": "Zakonodavstvo | FMERI.gov.ba\n# Zakonodavstvo\n##### Ministarstvo\n...\n- Zakon o korištenju obnovljivih izvora energije i efikasne kogeneracije (\"Službene novine FBiH\", broj 82/23)",
+     "title": "Zakonodavstvo - FMERI.gov.ba",
+     "url": "https://fmeri.gov.ba/zakonodavstvo/",
+     "verificacion": {
+      "bytes": 81169,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:00Z",
+      "http": 200,
+      "sha256": "d246a27819f47893cd16898f13a1fc191e87babf777e83025ab91bf3ad67e0d0"
+     }
+    },
+    {
+     "date": "2026-10-22",
+     "host": "mpr.gov.ba",
+     "rank": 3,
+     "snippet": "**Na ovoj stranici nalazi se pregled svih pravnih propisa Ministarstva pravde Bosne i Hercegovine kao i drugih važnijih propisa Bosne i Hercegovine.**\nPropisi su grupirani u zakone i podzakonske akte.\n...\n# Dokumenti\n## Ustav Bosne i Hercegovine",
+     "title": "Pravilnici - mpr.gov.ba",
+     "url": "https://mpr.gov.ba/bs/pravilnici"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.fipa.gov.ba",
+     "rank": 4,
+     "snippet": "Foreign Investment Promotion Agency of Bosnia and Herzegovina\n...\n# Relevant laws\n...\nConsolidated text of the Law on the Policy of Direct Foreign Investments of BiH.pdf\n(Official Gazette of BiH) no. 17/98, 13/03, 48/10 and 22/15",
+     "title": "Relevant laws",
+     "url": "https://www.fipa.gov.ba/en/relevant-laws"
+    },
+    {
+     "date": "",
+     "host": "parlamentfbih.gov.ba",
+     "rank": 5,
+     "snippet": "Parlament Federacije Bosne i Hercegovine DOM NARODA | Propisi\n033 219-190 dom.naroda.info@parlamentfbih.gov.ba Stara stranica PFBiH\n## Propisi\n...\n- Program rada Vlade Federacije Bosne i Hercegovine za 2026.",
+     "title": "Propisi",
+     "url": "https://parlamentfbih.gov.ba/v2/bs/propisi.php"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Bosnia and Herzegovina municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2026-10-21",
+     "host": "fbihvlada.gov.ba",
+     "rank": 1,
+     "snippet": "Vlada Federacije Bosne i Hercegovine | Regulations\n#### BOSNIA AND HERZEGOVINA\n### Federation of Bosnia and Herzegovina\n## Government of Federation of Bosnia and Herzegovina\n# Regulations\n### 2026. godina",
+     "title": "Regulations - Vlada Federacije Bosne i Hercegovine",
+     "url": "https://fbihvlada.gov.ba/en/uredbe",
+     "verificacion": {
+      "bytes": 42937,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:01Z",
+      "http": 200,
+      "sha256": "ffd9644b80e8013af696d23eef3bdc0553e854ec5ca9c66d59151e3056a8518e"
+     }
+    },
+    {
+     "date": "2026-10-19",
+     "host": "mpr.gov.ba",
+     "rank": 2,
+     "snippet": "**This page provides an overview of all legal regulations of the Ministry of Justice of Bosnia and Herzegovina, as well as other important regulations of Bosnia and Herzegovina.**\n...\nThe official versions of the regulations are contained in the Official Gazette of BiH.\n...\nE-mail: info@mpr.gov.ba",
+     "title": "Regulations",
+     "url": "https://mpr.gov.ba/en/regulations",
+     "verificacion": {
+      "bytes": 164921,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:03Z",
+      "http": 200,
+      "sha256": "00104adf6c6dc8b0a1a314cc62f326425bfae16275fc0f54985596b6b4ac76b3"
+     }
+    },
+    {
+     "date": "2026-10-23",
+     "host": "www.mcp.gov.ba",
+     "rank": 3,
+     "snippet": "Important Documents | Ministarstvo civilnih poslova Bosne i Hercegovine\n...\n# Important Documents\nSadrži dokumente za Važni dokumenti iz 11 kategorija\n## Zakoni\nZakoni\n## Pravilnici\n...\n## Srednjoročni planovi rada i godišnji programi rada",
+     "title": "Important Documents",
+     "url": "https://www.mcp.gov.ba/en/vazni-dokumenti"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.paragraf.ba",
+     "rank": 4,
+     "snippet": "#### Radno vrijeme:\nPonedjeljak - petak\n7:30 - 15:30",
+     "title": "Dobrodošli na sajt kompanije Paragraf",
+     "url": "https://www.paragraf.ba/"
+    },
+    {
+     "date": "2026-10-22",
+     "host": "mpr.gov.ba",
+     "rank": 5,
+     "snippet": "- Ustav Bosne i Hercegovine\n- Zakoni Ministarstva i drugi važniji zakoni\n...\nMinistarstvo pravde Bosne i Hercegovine\nadresa: Trg Bosne i Hercegovine 1, Sarajevo 71000\ne-mail: info@mpr.gov.ba",
+     "title": "Pravilnici - mpr.gov.ba",
+     "url": "https://mpr.gov.ba/bs/pravilnici"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Bosnia and Herzegovina regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2020-10-18",
+     "host": "www.trade.gov",
+     "rank": 1,
+     "snippet": "The key national standard body is the BiH Institute for Standardization, though the BiH Institute for Metrology and BiH Institute for Intellectual Property Rights (“IPR Institute”) also impact trade.\n...\nThe BiH Accreditation Institute is the main institution for accrediting testing organizations in",
+     "title": "Bosnia and Herzegovina - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/bosnia-and-herzegovina-standards-trade",
+     "verificacion": {
+      "bytes": 274349,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:03Z",
+      "http": 200,
+      "sha256": "60f074b0abc0e77522834280659ca8696a8b2d99641bc2e4e8ab3db5e7d3d328"
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "host": "mpr.gov.ba",
+     "rank": 2,
+     "snippet": "**This page provides an overview of all legal regulations of the Ministry of Justice of Bosnia and Herzegovina, as well as other important regulations of Bosnia and Herzegovina.**\n...\nThe official versions of the regulations are contained in the Official Gazette of BiH.\n...\nE-mail: info@mpr.gov.ba",
+     "title": "Regulations",
+     "url": "https://mpr.gov.ba/en/regulations",
+     "verificacion": {
+      "bytes": 164921,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:04Z",
+      "http": 200,
+      "sha256": "dcdcd898621a0f408822b5da48856b3d4fa8bee92cdd32ce7dd8b9a8ac7e5fa7"
+     }
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 3,
+     "snippet": "Bosnia and Herzegovina (BiH) maintains two entities— the Federation of BiH (FBiH) and \nRepublika Srpska (RS)—each managing its own agricultural policy, food safety, and inspections.\n...\n#\nPhytosanitary Department \n...\n78000 Banja Luka",
+     "title": "Report Name: FAIRS Country Report Annual",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS+Country+Report+Annual_Sarajevo_Bosnia+and+Herzegovina_BK2026-0002.pdf"
+    },
+    {
+     "date": "2026-11-01",
+     "host": "fipa.gov.ba",
+     "rank": 4,
+     "snippet": "Current regulations and public consultations | Agencija za unapređenje inozemnih investicija\nForeign Investment Promotion Agency of Bosnia and Herzegovina\n...\n# Current regulations and public consultations\ntel: ++ 387 33 278 - 080\n...\ne-mail: fipa@fipa.gov.ba",
+     "title": "Current regulations and public consultations",
+     "url": "https://fipa.gov.ba/en/current-regulations-and-public-consultations"
+    },
+    {
+     "date": "",
+     "host": "www.eerstekamer.nl",
+     "rank": 5,
+     "snippet": "The state-level Border Police is responsible for managing the state border.\n...\nHarmonised area: quality infrastructure  \n...\n…\n...\nThe state-level Agency for Medicines and Medical Devices (ALMBiH) is the regulatory body in charge, inter alia, to secure the functional, coordinated and uniform system",
+     "title": "Eerste Kamer der Staten-Generaal",
+     "url": "https://www.eerstekamer.nl/nonav/bijlage/20221013/bosnia_and_herzegovina_report_2022_4/document3/f=/vlx5g83l1xe1.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Bosnia and Herzegovina national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "isbih.gov.ba",
+     "rank": 1,
+     "snippet": "Katalog | ISBIH\n- Početna\n- Katalog\n...\n**Kontakt** Tel: +387 57 310 560 Faks: +387 57 310 575 stand@isbih.gov.ba",
+     "title": "Katalog",
+     "url": "https://isbih.gov.ba/p/katalog?ics_id=1234",
+     "verificacion": {
+      "bytes": 66866,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:07Z",
+      "http": 200,
+      "sha256": "7818e4f23d41b5f83331533737fc6a255cf917dd9aa902c19c373230c9286642"
+     }
+    },
+    {
+     "date": "",
+     "host": "isbih.gov.ba",
+     "rank": 2,
+     "snippet": "Webstore | ISBIH\n...\nIf you can not find required standard or you need help, please contact us at +38757/310-580 or via email prodaja@isbih.gov.ba.",
+     "title": "Webstore - ISBIH",
+     "url": "https://isbih.gov.ba/en/p/katalog?ics_id=389",
+     "verificacion": {
+      "bytes": 65056,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:08Z",
+      "http": 200,
+      "sha256": "6ce1ee0e52b234b80263f47b2a0fa37b3adceb84b48bb70456fa64cf9ec9ec45"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.isbih.gov.ba",
+     "rank": 3,
+     "snippet": "Каталог | ISBIH\nУколико не можете да пронађете тражени стандард или вам је потребна помоћ, контактирајте нас на 057/310-580 или путем е-поште prodaja@isbih.gov.ba.",
+     "title": "Каталог",
+     "url": "https://www.isbih.gov.ba/sr/p/katalog"
+    },
+    {
+     "date": "2026-10-20",
+     "host": "www.isbih.gov.ba",
+     "rank": 4,
+     "snippet": "…\n...\nThe new search function can be accessed via the main menu on our website or by clicking this link.\n...\n## Third Prize for Students of the University of Zenica\n**Contact** Tel: +387 57 310 560 Fax: +387 57 310 575 stand@isbih.gov.ba",
+     "title": "New Service on the Institute’s Website: Searching BAS Standards by ICS",
+     "url": "https://www.isbih.gov.ba/en/p/vijesti/nova-usluga-na-sajtu-instituta-pretraga-bas-standarda-prema-ics-u"
+    },
+    {
+     "date": "",
+     "host": "www.isbih.gov.ba",
+     "rank": 5,
+     "snippet": "Institute for Standardization  \nINSTITUTE FOR STANDARDIZATION OF BOSNIA AND HERZEGOVINA \nBosnia and Herzegovina, 71123 East Sarajevo, Trg Ilidžanske brigade 2b; \nphone.\n...\n2024\n...\nActive\n160",
+     "title": "[PDF] isbih-work-programme-for-2024-on-adopting-standards-and-other ...",
+     "url": "https://www.isbih.gov.ba/uploads/isbih-work-programme-for-2024-on-adopting-standards-and-other-standardization-documents.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Bosnia and Herzegovina mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2025-04-22",
+     "host": "www.fmt.gov.ba",
+     "rank": 1,
+     "snippet": "Pravilnici - Federalno ministarstvo trgovine\n...\n### Documents\n#### pdf Pravilnik o minimalno tehničkim uvjetima SN FBiH 28 2025 Popular\n...\nPravilnik o minimalno tehničkim uvjetima SN FBiH 28 2025.pdf",
+     "title": "Pravilnici - Federalno ministarstvo trgovine",
+     "url": "https://www.fmt.gov.ba/index.php?option=com_docman&view=list&format=html&layout=default&slug=pravilnici-1&Itemid=819",
+     "verificacion": {
+      "bytes": 150223,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:13Z",
+      "http": 200,
+      "sha256": "cf0446f5195b70468f69190a856f9e10bda22d3e926f702ec63a8990a40edd7c"
+     }
+    },
+    {
+     "date": "2018-01-30",
+     "host": "www.mvteo.gov.ba",
+     "rank": 2,
+     "snippet": "|--|\n...\n|Link otvara PDF dokument Naredba o opremi pod pritiskom (\"Sl.\nGlasnik BiH\", br.\n52/11)|\n...\n…\n...\nGlasnik BiH\", br.\n52/11)|",
+     "title": "Tehnički propisi",
+     "url": "https://www.mvteo.gov.ba/Content/Read/ekonomski-razvoj-i-poduzetnistvo-tehnicki-propisi",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mvteo.gov.ba/Content/Read/ekonomski-razvoj-i-poduzetnistvo-tehnicki-propisi",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:13:16Z"
+     }
+    },
+    {
+     "date": "2026-10-31",
+     "host": "mvteo.vijeceministara.gov.ba",
+     "rank": 3,
+     "snippet": "Laws and other regulations | Ministarstvo vanjske trgovine i ekonomskih odnosa Bosne i Hercegovine\nMinistry of Foreign Trade and Economic Relations of Bosnia and Herzegovina\n...\n# Laws and other regulations\n...\n- ## Bylaws\n- ## List and status of regulations for 2018",
+     "title": "Laws and other regulations",
+     "url": "https://mvteo.vijeceministara.gov.ba/en/menu/menu_cmp4pg9zf1q9fio3unr3q3wyp"
+    },
+    {
+     "date": "",
+     "host": "isbih.gov.ba",
+     "rank": 4,
+     "snippet": "ISBIH\n...\n- Standardization\n- Directives / Regulations\n## Directives/Regulations\n|Reference|Title|\n|--|--|",
+     "title": "Directives/Regulations - ISBIH",
+     "url": "https://isbih.gov.ba/en/p/direktive-uredbe"
+    },
+    {
+     "date": "2026-10-25",
+     "host": "globalautoregs.com",
+     "rank": 5,
+     "snippet": "…\n...\n|UN R132 Retrofit Emissions (from 17 Jun 2014)|Uniform provisions concerning the approval of Retrofit Emission Control devices (REC) for heavy duty vehicles, agricultural and forestry tractors and non-road mobile machinery equipped with compression ignition engines WP.29 adopted the first phas",
+     "title": "GAR | Bosnia-Herzegovina",
+     "url": "https://globalautoregs.com/participants/6-bosnia-herzegovina?show=rules"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Bosnia and Herzegovina national statistics office official website",
+   "descartados": 2,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-29",
+     "host": "fzs.ba",
+     "rank": 1,
+     "snippet": "Adresa: Zelenih beretki 26 |\n71000 Sarajevo, Bosna i Hercegovina | Tel: +387 33 20 64 52 |\nFax: +387 33 22 61 51 | Email: [email protected] | Web: www.fzs.ba",
+     "title": "FBiH – Federalni zavod za statistiku",
+     "url": "https://fzs.ba/index.php/category/nivo/fbih/",
+     "verificacion": {
+      "bytes": 102883,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:18Z",
+      "http": 200,
+      "sha256": "ef01da51bd82891dd639b296f961e7044770f5687a63a154074dc8e6a2b710c1"
+     }
+    },
+    {
+     "date": "2026-10-29",
+     "host": "fzs.ba",
+     "rank": 2,
+     "snippet": "Adresa: Zelenih beretki 26 |\n71000 Sarajevo, Bosna i Hercegovina | Tel: +387 33 20 64 52 |\nFax: +387 33 22 61 51 | Email: [email protected] | Web: www.fzs.ba",
+     "title": "Bilteni – Federalni zavod za statistiku",
+     "url": "https://fzs.ba/index.php/category/bilteni/",
+     "verificacion": {
+      "bytes": 101315,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:19Z",
+      "http": 200,
+      "sha256": "8675c4752be8a7fcf68f8af89a281aef853a51a7e586a03cf2520104c9097700"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "fzs.ba",
+     "rank": 3,
+     "snippet": "Adresa: Zelenih beretki 26 |\n71000 Sarajevo, Bosna i Hercegovina | Tel: +387 33 20 64 52 |\nFax: +387 33 22 61 51 | Email: [email protected] | Web: www.fzs.ba",
+     "title": "Godisnji – Federalni zavod za statistiku",
+     "url": "https://fzs.ba/index.php/category/godisnji/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Bosnia and Herzegovina central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.cbbh.ba",
+     "rank": 1,
+     "snippet": "Statistics web portal CBBH\n- ### Statistics web portal CBBH\n## Application Login\n- Web portal access\n...\nContact the Department of Statistics:\nContact the Department for Financial Stability:\n#### Statistics\n...\nStatistics Web portal of the CBBH\n...\n-\n...\nThe Central Bank of Bosnia and Herzegovina",
+     "title": "Statistics Web Portal Cbbh",
+     "url": "https://www.cbbh.ba/Content/Read/915",
+     "verificacion": {
+      "bytes": 29666,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:20Z",
+      "http": 200,
+      "sha256": "daaa1aff66f08249153835cf3c407a35a1c9bb4d14fe02e4024955cb45459279"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.cbbh.ba",
+     "rank": 2,
+     "snippet": "The Central Bank of Bosnia and Herzegovina\n…\n...\nCentral Bank of Bosnia and Herzegovina maintains monetary stability by issuing domestic currency according to the Currency Board arrangement.\nIt supports and maintains appropriate payment and settlement systems.",
+     "title": "The Central Bank of Bosnia and Herzegovina - cbbh.ba",
+     "url": "https://www.cbbh.ba/Home/Index",
+     "verificacion": {
+      "bytes": 76871,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:21Z",
+      "http": 200,
+      "sha256": "c78fcb2eb70744e111925b0910ea4741f7a9acccd66b0e3fbb17290506a98194"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cbbh.ba",
+     "rank": 3,
+     "snippet": "Alongside the Agency for Statistics of Bosnia and Herzegovina, the Central Bank of Bosnia and Herzegovina is a producer of official statistics at the level of Bosnia and Herzegovina and participates in the implementation of statistical survey plans in Bosnia and Herzegovina.",
+     "title": "Statistics - CBBH",
+     "url": "https://www.cbbh.ba/Content/Read/8?lang=en"
+    },
+    {
+     "date": "",
+     "host": "www.cbbh.ba",
+     "rank": 4,
+     "snippet": "#### Statistics\n- Advanced Release Calendar\n- Regulations\n- Data Access - Statistics web portal\n- Data according to earlier methodologies\n- SDDS\n- Statistical information\n- Access to Confidential Statistical Data for Scientific Purposes\n...\nStatistics Web portal of the CBBH\n...\nThe Central Bank of B",
+     "title": "Statistical information - The Central Bank of Bosnia and Herzegovina",
+     "url": "https://www.cbbh.ba/Content/Read/1232"
+    },
+    {
+     "date": "",
+     "host": "www.cbbh.ba",
+     "rank": 5,
+     "snippet": "IMF’s 2019 Guide.\n...\nPUBLISHER:\nCentral Bank of Bosnia and Herzegovina\n25 Maršala Tita St, 71000 Sarajevo\nTel + 387 33 278 100\nwww.cbbh.ba\ne-mail: contact@cbbh.ba",
+     "title": "[PDF] Annual Report 2025 - The Central Bank of Bosnia and Herzegovina",
+     "url": "https://www.cbbh.ba/Home/GetTableAttachment?contentId=9f738fd5-ed4c-4437-abf8-3f420d280f49&lang=en"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Bosnia and Herzegovina government open data portal",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.iddeea.gov.ba",
+     "rank": 1,
+     "snippet": "## ODP Open Data Portal\n**Transparency, accessibility, and citizen information in compliance with EU regulations**\nWelcome to the Open data portal of the Agency for Identification Documents, Registers, and Data Exchange of Bosnia and Herzegovina!",
+     "title": "ODP Open Data Portal",
+     "url": "https://www.iddeea.gov.ba/en/odp-3/",
+     "verificacion": {
+      "bytes": 122323,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:25Z",
+      "http": 200,
+      "sha256": "cf68fd779d08cbc91f54a4953eae5713d1e00085586393a75410ee923438e70b"
+     }
+    },
+    {
+     "date": "2026-10-23",
+     "host": "www.iddeea.gov.ba",
+     "rank": 2,
+     "snippet": "…\n## Open Data Portal (ODP)\nHere, you may access the Open Data Portal, which offers a comprehensive array of information and resources accessible to all citizens.\nThis includes details pertaining to the operations of the Agency, statistical data sourced from registries, and information regarding ide",
+     "title": "Homepage – IDDEEA",
+     "url": "https://www.iddeea.gov.ba/en/home/",
+     "verificacion": {
+      "bytes": 236772,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:27Z",
+      "http": 200,
+      "sha256": "cb336a71e6f9fbba2c3f8260e2a1a02a1fc06b76f74020123b49fd6e03f025f4"
+     }
+    },
+    {
+     "date": "2023-10-24",
+     "host": "www.iddeea.gov.ba",
+     "rank": 3,
+     "snippet": "# Open Data Portal (ODP)\n...\nThis portal represents a unique source of data that is available to everyone, with no restrictions or payment.\nThe Open Data Portal is designed to make various types of data more accessible and usable.\n...\nhttps://odp.iddeea.gov.ba/language-select",
+     "title": "Open Data Portal (ODP)",
+     "url": "https://www.iddeea.gov.ba/en/open-data-portal-odp/"
+    },
+    {
+     "date": "2026-07-08",
+     "host": "www.iddeea.gov.ba",
+     "rank": 4,
+     "snippet": "# IDDEEA predstavila novu verziju Portala otvorenih podataka – informacije iz državnih registara dostupnije nego ikada\nPortal otvorenih podataka dostupan je na adresi: https://data.iddeea.gov.ba",
+     "title": "IDDEEA predstavila novu verziju Portala otvorenih podataka",
+     "url": "https://www.iddeea.gov.ba/bs/iddeea-predstavila-novu-verziju-portala-otvorenih-podataka-informacije-iz-drzavnih-registara-dostupnije-nego-ikada/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:24:38Z",
+ "pais": {
+  "iso2": "BA",
+  "iso3": "BIH",
+  "nombre": "Bosnia and Herzegovina"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Portugal constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2016-08-22",
+     "host": "diariodarepublica.pt",
+     "rank": 1,
+     "snippet": "Lei n.º 26/2016, de 22 de agosto | DR\nJornal Oficial da República Portuguesa\nLei n.º 26/2016\n...\nEm vigor\n...\nPublicação:Diário da República n.º 160/2016, Série I de 2016-08-22",
+     "title": "Lei n.º 26/2016, de 22 de agosto | DR - Diário da República",
+     "url": "https://diariodarepublica.pt/dr/detalhe/lei/26-2016-75177807"
+    },
+    {
+     "date": "2026-07-28",
+     "host": "justica.gov.pt",
+     "rank": 2,
+     "snippet": "PDJ\n...\nPor isso, colocamos ao seu dispor os principais diplomas da atividade da Justiça em Portugal.\n- Consultar a partir do Diário da República eletrónico (legislação consolidada)\n- Consultar a partir da página da Procuradoria-Geral Distrital de Lisboa",
+     "title": "Legislação | Justiça.gov.pt",
+     "url": "https://justica.gov.pt/Legislacao"
+    },
+    {
+     "date": "",
+     "host": "www.pgdlisboa.pt",
+     "rank": 3,
+     "snippet": "# Procuradoria-Geral Regional\n*(Lei Orgânica n.º 1/2026, de 18 de Maio)* **</td></tr><tr><td colspan=\"2\"> Alteração à Lei n.º 37/81, de 3 de outubro, que aprova a Lei da Nacionalidade.",
+     "title": ":::Pesquisa leis",
+     "url": "https://www.pgdlisboa.pt/leis/lei_busca_assunto.php"
+    },
+    {
+     "date": "2026-10-31",
+     "host": "www.parlamento.pt",
+     "rank": 4,
+     "snippet": "(Government legislation is issued in the form of Executive Laws).\n...\nIt is also possible to directly access the legislative procedure database and to use it to search all the legal texts passed by the *Assembleia da República*, including the legislative ones, since the 1st Legislature.",
+     "title": "Legislation",
+     "url": "https://www.parlamento.pt/sites/EN/Parliament/Paginas/Legislation.aspx"
+    },
+    {
+     "date": "2016-08-22",
+     "host": "diariodarepublica.pt",
+     "rank": 5,
+     "snippet": "Aprova o regime de acesso à informação administrativa e ambiental e de reutilização dos documentos administrativos | DR",
+     "title": "Aprova o regime de acesso à informação administrativa e ambiental e de reutilização dos documentos administrativos",
+     "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2016-106603618"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Portugal national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-11-02",
+     "host": "diariodarepublica.pt",
+     "rank": 1,
+     "snippet": "Decreto-Lei n.º 205/2026\n...\n1\n234\n5 de 20 resultados\n...\nDecreto-Lei n.º 29-B/2021\nEstabelece o modelo de governação dos fundos europeus atribuídos a Portugal através do Plano de Recuperação e Resiliência",
+     "title": "Diário da República | DR",
+     "url": "https://diariodarepublica.pt/dr/home"
+    },
+    {
+     "date": "2026-07-28",
+     "host": "justica.gov.pt",
+     "rank": 2,
+     "snippet": "PDJ\n...\nPor isso, colocamos ao seu dispor os principais diplomas da atividade da Justiça em Portugal.\n- Consultar a partir do Diário da República eletrónico (legislação consolidada)\n- Consultar a partir da página da Procuradoria-Geral Distrital de Lisboa",
+     "title": "Legislação | Justiça.gov.pt",
+     "url": "https://justica.gov.pt/Legislacao"
+    },
+    {
+     "date": "1999-08-02",
+     "host": "diariodarepublica.pt",
+     "rank": 3,
+     "snippet": "Aprova o regime jurídico dos documentos electrónicos e da assinatura digital | DR\nVersão consolidada\nDecreto-Lei n.º 290-D/99\n2021-02-09\nDecreto-Lei n.º 12/2021 - 1.ª Série\n...\nEmitente:\n...\n…",
+     "title": "Aprova o regime jurídico dos documentos electrónicos e da ...",
+     "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1999-34499375"
+    },
+    {
+     "date": "",
+     "host": "pgdlisboa.pt",
+     "rank": 4,
+     "snippet": ":::Pesquisa leis\n...\n, de 25 de julho, que aprova o regime de organização e funcionamento do XXV Governo Constitucional e o Decreto-Lei n.º 36/2023, de 26 de maio, que estabelece a orgânica das Comissões de Coordenação e Desenvolvimento Regional.\n...\n|--|",
+     "title": ":::Pesquisa leis - Procuradoria-Geral Distrital de Lisboa",
+     "url": "https://pgdlisboa.pt/leis/lei_busca_assunto.php"
+    },
+    {
+     "date": "",
+     "host": "www.ministeriopublico.pt",
+     "rank": 5,
+     "snippet": "# Legislação\nEste espaço permite a consulta e pesquisa de legislação, nas seguintes modalidades:\n...\n2)   PESQUISA:\n— acesso ao módulo de legislação do sítio de *internet* da Procuradoria-Geral Distrital de Lisboa\n— acesso ao Diário da República Eletrónico",
+     "title": "Legislação | Portal do Ministério Público - Portugal",
+     "url": "https://www.ministeriopublico.pt/pagina/legislacao"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Portugal official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.erc.pt",
+     "rank": 1,
+     "snippet": "No. 11 \n18 January 2021 \n1 \nASSEMBLY OF THE REPUBLIC  \nDeclaration of Rectification No. 2-A/2020 \n...\n19 November which «Transposes into Portuguese law Directive (EU) 2018/1808 of the European",
+     "title": "The Portuguese Official Gazette, Series 1",
+     "url": "https://www.erc.pt/documentos/legislacaosite/English/declarationofrectification2a-2021_eng.pdf"
+    },
+    {
+     "date": "2026-11-02",
+     "host": "diariodarepublica.pt",
+     "rank": 2,
+     "snippet": "Diário da República | DR\nHoje ainda não foram publicados atos no Diário da República.\nPode consultar a edição anterior abaixo.\n...\n# Diário da República n.º 211/2026, de 30 de outubro de 2026\nDecreto do Presidente da República n.º 157/2026",
+     "title": "Diário da República | DR",
+     "url": "https://diariodarepublica.pt/dr/home"
+    },
+    {
+     "date": "",
+     "host": "diariodarepublica.pt",
+     "rank": 3,
+     "snippet": "Início\n...\nDe\nUse a tecla de seta para baixo para abrir o calendário; Use as teclas de seta para navegar pelos dias do calendário; Use cmd ou ctrl + seta para a direita ou esquerda para navegar pelos meses; Use cmd ou ctrl + seta para cima ou para baixo para navegar pelos anos;",
+     "title": "Resultados de pesquisa | DR - Diário da República",
+     "url": "https://diariodarepublica.pt/dr/pesquisa"
+    },
+    {
+     "date": "",
+     "host": "eportugal.gov.pt",
+     "rank": 4,
+     "snippet": "- Browse Online Available at anytime\n...\n- At any moment.\n...\nThe Electronic Official Gazette (DRE) is a portal of the National Press - Mint (INCM), which provides information completely free.\n...\nIt is possible to access legislation, through search engines, by words, issuers, dates and diploma numb",
+     "title": "Consult the electronic official gazette - ePortugal.gov.pt",
+     "url": "https://eportugal.gov.pt/en/servicos/consultar-o-diario-da-republica"
+    },
+    {
+     "date": "",
+     "host": "www.ine.pt",
+     "rank": 5,
+     "snippet": "PRESIDENCY OF THE COUNCIL OF MINISTERS  \nDecree-Law No 136/2012 \nof 2 July \n...\n…\n...\n— Pedro Passos Coelho — \n...\nPromulgated on 19 June 2012.\nLet it be published.",
+     "title": "Official Gazette, Series 1 – No 126 – 2 July 2012",
+     "url": "https://www.ine.pt/ngt_server/attachfileu.jsp?look_parentBoui=216693586&att_display=n&att_download=y"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Portugal supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-07-28",
+     "host": "justica.gov.pt",
+     "rank": 1,
+     "snippet": "## Entende-se por jurisprudência o conjunto das principais decisões judiciais dos tribunais superiores. Pode ser consultada através da internet.\n...\nConsulte uma base de dados de decisões dos tribunais:\n...\nTambém pode consultar os documentos disponíveis nas várias bibliotecas dos organismos do Mini",
+     "title": "Jurisprudência - Justiça.gov.pt",
+     "url": "https://justica.gov.pt/jurisprudencia"
+    },
+    {
+     "date": "2026-10-22",
+     "host": "www.stj.pt",
+     "rank": 2,
+     "snippet": "# Supremo Tribunal de Justiça\n1. Boas-vindas\n2. Base de Dados de Acórdãos\n3. Notas à Imprensa\n...\n## Base de Dados de Acórdãos",
+     "title": "Bem-vindo ao website do Supremo Tribunal de Justiça",
+     "url": "https://www.stj.pt/"
+    },
+    {
+     "date": "",
+     "host": "juris.stj.pt",
+     "rank": 3,
+     "snippet": "Permite explorar, pesquisar e filtrar os acórdãos publicados pelo Supremo Tribunal de Justiça.\n...\n```\n...\nÉ possível filtrar por Data, dando um ano de início, um ano de fim ou ambos.\n...\nOs resultados podem ser ordenados por data ou pela relevância que têm para a pesquisa feita.",
+     "title": "Jurisprudência STJ",
+     "url": "https://juris.stj.pt/pesquisa"
+    },
+    {
+     "date": "",
+     "host": "www.dgsi.pt",
+     "rank": 4,
+     "snippet": "|**Acórdãos do Supremo Tribunal de Justiça**|\n|--|\n|Dom 1-Nov 06:15 PM|",
+     "title": "Por Ano",
+     "url": "https://www.dgsi.pt/jstj.nsf?opendatabase"
+    },
+    {
+     "date": "",
+     "host": "www.dgsi.pt",
+     "rank": 5,
+     "snippet": "|**Acórdãos do Supremo Tribunal de Justiça**|\n|--|\n|Dom 1-Nov 11:28 PM|",
+     "title": "Por Ano",
+     "url": "https://www.dgsi.pt/JSTJ.nsf?OpenDatabase&Start=1054&Count=100&Expand=16401"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Portugal state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2016-08-22",
+     "host": "diariodarepublica.pt",
+     "rank": 1,
+     "snippet": "Aprova o regime de acesso à informação administrativa e ambiental e de reutilização dos documentos administrativos | DR",
+     "title": "Aprova o regime de acesso à informação administrativa e ambiental e de reutilização dos documentos administrativos",
+     "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2016-106603618"
+    },
+    {
+     "date": "2026-11-02",
+     "host": "diariodarepublica.pt",
+     "rank": 2,
+     "snippet": "## Últimos conteúdos desenvolvidos\nPortaria n.º 323/2026/1\n...\nDecreto-Lei n.º 29-B/2021\nEstabelece o modelo de governação dos fundos europeus atribuídos a Portugal através do Plano de Recuperação e Resiliência",
+     "title": "Diário da República | DR",
+     "url": "https://diariodarepublica.pt/dr/home"
+    },
+    {
+     "date": "",
+     "host": "pgdlisboa.pt",
+     "rank": 3,
+     "snippet": "# Procuradoria-Geral Regional\nSeguinte > <table><tr><td> <table><tr><td colspan=\"2\">**301.",
+     "title": ":::Pesquisa leis - Procuradoria-Geral Distrital de Lisboa",
+     "url": "https://pgdlisboa.pt/leis/lei_busca_assunto.php?ficha=201&pagina=3&buscajur=prazo+art+decreto"
+    },
+    {
+     "date": "2021-08-26",
+     "host": "diariodarepublica.pt",
+     "rank": 4,
+     "snippet": "…\n...\n# Dados abertos e reutilização de informações do setor público\n3 - As informações previstas nos números anteriores devem ser indexadas no portal dados.gov, com vista a facilitar a pesquisa de documentos ou dados disponíveis para reutilização.",
+     "title": "Dados abertos e reutilização de informações do setor público",
+     "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2021-170221049"
+    },
+    {
+     "date": "2026-10-31",
+     "host": "www.parlamento.pt",
+     "rank": 5,
+     "snippet": "It is also possible to directly access the legislative procedure database and to use it to search all the legal texts passed by the *Assembleia da República*, including the legislative ones, since the 1st Legislature.\n...\nYou can access some important legislation that is already available in English",
+     "title": "Legislation",
+     "url": "https://www.parlamento.pt/sites/EN/Parliament/Paginas/Legislation.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Portugal municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2026-10-18",
+     "host": "diariodarepublica.pt",
+     "rank": 1,
+     "snippet": "Regulamentos municipais | DR\n...\n(Sítio da Internet)\n**Regulamento Municipal da Urbanização e da Edificação**\n...\n(Sítio da Internet)\n**Regulamento Municipal da Urbanização e da Edificação**\n...\n**Regulamento Municipal da Urbanização e da Edificação**",
+     "title": "Regulamentos municipais | DR - Diário da República",
+     "url": "https://diariodarepublica.pt/dr/geral/areas-tematicas/regul-municipais"
+    },
+    {
+     "date": "",
+     "host": "www.dgterritorio.gov.pt",
+     "rank": 2,
+     "snippet": "Regulamentos de planos municipais e intermunicipais de ordenamento do território | Direção-Geral do Território\n# Regulamentos de planos municipais e intermunicipais de ordenamento do território\nDireção-Geral do Território\n...\n- **Direção-Geral do Território**\n...\nPortugal",
+     "title": "Regulamentos de planos municipais e intermunicipais de ... - DGT",
+     "url": "https://www.dgterritorio.gov.pt/Regulamentos-de-planos-municipais-e-intermunicipais-de-ordenamento-do-territorio"
+    },
+    {
+     "date": "",
+     "host": "portaldomunicipe.cm-porto.pt",
+     "rank": 3,
+     "snippet": "Página Inicial - Portal do Munícipe\nBem-vindo ao\nPortal do Munícipe\nEm que podemos ajudar?\nSimulador de Taxas Municipais\nMapas Interativos do Porto\nCódigo Regulamentar do Porto\nPlano Diretor Municipal em vigor",
+     "title": "Página Inicial - Portal do Munícipe",
+     "url": "https://portaldomunicipe.cm-porto.pt/home"
+    },
+    {
+     "date": "2026-03-02",
+     "host": "www.cm-redondo.pt",
+     "rank": 4,
+     "snippet": "# Legislação e Ligações Úteis\n...\n…\n- Regulamento Municipal de Urbanizações e Edificações do Concelho de Redondo (RMUE): https://diariodarepublica.pt/dr/detalhe/regulamento/208-2014-25696969",
+     "title": "Legislação e Ligações Úteis - Município de Redondo",
+     "url": "https://www.cm-redondo.pt/municipe/areas-de-acao/legislacao-e-ligacoes-uteis/"
+    },
+    {
+     "date": "",
+     "host": "portalautarquico.dgal.gov.pt",
+     "rank": 5,
+     "snippet": "Nota Informativa - Estatuto de pessoal dos bombeiros profissionais da administração local.\n...\nCopyright © 2014 - 2026 DGAL | Direção-Geral das Autarquias Locais",
+     "title": "Portal Autárquico - Homepage",
+     "url": "https://portalautarquico.dgal.gov.pt/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Portugal regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2013-08-28",
+     "host": "diariodarepublica.pt",
+     "rank": 1,
+     "snippet": "Lei-quadro das entidades administrativas independentes com funções de regulação da atividade económica dos setores privado, público e cooperativo | DR\n...\n# Lei-quadro das entidades administrativas independentes com funções de regulação da atividade económica dos setores privado, público e cooperati",
+     "title": "Lei-quadro das entidades administrativas independentes com ...",
+     "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2013-106955825"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 2,
+     "snippet": "Relevant Competent Authorities\nDirectorate General for Food and Veterinary (DGAV)1: In Portugal, according to Decree Regulation \n31/2012 the DGAV is responsible for defining, implementing, and evaluating food safety, animal protection, animal health, plant protection, and phytosanitary policies.",
+     "title": "[PDF] Report Name:Food and Agricultural Import Regulations ... - USDA/FAS",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Food+and+Agricultural+Import+Regulations+and+Standards+Country+Report+2025_Madrid_Portugal_PO2025-0005"
+    },
+    {
+     "date": "2013-08-28",
+     "host": "diariodarepublica.pt",
+     "rank": 3,
+     "snippet": "Lei n.º 67/2013, de 28 de agosto | DR\n...\n# Lei n.º 67/2013, de 28 de agosto\nEm vigor\n...\nSUMÁRIO\nLei-quadro das entidades administrativas independentes com funções de regulação da atividade económica dos setores privado, público e cooperativo",
+     "title": "Lei n.º 67/2013, de 28 de agosto | DR",
+     "url": "https://diariodarepublica.pt/dr/detalhe/lei/67-2013-499499"
+    },
+    {
+     "date": "",
+     "host": "portugal.gov.pt",
+     "rank": 4,
+     "snippet": "Deste modo, sugere-se a introdução de uma norma sobre qualidade regulatória, a integrar o \nCapítulo V da LQER (Independência, Transparência e Controlo).\n...\n…\n...\nERS \nEntidade Reguladora da Saúde \nERSAR  \n...\nERSE",
+     "title": "Relatório ﬁnal apresentado pela Comissão para o Reforço da ...",
+     "url": "https://portugal.gov.pt/api/media/edge/Project/Portal-do-Governo/Portal-do-Governo/gc25/documentos/Outros/20260605-relatorio-final-reforco-da-independencia-das-entidades-reguladoras.pdf"
+    },
+    {
+     "date": "",
+     "host": "pgdlisboa.pt",
+     "rank": 5,
+     "snippet": ":::Pesquisa leis\nProcuradoria-Geral Distrital de Lisboa\n# Procuradoria-Geral Regional\nSeguinte > <table><tr><td> <table><tr><td colspan=\"2\">**101.\n...\n[texto] </td></tr><tr><td colspan=\"2\">**102.",
+     "title": ":::Pesquisa leis - Procuradoria-Geral Distrital de Lisboa",
+     "url": "https://pgdlisboa.pt/leis/lei_busca_assunto.php?ficha=1"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Portugal national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "www.ipq.pt",
+     "rank": 1,
+     "snippet": "O Instituto Português da Qualidade é o Organismo Nacional de Normalização e a Instituição Nacional de Metrologia.\nCoordena o Sistema Português da Qualidade (SPQ) e outros sistemas de qualificação regulamentar que lhe forem conferidos por lei.\n...\nConsulta do **Catálogo de Normas**",
+     "title": "IPQ – Instituto Português da Qualidade",
+     "url": "https://www.ipq.pt/"
+    },
+    {
+     "date": "2024-03-04",
+     "host": "www.ipq.pt",
+     "rank": 2,
+     "snippet": "ENCONTRE NESTE PORTAL OS SEGUINTES SERVIÇOS: SERVIÇOS DE METROLOGIA, ATOS DE LICENCIAMENTO, PROTOCOLOS IPQ E SERVIÇO DE ACESSO A NORMAS, ETC.",
+     "title": "Acervo normativo nacional – IPQ",
+     "url": "https://www.ipq.pt/normalizacao/normas/acervo-normativo-nacional/"
+    },
+    {
+     "date": "2024-12-03",
+     "host": "www2.gov.pt",
+     "rank": 3,
+     "snippet": "By consulting the IPQ catalogue of standards online, the general public will be able to find out which Portuguese and European standards exist on a given subject, by searching for metadata and keywords.\nYou can search by subject, title, standard number, by technical committee and by International Cl",
+     "title": "Consultar o catálogo de normas do Instituto Português da ...",
+     "url": "https://www2.gov.pt/en/servicos/consultar-o-catalogo-ipq-de-normas-online"
+    },
+    {
+     "date": "2024-05-31",
+     "host": "www.ipq.pt",
+     "rank": 4,
+     "snippet": "ENCONTRE NESTE PORTAL OS SEGUINTES SERVIÇOS: SERVIÇOS DE METROLOGIA, ATOS DE LICENCIAMENTO, PROTOCOLOS IPQ E SERVIÇO DE ACESSO A NORMAS, ETC.",
+     "title": "EURAMET reúne no IPQ para debater iniciativas de capacitação em Metrologia",
+     "url": "https://www.ipq.pt/loja/catalogo-de-normas/"
+    },
+    {
+     "date": "2024-06-26",
+     "host": "www.ipq.pt",
+     "rank": 5,
+     "snippet": "## NORMAS\nPoderá consultar online o Catálogo de normas IPQ que permite identificar todas as normas nacionais e europeias e internacionais do acervo normativo nacional, respetiva referência, preço, comissão técnica responsável, data de edição, anulação e substituições.",
+     "title": "Normas",
+     "url": "https://www.ipq.pt/normalizacao/normas/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Portugal mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2017-02-21",
+     "host": "diariodarepublica.pt",
+     "rank": 1,
+     "snippet": "A referida diretiva revoga a Diretiva n.º 2006/95/CE, do Parlamento Europeu e do Conselho, de 12 de dezembro de 2006, transposta para o direito português pelo Decreto-Lei n.º 6/2008, de 10 de janeiro.",
+     "title": "Estabelece as regras aplicáveis à disponibilização no ...",
+     "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2017-156691427"
+    },
+    {
+     "date": "2026-03-26",
+     "host": "diariodarepublica.pt",
+     "rank": 2,
+     "snippet": "Portaria n.º 128/2026/1, de 26 de março | DR\n...\n# Portaria n.º 128/2026/1, de 26 de março\nEm vigor\n...\ng) As demais normas europeias e nacionais aplicáveis.",
+     "title": "Portaria n.º 128/2026/1, de 26 de março | DR",
+     "url": "https://diariodarepublica.pt/dr/detalhe/portaria/128-2026-1077350807"
+    },
+    {
+     "date": "2022-09-30",
+     "host": "diariodarepublica.pt",
+     "rank": 3,
+     "snippet": "Anexos II, V, III e IV à Diretiva relativa à segurança dos brinquedos | DR\nVersão consolidada\nPortaria n.º 249/2022\n...\nPortaria n.º 322/2026/1 - 1.ª Série\n...\nAnexo IV\nDocumentação técnica",
+     "title": "Anexos II, V, III e IV à Diretiva relativa à segurança dos ...",
+     "url": "https://diariodarepublica.pt/dr/legislacao-consolidada/portaria/2022-944098851"
+    },
+    {
+     "date": "",
+     "host": "www.dgeg.gov.pt",
+     "rank": 4,
+     "snippet": "…\n- Regulamento (UE) 2023/1804 Do Parlamento Europeu e do Conselho, de 13 de setembro de 2023\n...\nRelativo ao Guia Técnico das Instalações Elétricas para Alimentação de Veículos Elétricos (edição 3 de 2023).",
+     "title": "Legislação Aplicável e Despachos DGEG",
+     "url": "https://www.dgeg.gov.pt/pt/areas-setoriais/energia/energia-eletrica/mobilidade-eletrica/legislacao-aplicavel-e-despachos-dgeg/"
+    },
+    {
+     "date": "",
+     "host": "technical-regulation-information-system.ec.europa.eu",
+     "rank": 5,
+     "snippet": "## Segunda alteração ao Decreto-Lei n.º 131/2019, de 30 de agosto, na sua redação atual, que aprova, em anexo, o Regulamento de Instalação e de Funcionamento de Recipientes sob Pressão Simples e de Equipamentos sob Pressão",
+     "title": "Detalhe da notificação | TRIS - European Commission",
+     "url": "https://technical-regulation-information-system.ec.europa.eu/pt/notification/28450"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Portugal national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.ine.pt",
+     "rank": 1,
+     "snippet": "Portal do INE\n# Portal Oficial - Instituto Nacional de Estatística",
+     "title": "Portal do INE",
+     "url": "https://www.ine.pt/xportal/xmain?xpgid=ine_main&xpid=INE"
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 2,
+     "snippet": "Country Profile of Portugal\nMain statistical agency\nMain statistical agency name\nStatistics Portugal - Instituto Nacional de Estatística, IP (INE)\nWeb address\nwww.ine.pt",
+     "title": "Country Profile of Portugal - UN Statistics Division",
+     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=642&catID=301"
+    },
+    {
+     "date": "",
+     "host": "ec.europa.eu",
+     "rank": 3,
+     "snippet": "Statistics Portugal is the central body of the Portuguese Statistical System responsible for developing, producing and disseminating official statistics and for supervising and coordinating technical and scientific matters within the Portuguese Statistical System.\n...\nCurrent situation: \nThe Statist",
+     "title": "IMPROVEMENT ACTIONS",
+     "url": "https://ec.europa.eu/eurostat/documents/64157/14414849/portugal-improvement-actions.pdf/eb94264b-b616-061d-71eb-cf119289733c?t=1744272305298"
+    },
+    {
+     "date": "",
+     "host": "dsbb.imf.org",
+     "rank": 4,
+     "snippet": "#### Quick Links\nStatistical data shall be made available in an integrated, objective, timely and prompt manner, accompanied by the respective statistical metadata and other information to assist in the interpretation of findings.Statistics Portugal has a website https://www.ine.pt which provides th",
+     "title": "DQAF View : Portugal - Forward-looking indicators - SDDS",
+     "url": "https://dsbb.imf.org/sddsplus/dqaf-base/country/PRT/category/FLI00"
+    },
+    {
+     "date": "2024-09-27",
+     "host": "www.gov.pt",
+     "rank": 5,
+     "snippet": "gov.pt\nServiços\n# Consultar estatísticas sobre empresas em Portugal\n...\nO Instituto Nacional de Estatística (INE) dispõe, no seu Portal, de um conjunto de indicadores estatísticos no tema Empresas que, após visualização em quadro, é possível ajustar à medida das necessidades.",
+     "title": "Consultar estatísticas sobre empresas em Portugal - gov.pt",
+     "url": "https://www.gov.pt/servicos/consultar-estatisticas-sobre-empresas-em-portugal"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Portugal central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-23",
+     "host": "bpstat.bportugal.pt",
+     "rank": 1,
+     "snippet": "BPstat\n30-10-2026\n...\nOs **Quadros do Setor** são apurados a partir da informação da **central de balanços**, uma **base de dados** gerida pelo Banco de Portugal com **informação económica e financeira das empresas portuguesas**.",
+     "title": "Banco de Portugal - BPstat",
+     "url": "https://bpstat.bportugal.pt/"
+    },
+    {
+     "date": "",
+     "host": "bpstat.bportugal.pt",
+     "rank": 2,
+     "snippet": "Temas | BPstat\n# Temas\nExplore os temas do BPstat e encontre informação estatística sobre áreas como inflação, crédito, empresas e sustentabilidade.\nCada tema reúne indicadores, séries e conteúdos explicativos que ajudam a acompanhar diferentes aspetos da economia portuguesa.\nBPstat | Ver todos os t",
+     "title": "Temas | BPstat - Banco de Portugal",
+     "url": "https://bpstat.bportugal.pt/temas"
+    },
+    {
+     "date": "2026-04-21",
+     "host": "bpstat.bportugal.pt",
+     "rank": 3,
+     "snippet": "Monetárias e financeiras | BPstat\n...\n# Monetárias e financeiras\nAs estatísticas monetárias e financeiras apresentam os agregados monetários e respetivas contrapartidas, os balanços das instituições financeiras monetárias e não monetárias e as taxas de juro das operações bancárias com o público",
+     "title": "Monetárias e financeiras - BPstat - Banco de Portugal",
+     "url": "https://bpstat.bportugal.pt/dominios/14"
+    },
+    {
+     "date": "",
+     "host": "bpstat.bportugal.pt",
+     "rank": 4,
+     "snippet": "Séries Estatísticas | BPstat\n# Séries Estatísticas",
+     "title": "Séries Estatísticas - BPstat - Banco de Portugal",
+     "url": "https://bpstat.bportugal.pt/dados/explorer"
+    },
+    {
+     "date": "",
+     "host": "bpstat.bportugal.pt",
+     "rank": 5,
+     "snippet": "# Números que contam\nNúmeros que contam\n...\n### Crédito aos consumidores: quem pede, para quê?\nExplore a análise sobre a evolução do crédito aos consumidores entre 2018 e 2025, com detalhe para três segmentos principais: crédito automóvel, crédito pessoal e crédito renovável.",
+     "title": "Números que contam - BPstat - Banco de Portugal",
+     "url": "https://bpstat.bportugal.pt/numeros-que-contam"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Portugal government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.dgterritorio.gov.pt",
+     "rank": 1,
+     "snippet": "# Dados abertos da Administração Pública\n## Informações de contacto\n- **Direção-Geral do Território**\n- Rua Artilharia Um, 107, 1099-052 Lisboa\n- T: 21 381 96 00\n- Contactos",
+     "title": "Dados abertos da Administração Pública | Direção-Geral do Território",
+     "url": "https://www.dgterritorio.gov.pt/Dados-abertos-da-Administracao-Publica"
+    },
+    {
+     "date": "",
+     "host": "www.dgterritorio.gov.pt",
+     "rank": 2,
+     "snippet": "### Dados abertos\nO acesso ao Centro de Dados pode ser efetuado no seguinte endereço:\nhttps://cdd.dgterritorio.gov.pt/\n...\nO acesso à plataforma OGC API pode ser efetuado a partir do seguinte endereço:\nhttps://ogcapi.dgterritorio.gov.pt/\n...\n- CRUS Portugal Continental",
+     "title": "Dados abertos | Direção-Geral do Território",
+     "url": "https://www.dgterritorio.gov.pt/dados-abertos"
+    },
+    {
+     "date": "",
+     "host": "guias.mosaico.gov.pt",
+     "rank": 3,
+     "snippet": "# Dados.gov\nO portal de dados abertos da Administração Pública (AP) tem como função agregar, referenciar e alojar dados abertos de diferentes organismos e setores da AP.\nÉ o catálogo central de open data em Portugal.",
+     "title": "Dados.gov - Mosaico",
+     "url": "https://guias.mosaico.gov.pt/plataformas-comuns-da-administracao-publica/dados.gov"
+    },
+    {
+     "date": "2018-05-02",
+     "host": "dados.gov.pt",
+     "rank": 4,
+     "snippet": "## Descrição\nA plataforma dados.gov.pt é o portal de dados abertos único destinado a reunir e a disponibilizar gratuitamente todas as informações públicas detidas pelo Estado, pelos seus estabelecimentos públicos administrativos, pelas colectividades territoriais e pelas pessoas de direito público o",
+     "title": "Catálogo de dados dos dados.gov.pt",
+     "url": "https://dados.gov.pt/pt/datasets/catalogo-de-dados-dos-dados-gov-pt/"
+    },
+    {
+     "date": "2025-05-27",
+     "host": "mosaico.gov.pt",
+     "rank": 5,
+     "snippet": "O dados.gov é o portal de dados abertos da Administração Pública (AP).\nFunciona como uma catálogo central que agrega, referencia e aloja dados abertos da AP.\n...\nEnvie um e-mail para dados@arte.gov.pt, ou visite o website Dados.gov.",
+     "title": "Dados.GOV",
+     "url": "https://mosaico.gov.pt/plataformas-comuns/dados-gov"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:11:19Z",
+ "pais": {
+  "iso2": "PT",
+  "iso3": "PRT",
+  "nombre": "Portugal"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

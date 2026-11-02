@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Israel constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2023-07-25",
+     "host": "www.gov.il",
+     "rank": 1,
+     "snippet": "שירות זה מאפשר לאתר במאגר החקיקה הלאומי את כל חוקי מדינת ישראל שהתקבלו מאז תקופת המנדט הבריטי ושעדיין נמצאים בתוקף.\n...\n- נוסחי הצעת החוק.",
+     "title": "חוקי מדינת ישראל במאגר החקיקה הלאומי",
+     "url": "https://www.gov.il/he/service/the_laws_of_the_state_of_israel_in_the_national_legislation_database"
+    },
+    {
+     "date": "2023-07-26",
+     "host": "www.gov.il",
+     "rank": 2,
+     "snippet": "# כל הצעות החוק מהכנסת הראשונה ועד היום במאגר החקיקה הלאומי\nשירות זה מאפשר לאתר במאגר החקיקה הלאומי את כל הצעות החוק מהכנסת הראשונה עד הכנסת הנוכחית.",
+     "title": "כל הצעות החוק מהכנסת הראשונה ועד היום במאגר החקיקה הלאומי",
+     "url": "https://www.gov.il/he/service/bills_from_the_first_to_the_the_present_knesset_in_the_national_legislation_database"
+    },
+    {
+     "date": "2023-07-26",
+     "host": "www.gov.il",
+     "rank": 3,
+     "snippet": "במאגר ניתן למצוא את כל החוקים כפי שהתקבלו ופורסמו עד היום, החל בתקופת המנדט הבריטי, דרך תקופת מועצת המדינה הזמנית ועד הכנסת הנוכחית.\n...\n- פקודות שחוקק מועצת המדינה הזמנית.",
+     "title": "החוקים כפי שנחקקו במאגר החקיקה הלאומי",
+     "url": "https://www.gov.il/he/service/laws_as_enacted_in_the_national_legislation_database"
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 4,
+     "snippet": "WIPO Lex، بيانات الأعضاء، إسرائيل\n# إسرائيل\n## (158 النصوص)\nالقوانين (80) المعاهدات (73) الأحكام (5)\n### قوانين الملكية الفكرية الرئيسية (8 النصوص)\n...\n|--|--|--|--|",
+     "title": "WIPO Lex، بيانات الأعضاء، إسرائيل",
+     "url": "https://www.wipo.int/wipolex/ar/members/profile/IL"
+    },
+    {
+     "date": "",
+     "host": "www.gov.il",
+     "rank": 5,
+     "snippet": "מנוע ההסדרה והחקיקה עומד לרשותכם לצרכי איתור הסדרות מסוג, חוקים, תקנות, חוזרים, הבהרות, עמדות ממונה, הכרעות עקרוניות וטיוטות, באופן המהיר והידידותי ביותר.",
+     "title": "אתר השירותים והמידע הממשלתי",
+     "url": "https://www.gov.il/he/Departments/DynamicCollectors/regulation-legislation"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Israel national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.gov.il",
+     "rank": 1,
+     "snippet": "מנוע ההסדרה והחקיקה עומד לרשותכם לצרכי איתור הסדרות מסוג, חוקים, תקנות, חוזרים, הבהרות, עמדות ממונה, הכרעות עקרוניות וטיוטות, באופן המהיר והידידותי ביותר.",
+     "title": "אתר השירותים והמידע הממשלתי",
+     "url": "https://www.gov.il/he/Departments/DynamicCollectors/regulation-legislation"
+    },
+    {
+     "date": "2023-07-26",
+     "host": "www.gov.il",
+     "rank": 2,
+     "snippet": "במאגר ניתן למצוא את כל החוקים כפי שהתקבלו ופורסמו עד היום, החל בתקופת המנדט הבריטי, דרך תקופת מועצת המדינה הזמנית ועד הכנסת הנוכחית.\n...\n- פקודות שחוקק מועצת המדינה הזמנית.",
+     "title": "החוקים כפי שנחקקו במאגר החקיקה הלאומי",
+     "url": "https://www.gov.il/he/service/laws_as_enacted_in_the_national_legislation_database"
+    },
+    {
+     "date": "2023-12-31",
+     "host": "www.gov.il",
+     "rank": 3,
+     "snippet": "# التشريعات الرسمية باللغة العربية\n...\nتتوفر في هذا الموقع ترجمة عربية للنشرات التالية :\n### النشرات الرسمية :\n- كتاب القوانين – الذي يشمل القوانين التي صدرت في الكنيست بقراءة ثالثة .\n...\nهاتف\nفاكس073-3929706",
+     "title": "التشريعات الرسمية باللغة العربية",
+     "url": "https://www.gov.il/ar/departments/units/official_gazette_arabic"
+    },
+    {
+     "date": "2023-08-20",
+     "host": "www.gov.il",
+     "rank": 4,
+     "snippet": "بإمكانكم إجراء البحث عن منشورات في مجال المواصفات الرسمية في الوقائع الرسمية لوزارة العدل (ملف أنظمة أو ملف منشورات).\n...\n- موجز التغييرات التي حصلت في المواصفات.\n- رابط للمنشور.\n...\nيجب ضغط زر البحث.",
+     "title": "البحث عن منشورات في مجال المواصفات الرسمية في الوقائع الرسمية",
+     "url": "https://www.gov.il/ar/service/search-publications-in-records"
+    },
+    {
+     "date": "2026-10-31",
+     "host": "library.mevaker.gov.il",
+     "rank": 5,
+     "snippet": "# תוצאות החיפוש\n## חיפוש מתקדם\n### שנת הפרסום",
+     "title": "search-results - מבקר המדינה",
+     "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/pages/search-results.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Israel official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "tfadatabase.org",
+     "rank": 1,
+     "snippet": "# Israel\n...\n|The official Gazette|https://www.justice.gov.il/Units/Reshomot/pub...|The items mentioned in Article 1, subparagraphs 1.1(a) to (j) are published in Israel's domestic law, Ministry of Justice \"Reshumot\"|",
+     "title": "Israel",
+     "url": "https://tfadatabase.org/index.php/en/members/israel/publication-of-information-for-governments-and-traders"
+    },
+    {
+     "date": "",
+     "host": "www.tuv.com",
+     "rank": 2,
+     "snippet": "# Israel - Update on SI 32 Mandatory Standard for Plugs and Socket Outlets\n...\nSource Link: G/TBT/N/ISR/1302/Add.1",
+     "title": "www.tuv.com · regulations-and-standards · enIsrael - Update on SI 32 Mandatory Standard for Plugs and So",
+     "url": "https://www.tuv.com/regulations-and-standards/en/israel-update-on-si-32-mandatory-standard-for-plugs-and-socket-outlets.html"
+    },
+    {
+     "date": "2025-02-23",
+     "host": "www.tuv.com",
+     "rank": 3,
+     "snippet": "# Israel - New version of SI 62368 Part 1 Came into Force\n...\nThe revision was published on January 20, 2025, in the Israel Official Gazette, Section of Government Notices No. 11719.\n...\nSource Link: G/TBT/N/ISR/1245/Add.1",
+     "title": "Israel - New version of SI 62368 Part 1 Came into Force",
+     "url": "https://www.tuv.com/regulations-and-standards/en/israel-new-version-of-si-62368-part-1-came-into-force.html"
+    },
+    {
+     "date": "",
+     "host": "www.wto.org",
+     "rank": 4,
+     "snippet": "reference to Annex II of the Agreement, the publication utilized by Israel for the publication of notices of proposed purchases is:\n\"The Official Gazette of the State of Israel\".\n...\nIsrael para la inserción de\nlos avisos de las compras proyectadas es:\n\"The Official Gazette of the State of Israel\".",
+     "title": "RESTRICTED",
+     "url": "https://www.wto.org/gatt_docs/English/SULPDF/92360096.pdf"
+    },
+    {
+     "date": "2021-01-01",
+     "host": "www.wikiwand.com",
+     "rank": 5,
+     "snippet": "* (Hebrew: Reshumot*\n*רשומות*) is the law gazette of record for the State of Israel, in which official records and laws are published.\n...\n- File of Regulations, in which secondary legislation, such as regulations, orders and rules, is published;\n...\n- Patent journal",
+     "title": "Reshumot - Wikiwand",
+     "url": "https://www.wikiwand.com/en/articles/Reshumot"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Israel supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2025-03-11",
+     "host": "supreme.court.gov.il",
+     "rank": 1,
+     "snippet": "דף הבית\n...\n© בית המשפט העליון 2018\nחיפוש מתקדם",
+     "title": "תוצאות חיפוש // <![CDATA[ _spBodyOnLoadFunctionNames.push(\"setupPageDescriptionCallout\"); // ]]>",
+     "url": "https://supreme.court.gov.il/Pages/%D7%AA%D7%95%D7%A6%D7%90%D7%95%D7%AA%20%D7%97%D7%99%D7%A4%D7%95%D7%A9.aspx"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "supreme.court.gov.il",
+     "rank": 2,
+     "snippet": "זוהתה פעילות בלתי מורשית, אנא פנה לתמיכת המחשוב בארגונך\n...\nThe Israeli Judicial Authority",
+     "title": "חיפוש מתקדם - בית המשפט העליון",
+     "url": "https://supreme.court.gov.il/Pages/fullsearch.aspx"
+    },
+    {
+     "date": "",
+     "host": "supreme.court.gov.il",
+     "rank": 3,
+     "snippet": "דף הבית\n...\n© בית המשפט העליון 2018\nחיפוש מתקדם",
+     "title": "בית המשפט העליון של ישראל",
+     "url": "https://supreme.court.gov.il/Pages/HomePage.aspx"
+    },
+    {
+     "date": "2026-04-26",
+     "host": "supreme.court.gov.il",
+     "rank": 4,
+     "snippet": "זוהתה פעילות בלתי מורשית, אנא פנה לתמיכת המחשוב בארגונך\n...\nThe Israeli Judicial Authority",
+     "title": "דף הבית // <![CDATA[ _spBodyOnLoadFunctionNames.push(\"setupPageDescriptionCallout\"); // ]]>",
+     "url": "https://supreme.court.gov.il/"
+    },
+    {
+     "date": "",
+     "host": "static1.squarespace.com",
+     "rank": 5,
+     "snippet": "The database, including an online codebook and an analysis tool, is available at http://ISCD.huji.ac.il.\n...\nhuji.ac.il/data).\n...\nDatabase is freely and publicly available.\nAnyone can download the data (from https:// iscd.huji.ac.il/data); credentials are not needed.",
+     "title": "Introducing the Israeli Supreme Court Database",
+     "url": "https://static1.squarespace.com/static/60188505fb790b33c3d33a61/t/60447bbaf84379506f1d83a7/1615100859127/BuildingDatabases.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Israel state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2023-07-25",
+     "host": "www.gov.il",
+     "rank": 1,
+     "snippet": "# חוקי מדינת ישראל במאגר החקיקה הלאומי\nשירות זה מאפשר לאתר במאגר החקיקה הלאומי את כל חוקי מדינת ישראל שהתקבלו מאז תקופת המנדט הבריטי ושעדיין נמצאים בתוקף.",
+     "title": "חוקי מדינת ישראל במאגר החקיקה הלאומי",
+     "url": "https://www.gov.il/he/service/the_laws_of_the_state_of_israel_in_the_national_legislation_database"
+    },
+    {
+     "date": "",
+     "host": "www.gov.il",
+     "rank": 2,
+     "snippet": "מנוע ההסדרה והחקיקה עומד לרשותכם לצרכי איתור הסדרות מסוג, חוקים, תקנות, חוזרים, הבהרות, עמדות ממונה, הכרעות עקרוניות וטיוטות, באופן המהיר והידידותי ביותר.",
+     "title": "אתר השירותים והמידע הממשלתי",
+     "url": "https://www.gov.il/he/Departments/DynamicCollectors/regulation-legislation"
+    },
+    {
+     "date": "2017-09-14",
+     "host": "embassies.gov.il",
+     "rank": 3,
+     "snippet": "Summary of Laws Associated with Elections(Knesset website)\nLaws of Special Interest (Knesset website)\nIsrael's Environmental Laws\nSummary of principal laws relating to education\nEnglish translation of selected laws (Ministry of Justice)\nIsrael Securities Authority selected laws",
+     "title": "Selected Laws of the State of Israel",
+     "url": "https://embassies.gov.il/MFA/AboutIsrael/state/Law/Pages/Selected%20Laws%20of%20the%20State%20of%20Israel.aspx"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.gov.il",
+     "rank": 4,
+     "snippet": "gov.il - services and government information website\nCall The Government Central Support Center\n1299\n# All government information on one website, accessible and online\n## gov.il - Government services and information. Anywhere, anytime.\n## Government services\n### Find government services and informat",
+     "title": "gov.il - services and government information website",
+     "url": "https://www.gov.il/en"
+    },
+    {
+     "date": "2023-12-31",
+     "host": "www.gov.il",
+     "rank": 5,
+     "snippet": "# التشريعات الرسمية باللغة العربية\n## نبذة عن\nتتوفر في هذا الموقع ترجمة عربية للنشرات التالية :\n### النشرات الرسمية :\n- كتاب القوانين – الذي يشمل القوانين التي صدرت في الكنيست بقراءة ثالثة .",
+     "title": "التشريعات الرسمية باللغة العربية",
+     "url": "https://www.gov.il/ar/departments/units/official_gazette_arabic"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Israel municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2025-07-07",
+     "host": "www.harish.muni.il",
+     "rank": 1,
+     "snippet": "### כללי\n- **עיריית חריש** (להלן: \"הרשות\") מכבדת את פרטיות המבקרים והמשתמשים באתר האינטרנט העירוני שהיא מנהלת ומפעילה (להלן \"האתר\").\n...\n## Accessibility Statement\n- www.harish.muni.il",
+     "title": "ארכיון דוחות וצווים - עמוד 11 מתוך 12 - עיריית חריש",
+     "url": "https://www.harish.muni.il/report/page/11/"
+    },
+    {
+     "date": "",
+     "host": "www.gov.il",
+     "rank": 2,
+     "snippet": "מנוע ההסדרה והחקיקה עומד לרשותכם לצרכי איתור הסדרות מסוג, חוקים, תקנות, חוזרים, הבהרות, עמדות ממונה, הכרעות עקרוניות וטיוטות, באופן המהיר והידידותי ביותר.",
+     "title": "אתר השירותים והמידע הממשלתי",
+     "url": "https://www.gov.il/he/Departments/DynamicCollectors/regulation-legislation"
+    },
+    {
+     "date": "2025-09-08",
+     "host": "www.tel-aviv.gov.il",
+     "rank": 3,
+     "snippet": "כל הזכויות שמורות לעיריית תל-אביב-יפו, אבן גבירול 69, טלפון: 3013* מהנייד.\nהאתר מספק מידע כללי בלבד.",
+     "title": "דף הבית - עיריית תל אביב-יפו",
+     "url": "https://www.tel-aviv.gov.il/About/Pages/default.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.masham.org.il",
+     "rank": 4,
+     "snippet": "מרכז השלטון המקומי בישראל\n...\n**\nכתובת:\n** הארבעה 19, תל אביב 64739 **\nטלפון:\n** 03-6844222 **\nפקס:\n** 03-6844201",
+     "title": "מרכז השלטון המקומי בישראל",
+     "url": "https://www.masham.org.il/"
+    },
+    {
+     "date": "",
+     "host": "www.jerusalem.muni.il",
+     "rank": 5,
+     "snippet": "Reference #18.a8f7d517.1726993450.116f94fa",
+     "title": "Planning and Building | Jerusalem Municipality",
+     "url": "https://www.jerusalem.muni.il/en/residents/planningandbuilding/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Israel regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2025-01-04",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "## 3. Legal Regime\n### International Regulatory Considerations\nIsraeli regulatory bodies in the Ministry of Economy and Industry (Standards Institute of Israel), Ministry of Health (Food Control Services), and the Ministry of Agriculture (Veterinary Services and the Plant Protection Service) often a",
+     "title": "2023 Investment Climate Statements: Israel",
+     "url": "https://www.state.gov/reports/2023-investment-climate-statements/israel"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 2,
+     "snippet": "…\n...\nPlant Protection and Inspection Service: The Plant Protection and Inspection Service (PPIS) is the authority in charge of permitting the importation of plants and plant products into Israel.\n...\nIsrael’s Public Health Protection Law, (Food) 2015 (Hebrew), which came into force September 2016,",
+     "title": "Israel Food and Agricultural Import Regulations and Standards ...",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Food%20and%20Agricultural%20Import%20Regulations%20and%20Standards%20Report_Tel%20Aviv_Israel_12-17-2018.pdf"
+    },
+    {
+     "date": "2020-12-21",
+     "host": "www.trade.gov",
+     "rank": 3,
+     "snippet": "## Overview\nThe Standards Institution of Israel (SII) is the sole statutory body for developing and establishing standards, as mandated by the Standards Law of 1953.\n...\nPolicy oversight is provided by the Commissioner of Standards at the Ministry of Economy and Industry.",
+     "title": "Israel - Non-Tariffs Barriers to Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/israel-non-tariffs-barriers-trade"
+    },
+    {
+     "date": "2025-04-09",
+     "host": "www.oecd.org",
+     "rank": 4,
+     "snippet": "#### Overview\nThe Principles of Regulation Law, 2021 established basic principles of quality regulation, as well as a dedicated and independent regulatory oversight body – the Israeli Regulatory Authority (ILRA).\n...\nEvaluation of benefits is slowly being introduced.\n...\nThe ILRA also trains regulat",
+     "title": "Israel: OECD Regulatory Policy Outlook 2025",
+     "url": "https://www.oecd.org/en/publications/2025/04/oecd-regulatory-policy-outlook-2025_a754bf4c/full-report/israel_db4adb87.html"
+    },
+    {
+     "date": "",
+     "host": "regulation.gov.il",
+     "rank": 5,
+     "snippet": "המאגר מנוהל ומתוחזק על ידי רשות האסדרה, בשותפות עם מערך הדיגיטל הלאומי.\nרשות האסדרה אחראית על הפעלת האתר, תקינותו, וכן על שיפור השירות שהאתר מעניק לציבור.",
+     "title": "מאגר הרגולציה",
+     "url": "https://regulation.gov.il/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Israel national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.sii.org.il",
+     "rank": 1,
+     "snippet": "1. דף הבית - מכון התקנים הישראלי\n2. תקינה\n...\n- צפייה בתקנים ובאוספים באזור האישי\n- כניסה לאתר לצפייה בתקנים רשמיים/מחייבים\n- צפייה במידע על אוספים",
+     "title": "חיפוש תקנים מורחב - מכון התקנים הישראלי",
+     "url": "https://www.sii.org.il/he/lobby/standardization/standards-search"
+    },
+    {
+     "date": "",
+     "host": "www.sii.org.il",
+     "rank": 2,
+     "snippet": "Expanded Standard search - Standards Institution of Israel\n# Expanded Standard search\n**To place an order, please email library@sii.org.il**\n1. Home page - Standards Institution of Israel\n2. Standardization\n3. Expanded Standard search\nFound 0 Results\nExport to Excel Print\n...\n#### Contact us",
+     "title": "Expanded Standard search - Standards Institution of Israel",
+     "url": "https://www.sii.org.il/en/standards-search"
+    },
+    {
+     "date": "2025-01-27",
+     "host": "www.gov.il",
+     "rank": 3,
+     "snippet": "במנוע החיפוש ניתן לקבל מידע על התקנים הרשמיים במדינת ישראל.\n...\nלהורדת רשימת התקנים כקובץ אקסל\n...\nניתן לרכוש תקנים ישראליים בספריה של מכון התקנים הישראלי או באתר האינטרנט של מכון התקנים",
+     "title": "מנוע חיפוש התקנים הרשמיים",
+     "url": "https://www.gov.il/he/service/search_official_standards"
+    },
+    {
+     "date": "2026-10-31",
+     "host": "www.trade.gov",
+     "rank": 4,
+     "snippet": "# Standards Resources by Country\nInternational Trade Administration’s Country Commercial Guide for Israel - Information on Standards and Regulations and contact information for Commercial Service Officers in Israel\nStandards Institution of Israel - Israel’s national standards body\n...\n…",
+     "title": "Standards Resources by Country",
+     "url": "https://www.trade.gov/standards-resources-country"
+    },
+    {
+     "date": "",
+     "host": "data.gov.il",
+     "rank": 5,
+     "snippet": "…\nVoluntary Can and End Dimension Reference Manual, Can Manufacturers Institute, Revised 06/2004\",\"\",\"פטור מבדיקת יבוא\"\n...\n…\nתעודת בדיקה בהתאם ל- Commission Regulation (EU) No 1935/2004\nאו",
+     "title": "data.gov.il · dataset · mandatory-standardsמאגרי המידע הממשלתיים",
+     "url": "https://data.gov.il/dataset/mandatory-standards/resource/bb8b098e-40dd-47e6-927b-42c8a6339cce/download/bb8b098e-40dd-47e6-927b-42c8a6339cce.csv"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Israel mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.gov.il",
+     "rank": 1,
+     "snippet": "The Israeli Mandatory Requirements (IMR) for motor vehicles manufactured according to the European Union directives is the statutory document for importing vehicles into the State of Israel.\nThis IMR document is for informational purposes only.\n...\n…\n...\n…\nThis regulation does not replace other mand",
+     "title": "000211.docx",
+     "url": "https://www.gov.il/BlobFolder/policy/imr_rr_m_n_o_2026/he/000211.docx"
+    },
+    {
+     "date": "",
+     "host": "www.gov.il",
+     "rank": 2,
+     "snippet": "Commercial vehicles with air braking devices.<br>2.\nABS effective as required on FMVSS regulation and includes the following:<br>2.1 Taxis & tourist vehicles.<br>3.\nRegulation (EU) 2019/2144 is mandatory for vehicles in Category O |\n...\n|",
+     "title": "000191.docx - Gov.il",
+     "url": "https://www.gov.il/BlobFolder/policy/imr_rr_m_n_o_2026/he/000191.docx"
+    },
+    {
+     "date": "",
+     "host": "data.gov.il",
+     "rank": 3,
+     "snippet": "Voluntary Can and End Dimension Reference Manual, Can Manufacturers Institute, Revised 06/2004\",\"\",\"פטור מבדיקת יבוא\"\n...\n…\n...\n…",
+     "title": "data.gov.il · dataset · mandatory-standardsמאגרי המידע הממשלתיים",
+     "url": "https://data.gov.il/dataset/mandatory-standards/resource/bb8b098e-40dd-47e6-927b-42c8a6339cce/download/bb8b098e-40dd-47e6-927b-42c8a6339cce.csv"
+    },
+    {
+     "date": "",
+     "host": "www.gov.il",
+     "rank": 4,
+     "snippet": "Each vehicle should have EC Type-Approval and type approval certificate or EC Type Approval certificate according to the definitions in Directive 2007/46/EC<br>3.\nIncomplete, complete and completed vehicles intended to be adapted in Israel for the transportation of dangerous goods must comply with t",
+     "title": "000217.docx - Gov.il",
+     "url": "https://www.gov.il/BlobFolder/policy/imr_rr_m_n_o_2026/he/000217.docx"
+    },
+    {
+     "date": "",
+     "host": "www.gov.il",
+     "rank": 5,
+     "snippet": "…\n...\nAccording to Israeli Road Traffic Ordinance and Regulations:<br>1.\nInstallation of recording equipment is mandatory on buses and commercial vehicles exceeding 8,000 kg GVW<br>2.\nThe recording equipment must be calibrated.\n|",
+     "title": "[DOC] 000216.docx - Gov.il",
+     "url": "https://www.gov.il/BlobFolder/policy/imr_rr_m_n_o_2026/he/000216.docx"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Israel national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.cbs.gov.il",
+     "rank": 1,
+     "snippet": "CBS publications may also be viewed at the Statistical \nInformation Center in Tel Aviv-Yafo.\nCBS website:  \nwww.cbs.gov.il\nE-mail: \ninfo@cbs.gov.il",
+     "title": "[PDF] isr_in_n14e.pdf",
+     "url": "https://www.cbs.gov.il/he/publications/DocLib/isr_in_n/isr_in_n14e.pdf"
+    },
+    {
+     "date": "2026-06-08",
+     "host": "www.cbs.gov.il",
+     "rank": 2,
+     "snippet": "The Central Bureau of Statistics (CBS) is the official body in the country that is responsible for collecting, processing, and publishing statistical data about the population, economy, and society in Israel.\nThis data is essential for decision-making, policymakers, and the general public.\n...\ninfo@",
+     "title": "CBS Site",
+     "url": "https://www.cbs.gov.il/en/Pages/default.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.cbs.gov.il",
+     "rank": 3,
+     "snippet": "CBS publications may also be viewed at the Statistical \nInformation Center in Tel Aviv.\nCBS website:  www.cbs.gov.il\nE-mail: info@cbs.gov.il\nFor information on price indices, please call:\n02-652-7550 (multi-line) 24 hours a day",
+     "title": "Israel",
+     "url": "https://www.cbs.gov.il/he/publications/DocLib/isr_in_n/isr_in_n05e.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.cbs.gov.il",
+     "rank": 4,
+     "snippet": "The Statistical Abstract and its products (tables and maps) are published on the Central Bureau of\nStatistics website (www.cbs.gov.il).\n...\nThe Central Bureau of Statistics\nWebsite: www.cbs.gov.il\nE-mail: info@cbs.gov.il\nFacebook page: \"Israel Central Bureau of Statistics\"",
+     "title": "Selected Data - From the Statistical Abstract of Israel",
+     "url": "https://www.cbs.gov.il/he/publications/DocLib/isr_in_n/isr_in_n23e.pdf"
+    },
+    {
+     "date": "2026-05-14",
+     "host": "www.cbs.gov.il",
+     "rank": 5,
+     "snippet": "Turn on more accessible mode\nTurn off more accessible mode\n...\nnewsfeed.html",
+     "title": "Central Bureau of Statistics Home",
+     "url": "https://www.cbs.gov.il/en/cbsNewBrand/Pages/default.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Israel central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-21",
+     "host": "boi.org.il",
+     "rank": 1,
+     "snippet": "Data and Statistics | בנק ישראל - הבנק המרכזי של ישראל\n...\n# Data and Statistics\nThe Bank of Israel's Equalizer\n...\n## Additional information\n## Information and Statistics\nInformation that is accessible and interactive.\nPlease choose your topic from the menu on the left to view the information you n",
+     "title": "Data and Statistics",
+     "url": "https://boi.org.il/en/economic-roles/statistics/"
+    },
+    {
+     "date": "2026-11-01",
+     "host": "www.boi.org.il",
+     "rank": 2,
+     "snippet": "דף הבית | בנק ישראל - הבנק המרכזי של ישראל\n- - נגיד בנק ישראל פרופ' אמיר ירון",
+     "title": "אתר בנק ישראל | הבנק המרכזי",
+     "url": "https://www.boi.org.il/"
+    },
+    {
+     "date": "2025-09-30",
+     "host": "www.boi.org.il",
+     "rank": 3,
+     "snippet": "The Economy’s Balance of Payments | בנק ישראל - הבנק המרכזי של ישראל\n...\n- Economic Roles\n- Data and Statistics\n- External Sector\n- The Economy’s Balance of Payments\n...\n- Statistical Publications\n- Bank of Israel Annual Report\n- Press Releases - Israel’s International Investment Position (IIP)",
+     "title": "The Economy’s Balance of Payments - בנק ישראל",
+     "url": "https://www.boi.org.il/en/economic-roles/statistics/external-sector/the-economy-s-balance-of-payments/"
+    },
+    {
+     "date": "2026-06-08",
+     "host": "www.cbs.gov.il",
+     "rank": 4,
+     "snippet": "The Central Bureau of Statistics (CBS) is the official body in the country that is responsible for collecting, processing, and publishing statistical data about the population, economy, and society in Israel.\nThis data is essential for decision-making, policymakers, and the general public.\n...\ninfo@",
+     "title": "CBS Site",
+     "url": "https://www.cbs.gov.il/en/Pages/default.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.boi.org.il",
+     "rank": 5,
+     "snippet": "Dashboards | בנק ישראל - הבנק המרכזי של ישראל\n...\n- Home Page\n- Economic Roles\n- Data and Statistics\n- Information papers statistics\n- Dashboards\n# Dashboards\n## Financial and real data on the Israeli economy\n- Rapid indicators\n## Banks and credit card companies",
+     "title": "Dashboards | בנק ישראל - הבנק המרכזי של ישראל",
+     "url": "https://www.boi.org.il/en/economic-roles/statistics/information-papers-statistics/dashboards/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Israel government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "data.gov.il",
+     "rank": 1,
+     "snippet": "# אודות אתר המידע הממשלתי\n## מה זה DataGov\nאתר data.gov.il הוא הפלטפורמה המרכזית של ממשלת ישראל לפרסום מאגרי מידע המוגדרים כמידע פתוח (מידע שלא חלים עליו חסיונות).",
+     "title": "מאגרי המידע הממשלתיים | אודות",
+     "url": "https://data.gov.il/he/about"
+    },
+    {
+     "date": "",
+     "host": "data.gov.il",
+     "rank": 2,
+     "snippet": "אתר מאגרי המידע הממשלתיים מרכז מאגרי נתונים מכלל משרדי הממשלה הפתוחים לשימוש הציבור, מאפשר חיפוש נתונים בקלות וביעילות.\n...\n- החלטת ממשלה מספר 1933\n...\n- מדיניות שימוש בקוד פתוח",
+     "title": "מאגרי המידע הממשלתיים",
+     "url": "https://data.gov.il/"
+    },
+    {
+     "date": "2026-08-12",
+     "host": "www.wikidata.org",
+     "rank": 3,
+     "snippet": "open data portal Israel: a database of databases from all government ministries open to the public\n...\n|English|data.gov.il|open data portal Israel: a database of databases from all government ministries open to the public| |\n...\ncountry\nIsrael\n...\nofficial website\nhttps://info.data.gov.il/datagov/h",
+     "title": "data.gov.il - Wikidata",
+     "url": "https://www.wikidata.org/wiki/Q97119126"
+    },
+    {
+     "date": "2024-01-09",
+     "host": "atlas.co",
+     "rank": 4,
+     "snippet": "# National & Regional Data Portals\n### data.gov.il\nIsrael's national open data portal, providing public sector datasets including geographic and statistical data.\nIsrael, National, Open Data",
+     "title": "National & Regional Data Portals Directory",
+     "url": "https://atlas.co/data-portals/"
+    },
+    {
+     "date": "2026-05-06",
+     "host": "github.com",
+     "rank": 5,
+     "snippet": "## APIs\n|**data.gov.il (CKAN)**|National open-data portal — 1,194 datasets, 61 publishing orgs.\nNo English titles in API; see `060526/` for the English index.|`/api/3/action/package_search` · docs in snapshot|",
+     "title": "GitHub - danielrosehill/Israel-Open-Data-Resources",
+     "url": "https://github.com/danielrosehill/Israel-Open-Data-Resources"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:49:16Z",
+ "pais": {
+  "iso2": "IL",
+  "iso3": "ISR",
+  "nombre": "Israel"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

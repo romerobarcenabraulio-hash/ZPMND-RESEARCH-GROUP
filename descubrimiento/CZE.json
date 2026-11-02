@@ -1,0 +1,751 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Czechia constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.psp.cz",
+     "rank": 1,
+     "snippet": "Sbírka zákonů\n# Sbírka zákonů",
+     "title": "Sbírka zákonů",
+     "url": "https://www.psp.cz/sqw/sbirka.sqw",
+     "verificacion": {
+      "bytes": 32796,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:46Z",
+      "http": 200,
+      "sha256": "3a22265b5c9f7eb0c72e4bcf2bdcffe7b588a2595a73758a6a9c6fd2727180c6"
+     }
+    },
+    {
+     "date": "",
+     "host": "e-sbirka.gov.cz",
+     "rank": 2,
+     "snippet": "## Aktuálně vyhlášené právní akty\nPřehled aktuálně vyhlášených právních aktů.\n...\n## CzechVOC\nSlovník českých právních pojmů.\n## EuroVOC\n...\n|1/1993 Sb.|Ústava České republiky|",
+     "title": "Hlavní stránka",
+     "url": "https://e-sbirka.gov.cz/",
+     "verificacion": {
+      "bytes": 1040,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:47Z",
+      "http": 200,
+      "sha256": "9cbdcf626dea6bf587a7134c5d80633c002d9630ec90ec18e66e1be714bb02fb"
+     }
+    },
+    {
+     "date": "",
+     "host": "portal.gov.cz",
+     "rank": 3,
+     "snippet": "Zákony a vyhlášky - gov.cz\n- **Zákony a vyhlášky**\n# Zákony a vyhlášky\n### Zákon č. 89/2012 Sb.\nObčanský zákoník\n...\nZákoník práce",
+     "title": "Zákony a vyhlášky",
+     "url": "https://portal.gov.cz/kam-dal/zakony-vyhlasky"
+    },
+    {
+     "date": "",
+     "host": "e-sbirka.gov.cz",
+     "rank": 4,
+     "snippet": "|Vyhlášeno: 2. 9. 2026|",
+     "title": "Vyhledávání právních aktů - e-Sbírka",
+     "url": "https://e-sbirka.gov.cz/vyhledavani"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "ceskezakony.cz",
+     "rank": 5,
+     "snippet": "Přehledný a bezplatný přístup k české legislativě.\nVšechny zákony na jednom místě.\n...\nCeskeZakony.cz je bezplatný portál, který zpřístupňuje českou legislativu srozumitelnou formou.",
+     "title": "CeskeZakony.cz",
+     "url": "https://ceskezakony.cz/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Czechia national regulations decrees official government database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "e-sbirka.gov.cz",
+     "rank": 1,
+     "snippet": "Aktuálně vyhlášené právní akty - e-Sbírka\n# Aktuálně vyhlášené právní akty\nNalezeno 30 výsledků30 výsledků\n...\n|174/2026 Sb.|174/2026 Sb.",
+     "title": "Aktuálně vyhlášené právní akty",
+     "url": "https://e-sbirka.gov.cz/rejstriky/aktualne-vyhlasene-predpisy",
+     "verificacion": {
+      "bytes": 1040,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:48Z",
+      "http": 200,
+      "sha256": "9cbdcf626dea6bf587a7134c5d80633c002d9630ec90ec18e66e1be714bb02fb"
+     }
+    },
+    {
+     "date": "",
+     "host": "e-sbirka.gov.cz",
+     "rank": 2,
+     "snippet": "| |\nNařízení vlády, kterým se mění nařízení vlády č. 86/2011 Sb., o technických požadavcích na hračky, ve znění pozdějších předpisů Účinnost od: 29. 8. 2026|",
+     "title": "Právní akty s aktuálně nabytou účinností - e-Sbírka",
+     "url": "https://e-sbirka.gov.cz/rejstriky/aktualne-ucinne-predpisy",
+     "verificacion": {
+      "bytes": 1040,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:49Z",
+      "http": 200,
+      "sha256": "9cbdcf626dea6bf587a7134c5d80633c002d9630ec90ec18e66e1be714bb02fb"
+     }
+    },
+    {
+     "date": "",
+     "host": "e-sbirka.gov.cz",
+     "rank": 3,
+     "snippet": "|Vyhlášeno: 2. 9. 2026|",
+     "title": "Vyhledávání právních aktů - e-Sbírka",
+     "url": "https://e-sbirka.gov.cz/vyhledavani"
+    },
+    {
+     "date": "",
+     "host": "portal.gov.cz",
+     "rank": 4,
+     "snippet": "Zákony a vyhlášky - gov.cz\n- **Zákony a vyhlášky**\n# Zákony a vyhlášky\n### Zákon č. 89/2012 Sb.\n...\n### Vyhláška č. 362/1992 Sb.",
+     "title": "Zákony a vyhlášky",
+     "url": "https://portal.gov.cz/kam-dal/zakony-vyhlasky"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Czechia official gazette",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "msp.gov.cz",
+     "rank": 1,
+     "snippet": "Ústřední věstník ČR - Ministerstvo spravedlnosti České republiky - Portál justice\nMinisterstvo spravedlnosti...\nMinisterstvo Legislativa **\nÚstřední věstník ČR\n**",
+     "title": "Ústřední věstník ČR - Ministerstvo spravedlnosti České republiky",
+     "url": "https://msp.gov.cz/web/msp/ustredni-vestnik-cr",
+     "verificacion": {
+      "bytes": 130923,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:51Z",
+      "http": 200,
+      "sha256": "448256cc709a6c01362a10b93ec02fb1bb02f12dc4f94baf9fd195d8bb01c5b5"
+     }
+    },
+    {
+     "date": "",
+     "host": "portal.gov.cz",
+     "rank": 2,
+     "snippet": "Věstníky - Digitální a informační agentura - gov.cz\n...\n# Věstníky - Digitální a informační agentura\n...\n|Věstník DIA částka 6/2026|108142|30.04.2026|01.11.2026|",
+     "title": "Věstníky - Digitální a informační agentura - gov.cz",
+     "url": "https://portal.gov.cz/vestniky/yukd8p7/?all=True",
+     "verificacion": {
+      "bytes": 115704,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:53Z",
+      "http": 200,
+      "sha256": "16f78bbe094bcdeab54c9b000932078d90b4478d6fcce06cbaf183c0e5e4acca"
+     }
+    },
+    {
+     "date": "",
+     "host": "e-sbirka.gov.cz",
+     "rank": 3,
+     "snippet": "|Vyhlášeno: 2. 9. 2026|\n|--|\n...\n|Vyhlášeno: 31. 8. 2026|\n|Vyhlášeno: 28. 8. 2026|",
+     "title": "Vyhledávání právních aktů - e-Sbírka",
+     "url": "https://e-sbirka.gov.cz/vyhledavani"
+    },
+    {
+     "date": "",
+     "host": "e-sbirka.gov.cz",
+     "rank": 4,
+     "snippet": "-\n...\nVyhláška, kterou se mění vyhláška č. 21/2017 Sb., o zajišťování jaderné bezpečnosti jaderného zařízení Vyhlášeno: 23. 1. 2026|23. 1. 2026|",
+     "title": "Právní akty v roce 2026",
+     "url": "https://e-sbirka.gov.cz/rejstriky/chronologicky/2026"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Czechia supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "rozhodnuti.nsoud.cz",
+     "rank": 1,
+     "snippet": "Rozhodnutí a stanoviska Nejvyššího soudu\nRozšířené vyhledávání\nSpisová značka\nECLI\nDatum zveřejnění od\nDatum zveřejnění do\nDatum rozhodnutí od\nDatum rozhodnutí do\nHesla\nCivilní\n...\nAND\nOR",
+     "title": "Rozhodnutí a stanoviska Nejvyššího soudu",
+     "url": "https://rozhodnuti.nsoud.cz/",
+     "verificacion": {
+      "error": "robots.txt disallows https://rozhodnuti.nsoud.cz/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:50:54Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.nsoud.cz",
+     "rank": 2,
+     "snippet": "Nejvyšší soud uveřejňuje na svých webových stránkách všechna svá rozhodnutí vydaná po 1. 6. 2000. Databáze dále obsahuje vybraná stanoviska Nejvyššího soudu.\n...\n…",
+     "title": "Obsah databáze rozhodnutí a stanovisek Nejvyššího soudu",
+     "url": "https://www.nsoud.cz/napoveda-rozhodnuti-a-stanoviska/obsah-databaze-rozhodnuti-a-stanovisek-nejvyssiho-soudu",
+     "verificacion": {
+      "bytes": 44535,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:56Z",
+      "http": 200,
+      "sha256": "0f78da859128856c9713787199cfcdb9a9c552950db58bfd49a3f69e3dc02989"
+     }
+    },
+    {
+     "date": "",
+     "host": "rozhodnuti.justice.cz",
+     "rank": 3,
+     "snippet": "\"rok\":2026,\"pocet\":60203,\"odkaz\":\"https://rozhodnuti.justice.cz/api/opendata/2026\"}]",
+     "title": "rozhodnuti.justice.cz",
+     "url": "https://rozhodnuti.justice.cz/api/opendata"
+    },
+    {
+     "date": "",
+     "host": "www.nsoud.cz",
+     "rank": 4,
+     "snippet": "### Sbírka soudních rozhodnutí a stanovisek\n### Výběr rozhodnutí ESLP\n### AEQUITAS\n### BULLETIN\n## Úřední deska\n#### Rozhodnutí a stanoviska\n#### Informace o řízení",
+     "title": "Nejvyšší soud České republiky — Oddělení analytiky a ...",
+     "url": "https://www.nsoud.cz/"
+    },
+    {
+     "date": "",
+     "host": "www.nsoud.cz",
+     "rank": 5,
+     "snippet": "Po kliknutí na tlačítko se šipkou lze vyhledávání omezit na konkrétní soud.\nU Nejvyššího soudu lze vyhledávání omezit na hledání jen v rozhodnutích trestních nebo jen v rozhodnutích civilních.",
+     "title": "Nápověda - Rozhodnutí a stanoviska — Nejvyšší soud České ...",
+     "url": "https://www.nsoud.cz/napoveda-rozhodnuti-a-stanoviska"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Czechia state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "e-sbirka.gov.cz",
+     "rank": 1,
+     "snippet": "## Aktuálně vyhlášené právní akty\nPřehled aktuálně vyhlášených právních aktů.\n...\n## e-Sbírka pod doménou gov.cz a cms2.cz\n...\nOd 1.",
+     "title": "Hlavní stránka",
+     "url": "https://e-sbirka.gov.cz/",
+     "verificacion": {
+      "bytes": 1040,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:56Z",
+      "http": 200,
+      "sha256": "9cbdcf626dea6bf587a7134c5d80633c002d9630ec90ec18e66e1be714bb02fb"
+     }
+    },
+    {
+     "date": "",
+     "host": "e-sbirka.gov.cz",
+     "rank": 2,
+     "snippet": "|Vyhlášeno: 2. 9. 2026|",
+     "title": "Vyhledávání právních aktů - e-Sbírka",
+     "url": "https://e-sbirka.gov.cz/vyhledavani",
+     "verificacion": {
+      "bytes": 1040,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:57Z",
+      "http": 200,
+      "sha256": "9cbdcf626dea6bf587a7134c5d80633c002d9630ec90ec18e66e1be714bb02fb"
+     }
+    },
+    {
+     "date": "",
+     "host": "portal.gov.cz",
+     "rank": 3,
+     "snippet": "Zákony a vyhlášky - gov.cz\n- **Zákony a vyhlášky**\n# Zákony a vyhlášky\n### Zákon č. 89/2012 Sb.\n...\nZákon o ochraně spotřebitele",
+     "title": "Zákony a vyhlášky",
+     "url": "https://portal.gov.cz/kam-dal/zakony-vyhlasky"
+    },
+    {
+     "date": "",
+     "host": "www.psp.cz",
+     "rank": 4,
+     "snippet": "Sbírka zákonů\n# Sbírka zákonů",
+     "title": "Sbírka zákonů",
+     "url": "https://www.psp.cz/sqw/sbirka.sqw"
+    },
+    {
+     "date": "",
+     "host": "www.psp.cz",
+     "rank": 5,
+     "snippet": "- Digitální knihovna \"České sněmy\"\n...\n### Portály a databáze\n...\n- beck-online : zákony, vyhlášky, aktuální změny, ad.; **přístupno pouze z vnitřní sítě Poslanecké sněmovny**",
+     "title": "České zákony - psp.cz",
+     "url": "https://www.psp.cz/sqw/hp.sqw?k=2027"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Czechia municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "sbirkapp.gov.cz",
+     "rank": 1,
+     "snippet": "Sbírka právních předpisů územních samosprávných celků a některých správních úřadů\n...\n### Právní předpisy\nUmožňuje vyhledávat obecně závazné vyhlášky a nařízení.",
+     "title": "Sbírka právních předpisů územních samosprávných celků a ...",
+     "url": "https://sbirkapp.gov.cz/vyhledavani",
+     "verificacion": {
+      "bytes": 55847,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:50:59Z",
+      "http": 200,
+      "sha256": "9d195dd8223a6d7c490eb6fb399cd68c1de593f46ec8e538ee9263b489edc7f6"
+     }
+    },
+    {
+     "date": "",
+     "host": "sbirkapp.gov.cz",
+     "rank": 2,
+     "snippet": "### Nové zákonné zmocnění pro obce k regulaci zacházení s pyrotechnickými výrobky\nDovolujeme si Vás informovat, že k **1.\n...\nSoučasně Ministerstvo vnitra připravilo k novému zákonnému zmocnění metodický materiál.",
+     "title": "Vítejte na webových stránkách informačního systému Sbírka ...",
+     "url": "https://sbirkapp.gov.cz/",
+     "verificacion": {
+      "bytes": 61627,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:51:00Z",
+      "http": 200,
+      "sha256": "57d89e6a46a62d1c04f2f32dc8ef2a109c948b7cb26351d82623d23bbd4f4b1b"
+     }
+    },
+    {
+     "date": "",
+     "host": "portal.gov.cz",
+     "rank": 3,
+     "snippet": "gov.cz - Portál veřejné správy\n# Sbírka právních předpisů územních samosprávných celků\n## Hlavní informace",
+     "title": "Sbírka právních předpisů územních samosprávných celků",
+     "url": "https://portal.gov.cz/sluzby-vs/sbirka-pravnich-predpisu-uzemnich-samospravnych-celku-S14011"
+    },
+    {
+     "date": "",
+     "host": "e-sbirka.gov.cz",
+     "rank": 4,
+     "snippet": "|Vyhlášeno: 2. 9. 2026|",
+     "title": "Vyhledávání právních aktů - e-Sbírka",
+     "url": "https://e-sbirka.gov.cz/vyhledavani"
+    },
+    {
+     "date": "",
+     "host": "e-sbirka.gov.cz",
+     "rank": 5,
+     "snippet": "Rejstřík právních aktů členěný dle pojmů věcného rejstříku CzechVOC.\n## Aktuálně vyhlášené právní akty\nPřehled aktuálně vyhlášených právních aktů.",
+     "title": "Hlavní stránka",
+     "url": "https://e-sbirka.gov.cz/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Czechia regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.cnb.cz",
+     "rank": 1,
+     "snippet": "### Acts and directly binding EU regulations\n...\n- Regulation (EU) No 537/2014 of the European Parliament and of the Council of 16 April 2014 on specific requirements regarding statutory audit of public-interest entities and repealing Commission Decision 2005/909/EC (external link)\n...\nNote:",
+     "title": "Laws and regulations - Czech National Bank",
+     "url": "https://www.cnb.cz/en/supervision-financial-market/legislation/other-auditing-rating-agencies/laws-and-regulations/",
+     "verificacion": {
+      "bytes": 62300,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:51:02Z",
+      "http": 200,
+      "sha256": "8740ee392ca3dfaf197eec5625316e6250c81efbac0e04088828bde378ac46ef"
+     }
+    },
+    {
+     "date": "2026-10-05",
+     "host": "www.eurofound.europa.eu",
+     "rank": 2,
+     "snippet": "# Actors and institutions in Czechia\n## Public authorities involved in regulating working life\nThe regulation of working conditions and industrial relations falls under the authority of the Ministry of Labour and Social Affairs of Czechia (Ministerstvo práce a sociálních věcí, MPSV).\n...\n…\n...\non co",
+     "title": "Actors and institutions in Czechia | Eurofound - European Union",
+     "url": "https://www.eurofound.europa.eu/en/countries/czechia/actors-and-institutions",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.eurofound.europa.eu/en/countries/czechia/actors-and-institutions",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:51:02Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cnb.cz",
+     "rank": 3,
+     "snippet": "# Financial market supervision\nThe CNB therefore supervises the banking sector, the capital market, the insurance industry, pension funds, credit unions, bureaux-de-change and payment system institutions.\nThe CNB lays down rules safeguarding the stability of the banking sector, the capital market, t",
+     "title": "Supervision, Regulation",
+     "url": "https://www.cnb.cz/en/supervision-financial-market/"
+    },
+    {
+     "date": "",
+     "host": "coi.gov.cz",
+     "rank": 4,
+     "snippet": "Obecné informace týkající se činnosti ČOI jsou zveřejněny na tomto webu.\n...\nV případě, že máte jiný důvod kontaktovat ČOI, je možné využít e-podatelnu.\n...\n## Inspektoráty ČOI",
+     "title": "ČOI – Česká obchodní inspekce kontroluje a dozoruje ...",
+     "url": "https://coi.gov.cz/"
+    },
+    {
+     "date": "",
+     "host": "coi.gov.cz",
+     "rank": 5,
+     "snippet": "# Uvedení výrobku na trh\n...\n…",
+     "title": "Pro podnikatele",
+     "url": "https://coi.gov.cz/pro-podnikatele/uvedeni-vyrobku-na-trh/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Czechia national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "csnonline.agentura-cas.cz",
+     "rank": 1,
+     "snippet": "NOVĚ VYDANÉ NORMY\n**ČSN 36 5601-1 - Světelná signalizační zařízení pro řízení silničního provozu - Část 1: Technické a funkční požadavky**\n...\n11.2026\n...\n##### Kontakt:",
+     "title": "ČSN online - Česká agentura pro standardizaci",
+     "url": "https://csnonline.agentura-cas.cz/",
+     "verificacion": {
+      "bytes": 15768,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:51:04Z",
+      "http": 200,
+      "sha256": "252b9e3d18866caa0e9cebcf1ce4e452ff9b6dea5aa594926836f59cf449d9d1"
+     }
+    },
+    {
+     "date": "2026-04-21",
+     "host": "unmz.gov.cz",
+     "rank": 2,
+     "snippet": "# National standards of the Czech Republic\n1. National Standard of Time and Frequency\n2. National Standard of Activity of Radionuclides\n3. National Standard of Neutron Fluence Rate and Spectral Fluence Rate.\n...\n…\n...\n19. National Standard of Force ESZ 1 MN",
+     "title": "National standards of the Czech Republic - UNMZ",
+     "url": "https://unmz.gov.cz/metrology/metrology-system/national-standards-of-the-czech-republic/",
+     "verificacion": {
+      "bytes": 65587,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:51:05Z",
+      "http": 200,
+      "sha256": "3fa1a9436f10b8170f2bf6ea0a0a34d64e00520afca4e8ffc382b0d6b217accd"
+     }
+    },
+    {
+     "date": "2026-10-06",
+     "host": "agenturacas.gov.cz",
+     "rank": 3,
+     "snippet": "ČSN online - přístup do databáze českých technických norem\n...\n- Bez registrace\n...\nPlacený portál pro přístup k plným textům všech platných českých technických norem a technických normalizačních informací – na bázi předplatného.",
+     "title": "ČSN online - přístup do databáze českých technických norem",
+     "url": "https://agenturacas.gov.cz/produkty-a-sluzby/csn-online/"
+    },
+    {
+     "date": "2014-09-26",
+     "host": "cmi.gov.cz",
+     "rank": 4,
+     "snippet": "# Czech national standards\n...\n|--|--|--|--|--|--|--|\n|ECM|260-2/01-012|Standard of Magnetic Flux Density|0,6|mT / A|Ing.\nMichal Ulvr, Ph.D.|Ing.",
+     "title": "Czech national standards | Czech metrology institute",
+     "url": "https://cmi.gov.cz/standards?language=en"
+    },
+    {
+     "date": "2026-10-06",
+     "host": "agenturacas.gov.cz",
+     "rank": 5,
+     "snippet": "Česká agentura pro standardizaci\n...\nBiskupský dvůr 1148/5, 110 00 Praha 1\n**T: +420 221 802 111\nE: agentura@agenturacas.gov.cz\n**",
+     "title": "Česká agentura pro standardizaci",
+     "url": "https://agenturacas.gov.cz/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Czechia mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "msmt.gov.cz",
+     "rank": 1,
+     "snippet": "**Nákup úklidových služeb**\n...\n**Nákup osobních vozidel**\nStandardy osobních vozidel - běžný pohon, soubor typu xlsx, (77,9 kB) (platné od 17. března 2025)",
+     "title": "Závazné technické standardy",
+     "url": "https://msmt.gov.cz/ministerstvo/zavazne-technicke-standardy",
+     "verificacion": {
+      "bytes": 134779,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:51:07Z",
+      "http": 200,
+      "sha256": "1a68e163ea1751376913bec1539e8f38b95e88b08c2de5854d6be3b2c77b812b"
+     }
+    },
+    {
+     "date": "",
+     "host": "mpo.gov.cz",
+     "rank": 2,
+     "snippet": "## 22/1997\nACT of 24 January 1997 on technical requirements of products and amending certain laws\n...\n…\n...\n…\n...\n…\n## 17/2003\nGOVERNMENTAL ORDER of 9 December 2002 laying down technical requirements for low—voltage electrical equipment",
+     "title": "Standardization | MPO",
+     "url": "https://mpo.gov.cz/en/business/standardization/standardization--14348/",
+     "verificacion": {
+      "error": "robots.txt disallows https://mpo.gov.cz/en/business/standardization/standardization--14348/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:51:08Z"
+     }
+    },
+    {
+     "date": "2025-01-30",
+     "host": "ctu.gov.cz",
+     "rank": 3,
+     "snippet": "*30. 1. 2025: Harmonizované normy pro kybernetickou bezpečnost stanoví Prováděcí rozhodnutí Komise (EU) 2025/138.*",
+     "title": "Harmonizované normy",
+     "url": "https://ctu.gov.cz/harmonizovane-normy"
+    },
+    {
+     "date": "2026-04-21",
+     "host": "unmz.gov.cz",
+     "rank": 4,
+     "snippet": "# Transposition of technical regulations\nÚNMZ shall keep a register of proposed and valid EU technical regulations, including information on relevant responsible authorities, and keep a comprehensive overview of their transposition.\nIn the below mentioned table you can find current overview of the E",
+     "title": "Transposition of technical regulations - UNMZ",
+     "url": "https://unmz.gov.cz/international-relations/eu/transposition-of-technical-regulations/"
+    },
+    {
+     "date": "2024-05-01",
+     "host": "mpo.gov.cz",
+     "rank": 5,
+     "snippet": "# Standardizace\n### Zákon č. 526/2020 Sb., kterým se mění zákon č. 22/1997 Sb., o technických požadavcích na výrobky a o změně a doplnění některých zákonů, ve znění pozdě",
+     "title": "Standardizace",
+     "url": "https://mpo.gov.cz/cz/podnikani/standardizace/"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Czechia national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-06-30",
+     "host": "csu.gov.cz",
+     "rank": 1,
+     "snippet": "# ČSÚ využívá všechny dostupné a vhodné administrativní zdroje dat\n...\nVšechna data ČSÚ online\n...\n## Statistiky\n## Sledujte nás\n- © Český statistický úřad (ČSÚ) | 2026",
+     "title": "Český statistický úřad | Statistika",
+     "url": "https://csu.gov.cz/",
+     "verificacion": {
+      "bytes": 90856,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:51:10Z",
+      "http": 200,
+      "sha256": "7c46fa08e33cffbee7aa7dca2ae695f2f203ddacd0bcacb057dd634e492f38ef"
+     }
+    },
+    {
+     "date": "2026-06-30",
+     "host": "csu.gov.cz",
+     "rank": 2,
+     "snippet": "Czech Statistical Office | Statistics\n# Your data help improve life in Czechia!\nAll data of the CZSO online\n- **Population** 30/06/2026 **10,903,655** Publication date: 11. 09. 2026",
+     "title": "Czech Statistical Office",
+     "url": "https://csu.gov.cz/home",
+     "verificacion": {
+      "bytes": 88981,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:51:11Z",
+      "http": 200,
+      "sha256": "589e8836e97d9652895a1cca3a7096c0025ad12a5fca01c5336b06b85d1a9b71"
+     }
+    },
+    {
+     "date": "",
+     "host": "csu.gov.cz",
+     "rank": 3,
+     "snippet": "Are you interested in the latest data on inflation, GDP, population, average wages and the like?\nIf the answer is \nYES, don´t hesitate to visit us at:    www.csu.gov.cz \nCZSO HEADQUARTERS CONTACTS \nCzech Statistical Office",
+     "title": "[PDF] First hand figures Prague",
+     "url": "https://csu.gov.cz/docs/107508/307c07b3-8547-eb95-48cc-f13d5509832e/33012326_def.pdf?version=1.3"
+    },
+    {
+     "date": "",
+     "host": "csu.gov.cz",
+     "rank": 4,
+     "snippet": "**Czech Statistical Office \\| Na padesátém 81, 100 82 Praha 10, ph.: 274 051 111 \\| www.csu.gov.cz**  \n...\nYou can find them on the CZSO web page:  www.csu.gov.cz**",
+     "title": "[DOC] https://csu.gov.cz/docs/107508/c82d35d8-b0ba-8840-...",
+     "url": "https://csu.gov.cz/docs/107508/c82d35d8-b0ba-8840-0312-9ba13f5f43d9/32019425q4a.docx?version=1.0"
+    },
+    {
+     "date": "2026-10-31",
+     "host": "csu.gov.cz",
+     "rank": 5,
+     "snippet": "# Newsletter - 36/2026\n## Přihlásit se k odběru\nInformace o inflaci, HDP, obyvatelstvu, průměrných mzdách a mnohé další najdete na stránkách Českého statistického úřadu: csu.gov.cz.",
+     "title": "Newsletter - 36/2026 | Produkty",
+     "url": "https://csu.gov.cz/produkty/newsletter-36-kalendarni-tyden-2026"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Czechia central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-11-01",
+     "host": "www.cnb.cz",
+     "rank": 1,
+     "snippet": "Statistics - Czech National Bank\n# Statistics\nThe Czech National Bank systematically collects, processes and publishes statistical data needed to assess economic developments, conduct monetary policy, safeguard financial stability and fulfil its statistical obligations to national and European insti",
+     "title": "Statistics - Czech National Bank",
+     "url": "https://www.cnb.cz/en/statistics/",
+     "verificacion": {
+      "bytes": 62693,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:51:12Z",
+      "http": 200,
+      "sha256": "7aff3c2f8678c81fca646c6248dd2dd97e972045078b11c80969d090ba0b4b92"
+     }
+    },
+    {
+     "date": "2026-11-01",
+     "host": "www.cnb.cz",
+     "rank": 2,
+     "snippet": "Statistika - Česká národní banka\n# Statistika\n...\n**Ústředí ČNB**\nNa Příkopě 864/28\n115 03 Praha 1\nIČO 48136450\nTel.: 224 411 111\n**Zelená linka**",
+     "title": "Statistika - Česká národní banka",
+     "url": "https://www.cnb.cz/cs/statistika/",
+     "verificacion": {
+      "bytes": 70244,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:51:13Z",
+      "http": 200,
+      "sha256": "35db9f6bab0c9bb99cd7e19a843d68610c75370f6abb1945c40c6c5504a961e6"
+     }
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.cnb.cz",
+     "rank": 3,
+     "snippet": "Czech National Bank\n...\nConsumer prices in the Czech Republic are going up at a rate of around 2% a year.\nMaintaining low, stable and thus predictable inflation is the primary objective of the Czech National Bank.\n...\nNa Příkopě 864/28\n115 03 Prague 1",
+     "title": "Czech National Bank",
+     "url": "https://www.cnb.cz/en/"
+    },
+    {
+     "date": "",
+     "host": "www.cnb.cz",
+     "rank": 4,
+     "snippet": "Monetary and financial statistics - Czech National Bank\n...\nThe monetary and financial statistics comprise a set of statistics compiled and published by the Czech National Bank for the purposes of monetary policy and financial stability and for the needs of the European System of Central Banks.\n...\n",
+     "title": "Monetary and financial statistics - Czech National Bank",
+     "url": "https://www.cnb.cz/en/statistics/monetary-and-financial-statistics/"
+    },
+    {
+     "date": "2026-05-29",
+     "host": "www.cnb.cz",
+     "rank": 5,
+     "snippet": "# ARAD E K O N O M I C K Á D A T A\nOficiální statistiky, časové řady a ukazatele na jednom místě.\nProcházejte data, sestavujte vlastní přehledy a sledujte vývoj české ekonomiky.",
+     "title": "ARAD",
+     "url": "https://www.cnb.cz/arad/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Czechia government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "data.gov.cz",
+     "rank": 1,
+     "snippet": "# Search datasets\n...\n**Ministerstvo životního prostředí**\n...\n- - National Open Data Coordinator: Michal Kubáň\n- otevrenadata@dia.gov.cz\n- Phone: +420 974 817 556\n- X: @otevrenadata\n- Digital and Information Agency",
+     "title": "Datasets - National open data catalog (NKOD) - Portál o datech",
+     "url": "https://data.gov.cz/datasets?publisher-limit=36&themes-limit=24&formats-limit=48&page=9",
+     "verificacion": {
+      "bytes": 310468,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:51:15Z",
+      "http": 200,
+      "sha256": "76f95c52239b9ebc336f98536be88b129841beda8eff323e42b7e1c9a750a527"
+     }
+    },
+    {
+     "date": "2021-07-19",
+     "host": "data.mf.gov.cz",
+     "rank": 2,
+     "snippet": "Portál otevřených dat Ministerstva financí\n# Otevřená data Ministerstva financí\n...\n### Kontakt\n#### Ministerstvo financí ČR\nLetenská 15, Praha 1 - Malá Strana\nwww.mfcr.cz\n...\notevrenadata@mfcr.cz",
+     "title": "Otevřená data Ministerstva financí - Ministerstvo financí ČR",
+     "url": "https://data.mf.gov.cz/",
+     "verificacion": {
+      "bytes": 18246,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:51:16Z",
+      "http": 200,
+      "sha256": "407ca216088518dac30adb4484015f45d8f360d1c575560920c07055f295a223"
+     }
+    },
+    {
+     "date": "",
+     "host": "portal.gov.cz",
+     "rank": 3,
+     "snippet": "gov.cz - Portál veřejné správy\n…\n...\nSprávcem národního katalogu otevřených dat je **Digitální a informační agentura**.\nNárodní katalog otevřených dat je dostupný na elektronické adrese Portál otevřených dat.",
+     "title": "Katalog otevřených dat - gov.cz",
+     "url": "https://portal.gov.cz/sluzby-vs/narodni-katalog-otevrenych-dat-S10793"
+    },
+    {
+     "date": "",
+     "host": "portal.gov.cz",
+     "rank": 4,
+     "snippet": "Otevřená data - gov.cz\n# Otevřená data\n## ePetice\nSTÁHNOUT XLSX\n## Centrální registr výročních zpráv\n...\n## Věstníky\n- portalobcana@dia.gov.cz ⧉",
+     "title": "Otevřená data - gov.cz - Portál veřejné správy",
+     "url": "https://portal.gov.cz/kam-dal/otevrena-data"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:34:00Z",
+ "pais": {
+  "iso2": "CZ",
+  "iso3": "CZE",
+  "nombre": "Czechia"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

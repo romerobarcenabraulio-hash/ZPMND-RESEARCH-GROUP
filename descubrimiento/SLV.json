@@ -1,0 +1,605 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "El Salvador constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2004-02-01",
+     "host": "www.asamblea.gob.sv",
+     "rank": 1,
+     "snippet": "# CONSTITUCIÓN DE LA REPÚBLICA DE EL SALVADOR.\n...\n|Fecha de Emisión:|15/12/1983|Materia:|Asamblea Constituyente|\n...\n|--|--|--|\n|234|281|16/12/1983|",
+     "title": "Constitución de la republica de El Salvador - Asamblea Legislativa",
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/view/3959"
+    },
+    {
+     "date": "2025-12-01",
+     "host": "www.asamblea.gob.sv",
+     "rank": 2,
+     "snippet": "José Damián Villacorta, sirvió de fundamento a las deliberaciones del Congreso, que el 12 de junio de 1824, decretó la primera Constitución Política de El Salvador, sancionada por el prócer Don José Manuel Rodríguez, en su carácter de Jefe de Estado.",
+     "title": "Constitución de la República | Asamblea Legislativa de El ...",
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/constitucion"
+    },
+    {
+     "date": "2004-02-01",
+     "host": "www.asamblea.gob.sv",
+     "rank": 3,
+     "snippet": "Leyes y Decretos\nConstitución de la República\nBuscador de Leyes y Decretos\nAcuerdos de Reforma a la Constitución\nLeyes y Decretos por Año\nAnuarios Legislativo",
+     "title": "Decretos por Año - Asamblea Legislativa de El Salvador",
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/decretos-por-anios"
+    },
+    {
+     "date": "2026-10-05",
+     "host": "el-salvador.justia.com",
+     "rank": 4,
+     "snippet": "Justia El Salvador :: Nacionales :: Ley de El Salvador\nJustia El Salvador Nacionales Leyes\n...\n242. Ley Del Fondo Ambiental De El Salvador\n243. Ley Del Fondo De Conservación Vial\n244. Ley Del Fondo De Inversión Nacional En Electricidad Y Telefonía, Finet",
+     "title": "Justia El Salvador :: Nacionales :: Ley de El Salvador",
+     "url": "https://el-salvador.justia.com/nacionales/leyes/"
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 5,
+     "snippet": "Enmendado/a hasta: 28 de junio de 2014\nEntrada en vigor: 20 de diciembre de 1983\nPublicación: 16 de diciembre de 1983\nPromulgación: 15 de diciembre de 1983\nTipo de texto Leyes marco\nMateria Otros",
+     "title": "Constitución de la Republica de El Salvador, El Salvador - WIPO",
+     "url": "https://www.wipo.int/wipolex/es/legislation/details/3769"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "El Salvador national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2004-02-01",
+     "host": "www.asamblea.gob.sv",
+     "rank": 1,
+     "snippet": "Leyes y Decretos\n...\nBuscador de Leyes y Decretos\n...\nÚltimos Decretos Aprobados\nPendiente de Publicación Material en el Diario Oficial y de Entrada en Vigencia.\nAquí se muestran los Documentos Legislativos emitidos en cada Sesión Plenaria.",
+     "title": "Últimos Decretos Aprobados",
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/ultimos-aprobados"
+    },
+    {
+     "date": "2004-02-01",
+     "host": "www.asamblea.gob.sv",
+     "rank": 2,
+     "snippet": "Reglamento Interior de la Asamblea Legislativa\nGrupos Parlamentarios\nLeyes y Decretos\nConstitución de la República\nBuscador de Leyes y Decretos\nAcuerdos de Reforma a la Constitución\nLeyes y Decretos por Año",
+     "title": "Decretos por Año - Asamblea Legislativa de El Salvador",
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/decretos-por-anios"
+    },
+    {
+     "date": "2004-02-01",
+     "host": "www.asamblea.gob.sv",
+     "rank": 3,
+     "snippet": "# Búsqueda de Leyes y Decretos",
+     "title": "Búsqueda de Leyes y Decretos",
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/busqueda-decretos"
+    },
+    {
+     "date": "",
+     "host": "asp.salud.gob.sv",
+     "rank": 4,
+     "snippet": ".:: Centro Virtual de Documentación Regulatoria - Ministerio de Salud - Decretos ::.",
+     "title": "Decretos",
+     "url": "https://asp.salud.gob.sv/regulacion/decretos.asp"
+    },
+    {
+     "date": "2026-01-29",
+     "host": "www.asamblea.gob.sv",
+     "rank": 5,
+     "snippet": "# Decretos Emitidos en 2026\n...\nLEY ESPECIAL QUINCENA VEINTICINCO.\n...\nDISPOSICIONES TRANSITORIAS PARA LA INCORPORACIÓN DE DOCENTES INTERINOS PARA SU DESIGNACIÓN EN PLAZAS DOCENTES POR LEY DE SALARIOS.",
+     "title": "Decretos Emitidos en 2026 | Asamblea Legislativa de El Salvador",
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/decretos-por-anios/2026/0"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "El Salvador official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.transparencia.gob.sv",
+     "rank": 1,
+     "snippet": "Reformado 2022.\nREPUBLICA DE EL SALVADOR EN LA AMERICA CENTRAL.\n1\nDIARIO OFICIAL\n...\nTOMO Nº 435  SAN SALVADOR, VIERNES 10 DE JUNIO DE 2022  NUMERO 110\n…",
+     "title": "diario oficial",
+     "url": "https://www.transparencia.gob.sv/descarga_archivo.php?id=NjI1ODQx"
+    },
+    {
+     "date": "2021-04-28",
+     "host": "wwws.loc.gov",
+     "rank": 2,
+     "snippet": "# El Salvador Republic of El Salvador / República de El Salvador\n...\n## Legislative\n- OFFICIAL GAZETTE: Diario Oficial\n- PARLIAMENT: Asamblea Legislativa (external link)",
+     "title": "Guide to Law Online: El Salvador | Law Library of Congress",
+     "url": "https://wwws.loc.gov/law/help/guide/nations/elsalvador.php"
+    },
+    {
+     "date": "1997-05-16",
+     "host": "www.loc.gov",
+     "rank": 3,
+     "snippet": "# Periodical Official Gazette of the Republic of El Salvador; Tomo 334, Número 51 Official title: Diario oficial de la República de El Salvador\n...\n### Names\n- Government of the Republic of El Salvador\n### Created / Published\n- El Salvador, March 17, 1997",
+     "title": "Official Gazette of the Republic of El Salvador; Tomo 334, Número 51",
+     "url": "https://www.loc.gov/item/sv17031997/"
+    },
+    {
+     "date": "",
+     "host": "www.diariooficial.gob.sv",
+     "rank": 4,
+     "snippet": "Imprenta Nacional | Descargas\n# Imprenta Nacional\n### Seleccion de volumen de Diario Oficial\n**Seleccione un año y un mes:**\n|Nombre del archivo|Fecha|Descargar|\n|--|--|--|",
+     "title": "Imprenta Nacional | Descargas",
+     "url": "https://www.diariooficial.gob.sv/"
+    },
+    {
+     "date": "",
+     "host": "sv.vlex.com",
+     "rank": 5,
+     "snippet": "Diario Oficial de El Salvador - Legislation\n# Diario Oficial de El Salvador\nEmisor\n…\n...\nNúmero de Boletín\n- 14 de Octubre de 2026\nÚltimos documentos\n- Diario Oficial de El Salvador del 2026-10-06 (contenido completo)",
+     "title": "Diario Oficial de El Salvador - Legislation - vLex",
+     "url": "https://sv.vlex.com/source/13125"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "El Salvador supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-10-01",
+     "host": "jurisprudencia.gob.sv",
+     "rank": 1,
+     "snippet": "Departamento de Documentación Judicial\n## DEPARTAMENTO DE DOCUMENTACIÓN JUDICIAL\n## Corte Suprema de Justicia de El Salvador\n...\n## Boletines de jurisprudencia\n# 🔗 Enlaces de Interés 🔗\n## Videotutoriales de búsqueda\n**JURISPRUDENCIA**",
+     "title": "Publicaciones recientes",
+     "url": "https://jurisprudencia.gob.sv/ddj/"
+    },
+    {
+     "date": "",
+     "host": "www.csj.gob.sv",
+     "rank": 2,
+     "snippet": "Corte Suprema de Justicia de El Salvador\n...\n## 66 ACTA CORTE PLENA 01.09.26\n1 septiembre, 2026\n27 agosto, 2026",
+     "title": "Brindan atención visual gratuita a niñez y adolescencia",
+     "url": "https://www.csj.gob.sv/"
+    },
+    {
+     "date": "",
+     "host": "jurisprudencia.gob.sv",
+     "rank": 3,
+     "snippet": "Departamento de Documentación Judicial\n...\n**JURISPRUDENCIA**\nÍndice de temas por materiaIR A INDICE DE TEMAS >>\n## Búsqueda libre\nBusca palabras dentro del texto del documento\n## Búsqueda avanzada\nBusca por número de referencia y otros campos\n...\n|Hasta:|",
+     "title": "Búsqueda libre",
+     "url": "https://jurisprudencia.gob.sv/busqueda/busquedaLibre.php?id=1"
+    },
+    {
+     "date": "",
+     "host": "www.jurisprudencia.gob.sv",
+     "rank": 4,
+     "snippet": "Número de referencia\nNombre de tribunal\n...\nTipo de Resolución\nFallo\nDelitos\nTemas\nSentencias y Resoluciones Publicadas en el Mes de Julio 2026 en el Departamento de Documentación Judicial\n82. 303-S-2025\nCORTE PLENA\nSUPLICATORIO",
+     "title": "Sentencias y Resoluciones Publicadas en el Mes de Julio 2026 ...",
+     "url": "https://www.jurisprudencia.gob.sv/ddj/wp-content/uploads/2026/09/PublicadosJurisJulio2026.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "El Salvador state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2004-02-01",
+     "host": "www.asamblea.gob.sv",
+     "rank": 1,
+     "snippet": "# Búsqueda de Leyes y Decretos",
+     "title": "Búsqueda de Leyes y Decretos",
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/busqueda-decretos"
+    },
+    {
+     "date": "2004-02-01",
+     "host": "www.asamblea.gob.sv",
+     "rank": 2,
+     "snippet": "Historia\nReglamento Interior de la Asamblea Legislativa\nGrupos Parlamentarios\nLeyes y Decretos\nConstitución de la República\nBuscador de Leyes y Decretos\nAcuerdos de Reforma a la Constitución\nLeyes y Decretos por Año\nAnuarios Legislativo",
+     "title": "Decretos por Año - Asamblea Legislativa de El Salvador",
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/decretos-por-anios"
+    },
+    {
+     "date": "2026-10-01",
+     "host": "jurisprudencia.gob.sv",
+     "rank": 3,
+     "snippet": "Departamento de Documentación Judicial\n## DEPARTAMENTO DE DOCUMENTACIÓN JUDICIAL\n## Corte Suprema de Justicia de El Salvador\n# Publicaciones recientes\n## Boletines de Legislación\n- **OCTUBRE 2025**\n...\n**LEGISLACIÓN**",
+     "title": "Publicaciones recientes",
+     "url": "https://jurisprudencia.gob.sv/ddj/"
+    },
+    {
+     "date": "2004-02-01",
+     "host": "www.asamblea.gob.sv",
+     "rank": 4,
+     "snippet": "Reglamento Interior de la Asamblea Legislativa\n...\nConstitución de la República\nBuscador de Leyes y Decretos\nAcuerdos de Reforma a la Constitución\nLeyes y Decretos por Año\n...\nAquí se muestran los Documentos Legislativos emitidos en cada Sesión Plenaria.",
+     "title": "Últimos Decretos Aprobados",
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/ultimos-aprobados"
+    },
+    {
+     "date": "2004-02-01",
+     "host": "www.asamblea.gob.sv",
+     "rank": 5,
+     "snippet": "# Sitemap\n- Asamblea\n- Leyes y Decretos\n- Sesión Plenaria\n- Sala de Prensa\n...\n- Ley de Presupuesto 2026 (3)\n- Ley de Presupuesto General del Estado 2026 (1)",
+     "title": "Sitemap | Asamblea Legislativa de El Salvador",
+     "url": "https://www.asamblea.gob.sv/sitemap"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "El Salvador municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "transparencia.mh.gob.sv",
+     "rank": 1,
+     "snippet": "# Municipalidades\n...\n- Leyes\n- Normas\n- Reglamentos\n- Instructivos\n- Circulares\n...\n- Código Municipal\nEste código tiene por objeto desarrollar los principios constitucionales referentes a la organización, funcionamiento y ejercicio de las facultades autónomas de los municipios.\n...\nMinisterio de H",
+     "title": "Municipalidades - Ministerio de Hacienda de la República de ...",
+     "url": "https://transparencia.mh.gob.sv/laip/es/Temas/Ley_de_Acceso_a_la_Informacion_Publica/Marco_Normativo/Municipalidades.html"
+    },
+    {
+     "date": "",
+     "host": "www.jurisprudencia.gob.sv",
+     "rank": 2,
+     "snippet": "REFORMAS: \n(1) Decreto Municipal No. 7 de fecha 14 de marzo de 2025, publicado en el Diario Oficial No. 57, Tomo 446 de fecha 21 de marzo de 2025.\n(DEROGATORIA)",
+     "title": "El Concejo Municipal de San Salvador Centro ...",
+     "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/2020-2029/2024/11/1068E9.PDF"
+    },
+    {
+     "date": "",
+     "host": "elsalvador.eregulations.org",
+     "rank": 3,
+     "snippet": "Copie y pegue el siguiente código html dentro de su página:\n`\n<iframe style=\"height: 100%; border:none; width: 100%;min-height: 400px;\" src=\"https://elsalvador.eregulations.org/\"></iframe>\n`",
+     "title": "eRegulations El Salvador",
+     "url": "https://elsalvador.eregulations.org/"
+    },
+    {
+     "date": "",
+     "host": "elsalvador.eregulations.org",
+     "rank": 4,
+     "snippet": "`\n<iframe style=\"height: 100%; border:none; width: 100%;min-height: 400px;\" src=\"https://elsalvador.eregulations.org/menu/772?l=en\"></iframe>\n`\n...\nhttp://santaana.eregulations.org/?l=es",
+     "title": "Autorizaciones municipales",
+     "url": "https://elsalvador.eregulations.org/menu/772?l=en"
+    },
+    {
+     "date": "",
+     "host": "www.jurisprudencia.gob.sv",
+     "rank": 5,
+     "snippet": "Departamento de San Salvador, \nDECRETA la presente: \n“ORDENANZA REGULADORA DE FUNCIONAMIENTO Y ORGANIZACIÓN ADMINISTRATIVA DEL \nMUNICIPIO DE SAN SALVADOR SUR, DEPARTAMENTO DE SAN SALVADOR”\n...\nArt.",
+     "title": "[PDF] DECRETO No. 1 EL CONCEJO MUNICIPAL DE SAN SALVADOR ...",
+     "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/2020-2029/2024/06/102265.PDF"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "El Salvador regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bcr.gob.sv",
+     "rank": 1,
+     "snippet": "De conformidad a lo establecido en\nla Constitución de la República de\nEl Salvador, es atribución y\nobligación del Presidente de la\nRepública, decretar los reglamentos\nque fueren necesarios para facilitar\ny asegurar la aplicación de las leyes\ncuya ejecución le corresponde.",
+     "title": "https://www.bcr.gob.sv/regulaciones/complementaria...",
+     "url": "https://www.bcr.gob.sv/regulaciones/complementarias.php"
+    },
+    {
+     "date": "2021-11-05",
+     "host": "www.trade.gov",
+     "rank": 2,
+     "snippet": "There are two types of standards in Salvadoran legislation: Mandatory Salvadoran Standards (NSO), also known as Technical Regulations, and Recommended Salvadoran Standards (NSR), also known as Technical Standards.\n...\nEdificio CNC (Consejo Nacional de Calidad)\n...\nTel. +503 2590-5300",
+     "title": "El Salvador - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/el-salvador-standards-trade"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 3,
+     "snippet": "Since August 7, 2024, the Superintendence for Sanitary Regulation has been responsible for food and beverage product registration in El Salvador.\nThe Consumer Protection Law is enforced by the Consumer Protection Agency (DDC).\n...\nInstead, the Salvadoran \n...\nSRS \nHealth Code",
+     "title": "Report Name: FAIRS Country Report Annual",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS%20Country%20Report%20Annual_San%20Salvador_El%20Salvador_ES2025-0007.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.bcr.gob.sv",
+     "rank": 4,
+     "snippet": "De conformidad a lo establecido en\nla Constitución de la República de\nEl Salvador, es atribución y\nobligación del Presidente de la\nRepública, decretar los reglamentos\nque fueren necesarios para facilitar\ny asegurar la aplicación de las leyes\ncuya ejecución le corresponde.",
+     "title": "BCR Regulaciones del Sistema Financiero - REGLAMENTOS",
+     "url": "https://www.bcr.gob.sv/regulaciones/reglamentos.php"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.state.gov",
+     "rank": 5,
+     "snippet": "The laws and regulations of El Salvador are relatively transparent and generally foster competition.\n...\nThe Securities Market Law establishes the framework for the Salvadoran securities exchange.\nStocks, government and private bonds, and other financial instruments are traded on the exchange, which",
+     "title": "2026 Investment Climate Statements: El Salvador - State Department",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/el-salvador"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "El Salvador national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2022-02-07",
+     "host": "www.defensoria.gob.sv",
+     "rank": 1,
+     "snippet": "# Reglamentación Técnica y Normativas Obligatorias\nEn esta sección podrá encontrar las Normas Obligarorias y Reglamentos Técnicos Cetroamericanos y Salvadoreños aplicables al sector de productos alimenticios, asi como tambien el Codigo de Buenas Practicas de Servicios Financieros.",
+     "title": "Defensoria del Consumidor",
+     "url": "https://www.defensoria.gob.sv/servicios/reglamentacion-tecnica-y-normativas-obligatorias/"
+    },
+    {
+     "date": "2024-10-15",
+     "host": "www.transparencia.gob.sv",
+     "rank": 2,
+     "snippet": "# CNC Consejo Nacional de CalidadRegresar al listado Vista en PDF\n## Catálogo de Normas Técnicas Salvadoreñas e Internacionales\nVenta de Normas Técnicas Salvadoreñas y Normas Internacionales (ISO, IEC, ASTM, etc)\n...\nIlopango San Salvador.",
+     "title": "Portal de Transparencia - El Salvador",
+     "url": "https://www.transparencia.gob.sv/institutions/75/services/5137"
+    },
+    {
+     "date": "",
+     "host": "www.epingalert.org",
+     "rank": 3,
+     "snippet": "# Trade Policy Review\nUnlike RTS, NTS are voluntary.\nAccording to the OSN catalogue, in July 2022, there were 1,522 technical standards in force in El Salvador.",
+     "title": "El Salvador - Members - ePing SPS&TBT platform",
+     "url": "https://www.epingalert.org/en/MemberProfiles/Profile?countryId=C222"
+    },
+    {
+     "date": "2023-12-06",
+     "host": "web.oirsa.org",
+     "rank": 4,
+     "snippet": "AGUA POTABLE.\n...\n|NSO 67.10.01:03 NORMA GENERAL PARA EL ETIQUETADO DE LOS ALIMENTOS PREENVASADOS|\n...\n|NSO 67.32.06:09 PRODUCTOS PESQUEROS.\n...\nLECHE EN POLVO.",
+     "title": "El Salvador documentos",
+     "url": "https://web.oirsa.org/el-salvador-documentos"
+    },
+    {
+     "date": "2025-08-18",
+     "host": "es.scribd.com",
+     "rank": 5,
+     "snippet": "N° 231 3 NSO 11.37.01:04 10 de diciembre Especificaciones TOMO 365 de 2004 San Salvador N° 51 4 NSO 11.37.02:05 Condones.",
+     "title": "Inventario de Normas Salvadoreñas Obligatorias (Nso) Clasificados Por Rubro",
+     "url": "https://es.scribd.com/document/577553025/Inventario-de-Normas-Salvadorenas-Obligatorias-Nso-Clasificados-Por-Rubro"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "El Salvador mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2022-02-07",
+     "host": "www.defensoria.gob.sv",
+     "rank": 1,
+     "snippet": "# Reglamentación Técnica y Normativas Obligatorias\nEn esta sección podrá encontrar las Normas Obligarorias y Reglamentos Técnicos Cetroamericanos y Salvadoreños aplicables al sector de productos alimenticios, asi como tambien el Codigo de Buenas Practicas de Servicios Financieros.",
+     "title": "Defensoria del Consumidor",
+     "url": "https://www.defensoria.gob.sv/servicios/reglamentacion-tecnica-y-normativas-obligatorias/"
+    },
+    {
+     "date": "",
+     "host": "asp.salud.gob.sv",
+     "rank": 2,
+     "snippet": ">10/12/2019</td><td>Unidad de Atención a la Niñez</td></tr><tr><td> 5a.\nAdenda al Listado Institucional de Medicamentos Esenciales (LIME) 1a.\n...\n…",
+     "title": "Centro Virtual de Documentación Regulatoria - Ministerio de",
+     "url": "https://asp.salud.gob.sv/regulacion/buscar1.asp"
+    },
+    {
+     "date": "",
+     "host": "asp.salud.gob.sv",
+     "rank": 3,
+     "snippet": ".:: Centro Virtual de Documentación Regulatoria - Ministerio de Salud - Normas ::.",
+     "title": "Centro Virtual de Documentación Regulatoria - Normas",
+     "url": "https://asp.salud.gob.sv/regulacion/normas.asp"
+    },
+    {
+     "date": "2021-11-05",
+     "host": "www.trade.gov",
+     "rank": 4,
+     "snippet": "NSOs are mandatory standards, primarily for products that affect human health, and are based on international, regional, or foreign standards.\n...\n#### Contact Information\n- Organismo Salvadoreño de Reglamentación Técnica (OSARTEC) (Salvadoran Organism for Technical Regulations)",
+     "title": "El Salvador - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/el-salvador-standards-trade"
+    },
+    {
+     "date": "",
+     "host": "www.srs.gob.sv",
+     "rank": 5,
+     "snippet": "…\n...\n|256-2010(COMIECO -LIX)|Vigente|San Salvador, El Salvador 13 de diciembre de 2010|RTCA 11.01.04:10 Productos Farmacéuticos.\nEstudios de Estabilidad de Medicamentos para Uso Humano|",
+     "title": "Reglamentos Técnicos Centroamericanos RTCA",
+     "url": "https://www.srs.gob.sv/?p=3513"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "El Salvador national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-29",
+     "host": "onec.bcr.gob.sv",
+     "rank": 1,
+     "snippet": "Oficina Nacional de Estadística y Censos\n...\n#### Servicios Destacados\n###### Oficina Nacional de Estadística y Censos 7a Avenida Norte, entre 1a Calle Pte y Calle Arce, San Salvador\n###### 2281-8000\n###### info@bcr.gob.sv",
+     "title": "Oficina Nacional de Estadística y Censos",
+     "url": "https://onec.bcr.gob.sv/"
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 2,
+     "snippet": "Country Profile of El Salvador\nMain statistical agency\nMain statistical agency name\nDireccion General de Estadistica y Censos\nWeb address\nhttp://www.digestyc.gob.sv/",
+     "title": "Country Profile of El Salvador - UNSD Document",
+     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=573"
+    },
+    {
+     "date": "2024-01-01",
+     "host": "ghdx.healthdata.org",
+     "rank": 3,
+     "snippet": "Dirección General de Estadística y Censos\nCity\nSan Salvador\nWebsite\nhttp://www.digestyc.gob.sv/\nDataset Records for General Administration of Statistics and Censuses (El Salvador)",
+     "title": "General Administration of Statistics and Censuses (El Salvador)",
+     "url": "https://ghdx.healthdata.org/organizations/general-administration-statistics-and-censuses-el-salvador"
+    },
+    {
+     "date": "",
+     "host": "www.cepal.org",
+     "rank": 4,
+     "snippet": "# Oficina Nacional de Estadística y Censos (ONEC) de El Salvador\n2 May 2024\n|\n...\n### Acronym\npng\n### Link\n- https://onec.bcr.gob.sv/\n-\n### Email\n- onecinfo@bcr.gob.sv",
+     "title": "Oficina Nacional de Estadística y Censos (ONEC) de El ...",
+     "url": "https://www.cepal.org/en/node/62068"
+    },
+    {
+     "date": "2004-05-25",
+     "host": "en.wikipedia.org",
+     "rank": 5,
+     "snippet": "### Americas\n|Country|Organisation|Website|\n|--|--|--|\n|El Salvador|Oficina Nacional de Estadística y Censos (ONEC) del Banco Central de Reserva de El Salvador|onec.bcr.gob.sv|",
+     "title": "List of national and international statistical services",
+     "url": "https://en.wikipedia.org/wiki/List_of_national_and_international_statistical_services"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "El Salvador central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "estadisticas.bcr.gob.sv",
+     "rank": 1,
+     "snippet": "Estadísticas Macroeconómicas - Banco Central de Reserva de El Salvador\nPanorama de las sociedades de depósito\nMillones de US$\nDatos actualizados hasta: Septiembre 2026\n...\nDescargar datos en Excel/CSV\n- Formato Excel\n- Formato CSV\n...\nBanco Central De Reserva",
+     "title": "Panorama de las sociedades de depósito",
+     "url": "https://estadisticas.bcr.gob.sv/serie/panorama-de-las-sociedades-de-depositos"
+    },
+    {
+     "date": "",
+     "host": "estadisticas.bcr.gob.sv",
+     "rank": 2,
+     "snippet": "Estadísticas Macroeconómicas - Banco Central de Reserva de El Salvador\nGobierno Central Consolidado\n...\nDatos actualizados hasta: Septiembre 2026\n...\nBanco Central De Reserva\nAlameda Juan Pablo II, entre 15 y 17 Av. Norte.\n...\ninfo@bcr.gob.sv",
+     "title": "Gobierno Central Consolidado",
+     "url": "https://estadisticas.bcr.gob.sv/serie/gobierno-central-consolidado-mensual"
+    },
+    {
+     "date": "",
+     "host": "estadisticas.bcr.gob.sv",
+     "rank": 3,
+     "snippet": "Estadísticas Macroeconómicas - Banco Central de Reserva de El Salvador\nÍndice de Precios al Consumidor (IPC)\nIndice Diciembre 2009=100\nDatos actualizados hasta: Septiembre 2026\n...\nBanco Central De Reserva\n...\ninfo@bcr.gob.sv",
+     "title": "Índice de Precios al Consumidor (IPC)",
+     "url": "https://estadisticas.bcr.gob.sv/serie/indice-de-precios-al-consumidor-ipc"
+    },
+    {
+     "date": "",
+     "host": "estadisticas.bcr.gob.sv",
+     "rank": 4,
+     "snippet": "Estadísticas Macroeconómicas - Banco Central de Reserva de El Salvador\nPanorama del Banco Central\nMillones de US$\nDatos actualizados hasta: Septiembre 2026\n...\n…\nDescargar datos en Excel/CSV\n- Formato Excel\n- Formato CSV\n...\nBanco Central De Reserva",
+     "title": "Panorama del Banco Central",
+     "url": "https://estadisticas.bcr.gob.sv/serie/panorama-del-banco-central"
+    },
+    {
+     "date": "",
+     "host": "estadisticas.bcr.gob.sv",
+     "rank": 5,
+     "snippet": "Estadísticas Macroeconómicas - Banco Central de Reserva de El Salvador\nBalanza de Pagos Anual\nMillones de US$\nDatos actualizados hasta: 2025\n...\nBanco Central De Reserva\nAlameda Juan Pablo II, entre 15 y 17 Av. Norte.",
+     "title": "Balanza de Pagos Anual",
+     "url": "https://estadisticas.bcr.gob.sv/serie/ii-8-b-balanza-de-pagos-anual"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "El Salvador government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.transparenciafiscal.gob.sv",
+     "rank": 1,
+     "snippet": "Portal de Transparencia Fiscal de El Salvador:DATOS ABIERTOS\n...\n- Cierres Contables 44 Municipalidades\n2025 2024\n...\nSeleccione\n...\n- Aduanas - Catálogos (en proceso de actualización)\n...\n- Gobiernos Locales - Catálogos\nDescargar .CSV",
+     "title": "Portal de Transparencia Fiscal de El Salvador:DATOS ...",
+     "url": "https://www.transparenciafiscal.gob.sv/ptf/es/PTF2-Datos_Abiertos.html"
+    },
+    {
+     "date": "",
+     "host": "www.transparencia.gob.sv",
+     "rank": 2,
+     "snippet": "Transparencia\nInstituto de Acceso a la Información Pública\n# Portal de Transparencia\nConsulta la información oficiosa que publican las instituciones del Estado salvadoreño: documentos, funcionarios, contrataciones, viajes y más.\n...\nElige una categoría para ver sus instituciones y su información púb",
+     "title": "Portal de Transparencia - IAIP",
+     "url": "https://www.transparencia.gob.sv/"
+    },
+    {
+     "date": "2020-09-24",
+     "host": "oecd.org",
+     "rank": 3,
+     "snippet": "The National Policy on Open Data, introduced in 2018, and the open data portal Datos.gob.sv are part of a government initiative to promote transparency and fight corruption.\n...\nEl Salvador also increased the use of telemedicine, enabling patients to consult their doctors from home (CAF, 2020).",
+     "title": "El Salvador: Latin American Economic Outlook 2020",
+     "url": "https://oecd.org/en/publications/latin-american-economic-outlook-2020_e6e864fb-en/full-report/component-21"
+    },
+    {
+     "date": "",
+     "host": "siteal.iiep.unesco.org",
+     "rank": 4,
+     "snippet": "Lanzamiento de la política nacional de datos abiertos que promueve la generación y publicación de información pública en dicho formato bajo estándares internacionales.\nEn este mismo evento, se presentó el Portal de Datos Abiertos (https://datos.gob.sv/) en donde se encuentran varias bases de datos g",
+     "title": "Contenido",
+     "url": "https://siteal.iiep.unesco.org/sites/default/files/sit_accion_files/10231_0.pdf"
+    },
+    {
+     "date": "",
+     "host": "documentosexternos.cepal.org",
+     "rank": 5,
+     "snippet": "Como resultado del primer plan de acción se creó el portal de Gobierno Abierto \n(www.gobiernoabierto.gob.sv) que es un sitio único que centraliza todos los esfuerzos\n…\n...\npublicación \n...\nPortal de Gobierno Abierto habilitado para la publicación de información en formato de datos abiertos",
+     "title": "contenido",
+     "url": "https://documentosexternos.cepal.org/server/api/core/bitstreams/33d62f4d-e29d-4d89-b95e-9e7ffa9f6ebc/content"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:37:37Z",
+ "pais": {
+  "iso2": "SV",
+  "iso3": "SLV",
+  "nombre": "El Salvador"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

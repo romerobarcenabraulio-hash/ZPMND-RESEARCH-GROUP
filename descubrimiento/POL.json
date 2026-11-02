@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Poland constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "isap.sejm.gov.pl",
+     "rank": 1,
+     "snippet": "Baza ISAP zawiera opisy bibliograficzne i teksty aktów prawnych\nopublikowanych na podstawie\nustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych\n...\n2019 poz.",
+     "title": "ISAP",
+     "url": "https://isap.sejm.gov.pl/"
+    },
+    {
+     "date": "",
+     "host": "sejm.gov.pl",
+     "rank": 2,
+     "snippet": "> 1.\nThe Constitution shall be the supreme law of the Republic of Poland.\n...\n> 1.\nThe sources of universally binding law of the Republic of Poland shall be: the Constitution, statutes, ratified international agreements, and regulations.",
+     "title": "The Constitution of the Republic of Poland",
+     "url": "https://sejm.gov.pl/prawo/konst/angielski/konse.htm"
+    },
+    {
+     "date": "",
+     "host": "dziennikustaw.gov.pl",
+     "rank": 3,
+     "snippet": "Wyszukiwanie aktów prawnych\n# Wyszukiwanie aktów prawnych\n...\nTytuł aktu prawnego:\n...\nWyniki\nLiczba elementów spełniających kryteria wyszukiwania:\n|Typ aktu|Tytuł|Pliki|",
+     "title": "Wyszukiwanie aktów prawnych",
+     "url": "https://dziennikustaw.gov.pl/szukaj"
+    },
+    {
+     "date": "",
+     "host": "ppiop.rcl.gov.pl",
+     "rank": 4,
+     "snippet": "# Publiczny Portal Informacji o Prawie (PPIoP) zawiera:\n...\nW module Skorowidz aktów prawnych zamieszczane są akty prawne oraz wyroki Trybunału Konstytucyjnego odnoszące się do danego aktu prawnego.",
+     "title": "Publiczny Portal Informacji o Prawie (PPIoP) zawiera:",
+     "url": "https://ppiop.rcl.gov.pl/"
+    },
+    {
+     "date": "2025-12-02",
+     "host": "eli.sejm.gov.pl",
+     "rank": 5,
+     "snippet": "# Wyszukiwanie\n...\n|Dz.U.\n2025 poz.\n...\n|Dz.U.\n2025 poz.\n1652|obowiązujący|Ustawa z dnia 9 października 2025 r. o zmianie ustawy",
+     "title": "ELI - Wyszukiwanie - European Legislation Identifier",
+     "url": "https://eli.sejm.gov.pl/search"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Poland national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "dziennikustaw.gov.pl",
+     "rank": 1,
+     "snippet": "|Typ aktu|Tytuł|Pliki|\n...\n|Rozporządzenie|Rozporządzenie Ministra Infrastruktury z dnia 17 lipca 2026 r. w sprawie utworzenia Urzędu Morskiego w Słupsku| |",
+     "title": "Wyszukiwanie aktów prawnych - Dziennik Ustaw",
+     "url": "https://dziennikustaw.gov.pl/szukaj?pNumber=17&pSize=50&title="
+    },
+    {
+     "date": "",
+     "host": "dziennikustaw.gov.pl",
+     "rank": 2,
+     "snippet": "4. rozporządzenia wydane przez Prezydenta Rzeczypospolitej Polskiej, Radę Ministrów,\nPrezesa Rady Ministrów, ministrów kierujących działami administracji rządowej, przewodniczących\n...\nDzienniku Ustaw;",
+     "title": "Strona główna",
+     "url": "https://dziennikustaw.gov.pl/DU"
+    },
+    {
+     "date": "",
+     "host": "isap.sejm.gov.pl",
+     "rank": 3,
+     "snippet": "1225| |obowiązujący|Rozporządzenie Ministra Infrastruktury z dnia 17 września 2026 r. w sprawie warunków technicznych, jakim powinny odpowiadać budowle kolejowe i ich usytuowanie|",
+     "title": "Polskie Normy",
+     "url": "https://isap.sejm.gov.pl/isap.nsf/ByKeyword.xsp?key=Polskie%20Normy"
+    },
+    {
+     "date": "",
+     "host": "dziennikustaw.gov.pl",
+     "rank": 4,
+     "snippet": "W Monitorze Polskim ogłasza się:\n1. zarządzenia Prezydenta Rzeczypospolitej Polskiej wydane na podstawie ustawy;\n...\n3. teksty jednolite aktów określonych w pkt 1 i 2;",
+     "title": "Monitor Polski",
+     "url": "https://dziennikustaw.gov.pl/MP"
+    },
+    {
+     "date": "",
+     "host": "isap.sejm.gov.pl",
+     "rank": 5,
+     "snippet": "Baza ISAP zawiera opisy bibliograficzne i teksty aktów prawnych\nopublikowanych na podstawie\nustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych\n...\n2019 poz.",
+     "title": "ISAP",
+     "url": "https://isap.sejm.gov.pl/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Poland official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "dziennikustaw.gov.pl",
+     "rank": 1,
+     "snippet": "aktów prawnych (Dz. U. z 2019r., poz. 1461),\nDziennik Ustaw Rzeczypospolitej Polskiej (Dziennik Ustaw)\nwydaje Prezes Rady Ministrów przy pomocy Rządowego Centrum Legislacji.",
+     "title": "Dziennik Ustaw",
+     "url": "https://dziennikustaw.gov.pl/"
+    },
+    {
+     "date": "",
+     "host": "dziennikustaw.gov.pl",
+     "rank": 2,
+     "snippet": "|--|--|--|\n|Komunikat|Komunikat Ministra Finansów i Gospodarki z dnia 30 czerwca 2026 r. o wydanej decyzji w sprawie pozbawienia przedsiębiorcy statusu centrum badawczo-rozwojowego| |",
+     "title": "Wyszukiwanie aktów prawnych",
+     "url": "https://dziennikustaw.gov.pl/szukaj?pNumber=20&pSize=50&title="
+    },
+    {
+     "date": "2025-01-01",
+     "host": "eli.sejm.gov.pl",
+     "rank": 3,
+     "snippet": "- 2025\n- 2024\n- 2023\n- 2022\n- 2021\n- 2020\n- 2019\n- 2018\n- 2017\n- 2016\n...\n- 2014",
+     "title": "ELI",
+     "url": "https://eli.sejm.gov.pl/eli/DU"
+    },
+    {
+     "date": "",
+     "host": "rulemaking.worldbank.org",
+     "rank": 4,
+     "snippet": "## Poland\n|--|--|--|\n...\n|How are the laws that are in force accessed?|On a unified website managed by the government Printed in an official gazette / journal or other publication|http://dziennikustaw.gov.pl/ Official Gazette of the Republic of Poland|",
+     "title": "Economy Data - Global Indicators of Regulatory Governance",
+     "url": "https://rulemaking.worldbank.org/en/data/explorecountries/poland"
+    },
+    {
+     "date": "",
+     "host": "abw.gov.pl",
+     "rank": 5,
+     "snippet": "Wyszukiwarka Elektroniczny Dziennik Urzędowy ABW\n# Elektroniczny Dziennik Urzędowy ABW Wyszukiwarka\nod Dopuszczalny format (dd-mm-yyyy) do Dopuszczalny format (dd-mm-yyyy)",
+     "title": "Wyszukiwarka",
+     "url": "https://abw.gov.pl/ABW/search"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Poland supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-03-03",
+     "host": "www.sn.pl",
+     "rank": 1,
+     "snippet": "# Baza orzeczeń\n|**Udostępniony:** 29 września 2025|**Poprawiono:** 03 marca 2026|\n|--|--|\n|**Opublikował: ** Administrator|**Udostępnił: ** Administrator|",
+     "title": "Baza orzeczeń - Sąd Najwyższy",
+     "url": "https://www.sn.pl/pl/wyszukiwarka-orzeczen"
+    },
+    {
+     "date": "2026-09-14",
+     "host": "www.sn.pl",
+     "rank": 2,
+     "snippet": "## Judicial decisions\n29 September 2026\nI NSP 389/26\n...\nSupreme Court\nPlac Krasińskich 2/4/6 , 00-951 Warsaw\nsn@sn.pl\n...\nOpen 9:00 a.m. – 2:30 p.m.",
+     "title": "www.sn.pl › enHome - Sąd Najwyższy - SN",
+     "url": "https://www.sn.pl/en"
+    },
+    {
+     "date": "2026-09-17",
+     "host": "sn.pl",
+     "rank": 3,
+     "snippet": "Supreme Court\nJudicial decisions\n...\nJudicial review of the decision issued by the President of the Office of Rail Transport approving access charges for railway infrastructure\n17 September 2026\nII NSKP 8/26\n...\n10 September 2026\nII NSK 19/26\n...\n15 July 2026",
+     "title": "Sąd Najwyższy",
+     "url": "https://sn.pl/en/judicial-decisions"
+    },
+    {
+     "date": "",
+     "host": "www.sn.pl",
+     "rank": 4,
+     "snippet": "## Supreme Court, composed of the joint chambers of the Extraordinary Review and Public Affairs and the Labour and Social Security Law, departed from the legal principle established in the resolution of seven judges of the Supreme Court of 24 September 2025\n3 December 2025\nI NZP 7/25",
+     "title": "Supreme Court, composed of the joint chambers ...",
+     "url": "https://www.sn.pl/en/judicial-decisions/supreme-court-composed-of-the-joint-chambers-of-the-extraordinary-review-and-public-affairs-and-the-labour-and-social-security-law-departed-from-the-legal-principle-established-in-the-resolution-of-seven-judges-of-the-supreme-court-of-24-september-2025"
+    },
+    {
+     "date": "",
+     "host": "orzeczenia.uzp.gov.pl",
+     "rank": 5,
+     "snippet": "UZP - Wyszukiwarka orzeczeń - Wyszukiwarka\nart.",
+     "title": "UZP - Wyszukiwarka orzeczeń - Wyszukiwarka",
+     "url": "https://orzeczenia.uzp.gov.pl/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Poland state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "isap.sejm.gov.pl",
+     "rank": 1,
+     "snippet": "Internetowy System Aktów Prawnych (ISAP) to system informacji prawnej\nredagowany przez zespół specjalistów w Ośrodku Informatyki\nKancelarii Sejmu.\nISAP jest częścią Systemu Informacyjnego Sejmu.",
+     "title": "ISAP",
+     "url": "https://isap.sejm.gov.pl/"
+    },
+    {
+     "date": "",
+     "host": "isap.sejm.gov.pl",
+     "rank": 2,
+     "snippet": "Baza Internetowy System Aktów Prawnych - ISAP zawiera opisy\nbibliograficzne i\nteksty aktów prawnych opublikowanych\nw wydawnictwach\nurzędowych: Dzienniku Ustaw oraz Monitorze Polskim,\nwydawanych przez",
+     "title": "Polskie Normy",
+     "url": "https://isap.sejm.gov.pl/isap.nsf/ByKeyword.xsp?key=Polskie%20Normy"
+    },
+    {
+     "date": "",
+     "host": "isap.sejm.gov.pl",
+     "rank": 3,
+     "snippet": "# Akty prawne wg roczników\n|Dz.U.\n2026 poz.\n...\n2026 poz.",
+     "title": "Akty prawne wg roczników - ISAP",
+     "url": "https://isap.sejm.gov.pl/isap.nsf/ByYear.xsp?type=WDU&year=2026"
+    },
+    {
+     "date": "2026-08-26",
+     "host": "eli.gov.pl",
+     "rank": 4,
+     "snippet": "Dziennik Ustaw\nMonitor Polski\nDzienniki wojewódzkie\nInne Dzienniki\nHasła\n...\nEN\nFR\n...\nUstawa z dnia 29 maja 2026 r. o zmianie ustawy - Ordynacja podatkowa oraz niektórych innych ustaw",
+     "title": "ELI - Dziennik Ustaw/2026",
+     "url": "https://eli.gov.pl/eli/DU/2026"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "bip.rcl.gov.pl",
+     "rank": 5,
+     "snippet": "Rządowe Centrum Legislacji\n# Rządowe Centrum Legislacji\n...\n### Rządowe Centrum Legislacji\nul. Krucza 36 / Wspólna 6\n00-522 Warszawa\ntel.: 22 626 34 01",
+     "title": "Rządowe Centrum Legislacji",
+     "url": "https://bip.rcl.gov.pl/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Poland municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2021-01-29",
+     "host": "bip.paslek.pl",
+     "rank": 1,
+     "snippet": "Rejestr i zbiór aktów prawa miejscowego - Biuletyn Informacji Publicznej Urzędu Miejskiego w Pasłęku\n…\n...\nRejestr aktów prawa miejscowego 2023 rok\n...\nURZĄD MIEJSKI W PASŁĘKU",
+     "title": "Rejestr i zbiór aktów prawa miejscowego",
+     "url": "https://bip.paslek.pl/rejestr_zbior_aktow_prawa_miejscowego.html"
+    },
+    {
+     "date": "2026-10-24",
+     "host": "katowice.eu",
+     "rank": 2,
+     "snippet": "Urząd Miasta Katowice\n40-098 Katowice\nul. Młyńska 4\nTel. (+48 32) 2593-909,\nFax (+48 32) 7054-914\nUrzad_Miasta@katowice.eu",
+     "title": "NGO AKTY PRAWA MIEJSCOWEGO (UCHWAŁY) I ZARZĄDZENIA WYKONAWCZE",
+     "url": "https://katowice.eu/ngo/podstawy-prawne/akty-prawa-miejscowego-uchwaly-i-zarzadzenia-wykonawcze"
+    },
+    {
+     "date": "",
+     "host": "ppiop.rcl.gov.pl",
+     "rank": 3,
+     "snippet": "Publiczny Portal Informacji o Prawie - View Skorowidz\n...\n- »\n- Samorząd gminny.\n...\n### Samorząd gminny.\nDz.U.\n2026 r. poz.\n662\nData ogłoszenia: 2026-05-21",
+     "title": "View Skorowidz - Publiczny Portal Informacji o Prawie -",
+     "url": "https://ppiop.rcl.gov.pl/index.php?r=skorowidz/view&id=22329&page=2&sort=rok_publikacji"
+    },
+    {
+     "date": "",
+     "host": "www.gov.pl",
+     "rank": 4,
+     "snippet": "Szukaj - Gov.pl - Portal Gov.pl\n## Wyniki wyszukiwania\n...\nZnaleziono wyników: ****",
+     "title": "Szukaj",
+     "url": "https://www.gov.pl/web/gov/szukaj"
+    },
+    {
+     "date": "",
+     "host": "dziennikustaw.gov.pl",
+     "rank": 5,
+     "snippet": "Wyszukiwanie aktów prawnych\n# Wyszukiwanie aktów prawnych\n...\nTytuł aktu prawnego:\n...\nTreść aktu prawnego:\nWyniki\n...\n|Typ aktu|Tytuł|Pliki|\n|--|--|--|",
+     "title": "Wyszukiwanie aktów prawnych",
+     "url": "https://dziennikustaw.gov.pl/szukaj"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Poland regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-22",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "- Polish Investment and Trade Agency\n- Polish Financial Supervision Authority and\n- Office of Competition and Consumer Protection\nBiznes.gov.pl simplifies the formalities of setting up and running a business , providing current regulations and procedures in Poland and the EU.",
+     "title": "Poland - United States Department of State",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/poland/"
+    },
+    {
+     "date": "2026-10-05",
+     "host": "www.eurofound.europa.eu",
+     "rank": 2,
+     "snippet": "## Public authorities involved in regulating working life\n...\nThe National Labour Inspectorate (Państwowa Inspekcja Pracy, PIP) is a central administration body (headed by the Chief Labour Inspector, appointed by the parliament) responsible for monitoring the observance of and enforcing the labour l",
+     "title": "Actors and institutions in Poland | Eurofound - European Union",
+     "url": "https://www.eurofound.europa.eu/en/countries/poland/actors-and-institutions"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 3,
+     "snippet": "Food Authorities in Poland \n...\nThe State Sanitary Inspection (Państwowa Inspekcja Sanitarna (PIS) supervises food quality, materials, or products intended to contact with food.\n...\nIn Poland, the Plant Health and Seed Inspection (PIORIN) is the competent authority for supervision of",
+     "title": "Read more",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Food+and+Agricultural+Import+Regulations+and+Standards+Country+Report_Warsaw_Poland_12-31-2021"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 4,
+     "snippet": "The State Sanitary Inspection or Państwowa Inspekcja Sanitarna (PIS) is responsible for supervising food quality, materials, or products intended to come in contact with food.\n...\nLabeling regulations for GE food products are established by Regulation 1829/2003 (articles 12-13).",
+     "title": "Poland Food and Agricultural Import Regulations and Standards ...",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Food%20and%20Agricultural%20Import%20Regulations%20and%20Standards%20Report_Warsaw_Poland_3-13-2019.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.nyulawglobal.org",
+     "rank": 5,
+     "snippet": "## Regulations\n...\nThe competent organs to issue the regulations are the President of Republic of Poland, the Council of Ministers, the National Broadcasting Council, the Chairman of the Committee who is a member of the Council of Ministers, and the minister that manages the relevant area of public ",
+     "title": "An Overview of Polish Law - GlobaLex",
+     "url": "https://www.nyulawglobal.org/globalex/poland.html"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Poland national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.pkn.pl",
+     "rank": 1,
+     "snippet": "# Normy Europejskie\n|EN 18218-1:2026|Food authenticity - Non-targeted testing methods - Part 1: General considerations and definitions|2026-09-16|KT 235 ds. Analizy Żywności|",
+     "title": "Normy Europejskie - Polski Komitet Normalizacyjny",
+     "url": "https://www.pkn.pl/o-pkn/wspolpraca-miedzynarodowa/nowe-enisoiec/normy-europejskie"
+    },
+    {
+     "date": "",
+     "host": "www.pkn.pl",
+     "rank": 2,
+     "snippet": "# Wyszukiwarka nowych i wycofanych PN\nądzania|PN-EN ISO 9001:2026-10 - wersja angielska|\n...\n|PN-ISO 8217:2019-06 - wersja polska|Przetwory naftowe",
+     "title": "Wyszukiwarka nowych i wycofanych PN | Polski Komitet ...",
+     "url": "https://www.pkn.pl/wyszukiwarka-pn"
+    },
+    {
+     "date": "",
+     "host": "www.pkn.pl",
+     "rank": 3,
+     "snippet": "# Wykaz opublikowanych PN\n|55.080 Worki.\nTorby|55.080 Worki.\nTorby|55.080 Worki.\nTorby|55.080 Worki.\nTorby|55.080 Worki.\nTorby|",
+     "title": "Wykaz opublikowanych PN",
+     "url": "https://www.pkn.pl/polskie-normy/wykazy-pn/wykaz-opublikowanych-pn"
+    },
+    {
+     "date": "",
+     "host": "www.pkn.pl",
+     "rank": 4,
+     "snippet": "Poniżej przedstawiamy zestawienie zatwierdzonych Europejskich dokumentów normalizacyjnych opublikowanych w okresie ostatnich 60 dni.\nZestawienia sporządzono według Międzynarodowej Klasyfikacji Norm (ICS).",
+     "title": "Europejskie dokumenty normalizacyjne",
+     "url": "https://www.pkn.pl/o-pkn/wspolpraca-miedzynarodowa/nowe-enisoiec/europejskie-dokumenty-normalizacyjne"
+    },
+    {
+     "date": "",
+     "host": "www.pkn.pl",
+     "rank": 5,
+     "snippet": "# Komunikat on-line\n|PN-EN ISO 9001:2015-10|Systemy zarządzania jakością -- Wymagania|2026-10-05|PN-EN ISO 9001:2026-10|2027-03-31|",
+     "title": "Komunikat on-line",
+     "url": "https://www.pkn.pl/komunikat-online"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Poland mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "isap.sejm.gov.pl",
+     "rank": 1,
+     "snippet": "1225| |obowiązujący|Rozporządzenie Ministra Infrastruktury z dnia 17 września 2026 r. w sprawie warunków technicznych, jakim powinny odpowiadać budowle kolejowe i ich usytuowanie|",
+     "title": "Polskie Normy",
+     "url": "https://isap.sejm.gov.pl/isap.nsf/ByKeyword.xsp?key=Polskie%20Normy"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "sip.lex.pl",
+     "rank": 2,
+     "snippet": "#### DYREKTYWA 2014/33/UE DŹWIGI I ELEMENTY BEZPIECZEŃSTWA DO DŹWIGÓW\n...\n#### ZAŁĄCZNIK Nr 4 DYREKTYWA 2006/42/WE MASZYNY",
+     "title": "Wykaz norm zharmonizowanych - M.P.2026.297 - OpenLEX - ustawy",
+     "url": "https://sip.lex.pl/akty-prawne/mp-monitor-polski/wykaz-norm-zharmonizowanych-22247593"
+    },
+    {
+     "date": "2026-07-02",
+     "host": "www.tdt.gov.pl",
+     "rank": 3,
+     "snippet": "**Tabela nr 3**\n…\n...\n|--|\n...\n– regulaminy ONZ dla pojazdów kategorii M, N, O, L, T, C, R, S:\n...\n– regulaminy ONZ dla pojazdów kategorii M, N, O:",
+     "title": "Wykaz służb technicznych - TDT",
+     "url": "https://www.tdt.gov.pl/dzialalnosc/homologacja-opis/wykaz-sluzb-technicznych/"
+    },
+    {
+     "date": "",
+     "host": "www.pkn.pl",
+     "rank": 4,
+     "snippet": "|Kompatybilność elektromagnetyczna Electromagnetic compatibility (EMC)|2014/30/EU|\n|Maszyny Machinery (MD)|2006/42/EC|\n...\n|Ogólne bezpieczeństwo produktów General product safety|2023/988/UE|",
+     "title": "WYKAZY NORM ZHARMONIZOWANYCH | Polski Komitet Normalizacyjny",
+     "url": "https://www.pkn.pl/polskie-normy/normy-zharmonizowane/wykazy-norm-zharmonizowanych"
+    },
+    {
+     "date": "2021-07-01",
+     "host": "www.biznes.gov.pl",
+     "rank": 5,
+     "snippet": "## Polskie przepisy techniczne\n**Polskie przepisy techniczne, które określają wymagania dla produktów:**\n...\n**Polskie przepisy techniczne, które określają ogólne wymagania dla grup produktów:**\n...\nMinisterstwo Rozwoju i Technologii\n...\n00-507 Warszawa",
+     "title": "Krajowe wymagania dotyczące towarów, w tym zasada ...",
+     "url": "https://www.biznes.gov.pl/pl/portal/00144"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Poland national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-09-16",
+     "host": "stat.gov.pl",
+     "rank": 1,
+     "snippet": "## News\n### Summary of the Polish Presidency of the Council Working Party on Statistics (CWPS)\n...\n### Statistical Bulletin No 7/2026",
+     "title": "Statistics Poland",
+     "url": "https://stat.gov.pl/en/"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "new.stat.gov.pl",
+     "rank": 2,
+     "snippet": "Statistics Poland | GUS - Portal Informacyjny\n# Statistics Poland | GUS - Portal Informacyjny\n...\n**Statistics Poland**\nAl.\nNiepodległości 208,\n00-925 Warsaw\n...\n**Contact**\n...\n**E-mail:** kancelariaogolnaGUS@stat.gov.pl",
+     "title": "Statistics Poland | GUS - Portal Informacyjny - new.stat.gov.pl",
+     "url": "https://new.stat.gov.pl/en"
+    },
+    {
+     "date": "2026-09-15",
+     "host": "stat.gov.pl",
+     "rank": 3,
+     "snippet": "### Główny Urząd Statystyczny\nAleja Niepodległości 208\n00-925 Warszawa\nGodziny pracy Urzędu: 8.15–16.15\nKancelaria: +48 22 608 30 00\n...\n### Informacja",
+     "title": "Główny Urząd Statystyczny",
+     "url": "https://stat.gov.pl/?beta=false"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "publikacje.new.stat.gov.pl",
+     "rank": 4,
+     "snippet": "Publikacje | GUS - Portal Informacyjny\n...\n### Legenda:\n**Główny Urząd Statystyczny**\nAl.\nNiepodległości 208,\n00-925 Warszawa\n...\n**Kontakt**\n...\n**e-mail:** kancelariaogolnaGUS@stat.gov.pl",
+     "title": "Publikacje",
+     "url": "https://publikacje.new.stat.gov.pl/"
+    },
+    {
+     "date": "",
+     "host": "stat.gov.pl",
+     "rank": 5,
+     "snippet": "Statistics Poland / Basic data\n- # This is a old version of the portal.\n...\n### Statistics Poland\nAleja Niepodległości 208\n00-925 Warsaw\nOffice Hours: 8:15 - 16:15\nTelephone Exchange:\n+48 22 608 30 00",
+     "title": "Basic Data",
+     "url": "https://stat.gov.pl/en/basic-data/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Poland central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-02-23",
+     "host": "nbp.pl",
+     "rank": 1,
+     "snippet": "- Dane finansowe sektora bankowego\n- Adekwatność kapitałowa banków\n- Statystyka stóp procentowych\n- Statystyka funduszy inwestycyjnych\n- Rachunki finansowe\n...\n**Narodowy Bank Polski**\n...\n00-919 Warszawa**",
+     "title": "Statystyka monetarna i finansowa",
+     "url": "https://nbp.pl/statystyka-i-sprawozdawczosc/statystyka-monetarna-i-finansowa/"
+    },
+    {
+     "date": "2023-02-18",
+     "host": "nbp.pl",
+     "rank": 2,
+     "snippet": "Statistics | NBP\n...\n- Statistics\n# Statistics\nNarodowy Bank Polski is one of Poland’s key institutions that conduct statistical research\n...\nNarodowy Bank Polski is one of Poland’s key institutions that conduct statistical research.\n...\nNarodowy Bank Polski publishes a broad range of statistical da",
+     "title": "Statistics | NBP - Narodowy Bank Polski",
+     "url": "https://nbp.pl/en/statistic-and-financial-reporting/"
+    },
+    {
+     "date": "2017-05-26",
+     "host": "nbp.pl",
+     "rank": 3,
+     "snippet": "# Narodowy Bank Polski - Home page\n...\n## Exchange rates\nLast data update: 17-09-2026\nA graph showing changes in exchange rates over time.\n...\n## About NBP\nNarodowy Bank Polski (NBP) is the central bank of the Republic of Poland.",
+     "title": "Narodowy Bank Polski - Internetowy Serwis Informacyjny ...",
+     "url": "https://nbp.pl/en/"
+    },
+    {
+     "date": "",
+     "host": "static.nbp.pl",
+     "rank": 4,
+     "snippet": "Current and capital accounts \n...\n…\nTime series for the monthly balance of payments, starting with data for January 2004, are available on the NBP website.\nhttps://static.nbp.pl/dane/bilans-platniczy/bop_m.xlsx \n...\n* Preliminary data\n...\n2026",
+     "title": "[PDF] Balance of Payments in Poland in August 2026 - Nbp",
+     "url": "https://static.nbp.pl/dane/bilans-platniczy/bopa_en.pdf"
+    },
+    {
+     "date": "2026-04-09",
+     "host": "moneywiki.app",
+     "rank": 5,
+     "snippet": "|Official Website|https://www.nbp.pl/en/|\n...\n|--|--|\n|Statistical Authority|Collects and publishes monetary, banking, balance-of-payments, and financial statistics|\n...\n|Official Website|https://www.nbp.pl/en/|",
+     "title": "Narodowy Bank Polski (NBP) — Financial Regulator Profile",
+     "url": "https://moneywiki.app/regulators/narodowy-bank-polski"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Poland government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.gov.pl",
+     "rank": 1,
+     "snippet": "W jednym miejscu znajdziesz dane z różnych kategorii, np. zdrowie, gospodarka i finanse, środowisko, ludność i społeczeństwo.\n...\nDane z portalu możesz ponownie wykorzystywać bez konieczności składania wniosku.",
+     "title": "Portal danych (Dane.gov.pl) - Ministerstwo Cyfryzacji",
+     "url": "https://www.gov.pl/web/cyfryzacja/portal-danych-danegovpl"
+    },
+    {
+     "date": "",
+     "host": "interoperable-europe.ec.europa.eu",
+     "rank": 2,
+     "snippet": "Dane.gov.pl \nDane.gov.pl is an open data portal that offers access to public data in various categories, such as education, culture and sport, environment, economy and finance,",
+     "title": "Digital Public",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/DPA_Factsheets_2021_Poland_vFinal.pdf"
+    },
+    {
+     "date": "2023-05-10",
+     "host": "www.gov.pl",
+     "rank": 3,
+     "snippet": "### Prowadzimy i rozwijamy portal dane.gov.pl\nDane.gov.pl oferuje bezpłatny, nie wymagający rejestracji dostęp do informacji publicznej danych z różnych kategorii, takich jak np. oświata, środowisko, budżet i finanse.",
+     "title": "https://www.gov.pl/web/cyfryzacja/otwarte-dane-pub...",
+     "url": "https://www.gov.pl/web/cyfryzacja/otwarte-dane-publiczne"
+    },
+    {
+     "date": "2024-05-17",
+     "host": "www.gov.pl",
+     "rank": 4,
+     "snippet": "Urzędy udostępniają dane w portalach danych, a centralnym punktem dostępu do nich jest portal dane.gov.pl, który jest rozwijany już od 10 lat.\n...\n### Europejski lider\nW efekcie zdobył uznanie Komisji Europejskiej.",
+     "title": "Polska liderem w otwieraniu danych publicznych - Gov.pl",
+     "url": "https://www.gov.pl/web/cyfryzacja/polska-liderem-w-otwieraniu-danych-publicznych"
+    },
+    {
+     "date": "",
+     "host": "unctad.org",
+     "rank": 5,
+     "snippet": "An important addition is the policy of opening public data, including educational and qualification data, implemented through the dane.gov.pl portal and coordinated by the minister responsible for computerization.\n...\n13 \n...\nThe dane.gov.pl portal will be expanded with features that will improve it",
+     "title": "From Asymmetry to Equitable Stewardship",
+     "url": "https://unctad.org/system/files/non-official-document/cstd2026-27_data_c09_poland_en.pdf"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:10:55Z",
+ "pais": {
+  "iso2": "PL",
+  "iso3": "POL",
+  "nombre": "Poland"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

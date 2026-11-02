@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Liechtenstein constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.regierung.li",
+     "rank": 1,
+     "snippet": "…\n# Law\n**Constitution**\n|**LR - Nr:** 101|**LGBl - Nr:** 1921.015|**Status:** CURRENT|\n|--|--|--|\n...\n|English Version|German Version|German Version|\n|English Version|German Version|German Version|",
+     "title": "Law",
+     "url": "https://www.regierung.li/text/16318/law"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 2,
+     "snippet": "LV | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein\nRechtsdienst der Regierung (RDR)\n## Verfassung des Fürstentums Liechtenstein vom 5. Oktober 1921\n**LGBl Daten**",
+     "title": "Lilex",
+     "url": "https://www.gesetze.li/konso/1921015000/?version=45"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 3,
+     "snippet": "LV | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein\n...\n### Verfassung des Fürstentums Liechtenstein vom 5. Oktober 1921\n...\n…\n...\n|Fassung|LGBl|Titel|Ausgabedatum|BuA|LR-Nr|",
+     "title": "www.gesetze.li · konso · 1921015000LV | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein",
+     "url": "https://www.gesetze.li/konso/1921015000/meta?version=44"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 4,
+     "snippet": "Hier finden Sie tagesaktuell das geltende Landes- und Staatsvertragsrecht in konsolidierter (bereinigter) Form.\nIn den Grunderlass sind somit sämtliche Abänderungen eingearbeitet.\n**Textsuche**\n...\n**LGBl-Nr und LR-Nr**",
+     "title": "Suche - Konsolidiertes Recht | Lilex - Gesetzesdatenbank des ...",
+     "url": "https://www.gesetze.li/konso/suche"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 5,
+     "snippet": "Rechtsdienst der Regierung (RDR)\n## Landesgesetzblatt\nHier finden Sie alle Landesgesetzblätter (LGBl.) sowie sämtliche vor 1863 im Amtlichen Sammelwerk (ASW) veröffentlichten Rechtsvorschriften in chronologischer Folge.",
+     "title": "Suche - Landesgesetzblatt | Lilex - Gesetzesdatenbank des ...",
+     "url": "https://www.gesetze.li/chrono/suche"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Liechtenstein national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 1,
+     "snippet": "Neueste konsolidierte Fassungen - Konsolidiertes Recht | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein\nRechtsdienst der Regierung (RDR)\n**Neuesten konsolidierten Fassungen**",
+     "title": "Neueste konsolidierte Fassungen - Konsolidiertes Recht - Gesetze",
+     "url": "https://www.gesetze.li/konso/neueste-konso"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 2,
+     "snippet": "E-GovV | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein\n- Neueste Fassungen\n## Verordnung vom 15. Dezember 2020 über den elektronischen Geschäftsverkehr mit Behörden (...\n**LGBl Daten**",
+     "title": "Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein",
+     "url": "https://www.gesetze.li/konso/2020459000/?version=15"
+    },
+    {
+     "date": "2026-08-31",
+     "host": "www.llv.li",
+     "rank": 3,
+     "snippet": "Beschlüsse vom 28. August 2028 - Liechtensteinische Landesverwaltung\n...\nLink Website: https://www.llv.li/de/landesverwaltung/stabsstelle-ewr/wissenswertes/veroeffentlichungen/ewr-register/rechtsakte",
+     "title": "Beschlüsse vom 28. August 2028",
+     "url": "https://www.llv.li/de/landesverwaltung/stabsstelle-ewr/wissenswertes/veroeffentlichungen/ewr-register/rechtsakte"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 4,
+     "snippet": "Suche - Konsolidiertes Recht | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein\nRechtsdienst der Regierung (RDR)\n...\nHier finden Sie tagesaktuell das geltende Landes- und Staatsvertragsrecht in konsolidierter (bereinigter) Form.",
+     "title": "Suche - Konsolidiertes Recht | Lilex - Gesetzesdatenbank des ...",
+     "url": "https://www.gesetze.li/konso/suche"
+    },
+    {
+     "date": "",
+     "host": "www.regierung.li",
+     "rank": 5,
+     "snippet": "Law - Regierung des Fürstentums Liechtenstein\n...\n…\n...\n# Law\n|**LR - Nr:** 353|**LGBl - Nr:** 2010-246|**Status:** CURRENT|\n|--|--|--|\n...\n|English Version|German Version|German Version|",
+     "title": "Law",
+     "url": "https://www.regierung.li/text/16318/law"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Liechtenstein official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "regierung.li",
+     "rank": 1,
+     "snippet": "Ordinance of 23 March 2021 on the \nRegister of the Beneficial Owners of Legal \nEntities (VwbPV) \n...\nFirst published: \n26 March 2021 \nFirst publication no.\n(LGBl-Nr.): \n2021-123",
+     "title": "952.81",
+     "url": "https://regierung.li/files/attachments/vwpv-952-81-01-01-2026-en.pdf"
+    },
+    {
+     "date": "",
+     "host": "regierung.li",
+     "rank": 2,
+     "snippet": "2009-114 \n...\npublication nr. (LGBl-\n...\n1 \nLiechtenstein Law Gazette \nYear 2009 \nNo. 114 \npublished on 27 March 2009 \nFoundation Law Ordinance (StRV) of 24 March 2009\n...\n…",
+     "title": "216.013",
+     "url": "https://regierung.li/files/attachments/strv-216-013-01-07-2026-en.pdf"
+    },
+    {
+     "date": "",
+     "host": "regierung.li",
+     "rank": 3,
+     "snippet": "Business Act (GewG) of 30 September \n...\n…\nGewG \n930.1 \nLiechtenstein Law Gazette \nYear 2020 \nNo. 415 \npublished on 4 December 2020 \n...\nof 30 September 2020",
+     "title": "930.1",
+     "url": "https://regierung.li/files/medienarchiv/930-1-01-04-2021-en.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 4,
+     "snippet": "Liechtensteinisches Landesgesetzblatt \nJahrgang 2012 \nNr. 174 \nausgegeben am 26. Juni 2012 \n...\nArt.\n4 \nElektronische Herausgabe \nDas Landesgesetzblatt wird in elektronischer Form herausgegeben.\n...\nkund.",
+     "title": "Liechtensteinisches Landesgesetzblatt",
+     "url": "https://www.gesetze.li/chrono/pdf/2012174000"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 5,
+     "snippet": "Liechtensteinisches Landesgesetzblatt\nLiechtensteinisches Landesgesetzblatt\nJahrgang 2012\n...\nNr. 284\n...\nAmtsblattverordnung (ABlV)\n...\nArt.\n2\nInhalt des elektronischen Amtsblattes\nIm elektronischen Amtsblatt werden insbesondere folgende amtliche",
+     "title": "Amtsblattverordnung (ABlV) vom 4. September 2012 - gesetze.li",
+     "url": "https://www.gesetze.li/konso/pdf/2012284000"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Liechtenstein supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-10-20",
+     "host": "www.llv.li",
+     "rank": 1,
+     "snippet": "…\n# EWR-relevante Urteile des Staatsgerichtshofs\n...\n## 1995\n...\nLink Website: https://www.llv.li/de/landesverwaltung/stabsstelle-ewr/wissenswertes/veroeffentlichungen/ewr-relevante-urteile-staatsgerichtshof",
+     "title": "EWR-relevante Urteile des Staatsgerichtshofs (StGH)",
+     "url": "https://www.llv.li/de/landesverwaltung/stabsstelle-ewr/wissenswertes/veroeffentlichungen/ewr-relevante-urteile-staatsgerichtshof"
+    },
+    {
+     "date": "",
+     "host": "ogh.li",
+     "rank": 2,
+     "snippet": "Oberster Gerichtshof des Fürstentums Liechtenstein\nRechtsprechung\n# Entscheidungen des OGH\n...\nSpaniagasse 1, 9490 Vaduz, Fürstentum Liechtenstein, T +423 / 236 65 15 (Sekretariat)",
+     "title": "Oberster Gerichtshof des Fürstentums Liechtenstein - ogh.li",
+     "url": "https://ogh.li/entscheidungen/"
+    },
+    {
+     "date": "",
+     "host": "www.ogh.li",
+     "rank": 3,
+     "snippet": "Oberster Gerichtshof des Fürstentums Liechtenstein\nRechtsprechung\n# Entscheidungen des OGH\n# Entscheidungen des OGH\nEntscheidungen zu **#Wiedererwägung**\nZur Jahresauswahl\nFilter\n...\nBeschluss vom 27.05.2025",
+     "title": "Entscheidungen des OGH",
+     "url": "https://www.ogh.li/entscheidungen/99999?letter=w&Tag=Wiedererw%C3%A4gung&ignoreyear=1"
+    },
+    {
+     "date": "",
+     "host": "www.ogh.li",
+     "rank": 4,
+     "snippet": "Oberster Gerichtshof des Fürstentums Liechtenstein\nRechtsprechung\n# Entscheidungen des OGH\n# Entscheidungen des OGH\nAuswahl\n…\n- § 140\n...\n- #### dBGB\n...\n**Oberster Gerichtshof des Fürstentums Liechtenstein**",
+     "title": "Entscheidungen des OGH",
+     "url": "https://www.ogh.li/entscheidungen/2025?letter=s&norm=28127"
+    },
+    {
+     "date": "",
+     "host": "www.ogh.li",
+     "rank": 5,
+     "snippet": "Oberster Gerichtshof des Fürstentums Liechtenstein\nRechtsprechung\n# Rechtssätze\n# Rechtssätze\n...\n# Entscheidungen des OGH\n- ## 09 CG.2022.76\nUrteil vom 05.04.2024\n...\n- #### chStGB",
+     "title": "09 CG.2022.76 - Oberster Gerichtshof des Fürstentums Liechtenstein",
+     "url": "https://www.ogh.li/rechtssaetze?letter=r&Tag=Revisibilit%C3%A4t%20nach%20liechtensteinischem%20Zivilprozessrecht"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Liechtenstein state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 1,
+     "snippet": "Neueste konsolidierte Fassungen - Konsolidiertes Recht | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein\nRechtsdienst der Regierung (RDR)\n**Neuesten konsolidierten Fassungen**",
+     "title": "Neueste konsolidierte Fassungen - Konsolidiertes Recht - Gesetze",
+     "url": "https://www.gesetze.li/konso/neueste-konso"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 2,
+     "snippet": "PGR | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein\nRechtsdienst der Regierung (RDR)\n## Personen- und Gesellschaftsrecht (PGR) vom 20. Januar 1926\n**LGBl Daten**",
+     "title": "und Gesellschaftsrecht (PGR) vom 20. Januar 1926",
+     "url": "https://www.gesetze.li/konso/1926.004"
+    },
+    {
+     "date": "",
+     "host": "www.regierung.li",
+     "rank": 3,
+     "snippet": "Regierung des Fürstentums Liechtenstein - Startseite\n...\nRegierung des Fürstentums Liechtenstein\nRegierungsgebäude\nPeter-Kaiser-Platz 1\n...\n- T +423 236 61 11\n- office@regierung.li\n- www.regierung.li",
+     "title": "Cyberangriff auf das VwbP: Aktuelle Informationen",
+     "url": "https://www.regierung.li/"
+    },
+    {
+     "date": "",
+     "host": "www.regierung.li",
+     "rank": 4,
+     "snippet": "- Selected consolidated laws - Disclaimer\nEnglish is not an official language of the Principality of Liechtenstein.\n...\n|**LR - Nr:** 101|**LGBl - Nr:** 1921.015|**Status:** CURRENT|\n...\n- office@regierung.li\n- www.regierung.li",
+     "title": "Law",
+     "url": "https://www.regierung.li/text/16318/law"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 5,
+     "snippet": "Rechtsdienst der Regierung (RDR)\n## Konsolidiertes Recht\nHier finden Sie tagesaktuell das geltende Landes- und Staatsvertragsrecht in konsolidierter (bereinigter) Form.\nIn den Grunderlass sind somit sämtliche Abänderungen eingearbeitet.",
+     "title": "Suche - Konsolidiertes Recht | Lilex - Gesetzesdatenbank des ...",
+     "url": "https://www.gesetze.li/konso/suche"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Liechtenstein municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 1,
+     "snippet": "GemG | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein\n## LGBl und Materialien\n### Gemeindegesetz (GemG) vom 20. März 1996\n**LGBl und Materialien**\n...\n|--|--|--|",
+     "title": "GemG | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein",
+     "url": "https://www.gesetze.li/konso/1996076000/meta?version=19"
+    },
+    {
+     "date": "",
+     "host": "www.vaduz.li",
+     "rank": 2,
+     "snippet": "# Design & build\n## Legal basis\nThe municipalities issue a zoning plan and building regulations for their municipal area, which regulate the building and design regulations and the permitted use.\n## Building application forms\nThe building regulations and planning application forms are available onli",
+     "title": "Design & build",
+     "url": "https://www.vaduz.li/en/living-environment/living-building/design-build/navigate/823/1375"
+    },
+    {
+     "date": "",
+     "host": "www.vaduz.li",
+     "rank": 3,
+     "snippet": "Die Gemeinden erlassen für ihr Gemeindegebiet einen Zonenplan und eine Bauordnung, welche die Bau- und Gestaltungsvorschriften und die zulässige Nutzung regeln.\n...\nDie baurechtlichen Bestimmungen und Baugesuchsformulare stehen beim Amt für Bau und Infrastruktur online zur Verfügung.",
+     "title": "Planen & Bauen",
+     "url": "https://www.vaduz.li/wohnen-umwelt/wohnen-bauen/planen-bauen/navigate/822/1375"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 4,
+     "snippet": "Konsolidiertes Recht\nLandesgesetzblatt\n...\nAbfrage dem Typ der Textsuche im konsolidierten Recht: Volltext, Titel, Abkürzung",
+     "title": "vom 15. Dezember 2020",
+     "url": "https://www.gesetze.li/konso/2020459000/?version"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 5,
+     "snippet": "## Konsolidiertes Recht\nHier finden Sie tagesaktuell das geltende Landes- und Staatsvertragsrecht in konsolidierter (bereinigter) Form.\n...\n\"LGBl-Nr\", \"LR-Nr\" und \"Textsuche\" sind beliebig kombinierbar.",
+     "title": "Suche - Konsolidiertes Recht | Lilex - Gesetzesdatenbank des ...",
+     "url": "https://www.gesetze.li/konso/suche"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Liechtenstein regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.fma-li.li",
+     "rank": 1,
+     "snippet": "The current changes to laws and regulations are published in German.\nThey are available on the website www.gesetze.li.\n...\n- Law of 18 June 2004 on the Financial Market Authority (Financial Market Authority Act; FMAG)\n...\n- FMA Guideline 2021/3: ICT Security",
+     "title": "Regulation / Law",
+     "url": "https://www.fma-li.li/en/supervision/asset-management-and-markets-division/investment-undertakings-under-the-iua-and-their-management-companies/regulation-law.html"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 2,
+     "snippet": "RKV | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein\nRechtsdienst der Regierung (RDR)\n## Verordnung vom 3. April 2007 über die Aufgaben und Befugnisse der Regulierungsbehörde im...\n**LGBl Daten**",
+     "title": "Lilex",
+     "url": "https://www.gesetze.li/konso/2007068000/?version=5"
+    },
+    {
+     "date": "",
+     "host": "www.fma-li.li",
+     "rank": 3,
+     "snippet": "**Financial Market Authority Liechtenstein**\nLandstrasse 109, P.O. Box 279\n9490 Vaduz, Liechtenstein\nT. +423 236 73 73\nM. info@fma-li.li\n...\n8:00 AM - 12:00 PM",
+     "title": "Financial Market Authority Liechtenstein",
+     "url": "https://www.fma-li.li/en"
+    },
+    {
+     "date": "",
+     "host": "www.regierung.li",
+     "rank": 4,
+     "snippet": "Regierung des Fürstentums Liechtenstein\n# Fussbereich\nRegierungsgebäude\nPeter-Kaiser-Platz 1\nPostfach 684\nLI-9490 Vaduz\n- T +423 236 61 11\n- office@regierung.li\n- www.regierung.li",
+     "title": "Cyberangriff auf das VwbP: Aktuelle Informationen",
+     "url": "https://www.regierung.li/"
+    },
+    {
+     "date": "2025-02-04",
+     "host": "www.fma-li.li",
+     "rank": 5,
+     "snippet": "#### FMA-Wegleitung 2025/5\nVerwendung des Formulars für die halbjährliche Berichterstattung für Wertpapierfirmen (0.12 MB)\nFinanzmarktaufsicht Liechtenstein\n...\n9490 Vaduz, Liechtenstein\n...\nM. info@fma-li.li",
+     "title": "Regulierung / Rechtsgrundlagen - Finanzmarktaufsicht Liechtenstein",
+     "url": "https://www.fma-li.li/de/finanzdienstleister/asset-management-und-maerkte/wertpapierfirmen/regulierung-rechtsgrundlagen"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Liechtenstein national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "standards.cencenelec.eu",
+     "rank": 1,
+     "snippet": "If you are not redirected automatically, follow the link to CEN Members page",
+     "title": "CEN/CENELEC Search Standards",
+     "url": "https://standards.cencenelec.eu/"
+    },
+    {
+     "date": "2025-11-01",
+     "host": "www.llv.li",
+     "rank": 2,
+     "snippet": "# Accessibility to websites and mobile applications of public bodies\n## Public bodies\n### Valid standard\nThe benchmark for accessibility is the harmonized standard EN 301 349 v3.2.1 (2021-03).",
+     "title": "Barrier-free web access - Liechtenstein National ...",
+     "url": "https://www.llv.li/en/national-administration/office-of-social-services/barrier-free-web-access"
+    },
+    {
+     "date": "",
+     "host": "eur-lex.europa.eu",
+     "rank": 3,
+     "snippet": "D. Chapter XIX.\nGENERAL PROVISIONS IN THE FIELD OF TECHNICAL BARRIERS TO\n...\n'TPMN (Liechtenstein)\nLiechtensteinische Technische Prüf-, Mess- und Normenstelle\nKirchstr.\n7\nFL-9490 Vaduz'.",
+     "title": "No L 86/58",
+     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:21995D0420(01)"
+    },
+    {
+     "date": "2026-08-01",
+     "host": "european-standards.com",
+     "rank": 4,
+     "snippet": "# Find European standards and the right compliance next step\n## Clear answers before you choose a document or service\nA European Standard is a technical document adopted by a recognised European standards organisation.",
+     "title": "European Standards (EN, ISO, IEC) | Search & Compliance ...",
+     "url": "https://european-standards.com/"
+    },
+    {
+     "date": "2025-04-16",
+     "host": "www.llv.li",
+     "rank": 5,
+     "snippet": "# Trade barriers / barriers to trade\nWith Liechtenstein's accession to the European Economic Area, the Technical Inspection, Measurement and Standards Body (TPMN) was introduced.\n...\n## Contact persons\nThomas Näf [email protected] +423 236 6903",
+     "title": "Trade barriers / barriers to trade - Movement of Goods, Customs and Origin - Office of Economic Affairs - National Administration",
+     "url": "https://www.llv.li/en/national-administration/office-of-economic-affairs/movement-of-goods-customs-origin/trade-barriers-trade-barriers"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Liechtenstein mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 1,
+     "snippet": "VTS | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein\nRechtsdienst der Regierung (RDR)\n## Verordnung vom 16. Juli 1996 über die technischen Anforderungen an Strassenfahrzeuge (VTS)\n**LGBl Daten**",
+     "title": "VTS | Lilex - Gesetzesdatenbank des Fürstentums Liechtenstein",
+     "url": "https://www.gesetze.li/konso/1996143000"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 2,
+     "snippet": "|SR 730.010.2|Verordnung des UVEK vom 20. November 2024 über den Herkunftsnachweis für Brenn- und Treibstoffe (VHBT)|**2024** 690 **2025** 249|",
+     "title": "vom 28. Oktober 2025 - Gesetze.li",
+     "url": "https://www.gesetze.li/chrono/html/2025502000?search_text=&search_loc=&sort_col=lgblid&sort_dir=asc&lrnr=&lgblid_von=&lgblid_bis="
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 3,
+     "snippet": "|Ausgabe|LR-Nr|LGBl-Nr|Titel|geändert durch|\n|--|--|--|--|--|\n| |0.110|1995.068.202|Anhang II Technische Vorschriften, Normen, Prüfung und Zertifizierung|2026.332|",
+     "title": "Neueste konsolidierte Fassungen - Konsolidiertes Recht - Gesetze",
+     "url": "https://www.gesetze.li/konso/neueste-konso"
+    },
+    {
+     "date": "2026-05-13",
+     "host": "www.llv.li",
+     "rank": 4,
+     "snippet": "# Normen und gemeinsame Spezifikationen\n## Ansprechperson\n### Martin Stricker\nLink Website: https://www.llv.li/de/unternehmen/branchen-berufe-verbaende/gesundheitsberufe-und-heilmittel/medizinprodukte/normen-und-gemeinsame-spezifikationen",
+     "title": "Normen und gemeinsame Spezifikationen - Medizinprodukte",
+     "url": "https://www.llv.li/de/unternehmen/branchen-berufe-verbaende/gesundheitsberufe-und-heilmittel/medizinprodukte/normen-und-gemeinsame-spezifikationen"
+    },
+    {
+     "date": "",
+     "host": "www.gesetze.li",
+     "rank": 5,
+     "snippet": "## Anhang II Technische Vorschriften, Normen, Prüfung und Zertifizierung\n...\n|LGBl-Nr|LR-Nr|Fassung|Judikatur|\n...\n|1995.068.202|0.110|Select LGBl Version 01.08.2026|LGBl|",
+     "title": "Lilex",
+     "url": "https://www.gesetze.li/konso/1995068202/?version=492"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Liechtenstein national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.statistikportal.li",
+     "rank": 1,
+     "snippet": "# Volkszählung\nDie Volkszählung ist die umfassendste statistische Erhebung in Liechtenstein.\n...\n### Ansprechpersonen\nLink Website: https://www.statistikportal.li/de/erhebungen-register/volkszaehlung",
+     "title": "Volkszählung - Liechtensteinische Landesverwaltung Statistikportal",
+     "url": "https://www.statistikportal.li/de/erhebungen-register/volkszaehlung"
+    },
+    {
+     "date": "2025-12-05",
+     "host": "www.statistikportal.li",
+     "rank": 2,
+     "snippet": "# Statistikportal Liechtenstein\nHerzlich willkommen auf dem Portal der öffentlichen Statistik Liechtensteins.\nIm Statistikportal bietet das Amt für Statistik ein umfassendes Angebot verlässlicher, aktueller statistischer Daten und Analysen aus nahezu allen Bereichen des Lebens.",
+     "title": "Liechtensteinische Landesverwaltung Statistikportal ...",
+     "url": "https://www.statistikportal.li/de"
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.llv.li",
+     "rank": 3,
+     "snippet": "Statistics office - Liechtenstein National Administration\n…\n# Office of Statistics\nThe Office of Statistics is Liechtenstein's statistical information center.\n...\n## Newsletter\nLink Website: https://www.llv.li/en/national-administration/office-of-statistics",
+     "title": "Statistics office - Liechtenstein National Administration",
+     "url": "https://www.llv.li/en/national-administration/office-of-statistics"
+    },
+    {
+     "date": "",
+     "host": "www.statistikportal.li",
+     "rank": 4,
+     "snippet": "info.as@llv.li\nwww.statistikportal.li\nGestaltung\n...\nIm Statistikportal bietet das Amt für Statistik ein umfassendes \n...\nwww.statistikportal.li\nHier finden Sie detaillierte Informationen zu Statistiken, Grafiken, \nTabellen, Zeitreihen und Ländervergleichen.",
+     "title": "Liechtenstein in Zahlen 2026 - statistikportal.li",
+     "url": "https://www.statistikportal.li/statistikportal/publications/102-liechtenstein-in-zahlen/2026/01/1/102.2026.01.1_02_liechtenstein-in-zahlen-2026.pdf"
+    },
+    {
+     "date": "2026-03-06",
+     "host": "www.statistikportal.li",
+     "rank": 5,
+     "snippet": "## Statistisches Jahrbuch 2026\n### Methodik & Qualität\nDas Amt für Statistik ist das statistische Informationszentrum Liechtensteins.\n...\n### Statistikportal\n...\nLink Website: https://www.statistikportal.li/de/uebergreifendes-indikatoren/statistisches-jahrbuch",
+     "title": "Statistisches Jahrbuch 2026",
+     "url": "https://www.statistikportal.li/de/uebergreifendes-indikatoren/statistisches-jahrbuch"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Liechtenstein central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.statistikportal.li",
+     "rank": 1,
+     "snippet": "# Banken\nDas Amt für Statistik führt bei den in Liechtenstein tätigen Bankinstituten jährlich eine Erhebung durch.\nDie Vollerhebung wird jeweils Mitte Februar des Folgejahres durchgeführt.\n...\n### Ansprechpersonen\nLink Website: https://www.statistikportal.li/de/erhebungen-register/banken",
+     "title": "Banken - Liechtensteinische Landesverwaltung ...",
+     "url": "https://www.statistikportal.li/de/erhebungen-register/banken"
+    },
+    {
+     "date": "",
+     "host": "www.statistikportal.li",
+     "rank": 2,
+     "snippet": "Statistikportal Liechtenstein\nImpressum\nHier finden Sie detaillierte Informationen zu\nInhalt der Statistik, Grafiken, Tabellen,\nZeitreihen und Ländervergleichen.\nwww.statistikportal.li\n...\nErscheinungsweise: jährlich\n...\nAmt für Statistik Liechtenstein,\n...\nKontakt:",
+     "title": "[PDF] Banken 2025 - Statistikportal Liechtenstein",
+     "url": "https://www.statistikportal.li/de/publikation/banken-2025/2025/01/v-1/p47331/pdf"
+    },
+    {
+     "date": "",
+     "host": "www.statistikportal.li",
+     "rank": 3,
+     "snippet": "www.statistikportal.li\n...\nAngebot verlässlicher, aktueller statistischer Daten und Analysen aus nahezu allen Bereichen des Lebens.\n...\nwww.statistikportal.li\nHier finden Sie detaillierte Informationen zu Statistiken, Grafiken, \nTabellen, Zeitreihen und Ländervergleichen.",
+     "title": "Liechtenstein in Zahlen 2026 - statistikportal.li",
+     "url": "https://www.statistikportal.li/statistikportal/publications/102-liechtenstein-in-zahlen/2026/01/1/102.2026.01.1_02_liechtenstein-in-zahlen-2026.pdf"
+    },
+    {
+     "date": "2026-06-15",
+     "host": "www.statistikportal.li",
+     "rank": 4,
+     "snippet": "Banken - Liechtensteinische Landesverwaltung Statistikportal\n...\n# Banken\nFinanzdaten, Bankkennzahlen und Beschäftigtenzahlen werden von den in Liechtenstein tätigen Bankinstituten erhoben.\n...\nDie Daten werden jährlich 6 Monate nach Abschluss des Berichtsjahres veröffentlicht.",
+     "title": "Banken - Liechtensteinische Landesverwaltung Statistikportal",
+     "url": "https://www.statistikportal.li/de/themen/wirtschaftsbereiche-und-unternehmen/banken"
+    },
+    {
+     "date": "",
+     "host": "www.statistikportal.li",
+     "rank": 5,
+     "snippet": "Erscheinungskalender - Liechtensteinische Landesverwaltung Statistikportal\n...\n# Erscheinungskalender\n|Arbeitslosigkeit (Monat November)|17.12.2026|\n...\nLink Website: https://www.statistikportal.li/de/anwendungen-datenbanken/erscheinungskalender",
+     "title": "Erscheinungskalender - Statistikportal Liechtenstein",
+     "url": "https://www.statistikportal.li/de/anwendungen-datenbanken/erscheinungskalender"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Liechtenstein government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-08-31",
+     "host": "www.llv.li",
+     "rank": 1,
+     "snippet": "Das Portal stellt öffentliche Daten in maschinenlesbaren Formaten bereit und ermöglicht deren einfache Suche, Nutzung und Weiterverarbeitung.\nDie Datensätze werden laufend ergänzt.\nDie koordinierende Verantwortung für «opendata.li» liegt beim Amt für Statistik.\n...\n- regierung.li",
+     "title": "Open-Data-Richtlinie - Liechtensteinische Landesverwaltung",
+     "url": "https://www.llv.li/de/landesverwaltung/stabsstelle-fuer-digitale-innovation/digitalisierung/open-data-richtlinie"
+    },
+    {
+     "date": "2025-04-16",
+     "host": "www.llv.li",
+     "rank": 2,
+     "snippet": "# Open Data Portal\n## General information\nopendata.li represents Liechtenstein's national data portal, which provides public data in machine-readable formats.\n...\nThe heart of the portal is the comprehensive data catalog.\nThis enables a simple search and quick access to the desired data records thro",
+     "title": "OGD - Liechtenstein National Administration",
+     "url": "https://www.llv.li/en/national-administration/office-of-information-technology/things-to-know/egovernment-services/open-data-portal"
+    },
+    {
+     "date": "2024-10-02",
+     "host": "www.llv.li",
+     "rank": 3,
+     "snippet": "# Open Data Portal\n## Allgemein\nopendata.li repräsentiert das nationale Datenportal Liechtensteins, das öffentliche Daten in maschinenlesbaren Formaten bereitstellt.\n...\nDas Herzstück des Portals ist der umfassende Datenkatalog.",
+     "title": "Open Data Portal - OGD - Liechtensteinische Landesverwaltung",
+     "url": "https://www.llv.li/de/landesverwaltung/amt-fuer-informatik/wissenswertes/egovernment-services/open-data-portal"
+    },
+    {
+     "date": "",
+     "host": "interoperable-europe.ec.europa.eu",
+     "rank": 4,
+     "snippet": "In 2024, Liechtenstein launched its national open data platform,\nopendata.li,\nled\nby\nthe\nOpendata\nCoordination Office within the Office of Statistics.\nThe platform aims to make public and private sector data\nfreely\naccessible\nfor\n...\nand\ncommercial",
+     "title": "•",
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2025-11/iopeu-monitoring_2025-dpaf_liechtenstein_vfinal.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.opendata.li",
+     "rank": 5,
+     "snippet": "Data - Liechtensteinische Landesverwaltung Opendata\nContact\n- Phone: +423 236 61 11\n- Send feedback\n...\nLink Website: https://www.opendata.li/en/data\n- **Content type**",
+     "title": "Data - Liechtensteinische Landesverwaltung Opendata",
+     "url": "https://www.opendata.li/en/data"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:55:37Z",
+ "pais": {
+  "iso2": "LI",
+  "iso3": "LIE",
+  "nombre": "Liechtenstein"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

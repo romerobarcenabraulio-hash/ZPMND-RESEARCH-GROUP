@@ -1,0 +1,771 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Belarus constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 1,
+     "snippet": "Конституция Республики Беларусь\nНациональный правовой Интернет-портал Республики Беларусь\n- Все законодательство\nв актуальном состоянии **31** документов включено\n30 октября\n...\n31 октября\n- Национальный реестр\nправовых актов **\n30** актов зарегистрировано\n30 октября",
+     "title": "Конституция Республики Беларусь",
+     "url": "https://pravo.by/pravovaya-informatsiya/normativnye-dokumenty/konstitutsiya-respubliki-belarus/",
+     "verificacion": {
+      "bytes": 239409,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:29Z",
+      "http": 200,
+      "sha256": "70572b9f39935964efd2079bc758a824937d36c5eb4593e6c4cc718831336de8"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.law.by",
+     "rank": 2,
+     "snippet": "# Belarus Legislation Databank\nThe on-line version of the Belarus Legislation Databank contains the complete set of laws of the Republic of Belarus, acts of the President of the Republic of Belarus and the Government's decisions (only in Russian and Belarusian language).",
+     "title": "Belarus Legislation Databank",
+     "url": "https://www.law.by/legislation-on-line/belarus-legislation-databank/",
+     "verificacion": {
+      "bytes": 16116,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:31Z",
+      "http": 200,
+      "sha256": "2215012b803724dcf478f526891074c4115a000310a30e00b501d5e2e39838b4"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 3,
+     "snippet": "Национальный правовой Интернет-портал Республики Беларусь\nНациональный правовой Интернет-портал Республики Беларусь\n- **31** документов включено\n...\n- Национальный реестр\nправовых актов **\n...\n**297** 610зарегистрировано в Национальном реестре правовых актов",
+     "title": "Национальный правовой Интернет-портал Республики ...",
+     "url": "https://pravo.by/"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.law.by",
+     "rank": 4,
+     "snippet": "National Legal Internet Portal of the Republic of Belarus\nState information resource in the field of the law\nNational Legal Internet Portal of the Republic of Belarus\n- Business\nLegislation\n- Belarus Legislation\nDatabank \"ETALON\"\n...\n- State System of Legal Information - Legislative Process",
+     "title": "National Legal Internet Portal of the Republic of Belarus",
+     "url": "https://www.law.by/"
+    },
+    {
+     "date": "",
+     "host": "president.gov.by",
+     "rank": 5,
+     "snippet": "# Constitution of the Republic of Belarus\nThe Constitution of the Republic of Belarus is the Fundamental Law of the state, which has supreme legal force and direct effect in the entire territory of the country.\n...\nThe provisions of the Constitution are further elaborated in the current legislation.",
+     "title": "Constitution of the Republic of Belarus | Official Internet ...",
+     "url": "https://president.gov.by/en/gosudarstvo/constitution"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Belarus national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "president.gov.by",
+     "rank": 1,
+     "snippet": "Official documents | Official Internet Portal of the President of the Republic of Belarus\n1. Documents\n# Documents\n** All Directives Decrees Ordinances Executive Orders\nDecree No. 361 of 14 October 2026\n...\nDecree No. 355 of 7 October 2026",
+     "title": "Documents",
+     "url": "https://president.gov.by/en/documents",
+     "verificacion": {
+      "bytes": 147524,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:33Z",
+      "http": 200,
+      "sha256": "7e88cca39d05cd52a0d13178c01e034bb9b8842fcb0d79af80f6553e26526a34"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 2,
+     "snippet": "Национальный правовой Интернет-портал Республики Беларусь\nНациональный правовой Интернет-портал Республики Беларусь\n...\n- Национальный реестр\nправовых актов **\n30** актов зарегистрировано\n...\n**297** 610зарегистрировано в Национальном реестре правовых актов",
+     "title": "Национальный правовой Интернет-портал Республики ...",
+     "url": "https://pravo.by/",
+     "verificacion": {
+      "bytes": 65595,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:35Z",
+      "http": 200,
+      "sha256": "113782cfe35bb287fc1e13ecd7be73ae333feee476db122b0be7cefb1b3a3d8b"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 3,
+     "snippet": "Национальный правовой Интернет-портал Республики Беларусь\n- **31** документов включено\n30 октября\n- Официальное\nопубликование **28** актов опубликовано\n31 октября\n- Национальный реестр\nправовых актов **\n30** актов зарегистрировано\n30 октября",
+     "title": "pravo.by",
+     "url": "https://pravo.by/index_inc.php"
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 4,
+     "snippet": "О строительстве жилых домов и объектов инженерной и транспортной инфраструктуры к ним в 2026 году Постановление Совета Министров Республики Беларусь от 5 января 2026 г.\n№ 3\n...\n№ 751\n…\n...\n№ 373",
+     "title": "Правовые акты официально опубликованные на Pravo.by",
+     "url": "https://pravo.by/ofitsialnoe-opublikovanie/novye-postupleniya/?p0=31.12.2025&p1=09.01.2026"
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 5,
+     "snippet": "Поиск актов в Национальном реестре правовых актов\nНациональный правовой Интернет-портал Республики Беларусь\n...\nправовых актов **\n...\n30 октября\nГлавная / Национальный реестр / **Поиск в реестре**\n...\n## Поиск по регистрационному номеру",
+     "title": "Поиск актов в Национальном реестре правовых актов",
+     "url": "https://pravo.by/natsionalnyy-reestr/poisk-v-reestre/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Belarus official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2021-04-28",
+     "host": "wwws.loc.gov",
+     "rank": 1,
+     "snippet": "# Belarus Republic of Belarus / Respublika Belarus\n## Legislative\n- OFFICIAL GAZETTE: Vedomosti Verkhovnogo Soveta",
+     "title": "Guide to Law Online: Belarus | Law Library of Congress",
+     "url": "https://wwws.loc.gov/law/help/guide/nations/belarus.php",
+     "verificacion": {
+      "bytes": 21834,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:36Z",
+      "http": 200,
+      "sha256": "3cb91d80901a8a42ce1c026c0c90d0d19a9c32d6146201e3db9fb686d7e10ed8"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 2,
+     "snippet": "Национальный правовой Интернет-портал Республики Беларусь\nНациональный правовой Интернет-портал Республики Беларусь\n- **31** документов включено\n30 октября\n- Официальное\nопубликование **28** актов опубликовано\n31 октября\n- Национальный реестр",
+     "title": "Национальный правовой Интернет-портал Республики ...",
+     "url": "https://pravo.by/",
+     "verificacion": {
+      "bytes": 65595,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:13:38Z",
+      "http": 200,
+      "sha256": "5795de8fdd9ef12b981d798c93dd6d06b7176344480852588afe6bf1ecf58fa5"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 3,
+     "snippet": "№ 22 «Об утверждении Положения об официальном опубликовании и вступлении в силу правовых актов Республики Беларусь» официальное периодическое печатное издание и его электронная версия являются официальным источником опубликования правовых актов.\n...\n- регламенты коллегиальных органов;",
+     "title": "Национальный реестр правовых актов Республики Беларусь",
+     "url": "https://pravo.by/natsionalnyy-reestr/ofitsialnoe-izdanie-skryto/ofitsialnoe-periodicheskoe-pechatnoe-izdanie-natsionalnyy-reestr-pravovykh-aktov-respubliki-belarus/"
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 4,
+     "snippet": "# Официальное периодическое печатное издание «Национальный реестр правовых актов Республики Беларусь» (издавалось с 01.01.1999 по 30.06.2012)",
+     "title": "Об Официальном периодическом печатном издании",
+     "url": "https://pravo.by/ofitsialnoe-opublikovanie/ofitsialnoe-periodicheskoe-pechatnoe-izdanie-natsionalnyy-reestr-pravovykh-aktov-respubliki-belarus/"
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 5,
+     "snippet": "Количество опубликованных правовых актов: 202\nРаздел первый\n…\n...\n- **6/1821 (29.12.2021)**\n...\n№ 11\n- **6/1823 (30.12.2021)**\n...\n№ Р-1289/2021",
+     "title": "Новые поступления",
+     "url": "https://pravo.by/ofitsialnoe-opublikovanie/novye-postupleniya/?p0=06.01.2022&p1=13.01.2022"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Belarus supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.court.gov.by",
+     "rank": 1,
+     "snippet": "E-COURT\nЭлектронное судопроизводство\nБанк данных судебных постановлений\nОбразцы документов для обращения в суд\nНаправить электронное обращение\nКалькулятор госпошлины\nСтатистика\nО деятельности судов",
+     "title": "Расписание заседаний",
+     "url": "https://www.court.gov.by/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.court.gov.by/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:15:10Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 2,
+     "snippet": "Постановление Пленума Верховного Суда Республики Беларусь от 26.06.2025 г.\n№ 6 «О судебной практике рассмотрения земельных споров» – Pravo.by\n...\nПравовые акты в контрольном состоянии на сайте **etalonline.by**.",
+     "title": "О судебной практике рассмотрения земельных споров",
+     "url": "https://pravo.by/document/?guid=12551&p0=S22500006",
+     "verificacion": {
+      "bytes": 8531,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:15:13Z",
+      "http": 200,
+      "sha256": "9796424f395b8e363a198c036cc5fbd0b9f3ec99d130be6ff57da8dac364cd86"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 3,
+     "snippet": "# О банке данных «Судебная практика»\n...\nИнформационное наполнение осуществляется по мере поступления документов и материалов данной тематики.",
+     "title": "О банке данных «Судебная практика»",
+     "url": "https://pravo.by/pravovaya-informatsiya/pravovye-akty-po-temam-new/court-decisions/o-banke-dannykh/"
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 4,
+     "snippet": "Банк данных «Судебная практика»\nНациональный правовой Интернет-портал Республики Беларусь\n- **31** документов включено\n30 октября\n...\nопубликование **28** актов опубликовано\n...\n# Банк данных «Судебная практика»\nКонституционный Суд Республики Беларусь",
+     "title": "Банк данных «Судебная практика»",
+     "url": "https://pravo.by/pravovaya-informatsiya/pravovye-akty-po-temam/court-decisions/pravovye-akty/"
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 5,
+     "snippet": "# Иные банки данных правовой информации\n### Банк данных «Судебная практика»\n**Банк данных «Судебная практика»** включает документы, в числе которых:\n- решения, заключения и иные документы Конституционного Суда Республики Беларусь;",
+     "title": "Иные банки данных правовой информации",
+     "url": "https://pravo.by/pravovaya-informatsiya/pravovaya-informatizatsiya-/inye-banki-dannykh-pravovoy-informatsii/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Belarus state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 1,
+     "snippet": "Национальный правовой Интернет-портал Республики Беларусь\n- **31** документов включено\n...\n- Национальный реестр\nправовых актов **",
+     "title": "pravo.by",
+     "url": "https://pravo.by/index_inc.php",
+     "verificacion": {
+      "bytes": 40109,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:15:14Z",
+      "http": 200,
+      "sha256": "1d6c8d5b2cd35553002087c7af36f4cb76596d0c07ce1ab4204f9dd0048a7bf7"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 2,
+     "snippet": "Национальный правовой Интернет-портал Республики Беларусь\nНациональный правовой Интернет-портал Республики Беларусь\n- **31** документов включено\n...\n- Национальный реестр",
+     "title": "Национальный правовой Интернет-портал Республики ...",
+     "url": "https://pravo.by/",
+     "verificacion": {
+      "bytes": 65595,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:15:16Z",
+      "http": 200,
+      "sha256": "84bf9364839df9eb6516ee7ba750aa10e4fa67452b484d9ae683d62a2420e1cd"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.law.by",
+     "rank": 3,
+     "snippet": "National Legal Internet Portal of the Republic of Belarus\nState information resource in the field of the law\nNational Legal Internet Portal of the Republic of Belarus\n- Business\nLegislation\n- Belarus Legislation\nDatabank \"ETALON\"\n...\n- State System of Legal Information - Legislative Process",
+     "title": "National Legal Internet Portal of the Republic of Belarus",
+     "url": "https://www.law.by/"
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 4,
+     "snippet": "Национальный правовой Интернет-портал Республики Беларусь является основным государственным информационным ресурсом глобальной компьютерной сети Интернет в области права.\n...\n– к цифровым показателям, закрепленным в нормативных правовых актах, в разделе «Единый реестр цифровых показателей».",
+     "title": "О портале",
+     "url": "https://pravo.by/o-portale/o-portale/"
+    },
+    {
+     "date": "2026-01-08",
+     "host": "pravo.by",
+     "rank": 5,
+     "snippet": "Законодательство Республики Беларусь\nНациональный правовой Интернет-портал Республики Беларусь\n- Все законодательство\n...\n*(с) Национальный центр законодательства и правовой информации Республики Беларусь\n...\nЭкспресс-бюллетень законодательства Республики Беларусь за период с 1 по 7 октября 2026 г.",
+     "title": "Законодательство Республики Беларусь",
+     "url": "https://pravo.by/pravovaya-informatsiya/normativnye-dokumenty/ekspress-byulleten/zakonodatelstvo-respubliki-belarus/2026/january/91805/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Belarus municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2024-01-01",
+     "host": "etalonline.by",
+     "rank": 1,
+     "snippet": "Информационно-поисковая система (ИПС) «ЭТАЛОН-ONLINE» разработана и ведется\n**Национальным центром законодательства и правовой информации Республики Беларусь** и содержит::",
+     "title": "Описание",
+     "url": "https://etalonline.by/spravka/o-sisteme/",
+     "verificacion": {
+      "bytes": 2925,
+      "estado": "http",
+      "fecha": "2026-11-02T07:15:21Z",
+      "http": 403,
+      "sha256": "8a96d5688485240405f0caf1d4e920e67d154ea0ebde3f991adf6536f0fe9c60"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 2,
+     "snippet": "Национальный правовой Интернет-портал Республики Беларусь\n- **31** документов включено\n30 октября\n- Официальное\nопубликование **28** актов опубликовано\n31 октября\n- Национальный реестр\nправовых актов **\n30** актов зарегистрировано\n30 октября",
+     "title": "pravo.by",
+     "url": "https://pravo.by/index_inc.php",
+     "verificacion": {
+      "bytes": 40109,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:15:22Z",
+      "http": 200,
+      "sha256": "1d6c8d5b2cd35553002087c7af36f4cb76596d0c07ce1ab4204f9dd0048a7bf7"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 3,
+     "snippet": "Система «ЭТАЛОН-ONLINE» доступна по адресу etalonline.by.\n...\nвсех кодексов Республики Беларусь;\nправовых актов, объединенных в банки данных «Административные процедуры», «Государственные органы и организации (должностные лица)».",
+     "title": "Эталонный банк данных правовой информации Республики ...",
+     "url": "https://pravo.by/pravovaya-informatsiya/normativnye-dokumenty/etalonnyy-bank-dannykh-pravovoy-informatsii/"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.law.by",
+     "rank": 4,
+     "snippet": "National Legal Internet Portal of the Republic of Belarus\nState information resource in the field of the law\nNational Legal Internet Portal of the Republic of Belarus\n- Business\nLegislation\n- Belarus Legislation\nDatabank \"ETALON\"\n...\n- State System of Legal Information - Legislative Process",
+     "title": "National Legal Internet Portal of the Republic of Belarus",
+     "url": "https://www.law.by/"
+    },
+    {
+     "date": "2025-01-01",
+     "host": "center.gov.by",
+     "rank": 5,
+     "snippet": "**информационно-поисковой системы** «ЭТАЛОН» и «ЭТАЛОН-ONLINE».",
+     "title": "Эталонный и иные банки данных правовой информации",
+     "url": "https://center.gov.by/deyatelnost/rabota-s-pravovoy-informatsiey-ee-rasprostranenie-predostavlenie/etalonnyy-i-inye-banki-dannykh-pravovoy-informatsii/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Belarus regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 1,
+     "snippet": "- **11-3/45027 (02.07.2026)**\nОб утверждении образовательных стандартов переподготовки руководящих работников и специалистов Постановление Министерства финансов Республики Беларусь от 27 апреля 2026 г.\n№ 21\n...\n№ 73",
+     "title": "Новые правовые акты, зарегистрированные ...",
+     "url": "https://pravo.by/natsionalnyy-reestr/novye-postupleniya/?p0=30.06.2026&p1=07.07.2026",
+     "verificacion": {
+      "bytes": 239760,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:15:29Z",
+      "http": 200,
+      "sha256": "4a211c3677b8bb6651f8d46077cdf9982b6193986cf91fe8cf136f17f6a526c0"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 2,
+     "snippet": "- **10/351 (27.12.2023)**\nОб утверждении форм ведомственной отчетности Приказ Белорусского государственного концерна пищевой промышленности \"Белгоспищепром\" от 30 ноября 2023 г.\n№ 217",
+     "title": "Официальное опубликование на портале",
+     "url": "https://pravo.by/ofitsialnoe-opublikovanie/arkhiv/ofitsialnoe-opublikovanie-na-portale/?p0=2024&p1=2401",
+     "verificacion": {
+      "bytes": 129429,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:15:30Z",
+      "http": 200,
+      "sha256": "2fd90c83b93efbd992a6527e9bdedaca301ccc9c53d0d9e73b26815f00e3aab1"
+     }
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 3,
+     "snippet": "Национальный правовой Интернет-портал Республики Беларусь\nНациональный правовой Интернет-портал Республики Беларусь\n- **31** документов включено\n...\n- Национальный реестр",
+     "title": "Национальный правовой Интернет-портал Республики ...",
+     "url": "https://pravo.by/"
+    },
+    {
+     "date": "2025-11-12",
+     "host": "etalonline.by",
+     "rank": 4,
+     "snippet": "№ 65 «Об утверждении Инструкции по делопроизводству в государственных органах, иных организациях».\nПостановление вступило в силу после его официального опубликования.",
+     "title": "Информационно-правовая система ЭТАЛОН-ONLINE",
+     "url": "https://etalonline.by/"
+    },
+    {
+     "date": "",
+     "host": "pravo.by",
+     "rank": 5,
+     "snippet": "- **11-1/44301 (11.12.2025)**\n...\n№ 355\n...\nОб утверждении регламентов административных процедур Постановление Министерства архитектуры и строительства Республики Беларусь от 29 октября 2025 г.\n№ 131",
+     "title": "Новые поступления",
+     "url": "https://pravo.by/ofitsialnoe-opublikovanie/novye-postupleniya/?p0=11.12.2025&p1=17.12.2025"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Belarus national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2025-04-17",
+     "host": "belgim.by",
+     "rank": 1,
+     "snippet": "Тел.\n...\nЕжегодное издание Государственного комитета по стандартизации Республики Беларусь и Белорусского государственного института метрологии.\n...\n**1 января 2025 года**, включая:\n...\n**Информация о каждом документе, включенном в Каталог, размещена в следующих указателях:**",
+     "title": "Каталог документов «Метрология»",
+     "url": "https://belgim.by/pages/view?id=166",
+     "verificacion": {
+      "error": "robots.txt disallows https://belgim.by/pages/view?id=166",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:17:02Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "stn.by",
+     "rank": 2,
+     "snippet": "# Реестр СН и СП\n### Наши координаты\n+375 (17) 317-64-65 +375 (17) 363-61-21 mail@stn.by",
+     "title": "Реестр СН и СП | СТРОЙТЕХНОРМ",
+     "url": "https://stn.by/standartisation/splist",
+     "verificacion": {
+      "bytes": 335875,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:17:08Z",
+      "http": 200,
+      "sha256": "ffad9781b960f3483cd79a3682baa61c6f61f993b802dae0865ca12b35ee3e85"
+     }
+    },
+    {
+     "date": "2025-04-09",
+     "host": "gosstandart.gov.by",
+     "rank": 3,
+     "snippet": "приемной: +375 17 379 62 13\nТел.\nгорячей линии (по четвергам с 10.00 до 13.00): +375 17 365 37 69\n...\nE-mail: belst@gosstandart.gov.by",
+     "title": "Госстандарт",
+     "url": "https://gosstandart.gov.by/"
+    },
+    {
+     "date": "",
+     "host": "www.rw.by",
+     "rank": 4,
+     "snippet": "|**СТБ 35.1-94** Изм.\n№1, 2 (ИУС 1-2000, 2-2003)|Государственная система каталогизации продукции РБ.\nОсновные положения|Фонд службы НСМС|",
+     "title": "Основные государственные стандарты (СТБ), технические кодексы ...",
+     "url": "https://www.rw.by/images/stories/nsms/part2.doc"
+    },
+    {
+     "date": "2025-10-31",
+     "host": "www.belgiss.by",
+     "rank": 5,
+     "snippet": "## Комментарии специалистов\nКаким государственным стандартом (СТБ) можно пользоваться при определении перечня работ по ремонту smart-телевизоров?В Республике Беларусь отсутствуют стандарты, определяющие перечень указанных работ.",
+     "title": "Белорусский государственный институт стандартизации и сертификации",
+     "url": "https://www.belgiss.by/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Belarus mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2024-08-20",
+     "host": "gosstandart.gov.by",
+     "rank": 1,
+     "snippet": "# Принятые технические регламенты ТС (ЕАЭС)\nУказ Президента Республики Беларусь от 9 февраля 2015 г.",
+     "title": "Принятые технические регламенты ТС (ЕАЭС)",
+     "url": "https://gosstandart.gov.by/approved-technical-regulations-of-the-customs-union-(eeu)/",
+     "verificacion": {
+      "error": "robots.txt disallows https://gosstandart.gov.by/approved-technical-regulations-of-the-customs-union-(eeu)/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:18:39Z"
+     }
+    },
+    {
+     "date": "2025-10-23",
+     "host": "minprom.gov.by",
+     "rank": 2,
+     "snippet": "Перечень техники, приобретаемой лизингодателями в соответствии с подпунктом 1.2 пункта 1 постановления Совета Министров Республики Беларусь от 05.09.2025 № 482 ”О приобретении техники“",
+     "title": "Техническое регулирование",
+     "url": "https://minprom.gov.by/tehnicheskoe-regulirovanie/",
+     "verificacion": {
+      "bytes": 50490,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:18:41Z",
+      "http": 200,
+      "sha256": "1ee8542e6642b2f9af1c8151048d831971dd33cc98d28ccd886c50a29791807b"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bellis.by",
+     "rank": 3,
+     "snippet": "BELARUS.\n...\nAPPROVED\nResolution\nCouncil of Ministers\nRepublic of Belarus\n21 October 2016 №849\nLIST OF OBJECTS FOR MANDATORY CONFORMITY ASSURANCE\nIN THE NATIONAL CONFORMITY ASSURANCE SYSTEM OF THE REPUBLIC OF BELARUS*",
+     "title": "ANNEX 3",
+     "url": "https://www.bellis.by/upload/docs/news/2018.02.23/Annex_03_en.pdf"
+    },
+    {
+     "date": "2025-06-03",
+     "host": "rlst.by",
+     "rank": 4,
+     "snippet": "|1.|Технические регламенты:|\n|1.1|ТР BY (технический регламент Республики Беларусь)|2010 – 2025|\n|1.2|ТР ТС (технический регламент Таможенного союза)|2012 – 2025|",
+     "title": "Видовой состав фонда технических нормативных правовых ...",
+     "url": "https://rlst.by/vidovoj-sostav-fonda-tehnicheskih-normativnyh-pravovyh-aktov-tnpa/"
+    },
+    {
+     "date": "2023-08-30",
+     "host": "www.gosstandart.gov.by",
+     "rank": 5,
+     "snippet": "# Mandatory certification\n|- the object of conformity assessment the mandatory conformity attestation is introduced with the view to take prompt measures of state regulation.|The List of the objects of mandatory conformity attestation of the National system of conformity attestation of the Republic ",
+     "title": "Mandatory certification",
+     "url": "https://www.gosstandart.gov.by/en/obligatory-acknowledgement-of-conformity/"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Belarus national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2025-11-11",
+     "host": "www.belstat.gov.by",
+     "rank": 1,
+     "snippet": "Сборник является наиболее полным изданием Национального статистического комитета Республики Беларусь, характеризующим социально-экономическое развитие областей, районов и отдельных городов в 2024 году в сравнении с предыдущими годами.",
+     "title": "Национальный статистический комитет Республики ...",
+     "url": "https://www.belstat.gov.by/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.belstat.gov.by/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:18:42Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "new.cisstat.org",
+     "rank": 2,
+     "snippet": "## Статистические службы стран СНГ\n|**НАЦИОНАЛЬНЫЙ СТАТИСТИЧЕСКИЙ КОМИТЕТ РЕСПУБЛИКИ БЕЛАРУСЬ**  220070, г.",
+     "title": "Статистические службы стран СНГ",
+     "url": "https://new.cisstat.org/cis-nsi",
+     "verificacion": {
+      "error": "robots.txt disallows https://new.cisstat.org/cis-nsi",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:20:13Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "president.gov.by",
+     "rank": 3,
+     "snippet": "# Национальный статистический комитет Республики Беларусь\n## Общая информация\n### Официальный сайт:\nwww.belstat.gov.by",
+     "title": "Национальный статистический комитет (Белстат)",
+     "url": "https://president.gov.by/ru/statebodies/nacionalnyy-statisticheskiy-komitet-respubliki-belarus"
+    },
+    {
+     "date": "",
+     "host": "www.belstat.gov.by",
+     "rank": 4,
+     "snippet": "ISBN 978-985-7343-29-4 \nНациональный статистический комитет\nРеспублики Беларусь, 2025 \nE-mail: belstat@belstat.gov.by http: //www.belstat.gov.by\n…",
+     "title": "НАЦИОНАЛЬНЫЙ СТАТИСТИЧЕСКИЙ КОМИТЕТ РЕСПУБЛИКИ БЕЛАРУСЬ",
+     "url": "https://www.belstat.gov.by/upload/iblock/9be/bw58kf25iyvf50lhg5ggffbiroi4haqa.pdf"
+    },
+    {
+     "date": "2025-09-29",
+     "host": "www.belstat.gov.by",
+     "rank": 5,
+     "snippet": "**Организация:** Национальный статистический комитет Республики Беларусь (Белстат)",
+     "title": "Статистический ежегодник Республики Беларусь, 2025",
+     "url": "https://www.belstat.gov.by/ofitsialnaya-statistika/publications/izdania/public_compilation/index_152615/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Belarus central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "president.gov.by",
+     "rank": 1,
+     "snippet": "## Main tasks\n- to maintain banking and monetary statistics, statistics of the financial market, balance of payments, international investment positions, gross foreign debt of Belarus, and financial stability, and to post official statistics on the official website of the National Bank.\n...\n### Offi",
+     "title": "National Bank of the Republic of Belarus | Official Internet Portal of the President of the Republic of Belarus",
+     "url": "https://president.gov.by/special/en/statebodies/the-national-bank",
+     "verificacion": {
+      "bytes": 89443,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:20:14Z",
+      "http": 200,
+      "sha256": "89a4094c10f32e8822b470ee78523640958a6e04668f53c846e961726e0fb07e"
+     }
+    },
+    {
+     "date": "",
+     "host": "dsbb.imf.org",
+     "rank": 2,
+     "snippet": "###### Dissemination Formats\n###### External debt\n...\n# Dissemination Standards Bulletin Board (DSBB)\n## Special Data Dissemination Standard\n### Dissemination Formats\n|--|--|",
+     "title": "Dissemination Format Report : Belarus, Republic of",
+     "url": "https://dsbb.imf.org/sdds/dissemination-format/country/BLR/category/EXD00",
+     "verificacion": {
+      "bytes": 44059,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:20:14Z",
+      "http": 200,
+      "sha256": "580d572ae1f11d0b4ef850dd075b76bcafe223923fd09586441680567c5d5ae2"
+     }
+    },
+    {
+     "date": "",
+     "host": "unece.org",
+     "rank": 3,
+     "snippet": "Belarus\nE-mail :\n[email protected]\nWebsite:\nwww.ncpi.gov.by/minfin\nNational Bank of the republic of Belarus\n20 F Skorina Av.\nTel.:\n...\nFax:\n...\nBelarus\nE-mail :\n[email protected]\nWebsite:\nwww.nbrb.by",
+     "title": "United Nations Economic Commission for Europe",
+     "url": "https://unece.org/fileadmin/DAM/trade/trade-directory/belarus.htm"
+    },
+    {
+     "date": "2025-01-04",
+     "host": "www.state.gov",
+     "rank": 4,
+     "snippet": "…\n...\nThis includes data from the National Bank of Belarus ( ** http://www.nbrb.by ** ); Ministry of Economy ( ** https://www.economy.gov.by/ ** ); and National Statistical Committee ( ** https://www.belstat.gov.by/en/ ** ).",
+     "title": "2024 Investment Climate Statements: Belarus - State Department",
+     "url": "https://www.state.gov/reports/2024-investment-climate-statements/belarus"
+    },
+    {
+     "date": "",
+     "host": "president.gov.by",
+     "rank": 5,
+     "snippet": "- ведет банковскую, денежно-кредитную статистику, статистику финансового рынка, платежного баланса, международной инвестиционной позиции, валового внешнего долга Беларуси, финансовой устойчивости и размещает официальную статистическую информацию на официальном сайте Национального банка.",
+     "title": "president.gov.by · ru · statebodiesНациональный банк Республики Беларусь | Официальный интернет ...",
+     "url": "https://president.gov.by/ru/statebodies/nacionalnyy-bank-respubliki-belarus"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Belarus government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2019-05-11",
+     "host": "pravo.by",
+     "rank": 1,
+     "snippet": "**На общественное обсуждение вынесен проект постановления Совета Министров Республики Беларусь «О функционировании национального портала открытых данных на базе единого портала электронных услуг».**\n...\nС возможностями Портала можно ознакомиться по адресу: https://data.gov.by.",
+     "title": "Обсуждение проекта постановления о ...",
+     "url": "https://pravo.by/novosti/novosti-pravo-by/2019/may/34836/",
+     "verificacion": {
+      "bytes": 67069,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:20:16Z",
+      "http": 200,
+      "sha256": "d055cd80c2136747595067165dd391a21d272842ae547758980350ee669e87cc"
+     }
+    },
+    {
+     "date": "",
+     "host": "elib.bsu.by",
+     "rank": 2,
+     "snippet": "При введении запроса в поисковой системе Google сайт оказался досту-пен в сети Интернет по адресу: https://data.gov.by.",
+     "title": "открытые данные для государственного управления ...",
+     "url": "https://elib.bsu.by/bitstream/123456789/291069/1/272-276.pdf",
+     "verificacion": {
+      "bytes": 275661,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:20:28Z",
+      "http": 200,
+      "sha256": "1537be7895d63a049c40da81fe067833d2c195c5b4d57f4bd689c02cf8bf6c23"
+     }
+    },
+    {
+     "date": "",
+     "host": "unece.org",
+     "rank": 3,
+     "snippet": "109 http://gki.gov.by/en/sale_of_stocks/ \n110 http://www.belstat.gov.by/\n...\nOpen Data initiative \nThe launch of the Open Data Portal in 2018 was a milestone for public data availability in Belarus.\n...\nThe portal was updated in 2020.",
+     "title": "Implementation of the Shared Environmental Information System principles and practices in",
+     "url": "https://unece.org/sites/default/files/2021-03/Belarus%20Country%20Maturity%20Report%20EN.pdf"
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 4,
+     "snippet": "Indicators catalog.\nmanaged by National statistical committee of The Republic of Belarus.\npowered by Custom software.\naccessible at dataportal.belstat.gov.by.\n...\n### General\n|Link|http://dataportal.belstat.gov.by|\n...\n|Owner location|Belarus|\n...\n|Access modes|open|",
+     "title": "Interactive business intelligence system for distribution of ...",
+     "url": "https://dateno.io/registry/catalog/cdi00000264/"
+    },
+    {
+     "date": "2025-11-10",
+     "host": "www.belstat.gov.by",
+     "rank": 5,
+     "snippet": "…\nThe booklet contains information on investment activity, housing construction, housing stock and activity of construction organisations in the Republic of Belarus.",
+     "title": "National Statistical portal of the Republic of Belarus",
+     "url": "https://www.belstat.gov.by/en/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:22:14Z",
+ "pais": {
+  "iso2": "BY",
+  "iso3": "BLR",
+  "nombre": "Belarus"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

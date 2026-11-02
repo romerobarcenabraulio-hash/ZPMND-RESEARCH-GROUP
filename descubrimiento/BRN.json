@@ -1,0 +1,767 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Brunei Darussalam constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 1,
+     "snippet": "- 2.Constitutional Matters I – Constitution of Brunei Darussalam (B.L.R.O 2/2011)\n...\n#### List of laws of Brunei Darussalam\n- 1.Acts, Orders & Enactments (including subsidiary legislation, amendments, notifications and appointments)\n...\n-",
+     "title": "LEGISLATION ONLINE | AGC | Attorney General Chamber Brunei ...",
+     "url": "https://www.agc.gov.bn/legislation_online/",
+     "verificacion": {
+      "bytes": 141988,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:47Z",
+      "http": 200,
+      "sha256": "752dfaa4bd5f865349ee229419a068c350e85713eb7f066b933f52477dfdbb0b"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 2,
+     "snippet": "This Constitution may be cited as the Constitution of Brunei \nDarussalam.",
+     "title": "LAWS OF BRUNEI",
+     "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/CONST.-I-2022-ED-CONSTITUTION-OF-BRUNEI-DARUSSALAM.pdf",
+     "verificacion": {
+      "bytes": 673293,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:49Z",
+      "http": 200,
+      "sha256": "8225b0c1829901f8448c6ef8732648dfa120f49bf6f33f62bb0f969c4bf4b748"
+     }
+    },
+    {
+     "date": "2026-08-26",
+     "host": "www.agc.gov.bn",
+     "rank": 3,
+     "snippet": "# CONSTITUTIONAL MATTERS I – CONSTITUTION OF BRUNEI DARUSSALAM\nAug 26, 2026\nCONST.\nI\n...\n|Constitution (Administrative Appeals Rules) Order, 1959|S 103/1959|18 October 1959|",
+     "title": "CONSTITUTIONAL MATTERS I – CONSTITUTION OF BRUNEI DARUSSALAM",
+     "url": "https://www.agc.gov.bn/documents/constitutional-matters-i-constitution-of-brunei-darussalam/?agc_tab=sl&agc_sl=9"
+    },
+    {
+     "date": "",
+     "host": "www.mod.gov.bn",
+     "rank": 4,
+     "snippet": "|--|--|--|\n|Town and Country Planning Order, 2015|Jaatan Perancang Bandar dan Desa|Provides for the planning of areas in Brunei Darussalam and control of development within Development Control Areas and for connected and incidental matters.|",
+     "title": "Akta & Perintah",
+     "url": "https://www.mod.gov.bn/akta-perintah/"
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 5,
+     "snippet": "LAWS OF BRUNEI \nThe Constitution \nCONST.\nI \n5 \n*PART VII \nLEGISLATION AND PROCEDURE IN THE \nLEGISLATIVE COUNCIL \n39. \nPower to make laws \n...\nIntroduction of Bills, etc.",
+     "title": "THE CONSTITUTION OF BRUNEI DARUSSALAM - agc.gov.bn",
+     "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/CONST.-I-1984-ED-CONSTITUTION-OF-BRUNEI-DARUSSALAM.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Brunei Darussalam national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 1,
+     "snippet": "|S 31|Perintah Perancangan Bandar dan Desa, 2015 [S 74/2016] - Pemberitahuan permulaan kuat kuasa|Town and Country Planning Order, 2015 [S 61/2015] - Notification of commencement|24| |",
+     "title": "GOVERNMENT GAZETTE PART II – 2018 | AGC | Attorney General ...",
+     "url": "https://www.agc.gov.bn/gazette_2018/",
+     "verificacion": {
+      "bytes": 170110,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:56Z",
+      "http": 200,
+      "sha256": "30c6d037c30e9dcde6987d55b70d4dcbc30f7ae9f6de1f9ed83583fdbadffb20"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 2,
+     "snippet": "## BRULAW\n### New Legislation\n- Patents (Amendment) Rules, 2026\n- Notification of Orders Passed by The Legislative Council Under Article 83(7)\n- Stamp Act (Amendment) Order, 2026\n...\n- Mosque Construction Fund Rules, 2026",
+     "title": "BRULAW | AGC | Attorney General Chamber Brunei ...",
+     "url": "https://www.agc.gov.bn/services_brulaw-2/",
+     "verificacion": {
+      "bytes": 127817,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:58Z",
+      "http": 200,
+      "sha256": "85f3c1ebcf8aef21a7ce5e576a377d7aa02778e6d6e068c5abd2a77170e7dbaf"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mod.gov.bn",
+     "rank": 3,
+     "snippet": "Akta & Perintah | Kementerian Pembangunan Negara Brunei Darussalam\n## Akta & Perintah\n## Senarai undang-undang di bawah kawalan Kementerian Pembangunan\n...\n|Town and Country Planning (Development Control) Act (Cap.",
+     "title": "Akta & Perintah",
+     "url": "https://www.mod.gov.bn/akta-perintah/"
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 4,
+     "snippet": "#### List of laws of Brunei Darussalam\n- 1.Acts, Orders & Enactments (including subsidiary legislation, amendments, notifications and appointments)\n- 2.Government Gazette Part II\n...\n#### Orders under Article 83(3) of The Constitution of Brunei Darussalam",
+     "title": "LEGISLATION ONLINE | AGC | Attorney General Chamber Brunei ...",
+     "url": "https://www.agc.gov.bn/legislation_online/"
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 5,
+     "snippet": "…\n|S 19|Pembetulan - Architects, Professional Engineers and Quantity Surveyors Rules, 2016 (S 38/2016)|Corrigendum - Architects, Professional Engineers and Quantity Surveyors Rules, 2016 (S 38/2016)|11| |",
+     "title": "GOVERNMENT GAZETTE PART II – 2017 | AGC | Attorney General ...",
+     "url": "https://www.agc.gov.bn/gazette_2017/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Brunei Darussalam official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 1,
+     "snippet": "# GOVERNMENT GAZETTE PART II - 2025\n|Notification No.|Malay Text|English Text|Gazette No.|Status|\n...\n|S 1|No Malay translation|Personal Data Protection Order, 2025|1| |",
+     "title": "GOVERNMENT GAZETTE PART II - 2025 - agc.gov.bn",
+     "url": "https://www.agc.gov.bn/gazette_2025/",
+     "verificacion": {
+      "bytes": 149985,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:01Z",
+      "http": 200,
+      "sha256": "c283020da45c1679bd2512765b0c6aa15d6a6f3f9e8c811672688c5cc604e56c"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 2,
+     "snippet": "|S 1|Perintah Pihak Berkuasa Industri Teknologi Info-Komunikasi Negara Brunei Darussalam (Pindaan), 2026|Authority for Info-communications Technology Industry of Brunei Darussalam (Amendment) Order, 2026|1| |\n...\n…",
+     "title": "GOVERNMENT GAZETTE PART II – 2026 | AGC | Attorney General...",
+     "url": "https://www.agc.gov.bn/brulaw_gazette2026/",
+     "verificacion": {
+      "bytes": 148073,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:03Z",
+      "http": 200,
+      "sha256": "935439a3754e46438fc41cd13a2d16eb7d26de7abf124f642607d95a6386b480"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 3,
+     "snippet": "day of \n...\nDicetak oleh AWANG HAJI KAMARUL AZAM BIN HAJI MOHAMAD, \nPemangku Pengarah Percetakan, \neli jabatan Percetakan Kerajaan, Bandar Seri Begawan BB3510, Negara Brunei Darussalam.",
+     "title": "No. S 16",
+     "url": "https://www.agc.gov.bn/AGC%20Images/LAWS/Gazette_PDF/2015/EN/S016.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 4,
+     "snippet": "BRUNEI DARUSSALAM GOVERNMENT GAZETTE \n~Wll \n:, '~-\nSUCCESSION AND REGENCY PROCLAMATION, 1959 \nSUCCESSION AND REGENCY (AMENDMENT) PROCLAMATION, 2025 \n...\n…",
+     "title": "I ?;J., ~' ,J - agc.gov.bn",
+     "url": "https://www.agc.gov.bn/AGC%20Images/LAWS/Gazette_PDF/2025/EN/S%2024_2025%5BE%5D.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 5,
+     "snippet": "|Notification No.|Malay Text|English Text|Gazette No.|Status|\n...\n|S 33|Perintah Akta Agensi Pelaburan Brunei (Pindaan), 2017|Brunei Investment Agency Act (Amendment) Order, 2017|20| |\n...\n…",
+     "title": "GOVERNMENT GAZETTE PART II – 2017 | AGC | Attorney General ...",
+     "url": "https://www.agc.gov.bn/gazette_2017/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Brunei Darussalam supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-10-20",
+     "host": "www.judiciary.gov.bn",
+     "rank": 1,
+     "snippet": "### Judgments\nWritten decisions delivered by the Brunei courts.\n(content building ongoing. Email us if you wish specific decisions to be listed.)\n...\n### Supreme Court\nHears civil and criminal cases.\nConsists of the:\n- Court of Appeal\n- High Court",
+     "title": "The Judiciary of Brunei Darussalam | The Judiciary of Brunei ...",
+     "url": "https://www.judiciary.gov.bn/",
+     "verificacion": {
+      "bytes": 673997,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:10Z",
+      "http": 200,
+      "sha256": "be0ed9650825292e9da4ffa13f7fbf58fcf432085c912025dd3e23d3c16d7999"
+     }
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.judiciary.gov.bn",
+     "rank": 2,
+     "snippet": "# JUDGMENTS\n...\n#### ICCT/43/2017\n###### Decision date: 7 Jun 2017",
+     "title": "JUDGMENTS",
+     "url": "https://www.judiciary.gov.bn/judgments/?lang=en",
+     "verificacion": {
+      "bytes": 281717,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:15Z",
+      "http": 200,
+      "sha256": "3bdca58ff6acd49cba3e25e216ac9d1afe8236e358ae7820d43515d091cb0cd2"
+     }
+    },
+    {
+     "date": "2026-07-27",
+     "host": "www.judiciary.gov.bn",
+     "rank": 3,
+     "snippet": "# JUDGMENTS\n...\n#### Pg Md Aisamuddin bin Pg Hj Md Daud v Public Prosecutor\n#### HCCT/13/2025\n###### Decision date: 28 Jan 2026",
+     "title": "Judgments | The Judiciary of Brunei Darussalam",
+     "url": "https://www.judiciary.gov.bn/judgments/page/2/?lang=en"
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 4,
+     "snippet": "# LAW LIBRARY\nThe Law Library maintains a comprehensive collection of legal resources including online legal database for research and reference purposes.\nThe Law Library primarily serves officers and staff of the Attorney General’s Chambers.\nPublic access is available upon formal request to and app",
+     "title": "LAW LIBRARY | AGC | Attorney General Chamber Brunei Darussalam",
+     "url": "https://www.agc.gov.bn/services-lawlibrary/"
+    },
+    {
+     "date": "2026-09-12",
+     "host": "www.judiciary.gov.bn",
+     "rank": 5,
+     "snippet": "Judgment | The Judiciary of Brunei Darussalam\n## Civil Suit No. 33 of 2020",
+     "title": "Judgment | The Judiciary of Brunei Darussalam",
+     "url": "https://www.judiciary.gov.bn/category/judgment/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Brunei Darussalam state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 1,
+     "snippet": "LEGISLATION ONLINE | AGC | Attorney General Chamber Brunei Darussalam\n...\n#### List of laws of Brunei Darussalam\n- 1.Acts, Orders & Enactments (including subsidiary legislation, amendments, notifications and appointments)\n- 2.Government Gazette Part II\n...\n-",
+     "title": "LEGISLATION ONLINE | AGC | Attorney General Chamber Brunei ...",
+     "url": "https://www.agc.gov.bn/legislation_online/",
+     "verificacion": {
+      "bytes": 141988,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:17Z",
+      "http": 200,
+      "sha256": "752dfaa4bd5f865349ee229419a068c350e85713eb7f066b933f52477dfdbb0b"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 2,
+     "snippet": "BRULAW | AGC | Attorney General Chamber Brunei Darussalam\n## BRULAW\n### New Legislation\n- Patents (Amendment) Rules, 2026\n- Notification of Orders Passed by The Legislative Council Under Article 83(7)",
+     "title": "BRULAW | AGC | Attorney General Chamber Brunei ...",
+     "url": "https://www.agc.gov.bn/services_brulaw-2/",
+     "verificacion": {
+      "bytes": 127817,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:19Z",
+      "http": 200,
+      "sha256": "85f3c1ebcf8aef21a7ce5e576a377d7aa02778e6d6e068c5abd2a77170e7dbaf"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mod.gov.bn",
+     "rank": 3,
+     "snippet": "Akta & Perintah | Kementerian Pembangunan Negara Brunei Darussalam\n## Akta & Perintah\n## Senarai undang-undang di bawah kawalan Kementerian Pembangunan\n...\n|Town and Country Planning (Development Control) Act (Cap.",
+     "title": "Akta & Perintah",
+     "url": "https://www.mod.gov.bn/akta-perintah/"
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 4,
+     "snippet": "|S 13|Perintah Perbekalan Tambahan (2024/2025) (Bil.2), 2025|Supplementary Supply (2024/2025) (No.2) Order, 2025|9| |",
+     "title": "GOVERNMENT GAZETTE PART II - 2025 - agc.gov.bn",
+     "url": "https://www.agc.gov.bn/gazette_2025/"
+    },
+    {
+     "date": "2026-08-26",
+     "host": "www.agc.gov.bn",
+     "rank": 5,
+     "snippet": "# CONSTITUTIONAL MATTERS I – CONSTITUTION OF BRUNEI DARUSSALAM\nAug 26, 2026\nCONST.\nI\nOpen Latest PDF\nVersion Amendment Subsidiary Legislation\n|Citation|Reference Number|Commencement Date|",
+     "title": "CONSTITUTION OF BRUNEI DARUSSALAM - AGC",
+     "url": "https://www.agc.gov.bn/documents/constitutional-matters-i-constitution-of-brunei-darussalam/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Brunei Darussalam municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2025-03-24",
+     "host": "www.agc.gov.bn",
+     "rank": 1,
+     "snippet": "Municipal Boards (Bandar Seri Begawan) (Amendment) By-Laws, 2015\n...\nMunicipal (Amendment) By-Laws, 2006 - Kuala Belait - Seria\nMunicipal (Amendment) By-Laws, 2006 - Tutong",
+     "title": "MUNICIPAL BOARDS ACT - SL // <![CDATA[ _spBodyOnLoadFunctionNames.push(\"setupPageDescriptionCallout\"); // ]]>",
+     "url": "https://www.agc.gov.bn/SitePages/MUNICIPAL%20BOARDS%20ACT%20-%20SL.aspx",
+     "verificacion": {
+      "bytes": 67510,
+      "estado": "http",
+      "fecha": "2026-11-02T07:28:21Z",
+      "http": 404,
+      "sha256": "e225451c7c2726fc8a0b141786c976e9dd90d7d7d35c5879f0843404ccd67eb0"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 2,
+     "snippet": "CHAPTER 57\nMUNICIPAL BOARDS\n...\nAmended by\nS 44/2015\nS 31/2016\nREVISED EDITION 2022\nB.L.R.O. 4/2022\n...\nMunicipal Boards\nB.L.R.O. 4/2022",
+     "title": "LAWS OF BRUNEI CHAPTER 57 MUNICIPAL BOARDS - agc.gov.bn",
+     "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/CAP-57-2022-ED-MUNICIPAL-BOARDS-ACT.pdf",
+     "verificacion": {
+      "bytes": 158616,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:22Z",
+      "http": 200,
+      "sha256": "1879658d14011f5915d0fdb3f6bab37a6e2b171cabb50ae0a906756ca06e938a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 3,
+     "snippet": "REVISED EDITION 1984 \nCHAPTER 57 \nMUNICIPAL BOARDS \nARRANGEMENT OF SECTIONS \n...\n5. \nPower to pass by-laws \n6. \nConfirmation of by-laws \n7. \nPenalty for breach of by-laws",
+     "title": "CHAPTER 57",
+     "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/CAP-57-1984-ED-MUNICIPAL-BOARDS-ACT.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 4,
+     "snippet": "# LEGISLATION ONLINE\n...\n#### List of laws of Brunei Darussalam\n- 1.Acts, Orders & Enactments (including subsidiary legislation, amendments, notifications and appointments)\n- 2.Government Gazette Part II\n#### Laws of Brunei (Chapter/Acts)\n...\n-",
+     "title": "LEGISLATION ONLINE | AGC | Attorney General Chamber Brunei ...",
+     "url": "https://www.agc.gov.bn/legislation_online/"
+    },
+    {
+     "date": "",
+     "host": "www.mod.gov.bn",
+     "rank": 5,
+     "snippet": "## Akta & Perintah\n...\n|--|--|--|\n...\n|Town and Country Planning Order, 2015|Jaatan Perancang Bandar dan Desa|Provides for the planning of areas in Brunei Darussalam and control of development within Development Control Areas and for connected and incidental matters.|",
+     "title": "Akta & Perintah",
+     "url": "https://www.mod.gov.bn/akta-perintah/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Brunei Darussalam regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2018-10-09",
+     "host": "oecd.org",
+     "rank": 1,
+     "snippet": "|--|--|\n...\nThere is no single SME regulatory policy in Brunei.\n...\nThere is currently no published cross-sectoral policy that guides enforcement and inspection in Brunei.\nEach ministry holds autonomous sanctioning powers and is responsible for their own inspection authorities, as guided by relevant",
+     "title": "Brunei Darussalam: Good Regulatory Practices to Support Small and Medium Enterprises in Southeast Asia",
+     "url": "https://oecd.org/en/publications/2018/10/good-regulatory-practices-to-support-small-and-medium-enterprises-in-southeast-asia_g1g94d19/full-report/component-6.html",
+     "verificacion": {
+      "error": "robots.txt disallows https://oecd.org/en/publications/2018/10/good-regulatory-practices-to-support-small-and-medium-enterprises-in-southeast-asia_g1g94d19/full-report/component-6.html",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:28:23Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bruneitrade.mofe.gov.bn",
+     "rank": 2,
+     "snippet": "|•|Authority for Info-Communications Technology Industry of Brunei Darussalam (AITI) Order, 2001|Order|Download|Amendment:|\n...\n|•|Broadcasting (Class License) Notification, 2001|Notification|Download|Download|",
+     "title": "National Laws and Rules | Brunei Trade",
+     "url": "https://www.bruneitrade.mofe.gov.bn/national-laws-and-rules/",
+     "verificacion": {
+      "bytes": 179083,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:27Z",
+      "http": 200,
+      "sha256": "f65c992ec5130f7ce28f8d237917b84a9c77a4ec7e40afa059c8e90bf78248ce"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mod.gov.bn",
+     "rank": 3,
+     "snippet": "|**Tajuk Akta / Perintah / Peraturan**|**Autoriti**|**Keterangan**|\n...\n|Building Control Order, 2014|Autoriti Kawalan Bangunan dan Industri Pembinaan|Provides for matters relating to buildings and its related matters and licensing of builders.|",
+     "title": "Akta & Perintah",
+     "url": "https://www.mod.gov.bn/akta-perintah/"
+    },
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 4,
+     "snippet": "…\n...\n**3.77.** The Brunei Darussalam Standards and Accreditation Centre (BDSAC) (formerly known as the Brunei Darussalam National Standards Centre) is the country's national standards body.\nIt is responsible for standardization and, since February 2024, for certification activities.",
+     "title": "Brunei Darussalam",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C096"
+    },
+    {
+     "date": "",
+     "host": "www.bruneitrade.mofe.gov.bn",
+     "rank": 5,
+     "snippet": "|Ministry of Finance and Economy Royal Customs and Excise Department| |\n...\n||Ministry of Primary Resources and Tourism Department of Fisheries Department of Agriculture and Agrifood Forestry Department|\n||Ministry of Health Compliance & Licensing Section, Department of Pharmaceutical Services|\n...\n",
+     "title": "Relevant Agencies - Brunei Trade |",
+     "url": "https://www.bruneitrade.mofe.gov.bn/relevant-agencies/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Brunei Darussalam national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.mofe.gov.bn",
+     "rank": 1,
+     "snippet": "PBD 1:1992 \n...\n1.  PBD ISO 9000 PT 1:1994 \nQuality System Standards – Guidelines for selection \n$10.00 \n...\n7.  PBD ISO 9004-1:1994 \nQuality Management and systems elements",
+     "title": "[all] piawai brunei darussalam (pbd)",
+     "url": "https://www.mofe.gov.bn/Shared%20Documents/PSABD_Listing%20of%20Standards/PBD%20(new)/%5BALL%5D%20PIAWAI%20BRUNEI%20DARUSSALAM%20(PBD).pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mofe.gov.bn/Shared%20Documents/PSABD_Listing%20of%20Standards/PBD%20(new)/%5BALL%5D%20PIAWAI%20BRUNEI%20DARUSSALAM%20(PBD).pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:28:28Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mofe.gov.bn",
+     "rank": 2,
+     "snippet": "Price \n...\nPBD 25: 2016 \nCode of Hygienic Practice for Precooked and Cooked Foods in \nMass Catering\n...\nPBD 30: 2016 \nCrackers from marine and freshwater fish, Crustacean and \nMolluscan Shellfish",
+     "title": "[PDF] LIST OF NATIONAL STANDARDS BOOKS - MOFE |",
+     "url": "https://www.mofe.gov.bn/wp-content/uploads/2025/10/FOODS-AGRIFOOD.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mofe.gov.bn/wp-content/uploads/2025/10/FOODS-AGRIFOOD.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:28:28Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mod.gov.bn",
+     "rank": 3,
+     "snippet": "|--|--|\n|Road Map To ISO 9000 For Brunei Darussalam|BND 5.00|\n...\n|Bridge Design Guidelines|BND 5.00|\n...\n|Timber: Design of Nailed Joints|BND 5.00|",
+     "title": "Bahan Terbitan",
+     "url": "https://www.mod.gov.bn/bahan-terbitan/"
+    },
+    {
+     "date": "2025-10-25",
+     "host": "mofe.gov.bn",
+     "rank": 4,
+     "snippet": "PBDs are not freely available, but listing of available standards can be found here and can be purchased directly through the Pusat Standard dan Akreditasi Brunei Darussalam (PSABD) or email to psabd@mofe.gov.bn.",
+     "title": "Ministry of Finance and Economy - PSABDpg11",
+     "url": "https://mofe.gov.bn/SitePages/PSABDpg11.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.mofe.gov.bn",
+     "rank": 5,
+     "snippet": "No. \n...\n1.  PBD 24:2007 – Malay \nMakanan Halal \n...\nGaris Panduan untuk pengilangan dan pengendalian produk perubatan, ubat traditional dan tambahan kesihatan halal\n...\nGaris Panduan Bagi Pensijilan Halal",
+     "title": "LIST OF NATIONAL STANDARDS BOOKS",
+     "url": "https://www.mofe.gov.bn/Shared%20Documents/PSABD_Listing%20of%20Standards/PBD%20(new)/HALAL.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Brunei Darussalam mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.epingalert.org",
+     "rank": 1,
+     "snippet": "|--|--|--|--|\n|Brunei Darussalam|G/SPS/N/BRN/4 ** Food Order, 2024 Notified document (1)|22/07/2024|Food products|",
+     "title": "Brunei Darussalam - ePing SPS&TBT platform",
+     "url": "https://www.epingalert.org/en/MemberProfiles/Profile?countryId=C096",
+     "verificacion": {
+      "bytes": 153235,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:30Z",
+      "http": 200,
+      "sha256": "99d9db6a5a7b8e70fdaf8b2c2768ce8356d815dc79f5babec577760ed1937b2f"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.agc.gov.bn",
+     "rank": 2,
+     "snippet": "ENERGY EFFICIENCY (STANDARDS AND LABELLING) ACT \n(Chapter 233) \nENERGY EFFICIENCY (MINIMUM ENERGY EFFICIENCY STANDARDS \nAND ENERGY LABELLING) REGULATIONS, 2023 \n...\nlarger;",
+     "title": "21st. SEPTEMBER, 2023 No. S 37 ENERGY EFFICIENCY (STANDARDS AND...",
+     "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/S-37-2023-ENERGY-EFFICENCY-MINIMUM-ENERGY-EFFICIENCY-STANDARDS-AND-ENERGY-LABELLING-REGULATIONS-2023-1.pdf",
+     "verificacion": {
+      "bytes": 158969,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:31Z",
+      "http": 200,
+      "sha256": "20587b6e510e8c6dc0460b81fea891195437859ee86a254ad2cf353b53f321a0"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bruneitrade.mofe.gov.bn",
+     "rank": 3,
+     "snippet": "|•|Authority for Info-Communications Technology Industry of Brunei Darussalam (AITI) Order, 2001|Order|Download|Amendment:|\n...\n|•|Broadcasting (Class License) Notification, 2001|Notification|Download|Download|",
+     "title": "National Laws and Rules | Brunei Trade",
+     "url": "https://www.bruneitrade.mofe.gov.bn/national-laws-and-rules/"
+    },
+    {
+     "date": "",
+     "host": "www.mod.gov.bn",
+     "rank": 4,
+     "snippet": "…\n|Building Control Regulations, 2014|Autoriti Kawalan Bangunan dan Industri Pembinaan|Provides for submission and approval of plans, duties of QP, site supervisors and builders during construction, design and construction, installation of exterior features, occupation of buildings, etc.|",
+     "title": "Akta & Perintah",
+     "url": "https://www.mod.gov.bn/akta-perintah/"
+    },
+    {
+     "date": "",
+     "host": "www.wto.org",
+     "rank": 5,
+     "snippet": "…\n# SUMMARY OBSERVATIONS\n## (3) Trade Policies and Practices\nCurrently, there are no mandatory standards (technical regulations) in Brunei, only 42 voluntary standards that relate to construction and one in the food sector.",
+     "title": "[DOC] s196-00_e.doc - World Trade Organization",
+     "url": "https://www.wto.org/english/tratop_e/tpr_e/s196-00_e.doc"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Brunei Darussalam national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.deps.gov.bn",
+     "rank": 1,
+     "snippet": "Population | DEPS\n...\n# Population\n...\nLatest Highlights**           **2025**\nPopulation estimates of Brunei Darussalam for 2025 was 458,600 persons, comprising 244,800 males (53.4 per cent) and 213,800 females (46.6 per cent).",
+     "title": "Population | DEPS",
+     "url": "https://www.deps.gov.bn/population-social-statistics/",
+     "verificacion": {
+      "bytes": 181722,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:34Z",
+      "http": 200,
+      "sha256": "2193a29b79674dca37feac2a22bdb0cf905df7e2ec5abfb2197991f572999d3d"
+     }
+    },
+    {
+     "date": "2026-10-24",
+     "host": "sesric.org",
+     "rank": 2,
+     "snippet": "## Information on National Statistical Offices Located in Brunei\n|Organization :|Department of Economic Planning and Statistics (DEPS)|\n|--|--|\n...\n|Fax :|(+673) 2 230 236|\n|Web Site :|http://www.deps.gov.bn|",
+     "title": "Information on National Statistical Offices Located in Brunei - SESRIC",
+     "url": "https://sesric.org/databases-nso-detail.php?c_code=10",
+     "verificacion": {
+      "bytes": 70031,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:36Z",
+      "http": 200,
+      "sha256": "7f498ee3bda807f95f5c93ce08b556e76aa14832ca49a65821927cf99851d878"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.deps.gov.bn",
+     "rank": 3,
+     "snippet": "Laman sesawang \n: \ndeps.mofe.gov.bn\n...\nThe Report of the Population and Housing Census (BPP) 2021: Demographic, \nHousehold and Housing Characteristics is available from JPES’s website.\n...\nWebsite \n: \ndeps.mofe.gov.bn",
+     "title": "SIARAN MEDIA",
+     "url": "https://www.deps.gov.bn/wp-content/uploads/2025/11/PR-2.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.deps.gov.bn",
+     "rank": 4,
+     "snippet": "Home v3 | DEPS\nDepartment of Economic Planning and Statistics\nMinistry of Finance and Economy | Brunei Darussalam\n...\n## Latest Indicators\n### National Statistics",
+     "title": "Home v3",
+     "url": "https://www.deps.gov.bn/home-v3/"
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 5,
+     "snippet": "Country Profile of Brunei Darussalam\nMain statistical agency\nMain statistical agency name\nDepartment of Statistics\nWeb address\nbrunei.gov.bn/",
+     "title": "UNSD Document",
+     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=542"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Brunei Darussalam central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bdcb.gov.bn",
+     "rank": 1,
+     "snippet": "Home - BDCB\n...\n## Statistics\n### Statistical Bulletin\nUPDATED\n22 October 2026\n### Performance Review of Banks and Finance Companies\nUPDATED\nQ2 2026\n### Monetary and Financial Statistics\nUPDATED\n05 May 2026\n### Overnight Standing Facilities Rates\n...\n20 May 2026",
+     "title": "Brunei Darussalam Central Bank",
+     "url": "https://www.bdcb.gov.bn/",
+     "verificacion": {
+      "bytes": 155042,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:40Z",
+      "http": 200,
+      "sha256": "eab7d6048710eaa488ce2c451a4f5d04be3660ab7e56523d5385b57b805c765e"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bdcb.gov.bn",
+     "rank": 2,
+     "snippet": "Brunei Darussalam Central Bank (BDCB) today published its second semi-annual policy statement for the year 2024.\n...\nThe full version of BDCB Policy Statement 2/2024 can be found on BDCB’s website at www.bdcb.gov.bn.",
+     "title": "BDCB Policy Statement 2/2024",
+     "url": "https://www.bdcb.gov.bn/publications/details?id=01jgb71h6djqme7s5f4rvn6had",
+     "verificacion": {
+      "bytes": 138803,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:42Z",
+      "http": 200,
+      "sha256": "d413327ad61f043d6f555a72f1127c577f008a8335beeafca7d5bbad513aeae3"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bdcb.gov.bn",
+     "rank": 3,
+     "snippet": "Monetary and Financial Statistics - BDCB\n1. Statistics\n2. Monetary and Financial Statistics\n...\n### Interest rates\n...\n### Central Bank Survey\nThe central bank data are presented as a Central Bank Survey.\nThis survey covers the central bank's data only, i.e. BDCB's data.",
+     "title": "Monetary and Financial Statistics",
+     "url": "https://www.bdcb.gov.bn/statistics/monetary-and-financial-statistics"
+    },
+    {
+     "date": "",
+     "host": "www.bdcb.gov.bn",
+     "rank": 4,
+     "snippet": "Sheet: 4.4\n...\n4.4 Residential Property Market: No. of transactions by District and Property Type,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed:",
+     "title": "BDCB%20SB%20-%2022nd%20October%202026%20publication.xlsx",
+     "url": "https://www.bdcb.gov.bn/docs/home/BDCB%20SB%20-%2022nd%20October%202026%20publication.xlsx"
+    },
+    {
+     "date": "",
+     "host": "www.bdcb.gov.bn",
+     "rank": 5,
+     "snippet": ",,,,,,,\n\"Source: Monetary Operations / Development and International Department, BDCB\",,,,,,,\n...\n\"Source: Regulatory and Supervision Department, BDCB\",,,,,,,,,,,\n...\n…\n...\n\"Source: Monetary Operations / Development and International Department, BDCB\",,,,,,,,,,,,,,,,,,,,,,,,,,",
+     "title": "contents",
+     "url": "https://www.bdcb.gov.bn/docs/home/BDCB%20SB%20-January%202026.xlsx"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Brunei Darussalam government open data portal",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-10-08",
+     "host": "www.egnc.gov.bn",
+     "rank": 1,
+     "snippet": "Open Data Portal | E-Government National Centre\n...\nData.gov.bn helps people discover and use open data created and collected by the government agencies easily; to enhance economic growth, to improve public service delivery, empowering and inspire new ideas, enabling better-informed decisions making",
+     "title": "Open Data Portal | E-Government National Centre",
+     "url": "https://www.egnc.gov.bn/open-data-portal/",
+     "verificacion": {
+      "bytes": 206901,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:46Z",
+      "http": 200,
+      "sha256": "ab976d77d80e0176e730077d236f0725e97d68e05f4b67a1b1db37d85784d4b6"
+     }
+    },
+    {
+     "date": "2026-07-13",
+     "host": "www.data.gov.bn",
+     "rank": 2,
+     "snippet": "Brunei Open Data Website |\n...\nGoverment Links\n- GOV.BN Portal\nUseful Links\n...\nE-Government National Centre\nSimpang 69-18, Jalan E-Kerajaan, Gadong, BE1110 Brunei Darussalam\nEmail: data@egnc.gov.bn",
+     "title": "Brunei Open Data Website |",
+     "url": "https://www.data.gov.bn/",
+     "verificacion": {
+      "bytes": 196037,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:51Z",
+      "http": 200,
+      "sha256": "0612c10651cbfdb1df61673ed31b8f03a20ef403a97d819c73ec4239d53a6944"
+     }
+    },
+    {
+     "date": "",
+     "host": "mddb.apec.org",
+     "rank": 3,
+     "snippet": "DOMESTIC OGD POLICIES\nMeasures Specific to OGD\nBrunei Darussalam\nThe “E-Government National Centre (EGNC)” maintains an open data platform data.gov.bn which publishes open government data from government agencies to encourage other agencies and the public to access and reuse the data.",
+     "title": "Facilitating Access to Open Government Data",
+     "url": "https://mddb.apec.org/Documents/2022/CTI/WKSP5/22_cti_wksp5_002.pdf"
+    },
+    {
+     "date": "2026-07-13",
+     "host": "www.data.gov.bn",
+     "rank": 4,
+     "snippet": "Dataset | Brunei Open Data Website\n...\nGoverment Links\n- GOV.BN Portal\nUseful Links\n...\nE-Government National Centre\nSimpang 69-18, Jalan E-Kerajaan, Gadong, BE1110 Brunei Darussalam\nEmail: data@egnc.gov.bn",
+     "title": "Dataset",
+     "url": "https://www.data.gov.bn/category/dataset/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:25:51Z",
+ "pais": {
+  "iso2": "BN",
+  "iso3": "BRN",
+  "nombre": "Brunei Darussalam"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

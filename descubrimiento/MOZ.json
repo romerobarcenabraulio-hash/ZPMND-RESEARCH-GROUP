@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Mozambique constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2025-09-23",
+     "host": "www.ts.gov.mz",
+     "rank": 1,
+     "snippet": "Leis – Tribunal Supremo da República de Moçambique\n...\n17/2024 de 3 de Setembro, Lei da Revisão Pontual do Estatuto dos Magistrados Judiciais\n- Lei n.º 11/2024, de 7 de Junho, Lei Orgânica do Conselho Constitucional",
+     "title": "Leis – Tribunal Supremo da República de Moçambique",
+     "url": "https://www.ts.gov.mz/leis/"
+    },
+    {
+     "date": "",
+     "host": "minec.gov.mz",
+     "rank": 2,
+     "snippet": "Constituição da República de Moçambique\n...\nDecreto 66/2014 de 29 de Outubro – Regulamento da Lei 14/2013 de 12 de Agosto\nDescarregar482 Downloads\n...\nLei 05/2018 – Lei de Combate ao Terrorrismo",
+     "title": "Legislação – MINEC",
+     "url": "https://minec.gov.mz/legislacao/"
+    },
+    {
+     "date": "",
+     "host": "minec.gov.mz",
+     "rank": 3,
+     "snippet": "A Constituição – MINEC\n### MINEC\nMinistério dos Negócios Estrangeiros e Cooperação\n## A Constituição da República de Moçambique\nA presente  Constituição  entrou em vigor em 2005.",
+     "title": "A Constituição – MINEC",
+     "url": "https://minec.gov.mz/a-constituicao/"
+    },
+    {
+     "date": "",
+     "host": "presidencia.gov.mz",
+     "rank": 4,
+     "snippet": "Quarta-feira, 22 de Dezembro de 2004 I SÉRIE — Número 51\nBOLETIM DA REPÚBLICA\nPUBLICAÇÃO OFICIAL DA REPÚBLICA DE MOÇAMBIQUE\nIMPRENSA NACIONAL DE MOÇAMBIQUE",
+     "title": "BOLETIM DA REPÚBLICA PUBLICAÇÃO OFICIAL DA REPÚBLICA DE ...",
+     "url": "https://presidencia.gov.mz/wp-content/uploads/2025/04/Constituicao_republica_mocambique.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 5,
+     "snippet": "# Constitution of the Republic of Mozambique, Mozambique\nLatest Version in WIPO Lex\nDetails\n...\nNormative acts of the President of the Republic shall take the form of presidential decrees, and other decisions shall take the form of presidential orders, and they shall be published in the Boletim da R",
+     "title": "Constitution of the Republic of Mozambique, Mozambique, WIPO Lex",
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/21389"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Mozambique national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2024-08-13",
+     "host": "mireme.gov.mz",
+     "rank": 1,
+     "snippet": "Arquivo de Legislação - MIREME\n- geral@mireme.gov.mz\n- +258 21 314843\n...\n### Decreto 62-2023 de 23 de Novembro Regulamento de Distribuicao e Comercializacao de Gas Natural BR_225_I_SERIE_2023\n…",
+     "title": "Arquivo de Legislação - MIREME",
+     "url": "https://mireme.gov.mz/documentos/legislacao/"
+    },
+    {
+     "date": "2014-06-17",
+     "host": "www.inm.gov.mz",
+     "rank": 2,
+     "snippet": "Formato: 2025\n...\nDecreto n.º 44/2015:\n...\nDecreto n.º 76/2016:\nAprova os termos e condições do Contrato de GNL do Governo para o Projecto Inicial de GNL da Área 1, no Bloco de Rovuma.",
+     "title": "Produtos",
+     "url": "https://www.inm.gov.mz/pt-br/produtos?page=196"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.bancomoc.mz",
+     "rank": 3,
+     "snippet": "DECRETO N.º 56/2026, DE 17 DE SETEMBRO - APROVA O REGULAMENTO DA LEI N.º 17/2026, DE 15 DE JUNHO, QUE CRIA O BANCO DE DESENVOLVIMENTO DE MOÇAMBIQUE",
+     "title": "Normativos",
+     "url": "https://www.bancomoc.mz/pt/o-banco/normativos/"
+    },
+    {
+     "date": "2023-06-20",
+     "host": "www.ts.gov.mz",
+     "rank": 4,
+     "snippet": "Legislação – Tribunal Supremo da República de Moçambique\n...\n1/2024, de 08 de Março, que aprova o Regulamento do Regime Jurídico de Entidades Legais e revoga o Decreto n°.\n...\n…\n...\nO Tribunal Supremo disponibiliza informação de valor de forma fácil e dinâmica",
+     "title": "Legislação – Tribunal Supremo da República de Moçambique",
+     "url": "https://www.ts.gov.mz/legislacao/"
+    },
+    {
+     "date": "2023-12-21",
+     "host": "portalcomercioexterno.gov.mz",
+     "rank": 5,
+     "snippet": "Legislação - Portal do Comércio Externo\n...\n- Decreto nº 34/2013 de 2 de Agosto: Aprova o Regulamento do Licenciamento da Actividade Comercial\n- Decreto nº 5/2021 de 17 de Fevereiro: Acesso universal e gratuito ao Boletim da República",
+     "title": "Legislação - Portal do Comércio Externo",
+     "url": "https://portalcomercioexterno.gov.mz/legislacao/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Mozambique official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2014-06-17",
+     "host": "www.inm.gov.mz",
+     "rank": 1,
+     "snippet": "BR Nº 26 de 10.02.26, Boletim da República - I Serie\n...\nO serviço de Boletim da República representa o mecanismo competente em matéria de publicação e divulgação das leis, disposições e outros actos de publicação obrigatória em Moçambique.",
+     "title": "Boletim da República",
+     "url": "https://www.inm.gov.mz/pt-br/bulletin"
+    },
+    {
+     "date": "2021-10-19",
+     "host": "www.trade.gov",
+     "rank": 2,
+     "snippet": "## Publication of Technical Regulations\nThe Boletim da República serves as Mozambique’s official gazette for the publication and dissemination of laws, regulations, and other official acts.\n...\nWhen changes to laws or regulations are enacted, they are published in the national gazette.",
+     "title": "Mozambique - Trade Standards",
+     "url": "https://www.trade.gov/country-commercial-guides/mozambique-trade-standards"
+    },
+    {
+     "date": "2008-12-30",
+     "host": "www.loc.gov",
+     "rank": 3,
+     "snippet": "# Periodical Official Gazette of the Republic of Mozambique; Série 1, Número 52, Suplemento 6 Official title: Boletim da República\n...\n### Title\n...\n### Names\n- Government of the Republic of Mozambique\n### Created / Published\n- December 30, 2008",
+     "title": "Official Gazette of the Republic of Mozambique; Série 1, Número 52, Suplemento 6",
+     "url": "https://www.loc.gov/item/mz20081230_04/"
+    },
+    {
+     "date": "2022-11-30",
+     "host": "gazettes.africa",
+     "rank": 4,
+     "snippet": "##### Mozambique Government Gazette Series I dated 2022-11-30 number 231\n**Loading PDF...**\nThis document is 630.2 KB.\nDo you want to load it?",
+     "title": "Mozambique Government Gazette Series I dated 2022-11-30 ...",
+     "url": "https://gazettes.africa/akn/mz/officialGazette/government-gazette-series-i/2022-11-30/231/por@2022-11-30"
+    },
+    {
+     "date": "",
+     "host": "www.mozconsulate-macau.org.mo",
+     "rank": 5,
+     "snippet": "Mozambique Government Portal\nOfficial Gazette of Mozambique\nPortuguese-speaking African countries (PALOP) Legislation\nInvestment Law\nMining Legislation\nLegislation by Sectors",
+     "title": "LEGISLATION – Mozambique Consulate",
+     "url": "https://www.mozconsulate-macau.org.mo/mz-legislation/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Mozambique supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2023-06-20",
+     "host": "www.ts.gov.mz",
+     "rank": 1,
+     "snippet": "Tabela de Julgamentos – Tribunal Supremo da República de Moçambique\n# Tabelas de Julgamento\nVisualizações: 4.214\n## Sessão do dia 16 de Julho de 2024\n...\nO Tribunal Supremo disponibiliza informação de valor de forma fácil e dinâmica",
+     "title": "Tabelas de Julgamento",
+     "url": "https://www.ts.gov.mz/tabela-de-julgamento/"
+    },
+    {
+     "date": "2023-06-20",
+     "host": "www.ts.gov.mz",
+     "rank": 2,
+     "snippet": "# Relatórios Anuais dos Tribunais Judiciais\nVisualizações: 6.937\n- ## Relatório Anual dos Tribunais Judiciais de 2025 vol 1\n- ## Relatório Anual dos Tribunais Judiciais de 2023",
+     "title": "Relatórios – Tribunal Supremo da República de Moçambique",
+     "url": "https://www.ts.gov.mz/relatorios/"
+    },
+    {
+     "date": "2026-10-20",
+     "host": "www.ts.gov.mz",
+     "rank": 3,
+     "snippet": "Biblioteca Digital\n...\n5. **Directivas, Circulares e outras Ordens ou Instruções**\n...\nBiblioteca Digital\nAv. Vladimir Lenine, 103, Maputo E-mail: geral@ts.gov.mz - Telefone: +25821323306",
+     "title": "Biblioteca Digital",
+     "url": "https://www.ts.gov.mz/bibliotecadigital/"
+    },
+    {
+     "date": "2023-06-20",
+     "host": "www.ts.gov.mz",
+     "rank": 4,
+     "snippet": "# Acordãos do Tribunal Supremo\n|86/2025-C|Agravo|**Recurso de Agravo** I.\nO arresto constitui meio cautelar destinado à conservação da garantia patrimonial do crédito, exigindo a verificaçã",
+     "title": "Acordãos do Tribunal Supremo",
+     "url": "https://www.ts.gov.mz/acordaos-do-tribunal-supremo/"
+    },
+    {
+     "date": "2023-11-16",
+     "host": "www.ts.gov.mz",
+     "rank": 5,
+     "snippet": "…\nEm cumprimento da Lei n° 34/1014, de 31 de Dezembro (Lei do Direito à Informação), o Arquivo do Tribunal Supremo encontra-se aberto ao público, de Segunda a Sexta-feira, das 7:30h às 15:30h.",
+     "title": "Arquivo do Tribunal Supremo – Tribunal Supremo da República ...",
+     "url": "https://www.ts.gov.mz/arquivo-do-tribunal-supremo/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Mozambique state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2025-09-23",
+     "host": "www.ts.gov.mz",
+     "rank": 1,
+     "snippet": "Leis – Tribunal Supremo da República de Moçambique\n...\n17/2024 de 3 de Setembro, Lei da Revisão Pontual do Estatuto dos Magistrados Judiciais\n...\n- Lei n°.\n19/91, de 16 de Agosto – Aprova a Lei contra a Segurança do Estado",
+     "title": "Leis – Tribunal Supremo da República de Moçambique",
+     "url": "https://www.ts.gov.mz/leis/"
+    },
+    {
+     "date": "2024-08-13",
+     "host": "mireme.gov.mz",
+     "rank": 2,
+     "snippet": "Arquivo de Legislação - MIREME\n- geral@mireme.gov.mz\n- +258 21 314843\n...\n# Legislação\n...\n### Lei do Conteúdo Local – 2026\n### Lei do Petroleo- 2026\n### Lei de Minas – 2026",
+     "title": "Arquivo de Legislação - MIREME",
+     "url": "https://mireme.gov.mz/documentos/legislacao/"
+    },
+    {
+     "date": "2014-06-17",
+     "host": "www.inm.gov.mz",
+     "rank": 3,
+     "snippet": "O serviço de Boletim da República representa o mecanismo competente em matéria de publicação e divulgação das leis, disposições e outros actos de publicação obrigatória em Moçambique.\n...\nBR Nº 9 de 15.01.26, Boletim da República - II Serie",
+     "title": "Boletim da República",
+     "url": "https://www.inm.gov.mz/pt-br/bulletin"
+    },
+    {
+     "date": "2023-12-21",
+     "host": "portalcomercioexterno.gov.mz",
+     "rank": 4,
+     "snippet": "Legislação - Portal do Comércio Externo\n…\n...\n- info@economia.gov.mz\n- http://www.economia.gov.mz\n###### Ministério da Industria e Comércio\n...\n- geral@portalcomercioexterno.gov.mz\n- http://www.mic.gov.mz",
+     "title": "Legislação - Portal do Comércio Externo",
+     "url": "https://portalcomercioexterno.gov.mz/legislacao/"
+    },
+    {
+     "date": "2012-04-07",
+     "host": "www.agricultura.gov.mz",
+     "rank": 5,
+     "snippet": "Legislação – Ministério da Agricultura, Ambiente e Pescas\n...\n# Legislação\n**Constituição da República de Moçambique**\n**Lei 26/2007 de 16 de Novembro,** altera o artigo 304 da Constituição da República de Moçambique\n...\nAgricultura",
+     "title": "Legislação",
+     "url": "https://www.agricultura.gov.mz/instituicional/ministerio/arquivo/legislacao/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Mozambique municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "sibmoz.gov.mz",
+     "rank": 1,
+     "snippet": "4. [Decreto no. 23/2008: Regulamento da Lei de Ordenamento Territorial](https://sibmoz.gov.mz/reports-and-publications/decreto-no-23-2008-regulamento-da-lei-de-ordenamento-territorial/)",
+     "title": "[DOC] Links-QR-code_revNS.docx",
+     "url": "https://sibmoz.gov.mz/content/uploads/2025/11/Links-QR-code_revNS.docx"
+    },
+    {
+     "date": "2014-06-17",
+     "host": "www.inm.gov.mz",
+     "rank": 2,
+     "snippet": "BR Nº 26 de 10.02.26, Boletim da República - I Serie\n...\nO serviço de Boletim da República representa o mecanismo competente em matéria de publicação e divulgação das leis, disposições e outros actos de publicação obrigatória em Moçambique.",
+     "title": "Boletim da República",
+     "url": "https://www.inm.gov.mz/pt-br/bulletin"
+    },
+    {
+     "date": "",
+     "host": "www.yumpu.com",
+     "rank": 3,
+     "snippet": "# portaldogoverno.gov.mz\n- www.portaldogoverno.gov.mz\nDownload - Ministério da Planificação e Desenvolvimento",
+     "title": "68 free Magazines from PORTALDOGOVERNO.GOV.MZ",
+     "url": "https://www.yumpu.com/user/portaldogoverno.gov.mz"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "portaldogoverno.gov.mz",
+     "rank": 4,
+     "snippet": "Portal do Governo de Mocambique\n- +258 853004034/5\n- # PR CONVIDA EMPRESÁRIOS RUSSOS A INVESTIR EM SECTORES ESTRATÉGICOS DE MOÇAMBIQUE",
+     "title": "Portal do Governo de Mocambique",
+     "url": "https://portaldogoverno.gov.mz/"
+    },
+    {
+     "date": "",
+     "host": "www.legis-palop.org",
+     "rank": 5,
+     "snippet": "As principais mais valias do Legis-PALOP+TL consistem em poder encontrar textos legislativos PALOP e TL mais facilmente e ter uma referência, a equipa Legis-PALOP+TL, com quem poder interagir.",
+     "title": "LegisPalop+TL - Início",
+     "url": "https://www.legis-palop.org/?country=Mocambique"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Mozambique regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-08-11",
+     "host": "www.bancomoc.mz",
+     "rank": 1,
+     "snippet": "Regulations - Banco de Moçambique\n...\n10 of 324 results\n...\nAVISO N.º 3/GBM/2026, DE 2 DE JUNHO – REGRAS RELATIVAS À QUALIFICAÇÃO DOS INVESTIDORES NO MERCADO DE VALORES MOBILIÁRIOS",
+     "title": "www.bancomoc.mz › en › the-bankRegulations - - Banco de Moçambique",
+     "url": "https://www.bancomoc.mz/en/the-bank/normatives/?page=2"
+    },
+    {
+     "date": "2025-11-24",
+     "host": "www.incm.gov.mz",
+     "rank": 2,
+     "snippet": "Regulamento de Licenciamento de Telecomunicações e de Recursos Escassos – Decreto n.º 36/2026, de 16 de Julho\nO presente Regulamento tem por objecto estabelecer os procedimentos para atribuição de licenças de telecomunicações e de recursos escassos.",
+     "title": "Legislação Telecomunicações - INCM",
+     "url": "https://www.incm.gov.mz/legislacao-telecomunicacoes/"
+    },
+    {
+     "date": "2026-10-16",
+     "host": "www.bancomoc.mz",
+     "rank": 3,
+     "snippet": "DECRETO N.º 56/2026, DE 17 DE SETEMBRO - APROVA O REGULAMENTO DA LEI N.º 17/2026, DE 15 DE JUNHO, QUE CRIA O BANCO DE DESENVOLVIMENTO DE MOÇAMBIQUE",
+     "title": "Normativos - Banco de Moçambique - bancomoc.mz",
+     "url": "https://www.bancomoc.mz/pt/o-banco/normativos/?category=Decretos"
+    },
+    {
+     "date": "",
+     "host": "www.state.gov",
+     "rank": 4,
+     "snippet": "The Mozambican Tax Authority is the accounting regulation body.\nMozambique’s administrative process is overseen by three entities:\n- the Competition Regulatory Authority (ARC) for competition matters,\n- the Administrative Court for administrative decisions, and\n- the Office of the Ombudsman for citi",
+     "title": "2025 Investment Climate Statements: Mozambique - State Department",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/mozambique"
+    },
+    {
+     "date": "2025-11-23",
+     "host": "www.incm.gov.mz",
+     "rank": 5,
+     "snippet": "Regulamento do Registo dos Subescritores dos Serviços de Telecomunicações\nDecreto n º 13/2023, de 11 de Abril\n...\nRegulamento de Segurança de Redes de Telecomunicações\nDecreto n.º 66/2019, de 1 de Agosto\n…",
+     "title": "Documentos de Telecomunicações - INCM",
+     "url": "https://www.incm.gov.mz/documentos-de-telecomunicacoes/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Mozambique national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2026-03-22",
+     "host": "pt.scribd.com",
+     "rank": 1,
+     "snippet": "Catálogos diversos de Normas;\nLista das Normas Moçambicanas e;\n...\n## NM 247: 2010 Ed. 1 08p. NM ISO 6107-7:\n...\nBovinos de consumo – Terminologia NM ISO/IEC 14050:",
+     "title": "Catálogo+de+Normas+Moçambicanas.pdf",
+     "url": "https://pt.scribd.com/document/400178625/Catalogo-de-Normas-Mocambicanas-pdf"
+    },
+    {
+     "date": "2026-10-11",
+     "host": "pt.scribd.com",
+     "rank": 2,
+     "snippet": "automáticos de braços iguais\n...\n…\n...\nNM 251: 2013 – Turismo.\nCategorização de Restaurantes.\nRequisitos\nNM 284: 2010 – Norma da Soja.\nNM285: 2010 – Sementes de gergelim – Especificações",
+     "title": "Legislação de Higiene Alimentar em Moçambique",
+     "url": "https://pt.scribd.com/document/628983380/1-Food-Safety-Legislation"
+    },
+    {
+     "date": "2025-07-16",
+     "host": "pt.scribd.com",
+     "rank": 3,
+     "snippet": "Lista de Normas Moçambicanas Homologadas em 2015 PDF\n...\n84.\nNM ISO 17030:2015 - Avaliação da conformidade – Requisitos gerais para avaliação entre pares de organismos de avaliação de conformidade e organismos de acreditação.",
+     "title": "Lista+de+Normas+Moçambicanas+Homologadas+em+2015.pdf",
+     "url": "https://pt.scribd.com/document/392477105/Lista-de-Normas-Mocambicanas-Homologadas-em-2015-pdf"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "pt.scribd.com",
+     "rank": 4,
+     "snippet": "59. NM 57: 2008 – Código de práticas para o processamento da castanha de caju.\nICS 67 080 –\n340,00\n...\nICS 67\n080 – 340,00\n...\npadrões.\nICS 83 080– 660,00\n...\n25",
+     "title": "Lista de Preços de Normas Moçambicanas | PDF - Scribd",
+     "url": "https://pt.scribd.com/document/695366979/Lista-de-Precos-de-Normas-Mocambicanas-Aprovadas"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 5,
+     "snippet": "6\n...\nSection II: Labeling Requirements\nLabeling requirements for foodstuffs are developed by the INNOQ (National Institute for Normalization and Standards).\nAdditional information regarding labeling requirements can be found by clicking on the following link, in Portuguese, www.innoq.gov.mz.\n...\n…",
+     "title": "Report Name: Food and Agricultural Import Regulations and ...",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Food+and+Agricultural+Import+Regulations+and+Standards+Country+Report_Maputo_Mozambique_09-30-2020.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Mozambique mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2025-11-23",
+     "host": "www.incm.gov.mz",
+     "rank": 1,
+     "snippet": "Regulamento de Controlo de Tráfego de Telecomunicações Decreto 33/2023\n...\nBR 158 I SÉRIE 2023 / Resolução nrº 4 BR INCM 2023: Normas Técnicas de Funcionamento da Central de Risco\n…\n...\n…",
+     "title": "Documentos de Telecomunicações",
+     "url": "https://www.incm.gov.mz/documentos-de-telecomunicacoes/page/2/"
+    },
+    {
+     "date": "2025-10-28",
+     "host": "www.incm.gov.mz",
+     "rank": 2,
+     "snippet": "Regulamento de Homologação de Equipamento de Telecomunicações e Radiocomunicações - INCM\n# Regulamento de Homologação de Equipamento de Telecomunicações e Radiocomunicações\n...\nDecreto n.ᵒ 66/2018, de 9 de Novembro",
+     "title": "Regulamento de Homologação de Equipamento de ... - INCM",
+     "url": "https://www.incm.gov.mz/sdm_downloads/regulamento-de-homologacao-de-equipamento-de-telecomunicacoes-e-radiocomunicacoes/"
+    },
+    {
+     "date": "2025-11-24",
+     "host": "www.incm.gov.mz",
+     "rank": 3,
+     "snippet": "Plano Nacional de Atribuição de Frequências 2021-PNAF\n...\nRegulamento que actualiza as listas das categorias I,II e III daos equipamentos de telecomunicações e de radiocolunicações\n...\nRegulamento que aprova a norma técnica Television White Space (TVWS)\n...\n…",
+     "title": "Legislação Radiocomunicações - INCM",
+     "url": "https://www.incm.gov.mz/legislacao-radiocomunicacoes/"
+    },
+    {
+     "date": "",
+     "host": "www.ippc.int",
+     "rank": 4,
+     "snippet": "| |Regulamento de Inspeccao Fitossanitaria e Quarentena Vegetal| |01 Jun 2009|04 May 2017| |\n| |Updated Phitossatary Regulation|En En|01 Jun 2009|06 Jan 2018| |",
+     "title": "Reporting Obligations: Mozambique",
+     "url": "https://www.ippc.int/en/countries/mozambique/reportingobligation/4"
+    },
+    {
+     "date": "",
+     "host": "www.epingalert.org",
+     "rank": 5,
+     "snippet": "|--|--|--|--|\n...\n**3.56.** Under the Pesticides Management Regulation, all pesticide packages must have a label approved by the Registrar of the Agrochemicals Registration and Control Department (Repartio de Registro e Controlo de Agroqumicos (RRCA)).",
+     "title": "Mozambique",
+     "url": "https://www.epingalert.org/en/MemberProfiles/Profile?countryId=C508"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Mozambique national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-02-10",
+     "host": "ine.gov.mz",
+     "rank": 1,
+     "snippet": "## Instituto Nacional de Estatistica - INE\n# Destaques\n...\nExplore e aceda aos conjuntos de microdados das nossas pesquisas no ANDA.\n...\nINSTITUTO NACIONAL DE ESTATÍSTICA - Moçambique.\n1996-2023 Powered by: Infopel RDSambo",
+     "title": "Instituto Nacional de Estatistica - INE - INE",
+     "url": "https://ine.gov.mz/"
+    },
+    {
+     "date": "",
+     "host": "ecastats.uneca.org",
+     "rank": 2,
+     "snippet": "#### National Statistical Offices\n|Country|NSO|Web address|\n|--|--|--|\n|Maroc|Direction de la Statistique|http://www.hcp.ma/|\n|Mozambique|National Statistical Institute|http://www.ine.gov.mz/|",
+     "title": "National Statistical Offices",
+     "url": "https://ecastats.uneca.org/data/national-statistical-offices"
+    },
+    {
+     "date": "",
+     "host": "ine.gov.mz",
+     "rank": 3,
+     "snippet": "web: www.ine.gov.mz\n...\n…\nelaboração desta edição e, convida os utilizadores a visitar o seu sítio em www.ine.gov.mz, ou os seus centros de documentação, na sua sede, em Maputo e em todas as suas delegações provinciais.",
+     "title": "Estatísticas do Distrito de Mocuba 2017 - 202 - INE",
+     "url": "https://ine.gov.mz/documents/20119/137589/Mocuba.pdf/7ea258cb-37ed-4b64-bee6-f7cee5023278?version=1.0&t=1688376524889&download=true"
+    },
+    {
+     "date": "",
+     "host": "ine.gov.mz",
+     "rank": 4,
+     "snippet": "Título / Title\n...\nEditor\nInstituto Nacional de Estatística\n...\nE-Mail: info@ine.gov.mz\nWeb: www.ine.gov.mz\nDirecção / Management\nDirecção das Contas Nacionais e Indicadores \nGlobais (DCNIG)\nCoordenação/Coordination:",
+     "title": "Moçambique em Números 2014",
+     "url": "https://ine.gov.mz/documents/20119/44619/Mocambique%20em%20Numeros_final_net.pdf/7a7f665d-faf2-31a2-7eb7-6165b1d0507a?version=1.0&t=1675763846098&download=true"
+    },
+    {
+     "date": "",
+     "host": "ine.gov.mz",
+     "rank": 5,
+     "snippet": "Instituto Nacional de Estatística \nDirecção de Estatísticas Demográficas, Vitais e Sociais, 5º Andar \n...\nMaputo Província\n...\nFax: +258 21305529\nE-Mail: info@ine.gov.mz\nHomepage: www.ine.gov.mz",
+     "title": "Estatísticas Vitais, 2023-2024 - Instituto Nacional de Estatística – Moçambique",
+     "url": "https://ine.gov.mz/documents/20119/44457/ESTATISTICAS%20VITAIS%202023-2024.pdf/913ca430-297c-c81c-bcc7-ed3eddd22010?version=1.0&t=1771234985251&download=true"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Mozambique central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bancomoc.mz",
+     "rank": 1,
+     "snippet": "No âmbito da lei orgânica e no quadro das suas competências, o Banco de Moçambique recolhe, compila e divulga estatísticas monetárias e financeiras, cambiais, do sector externo, do sistema nacional de pagamentos, da central de balanços, de títulos e estatísticas de inclusão financeira.",
+     "title": "Estatisticas - Banco de Moçambique",
+     "url": "https://www.bancomoc.mz/pt/areas-de-actuacao/estatisticas/estatisticas/"
+    },
+    {
+     "date": "",
+     "host": "www.bancomoc.mz",
+     "rank": 2,
+     "snippet": "Domínios e Indicadores Estatísticos - Banco de Moçambique\n...\n…\n...\n**Indicadores:**\n...\n**Indicadores:**\nEstatísticas de Circulação Monetária-Setembro 2026\n...\n**Indicadores:**\nEstatística de Emissão Monetária-Setembro 2026",
+     "title": "Domínios e Indicadores Estatísticos",
+     "url": "https://www.bancomoc.mz/pt/areas-de-actuacao/estatisticas/dominios-e-indicadores-estatisticos/"
+    },
+    {
+     "date": "",
+     "host": "www.bancomoc.mz",
+     "rank": 3,
+     "snippet": "Edição\nBanco de Moçambique\nDepartamento de Estudos Económicos e Estatística\nAvenida 25 de Setembro BM – Sede\nTelef.: 258 1 428169 Fax: 258 1 421361\n...\nLayout e impressão\n...\nBanco de Moçambique",
+     "title": "[PDF] Maio / May 2024 - | Ano/Year 33 Nº 248 - Banco de Moçambique",
+     "url": "https://www.bancomoc.mz/media/ho4dcafq/boletim-estat%C3%ADstico-mensal-maio-2024.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.bancomoc.mz",
+     "rank": 4,
+     "snippet": "Statistics - Banco de Moçambique\n...\nIn light of the Organic Law and the central bank's powers, the Banco de Moçambique collects, compiles and discloses the following statistics: monetary and financial, foreign exchange, external sectors, national payment system, central balance sheet database, secu",
+     "title": "Statistics",
+     "url": "https://www.bancomoc.mz/en/areas-of-expertise/statistics/statistics/"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.bancomoc.mz",
+     "rank": 5,
+     "snippet": "Homepage - Banco de Moçambique\n## MIMO POLICY RATE UNCHANGED AT 9.25%\nThe Monetary Policy Committee (MPC) of the Banco de Moçambique has decided to keep the monetary policy rate, MIMO, unchanged at 9.25%.",
+     "title": "- Banco de Moçambique",
+     "url": "https://www.bancomoc.mz/en"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Mozambique government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-09-10",
+     "host": "dataportal.co.mz",
+     "rank": 1,
+     "snippet": "Data Portal Moçambique - Dados Abertos e Geoespaciais\n● Dados oficiais · Actualizados continuamente\n...\nO que é o Portal de Dados?\nÉ a plataforma pública da Data4Moz para consultar e reutilizar dados oficiais de Moçambique.\n...\nToda a lista de serviços está em Serviços.",
+     "title": "Data Portal Moçambique - Dados Abertos e Geoespaciais",
+     "url": "https://dataportal.co.mz/"
+    },
+    {
+     "date": "",
+     "host": "mozdata.ine.gov.mz",
+     "rank": 2,
+     "snippet": "# Arquivo Nacional de Dados\nSearch in **79** datasets\n...\nInstituto Nacional de Estatistica",
+     "title": "Arquivo Nacional de Dados - INE",
+     "url": "https://mozdata.ine.gov.mz/index.php/home"
+    },
+    {
+     "date": "",
+     "host": "mozdata.ine.gov.mz",
+     "rank": 3,
+     "snippet": "Catálogo de Dados\n...\nMozambique, 2020\n...\nArquivo de datos con Licencia",
+     "title": "Catálogo de Dados - Instituto Nacional de Estatistica",
+     "url": "https://mozdata.ine.gov.mz/index.php/catalog/central"
+    },
+    {
+     "date": "",
+     "host": "corpus.data-landscapers.io",
+     "rank": 4,
+     "snippet": "…\nOpen data\nMozambique has no open government data portal (2025).\nThe right to ask for what is not published exists — Law No.\n34/2014 grants it and gives the authorities a maximum of twenty-one days to answer.",
+     "title": "[PDF] Mozambique: status report — Data Landscapers",
+     "url": "https://corpus.data-landscapers.io/reports/MOZ/MOZ-status-2026-10-04.pdf"
+    },
+    {
+     "date": "2023-02-21",
+     "host": "www.ine.gov.mz",
+     "rank": 5,
+     "snippet": "## Mozambique Data Portal-2-min\n# Mozambique Data Portal-2-min\nIdioma:\n## Planos e relatórios\n...\n## Contacte-nos\nINSTITUTO NACIONAL DE ESTATÍSTICA - Moçambique.",
+     "title": "Mozambique Data Portal-2-min",
+     "url": "https://www.ine.gov.mz/web/guest/d/mozambique-data-portal-2-min-1"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:02:54Z",
+ "pais": {
+  "iso2": "MZ",
+  "iso3": "MOZ",
+  "nombre": "Mozambique"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

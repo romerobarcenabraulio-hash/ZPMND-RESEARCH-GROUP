@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Paraguay constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.senado.gov.py",
+     "rank": 1,
+     "snippet": "Con el objetivo de promover el acceso y la difusión de la Constitución de la República del Paraguay, en esta sección, publicamos varios elementos de la Constitución Nacional en formato PDF y eBook, permitiendo que cualquier persona interesada pueda explorar y consultar su contenido de manera práctic",
+     "title": "Constitución de la República del Paraguay y Reglamento ...",
+     "url": "https://www.senado.gov.py/index.php/enlaces-adicionales/sub-menu-constitucion-de-la-republica-del-paraguay.html"
+    },
+    {
+     "date": "2021-06-09",
+     "host": "www.bacn.gov.py",
+     "rank": 2,
+     "snippet": "Esta, los tratados, convenios y acuerdos internacionales aprobados y ratificados, las leyes dictadas por el Congreso y otras disposiciones jurídicas de inferior jerarquía, sancionadas en consecuencia, integran el derecho positivo nacional en el orden de prelación enunciado.",
+     "title": "CONSTITUCION DE LA REPUBLICA DEL PARAGUAY - Baccn",
+     "url": "https://www.bacn.gov.py/leyes-paraguayas/9580/constitucion-nacional"
+    },
+    {
+     "date": "",
+     "host": "www.pj.gov.py",
+     "rank": 3,
+     "snippet": "Compuesta por leyes y decretos que reglamentan la ejecución de las leyes comprendidas desde el año 1.869 a la fecha, publicados en la Gaceta Oficial, contenidas en Registros y Publicaciones Oficiales, asociando a cada normativa su fuente correspondiente.",
+     "title": "Instituto de Investigaciones Jurídicas - Poder Judicial",
+     "url": "https://www.pj.gov.py/contenido/931-instituto-de-investigaciones-juridicas/335"
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 4,
+     "snippet": "Political Constitution of the Republic of Paraguay, Paraguay, WIPO Lex\n# Political Constitution of the Republic of Paraguay, Paraguay\nLatest Version in WIPO Lex\n...\nYear of Version 2011\nDates\n...\nMain text(s)\nEnglish Political Constitution of the Republic of Paraguay\nSpanish Constitución Política de",
+     "title": "Political Constitution of the Republic of Paraguay, - WIPO",
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/21430"
+    },
+    {
+     "date": "",
+     "host": "faolex.fao.org",
+     "rank": 5,
+     "snippet": "|FAOLEX - legislation database of FAO Legal Office **Paraguay** CC:PAR AND T:ALL AND REPEALED:N AND SUPERS:N NOT RO:Y AND Z:C AND TERRIT:N Constitución de la República de Paraguay.\nDate of text: 20 June 1992.",
+     "title": "FAOLEX",
+     "url": "https://faolex.fao.org/cgi-bin/faolex.exe?rec_id=000160&database=valid&search_type=link&lang=eng&format_name=@ESPRF"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Paraguay national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "infojuridica.procuraduria-admon.gob.pa",
+     "rank": 1,
+     "snippet": "Infojurídica es un sistema de información jurídica que contiene datos sistematizados y el texto íntegro de todas las normas legales publicadas en la Gaceta Oficial desde 1903 hasta la fecha, con expresión detallada de sus modificaciones, derogaciones, vigencia e inconstitucionalidades.",
+     "title": "Pantalla Principal",
+     "url": "https://infojuridica.procuraduria-admon.gob.pa/"
+    },
+    {
+     "date": "2025-12-01",
+     "host": "www.mic.gov.py",
+     "rank": 2,
+     "snippet": "# MARCO JURIDICO\n1. Portada\n...\n**LE** **YES, DECRETOS Y RESOLUCIONES DEL MINISTERIO DE INDUSTRIA Y COMERCIO**\n|Número|Sección|Categoría|Título|Descripción|Fecha de promulgación| |Descargar|",
+     "title": "MARCO JURIDICO",
+     "url": "https://www.mic.gov.py/marco-juridico/"
+    },
+    {
+     "date": "2025-04-10",
+     "host": "www.mades.gov.py",
+     "rank": 3,
+     "snippet": "Decretos | Ministerio del Ambiente y Desarrollo Sostenible\n...\n**Decretos vigentes sobre el medio ambiente.**\n...\n|Decreto 14943/2001|POR EL CUAL SE IMPLEMENTA EL PROGRAMA NACIONAL DE CAMBIO CLIMATICO|2001|Ver Archivo|",
+     "title": "Decretos | Ministerio del Ambiente y Desarrollo Sostenible",
+     "url": "https://www.mades.gov.py/decretos/"
+    },
+    {
+     "date": "",
+     "host": "www.mef.gov.py",
+     "rank": 4,
+     "snippet": "### Decreto N° 6495/2016 por el cual se complementa y ajusta el marco regulatorio del SNIP\n...\n### Decreto N° 5402/2016 Por el cual se reglamenta el Artículo 210 de la Ley N° 5554/2016",
+     "title": "| Ministerio de Economía y Finanzas",
+     "url": "https://www.mef.gov.py/es/node?page=404"
+    },
+    {
+     "date": "2025-06-26",
+     "host": "www.conatel.gov.py",
+     "rank": 5,
+     "snippet": "DECRETO N° 6999/2017 POR EL CUAL SE APRUEBA EL REGLAMENTO GENERAL DE TARIFAS DE LOS SERVICIOS DE TELECOMUNICACIONES EN LA REPÚBLICA DEL PARAGUAY.\nDESCARGAR\n...\nDESCARGAR",
+     "title": "Decretos",
+     "url": "https://www.conatel.gov.py/decretos/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Paraguay official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.pj.gov.py",
+     "rank": 1,
+     "snippet": "Pág.\n...\nStella  Maris  c/  Hernandarias  -  Teléf.:  498  311  -  ASUNCIÓN  -  PARAGUAY\nwww.gacetaoficial.gov.py\nDE LA REPÚBLICA DEL PARAGUAY",
+     "title": "GACETA OFICIAL",
+     "url": "https://www.pj.gov.py/images/contenido/otp/Dispositivos-electronicos/7%20LEY%207239_15_04_2024.pdf"
+    },
+    {
+     "date": "2021-09-26",
+     "host": "www.trade.gov",
+     "rank": 2,
+     "snippet": "Final regulations are published in the government’s Official Gazette (https://www.gacetaoficial.gov.py/\n…\n...\nGaceta Oficial\n...\nGabinete Civil de la Presidencia de la Republica\n...\nAsuncion, Paraguay\n...\nWeb:  https://www.gacetaoficial.gov.py/",
+     "title": "Paraguay - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/paraguay-standards-trade"
+    },
+    {
+     "date": "",
+     "host": "www.mef.gov.py",
+     "rank": 3,
+     "snippet": "1\n...\nGACETA OFICIAL\n...\nStella Maris c/ Hernandarias - Teléf.: 498 311 - ASUNCIÓN - PARAGUAY www.gacetaoficial.gov.py\nDE LA REPÚBLICA DEL PARAGUAY\nS U M A R I O",
+     "title": "GACETA OFICIAL DE LA REPÚBLICA DEL PARAGUAY",
+     "url": "https://www.mef.gov.py/sites/default/files/2025-08/Ley%205.282-2014%20De%20libre%20acceso%20ciudadano%20a%20la%20informaci%C3%B3n%20p%C3%BAblica%20y%20transparencia%20gubernamental.pdf"
+    },
+    {
+     "date": "",
+     "host": "informacionpublica.paraguay.gov.py",
+     "rank": 4,
+     "snippet": "1\n...\nEDICIÓN DE 64 PÁGINAS\nGACETA OFICIAL\n...\nPublicaciones Oficiales - Avda.\nStella Maris c/ Hernandarias - Teléf.: 498 311 - ASUNCIÓN - PARAGUAY www.gacetaoficial.gov.py",
+     "title": "GACETA OFICIAL Nº 81",
+     "url": "https://informacionpublica.paraguay.gov.py/public/2058865-Ley6518pdf-Ley6518.pdf"
+    },
+    {
+     "date": "2002-08-01",
+     "host": "www.loc.gov",
+     "rank": 5,
+     "snippet": "# Periodical Official Gazette of the Republic of Paraguay; 2003, Número 119 (Bis) Official title: Gaceta oficial de la República del Paraguay\n...\n### Names\n- Government of the Republic of Paraguay\n### Created / Published\n- Paraguay, June 24, 2003",
+     "title": "Official Gazette of the Republic of Paraguay; 2003, Número 119 (Bis)",
+     "url": "https://www.loc.gov/item/38023297_20030624_02/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Paraguay supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.pj.gov.py",
+     "rank": 1,
+     "snippet": "La Sala Constitucional de la Corte Suprema de Justicia, informa que se encuentra a disposición de las partes las 91 resoluciones dictadas en la semana que va del 01 al 05 de diciembre de 2025, entre Autos Interlocutorios y Acuerdos y Sentencias.",
+     "title": "Decisiones de la Sala Constitucional de la Corte Suprema de ...",
+     "url": "https://www.pj.gov.py/notas/29131-decisiones-de-la-sala-constitucional-de-la-corte-suprema-de-justicia"
+    },
+    {
+     "date": "",
+     "host": "www.pj.gov.py",
+     "rank": 2,
+     "snippet": "La Sala Constitucional de la Corte Suprema de Justicia, informa que se encuentra a disposición de las partes las 278 resoluciones dictadas del 13 de julio al  22 de julio de 2026, entre Autos Interlocutorios y Acuerdos y Sentencias.",
+     "title": "Decisiones de la Sala Constitucional de la Corte Suprema ...",
+     "url": "https://www.pj.gov.py/notas/30307-decisiones-de-la-sala-constitucional-de-la-corte-suprema-de-justicia"
+    },
+    {
+     "date": "",
+     "host": "www.pj.gov.py",
+     "rank": 3,
+     "snippet": "La Sala Constitucional de la Corte Suprema de Justicia, informa que se encuentra a disposición de las partes las 55 resoluciones dictadas en la semana que va del 20 al 24 de octubre de 2025, entre Autos Interlocutorios y Acuerdos y Sentencias.\n...\n128 Kb",
+     "title": "Decisiones de la Sala Constitucional de la Corte Suprema de Justicia",
+     "url": "https://www.pj.gov.py/notas/28887-decisiones-de-la-sala-constitucional-de-la-corte-suprema-de-justicia"
+    },
+    {
+     "date": "",
+     "host": "www.pj.gov.py",
+     "rank": 4,
+     "snippet": "## Decisiones de la Plenaria de la Corte Suprema de Justicia\nEn sesión plenaria de fecha 10 de junio del corriente año el Pleno de la Corte Suprema de Justicia resolvió lo siguiente:\n...\nSesión plenaria del día 10 de junio de 2020.",
+     "title": "Decisiones de la Plenaria de la Corte Suprema de Justicia",
+     "url": "https://www.pj.gov.py/notas/18605-decisiones-de-la-plenaria-de-la-corte-suprema-de-justicia"
+    },
+    {
+     "date": "",
+     "host": "www.pj.gov.py",
+     "rank": 5,
+     "snippet": "La Sala Constitucional de la Corte Suprema de Justicia, informa que se encuentra a disposición de las partes las 112 resoluciones dictadas del 17 de agosto al  21 de agosto de 2026, entre Autos Interlocutorios y Acuerdos y Sentencias.",
+     "title": "Decisiones de la Sala Constitucional de la Corte Suprema ...",
+     "url": "https://www.pj.gov.py/notas/30431-decisiones-de-la-sala-constitucional-de-la-corte-suprema-de-justicia"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Paraguay state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2015-02-24",
+     "host": "www.bacn.gov.py",
+     "rank": 1,
+     "snippet": "Ley Nº 5282/2014 / LIBRE ACCESO CIUDADANO A LA INFORMACIÓN PÚBLICA Y TRANSPARENCIA GUBERNAMENTAL.\n...\n#### Descargar Archivo: Ley N° 5282 (2.94 MB)\n...\n°** Objeto.",
+     "title": "Ley Nº 5282/2014 / LIBRE ACCESO CIUDADANO A LA ...",
+     "url": "https://www.bacn.gov.py/leyes-paraguayas/3013/libre-acceso-ciudadano-a-la-informacion-publica-y-transparencia-gubernamental"
+    },
+    {
+     "date": "",
+     "host": "silpy.congreso.gov.py",
+     "rank": 2,
+     "snippet": "SILpy - Sistema de Información Legislativa, Paraguay 1.\nInicio\n…\n...\n# Bienvenido\nAcceda a la sección de la Gestión de Comisiones, donde encontrarás el detalle del trabajo de las Comisiones de ambas cámaras del Congreso Nacional.\n...\nDGTIC-HCS.",
+     "title": "SILpy - Sistema de Información Legislativa, Paraguay",
+     "url": "https://silpy.congreso.gov.py/web/"
+    },
+    {
+     "date": "2025-04-10",
+     "host": "mitic.gov.py",
+     "rank": 3,
+     "snippet": "Portal Único de Gobierno(www.paraguay.gov.py) es el Portal del Estado Paraguayo orientado al ciudadano.\n...\nEl Portal ofrece la información organizada por temas de interés.\nLos servicios y trámites registrados en el portal, se organizan por temáticas, ciclos de vida y palabras claves.",
+     "title": "(*) Anexo “Lineamientos de Gobierno Electrónico – Item 1” de la Resolución MITIC 553 / 2024",
+     "url": "https://mitic.gov.py/gobierno-electronico/portal-unico-de-gobierno/"
+    },
+    {
+     "date": "2025-09-29",
+     "host": "www.mre.gov.py",
+     "rank": 4,
+     "snippet": "Ley 5282/14 – Libre Acceso a la Información Pública y Transparencia Gubernamental – 2026\nPortada\nLey 5282/14 – Libre Acceso a la Información Pública y Transparencia Gubernamental – 2026\n...\nResoluciones Ministeriales.",
+     "title": "Ley 5282/14 – Libre Acceso a la Información Pública y ...",
+     "url": "https://www.mre.gov.py/ley-5282-14-libre-acceso-a-la-informacion-publica-y-transparencia-gubernamental-2026/"
+    },
+    {
+     "date": "",
+     "host": "www.dnit.gov.py",
+     "rank": 5,
+     "snippet": "### Todas las Leyes\n### Ley N° 7271/24\n...\n### Ley N.° 7424/25\n...\n…\n### Ley N.° 7565/25\n...\n…\n### Ley Nº 125/91\nESTABLECE EL NUEVO REGIMEN TRIBUTARIO.",
+     "title": "Leyes - Portal Institucional - DNIT",
+     "url": "https://www.dnit.gov.py/web/portal-institucional/leyes"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Paraguay municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.mef.gov.py",
+     "rank": 1,
+     "snippet": "Ley N° 3966/2010 Orgánica municipal | Ministerio de Economía y Finanzas\n...\n/sites/default/files/2025-08/Ley%203.966-2010%20Org%C3%A1nica%20municipal.pdf\nPeso",
+     "title": "Ley N° 3966/2010 Orgánica municipal | Ministerio de Economía ...",
+     "url": "https://www.mef.gov.py/es/node/5258"
+    },
+    {
+     "date": "2024-10-29",
+     "host": "www.asuncion.gov.py",
+     "rank": 2,
+     "snippet": "RD.\nNº 34/16|\n...\n|ORD.\nNº 35/16|\n...\n|ORD.\nNº 37/16|\n...\nNº 40/16|\n...\nNº 44/16|\n...\nNº 47/16|\n...\nAsunción - Paraguay",
+     "title": "Ordenanzas - Periodo 2015-2021 - Municipalidad de Asunción",
+     "url": "https://www.asuncion.gov.py/ordenanzas/periodo-2015-2021"
+    },
+    {
+     "date": "2024-10-31",
+     "host": "www.asuncion.gov.py",
+     "rank": 3,
+     "snippet": "Ordenanzas - Municipalidad de Asunción\n...\n*La carga integra de las ordenanzas, edictos y minutas es un servicio dependiente de la **Junta Municipal de Asunción**: (www.jma.gov.py).\nEsto solo es un compendio de algunas ordenanzas importantes*.\n...\nLEY.",
+     "title": "Ordenanzas - Municipalidad de Asunción",
+     "url": "https://www.asuncion.gov.py/ordenanzas"
+    },
+    {
+     "date": "2014-05-16",
+     "host": "www.bacn.gov.py",
+     "rank": 4,
+     "snippet": "Ley Nº 1294 / ORGANICA MUNICIPAL\n...\n# Ley Nº 1294 / ORGANICA MUNICIPAL\n...\n1. **Fecha de Publicación:** 18-12-1987\n#### Descargar Archivo: Ley N° 1294 (7.62 MB)",
+     "title": "Ley Nº 1294 / ORGANICA MUNICIPAL",
+     "url": "https://www.bacn.gov.py/leyes-paraguayas/2425/ley-n-1294-organica-municipal"
+    },
+    {
+     "date": "2014-05-16",
+     "host": "www.bacn.gov.py",
+     "rank": 5,
+     "snippet": "**LEY 222/1954**\n**QUE SANCIONA LA LEY ORGÁNICA MUNICIPAL**\n...\n67º.-** La Junta Municipal por intermedio de una ordenanza, pondrá en vigencia el Plan Regulador, que tendrá fuerza de ley en el municipio.-",
+     "title": "Ley Nº 222 / SANCIONA LA LEY ORGÁNICA MUNICIPAL",
+     "url": "https://www.bacn.gov.py/leyes-paraguayas/2427/ley-n-222-sanciona-la-ley-org-nica-municipal-br"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Paraguay regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bcp.gov.py",
+     "rank": 1,
+     "snippet": "### Resolución N° 2, Acta N° 31 de fecha 13.07.26\nReglamento general de los sistemas de pagos del Paraguay (SIPAP).\n...\n…\n...\n### Resolución N° 1, Acta N°32 de fecha 01.07.21",
+     "title": "www.bcp.gov.py › web › institucionalBanco Central del Paraguay - Banco Central del Paraguay",
+     "url": "https://www.bcp.gov.py/web/institucional/bancocentraldelparaguay"
+    },
+    {
+     "date": "",
+     "host": "www.bcp.gov.py",
+     "rank": 2,
+     "snippet": "### Ley N° 6104\n...\n…\n...\nReglamento de Prevención del Lavado de Activos y el Financiamiento del Terrorismo Basado en un Sistema de Gestión de Riesgos para los Sujetos Obligados Supervisados por la Superintendencia de Seguros del Banco Central del Paraguay\n...\n…",
+     "title": "Marco Legal - Banco Central del Paraguay",
+     "url": "https://www.bcp.gov.py/web/institucional/marco-legal-sis"
+    },
+    {
+     "date": "2022-05-06",
+     "host": "pruebaweb.intn.gov.py",
+     "rank": 3,
+     "snippet": "|1|Ley Nº 937/82|Ley de Metrología|Descargar PDF|\n|2|Decreto Nº 1988/99|Por el cual se aprueba el Reglamento General de la Ley Nº 937/82 \"de Metrología\"|Descargar PDF|",
+     "title": "Marco Legal - Portal INTN",
+     "url": "https://pruebaweb.intn.gov.py/index.php/institucion/marco-legal"
+    },
+    {
+     "date": "",
+     "host": "www.state.gov",
+     "rank": 4,
+     "snippet": "### Competition and Antitrust Laws\n...\nHowever, in September 2024, Paraguay’s telecommunications regulator (CONATEL) issued a resolution obligating internet and data transmission providers to keep the connection records of each user of the service in order to uniquely and unequivocally identify them",
+     "title": "Paraguay - United States Department of State",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/paraguay/"
+    },
+    {
+     "date": "",
+     "host": "www.epingalert.org",
+     "rank": 5,
+     "snippet": "Law No. 836/1980 (Health Code) is still the main regulation in terms of sanitary requirements\nTBT\n...\nThe National Council for Science and Technology (CONACYT) is the body responsible for coordination between the SNC and the bodies involved in the various quality activities.",
+     "title": "Paraguay - Members - ePing SPS&TBT platform",
+     "url": "https://www.epingalert.org/en/MemberProfiles/Profile?countryId=C600"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Paraguay national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "intn.gov.py",
+     "rank": 1,
+     "snippet": "Se relaciona con el poder Ejecutivo a través del Ministerio de Industria y Comercio de la República del Paraguay.\n...\n## ORGANISMOS\n...\n#### Certificación\n#### Normalización\n#### Inspección\n...\n#### Normas Paraguayas\nCatálogo\n…\n#### Reglamentos Técnicos\nListado\n…",
+     "title": "INTN – El INTN es una entidad pública, autárquica y ...",
+     "url": "https://intn.gov.py/"
+    },
+    {
+     "date": "2023-11-08",
+     "host": "intn.gov.py",
+     "rank": 2,
+     "snippet": "|NP-ISO/IEC 10012|ONN|CITN|LABORATORIO CITN|84.000|\n...\n|PNA 38 001 04|ONN|CITN|LABORATORIO CITN|82.000|\n...\n|PNA",
+     "title": "Listado de Servicios ONN",
+     "url": "https://intn.gov.py/servicios-listado-onn/"
+    },
+    {
+     "date": "2023-11-08",
+     "host": "intn.gov.py",
+     "rank": 3,
+     "snippet": "El ONN se encarga de elaborar, promover y difundir normas que sean útiles para la comunidad, con énfasis en aquellos sectores priorizados por las políticas públicas y con participación activa de los sectores involucrados y acorde a criterios internacionales.\n...\n#### Normas paraguayas\nCatálogo\n...\n-",
+     "title": "intn.gov.py › organismo-nacional-de-normalizacionOrganismo Nacional de Normalización – INTN",
+     "url": "https://intn.gov.py/organismo-nacional-de-normalizacion/"
+    },
+    {
+     "date": "2023-05-10",
+     "host": "www.studocu.com",
+     "rank": 4,
+     "snippet": "CATALOGO GENERAL DE NORMAS\nTECNICAS PARAGUAYAS\nInstituto Nacional de Tecnología, Normalización y Metrología - INTN.\n...\nE-mail: intn@intn.gov.py\nC. C. Nº 967\n...\n## CATALOGO GENERAL DE NORMAS",
+     "title": "Catálogo de Normas Técnicas Paraguayas - INTN 2023",
+     "url": "https://www.studocu.com/latam/document/universidad-catolica-nuestra-senora-de-la-asuncion/ingenieria-civil/catalogo-general-de-normas-tecnicas-paraguayas/57899469?origin=course-trending-combined-1"
+    },
+    {
+     "date": "2023-11-08",
+     "host": "intn.gov.py",
+     "rank": 5,
+     "snippet": "El INTN desarrolla su actividad normativa en el Departamento de Normalización Nacional (DNNA), dependiente del Organismo Nacional de Normalización (ONN), elaborando las Normas Paraguayas que son documentos de contenido técnico y de aplicación voluntaria.\n...\nscabrera@intn.gov.py\n...\n2210",
+     "title": "ONN – Departamentos – INTN",
+     "url": "https://intn.gov.py/onn-departamentos/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Paraguay mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "intn.gov.py",
+     "rank": 1,
+     "snippet": "…\n#### Reglamentos Técnicos\nListado\n#### Personas y Empresas\nHabilitadas por el INTN\n#### Personas y Empresas\nCertificadas\n#### Técnicos del INTN\nAutorizados",
+     "title": "INTN – El INTN es una entidad pública, autárquica y ...",
+     "url": "https://intn.gov.py/"
+    },
+    {
+     "date": "",
+     "host": "dinavisa.gov.py",
+     "rank": 2,
+     "snippet": "DECRETO N° 17.057/97\nPOR EL CUAL SE DISPONE LA VIGENCIA EN LA REPÚBLICA DEL PARAGUAY DE\nLAS RESOLUCIONES ADOPTADAS POR EL GRUPO MERCADO COMÚN DEL\n...\nArt.\n...\nArt.",
+     "title": "Decreto-N°-17057-1997.pdf",
+     "url": "https://dinavisa.gov.py/wp-content/uploads/2023/08/Decreto-N%C2%B0-17057-1997.pdf"
+    },
+    {
+     "date": "2025-12-01",
+     "host": "www.mic.gov.py",
+     "rank": 3,
+     "snippet": "# MARCO JURIDICO\n|164|MAQUILA|LEY|Ley N° 5408/2015|Que modifica el artículo 12 de la Ley 1064/97 De la Industria Maquiladora de Exportación|30/03/2015| |Ver Documento|",
+     "title": "MARCO JURIDICO",
+     "url": "https://www.mic.gov.py/marco-juridico/"
+    },
+    {
+     "date": "",
+     "host": "tfadatabase.org",
+     "rank": 4,
+     "snippet": "| TFAD - Trade Facilitation Agreement Database\n...\n2. Member profiles\n...\n|Ministerio de Industria y Comercio|https://snin.gov.py/publico/|Sistema Nacional de Información y Notificación sobre Reglamentos Técnicos, Normas y Procedimientos de Evaluación de la Conformidad|",
+     "title": "Paraguay",
+     "url": "https://tfadatabase.org/en/members/paraguay/publication-of-information-for-governments-and-traders"
+    },
+    {
+     "date": "",
+     "host": "legacy.export.gov",
+     "rank": 5,
+     "snippet": "### Standards\nThe following is a list of Paraguayan government bodies responsible for developing domestic standards: - National Institute of Technology, Standardization and Measurement (INTN)\n- National Animal Quality and Health Service (SENACSA)\n- National Seed and Vegetable Quality and Sanitation ",
+     "title": "Paraguay - Standards for Trade - export.gov",
+     "url": "https://legacy.export.gov/article?id=Paraguay-Standards-for-Trade"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Paraguay national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.ine.gov.py",
+     "rank": 1,
+     "snippet": "Call center: 178\n...\nBoggiani - Asunción.\nTeléfono: (595 21) 500-194\nE-mail: info@ine.gov.py / Web-site: www.ine.gov.py\nDiseño y diagramación: Sol Díaz / Nempre Producciones\nFicha Técnica",
+     "title": "Revista_Censo 2022",
+     "url": "https://www.ine.gov.py/censo2022/documentos/Revista_Censo_2022.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.ine.gov.py",
+     "rank": 2,
+     "snippet": "# CONOZCA A SU ENTREVISTADOR\nEl Instituto Nacional de Estadística (INE) se encuentra recolectando datos en diversos puntos del territorio nacional para generar información acerca de la situación de la población paraguaya.\n...\n# Seguinos en\n> Instituto Nacional de Estadística - Paraguay",
+     "title": "INE::Instituto Nacional de Estadística",
+     "url": "https://www.ine.gov.py/"
+    },
+    {
+     "date": "",
+     "host": "www.ine.gov.py",
+     "rank": 3,
+     "snippet": "# El INE tiene disponible para la ciudadanía un cúmulo de datos de libre uso\nLos interesados pueden acceder a la página web del INE, www.ine.gov.py .",
+     "title": "En el marco de la semana internacional de los datos abiertos, que se celebra del 4 al 10 de marzo, el Instituto Nacional de Estadística (INE) recuerda la importancia de poner a conocimiento de la pobl",
+     "url": "https://www.ine.gov.py/noticias/1503/el-ine-tiene-disponible-para-la-ciudadania-un-cumulo-de-datos-de-libre-uso"
+    },
+    {
+     "date": "",
+     "host": "www.ine.gov.py",
+     "rank": 4,
+     "snippet": "Oficina Técnica: Avenida Boggiani e/ Cirilo Rivarola Nº 6688.\nAsunción.\n...\n       info@ine.gov.py \n       www.ine.gov.py \n       Instituto Nacional de Estadística - Paraguay\n@INE_Paraguay\n...\nINE Paraguay",
+     "title": "COMPENDIO",
+     "url": "https://www.ine.gov.py/Publicaciones/Biblioteca/documento/252/Compendio%20Estadistico%202022%20(13.06.24)%20Final.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.ine.gov.py",
+     "rank": 5,
+     "snippet": "14/10/2024\nEl Instituto Nacional de Estadística (INE) presenta los resultados finales del Censo Nacional de Población y Viviendas 2022.\nEn esta ocasión se pone a disposición el documento “Estructura de la población por edad y sexo”.",
+     "title": "Población - INE::Instituto Nacional de Estadística",
+     "url": "https://www.ine.gov.py/publicacion/2/poblacion"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Paraguay central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bcp.gov.py",
+     "rank": 1,
+     "snippet": "Inicio - Banco Central del Paraguay\n...\n3,5%\nwallet Inflación interanual septiembre 2026\n1,7%\n...\nFederación Rusa y Augusto Roa Bastos - Asunción / Paraguay (+595 21) 608 011 (Central telefónica) [email protected]",
+     "title": "Banco Central del Paraguay: Inicio",
+     "url": "https://www.bcp.gov.py/home"
+    },
+    {
+     "date": "",
+     "host": "www.bcp.gov.py",
+     "rank": 2,
+     "snippet": "Estados Financieros Mensuales - Banco Central del Paraguay\n...\n…\n### Anexo - Ratios - 2002/2003\n### Estados financieros - Pasivos - 2002/2003\n### Estados financieros - Activos - 2002/2003\n...\n### 2000/2001",
+     "title": "Estados Financieros Mensuales",
+     "url": "https://www.bcp.gov.py/web/institucional/estados-financieros-mensuales"
+    },
+    {
+     "date": "",
+     "host": "www.bcp.gov.py",
+     "rank": 3,
+     "snippet": "Inicio - Banco Central del Paraguay\n...\nMisión “Preservar y velar por la estabilidad del valor de la moneda y promover la eficacia, integridad y estabilidad del sistema financiero, para colaborar con el bienestar del país”.\n...\nwallet Inflación interanual septiembre 2026\n1,7%",
+     "title": "Informe de Indicadores Financieros (IF) junio 2026",
+     "url": "https://www.bcp.gov.py/web/institucional/home"
+    },
+    {
+     "date": "",
+     "host": "www.bcp.gov.py",
+     "rank": 4,
+     "snippet": "Serie Detallada - Banco Central del Paraguay\n...\nEl procedimiento requerido para la búsqueda del código especifico en el documento PDF consiste en utilizar el comando “Control + tecla F”.\n...\n### Importación Partida País Año 1994\n© 2025 - Banco Central del Paraguay - Aviso Legal -",
+     "title": "Serie Detallada - Banco Central del Paraguay",
+     "url": "https://www.bcp.gov.py/serie-detallada1"
+    },
+    {
+     "date": "",
+     "host": "www.bcp.gov.py",
+     "rank": 5,
+     "snippet": "Inflación interanual septiembre 2026 - Banco Central del Paraguay\n...\n© 2025 - Banco Central del Paraguay - Aviso Legal -\nFederación Rusa y Augusto Roa Bastos - Asunción / Paraguay (+595 21) 608 011 (Central telefónica) [email protected]",
+     "title": "www.bcp.gov.py · web · institucionalInflación interanual septiembre 2026 - Banco Central del Paraguay",
+     "url": "https://www.bcp.gov.py/web/institucional/w/inflaci%C3%B3n-interanual"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Paraguay government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "contrataciones.gov.py",
+     "rank": 1,
+     "snippet": "eficiencia, la participación ciudadana y el desarrollo económico,\n...\n- Actualmente la **API V1** está siendo deprecada, estará disponible hasta el 04/2023.\n- Actualmente la **API V2** está siendo deprecada, estará disponible hasta el 06/2023.",
+     "title": "Datos Abiertos DNCP - contrataciones.gov.py",
+     "url": "https://contrataciones.gov.py/datos/"
+    },
+    {
+     "date": "",
+     "host": "www.datos.gov.py",
+     "rank": 2,
+     "snippet": "|La Unidad Técnica del Gabinete Social (UTGS) disponibiliza la Plataforma de Visualización de Datos e Indicadores e-Heka, la cual es una herramienta digital de acceso público que muestra de forma gráfica la información alojada en el Sistema Integrado de Información Social (SIIS).\nhttps://sistema",
+     "title": "Portales de Datos Abiertos Gubernamentales",
+     "url": "https://www.datos.gov.py/portales-de-datos-abiertos"
+    },
+    {
+     "date": "",
+     "host": "www.datos.gov.py",
+     "rank": 3,
+     "snippet": "# Acerca de\nEl Gobierno Paraguayo está liberando datos públicos para ayudar a la gente a entender cómo funciona su gobierno y cómo se realiza la gestión de los recursos de Gobierno.\ndatos.gov.py es un portal de acceso a estos datos abiertos gubernamentales también denominado Catálogo Gubernamental d",
+     "title": "Acerca de",
+     "url": "https://www.datos.gov.py/about"
+    },
+    {
+     "date": "",
+     "host": "www.datos.gov.py",
+     "rank": 4,
+     "snippet": "## Conjunto de Datos más consultados\n|Conjutos de Datos|**Total de vistas**|",
+     "title": "Datos Abiertos",
+     "url": "https://www.datos.gov.py/"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.contrataciones.gov.py",
+     "rank": 5,
+     "snippet": "Portal de Contrataciones Públicas de la República del Paraguay\n...\n##### Datos abiertos\n...\nBrindamos datos abiertos, el Sistema de Información Estadística (SIE), el Sistema de Información de Proveedores del Estado (SIPE), Trámites Jurídicos Electrónicos y oportunidades de capacitación a través del ",
+     "title": "Portal de Contrataciones Públicas de la República del Paraguay",
+     "url": "https://www.contrataciones.gov.py/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:09:42Z",
+ "pais": {
+  "iso2": "PY",
+  "iso3": "PRY",
+  "nombre": "Paraguay"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

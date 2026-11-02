@@ -1,0 +1,761 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Democratic Republic of the Congo constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 1,
+     "snippet": "The Constitution of the Democratic Republic of Congo, as amended by Law No. 11/002 of January 20, 2011, Amending Some Articles of the Constitution of the Democratic Republic of Congo of February 18, 2006, Democratic Republic of the Congo, WIPO Lex\n...\nDetails\n...\nDates",
+     "title": "The Constitution of the Democratic Republic of Congo, as ... - WIPO",
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/13748",
+     "verificacion": {
+      "bytes": 222609,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:07Z",
+      "http": 200,
+      "sha256": "7cf6e41021d6862c648ea498cc5710b66d648ccc30f2e05db553736f9c179551"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 2,
+     "snippet": "# Constitution of the Democratic Republic of Congo, Democratic Republic of the Congo\nLatest Version in WIPO Lex\n...\nDates\n...\nNotes The Constitution of the Democratic Republic of Congo was adopted on February 18, 2006 and entered into force on the same date, which marks the start of the country's Th",
+     "title": "Constitution of the Democratic Republic of Congo ...",
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/7449",
+     "verificacion": {
+      "bytes": 201977,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:08Z",
+      "http": 200,
+      "sha256": "09adcf939e2e7efb85fb34b48cd5b02e884b95b536f4a74854abc7de6636cdd3"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.leganet.cd",
+     "rank": 3,
+     "snippet": "> Constitution de la République Démocratique du Congo du 18 février 2006 telle que modifiée par la loi du 20 janvier 2011 textes coordonnés.\nPdf\n...\n> Constitution de la République Démocratique du Congo.\n...\n(République démocratique du Congo)\n...\n…",
+     "title": "Droit public - Leganet.cd",
+     "url": "https://www.leganet.cd/Legislation/Tables/droit_public.htm"
+    },
+    {
+     "date": "",
+     "host": "extranet.who.int",
+     "rank": 4,
+     "snippet": "The Constitution of the Democratic Republic of the Congo was adopted in 2006 and revised by Law No 11/002 of 20 January 2011.\nThe Constitution consists of 229 articles that are grouped into eight titles.\n...\nTo read the whole document please download the PDF file\n...\nAdoption year:",
+     "title": "Constitution",
+     "url": "https://extranet.who.int/cpcd/health-legislation/constitution-10"
+    },
+    {
+     "date": "",
+     "host": "www.legali.cd",
+     "rank": 5,
+     "snippet": "# Recherche avancée\nTrouvez instantanément les textes juridiques congolais — codes, lois, décrets, arrêtés et jurisprudence.\n1708 documents référencés\nSaisissez un terme ou choisissez un sujet pour commencer.\n...\n## Codes\n2023En vigueur",
+     "title": "Recherche avancée",
+     "url": "https://www.legali.cd/legislation/recherche"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Democratic Republic of the Congo national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "dgi.gouv.cd",
+     "rank": 1,
+     "snippet": "|Arrêtés Ministériel N°CAB/MIN/FINANCES/2022/015/du 15 avril 2022 portant modalités de mise en œuvre du mécanisme de constatation et de liquidation de la taxe sur la valeur ajoutée à l'importation|Télécharger|",
+     "title": "Arrêtés, Décrets & Lois | DGI",
+     "url": "https://dgi.gouv.cd/arretes/",
+     "verificacion": {
+      "bytes": 586856,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:10Z",
+      "http": 200,
+      "sha256": "beaad4d538ef4d53ba89529bb80dd0b52869d97546cde9852c4a0f87ef3e27fd"
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "host": "are.gouv.cd",
+     "rank": 2,
+     "snippet": "Lois & Décrets – ARE\n…\n# Lois & Décrets\n...\n1 fichier·s 3.78 MB\n…\n...\n1 fichier·s 29.17 MB\n…\n...\nBoulevard du 30 Juin-Gombe, Kinshasa.\n- Email: contact@are.gouv.cd",
+     "title": "Lois & Décrets – ARE",
+     "url": "https://are.gouv.cd/documentation/decrets/",
+     "verificacion": {
+      "bytes": 119670,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:12Z",
+      "http": 200,
+      "sha256": "d4ed7fcaedea2fbe4b4f4f4686d9347a2274dfcc8a762df789c9f30bec583a62"
+     }
+    },
+    {
+     "date": "2025-11-28",
+     "host": "medd.gouv.cd",
+     "rank": 3,
+     "snippet": "|--|--|--|--|--|\n...\n|PDF|**Décret n°25-01 portant création de l’aire protégée a vocation de réserve communautaire -couloir vert.**|Lois et Réglementations|1,05 Mo|Télécharger|",
+     "title": "Lois et Réglementations - MEDD-NEC",
+     "url": "https://medd.gouv.cd/lois-et-reglementations/"
+    },
+    {
+     "date": "",
+     "host": "www.legali.cd",
+     "rank": 4,
+     "snippet": "# Recherche avancée\nTrouvez instantanément les textes juridiques congolais — codes, lois, décrets, arrêtés et jurisprudence.\n1708 documents référencés\nSaisissez un terme ou choisissez un sujet pour commencer.\n...\n## Codes\n...\n## Décrets\n2006En vigueur",
+     "title": "Recherche avancée",
+     "url": "https://www.legali.cd/legislation/recherche"
+    },
+    {
+     "date": "",
+     "host": "www.leganet.cd",
+     "rank": 5,
+     "snippet": "- Décret n° 009/2002 du 05 février\n2002 portant création et statuts d’un établissement public dénomme\n«Fonds Social de la République Démocratique du Congo », en sigle «FSRDC\n...\n2005. -\nTexte\n...\n112. Texte",
+     "title": "Droit public - Leganet.cd",
+     "url": "https://www.leganet.cd/Legislation/Tables/droit_public.htm"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Democratic Republic of the Congo official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-06-19",
+     "host": "journalofficiel.cd",
+     "rank": 1,
+     "snippet": "# Le Journal officiel de la République démocratique du Congo\n...\nParaissant le 1er et le 15 de chaque mois, la première partie est le bulletin des actes législatifs et réglementaires : lois, ordonnances, décrets, arrêtés, décisions, circulaires, etc.",
+     "title": "Journal Officiel de la RDC — Publication officielle des actes ...",
+     "url": "https://journalofficiel.cd/",
+     "verificacion": {
+      "bytes": 21674,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:15Z",
+      "http": 200,
+      "sha256": "a60539fb067d5303492dfac83d95a84c23ac194fb705d34db7bf821fc7a6376e"
+     }
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 2,
+     "snippet": "# Congo (Democratic Republic): legislation: official gazette\nDescription:\n1 title containing the official gazette for the Democratic Republic of the Congo from 1885 to 1934.\nIt is an official publication and the text is in French.\nNew material is no longer added.\n...\nCountry:",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag/congo-democratic-republic-govtpubs675r1-42",
+     "verificacion": {
+      "bytes": 13765,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:15Z",
+      "http": 200,
+      "sha256": "fcb0ba6ca020d39e5d7fe4ebc369e009f6532905ab2589ea806fc15093562e54"
+     }
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 3,
+     "snippet": "Description:\n2 titles containing the official gazettes for the Democratic Republic of the Congo, from 1960 to 1967 and for Katanga from 1960 to 1963.\nBoth are official publications on microfiche and the text is in French.\nNew material is no longer added.",
+     "title": "Congo (Democratic Republic) | IALS Digital resources | IALS ...",
+     "url": "https://resources.ials.sas.ac.uk/flag-country/congo-democratic-republic"
+    },
+    {
+     "date": "2025-01-04",
+     "host": "www.state.gov",
+     "rank": 4,
+     "snippet": "The Official Gazette of the DRC is a specialized service of the Presidency of the Republic, which publishes and disseminates legislative and regulatory texts, judicial decisions, acts of companies, associations and political parties, designs, industrial models, trademarks as well as any other act re",
+     "title": "Democratic Republic of the Congo",
+     "url": "https://www.state.gov/reports/2022-investment-climate-statements/democratic-republic-of-the-congo"
+    },
+    {
+     "date": "",
+     "host": "dsbb.imf.org",
+     "rank": 5,
+     "snippet": "…\n...\n## Enhanced General Data Dissemination System\n### Summary of Methodology\n###### Contact Person(s)\nIdentification of internal Government Access to Data Before Release** **1.2.2 Internal governmental access to statistics prior to release ** Publication of data is not subject to prior aut",
+     "title": "IMF--GDDS--Congo, Dem. Rep. of--Table C.",
+     "url": "https://dsbb.imf.org/e-gdds/data-integrity-report/country/COD/category/CODCBK00"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Democratic Republic of the Congo supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-03-02",
+     "host": "juricaf.org",
+     "rank": 1,
+     "snippet": "La jurisprudences de Congo démocratique\n...\n# La jurisprudences de Congo démocratique\n102 résultats trouvés :\n...\n| Congo démocratique, Cour de cassation, 14 janvier 2026, RP.2087",
+     "title": "La jurisprudences de Congo démocratique - juricaf.org",
+     "url": "https://juricaf.org/recherche/+/facet_pays:Congo_d%C3%A9mocratique",
+     "verificacion": {
+      "bytes": 25851,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:17Z",
+      "http": 200,
+      "sha256": "e40b3b13e63aa5d4a7b56f9b3648799b39196ad5318fe3ae3c2a15141de7c9db"
+     }
+    },
+    {
+     "date": "2019-05-06",
+     "host": "legalrdc.com",
+     "rank": 2,
+     "snippet": "### Découvrez la jurisprudence\nLes décisions et avis rendus par la CCJA et les Hautes Cours de la RDC – Cour de cassation, Conseil d’Etat et Cour constitutionnelle – sont mis à la disposition du public et sont consultables gratuitement",
+     "title": "legalRDC – LégalRDC est spécialiste en informations juridiques.",
+     "url": "https://legalrdc.com/",
+     "verificacion": {
+      "bytes": 294462,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:22Z",
+      "http": 200,
+      "sha256": "f43714832829bdb482eb4a919923075184139f08b8f0ef8d0d75b368ca4b7472"
+     }
+    },
+    {
+     "date": "",
+     "host": "juricaf.org",
+     "rank": 3,
+     "snippet": "La jurisprudences de Congo démocratique | Cour suprême de justice\n...\n# La jurisprudences de Congo démocratique | Cour suprême de justice\n15 résultats trouvés :\n| Congo démocratique, Cour suprême de justice, Section administrative, 02 novembre 1990, RA.236\n...\n…",
+     "title": "La jurisprudences de Congo démocratique | Cour suprême de justice",
+     "url": "https://juricaf.org/recherche/+/facet_pays:Congo_d%C3%A9mocratique,facet_pays_juridiction:Congo_d%C3%A9mocratique_%7C_Cour_supr%C3%AAme_de_justice"
+    },
+    {
+     "date": "2020-11-17",
+     "host": "guides.loc.gov",
+     "rank": 4,
+     "snippet": "# Guide to Law Online: Democratic Republic of the Congo\nThis guide, prepared by the Law Library of Congress, includes links to free online resources regarding the country of the Democratic Republic of the Congo, focusing on its constitution; executive, legislative and judicial branches; legal guides",
+     "title": "Guide to Law Online: Democratic Republic of the Congo",
+     "url": "https://guides.loc.gov/law-democratic-republic-congo"
+    },
+    {
+     "date": "",
+     "host": "www.legali.cd",
+     "rank": 5,
+     "snippet": "# Recherche avancée\nTrouvez instantanément les textes juridiques congolais — codes, lois, décrets, arrêtés et jurisprudence.\n1708 documents référencés\nSaisissez un terme ou choisissez un sujet pour commencer.\n## Arrêtés\n2023En vigueur\n…",
+     "title": "Recherche avancée",
+     "url": "https://www.legali.cd/legislation/recherche"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Democratic Republic of the Congo state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-06-19",
+     "host": "journalofficiel.cd",
+     "rank": 1,
+     "snippet": "Le Journal officiel assure la publication et la diffusion des textes législatifs et réglementaires, ainsi que d'un large éventail d'actes juridiques; notamment les actes relatifs aux sociétés et aux associations, les actes judiciaires et ceux relevant de la propriété intellectuelle.",
+     "title": "Journal Officiel de la RDC — Publication officielle des actes ...",
+     "url": "https://journalofficiel.cd/",
+     "verificacion": {
+      "bytes": 21674,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:22Z",
+      "http": 200,
+      "sha256": "a60539fb067d5303492dfac83d95a84c23ac194fb705d34db7bf821fc7a6376e"
+     }
+    },
+    {
+     "date": "2024-01-30",
+     "host": "budget.gouv.cd",
+     "rank": 2,
+     "snippet": "Lois de finances - Ministère du Budget\n...\nLois de finances n°23/056 du 10 décembre 2023 pour l’exercice 2024\n...\nLois de finances n°22/071 du 28/12/2023 pour l’exercice 2023\n...\n- Loi relative aux finances publiques",
+     "title": "Lois de finances - Ministère du Budget",
+     "url": "https://budget.gouv.cd/lois-de-finances/",
+     "verificacion": {
+      "bytes": 71741,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:27Z",
+      "http": 200,
+      "sha256": "31194751b5b6aded892b1fd440e15b35daf33d53d5f82fded8f26be94597e9eb"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cno-rdc.com",
+     "rank": 3,
+     "snippet": "Législation nationale – CNO-RDC\nCommission Nationale OHADA de la RDC\n...\n## Législation nationale\nTextes internes de la république Démocratique du Congo (Constitution, Lois, Décrets, Codes...)\n…\n...\n### Contacts\nhttp://www.cno-rdc.com",
+     "title": "Législation nationale – CNO-RDC",
+     "url": "https://www.cno-rdc.com/bibliotheque/legislation-nationale"
+    },
+    {
+     "date": "",
+     "host": "www.leganet.cd",
+     "rank": 4,
+     "snippet": "- 25 mai 2009 - Arrêté provincial n° 090BIS/CAB.GOUV./BC/022/2009 portant création, organisation et fonctionnement d'une Commission Provinciale pour les Investissements et le Développement du Bas-Congo, COPIDE en sigle - Texte\n…",
+     "title": "Provinces - Leganet.cd",
+     "url": "https://www.leganet.cd/Legislation/Tables/provinces.htm"
+    },
+    {
+     "date": "",
+     "host": "www.leganet.cd",
+     "rank": 5,
+     "snippet": "Loi organique n° 10/011 du 18 mai 2010 portant\nfixation des subdivisions territoriales à l’intérieur des provinces\nTexte-\n...\nmai 2009 - Arrêté provincial n° 090BIS/CAB.GOUV./BC/ 022/2009",
+     "title": "LEGANET.CD LEGANET.CD LEGANET.CD LEGANET.CD LEGANET.CD",
+     "url": "https://www.leganet.cd/Legislation/droit_public.htm"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Democratic Republic of the Congo municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "interieur.gouv.cd",
+     "rank": 1,
+     "snippet": "# Textes juridiques\nLois, décrets et textes réglementaires.\nLes textes juridiques (lois, décrets, arrêtés) relevant du Ministère de l'Intérieur seront progressivement regroupés dans cette section.\n...\n### Contact\nSite officiel du Gouvernement de la RDC",
+     "title": "Textes juridiques",
+     "url": "https://interieur.gouv.cd/documentation/textes-officiels",
+     "verificacion": {
+      "error": "robots.txt disallows https://interieur.gouv.cd/documentation/textes-officiels",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:40:31Z"
+     }
+    },
+    {
+     "date": "2025-11-28",
+     "host": "medd.gouv.cd",
+     "rank": 2,
+     "snippet": "Lois et Réglementations - MEDD-NEC\nBienvenue au MEDDNEC\nRDC, Pays solution!\n+243891118392\ninfo@medd.gouv.cd\n...\n# Lois et Réglementations\nHome\nLois et Réglementations",
+     "title": "Lois et Réglementations - MEDD-NEC",
+     "url": "https://medd.gouv.cd/lois-et-reglementations/",
+     "verificacion": {
+      "bytes": 288101,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:34Z",
+      "http": 200,
+      "sha256": "a5b0acebaa82a1e855a9dbc708e92ccbb1580d624e4d7782bd838c7e3d9db0d9"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.legali.cd",
+     "rank": 3,
+     "snippet": "Arrêtés | LEGALI\nLégislation LEGALI\n...\nRépublique Démocratique du Congo",
+     "title": "Arrêtés | LEGALI",
+     "url": "https://www.legali.cd/legislation/arretes"
+    },
+    {
+     "date": "",
+     "host": "www.leganet.cd",
+     "rank": 4,
+     "snippet": "Texte -PDF\n...\nARRÊTÉ SC/004/BGVI/COJU/PAT/2001 du 10 avril 2001portant création et\norganisation du conseil de la ville de Kinshasa.\n(Ville de Kinshasa)\nTexte",
+     "title": "LEGANET - Législation",
+     "url": "https://www.leganet.cd/legislation.htm"
+    },
+    {
+     "date": "",
+     "host": "www.leganet.cd",
+     "rank": 5,
+     "snippet": "## Droit public\nTextes classés par thèmes en droit public.\n...\n(République démocratique du Congo)\n> Texte\n> Loi organique n°15/006 du 25 mars 2015 portant fixation des limites des provinces et celle de la ville de Kinshasa - texte",
+     "title": "Droit public - Leganet.cd",
+     "url": "https://www.leganet.cd/Legislation/Tables/droit_public.htm"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Democratic Republic of the Congo regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "### Competition and Antitrust Laws\nThe Competition Commission (COMCO) remains the primary authority overseeing competition in the DRC, operating under Organic Law No. 18/020 on Freedom of Pricing and Competition.\n...\nThe Agency for Special Economic Zones (AZES) oversees the management of these zones",
+     "title": "Democratic Republic of the Congo - United States Department of State",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/democratic-republic-of-the-congo",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2025-investment-climate-statements/democratic-republic-of-the-congo",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:40:34Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 2,
+     "snippet": "# Réglementation\nRetrouvez le cadre légal et réglementaire régissant les établissements de crédit, les sociétés financières ainsi que les systèmes et moyens de paiement en République Démocratique du Congo, classé par catégories d'établissement.\n...\n### Tous les intermédiaires financiers agréés par l",
+     "title": "Réglementation | Banque Centrale du Congo - bcc.cd",
+     "url": "https://www.bcc.cd/intermediaires-financiers/reglementation",
+     "verificacion": {
+      "bytes": 471643,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:39Z",
+      "http": 200,
+      "sha256": "cfc754f91dba7caf214a95e17a7ecfbf0ca8a38927ba3973435eb622a1847eaa"
+     }
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.state.gov",
+     "rank": 3,
+     "snippet": "Regulations are adopted by Parliamentary vote and the President’s signature.\n...\n### Intellectual Property\n...\nAgencies responsible for IP enforcement in the DRC include the:\n- Congolese Office of Control (OCC)\n- General Directorate of Customs and Excise (DGDA) and\n- National police",
+     "title": "Democratic Republic of the Congo",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/democratic-republic-of-the-congo/"
+    },
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 4,
+     "snippet": "Chaque entité ci-dessous porte les textes légaux qui lui sont applicables : le titre de la loi ouvre le document.\n...\nLes instructions et autres mesures d'application sont consultables dans la rubrique Réglementation, catégorie par catégorie.\n...\n### Consulter les textes légaux et réglementaires par",
+     "title": "Les textes applicables par entité",
+     "url": "https://www.bcc.cd/intermediaires-financiers/reglementation/textes-par-entite"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 5,
+     "snippet": "…\n...\nAccises (DGDA) \n...\n…\n...\nOversees agricultural production and food self-sufficiency.\n2. Ministry of Commerce \nRegulates trade policies, including imports and exports.\n3. Ministry of Finance \nThrough the DGDA, manages customs regulations and import tariffs.",
+     "title": "Report Name:Exporter Guide - Democratic Republic of ...",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Exporter+Guide+-+Democratic+Republic+of+Congo+_Nairobi_Congo+-+Democratic+Rep+of+the_KE2025-0002.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Democratic Republic of the Congo national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.eac.int",
+     "rank": 1,
+     "snippet": "1 \n...\nEAS \n1032:202\n1  \n1 \nCocoa butter for food \nindustry — \nSpecification (1st \nEdition) \n2021 \nThis East African Standard specifies the requirements, sampling and test methods for cocoa butter intended for human consumption.",
+     "title": "CATALOGUE OF EAST AFRICAN STANDARDS 2024 - eac.int",
+     "url": "https://www.eac.int/documents?controller=download&task=download.file&file=dc6cfe4f-7a3c-478b-9395-3e116a7d28a1&name=EAS+CATALOGUE+OCTOBER+-+2024.pdf",
+     "verificacion": {
+      "bytes": 2911823,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:41Z",
+      "http": 200,
+      "sha256": "7e4ebce2383c0ca3007b53fbc833d4e3c1c7f32ba8c99859aae7f26c4eba7bcf"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.epingalert.org",
+     "rank": 2,
+     "snippet": "# Democratic Republic of the Congo\n...\n# SPS NATIONAL NOTIFICATION AUTHORITY (NNA)\n|Name/Agency **|Contact information **|\n|--|--|",
+     "title": "Democratic Republic of the Congo - Epingalert.org",
+     "url": "https://www.epingalert.org/en/MemberProfiles/Profile?countryId=C180",
+     "verificacion": {
+      "bytes": 153235,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:42Z",
+      "http": 200,
+      "sha256": "d67810eb70dc1373e503f6088da96ff37fad50f269f37c27f0c51ac8b7294e14"
+     }
+    },
+    {
+     "date": "2025-01-04",
+     "host": "www.state.gov",
+     "rank": 3,
+     "snippet": "## 5. Protection of Property Rights\n...\nThe registration is done in three steps with the General Secretariat of the Ministry of Industry, which is the competent body for intellectual property in the DRC: (1) filing the file – after paying the official fees, the applicant must file his file.",
+     "title": "Democratic Republic of the Congo",
+     "url": "https://www.state.gov/reports/2022-investment-climate-statements/democratic-republic-of-the-congo"
+    },
+    {
+     "date": "",
+     "host": "legacy.export.gov",
+     "rank": 4,
+     "snippet": "### Overview\nThe Ministry of Commerce is responsible for standards and conformity assessments.\nThe OCC, an ISO member agency, is responsible for developing standards and performing conformity assessments on exports and imports, operating under the supervision of the Ministry of Commerce.\n...\n### Con",
+     "title": "Congo, Democratic Republic - Standards for Trade - export.gov",
+     "url": "https://legacy.export.gov/article?id=Congo-Democratic-Republic-Standards-for-Trade"
+    },
+    {
+     "date": "2021-10-11",
+     "host": "www.trade.gov",
+     "rank": 5,
+     "snippet": "Democratic Republic of the Congo - Standards for Trade\nDescribes standards, identifies the national standards, accreditation bodies, and lists the national testing organization(s) and conformity assessment bodies.",
+     "title": "Democratic Republic of the Congo - Trade Barriers",
+     "url": "https://www.trade.gov/country-commercial-guides/democratic-republic-congo-trade-barriers?navcard=13497"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Democratic Republic of the Congo mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "are.gouv.cd",
+     "rank": 1,
+     "snippet": "Normes applicables dans les domaines techniques et environnemental en RDC – ARE\n# Normes applicables dans les domaines techniques et environnemental en RDC\n...\n474\n...\n# Normes applicables dans les domaines techniques et environnemental en RDC\nAutorité de Régulation du Secteur de l'Electricité (ARE)",
+     "title": "Normes applicables dans les domaines techniques et ...",
+     "url": "https://are.gouv.cd/download/normes-applicables-dans-les-domaines-techniques-et-environnemental-en-rdc/",
+     "verificacion": {
+      "bytes": 91219,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:43Z",
+      "http": 200,
+      "sha256": "6336e03e3c67796240b9346a59b9aaf5a62b10c7deda8529c5192c66ec9995a6"
+     }
+    },
+    {
+     "date": "",
+     "host": "are.gouv.cd",
+     "rank": 2,
+     "snippet": "LISTE DES NORMES APPLICABLES DANS LES DOMAINES \nTECHNIQUE ET ENVIRONNEMENTAL EN REPUBLIQUE \nDEMOCRATIQUE DU CONGO\n...\nNOTE :  \nCette liste des normes applicables dans les domaines technique et environnemental en République",
+     "title": "NORMES APPLICABLES EN RDC DANS LES DOMAINES TECHNIQUE ET ...",
+     "url": "https://are.gouv.cd/wp-content/uploads/2023/08/NORMES-APPLICABLES-EN-RDC-rev0.pdf",
+     "verificacion": {
+      "bytes": 307455,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:44Z",
+      "http": 200,
+      "sha256": "81cc5fe97444f1556f341f527cf8e4e9078d8c6da14163333b8e38c681fd786e"
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "host": "are.gouv.cd",
+     "rank": 3,
+     "snippet": "# Normes\n### Normes applicables dans les domaines techniques et environnemental en RDC\n1 fichier·s 300.25 KB\n…",
+     "title": "Normes – ARE",
+     "url": "https://are.gouv.cd/normes/"
+    },
+    {
+     "date": "",
+     "host": "ceec.cd",
+     "rank": 4,
+     "snippet": "| |Decret-n°-11-28-du-07-juin-2011-CEEC.pdf Decret-n°-11-28-du-07-juin-2011-CEEC.pdf Ouvrir Télécharger Copier le lien|115.03 KB|21 mai 2026|",
+     "title": "LEGISLATION – Centre d'Expertise d'Evaluation et de ...",
+     "url": "https://ceec.cd/legislation"
+    },
+    {
+     "date": "",
+     "host": "verigates.bureauveritas.com",
+     "rank": 5,
+     "snippet": "Authority: \n...\ncorresponding Material Safety Data Sheet (MSDS).\n# Automotive vehicles must observe the legal requirements of safety, manufacture and \nroadworthiness.\nThey must enter the customs territory of the Democratic Republic of \nCongo with the documents proving ownership and age of the vehicl",
+     "title": "CONGO (Rep Democratic of) Datasheet EN Rev 24mcc_final",
+     "url": "https://verigates.bureauveritas.com/sites/verigates/files/2023-04/CONGO%20(Rep%20Democratic%20of)%20EN%20Datasheet%20Rev%2024_0.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Democratic Republic of the Congo national statistics office official website",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "insrdc.cd",
+     "rank": 1,
+     "snippet": "# Institut National de la Statistique (INS) - RDC\nBienvenue sur le portail officiel de l’INS RDC.\n...\n✉️ contact@insrdc.cd 🏛️ Missions 📚 Produits\n...\nContact : contact@insrdc.cd • Programmes • Produits",
+     "title": "Institut National de la Statistique (INS) - RDC | Données ...",
+     "url": "https://insrdc.cd/",
+     "verificacion": {
+      "bytes": 32254,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:49Z",
+      "http": 200,
+      "sha256": "8e807d489f696ba2e95e0e1e2e4fb9dca3d98bf9d84809983c1cbd5980e18103"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ins.gouv.cd",
+     "rank": 2,
+     "snippet": "Institut National de la Statistique\nInstitution Officielle\n…\n...\nDirections Techniques\n6ème rue, n°12, Limeté Industriel\n...\nL'Institut National de la Statistique est l'organe central du système public de statistiques, garantissant la production et la diffusion de données fiables.",
+     "title": "Institut National de la Statistique",
+     "url": "https://www.ins.gouv.cd/",
+     "verificacion": {
+      "bytes": 135230,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:52Z",
+      "http": 200,
+      "sha256": "9e81061310091c771fbf50a051274bb51487414f48e93b393e89f9fc2a30bc18"
+     }
+    },
+    {
+     "date": "",
+     "host": "apai-crvs.uneca.org",
+     "rank": 3,
+     "snippet": "DEMOCRATIC REPUBLIC OF CONGO\n11\nResources\nWebsites:\nT\nT Institut National de la Statistique(INS) / \nNational Institute of Statistics (NIS) – http://www.ins-rdc.org\nT\n...\nhttps://www.minisanterdc.cd/",
+     "title": "SNAPSHOT OF CIVIL REGISTRATION AND VITAL ...",
+     "url": "https://apai-crvs.uneca.org/sites/default/files/resourcefiles/CRVS_CongoDRSnapshot_e.pdf"
+    },
+    {
+     "date": "2024-02-01",
+     "host": "ins-rdc.org",
+     "rank": 4,
+     "snippet": "L’Institut National de la Statistique, est un ‘établissement public sous la tutelle du ministà¨re du Plan.\nIl emploie … personnes r’éparties sur l’ensemble du territoire national.",
+     "title": "L'Institut National de la Statistique - INS - RDC | Site officiel",
+     "url": "https://ins-rdc.org/accueil/organisation/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Democratic Republic of the Congo central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 1,
+     "snippet": "### Condensé d'informations statistiques du 23 avril 2026\nConsulter\n348 résultats\n...\nSiège\n563, Bld.\nColonel Tshatshi\nGombe\nKinshasa\nBP 2697 Kinshasa 1\nRépublique Démocratique du Congo",
+     "title": "Condensés d'informations statistiques",
+     "url": "https://www.bcc.cd/statistiques/condense-informations-statistiques",
+     "verificacion": {
+      "bytes": 463271,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:53Z",
+      "http": 200,
+      "sha256": "88e434267354d3c254fafcc982754a711e55cc1ef3279ebe0042b588e05ada02"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 2,
+     "snippet": "### Secteur réel\n...\nSiège\n563, Bld.\nColonel Tshatshi\nGombe\nKinshasa\nBP 2697 Kinshasa 1\nRépublique Démocratique du Congo\n- Musée de la BCC\n...\n© 2026 Banque Centrale du Congo.",
+     "title": "Secteur monétaire : Statistiques macroéconomiques",
+     "url": "https://www.bcc.cd/statistiques/secteur-monetaire",
+     "verificacion": {
+      "bytes": 459436,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:56Z",
+      "http": 200,
+      "sha256": "8f82c72afb6f3eab261354cec1a79d7b7532aae30cc62d2c1a60d84d61a36269"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 3,
+     "snippet": "Statistiques macroéconomiques | Banque Centrale du Congo\n...\nExplorez les indicateurs économiques et financiers de référence de la BCC, organisés par secteur et par sujet.\n...\nChoisissez un secteur pour accéder à son tableau de bord, comparer ses séries officielles et exporter les données utiles.\n..",
+     "title": "Recherche Et Statistiques",
+     "url": "https://www.bcc.cd/statistiques"
+    },
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 4,
+     "snippet": "# Bulletins de statistiques\nConsultez l'ensemble des bulletins de statistiques de la Banque Centrale du Congo.\n…\n...\n### Bulletin d'informations statistiques d'août 2024\nConsulter\n182 résultats\n...\n563, Bld.\nColonel Tshatshi\nGombe\nKinshasa",
+     "title": "Bulletins de statistiques : statistiques de la Banque Centrale du Congo",
+     "url": "https://www.bcc.cd/publications/bulletin-de-statistiques?"
+    },
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 5,
+     "snippet": "- Inflation (glissement annuel)8,871%+1,669 pts\n...\n# Banque Centrale du Congo, site officiel\n...\n563, Bld.\nColonel Tshatshi\nGombe\nKinshasa\nBP 2697 Kinshasa 1\nRépublique Démocratique du Congo",
+     "title": "Banque Centrale du Congo",
+     "url": "https://www.bcc.cd/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Democratic Republic of the Congo government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-10-31",
+     "host": "corpus.data-landscapers.io",
+     "rank": 1,
+     "snippet": "#### Use of open data\n**Data published for download, and under an open licence.** The director general of the Institut national de la statistique said on 5 June 2026 that the Open Data Portal is at work and anyone can access and download data from it in Excel, PDF and Word formats.",
+     "title": "Congo — Maturity Assessment — Data Landscapers",
+     "url": "https://corpus.data-landscapers.io/maturity/countries/cog/",
+     "verificacion": {
+      "bytes": 323174,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:56Z",
+      "http": 200,
+      "sha256": "5b67d4669ac7f75547137064c5746ba803877e386f391b976d535a2c63efc760"
+     }
+    },
+    {
+     "date": "",
+     "host": "dataportals.org",
+     "rank": 2,
+     "snippet": "# Open Data for Democratic Republic of Congo\n## Description\nOpen data portal for Democratic Republic of Congo\n- Area covered:\n- Democratic Republic of Congo\n- Publisher:\n- African Development Bank Group\n- URL:\n- https://drcongo.opendataforafrica.org/",
+     "title": "Open Data for Democratic Republic of Congo",
+     "url": "https://dataportals.org/portal/drcongo_opendataforafrica/",
+     "verificacion": {
+      "bytes": 7572,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:57Z",
+      "http": 200,
+      "sha256": "fb4429cd28b208b765c7ef7f414190019e1b2d70d0453018f0da636ba9e6997a"
+     }
+    },
+    {
+     "date": "2025-06-06",
+     "host": "www.imf.org",
+     "rank": 3,
+     "snippet": "June 6, 2025\nWith the successful launch of the new data portal—the National Summary Data Page (NSDP) — the Democratic Republic of Congo has implemented a key recommendation of the IMF’s Enhanced General Data Dissemination System (e-GDDS) to publish essential macroeconomic and financial data.",
+     "title": "Democratic Republic of Congo Implements the Enhanced ...",
+     "url": "https://www.imf.org/en/news/articles/2025/06/06/pr-25185-democratic-republic-of-congo-dem-repub-of-congo-implements-the-e-gdds"
+    },
+    {
+     "date": "",
+     "host": "drcongo.opendataforafrica.org",
+     "rank": 4,
+     "snippet": "### Our Privacy Statement & Cookie Policy\nOur website uses cookies to improve your online experience.",
+     "title": "Democratic Republic of the Congo Data Portal",
+     "url": "https://drcongo.opendataforafrica.org/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:34:49Z",
+ "pais": {
+  "iso2": "CD",
+  "iso3": "COD",
+  "nombre": "Democratic Republic of the Congo"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

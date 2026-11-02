@@ -1,0 +1,775 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "United Arab Emirates constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2026-02-04",
+     "host": "uaelegislation.gov.ae",
+     "rank": 1,
+     "snippet": "## تشريعات الإمارات\n...\n76\nلائحة تنفيذية\n...\nقرار تنظيمي",
+     "title": "تشريعات الإمارات العربية المتحدة",
+     "url": "https://uaelegislation.gov.ae/",
+     "verificacion": {
+      "bytes": 6033,
+      "estado": "http",
+      "fecha": "2026-11-02T06:39:00Z",
+      "http": 403,
+      "sha256": "9821057e7966976390aed14cc88e9248569c883b93b3ec103f07f57008b7117c"
+     }
+    },
+    {
+     "date": "2024-08-01",
+     "host": "mohap.gov.ae",
+     "rank": 2,
+     "snippet": "…\n...\n### خصائص المنصة\nللمزيد من المعلومات، اضغط هنا",
+     "title": "تشريعات الإمارات",
+     "url": "https://mohap.gov.ae/ar/w/uae-legislation",
+     "verificacion": {
+      "error": "robots.txt disallows https://mohap.gov.ae/ar/w/uae-legislation",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:39:38Z"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.uaelegislation.gov.ae",
+     "rank": 3,
+     "snippet": "#### Article (111)\nLaws shall be published in the Official Gazette of the UAE within a maximum of two weeks from the date it is signed and issued by the President of the UAE after it is ratified by the Supreme Council.\n...\n### Part Ten: Final Provisions\n#### Article (152)",
+     "title": "The Constitution of the United Arab Emirates",
+     "url": "https://www.uaelegislation.gov.ae/en/constitution"
+    },
+    {
+     "date": "",
+     "host": "www.moj.gov.ae",
+     "rank": 4,
+     "snippet": "|دستور دولة الإمارات العربية المتحدة 2025|2.0 MB| |\n|تشريعـــات السير والمـــرور 2025|1.1 MB| |\n...\n|تشريعــات مــاليــة 2025|2.2 MB| |",
+     "title": "القوانين والتشريعات | التشريعات | القوانين والتشريعات | وزارة ...",
+     "url": "https://www.moj.gov.ae/ar/laws-and-legislation/legislation/laws-and-legislation.aspx"
+    },
+    {
+     "date": "2021-09-20",
+     "host": "uaelegislation.gov.ae",
+     "rank": 5,
+     "snippet": "Search by legislation number\n...\nFederal Decree-Law on\nCopyright\nand Neighboring Rights\nIssued date : 20 Sep 2021\n...\nfound in the legislation content\n...\nThe Constitution of the United Arab Emirates\nIssued date : 18 Jul 1971\nSector : The Constitution\nfound in the legislation content",
+     "title": "Advanced Search",
+     "url": "https://uaelegislation.gov.ae/en/search"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "United Arab Emirates national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-02-04",
+     "host": "uaelegislation.gov.ae",
+     "rank": 1,
+     "snippet": "تشريعات الإمارات العربية المتحدة\n## تشريعات الإمارات\n...\n## الجريدة الرسمية المحلية",
+     "title": "تشريعات الإمارات العربية المتحدة",
+     "url": "https://uaelegislation.gov.ae/",
+     "verificacion": {
+      "bytes": 6033,
+      "estado": "http",
+      "fecha": "2026-11-02T06:39:38Z",
+      "http": 403,
+      "sha256": "140bfc0b3d67906e4afac64d8495b5ba64104e4ed96c690a2bfd30842cc83473"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "uaelegislation.gov.ae",
+     "rank": 2,
+     "snippet": "United Arab Emirates Legislations | Federal Decree by Law Promulgating the Civil Transactions Law\n...\n## Federal Decree by Law Promulgating the Civil Transactions Law\n...\n#### 14 Oct 2025\n...\n#### Federal Decree by Law No. (25) of 2025 Promulgating the Civil Transactions Law",
+     "title": "Federal Decree by Law Promulgating the Civil Transactions Law",
+     "url": "https://uaelegislation.gov.ae/en/legislations/4011",
+     "verificacion": {
+      "bytes": 6033,
+      "estado": "http",
+      "fecha": "2026-11-02T06:39:39Z",
+      "http": 403,
+      "sha256": "6b9de6e8118a1d1178b860992daf3aad392dd436001fb77b8efdb2fb594a4119"
+     }
+    },
+    {
+     "date": "2024-08-01",
+     "host": "mohap.gov.ae",
+     "rank": 3,
+     "snippet": "### خصائص المنصة\n...\n- تضم المنصة كافة التشريعات الاتحادية ولوائحها التنفيذية والقرارات التنظيمية الأخرى وفق أحدث التعديلات.",
+     "title": "تشريعات الإمارات",
+     "url": "https://mohap.gov.ae/ar/w/uae-legislation"
+    },
+    {
+     "date": "",
+     "host": "www.moet.gov.ae",
+     "rank": 4,
+     "snippet": "# Legislations Regulating the Economic Sector in the UAE\nThis page allows you to view all legislations, laws, decrees, regulations and regulatory resolutions that have been issued to regulate the economic, trade and investment sectors in the UAE.\n...\n#### Contact via WhatsApp\nwww.moet.gov.ae",
+     "title": "Legislations | Ministry of Economy & Tourism - UAE",
+     "url": "https://www.moet.gov.ae/en/web/guest/laws"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "dlp.dubai.gov.ae",
+     "rank": 5,
+     "snippet": "## All Legislations\n- Administrative Resolution No. (96) of 2025 Concerning the Rules Governing Practical Training Programmes for Students of Academic Institutions Based in Free Zones\n...\n…\n### Type\n#### Decree\n### Issuing Authority\n...\n### Official Gazette No\n#### 766\n...\n#### In Force",
+     "title": "Browse Legislation",
+     "url": "https://dlp.dubai.gov.ae/en/Pages/BrowseLegislation.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "United Arab Emirates official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-10-01",
+     "host": "u.ae",
+     "rank": 1,
+     "snippet": "- **The Official Gazette of Abu Dhabi**\n...\n- **The Official Gazette of Dubai**\nGovernment of Dubai issues an Official Gazette through its Supreme Legislation Committee.\nIt contains all legislations including laws, decrees, resolutions, regulations, by-laws, instructions and orders issued by the Gov",
+     "title": "Where to find local laws of the UAE’s emirates? | The ...",
+     "url": "https://u.ae/en/information-and-services/justice-safety-and-the-law/Law/how-are-uae-laws-issued-and-how-to-find-them/where-to-find-local-laws-of-the-uae-emirates",
+     "verificacion": {
+      "bytes": 70741,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:39:42Z",
+      "http": 200,
+      "sha256": "0dba27f60b3eec2cd5639a6f60ebbfc051d68765d9ed705a5da77c9d19766e0d"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "uaelegislation.gov.ae",
+     "rank": 2,
+     "snippet": "#### 17 Jun 2026\nEffective Date\n#### 30 Jun 2026\nOfficial Gazette Date\n#### 29 Jun 2026\nOfficial Gazette No\n#### 826\n...\n#### Cabinet Resolution No. (106) of 2026 Regarding the Regulation of Children's Access to Social Media Platforms",
+     "title": "Cabinet Resolution Regarding the Regulation of Children's ...",
+     "url": "https://uaelegislation.gov.ae/en/legislations/4506",
+     "verificacion": {
+      "bytes": 6033,
+      "estado": "http",
+      "fecha": "2026-11-02T06:39:43Z",
+      "http": 403,
+      "sha256": "1a7168ac6b6f9f9e06f316a9d5b805be81625e0b9903ac8d8338babb1d0a331f"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.abudhabi.gov.ae",
+     "rank": 3,
+     "snippet": "3. This Resolution shall be effective from the date of its issuance and published in the Official Gazette.\n...\nThe Emirate Of Abu Dhabi\nIssued By The Gereral Secretariat of The Executive Council of The Emirate Of Abu Dhabi\nOffice of Legal Affairs \nAbu Dhabi - P.O. Box: 19",
+     "title": "[PDF] The Official Gazette - Abu Dhabi",
+     "url": "https://www.abudhabi.gov.ae/-/media/sites/adgov/gazettes/2023/en/2-nd-edition-english-2023.ashx"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "uaelegislation.gov.ae",
+     "rank": 4,
+     "snippet": "## Federal Decree by Law Regarding Anti-Money Laundering, and Combating the Financing of Terrorism and Proliferation Financing\n...\nIssued Date\n#### 30 Sep 2025\nEffective Date\n...\nOfficial Gazette Date\n#### 30 Sep 2025\nOfficial Gazette No\n#### 808",
+     "title": "Federal Decree by Law Regarding Anti-Money Laundering ...",
+     "url": "https://uaelegislation.gov.ae/en/legislations/3314"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "uaelegislation.gov.ae",
+     "rank": 5,
+     "snippet": "## Federal Decree by Regarding the Capital Market Authority\n...\nEffective Date\n#### 01 Jan 2026\nOfficial Gazette Date\n#### 14 Oct 2025\nOfficial Gazette No\n#### 809\n...\n#### Federal Decree by Law No. (32) of 2025 Regarding the Capital Market Authority",
+     "title": "Federal Decree by Regarding the Capital Market Authority",
+     "url": "https://uaelegislation.gov.ae/en/legislations/4001"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "United Arab Emirates supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.moj.gov.ae",
+     "rank": 1,
+     "snippet": "احدث اجتهادات المحكمة | الخدمات الالكترونية | المحكمة الاتحادية العليا | عن الوزارة | وزارة العدل -الإمارات العربية المتحدة\n...\n# احدث اجتهادات المحكمة\n...\nالبحث في القائمة أدناه.\nResults will be updated automatically when you click the search button or press enter.",
+     "title": "احدث اجتهادات المحكمة | الخدمات الالكترونية - وزارة العدل",
+     "url": "https://www.moj.gov.ae/ar/about-moj/union-supreme-court/e-services/latest-court-interpretations.aspx",
+     "verificacion": {
+      "bytes": 247,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:39:45Z",
+      "http": 200,
+      "sha256": "ce6a7bf291184fc9ea782dc294304250b1b28d21fda84d9a5a6a4ba83582690f"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.adjd.gov.ae",
+     "rank": 2,
+     "snippet": "|رقم القضية|المحكمة|نوع القضية|النوع الفرعي للقضية|تاريخ الحكم|عرض الحكم|\n|--|--|--|--|--|--|\nالتسمية التوضيحية للصورة\n...\n- - #### info@adjd.gov.ae",
+     "title": "نشر الاحكام القضائية",
+     "url": "https://www.adjd.gov.ae/sites/eservices/ar/pages/judgments.aspx",
+     "verificacion": {
+      "bytes": 594250,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:39:49Z",
+      "http": 200,
+      "sha256": "7f1367e088e7ad5dff597bf202b326dc0e51520df9b8bf47456eaf71da0977c2"
+     }
+    },
+    {
+     "date": "2024-12-12",
+     "host": "www.moj.gov.ae",
+     "rank": 3,
+     "snippet": "# Request a copy of the judgment / decisions or orders\nThis service is for submitting a request for a copy of the judgment / decisions or orders.\nTo access the service click here\n## The process\n- Register with UAE PASS\n- Online application\n- Payment of fees\n- judgment / decisions or orders",
+     "title": "Request a copy of the judgment / decisions or orders | Services",
+     "url": "https://www.moj.gov.ae/en/services/services-categories/courts-and-case-management/request-a-copy-of-the-judgment-decisions-or-orders-baa819b.aspx"
+    },
+    {
+     "date": "2025-10-06",
+     "host": "bayanat.ae",
+     "rank": 4,
+     "snippet": "# Cases Presented Before Supreme Federal Court By Type Of Case\n...\nThe dataset illustrates the Cases Presented Before Supreme Federal Court By Type Of Case in the United Arab Emirates for the year of 2004\n...\n###### CASES PRESENTED BEFORE SUPREME FEDERAL COURT BY TYPE OF CASE.xlsx\n...\nDownload\nOpen ",
+     "title": "Dataset Info | The Opendata Portal",
+     "url": "https://bayanat.ae/en/Datasets/Dataset-info?id=iUMRfxNAQxb7KCZ3gmEepMgL3qTBFwOKinnOwsHuqXA"
+    },
+    {
+     "date": "",
+     "host": "www.moj.gov.ae",
+     "rank": 5,
+     "snippet": "المحكمة الاتحادية العليا - السنة 2020 مدني\n...\nالمحكمة الاتحادية العليا - السنة 2021 جزائي\n...\nالمحكمة الاتحادية العليا - السنة 2021 مدني\n...\nالمحكمة الاتحادية العليا - السنة 2022 جزائي",
+     "title": "إصدارات المكتب الفني للمحكمة | الخدمات الالكترونية | المحكمة ...",
+     "url": "https://www.moj.gov.ae/ar/about-moj/union-supreme-court/e-services/court-technical-office-publications.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "United Arab Emirates state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-11-01",
+     "host": "dlp.dubai.gov.ae",
+     "rank": 1,
+     "snippet": "- Resolution No. (15) of 2026 Extending the Deadline for Preparing and Approving the Schedules of Fees, Violations, and Fines Relating to Law No. (5) of 2025 Concerning Public Health in the Emirate of Dubai\n...\n#### H.H. The Ruler",
+     "title": "Legislation Search Engine - dlp.dubai.gov.ae",
+     "url": "https://dlp.dubai.gov.ae/en/Pages/LegislationSearch.aspx",
+     "verificacion": {
+      "bytes": 497283,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:39:54Z",
+      "http": 200,
+      "sha256": "36fd11b0ad74828a77eefc15bea392e278a650d3ae765edce80e25fb76c3444f"
+     }
+    },
+    {
+     "date": "2026-11-02",
+     "host": "dlp.dubai.gov.ae",
+     "rank": 2,
+     "snippet": "The Dubai Legislation Portal is your reliable source for the latest legislation issued in the Emirate of Dubai.\n...\nThe Official Gazette Browser enables users to browse the chronologically-ordered, digitalised copies of all original issues of the Official Gazette of the Government of Dubai from 1961",
+     "title": "Legal knowledge is real power - dlp.dubai.gov.ae",
+     "url": "https://dlp.dubai.gov.ae/en/Pages/Default.aspx",
+     "verificacion": {
+      "bytes": 231589,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:39:56Z",
+      "http": 200,
+      "sha256": "6cddef5ad3d75187c3545da1898cca0060586e3d6a9ff7d21604c36bbba6710f"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "uaelegislation.gov.ae",
+     "rank": 3,
+     "snippet": "United Arab Emirates Legislations | Federal Decree by Law Promulgating the Civil Transactions Law\n...\n## Federal Decree by Law Promulgating the Civil Transactions Law\n...\n#### 809\nLegislation State\n...\n#### Federal Decree by Law No. (25) of 2025 Promulgating the Civil Transactions Law",
+     "title": "Federal Decree by Law Promulgating the Civil Transactions Law",
+     "url": "https://uaelegislation.gov.ae/en/legislations/4011"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "uaelegislation.gov.ae",
+     "rank": 4,
+     "snippet": "United Arab Emirates Legislations | Federal Decree by Regarding the Capital Market Authority\n...\n## Federal Decree by Regarding the Capital Market Authority\n...\n#### 14 Oct 2025\nOfficial Gazette No\n#### 809\n...\n#### Federal Decree by Law No. (32) of 2025 Regarding the Capital Market Authority",
+     "title": "Federal Decree by Regarding the Capital Market Authority",
+     "url": "https://uaelegislation.gov.ae/en/legislations/4001"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "dlp.dubai.gov.ae",
+     "rank": 5,
+     "snippet": "# Legislation\n...\nThe Legislation Search Engine facilitates advanced search within the legislation database, using keyword query, date query, legislation number query, and many other options.\n...\n## Legislation Browser\nThe Legislation Browser gives users the option to access all the Dubai legislatio",
+     "title": "Legislation - dlp.dubai.gov.ae",
+     "url": "https://dlp.dubai.gov.ae/en/Pages/Legislation.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "United Arab Emirates municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2026-10-01",
+     "host": "u.ae",
+     "rank": 1,
+     "snippet": "Find the laws issued by local governments online on the legal portals of the respective emirate and in the local Official Gazette.\n...\nTo find the local laws and decrees which pertain to each emirate, look for the local official gazette of the respective emirate of the UAE.",
+     "title": "Where to find local laws of the UAE’s emirates? | The ...",
+     "url": "https://u.ae/en/information-and-services/justice-safety-and-the-law/Law/how-are-uae-laws-issued-and-how-to-find-them/where-to-find-local-laws-of-the-uae-emirates",
+     "verificacion": {
+      "bytes": 70746,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:39:59Z",
+      "http": 200,
+      "sha256": "1b9292c7996e605a9e6d9db9f02e595703ed48ba58873e67bb8ec6a09282fc60"
+     }
+    },
+    {
+     "date": "2026-11-01",
+     "host": "dlp.dubai.gov.ae",
+     "rank": 2,
+     "snippet": "بوابة دبي التشريعية\n...\nبوابة دبي التشريعية هي مصدرك الموثوق لأحدث التشريعات الصادرة في إمارة دبي.\nالآن أصبح بإمكانك تصفح أعداد الجريدة الرسمية التي صدرت منذ عام 1961 وحتى الآن\n...\n…",
+     "title": "المعرفة القانونية قوة حقيقية",
+     "url": "https://dlp.dubai.gov.ae/ar/Pages/Default.aspx/1000",
+     "verificacion": {
+      "bytes": 1718783,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:40:09Z",
+      "http": 200,
+      "sha256": "b5fb37ee9022c844aba591730388c8b678fe941e9546d0b16cab898478963b76"
+     }
+    },
+    {
+     "date": "2026-11-01",
+     "host": "dlp.dubai.gov.ae",
+     "rank": 3,
+     "snippet": "- Law114\n- Decree80\n- Regulation8\n- Order28\n- Instructions5\n- Bylaw1\n- Explanatory Notes3\n...\n### Status\n...\n- Administrative Resolution No. (112) of 2026 Approving the Safety Guide for Construction Works in the Emirate of Dubai",
+     "title": "Legislation Search Engine - dlp.dubai.gov.ae",
+     "url": "https://dlp.dubai.gov.ae/en/Pages/LegislationSearch.aspx"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "u.ae",
+     "rank": 4,
+     "snippet": "Home | The Official Platform of the UAE Government\n# The United Arab Emirates’ Government Platform\nThe unified channel to transform how you live, work, visit and invest in the UAE\n...\nLaw How are UAE laws issued and how to find them?\n...\nWhere to find local laws of the UAE’s emirates?",
+     "title": "الرئيسية | المنصة الرسمية لحكومة الإمارات العربية المتحدة",
+     "url": "https://u.ae/"
+    },
+    {
+     "date": "",
+     "host": "www.dubai.ae",
+     "rank": 5,
+     "snippet": "## Dubai Legislation Portal\nDubai Legislation Portal is an official and trusted sources of all legislations issued in Dubai since 1961.\nIt covers all types of legislations, which include laws, bylaws, decrees, resolutions, judgements, etc.\n...\n## The UAE Legislation platform",
+     "title": "Legislation Portals and the Official Gazette - dda - Dubai.ae",
+     "url": "https://www.dubai.ae/web/dubai.ae/living/legal-affairs/legislation-portals-and-the-official-gazette"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "United Arab Emirates regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-20",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "…\nThe UAE Data Office, established under a separate law (Federal Decree Law No. 44 of 2021), is the single national data privacy regulator.\n...\n## Financial Sector\n### Capital Markets and Portfolio Investment\n...\nThe CMA (formerly SCA) licenses and regulates investment funds.",
+     "title": "2026 Investment Climate Statements: United Arab Emirates",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/united-arab-emirates",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/united-arab-emirates",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:40:09Z"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "host": "u.ae",
+     "rank": 2,
+     "snippet": "This page lists the general business laws applicable in the UAE and laws that are specific to the industry.\n...\n### Laws as per sector\n...\n- Federal Law by Decree No. 42 of 2023 Concerning Anti-Commercial Fraud\n- Federal Law No. 15 of 2020 on Consumer Protection",
+     "title": "Business regulations | The Official Platform of the UAE ...",
+     "url": "https://u.ae/en/information-and-services/business/Business-laws-and-compliance/business-regulations",
+     "verificacion": {
+      "bytes": 75405,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:40:15Z",
+      "http": 200,
+      "sha256": "02a7ebde928162dd256442b028d6da40ee78aef55db1b07997cf208d915ddc96"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.moet.gov.ae",
+     "rank": 3,
+     "snippet": "This page allows you to view all legislations, laws, decrees, regulations and regulatory resolutions that have been issued to regulate the economic, trade and investment sectors in the UAE.\n...\n…\n##### Commercial Agencies laws\nFederal Law No. (3) of 2022 Regulating Commercial Agencies\n...\n…",
+     "title": "Legislations | Ministry of Economy & Tourism - UAE",
+     "url": "https://www.moet.gov.ae/en/laws"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "u.ae",
+     "rank": 4,
+     "snippet": "Federal Electricity and Water Authority\nAl Mezan Building,Muhaisnah 4 - Dubai\n...\nAl Wezarat street-Department of economic development Main Building\n...\nSecurities and Commodities Authority\nHead Office,Hamdan Street - Al Ghaith Tower-13th Floor-Abu Dhabi\n...\nTelecommunications Regulatory Authority",
+     "title": "Home | The Official Platform of the UAE Government",
+     "url": "https://u.ae/en"
+    },
+    {
+     "date": "2026-02-04",
+     "host": "uaelegislation.gov.ae",
+     "rank": 5,
+     "snippet": "تشريعات الإمارات العربية المتحدة\n## تشريعات الإمارات\n...\n## الجريدة الرسمية المحلية",
+     "title": "تشريعات الإمارات العربية المتحدة",
+     "url": "https://uaelegislation.gov.ae/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "United Arab Emirates national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "legacy.export.gov",
+     "rank": 1,
+     "snippet": "# United Arab Emirates - Trade Standards UAE - Trade Standards\n...\nThe UAE established the Emirates Authority for Standardization and Metrology (ESMA) as its sole national standardization body in 2001 under UAE Law No. 28/2001.\n...\nP.O. Box 2166, Abu Dhabi - UAE",
+     "title": "United Arab Emirates - Trade Standards - export.gov",
+     "url": "https://legacy.export.gov/article?id=United-Arab-Emirates-trade-standards",
+     "verificacion": {
+      "bytes": 210522,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:40:17Z",
+      "http": 200,
+      "sha256": "427371d80d808e075957dc65d26a9a4037b64cb9ec72fa7edbc4742964d3657d"
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "host": "moiat.gov.ae",
+     "rank": 2,
+     "snippet": "This service allows you to apply for the UAE standard specifications and view the latest specifications and requirements.\n...\n1\n- Login or Register to the ministry's digital platform for services\n(moiat.gov.ae)\nApply to obtain the UAE standard specifications\n...\nPay the applicable fees\nDownload the ",
+     "title": "Sell Standardisation Specifications",
+     "url": "https://moiat.gov.ae/en/services/sell-standardisation-specifications",
+     "verificacion": {
+      "bytes": 451148,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:40:22Z",
+      "http": 200,
+      "sha256": "6d1858554c9649f7ebf86f19848ef1bdac3480f8fbdc162f4a2c71430624b82a"
+     }
+    },
+    {
+     "date": "2026-09-24",
+     "host": "tbtcode.iso.org",
+     "rank": 3,
+     "snippet": "## ESMA\n### Emirates Authority for Standardization and Metrology\n### United Arab Emirates\n#### About\n...\nCentral government\n...\nFormulating and issuance of national standards of UAE as well as adopting international standards.\nGranting the Emirates Quality Mark for national and international product",
+     "title": "C784 - United Arab Emirates - ESMA",
+     "url": "https://tbtcode.iso.org/contents/json/183.html"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 4,
+     "snippet": "Organization  \n...\nNFSC  \n...\nHandling of Foods for Special Medical Purposes.”\n...\nWeight and Measures: The UAE.S/GSO ISO 1000:2009 “International System of Units and \nRecommendations for the Use of their Multiples of Certain Other Units” and UAE.S/GSO OIML",
+     "title": "Report Name: Food and Agricultural Import Regulations and ...",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Food%20and%20Agricultural%20Import%20Regulations%20and%20Standards%20Country%20Report_Dubai_United%20Arab%20Emirates_TC2022-0009.pdf"
+    },
+    {
+     "date": "",
+     "host": "extranet.who.int",
+     "rank": 5,
+     "snippet": "The Emirates Authority for Standardization and Metrology (ESMA) is the body responsible for standardization activities in the State.\nIts tasks include preparing UAE technical regulations or standards through specialized technical committees.\n...\nResolution \n...\nUAE.S 5030:2018\n1 \nElectronic Nicotine",
+     "title": "UAE.S 5030 : 2018",
+     "url": "https://extranet.who.int/fctcapps/sites/default/files/2026-06/fctc_annex/ARE-UAE.S%C2%A05030%C2%A0%20_%202018.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "United Arab Emirates mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2026-07-20",
+     "host": "www.dm.gov.ae",
+     "rank": 1,
+     "snippet": "# General Legislations\n|**General Legislations**|**General Legislations**|\n|--|--|\n|1|Federal Law No. (5) of 1979 Concerning Agricultural Quarantine|\n|2|Federal Law No. (6) of 1979 Concerning Veterinary Quarantine|",
+     "title": "General Legislations - Dubai Municipality",
+     "url": "https://www.dm.gov.ae/municipality-business/general-legislations/",
+     "verificacion": {
+      "bytes": 93907,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:40:24Z",
+      "http": 200,
+      "sha256": "a2f3784d158ea04f224f6b24974e4640a9dc5055f2e84271f8c523c9a3dcc6e6"
+     }
+    },
+    {
+     "date": "",
+     "host": "uaelegislation.gov.ae",
+     "rank": 2,
+     "snippet": "Cabinet Resolution No. (28) of 2024 \nApproving Mandatory Technical Rules in the Food and Agriculture and Oil and \nGas Sectors in the United Arab Emirates \n...\nUAE.S GSO 814:2023 \nGround red meat and ground poultry meat \nNew\n...\nNew",
+     "title": "Cabinet Resolution of 2024 Approving Mandatory Technical Rules in the Food and Agriculture and Oil and Gas Sectors in the",
+     "url": "https://uaelegislation.gov.ae/en/legislations/2486/download",
+     "verificacion": {
+      "bytes": 6033,
+      "estado": "http",
+      "fecha": "2026-11-02T06:40:25Z",
+      "http": 403,
+      "sha256": "a1f5b4d5955679b61c6326bc937ccbf182f4f58ac2c38c8127fc2623653f1cb0"
+     }
+    },
+    {
+     "date": "",
+     "host": "uaelegislation.gov.ae",
+     "rank": 3,
+     "snippet": "The Table Attached to Cabinet Resolution No. (13) of 2018 Regarding Mandatory \nStandards for the United Arab Emirates \n...\nUAE.S 5016:2018 \nTechnical \nRequirements for \nLow Small Series\nProduction \nVehicles \n...\n\"eCall\" Emergency",
+     "title": "Cabinet Resolution of 2018 Regarding Mandatory Standards for the United Arab Emirates",
+     "url": "https://uaelegislation.gov.ae/en/legislations/2552/regulations/883/download"
+    },
+    {
+     "date": "2026-10-23",
+     "host": "uaelegislation.gov.ae",
+     "rank": 4,
+     "snippet": "United Arab Emirates Legislations | Cabinet Resolution Approving Technical Regulations in a Number of UAE Sectors\n...\n## Cabinet Resolution Approving Technical Regulations in a Number of UAE Sectors\n...\nEffective Date\n...\n#### Cabinet Resolution No. (22) of 2022 Approving Technical Regulations in a ",
+     "title": "Cabinet Resolution Approving Technical Regulations in a Number ...",
+     "url": "https://uaelegislation.gov.ae/en/legislations/1758"
+    },
+    {
+     "date": "",
+     "host": "uaelegislation.gov.ae",
+     "rank": 5,
+     "snippet": "Danbo Cheese \nNew\n...\nNew \n...\nUAE.S GSO 1785-2:2023 \nLubricating Oils for Internal Combustion \nEngines – Part 2: ACEA European Oil \nSequences for Gasoline Engines and Diesel\nEngines \nNew",
+     "title": "Cabinet Resolution of 2024 Approving Mandatory Technical Rules in the Food and Agriculture and Oil and Gas Sectors in the",
+     "url": "https://uaelegislation.gov.ae/en/legislations/2486/regulations/846/download"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "United Arab Emirates national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2022-12-30",
+     "host": "statad.gov.ae",
+     "rank": 1,
+     "snippet": "Statistics Centre - Abu Dhabi - SCAD\n…\n...\n## عدد سكان إمارة أبوظبي لعام 2024 ينمو 7.5% ليصل إلى 4.14 ملايين نسمة\n...\n- info@scad.gov.ae\n- 800 555\n...\nBox 6036",
+     "title": "تمكين قرارات المستقبل في أبوظبي بالاستناد إلى بيانات ...",
+     "url": "https://statad.gov.ae/ar/home",
+     "verificacion": {
+      "bytes": 511107,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:40:33Z",
+      "http": 200,
+      "sha256": "a82450a7c2d590366bf22aef7523c11fcb670dbe0ab54c693ca3ef4ccbf5e3a0"
+     }
+    },
+    {
+     "date": "",
+     "host": "fcsc.gov.ae",
+     "rank": 2,
+     "snippet": "www.uaestatistics.gov.ae     :املوقع الإلكرتوين\n...\nNational Bureau of Statistics\nTel: +971 2 5592000\nFax: +971 2 5592999\nP.O.Box: 93000\nUnited Arab Of Emirates\nwww.uaestatistics.gov.ae",
+     "title": "إصدار إحصايئ",
+     "url": "https://fcsc.gov.ae/wp-content/uploads/2025/04/%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A8%D8%A7%D9%84%D8%A3%D8%B1%D9%82%D8%A7%D9%85-2012.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://fcsc.gov.ae/wp-content/uploads/2025/04/%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A8%D8%A7%D9%84%D8%A3%D8%B1%D9%82%D8%A7%D9%85-2012.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:40:34Z"
+     }
+    },
+    {
+     "date": "2026-10-31",
+     "host": "statad.gov.ae",
+     "rank": 3,
+     "snippet": "## Asset Publisher\nThis service enables customers to request accurate and reliable statistical data and indicators regarding the following topics:\n...\n- Industry and Business\n- Population and Demography\n...\n## Media Centre\n### Contact Us\n- info@scad.gov.ae\n- 800 555\n...\nBox 6036",
+     "title": "Statistics Centre - Abu Dhabi",
+     "url": "https://statad.gov.ae/"
+    },
+    {
+     "date": "2022-01-01",
+     "host": "uaestat.fcsc.gov.ae",
+     "rank": 4,
+     "snippet": "|DEMOGRAPHY AND SOCIAL|\n...\n|Population|Population Estimates|1970 - 2023|\n...\n|Vitals|Births|1976 - 2022|\n...\n|Fertility|2005 - 2022|\n...\n|Education|General Education|2022 - 2023|",
+     "title": "UAE.Stat",
+     "url": "https://uaestat.fcsc.gov.ae/en"
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 5,
+     "snippet": "# Partners\n### National Statistical Offices\n#### National Statistical Offices Websites:\n- **Turkey **&dash; Turkish Statistical Institute\n- **United Arab Emirates **&dash; Federal Competitiveness & Statistics Authority",
+     "title": "Partners",
+     "url": "https://unstats.un.org/home/nso_sites/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "United Arab Emirates central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "centralbank.ae",
+     "rank": 1,
+     "snippet": ",Main Page,,\"جدول 4 : الميزانية العمومية لمصرف الامارات العربية المتحدة المركزي\nTable 4: Balance Sheet  - Central Bank of the UAE\",,,,,,,,,,,,,الصفحة الرئيسية,\n,,,,,,,,,,,,,,,,,",
+     "title": "www.centralbank.ae",
+     "url": "https://centralbank.ae/media/hhmdmafj/statistical-bulletin-may-2026.xlsx",
+     "verificacion": {
+      "bytes": 1663495,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:40:37Z",
+      "http": 200,
+      "sha256": "ae7aa340e10c3d3fecdbd3f882fefdc03ed47326b86840414159a8f764451cc4"
+     }
+    },
+    {
+     "date": "",
+     "host": "centralbank.ae",
+     "rank": 2,
+     "snippet": "1 \n...\nQuarterly \nEconomic \nReview \nw w w . c e n t r a l b a n k . a e\n...\nFigure 2.2 Consolidated Fiscal Balance (% of GDP) \n...\n                                                                                                                                                                         ",
+     "title": "Quarterly Economic Review - centralbank.ae",
+     "url": "https://centralbank.ae/media/nryh021m/qer-june-2025.pdf",
+     "verificacion": {
+      "bytes": 1486731,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:40:40Z",
+      "http": 200,
+      "sha256": "539fe726cebb03766de55ae3c6c8471c328c0f851209debdd2419024e4eea10d"
+     }
+    },
+    {
+     "date": "",
+     "host": "centralbank.ae",
+     "rank": 3,
+     "snippet": "22396 MARKZI EM\n...\nWebsite:  www.centralbank.ae\nResearch & Statistics Department\nP. O Box 645 - Sharjah - Tel: 06-5592592 - Fax: 06-5595300\nE-mail: rsdbuae@emirates.net.ae",
+     "title": "Central Bank Annual Report 2012",
+     "url": "https://centralbank.ae/media/k2knanz4/cbuae-annual-report-2012-en.pdf"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "centralbank.ae",
+     "rank": 4,
+     "snippet": "## Financial and Monetary Statistics\n#### Economic Indicators - August 2026\n## Media Centre\n- ##### News\n- ##### Publications\n- ##### Statistics\n- ##### Monetary\n...\n### Quarterly Economic Review - December 2025\n23 December 2025\nDownload\n- Quarterly Economic Review - December 2025",
+     "title": "CBUAE | Central Bank of the UAE",
+     "url": "https://centralbank.ae/en/"
+    },
+    {
+     "date": "",
+     "host": "centralbank.ae",
+     "rank": 5,
+     "snippet": "22396 MARKZI EM\n...\nWebsite:  www.centralbank.ae\nResearch & Statistics Department\nP. O Box 645 - Sharjah - Tel: 06-5592592 - Fax: 06-5595300\nE-mail: rsdbuae@emirates.net.ae",
+     "title": "cbuae-annual-report-2013-en.pdf",
+     "url": "https://centralbank.ae/media/cz1laszo/cbuae-annual-report-2013-en.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "United Arab Emirates government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bayanat.ae",
+     "rank": 1,
+     "snippet": "Home | The Opendata Portal\n# The uae Open Data Portal\nWelcome to the UAE Government’s official open data portal.\nHere you’ll find government data shared as part of our commitment to transparency and public participation.\nThe data is available for public use\nFood Security",
+     "title": "Home | The Opendata Portal - Bayanat",
+     "url": "https://bayanat.ae/en",
+     "verificacion": {
+      "bytes": 479350,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:40:55Z",
+      "http": 200,
+      "sha256": "cc5b463edb802566b23a7b17275bea97cefea9f6d918fcf630c251e961de4244"
+     }
+    },
+    {
+     "date": "",
+     "host": "u.ae",
+     "rank": 2,
+     "snippet": "Data | The Official Platform of the UAE Government\n## Data\nThe UAE Government has launched policies, strategies and laws to promote the use of open data.\nIt also organises the annual hackathon to encourage the use of data in designing solutions.\n...\n###### Data Index\n...\n###### Open government data",
+     "title": "Data | The Official Platform of the UAE Government",
+     "url": "https://u.ae/en/about-the-uae/digital-uae/data",
+     "verificacion": {
+      "bytes": 58804,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:40:57Z",
+      "http": 200,
+      "sha256": "07ed9f91ce3f4019248ba7f2cf21831042f5db51184feb9122c342dd20f7dc31"
+     }
+    },
+    {
+     "date": "2026-11-02",
+     "host": "www.moet.gov.ae",
+     "rank": 3,
+     "snippet": "# Access a repository of open data from the Ministry of Economy\nThe open data platform of the Ministry of Economy provides easy access to various resources such as statistics, reports and analyses, through interactive dashboards and display maps which support browser requirements, and available sear",
+     "title": "MoEc Open Data | Ministry of Economy & Tourism - UAE",
+     "url": "https://www.moet.gov.ae/en/web/guest/moec-opendata?delta=40"
+    },
+    {
+     "date": "2026-10-08",
+     "host": "u.ae",
+     "rank": 4,
+     "snippet": "…\n### Open government data\n9. launched the UAE's data portal - Bayanat to make data open for public use\n...\nFederal Competitiveness and Statistics Centre is the UAE government source for national statistics in all sectors.\n...\n…\nThe UAE has two data portals: UAE Numbers and Bayanat.",
+     "title": "Open government data | The Official Platform of the UAE Government",
+     "url": "https://u.ae/en/about-the-uae/digital-uae/data/Open-government-data"
+    },
+    {
+     "date": "",
+     "host": "bayanat.ae",
+     "rank": 5,
+     "snippet": "### Who We Are\nThe official open data portal for the United Arab Emirates.\nIt offers data in machine-readable formats that cover a variety of priority sectors in the UAE.\nAdditionally, the data on Bayanat.ae is freely available for anyone to use, reuse, distribute, or share with others without restr",
+     "title": "About Bayanat.ae | The Opendata Portal",
+     "url": "https://bayanat.ae/en/about"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:28:58Z",
+ "pais": {
+  "iso2": "AE",
+  "iso3": "ARE",
+  "nombre": "United Arab Emirates"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

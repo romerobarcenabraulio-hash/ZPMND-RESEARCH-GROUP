@@ -1,0 +1,605 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Fiji constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "laws.gov.fj",
+     "rank": 1,
+     "snippet": "|<table><tr><td> Welcome to the Laws of Fiji\n...\nRead more\n...\nPublication of Service 22\nRead more\nIntroducing PageCHECK\nPageCHECK service available for the Laws of Fiji\nRead more\nBills of Parliament\nBills of Parliament are available on the Parliament of the Republic of Fiji website",
+     "title": "Disclaimer",
+     "url": "https://laws.gov.fj/"
+    },
+    {
+     "date": "",
+     "host": "www.fiji.gov.fj",
+     "rank": 2,
+     "snippet": "# Fijian Constitution\n...\n| |2013 Constitution of The Republic of Fiji - English|Click to Read|\n| |2013 Constitution of The Republic of Fiji - Hindi|Click to Read|\n| |2013 Constitution of The Republic of Fiji - i-Taukei|Click to Read|",
+     "title": "Fijian Constitution | Fiji Government",
+     "url": "https://www.fiji.gov.fj/fijian-constitution/"
+    },
+    {
+     "date": "2004-01-01",
+     "host": "www.laws.gov.fj",
+     "rank": 3,
+     "snippet": "The Laws of Fiji\n...\nThe Fijian Constitution\nConsolidated Laws\nLaws as Published\n...\nThe Laws of Fiji\nPUBLIC HEALTH (NATIONAL BUILDING CODE) REGULATIONS 2004\nTable of Amendments\n...\n[PHA 29,040] reg 3 National Building Code",
+     "title": "PUBLIC HEALTH (NATIONAL BUILDING CODE) REGULATIONS 2004",
+     "url": "https://www.laws.gov.fj/Acts/DisplayAct/3108"
+    },
+    {
+     "date": "",
+     "host": "www.justice.gov.fj",
+     "rank": 4,
+     "snippet": "OF \nTHE REPUBLIC OF FIJI\nCONSTITUTION\nOF\nTHE REPUBLIC OF FIJI",
+     "title": "CONSTITUTION OF THE REPUBLIC OF FIJI - justice.gov.fj",
+     "url": "https://www.justice.gov.fj/wp-content/uploads/2026/07/Get.pdf"
+    },
+    {
+     "date": "2019-06-06",
+     "host": "www.parliament.gov.fj",
+     "rank": 5,
+     "snippet": "For more information contact research@parliament.gov.fj\n...\nAct No. 28 of 2020 – Business Licensing (Repeal) Act 2020\n...\nAct No. 30 of 2020 – Public Health (Amendment) (No.2) Act 2020",
+     "title": "Acts",
+     "url": "https://www.parliament.gov.fj/acts/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Fiji national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "laws.gov.fj",
+     "rank": 1,
+     "snippet": "|<table><tr><td> Welcome to the Laws of Fiji\n...\nRead more\n...\nPublication of Service 22\nRead more\nIntroducing PageCHECK\nPageCHECK service available for the Laws of Fiji\nRead more\nBills of Parliament\nBills of Parliament are available on the Parliament of the Republic of Fiji website",
+     "title": "Disclaimer",
+     "url": "https://laws.gov.fj/"
+    },
+    {
+     "date": "2025-04-01",
+     "host": "www.fiji.gov.fj",
+     "rank": 2,
+     "snippet": "**2.\n...\nCabinet endorsed the Fisheries (Tavarua Island Marine Reserve) Regulations 2025.\n...\nCabinet approved the voluntary adoption of Fiji Wind Loads Standards (FS 1170.2 – Structural Design Actions Part 2: Wind Actions and FS 4055 – Wind loads for housing).",
+     "title": "DECISIONS MADE AT THE 5TH CABINET MEETING HELD ON ...",
+     "url": "https://www.fiji.gov.fj/decisions-made-at-the-5th-cabinet-meeting-held-on-april-01-2025/"
+    },
+    {
+     "date": "",
+     "host": "www.laws.gov.fj",
+     "rank": 3,
+     "snippet": "…\n...\n…",
+     "title": "toc_lawsaspublished",
+     "url": "https://www.laws.gov.fj/api/toc_lawsaspublished"
+    },
+    {
+     "date": "2019-06-06",
+     "host": "www.parliament.gov.fj",
+     "rank": 4,
+     "snippet": "Acts – Parliament of the Republic of Fiji\n...\n|27/04/2017|**View Order Paper**| |\n- |Rules of the House|Date of Publication|",
+     "title": "Acts",
+     "url": "https://www.parliament.gov.fj/acts/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Fiji official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.fiji.gov.fj",
+     "rank": 1,
+     "snippet": "TUESDAY, 24th APRIL 2018 \n     No. 40 \nPUBLISHED BY AUTHORITY OF THE FIJI  GOVERNMENT\nGOVERNMENT OF FIJI GAZETTE\nEXTRAORDINARY\nEXTRAORDINARY\n[620]",
+     "title": "[PDF] GOVERNMENT OF FIJI GAZETTE",
+     "url": "https://www.fiji.gov.fj/getattachment/147993d6-165b-468c-b69d-cf5e426ac718/Gazette-Notice-(Act-7-of-2018).aspx"
+    },
+    {
+     "date": "",
+     "host": "www.parliament.gov.fj",
+     "rank": 2,
+     "snippet": "Vol. 27 \n                  TUESDAY, 17th MARCH 2026\nNo. 19\nPUBLISHED BY AUTHORITY OF THE FIJI  GOVERNMENT\nGOVERNMENT OF FIJI GAZETTE\nEXTRAORDINARY\n...\nOfficial Printer Since 2022",
+     "title": "543",
+     "url": "https://www.parliament.gov.fj/wp-content/uploads/2026/03/GN-19-Acts-passed-by-Parliament-Nos.-1-3-1.pdf"
+    },
+    {
+     "date": "2019-06-06",
+     "host": "www.parliament.gov.fj",
+     "rank": 3,
+     "snippet": "Gazette – Parliament of the Republic of Fiji\n...\n# Gazette\n9 October 2026 – GN 95 – Declaration of Public Holidays for 2026\n...\nParliament of the Republic of Fiji P.O. Box 2352, Government Building, Suva.",
+     "title": "Gazette – Parliament of the Republic of Fiji - Suva",
+     "url": "https://www.parliament.gov.fj/gazette/"
+    },
+    {
+     "date": "",
+     "host": "www.parliament.gov.fj",
+     "rank": 4,
+     "snippet": "(12/2026)\nVol. 27 \n                 WEDNESDAY, 27th MAY 2026 \n               No. 43\nPUBLISHED BY AUTHORITY OF THE FIJI GOVERNMENT\nGOVERNMENT OF FIJI GAZETTE\nEXTRAORDINARY",
+     "title": "[PDF] GOVERNMENT OF FIJI GAZETTE - Fiji Parliament",
+     "url": "https://www.parliament.gov.fj/wp-content/uploads/2026/05/GN-43-Bill-to-be-presented-in-Parliament-No.-12-.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.parliament.gov.fj",
+     "rank": 5,
+     "snippet": "(5/2026)\nVol. 27\nTUESDAY, 28th APRIL 2026 \n               No. 29\nPUBLISHED BY AUTHORITY OF THE FIJI GOVERNMENT\nGOVERNMENT OF FIJI GAZETTE\nEXTRAORDINARY",
+     "title": "841",
+     "url": "https://www.parliament.gov.fj/wp-content/uploads/2026/04/GN-29-Bill-to-be-presented-in-Parliament-No.-5-.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Fiji supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "judiciary.gov.fj",
+     "rank": 1,
+     "snippet": "Supreme Court - judiciary.gov.fj - Page 10\n# Archive\n04 September\n0 Comments\nSticky\n# 30.08.2024_SC_Civ_CBV0018_2023_Aiyub v Khairati_Judgment_Young, J",
+     "title": "30.08.2024_SC_Civ_CBV0018_2023_Aiyub v Khairati_Judgment_Young, J",
+     "url": "https://judiciary.gov.fj/courts_tribunals/supreme-court/page/10/"
+    },
+    {
+     "date": "",
+     "host": "judiciary.gov.fj",
+     "rank": 2,
+     "snippet": "Supreme Court - judiciary.gov.fj - Page 17\n# Archive\n06 July\n...\n# 29.6.23_Crim_CAV 5.2020_Eseroma Vakacegu v The State_Judgment",
+     "title": "29.6.23_Crim_CAV 5.2020_Eseroma Vakacegu v The State_Judgment",
+     "url": "https://judiciary.gov.fj/courts_tribunals/supreme-court/page/17/"
+    },
+    {
+     "date": "",
+     "host": "judiciary.gov.fj",
+     "rank": 3,
+     "snippet": "Supreme Court - judiciary.gov.fj - Page 6\n# Archive\n13 May\n...\n# 30.10.24 – SC Crim – CAV 0027.2023 Lemeki Tauvoli v The State – Judgment",
+     "title": "29.04.2025_SC_Crim_CAV0045_2023_CAV0003_2024_Toka & Domoni v State_Judgment_Gates, J",
+     "url": "https://judiciary.gov.fj/courts_tribunals/supreme-court/page/6/"
+    },
+    {
+     "date": "",
+     "host": "judiciary.gov.fj",
+     "rank": 4,
+     "snippet": "Supreme Court - judiciary.gov.fj - Page 15\n...\n# Supreme Court 10 05 2023_Daily\n...\n# 31.08.23 – SC Civil – CBV0005.2019 – Dawai v iTLTB – Judgment",
+     "title": "Supreme Court 10 05 2023_Daily",
+     "url": "https://judiciary.gov.fj/courts_tribunals/supreme-court/page/15/"
+    },
+    {
+     "date": "",
+     "host": "judiciary.gov.fj",
+     "rank": 5,
+     "snippet": "Supreme Court - judiciary.gov.fj - Page 16\n…\n...\nPosted by Aradhna Chandra\n...\n# 30.08.23 – SC Crim – CAV0012.2021 – Ilaitia Nalawa v The State – Judgment",
+     "title": "30.08.23_CAV 8.2021_Criminal_Lal v The State_Judgment",
+     "url": "https://judiciary.gov.fj/courts_tribunals/supreme-court/page/16/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Fiji state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "laws.gov.fj",
+     "rank": 1,
+     "snippet": "|<table><tr><td> Welcome to the Laws of Fiji\n...\nRead more\nPublication of Service 22\n...\nRead more\nIntroducing PageCHECK\nPageCHECK service available for the Laws of Fiji\nRead more\nBills of Parliament\nBills of Parliament are available on the Parliament of the Republic of Fiji website",
+     "title": "Disclaimer",
+     "url": "https://laws.gov.fj/"
+    },
+    {
+     "date": "2026-03-18",
+     "host": "parliament.gov.fj",
+     "rank": 2,
+     "snippet": "Bill No. 7 of 2017 – Electricity Bill 2017\n...\nThis collection of statistical resources on gender in Fiji has been curated by the Research and Library Services of the Fiji Parliament.\n...\nFor more information contact research@parliament.gov.fj",
+     "title": "Acts - Parliament of the Republic of Fiji",
+     "url": "https://parliament.gov.fj/acts/"
+    },
+    {
+     "date": "2026-03-05",
+     "host": "www.rbf.gov.fj",
+     "rank": 3,
+     "snippet": "Legislation Archives - Reserve Bank of Fiji\n...\nTo Download the NATIONAL PAYMENT SYSTEM ACT 2021 (ACT NO.\n4 OF 2021) – Please Click Here To Download the National Payment System Regulations 2022 – […]\n...\n## Companies Act (2015)\nMarch 22, 2020",
+     "title": "Our Legislation",
+     "url": "https://www.rbf.gov.fj/category/legislation/"
+    },
+    {
+     "date": "",
+     "host": "www.parliament.gov.fj",
+     "rank": 4,
+     "snippet": "Republic of Fiji on 6 November 2025\n18 February 2026 – commencement date of the Fisheries (Amendment) Act 2025\n(LN 25 of 2026)\n33 of 2025\n25\n...\n• \n...\nRepublic of Fiji on 4 December 2025",
+     "title": "ACTS",
+     "url": "https://www.parliament.gov.fj/wp-content/uploads/2026/05/1Acts.pdf"
+    },
+    {
+     "date": "2026-01-27",
+     "host": "ag.gov.fj",
+     "rank": 5,
+     "snippet": "# Law Revision\nThe Laws of Fiji website was officially launched by the Hon.\nChief Justice on Friday, 29 March 2019 and the office’s considerable effort in relation to the revision and consolidation of the laws of Fiji since 2015 and it is an important achievement for the Office and for Fiji.",
+     "title": "Law Revision - OFFICE OF THE ATTORNEY – GENERAL",
+     "url": "https://ag.gov.fj/law-revision/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Fiji municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.laws.gov.fj",
+     "rank": 1,
+     "snippet": "The Laws of Fiji\nLEVUKA TOWN BY-LAWS 1966\nTable of Amendments\nPART 1 PRELIMINARY [by-laws 1, 2]\n[LG 77,990] by-law 1 Short title\n...\n[Schedules]",
+     "title": "LEVUKA TOWN BY-LAWS 1966 - Laws of Fiji",
+     "url": "https://www.laws.gov.fj/Acts/DisplayAct/165"
+    },
+    {
+     "date": "2025-06-04",
+     "host": "www.mlg.gov.fj",
+     "rank": 2,
+     "snippet": "There is no reference to local government in the Constitution and the main governing legislation is the Local Government Act 1972.\nThe Ministry for Local Government oversees the 13 municipal councils (two city councils and 11 town councils).",
+     "title": "Ministry Of Local Government",
+     "url": "https://www.mlg.gov.fj/"
+    },
+    {
+     "date": "",
+     "host": "laws.gov.fj",
+     "rank": 3,
+     "snippet": "We are realising that mandate by putting the laws of the nation at the fingertips of every Fijian in an intuitive and user-friendly online platform that is completely free to access.</td></tr></table>|<table><tr><td> Welcome to the Laws of Fiji",
+     "title": "Disclaimer",
+     "url": "https://laws.gov.fj/"
+    },
+    {
+     "date": "2026-10-05",
+     "host": "www.fiji.gov.fj",
+     "rank": 4,
+     "snippet": "Ron HomePage | Fiji Government\n##### A Fiji Government Website. How to identify ?\n## Welcome to Fiji Government Website\n...\n### More\n#### Fiji Laws\nGood rules keep us safe\n#### Directory",
+     "title": "Ron HomePage | Fiji Government",
+     "url": "https://www.fiji.gov.fj/ron-homepage/"
+    },
+    {
+     "date": "2024-02-20",
+     "host": "www.businessnow.gov.fj",
+     "rank": 5,
+     "snippet": "A Fiji Government Website.\n...\nGovernment agencies communicate via .gov.fj websites (e.g mcttt.gov.fj)",
+     "title": "Application For Amendment To Scheme Or Rezoning",
+     "url": "https://www.businessnow.gov.fj/amendment-to-scheme-or-rezoning/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Fiji regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-16",
+     "host": "www.rbf.gov.fj",
+     "rank": 1,
+     "snippet": "- Financial Sector Development Policy Statement No. 2 FinTech Regulatory Sandbox Guideline.\n...\nThis Policy sets out the Reserve Bank of Fiji’s (RBF) minimum requirements for the provision of disaggregated data on financial inclusion by Financial Service Providers (FSPs) licensed and supervised by R",
+     "title": "Financial Sector Development Policies",
+     "url": "https://www.rbf.gov.fj/core-functions/financial-system-development/financial-sector-development-policies/"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.state.gov",
+     "rank": 2,
+     "snippet": "- lack of technical capacity,\n...\n- slow decision-making.\n...\nFiji has a regulatory framework in place to encourage and facilitate portfolio investment.\nThe Reserve Bank of Fiji (RBF) regulates and supervises the capital market and oversees the financial system and works to ensure stability and comp",
+     "title": "2025 Investment Climate Statements: Fiji",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/fiji"
+    },
+    {
+     "date": "2026-09-22",
+     "host": "www.rbf.gov.fj",
+     "rank": 3,
+     "snippet": "As part of its regulatory responsibilities, the Reserve Bank of Fiji acts as gate-keepers for the respective sectors it supervises.\nInterested entities who would like to pursue the undertaking of these regulated activities would need to be licensed and/or registered by the Reserve Bank.\n...\n1. Small",
+     "title": "Licensing",
+     "url": "https://www.rbf.gov.fj/core-functions/financial-stability/licensing/"
+    },
+    {
+     "date": "2021-12-08",
+     "host": "www.rbf.gov.fj",
+     "rank": 4,
+     "snippet": "The RBF derives its regulatory and supervisory powers from the Companies Act 2015, RBF (Amendment) Decree 2009, and Interpretation Act (s19) as well as, the RBF (Capital Markets and Securities Industry) Regulations 2015.\n...\n- Companies Regulations 2015",
+     "title": "Regulatory Framework",
+     "url": "https://www.rbf.gov.fj/core-functions/financial-system-development/regulatory-framework-2/"
+    },
+    {
+     "date": "",
+     "host": "documents1.worldbank.org",
+     "rank": 5,
+     "snippet": "Banks are regulated and supervised by the RBF under the Reserve Bank of Fiji\nAct of 1985 and the Banking Act of 1995.\n...\nDescription and analysis\n...\nand prosecution of ML and TF cases the Office of the DPP, the FPF, and the FIRCA.\nThe Transnational Crime",
+     "title": "791970WP0Fiji00Box0377369B00Public0.txt",
+     "url": "https://documents1.worldbank.org/curated/en/445081468249704881/txt/791970WP0Fiji00Box0377369B00Public0.txt"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Fiji national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "pasc.standards.org.au",
+     "rank": 1,
+     "snippet": "FJS 1376: 1998\nConversion factors\nFJS 1170.1: 1998\nMinimum design loads on structures - Dead and live loads and load combinations\n...\nMinimum design loads on structures - Wind loads\n...\nDesign for access and mobility - General requirements for access - New building work",
+     "title": "Standards List - Fiji Standards",
+     "url": "https://pasc.standards.org.au/standards-list"
+    },
+    {
+     "date": "",
+     "host": "www.fijitradeportal.gov.fj",
+     "rank": 2,
+     "snippet": "# Standards\nHere, users can easily access and explore the list of Mandatory Standards issued by the Department of National Trade Measurement and Standards.\n...\nUse the search function to find relevant standards by product type, category, or keyword, and stay informed about the compliance requirement",
+     "title": "Standard - Fiji Trade Portal",
+     "url": "https://www.fijitradeportal.gov.fj/en-gb/search-measure/index-standard"
+    },
+    {
+     "date": "",
+     "host": "www.businessnow.gov.fj",
+     "rank": 3,
+     "snippet": "Building Standards \n...\nFJS AS 1170.1: 1998 Minimum design loads on structures (known as the SAA \nLoading Code) – Deads and live loads and load combinations  \nFJS AS 1170.2 :1998 Minimum design loads on structures -Wind loads",
+     "title": "List of Fijian Building Standards",
+     "url": "https://www.businessnow.gov.fj/wp-content/uploads/2024/02/List-of-Fijian-Building-Standards_22-05-19.pdf"
+    },
+    {
+     "date": "",
+     "host": "pasc.standards.org.au",
+     "rank": 4,
+     "snippet": "FJS 2210.2: 2003\nOccupational protective footwear - Requirements and test methods\nRead more\nFJS 2210.3: 2003\nOccupational protective footwear - Specification for safety footwear\nRead more\n...\nTelecommunications installations - Administration of communications cabling systems - Basic requirements",
+     "title": "Standards List - Fiji Standards - Standards Australia",
+     "url": "https://pasc.standards.org.au/standards-list?17c64332_page=3"
+    },
+    {
+     "date": "",
+     "host": "www.theprif.org",
+     "rank": 5,
+     "snippet": "FJS 1170.1: 1998 Minimum design loads on structures - Dead and live loads and load combinations\n...\nFJS 1170.2: 1998 Minimum design loads on structures - Wind loads\nRequest Gov, \n...\nRefrigerating appliances - Part 1: Energy consumption and performance",
+     "title": "PRIF Building Code Bibliography 20220930.pdf",
+     "url": "https://www.theprif.org/sites/theprif.org/files/documents/PRIF%20Building%20Code%20Bibliography%2020220930.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Fiji mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.fijitradeportal.gov.fj",
+     "rank": 1,
+     "snippet": "# Standards\n|#|Name|Enforced By|Type|Activity|Created On|Validity From|Validity To|\n|--|--|--|--|--|--|--|--|\n...\n…",
+     "title": "Standard - Fiji Trade Portal",
+     "url": "https://www.fijitradeportal.gov.fj/en-gb/search-measure/index-standard"
+    },
+    {
+     "date": "2019-05-08",
+     "host": "www.stopfakes.gov",
+     "rank": 2,
+     "snippet": "There are 12 mandatory standards (technical regulations) and 75 voluntary standards in place, covering areas such as building and building material, telecommunication cabling, occupational health and safety, and electrical installation.\n...\nAll technical regulations are published in the Fiji Islands",
+     "title": "Fiji - Standards for TradeFiji - Trade Standards",
+     "url": "https://www.stopfakes.gov/article?id=Fiji-standards-for-trade"
+    },
+    {
+     "date": "",
+     "host": "laws.gov.fj",
+     "rank": 3,
+     "snippet": "TRADE STANDARDS (HOUSEHOLD ELECTRIC REFRIGERATING APPLIANCES) ORDER 2007\nTable of Amendments\n...\n[TSQ 13,035] O 7 Registration\n[TSQ 13,040] O 8 Labelling and standards guidelines",
+     "title": "TRADE STANDARDS (HOUSEHOLD ELECTRIC ...",
+     "url": "https://laws.gov.fj/Acts/DisplayAct/3157"
+    },
+    {
+     "date": "",
+     "host": "www.businessnow.gov.fj",
+     "rank": 4,
+     "snippet": "No \n...\nMandatory Fijian Standard \n1.  Steel Coils \nFS 1562.1:998 – Design and Installation of Sheet Roof Cladding \n...\nFJS AS/NZS 1562.3 :1998 - Design and installation of sheet roof and wall cladding -Plastic",
+     "title": "List of Fijian Building Standards",
+     "url": "https://www.businessnow.gov.fj/wp-content/uploads/2024/02/List-of-Fijian-Building-Standards_22-05-19.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.export-u.com",
+     "rank": 5,
+     "snippet": "Standards \nThere are 12 mandatory standards (technical regulations) and 75 voluntary standards in place, covering areas such as building and building material, telecommunication cabling, occupational health and safety, and electrical\n…\nPublication of Technical Regulations \nAll technical regulations ",
+     "title": "Fiji 2017 Country Commercial Guide",
+     "url": "https://www.export-u.com/CCGs/Fiji%20CCG%202017%20PDF.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Fiji national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-08-18",
+     "host": "www.statsfiji.gov.fj",
+     "rank": 1,
+     "snippet": "Home - Fiji Bureau of Statistics\n...\n# Fiji Statistics at a Glance\n...\n# 2026 Advanced Release Calendar\n### Data Portal Site",
+     "title": "Fiji Bureau of Statistics: Home",
+     "url": "https://www.statsfiji.gov.fj/"
+    },
+    {
+     "date": "",
+     "host": "www.unsiap.or.jp",
+     "rank": 2,
+     "snippet": "Compiled by Fiji Bureau of Statistics\n...\nCompiled Quarterly & Annually\n...\nLatest available publication: June 2018\n-\nAvailable online : www.statsfiji.gov.fj\n...\nVinaka \nWebsite Address: www.statsfiji.gov.fj\nEmail Address: info@statsfiji.gov.fj",
+     "title": "Preliminary national diagnostic for environment statistics - SIAP",
+     "url": "https://www.unsiap.or.jp/sites/default/files/pdf/e-learning_el_material_6_env_disaster_6_1_env_stat_1809_seea_climate_fji_country_presentationcountry_presentation_seea_fiji.pdf"
+    },
+    {
+     "date": "2024-01-04",
+     "host": "link.springer.com",
+     "rank": 3,
+     "snippet": "# Fiji\n## Further Reading\n- *National Statistical Office*: Bureau of Statistics, POB 2221, Government Buildings, Suva.\nGoogle Scholar\n- *Website*: http://www.statsfiji.gov.fj\n…",
+     "title": "Fiji | Springer Nature Link",
+     "url": "https://link.springer.com/rwe/10.1057/978-1-349-96076-7_69"
+    },
+    {
+     "date": "2026-04-14",
+     "host": "www.statsfiji.gov.fj",
+     "rank": 4,
+     "snippet": "# Fiji National Vital Statistics Report 2020-2022\n...\nThe Fiji Vital Statistics Report 2020 – 2022 provides a summary of registered births, deaths, and other vital events in Fiji over the three-year period.",
+     "title": "Fiji National Vital Statistics Report 2020-2022",
+     "url": "https://www.statsfiji.gov.fj/fiji-national-vital-statistics-report-2020-2022/"
+    },
+    {
+     "date": "2026-02-26",
+     "host": "www.statsfiji.gov.fj",
+     "rank": 5,
+     "snippet": "Key Statistics - Fiji Bureau of Statistics\n...\n# Key Statistics\n# Key Statistics\nThis section gives you access to all the Key Statistics published on this website.\n- Key Statistics",
+     "title": "Key Statistics - Fiji Bureau of Statistics - statsfiji.gov.fj",
+     "url": "https://www.statsfiji.gov.fj/key-statistics-2/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Fiji central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2020-09-22",
+     "host": "www.rbf.gov.fj",
+     "rank": 1,
+     "snippet": "Statistics - Reserve Bank of Fiji\n...\n- RBF provides essential macroeconomic data to policy makers, a broad range of domestic and international stakeholders, including investors, rating agencies and the public enabling easy access to information that RBF has identified as critical for monitoring eco",
+     "title": "Statistics - Reserve Bank of Fiji",
+     "url": "https://www.rbf.gov.fj/statistics/"
+    },
+    {
+     "date": "2025-04-01",
+     "host": "www.rbf.gov.fj",
+     "rank": 2,
+     "snippet": "Data & Statistics - Reserve Bank of Fiji\n...\n- ## Statistics\n...\nThe Reserve Bank of Fiji (RBF) collects a wide range of data to inform its policy development.\n...\nOn this page, you will find some of the data we have published and references to useful external resources:\n...\n#### Demand Side Financi",
+     "title": "Data & Statistics",
+     "url": "https://www.rbf.gov.fj/core-functions/financial-system-development/data-statistics-2/"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.rbf.gov.fj",
+     "rank": 3,
+     "snippet": "- ## Statistics\nRBF provides essential macroeconomic data to policy makers, a broad range of domestic and international stakeholders, including investors, rating agencies and the public enabling easy access to information that RBF has identified as critical for monitoring economic conditions and pol",
+     "title": "Economic and Financial Statistics",
+     "url": "https://www.rbf.gov.fj/statistics/economic-and-financial-statistics/"
+    },
+    {
+     "date": "",
+     "host": "www.parliament.gov.fj",
+     "rank": 4,
+     "snippet": "Private Mail Bag, Suva, Fiji               Tel: (679) 331 3611             Fax: (679) 330 4363             Email: info@rbf.gov.fj            Website: www.rbf.gov.fj  \nLETTER TO THE MINISTER\n...\nPostal:\n...\nWebsite:",
+     "title": "ANNUAL REPORT",
+     "url": "https://www.parliament.gov.fj/wp-content/uploads/2024/12/Reserve-Bank-of-Fiji-Annual-Report-August-2023%E2%80%93July-2024.pdf"
+    },
+    {
+     "date": "2026-10-04",
+     "host": "www.rbf.gov.fj",
+     "rank": 5,
+     "snippet": "- ## Media\n...\n- RBF provides essential macroeconomic data to policy makers, a broad range of domestic and international stakeholders, including investors, rating agencies and the public enabling easy access to information that RBF has identified as critical for monitoring economic conditions and po",
+     "title": "Charts on the Fiji Economy as at September 2026 - Reserve Bank of Fiji",
+     "url": "https://www.rbf.gov.fj/charts-on-the-fiji-economy-as-at-september-2026/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Fiji government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 1,
+     "snippet": "# Fiji National Data Portal\nNational data portal of the Fiji Bureau of Statistics providing access to official statistics, indicators, and datasets.\nThe portal covers balance of payments, national accounts and prices, tourism, migration, and poverty indicators.\n...\n### General\n|Link|https://data.sta",
+     "title": "Fiji National Data Portal - Dateno",
+     "url": "https://dateno.io/registry/catalog/cdi00013510/"
+    },
+    {
+     "date": "2026-09-11",
+     "host": "www.rbf.gov.fj",
+     "rank": 2,
+     "snippet": "National Summary Data Page - Reserve Bank of Fiji\n...\n# e-GDDS\n## National Summary Data Page (NSDP) – Fiji\nData linked from this page correspond to data described in the International Monetary Fund’s DSBB.\n...\nMacroeconomic and Financial Data for Fiji\n| | | | |",
+     "title": "National Summary Data Page",
+     "url": "https://www.rbf.gov.fj/statistics/nsdp/"
+    },
+    {
+     "date": "",
+     "host": "www.sdmx2025.org",
+     "rank": 3,
+     "snippet": "FIJI EXPERIENCE\n✓Fiji now has a fully functioning SDMX-\nbased national data portal.\n...\nFiji SDMX-based  Data Portal .Stat Data Explorer \nhttps://data.statsfiji.gov.fj/\nFIJI EXPERIENCE",
+     "title": "[PDF] The Samoa and Fiji Data Portals Initiative",
+     "url": "https://www.sdmx2025.org/plenary/SESSION_4/Session%204_P1%20-%20Empowering%20Pacific%20National%20Statistics%20through%20SDMX%20-%20The%20Samoa%20and%20Fiji%20Data%20Portals%20Initiative%20(D.%20Grofils).pdf"
+    },
+    {
+     "date": "2026-08-18",
+     "host": "www.statsfiji.gov.fj",
+     "rank": 4,
+     "snippet": "Home - Fiji Bureau of Statistics\n...\n# Fiji Statistics at a Glance\n...\n# 2026 Advanced Release Calendar\n### Data Portal Site",
+     "title": "Fiji Bureau of Statistics: Home",
+     "url": "https://www.statsfiji.gov.fj/"
+    },
+    {
+     "date": "2026-09-17",
+     "host": "www.fiji.gov.fj",
+     "rank": 5,
+     "snippet": "|**Official website links end with .gov.fj** Government Ministries/Departments communicate via **.gov.fj** websites (e.g. fiji.gov.fj).\nTrusted websites|**Secure websites use HTTPS** Look for a lock ( ) or https:// as an added precaution.",
+     "title": "fijian competition and consumer commission - Suva - Fiji Government |",
+     "url": "https://www.fiji.gov.fj/page/5/?et_blog"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:40:00Z",
+ "pais": {
+  "iso2": "FJ",
+  "iso3": "FJI",
+  "nombre": "Fiji"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

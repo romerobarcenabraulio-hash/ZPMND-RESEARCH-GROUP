@@ -1,0 +1,771 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Switzerland constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2019-01-26",
+     "host": "www.fedlex.admin.ch",
+     "rank": 1,
+     "snippet": "Fedlex\n## Orientation in the website\n### Alle Schweizer Bundesbehörden\n# Fedlex Die Publikationsplattform des Bundesrechts\n# Fedlex\n## Die Publikationsplattform des Bundesrechts\n# Bundesrecht",
+     "title": "RS 101 - Constitution fédérale de la Confédération suisse...",
+     "url": "https://www.fedlex.admin.ch/eli/cc/1999/404/fr",
+     "verificacion": {
+      "bytes": 77151,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:52Z",
+      "http": 200,
+      "sha256": "39d0c4d52bf6c1140a7d5b1848e1a625375891aecc22869089e1361f1fd8b3be"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.fedlex.admin.ch",
+     "rank": 2,
+     "snippet": "Federal Gazette**0**\nOfficial Compilation**0**\nClassified Compilation**4**\nConsultation procedure**0**\nTreaties**0**\nEditorial correction\n...\nEN: Thank you for visiting the federal law website; it is only fully accessible if you are using a JavaScript-capable browser.",
+     "title": "Fedlex Federal law",
+     "url": "https://www.fedlex.admin.ch/",
+     "verificacion": {
+      "bytes": 77151,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:53Z",
+      "http": 200,
+      "sha256": "39d0c4d52bf6c1140a7d5b1848e1a625375891aecc22869089e1361f1fd8b3be"
+     }
+    },
+    {
+     "date": "2019-01-26",
+     "host": "www.fedlex.admin.ch",
+     "rank": 3,
+     "snippet": "Fedlex\n# Fedlex La piattaforma di pubblicazione del diritto federale\n# Fedlex\n## La piattaforma di pubblicazione del diritto federale\n# Diritto federale\n...\n## Breadcrumbs\n- Legislazione cantonale e giurisprudenza dei tribunali federali",
+     "title": "Fedlex La piattaforma di pubblicazione del diritto federale",
+     "url": "https://www.fedlex.admin.ch/it/legal-information"
+    },
+    {
+     "date": "1999-04-18",
+     "host": "www.fedlex.admin.ch",
+     "rank": 4,
+     "snippet": "# Federal Constitution of the Swiss Confederation\nof 18 April 1999 (Status as of 3 March 2024)\n…\n...\n###### Art. 49 Precedence of and compliance with federal law\n^1^ Federal law takes precedence over any conflicting provision of cantonal law.",
+     "title": "Federal Constitution of the Swiss Confederation",
+     "url": "https://www.fedlex.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/en/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-en-html.html"
+    },
+    {
+     "date": "",
+     "host": "www.fedlex.admin.ch",
+     "rank": 5,
+     "snippet": "DE: Vielen Dank, dass Sie sie die Website des Bundesrechts aufgerufen haben; sie ist nur mit einem Javascript-fähigen Browser verfügbar.\n...\nFederal Gazette**0**\nOfficial Compilation**0**\nClassified Compilation**2**\nConsultation procedure**0**\nTreaties**0**",
+     "title": "Fedlex Federal law | Fedlex",
+     "url": "https://www.fedlex.admin.ch/en/home"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Switzerland national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.fedlex.admin.ch",
+     "rank": 1,
+     "snippet": "Federal Gazette**0**\nOfficial Compilation**0**\n...\nEN: Thank you for visiting the federal law website; it is only fully accessible if you are using a JavaScript-capable browser.",
+     "title": "Fedlex Federal law",
+     "url": "https://www.fedlex.admin.ch/",
+     "verificacion": {
+      "bytes": 77151,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:54Z",
+      "http": 200,
+      "sha256": "39d0c4d52bf6c1140a7d5b1848e1a625375891aecc22869089e1361f1fd8b3be"
+     }
+    },
+    {
+     "date": "2018-01-26",
+     "host": "fedlex.data.admin.ch",
+     "rank": 2,
+     "snippet": "This platform is primarily used to publish the Official Federal Gazette, the Official Compilation of Federal Legislation and the\nClassified Compilation of Federal Legislation, i.e. the consolidated version of federal legislation and international law texts.\n...\nThe legislative texts are available in",
+     "title": "Fedlex",
+     "url": "https://fedlex.data.admin.ch/",
+     "verificacion": {
+      "bytes": 9148,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:55Z",
+      "http": 200,
+      "sha256": "67ef6948509ab1827f885d4e4890d72fdd864e8d0e7ea1c41de2deffdd6dc8b6"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.fedlex.admin.ch",
+     "rank": 3,
+     "snippet": "Federal Gazette**0**\nOfficial Compilation**0**\nClassified Compilation**2**\nConsultation procedure**0**\n...\nOrdinance of 18 May 2005 on the Placing on the Market and Handling of Biocidal Products (Ordinance on Biocidal Products, OBP)",
+     "title": "Fedlex Federal law | Fedlex",
+     "url": "https://www.fedlex.admin.ch/en/home"
+    },
+    {
+     "date": "2025-05-19",
+     "host": "www.admin.ch",
+     "rank": 4,
+     "snippet": "Bundesrecht Übersicht – Erlasse, Inkrafttreten und Vernehmlassungen\n...\n# Bundesrecht\nDiese Seite bietet eine Übersicht und verweist auf die relevanten Bereiche von Fedlex, der offiziellen Publikationsplattform des Bundesrechts.",
+     "title": "Bundesrecht Übersicht – Erlasse, Inkrafttreten und ...",
+     "url": "https://www.admin.ch/de/bundesrecht"
+    },
+    {
+     "date": "",
+     "host": "fedlex.data.admin.ch",
+     "rank": 5,
+     "snippet": "https://fedlex.data.admin.ch\nMon, 02 Nov 2026 03:34:56 GMT\nKompetenzzentrum Amtliche Veröffentlichungen (KAV)\nZuletzt veröffentlichte Texte in der Amtlichen Sammlung des Bundesrechts\nVerordnung des BLW über die biologische Landwirtschaft",
+     "title": "Kompetenzzentrum Amtliche Veröffentlichungen (KAV)",
+     "url": "https://fedlex.data.admin.ch/api/rss-oc-de.xml"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Switzerland official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2018-01-26",
+     "host": "fedlex.data.admin.ch",
+     "rank": 1,
+     "snippet": "This platform is primarily used to publish the Official Federal Gazette, the Official Compilation of Federal Legislation and the\nClassified Compilation of Federal Legislation, i.e. the consolidated version of federal legislation and international law texts.\n...\nThe legislative texts are available in",
+     "title": "Fedlex",
+     "url": "https://fedlex.data.admin.ch/",
+     "verificacion": {
+      "bytes": 9148,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:56Z",
+      "http": 200,
+      "sha256": "67ef6948509ab1827f885d4e4890d72fdd864e8d0e7ea1c41de2deffdd6dc8b6"
+     }
+    },
+    {
+     "date": "2019-01-26",
+     "host": "www.fedlex.admin.ch",
+     "rank": 2,
+     "snippet": "Bundesblatt | Fedlex\n# Fedlex Die Publikationsplattform des Bundesrechts\n# Fedlex\n## Die Publikationsplattform des Bundesrechts\n# Bundesrecht\n...\nWählen Sie auf der Seite ‘Systematischen Rechtssammlung’ den Link ‘*Nutzen Sie unsere KI-Suchfunktion*’.",
+     "title": "Bundesblatt | Fedlex",
+     "url": "https://www.fedlex.admin.ch/de/fga",
+     "verificacion": {
+      "bytes": 77151,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:57Z",
+      "http": 200,
+      "sha256": "39d0c4d52bf6c1140a7d5b1848e1a625375891aecc22869089e1361f1fd8b3be"
+     }
+    },
+    {
+     "date": "",
+     "host": "fedlex.data.admin.ch",
+     "rank": 3,
+     "snippet": "https://fedlex.data.admin.ch\nSat, 31 Oct 2026 21:29:38 GMT\nOfficial Publications Centre (OPC)\nTexts recently published in the Federal Gazette and in the Official and Systematic Compilations of Federal Legislation",
+     "title": "Official Publications Centre (OPC)",
+     "url": "https://fedlex.data.admin.ch/api/rss-en.xml"
+    },
+    {
+     "date": "",
+     "host": "www.sogc.ch",
+     "rank": 4,
+     "snippet": "Loading ...",
+     "title": "Swiss Official Gazette of Commerce (SOGC)",
+     "url": "https://www.sogc.ch/"
+    },
+    {
+     "date": "2026-04-30",
+     "host": "www.seco.admin.ch",
+     "rank": 5,
+     "snippet": "# Services\nThe State Secretariat for Economic Affairs SECO sees itself as a knowledge and service provider.\n...\n## Economy\n### Swiss Official Gazette of Commerce «SOGC»\nThe SOGC publishes the latest official information and public notices on a daily basis.",
+     "title": "Services",
+     "url": "https://www.seco.admin.ch/en/services-en"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Switzerland supreme court decisions official database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "search.bger.ch",
+     "rank": 1,
+     "snippet": "Weitere Urteile ab 2000\n...\n|allen Urteilen Staats- und Verwaltungsrecht Privatrecht u.\n...\nUm nach einer Wortfolge zu suchen, können Sie die Begriffe in doppelte Anführungszeichen (\") setzen.\nBeispiel: \"Konvention zum Schutz der Menschenrechte\"",
+     "title": "Eurospider Suche - Schweizerisches Bundesgericht",
+     "url": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de",
+     "verificacion": {
+      "bytes": 22941,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:59Z",
+      "http": 200,
+      "sha256": "c747d3e8ca0f9cdf1c70d158f46314263e09037a6e67d6d54181fd7a42a827e8"
+     }
+    },
+    {
+     "date": "2026-10-29",
+     "host": "opencaselaw.ch",
+     "rank": 2,
+     "snippet": "Published decisions from every federal and cantonal court, plus 21,000+ federal and cantonal laws.\n...\nPublished rulings from the Federal Supreme Court, every federal court, and all 26 cantons, **1875–2026**, in German, French and Italian.\n...\n50’486",
+     "title": "OpenCaseLaw: The open record of Swiss law, rebuilt every day",
+     "url": "https://opencaselaw.ch/",
+     "verificacion": {
+      "bytes": 87046,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:00Z",
+      "http": 200,
+      "sha256": "76739a6fdb8480d6c18f81d4d1c7527bf6d9f3595ee7568d45ba103df3a31c3d"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bger.ch",
+     "rank": 3,
+     "snippet": "Sie können online in der Datenbank \"Leitentscheide\" abgerufen werden.\nSeit 2007 sind alle Bundesgerichtsentscheide, grundsätzlich in anonymisierter Form, in der Datenbank \"Alle Urteile\" zugänglich.",
+     "title": "Urteilsdatenbanken",
+     "url": "https://www.bger.ch/index/juridiction/jurisdiction-inherit-template/jurisdiction-recht.htm"
+    },
+    {
+     "date": "",
+     "host": "ius.unibas.ch",
+     "rank": 4,
+     "snippet": "|**Federal Supreme Court expert search**|Offers options such as cross-language search using descriptors, search for standards in CHLexML format, displays further references and allows you to define push filters for automatic notification of new decisions by the Federal Supreme Court.\n...\nYou will re",
+     "title": "Rechtsdatenbanken | Faculty of Law | University of Basel",
+     "url": "https://ius.unibas.ch/en/bibliothek/recherche/rechtsdatenbanken/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Switzerland state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2025-11-03",
+     "host": "www.ge.ch",
+     "rank": 1,
+     "snippet": "Le droit genevois est accessible gratuitement sur le site internet **SIL Genève Public**, qui contient le droit cantonal (rs/GE), intercantonal, communal, les prescriptions autonomes des institutions de droit public, ainsi que des informations relatives aux référendums et initiatives populaires cant",
+     "title": "Législation genevoise",
+     "url": "https://www.ge.ch/legislation-genevoise",
+     "verificacion": {
+      "bytes": 913628,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:03Z",
+      "http": 200,
+      "sha256": "7f4f084db5125e791379e245b9b07aff32de685a62f9eab2ec066e29e65d67c9"
+     }
+    },
+    {
+     "date": "",
+     "host": "silgeneve.ch",
+     "rank": 2,
+     "snippet": "**\n...\nLe site Internet **SIL Genève PUBLIC** est** ** publié et mis à jour par le** ** **service de la législation** (chancellerie d’Etat de la République et canton de Genève), il permet de consulter le droit genevois en vigueur.",
+     "title": "Mode d'emploi, contacts et infos - SIL Genève",
+     "url": "https://silgeneve.ch/legis/program/books/zginfo/home.htm?myd=1761091200071&app=sil",
+     "verificacion": {
+      "bytes": 8279,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:09Z",
+      "http": 200,
+      "sha256": "e26783ce66654754e17ad4e9f179018b4659aa0711a3bd0a0739886ff2c3822e"
+     }
+    },
+    {
+     "date": "",
+     "host": "www4.ti.ch",
+     "rank": 3,
+     "snippet": "# Repubblica e Cantone Ticino\nCancelleria dello Stato\nwww.ti.ch/legislazione ** **\n...\n# Versione web\nLa Raccolta delle leggi del Cantone Ticino è su Internet dal 1999 ed è accessibile a questo indirizzo.",
+     "title": "Versione web - SGCDS (CAN) - Repubblica e Cantone Ticino",
+     "url": "https://www4.ti.ch/can/sgcds/legislazione/versione-web/"
+    },
+    {
+     "date": "2025-05-19",
+     "host": "www.admin.ch",
+     "rank": 4,
+     "snippet": "Bundesrecht Übersicht – Erlasse, Inkrafttreten und Vernehmlassungen\nDer Bundesrat\nDas Portal der Schweizer Regierung\n...\nDer Bundesrat\n...\n# Bundesrecht\nDiese Seite bietet eine Übersicht und verweist auf die relevanten Bereiche von Fedlex, der offiziellen Publikationsplattform des Bundesrechts.",
+     "title": "Bundesrecht Übersicht – Erlasse, Inkrafttreten und ...",
+     "url": "https://www.admin.ch/de/bundesrecht"
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.fr.ch",
+     "rank": 5,
+     "snippet": "Consultation relative à la modification de la loi sur l’Université (LUni) | Etat de Fribourg\n…\n# Consultation relative à la modification de la loi sur l’Université (LUni)\n...\nLa consultation court jusqu’au 29 janvier 2027.",
+     "title": "Consultation relative à la modification de la loi sur l’Université (LUni)",
+     "url": "https://www.fr.ch/dfac/safu/actualites/consultation-relative-a-la-modification-de-la-loi-sur-luniversite-luni"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Switzerland municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.geneve.ch",
+     "rank": 1,
+     "snippet": "# Règlements de la Ville de Genève\nLa liste des règlements municipaux peut être filtrée par catégorie.\nLes documents peuvent être consultés et téléchargés au format PDF.\n...\n- PDF 21111 - Règlement du Conseil municipal de la Ville de Genève\n…\n...\n-",
+     "title": "Règlements de la Ville de Genève Page 1",
+     "url": "https://www.geneve.ch/autorites-administration/administration-municipale/reglements-municipaux",
+     "verificacion": {
+      "bytes": 105833,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:11Z",
+      "http": 200,
+      "sha256": "afb447cf614de150b9ebeff5c4763eb83be15282e09a959dca76c2d247f736e6"
+     }
+    },
+    {
+     "date": "",
+     "host": "publikationen.sg.ch",
+     "rank": 2,
+     "snippet": "Rechtsverbindliche Publikationen der Gemeinden und des Kantons St.Gallen finden Sie unter «Amtliche Publikationen».\n### Gesetzessammlungen der Gemeinden\nIm Bereich «Gesetzessammlungen» finden Sie kommunale Reglemente sowie Gemeindeordnungen.",
+     "title": "Publikationen Kanton St. Gallen Willkommen auf der ... - sg.ch",
+     "url": "https://publikationen.sg.ch/publikationsplattform/",
+     "verificacion": {
+      "error": "robots.txt disallows https://publikationen.sg.ch/publikationsplattform/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:35:12Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "jongny.ch",
+     "rank": 3,
+     "snippet": "# Rules and regulations\nFind all the municipal regulations in force here.\nThese documents ensure the smooth running of community life and compliance with collective rules.\n...\n## Administration\n...\n- Mérites de Jongny – Règlement d’attribution\n...\n## Gestion des déchets\n...\n- Règlement communal sur ",
+     "title": "Rules and regulations",
+     "url": "https://jongny.ch/en/official/regulations/"
+    },
+    {
+     "date": "2025-01-01",
+     "host": "www.chur.ch",
+     "rank": 4,
+     "snippet": "# Rechtliche Grundlagen\nDie Kommunale Nutzungsplanung ordnet die zulässige Nutzung des Bodens.\nBestandteile der Nutzungsplanung sind Zonenplan, Genereller Gestaltungsplan und Genereller Erschliessungsplan zusammen mit dem Baugesetz.\n...\n|Name|Download|\n|--|--|",
+     "title": "Rechtliche Grundlagen",
+     "url": "https://www.chur.ch/bauvorhabenverfahrenablaeufe/61375"
+    },
+    {
+     "date": "",
+     "host": "publication.vd.ch",
+     "rank": 5,
+     "snippet": "L’ensemble du droit fédéral se trouve dans le Recueil systématique du droit fédéral (RS) à l’adresse internet : www.admin.ch > Droit fédéral > Recueil systématique.\n...\nL’ensemble du droit cantonal se trouve dans la Base législative vaudoise (BLV).",
+     "title": "Cadre légal de l'activité communale - Publication - État de Vaud",
+     "url": "https://publication.vd.ch/publications/dgaic/aide-memoire/autorites/cadre-legal-de-lactivite-communale"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Switzerland regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-06-01",
+     "host": "www.seco.admin.ch",
+     "rank": 1,
+     "snippet": "SECO\n...\n# Portal of Swiss technical regulations\nThis page gives an overview of the Swiss regulations that must be observed when placing products on the Swiss market.\n...\n1 par.\n3 of the Law on Product Safety).\n...\nAny product placed on the Swiss market can be subject to market surveillance by the r",
+     "title": "Portal of Swiss technical regulations - seco.admin.ch",
+     "url": "https://www.seco.admin.ch/en/portal-of-swiss-technical-regulations",
+     "verificacion": {
+      "bytes": 214917,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:15Z",
+      "http": 200,
+      "sha256": "ecf3c25588f64ce30bc81ad75255310fdaec0f86a18c6f2f319c73b5ddf3e90f"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.finma.ch",
+     "rank": 2,
+     "snippet": "FINMA’s statutory powers to supervise banks, insurances, financial market infrastructures, financial institutions and collective capital investment schemes are derived from the legal basis set out in the Financial Market Supervision Act, financial market laws and implementing ordinances.\n...\n- Banki",
+     "title": "The financial market is governed by laws and ordinances.",
+     "url": "https://www.finma.ch/en/documentation/legal-basis/laws-and-ordinances",
+     "verificacion": {
+      "bytes": 65028,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:18Z",
+      "http": 200,
+      "sha256": "92f7a76d9730ca123e9ff02240cecb7758cf88e5d97742d8eafc914e52366b2f"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.finma.ch",
+     "rank": 3,
+     "snippet": "Willkommen bei der Eidgenössischen Finanzmarktaufsicht FINMA | FINMA\n...\n- Laupenstrasse 27, 3003 Bern\n- Tel. +41 31 327 91 00, Fax +41 31 327 91 01\n- info@finma.ch",
+     "title": "Willkommen bei der Eidgenössischen Finanzmarktaufsicht FINMA",
+     "url": "https://www.finma.ch/"
+    },
+    {
+     "date": "2026-02-05",
+     "host": "www.seco.admin.ch",
+     "rank": 4,
+     "snippet": "Dieses Portal gibt einen Überblick über die Schweizer Produktevorschriften, welche beim Inverkehrbringen von Produkten in der Schweiz zu beachten sind.\n...\nJedes auf dem Schweizer Markt in Verkehr gebrachte Produkt kann jederzeit Gegenstand einer Kontrolle durch die zuständigen Behörden sein.\n...\n##",
+     "title": "Portal der Schweizer Produktevorschriften - seco.admin.ch",
+     "url": "https://www.seco.admin.ch/de/portal-schweizer-produktevorschriften"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.swissmedic.ch",
+     "rank": 5,
+     "snippet": "Swissmedic überwacht alle Sicherheitsmassnahmen von Medizinprodukten, die in der Schweiz auf dem Markt sind.\n...\nSwissmedic ist die schweizerische Zulassungs- und Kontrollbehörde für Heilmittel.\nBasis für die Tätigkeit der Swissmedic ist das Heilmittelrecht.",
+     "title": "Swissmedic",
+     "url": "https://www.swissmedic.ch/swissmedic/de/home.html"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Switzerland national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "connect.snv.ch",
+     "rank": 1,
+     "snippet": "Don't use this field\nBuy, monitor, or subscribe to national and international standards easily online: **SN**, **EN**, **ISO**, **AFNOR**, **ASTM**, **DIN**, **DVS**, **IEC**, **IEEE**, **SAE**, and **VDI**.",
+     "title": "SNV-Connect – the Swiss standards shop",
+     "url": "https://connect.snv.ch/en/",
+     "verificacion": {
+      "bytes": 25235,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:19Z",
+      "http": 200,
+      "sha256": "91302fd9db277f0b719d31af2fd42070ab52ed340a985b52ca7d95bb20e198ef"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.epfl.ch",
+     "rank": 2,
+     "snippet": "# Standards\n**Official website**\nhttp://www.webnorm.ch/\n...\n…\nSwiss standards published from 2006 onwards:\n- ASUT standards (Swiss Telecommunications Association)\n- Electrosuisse standards\n...\n- SIA standards (Swiss Society of Engineers and Architects)\n- SNV standards (Swiss Standards Association)",
+     "title": "Standards ‒ Library ‐ EPFL",
+     "url": "https://www.epfl.ch/campus/library/collections/standards/",
+     "verificacion": {
+      "bytes": 85942,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:21Z",
+      "http": 200,
+      "sha256": "fd02dc54c7762b3163e6bf72774f570e13c193576347fdc8bc1410064568b099"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.snv.ch",
+     "rank": 3,
+     "snippet": "ISO 31000\n...\n- **Services d’édition à Winterthour\nAssociation Suisse de Normalisation (SNV)\n...\nCase postale\n8404 Winterthour\nTéléphone: +41 52 224 54 54\nE-mail: info@snv.ch\nwww.snv.ch",
+     "title": "Consulter gratuitement les normes - SNV",
+     "url": "https://www.snv.ch/fr/a-propos-des-normes/consulter-gratuitement-les-normes.html"
+    },
+    {
+     "date": "2025-12-17",
+     "host": "www.nb.admin.ch",
+     "rank": 4,
+     "snippet": "Die digitale Normen-Sammlung der Schweizerischen Nationalbibliothek (NB) umfasst alle Schweizer Normen, die von der Schweizerischen Normen-Vereinigung (SNV) herausgegeben werden.\n...\nAufgrund eines Systemwechsels sind die Normen derzeit nicht über die Kataloge der NB zugänglich.",
+     "title": "www.nb.admin.ch · de · normenNormen - nb.admin.ch",
+     "url": "https://www.nb.admin.ch/de/normen"
+    },
+    {
+     "date": "",
+     "host": "www.sqs.ch",
+     "rank": 5,
+     "snippet": "### Zertifizierung\nDie SQS-Zertifizierungsdokumente stehen für anerkannte Qualität – national, europaweit, weltweit.\nSustainability Performance Standard (SPS)\n...\nISO 9001:2015\nZertifizierung von Qualitätsmanagementsystemen\n...\nBauprodukte-Normen",
+     "title": "Normen, Labels, Standards | SQS Switzerland",
+     "url": "https://www.sqs.ch/de/dienstleistungen/produkte"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Switzerland mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2026-05-20",
+     "host": "www.seco.admin.ch",
+     "rank": 1,
+     "snippet": "# Portail des prescriptions techniques suisses\nCe portail donne un aperçu des prescriptions techniques suisses qui doivent être observées lors de la mise sur le marché de produits en Suisse.\n...\n1 al.\n3 LSPro).\n...\n### Biens de consommation courante et autres produits avec prescriptions sectorielles",
+     "title": "Portail des prescriptions techniques suisses - seco.admin.ch",
+     "url": "https://www.seco.admin.ch/fr/portail-des-prescriptions-techniques-suisses",
+     "verificacion": {
+      "bytes": 325403,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:22Z",
+      "http": 200,
+      "sha256": "e2c0bc3761f4154f4ca50fb033b0e8227422efb948efeba970d27e75e04cdeeb"
+     }
+    },
+    {
+     "date": "2026-02-05",
+     "host": "www.seco.admin.ch",
+     "rank": 2,
+     "snippet": "# Portal der Schweizer Produktevorschriften\nDieses Portal gibt einen Überblick über die Schweizer Produktevorschriften, welche beim Inverkehrbringen von Produkten in der Schweiz zu beachten sind.\n...\n1 Abs. 3 PrSG).",
+     "title": "Portal der Schweizer Produktevorschriften - seco.admin.ch",
+     "url": "https://www.seco.admin.ch/de/portal-schweizer-produktevorschriften",
+     "verificacion": {
+      "bytes": 301883,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:23Z",
+      "http": 200,
+      "sha256": "e9c978120d7e2b97e327b6546b938f3dae184e6694ed7d55ace8e10793785a4f"
+     }
+    },
+    {
+     "date": "2026-06-01",
+     "host": "www.seco.admin.ch",
+     "rank": 3,
+     "snippet": "This page gives an overview of the Swiss regulations that must be observed when placing products on the Swiss market.\n...\n1 par.\n...\nAnyone placing a product on the Swiss market is liable for its conformity with the applicable technical regulations, even if the conformity assessment was carried out ",
+     "title": "Portal of Swiss technical regulations",
+     "url": "https://www.seco.admin.ch/en/portal-of-swiss-technical-regulations"
+    },
+    {
+     "date": "2026-05-27",
+     "host": "www.seco.admin.ch",
+     "rank": 4,
+     "snippet": "### Low-voltage electrical equipment\n...\n- Requirements for electromagnetic compatibility\n- Requirements for low-voltage equipment\n- Requirements on specific energy consumption, energy efficiency and energy consumption-relevant properties in accordance with the Energy Efficiency Ordinance\n- Requirem",
+     "title": "Industrial products",
+     "url": "https://www.seco.admin.ch/en/industrial-products"
+    },
+    {
+     "date": "2025-02-20",
+     "host": "www.bakom.admin.ch",
+     "rank": 5,
+     "snippet": "# Normen\nTechnische Normen für Fernmeldeanlagen und die elektromagnetische Verträglichkeit elektrischer Geräte, die - wenn sie eingehalten werden - eine Vermutung über die Konformität mit den grundlegenden Anforderungen nachweisen.\n...\n## Technische Normen für Funkanlagen",
+     "title": "Normen - BAKOM",
+     "url": "https://www.bakom.admin.ch/de/normen"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Switzerland national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-29",
+     "host": "www.bfs.admin.ch",
+     "rank": 1,
+     "snippet": "The Federal Statistical Office (FSO) provides high-quality data and statistical information about Switzerland to support informed decision-making and democratic debate.\n...\nThe new Federal Statistical Office website provides information on the FSO’s organisation and services, while the “Swiss Statis",
+     "title": "Data for an informed Switzerland",
+     "url": "https://www.bfs.admin.ch/en",
+     "verificacion": {
+      "bytes": 103099,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:25Z",
+      "http": 200,
+      "sha256": "2b866975b34afd4713ff9e3a6b9c5f4dc72d7acd5eeb4739980780c8ded7d660"
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.bfs.admin.ch",
+     "rank": 2,
+     "snippet": "Explorateur de données | Office fédéral de la statistique\n...\nL’Explorateur de données « Swiss Stats Explorer » permet d’accéder à un ensemble étendu de jeux de données statistiques issus de l’Office fédéral de la statistique (OFS).\n...\ndata@bfs.admin.ch",
+     "title": "Explorateur de données",
+     "url": "https://www.bfs.admin.ch/fr/explorateur-donnees",
+     "verificacion": {
+      "bytes": 162605,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:26Z",
+      "http": 200,
+      "sha256": "9dc39cd76d6b139a1ee760d025785154e9bd26769bcac9af618388a6fa260915"
+     }
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.bfs.admin.ch",
+     "rank": 3,
+     "snippet": "The Federal Statistical Office (FSO) has redesigned its web presence around two complementary platforms.\nThe new Federal Statistical Office website provides information on the FSO’s organisation and services, while the “Swiss Statistics” portal makes statistical data more accessible to both people a",
+     "title": "Press releases | Federal Statistical Office",
+     "url": "https://www.bfs.admin.ch/en/press-releases"
+    },
+    {
+     "date": "2026-10-22",
+     "host": "www.bfs.admin.ch",
+     "rank": 4,
+     "snippet": "Der Daten-Explorer «Swiss Stats Explorer» bietet einen zentralen Zugang zu den wichtigsten offiziellen Statistiken der Schweiz.\n...\n## Beschreibung\nÜber den Daten-Explorer «Swiss Stats Explorer» kann auf eine umfangreiche Sammlung statistischer Datensätze des Bundesamtes für Statistik (BFS) zugegrif",
+     "title": "Datenexplorer - Bundesamt für Statistik",
+     "url": "https://www.bfs.admin.ch/de/daten-explorer"
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 5,
+     "snippet": "In Switzerland, this commitment has guided our approach for 175 years, since the first federal census in 1850 and the establishment of the Federal Statistical Bureau – the predecessor of today's\n...\n…\nSubscribe to FSO NewsMails: www.news-stat.admin.ch \nFSO website: www.statistics.ch",
+     "title": "Press release",
+     "url": "https://unstats.un.org/unsd/wsd/2025/docs/FSO-Swiss-WSD2025.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Switzerland central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "data.snb.ch",
+     "rank": 1,
+     "snippet": "Auf dem Datenportal veröffentlicht die SNB ein umfangreiches Datenangebot, das für die Geldpolitik und die Beobachtung der Wirtschaft von Bedeutung ist.\n...\nSur son portail, la BNS présente un grand nombre de données statistiques essentielles à la politique monétaire et à l’observation de l’économie",
+     "title": "Datenportal der Schweizerischen Nationalbank",
+     "url": "https://data.snb.ch/",
+     "verificacion": {
+      "bytes": 3592,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:28Z",
+      "http": 200,
+      "sha256": "c6720e56368cbdbad572e7d4c3cc3f979ba818a591cd296b34992991451ef043"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.snb.ch",
+     "rank": 2,
+     "snippet": "### The SNB's data portal\nOn the data portal, you can find an extensive range of data on monetary policy and the economy.\n...\nThe SNB conducts Switzerland's monetary policy as an independent central bank.\n...\nBörsenstrasse 15\nP. O. Box\nCH-8022 Zurich",
+     "title": "SNB BNS",
+     "url": "https://www.snb.ch/",
+     "verificacion": {
+      "bytes": 122933,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:31Z",
+      "http": 200,
+      "sha256": "4ca15b7aa8540e4ca00eb17435f055f5c51cc2fc816c63912884996eaeeb3cd4"
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "host": "data.snb.ch",
+     "rank": 3,
+     "snippet": "On the data portal, the SNB publishes data which is of importance for monitoring the economy as well as for monetary policy.\n...\nSwiss National Bank\nStatistics\nBörsenstrasse 15\nP.O. Box\nCH-8022 Zurich\nTelephone +41 58 631 00 00",
+     "title": "SNB data portal - Swiss National Bank",
+     "url": "https://data.snb.ch/en/topics/snb/cube/snbmonagg"
+    },
+    {
+     "date": "",
+     "host": "data.snb.ch",
+     "rank": 4,
+     "snippet": "Auf dem Datenportal veröffentlicht die SNB ein umfangreiches Datenangebot, das für die Geldpolitik und die Beobachtung der Wirtschaft von Bedeutung ist.\n...\nSur son portail, la BNS présente un grand nombre de données statistiques essentielles à la politique monétaire et à l’observation de l’économie",
+     "title": "SNB data portal",
+     "url": "https://data.snb.ch/en/search"
+    },
+    {
+     "date": "2023-09-27",
+     "host": "www.snb.ch",
+     "rank": 5,
+     "snippet": "On its website, the SNB makes an extensive range of data available to the public.\nThe SNB’s data portal contains data that is relevant for monetary policy as well as for monitoring the economic situation.\n...\nBörsenstrasse 15\nP. O. Box\nCH-8022 Zurich",
+     "title": "For what purpose does the SNB collect statistical data?",
+     "url": "https://www.snb.ch/en/snb-explained/statistics"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Switzerland government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-09-01",
+     "host": "www.bfs.admin.ch",
+     "rank": 1,
+     "snippet": "# Portail opendata.swiss (OGD)\nopendata.swiss est le portail central des données ouvertes de l'administration publique suisse.\n...\nLes métadonnées standardisées facilitent la recherche et la réutilisation.",
+     "title": "Portail opendata.swiss (OGD)",
+     "url": "https://www.bfs.admin.ch/fr/portail-opendata-swiss-fr",
+     "verificacion": {
+      "bytes": 169250,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:31Z",
+      "http": 200,
+      "sha256": "505e11bb2b2bdd02d0636ee0053942454055abdfd01c6dcfd888ea28acf9a8ac"
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "host": "www.bfs.admin.ch",
+     "rank": 2,
+     "snippet": "# Portal opendata.swiss (OGD)\nopendata.swiss ist das Portal der Schweizer Behörden für offene Verwaltungsdaten.\nEs bietet Zugang zu Datensätzen von Bund, Kantonen, Gemeinden und weiteren Organisationen in verschiedensten Bereichen wie Gesundheit, Mobilität und Umwelt.",
+     "title": "Portal opendata.swiss (OGD)",
+     "url": "https://www.bfs.admin.ch/de/opendata-swiss-ogd-de",
+     "verificacion": {
+      "bytes": 155488,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:35:32Z",
+      "http": 200,
+      "sha256": "beeca5a9666677921d87c15b9d719eb7b225681c4010085492b3c9ed19cba20c"
+     }
+    },
+    {
+     "date": "",
+     "host": "opendata.swiss",
+     "rank": 3,
+     "snippet": "opendata.swiss\n...\n**opendata.swiss** is Switzerland’s national portal for open government data.\nIt contains thousands of datasets issued by the Swiss Confederation, cantons, cities and other public institutions.\n...\nIt makes open government data available to the general public in a central catalogu",
+     "title": "Press and media",
+     "url": "https://opendata.swiss/en/press"
+    },
+    {
+     "date": "2021-02-01",
+     "host": "opendata.swiss",
+     "rank": 4,
+     "snippet": "**opendata.swiss is the Swiss public administration’s central portal for open government data.**\nA centralised and reliable tool, the opendata.swiss website offers easy access to the public data of the Confederation, cantons and communes.",
+     "title": "Get involved",
+     "url": "https://opendata.swiss/en/about"
+    },
+    {
+     "date": "2025-10-01",
+     "host": "opendata.swiss",
+     "rank": 5,
+     "snippet": "**Willkommen bei opendata.swiss**, dem nationalen Portal für offene Daten in der Schweiz.\nHier finden Sie Tausende von öffentlichen Datensätzen von Bund, Kantonen, Gemeinden und Partnerinstitutionen.\nDas Portal richtet sich",
+     "title": "Was sind Open Government Data?",
+     "url": "https://opendata.swiss/de/getting-started"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:23:22Z",
+ "pais": {
+  "iso2": "CH",
+  "iso3": "CHE",
+  "nombre": "Switzerland"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

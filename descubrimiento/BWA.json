@@ -1,0 +1,716 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Botswana constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "e-laws.botswanalaws.com",
+     "rank": 1,
+     "snippet": "The site centralises access to all current statutory laws of Botswana, including all Principal and Subsidiary Legislation, in a modern, consolidated format.\n...\n- A monthly Bulletin recording new and amending Acts and Regulations\n- Annotated Acts and Regulations\n- Repealed Acts\n- Acts on Notice",
+     "title": "Botswana Laws",
+     "url": "https://e-laws.botswanalaws.com/",
+     "verificacion": {
+      "bytes": 308456,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:53Z",
+      "http": 200,
+      "sha256": "20dae2990d25137daf985525ab05d6cc26709e04ae44bedb2a3b5d6a8cc3031a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 2,
+     "snippet": "Constitution of Botswana, 1966, Botswana, WIPO Lex\n# Constitution of Botswana, 1966, Botswana\nLatest Version in WIPO Lex\n...\nDetails\nYear of Version 2006\nDates\n...\nType of Text Framework Laws\n...\nMain text(s)\nEnglish Constitution of Botswana, 1966",
+     "title": "Constitution of Botswana, 1966, Botswana",
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/9771",
+     "verificacion": {
+      "bytes": 34191,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:54Z",
+      "http": 200,
+      "sha256": "0af862e4a4b25b4fff7ff3cd4da27ec231abaea201d8babb2d06b290851c19de"
+     }
+    },
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 3,
+     "snippet": "## Access to Laws of Botswana\nThe current laws of Botswana, including all Acts of Parliament and Subsidiary Legislation, can be accessed on the Botswana e-Laws website.\nLegislation can be searched using multiple criteria and downloaded in PDF format.\nHard copies of current legislation can be purchas",
+     "title": "Law, Crime and Justice",
+     "url": "https://www.gov.bw/taxonomy/term/26"
+    },
+    {
+     "date": "",
+     "host": "www.parliament.gov.bw",
+     "rank": 4,
+     "snippet": "CONSTITUTION OF BOTSWANA \nARRANGEMENT OF SECTIONS \nCHAPTER I \nThe Republic \n...\nCHAPTER II \nProtection of Fundamental Rights and Freedoms of the Individual \n3. \n...\nCopyright Government of Botswana \n...\nBotswana is a sovereign Republic.",
+     "title": "Copyright Government of Botswana CONSTITUTION OF ...",
+     "url": "https://www.parliament.gov.bw/images/constitution.pdf"
+    },
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 5,
+     "snippet": "## Access to Laws of Botswana\nThe current laws of Botswana, including all Acts of Parliament and Subsidiary Legislation, can be accessed on the Botswana e-Laws website.\nLegislation can be searched using multiple criteria and downloaded in PDF format.\nHard copies of current legislation can be purchas",
+     "title": "Attorney General's Chambers | Government of Botswana",
+     "url": "https://www.gov.bw/taxonomy/term/94"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Botswana national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 1,
+     "snippet": "Home | Government of Botswana\n# Botswana Government Information Portal\nThe best place to find government services and information\n...\n## Information & Services\nPrivate Bag 001, Gaborone, Botswana\nEmail: bgcis [at] gov.bw",
+     "title": "Botswana Government Information Portal",
+     "url": "https://www.gov.bw/",
+     "verificacion": {
+      "bytes": 65292,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:00Z",
+      "http": 200,
+      "sha256": "0a1fa84e9c753b6096473cffc21dbca0f27706588154c5bd8f261a5823afe683"
+     }
+    },
+    {
+     "date": "2026-10-22",
+     "host": "botswanalaws.com",
+     "rank": 2,
+     "snippet": "# Bulletin-2023\n...\n|[SI 75/2023] Public Procurement (National Electronic Procurement) Regulations|\n...\n|[SI 89/2023] Control of Goods, Prices and Other Charges (Petroleum Prices) (Amendment) (No. 4) Regulations|",
+     "title": "Bulletin-2023",
+     "url": "https://botswanalaws.com/bulletin/subsidiary-legislation/bulletin-2023?start=100",
+     "verificacion": {
+      "bytes": 90601,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:03Z",
+      "http": 200,
+      "sha256": "a966fe05a15a0f7f73b169dac97cff3d29f4c2df67a434ddd0a73bf42e263d03"
+     }
+    },
+    {
+     "date": "2026-11-01",
+     "host": "www.botswanalaws.com",
+     "rank": 3,
+     "snippet": "Bulletin-2023 – Botswana Laws\nBotswana Laws\n# Bulletin-2023\nFully Consolidated and Annotated\n...\n|[SI 12/2023] Diseases of Animals (Slaughter of Cattle and Other Foot and Mouth Disease Susceptible Stock in the Containment Zone) Regulations|",
+     "title": "Bulletin-2023",
+     "url": "https://www.botswanalaws.com/bulletin-2023/"
+    },
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 4,
+     "snippet": "# Search Botswana New Legislation\nBotswana legislation that will soon be enacted, or has recently been enacted, is listed on the Botswana e-Laws website.\nThis new legislation, including acts, bills and statutory instruments, can be searched and listings can be downloaded in PDF format from the e-Law",
+     "title": "Search Botswana New Legislation",
+     "url": "https://www.gov.bw/legal/search-botswana-new-legislation?page"
+    },
+    {
+     "date": "",
+     "host": "www.bocra.org.bw",
+     "rank": 5,
+     "snippet": "…\n...\n|Cybercrime and computer related Crimes Act 2018| |Download File|\n...\n|Electronic Records (Evidence) Regulations| |Download File|\n|Electronic Records Act| |Download File|\n|Draft Electronic Records (Evidence) Regulations - 8 May 2015| |Download File|",
+     "title": "Documents & Legislation | Botswana Communications Regulatory ...",
+     "url": "https://www.bocra.org.bw/documents&legislation?page=8"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Botswana official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 1,
+     "snippet": "Overview\nThis service is offered for purposes of distributing the weekly Government Gazette publications (and extra ordinary publications) to subscribers.\n...\n- Gaborone Government Bookshop\nPrivate Bag 0081, Gaborone,\nRepublic of Botswana\nPlot No. 8843, Khama Crescent\nGovernment Enclave",
+     "title": "Request to subscribe for Government Gazette",
+     "url": "https://www.gov.bw/communications/request-subscribe-government-gazette",
+     "verificacion": {
+      "bytes": 0,
+      "estado": "http",
+      "fecha": "2026-11-02T07:32:06Z",
+      "http": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     }
+    },
+    {
+     "date": "2021-03-19",
+     "host": "www.loc.gov",
+     "rank": 2,
+     "snippet": "# Periodical Government Gazette of the Republic of Botswana; Vol. 59, No. 23\n...\n- Government Gazette of the Republic of Botswana; Vol. 59, No. 23\n...\n- Government of the Republic of Botswana\n### Created / Published\n- Botswana, March 19, 2021",
+     "title": "Government Gazette of the Republic of Botswana; Vol. 59, No. 23",
+     "url": "https://www.loc.gov/resource/llflg.2013217451_20210319_01/?st=list",
+     "verificacion": {
+      "bytes": 5757,
+      "estado": "http",
+      "fecha": "2026-11-02T07:32:06Z",
+      "http": 403,
+      "sha256": "324b7d75357478b031f97266a1d5b7e45ee4b679226db471f921632b3950ba30"
+     }
+    },
+    {
+     "date": "2024-10-12",
+     "host": "botc.org.bw",
+     "rank": 3,
+     "snippet": "1 Result(s) found\nNotice\n12/10/2024\nThe Botswana Trade Commission (BOTC) is committed to protecting your personal data in accordance with the Botswana Data Protection Act, 2024.",
+     "title": "Government Gazettes - Botswana Trade Commission",
+     "url": "https://botc.org.bw/government-gazettes/"
+    },
+    {
+     "date": "2021-01-21",
+     "host": "guides.loc.gov",
+     "rank": 4,
+     "snippet": "# Legal Guides\n- Government Gazette by Botswana\nCall Number: KQK1.5 .G742\nPublished/Created: 2015-\n- Government Gazette by Botswana\nCall Number: Microfilm LL-02190\nPublished/Created: 1991-2017\n- Government Gazette by Botswana",
+     "title": "Legal Guides - Guide to Law Online: Botswana - Research ...",
+     "url": "https://guides.loc.gov/law-botswana/legal-guides"
+    },
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 5,
+     "snippet": "These include, amongst others:\n- Government Gazette\n...\n- Visit any bookshop or service point and buy any type of document or\n- Subscribe to receive the Government Gazette by filling the renewal of subscription rates form\n...\nPhone: (+267) 391 4441 / 368 5200\n...\nOr",
+     "title": "Sale of Publications (through government bookshops)",
+     "url": "https://www.gov.bw/sale-goods-and-services/sale-publications-through-government-bookshops?page=0"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Botswana supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-01-23",
+     "host": "www.gov.bw",
+     "rank": 1,
+     "snippet": "Law, Crime and Justice | Government of Botswana\n# Law, Crime and Justice\n## Law, Crime and Justice\n/law-crime-and-justice?field_theme_for_this_service_target_id=All\n...\nRecord of Proceedings/Transcript\nCase Enrolment\nCourt Orders, Judgments & Rulings",
+     "title": "Law, Crime and Justice - Gaborone",
+     "url": "https://www.gov.bw/law-crime-and-justice?field_theme_for_this_service_target_id=155&page=3",
+     "verificacion": {
+      "bytes": 64503,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:08Z",
+      "http": 200,
+      "sha256": "5c745c1808b4e3ba94a219c5422a2cd30b3f260970fba2970d47ed69c43bf360"
+     }
+    },
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 2,
+     "snippet": "# Distribution of judgements\nDecisions of the High Court and Court of Appeal are available in hard copy or electronic format by email to members of the public who subscribe to receive them quarterly throughout the year.\n...\n- Additionally, judgments are available online on the South African Legal In",
+     "title": "Distribution of judgements",
+     "url": "https://www.gov.bw/legal/distribution-judgements",
+     "verificacion": {
+      "bytes": 70366,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:10Z",
+      "http": 200,
+      "sha256": "f1e9dd980ab4b47b83a98de8a161fbff22c4091929a7c6c81833a2ba78eddff2"
+     }
+    },
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 3,
+     "snippet": "# Appealed Cases from the High Court and Industrial Court\n...\nThe Court of Appeal is a Supreme Court of record, with plenary review, appellate and, where appropriate first instance jurisdiction.\nIt hears all appeals from the High Court and Industrial Court.",
+     "title": "Appealed Cases from the High Court and Industrial Court",
+     "url": "https://www.gov.bw/legal/appealed-cases-high-court-and-industrial-court"
+    },
+    {
+     "date": "2026-06-17",
+     "host": "www.gov.bw",
+     "rank": 4,
+     "snippet": "## Distribution of judgements\nDecisions of the High Court and Court of Appeal are available in hard copy or electronic format by email to members of the public who subscribe to receive them quarterly throughout the year.\n...\n- Additionally, judgments are available online on the South African Legal I",
+     "title": "Administration of Justice | Government of Botswana",
+     "url": "https://www.gov.bw/taxonomy/term/90?page=1"
+    },
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 5,
+     "snippet": "Hard copies of current legislation can be purchased from the government bookstore.\n...\n- To retrieve Law Reports, conduct searches and download PDF copies of judgements up to 2012, visit the Botswana e-Laws website (www.elaws.gov.bw) and click on the Botswana Law Reports tab.",
+     "title": "Access to Laws of Botswana",
+     "url": "https://www.gov.bw/law-crime-and-justice/access-laws-botswana"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Botswana state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-06-17",
+     "host": "www.gov.bw",
+     "rank": 1,
+     "snippet": "Botswana legislation that will soon be enacted, or has recently been enacted, is listed on the Botswana e-Laws website.\n...\nHard copies of the full contents of the legislation can be purchased from the government bookstore.\n...\nBotswana e-Laws web address: www.elaws.gov.bw.",
+     "title": "Search Botswana New Legislation",
+     "url": "https://www.gov.bw/legal/search-botswana-new-legislation?page=1",
+     "verificacion": {
+      "bytes": 67680,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:13Z",
+      "http": 200,
+      "sha256": "7442a982684caad5537abbc38b59191c85eb07cafcb5fcc94782798cc8ebfc4c"
+     }
+    },
+    {
+     "date": "",
+     "host": "e-laws.botswanalaws.com",
+     "rank": 2,
+     "snippet": "# Act-Bulletin-2022\n...\n…\n|ACT 6 OF 2022 – SOCIETIES ACT|\n|ACT 5 OF 2022 – MOVABLE PROPERTY (SECURITY INTERESTS) ACT|\n|ACT 4 OF 2022 – TRUST PROPERTY CONTROL ACT|",
+     "title": "Act-Bulletin-2022",
+     "url": "https://e-laws.botswanalaws.com/act-bulletin-2022/",
+     "verificacion": {
+      "bytes": 318890,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:14Z",
+      "http": 200,
+      "sha256": "d9ff6740403185f855b888d7d127a7a4c93a2f9030edc7b9e5efceb263769ef5"
+     }
+    },
+    {
+     "date": "",
+     "host": "e-laws.botswanalaws.com",
+     "rank": 3,
+     "snippet": "# Welcome to the Botswana e-Laws Portal\n**Botswana e-Laws** serves as a valuable resource for legal professionals and citizens alike.\nThe site centralises access to all current statutory laws of Botswana, including all Principal and Subsidiary Legislation, in a modern, consolidated format.",
+     "title": "Botswana Laws",
+     "url": "https://e-laws.botswanalaws.com/"
+    },
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 4,
+     "snippet": "# Access to Laws of Botswana\nLegislation can be searched using multiple criteria and downloaded in PDF format.\n...\n- To retrieve a listing of current legislation, conduct searches and download PDF copies of legislation, visit the Botswana e-Laws website (www.elaws.gov.bw) and click on the Laws of Bo",
+     "title": "Access to Laws of Botswana",
+     "url": "https://www.gov.bw/law-crime-and-justice/access-laws-botswana?page=0"
+    },
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 5,
+     "snippet": "# Botswana Government Information Portal\nThe best place to find government services and information",
+     "title": "Botswana Government Information Portal",
+     "url": "https://www.gov.bw/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Botswana municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 1,
+     "snippet": "Home | Government of Botswana\n# Botswana Government Information Portal\nThe best place to find government services and information\n...\nOur Government\nMinistries & Agencies\nLocal Authorities\nLandboards\nParastatals\nBusiness in Botswana\n- Business\n- Business Registration\n...\nEmail: bgcis [at] gov.bw",
+     "title": "Botswana Government Information Portal",
+     "url": "https://www.gov.bw/",
+     "verificacion": {
+      "bytes": 65292,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:16Z",
+      "http": 200,
+      "sha256": "0a1fa84e9c753b6096473cffc21dbca0f27706588154c5bd8f261a5823afe683"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.gov.bw",
+     "rank": 2,
+     "snippet": "Ministry of Local Government and Traditional Affairs | Government of Botswana\n# Ministry of Local Government and Traditional Affairs\n...\n- Develop and monitor applicable policies and legislations aimed at transforming and strengthening local government and traditional institutions (Dikgosi le Makgot",
+     "title": "Ministry of Local Government and Traditional Affairs",
+     "url": "https://www.gov.bw/ministries/ministry-local-government-and-traditional-affairs",
+     "verificacion": {
+      "bytes": 0,
+      "estado": "http",
+      "fecha": "2026-11-02T07:32:18Z",
+      "http": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     }
+    },
+    {
+     "date": "2026-07-29",
+     "host": "www.gov.bw",
+     "rank": 3,
+     "snippet": "Local Authorities | Government of Botswana\n# Local Authorities\n...\n## News & Updates\nPrivate Bag 001, Gaborone, Botswana",
+     "title": "Local Authorities - Gaborone - Government of Botswana",
+     "url": "https://www.gov.bw/local-authorities-view"
+    },
+    {
+     "date": "",
+     "host": "botswanalaws.com",
+     "rank": 4,
+     "snippet": "LOCAL GOVERNMENT – Botswana Laws\n- Home\n...\n- LOCAL GOVERNMENT\n...\n**48.\nMinister may make model bye-laws**\n...\n**92.\nRegulations**\nThe Minister may make regulations prescribing anything required to be prescribed by this Act, and generally for carrying out the purpose and intent of this Act.",
+     "title": "LOCAL GOVERNMENT – Botswana Laws",
+     "url": "https://botswanalaws.com/principal-legislation/local-government/"
+    },
+    {
+     "date": "2025-03-25",
+     "host": "botswanalaws.com",
+     "rank": 5,
+     "snippet": "SOWA TOWN COUNCIL (ROADS AND TRAFFIC) BYE-LAWS\n*sections 44 and 45*)\n*1st April, 2022)*\n...\nPART V\n...\nThese Bye-laws may be cited as the Sowa Town Council (Roads and Traffic) Bye-laws.",
+     "title": "LOCAL GOVERNMENT : SUBSIDIARY LEGISLATION : SOWA TOWN COUNCIL (ROADS AND TRAFFIC) BYE-LAWS",
+     "url": "https://botswanalaws.com/local-government-subsidiary/local-government-subsidiary-legislation-sowa-town-council-roads-and-traffic-bye-laws"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Botswana regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bomra.co.bw",
+     "rank": 1,
+     "snippet": "MEDICINES AND RELATED SUBSTANCES ACT, 2025 \n(Act No. 29 of 2025) \nMEDICINES AND RELATED SUBSTANCES \n(FEES, LEVIES AND PENALTIES) REGULATIONS, 2026\n…\n...\n…",
+     "title": "MEDICINES AND RELATED SUBSTANCES (FEES, LEVIES AND PENALTIES) REGULATIONS, 2026",
+     "url": "https://www.bomra.co.bw/download/134/mrsa-25-regulations/31442/mrs-fees-levies-and-penalties-regulations-2026-final-sh.pdf",
+     "verificacion": {
+      "bytes": 463296,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:20Z",
+      "http": 200,
+      "sha256": "10b0379f7132d43b4091087e413d903b0a7e8289de7241f7fdd1bd490adc58be"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bankofbotswana.bw",
+     "rank": 2,
+     "snippet": "Statutory Instrument No. 14 of 2022\nFINANCIAL INTELLIGENCE ACT\n(Cap. 08:07)\nFINANCIAL INTELLIGENCE REGULATIONS, 2022\n(Published on 25th February, 2022)\n...\nREGULATION\n...\n2022.",
+     "title": "Financial Intelligence Regulations 2022",
+     "url": "https://www.bankofbotswana.bw/sites/default/files/Financial%20Intelligence%20Regulations%202022.pdf",
+     "verificacion": {
+      "bytes": 471805,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:23Z",
+      "http": 200,
+      "sha256": "adf7c530a3912b05b69b619bce9343c12c1e8283389ec4b07f637213a7c3a004"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bera.co.bw",
+     "rank": 3,
+     "snippet": "BOTSWANA ENERGY REGULATORY AUTHORITY (PETROLEUM \nPRODUCTS) (AMENDMENT) REGULATIONS, 2024 \n(Published on 4th October, 2024) \n...\nREGULATION \n...\n1. These Regulations may be cited as the Botswana Energy Regulatory",
+     "title": "BOTSWANA",
+     "url": "https://www.bera.co.bw/downloads/Petroleum/BERA%20PETROLEUM%20PRODUCTS%20AMENDMENT.pdf"
+    },
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 4,
+     "snippet": "…\n...\n…\n# Trade Policy Review\nThe titles of all technical regulations falling under BOBS' remit are listed in an annex to the Standards (Import Inspection) Regulations.[70] The Compulsory Standards Unit within BOBS' Department of Regulatory Compliance is responsible for enforcing the technical regul",
+     "title": "Members - ePing SPS&TBT platform",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C072"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Botswana national standards body standards catalogue",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.botswanatradeportal.org.bw",
+     "rank": 1,
+     "snippet": "The Botswana Trade Portal - Standard SearchMeasures\n...\nA list of the Compulsory Standards is available on the portal through the search function.\n...\n|Requirement to comply with BOS 25:2014|Botswana Bureau of Standards|Technical Standard|01-06-2013|31-12-9999|",
+     "title": "Search Standards - The Botswana Trade Portal",
+     "url": "https://www.botswanatradeportal.org.bw/?r=SearchMeasures/standard",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.botswanatradeportal.org.bw/?r=SearchMeasures/standard",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:32:27Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "legacy.export.gov",
+     "rank": 2,
+     "snippet": "Altogether, there are more than 600 Botswana standards that have been published for different sectors in Botswana.\nA standards catalogue is now available to the public at the BOBS Information Department.\n...\nFax: (+267) 3903120\nEmail: infoc@hq.bobstandards.bw",
+     "title": "Botswana - Standards for Trade | export.gov",
+     "url": "https://legacy.export.gov/article?id=Botswana-standards-for-trade",
+     "verificacion": {
+      "bytes": 161435,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:28Z",
+      "http": 200,
+      "sha256": "641d13788b470277bd1d5b821d27d4dcfbfb0e55339da2f40b782db1b0ef287c"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ceda.co.bw",
+     "rank": 3,
+     "snippet": "JUNE 2018\n...\nInformation Centre \nBotswana Bureau of Standards \nPrivate Bag BO 48 \nGaborone \nTel: +267 390 3200 \nFax: +267 390 3120 \nToll free: 0 800 600 900",
+     "title": "Botswana-Standards-Catalogue-June-2018. ...",
+     "url": "https://www.ceda.co.bw/sites/default/files/Botswana-Standards-Catalogue-June-2018.pdf"
+    },
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 4,
+     "snippet": "Postal address: Botswana Bureau of Standards Private Bag BO48 Gaborone|**Email:** enquiries@bobstandards.bw; moilwa@bobstandards.bw **Phone:** +267 3903200/3645604 **Website:** http://www.bobstandards.bw|",
+     "title": "Members - ePing SPS&TBT platform",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C072"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Botswana mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "botswanalaws.com",
+     "rank": 1,
+     "snippet": "## LIST OF PRODUCTS AND THE PRESCRIBED COMPULSORY STANDARDS\n...\n|**PRODUCT RANGE**|REFERENCE STANDARD|\n...\n|MECHANICAL STANDARDS| |\n|1|Fire hose reels|\n...\n|10|Regulators for liquefied Petroleum Gas (LPG)|\n…",
+     "title": "STANDARDS: SUBSIDIARY LEGISLATION",
+     "url": "https://botswanalaws.com/subsidiary-legislation/standards-subsidiary-legislation/",
+     "verificacion": {
+      "bytes": 71075,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:29Z",
+      "http": 200,
+      "sha256": "7bb91c1578e230c69ed1f6c0e42d2b671c5663895c68a5f92042398c8a856609"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bocra.org.bw",
+     "rank": 2,
+     "snippet": "BROADCAST EQUIPMENT \nThis specification \napplies to all radio \nMF (AM) broadcast \nequipment to be \nused in Botswana \n150 ~ 285 kHz \n525 ~ 605 kHz \nTS0001: Safety & EMC \nSpecification applies.",
+     "title": "[PDF] Annex 3 – Type Approval Technical Specifications – 20 Feb 2023",
+     "url": "https://www.bocra.org.bw/sites/default/files/documents/Annex%203%20-%20Type%20Approval%20Technical%20Specifications%20v1%20.pdf",
+     "verificacion": {
+      "bytes": 443762,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:33Z",
+      "http": 200,
+      "sha256": "e75f1f7a9ade768b9e506edadcc131eb9da6be2fa08945cd1b93e85df47eb9ed"
+     }
+    },
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 3,
+     "snippet": "# Trade Policy Review\nThe titles of all technical regulations falling under BOBS' remit are listed in an annex to the Standards (Import Inspection) Regulations.[70] The Compulsory Standards Unit within BOBS' Department of Regulatory Compliance is responsible for enforcing the technical regulations f",
+     "title": "Members - ePing SPS&TBT platform",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C072"
+    },
+    {
+     "date": "",
+     "host": "www.botswanatradeportal.org.bw",
+     "rank": 4,
+     "snippet": "…\n# Standards\nA list of the Compulsory Standards is available on the portal through the search function.\n...\n|Requirement to comply with BOS 25:2014|Botswana Bureau of Standards|Technical Standard|01-06-2013|31-12-9999|",
+     "title": "Search Standards - The Botswana Trade Portal",
+     "url": "https://www.botswanatradeportal.org.bw/?r=SearchMeasures/standard"
+    },
+    {
+     "date": "",
+     "host": "www.tuv.com",
+     "rank": 5,
+     "snippet": "1\nBotswana SCSR\nList of Regulated Products\nBotswana Bureau of Standards (BOBS) has implemented the \nStandards (Compulsory Standards) Regulations (SCSR).\n...\n2\n...\nThe following table lists all Products and their respective Compulsory Standards as in the SCSR.",
+     "title": "[PDF] Botswana SCSR List of Regulated Products | TUV Rheinland",
+     "url": "https://www.tuv.com/content-media-files/master-content/government-inspections-international-trade/tuev-rheinland-botswana-scsr-regulated-list-of-products.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Botswana national statistics office official website",
+   "descartados": 4,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-08-14",
+     "host": "www.statsbots.org.bw",
+     "rank": 1,
+     "snippet": "# Publication By sector\n## Data Portal\nFollowing are Statistics Botswana web-based data platforms used for organising, storing and presenting data in a uniform way to facilitate data sharing.\n...\nStatistics Botswana is a parastatal organization charged with responsibilities of collecting and dissemi",
+     "title": "Publication By sector | Statistics Botswana",
+     "url": "https://www.statsbots.org.bw/publication-by-sector/154",
+     "verificacion": {
+      "bytes": 108620,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:44Z",
+      "http": 200,
+      "sha256": "1069d6aba47636d22bacc69687a56d7fbbfe4d68e5d450598b9590d4c08bb01e"
+     }
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Botswana central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-03-31",
+     "host": "www.bankofbotswana.bw",
+     "rank": 1,
+     "snippet": "Botswana Economic and Financial Statistics -February 2026\n31 Mar 2026\nBotswana Economic and Financial Statistics - February 2026 .xlsx\nAbout Us\n...\nAdvance Release Calendar\nEconomic and Financial Data\nNational Summary Data Page (NSDP)\nChart Packs\nOther Data Sources\n...\nHistorical Data",
+     "title": "Botswana Economic and Financial Statistics -February 2026",
+     "url": "https://www.bankofbotswana.bw/publication/botswana-economic-and-financial-statistics-february-2026",
+     "verificacion": {
+      "bytes": 90884,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:46Z",
+      "http": 200,
+      "sha256": "b769c6e75cc824ac0424a649398e31f67fdd3e509ed2d764df3434653a00f766"
+     }
+    },
+    {
+     "date": "2026-10-23",
+     "host": "www.bankofbotswana.bw",
+     "rank": 2,
+     "snippet": "Home | Bank of Botswana\n+267 3606000\n...\n### BoBC Rate\n7 Day:\n5.50 %\nMonetary Policy Rate:\n5.50\n1 month BoBC:\n6.01",
+     "title": "Bank of Botswana: Home",
+     "url": "https://www.bankofbotswana.bw/",
+     "verificacion": {
+      "bytes": 145863,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:48Z",
+      "http": 200,
+      "sha256": "dbf92132a693b0022bb08fc8f9afb3a6e5f183f13eec9138fc57b1b72c802ebd"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bankofbotswana.bw",
+     "rank": 3,
+     "snippet": "The Botswana Financial Statistics is a monthly publication that provides statistical series on seven broad arears, namely: National Output; Prices; Banking System; Money and Capital Markets; Other Financial Institutions; External Trade and International Finance and Public Finance.",
+     "title": "Botswana Economic and Financial Statistics",
+     "url": "https://www.bankofbotswana.bw/botswana-economic-and-financial-statistics"
+    },
+    {
+     "date": "",
+     "host": "www.bankofbotswana.bw",
+     "rank": 4,
+     "snippet": "3\n...\n17938, Khama Crescent, Gaborone, Botswana\nTel: 360 6000 | Website: www.bankofbotswana.bw\n...\nWebsite: www.bankofbotswana.bw  |  Email: info@bob.bw  |  Tel: 360 6000",
+     "title": "Monetary Policy Report - August 2026",
+     "url": "https://www.bankofbotswana.bw/sites/default/files/publications/Monetary%20Policy%20Report%20-%20August%202026.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.bankofbotswana.bw",
+     "rank": 5,
+     "snippet": "17938, Khama Crescent, Gaborone, Botswana\nTel: 360 6000 | Website: www.bankofbotswana.bw\n...\nSource: Statistics Botswana and Bank of Botswana Calculations.\n...\n42\nWebsite: www.bankofbotswana.bw | Email: info@bob.bw |",
+     "title": "Monetary Policy Report August 2025",
+     "url": "https://www.bankofbotswana.bw/sites/default/files/publications/Monetary%20Policy%20Report%20%20-%20August%202025.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Botswana government open data portal",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.statsbots.org.bw",
+     "rank": 1,
+     "snippet": "Data Portal | Statistics Botswana\n...\n## Micro Data Portal\nStatistics Botswana is committed to making all data available to users on-line on this application.\n...\n…\n...\n- If you are a first time user, you are to Register as a user on this platform before you can request or have access to any data.",
+     "title": "Data Portal | Statistics Botswana",
+     "url": "https://www.statsbots.org.bw/data-portal",
+     "verificacion": {
+      "bytes": 37118,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:32:54Z",
+      "http": 200,
+      "sha256": "2d9c217d1e373c5274f6bb072124fdc3290f4c2697c167e9a1cae483a91c5102"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.statsbots.org.bw",
+     "rank": 2,
+     "snippet": "## Website Survey\nStatsBots Website Survey\n...\n**Statistics Botswana**\nPrivate Bag 0024, Gaborone Botswana\nTel: (267)3671300, Fax: (267) 3952201",
+     "title": "Statistics Botswana | home",
+     "url": "https://www.statsbots.org.bw/",
+     "verificacion": {
+      "bytes": 195678,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:04Z",
+      "http": 200,
+      "sha256": "8ed082f42475ef05c9399a63b8ef18597d5a0ce5c2fe83b39eea27684ffb2d65"
+     }
+    },
+    {
+     "date": "2016-04-05",
+     "host": "www.statsbots.org.bw",
+     "rank": 3,
+     "snippet": "# Agriculture\n## Data Portal\nFollowing are Statistics Botswana web-based data platforms used for organising, storing and presenting data in a uniform way to facilitate data sharing.\n...\nThe portals provide interactive access, metadata and web services for automated data sharing.\n...\n**Statistics Bot",
+     "title": "Agriculture - Statistics Botswana",
+     "url": "https://www.statsbots.org.bw/agriculture"
+    },
+    {
+     "date": "2016-04-06",
+     "host": "www.statsbots.org.bw",
+     "rank": 4,
+     "snippet": "# National Accounts\n## Data Portal\nStatistics Botswana is a parastatal organization charged with responsibilities of collecting and disseminating all official statistics in Botswana.\n...\n**Statistics Botswana**\nPrivate Bag 0024, Gaborone Botswana\nTel: (267)3671300, Fax: (267) 3952201",
+     "title": "National Accounts",
+     "url": "https://www.statsbots.org.bw/national-accounts"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:25:02Z",
+ "pais": {
+  "iso2": "BW",
+  "iso3": "BWA",
+  "nombre": "Botswana"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

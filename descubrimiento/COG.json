@@ -1,0 +1,779 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Congo constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.sgg.cg",
+     "rank": 1,
+     "snippet": "**Art.1**.- La République du Congo est un Etat de droit, souverain, unitaire et indivisible, décentralisé, laïc et démocratique.\nSa capitale est Brazzaville.\n...\nElle est juge de la constitutionnalité des lois, des traités et accords internationaux.",
+     "title": "Constitution de la République du Congo",
+     "url": "https://www.sgg.cg/fr/journal-officiel/constitution.html",
+     "verificacion": {
+      "bytes": 126402,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:59Z",
+      "http": 200,
+      "sha256": "4e71bfdbcd1f8e322b5bbd2c69b2bdefee8df3b7c3a0ae45a5317931e44a990f"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 2,
+     "snippet": "Constitution of the Republic of Congo of 25 October 2015, Congo, WIPO Lex\n...\nLatest Version in WIPO Lex\nThis text has been amended and a consolidated version is not yet available in WIPO Lex.\n...\nDates\n...\nFrench Constitution de la République du Congo du 25 octobre 2015",
+     "title": "Constitution of the Republic of Congo of 25 October 2015, ...",
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/22749",
+     "verificacion": {
+      "bytes": 36710,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:40:59Z",
+      "http": 200,
+      "sha256": "3b5a4aff18f71f5a803affc814983485d40d4715c6459b7241811bb56bde693f"
+     }
+    },
+    {
+     "date": "",
+     "host": "extranet.who.int",
+     "rank": 3,
+     "snippet": "Constitution | WHO - CPCD\nCountry Planning Cycle Database\n# Constitution\n...\nTo read the whole document please download the PDF file\n...\n2023\n...\nPDF file - full version:\nMultilingual:\nNo\nCountry:\nCongo\nAdoption year:\n2015\nNumber of pages:\n51",
+     "title": "Constitution",
+     "url": "https://extranet.who.int/cpcd/health-legislation/constitution-20"
+    },
+    {
+     "date": "",
+     "host": "www.legali.cd",
+     "rank": 4,
+     "snippet": "# Recherche avancée\nTrouvez instantanément les textes juridiques congolais — codes, lois, décrets, arrêtés et jurisprudence.\n1708 documents référencés\nSaisissez un terme ou choisissez un sujet pour commencer.\n...\n## Codes\n2023En vigueur",
+     "title": "Recherche avancée",
+     "url": "https://www.legali.cd/legislation/recherche"
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 5,
+     "snippet": "Latest Version in WIPO Lex\nDetails\n...\nDates\n...\nNotes The Constitution of the Democratic Republic of Congo was adopted on February 18, 2006 and entered into force on the same date, which marks the start of the country's Third Republic.\nIt was last amended on January 20, 2011.",
+     "title": "Constitution of the Democratic Republic of Congo ...",
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/7449"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Congo national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.sgg.cg",
+     "rank": 1,
+     "snippet": "# Textes de droit congolais\nFiltrer les résultats\n...\n**\n125699 Résultats **\n- DC\nArrêté n°3828 du 8 septembre 2025 portant nomination des secrétaires du Conseil consultatif de la femme (Publié au JO 2025-38)",
+     "title": "Droit Congolais",
+     "url": "https://www.sgg.cg/fr/recherche.html",
+     "verificacion": {
+      "bytes": 58417,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:00Z",
+      "http": 200,
+      "sha256": "d5757a6c0ee3a762d6fe27012bfb926796c8f52443c3a3f86fe105dbbf543c32"
+     }
+    },
+    {
+     "date": "",
+     "host": "sgg.cg",
+     "rank": 2,
+     "snippet": "- DC Arrêté n°3828 du 8 septembre 2025 portant nomination des secrétaires du Conseil consultatif de la femme\n- DC Arrêté n°3829 du 8 septembre 2025 définissant les directives nationales d'aménagement simplifié d'une unité d'exploitation domestique",
+     "title": "SGG Congo - Secrétariat Général du Gouvernement",
+     "url": "https://sgg.cg/en/accueil.html",
+     "verificacion": {
+      "bytes": 35328,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:02Z",
+      "http": 200,
+      "sha256": "2ca9091aa3cdafc29233b375e84578225cee1ae9fde399d6104b6aede1168c16"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.commerce.gouv.cg",
+     "rank": 3,
+     "snippet": "# Lois et décrets\n18\nLois disponibles\n26\nDécrets disponibles\n2026\n...\n### Réglementation du commerce intérieur et extérieur\nCadre général encadrant les activités commerciales au Congo, conditions d'exercice et obligations des opérateurs économiques.\n...\nRepublique du Congo.\nContact",
+     "title": "Ministère du Commerce, des Approvisionnements et de la ...",
+     "url": "https://www.commerce.gouv.cg/fr/lois-decrets/"
+    },
+    {
+     "date": "2022-07-16",
+     "host": "gouvernement.cg",
+     "rank": 4,
+     "snippet": "#### Retrouvez tous nos documents, classés par catégories\nCliquez sur un document pour le consulter, feuilleter ou télécharger.\n...\nLe portail *officiel du Gouvernement* de la République du Congo est un *site* destiné aux usagers qui souhaitent obtenir des informations officielles émanant du Gouvern",
+     "title": "Documenthèque - Gouvernement",
+     "url": "https://gouvernement.cg/documentheque/"
+    },
+    {
+     "date": "",
+     "host": "www.sgg.cg",
+     "rank": 5,
+     "snippet": "Décret n° 2024-29 portant attribution à la Société \nnationale des pétroles du Congo d’un permis \nd’exploration d’hydrocarbures liquides ou gazeux\n...\n136\nJournal offi ciel de la République du Congo\nN° 6-2024",
+     "title": "RÉPUBLIQUE DU CONGO 66e ANNEE - N° 6 Unité - Travail ...",
+     "url": "https://www.sgg.cg/JO/2024/congo-jo-2024-6.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Congo official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "sgg.cg",
+     "rank": 1,
+     "snippet": "6.000\n3 MOIS\n500 F CFA\nJOURNAL OFFICIEL\nDE LA REPUBLIQUE DU CONGO\nparaissant le jeudi de chaque semaine à Brazzaville\n...\nLes annonces devront parvenir au plus tard le jeudi précédant la date de parution du “JO”.",
+     "title": "Congo-jo-2026-37 copie.indd",
+     "url": "https://sgg.cg/JO/2026/congo-jo-2026-37.pdf",
+     "verificacion": {
+      "bytes": 1230133,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:03Z",
+      "http": 200,
+      "sha256": "62623cbfaae3b91743b845b21f486561627a93524e0b9cd5098b2642309b913a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.sgg.cg",
+     "rank": 2,
+     "snippet": "Journal officiel, édition ordinaire - sgg-congo : Secrétariat Général du Congo\n...\nSeule la version papier de l'édition ordinaire du Journal officiel de la République du Congo fait foi, la version électronique ne garantissant qu'un accès à l'information.\n...\n1859 Résultats **",
+     "title": "Journal officiel",
+     "url": "https://www.sgg.cg/fr/m-journal-officiel/le-journal-officiel.html",
+     "verificacion": {
+      "bytes": 41649,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:03Z",
+      "http": 200,
+      "sha256": "f8b8489e6ad66ac03b8303bc47a57fa6c86c2fe7cd12df6b1033a1d4cab05719"
+     }
+    },
+    {
+     "date": "",
+     "host": "sgg.cg",
+     "rank": 3,
+     "snippet": "6.000\n3 MOIS\n500 F CFA\nJOURNAL OFFICIEL\nDE LA REPUBLIQUE DU CONGO\nparaissant le jeudi de chaque semaine à Brazzaville\n...\nLes annonces devront parvenir au plus tard le jeudi précédant la date de parution du “JO”.\n...\n928",
+     "title": "[PDF] JOURNAL OFFICIEL - Secrétariat Général du Gouvernement",
+     "url": "https://sgg.cg/JO/2026/congo-jo-2026-33-3.pdf"
+    },
+    {
+     "date": "",
+     "host": "sgg.cg",
+     "rank": 4,
+     "snippet": "Les annonces devront parvenir au plus tard le jeudi précédant la date de parution du “JO”.\n...\nRÉPUBLIQUE DU CONGO\n...\nJeudi 7 mai 2026\n...\n628\nJournal officiel de la République du Congo\nN° 19-2026\nPARTIE OFFICIELLE",
+     "title": "[PDF] congo-jo-2026-19.pdf - Secrétariat Général du Gouvernement",
+     "url": "https://sgg.cg/JO/2026/congo-jo-2026-19.pdf"
+    },
+    {
+     "date": "",
+     "host": "sgg.cg",
+     "rank": 5,
+     "snippet": "Les annonces devront parvenir au plus tard le jeudi précédant la date de parution du “JO”.\n...\nDIRECTION : TEL./FAX : (+242) 281.52.42 - BOÎTE POSTALE 2.087  BRAZZAVILLE - Email : journal.officiel@sgg.cg",
+     "title": "congo-jo-2026-36.pdf",
+     "url": "https://sgg.cg/JO/2026/congo-jo-2026-36.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Congo supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2024-03-29",
+     "host": "juricaf.org",
+     "rank": 1,
+     "snippet": "La jurisprudences de Congo\nRésultats par\n...\n131 résultats trouvés :\n| Congo, Cour suprême, 29 mars 2024, 30/GCS-024\n...\nJuricaf est un projet de l'AHJUCAF, l'association des Cours suprêmes judiciaires francophones.",
+     "title": "La jurisprudences de Congo",
+     "url": "https://juricaf.org/recherche/+/facet_pays:Congo",
+     "verificacion": {
+      "bytes": 24584,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:04Z",
+      "http": 200,
+      "sha256": "0eb200b378333ccc40f834fd466a0b199fcab356ff9b452c5741559dd6f2f309"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.sgg.cg",
+     "rank": 2,
+     "snippet": "sgg-congo : Secrétariat Général du Congo - Textes de droit congolais\n# Textes de droit congolais\nÉtendre la recherche à tout le texte\n...\n21 22 23 24 25\n**\n125699 Résultats **\n- DC",
+     "title": "Textes de droit congolais",
+     "url": "https://www.sgg.cg/1/87/fr/recherche.html?page=22&row=123487",
+     "verificacion": {
+      "bytes": 59659,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:05Z",
+      "http": 200,
+      "sha256": "d937e8a654b6fa581f2ef9094256725c7eac6845d21f0c8454960f3f0ee41788"
+     }
+    },
+    {
+     "date": "2026-03-02",
+     "host": "juricaf.org",
+     "rank": 3,
+     "snippet": "La jurisprudences de Congo démocratique\n...\n# La jurisprudences de Congo démocratique\n102 résultats trouvés :\n...\n| Congo démocratique, Cour de cassation, 14 janvier 2026, RP.2087",
+     "title": "La jurisprudences de Congo démocratique - juricaf.org",
+     "url": "https://juricaf.org/recherche/+/facet_pays:Congo_d%C3%A9mocratique"
+    },
+    {
+     "date": "2021-04-28",
+     "host": "wwws.loc.gov",
+     "rank": 4,
+     "snippet": "# Congo, Republic of the République du Congo ( formerly : Congo/Brazzaville, Congo/French colony)\n## Judicial\n- COURTS: Cour Supreme\n- Juricaf: Congo (external link) decisions in French",
+     "title": "Guide to Law Online: Congo, Republic of the",
+     "url": "https://wwws.loc.gov/law/help/guide/nations/congo.php"
+    },
+    {
+     "date": "2019-05-06",
+     "host": "legalrdc.com",
+     "rank": 5,
+     "snippet": "### Découvrez la jurisprudence\nLes décisions et avis rendus par la CCJA et les Hautes Cours de la RDC – Cour de cassation, Conseil d’Etat et Cour constitutionnelle – sont mis à la disposition du public et sont consultables gratuitement",
+     "title": "legalRDC – LégalRDC est spécialiste en informations juridiques.",
+     "url": "https://legalrdc.com/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Congo state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.sgg.cg",
+     "rank": 1,
+     "snippet": "# Textes de droit congolais\nLoi n°5-2025 du 29 mars 2025 portant création de la commission nationale pour la protection des données à caractère personnel (Publié au JO 2025-15)",
+     "title": "sgg-congo : Secrétariat Général du Congo - Textes de droit ...",
+     "url": "https://www.sgg.cg/fr/droit-congolais/recherche.html?page=30&row=125702",
+     "verificacion": {
+      "bytes": 57342,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:08Z",
+      "http": 200,
+      "sha256": "56639aef8603c77275d9560e5d8cfe725111afc705edd9f42ee0f1ab8658006e"
+     }
+    },
+    {
+     "date": "2026-08-18",
+     "host": "sgg.cg",
+     "rank": 2,
+     "snippet": "SGG Congo - Secrétariat Général du Gouvernement\n## L’information juridique au Congo\n...\n## Journaux Officiels\n...\n- JO Journal officiel n°2026-41 du 08/10/2026\n- JO Journal officiel n°2026-40 du 01/10/2026",
+     "title": "SGG Congo - Secrétariat Général du Gouvernement",
+     "url": "https://sgg.cg/",
+     "verificacion": {
+      "bytes": 35328,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:09Z",
+      "http": 200,
+      "sha256": "2ca9091aa3cdafc29233b375e84578225cee1ae9fde399d6104b6aede1168c16"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.sgg.cg",
+     "rank": 3,
+     "snippet": "Codes en vigueur - sgg-congo : Secrétariat Général du Congo\n# Codes en vigueur\n**\n18 Codes consolidés **\n- DC Code minier 2026\n...\n© 2009-2026 I Secrétariat Général du Gouvernement de la République du Congo",
+     "title": "Codes en vigueur - sgg-congo : Secrétariat Général du Congo",
+     "url": "https://www.sgg.cg/fr/droit-congolais/les-codes-consolides.html"
+    },
+    {
+     "date": "",
+     "host": "www.sgg.cg",
+     "rank": 4,
+     "snippet": "# Textes de droit congolais\n...\n- DC\n...\n- DC\nLoi n°32-2019 du 10 octobre 2019 autorisant la ratification de l'accord de Bangui instituant une organisation africaine de la propriété intellectuelle (Publié au JO 2019-44)",
+     "title": "Textes de droit congolais - Brazzaville",
+     "url": "https://www.sgg.cg/fr/recherche.html?page=567&row=123423"
+    },
+    {
+     "date": "",
+     "host": "www.leganet.cd",
+     "rank": 5,
+     "snippet": "- 25 mai 2009 - Arrêté provincial n° 090BIS/CAB.GOUV./BC/022/2009 portant création, organisation et fonctionnement d'une Commission Provinciale pour les Investissements et le Développement du Bas-Congo, COPIDE en sigle - Texte\n…",
+     "title": "Provinces - Leganet.cd",
+     "url": "https://www.leganet.cd/Legislation/Tables/provinces.htm"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Congo municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2023-03-30",
+     "host": "www.unicongo.cg",
+     "rank": 1,
+     "snippet": "# Document Category : 6 - Autres Textes\n### Délibération n° 19 88_1988_Textes Municipaux_Modification Délibération n°10 66_1966\nNicolas ZEIN | Publié le 30 mars 2023 |",
+     "title": "Archives des 6 - Autres Textes - Page 11 sur 52 - UNICONGO",
+     "url": "https://www.unicongo.cg/document-category/autres-textes/page/11/",
+     "verificacion": {
+      "bytes": 188517,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:13Z",
+      "http": 200,
+      "sha256": "c747c4e9aa9825e1b4a0aa2ea38316562ef6ea9518beea6a88e49282e4505d10"
+     }
+    },
+    {
+     "date": "2023-03-30",
+     "host": "www.unicongo.cg",
+     "rank": 2,
+     "snippet": "Archives des Textes Municipaux Brazzaville - UNICONGO\n# Document Category : Textes Municipaux Brazzaville\n### Arrêté n° 023_1992_Textes MUnicipaux_Création Taxe Quitus Agrement",
+     "title": "Archives des Textes Municipaux Brazzaville - UNICONGO",
+     "url": "https://www.unicongo.cg/document-category/autres-textes/textes-municipaux/textes-municipaux-brazzaville/",
+     "verificacion": {
+      "bytes": 188933,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:14Z",
+      "http": 200,
+      "sha256": "5761842dae6e63f329af7952033aea3be6285f3f04c76fba7df4e93978d0ebe3"
+     }
+    },
+    {
+     "date": "2023-03-30",
+     "host": "www.unicongo.cg",
+     "rank": 3,
+     "snippet": "# Document Category : 6 - Autres Textes\n### Délibération n°14 1985_Textes Municipaux_Modifiant l_Article 2 Délibération n°26 1969\nNicolas ZEIN | Publié le 30 mars 2023 |",
+     "title": "Archives des 6 - Autres Textes - Page 9 sur 52 - UNICONGO",
+     "url": "https://www.unicongo.cg/document-category/autres-textes/page/9/"
+    },
+    {
+     "date": "2023-03-30",
+     "host": "www.unicongo.cg",
+     "rank": 4,
+     "snippet": "Archives des 6 - Autres Textes - Page 7 sur 52 - UNICONGO\n# Document Category : 6 - Autres Textes\n### Délibération n°026_2003_Textes Municipaux_Modifiant Délibération n°17 88_1988",
+     "title": "Archives des 6 - Autres Textes - Page 7 sur 52 - UNICONGO",
+     "url": "https://www.unicongo.cg/document-category/autres-textes/page/7/"
+    },
+    {
+     "date": "2023-03-30",
+     "host": "www.unicongo.cg",
+     "rank": 5,
+     "snippet": "# Document Category : 6 - Autres Textes\n### Ordonnance n°10 70_1970_Textes Municipaux _Rectificatif n°43 70 Fixant Taux de la Taxe Régionale",
+     "title": "Archives des 6 - Autres Textes - Page 6 sur 52 - UNICONGO",
+     "url": "https://www.unicongo.cg/document-category/autres-textes/page/6/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Congo regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 1,
+     "snippet": "Les textes applicables par entité | Banque Centrale du Congo\n...\n### Consulter les textes légaux et réglementaires par catégorie\nLes lois, les instructions et leurs modifications, classées par catégorie d'établissement.\nSiège\n...\nColonel Tshatshi\nGombe\nKinshasa",
+     "title": "Les textes applicables par entité",
+     "url": "https://www.bcc.cd/intermediaires-financiers/reglementation/textes-par-entite",
+     "verificacion": {
+      "bytes": 510385,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:15Z",
+      "http": 200,
+      "sha256": "4549de81ea292dcaa6ce17493b4cd1b977ef6dd21def77536627447be2b0f1f8"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.state.gov",
+     "rank": 2,
+     "snippet": "ACPCE has offices in:\n...\nVarious ministries have regulatory authority over the individual industries in their area of responsibility, with overall authority coordinated by the Ministry of Economy.\n...\nROC uses Francophone Africa’s Organization for the Harmonization of Business Law in Africa (OHADA)",
+     "title": "2025 Investment Climate Statements: Republic of the Congo",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/republic-of-the-congo",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2025-investment-climate-statements/republic-of-the-congo",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:41:15Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 3,
+     "snippet": "French labeling is mandatory for all imported food products and is regulated by the Ministry of Foreign \nTrade, the Office Congolais de Contrôle (OCC), the Ministry of Health, and the National Standards \nAgency (Agence Congolaise de Normalisation, ACN) to ensure compliance with applicable standards.",
+     "title": "Report Name: Exporter Guide - Democratic Republic of Congo",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Exporter%20Guide%20-%20Democratic%20Republic%20of%20Congo%20_Nairobi_Congo%20-%20Democratic%20Rep%20of%20the_KE2025-0002.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 4,
+     "snippet": "Relative à l'homologation et la publication de la grille tarifaire des services offerts par les bureaux d'information sur le crédit\n...\nConsulter\nAux bureaux d'information sur le crédit relative aux conditions d'agrément et d'autorisations préalables\n...\nRelative au gouvernement d'entreprise des soc",
+     "title": "Textes réglementaires applicables aux entreprises de micro-crédit",
+     "url": "https://www.bcc.cd/intermediaires-financiers/reglementation/textes-reglementaires/entreprises-de-micro-credit"
+    },
+    {
+     "date": "2026-10-16",
+     "host": "are.gouv.cd",
+     "rank": 5,
+     "snippet": "1 fichier·s 3.78 MB\n…\n...\n1 fichier·s 29.17 MB\n…\n...\n- Email: contact@are.gouv.cd\n- Phone: +243 975 638 914\n- Heures: Lun - Ven : 08.00 - 17.00",
+     "title": "Lois & Décrets – ARE",
+     "url": "https://are.gouv.cd/documentation/decrets/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Congo national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "are.gouv.cd",
+     "rank": 1,
+     "snippet": "184. ISO NF EN 196-3/IN 1 :  \nMéthodes d’essais des ciments\n...\n195. NF EN 196-1 :  \nMéthodes d’essais des ciments – Partie 1 : Détermination des résistances.\n...\nprincipes généraux",
+     "title": "NORMES APPLICABLES EN RDC DANS LES DOMAINES TECHNIQUE ET ...",
+     "url": "https://are.gouv.cd/wp-content/uploads/2023/08/NORMES-APPLICABLES-EN-RDC-rev0.pdf",
+     "verificacion": {
+      "bytes": 307455,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:16Z",
+      "http": 200,
+      "sha256": "81cc5fe97444f1556f341f527cf8e4e9078d8c6da14163333b8e38c681fd786e"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.eac.int",
+     "rank": 2,
+     "snippet": "Office Congolais de Contrôle \n98, Avenue du Port \nB.P. 8806 \nKinshasa/Gombe \nCongo, The Democratic Republic of the \nTel: +243 81 8115737 \nFax: +243 81 3016668",
+     "title": "CATALOGUE OF EAST AFRICAN STANDARDS 2024 - eac.int",
+     "url": "https://www.eac.int/documents?controller=download&task=download.file&file=dc6cfe4f-7a3c-478b-9395-3e116a7d28a1&name=EAS+CATALOGUE+OCTOBER+-+2024.pdf",
+     "verificacion": {
+      "bytes": 2911823,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:17Z",
+      "http": 200,
+      "sha256": "7e4ebce2383c0ca3007b53fbc833d4e3c1c7f32ba8c99859aae7f26c4eba7bcf"
+     }
+    },
+    {
+     "date": "2020-10-30",
+     "host": "deskeco.com",
+     "rank": 3,
+     "snippet": "RDC : le ministère de l’Industrie adopte le répertoire de 1.083 normes nationales congolaises | DeskEco\n# RDC : le ministère de l’Industrie adopte le répertoire de 1.083 normes nationales congolaises",
+     "title": "RDC : le ministère de l’Industrie adopte le répertoire de 1.083 normes nationales congolaises",
+     "url": "https://deskeco.com/2020/10/30/rdc-le-ministere-de-lindustrie-adopte-le-repertoire-de-1083-normes-nationales-congolaises"
+    },
+    {
+     "date": "",
+     "host": "www.epingalert.org",
+     "rank": 4,
+     "snippet": "# Trade Policy Review\nAt operational level, the OCC oversees compliance with standards.\nThe National Standardization Committee includes representatives of several agencies, among them the OCC, and is chaired by the Ministry responsible for industry.\nThe Congolese Control Office (OCC) is the national",
+     "title": "Democratic Republic of the Congo - Epingalert.org",
+     "url": "https://www.epingalert.org/en/MemberProfiles/Profile?countryId=C180"
+    },
+    {
+     "date": "",
+     "host": "legacy.export.gov",
+     "rank": 5,
+     "snippet": "The OCC, an ISO member agency, is responsible for developing standards and performing conformity assessments on exports and imports, operating under the supervision of the Ministry of Commerce.\n...\nDescribes the country's standards landscape, identifies the national standards and accreditation bodie",
+     "title": "Congo, Democratic Republic - Standards for Trade - export.gov",
+     "url": "https://legacy.export.gov/article?id=Congo-Democratic-Republic-Standards-for-Trade"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Congo mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2026-10-16",
+     "host": "are.gouv.cd",
+     "rank": 1,
+     "snippet": "# Normes\n### Normes applicables dans les domaines techniques et environnemental en RDC\n1 fichier·s 300.25 KB\n…\n...\n90A, Immeuble NGIMAK\nBoulevard du 30 Juin-Gombe, Kinshasa.\n- Email: contact@are.gouv.cd",
+     "title": "Normes – ARE",
+     "url": "https://are.gouv.cd/normes/",
+     "verificacion": {
+      "bytes": 97300,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:18Z",
+      "http": 200,
+      "sha256": "b309b05f445c1a83fa3b3116356f8fccee164f24bf7e8d8a7978e397bc8930e2"
+     }
+    },
+    {
+     "date": "",
+     "host": "ceec.cd",
+     "rank": 2,
+     "snippet": "| |Decret-n°-11-28-du-07-juin-2011-CEEC.pdf Decret-n°-11-28-du-07-juin-2011-CEEC.pdf Ouvrir Télécharger Copier le lien|115.03 KB|21 mai 2026|",
+     "title": "LEGISLATION – Centre d'Expertise d'Evaluation et de ...",
+     "url": "https://ceec.cd/legislation",
+     "verificacion": {
+      "bytes": 64358,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:21Z",
+      "http": 200,
+      "sha256": "2b70ab31caba6a4bd7b9f26feaddf9aa93a4d8e460c355a9b67ed1c8116acb36"
+     }
+    },
+    {
+     "date": "",
+     "host": "sgg.cg",
+     "rank": 3,
+     "snippet": "Article premier : En application des articles 5 et 6 de la loi n° 20-2015 du 29 octobre 2015 susvisée, les normes internationales IEC ci-après sont homologuées et rendues d’application obligatoire.\n...\n01\nNCGO IEC 60051-1",
+     "title": "[PDF] congo-jo-2022-30.pdf - JOURNAL OFFICIEL",
+     "url": "https://sgg.cg/JO/2022/congo-jo-2022-30.pdf"
+    },
+    {
+     "date": "",
+     "host": "are.gouv.cd",
+     "rank": 4,
+     "snippet": "LISTE DES NORMES APPLICABLES DANS LES DOMAINES \nTECHNIQUE ET ENVIRONNEMENTAL EN REPUBLIQUE \nDEMOCRATIQUE DU CONGO\n...\nNOTE :  \nCette liste des normes applicables dans les domaines technique et environnemental en République",
+     "title": "NORMES APPLICABLES EN RDC DANS LES DOMAINES TECHNIQUE ET ...",
+     "url": "https://are.gouv.cd/wp-content/uploads/2023/08/NORMES-APPLICABLES-EN-RDC-rev0.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.sgg.cg",
+     "rank": 5,
+     "snippet": "sgg-congo : Secrétariat Général du Congo - Textes de droit congolais\n…\n...\nDécret n°2007-293 du 31 mai 2007 fixant les règles techniques d'exploitation des carrières de géomatériaux (Publié au JO 2007-23)",
+     "title": "sgg-congo : Secrétariat Général du Congo - Textes de droit ...",
+     "url": "https://www.sgg.cg/fr/recherche.html?page=4924&row=123383"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Congo national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ins-congo.cg",
+     "rank": 1,
+     "snippet": "Accueil | Institut National de la statistique\n#### Contact info\nEmail contact@ins-congo.cg\nTéléphone 00 (242) 282 38 40\nAdresse\n...\n#### INSTITUT NATIONAL DE LA STATISTIQUE\nContact\n...\nContact électronique\nVia adresse mail\ncontact@ins-congo.cg",
+     "title": "Accueil | Institut National de la statistique",
+     "url": "https://ins-congo.cg/",
+     "verificacion": {
+      "bytes": 122901,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:22Z",
+      "http": 200,
+      "sha256": "3d82b39880f2d65e4ab5d14ab2ad5a59fadef075ce765880fac75c8ba0ca16fd"
+     }
+    },
+    {
+     "date": "2020-01-28",
+     "host": "ins-congo.cg",
+     "rank": 2,
+     "snippet": "Copyright\nInstitut National de la Statistique.\n2026 - All Rights Reserved",
+     "title": "Donnée conjoncturelle",
+     "url": "https://ins-congo.cg/donnee-conjoncturelle/",
+     "verificacion": {
+      "bytes": 796,
+      "estado": "http",
+      "fecha": "2026-11-02T07:41:23Z",
+      "http": 404,
+      "sha256": "c4b07931b3fc37bc80d56a367783e7fa7c04ced4befec7f57ed079c38c960400"
+     }
+    },
+    {
+     "date": "",
+     "host": "insrdc.cd",
+     "rank": 3,
+     "snippet": "# Institut National de la Statistique (INS) - RDC\nBienvenue sur le portail officiel de l’INS RDC.\n...\n## Centre d’information (SEO)\n### Diffusion & communication\nContact : contact@insrdc.cd • Programmes • Produits",
+     "title": "Institut National de la Statistique (INS) - RDC | Données ...",
+     "url": "https://insrdc.cd/"
+    },
+    {
+     "date": "",
+     "host": "www.ins-congo.cg",
+     "rank": 4,
+     "snippet": "Publications | Institut National de la Statistique\n...\n#### INSTITUT NATIONAL DE LA STATISTIQUE\nContact\nAvenue de Foch en face de la radio Brazzaville, Congo\n00 (242) 282 38 40\nContact électronique\nVia adresse mail\ncontact@ins-congo.cg",
+     "title": "Publications | Institut National de la Statistique",
+     "url": "https://www.ins-congo.cg/publications.html"
+    },
+    {
+     "date": "",
+     "host": "www.ins.gouv.cd",
+     "rank": 5,
+     "snippet": "Institut National de la Statistique\nInstitution Officielle\n…\n...\n## Abonnez-vous à notre newsletter\n### Besoin d'aide ?\nL'Institut National de la Statistique est l'organe central du système public de statistiques, garantissant la production et la diffusion de données fiables.",
+     "title": "Institut National de la Statistique",
+     "url": "https://www.ins.gouv.cd/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Congo central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 1,
+     "snippet": "### Condensé d'informations statistiques du 23 avril 2026\nConsulter\n348 résultats\nprécédent1 sur 15suivant\nSiège\n563, Bld.\nColonel Tshatshi\nGombe\nKinshasa\nBP 2697 Kinshasa 1",
+     "title": "Condensés d'informations statistiques",
+     "url": "https://www.bcc.cd/statistiques/condense-informations-statistiques",
+     "verificacion": {
+      "bytes": 463271,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:24Z",
+      "http": 200,
+      "sha256": "88e434267354d3c254fafcc982754a711e55cc1ef3279ebe0042b588e05ada02"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 2,
+     "snippet": "Statistiques macroéconomiques | Banque Centrale du Congo\n...\n# Statistiques\nExplorez les indicateurs économiques et financiers de référence de la BCC, organisés par secteur et par sujet.\n...\nChoisissez un secteur pour accéder à son tableau de bord, comparer ses séries officielles et exporter les don",
+     "title": "Recherche Et Statistiques",
+     "url": "https://www.bcc.cd/statistiques",
+     "verificacion": {
+      "bytes": 479828,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:26Z",
+      "http": 200,
+      "sha256": "0d0fe9877d9b7fcc3b0371b063f068333e7d8b5b49c6ff732a409f0e2c6798a6"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 3,
+     "snippet": "Bulletins de statistiques : statistiques de la Banque Centrale du Congo\n...\n# Bulletins de statistiques\nConsultez l'ensemble des bulletins de statistiques de la Banque Centrale du Congo.\n### BULLETIN MENSUEL D'INFORMATIONS STATISTIQUES AOUT 2026\n...\n…\n...\n183 résultats",
+     "title": "Bulletins de statistiques",
+     "url": "https://www.bcc.cd/publications/bulletin-de-statistiques"
+    },
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 4,
+     "snippet": "Masse monétaire M2\n54 895,331\n2026-09 · Mds CDF · +5,99%\nCrédit au secteur privé\n30 396,993\n2026-09 · Mds CDF · +3,47%\nTaux directeur\n...\nGombe",
+     "title": "Secteur monétaire : Statistiques macroéconomiques",
+     "url": "https://www.bcc.cd/statistiques/secteur-monetaire"
+    },
+    {
+     "date": "",
+     "host": "www.bcc.cd",
+     "rank": 5,
+     "snippet": "- Taux directeur12,50%\n- Inflation (glissement annuel)8,871%+1,669 pts\n...\n# Banque Centrale du Congo, site officiel\n...\n563, Bld.\nColonel Tshatshi\nGombe\nKinshasa\nBP 2697 Kinshasa 1",
+     "title": "Banque Centrale du Congo",
+     "url": "https://www.bcc.cd/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Congo government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 1,
+     "snippet": "# Congo GeoPortal - powered by Esri - Africa GeoPortal\n...\n|--|--|\n|Link|https://congo-geoportal-powered-by-esri-africa.hub.arcgis.com/|\n|Status|active|\n...\n|Access modes|open|\n...\n|API Status|active|",
+     "title": "Congo GeoPortal - powered by Esri - Africa GeoPortal",
+     "url": "https://dateno.io/registry/catalog/cdi00003341/",
+     "verificacion": {
+      "bytes": 21037,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:26Z",
+      "http": 200,
+      "sha256": "23fc27cbe9dbe55d76c59e84260398b738bf48c17235beedb87deaf4c9cb1f28"
+     }
+    },
+    {
+     "date": "2026-10-31",
+     "host": "corpus.data-landscapers.io",
+     "rank": 2,
+     "snippet": "***Not found***.\n...\n**Data published for download, and under an open licence.** The director general of the Institut national de la statistique said on 5 June 2026 that the Open Data Portal is at work and anyone can access and download data from it in Excel, PDF and Word formats.",
+     "title": "Congo — Maturity Assessment — Data Landscapers",
+     "url": "https://corpus.data-landscapers.io/maturity/countries/cog/",
+     "verificacion": {
+      "bytes": 323174,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:27Z",
+      "http": 200,
+      "sha256": "ac3835389afe30b629242b0a48f44d15960a4bdcb9e4c157b6a90790c621f68c"
+     }
+    },
+    {
+     "date": "2026-10-24",
+     "host": "www.congodata.app",
+     "rank": 3,
+     "snippet": "Recherchez, visualisez et intégrez des données publiques sur la République Démocratique du Congo via une interface unifiée et une API développeur.\n...\ncongodata.app/catalog\n...\nCherchez dans le catalogue en français ou en anglais et filtrez par secteur, format et niveau d'accès.",
+     "title": "OpenCongoData",
+     "url": "https://www.congodata.app/"
+    },
+    {
+     "date": "",
+     "host": "documents1.worldbank.org",
+     "rank": 4,
+     "snippet": "…\n71.     The INS website and its open data portal (http://rcongo.opendataforafrica.org/) were revamped thanks\nto the project.\n...\ndecisions.\n...\n…\n...\ndevelopment and rehabilitation of rural roads project, and bulletins on the project and others.",
+     "title": "https://documents1.worldbank.org/curated/en/099032...",
+     "url": "https://documents1.worldbank.org/curated/en/099032824153529521/txt/BOSIB1d4916f1f0881864a15777f0f0ade0.txt"
+    },
+    {
+     "date": "",
+     "host": "dataportals.org",
+     "rank": 5,
+     "snippet": "# Open Data for Republic of Congo\n← Return to results\n## Description\nOpen data portal for Republic of Congo\n- **Area covered:**\nRepublic of Congo\n- **Publisher:**\nAfrican Development Bank Group\n- **URL:**\nhttps://rcongo.opendataforafrica.org/\n...\nactive",
+     "title": "Open Data for Republic of Congo",
+     "url": "https://dataportals.org/portal/rcongo_opendataforafrica/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:31:34Z",
+ "pais": {
+  "iso2": "CG",
+  "iso3": "COG",
+  "nombre": "Congo"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

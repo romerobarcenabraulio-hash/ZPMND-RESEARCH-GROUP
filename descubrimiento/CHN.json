@@ -1,0 +1,694 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "China constitution and national laws official legal database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "en.moj.gov.cn",
+     "rank": 1,
+     "snippet": "Laws and Regulations\n...\nLaws and Regulations\nRegulations on Closure of Financial Institutions\n2022-05-09\n...\n2022-05-09\n...\nConstitution of the People's Republic of China\n2021-06-22\nCivil Code of the People's Republic of China\n2021-06-22",
+     "title": "Ministry of Justice of the People's Republic of China",
+     "url": "https://en.moj.gov.cn/lawsandregulations_2.html",
+     "verificacion": {
+      "bytes": 16402,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:33Z",
+      "http": 200,
+      "sha256": "d0db4812b0ed8bea6744e1dfee92714390be1056c9380e8883c6231d13462fa2"
+     }
+    },
+    {
+     "date": "",
+     "host": "english.www.gov.cn",
+     "rank": 2,
+     "snippet": "LAWS & REGULATIONS\n...\n- ### Civil Code\n#### 2020/12/31\n- ### Constitution\n#### 2019/11/20\n- ### Regulations of the People’s Republic of China Concerning Diplomatic Privileges and Immunities\n#### 2014/09/08",
+     "title": "LAWS & REGULATIONS",
+     "url": "https://english.www.gov.cn/archive/lawsregulations/page_1.html",
+     "verificacion": {
+      "bytes": 13687,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:36Z",
+      "http": 200,
+      "sha256": "d4b5171df5e637db02897d7cd8d290e9f53130f53455c13330190bfeed93f2c7"
+     }
+    },
+    {
+     "date": "2021-12-01",
+     "host": "www.chinajob.com",
+     "rank": 3,
+     "snippet": "The “National Laws and Regulations Database” provided by the Standing Committee of the National People’s Congress of China provides a single-site search service involving China’s constitution, laws, administrative regulations, supervision regulations, judicial interpretations and local regulations.\n",
+     "title": "The Legal Service Manual for International Talent ...",
+     "url": "https://www.chinajob.com/article/article.php?id=SUy8iTR78JExVfhZPL"
+    },
+    {
+     "date": "2025-01-02",
+     "host": "www.tandfonline.com",
+     "rank": 4,
+     "snippet": "This official full-text law database was launched in the spring of 2021 by the National People’s Congress (NPC).\nIt contains the Constitution, national laws, administrative regulations and rules, local regulations and rules, and judicial interpretations, with varying coverage across sections.\n...\n…\n",
+     "title": "Building A Holistic Public Legal Information System to ...",
+     "url": "https://www.tandfonline.com/doi/full/10.1080/0270319X.2024.2445375"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "China national regulations decrees official government database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-09-19",
+     "host": "xzfg.moj.gov.cn",
+     "rank": 1,
+     "snippet": "国家行政法规库\n根据《行政法规制定程序条例》汇编国家正式版本并动态更新 中国政府网与中国政府法制信息网(司法部官网)同步公布\n现行有效 606 部\n- 1.\n中华人民共和国审计法实施条例 历史沿革",
+     "title": "国家行政法规库 - xzfg.moj.gov.cn",
+     "url": "https://xzfg.moj.gov.cn/mobile/search.html",
+     "verificacion": {
+      "bytes": 44075,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:39Z",
+      "http": 200,
+      "sha256": "9a75c61c8738b7b63424b5db31ca69d77bf8e25db645768f956d2a7c16d3a86e"
+     }
+    },
+    {
+     "date": "",
+     "host": "xzfg.moj.gov.cn",
+     "rank": 2,
+     "snippet": "国家行政法规库\n根据《行政法规制定程序条例》汇编国家正式版本并动态更新，中国政府网与中国政府法制信息网(司法部官网)同步公布\n现行有效 606 部\n- 1.\n...\n- 1950-01-01公布",
+     "title": "高级检索 - 国家行政法规库- 司法部",
+     "url": "https://xzfg.moj.gov.cn/SearchAdvancedFront",
+     "verificacion": {
+      "bytes": 55084,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:41Z",
+      "http": 200,
+      "sha256": "d0f7b9c7907345e6763849e32caf5949a0ca1d64f13d6690857064b9512eb64a"
+     }
+    },
+    {
+     "date": "2023-03-29",
+     "host": "www.gov.cn",
+     "rank": 3,
+     "snippet": "国家规章库的规章文本，是各规章制定单位根据《法规汇编编辑出版管理规定》、按照统一体例格式汇编的国家正式版本。\n主办单位：国务院办公厅 运行维护单位：中国政府网运行中心",
+     "title": "国家规章库_中国政府网",
+     "url": "https://www.gov.cn/zhengce/xxgk/gjgzk/index.htm"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "english.www.gov.cn",
+     "rank": 4,
+     "snippet": "Updated: October 30, 2026 17:00 english.www.gov.cn\n...\n• Decree of the National Development and Reform Commission of the People’s Republic of China (No. 46)\n...\n*The Table of Contents is prepared in both Chinese and English, with the Chinese version being official.*",
+     "title": "State Council Gazette Issue No.30 Serial No.1929 (Oct 30 ...",
+     "url": "https://english.www.gov.cn/archive/statecouncilgazette/202610/30/content_WS6ae45c98c6d00ca5f9a0df9c.html"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "China official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-10-10",
+     "host": "english.www.gov.cn",
+     "rank": 1,
+     "snippet": "State Council Gazette Issue No.28 Serial No.1927 (Oct 10, 2026)\n...\nUpdated: October 10, 2026 17:03 english.www.gov.cn\n...\n• Remarks at Arrival Ceremony at the White House — President of the People’s Republic of China Xi Jinping\n...\n…",
+     "title": "State Council Gazette Issue No.28 Serial No.1927 (Oct 10 ...",
+     "url": "https://english.www.gov.cn/archive/statecouncilgazette/202610/10/content_WS6ac9ff62c6d00ca5f9a0d99d.html",
+     "verificacion": {
+      "bytes": 16643,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:42Z",
+      "http": 200,
+      "sha256": "23e992b94a7c9df36f51f2d173aacdcce592540efdcdadcd7aaff1588ecd91c1"
+     }
+    },
+    {
+     "date": "2026-09-20",
+     "host": "english.www.gov.cn",
+     "rank": 2,
+     "snippet": "State Council Gazette Issue No.26 Serial No.1925 (Sept 20, 2026)\n...\nUpdated: September 20, 2026 17:00 english.www.gov.cn\n**CONTENTS**\n...\n— Regulations on the Emergency Response to and Investigation and Handling of Electric Power Safety Accidents",
+     "title": "State Council Gazette Issue No.26 Serial No.1925 (Sept 20, 2026)",
+     "url": "https://english.www.gov.cn/archive/statecouncilgazette/202609/20/content_WS6aafa0bbc6d00ca5f9a0d460.html",
+     "verificacion": {
+      "bytes": 25646,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:42Z",
+      "http": 200,
+      "sha256": "b398e476acdba75bc76d0c30bdeaa15c373b81ef54f9cf1ec5d17a0876e21bfa"
+     }
+    },
+    {
+     "date": "2026-03-30",
+     "host": "english.www.gov.cn",
+     "rank": 3,
+     "snippet": "State Council Gazette Issue No.9 Serial No.1908 (March 30, 2026)\n...\n• Report on the Work of the Government\n— Delivered at the Fourth Session of the 14th National People’s Congress of the People’s Republic of China on March 5, 2026\n...\n…",
+     "title": "State Council Gazette Issue No.9 Serial No.1908 (March 30, 2026)",
+     "url": "https://english.www.gov.cn/archive/statecouncilgazette/202603/30/content_WS69ca2554c6d00ca5f9a0a291.html"
+    },
+    {
+     "date": "2026-10-20",
+     "host": "english.www.gov.cn",
+     "rank": 4,
+     "snippet": "State Council Gazette Issue No.29 Serial No.1928 (Oct 20, 2026)\n...\nUpdated: October 20, 2026 17:04 english.www.gov.cn\n...\n…\n...\n*The Table of Contents is prepared in both Chinese and English, with the Chinese version being official.*",
+     "title": "State Council Gazette Issue No.29 Serial No.1928 (Oct 20, 2026)",
+     "url": "https://english.www.gov.cn/archive/statecouncilgazette/202610/20/content_WS6ad72e88c6d00ca5f9a0dd85.html"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "english.www.gov.cn",
+     "rank": 5,
+     "snippet": "State Council Gazette Issue No.30 Serial No.1929 (Oct 30, 2026)\n...\nUpdated: October 30, 2026 17:00 english.www.gov.cn\n...\n…\n...\n*The Table of Contents is prepared in both Chinese and English, with the Chinese version being official.*",
+     "title": "State Council Gazette Issue No.30 Serial No.1929 (Oct 30 ...",
+     "url": "https://english.www.gov.cn/archive/statecouncilgazette/202610/30/content_WS6ae45c98c6d00ca5f9a0df9c.html"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "China supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "wenshu.court.gov.cn",
+     "rank": 1,
+     "snippet": "为进一步优化网站功能，提升访问速度，我们近期对中国裁判文书网进行升级维护，升级期间，部分功能可能会受到影响，由此给您带来的不便，敬请谅解！您可将相关问题反馈至cpwsw@court.gov.cn。",
+     "title": "首页",
+     "url": "https://wenshu.court.gov.cn/",
+     "verificacion": {
+      "error": "robots.txt disallows https://wenshu.court.gov.cn/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:37:44Z"
+     }
+    },
+    {
+     "date": "2026-09-21",
+     "host": "www.court.gov.cn",
+     "rank": 2,
+     "snippet": "中华人民共和国最高人民法院 - Search\n为您找到相关结果约502个 用时0.8094539642334秒\n...\n- 全国人民法庭信息网 | 人民法院诉讼资产网\n...\n- 中华人民共和国最高人民法院 版权所有",
+     "title": "中华人民共和国最高人民法院- Search",
+     "url": "https://www.court.gov.cn/search.html?content=%E6%B0%91%E4%BA%8B&page=1",
+     "verificacion": {
+      "bytes": 25068,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:49Z",
+      "http": 200,
+      "sha256": "4a0e2cd2fe3256f71c0c1ba0d9e32d2d5841110d8decd8768f2558657d141544"
+     }
+    },
+    {
+     "date": "",
+     "host": "english.court.gov.cn",
+     "rank": 3,
+     "snippet": "People’s Court Case Database\n- ###### 2026-03-17\n#### People’s Court Case Database\n#### Copyright © Supreme People's Court of the People's Republic of China.",
+     "title": "People's Court Case Database",
+     "url": "https://english.court.gov.cn/peoplescourtcasedatabase.html"
+    },
+    {
+     "date": "",
+     "host": "cjdh.court.gov.cn",
+     "rank": 4,
+     "snippet": "文书总量\n63937700篇\n访问总量\n22656419391次\n- 刑事文书7703650篇\n- 民事文书40379186篇\n- 行政文书1935816篇\n- 赔偿文书55635篇",
+     "title": "最高人民法院服务人民群众系统场景导航 - Court",
+     "url": "https://cjdh.court.gov.cn/judicialDoc.html"
+    },
+    {
+     "date": "2024-05-13",
+     "host": "libguides.lib.hku.hk",
+     "rank": 5,
+     "snippet": "…\n...\n- 中國裁判文書網 China Judgments Online\n...\nMaintained by the Supreme People’s Court of PRC (中華人民共和國最高人民法院), this platform serves as the largest collection of judgments made from Chinese courts in the country, with cases available starting from 2013.",
+     "title": "The Law Guide: People's Republic of China - LibGuides",
+     "url": "https://libguides.lib.hku.hk/lawguide/china"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "China state or provincial legislation official portal",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-10-23",
+     "host": "www.ndrc.gov.cn",
+     "rank": 1,
+     "snippet": "中华人民共和国国家发展和改革委员会令\n第50号\n《能源保供中长期合同管理办法（试行）》已经2026年10月15日第39次委务会议审议通过，现予公布，自2026年12月1日起施行。\n...\n附件：",
+     "title": "【《能源保供中长期合同管理办法(试行)》 2026年第50号令】-国家发展和改革委员会",
+     "url": "https://www.ndrc.gov.cn/xxgk/zcfb/fzggwl/202610/t20261023_1408364.html",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ndrc.gov.cn/xxgk/zcfb/fzggwl/202610/t20261023_1408364.html",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:37:50Z"
+     }
+    },
+    {
+     "date": "2026-10-31",
+     "host": "www.gov.cn",
+     "rank": 2,
+     "snippet": "中国政府网_中央人民政府门户网站\n...\n## 最新政策\n### 国务院政策文件库\n...\n## 为企服务 更多 >>\n### 加强政府建设\n- 国家政务服务平台",
+     "title": "中国政府网_中央人民政府门户网站",
+     "url": "https://www.gov.cn/?home",
+     "verificacion": {
+      "bytes": 67506,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:51Z",
+      "http": 200,
+      "sha256": "480f4cfd627abac593f47905e14d93fe86cea3f417b87177cd1899211f4f55f0"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.gov.cn",
+     "rank": 3,
+     "snippet": "Gov.cn: The Chinese Central Government's Official Web Portal\n|\n...\n…",
+     "title": "Gov.cn: The Chinese Central Government's Official Web Portal",
+     "url": "https://www.gov.cn/english/laws/year2000.htm"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "China municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.beijing.gov.cn",
+     "rank": 1,
+     "snippet": "规章_首都之窗_北京市人民政府门户网站\n现行有效部\n...\n- 北京市行政规范性文件备案审查规定\n（2026年10月23日北京市人民政府第321号令发布 自2027年1月1日起施行)",
+     "title": "规章_首都之窗",
+     "url": "https://www.beijing.gov.cn/gongkai/zfxxgk/zc/gz/",
+     "verificacion": {
+      "bytes": 38347,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:56Z",
+      "http": 200,
+      "sha256": "fe0f395bb32ae5dd1f68ae88d443a972f7e572bf8c59870528345ef10c18a526"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.beijing.gov.cn",
+     "rank": 2,
+     "snippet": "地方性法规_首都之窗_北京市人民政府门户网站\n- [地方性法规] 北京市测绘地理信息条例2026-09-13\n...\n- [地方性法规] 北京市实施《中华人民共和国城市居民委员会组织法》办法2026-07-31",
+     "title": "地方性法规_首都之窗_北京市人民政府门户网站",
+     "url": "https://www.beijing.gov.cn/zhengce/dfxfg/",
+     "verificacion": {
+      "bytes": 20625,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:57Z",
+      "http": 200,
+      "sha256": "0ddaa571e9b7bbf36f6bbf7c4914fd77249dc6a474be858d71d9c615aca73711"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.beijing.gov.cn",
+     "rank": 3,
+     "snippet": "地方性法规_首都之窗_北京市人民政府门户网站\n- [地方性法规] 北京市水土保持条例2025-05-30\n...\n- [地方性法规] 北京市城市更新条例2022-12-06",
+     "title": "地方性法规_首都之窗 - 北京市人民政府",
+     "url": "https://www.beijing.gov.cn/zhengce/dfxfg/index_1.html"
+    },
+    {
+     "date": "2023-03-29",
+     "host": "www.gov.cn",
+     "rank": 4,
+     "snippet": "国家规章库的规章文本，是各规章制定单位根据《法规汇编编辑出版管理规定》、按照统一体例格式汇编的国家正式版本。\n...\n版权所有：中国政府网 中文域名：中国政府网.政务",
+     "title": "国家规章库_中国政府网",
+     "url": "https://www.gov.cn/zhengce/xxgk/gjgzk/index.htm"
+    },
+    {
+     "date": "2024-01-01",
+     "host": "www.beijing.gov.cn",
+     "rank": 5,
+     "snippet": "您访问的链接即将离开“首都之窗”门户网站 是否继续？",
+     "title": "北京市法规规章_首都之窗_北京市人民政府门户网站",
+     "url": "https://www.beijing.gov.cn/zhengce/zcjd/zcwd/fggz/index.html"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "China regulatory agencies official regulations",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "english.nmpa.gov.cn",
+     "rank": 1,
+     "snippet": "Promulgated by SAMR Decree No. 48, issued on August 26, 2021 and shall go into effect as of October 1, 2021\n...\nPromulgated by Decree No. 54 of the State Administration for Market Regulation on March 10, 2022",
+     "title": "Regulations",
+     "url": "https://english.nmpa.gov.cn/Regulations.html",
+     "verificacion": {
+      "bytes": 7375,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:37:59Z",
+      "http": 200,
+      "sha256": "a3bc4d406d1c1bb25ea0bb45e222d94c2507965350a3e55b14144189b5aaaf82"
+     }
+    },
+    {
+     "date": "",
+     "host": "sjfg.samr.gov.cn",
+     "rank": 2,
+     "snippet": "市场监管法律法规规章数据库 国家市场监督管理总局法律法规规章数据库\n…\n...\n- 中华人民共和国工业产品生产许可证管理条例 2023年07月19日\n...\n总局公布的规章(235)\n总局参与的联合规章(54)\n…",
+     "title": "市场监管法律法规规章数据库 - samr",
+     "url": "https://sjfg.samr.gov.cn/law/pageInfo/main.main",
+     "verificacion": {
+      "bytes": 48852,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:04Z",
+      "http": 200,
+      "sha256": "72114204b84837d08d74c0877b3d85035090a6c7518471437821f038bccac3b7"
+     }
+    },
+    {
+     "date": "2026-04-24",
+     "host": "www.nfra.gov.cn",
+     "rank": 3,
+     "snippet": "…\nFollowing this, the financial regulatory authorities under the State Council (hereinafter referred to as the financial regulatory authorities) may separately issue additional online marketing requirements for financial products in segments under their respective jurisdictions.\n...\nThe *Measures* i",
+     "title": "Administrative Measures for Online Marketing of Financial ...",
+     "url": "https://www.nfra.gov.cn/en/view/pages/ItemDetail.html?docId=1257542"
+    },
+    {
+     "date": "",
+     "host": "www.standardsportal.org",
+     "rank": 4,
+     "snippet": "Below is a list of ministries and agencies that frequently issue regulations affecting products and services.\n...\nRegulates pharmaceutical, medical device, and cosmetics standards.\n...\nFormulates and supervises the implementation of standards for patents, trademarks, copyrights, and other aspects re",
+     "title": "Chinese Ministries and Agencies That Issue Regulations",
+     "url": "https://www.standardsportal.org/usa_en/prc_standards_system/chinese_ministries.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "China national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "std.samr.gov.cn",
+     "rank": 1,
+     "snippet": "国家标准 - 全国标准信息公共服务平台\n- 项目总体分布\n- 过程信息公开\n...\n# 国家标准\n50840\n- *•* 即将实施2068\n- *•* 现行标准48772\n- *•* 废止标准28986",
+     "title": "国家标准 - 全国标准信息公共服务平台",
+     "url": "https://std.samr.gov.cn/gb.html",
+     "verificacion": {
+      "bytes": 75515,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:08Z",
+      "http": 200,
+      "sha256": "fc8050ef5f2d7dadbef714c62a88d4cbe65587b6a79cc150b17e11bdfb7f81f5"
+     }
+    },
+    {
+     "date": "",
+     "host": "std.sacinfo.org.cn",
+     "rank": 2,
+     "snippet": "标准信息查询-国家标准化管理委员会\n...\n…\n**GB/T 37262-2026**\n中文名称：石油天然气工业 铝合金钻杆螺纹连接测量\n...\n实施日期：2027-04-01 1/50840\n...\n…\n...\n…",
+     "title": "标准信息查询-国家标准化管理委员会",
+     "url": "https://std.sacinfo.org.cn/home/query",
+     "verificacion": {
+      "bytes": 83784,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:16Z",
+      "http": 200,
+      "sha256": "0341960988d55427bc3856a57ac2159df2f23fccd77c2f0f3f6440093f7ce005"
+     }
+    },
+    {
+     "date": "",
+     "host": "openstd.samr.gov.cn",
+     "rank": 3,
+     "snippet": "国家标准全文公开\n...\n|GB强制性国家标准|本系统收录现行有效强制性国家标准2,054项。其中非采标1,718项可在线阅读和下载，采标336项只可在线阅读。|",
+     "title": "国家标准全文公开",
+     "url": "https://openstd.samr.gov.cn/bzgk/std/"
+    },
+    {
+     "date": "",
+     "host": "std.samr.gov.cn",
+     "rank": 4,
+     "snippet": "## 国家标准化 业务协同系统\n...\n技术委员会组织管理系统\n##### 标准公告\n技术委员会目录查询\n## 行业标准化 本系统当前共收录 76 个行业,共计 89315 个标准 行业标准 信息服务 平台 行业标准 备案月报",
+     "title": "首页 - 全国标准信息公共服务平台",
+     "url": "https://std.samr.gov.cn/?lang=zh"
+    },
+    {
+     "date": "",
+     "host": "std.samr.gov.cn",
+     "rank": 5,
+     "snippet": "行业标准 - 全国标准信息公共服务平台\n...\n- ## 国家标准化管理委员会依法备案行业标准331项，现予以公告（见附件）。",
+     "title": "行业标准 - 全国标准信息公共服务平台",
+     "url": "https://std.samr.gov.cn/hb"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "China mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "openstd.samr.gov.cn",
+     "rank": 1,
+     "snippet": "强制性国家标准\n...\n#### 特别声明\n- 本系统公开了国家市场监督管理总局、国家标准委2017年1月1日前已批准发布的所有强制性国家标准、推荐性国家标准（非采标）、指导性技术文件（非采标）。",
+     "title": "强制性国家标准",
+     "url": "https://openstd.samr.gov.cn/bzgk/std/std_list_type?p.p1=1&p.p5=PUBLISHED&p.p6=91&p.p90=circulation_date&p.p91=desc&pageSize=50",
+     "verificacion": {
+      "bytes": 100624,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:21Z",
+      "http": 200,
+      "sha256": "ec4eab65dd1b1d7c3dc1ba753deea7908dddc062fc42b2d964c86a94f8e64a16"
+     }
+    },
+    {
+     "date": "",
+     "host": "openstd.samr.gov.cn",
+     "rank": 2,
+     "snippet": "#### 特别声明\n|2|GB 45669.7-2026| | |黄河流域工业用水定额 第7部分：煤制甲醇|强标|现行|2026-06-27|2026-08-01|查看详细|",
+     "title": "筛选条件 - 国家标准全文阅读|标准检索- 国家市场监督管理总局",
+     "url": "https://openstd.samr.gov.cn/bzgk/std/std_list?p.p1=0&p.p90=circulation_date&p.p91=desc&p.p2=%E7%94%B2%E9%86%87",
+     "verificacion": {
+      "bytes": 73975,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:24Z",
+      "http": 200,
+      "sha256": "5097b293923d9d24a773941b8cd69400cdd580fccb63810fbbd4a9f6961d38f1"
+     }
+    },
+    {
+     "date": "",
+     "host": "dbba.sacinfo.org.cn",
+     "rank": 3,
+     "snippet": "|\n...\n…\n...\n- ## 2026年第11号(总第316号)\n- ## 2026年第10号(总第315号)\n- ## 2026年第9号(总第314号)\n- ## 2026年第8号(总第313号)",
+     "title": "全国标准信息公共服务平台",
+     "url": "https://dbba.sacinfo.org.cn/"
+    },
+    {
+     "date": "",
+     "host": "std.sacinfo.org.cn",
+     "rank": 4,
+     "snippet": "…\n**GB/T 37262-2026**\n中文名称：石油天然气工业 铝合金钻杆螺纹连接测量\n发布日期：2026-09-28\n实施日期：2027-04-01 1/50840\n...\n…",
+     "title": "标准信息查询-国家标准化管理委员会",
+     "url": "https://std.sacinfo.org.cn/home/query"
+    },
+    {
+     "date": "",
+     "host": "openstd.samr.gov.cn",
+     "rank": 5,
+     "snippet": "国家标准全文公开\n...\n|GB强制性国家标准|本系统收录现行有效强制性国家标准2,054项。其中非采标1,718项可在线阅读和下载，采标336项只可在线阅读。|",
+     "title": "国家标准全文公开",
+     "url": "https://openstd.samr.gov.cn/bzgk/std/"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "China national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.stats.gov.cn",
+     "rank": 1,
+     "snippet": "国家统计局\n中国共产党第二十届中央委员会第五次全体会议公报\n...\n地址: 北京市西城区月坛南街57号 (100826)",
+     "title": "国家统计局",
+     "url": "https://www.stats.gov.cn/",
+     "verificacion": {
+      "bytes": 141193,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:32Z",
+      "http": 200,
+      "sha256": "3887bb3ed297dadd54e0afc401e427a861f5326eb75d32483a8c2a529067e8bd"
+     }
+    },
+    {
+     "date": "2023-10-09",
+     "host": "www.stats.gov.cn",
+     "rank": 2,
+     "snippet": "统计数据发布渠道\n...\n⑴国家统计局官方网站\n国家统计局官方网站的“最新发布”“数据解读”栏目按照国家统计局主要统计信息发布日程发布统计数据。\n链接地址：http://www.stats.gov.cn/\n...\n…\n链接地址：https://data.stats.gov.cn/",
+     "title": "一、数据发布与更新（6） - 国家统计局",
+     "url": "https://www.stats.gov.cn/hd/cjwtjd/202302/t20230207_1902282.html",
+     "verificacion": {
+      "bytes": 133468,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:34Z",
+      "http": 200,
+      "sha256": "27c7328afd8b8fec841cbb52c5e5efa778a6390ae509946bc840b8217df5b91a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.stats.gov.cn",
+     "rank": 3,
+     "snippet": "数据发布 - 国家统计局\n数据发布\n- 2026年10月中国采购经理指数运行情况 2026年10月中国采购经理指数运行情况 2026年10月中国采购经理指数运行情况 2026-10-31",
+     "title": "数据发布",
+     "url": "https://www.stats.gov.cn/sj/zxfb/"
+    },
+    {
+     "date": "",
+     "host": "www.stats.gov.cn",
+     "rank": 4,
+     "snippet": "- wgsjsys@stats.gov.cn\n...\n- 中国统计资料馆\n...\n| |版权所有：国家统计局 地址：北京市西城区月坛南街57号（100826） 京ICP备05034670号 网站标识码bm36000002 联系方式：010-68783311| |",
+     "title": "中华人民共和国2025年国民经济和社会发展统计公报",
+     "url": "https://www.stats.gov.cn/zwfwck/sjfb/202602/t20260228_1962662.html"
+    },
+    {
+     "date": "",
+     "host": "www.stats.gov.cn",
+     "rank": 5,
+     "snippet": "National Bureau of Statistics of China\n# National Economy was Generally Stable with New Achievement Made in High-Quality Development in the First Three Quarters\n...\n## Related Links ENGLISH.WWW.GOV.CN\n- Government Agencies of China\n- International Organizations\n- National Statistical Offices Website",
+     "title": "National Economy was Generally Stable with New Achievement Made in High-Quality Development in the First Three Quarters",
+     "url": "https://www.stats.gov.cn/english//"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "China central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-01-06",
+     "host": "www.pbc.gov.cn",
+     "rank": 1,
+     "snippet": "中国人民银行\n...\n- 中国人民银行 国家外汇管理局发布《关于境内企业境外上市资金管理有关问题的通知》\n- 中国人民银行发布《中国金融稳定报告（2025）》",
+     "title": "政府信息公开",
+     "url": "https://www.pbc.gov.cn/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.pbc.gov.cn/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:38:35Z"
+     }
+    },
+    {
+     "date": "2025-12-15",
+     "host": "camlmac.pbc.gov.cn",
+     "rank": 2,
+     "snippet": "官方储备资产\nOfficial reserve assets\n...\n货币当局资产负债表\nBalance Sheet of Monetary Authority\nhtm\n...\n存款性公司概览\nDepository Corporations Survey\nhtm\n...\nBalance Sheet of Other Depository Corporations\n...\n货币供应量\nMoney Supply\nhtm",
+     "title": "货币统计概览",
+     "url": "https://camlmac.pbc.gov.cn/diaochatongjisi/116219/116319/5570903/5570886/index.html",
+     "verificacion": {
+      "error": "robots.txt disallows https://camlmac.pbc.gov.cn/diaochatongjisi/116219/116319/5570903/5570886/index.html",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:38:38Z"
+     }
+    },
+    {
+     "date": "2025-12-29",
+     "host": "www.pbc.gov.cn",
+     "rank": 3,
+     "snippet": "统计数据\n服务互动\n...\n|--|\n|--|",
+     "title": "中国人民银行-调查统计司-统计数据",
+     "url": "https://www.pbc.gov.cn/diaochatongjisi/116219/116319/index.html"
+    },
+    {
+     "date": "2025-10-27",
+     "host": "www.pbc.gov.cn",
+     "rank": 4,
+     "snippet": "Home\nThe Central Bank of the People's Republic of China\n- 1.4380% DR007\n- 8% M2 (YoY)\n- 7.0749 USD/CNY Fixing Rate\n- 440.07TN AFRE (Outstanding)",
+     "title": "The Central Bank of the People's Republic of China (PBOC)",
+     "url": "https://www.pbc.gov.cn/en/3688006/index.html"
+    },
+    {
+     "date": "2025-12-25",
+     "host": "www.pbc.gov.cn",
+     "rank": 5,
+     "snippet": "|Official reserve assets|htm|xls|\n...\n|Balance Sheet of Monetary Authority|htm|xls|\n|--|--|--|\n|Depository Corporations Survey|htm|xls|\n...\n|--|--|--|\n|Money Supply|htm|xls|",
+     "title": "Money and Banking Statistics",
+     "url": "https://www.pbc.gov.cn/en/3688247/3688975/4787948/4787992/index.html"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "China government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 1,
+     "snippet": "|`temp00000157`|Yichun Government Data Catalog (sjkf.shtml)|No|–|Open data portal|Local government|Custom software|\n|`temp00000131`|data.jiangxi.gov.cn|No|–|Open data portal|Regional government|Custom software|",
+     "title": "Dateno Registry and Dataset Search Engine",
+     "url": "https://dateno.io/registry/country/CN/",
+     "verificacion": {
+      "bytes": 95260,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:38Z",
+      "http": 200,
+      "sha256": "f50868fae831f9263fa8279bb523d3919d1393ce1575fd79e8ff7fc09a04efbe"
+     }
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:30:21Z",
+ "pais": {
+  "iso2": "CN",
+  "iso3": "CHN",
+  "nombre": "China"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

@@ -1,0 +1,775 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Barbados constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.gov.bb",
+     "rank": 1,
+     "snippet": "GOV.BB\n### Constitution of Barbados\n...\nConstitution of Barbados\nThe Constitution of Barbados, originally the Schedule to the Barbados Independence order, was laid before Parliament on 22 November 1966 and entered into force on 30 November of the same year.\nIt is is the supreme law of Barbados.",
+     "title": "Constitution of Barbados",
+     "url": "https://www.gov.bb/Government/barbados-constitution",
+     "verificacion": {
+      "bytes": 30404,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:53Z",
+      "http": 200,
+      "sha256": "b0f92598250bdb039739734c2aaf4e4c2247a0377a58bf53a91f9590064955ee"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.barbadosparliament.com",
+     "rank": 2,
+     "snippet": "View Bills\n- Bills\n- Resolutions\n...\n|Economic Diversification and Growth Fund Bill, 2025|Passed|09/12/2025|",
+     "title": "Bills & Resolutions",
+     "url": "https://www.barbadosparliament.com/bills/search",
+     "verificacion": {
+      "bytes": 64992,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:54Z",
+      "http": 200,
+      "sha256": "131a4d7608f939ec20c0126f311b6ce5fa8633f709ec2b10a4ee0a9bf0582187"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.barbadoslawcourts.gov.bb",
+     "rank": 3,
+     "snippet": "Table of Statutes\n...\nStatutes in this Edition\n...\nThe Constitution of Barbados\n...\nTHE LAWS OF BARBADOS\nPrinted by the Government Printer, Bay Street, St. Michael\nby the authority of the Government of Barbados\n15    L.R.O. 2007\nTable of Statutes\nChapter",
+     "title": "[PDF] Table of Statutes - Barbados Judicial System",
+     "url": "https://www.barbadoslawcourts.gov.bb/assets/content/pdfs/indices/3SubjectIndex.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.barbadosparliament.com",
+     "rank": 4,
+     "snippet": "Official Gazette | The Barbados Parliament\n## Official Gazettes - Document Search\nGazette October 22, 2026 Part A CLXI No. 124 with Bill\n...\nGazette October 16 2026 Part A CLXI No. 122 with Act #25",
+     "title": "Official Gazette | The Barbados Parliament",
+     "url": "https://www.barbadosparliament.com/index.php/gazette"
+    },
+    {
+     "date": "2026-10-16",
+     "host": "governmentprintery.gov.bb",
+     "rank": 5,
+     "snippet": "Acts | Government Printing Department\n...\nVOL.\n...\nThe Official Gazette PUBLISHED BY AUTHORITY VOL.\nCLXI No. 112 Part A BRIDGETOWN, BARBADOS, 22ND SEPTEMBER, 2026 Content Act 2026-21: Domestic Terrorism Act, 2026.",
+     "title": "Acts",
+     "url": "https://governmentprintery.gov.bb/category/part-a/acts/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Barbados national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.barbadoslawcourts.gov.bb",
+     "rank": 1,
+     "snippet": "# Subsidiary Legislation of Barbados\n- Consolidated Laws\n- \\\n- Subsidiary Legislation of Barbados\n- **\nNational Insurance and Social Security (Benefit) Regulations, 1967 Cap47'B **\n...\nArchives (Records Management) Regulations, 2008 Cap19B'A **",
+     "title": "Subsidiary Legislation of Barbados",
+     "url": "https://www.barbadoslawcourts.gov.bb/laws/consolidated-laws/subsidiary-legislation-of-barbados",
+     "verificacion": {
+      "bytes": 225949,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:05Z",
+      "http": 200,
+      "sha256": "1cabff0a1d12ab4835379049f2dbc82b5ac8aa9372059bbbeb6bcfa09e587831"
+     }
+    },
+    {
+     "date": "2020-12-11",
+     "host": "governmentprintery.gov.bb",
+     "rank": 2,
+     "snippet": "# The Online Gazette\nThe Gazette can be searched and viewed entirely online.\nSimply type what you’re looking for in the search bar or browse from the titles below.\n...\n…\n## Part A\n#### Laws, SI’s (statutory instruments), Acts, Resolutions and Covid-19 Directives",
+     "title": "The Online Gazette",
+     "url": "https://governmentprintery.gov.bb/the-online-gazette/",
+     "verificacion": {
+      "bytes": 342341,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:06Z",
+      "http": 200,
+      "sha256": "023bf0c34cf2107ed8a9bd72945b045d969eaca4c4e59981e77b94e624c44733"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.barbadosparliament.com",
+     "rank": 3,
+     "snippet": "Official Gazette | The Barbados Parliament\n## Official Gazettes - Document Search\nGazette October 22, 2026 Part A CLXI No. 124 with Bill\nGazette October 19 2026 Part B & C CLXI No. 123",
+     "title": "Official Gazette | The Barbados Parliament",
+     "url": "https://www.barbadosparliament.com/gazette"
+    },
+    {
+     "date": "2026-10-12",
+     "host": "governmentprintery.gov.bb",
+     "rank": 4,
+     "snippet": "Part A | Government Printing Department\n...\nThe Official Gazette PUBLISHED BY AUTHORITY VOL.\nCLXI No. 120 Part A BRIDGETOWN, BARBADOS, 12TH OCTOBER, 2026 Contents Bill re Virtual Asset Service Providers Act, 2026.",
+     "title": "Part A | Government Printing Department",
+     "url": "https://governmentprintery.gov.bb/category/part-a/"
+    },
+    {
+     "date": "",
+     "host": "governmentprintery.gov.bb",
+     "rank": 5,
+     "snippet": "## Access the official Barbados Government Gazette.\nIncludes Statutory Instruments, Legal Acts and more.\n...\nThe main goal of this website is to provide our clients and Central Government with quicker and more timely access to our publications, in particular, the Official Gazette which contains Acts",
+     "title": "Barbados Government Printing Department",
+     "url": "https://governmentprintery.gov.bb/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Barbados official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "governmentprintery.gov.bb",
+     "rank": 1,
+     "snippet": "## Access the official Barbados Government Gazette.\nIncludes Statutory Instruments, Legal Acts and more.\n...\nThe main goal of this website is to provide our clients and Central Government with quicker and more timely access to our publications, in particular, the Official Gazette which contains Acts",
+     "title": "Barbados Government Printing Department",
+     "url": "https://governmentprintery.gov.bb/",
+     "verificacion": {
+      "bytes": 333963,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:07Z",
+      "http": 200,
+      "sha256": "ee6db8c89d1ab6f4420218ef1ac40128d0e92d84e7a676c6f1372865097c4530"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.barbadosparliament.com",
+     "rank": 2,
+     "snippet": "Part  A\nBRIDGETOWN, BARBADOS, 31ST MARCH, 2026\nVOL.\nCLXI    No. 41\n...\nOFFICIAL  GAZETTE\n2\nMarch 31, 2026\nHOUSE OF ASSEMBLY\n...\n…\nPrinted and Published by",
+     "title": "[PDF] Gazette March 31, 2026 Part A.indd - The Barbados Parliament",
+     "url": "https://www.barbadosparliament.com/uploads/gazette/Gazette_March_31_2026_Part_A_VOL_CLXI_No_41_with_Res_Act_S_Is.pdf",
+     "verificacion": {
+      "bytes": 877961,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:07Z",
+      "http": 200,
+      "sha256": "565df4b43a9845637736aca967ca3500bb622f56bfc230789c1dfb70acda4bff"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.barbadosparliament.com",
+     "rank": 3,
+     "snippet": "VOL.\nCLXI   No. 120\nPart B\nNotices re Turineg Services Technology Corporation, \nP-A Bottlers (Barbados) SRL and Bargalve Steel Inc.\n.............1\n...\nOFFICIAL  GAZETTE\n...\nOctober 12, 2026",
+     "title": "BRIDGETOWN,  BARBADOS, 12TH  OCTOBER, 2026",
+     "url": "https://www.barbadosparliament.com/uploads/gazette/Gazette_October_12_2026_Part_B_C_CLXI_No_120.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.barbadosparliament.com",
+     "rank": 4,
+     "snippet": "VOL.\nCLXI    No. 124\nPart  A\n...\ncompulsory acquisition of the parcel of land the property\n...\nBRIDGETOWN,  BARBADOS, 22ND OCTOBER, 2026\nOFFICIAL  GAZETTE\nResolution No. 9/2026",
+     "title": "Gazette Ootober 22, 2026 Part A.indd",
+     "url": "https://www.barbadosparliament.com/uploads/gazette/Gazette_October_22_2026_Part_A_CLXI_No_124_with_Bill.pdf"
+    },
+    {
+     "date": "",
+     "host": "governmentprintery.gov.bb",
+     "rank": 5,
+     "snippet": "Printed in Bridgetown, Barbados since 1966, The Official Gazette of Barbados publishes public and legal notices, directives, Parliamentary decrees and advisories for public notice.\nAs of the year 2020, the Government Printing Department is now publishing the Official Gazette five days a week, from M",
+     "title": "Official Gazette",
+     "url": "https://governmentprintery.gov.bb/official-gazette/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Barbados supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.barbadoslawcourts.gov.bb",
+     "rank": 1,
+     "snippet": "Judgments | Barbados Judicial System\n...\n# Judgments\n#### The cases displayed on this website will initially be from 2007 until 2022. Cases from other years are being worked on and this note will be updated accordingly",
+     "title": "Judgments",
+     "url": "https://www.barbadoslawcourts.gov.bb/judgments/",
+     "verificacion": {
+      "bytes": 34414,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:14Z",
+      "http": 200,
+      "sha256": "375912f93d44b04a93107e00be9e61b4120ef7ee3de76f3cb602a595deed922e"
+     }
+    },
+    {
+     "date": "2021-08-12",
+     "host": "www.barbadoslawcourts.gov.bb",
+     "rank": 2,
+     "snippet": "## Welcome to the website of the Supreme Court of Barbados\n#### For\n...\n## Media\n### Law\n- Consolidated Laws\n- Annuals\n- Indices\n...\n# Welcome to the website of the Barbados Judicial System\nWelcome to the website of the Barbados Judicial System.",
+     "title": "Home",
+     "url": "https://www.barbadoslawcourts.gov.bb/",
+     "verificacion": {
+      "bytes": 50869,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:24Z",
+      "http": 200,
+      "sha256": "d9dadedb3241cbcf27964a4dd1905ba3384c2680af6caa7b85f38949e942153b"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.barbadoslawcourts.gov.bb",
+     "rank": 3,
+     "snippet": "## BARBADOS\n## IN THE SUPREME COURT OF JUDICATURE HIGH COURT\n## (CIVIL DIVISION)\n...\n## CLAIMANT\n...\n## Date of Decision: 2021 13th July (Oral) 2022 12th January (Written)",
+     "title": "CV639 of 2020 Carl Watson v NPC & CV544 ...",
+     "url": "https://www.barbadoslawcourts.gov.bb/judgments/cv639-of-2020-carl-watson-v-npc-and-cv544-of-2020-grace-gill-v-ag"
+    },
+    {
+     "date": "2022-03-15",
+     "host": "www.barbadoslawcourts.gov.bb",
+     "rank": 4,
+     "snippet": "||1-10 of 814 results shown|Court/Tribunal|Judge|Decision Date|Download|\n|--|--|--|--|--|--|\n...\n||1.\n...\n||DECISION CHANDLER JA (AG.)",
+     "title": "Search Results",
+     "url": "https://www.barbadoslawcourts.gov.bb/case-search-results/?asId=as0"
+    },
+    {
+     "date": "",
+     "host": "www.barbadoslawcourts.gov.bb",
+     "rank": 5,
+     "snippet": "## BARBADOS [Unreported]\n## THE SUPREME COURT OF JUDICATURE HIGH COURT\n## CIVIL DIVISION\n## No. CV 427 of 2012\n...\n## BETWEEN\n...\n## CLAIMANTS/APPLICANTS\n## AND\n...\n## DEFENDANT/RESPONDENT",
+     "title": "Edmund King vs Marva Clarke",
+     "url": "https://www.barbadoslawcourts.gov.bb/judgments/edmund-king-vs-marva-clarke"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Barbados state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.barbadosparliament.com",
+     "rank": 1,
+     "snippet": "View Bills\n- Bills\n- Resolutions\n...\n|Title|Stage|Notice given|\n...\n|Virtual Asset Service Providers Act, 2026|Passed|06/10/2026|\n...\n|Domestic Terrorism Act, 2026|Passed|07/08/2026|",
+     "title": "View Bills - House of Assembly of Barbados",
+     "url": "https://www.barbadosparliament.com/bills/search/id/1",
+     "verificacion": {
+      "bytes": 64992,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:24Z",
+      "http": 200,
+      "sha256": "c1441f2f00090d8281230abd945c8952eae480d419b1ab6a66e75d9e6080f47c"
+     }
+    },
+    {
+     "date": "",
+     "host": "governmentprintery.gov.bb",
+     "rank": 2,
+     "snippet": "## Access the official Barbados Government Gazette.\nIncludes Statutory Instruments, Legal Acts and more.\n...\nThe main goal of this website is to provide our clients and Central Government with quicker and more timely access to our publications, in particular, the Official Gazette which contains Acts",
+     "title": "Barbados Government Printing Department",
+     "url": "https://governmentprintery.gov.bb/",
+     "verificacion": {
+      "bytes": 333963,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:24Z",
+      "http": 200,
+      "sha256": "22ee9454dfb84140fe7430d1fc031394804dbbf65a926e2d495ef58fd690127e"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.caipo.gov.bb",
+     "rank": 3,
+     "snippet": "# Legislation\nSet out below is a list of the enactments and conventions currently administered by the Department.\nActs available online for viewing are linked below.\n...\n### Corporate Affairs and Intellectual Property Act, Cap. 21A\n...\nCap.\n...\n### Intellectual Property Miscellaneous Provisions Act ",
+     "title": "Legislation",
+     "url": "https://www.caipo.gov.bb/legislation/"
+    },
+    {
+     "date": "",
+     "host": "www.barbadosparliament.com",
+     "rank": 4,
+     "snippet": "View Bills\n- Bills\n- Resolutions\n...\n|--|--|--|\n|Whistleblower Protection Act, 2021|Passed|01/11/2021|\n...\n|Three Houses Spring (Management and Control) Bill, 2023|Passed|24/04/2023|",
+     "title": "View Bills",
+     "url": "https://www.barbadosparliament.com/bills/search/id/1/sort/name/dir/desc"
+    },
+    {
+     "date": "2020-12-11",
+     "host": "governmentprintery.gov.bb",
+     "rank": 5,
+     "snippet": "# The Online Gazette\nThe Gazette can be searched and viewed entirely online.\nSimply type what you’re looking for in the search bar or browse from the titles below.\n...\n…\n## Part A\n#### Laws, SI’s (statutory instruments), Acts, Resolutions and Covid-19 Directives",
+     "title": "The Online Gazette",
+     "url": "https://governmentprintery.gov.bb/the-online-gazette/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Barbados municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2024-10-02",
+     "host": "mtw.gov.bb",
+     "rank": 1,
+     "snippet": "Town Planning Section - Ministry of Transport & Works\n...\n# MTW and Infra Milling and Paving: Clear View, Wotton, Christ Church\n## TOWN PLANNING UNIT\nThe Town Planning Unit of the Ministry of Transport and Works assesses planning applications for residential and commercial/industrial developments:",
+     "title": "Town Planning Section - Ministry of Transport & ...",
+     "url": "https://mtw.gov.bb/departments-services/design-services/town-planning-section/",
+     "verificacion": {
+      "error": "robots.txt disallows https://mtw.gov.bb/departments-services/design-services/town-planning-section/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:27:27Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "agriculture.gov.bb",
+     "rank": 2,
+     "snippet": "Regulations\n- Official Website of the Government of Barbados\n# Regulations\n##### Have something to say?\n## Reach out to the Ministry of Agriculture, Food and Nutritional Security today.",
+     "title": "Regulations - agriculture.gov.bb",
+     "url": "https://agriculture.gov.bb/Resources/Regulations",
+     "verificacion": {
+      "bytes": 24323,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:29Z",
+      "http": 200,
+      "sha256": "4857a992640d2655d6637561295e3b2e2fab22f98fab4bfe8141fc462f5f05d8"
+     }
+    },
+    {
+     "date": "",
+     "host": "governmentprintery.gov.bb",
+     "rank": 3,
+     "snippet": "We are the Barbados Government Printing Department.\n## Access the official Barbados Government Gazette.\nIncludes Statutory Instruments, Legal Acts and more.\n...\nWelcome to the\n**Government Printing Department’s** website.\n...\n## Official Gazette\n#### Laws\n#### Regulations\n#### The Official Gazette",
+     "title": "Barbados Government Printing Department",
+     "url": "https://governmentprintery.gov.bb/"
+    },
+    {
+     "date": "2026-10-12",
+     "host": "governmentprintery.gov.bb",
+     "rank": 4,
+     "snippet": "The Official Gazette PUBLISHED BY AUTHORITY VOL.\nCLXI No. 113 Part A BRIDGETOWN, BARBADOS, 24TH SEPTEMBER, 2026 Content S.I. 2026 No. 90: Traffic Control (National Youth Parade and March) Rules, 2026.",
+     "title": "Part A | Government Printing Department",
+     "url": "https://governmentprintery.gov.bb/category/part-a/"
+    },
+    {
+     "date": "2020-12-11",
+     "host": "governmentprintery.gov.bb",
+     "rank": 5,
+     "snippet": "# The Online Gazette\nThe Gazette can be searched and viewed entirely online.\nSimply type what you’re looking for in the search bar or browse from the titles below.\n...\n…\n## Part A\n#### Laws, SI’s (statutory instruments), Acts, Resolutions and Covid-19 Directives",
+     "title": "The Online Gazette",
+     "url": "https://governmentprintery.gov.bb/the-online-gazette/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Barbados regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-20",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "These laws and regulations are developed with the participation of relevant ministries, drafted by the Office of the Attorney General, and enforced by the relevant ministry or ministries.\n...\n- Banking and financial services – Central Bank of Barbados (CBB)\n- Insurance and non-banking financial serv",
+     "title": "Barbados - United States Department of State",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/barbados/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/barbados/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:27:29Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.fsc.gov.bb",
+     "rank": 2,
+     "snippet": "Financial Services Commission | Regulatory Divisions\n...\n# Regulatory Divisions\n#### Insurance\nThe Insurance Division is responsible for the supervision and regulation of insurance business conducted in or from within Barbados, as authorised by the Financial Services Commission Act, 2010-21; and the",
+     "title": "www.fsc.gov.bb · regulatory-divisionsFinancial Services Commission | Regulatory Divisions",
+     "url": "https://www.fsc.gov.bb/regulatory-divisions",
+     "verificacion": {
+      "bytes": 48050,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:31Z",
+      "http": 200,
+      "sha256": "224269d5a3b1afca2e0738c47c06244b677f0e794efb23636613cee8c2863c95"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.centralbank.org.bb",
+     "rank": 3,
+     "snippet": "Legislation and Guidelines\n...\ninfo@centralbank.org.bb - General\n...\nsupervision@centralbank.org.bb - Regulatory Matters\nPhone:\n...\nAddress:\nTom Adams Financial Centre\nSpry Street\nBridgetown\nBarbados\n...\nEmail: info@centralbank.org.bb\n...\n## Central Bank of Barbados",
+     "title": "Legislation and Guidelines - Central Bank of Barbados",
+     "url": "https://www.centralbank.org.bb/financial-stability-and-financial-regulation/legislation-and-guidelines"
+    },
+    {
+     "date": "",
+     "host": "www.fsc.gov.bb",
+     "rank": 4,
+     "snippet": "The Financial Services Commission operates and regulates the non-bank financial sector by the authority of the following Acts of Parliament :-\n...\n158\n...\nS\n...\n318A\n- Securities Regulations 2002\n- Securities (Amendment) Regulations, 2010\n- Securities (Amendment) Regulations, 2018",
+     "title": "Financial Services Commission | Legislation - fsc.gov.bb",
+     "url": "https://www.fsc.gov.bb/index.php/legislation"
+    },
+    {
+     "date": "",
+     "host": "www.centralbank.org.bb",
+     "rank": 5,
+     "snippet": "supervision@centralbank.org.bb - Regulatory Matters\n...\nWho does the Central Bank regulate and supervise?\n...\nThe Bank is responsible for regulating and supervising commercial banks, merchant banks, trust and finance companies, money or value transmission service providers, payment services provider",
+     "title": "Regulatory FAQs",
+     "url": "https://www.centralbank.org.bb/faqs/regulatory-faqs"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Barbados national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bnsibarbados.org",
+     "rank": 1,
+     "snippet": "Mandatory Barbados National Standards are listed by subject.\nInternational (ISO) standards  \nadopted as Barbados National Standards, and CARICOM standards approved for publication  \nhave also been listed.\n...\nBNSI  Standards  Catalogue  2022 \n...\nSUBJECT INDEX \n...\nBNS 177",
+     "title": "BNSI Standards Catalogue 2022",
+     "url": "https://bnsibarbados.org/wp-content/uploads/2022/03/Catalogue-2022.pdf",
+     "verificacion": {
+      "bytes": 769318,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:32Z",
+      "http": 200,
+      "sha256": "201161aad02abb79b35feaba3c601bb5947e757854868b930edfad8c5e346fbf"
+     }
+    },
+    {
+     "date": "2021-09-25",
+     "host": "www.trade.gov",
+     "rank": 2,
+     "snippet": "### Publication of Technical Regulations\nThe BNSI publishes national standards on labeling, building, food, chemicals, textiles, solar energy, liquefied petroleum gas, furniture, and consumer products.\nThe complete list of Barbadian standards is published in the Standards Catalogue which is availabl",
+     "title": "Barbados - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/barbados-standards-trade",
+     "verificacion": {
+      "bytes": 272774,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:32Z",
+      "http": 200,
+      "sha256": "d705e29e1a18591b8149f46b0e27db5591d74673b3de60b010bfd0db18f76417"
+     }
+    },
+    {
+     "date": "",
+     "host": "bnsibarbados.org",
+     "rank": 3,
+     "snippet": "Mandatory Barbados National Standards are listed by subject.\nInternational (ISO) standards  \nadopted as Barbados National Standards, and CARICOM standards approved for publication  \nhave also been listed.\n...\nStandards  Catalogue  2026 Vol 1 \n...\nBNS SP 1: 2013",
+     "title": "BNSI Standards Catalogue 2026 Vol 1",
+     "url": "https://bnsibarbados.org/wp-content/uploads/2026/06/Catalogue-2026-Vol-1.pdf"
+    },
+    {
+     "date": "",
+     "host": "bnsibarbados.org",
+     "rank": 4,
+     "snippet": "Mandatory Barbados National Standards are listed by subject.\nInternational (ISO) standards\n...\n- 27 - \n...\n     Small Business Centre, Fontabelle, St. Michael BB11152 \n     Tel: (246) 426-3870          \n     Email: bnsi.office@barbados.gov.bb",
+     "title": "BARBADOS STANDARDS CATALOGUE",
+     "url": "https://bnsibarbados.org/wp-content/uploads/2022/11/Catalogue-2022.pdf"
+    },
+    {
+     "date": "",
+     "host": "bnsibarbados.org",
+     "rank": 5,
+     "snippet": "Mandatory Barbados National Standards are listed by subject.\nInternational (ISO) standards  \nadopted as Barbados National Standards, and CARICOM standards approved for publication  \nhave also been listed.\n...\nBNSI  Standards  Catalogue  2025 Vol 1 \n...\nSECTIONAL LISTING FOR",
+     "title": "[PDF] BNSI Standards Catalogue 2025 Vol 1",
+     "url": "https://bnsibarbados.org/wp-content/uploads/2025/04/Catalogue-2025-Vol-1.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Barbados mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "agriculture.gov.bb",
+     "rank": 1,
+     "snippet": "Explore the list of all legislation related to the Ministry of Agriculture and Food Security below.\n...\n- ### Animals (Diseases and Importation Control) Regulations 1961\n...\n- ### Pesticide Control Act 1974\n...\n- ### Pesticide Control Labelling Regulation 1976 CP395-A\n...\n355",
+     "title": "Downloads",
+     "url": "https://agriculture.gov.bb/Downloads/",
+     "verificacion": {
+      "bytes": 36622,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:34Z",
+      "http": 200,
+      "sha256": "1746d5537c99de121d18ff0104fdb83d2baa21712c4c71c2b3463cb9e5628cb1"
+     }
+    },
+    {
+     "date": "",
+     "host": "mtw.gov.bb",
+     "rank": 2,
+     "snippet": "laws Archives - Ministry of Transport & Works\n...\n## Road Traffic Act CAP. 295 (Windscreens and Windows) Regulations 2025\nRoad Traffic Act CAP.\n295 Road Traffic (Motor Vehicles) (Windscreens and Windows) Regulations 2025\n## Ministry of Transport & Works",
+     "title": "laws Archives - Ministry of Transport & Works",
+     "url": "https://mtw.gov.bb/document-tag/laws/",
+     "verificacion": {
+      "error": "robots.txt disallows https://mtw.gov.bb/document-tag/laws/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:27:34Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "agriculture.gov.bb",
+     "rank": 3,
+     "snippet": "Regulations\n- Official Website of the Government of Barbados\n# Regulations",
+     "title": "Regulations - agriculture.gov.bb",
+     "url": "https://agriculture.gov.bb/Resources/Regulations"
+    },
+    {
+     "date": "2026-10-20",
+     "host": "www.state.gov",
+     "rank": 4,
+     "snippet": "- Quality systems\n- Quality control and\n- Certification\n...\nAs a party to the World Trade Organization (WTO) Agreement on Technical Barriers to Trade, Barbados is obligated to harmonize all national standards through the BNSI to international norms to avoid creating technical barriers to trade.",
+     "title": "Barbados - United States Department of State",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/barbados/"
+    },
+    {
+     "date": "",
+     "host": "legacy.export.gov",
+     "rank": 5,
+     "snippet": "### Mandatory Standards:\nBarbados National Standard Specification for Labeling of Commodities [General] (BNS 5: Part 1:1974);\n• Barbados National Standard Specification for Labeling of Prepackaged Food (BNS 5:Part 2:2004 second revision);",
+     "title": "Barbados - Trade Standards | export.gov",
+     "url": "https://legacy.export.gov/article?id=Barbados-Trade-Standards"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Barbados national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "stats.gov.bb",
+     "rank": 1,
+     "snippet": "Barbados Statistical Service – Working Together Towards Excellence\n...\n- Barbados Statistical Service\nBSS\nThe Barbados Statistical Service (BSS) is a department in the Ministry of Economic Affairs and Development.\nIts mandate is to provide reliable and timely key economic and social statistics which",
+     "title": "Barbados Statistical Service – Working Together Towards ...",
+     "url": "https://stats.gov.bb/",
+     "verificacion": {
+      "bytes": 275142,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:37Z",
+      "http": 200,
+      "sha256": "a87c8774a31ad462172e9c96e9c03d4bfa5de573fe9b19e2c58bafda3d6ebd9b"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.un.org",
+     "rank": 2,
+     "snippet": "Barbados - Statistical Service\nNational Statistical Office of Barbados\nhttp://www.barstats.gov.bb/",
+     "title": "country profile | Barbados",
+     "url": "https://data.un.org/CountryProfile.aspx/_Images/CountryProfile.aspx?crName=Barbados",
+     "verificacion": {
+      "bytes": 3769,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:37Z",
+      "http": 200,
+      "sha256": "8ef3da215ff1000f05581814f1e5ef349a5f18b070b18bec5eb0507e967b1d8a"
+     }
+    },
+    {
+     "date": "",
+     "host": "stats.gov.bb",
+     "rank": 3,
+     "snippet": "Request Data – Barbados Statistical Service\n...\n## Request Data\n### Request Data\n...\n#### Social Media\nCopyright © 2021 Barbados Statistical Service.",
+     "title": "Request Data",
+     "url": "https://stats.gov.bb/request-data/"
+    },
+    {
+     "date": "",
+     "host": "stats.gov.bb",
+     "rank": 4,
+     "snippet": "Data – Barbados Statistical Service\n17th October 2026                                                                      Working together towards excellence.\n- Home\n- Statistics\n- Data\nExport Import Price Index\n...\nCopyright © 2021 Barbados Statistical Service.\nA department in the Ministry of Econ",
+     "title": "Data",
+     "url": "https://stats.gov.bb/statistics/data/"
+    },
+    {
+     "date": "",
+     "host": "edirc.repec.org",
+     "rank": 5,
+     "snippet": "## Barbados Statistical Service\n## Government of Barbados\n...\nLocation: Bridgetown, Barbados\nHomepage: https://stats.gov.bb/\nEmail:\nPhone: (246) 427-6009\n...\nInstitution Handle: RePEc:edi:stagvbb\nAreas or Functions: Statistical Offices",
+     "title": "Economics Departments, Institutes and Research Centers in the World",
+     "url": "https://edirc.repec.org/data/stagvbb.html"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Barbados central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.centralbank.org.bb",
+     "rank": 1,
+     "snippet": "Each data update made to CBBWEBSTATS is reflected here and can be downloaded in Excel format through a series of pre-formatted tables.\n...\nCBBWEBSTATS was launched on July 31 2019.\n...\n# Central Bank of Barbados Survey February 2026\n- Central Bank Of Barbados",
+     "title": "Central Bank of Barbados Survey February 2026",
+     "url": "https://www.centralbank.org.bb/news/statistics-news/central-bank-of-barbados-survey-february-2026",
+     "verificacion": {
+      "bytes": 121486,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:39Z",
+      "http": 200,
+      "sha256": "828cd0788215129fa6f7b53789e0b18cfb9e402eb5e168b5145f2af6f849a4df"
+     }
+    },
+    {
+     "date": "2026-10-31",
+     "host": "www.centralbank.org.bb",
+     "rank": 2,
+     "snippet": "info@centralbank.org.bb - General\n...\nEmail: info@centralbank.org.bb\n...\nCentral Bank of Barbados' Review of Barbados' Economy: January-September 2026\n...\n## Central Bank of Barbados\n- info@centralbank.org.bb\n- +1 (246) 436-6870",
+     "title": "Central Bank of Barbados - Home",
+     "url": "https://www.centralbank.org.bb/",
+     "verificacion": {
+      "bytes": 137250,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:40Z",
+      "http": 200,
+      "sha256": "d3f53f2fc25ef58bf9dd2be58c6328e04dee0d019a097485c8f2e00781b0af4a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.centralbank.org.bb",
+     "rank": 3,
+     "snippet": "Central Bank of Barbados Survey August 2025\n...\ninfo@centralbank.org.bb - General\n...\nA1CBBSURVEYAugust2025\n### Related Information\n- Research & Publications\n## Central Bank of Barbados\n- info@centralbank.org.bb\n- +1 (246) 436-6870",
+     "title": "Central Bank of Barbados Survey August 2025",
+     "url": "https://www.centralbank.org.bb/news/statistics-news/central-bank-of-barbados-survey-august-2025"
+    },
+    {
+     "date": "",
+     "host": "www.centralbank.org.bb",
+     "rank": 4,
+     "snippet": "CBBWEBSTATS was launched on July 31 2019.\nClick on About CBBWEBSTATS to learn more.\nAll queries related to CBBWEBSTATS should be sent to statistics@centralbank.org.bb.\n...\n## Central Bank of Barbados\n- info@centralbank.org.bb",
+     "title": "Central Bank of Barbados Asset and Liabilities April 2024",
+     "url": "https://www.centralbank.org.bb/news/statistics-news/central-bank-of-barbados-asset-and-liabilities-april-2024"
+    },
+    {
+     "date": "",
+     "host": "www.centralbank.org.bb",
+     "rank": 5,
+     "snippet": "CBBWEBSTATS was launched on July 31 2019.\nClick on About CBBWEBSTATS to learn more.\nAll queries related to CBBWEBSTATS should be sent to statistics@centralbank.org.bb.\n...\n## Central Bank of Barbados\n- info@centralbank.org.bb",
+     "title": "Central Bank of Barbados Survey September 2026",
+     "url": "https://www.centralbank.org.bb/news/statistics-news/central-bank-of-barbados-survey-september-2026"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Barbados government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "stats.gov.bb",
+     "rank": 1,
+     "snippet": "## Barbados' National Summary Data Page\nData Providers: Barbados Statistical Service, Central Bank of Barbados, Ministry of Finance\n...\nThe Browse Data button links the user to the compiling agency’s website, or a simple file containing the dataset in a human-readable form.\nThese files are currently",
+     "title": "stats.gov.bb · statistics · national-summary-data-pageNational Summary Data Page – Barbados Statistical Service",
+     "url": "https://stats.gov.bb/statistics/national-summary-data-page/",
+     "verificacion": {
+      "bytes": 154156,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:41Z",
+      "http": 200,
+      "sha256": "7bb0988ca7624d73a8a2f667b74c75017a568a7369e3db9ab58638340e9732d2"
+     }
+    },
+    {
+     "date": "",
+     "host": "stats.gov.bb",
+     "rank": 2,
+     "snippet": "Barbados Statistical Service – Working Together Towards Excellence\n...\n- Barbados Statistical Service\nBSS\nThe Barbados Statistical Service (BSS) is a department in the Ministry of Economic Affairs and Development.\nIts mandate is to provide reliable and timely key economic and social statistics which",
+     "title": "stats.gov.bbBarbados Statistical Service – Working Together Towards ...",
+     "url": "https://stats.gov.bb/",
+     "verificacion": {
+      "bytes": 275142,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:27:44Z",
+      "http": 200,
+      "sha256": "8d45a11c71c317b3a3714afa83ca10c816c9dc04e4970049a3434b755c60f3d0"
+     }
+    },
+    {
+     "date": "2023-03-03",
+     "host": "geoportal-bds-lsdept.hub.arcgis.com",
+     "rank": 3,
+     "snippet": "Barbados Geoportal\nThe Barbados Geoportal provides users with the ability to search, view, download, and analyze spatial datasets housed within governmental departments across various disciplines.\n...\n(246) 536 5200\nLSDept@Barbados.gov.bb\nLands & Surveys Department\n...\nBarbados",
+     "title": "Barbados Geoportal",
+     "url": "https://geoportal-bds-lsdept.hub.arcgis.com/"
+    },
+    {
+     "date": "",
+     "host": "stats.gov.bb",
+     "rank": 4,
+     "snippet": "Data – Barbados Statistical Service\n...\n- Home\n- Statistics\n- Data\nExport Import Price Index\n- XMPI (Export Goods Index_Excel version) (XLSX, 23kb)\n...\n- XMPI (Import Goods Excel tables) (XLSX, 23kb)",
+     "title": "Data - Statistics",
+     "url": "https://stats.gov.bb/statistics/data/"
+    },
+    {
+     "date": "",
+     "host": "www.gov.bb",
+     "rank": 5,
+     "snippet": "GOV.BB\n- Video - Information About EZpay+\n**GOV.BB is changing** We're improving how you interact with the Government and we want to learn from you.\nGo to alpha.gov.bb\n### PROCUREMENT PORTAL\n...\n- Minister Caddle Newest Member Of Global Digital Innovation Board",
+     "title": "Government of Barbados",
+     "url": "https://www.gov.bb/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:21:50Z",
+ "pais": {
+  "iso2": "BB",
+  "iso3": "BRB",
+  "nombre": "Barbados"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

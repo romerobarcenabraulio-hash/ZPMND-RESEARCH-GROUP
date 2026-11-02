@@ -1,0 +1,773 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Central African Republic constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 1,
+     "snippet": "# Constitution de la République Centrafricaine du 30 mars 2016, République centrafricaine\n...\nVersion la plus récente dans WIPO Lex\n...\nDates\n...\n#### Documents disponibles\n...\nTexte(s) princip(al)(aux)\nAnglais Constitution of the Central African Republic of March 30, 2016",
+     "title": "Constitution de la République Centrafricaine du 30 mars 2016 ...",
+     "url": "https://www.wipo.int/wipolex/fr/legislation/details/22785",
+     "verificacion": {
+      "bytes": 40967,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:05Z",
+      "http": 200,
+      "sha256": "6de4c4d1f7087361f31c2b8abc4210e3f08b58a54e30d6473a61168439980ff4"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 2,
+     "snippet": "|2016|Promulgated : March 30, 2016|Constitution of the Central African Republic of March 30, 2016, Decree No. 160218 of March 30, 2016 promulgating the Constitution of the Central African Republic|Other|",
+     "title": "WIPO Lex, Member Profile, Central African Republic",
+     "url": "https://www.wipo.int/wipolex/en/members/profile/CF",
+     "verificacion": {
+      "bytes": 140156,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:06Z",
+      "http": 200,
+      "sha256": "e2e2e9d01fa8d9a4d0ab1e998726c20d4eff9b7d9081a94608b62405d3be759b"
+     }
+    },
+    {
+     "date": "",
+     "host": "rimap.unhcr.org",
+     "rank": 3,
+     "snippet": "1. Countries\n...\n|Constitution of the Central African Republic|2023|Domestic law|Asylum,Documentation,Education,Family life,Freedom of movement,Health,Housing, land & property,Liberty & security of person,Nationality, Integration & Public Affairs,Social protection,Work & Workplace rights|",
+     "title": "Laws & policies",
+     "url": "https://rimap.unhcr.org/laws-policies/35"
+    },
+    {
+     "date": "2021-04-28",
+     "host": "wwws.loc.gov",
+     "rank": 4,
+     "snippet": "## Constitution\n- WIPO Lex: Constitution of the Central African Republic (external link) *(World Intellectual Property Organization)*\n...\n- FAOLEX: Central African Republic (external link) *(Food and Agriculture Organization of the United Nations)* database of national laws and regulations on food, ",
+     "title": "Guide to Law Online: Central African Republic | Law Library ...",
+     "url": "https://wwws.loc.gov/law/help/guide/nations/car.php"
+    },
+    {
+     "date": "2019-08-20",
+     "host": "natlex.ilo.org",
+     "rank": 5,
+     "snippet": "Legislation finder - Central African Republic\n...\nLoi n° 19‐0011 du 20 août 2019 portant Code électoral de la République centrafricaine.\n...\nDécret n° 160218 du 30 mars 2016 portant promulgation de la Constitution de la République centrafricaine.",
+     "title": "Breadcrumb",
+     "url": "https://natlex.ilo.org/dyn/natlex2/r/natlex/fe/results?p2_country_filter=CAF"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Central African Republic national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2021-02-25",
+     "host": "www.finances.gouv.cf",
+     "rank": 1,
+     "snippet": "Décrets et arrêtés | Ministère des Finances et du Budget\n…\n...\n|2021-09-03|Arrêté portant création, organisation et fonctionnement du comité de suivi de la digitalisation des finances publiques1.09 Mo|\nRGCP.pdf11.92 Mo|",
+     "title": "Décrets et arrêtés | Ministère des Finances et du Budget",
+     "url": "https://www.finances.gouv.cf/finances/decrets-et-arretes",
+     "verificacion": {
+      "bytes": 74927,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:08Z",
+      "http": 200,
+      "sha256": "025bf84d153674e82da1f27d70bac8c252a4a040b458c304feeb80f173823b94"
+     }
+    },
+    {
+     "date": "2021-02-18",
+     "host": "www.finances.gouv.cf",
+     "rank": 2,
+     "snippet": "# Ministère des Finances et du Budget\nRépublique Centrafricaine\n…\n...\n|2021-02-24|DÉCRET N°09.114: définissant les modalités et seuils d'approbation des marchés publics et des conventions de délégation de servi741.14 Ko|",
+     "title": "Textes réglémentaires | Ministère des Finances et du Budget",
+     "url": "https://www.finances.gouv.cf/marches-publics/textes-reglementaires",
+     "verificacion": {
+      "bytes": 55327,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:09Z",
+      "http": 200,
+      "sha256": "2454d783799fcafa37a807e2f4973eeac0953ace7a8be706bd0d9568c68e8d9e"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.arcep.cf",
+     "rank": 3,
+     "snippet": "# Lois et Ordonnances\n## Textes législatifs disponibles\n### Loi 24.002 relative à la cybersécurité et à la lutte contre la cybercriminalité\n21 février 2024\n...\n### Loi 24.001 portant protection des données à caractère personnel\n25 janvier 2024",
+     "title": "Lois et Ordonnances",
+     "url": "https://www.arcep.cf/page.php?slug=lois-ordonnances"
+    },
+    {
+     "date": "",
+     "host": "www.ecoi.net",
+     "rank": 4,
+     "snippet": "# Central African Republic - National Laws\n...\nShow all.\n...\n#### Order on the creation of the sub-commission for eligibility of the national refugee commission of 27. October 1987\n...\nfrID 1211219\n...\n#### Decree on the organisation and functioning of the national refugee commission of 1983",
+     "title": "Central African Republic - National Laws - ecoi.net",
+     "url": "https://www.ecoi.net/en/countries/central-african-republic/national-laws/?page=2"
+    },
+    {
+     "date": "",
+     "host": "www.icasees.org",
+     "rank": 5,
+     "snippet": "# TEXTES OFFICIELS\n|Lois (4 Documents)|\n|--|\n|Arrêtés (8 Documents)|\n|Décrets (11 Documents)|\n### Recherche avancée\n...\nLes publications, documents et données diffusés par l’ICASEES sont mis à disposition sous licence",
+     "title": "TEXTES OFFICIELS",
+     "url": "https://www.icasees.org/index.php/a-propos/ssn/textes-juriduques"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Central African Republic official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2021-04-28",
+     "host": "wwws.loc.gov",
+     "rank": 1,
+     "snippet": "# Central African Republic République Centrafricaine / Ködrö ti Bê-Afrika\n...\n## Legislative\n- OFFICIAL GAZETTE: Journal officiel",
+     "title": "Guide to Law Online: Central African Republic | Law Library ...",
+     "url": "https://wwws.loc.gov/law/help/guide/nations/car.php",
+     "verificacion": {
+      "bytes": 19949,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:09Z",
+      "http": 200,
+      "sha256": "b4cd2b7cad1eb14f6c997af67c623bdf3689bc642574bb730dbf241baa4d88a1"
+     }
+    },
+    {
+     "date": "2026-04-28",
+     "host": "data.bnf.fr",
+     "rank": 2,
+     "snippet": "Journal officiel de la République centrafricaine\n# Journal officiel de la République centrafricaine\nPériodique\n- **XML**\n...\n|Titre complet :|Journal officiel de la République centrafricaine|\n...\n|Lieu de publication :|**Bangui (République centrafricaine)**|",
+     "title": "Journal officiel de la République centrafricaine - data.bnf.fr",
+     "url": "https://data.bnf.fr/fr/ark:/12148/cb32802087d",
+     "verificacion": {
+      "bytes": 9859,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:11Z",
+      "http": 200,
+      "sha256": "11c1e20e54a25a93bdec53ecea2b58c2c25b22bb83200625ca41994314d83033"
+     }
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 3,
+     "snippet": "# Central African Republic\n## Central African Republic: legislation: official gazette\nDescription:\n...\nBoth in French.\nNo new material.",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag-country/central-african-republic"
+    },
+    {
+     "date": "2020-11-09",
+     "host": "guides.loc.gov",
+     "rank": 4,
+     "snippet": "- Journal Officiel de la République Centrafricaine by Central African Republic\nCall Number: Microfilm LL-02181\nPublished/Created: 1979-1994\n...\nCall Number: KRB1.5 C463 GAZETTES\nPublished/Created: 1979-",
+     "title": "Legal Guides - Guide to Law Online: Central African Republic ...",
+     "url": "https://guides.loc.gov/law-central-african-republic/legal-guides"
+    },
+    {
+     "date": "",
+     "host": "search.library.wisc.edu",
+     "rank": 5,
+     "snippet": "# Journal officiel de la République centrafricaine\nJournal officiel de la République centrafricaine (1959-1976)\n...\nCentral African Republic\n...\nFrench\n...\n- **Publication Dates**\n1ére année, no. 1 (1er juil. 1959)-, Ceased with 18.",
+     "title": "Journal officiel de la République centrafricaine - Catalog",
+     "url": "https://search.library.wisc.edu/catalog/999500227702121"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Central African Republic supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "justice.gouv.cf",
+     "rank": 1,
+     "snippet": "FIN DE LA PREMIERE SESSION CRIMINELLE ORDINAIRE A LA COUR D’APPEL DE BANGUI La Cour d’Appel de Bangui a officiellement terminé, mardi 4 novembre 2025, la première session criminelle ordinaire ouverte le 6 octobre dernier.",
+     "title": "Bienvenue sur Ministère de la Justice, de la Promotion des Droits Humains et de la Bonne Gouvernance, Garde des Sceaux",
+     "url": "https://justice.gouv.cf/",
+     "verificacion": {
+      "bytes": 44535,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:13Z",
+      "http": 200,
+      "sha256": "bc4d490b0af2320fe20723e8101f2ea9d4d128f23fd16c8a3e87db8cb9ad8db1"
+     }
+    },
+    {
+     "date": "",
+     "host": "repository.african-court.org",
+     "rank": 2,
+     "snippet": "Law Reports / Recueil de Jurisprudence\n...\n# Law Reports / Recueil de Jurisprudence\nPermanent URI for this collectionhttps://repository.african-court.org/handle/123456789/6\n## Browse\nSearch By Issue Date By Author By Title By Subject By Subject Category",
+     "title": "Law Reports / Recueil de Jurisprudence",
+     "url": "https://repository.african-court.org/collections/45f3c1f1-5e3a-4be3-b40c-a6f10de248f1",
+     "verificacion": {
+      "bytes": 387515,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:17Z",
+      "http": 200,
+      "sha256": "55d43ff0f6136e7c5ebda12df866ad9a8e91c2737cb0c5246491c625eb7801e8"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.african-court.org",
+     "rank": 3,
+     "snippet": "# Dashboard\nChoose a dashboard view — cases, implementation, advisory opinions or decisions.\n## Cases dashboard\n...\n## Decisions dashboard\nDecisions, judgments, orders, types and judges opinions.\n...\nFor authoritative legal information, please refer to the official case files and decisions published",
+     "title": "Dashboard",
+     "url": "https://www.african-court.org/ajudata/dashboard"
+    },
+    {
+     "date": "2020-11-09",
+     "host": "guides.loc.gov",
+     "rank": 4,
+     "snippet": "# Judicial\nThe following links to government and non-government websites provide access to free online legal resources related to the judicial branch of the Central African Repuiblic's government.\n- Juricaf: Centrafrique External This link opens in a new window\n(Judicial decisions in French)",
+     "title": "Judicial",
+     "url": "https://guides.loc.gov/law-central-african-republic/judicial"
+    },
+    {
+     "date": "",
+     "host": "www.worldlii.org",
+     "rank": 5,
+     "snippet": "## Africa\n### Central African Republic\n- République centrafricaine: Cour suprême 1988- (Droit francophone)\n- République centrafricaine: Tribunal administratif 1982- (Droit francophone)",
+     "title": "WorldLII Databases",
+     "url": "https://www.worldlii.org/databases.html"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Central African Republic state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.arcep.cf",
+     "rank": 1,
+     "snippet": "### Loi 24.002 relative à la cybersécurité et à la lutte contre la cybercriminalité\n...\n### Loi 24.001 portant protection des données à caractère personnel\n25 janvier 2024\nTexte relatif à la protection, au traitement et à la sécurisation des données",
+     "title": "Lois et Ordonnances",
+     "url": "https://www.arcep.cf/page.php?slug=lois-ordonnances",
+     "verificacion": {
+      "bytes": 11743,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:24Z",
+      "http": 200,
+      "sha256": "7ff00f0585a37498a27d5d0bc111c7eb1fa15d7f3ba13f06a6482837c83ce47c"
+     }
+    },
+    {
+     "date": "",
+     "host": "justice.gouv.cf",
+     "rank": 2,
+     "snippet": "Certificat de nationalité\nCasier Judiciaire\nInscription au RCCM\nActes Juridictionnels\nActes non juridictionnels\n...\n## Contact\nAvenue de l’indépendance Bangui - RCA\nTel : (+236) 21\nEmail : contact@justice.gouv.cf",
+     "title": "Bienvenue sur Ministère de la Justice, de la Promotion des Droits Humains et de la Bonne Gouvernance, Garde des Sceaux",
+     "url": "https://justice.gouv.cf/",
+     "verificacion": {
+      "bytes": 44535,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:25Z",
+      "http": 200,
+      "sha256": "bc4d490b0af2320fe20723e8101f2ea9d4d128f23fd16c8a3e87db8cb9ad8db1"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.assembleenationale-rca.cf",
+     "rank": 3,
+     "snippet": "L'Assemblée Nationale est la Chambre du Parlement de la République Centrafricaine.\nElle représente le peuple centrafricain et contribue à l'élaboration des lois de la Nation.\n📍Avenue des Martyrs, Bangui, République Centrafricaine",
+     "title": "Assemblée Nationale — République Centrafricaine",
+     "url": "https://www.assembleenationale-rca.cf/lois/"
+    },
+    {
+     "date": "",
+     "host": "gouv.cf",
+     "rank": 4,
+     "snippet": "Bienvenue sur Portail du Gouvernement | Portail du Gouvernement\n…\n...\n# Bienvenue sur Portail du Gouvernement\n## Contact\nPorte-Parole du Gouvernement.",
+     "title": "Bienvenue sur Portail du Gouvernement | Portail du Gouvernement",
+     "url": "https://gouv.cf/"
+    },
+    {
+     "date": "",
+     "host": "cemac.int",
+     "rank": 5,
+     "snippet": "Règlements et Directives – CEMAC\n...\n- La Commission de la Communauté Économique et Monétaire de l'Afrique Centrale\nCommunauté Économique et Monétaire de l'Afrique Centrale\n# Règlements et Directives\n- Accueil\n- Règlements et Directives",
+     "title": "Règlements et Directives – CEMAC",
+     "url": "https://cemac.int/reglements-directives/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Central African Republic municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "justice.gouv.cf",
+     "rank": 1,
+     "snippet": "# Bienvenue sur Ministère de la Justice, de la Promotion des Droits Humains et de la Bonne Gouvernance, Garde des Sceaux",
+     "title": "Bienvenue sur Ministère de la Justice, de la Promotion des Droits Humains et de la Bonne Gouvernance, Garde des Sceaux",
+     "url": "https://justice.gouv.cf/",
+     "verificacion": {
+      "bytes": 44535,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:26Z",
+      "http": 200,
+      "sha256": "bc4d490b0af2320fe20723e8101f2ea9d4d128f23fd16c8a3e87db8cb9ad8db1"
+     }
+    },
+    {
+     "date": "",
+     "host": "gazettes.africa",
+     "rank": 2,
+     "snippet": "Home\nChoose country\n...\nNational Gazettes\n...\nWe welcome donations of gazette collections.",
+     "title": "Gazettes.Africa",
+     "url": "https://gazettes.africa/",
+     "verificacion": {
+      "bytes": 37726,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:27Z",
+      "http": 200,
+      "sha256": "e7ab4287c8788cbd24e94f2d41406c09e9c396df69a78d4092c1629dfd308e8e"
+     }
+    },
+    {
+     "date": "2020-04-07",
+     "host": "leap.unep.org",
+     "rank": 3,
+     "snippet": "Country\nCentral African Republic\n...\nAbstract\nLa présente loi portant sur l'organisation et le fonctionnement des collectivités territoriales en République Centrafricaine vise à établir un cadre juridique pour la décentralisation, en attribuant aux collectivités des compétences, des moyens et l'auto",
+     "title": "Loi n° 20.008 du 7 avril 2020, portant organisation et ... - UNEP-LEAP",
+     "url": "https://leap.unep.org/en/countries/cf/national-legislation/loi-ndeg-20008-du-7-avril-2020-portant-organisation-et"
+    },
+    {
+     "date": "",
+     "host": "www.justice.gouv.cf",
+     "rank": 4,
+     "snippet": "# Publications\n|Titre|Types|Fichier (Pdf)|\n...\n## Contact\nEmail : contact@justice.gouv.cf",
+     "title": "Publications",
+     "url": "https://www.justice.gouv.cf/publications"
+    },
+    {
+     "date": "",
+     "host": "www.africa-laws.org",
+     "rank": 5,
+     "snippet": "Central African Republic's Laws & Regulations ┃ Africa Laws\n# Central African Republic",
+     "title": "Central African Republic - Africa laws",
+     "url": "https://www.africa-laws.org/centralafricanrepublic/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Central African Republic regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.arcep.cf",
+     "rank": 1,
+     "snippet": "Interconnexion et accès aux réseaux\nTexte définissant les modalités d’interconnexion et d’accès aux réseaux de communications\n...\n…\n### Décret n°20.004 relatif aux entreprises et établissements publics\nCadre institutionnel, juridique et financier\nTexte portant organisation du cadre applicable aux en",
+     "title": "Décrets",
+     "url": "https://www.arcep.cf/page.php?slug=decrets",
+     "verificacion": {
+      "bytes": 12765,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:30Z",
+      "http": 200,
+      "sha256": "b7cbd73d652261d579d54908d946da0962b611a4a1aa5d57caaa869db29da844"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.arcep.cf",
+     "rank": 2,
+     "snippet": "Le nouveau portail officiel de l’Autorité de Régulation des Communications\nÉlectroniques et de la Poste est en cours de finalisation.\n...\nContacter l’ARCEP contact@arcep.cf\n...\n**ARCEP RCA** — Autorité de Régulation des Communications Électroniques et de la Poste",
+     "title": "ARCEP RCA | Site en construction",
+     "url": "https://www.arcep.cf/",
+     "verificacion": {
+      "bytes": 7706,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:32Z",
+      "http": 200,
+      "sha256": "d889714dcb23943109ebea553b51b8b17319d9b81ecac2e905f5397c6ce06759"
+     }
+    },
+    {
+     "date": "",
+     "host": "cemac.int",
+     "rank": 3,
+     "snippet": "|Règlement d'exécution N°682/25/CEMAC/C/P/REX-NOR Relatif aux méthodes de travail de l'agence de supervision de la sécurité aérienne en Afrique centrale pour l'exécution d'inspections de normalisation|Sep 30, 2025|",
+     "title": "Règlements et Directives – CEMAC",
+     "url": "https://cemac.int/reglements-directives/"
+    },
+    {
+     "date": "2025-09-04",
+     "host": "cemac.int",
+     "rank": 4,
+     "snippet": "## Règlement fixant frais agréments_nouveau\n20 mai 202620 mai 2026\n...\nRèglements\n...\nSignée le 12 février 2025, la Directive de la CEMAC relative aux Partenariats Public-Privé définit le cadre juridique et institutionnel […]",
+     "title": "Règlements – CEMAC",
+     "url": "https://cemac.int/category/regulations/"
+    },
+    {
+     "date": "",
+     "host": "www.arcep.cf",
+     "rank": 5,
+     "snippet": "### Loi 24.002 relative à la cybersécurité et à la lutte contre la cybercriminalité\n21 février 2024\n...\nles infractions commises au moyen des technologies numériques.\n...\nAutorité administrative chargée de la régulation des communications électroniques et de la poste en République Centrafricaine.",
+     "title": "Lois et Ordonnances",
+     "url": "https://www.arcep.cf/page.php?slug=lois-ordonnances"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Central African Republic national standards body standards catalogue",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.ifrs.org",
+     "rank": 1,
+     "snippet": "# Central African Republic\n## COMMITMENT TO GLOBAL FINANCIAL REPORTING STANDARDS\nWhat is the jurisdiction’s status of adoption?\nIFRS Standards have been adopted in Central African Republic.",
+     "title": "IFRS - View Jurisdiction",
+     "url": "https://www.ifrs.org/use-around-the-world/use-of-ifrs-standards-by-jurisdiction/view-jurisdiction/central-african-republic/",
+     "verificacion": {
+      "bytes": 128689,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:33Z",
+      "http": 200,
+      "sha256": "6219d9348ddf13002134e5369c854d289e6c2688e5d75ff6a7b962f33bffa793"
+     }
+    },
+    {
+     "date": "2017-10-24",
+     "host": "tbtcode.iso.org",
+     "rank": 2,
+     "snippet": "# WTO ISO Standards Information Gateway\n## 195 organizations from 146 countries/territories\n|Viet Nam|STAMEQ|Directorate for Standards, Metrology and Quality|Central government|2001|Work Programme|",
+     "title": "List of standardizing bodies",
+     "url": "https://tbtcode.iso.org/list-of-standardizing-bodies.html",
+     "verificacion": {
+      "bytes": 154901,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:35Z",
+      "http": 200,
+      "sha256": "2f5dfaf5eb710db78b5766f2cc1c4a552bd80430cb0ead7062b737e16f828630"
+     }
+    },
+    {
+     "date": "2026-10-23",
+     "host": "www.scribd.com",
+     "rank": 3,
+     "snippet": "Inspection and Verification of\nConformity Program\n...\nAvenue Barthélémy BOGANDA\n3ème Etage Immeuble Propriété Béthel,\nDerrière Building Administratif\nTél.: +236 75 95 99 22\nBangui (Central African Republic)\nContacts:",
+     "title": "CAR Product Conformity Guidelines | PDF | Textiles | Foods",
+     "url": "https://www.scribd.com/document/930592066/Sgs-Gs-Pca-Central-African-Republic-Datasheet-En"
+    },
+    {
+     "date": "",
+     "host": "www.wto.org",
+     "rank": 4,
+     "snippet": "3.44.\nThe Central African Republic has no national regulatory framework on standardization and quality management, and no notification has been made to the WTO on the matter.\n...\nThe country has no national standards.\nThe only institution authorized to adopt international standards and formulate nat",
+     "title": "[PDF] WT/TPR/S/285 • CAR - ANNEX 4 CENTRAL AFRICAN REPUBLIC",
+     "url": "https://www.wto.org/english/tratop_e/tpr_e/s285-03_e.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Central African Republic mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "cemac.int",
+     "rank": 1,
+     "snippet": "# Règlements et Directives\n|Title|Updated|\n|--|--|\n...\n|Directive N°0120/25-UEAC-622-CM-42 Portant institution d'un Livre des Procédures Fiscales Communautaires (LPFC)|Jan 29, 2025|",
+     "title": "Règlements et Directives – CEMAC",
+     "url": "https://cemac.int/reglements-directives/",
+     "verificacion": {
+      "bytes": 111297,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:37Z",
+      "http": 200,
+      "sha256": "efbfc7604844eacd5447687037bdfb92bdc63cf2653b152797089318966e2243"
+     }
+    },
+    {
+     "date": "2025-09-04",
+     "host": "cemac.int",
+     "rank": 2,
+     "snippet": "# Catégorie : Règlements\n## Règlement fixant frais agréments_nouveau\n20 mai 202620 mai 2026\nREGLEMENT FRAIS D’AGREMENT_NOUVEAU\n...\n## DIRECTIVE PPP CEMAC\n4 septembre 20254 septembre 2025",
+     "title": "Règlements – CEMAC",
+     "url": "https://cemac.int/category/regulations/",
+     "verificacion": {
+      "bytes": 68200,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:38Z",
+      "http": 200,
+      "sha256": "f23039de66ec7cb4c980ae1df77993543c381a50d43723dd232d15c1e4f56666"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.sgs.com",
+     "rank": 3,
+     "snippet": "N°14/MCI/DIR-\n...\nCoC is mandatory for all shipments arriving to CAR.\n...\nYes \nREGULATED PRODUCTS \nThe following products are subject to the Program: \nHS code from chapter 02 to 99 \nREQUIREMENTS TO ELECTRIC PLUGS",
+     "title": "[PDF] Pre-shipment Verification of Conformity to Central African Republic",
+     "url": "https://www.sgs.com/-/media/sgscorp/documents/corporate/brochures/sgs-cp-pca-central-african-republic-datasheet-en.cdn.en.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.wto.org",
+     "rank": 4,
+     "snippet": "3.1.9   Prohibitions, quantitative restrictions and licences ....................................................\n332 \n3.1.10   Standards, technical regulations and accreditation ..................................................\n333 \n3.1.11   Packaging, marking and labelling requirements ..........",
+     "title": "[PDF] WT/TPR/S/285 • CAR - ANNEX 4 CENTRAL AFRICAN REPUBLIC",
+     "url": "https://www.wto.org/english/tratop_e/tpr_e/s285-03_e.pdf"
+    },
+    {
+     "date": "2020-08-21",
+     "host": "goods-schedules.wto.org",
+     "rank": 5,
+     "snippet": "### All procedures and legal instruments\n|G/MA/TAR/RS/517|28.02.2018 Initiated on: **28.02.2018** Last updated on: **28.02.2018**|HS2012|Certified|WT/Let/1359|+|",
+     "title": "Central African Republic | Goods Schedules eLibrary",
+     "url": "https://goods-schedules.wto.org/member/central-african-republic"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Central African Republic national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-10",
+     "host": "www.icasees.org",
+     "rank": 1,
+     "snippet": "Institut Centrafricain des Statistiques et des Etudes Economiques et Sociales\n- +236 72 05 25 93\n- Cette adresse e-mail est protégée contre les robots spammeurs.\nVous devez activer le JavaScript pour la visualiser.",
+     "title": "Institut Centrafricain des Statistiques et des Etudes Economiques et Sociales",
+     "url": "https://www.icasees.org/",
+     "verificacion": {
+      "bytes": 643715,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:40Z",
+      "http": 200,
+      "sha256": "52d82a772f514e6a6b07108029c9947c31c927a18922b84c7204dd627dec9a9f"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.wto.org",
+     "rank": 2,
+     "snippet": "…\nBulgaria \nNational Statistical Institute  \n...\nNational Institute of Statistics   \nCameroon  \nNational Institute of Statisti cs  \nCanada  \nStatistics Canada   \nCape Verde  \nNational Statistical Office   \nCentral African Republic  \nGeneral Di rectorate of Statistics and Economic and Social Studies",
+     "title": "[PDF] Web-sites of National Statistical Offices",
+     "url": "https://www.wto.org/english/res_e/statis_e/natl_e.pdf",
+     "verificacion": {
+      "bytes": 165004,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:41Z",
+      "http": 200,
+      "sha256": "33192cce0d031fe520d7d16d5afcc01aafc947bb247f083b89d78c161f16cea4"
+     }
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 3,
+     "snippet": "Main statistical agency name\nDivision des Statistiques et des Etudes Economiques (DSEES)\nWeb address\nwww.stat-centrafrique.com",
+     "title": "UNSD Document",
+     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=549"
+    },
+    {
+     "date": "",
+     "host": "ecastats.uneca.org",
+     "rank": 4,
+     "snippet": "|Country|NSO|Head of NSO|Title|Web address|",
+     "title": "National Statistics Offices in Africa - ECAStats",
+     "url": "https://ecastats.uneca.org/khub/en-us/Community/National-Statistical-Offices"
+    },
+    {
+     "date": "2026-06-05",
+     "host": "www.census.gov",
+     "rank": 5,
+     "snippet": "# Related International Statistical Activities\n|Country or Area Name*|GENC*|National Statistical Office|",
+     "title": "Related International Statistical Activities",
+     "url": "https://www.census.gov/programs-surveys/international-programs/about/related-sites.html"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Central African Republic central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "www.beac.int",
+     "rank": 1,
+     "snippet": "…\n...\n…\n- Base de Données Économiques, Monétaires et Financières\n- Indicateur Composite des Activités Économiques (ICAE)\n- Statistiques de la Balance des Paiements\n- Statistiques de l’Emission Monétaire\n- Statistiques d’inclusion financière",
+     "title": "BEAC: Accueil",
+     "url": "https://www.beac.int/",
+     "verificacion": {
+      "bytes": 380535,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:49Z",
+      "http": 200,
+      "sha256": "d85c6e9b93fe7c6f317a67341a399420dc9a753d2dfb497f3b6b35e1990a59fc"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.finances.gouv.cf",
+     "rank": 2,
+     "snippet": "# Ministère des Finances et du Budget\n...\nMinistère des Finances et du Budget",
+     "title": "Bienvenue sur Ministère des Finances et du Budget | Ministère ...",
+     "url": "https://www.finances.gouv.cf/",
+     "verificacion": {
+      "bytes": 52558,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:49Z",
+      "http": 200,
+      "sha256": "5a6a1ef10799b828002fb4be05e84d6119a5bfcf6da0794c3ac2fa83da7927d7"
+     }
+    },
+    {
+     "date": "2026-10-05",
+     "host": "www.banquemondiale.org",
+     "rank": 3,
+     "snippet": "https://www.banquemondiale.org/ext/fr/country/centralafricanrepublic\n...\n## EN CHIFFRES : RÉPUBLIQUE CENTRAFRICAINE\nVoir plus de données\nhttps://data360.worldbank.org/en/economy/CAF\nRépublique Centrafricaine",
+     "title": "République centrafricaine | Groupe de la Banque mondiale",
+     "url": "https://www.banquemondiale.org/ext/fr/country/centralafricanrepublic"
+    },
+    {
+     "date": "",
+     "host": "data.worldbank.org",
+     "rank": 4,
+     "snippet": "# GDP per capita (current US$) - Central African Republic\nCountry official statistics, National Statistical Organizations and/or Central Banks; National Accounts data files, Organisation for Economic Co-operation and Development ( OECD ); Staff estimates, World Bank ( WB )\n...\n**1960** - **2025**",
+     "title": "GDP per capita (current US$) - Central African Republic | Data",
+     "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=CF"
+    },
+    {
+     "date": "",
+     "host": "globaledge.msu.edu",
+     "rank": 5,
+     "snippet": "The Bank of Central African States, also known as Banque des Etats de I'Afrique Centrale (BEAC), consists of Cameroon, Gabon, the Central African Republic, Chad, the Republic of the Congo, and Equatorial Guinea.\nThis website provides statistical information on the region as well as publications.",
+     "title": "Bank of Central African States (BEAC) - globalEDGE",
+     "url": "https://globaledge.msu.edu/global-resources/resource/5451"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Central African Republic government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "africadata.org",
+     "rank": 1,
+     "snippet": "# AIH Projects\n|AFREC|Statistical Data Portal Open Data Portal|\n|--|--|\n|Cameroon|Statistical Data Portal Open Data Portal|\n|Central African Republic|Open Data Portal|",
+     "title": "AIH Projects | Africa Information Highway",
+     "url": "https://africadata.org/projects/",
+     "verificacion": {
+      "bytes": 40967,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:50Z",
+      "http": 200,
+      "sha256": "9657d3faf42d0b20e12942154ef15e4c778e98d79d790a4629fe910e4d7d5baa"
+     }
+    },
+    {
+     "date": "2026-11-01",
+     "host": "corpus.data-landscapers.io",
+     "rank": 2,
+     "snippet": "**Data published for download, and under an open licence.** The ICASEES mid-term review of the national statistics strategy (7-9 October 2026) says the Open Data Portal of the Central African Republic, administered by an ICASEES webmaster, has changed the conditions of access to official statistics.",
+     "title": "Maturity Assessmenti",
+     "url": "https://corpus.data-landscapers.io/maturity/countries/caf/",
+     "verificacion": {
+      "bytes": 295504,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:51Z",
+      "http": 200,
+      "sha256": "71270707571c8615b450b38fa766a6f135ed12f73d506b639d019e3821ea8f78"
+     }
+    },
+    {
+     "date": "2026-06-16",
+     "host": "www.icasees.org",
+     "rank": 3,
+     "snippet": "# Open Data Inventory (ODIN)\n...\nAccès ODP RCA Inventaire ODIN (23 catégories / 67 indicateurs)\n...\n## Accès rapide\n### ODP RCA\nPortail national des données ouvertes\n…\n...\n## Accéder au Portail Open Data de la RCA\nExplorer ODP RCA",
+     "title": "Matrice des indicateurs pour l'inventaire des données ouvertes",
+     "url": "https://www.icasees.org/index.php/plates-formes/odin"
+    },
+    {
+     "date": "",
+     "host": "www.gouv.cf",
+     "rank": 4,
+     "snippet": "Bienvenue sur Portail du Gouvernement | Portail du Gouvernement\n...\nMinistère de la Communication et des Média.\nPorte-Parole du Gouvernement.\nBP : 940 - Bangui - République Centrafricaine\nTel :  (236) 21.61.05.27\nEmail :",
+     "title": "Bienvenue sur Portail du Gouvernement | Portail du ...",
+     "url": "https://www.gouv.cf/"
+    },
+    {
+     "date": "",
+     "host": "africadata.org",
+     "rank": 5,
+     "snippet": "## Africa Information Highway\nCentral African Republic\nUnique Users 83\ncar.opendataforafrica.org\nChad",
+     "title": "Africa Information Highway",
+     "url": "https://africadata.org/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:29:08Z",
+ "pais": {
+  "iso2": "CF",
+  "iso3": "CAF",
+  "nombre": "Central African Republic"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

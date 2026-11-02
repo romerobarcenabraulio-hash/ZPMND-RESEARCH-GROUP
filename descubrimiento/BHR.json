@@ -1,0 +1,735 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Bahrain constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.lloc.gov.bh",
+     "rank": 1,
+     "snippet": "THE CONSTITUTION OF THE KINGDOM OF BAHRAIN\nDate : 14-February-2002 Official Gazette No. : 2517\nEnglish Version ( 58.69 KB ) Arabic Version (Image) ( 973.11 KB ) Arabic Version (Text)\n...\n- National Charter and Constitution",
+     "title": "The Constitution of the Kingdom of Bahrain",
+     "url": "https://www.lloc.gov.bh/en/Legislation/id/Constitution",
+     "verificacion": {
+      "bytes": 31734,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:13Z",
+      "http": 200,
+      "sha256": "9241c82b6d31a52513a5d1e6fbc648ee0800bf39672eb135f35d4c60c494fce3"
+     }
+    },
+    {
+     "date": "",
+     "host": "lloc.gov.bh",
+     "rank": 2,
+     "snippet": "Legislation and Legal Opinion Commission-The Constitution of the Kingdom of Bahrain\n...\nThis Constitution that we have promulgated contains the amendments that have been carried out in accordance with the provisions of the National Action Charter and that complement all the unamended texts.\n...\nLegi",
+     "title": "Legislation and Legal Opinion Commission-The Constitution of the Kingdom of Bahrain",
+     "url": "https://lloc.gov.bh/en/page/The%20Constitution%20of%20the%20Kingdom%20of%20Bahrain",
+     "verificacion": {
+      "bytes": 145699,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:15Z",
+      "http": 200,
+      "sha256": "36fcce9357dd7e03ba50fdf7b8bc9db9fd314e818980ebe81d5d2c329b9247be"
+     }
+    },
+    {
+     "date": "",
+     "host": "lloc.gov.bh",
+     "rank": 3,
+     "snippet": "قانون هيئة التشريع والرأي القانوني\n...\nالقانون المدني\n...\nقانون الأسرة\n...\nدستور مملكة البحرين\n( 2.17 MB )\nقانون العقوبات والتدابير البديلة\n( 380 KB )\nميثاق العمل الوطني\n( 526.6 KB )",
+     "title": "هيئة التشريع والرأي القانوني- - LLOC",
+     "url": "https://lloc.gov.bh/ElectronicLibrary"
+    },
+    {
+     "date": "",
+     "host": "www.bahrain.bh",
+     "rank": 4,
+     "snippet": "# Kingdom of Bahrain's National Portal\n...\n### Bahraini Legislations\nThe Kingdom of Bahrain’s Constitution, National Action Charter, and the latest legislative decrees, laws, royal decrees, and official announcements form the cornerstone of the Kingdom’s governance and legal framework.",
+     "title": "Home",
+     "url": "https://www.bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/!ut/p/z0/TY7NEsFAEIRfZS85zwTZxBFFwoXyU9iLGsmKlWQ2YineXhQHt-7qr7saFOxAMT1MTs5YprL1eyUP_jTAJBoh9jebCcoonvR6MlqGQQgrzTAD9Q8lct1BOYjD7mIx9ufD7mfFXK5XNQCVWnb66WB35PpAjYd0tHcn3FmLwnCe2crDk2HiVAviTPDvidBt01YvDxtdktOZcLY26c3Db2BS0bTqoZuXqEtiqIt4-wZbh5x-/?uri=nm:oid:Z6_1I50H8C009UUF068GF4468R757&st="
+    },
+    {
+     "date": "",
+     "host": "www.bahrain.bh",
+     "rank": 5,
+     "snippet": "The Bahrain Legislations App serves as an advanced digital channel, giving stakeholders immediate access to a range of legal eServices.\nUsers can search for and review updated legislation, decrees, treaties, and agreements, as well as legal principles issued by the Legislation & Legal Opinion Commis",
+     "title": "Bahraini Legislations",
+     "url": "https://www.bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/ContentDetailsPage/!ut/p/z0/dZBBT8JAFIT_yvOwR7MPqgWPIgnVBEVNBPZCtu1anl3eK9ttlX8vGg9Gw3Emk5kvo41eacO2p8pGErb-qNcm3QxuLzEb3yAuphdDfHy5ekon8wHOZ4l-dqzvtPkdyu4XU0wfsvFoOJokmOBXC73t9-Zam0I4uo-oVzk3GxsUHqQL4OnVATHkdhssscJKehd45ziC5RJaKch6aLumkRAVBudtdCVEaahoFfbiO442HOBdQv0X6D_1KSB3nLa5dBHi1kFNXJWyU_iDReBdRa3_Pqc9Yeumni3PzfrsE16EySo!/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Bahrain national regulations decrees official government database",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "lloc.gov.bh",
+     "rank": 1,
+     "snippet": "هيئة التشريع والرأي القانوني-التشريعات المترجمة للغة الإنجليزية\n(current)/التشريعات/التشريعات المترجمة للغة الإنجليزية\nResults (2806 records found)\n...\nDate : 17-Jul-2025 Official Gazette No. : 3822",
+     "title": "هيئة التشريع والرأي القانوني-التشريعات المترجمة للغة الإنجليزية",
+     "url": "https://lloc.gov.bh/legislation/english",
+     "verificacion": {
+      "bytes": 74492,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:43Z",
+      "http": 200,
+      "sha256": "f079fd798e26834b4c68964a16bd7c67966c4f11694e9f321cb96ae675f60981"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.lloc.gov.bh",
+     "rank": 2,
+     "snippet": "يمكن للباحث أن يبحث عن أداة قانونية وذلك من خلال كتابة رقم الأداة والسنة التي صدرت فيها الأداة في الخانة أعلاه.\nيمكن للباحث أن يبحث عن أداة قانونية في سنة محددة من خلال كتابة رقم السنة في الخانة أعلاه.\n...\nالخ.",
+     "title": "هيئة التشريع والرأي القانوني-ابحث في التشريعات",
+     "url": "https://www.lloc.gov.bh/legislation/search",
+     "verificacion": {
+      "bytes": 118864,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:44Z",
+      "http": 200,
+      "sha256": "04c617b98f9fa8176e3fa7174a1fbad430ba288baf209fa3d204a958a0ca6bfb"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bahrain.bh",
+     "rank": 3,
+     "snippet": "# Kingdom of Bahrain's National Portal\n...\n### Bahraini Legislations\nThe Kingdom of Bahrain’s Constitution, National Action Charter, and the latest legislative decrees, laws, royal decrees, and official announcements form the cornerstone of the Kingdom’s governance and legal framework.",
+     "title": "Home",
+     "url": "https://www.bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/!ut/p/z0/TYyxDoIwFEV_pQtzC0LBkRgBnYiRBLqQUl9KtbRQGsPnC5vjuefmYIZbzAz_Ksm9sobrnTtG-_CWkCq7EHJumoLQrCzimGaPNEnxHbP_Q0WfEaF5mZ7q-hqW0ekoqPeysBwzYY2HzeN2MHMPJiCwzdo6QAMfHVfHMIGTykjkQYzGaisVrAFxoLmHF_J2VmLndeLOI6H8bvH8Yd0Py8-PdA!!/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Bahrain official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-10-29",
+     "host": "www.lloc.gov.bh",
+     "rank": 1,
+     "snippet": "Legislation and Legal Opinion Commission-Official Gazettes\n...\n3916\n29 October 2026\n( 4.3 MB )\n3915\n28 October 2028\n...\n3913\n...\nLegislation and Legal Opinion Commission\nP.O. Box : 790\nManama - Kingdom of Bahrain",
+     "title": "Legislation and Legal Opinion Commission-Official Gazettes",
+     "url": "https://www.lloc.gov.bh/En/OfficialGazette",
+     "verificacion": {
+      "bytes": 33037,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:45Z",
+      "http": 200,
+      "sha256": "e4a2f39dc1971e39e5b756b9291b65f81de9eec8e5732a00780e3963b00c9c1c"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.lloc.gov.bh",
+     "rank": 2,
+     "snippet": "Legislation and Legal Opinion Commission-Legislation\n...\nDate : 25-December-2025 Official Gazette No. : 3852\n...\nDate : 19-September-2024 Official Gazette No. : 3769\n...\nP.O. Box : 790\nManama - Kingdom of Bahrain",
+     "title": "Legislation and Legal Opinion Commission-Legislation",
+     "url": "https://www.lloc.gov.bh/en/Legislation/Amendments/D7821",
+     "verificacion": {
+      "bytes": 34940,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:46Z",
+      "http": 200,
+      "sha256": "23310dfd5f0fae281f03b9e014623dbc4e43a967aef5411c5fff0efb517fa1ac"
+     }
+    },
+    {
+     "date": "",
+     "host": "services.bahrain.bh",
+     "rank": 3,
+     "snippet": "This service, provided by Information Affairs Authority (IAA), allows IAA customers (Individuals, Businesses and Government) to pay and subscribe for the Official Gazette which provides Minutes of Shura and Nuwab Councils’ sessions, commercial registration related papers, as well as the ability to s",
+     "title": "Official Gazette Services",
+     "url": "https://services.bahrain.bh/wps/portal/en/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziLSzcnQ2NLIy8_IP8LAwcQ03Mw7wDQ40MnA30C7IdFQEVHr-p/"
+    },
+    {
+     "date": "2026-07-20",
+     "host": "www.bahrainchamber.bh",
+     "rank": 4,
+     "snippet": "The Official Gazette is the Kingdom of Bahrain’s official publication for laws, decrees, regulations, resolutions, and other legislative instruments issued by the Government.\nIt serves as the authoritative source for publishing official legal and regulatory information, providing the public and rele",
+     "title": "Official Gazette of Bahrain",
+     "url": "https://www.bahrainchamber.bh/en/official-gazette-of-bahrain"
+    },
+    {
+     "date": "",
+     "host": "www.lloc.gov.bh",
+     "rank": 5,
+     "snippet": "Decree No. (42) of 1999 Establishing the Bahrain Petroleum Company\nDate : 29-December-1999 Official Gazette No. : 2405\n...\nLegislation and Legal Opinion Commission\nP.O. Box : 790\nManama - Kingdom of Bahrain",
+     "title": "Legislation and Legal Opinion Commission-Decree No. ...",
+     "url": "https://www.lloc.gov.bh/en/Legislation/id/L4299"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Bahrain supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "services.bahrain.bh",
+     "rank": 1,
+     "snippet": "If you have further feedback, please contact us.\n...\nFor more information : bahrainweather.gov.bh",
+     "title": "Court Case",
+     "url": "https://services.bahrain.bh/wps/portal/CourtCase_en",
+     "verificacion": {
+      "error": "robots.txt disallows https://services.bahrain.bh/wps/portal/CourtCase_en",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:09:46Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "services.bahrain.bh",
+     "rank": 2,
+     "snippet": "ابحث في الخدمات الإلكترونية ، المعلومات ، الوزارات...\nتتيح هذه الخدمات المقدمة من وزارة العدل والشؤون الإسلامية والأوقاف للمستخدمين إمكانية إنجاز معاملاتهم القانونية بطريقة سهلة وفعالة.\nالخدمة متوفرة باللغة الإنجليزية فقط , يرجى التغيير إلى اللغة الإنجليزية",
+     "title": "خدمات المحاكم والقضايا",
+     "url": "https://services.bahrain.bh/wps/portal/courts_ar",
+     "verificacion": {
+      "error": "robots.txt disallows https://services.bahrain.bh/wps/portal/courts_ar",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:09:46Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "services.bahrain.bh",
+     "rank": 3,
+     "snippet": "The service is available in Arabic only\nWe value your input.\n...\nFor more information : bahrainweather.gov.bh",
+     "title": "View court case Notifications (Arabic Only)",
+     "url": "https://services.bahrain.bh/wps/portal/en/BSP/GSX-UI-EServiceDetails?esID=48"
+    },
+    {
+     "date": "2025-03-25",
+     "host": "www.bahrain.bh",
+     "rank": 4,
+     "snippet": "Judicial cases and announcements, courts and more\n...\nIn line with its commitment to keep pace with social developments and embrace new technology, the Ministry provides many of its services through the National Portal bahrain.bh, including those for execution courts, announcements, cases, licenses,",
+     "title": "Courts and Cases",
+     "url": "https://www.bahrain.bh/wps/portal/en/BNP/HereInBahrain/CourtsAndCases/!ut/p/z0/fZBPb8IwDMW_infoOYZCy5X90bpNGtW0A8sFpa0JHqlT0oD4-MvQLmjabn56T_bvWWm1VlrMia2J7MW4pD90sZk8zbFa3CFWr_U9FqtqUU7L2xxfZupZ6atA8T7FYvlY5nX9MMG32fcG_jwc9FLp1kukc1TrRoaNCRnSeXA-EDRmFwxLhiZE3nLLxgGnrHNsSVr60wAjHQTf-Mjt-IvlCnZV5_-ymMYfI8QdwZ7Fdr7P8AeLwZHl0V1-MmYYKI3UQfRDupphx-NIPcvFB78F608UpCeJkBqSdByPgdSw183c2ZsvoKMuzg!!/?st=&uri=nm:oid:Z6_1I50H8C00HNPD06OH8727B30K4"
+    },
+    {
+     "date": "",
+     "host": "services.bahrain.bh",
+     "rank": 5,
+     "snippet": "|بوابتك للحصول على الخدمات والمعلومات الحكومية بكل يُسر\nابحث في الخدمات الإلكترونية ، المعلومات ، الوزارات...",
+     "title": "خدمات الدعاوى القضائية",
+     "url": "https://services.bahrain.bh/wps/portal/CasesServices_ar"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Bahrain state or provincial legislation official portal",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.lloc.gov.bh",
+     "rank": 1,
+     "snippet": "The user can search for any legislation by typing the legislation number in the textbox above.\nThe user can search for any legislation by typing the legislation year in the textbox above.\n...\nLegislation Type\n...\nLegislation and Legal Opinion Commission\nP.O. Box : 790\nManama - Kingdom of Bahrain",
+     "title": "Legislation and Legal Opinion Commission-Search in Legislations",
+     "url": "https://www.lloc.gov.bh/en/Legislation/Search",
+     "verificacion": {
+      "bytes": 113497,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:50Z",
+      "http": 200,
+      "sha256": "c62bf724847c9263d92b48226ead9c90f54b954d3b60f9b836321d53fcd7ca7a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.lloc.gov.bh",
+     "rank": 2,
+     "snippet": "يمكن للباحث أن يبحث عن أداة قانونية وذلك من خلال كتابة رقم الأداة والسنة التي صدرت فيها الأداة في الخانة أعلاه.\nيمكن للباحث أن يبحث عن أداة قانونية في سنة محددة من خلال كتابة رقم السنة في الخانة أعلاه.\n...\nالخ.",
+     "title": "هيئة التشريع والرأي القانوني-ابحث في التشريعات",
+     "url": "https://www.lloc.gov.bh/legislation/search",
+     "verificacion": {
+      "bytes": 118864,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:51Z",
+      "http": 200,
+      "sha256": "10ff4f2d40e0fab5dbee86bb79e340ec2b3b3373ed5a06525331921b3f016d43"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.lloc.gov.bh",
+     "rank": 3,
+     "snippet": "Legislation and Legal Opinion Commission-THE CONSTITUTION OF THE KINGDOM OF BAHRAIN\n- +973 17518000\n...\nTHE CONSTITUTION OF THE KINGDOM OF BAHRAIN\n...\nLegislation and Legal Opinion Commission\nP.O. Box : 790\nManama - Kingdom of Bahrain",
+     "title": "The Constitution of the Kingdom of Bahrain",
+     "url": "https://www.lloc.gov.bh/en/Legislation/id/Constitution"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Bahrain municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2026-10-25",
+     "host": "www.mun.gov.bh",
+     "rank": 1,
+     "snippet": "# القوانين و التشريعات\n...\n## القرار رقم (25) لسنة 2026 بتعديل بعض أحكام اللائحة التنفيذية لقانون تنظيم المباني الصادر بالمرسوم بقانون رقم (13) لسنة1977\n2026\n...\n2026\n...\ncontact@mun.gov.bh",
+     "title": "القوانين و التشريعات",
+     "url": "https://www.mun.gov.bh/newportal/ar/municipal-affairs/rules-and-regulations",
+     "verificacion": {
+      "bytes": 132352,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:52Z",
+      "http": 200,
+      "sha256": "fec11431f5d8bc619e195d62840f3baab68f5356f3479e5d55a4d84de57fe5b9"
+     }
+    },
+    {
+     "date": "2026-10-25",
+     "host": "www.mun.gov.bh",
+     "rank": 2,
+     "snippet": "Rules and Regulations | Ministry of Municipalities Affairs and Agriculture\n# Rules and Regulations\n## Resolution No. (167) of 2019 regarding changing the classification of a property in the Muharraq area - Block 211\n2019\nDownload (470.25 KB) pdf\n...\n2019\n...\n2019",
+     "title": "Rules and Regulations",
+     "url": "https://www.mun.gov.bh/newportal/en/municipal-affairs/rules-and-regulations?title=&field_sector_target_id=1&&&page=9",
+     "verificacion": {
+      "bytes": 124848,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:54Z",
+      "http": 200,
+      "sha256": "088277f411be6278bb046c28b91fea5627d99defa9297a3e81753fda99e553fd"
+     }
+    },
+    {
+     "date": "2026-10-19",
+     "host": "www.mun.gov.bh",
+     "rank": 3,
+     "snippet": "وزارة شؤون البلديات والزراعة |\nhttps://forms.gle/ULmRGCy5jeppFnUx9\nhttps://s3.eu-west-1.amazonaws.com/staticbh.mun.gov.bh-ire/2026/50/docs/Municip…\n...\ncontact@mun.gov.bh",
+     "title": "وزارة شؤون البلديات والزراعة |",
+     "url": "https://www.mun.gov.bh/newportal/ar"
+    },
+    {
+     "date": "",
+     "host": "www.mun.gov.bh",
+     "rank": 4,
+     "snippet": "- # اتصل بنا\n- : prinfo@mun.gov.bh\n- : 17981000\n- : ص.ب.\n53\nالمنامة\nمملكة البحرين\n...\n### الرجاء تسجيل الدخول بإستخدام حساب المستخدم التابع للبلدية\n...\nوزارة شؤون البلديات والزراعة",
+     "title": "تسجيل الدخول - وزارة شؤون البلديات والزراعة |",
+     "url": "https://www.mun.gov.bh/portal/"
+    },
+    {
+     "date": "",
+     "host": "mun.gov.bh",
+     "rank": 5,
+     "snippet": "Ministry of Works, Municipalities Affairs and Urban Planning - Kingdom of Bahrain\n- Email :\nprinfo@mun.gov.bh\n- Tel :17981000\n- Postal Address :P.O Box 53\nManama, Kingdom of Bahrain\n- No. of People used this service",
+     "title": "Ministry of Works, Municipalities Affairs and Urban Planning ...",
+     "url": "https://mun.gov.bh/esite/indexEn.jsp"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Bahrain regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-26",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "- MoIC\n- Electricity and Water Authority\n- The Municipality in which their business will be located\n- Labour Market Regulatory Authority\n- Social Insurance Organization\n- National Bureau for Revenue (Mandatory if the business revenue exceeds BHD 37,500, or approximately $99,734)",
+     "title": "2025 Investment Climate Statement: Bahrain",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/bahrain",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2025-investment-climate-statements/bahrain",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:09:54Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bahrain.bh",
+     "rank": 2,
+     "snippet": "A comprehensive guide to ministries, authorities, and government institutions in the Kingdom of Bahrain, everything you need to know to contact information\n...\n##### Central Bank of Bahrain\n##### Civil Service Bureau\n##### Legislation and Legal Opinion Commission\n##### Ministry of Oil and Environmen",
+     "title": "Government Directory",
+     "url": "https://www.bahrain.bh/wps/portal/en/BNP/GSX-UI-AllEntities",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.bahrain.bh/wps/portal/en/BNP/GSX-UI-AllEntities",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:09:54Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.lloc.gov.bh",
+     "rank": 3,
+     "snippet": "Legislation and Legal Opinion Commission-Search in Legislations\n...\nNational Authority for the Regulation of Occupation and Medical Services\n...\nNational Authority for Qualifications and quality Assurance of Education and Training\n...\nReal Estate Regulatory Authority\n...\nLegislation and Legal Opinio",
+     "title": "Legislation and Legal Opinion Commission-Search in Legislations",
+     "url": "https://www.lloc.gov.bh/en/Legislation/Search"
+    },
+    {
+     "date": "",
+     "host": "www.bahrain.bh",
+     "rank": 4,
+     "snippet": "The Bahrain Legislations App serves as an advanced digital channel, giving stakeholders immediate access to a range of legal eServices.\nUsers can search for and review updated legislation, decrees, treaties, and agreements, as well as legal principles issued by the Legislation & Legal Opinion Commis",
+     "title": "Bahraini Legislations",
+     "url": "https://www.bahrain.bh/wps/portal/en/BNP/BahrainAtAGlance/BahrainiLegislations/!ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDT1NDTwsnA0MPPwCXAzM_D0szI3MnYz9A4z0g1Pz9L30o5AVBbiYGBkEhlkGmTn5Ghr4uhuDTMnMKiyMctSPSs7PK0mtKNGPSMoriE_NUzWozC8tUsjJTEtVyMxTSErMKErMBIqW5-emwij9gmz3cABGrkSx/?uri=nm:oid:Z6_1I50H8C001TU00QVIAROFD1041&st="
+    },
+    {
+     "date": "",
+     "host": "www.lloc.gov.bh",
+     "rank": 5,
+     "snippet": "هيئة التشريع والرأي القانوني-التشريعات المترجمة للغة الإنجليزية\n(current)/التشريعات/التشريعات المترجمة للغة الإنجليزية\n...\nDecision No. (43) of 2025 Promulgating the Regulatory Regulation for Social Care Institutions 46.26 KB",
+     "title": "هيئة التشريع والرأي القانوني-التشريعات المترجمة للغة الإنجليزية",
+     "url": "https://www.lloc.gov.bh/legislation/english"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Bahrain national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bsmd.moic.gov.bh",
+     "rank": 1,
+     "snippet": "…\n...\nالنتائج 1 - 12 من 80,488 نتيجة Found 80,488 Standards\nGSO IEC 63522-32:2026\nIEC 63522-32:2025\nمواصفة قياسية خليجية\n...\nمواصفة قياسية خليجية",
+     "title": "البحث في المواصفات - متجر المواصفات",
+     "url": "https://bsmd.moic.gov.bh/store/standards",
+     "verificacion": {
+      "bytes": 372157,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:57Z",
+      "http": 200,
+      "sha256": "e6b1198810d3c09eefa584bdbc7da08e3022a70740bb35839655c280d70ab2ec"
+     }
+    },
+    {
+     "date": "",
+     "host": "bsmd.moic.gov.bh",
+     "rank": 2,
+     "snippet": "BH GSO 150-2:2015\nGSO 150-2:2013\nمواصفة قياسية بحرينية\n...\nGSO 9:2022\nلائحة فنية خليجية\nبطاقات المواد الغذائية المعبأة\nBH GSO 9:2023\n...\n…",
+     "title": "bsmd.moic.gov.bh · storeمتجر المواصفات - Ministry of Industry & Commerce - Kingdom of Bah...",
+     "url": "https://bsmd.moic.gov.bh/store/",
+     "verificacion": {
+      "bytes": 944847,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:59Z",
+      "http": 200,
+      "sha256": "b558b7818227188ebbe6821854b76822edd58f34a1fd4e14df21145019c88629"
+     }
+    },
+    {
+     "date": "",
+     "host": "bsmd.moic.gov.bh",
+     "rank": 3,
+     "snippet": "Ministry of Industry, Commerce, and Tourism - Kingdom of Bahrain\nBahrain Testing & Metrology Directorate (BTMD) - e-Services\n##### Bahraini Standards Store\nBuy Bahraini Standards and Technical Regulations, Pay online and immediately download your watermarked copy in PDF format\n...\nView Registered Pr",
+     "title": "Ministry of Industry, Commerce, and Tourism - Kingdom of Bahrain",
+     "url": "https://bsmd.moic.gov.bh/bsmd_landing.html?lang=en"
+    },
+    {
+     "date": "2025-01-01",
+     "host": "www.moic.gov.bh",
+     "rank": 4,
+     "snippet": "This service provided by the Ministry of Industry, Commerce and Tourism (MOICT), enables stakeholders to search and buy standards and technical regulations online in an electronic format.\n...\n- Enter/Search for standard/technical regulation number or title.\n- Add the required standard/technical regu",
+     "title": "Bahrain Standards Store | Ministry of Industry and Commerce",
+     "url": "https://www.moic.gov.bh/en/node/2720"
+    },
+    {
+     "date": "",
+     "host": "services.bahrain.bh",
+     "rank": 5,
+     "snippet": "## Bahrain Standards Store\nThis service provided by the Ministry of Industry and Commerce (MOIC), enables stakeholders to search and buy standards and technical regulations online in an electronic format.\n...\n### Bahrain Standards Store\n- Technical specifications and standards shall be sold accordin",
+     "title": "Bahrain Standards Store",
+     "url": "https://services.bahrain.bh/wps/portal/en/BSP/GSX-UI-EServiceDetails?esID=2157"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Bahrain mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bsmd.moic.gov.bh",
+     "rank": 1,
+     "snippet": "## البحث في المواصفات\n### نتائج البحث\nالنتائج 1 - 12 من 255 نتيجة Found 255 Standards",
+     "title": "تصفية النتائج",
+     "url": "https://bsmd.moic.gov.bh/store/standards?ics=17.220.20",
+     "verificacion": {
+      "bytes": 378374,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:09:59Z",
+      "http": 200,
+      "sha256": "fc7a505ab36b991b6800fc2107bb7c6e6264623437a0e6f4a490315ae6227ff6"
+     }
+    },
+    {
+     "date": "2025-09-01",
+     "host": "www.moic.gov.bh",
+     "rank": 2,
+     "snippet": "|1|Motor Vehicles (205.42 KB, 4 Pages, PDF, Arabic Only)|\n|2|Vehicle Tires (42.83 KB, 2 Pages, PDF, Arabic Only)|\n|3|Motorcycles (222.89 KB, 4 Pages, PDF, Arabic Only)|",
+     "title": "Ministerial Orders and Technical Regulations for Regulated ...",
+     "url": "https://www.moic.gov.bh/en/node/2785",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.moic.gov.bh/en/node/2785",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:10:00Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "bsmd.moic.gov.bh",
+     "rank": 3,
+     "snippet": "GSO 150-2:2013\nمواصفة قياسية خليجية\nفترات صلاحية المنتجات الغذائية - الجزء الثاني : فترات الصلاحية الاختيارية\n...\nGSO 150-2:2013\nمواصفة قياسية بحرينية\n...\nISO 23375:2026",
+     "title": "bsmd.moic.gov.bh · storeمتجر المواصفات - Ministry of Industry & Commerce - Kingdom of Bah...",
+     "url": "https://bsmd.moic.gov.bh/store/"
+    },
+    {
+     "date": "",
+     "host": "bsmd.moic.gov.bh",
+     "rank": 4,
+     "snippet": "##### Bahraini Standards Store\nBuy Bahraini Standards and Technical Regulations, Pay online and immediately download your watermarked copy in PDF format\n...\nGulf technical regulations for Children toys and Low voltage appliances are able to grant manufacturers or importers certificates of conformity",
+     "title": "Ministry of Industry, Commerce, and Tourism - Kingdom of Bahrain",
+     "url": "https://bsmd.moic.gov.bh/bsmd_landing.html?lang=en"
+    },
+    {
+     "date": "",
+     "host": "iga.gov.bh",
+     "rank": 5,
+     "snippet": "Short-range radiocommunication devices or application devices may not be used or imported except after obtaining a specific certification from the Department, except for devices imported for personal use if they conform to the technical specifications approved in the Kingdom unless five devices.\n...",
+     "title": "The Regulations of “Type Approval for Short-Range Devices”",
+     "url": "https://iga.gov.bh/Media/Publications/pdf/The%20Regulations%20of%20Type%20Approval%20for%20Short%20Range%20Devices.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Bahrain national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.data.gov.bh",
+     "rank": 1,
+     "snippet": "2025-03-19\nhttps://www.data.gov.bh/explore/dataset/01-annually-general-economic-indicators-by-cp/\n...\nhttps://www.data.gov.bh/explore/dataset/distribution-population-by-governorate-and-nationality-of-households-census-2020/",
+     "title": "[XML] https://www.data.gov.bh/sitemap.xml",
+     "url": "https://www.data.gov.bh/sitemap.xml",
+     "verificacion": {
+      "bytes": 71118,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:04Z",
+      "http": 200,
+      "sha256": "5bd3a97d45f1cd9da61c42e44791357a5ff02d947347d4f0394a6cbb42a3d750"
+     }
+    },
+    {
+     "date": "2026-06-29",
+     "host": "www.data.gov.bh",
+     "rank": 2,
+     "snippet": "إحصاءات\nStatistics\n...\nمعلومات عنا\nAbout us\nالعربية\nEnglish",
+     "title": "مرحباً بكم في بوابة البحرين للبيانات المفتوحة",
+     "url": "https://www.data.gov.bh/pages/homepage/?flg",
+     "verificacion": {
+      "bytes": 116976,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:05Z",
+      "http": 200,
+      "sha256": "dbd80591748a585adfa64cdd0d8196ae41188e7a694a938b19f165d117dd45ef"
+     }
+    },
+    {
+     "date": "2026-06-29",
+     "host": "www.data.gov.bh",
+     "rank": 3,
+     "snippet": "# Active filters Clear all\n# Filters\n### Themes\n- 12 National Accounts - Quarterly\n- 5 Population",
+     "title": "Explore — Bahrain Open Data Portal",
+     "url": "https://www.data.gov.bh/explore/"
+    },
+    {
+     "date": "",
+     "host": "static.cambridge.org",
+     "rank": 4,
+     "snippet": "Table A1: Websites of National Statistical Agencies in MENA \nS/N \nEconomy \nNational Statistical Agencies \nWebsite \n1 \n...\n2 \nBahrain \nNational statistical office of Bahrain \nInformation and eGovernment Authority http://www.data.gov.bh;",
+     "title": "Annex",
+     "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S2632324922000244/resource/name/S2632324922000244sup001.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.iga.gov.bh",
+     "rank": 5,
+     "snippet": "- Bahrain Open Data Portal\nThe platform allows the ability to view, analyze and upload data feeds for research and reporting purposes for data users, with access to graphs ready for display and analysis, in terms of transparency and enhancing eParticipation.\n...\nP.O. Box 33305,\nManama - Kingdom of B",
+     "title": "Statistics & Population",
+     "url": "https://www.iga.gov.bh/en/article/statistics-and-population"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Bahrain central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-20",
+     "host": "www.cbb.gov.bh",
+     "rank": 1,
+     "snippet": "established by the Central Bank of Bahrain and Financial Institutions\nLaw 2006.\n...\n…\n### Number of Banks and Financial Institutions\nJanuary 2026\n**14,971**\n…\n### Total Balance Sheet of the Banking System\nDecember 2025\n**17.2%**\n…",
+     "title": "Central Bank of Bahrain | Home",
+     "url": "https://www.cbb.gov.bh/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.cbb.gov.bh/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:10:08Z"
+     }
+    },
+    {
+     "date": "2025-04-06",
+     "host": "www.cbb.gov.bh",
+     "rank": 2,
+     "snippet": "### CENTRAL BANK OF BAHRAIN\nBuilding 96, Road 1702\nBlock 317, Diplomatic Area",
+     "title": "Facilities & Interest Rates",
+     "url": "https://www.cbb.gov.bh/facilities-interest-rates/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.cbb.gov.bh/facilities-interest-rates/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:10:08Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cbb.gov.bh",
+     "rank": 3,
+     "snippet": "Data are compiled by the Central Bank of Bahrain since 2001, and are available on monthly basis.\n...\nThe data is published simultaneously every end of a month and are available on the CBB website (https://www.cbb.gov.bh/publications) along with a press release\n…",
+     "title": "قائمـة الجـداول Tables List الجدول Table Banking Statistics ...",
+     "url": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Jul-2026.pdf"
+    },
+    {
+     "date": "2025-03-05",
+     "host": "www.cbb.gov.bh",
+     "rank": 4,
+     "snippet": "Publications & Data\n...\n## Central Bank Survey\n**Central Bank Survey** September 2026 PDF Excel PUBLISHED October 2026\n**Central Bank Survey** August 2026 PDF Excel PUBLISHED September 2026\n**Central Bank Survey** July 2026 PDF Excel PUBLISHED August 2026",
+     "title": "Publications & Data | CBB",
+     "url": "https://www.cbb.gov.bh/publications/"
+    },
+    {
+     "date": "2026-06-29",
+     "host": "www.data.gov.bh",
+     "rank": 5,
+     "snippet": "# The National Summary Data Page (NSDP) - Kingdom of Bahrain\nThis page displays important economic and financial data for the Kingdom of Bahrain published as per the\nDissemination Standards Bulletin Board (DSBB) of the International Monetary Fund (IMF).\n...\n|--|--|--|--|",
+     "title": "National Summary Data Page (NSDP) - Bahrain Open Data Portal",
+     "url": "https://www.data.gov.bh/pages/national-summary-data-page-nsdp/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Bahrain government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2024-10-11",
+     "host": "www.data.gov.bh",
+     "rank": 1,
+     "snippet": "Terms and Conditions — Bahrain Open Data Portal\nBy using the government open data, you implicitly acknowledge your agreement to the terms and conditions stated in the Bahrain Government Open Data License",
+     "title": "Terms and Conditions",
+     "url": "https://www.data.gov.bh/pages/terms-and-conditions/",
+     "verificacion": {
+      "bytes": 106617,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:08Z",
+      "http": 200,
+      "sha256": "be1ff1c141f224c2bc457fe7c588a3640291c56c5e531c36d7131412700f8e1a"
+     }
+    },
+    {
+     "date": "2026-06-29",
+     "host": "www.data.gov.bh",
+     "rank": 2,
+     "snippet": "Explore — Bahrain Open Data Portal\n...\n# Download catalog\nThis catalog is available as:\n- ** XLSX\n- ** CSV\n- ** RDF/XML (DCAT)\n- ** RSS feed",
+     "title": "إدارة تفضيلات ملفات تعريف الارتباط",
+     "url": "https://www.data.gov.bh/explore/?refine.theme",
+     "verificacion": {
+      "bytes": 92936,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:10:09Z",
+      "http": 200,
+      "sha256": "e274d234b1767febdb5232ec9bed2f8f6cd28057b5eb2df7ada78693753cb043"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bahrain.bh",
+     "rank": 3,
+     "snippet": "## Open Data Portal\nIn an effort to improve government transparency and boost public participation, several governmental entities in Bahrain freely publish their data on the Open Data Portal.\n...\nFor ease of use, a searchable metadata list is available on the portal to further explain common terms i",
+     "title": "Data for All-Open Government and Inclusion",
+     "url": "https://www.bahrain.bh/wps/portal/en/!ut/p/z0/lZJPb8IwDMW_ii89oob_cBxjGpvEYBw2yAW5rdsG0qQkaTe-_cLEpmkwJiRfLL3YP7-XkIfLkCusRYZOaIXS9yveWzcfumwyuGVs8jQfs95sMui3-qP2bNEKH0N-QTBsHSaIzW7Hb0Iea-Xo3YXLSJVrUgHDSFcOXE6wFSpLdBGwCHODQkEiMuFQQqZrMqog5WCjK6NoHzBDEh0l4HQpYhuwEo1TZGwuSgtvwuWfI0sjai8DS7HT5jfofNxpseeX4aI3mjbZ9L79JyiagO39apAiJfBoR8SA5VWBCozIcmdPqVJD5E8CnR5xyFpAlUBBicDLxnXu2tcaVxDayvgO4so6XZAB61O0KcaHLE_5zsrAF1kytYjJ_hPu4upwv0IVKpaVPUuVoENItQGUsqFLUj9_wMG977dhueVRV9bFa4OvPgBDrT3f/"
+    },
+    {
+     "date": "2026-06-29",
+     "host": "www.data.gov.bh",
+     "rank": 4,
+     "snippet": "The data is available for free to all visitors to the Bahrain Open Data Portal without exception.\n...\nYou can access the data using the search engine or through the Data page on the main menu, which lists all the official datasets on the portal.\nThe data can be filtered by topic or by the publishing",
+     "title": "FAQ",
+     "url": "https://www.data.gov.bh/pages/faq/"
+    },
+    {
+     "date": "2026-06-29",
+     "host": "www.data.gov.bh",
+     "rank": 5,
+     "snippet": "Explore — Bahrain Open Data Portal\n…\n# Filters\n### Creator\n- 185 Information & eGovernment Authority\n...\n# Download catalog\nThis catalog is available as:\n- XLSX\n- CSV\n- RDF/XML (DCAT)\n- RSS feed",
+     "title": "Explore — Bahrain Open Data Portal",
+     "url": "https://www.data.gov.bh/explore/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:21:02Z",
+ "pais": {
+  "iso2": "BH",
+  "iso3": "BHR",
+  "nombre": "Bahrain"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

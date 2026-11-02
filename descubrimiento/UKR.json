@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Ukraine constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "1996-06-28",
+     "host": "zakon.rada.gov.ua",
+     "rank": 1,
+     "snippet": "# The Constitution of Ukraine\nThe Constitution of Ukraine\n*Verkhovna Rada of Ukraine*; Constitution of Ukraine, Constitution, Law on June 28, 1996 №\n**254к/96-ВР**",
+     "title": "The Constitution of Ukraine - Верховна Рада України",
+     "url": "https://zakon.rada.gov.ua/laws/show/en/254%D0%BA/96-%D0%B2%D1%80"
+    },
+    {
+     "date": "",
+     "host": "zakon.rada.gov.ua",
+     "rank": 2,
+     "snippet": "…\nПосилання згідно ДСТУ 8302:2015:\n...\nURL: https://zakon.rada.gov.ua/go/254%D0%BA/96-%D0%B2%D1%80 (дата звернення: 15.10.2026)",
+     "title": "Конституція України | від 28.06.1996 № 254к/96-ВР - zakon",
+     "url": "https://zakon.rada.gov.ua/laws/show/254%D0%BA/96-%D0%B2%D1%80"
+    },
+    {
+     "date": "",
+     "host": "zakon.rada.gov.ua",
+     "rank": 3,
+     "snippet": "## Universal search\nSearch engine makes it possible to find documents quickly as **by parameters** as by **context**:\n...\n- Constitution of Ukraine\n...\n- On Status of People's Deputy of Ukraine\n...\n** The Database **\"Laws of Ukraine\"** is of informative nature and is not an official printed edition.",
+     "title": "zakon.rada.gov.ua · laws · mainLegislation of Ukraine",
+     "url": "https://zakon.rada.gov.ua/laws/main/en/"
+    },
+    {
+     "date": "",
+     "host": "zakon.rada.gov.ua",
+     "rank": 4,
+     "snippet": "# Головна сторінка розділу \"Законодавство України\"\n## До уваги\n** **База даних \"Законодавство України\"** має інформаційний характер і не є офіційним друкованим виданням.",
+     "title": "Законодавство України - Всі документи",
+     "url": "https://zakon.rada.gov.ua/laws/main/index"
+    },
+    {
+     "date": "2026-10-23",
+     "host": "www.rada.gov.ua",
+     "rank": 5,
+     "snippet": "## Legislation\n- Latest additions of parliamentary enactments\n...\n- Constitution of Ukraine\n- Ukraine’s codes\n- Laws of Ukraine\n- International Acts\n- Translation of EU legal acts\n- Primary legislation\n- Documents by Committees\n- Abstracts of Documents\n- Legislative glossary\n- Legal classification o",
+     "title": "Verkhovna Rada of Ukraine",
+     "url": "https://www.rada.gov.ua/en"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Ukraine national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-10-06",
+     "host": "zakon.rada.gov.ua",
+     "rank": 1,
+     "snippet": "### Президент\n#### Президент України ( Президент України )\n1. *Президент України*; Указ від 06.10.2026 № **1032/2026**\n1032/2026, 1 кб\n...\n1028/2026, **Чинний**, 2 кб",
+     "title": "Нові Надходження",
+     "url": "https://zakon.rada.gov.ua/laws/main/nn"
+    },
+    {
+     "date": "",
+     "host": "zakon.rada.gov.ua",
+     "rank": 2,
+     "snippet": "Інформаційно-пошукова система \"Законодавство України\" дає змогу знайти документи, як **за реквізитами**, так і **за контекстом**:\n…\n...\n- Видавники документів\n- Міжнародні видавники",
+     "title": "Законодавство України - Всі документи",
+     "url": "https://zakon.rada.gov.ua/laws/main/index"
+    },
+    {
+     "date": "",
+     "host": "www.kmu.gov.ua",
+     "rank": 3,
+     "snippet": "Search for Government decisions | Cabinet of Ministers of Ukraine\n|Пн|Вт|Ср|Чт|Пт|Сб|Нд|\n...\nConstitutional Court of Ukraine\n...\n2. Search for Government decisions\n# Search for Government decisions",
+     "title": "Search for Government decisions | Cabinet of Ministers of Ukraine",
+     "url": "https://www.kmu.gov.ua/en/npasearch"
+    },
+    {
+     "date": "2021-01-26",
+     "host": "data.gov.ua",
+     "rank": 4,
+     "snippet": "### Єдиний державний реєстр нормативно-правових актів\nЄдиний державний реєстр нормативно-правових актів, що містить картку нормативно-правового акта, текст нормативно правового акта",
+     "title": "Єдиний державний реєстр нормативно-правових актів",
+     "url": "https://data.gov.ua/dataset/c98e830c-e39e-4da6-a13c-f9ba32a79bec"
+    },
+    {
+     "date": "",
+     "host": "zakon.rada.gov.ua",
+     "rank": 5,
+     "snippet": "Всі документи (станом на 23 жовтня 2026 р.)\n...\nІнформаційне наповнення — Відділ баз даних нормативно-правової інформації\nДеякі функції знаходяться у режимі тестової експлуатації.",
+     "title": "Всі документи (станом на 21 жовтня 2026 р.)",
+     "url": "https://zakon.rada.gov.ua/laws"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Ukraine official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-10-02",
+     "host": "zakon.rada.gov.ua",
+     "rank": 1,
+     "snippet": "*Мін'юст України*; Повідомлення від 25.10.2024Опубліковано: **Офіційний вісник України**від 25.10.2024 — **2024 р., № 89** 3 кб #1\n…",
+     "title": "Публікації документа (Офіційний вісник України) - Всі документи",
+     "url": "https://zakon.rada.gov.ua/laws/main/b19"
+    },
+    {
+     "date": "2026-10-20",
+     "host": "law.dpcoi.com.ua",
+     "rank": 2,
+     "snippet": "Вийшов друком черговий випуск «Офіційного вісника України» № 084 – law.dpcoi.com.ua\n...\n16 Жов 2026",
+     "title": "Вийшов друком черговий випуск «Офіційного вісника України» № 084",
+     "url": "https://law.dpcoi.com.ua/news/%D0%B2%D0%B8%D0%B9%D1%88%D0%BE%D0%B2-%D0%B4%D1%80%D1%83%D0%BA%D0%BE%D0%BC-%D1%87%D0%B5%D1%80%D0%B3%D0%BE%D0%B2%D0%B8%D0%B9-%D0%B2%D0%B8%D0%BF%D1%83%D1%81%D0%BA-%D0%BE%D1%84%D1%96%D1%86%D1%96-807/"
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 3,
+     "snippet": "# Ofitsiinyi visnyk Ukraïny\n...\nIndexes to Ofitsiinyi visnyk Ukraïny and some full text available free of charge.\n...\nOfficial Gazette of Ukraine.\nPublishes normative acts passed by national executive agencies and registered with the Ministry of Justice of Ukraine.\nPublished weekly",
+     "title": "Ofitsiinyi visnyk Ukraïny - IALS Digital resources",
+     "url": "https://resources.ials.sas.ac.uk/fogg/ofitsiinyi-visnyk-ukra%C3%AFny"
+    },
+    {
+     "date": "",
+     "host": "zakon.rada.gov.ua",
+     "rank": 4,
+     "snippet": "Опубліковано:\n**Офіційний вісник України** від 08.05.2026 — **2026 р., № 38, стаття 2611, код акта 139011/2026**\n...\nОпубліковано:\n...\nОпубліковано:",
+     "title": "Публікації документа (Офіційний вісник України)",
+     "url": "https://zakon.rada.gov.ua/laws/main/b19/page2/sps:max1516"
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 5,
+     "snippet": "# Ukraine: legislation: official gazette\nDescription:\n1 title containing the official gazette for the Ukraine from 1993 onwards.\nIt is an official publication and the text is in Ukranian.\nNew material is still added.\n...\nCountry:\nUkraine",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag/ukraine-legislation-officiaperiodicalsvid-41"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Ukraine supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "supreme.court.gov.ua",
+     "rank": 1,
+     "snippet": "Рішення Верховного Суду\nВЕРХОВНИЙ СУД\nВЕРХОВНИЙ СУД\nОтримуйте інформацію лише з офіційних джерел\n...\n# Рішення Верховного Суду",
+     "title": "Рішення Верховного Суду",
+     "url": "https://supreme.court.gov.ua/supreme/gromadyanam/reyestr-vs/"
+    },
+    {
+     "date": "",
+     "host": "supreme.court.gov.ua",
+     "rank": 2,
+     "snippet": "Рішення судових палат\n...\n2024 рік\n...\n2025 рік\n…\n- Постанова Верховного Суду від 10 грудня 2024 року у справі № 240/19209/21 (провадження № К/990/16548/22)",
+     "title": "Рішення судових палат - ВЕРХОВНИЙ СУД - Судова влада України",
+     "url": "https://supreme.court.gov.ua/supreme/pro_sud/rishennya_sud_palat/"
+    },
+    {
+     "date": "",
+     "host": "www.supreme.court.gov.ua",
+     "rank": 3,
+     "snippet": "Набори відкритих даних\nОтримуйте інформацію лише з офіційних джерел\nЄдиний Контакт-центр судової влади України 044 207-35-46\n# Судова влада України\n# Набори відкритих даних",
+     "title": "Набори відкритих даних - supreme.court.gov.ua",
+     "url": "https://www.supreme.court.gov.ua/opendata/"
+    },
+    {
+     "date": "",
+     "host": "lpd.court.gov.ua",
+     "rank": 4,
+     "snippet": "База правових позицій | Верховний Суд\n…\n# Знаходьте правові позиції\n## Нещодавно додані правові позиції\n### Верховний Суд\ninbox@lpd.court.gov.ua",
+     "title": "База правових позицій | Верховний Суд",
+     "url": "https://lpd.court.gov.ua/"
+    },
+    {
+     "date": "",
+     "host": "www.supreme.court.gov.ua",
+     "rank": 5,
+     "snippet": "Отримуйте інформацію лише з офіційних джерел",
+     "title": "Справи",
+     "url": "https://www.supreme.court.gov.ua/affairs/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Ukraine state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-10-29",
+     "host": "www.rada.gov.ua",
+     "rank": 1,
+     "snippet": "1. Головна\n2. Текстові публікації\n3. Законодавство України\n...\n- Прийняті акти\n...\n- Повний перелік документів\n...\nПортал працює у тестовому режимі.\nОкремі функції можуть не працювати.",
+     "title": "Законодавство України - Офіційний портал Верховної Ради України",
+     "url": "https://www.rada.gov.ua/news/zak"
+    },
+    {
+     "date": "",
+     "host": "zakon.rada.gov.ua",
+     "rank": 2,
+     "snippet": "VERKHOVNA\nRADA OF UKRAINE\nOfficial website of the Parliament of Ukraine\n...\n### State websites of Ukraine\n- Verkhovna Rada of Ukraine\n- President of Ukraine\n- Cabinet of Ministers of Ukraine\n- Constitutional Court of Ukraine\n- National Security and Defense Council of Ukraine",
+     "title": "Laws of Ukraine // Annotation of Documents",
+     "url": "https://zakon.rada.gov.ua/laws/main/en/annot"
+    },
+    {
+     "date": "2022-01-01",
+     "host": "www.rada.gov.ua",
+     "rank": 3,
+     "snippet": "Відкриті\nпарламентські дані\nUkrainian Parliament Open Data\n...\nМаєте запитання до Верховної Ради України?\n...\nПортал працює у тестовому режимі.\nОкремі функції можуть не працювати.",
+     "title": "Офіційний портал Верховної Ради України",
+     "url": "https://www.rada.gov.ua/"
+    },
+    {
+     "date": "",
+     "host": "zakon.rada.gov.ua",
+     "rank": 4,
+     "snippet": "# Головна сторінка розділу \"Законодавство України\"\n## До уваги\n** **База даних \"Законодавство України\"** має інформаційний характер і не є офіційним друкованим виданням.",
+     "title": "Законодавство України - Всі документи",
+     "url": "https://zakon.rada.gov.ua/laws/main/index"
+    },
+    {
+     "date": "2026-10-23",
+     "host": "zakon.rada.gov.ua",
+     "rank": 5,
+     "snippet": "Official website of the Parliament of Ukraine\nLegislation of Ukraine\n...\n- Verkhovna Rada of Ukraine\n### Your browser is old!\n- Legislation of Ukraine\n- All Documents\n# All Documents ( as of October 23, 2026 ) — 295340 documents",
+     "title": "All Documents (as of October 8, 2026)",
+     "url": "https://zakon.rada.gov.ua/laws?lang=en"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Ukraine municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "data.kyivcity.gov.ua",
+     "rank": 1,
+     "snippet": "Нормативно-правові акти - Портал даних Києва\n...\nШевченківська районна в місті Києві державна адміністрація\n...\n- Офіційний портал Києва\n- Сторінка КМДА на data.gov.ua",
+     "title": "Портал відкритих даних Києва",
+     "url": "https://data.kyivcity.gov.ua/category/acts"
+    },
+    {
+     "date": "2026-10-28",
+     "host": "data.kyivcity.gov.ua",
+     "rank": 2,
+     "snippet": "…\n...\n**legalActs** – інформацію про нормативно-правові акти, акти індивідуальної дії (крім внутрішньоорганізаційних), прийняті Солом'янською районною в місті Києві державною адміністрацією;",
+     "title": "Набори даних - Портал даних Києва",
+     "url": "https://data.kyivcity.gov.ua/dataset"
+    },
+    {
+     "date": "",
+     "host": "komr.gov.ua",
+     "rank": 3,
+     "snippet": "## КП «Козятинський міський ЦПМСД»\n(04342) 2-22-44\nОфіційний інформаційний сайт",
+     "title": "Регуляторні акти",
+     "url": "https://komr.gov.ua/rehulyatorni-akty"
+    },
+    {
+     "date": "2026-01-06",
+     "host": "dolynske-gromada.gov.ua",
+     "rank": 4,
+     "snippet": "Інформація щодо перегляду чинних регуляторних актів на 01.01.2026",
+     "title": "Інформація щодо перегляду діючих (чинних) регуляторних актів (Долинської сілської ради) станом на 01 січня 2026 року",
+     "url": "https://dolynske-gromada.gov.ua/news/1767691138/"
+    },
+    {
+     "date": "1997-05-21",
+     "host": "zakon.rada.gov.ua",
+     "rank": 5,
+     "snippet": "# On Local Self-Government in Ukraine\nOn Local Self-Government in Ukraine\n...\nURL: https://zakon.rada.gov.ua/go/280/97-%D0%B2%D1%80 (date of share: October 17, 2026)",
+     "title": "On Local Self-Government in Ukraine",
+     "url": "https://zakon.rada.gov.ua/laws/show/en/280/97-%D0%B2%D1%80"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Ukraine regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-26",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "The Ministry of Economy serves as the primary policymaking body, shaping the regulatory environment and designing state incentive packages.\n...\nThe NBU and National Securities and Stock Market Commission (NSSMC) share regulatory oversight of the financial sector.\nThe NBU supervises and regulates:\n- ",
+     "title": "Ukraine - United States Department of State",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/ukraine"
+    },
+    {
+     "date": "2021-09-24",
+     "host": "www.trade.gov",
+     "rank": 2,
+     "snippet": "Technical regulations in Ukraine are coordinated by the Department for Technical Regulations in the Ministry of Economy of Ukraine and developed by the State Enterprise Ukrainian Scientific, Research and Training Center for Certification, Standards, and Quality (UkrNDNC) which serves as a national s",
+     "title": "Ukraine - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/ukraine-standards-trade"
+    },
+    {
+     "date": "2015-01-03",
+     "host": "me.gov.ua",
+     "rank": 3,
+     "snippet": "## Technical regulations\n...\nThe legislative framework regulating Technical Regulation, Conformity Assessment and Accreditation in Ukraine consists of the Law of Ukraine “On Technical Regulations and Conformity Assessment” and the Law of Ukraine “On Accreditation of Conformity Assessment Bodies”.",
+     "title": "Ministry of Economy and Environment of Ukraine -> Technical regulations -> Quality infrastructure in Ukraine (standardization, technical regulation, conformity assessment, accreditation, metrology and",
+     "url": "https://me.gov.ua/Documents/Print/09768736-6c01-4a40-8a32-1777586060b4?lang=en-GB"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 4,
+     "snippet": "Cabinet of Ministers of Ukraine.\nThe SSUFSCP is responsible for the safety and control of veterinary drugs, feed, live animals, reproductive materials, products of animal origin for food and non-food consumption, other processed and unprocessed food products, and phytosanitary issues (plant quaranti",
+     "title": "Report Name: FAIRS Country Report Annual - apps.fas.usda.gov",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS+Country+Report+Annual_Kyiv_Ukraine_UP2025-0017.pdf"
+    },
+    {
+     "date": "",
+     "host": "zakon.rada.gov.ua",
+     "rank": 5,
+     "snippet": "RADA OF UKRAINE\nOfficial website of the Parliament of Ukraine\nLegislation of Ukraine\n- Verkhovna Rada of Ukraine\n- President of Ukraine\n- Cabinet of Ministers of Ukraine\n- Constitutional Court of Ukraine\n...\n# Documents by Type (Law) — 8217 documents\nIssuers:",
+     "title": "Documents by Type (Law)",
+     "url": "https://zakon.rada.gov.ua/laws/main/en/t1"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Ukraine national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2026-03-10",
+     "host": "me.gov.ua",
+     "rank": 1,
+     "snippet": "…\nAs of today, the list of national measurement standards of Ukraine comprises 58 national measurement standards of measurement units, and 311 CMCs concerning measurement and calibration features of national etalons were included to the database of the International Bureau of Weights and Measures (В",
+     "title": "Technical regulations - Ministry of Economy of Ukraine",
+     "url": "https://me.gov.ua/Documents/Detail?lang=en-GB&id=09768736-6c01-4a40-8a32-1777586060b4"
+    },
+    {
+     "date": "2025-01-17",
+     "host": "uas.gov.ua",
+     "rank": 2,
+     "snippet": "…\n| |01.\nЗагальні положення.\nТермінологія.\nСтандартизація.\nДокументація| |\n...\n| |21.\nМеханічні системи та складники загальної призначеності| |\n| |23.",
+     "title": "Каталог національних НД",
+     "url": "https://uas.gov.ua/standards-catalog/categories"
+    },
+    {
+     "date": "2026-03-10",
+     "host": "me.gov.ua",
+     "rank": 3,
+     "snippet": "…\nAs of today, the list of national measurement standards of Ukraine comprises 58 national measurement standards of measurement units, and 311 CMCs concerning measurement and calibration features of national etalons were included to the database of the International Bureau of Weights and Measures (В",
+     "title": "Ministry of Economy and Environment of Ukraine",
+     "url": "https://me.gov.ua/Documents/Detail?lang=en-GB&id=09768736-6c01-4a40-8a32-1777586060b4&title"
+    },
+    {
+     "date": "2015-01-03",
+     "host": "me.gov.ua",
+     "rank": 4,
+     "snippet": "## Technical regulations\nSviatoshynska 2, Kyiv, 03115, Ukraine, official website: uas.gov.ua) will perform functions of the **National Standardization Body** **(NSB).**",
+     "title": "Ministry of Economy and Environment of Ukraine -> Technical regulations -> Quality infrastructure in Ukraine (standardization, technical regulation, conformity assessment, accreditation, metrology and",
+     "url": "https://me.gov.ua/Documents/Print/09768736-6c01-4a40-8a32-1777586060b4?lang=en-GB"
+    },
+    {
+     "date": "",
+     "host": "register.nqa.gov.ua",
+     "rank": 5,
+     "snippet": "# Професійні стандарти\nЧинних стандартів -\nВідкрити розширений пошук\nСтатусУсі\nЧиннийВтратив чинність\nКод за ДК 003:2010\nРозробник\nОберіть зі списку",
+     "title": "Професійні стандарти",
+     "url": "https://register.nqa.gov.ua/standards"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Ukraine mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2018-07-09",
+     "host": "me.gov.ua",
+     "rank": 1,
+     "snippet": "Закон України “Про технічні регламенти та оцінку відповідності” від 15.01.2015 № 124 - VIII\n01.09.2026 | 11:34",
+     "title": "Технічні регламенти | Міністерство економіки, довкілля та ...",
+     "url": "https://me.gov.ua/Documents/List?lang=uk-UA&tag=TekhnichniReglamenti"
+    },
+    {
+     "date": "",
+     "host": "data.gov.ua",
+     "rank": 2,
+     "snippet": "Дата початку обов҆язкового застосування\n1\nПро загальну безпечність нехарчової продукції\n...\n…\n...\n2012-10-15T00:00:00.000\n25\nТехнічний регламент безпеки машин\n[5]",
+     "title": "download",
+     "url": "https://data.gov.ua/dataset/075579cc-d48a-4b8e-963f-3e87f5895566/resource/db40b1c5-ae2a-487f-8592-cb1b102d4fbb/revision/39545/download"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 3,
+     "snippet": "Food Safety \n...\nThe list of known technical regulations includes (all links in Ukrainian): \n Requirements for Honey (MAPFU Order 330, 2019; amended in 2025) \n Requirements for Sugars Intended for Human Consumption (MAPFU Order 592, 2017)",
+     "title": "Report Name: FAIRS Country Report Annual",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS%20Country%20Report%20Annual_Kyiv_Ukraine_UP2025-0017.pdf"
+    },
+    {
+     "date": "2026-03-10",
+     "host": "me.gov.ua",
+     "rank": 4,
+     "snippet": "- general product safety (2001/95/EC);\n- equipment and protective systems intended for use in potentially explosive atmospheres (2014/34/EU, ATEX);\n- restriction of the use of certain hazardous substances in electrical and electronic equipment (2011/65/EU, RoHS);",
+     "title": "Technical regulations - Ministry of Economy of Ukraine",
+     "url": "https://me.gov.ua/Documents/Detail?lang=en-GB&id=09768736-6c01-4a40-8a32-1777586060b4"
+    },
+    {
+     "date": "",
+     "host": "data.gov.ua",
+     "rank": 5,
+     "snippet": "26.10.2020 № 684, зареєстрований в Мінʾюсті від 12.02.2021 № 185/35807      набирає чинність з 26.08.2021  \",2021-08-26,",
+     "title": "реєстр тр",
+     "url": "https://data.gov.ua/dataset/075579cc-d48a-4b8e-963f-3e87f5895566/resource/db40b1c5-ae2a-487f-8592-cb1b102d4fbb/revision/260408/download"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Ukraine national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-23",
+     "host": "stat.gov.ua",
+     "rank": 1,
+     "snippet": "Main page Ukrstat | State Statistics Service of Ukraine\n...\n##### enterprises\nAll data of published sets can be studied and filtered by certain indicators directly on the portal using the Dataset Explorer\nAll datasets, whether filtered segments or complete sets, are available for download in three f",
+     "title": "Statistics by topics",
+     "url": "https://stat.gov.ua/en/"
+    },
+    {
+     "date": "",
+     "host": "ukrstat.gov.ua",
+     "rank": 2,
+     "snippet": "України \n  \n...\n факс (044): 235–37–39 \n електронна пошта: \noffice@ukrstat.gov.ua   \n вебсайт: www.ukrstat.gov.ua \nState Statistics Service  \nof Ukraine",
+     "title": "[PDF] К АТА Л О Г CATALOGUE - Державна служба статистики України",
+     "url": "https://ukrstat.gov.ua/druk/publicat/kat_u/2021/CATALOG_2022.pdf"
+    },
+    {
+     "date": "",
+     "host": "ukrstat.gov.ua",
+     "rank": 3,
+     "snippet": "України \n...\n телефони (044): 284–31–28 \n факс (044): 235–37–39 \n електронна пошта: \noffice@ukrstat.gov.ua   \n веб-сайт: www.ukrstat.gov.ua",
+     "title": "Каталог офіційних статистичних публікацій у 2019 році",
+     "url": "https://ukrstat.gov.ua/druk/publicat/kat_u/2018/catalogue_19.pdf"
+    },
+    {
+     "date": "",
+     "host": "stat.gov.ua",
+     "rank": 4,
+     "snippet": "Population and social statistics | State Statistics Service of Ukraine\n1. Home\n2. Population and social statistics\n# Population and social statistics",
+     "title": "Population and social statistics",
+     "url": "https://stat.gov.ua/en/topics/population-and-social-statistics?facets_query=&page=4"
+    },
+    {
+     "date": "",
+     "host": "stat.gov.ua",
+     "rank": 5,
+     "snippet": "MATTER\n2024\nSTATISTICAL\nYEARBOOK\nOF UKRAINE\nofficial statistics portal\nstat.gov.ua\nSTATE STATISTICS SERVICE OF UKRAINE\n...\nState Statistics Service of Ukraine\n...\n• e-mail: office@stat.gov.ua\n• site: stat.gov.ua",
+     "title": "STATISTICAL YEARBOOK OF UKRAINE - stat.gov.ua",
+     "url": "https://stat.gov.ua/sites/default/files/2026-09/yearbook_24e.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Ukraine central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-02-06",
+     "host": "le.bank.gov.ua",
+     "rank": 1,
+     "snippet": "# Статистика Національного банку\n## Статистика Національного банку",
+     "title": "Статистика Національного банку",
+     "url": "https://le.bank.gov.ua/ua/statistic/nbustatistic"
+    },
+    {
+     "date": "2026-03-17",
+     "host": "bank.gov.ua",
+     "rank": 2,
+     "snippet": "Statistics Release Calendars\n1. National Bank of Ukraine\n2. Statistics\n3. Statistics Release Calendars\n...\n#### (the period to which data to be released relate is shown in parentheses)|\n1/ Data disseminated daily.\n2/ Periodicity flexibility.\nOfficial website of the National Bank of Ukraine",
+     "title": "Statistics Release Calendars",
+     "url": "https://bank.gov.ua/en/statistic/calendar-dissemin-statist"
+    },
+    {
+     "date": "2026-03-17",
+     "host": "bank.gov.ua",
+     "rank": 3,
+     "snippet": "Statistics\n...\nThe National Bank of Ukraine (NBU) produces and publishes economic and financial data for use in making monetary policy decisions and monitoring compliance with policy decisions.\nThe data are also used to conduct macroeconomic analyses, assess financial stability, and inform users inc",
+     "title": "Statistics",
+     "url": "https://bank.gov.ua/en/statistic"
+    },
+    {
+     "date": "",
+     "host": "le.bank.gov.ua",
+     "rank": 4,
+     "snippet": "# Статистика\n## Статистика Національного банку\n...\n## Статистичний календар\n## Макроекономічні показники",
+     "title": "le.bank.gov.ua · ua · statisticСтатистика - le.bank.gov.ua",
+     "url": "https://le.bank.gov.ua/ua/statistic"
+    },
+    {
+     "date": "2026-03-17",
+     "host": "le.bank.gov.ua",
+     "rank": 5,
+     "snippet": "Inflation\nSeptember 2026 - September 2025\n(Per Annum, %)\n10.0\n(Per Annum, %)\n16.0\n...\n…\n...\n### Monthly Business Outlook Survey, September 2026\n...\nof National Bank of Ukraine\nOfficial website of the National Bank of Ukraine",
+     "title": "National Bank of Ukraine",
+     "url": "https://le.bank.gov.ua/en/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Ukraine government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2021-01-26",
+     "host": "data.gov.ua",
+     "rank": 1,
+     "snippet": "Log into Open Data Portal - Data.gov.ua\n# Log into Open Data Portal\nNo problem, use our password recovery form to reset it.",
+     "title": "Open data portal",
+     "url": "https://data.gov.ua/en/user/login?came_from=/dataset/25d68e54-f420-41c1-966b-d0f8af7a744a/resource/41aa9076-2d65-4d8c-a5ea-960005627f4f"
+    },
+    {
+     "date": "2021-01-26",
+     "host": "data.gov.ua",
+     "rank": 2,
+     "snippet": "Головна сторінка - Data.gov.ua\n# Портал відкритих даних\n...\n### Держава\nВсе що стосується державного управління та питань загальнодержавного характеру\n...\nЗакупівлі, витрати, бюджетні показники\n…\n...\n…",
+     "title": "Портал відкритих даних",
+     "url": "https://data.gov.ua/"
+    },
+    {
+     "date": "",
+     "host": "data.europa.eu",
+     "rank": 3,
+     "snippet": "For Explanation:\n...\n…\nFor Explanation:\n* If yes, please provide the URL of the national portal.\",yes,https://data.gov.ua/ ,Confirm,,\nPT2,\"For Explanation:\n...\nProposed datasets: https://data.gov.ua/requests/all.",
+     "title": "[XLS] Policy - The European Data Portal",
+     "url": "https://data.europa.eu/sites/default/files/2025-12/2025_odm_questionnaire_ukraine.xlsx"
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 4,
+     "snippet": "# Портал відкритих даних\nUkrainian government open data portal\n...\n|Link|https://data.gov.ua|\n|Status|active|\n|Catalog type|Open data portal|\n...\n|Owner name|Government of Ukraine|\n...\n|Owner link|https://data.gov.ua|",
+     "title": "Портал відкритих даних",
+     "url": "https://dateno.io/registry/catalog/cdi00001596/"
+    },
+    {
+     "date": "2021-01-26",
+     "host": "data.gov.ua",
+     "rank": 5,
+     "snippet": "Єдиний державний веб-портал відкритих даних створено на вимогу Закону України «Про доступ до публічної інформації» та постанови Кабінету Міністрів України від 21 жовтня 2015 р.",
+     "title": "Про портал",
+     "url": "https://data.gov.ua/pages/about"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:28:34Z",
+ "pais": {
+  "iso2": "UA",
+  "iso3": "UKR",
+  "nombre": "Ukraine"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

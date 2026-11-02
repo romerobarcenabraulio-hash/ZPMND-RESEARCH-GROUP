@@ -1,0 +1,755 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Cabo Verde constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2022-10-30",
+     "host": "www.governo.cv",
+     "rank": 1,
+     "snippet": "Constituição - Governo de Cabo Verde\n### Constituição\n...\n- **Constituição da República de Cabo Verde**",
+     "title": "Constituição",
+     "url": "https://www.governo.cv/governo/constituicao/",
+     "verificacion": {
+      "bytes": 40379,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:03Z",
+      "http": 200,
+      "sha256": "c57bea5b79c8a09184acff85bf6050a548f906e5ca177652cf6b51f31d9387d5"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.parlamento.cv",
+     "rank": 2,
+     "snippet": "# CONSTITUIÇAO DA REPÚBLICA DE CABO VERDE\n### 2ª Revisão Ordinária - 2010\nEste texto não substitui o original publicado no Boletim Oficial.\n...\n- PARTE III\n- PARTE IV\n- PARTE V",
+     "title": "CONSTITUIÇAO DA REPÚBLICA DE CABO VERDE",
+     "url": "https://www.parlamento.cv/constituicao/index.php",
+     "verificacion": {
+      "bytes": 565112,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:06Z",
+      "http": 200,
+      "sha256": "8ef0ac72e383c52c3102bc3716a38e4ae2a9692cbad22cc5dddf251efb35950b"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.parlamento.cv",
+     "rank": 3,
+     "snippet": "**Lei nº 2/81 - Revê o texto da Constituição Política da República de Cabo Verde, aprovada pela Lei nº 3/80 de 13 de Outubro**\n...\n**Constituição da República de Cabo Verde/1980**\n...\n**LOPE - Lei sobre a Organização Política do Estado**",
+     "title": "Downloads - Constituição da Republica - Assembleia Nacional",
+     "url": "https://www.parlamento.cv/Constituicao/downloads_cr.php"
+    },
+    {
+     "date": "",
+     "host": "justica.gov.cv",
+     "rank": 4,
+     "snippet": "23\nCONSTITUIÇÃO DA REPÚBLICA DE CABO VERDE    2010\nPARTE I\nPRINCÍPIOS FUNDAMENTAIS\nTÍTULO I\nDA REPÚBLICA\nArtigo 1º\n(República de Cabo Verde)\n...\na)",
+     "title": "CONSTITUIÇÃO",
+     "url": "https://justica.gov.cv/documents/39734/5ac84e08-e464-c33f-6b9e-5b25ef5fe5ae"
+    },
+    {
+     "date": "2026-08-19",
+     "host": "dgape.cv",
+     "rank": 5,
+     "snippet": "Legislação list – DGAPE\n#### ESTATUTO DOS DEPUTADOS\n#### ESTATUTO DOS MUNICIPIOS DE CABO VERDE\n#### LEI SOBRE A COMPETÊNCIA, ORGANIZAÇÃO E FUNCIONAMENTO DO TRIBUNAL CONSTITUCIONAL\n...\nRepública de Cabo Verde",
+     "title": "Legislação list",
+     "url": "https://dgape.cv/legislacao_/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Cabo Verde national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.governo.cv",
+     "rank": 1,
+     "snippet": "13 de abril de 2022\nClique para baixar\n…\n...\n8 de abril de 2022\n...\n### BO nº35 I Série (1º Suplemento) – Conselho de Ministros – Aprova o Programa Operacional do Turismo – (POT)\n5 de abril de 2022",
+     "title": "Arquivo Documentos - Página 4 de 17 - Governo de Cabo Verde",
+     "url": "https://www.governo.cv/documentos/page/4/",
+     "verificacion": {
+      "bytes": 66127,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:08Z",
+      "http": 200,
+      "sha256": "9db4cba82a8e18d33e29fc6b9cabb76573137ef5097abb0b2f8a61c738dfd138"
+     }
+    },
+    {
+     "date": "",
+     "host": "boe.incv.cv",
+     "rank": 2,
+     "snippet": "9 resultados\n...\nCONSELHO DE MINISTROS\n...\nAprova os Estatutos da Fundação Social das Forças Armadas.\nDecreto-Regulamentar n.º 6/2025 - Boletim Oficial n.º 124, I Série de 10-12-2025\n…",
+     "title": "BOE :: Boletins Oficiais - IMPRENSA NACIONAL DE CABO VERDE",
+     "url": "https://boe.incv.cv/Bulletins?Part=21",
+     "verificacion": {
+      "bytes": 1033433,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:11Z",
+      "http": 200,
+      "sha256": "df8d567713d27915d0e9454b101ab2b418abb3a780a356054e0c54eb3f76466a"
+     }
+    },
+    {
+     "date": "",
+     "host": "justica.gov.cv",
+     "rank": 3,
+     "snippet": "Legislação - Ministério-Justiça - Portal Justiça - Portal Justiça\n...\n# Legislação\n## Publicador de Conteúdo\n#### Decreto_Lei n_702009.pdf\n...\n#### Decreto-lei nº10-2010, de 29 de março - Aprova o Código do Registo Predial.pdf",
+     "title": "Legislação - Ministério-Justiça - Portal Justiça - Portal Justiça",
+     "url": "https://justica.gov.cv/legisla%C3%A7%C3%B5es"
+    },
+    {
+     "date": "",
+     "host": "boe.incv.cv",
+     "rank": 4,
+     "snippet": "# Índice remissivo\n...\n- »\n454 resultados\nDecreto-Lei n.º 45/2026 - Boletim Oficial n.º 109, I Série de 08-10-2026\nCONSELHO DE MINISTROS\n...\n…\n...\nCONSELHO DE MINISTROS",
+     "title": "BOE :: Índice remissivo - IMPRENSA NACIONAL DE CABO VERDE",
+     "url": "https://boe.incv.cv/Bulletins/Table?series=1&year=2026&highlight=False&page=14&rows=15"
+    },
+    {
+     "date": "2026-08-19",
+     "host": "dgape.cv",
+     "rank": 5,
+     "snippet": "Legislação list – DGAPE\n#### ESTATUTO DOS DEPUTADOS\n#### ESTATUTO DOS MUNICIPIOS DE CABO VERDE\n...\n### Contatos\n...\nVárzea, Cidade da Praia,\nRepública de Cabo Verde\n...\nEmail: dgape@palgov.gov.cv",
+     "title": "Legislação list",
+     "url": "https://dgape.cv/legislacao_/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Cabo Verde official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "boe.incv.cv",
+     "rank": 1,
+     "snippet": "BOE :: Boletins Oficiais\n1. Página Inicial\n...\n# Boletins Oficiais\n...\n2298 resultados\nResolução n.º 08/XI/2026 - Boletim Oficial n.º 208, II Série de 29-10-2026\n...\nASSEMBLEIA NACIONAL",
+     "title": "Boletins Oficiais - BOE - IMPRENSA NACIONAL DE CABO VERDE",
+     "url": "https://boe.incv.cv/Bulletins?Entity=1",
+     "verificacion": {
+      "bytes": 1044998,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:12Z",
+      "http": 200,
+      "sha256": "3df8819c59d085ea6eafe82c274059d3c3e9f0aad6dd4ea12309233e11df0d30"
+     }
+    },
+    {
+     "date": "",
+     "host": "boe.incv.cv",
+     "rank": 2,
+     "snippet": "24\n# BOE\nBoletim Oficial n.º 209, II Série de 30-10-2026\nParte B - Assembleia Nacional\nExtrato do Despacho n.º 1595/2026\nASSEMBLEIA NACIONAL > Direcção de Serviço Administrativo e Financeiros",
+     "title": "BOE - IMPRENSA NACIONAL DE CABO VERDE",
+     "url": "https://boe.incv.cv/",
+     "verificacion": {
+      "bytes": 854698,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:13Z",
+      "http": 200,
+      "sha256": "e7ef19e337acebeb6e206b6eb69280190b8cc124ddee989dacaff2caa50255dc"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.governo.cv",
+     "rank": 3,
+     "snippet": "Terça-feira, 14 de dezembro de 2021\nI Série\nNúmero 123\n...\nResolução nº 113/2021:\nAprova a Estratégia para a Governação Digital de Cabo Verde para o período 2021 a 2024..................3053\n...\n––––––",
+     "title": "BOLETIM OFICIAL - Governo",
+     "url": "https://www.governo.cv/documentos/boletim-oficial-14-de-dezembro-de-2021/"
+    },
+    {
+     "date": "2020-09-10",
+     "host": "www.trade.gov",
+     "rank": 4,
+     "snippet": "### Standards\nThe Cabo Verdean normative documents include all Cabo Verdean standards, technical specifications, technical reports, guides, and technical agreements and are published in the official gazette as adopted.\n...\n### Publication of Technical Regulations\nRegulations are published in the gov",
+     "title": "Cabo Verde - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/cabo-verde-standards-trade"
+    },
+    {
+     "date": "2019-08-30",
+     "host": "www.loc.gov",
+     "rank": 5,
+     "snippet": "# Periodical Official Bulletin of the Republic of Cabo Verde; Série 2, Número 156 Official title: Boletim oficial\n...\n### Created / Published\n- Cabo Verde, November 5, 2019\n...\n### Source Collection\n- Cabo Verde Legal Gazettes\n...\n### Online Format\n- online text",
+     "title": "Official Bulletin of the Republic of Cabo Verde; Série 2, Número 156",
+     "url": "https://www.loc.gov/item/llflg.86653963_20191105_02/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Cabo Verde supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "boe.incv.cv",
+     "rank": 1,
+     "snippet": "…\nAcórdão nº 30/2015 - Boletim Oficial n.º 38, II Série de 01-08-2015\nSUPREMO TRIBUNAL DE JUSTIÇA > Secretaria\n...\n…\n...\nSUPREMO TRIBUNAL DE JUSTIÇA > Secretaria",
+     "title": "BOE :: Boletins Oficiais - Imprensa Nacional de Cabo Verde",
+     "url": "https://boe.incv.cv/Bulletins?Entity=28",
+     "verificacion": {
+      "bytes": 1046580,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:14Z",
+      "http": 200,
+      "sha256": "d9a7288a2afbf7130be62e8e802d2984d3d45129487de856f175e65be30bc50a"
+     }
+    },
+    {
+     "date": "",
+     "host": "boe.incv.cv",
+     "rank": 2,
+     "snippet": "BOE :: Índice remissivo\n1. Página Inicial\n...\nProferida nos autos de Recurso de Fiscalização Concreta da Constitucionalidade n.º 8/2025, em que é recorrente Adérito Augusto Martins Moreira e entidade recorrida o Supremo Tribunal de Justiça.",
+     "title": "BOE :: Índice remissivo - Imprensa Nacional de Cabo Verde",
+     "url": "https://boe.incv.cv/Bulletins/Table?series=1&year=2025&page=9&rows=15",
+     "verificacion": {
+      "bytes": 883068,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:15Z",
+      "http": 200,
+      "sha256": "9fa4d215386547a89ad3055191555810e839c56d089c727632359375601987b9"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "host": "justica.gov.cv",
+     "rank": 3,
+     "snippet": "# Serviço de Contraprova\nVerifique aqui a autenticidade dos documentos emitidos.\nDocumento Não Encontrado",
+     "title": "Início - Ministério-Justiça - Portal Justiça",
+     "url": "https://justica.gov.cv/"
+    },
+    {
+     "date": "2020-01-29",
+     "host": "csm.org.pt",
+     "rank": 4,
+     "snippet": "…\n**Todos os componentes são separados por dois pontos.**\n**Exemplo: JURIS : CV : TRS : 2017 : 123**\n...\nRua Duque de Palmela n.º 23\n1250-097 Lisboa\nTelefone +351 213220020",
+     "title": "Protocolo entre o CSM e o CSMJ: Cabo Verde inaugura base de ...",
+     "url": "https://csm.org.pt/protocolo-entre-o-csm-e-o-csmj-cabo-verde-inaugura-base-de-dados-de-jurisprudencia/"
+    },
+    {
+     "date": "2026-10-16",
+     "host": "csmj.cv",
+     "rank": 5,
+     "snippet": "O presidente do Conselho Superior da Magistratura Judicial augura que a comunidade jurídica, profissionais do foro, estudantes de direito e cidadãos de uma forma geral façam um bom uso desta plataforma.\n...\n- (+238) 3337710\n...\n- info_csmj@csmj.gov.cv",
+     "title": "CSMJ coloca repositório de Jurisprudências dos tribunais de ...",
+     "url": "https://csmj.cv/repositorio-de-jurisprudencias-dos-tribunais-de-cabo-verde-disponivel-ao-publico/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Cabo Verde state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-08-19",
+     "host": "dgape.cv",
+     "rank": 1,
+     "snippet": "Legislação list – DGAPE\n#### ESTATUTO DOS DEPUTADOS\n#### ESTATUTO DOS MUNICIPIOS DE CABO VERDE\n#### LEI SOBRE A COMPETÊNCIA, ORGANIZAÇÃO E FUNCIONAMENTO DO TRIBUNAL CONSTITUCIONAL\n...\nRepública de Cabo Verde",
+     "title": "Legislação list",
+     "url": "https://dgape.cv/legislacao_/",
+     "verificacion": {
+      "bytes": 322711,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:21Z",
+      "http": 200,
+      "sha256": "dcefb87a4ea16990875e004870a428fcad51bc033b040648dfd821e0dbf38c07"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.arc.cv",
+     "rank": 2,
+     "snippet": "ARC - Legislação: Outras Leis Laravel\n...\n1. Página Inicial\n...\nPara aceder ao texto integral dos diplomas em vigor, clique nos temas apresentados, no menu à\ndireita.\nOs textos dos diplomas já incluem as retificações e as alterações que lhes foram\nintroduzidas",
+     "title": "Legislação: Outras Leis - ARC",
+     "url": "https://www.arc.cv/arc/legislacao/14",
+     "verificacion": {
+      "bytes": 102983,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:28Z",
+      "http": 200,
+      "sha256": "0544c50a08cb488122df764b92573cdaa5e19bbe697f179a922b323e986dedc7"
+     }
+    },
+    {
+     "date": "",
+     "host": "justica.gov.cv",
+     "rank": 3,
+     "snippet": "Legislação - Ministério-Justiça - Portal Justiça - Portal Justiça\n...\n# Legislação\n## Publicador de Conteúdo\n#### Decreto_Lei n_702009.pdf\n...\n#### Decreto-lei nº10-2010, de 29 de março - Aprova o Código do Registo Predial.pdf",
+     "title": "Legislação - Ministério-Justiça - Portal Justiça - Portal Justiça",
+     "url": "https://justica.gov.cv/legisla%C3%A7%C3%B5es"
+    },
+    {
+     "date": "",
+     "host": "boe.incv.cv",
+     "rank": 4,
+     "snippet": "Decreto-lei n.º 15/2024 - Boletim Oficial n.º 26, I Série de 28-03-2024\n...\nDecreto-lei n.º 16/2024 - Boletim Oficial n.º 33, I Série de 18-04-2024",
+     "title": "boe.incv.cv · Bulletins · TableBOE :: Índice remissivo",
+     "url": "https://boe.incv.cv/Bulletins/Table?series=1&year=2024&page=21&rows=15"
+    },
+    {
+     "date": "",
+     "host": "www.parlamento.cv",
+     "rank": 5,
+     "snippet": "DSDIP - Assembleia Nacional\n...\nPágina Inicial ›› Parlamento ›› DDIP›› Aquisicao ›› CÃ³digo Civil - Cabo Verde\n# Aquisições\nTítulo : Código Civil - Cabo Verde\n...\nAutor : Ministério da Justiça\nAno : 2026\nFormato : PDF",
+     "title": "DSDIP - Assembleia Nacional",
+     "url": "https://www.parlamento.cv/dsdip/ver_biblio.php?id=1887"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Cabo Verde municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2026-08-19",
+     "host": "dgape.cv",
+     "rank": 1,
+     "snippet": "Legislação list – DGAPE\n#### ESTATUTO DOS DEPUTADOS\n#### ESTATUTO DOS MUNICIPIOS DE CABO VERDE",
+     "title": "Legislação list",
+     "url": "https://dgape.cv/legislacao_/",
+     "verificacion": {
+      "bytes": 322711,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:32Z",
+      "http": 200,
+      "sha256": "4f5c23594cd720dfb8f8f277a7d9645ac17659382bd75983154f5a828182a7dc"
+     }
+    },
+    {
+     "date": "",
+     "host": "rulemaking.worldbank.org",
+     "rank": 2,
+     "snippet": "|--|--|--|\n|Are the laws that are currently in effect available in a single place?|Yes| |\n...\n|Are the secondary regulations that are currently in effect codified and available in a single place?|Yes| |\n|Are these websites or registries updated regularly?|Yes| |",
+     "title": "Economy Data - Global Indicators of Regulatory Governance",
+     "url": "https://rulemaking.worldbank.org/en/data/explorecountries/cabo-verde",
+     "verificacion": {
+      "bytes": 127780,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:32Z",
+      "http": 200,
+      "sha256": "98c542c0436ca6984c1c6e1be142e2bd49e43efc373713f3c14ea0bb4264ab3b"
+     }
+    },
+    {
+     "date": "",
+     "host": "boe.incv.cv",
+     "rank": 3,
+     "snippet": "# BOE\nDeliberação n.º 23/IX/2026\nMUNICÍPIO DO SAL > Assembleia Municipal",
+     "title": "BOE - IMPRENSA NACIONAL DE CABO VERDE",
+     "url": "https://boe.incv.cv/"
+    },
+    {
+     "date": "",
+     "host": "boe.incv.cv",
+     "rank": 4,
+     "snippet": "# Boletins Oficiais\nRatifica o Plano Director Municipal (PDM) de São Lourenço dos Órgãos.",
+     "title": "Boletins Oficiais - BOE - IMPRENSA NACIONAL DE CABO VERDE",
+     "url": "https://boe.incv.cv/Bulletins?entity=154&highlight=False&page=3&rows=15"
+    },
+    {
+     "date": "2025-01-04",
+     "host": "www.state.gov",
+     "rank": 5,
+     "snippet": "# 2018 Investment Climate Statements: Cabo Verde\n## Executive Summary\nThe following is the government official register site for the entity responsible for the official publication of all approved laws: https://kiosk.incv.cv/ .\n...\nIn Cabo Verde there is free access to all laws through the Governmen",
+     "title": "2018 Investment Climate Statements: Cabo Verde - State Department",
+     "url": "https://www.state.gov/reports/2018-investment-climate-statements/cabo-verde"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Cabo Verde regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.mf.gov.cv",
+     "rank": 1,
+     "snippet": "|ARME - Agência Reguladora Multissetorial de Economia|\n|ARES - Agência Reguladora do Ensino Superior|\n|AAC - Agência de Aviação Civil|\n|ARC - Autoridade Reguladora para a Comunicação|\n|ARAP - Autoridade Reguladora das Aquisições Públicas|",
+     "title": "Entidades Reguladoras Independentes - Ministério das Finanças",
+     "url": "https://www.mf.gov.cv/entidades-reguladoras-independentes",
+     "verificacion": {
+      "bytes": 96876,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:34Z",
+      "http": 200,
+      "sha256": "b3840f8d82b98a0cbc7bfbc60eaf4c70683aea5c9c32918a5460d9cb9aee1d12"
+     }
+    },
+    {
+     "date": "2026-10-09",
+     "host": "www.state.gov",
+     "rank": 2,
+     "snippet": "Key institutions include:\n- The Central Bank of Cabo Verde (Banco de Cabo Verde, BCV), which supervises the financial sector\n- The Economic Regulatory Agency (Agência Reguladora Multissetorial da Economia, ARME), responsible for oversight in sectors such as energy, water, transport, and electronic c",
+     "title": "Cabo Verde - United States Department of State",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/cabo-verde/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/cabo-verde/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:43:34Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.state.gov",
+     "rank": 3,
+     "snippet": "All laws are available through the government’s official register .\n    Commercial regulations are available on the CVTI website .\n...\nIt has regulatory, supervisory, and sanctioning powers applicable to public and private companies in all sectors of trade, industry, and services.\n...\n### Intellectu",
+     "title": "2025 Investment Climate Statements: Cabo Verde",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/cabo-verde"
+    },
+    {
+     "date": "",
+     "host": "boe.incv.cv",
+     "rank": 4,
+     "snippet": "…\n...\nAprovando o regulamento de colocação dos produtos cosméticos no mercado e das atividades conexas.\n…\n...\nAprovando o Regulamento de Autorização de Introdução no Mercado (AIM) para medicamentos de uso humano por processo completo\n…",
+     "title": "BOE :: Boletins Oficiais - Imprensa Nacional de Cabo Verde",
+     "url": "https://boe.incv.cv/Bulletins?Entity=562"
+    },
+    {
+     "date": "",
+     "host": "www.wto.org",
+     "rank": 5,
+     "snippet": "Agency (Agência Reguladora Multissetorial de Economia (ARME)), created in 2018 by \nDecree-Law No. 50/2018 through the merger of the Economic Regulatory Agency (ARE) and the \nNational Communications Agency (ANAC).\n...\n…\n...\n4.78.",
+     "title": "RESTRICTED WT/TPR/S/471 9 April 2025 (25-2439) Page",
+     "url": "https://www.wto.org/english/tratop_e/tpr_e/s471_e.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Cabo Verde national standards body standards catalogue",
+   "descartados": 2,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.igqpi.cv",
+     "rank": 1,
+     "snippet": "…\n...\nConsulte as principais categorias de documentos normativos disponíveis.\n### Catálogo de Normas do Acervo Normativo Nacional\n### NCV\nNormas Cabo-verdianas\nConsultar catálogo\n### NCV IEC\nNormas Cabo-verdianas baseadas em normas IEC\nConsultar catálogo\n…",
+     "title": "Acervo Normativo | IGQPI",
+     "url": "https://www.igqpi.cv/qualidade/normalizacao/acervo-normativo",
+     "verificacion": {
+      "bytes": 53541,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:35Z",
+      "http": 200,
+      "sha256": "4cffc107ee9f68d23aab710ddecb869a9ab37c4fdbd96aec520d48a128fb68d7"
+     }
+    },
+    {
+     "date": "",
+     "host": "igqpi.cv",
+     "rank": 2,
+     "snippet": "Título \n...\nNCV 003:2015 \nNorma da qualidade para batata-comum\nNCV 004:2015 \n...\nNCV 010:2015 \n...\nNCV 011:2015 \nNorma da aguardente de cana-de-açúcar\n…",
+     "title": "Lista de Normas Cabo-verdianas",
+     "url": "https://igqpi.cv/wp-content/uploads/2023/09/Lista-de-NCV.pdf",
+     "verificacion": {
+      "bytes": 59,
+      "estado": "http",
+      "fecha": "2026-11-02T07:43:37Z",
+      "http": 403,
+      "sha256": "f0b41ee1620f644a53aa6745db51beef9955ca58fc7cdef11fcb0990521e2d18"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "corpus.data-landscapers.io",
+     "rank": 3,
+     "snippet": "### Standards\n#### National quality standards\nThe list runs from NCV 001:2015 to NCV 025:2023.\nOf its 25 national standards, 21 are on agricultural, fisheries and food products and four on tourism; it holds none on information technology, information security, software or data.",
+     "title": "Cape Verde — Maturity Assessment — Data Landscapers",
+     "url": "https://corpus.data-landscapers.io/maturity/countries/cpv/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Cabo Verde mandatory technical regulations official list",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 1,
+     "snippet": "…\n...\n# Number of SPS notifications per year\n|Cabo Verde|G/SPS/N/CPV/4 ** Régimen jurídico de la producción de aguardiente de caña de azúcar en Cabo Verde.\nLey nº 11/2015 (Legal regime governing the production of sugar cane spirit in Cabo Verde.",
+     "title": "Members - ePing SPS&TBT platform",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C132",
+     "verificacion": {
+      "bytes": 154704,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:37Z",
+      "http": 200,
+      "sha256": "06bb23293e08eb9644e4e7088e199b727d266ba76932607c7a823e86bfbe6c41"
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.arme.cv",
+     "rank": 2,
+     "snippet": "Manual ITED-CV - prescrições e especificações técnicas a aplicar nas infraestruturas de telecomunicações em edifícios em Cabo Verde 9 968\n...\nDecreto-Lei nº9/2006 - que aproa o Regulamento dos Transportes Automóveis 9 274",
+     "title": "ARME — Regulamentos",
+     "url": "https://www.arme.cv/index.php/arme/documentacao/category/238-regulamentos",
+     "verificacion": {
+      "bytes": 75257,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:40Z",
+      "http": 200,
+      "sha256": "2066db40e9ddd03a60af5ff863001f237dbe1843fce6eef91fc9f7f6ec6c08be"
+     }
+    },
+    {
+     "date": "2020-12-21",
+     "host": "boe.incv.cv",
+     "rank": 3,
+     "snippet": "# Boletins Oficiais\n7 resultados\n...\nProcede à aprovação do Regulamento de Certificação e Requisitos Mínimos dos Aparelhos de Ar Condicionado.\n...\nProcede a aprovação de Certificação e Requisitos Mínimos dos Termoacumuladores.",
+     "title": "BOE :: Boletins Oficiais - Imprensa Nacional de Cabo Verde",
+     "url": "https://boe.incv.cv/Bulletins?Entity=1088"
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.arme.cv",
+     "rank": 4,
+     "snippet": "Manual ITED-CV - prescrições e especificações técnicas a aplicar nas infraestruturas de telecomunicações em edifícios em Cabo Verde 9 970\n...\nDecreto-Lei nº9/2006 - que aproa o Regulamento dos Transportes Automóveis 9 285",
+     "title": "Legislação geral - comunicações - ARME",
+     "url": "https://www.arme.cv/index.php?option=com_jdownloads&view=category&catid=51&Itemid=741&limitstart=0"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Cabo Verde national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2025-03-12",
+     "host": "www.ine.cv",
+     "rank": 1,
+     "snippet": "## PRINCIPAIS INDICADORES\n...\n## Estatísticas por Tema\n##### População e Condições de Vida\n...\nO Instituto Nacional de Estatística (INE) tem o grande desafio e [...]",
+     "title": "INE - Erro no Servidor",
+     "url": "https://www.ine.cv/",
+     "verificacion": {
+      "bytes": 10697,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:42Z",
+      "http": 200,
+      "sha256": "daddbab6f6b06ab67faae5d14c4a1cb45ec71d5c1fc7d34188f26fd5ba137079"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.un.org",
+     "rank": 2,
+     "snippet": "Cabo Verde - Instituto Nacional de Estatística\nNational Statistical Office of Cabo Verde\nhttp://www.ine.cv/",
+     "title": "Cabo Verde",
+     "url": "https://data.un.org/CountryProfile.aspx/_Images/CountryProfile.aspx?crName=Cabo%20Verde",
+     "verificacion": {
+      "bytes": 3769,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:42Z",
+      "http": 200,
+      "sha256": "8ef3da215ff1000f05581814f1e5ef349a5f18b070b18bec5eb0507e967b1d8a"
+     }
+    },
+    {
+     "date": "",
+     "host": "ecastats.uneca.org",
+     "rank": 3,
+     "snippet": "#### National Statistical Offices\n|Country|NSO|Web address|\n|--|--|--|\n...\n|Cabo Verde|Inststituto Nacional de Estatistica (INE)|http://www.ine.cv/|",
+     "title": "National Statistical Offices",
+     "url": "https://ecastats.uneca.org/data/national-statistical-offices"
+    },
+    {
+     "date": "",
+     "host": "ghdx.healthdata.org",
+     "rank": 4,
+     "snippet": "Organizations\nCape Verde National Statistics Institute (INE)\nAcronym\nINE\nCity\nPraia\nWebsite\nhttp://www.ine.cv/\nDataset Records for Cape Verde National Statistics Institute (INE)\n...\nGHDx Entry last modified on: Sep 6, 2023\n...\nUniversity of Washington",
+     "title": "Cape Verde National Statistics Institute (INE)",
+     "url": "https://ghdx.healthdata.org/organizations/cape-verde-national-statistics-institute-ine"
+    },
+    {
+     "date": "2023-01-01",
+     "host": "edirc.repec.org",
+     "rank": 5,
+     "snippet": "# Economics Departments, Institutes and Research Centers in the World\n## Instituto Nacional de Estatisticas (INE)\n## Government of Cabo VerdeTranslation: National Institute of Statistics\nLocation: Santiago, Cabo Verde\nHomepage: http://www.ine.cv/\n...\nAreas or Functions: Statistical Offices",
+     "title": "Instituto Nacional de Estatisticas (INE) - EDIRC - RePEc",
+     "url": "https://edirc.repec.org/data/stagvcv.html"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Cabo Verde central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-29",
+     "host": "www.bcv.cv",
+     "rank": 1,
+     "snippet": "# Statistics and Publications\n...\nStatistics\nBanco de Cabo Verde is responsible for the entire process of compiling monetary, financial, foreign exchange and external sector statistics.\n...\nHistorical Series and Publications On this page, Banco de Cabo Verde provides the statistics compiled based on",
+     "title": "Statistics and Publications",
+     "url": "https://www.bcv.cv/en/Estatisticas/Paginas/Estatisticas.aspx",
+     "verificacion": {
+      "bytes": 229260,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:52Z",
+      "http": 200,
+      "sha256": "1affd436167d3caa8a4b81f919a5ec14870f88bb1e0f4da234a57b3c3bf6ca2e"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcv.cv",
+     "rank": 2,
+     "snippet": "May 2015\n...\nDepartment of Economic Studies and Statistics \nAvenida Amílcar Cabral, 27 \nCP 7600-101 - Praia - Cabo Verde \nTel: +238 2607000 / Fax: +238 2607197 http://www.bcv.cv",
+     "title": "monetary policy report",
+     "url": "https://www.bcv.cv/en/Estatisticas/Publicacoes%20e%20Intervencoes/Relatorios/Relatorio%20de%20Politica%20Monetaria/Documents/RPM%20Ingl%C3%AAs/Monetary%20Policy%20Report%20Maio%202015.pdf",
+     "verificacion": {
+      "bytes": 2927012,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:56Z",
+      "http": 200,
+      "sha256": "d2d756ca449352643400a32eb63c29ef45ce8fc9781fabac918036121588b7ce"
+     }
+    },
+    {
+     "date": "2026-02-13",
+     "host": "www.bcv.cv",
+     "rank": 3,
+     "snippet": "- Statistics and Publications\n...\nPayment volumes and dynamics in 2023 reflect a sustained growth trend, driven by the increased use of electronic devices.\nDetailed information on this and other payment-related trends in Cape Verde, as well as the main developments throughout the year, is presented ",
+     "title": "Reports",
+     "url": "https://www.bcv.cv/en/Estatisticas/Publicacoes%20e%20Intervencoes/Relatorios/Paginas/Relat%C3%B3rios.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.bcv.cv",
+     "rank": 4,
+     "snippet": "Departamento de Estudos Económicos e Estatísticas\nAvenida OUA, nº 2\nCódigo Postal 7954 - 094\nCidade da Praia, Santiago - Cabo Verde\nTel: +238 260 7000 / Fax: +238 260 7197 http://www.bcv.cv",
+     "title": "Outubro 2025",
+     "url": "https://www.bcv.cv/pt/Estatisticas/Publicacoes%20e%20Intervencoes/Boletim%20de%20Estat%C3%ADsticas/Documents/2026/Janeiro/Boletim%20de%20Estat%C3%ADsticas%20Outubro.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.bcv.cv",
+     "rank": 5,
+     "snippet": "BANCO DE CABO VERDE \nAvenida Amílcar Cabral, 27 \nPO Box No. 7600-101 - Praia - Cabo Verde \nTel: +238 2607000 / Fax: +238 2607197 http://www.bcv.cv\nIssue",
+     "title": "annual report",
+     "url": "https://www.bcv.cv/en/Estatisticas/Publicacoes%20e%20Intervencoes/Relatorios/Relatorio%20Anual/Documents/Annual%20Report%202017%20Ingl%C3%AAs.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Cabo Verde government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2025-06-27",
+     "host": "www.governo.cv",
+     "rank": 1,
+     "snippet": "Portal da Transparência em Consulta Pública - Governo de Cabo Verde\n...\n…\n# Portal da Transparência em Consulta Pública\nEste portal deve permitir que os utilizadores descarreguem os dados em formatos comuns, tais como MS Excel, MS Word, PDF, HTML, XML, CSV, etc.",
+     "title": "Portal da Transparência em Consulta Pública - Governo de Cabo ...",
+     "url": "https://www.governo.cv/portal-da-transparencia-em-consulta-publica/",
+     "verificacion": {
+      "bytes": 42866,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:58Z",
+      "http": 200,
+      "sha256": "d8246c03cd02b6d5411ee200a45658c14eb799fd89d26bf539719e8eb49305f3"
+     }
+    },
+    {
+     "date": "2025-06-27",
+     "host": "www.mf.gov.cv",
+     "rank": 2,
+     "snippet": "# Portal da Transparência em Consulta Pública - Asset Display Page\n## Portal da Transparência em Consulta Pública\n...\n**Portal da Transparência em Consulta Pública**\nDatas: **27 de junho a 17 de julho de 2025**\nLink: https://portaltransparencia.gov.cv\n...\n…",
+     "title": "Portal da Transparência em Consulta Pública - Asset Display Page",
+     "url": "https://www.mf.gov.cv/web/mf/-/portal-da-transpar%C3%AAncia-em-consulta-p%C3%BAblica",
+     "verificacion": {
+      "bytes": 80879,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:59Z",
+      "http": 200,
+      "sha256": "352a1bb5ee2e6dcb33797f620a4c836d6d6c675887bf626ac361fc039a097f1a"
+     }
+    },
+    {
+     "date": "2026-05-29",
+     "host": "github.com",
+     "rank": 3,
+     "snippet": "## Government and Semi-Official Online Services in Cape Verde\n- ⬛ Portals of open data and datasets in various directions\n- **Portal de Dados Abertos de Cabo Verde** – National open data platform hosting government datasets on economy, demographics, public finance and administrative statistics.",
+     "title": "OSINT_in_Cape_Verde/README.md at main · OSINT-for- ...",
+     "url": "https://github.com/OSINT-for-countries/OSINT_in_Cape_Verde/blob/main/README.md"
+    },
+    {
+     "date": "",
+     "host": "www.opengovpartnership.org",
+     "rank": 4,
+     "snippet": "…\n...\n71 At the time of writing in December 2020, NOSI had developed the portal, but it was not yet available to the public.\nThe portal is intended to be located at http://opendata.gov.cv/.\nImplementation of this commitment will be assessed in a future IRM report.",
+     "title": "Cabo Verde 18-20 Design Report - For Public Comment - English",
+     "url": "https://www.opengovpartnership.org/wp-content/uploads/2021/02/Cabo-Verde_Design_Report_2018-2020_EN_For-Public-Comment.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.mf.gov.cv",
+     "rank": 5,
+     "snippet": "Legal Consultancy for Government Digital Transformation, Legislative Reform, and \nSupport to the Single Government Portal (gov.cv) Development \n...\n3. Digital Public Services and Marketplace – consolidating all digital public services under a unified Single Government Portal (gov.cv), enhancing acce",
+     "title": "[PDF] república de cabo verde",
+     "url": "https://www.mf.gov.cv/documents/20126/0/110_02+ToR+Legal+ConsultancyFIRM.pdf/dbfcefe2-4f47-9abf-2176-a5d38ca63848?t=1777895954738"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:27:29Z",
+ "pais": {
+  "iso2": "CV",
+  "iso3": "CPV",
+  "nombre": "Cabo Verde"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

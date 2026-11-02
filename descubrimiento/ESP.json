@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Spain constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2026-05-20",
+     "host": "www.senado.es",
+     "rank": 1,
+     "snippet": "# Spanish Constitution\n## Systematics\n### LEGAL ASSISTANCE (See also Legal Defence )\n...\n- Members of the Constitutional Court, 159.2",
+     "title": "Spanish Constitution | Spanish Senate - Senado",
+     "url": "https://www.senado.es/web/conocersenado/normas/constitucion/index.html?lang=en&id=2&letter=L"
+    },
+    {
+     "date": "",
+     "host": "www.boe.es",
+     "rank": 2,
+     "snippet": "# Agencia Estatal Boletín Oficial del Estado\n- Inicio\n- Buscar\n...\n…\n- **Permalink ELI:**\nhttps://www.boe.es/eli/es/c/1978/12/27/(1)/con\n...\nEste documento es de carácter informativo y no tiene valor jurídico.",
+     "title": "BOE-A-1978-31229 Constitución Española.",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229"
+    },
+    {
+     "date": "",
+     "host": "www.boe.es",
+     "rank": 3,
+     "snippet": "BOLETÍN OFICIAL DEL ESTADO\nLa última versión de este Código en PDF y ePUB está disponible para su descarga gratuita en: \nwww.boe.es/biblioteca_juridica/\nAlertas de actualización en Mi BOE: www.boe.es/mi_boe/\n...\n…",
+     "title": "The Spanish Constitution",
+     "url": "https://www.boe.es/biblioteca_juridica/codigos/pdf/158_Constitucion_Espanola_________________The_Spanish_Constitution_.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.boe.es",
+     "rank": 4,
+     "snippet": "BOLETÍN OFICIAL DEL ESTADO\nLa última versión de este Código en PDF y ePUB está disponible para su descarga gratuita en: \nwww.boe.es/biblioteca_juridica/\nAlertas de actualización en Mi BOE: www.boe.es/mi_boe/\n...\n…",
+     "title": "Constitución Española - Agencia Estatal Boletín Oficial ...",
+     "url": "https://www.boe.es/biblioteca_juridica/codigos/pdf/151_Constitucion_Espanola.pdf"
+    },
+    {
+     "date": "",
+     "host": "boe.es",
+     "rank": 5,
+     "snippet": "Para efectuar la búsqueda introduzca la palabra o grupo de palabras que desee consultar en el campo de búsqueda.\nPor defecto la búsqueda se realiza sobre el título de los documentos, si desea buscar en todo el texto debe desmarcar esta opción.\n...\n**Iberlex: Legislación**\n...\nAvda.",
+     "title": "BOE.es - Buscar legislación: Ayuda y contenido",
+     "url": "https://boe.es/buscar/ayudas/legislacion_ayuda.php"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Spain national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "www.hacienda.gob.es",
+     "rank": 1,
+     "snippet": "Resultados normativa: Ministerio de Facenda\n...\n# Resultados normativa\nResultados de la búsqueda\n...\n- Real Decreto 707/2026, de 2 de septiembre, por el que se aprueba el Reglamento de las condiciones básicas de accesibilidad cognitiva\nFecha de publicación: 03/09/2026",
+     "title": "Resultados normativa",
+     "url": "https://www.hacienda.gob.es/gl-es/normativa%20y%20doctrina/normativa/paginas/normativaresultados.aspx?normativa=:administraci%C3%B3n+electr%C3%B3nica+(normativa)"
+    },
+    {
+     "date": "",
+     "host": "transparencia.gob.es",
+     "rank": 2,
+     "snippet": "Transparencia - General - Búsqueda\n...\n# Rules with finalised processing\n## 705 Search results\n...\n|Title|Ministry|Type of rule|Date of publication in BOE|\n...\n|--|--|\n|Date of publication in BOE|18/12/2024|",
+     "title": "705 Search results",
+     "url": "https://transparencia.gob.es/servicios-buscador/buscar.htm?categoria=vigente&categoriasPadre=normativa&ente=E05228601&lang=en&pag=12"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.hacienda.gob.es",
+     "rank": 3,
+     "snippet": "- Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad.\n...\n- Real Decreto 203/2021, de 30 de marzo, por el que se aprueba el Reglamento de actuación y funcionamiento del sector público por medios electrónicos.",
+     "title": "Resultats normativa",
+     "url": "https://www.hacienda.gob.es/ca-ES/Normativa%20y%20doctrina/Normativa/paginas/normativaresultados.aspx?normativa=:general"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.hacienda.gob.es",
+     "rank": 4,
+     "snippet": "Legislation results: Ministry of Finance\n# Legislation results\nResults Search\n...\nMateria: administración electrónica (normativa)\n...\n- Real Decreto 1394/1993, de 4 de agosto, por el que se regula el procedimiento sancionador en el ámbito del Monopolio de Tabacos.",
+     "title": "Legislation results: Ministry of Finance",
+     "url": "https://www.hacienda.gob.es/en-GB/Normativa%20y%20doctrina/Normativa/Paginas/NormativaResultados.aspx?normativa=:administraci%C3%B3n+electr%C3%B3nica+(normativa)"
+    },
+    {
+     "date": "",
+     "host": "boe.es",
+     "rank": 5,
+     "snippet": "- *Decreto Legislativo*: Recupera también Real Decreto Legislativo y Decreto Foral Legislativo.\n...\nPulsando sobre la lista de resultados, puede acceder al fichero pdf de cada sentencia, que se ofrece mediante conexión con la base de datos del CENDOJ.\n…\n**Iberlex: Legislación**",
+     "title": "BOE.es - Buscar legislación: Ayuda y contenido",
+     "url": "https://boe.es/buscar/ayudas/legislacion_ayuda.php"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Spain official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "boe.es",
+     "rank": 1,
+     "snippet": "BOE.es - Agencia Estatal Boletín Oficial del Estado\n# Agencia Estatal Boletín Oficial del Estado\n## Diarios oficiales\n### Boletín Oficial del Estado\nBoletín Oficial del Estado\n- Último BOE\n- Buscar en BOE\n- Calendario\n...\nAvda.",
+     "title": "Agencia Estatal Boletín Oficial del Estado",
+     "url": "https://boe.es/"
+    },
+    {
+     "date": "",
+     "host": "www.boe.es",
+     "rank": 2,
+     "snippet": "BOE.es - Diario BOE 2026\n# State Agency Official State Gazette\n...\n- BOE\n- Diario BOE 2026\n## Diario BOE 2026\n**Enero**\n…\n...\nState Agency Official State Gazette\n...\nde Manoteras, 54 - 28050 Madrid",
+     "title": "Diario BOE 2026",
+     "url": "https://www.boe.es/diario_boe/calendarios.php?lang=en&c=b"
+    },
+    {
+     "date": "",
+     "host": "www.boe.es",
+     "rank": 3,
+     "snippet": "BOE.es - Search\n# State Agency Official State Gazette\n- Legislation\n...\n- Other Provisions\n- All BOE\n...\n- Gazeta (1661 - 1959)\nState Agency Official State Gazette\nAvda.\nde Manoteras, 54 - 28050 Madrid",
+     "title": "Search - BOE.es",
+     "url": "https://www.boe.es/buscar/index.php?lang=en"
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 4,
+     "snippet": "Description:\n1 title containing the official gazette for Spain from 1677 to 2007 (incomplete especially in 18th and 19th centuries).\n1936 and 1939 are additionally on microform.\nIt is an official publication and the text is in Spanish.\n...\nDescription:",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag-country/spain?page=1"
+    },
+    {
+     "date": "",
+     "host": "www.boe.es",
+     "rank": 5,
+     "snippet": "BOE.es - The body of Law\n# State Agency Official State Gazette\n...\n- Constitutional Court\n- Jurisprudence (CENDOJ)\n...\n- Historic collection: Gazeta (1661-1959)\n...\nAvda.\nde Manoteras, 54 - 28050 Madrid",
+     "title": "The body of Law",
+     "url": "https://www.boe.es/legislacion/index.php?lang=en"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Spain supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.poderjudicial.es",
+     "rank": 1,
+     "snippet": "Esta es la ventana de acceso a la Jurisprudencia.\nUna vez haya pulsado sobre **BUSCADOR DE RESOLUCIONES DEL TRIBUNAL SUPREMO**, accederá a una plantilla para que usted teclee los criterios de búsqueda.",
+     "title": "Jurisprudencia del TS | CGPJ | Poder Judicial | Tribunal ...",
+     "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Jurisprudencia-/Jurisprudencia-del-TS/"
+    },
+    {
+     "date": "",
+     "host": "www.poderjudicial.es",
+     "rank": 2,
+     "snippet": "Consejo General del Poder Judicial: Buscador de contenidos\n## Tribunal Supremo - Audiencia Nacional - Tribunal Superior de Justicia - Audiencia Provincial - Tribunales militares y Unipersonales\n# CENDOJ\n...\n560.1.10º de la Ley Orgánica del Poder Judicial.",
+     "title": "CENDOJ : Buscador del Sistema de Jurisprudencia - Poder Judicial",
+     "url": "https://www.poderjudicial.es/search/openDocument/"
+    },
+    {
+     "date": "",
+     "host": "www.poderjudicial.es",
+     "rank": 3,
+     "snippet": "## Tribunal Supremo - Audiencia Nacional - Tribunal Superior de Justicia - Audiencia Provincial - Tribunales militares y Unipersonales\n...\n1. Buscador\n2. Resultados\n3. Documento\n...\nSentencia ** - ** Sentencia de casación (L.O. 7/2015)**",
+     "title": "CENDOJ : Buscador del Sistema de Jurisprudencia",
+     "url": "https://www.poderjudicial.es/search/AN/openDocument/759fa25aa40b1a9da0a8778d75e36f0d/20260507"
+    },
+    {
+     "date": "",
+     "host": "www.poderjudicial.es",
+     "rank": 4,
+     "snippet": "Esta es la ventana de acceso a la Jurisprudencia.\nUna vez haya pulsado sobre **BUSCADOR DE RESOLUCIONES DEL TRIBUNAL SUPREMO**, accederá a una plantilla para que usted teclee los criterios de búsqueda.",
+     "title": "Buscador de Jurisprudencia del Tribunal Supremo | CGPJ ...",
+     "url": "https://www.poderjudicial.es/portal/site/cgpj/menuitem.65d2c4456b6ddb628e635fc1dc432ea0/?vgnextoid=09ac434e92c10310VgnVCM1000006f48ac0aRCRD&vgnextchannel=9b64f70c8b1da210VgnVCM100000cb34e20aRCRD&vgnextfmt=default&vgnextlocale=es&perfil=2"
+    },
+    {
+     "date": "",
+     "host": "www.poderjudicial.es",
+     "rank": 5,
+     "snippet": "A través de esta web, se facilitan gratuitamente a la ciudadanía las sentencias y otras resoluciones del Tribunal Supremo, Audiencia Nacional, Tribunales Superiores de Justicia y Audiencias Provinciales.\nEstos contenidos se encuentran disponibles a través del buscador de jurisprudencia.",
+     "title": "Buscador Fondo Documental-Jurisprudencia | CGPJ",
+     "url": "https://www.poderjudicial.es/cgpj/es/Servicios/Jurisprudencia/Buscador-Fondo-Documental-Jurisprudencia/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Spain state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "boe.es",
+     "rank": 1,
+     "snippet": "**La base de datos \"Legislación\"** ofrece disposiciones de carácter general de ámbito estatal (desde 1960, así como una selección de normativa anterior), de ámbito europeo (desde 1952) y normativa autonómica con rango de ley.\n...\n**Iberlex: Legislación**",
+     "title": "BOE.es - Buscar legislación: Ayuda y contenido",
+     "url": "https://boe.es/buscar/ayudas/legislacion_ayuda.php"
+    },
+    {
+     "date": "",
+     "host": "www.boe.es",
+     "rank": 2,
+     "snippet": "# Agencia Estatal Boletín Oficial del Estado\n...\nContiene compilaciones de las principales normas vigentes del ordenamiento jurídico, **permanentemente actualizadas**, presentadas por ramas del Derecho.\n...\n#### Comunidades Autónomas\n...\n- Código de Galicia (actualizado)\n- Código de Andalucía (actua",
+     "title": "BOE.es - Biblioteca Jurídica Digital",
+     "url": "https://www.boe.es/biblioteca_juridica/index.php?tipo=C"
+    },
+    {
+     "date": "",
+     "host": "op.europa.eu",
+     "rank": 3,
+     "snippet": "In accordance with the Royal Decree 1495/2007, the Official State Gazette website (https://www.boe.es) is the official legislative portal.\nConcerning the Autonomous Communities, the corresponding Official Gazette website is the main official legislative portal.\n...\n|Organisation responsible|Official",
+     "title": "Spain - European Forum of Official Gazettes",
+     "url": "https://op.europa.eu/en/web/forum/spain-oj1"
+    },
+    {
+     "date": "",
+     "host": "administracion.gob.es",
+     "rank": 4,
+     "snippet": "Punto de Acceso General | Official Bulletins of the Legislative Assemblies of the Autonomous Communities - Official Bulletins and Legislation - Public Administration and State\n...\nYou can click on the Autonomous Community of your choice to access the official bulletin of its Legislative Assembly.\nSe",
+     "title": "Punto de Acceso General - Official Bulletins and Legislation",
+     "url": "https://administracion.gob.es/en/espanaadmon/boletinesylegislacion/boletinesoficiales/bo-aall-ccaa"
+    },
+    {
+     "date": "",
+     "host": "administracion.gob.es",
+     "rank": 5,
+     "snippet": "Punto de Acceso General | Boletines y Diarios Oficiales - Boletines oficiales y Legislación - Administración Pública y Estado\n...\nMi BOE\n...\nBoletines o Diarios Oficiales Autonómicos\nBoletines o Diarios de las Diputaciones provinciales\n...\nCanales de atención",
+     "title": "Boletines y Diarios Oficiales - Punto de Acceso General",
+     "url": "https://administracion.gob.es/espanaadmon/boletinesylegislacion/boletinesoficiales"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Spain municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2024-03-01",
+     "host": "datos.gob.es",
+     "rank": 1,
+     "snippet": "Ayuntamiento de Zaragoza\n...\nListado de todas las ordenanzas municipales aprobadas por el Ayuntamiento de Terrassa y en vigor, con enlaces a los respectivos documentos normativos\n...\nOrdenanzas reguladoras y reglamentos de la Administración local catalana; ordenanzas fiscales; calendarios y padrones",
+     "title": "Catálogo de datos - Datos.gob.es",
+     "url": "https://datos.gob.es/es/catalogo/conjuntos-datos?tags_eu=ordenanzas__es"
+    },
+    {
+     "date": "",
+     "host": "sede.madrid.es",
+     "rank": 2,
+     "snippet": "Base de Datos de Normativa Municipal - SEDE ELECTRÓNICA\n# Sede electrónica del Ayuntamiento de Madrid\n## Ciudadanía\n...\n### Base de Datos de Normativa Municipal\n**Vídeo presentación Cibelex**\nBúsqueda de normativa",
+     "title": "Base de Datos de Normativa Municipal - SEDE ELECTRÓNICA",
+     "url": "https://sede.madrid.es/portal/site/tramites/menuitem.8f3f80851c925738d9551dc0a8a409a0/?vgnextoid=e81965dd72ede410VgnVCM1000000b205a0aRCRD&vgnextchannel=e81965dd72ede410VgnVCM1000000b205a0aRCRD&vgnextfmt=default"
+    },
+    {
+     "date": "",
+     "host": "mptmd.gob.es",
+     "rank": 3,
+     "snippet": "Portal MPT | Registro de Entidades Locales\n...\n3. Política local\n...\n# Registro de Entidades Locales\nConsulte los datos relativos a los distintos tipos de Entidades Locales.\n...\nA través de esta página podrá consultar los cambios producidos en las distintas Entidades Locales en los últimos meses.",
+     "title": "Portal MPT | Registro de Entidades Locales",
+     "url": "https://mptmd.gob.es/portal/politica-territorial/local/sistema_de_informacion_local_-sil-/registro_eell"
+    },
+    {
+     "date": "",
+     "host": "sede.madrid.es",
+     "rank": 4,
+     "snippet": "# Sede electrónica del Ayuntamiento de Madrid\n## Publicaciones Oficiales\n- Home\n- Sede electrónica\n- Publicaciones Oficiales\n- Tablón de Edictos Electrónico\n- Fundamento legal\n### Fundamento legal\n...\n(BOAM núm.",
+     "title": "Fundamento legal - SEDE ELECTRÓNICA - Sede Madrid",
+     "url": "https://sede.madrid.es/portal/site/tramites/menuitem.dd7c2859598d94d061e061e084f1a5a0/?vgnextoid=2f3865dd72ede410VgnVCM1000000b205a0aRCRD&vgnextchannel=2f3865dd72ede410VgnVCM1000000b205a0aRCRD&vgnextfmt=default"
+    },
+    {
+     "date": "",
+     "host": "www.mijas.es",
+     "rank": 5,
+     "snippet": "TITLE I\n...\n1.  This  Bylaw  regulates  all  aspects  of  relationships  between  people  and  animals \nthroughout the entire municipality of Mijas.\n...\nFourth: This present bylaw will come into force in the manner established in the rules currently governing local affairs.",
+     "title": "Bylaw regulating the keeping of animals",
+     "url": "https://www.mijas.es/files/adjuntos/bylaws/a4282_Bylaw_regulating_the_keeping_of_animals.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Spain regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2023-03-27",
+     "host": "www.aemps.gob.es",
+     "rank": 1,
+     "snippet": "## Spanish Regulation\n|Web publication|Document title|\n...\n|4/12/2015|Royal Decree 1090/2015, regulating clinical trials with medicinal products, Ethics Committees for Investigation with medicinal products and the Spanish Clinical Studies Registry – English version|\n(Available only in Spanish)|",
+     "title": "Regulation on Clinical trials with medicines for human use",
+     "url": "https://www.aemps.gob.es/legislacion-de-la-union-europea/regulation-on-clinical-trials-with-medicines-for-human-use/?lang"
+    },
+    {
+     "date": "",
+     "host": "boe.es",
+     "rank": 2,
+     "snippet": "La Agencia de Seguridad Alimentaria y Nutrición y el Instituto Nacional del Consumo son dos organismos autónomos de los relacionados en el artículo 43,1.a) de la Ley 6/1997, de 14 de abril, de Organización y Funcionamiento de la Administración General del Estado.",
+     "title": "Agencia Estatal Boletín Oficial del Estado",
+     "url": "https://boe.es/eli/es/rd/2014/01/17/19"
+    },
+    {
+     "date": "2019-08-09",
+     "host": "www.aemps.gob.es",
+     "rank": 3,
+     "snippet": "|--|--|\n...\n### Legislación derogada\n(En vigor hasta el 21 de marzo de 2010).\n**Agencia Española de Medicamentos y Productos Sanitarios (AEMPS)**\nC/ Campezo nº 1, Edificio 8\n28022, Madrid",
+     "title": "Legislación sobre productos sanitarios",
+     "url": "https://www.aemps.gob.es/la-aemps/legislacion/legislacion-sobre-productos-sanitarios/"
+    },
+    {
+     "date": "",
+     "host": "administracion.gob.es",
+     "rank": 4,
+     "snippet": "# Institutions with special regulations\n...\n- To ensure their independence in the supervision of markets or certain activities.\nAmong them, the Bank of Spain, the National Securities Market Commission, the National Competition Commission.\n- The special rules are due to the nature of the activities t",
+     "title": "Institutions with special regulations",
+     "url": "https://administracion.gob.es/en/espanaadmon/comoseorganizaestado/administracion-gral-estado/institucionesnormativaespecial"
+    },
+    {
+     "date": "",
+     "host": "administracion.gob.es",
+     "rank": 5,
+     "snippet": "Punto de Acceso General | Search for Regulations\n1. Search for Regulations\n# Search for Regulations\n# Search for Regulations\n...\nThe documents listed here are for informational purposes only; only those published in the Official Bulletins or Journals or contained in certifications issued in accordan",
+     "title": "Punto de Acceso General | Search for Regulations",
+     "url": "https://administracion.gob.es/en/contenidoestaticojava/buscadornormativas"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Spain national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2026-02-08",
+     "host": "www.une.org",
+     "rank": 1,
+     "snippet": "Número de resultados: 154.505\nUNE-EN ISO 5821:2026 UNE\nEstado: Vigente / 2026-02-04\nSoldeo por resistencia.\nElectrodos para el soldeo por puntos.\n...\nDeterminación del módulo de alargamiento.",
+     "title": "UNE - Busca tu norma - Asociación Española de Normalización",
+     "url": "https://www.une.org/encuentra-tu-norma/busca-tu-norma"
+    },
+    {
+     "date": "2022-05-11",
+     "host": "www.aenor.com",
+     "rank": 2,
+     "snippet": "Buscador de normas UNE, ISO, cursos y certificaciones - AENOR\n...\nEurocódigo 9: Diseño de estructuras de aluminio.\nParte 1-1: Reglas generales (Ratificada por AENOR en enero de 2014.)\n...\nNorma\nEn Vigor",
+     "title": "Buscador de normas UNE, ISO, cursos y certificaciones - AENOR",
+     "url": "https://www.aenor.com/buscador"
+    },
+    {
+     "date": "2026-02-07",
+     "host": "www.une.org",
+     "rank": 3,
+     "snippet": "Número de resultados: 154.505\n...\nEstado: Vigente / 1993-02-19\n...\nUNE-EN ISO 18279:2024 UNE\nEstado: Vigente / 2026-01-28\n...\nEstado: Vigente / 2026-01-14\n...\nSeguridad.",
+     "title": "Buscador de normas - Normalización",
+     "url": "https://www.une.org/encuentra-tu-norma"
+    },
+    {
+     "date": "",
+     "host": "www.boe.es",
+     "rank": 4,
+     "snippet": "diana Empresa, por la que se publica la relación de normas UNE aprobadas por la Asociación Española de Normalización durante el mes de septiembre de 2026.\n...\n254, de 13 de octubre de 2026, páginas 136597 a 136602 (6 págs.)",
+     "title": "BOE-A-2026-21299 Resolución de 1 de octubre de 2026, de la ...",
+     "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-21299"
+    },
+    {
+     "date": "2026-09-16",
+     "host": "tienda.aenor.com",
+     "rank": 5,
+     "snippet": "## UNE-EN ISO 37001:2026. Referente mundial en antisoborno\n...\n## 633534 Resultados disponibles\n...\n### UNE-EN ISO 9001:2026\nEn Vigor\n2026-09-16\nSistemas de gestión de la calidad.\nRequisitos.",
+     "title": "Buscador de Normas de la tienda AENOR",
+     "url": "https://tienda.aenor.com/normas"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Spain mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "digital.gob.es",
+     "rank": 1,
+     "snippet": "…\n# Technical standardisation\n## Regulations",
+     "title": "Technical standardisation",
+     "url": "https://digital.gob.es/en/telecomunicaciones-infraestructuras-digitales/servicios/normalizacion-tecnica"
+    },
+    {
+     "date": "",
+     "host": "www.boe.es",
+     "rank": 2,
+     "snippet": "- Documento BOE-A-2025-19509\n...\nEl listado de normas de obligado cumplimiento de la Instrucción Técnica Complementaria ITC RAT-02, queda actualizado como se indica en el anexo a la presente resolución.\n...\n- Efectos desde el 2 de octubre de 2025.",
+     "title": "BOE-A-2025-19509 Resolución de 18 de septiembre de 2025, de la ...",
+     "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-19509"
+    },
+    {
+     "date": "",
+     "host": "www.boe.es",
+     "rank": 3,
+     "snippet": "…\n...\n#### ANÁLISIS\n- Fecha de entrada en vigor: 29/09/2024\n- Permalink ELI EUR-Lex: https://data.europa.eu/eli/reg_impl/2024/2215/spa",
+     "title": "DOUE-L-2024-81322 Reglamento de Ejecución (UE) 2024 ... - BOE.es",
+     "url": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81322"
+    },
+    {
+     "date": "",
+     "host": "www.boe.es",
+     "rank": 4,
+     "snippet": "(6) Ejecuta el Reglamento (UE) 165/2014.\n...\nANEXO II\n...\nDE 4 DE JUNIO\nAPÉNDICE 5\nLista de requisitos exigidos para la homologación de vehículos en Serie Corta \nNacional y Homologación Individual\n…",
+     "title": "Disposición 11580 del BOE núm. 131 de 2026",
+     "url": "https://www.boe.es/boe/dias/2026/05/29/pdfs/BOE-A-2026-11580.pdf"
+    },
+    {
+     "date": "2026-10-31",
+     "host": "industria.gob.es",
+     "rank": 5,
+     "snippet": "# Reglamento UE 2023/1230\n...\n## Legislación Europea\n## Reglamento (UE) 2023-1230\n...\nVigente a partir del 14 de enero de 2027 salvo lo dispuesto en el capítulo IX \"Disposiciones Transitorias y Finales\"",
+     "title": "Ministerio de Industria y Turismo - Reglamento UE 2023/1230",
+     "url": "https://industria.gob.es/Calidad-Industrial/seguridadindustrial/productosindustriales/Seguridad-Maquinas/Paginas/reglamento-ue-20131230.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Spain national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.ine.es",
+     "rank": 1,
+     "snippet": "INE.\nInstituto Nacional de EstadûÙstica\n# INE- Instituto Nacional de EstadûÙstica. EspaûÝa",
+     "title": "INE. Instituto Nacional de Estadística",
+     "url": "https://www.ine.es/"
+    },
+    {
+     "date": "",
+     "host": "www.ine.es",
+     "rank": 2,
+     "snippet": "# Últimas noticias\n## Estadística de Hipotecas (H)\n© 2026 INE.\nInstituto Nacional de Estadística Avda.\nManoteras, 52 - 28050 - Madrid - España Tlf: (+34) 91 583 91 00",
+     "title": "Área de prensa / Últimas noticias del INE",
+     "url": "https://www.ine.es/dyngs/Prensa/es/ultNoticias.htm"
+    },
+    {
+     "date": "",
+     "host": "www.ine.es",
+     "rank": 3,
+     "snippet": "Service Charter 2026-2029\nwww.ine.es\nNational Statistics Institute\nAvda.\nManoteras, 52, 28050 Madrid (Spain)\nPersonalised service (website and telephone) \nWebsite enquiry form: www.ine.es/infoine",
+     "title": "www .ine.es",
+     "url": "https://www.ine.es/en/prodyser/carta_servicios_triptico_en.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.ine.es",
+     "rank": 4,
+     "snippet": "Instituto Nacional de Estadística.\n(National Statistics Institute)\n- INEbase\n- Cifras de población y Censos demográficos\n- Demografía y población\n- Censo Anual de Población\n...\n# Censo anual de población 2021-2025",
+     "title": "Censo anual de población 2021-2025 - INE",
+     "url": "https://www.ine.es/dynt3/inebase/index.htm?padre=11555&capsel=11532"
+    },
+    {
+     "date": "",
+     "host": "www.ine.es",
+     "rank": 5,
+     "snippet": "Instituto Nacional de Estadística.\n(National Statistics Institute)\n...\n# Población\n© 2026 INE.\nInstituto Nacional de Estadística Avda.\nManoteras, 52 - 28050 - Madrid - España Tlf: (+34) 91 583 91 00",
+     "title": "Población",
+     "url": "https://www.ine.es/dynt3/inebase/es/index.htm?padre=8018&capsel=9046"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Spain central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-20",
+     "host": "www.bde.es",
+     "rank": 1,
+     "snippet": "Estadísticas del Banco de España - Banco de España\n...\nEsta actividad se desarrolla siguiendo los principios que establece el Compromiso público sobre estadísticas europeas del SEBC.\nEn esta sección se puede acceder tanto a la información estadística que elabora el Banco de España como a los princip",
+     "title": "Estadísticas del Banco de España - Banco de España",
+     "url": "https://www.bde.es/wbe/es/estadisticas/"
+    },
+    {
+     "date": "2026-10-20",
+     "host": "www.bde.es",
+     "rank": 2,
+     "snippet": "# Estadístiques\n...\nEn esta secció es pot accedir tant a la informació estadística que elabora el Banco de España com als principals calendaris de difusió.\n...\nServicio de Información de Estadísticas\n- Telèfon: 91 338 5651",
+     "title": "VA",
+     "url": "https://www.bde.es/wbe/va/estadisticas/"
+    },
+    {
+     "date": "2026-08-19",
+     "host": "datos.bde.es",
+     "rank": 3,
+     "snippet": "Catálogo de Datos del Banco de España | Catálogo de datos BdE\n# Bienvenido al Catálogo de Datos del Banco de España\n...\n## Aplicaciones y servicios de datos relevantes\n- Servicio web de Estadísticas\n- HERMES\n...\n- Servicio de Información de Estadísticas",
+     "title": "Catálogo de Datos del Banco de España | Catálogo de datos BdE",
+     "url": "https://datos.bde.es/datos/es.html"
+    },
+    {
+     "date": "2026-10-07",
+     "host": "www.bde.es",
+     "rank": 4,
+     "snippet": "Statistical information - Banco de España\n…\n275 results found with the selected filters\n...\nSeptember 2026\n**\nStatistical Bulletin\nBanco de España\n10/09/2026\n...\n28.\nForeign direct investment in Spain: developments, composition and international comparison\n...\nStatistical Bulletin\nBanco de España",
+     "title": "Statistical information - Banco de España",
+     "url": "https://www.bde.es/wbe/en/publicaciones/informacion-estadistica/"
+    },
+    {
+     "date": "2026-10-20",
+     "host": "www.bde.es",
+     "rank": 5,
+     "snippet": "The Banco de España compiles, prepares and publishes a broad set of economic and financial statistics, as part of the functions conferred on it by the Law of Autonomy and its responsibilities as a member of the European System of Central Banks (ESCB) as well as those established by the National Stat",
+     "title": "Statistics",
+     "url": "https://www.bde.es/wbe/en/estadisticas/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Spain government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.datosabiertos.miteco.gob.es",
+     "rank": 1,
+     "snippet": "## Portal Datos Abiertos\nEl Ministerio para la Transición Ecológica y el Reto Demográfico ofrece a la ciudadanía, empresas y organismos su portal de datos abiertos, que incluye catálogos, APIs y estadísticas.\n...\nCatálogo de Datos\nAcceso a APIS\n...\nEstadísticas\n…",
+     "title": "Home [www.datosabiertos.miteco.gob.es]",
+     "url": "https://www.datosabiertos.miteco.gob.es/es.html"
+    },
+    {
+     "date": "2026-08-05",
+     "host": "datos.gob.es",
+     "rank": 2,
+     "snippet": "Datos abiertos del Gobierno de España | datos.gob.es\n...\n## What we do and why it's important\nAt **datos.gob.es** we have the **mission of empowering the Spanish digital economy** based on two fundamental pillars, the publication of open data for reuse and access to the resources and tools necessary",
+     "title": "Open data initiative of the Government of Spain",
+     "url": "https://datos.gob.es/en/"
+    },
+    {
+     "date": "",
+     "host": "datos.gob.es",
+     "rank": 3,
+     "snippet": "Catálogo de datos - Datos.gob.es\n- Inicio\n...\n- Servicios de datos\n# Catálogo de datos\nDescubre conjuntos de datos abiertos por las organizaciones y dispuestos para su reutilización\n- Conjuntos de datos (116.242)\n- Servicios de datos (495)",
+     "title": "Catálogo de datos",
+     "url": "https://datos.gob.es/es/catalogo/servicios-datos"
+    },
+    {
+     "date": "",
+     "host": "dataportals.org",
+     "rank": 4,
+     "snippet": "datos.gob.es - Official Spain Government Portal\n...\nDatos.gob.es is the national portal that organises and manages the Public Information Catalogue of the General State Administration.\nThe portal also provides general information, educational material and news updates on reusing public sector inform",
+     "title": "datos.gob.es - Official Spain Government Portal",
+     "url": "https://dataportals.org/catalog/spain"
+    },
+    {
+     "date": "",
+     "host": "web-archive-storage.oecd.org",
+     "rank": 5,
+     "snippet": "Open Government Data Portal\nDatos.gob.es is the main portal for open government data in Spain.\nThe ‘Initiative map’ is an interactive map that presents different open data initiatives and applications in Spain, and categorises them depending on administrative level, subject, re-use level",
+     "title": "[PDF] OECD OURdata Index: 2019",
+     "url": "https://web-archive-storage.oecd.org/aemint-web-archive-prod/web-archive/ce/ce1aa49c6a9bc4214577fb32bf0fb2a318d1e36a99ac8f3f404312f459ff4f21.pdf"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:21:22Z",
+ "pais": {
+  "iso2": "ES",
+  "iso3": "ESP",
+  "nombre": "Spain"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

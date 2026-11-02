@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Malaysia constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2024-01-01",
+     "host": "lom.agc.gov.my",
+     "rank": 1,
+     "snippet": "|Act 855 - PRESERVATION OF PUBLIC SECURITY (SARAWAK) ACT 1962 (REVISED - 2024)|\n...\n|Act 854 - CYBER SECURITY ACT 2024|\n...\n|Act A1712 - ENVIRONMENTAL QUALITY (AMENDMENT) ACT 2024|",
+     "title": "Malaysia Federal Legislation",
+     "url": "https://lom.agc.gov.my/"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 2,
+     "snippet": "Portal Rasmi Kerajaan Malaysia\n...\nBadan Kehakiman Malaysia bertanggungjawab mentafsir, melaksana dan menguatkuasakan undang-undang serta memastikan keadilan dilaksanakan mengikut Perlembagaan Persekutuan dan peruntukan undang-undang.",
+     "title": "Integriti, Tadbir Urus dan Undang-undang - Sistem Kehakiman",
+     "url": "https://www.malaysia.gov.my/my/categories/integriti-tadbir-urus-dan-undang-undang/sistem-kehakiman"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 3,
+     "snippet": "Portal Rasmi Kerajaan Malaysia\n...\n# Akta dan Peraturan\n### Peruntukan Undang-undang berkaitan Kanak-kanak",
+     "title": "Integriti, Tadbir Urus dan Undang-undang - Akta dan ...",
+     "url": "https://www.malaysia.gov.my/my/categories/integriti-tadbir-urus-dan-undang-undang/akta-dan-peraturan"
+    },
+    {
+     "date": "",
+     "host": "mylaw.my",
+     "rank": 4,
+     "snippet": "Malaysia corpus\n...\nFederal and state law — each one broken into parts, sections, and paragraphs you can link to and quote.\n...\nConstitution FEDERAL 1957\n...\nmylaw.my turns official legislation into clean, navigable text, so you can find the exact provision you need and cite it with confidence.",
+     "title": "mylaw.my",
+     "url": "https://mylaw.my/"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 5,
+     "snippet": "Official Malaysia Government Website\n...\n# Digital Legal Services\nThe e-Judgment Portal enables the digital management, storage, and access of court judgments.",
+     "title": "Integrity, Governance and the Rule of Law - Digital Legal Services",
+     "url": "https://www.malaysia.gov.my/en/categories/integrity-governance-and-the-rule-of-law/digital-legal-services"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Malaysia national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 1,
+     "snippet": "Portal Rasmi Kerajaan Malaysia\n...\n## Apa yang anda cari?\nDasar KeselamatanDasar PrivasiPenafianNotis Hak CiptaBantuan\nIntegriti, Tadbir Urus dan Undang-undang - Akta dan Peraturan",
+     "title": "Integriti, Tadbir Urus dan Undang-undang - Akta dan ...",
+     "url": "https://www.malaysia.gov.my/my/categories/integriti-tadbir-urus-dan-undang-undang/akta-dan-peraturan"
+    },
+    {
+     "date": "2025-08-01",
+     "host": "www.kpdn.gov.my",
+     "rank": 2,
+     "snippet": "|BIL|NAMA PERATURAN|\n...\n|1|Peraturan-peraturan Hak Cipta (pengkompaunan Kesalahan) 2023|Muat Turun|\n...\n|6|Peraturan-peraturan Cap Dagangan 2019|Muat Turun|",
+     "title": "Akta / Peraturan / Garis Panduan - KPDN",
+     "url": "https://www.kpdn.gov.my/ms/orang-awam/akta-peraturan-garis-panduan"
+    },
+    {
+     "date": "2021-10-05",
+     "host": "www.doe.gov.my",
+     "rank": 3,
+     "snippet": "Regulations - Department of Environment\n...\nEnvironmental Quality (Appeal Board) Regulations 2003 – P.U. (A) 1152003\n...\nEnvironmental Quality (Control of Petrol and Diesel Content) (Amendment) Regulations 2021 -P.U. (A) 138 2021\n…",
+     "title": "Regulations - Department of Environment - Jabatan Alam Sekitar",
+     "url": "https://www.doe.gov.my/en/regulation/"
+    },
+    {
+     "date": "",
+     "host": "data.gov.my",
+     "rank": 4,
+     "snippet": "data.gov.my\nGovernment of Malaysia\nGovernment of Malaysia\nMalaysia's official open data portal\n...\nYour one-stop centre to browse Malaysia's wealth of open data.\n...\nTo search for something specific, use our data catalogue - it allows you to download or programmatically access our datasets.\n- 24 hou",
+     "title": "data.gov.my",
+     "url": "https://data.gov.my/"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 5,
+     "snippet": "MyGovernment - Government of Malaysia's Official Portal\nOfficial Malaysia Government Website\n...\nOfficial Malaysia Government Website\n...\n# PUBLICATIONS\n1. PUBLICATIONS\n## Publications\n# PUBLICATIONS",
+     "title": "MyGovernment - Government of Malaysia's Official Portal",
+     "url": "https://www.malaysia.gov.my/en/publication"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Malaysia official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2021-04-28",
+     "host": "wwws.loc.gov",
+     "rank": 1,
+     "snippet": "# Malaysia Federation of Malaysia\n## Legislative\n- OFFICIAL GAZETTE: Federal Gazette\n- Laws of Malaysia (L.O.M.)\n*(Attorney-General’s Chambers of Malaysia)*",
+     "title": "Guide to Law Online: Malaysia | Law Library of Congress",
+     "url": "https://wwws.loc.gov/law/help/guide/nations/malaysia.php"
+    },
+    {
+     "date": "2026-10-23",
+     "host": "rai.malaysia.gov.my",
+     "rank": 2,
+     "snippet": "MyGovernment Portal for Non-Citizen\n...\nOfficial Malaysia Government Website\nOfficial Malaysia Government Website",
+     "title": "Government Online Services Gateway - rai.malaysia.gov.my",
+     "url": "https://rai.malaysia.gov.my/main"
+    },
+    {
+     "date": "",
+     "host": "repositori.parlimen.gov.my",
+     "rank": 3,
+     "snippet": "AI Overview\n...\nIt functioned as the official record for urgent, non-routine, or special legislative matters outside the regular Gazette schedule, covering the Federation of Malaya (11 states).\n...\nOfficial Record: As maintained by the Parliament of Malaysia, these documents are essential for legal,",
+     "title": "FEDERATION OF MALAYA GOVERNMENT GAZETTE ...",
+     "url": "https://repositori.parlimen.gov.my/handle/123456789/3698"
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 4,
+     "snippet": "# Malaysia: legislation: official gazette\nDescription:\n1 title containing the official gazette for Malaysia from 1948 to 1980 (User advice: confirm with TNA).\nIt is an official publication and the text is in English.\nNew material is no longer added.\nLibrary:",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag/malaysia-legislation-officico930-41"
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 5,
+     "snippet": "# Malaysia: legislation: official gazette\nDescription:\n1 title containing the official gazette for Malaysia from 1947 to 1950.\nIt is an official publication and the text is in English.\nNew material is no longer added.\n...\nGOVT PUBS 595 (R8)",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag/malaysia-legislation-officigovtpubs595r8-41"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Malaysia supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 1,
+     "snippet": "This service enables users to search, review and access court judgments and written grounds of judgments published by the Federal Court, Court of Appeal, High Court and other courts in Malaysia.\n...\n1. Click the 'Access This Service' button\n2. Complete all required information\n3. Click the 'Search' ",
+     "title": "Court Case Judgment Search",
+     "url": "https://www.malaysia.gov.my/en/digital-services/semakan-keputusan-kes-mahkamah"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 2,
+     "snippet": "# e-Judgement Portal\n...\nThe e-Judgment Portal enables the digital management, storage, and access of court judgments.\nThrough the portal, users can:\n- Access written grounds of judgment\n- Download grounds of judgment documents\n- Refer to court decisions\n- Check the status of a case decision",
+     "title": "e-Judgement Portal",
+     "url": "https://www.malaysia.gov.my/en/categories/integrity-governance-and-the-rule-of-law/digital-legal-services/e-judgement-portal"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 3,
+     "snippet": "Portal e-Judgement\n...\nPortal e-Judgment membolehkan pengurusan, penyimpanan dan akses penghakiman mahkamah secara digital.\nMelalui portal ini, pengguna boleh:\n...\n- Memuat turun dokumen alasan penghakiman\n- Membuat rujukan keputusan mahkamah",
+     "title": "Portal e-Judgement",
+     "url": "https://www.malaysia.gov.my/my/topics/portal-e-judgement"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 4,
+     "snippet": "e-Judgement Portal\n...\nThe e-Judgment Portal enables the digital management, storage, and access of court judgments.\nThrough the portal, users can:\n- Access written grounds of judgment\n- Download grounds of judgment documents\n- Refer to court decisions\n- Check the status of a case decision",
+     "title": "e-Judgement Portal - MyGOV",
+     "url": "https://www.malaysia.gov.my/en/topics/e-judgement-portal"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.kehakiman.gov.my",
+     "rank": 5,
+     "snippet": "# E-Kehakiman\n# E-Kehakiman\n### Portal E-Kehakiman\n### Case Management System\n### e-Filing\n### e-Lelong\n...\n### Alasan Penghakiman\n...\n**MAHKAMAH PERSEKUTUAN MALAYSIA,**",
+     "title": "E-Kehakiman | Portal Rasmi Pejabat Ketua Pendaftar Mahkamah ...",
+     "url": "https://www.kehakiman.gov.my/ms/e-kehakiman"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Malaysia state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "lawnet.sarawak.gov.my",
+     "rank": 1,
+     "snippet": "Sarawak LawNet System v 1.0\n...\nWhere to get the Laws of Sarawak Series The Laws of Sarawak series are published by Authority of the Sarawak Government and are available in booklet and looseleaf format.",
+     "title": "Sarawak LawNet System v 1.0",
+     "url": "https://lawnet.sarawak.gov.my/lawnet/Law/TLnetPubHome.jsp"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 2,
+     "snippet": "Official Malaysia Government Website\n...\nOfficial Malaysia Government Website\n...\nKelantan State Legal Document Repository\n1. Digital Services\n2. Kelantan State Legal Document Repository\nKelantan State Legal Document Repository\n...\nONLINE TOOLS\nCATEGORY: OTHERS\nA comprehensive legal information repo",
+     "title": "Kelantan State Legal Document Repository - MyGovernment",
+     "url": "https://www.malaysia.gov.my/en/digital-services/kelantan-state-legal-document-repository"
+    },
+    {
+     "date": "2026-10-20",
+     "host": "johor.kehakiman.gov.my",
+     "rank": 3,
+     "snippet": "Policy and Legislation Division | Portal Rasmi Mahkamah Negeri Johor\nOfficial Malaysia Government Website\n...\nTo draft policies and legislation efficiently and effectively in accordance with the laws.\n...\nILKAP\nSuruhanjaya Perkhidmatan Kehakiman dan Perundangan (SPKP)\nMyGovernment",
+     "title": "Policy and Legislation Division",
+     "url": "https://johor.kehakiman.gov.my/en/policy-and-legislation-division"
+    },
+    {
+     "date": "2021-04-28",
+     "host": "wwws.loc.gov",
+     "rank": 4,
+     "snippet": "# Malaysia Federation of Malaysia\n## Legislative\n...\n*(Attorney-General’s Chambers of Malaysia)*\n...\n- E-Syariah Official Portal includes legislation from each state under \"Reference Materials,\" \"Syariah Law\"\n- Sabah LawNet State Laws of Sabah\n- Sarawak LawNet State Laws of Sarawak",
+     "title": "Guide to Law Online: Malaysia | Law Library of Congress",
+     "url": "https://wwws.loc.gov/law/help/guide/nations/malaysia.php"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 5,
+     "snippet": "Official Malaysia Government Website\n...\nPerak Digital Portal\n...\nPerak Chief Minister's and State Secretary's Office (PMB-SUK Perak)\n...\nThis service provides a one-stop platform that brings together various digital services, information, and facilities offered by the Perak State Government for pub",
+     "title": "Perak Digital Portal - MyGOV",
+     "url": "https://www.malaysia.gov.my/en/digital-services/portal-perak-digital"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Malaysia municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2015-09-01",
+     "host": "www.mdmaran.gov.my",
+     "rank": 1,
+     "snippet": "- Building Standards By-Laws (Pahang) 1984\n- Election Advertising By-Laws (MDM) 1990\n- Trade, Business and Industrial Licensing By-Laws (MDM) 1991\n- Public Lavatories By-Laws (MDM) 1991\n…",
+     "title": "Bylaws | Official Portal of Maran District Council (MDM)",
+     "url": "https://www.mdmaran.gov.my/en/businesses/legislation/bylaws"
+    },
+    {
+     "date": "2025-02-12",
+     "host": "mbk.gov.my",
+     "rank": 2,
+     "snippet": "Official Portal Of Kuantan City Council Undang-undang kecil - Majlis Bandaraya Kuantan\n...\n- aduanmbk.gov.my\n-\n# Bylaws\n- https://mbk.gov.my/portal/en/perundangan-halaman-3-dari-3/Bylaws\n…",
+     "title": "Bylaws",
+     "url": "https://mbk.gov.my/portal/en/perundangan-halaman-3-dari-3/"
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.planmalaysia.gov.my",
+     "rank": 3,
+     "snippet": "Portal Rasmi PLANMalaysia - Utama\n...\n|BM|EN|\n|--|--|\n**Portal Rasmi**\n# JABATAN PERANCANGAN BANDAR DAN DESA\n### KEMENTERIAN PERUMAHAN DAN KERAJAAN TEMPATAN",
+     "title": "Portal Rasmi PLANMalaysia",
+     "url": "https://www.planmalaysia.gov.my/main/documents?type=perundangan"
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.mbdk.gov.my",
+     "rank": 4,
+     "snippet": "Legislation | Portal Rasmi Majlis Bandaraya Diraja Klang (MBDK)\nlamanweb@mbdk.gov.my\n# Legislation\n### Act\n### By-laws\n### Enactments\n### Command\n### Methods\n### Rules\nView forms >",
+     "title": "Legislation | Portal Rasmi Majlis Bandaraya Diraja Klang (MBDK)",
+     "url": "https://www.mbdk.gov.my/en/resources/legislation"
+    },
+    {
+     "date": "2026-08-03",
+     "host": "www.dbkl.gov.my",
+     "rank": 5,
+     "snippet": "Portal Rasmi Dewan Bandaraya Kuala Lumpur - DBKL | Senarai Perundangan Senarai Perundangan | Portal Rasmi Dewan Bandaraya Kuala Lumpur - DBKL\n# Senarai Perundangan\nUtama / Info Korporat / Senarai Perundangan\n...\nWARTA|",
+     "title": "Senarai Perundangan - Kuala Lumpur",
+     "url": "https://www.dbkl.gov.my/info-korporat/senarai-perundangan"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Malaysia regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-11-02",
+     "host": "www.npra.gov.my",
+     "rank": 1,
+     "snippet": "- National Pharmaceutical Regulatory Agency (NPRA)\nLot 36, Jalan Universiti (Jalan Prof Diraja Ungku Aziz), 46200 Petaling Jaya, Selangor, Malaysia.\n- Phone: +603-7883 5400\n...\nNational Pharmaceutical Regulatory Agency (NPRA)",
+     "title": "Drug Registration Guidance Documents (DRGD) E-Book",
+     "url": "https://www.npra.gov.my/~npraweb/index.php/en/drug-registration-guidance-documents-drgd-e-book.html"
+    },
+    {
+     "date": "2026-11-01",
+     "host": "www.npra.gov.my",
+     "rank": 2,
+     "snippet": "NPRA relies on the National Regulatory Authorities (NRAs) approved by the Drug Control Authority as listed below:\n...\nNational Pharmaceutical Regulatory Agency (NPRA)\nLot 36, Jalan Universiti (Jalan Prof Diraja Ungku Aziz), 46200 Petaling Jaya, Selangor, Malaysia.",
+     "title": "Regulation Basics",
+     "url": "https://www.npra.gov.my/index.php/my/regulation-basic"
+    },
+    {
+     "date": "2026-11-02",
+     "host": "www.npra.gov.my",
+     "rank": 3,
+     "snippet": "Lot 36, Jalan Universiti (Jalan Prof Diraja Ungku Aziz), 46200 Petaling Jaya, Selangor, Malaysia.\n...\n# NPRA mission\nNPRA mission is to safeguard the nation’s health through scientific excellence in the regulatory control of medicinal products and cosmetics.",
+     "title": "National Pharmaceutical Regulatory Agency (NPRA) - Home",
+     "url": "https://www.npra.gov.my/index.php/en/"
+    },
+    {
+     "date": "",
+     "host": "www.npra.gov.my",
+     "rank": 4,
+     "snippet": "This guidance document is issued by the Director of \nPharmaceutical Services under Regulation 18A, Control of Drugs and Cosmetics Regulations 1984.\n...\nMinistry of Health Malaysia, \nLot 36, Jalan Profesor Diraja Ungku Aziz (Jalan Universiti), \n...\nMalaysia.\n...\nMalaysia.",
+     "title": "Guidelines for Control of Cosmetic Products in Malaysia ( ...",
+     "url": "https://www.npra.gov.my/images/Guidelines_Central/Guidelines_on_Cosmetic/GUIDELINES_FOR_CONTROL_OF_COSMETIC_PRODUCTS_IN_MALAYSIA.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.mcmc.gov.my",
+     "rank": 5,
+     "snippet": "COMMUNICATIONS AND MULTIMEDIA (LICENSING) REGULATIONS 2000 [P.U.(A) 129/2000]\n...\nCOMMUNICATIONS AND MULTIMEDIA (SPECTRUM) REGULATIONS 2000 [P.U.(A) 128/2000]",
+     "title": "Communications and Multimedia Act 1998 [Act 588] | Malaysian Communications And Multimedia Commission (MCMC)",
+     "url": "https://www.mcmc.gov.my/en/legal/acts/communications-and-multimedia-act-1998-reprint-200"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Malaysia national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "mysol.jsm.gov.my",
+     "rank": 1,
+     "snippet": "##### Business events — Part 3: Classification — Criteria and requirements for professional exhibition organiser (PEO)\n**\nMS 2765-3:2026 **\n**Status : Original**\n...\n##### Star rating for industrial park (IP) — Classification\n**\nMS 2822:2026 **",
+     "title": "Search Catalogue",
+     "url": "https://mysol.jsm.gov.my/search-catalogue"
+    },
+    {
+     "date": "",
+     "host": "mysol.jsm.gov.my",
+     "rank": 2,
+     "snippet": "##### MS Catalogue\nEasily search and explore the complete list of Malaysian Standards.\n...\n###### MS 1480:2025\nFood safety according to Hazard Analysis and Critical Control Point (HACCP) system\n...\nMS document can be purchased via:\n- Online purchase at https://mysol.jsm.gov.my",
+     "title": "MySol - Department of Standards Malaysia",
+     "url": "https://mysol.jsm.gov.my/"
+    },
+    {
+     "date": "",
+     "host": "mysol.jsm.gov.my",
+     "rank": 3,
+     "snippet": "##### Malaysia National Annex to MS EN 1992-4:2023, Eurocode 2: Design of concrete structures - Part 4: Design of fastenings for use in concrete\n**\nMS EN 1992-4:2023 (NATIONAL ANNEX:2025) **",
+     "title": "JSM - MySOL",
+     "url": "https://mysol.jsm.gov.my/search/search-catalogue?page=6"
+    },
+    {
+     "date": "",
+     "host": "www.jsm.gov.my",
+     "rank": 4,
+     "snippet": "Jabatan Standard Malaysia - New Landing\n...\nOFFICIAL PORTAL OF JSM\n# Malaysian Standards, World Quality\nJSM ensures that Malaysia's standardization and accreditation system is of international standard.\n...\nAll rights reserved.\n...\nNational standards development through MySOL, and the Malaysian Stan",
+     "title": "Malaysian Standards,World Quality",
+     "url": "https://www.jsm.gov.my/ms/new-landing"
+    },
+    {
+     "date": "",
+     "host": "mysol.jsm.gov.my",
+     "rank": 5,
+     "snippet": "##### Business events — Part 3: Classification — Criteria and requirements for professional exhibition organiser (PEO)\n**\nMS 2765-3:2026 **\n**Status : Original**\n...\n##### Star rating for industrial park (IP) — Classification\n**\nMS 2822:2026 **",
+     "title": "JSM",
+     "url": "https://mysol.jsm.gov.my/customer/search-catalogue"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Malaysia mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.jsm.gov.my",
+     "rank": 1,
+     "snippet": "…\n,,,,,,,,,\n...\nMDA/RR No. 1\"\n...\n…\n,,49.0,ST,,,19.0,MS 2598:2014,Minimum Energy Performance Standards (MEPS) for Lamps,Information Booklet 2018 Edition",
+     "title": "[XLS] By Regulator - Department of Standards Malaysia",
+     "url": "https://www.jsm.gov.my/images/1-about-dsm/statistics/document/mandatory_standard_list_/Database_Mandatori_Standard_2025_-_Web.xlsx"
+    },
+    {
+     "date": "2022-11-03",
+     "host": "www.jpj.gov.my",
+     "rank": 2,
+     "snippet": "|1.|Topi Keledar|*R22 Protective Helmets and Their Visors for Driver and Passengers of Motorcycles and Moped*|\n...\n|2.|*Child Seat / Child Restraint System*|*R44 Child Restraint Systems*|",
+     "title": "Kelulusan Jenis Komponen (CTA) - Portal Rasmi JPJ",
+     "url": "https://www.jpj.gov.my/kelulusan-jenis-komponen-cta/"
+    },
+    {
+     "date": "",
+     "host": "asean.org",
+     "rank": 3,
+     "snippet": "====================\n...\n\"MS 888\n\",\"MS 888-White portland cement\n-Compositions,specifications and conformity criteria\n\",✓,\"This Malaysian Standard covers the manufacture, composition, requirements for mechanical, physical and chemical, classification, sampling and marking of White Portland cement.\",",
+     "title": "5.malaysia",
+     "url": "https://asean.org/wp-content/uploads/2024/01/Technical-Regulations-or-Mandatory-Standards-on-BCM-in-ASEAN-ao-9th-BCWG-Malaysia.xlsx"
+    },
+    {
+     "date": "",
+     "host": "asean.org",
+     "rank": 4,
+     "snippet": "REGULATORY BODY \nMalaysia\nEnergy Commission (Suruhanjaya Tenaga) \n...\nMalaysia \n• Electricity Supply Act 1990; and \n• \nElectricity Regulations 1994.\n• Electricity (Amendment) Regulations 2013.\n...\nLED lamps for",
+     "title": "REGULATORY ENVIRONMENT ON ELECTRICAL AND ...",
+     "url": "https://asean.org/wp-content/uploads/2024/03/Regulatory-Regime-of-Malayia-Update-List_September-2023.pdf"
+    },
+    {
+     "date": "2026-02-20",
+     "host": "www.jsm.gov.my",
+     "rank": 5,
+     "snippet": "…\n## Mandatory Standards\n|**NSC**|**NAME**|**MS**|\n|--|--|--|\n|19|Electrical and Electronics Equipments and Accessories|92|\n...\n|25|Quality and Organisational Management|3|\n|26|Environmental Management and Climate Change|2|",
+     "title": "Mandatory Standards",
+     "url": "https://www.jsm.gov.my/about-us/statistics/standards-statistics/mandatory-standards"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Malaysia national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.dosm.gov.my",
+     "rank": 1,
+     "snippet": "Department of Statistics Malaysia\n- - Metadata Guideline\n...\n- Department of Statistics Malaysia,\nBlock C6 & C7, Complex C,\nFederal Government Administrative Centre\n62514 Precinct 1,\nWilayah Persekutuan Putrajaya\n...\n- www.dosm.gov.my",
+     "title": "Department of Statistics Malaysia",
+     "url": "https://www.dosm.gov.my/portal-main/home"
+    },
+    {
+     "date": "",
+     "host": "www.dosm.gov.my",
+     "rank": 2,
+     "snippet": "#### Welcome to the DOSM Official Portal\nThe Department of Statistics Malaysia is a main government agency entrusted with the responsibility to collect, interpret and disseminate latest and real time statistics in the monitoring of national economic performance and social development.\n#### MySubNasi",
+     "title": "Department of Statistics Malaysia",
+     "url": "https://www.dosm.gov.my/"
+    },
+    {
+     "date": "",
+     "host": "www.dosm.gov.my",
+     "rank": 3,
+     "snippet": "Department of Statistics Malaysia\n- - Metadata Guideline\n- Metadata - Publication Level\n...\n## Online Services\n###### Interactive Visualisation\n- Department of Statistics Malaysia,\nBlock C6 & C7, Complex C,\n...\n62514 Precinct 1,\n...\n- www.dosm.gov.my",
+     "title": "My Local Stats",
+     "url": "https://www.dosm.gov.my/portal-main/release-content/my-local-stats-malaysia-negeri--daerah-pentadbiran-2024"
+    },
+    {
+     "date": "",
+     "host": "www.dosm.gov.my",
+     "rank": 4,
+     "snippet": "Department of Statistics Malaysia\n- - Metadata Guideline\n...\n…\n- Department of Statistics Malaysia,\nBlock C6 & C7, Complex C,\nFederal Government Administrative Centre\n62514 Precinct 1,\nWilayah Persekutuan Putrajaya\n...\n- www.dosm.gov.my",
+     "title": "Department of Statistics Malaysia - DOSM",
+     "url": "https://www.dosm.gov.my/portal-main/online-services?data=9"
+    },
+    {
+     "date": "",
+     "host": "www.dosm.gov.my",
+     "rank": 5,
+     "snippet": "## Online Services\n###### Interactive Visualisation\n- Department of Statistics Malaysia,\nBlock C6 & C7, Complex C,\nFederal Government Administrative Centre\n...\n- www.dosm.gov.my",
+     "title": "Social Indicators",
+     "url": "https://www.dosm.gov.my/portal-main/release-subthemes/social-indicators"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Malaysia central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "www.bnm.gov.my",
+     "rank": 1,
+     "snippet": "bilion\n...\n|Real GDP Growth, y-o-y (2nd Quarter 2026)|6.0%|\n...\n|Broad Money (M3) (RM billion) (Aug 2026)|2,636.6|\n...\n|Population (million person) (2026)|34.4|",
+     "title": "Bank Negara Malaysia",
+     "url": "https://www.bnm.gov.my/home"
+    },
+    {
+     "date": "",
+     "host": "www.bnm.gov.my",
+     "rank": 2,
+     "snippet": "The discontinuation of these datasets is in view of the availability of centralised data platforms such as Malaysia’s Official Open Data portal (data.gov.my) and OpenDOSM, or other official websites of data providers, which provide easy access to similar datasets with more comprehensive dimensions, ",
+     "title": "Monthly Highlights & Statistics in June 2026 - Bank Negara Malaysia",
+     "url": "https://www.bnm.gov.my/-/monthly-highlights-statistics-in-june-2026"
+    },
+    {
+     "date": "",
+     "host": "www.bnm.gov.my",
+     "rank": 3,
+     "snippet": "Rates & Statistics - Bank Negara Malaysia\n…\n## Stats General Info 2023\n...\n|National Summary Data Page for Malaysia Summary of key economic and financial variables over the last two periods, published in the format prescribed by the International Monetary Fund (IMF) Special Data Dissemination Standa",
+     "title": "Rates & Statistics",
+     "url": "https://www.bnm.gov.my/rates-statistics"
+    },
+    {
+     "date": "",
+     "host": "www.bnm.gov.my",
+     "rank": 4,
+     "snippet": "Malaysia’s Official Open Data portal (data.gov.my) and OpenDOSM, or other official websites of data providers, which provide easy access to similar datasets with more comprehensive dimensions, greater granularity and higher frequencies.\n...\n**Data source:** Bank Negara Malaysia\n**Data periodicity**:",
+     "title": "Monthly Highlights & Statistics in December 2024",
+     "url": "https://www.bnm.gov.my/-/monthly-highlights-statistics-in-december-2024"
+    },
+    {
+     "date": "",
+     "host": "www.bnm.gov.my",
+     "rank": 5,
+     "snippet": "The discontinuation of these datasets is in view of the availability of centralised data platforms such as Malaysia’s Official Open Data portal (data.gov.my) and OpenDOSM, or other official websites of data providers, which provide easy access to similar datasets with more comprehensive dimensions, ",
+     "title": "Monthly Highlights & Statistics in November 2025",
+     "url": "https://www.bnm.gov.my/-/monthly-highlights-statistics-in-november-2025"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Malaysia government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 1,
+     "snippet": "Portal Rasmi Kerajaan Malaysia\n...\n…\nPortal ini telah dinaik taraf dengan penambahan ciri-ciri baharu mengikut trend data terbuka peringkat global bagi memudahkan capaian ke atas set data terdapat dalam portal ini.\n...\nContoh set data yang boleh dicapai disini ialah:",
+     "title": "Portal Data Terbuka Sektor Awam - Portal Rasmi Kerajaan Malaysia",
+     "url": "https://www.malaysia.gov.my/my/my-initiative/perkhidmatan-digital-keseluruhan-kerajaan/perkongsian-data/portal-data-terbuka-sektor-awam"
+    },
+    {
+     "date": "2026-04-01",
+     "host": "data.gov.my",
+     "rank": 2,
+     "snippet": "Data Catalogue | data.gov.my\nGovernment of Malaysia\nGovernment of Malaysia\nMalaysia's official open data portal\n## Data Catalogue\nYour one-stop interface to browse Malaysia's wealth of open data.\nThis page will consistently grow in depth and breadth with high-quality data from federal and state agen",
+     "title": "Data Catalogue",
+     "url": "https://data.gov.my/data-catalogue"
+    },
+    {
+     "date": "",
+     "host": "data.gov.my",
+     "rank": 3,
+     "snippet": "data.gov.my\nGovernment of Malaysia\nGovernment of Malaysia\nMalaysia's official open data portal\n...\nYour one-stop centre to browse Malaysia's wealth of open data.\n...\nTo search for something specific, use our data catalogue - it allows you to download or programmatically access our datasets.\n- 24 hou",
+     "title": "data.gov.my",
+     "url": "https://data.gov.my/"
+    },
+    {
+     "date": "",
+     "host": "open.dosm.gov.my",
+     "rank": 4,
+     "snippet": "OpenDOSM is a platform that catalogs, visualises, and analyses DOSM's wealth of data.\nEverything on this site is open-sourced and freely available for the nation's benefit.\n...\nTo search for something specific, use our data catalogue - it hosts every open dataset from Malaysia's public sector.",
+     "title": "OpenDOSM",
+     "url": "https://open.dosm.gov.my/"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.malaysia.gov.my",
+     "rank": 5,
+     "snippet": "© Government of Malaysia All Rights Reserved\n...\nOpenDOSM\n...\nOpenDOSM\nDepartment of Statistics Malaysia (DOSM)\n...\nOpenDOSM is a platform cataloguing, describing, and analysing DOSM’s wealth of data.\nEverything on this site is open source and available free for the nation’s benefit.",
+     "title": "OpenDOSM",
+     "url": "https://www.malaysia.gov.my/en/digital-services/opendosm"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:57:38Z",
+ "pais": {
+  "iso2": "MY",
+  "iso3": "MYS",
+  "nombre": "Malaysia"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

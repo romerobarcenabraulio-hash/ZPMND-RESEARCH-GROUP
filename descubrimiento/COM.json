@@ -1,0 +1,765 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Comoros constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2026-09-29",
+     "host": "justice.gouv.km",
+     "rank": 1,
+     "snippet": "## Consultez les textes officiels en ligne\nConsultez les lois et décrets directement sur notre site web.\nRetrouvez tous les textes officiels organisés par catégorie pour faciliter vos recherches.",
+     "title": "Ministère de la Justice – Union des Comores",
+     "url": "https://justice.gouv.km/",
+     "verificacion": {
+      "bytes": 45620,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:25Z",
+      "http": 200,
+      "sha256": "2820d519e6e53700efcf68a107f647abe73fa3ebd8eb718c59ee45581375e746"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 2,
+     "snippet": "# Constitution of the Union of the Comoros, Comoros\nLatest Version in WIPO Lex\n...\nYear of Version 2018\nDates\nEntry into force: August 6, 2018\nAdopted: July 30, 2018\nType of Text Framework Laws\nSubject Matter Other",
+     "title": "Constitution of the Union of the Comoros, ...",
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/20721",
+     "verificacion": {
+      "bytes": 35351,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:26Z",
+      "http": 200,
+      "sha256": "657c27ab9dc571d9ab4bed44140118db534061ad4a60e9caada301c18ca34cab"
+     }
+    },
+    {
+     "date": "",
+     "host": "extranet.who.int",
+     "rank": 3,
+     "snippet": "## Abstract\nThe Constitution of Comoros was adopted in 2001 and last amended in 2018.\nThe Constitution contains 122 articles addressing a large number of issues as the protection of fundamental rights and freedoms, the fundamental principles of the state and institutional arrangements.\nTo read the w",
+     "title": "Constitution de l'Union des Comores | WHO - CPCD",
+     "url": "https://extranet.who.int/cpcd/health-legislation/constitution-de-lunion-des-comores"
+    },
+    {
+     "date": "2026-10-23",
+     "host": "justice.gouv.km",
+     "rank": 4,
+     "snippet": "Ministry of Justice – Union of the Comoros\n# Ministry of Justice, Islamic Affairs and Civil Service, responsible for human rights, transparency and public administration\n...\n## Consult the official texts online\nConsult laws and decrees directly on our website.\nFind all official texts organized by ca",
+     "title": "Ministry of Justice – Union of the Comoros",
+     "url": "https://justice.gouv.km/en/home/"
+    },
+    {
+     "date": "2018-01-01",
+     "host": "leap.unep.org",
+     "rank": 5,
+     "snippet": "# Constitution of the Republic of Comoros.\nCountry\nComoros\nType of law\nConstitution\nDate of original text\n2001\nDate of latest amendment\n01 Jan 2018\nSource\n...\nAttached files\nhttp://faolex.fao.org/docs/pdf/com128670.pdf\n...\nRepealed",
+     "title": "Constitution of the Republic of Comoros.",
+     "url": "https://leap.unep.org/en/countries/km/national-legislation/constitution-republic-comoros"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Comoros national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-09-29",
+     "host": "justice.gouv.km",
+     "rank": 1,
+     "snippet": "## Consultez les textes officiels en ligne\nConsultez les lois et décrets directement sur notre site web.\nRetrouvez tous les textes officiels organisés par catégorie pour faciliter vos recherches.",
+     "title": "Ministère de la Justice – Union des Comores",
+     "url": "https://justice.gouv.km/",
+     "verificacion": {
+      "bytes": 45620,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:27Z",
+      "http": 200,
+      "sha256": "2820d519e6e53700efcf68a107f647abe73fa3ebd8eb718c59ee45581375e746"
+     }
+    },
+    {
+     "date": "2025-06-29",
+     "host": "justice.gouv.km",
+     "rank": 2,
+     "snippet": "Legislation and Official Texts – Ministry of Justice\n...\nType of document\n...\n29 June 2025\n...\n## Décret n°23-097/PR du 13 septembre 2023 – création, organisation et fonctionnement de l’autorité comorienne de régulation postale\n13 September 2023",
+     "title": "Legislation and Official Texts – Ministry of Justice",
+     "url": "https://justice.gouv.km/en/legislation-and-official-texts/",
+     "verificacion": {
+      "bytes": 62129,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:28Z",
+      "http": 200,
+      "sha256": "b124c119b7fb8e6b0ea6fcc83d69c09d30e78e577330afdd0116a51622777714"
+     }
+    },
+    {
+     "date": "2026-09-29",
+     "host": "justice.gouv.km",
+     "rank": 3,
+     "snippet": "Ministère de la Justice, des affaires islamiques, et de la fonction publique, chargé des droits de l’Homme, de la transparence et des administrations publiques\n…",
+     "title": "Décret n°24-001/PR du 26 janvier 2024",
+     "url": "https://justice.gouv.km/texte/decret-n24-001-pr-du-26-janvier-2024-promulgation-de-la-loi-n23-022-au-modifiant-et-completant-la-loi-n15-016-au-du-28-decembre-2015-portant-code-des-douanes/"
+    },
+    {
+     "date": "2026-10-23",
+     "host": "justice.gouv.km",
+     "rank": 4,
+     "snippet": "Ministry of Justice – Union of the Comoros\n# Ministry of Justice, Islamic Affairs and Civil Service, responsible for human rights, transparency and public administration\n...\n## Consult the official texts online\nConsult laws and decrees directly on our website.\nFind all official texts organized by ca",
+     "title": "Ministry of Justice – Union of the Comoros",
+     "url": "https://justice.gouv.km/en/home/"
+    },
+    {
+     "date": "",
+     "host": "anrtic.km",
+     "rank": 5,
+     "snippet": "Actes réglementaires pris par le Président de la République ou le Conseil des ministres dans le domaine des communications électroniques.\n...\nPortant promulgation de la loi N°23-024/AU portant modification de la loi N°14-031/AU du 17 mars 2014 relatif aux communications électroniques",
+     "title": "Décrets — Autorité Nationale de Régulation des TIC | Union ...",
+     "url": "https://anrtic.km/regulation/decrets"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Comoros official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "journalofficiel-km.com",
+     "rank": 1,
+     "snippet": "Portail officiel de l'Union des Comores\n# Journal Officiel de l'Union des Comores\n...\nActes publiés\nLois, décrets, arrêtés\n...\n## Derniers numéros publiés\nConsultez les dernières éditions du Journal Officiel avec tous les actes et annonces officielles",
+     "title": "Journal Officiel de l'Union des Comores",
+     "url": "https://journalofficiel-km.com/",
+     "verificacion": {
+      "bytes": 2044,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:30Z",
+      "http": 200,
+      "sha256": "84fa9c5744378e745e905221a2b11137991d29ab0a34e08f3c9eef30a08ac1b2"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.lagazettedescomores.com",
+     "rank": 2,
+     "snippet": "La gazette des Comores\n# La Gazette\n## des Comores\n#### Télécommunications : Yas inaugure son premier Store Digital",
+     "title": "La gazette des Comores",
+     "url": "https://www.lagazettedescomores.com/",
+     "verificacion": {
+      "bytes": 52262,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:32Z",
+      "http": 200,
+      "sha256": "9ee7d5ec3748dc31d18e4e459f9debde8bed6f0d3afb78ea28e6dd4ab9796bac"
+     }
+    },
+    {
+     "date": "2015-10-09",
+     "host": "libguides.lib.uct.ac.za",
+     "rank": 3,
+     "snippet": "Guide to legislation in print and online\n## Gazettes\nComoros.\nJournal officiel.\n[Moroni,   Secrétariat Général du Gouvernment].\nNo. 1 (Jan. 2014) onwards.\nShelf no.\nG 6941 G",
+     "title": "LibGuides: African Legislation : Library Guide: Comoros",
+     "url": "https://libguides.lib.uct.ac.za/c.php?g=396386&p=5211794"
+    },
+    {
+     "date": "",
+     "host": "www.gazette.sc",
+     "rank": 4,
+     "snippet": "Gazettes 2026 | Official Gazette\n...\nGazette Extraordinary No. 64 - Friday 30th October 2026\n488.97 KB\n...\nGazette No. 63 - Monday 26th October 2026\n...\nGazette No. 62 - Monday 19th October 2026",
+     "title": "Gazettes 2026 | Official Gazette",
+     "url": "https://www.gazette.sc/v/gazette/2026"
+    },
+    {
+     "date": "",
+     "host": "rulemaking.worldbank.org",
+     "rank": 5,
+     "snippet": "|Question|Answer|Note|\n...\n|Are the laws that are currently in effect available in a single place?|Yes| |\n|How are the laws that are in force accessed?|Printed in an official gazette / journal or other publication|Official Gazette (Journal Officiel de l'Union des Comores)|",
+     "title": "Economy Data",
+     "url": "https://rulemaking.worldbank.org/en/data/explorecountries/comoros"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Comoros supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "coursupreme.cm",
+     "rank": 1,
+     "snippet": "## Supreme Court Decisions\n## JUDGEMENT N° 85/CIV of 04 April 2023\nNovember 1, 2026\n...\n## FINAL JUDGMENT No.15/COM of 01rd July 2021\nNovember 1, 2026\n1744",
+     "title": "Arrêts de la Cour Suprême",
+     "url": "https://coursupreme.cm/publication/arret",
+     "verificacion": {
+      "bytes": 121774,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:34Z",
+      "http": 200,
+      "sha256": "cd5af66438f2a14dcab88e62ec92e490b718611f58cd0010ef2aa90399dc6c13"
+     }
+    },
+    {
+     "date": "2026-09-29",
+     "host": "justice.gouv.km",
+     "rank": 2,
+     "snippet": "Le site propose un portail documentaire complet regroupant lois, décrets, jurisprudence, arrêtés et circulaires classés par thématique et par date.",
+     "title": "Le Ministère de la Justice, des Affaires Islamiques et de la ...",
+     "url": "https://justice.gouv.km/nouveau-site-internet-du-ministere/",
+     "verificacion": {
+      "bytes": 44648,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:35Z",
+      "http": 200,
+      "sha256": "c05c6b86e354c87d50514579517c9f852a76603e037c25df7ca9442938194ee7"
+     }
+    },
+    {
+     "date": "",
+     "host": "jurisprudence.cc",
+     "rank": 3,
+     "snippet": "La jurisprudence du Comores — décisions des juridictions nationales et arrêts de la CCJA — est réunie sur Jurisprudence.cc et interrogeable en langage naturel : posez votre question, l'IA cite les textes et la jurisprudence pertinents avec leur référence.",
+     "title": "Droit Comores : lois, codes, décrets & jurisprudence (OHADA)",
+     "url": "https://jurisprudence.cc/couverture/comores"
+    },
+    {
+     "date": "",
+     "host": "app.maathis.com",
+     "rank": 4,
+     "snippet": "Explorez la base juridique de Comores sur Maathis.\n12 textes disponibles actuellement.\n...\n## Questions fréquentes\nMaathis indexe 12 textes juridiques du Comores : 10 décision de justices, 2 lois.\nVous pouvez les consulter par type ou rechercher par mot-clé.",
+     "title": "Droit de Comores · 12 textes | Maathis",
+     "url": "https://app.maathis.com/droit/comores"
+    },
+    {
+     "date": "",
+     "host": "app.maathis.com",
+     "rank": 5,
+     "snippet": "Décisions de justice (Comores) | Maathis\n# Décisions de justice · Comores\nMaathis référence 10 décisions de justice pour Comores.\nCette base est mise à jour régulièrement.",
+     "title": "Décision de justices (Comores) | Maathis",
+     "url": "https://app.maathis.com/droit/comores/decision-de-justice"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Comoros state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2025-06-29",
+     "host": "justice.gouv.km",
+     "rank": 1,
+     "snippet": "Legislation and Official Texts – Ministry of Justice\nMinistry of Justice, Islamic Affairs and Civil Service, responsible for human rights, transparency and public administration\n...\n29 June 2025\n...\n21 September 2024\n...\n## Code des douanes version 2024\n...\n13 September 2023",
+     "title": "Legislation and Official Texts – Ministry of Justice",
+     "url": "https://justice.gouv.km/en/legislation-and-official-texts/",
+     "verificacion": {
+      "bytes": 62129,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:36Z",
+      "http": 200,
+      "sha256": "b124c119b7fb8e6b0ea6fcc83d69c09d30e78e577330afdd0116a51622777714"
+     }
+    },
+    {
+     "date": "2026-09-29",
+     "host": "justice.gouv.km",
+     "rank": 2,
+     "snippet": "## Consultez les textes officiels en ligne\nConsultez les lois et décrets directement sur notre site web.\nRetrouvez tous les textes officiels organisés par catégorie pour faciliter vos recherches.",
+     "title": "Ministère de la Justice – Union des Comores",
+     "url": "https://justice.gouv.km/",
+     "verificacion": {
+      "bytes": 45620,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:37Z",
+      "http": 200,
+      "sha256": "2820d519e6e53700efcf68a107f647abe73fa3ebd8eb718c59ee45581375e746"
+     }
+    },
+    {
+     "date": "2026-10-23",
+     "host": "justice.gouv.km",
+     "rank": 3,
+     "snippet": "Ministry of Justice – Union of the Comoros\n# Ministry of Justice, Islamic Affairs and Civil Service, responsible for human rights, transparency and public administration\n...\n## Consult the official texts online\nConsult laws and decrees directly on our website.\nFind all official texts organized by ca",
+     "title": "Ministry of Justice – Union of the Comoros",
+     "url": "https://justice.gouv.km/en/home/"
+    },
+    {
+     "date": "",
+     "host": "www.anrtic.km",
+     "rank": 4,
+     "snippet": "Textes législatifs régissant le secteur des communications électroniques et des technologies numériques en Union des Comores.\n...\nDécret portant promulgation de la loi N°23-024/AU portant modification de la loi N°14-031/AU du 17 mars 2014 relative aux communications électroniques.",
+     "title": "Lois — Autorité Nationale de Régulation des TIC | Union des Comores",
+     "url": "https://www.anrtic.km/regulation/lois"
+    },
+    {
+     "date": "",
+     "host": "comoros.eregulations.org",
+     "rank": 5,
+     "snippet": "`\n<iframe style=\"height: 100%; border:none; width: 100%;min-height: 400px;\" src=\"https://comoros.eregulations.org/Laws?l=fr&embed=true&includeSearch=true\"></iframe>\n`\n...\n|--|--|--|",
+     "title": "Bases légales et normes - eRegulations Comores",
+     "url": "https://comoros.eregulations.org/Laws?l=fr"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Comoros municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "comoros.eregulations.org",
+     "rank": 1,
+     "snippet": "Please copy/paste the following html code inside your page:\n<iframe style=\"height: 100%; border:none; width: 100%;min-height: 400px;\" src=\"https://comoros.eregulations.org/?l=fr&embed=true&includeSearch=true\"></iframe>",
+     "title": "Contactez nous",
+     "url": "https://comoros.eregulations.org/?l=fr",
+     "verificacion": {
+      "bytes": 66205,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:39Z",
+      "http": 200,
+      "sha256": "7a077f0190af94e1623639467e53564027fc5d438d196d5c7547e92d2da70588"
+     }
+    },
+    {
+     "date": "2026-09-29",
+     "host": "justice.gouv.km",
+     "rank": 2,
+     "snippet": "## Consultez les textes officiels en ligne\nConsultez les lois et décrets directement sur notre site web.\nRetrouvez tous les textes officiels organisés par catégorie pour faciliter vos recherches.",
+     "title": "Ministère de la Justice – Union des Comores",
+     "url": "https://justice.gouv.km/",
+     "verificacion": {
+      "bytes": 45620,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:39Z",
+      "http": 200,
+      "sha256": "2820d519e6e53700efcf68a107f647abe73fa3ebd8eb718c59ee45581375e746"
+     }
+    },
+    {
+     "date": "2026-10-23",
+     "host": "justice.gouv.km",
+     "rank": 3,
+     "snippet": "Ministry of Justice – Union of the Comoros\n# Ministry of Justice, Islamic Affairs and Civil Service, responsible for human rights, transparency and public administration\n...\n## Consult the official texts online\nConsult laws and decrees directly on our website.\nFind all official texts organized by ca",
+     "title": "Ministry of Justice – Union of the Comoros",
+     "url": "https://justice.gouv.km/en/home/"
+    },
+    {
+     "date": "",
+     "host": "rulemaking.worldbank.org",
+     "rank": 4,
+     "snippet": "## Comoros\n|How are the laws that are in force accessed?|Printed in an official gazette / journal or other publication|Official Gazette (Journal Officiel de l'Union des Comores)|\n|Are the secondary regulations that are currently in effect codified and available in a single place?|Yes| |",
+     "title": "Economy Data",
+     "url": "https://rulemaking.worldbank.org/en/data/explorecountries/comoros"
+    },
+    {
+     "date": "2025-04-23",
+     "host": "mwaliregistrar.org",
+     "rank": 5,
+     "snippet": "Laws and Regulatory Framework - Mwali Registrar\n## Security Alert: Beware of Fraudulent Websites Claiming to be MISA. Our only official website is www.mwaliregistrar.org",
+     "title": "Laws and Regulatory Framework",
+     "url": "https://mwaliregistrar.org/laws-and-regulatory-framework/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Comoros regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "banque-comores.km",
+     "rank": 1,
+     "snippet": "Réglementation bancaire et financière | Banque Centrale des Comores\n- secretariat@banque-comores.km\n- +269 773-18-14\n- Place de France, BP: 405 Moroni - Comores\n...\n### Textes réglementaires de la BCC\n...\n…",
+     "title": "Réglementation bancaire et financière | Banque Centrale des ...",
+     "url": "https://banque-comores.km/r/reglementation-bancaire-et-financiere",
+     "verificacion": {
+      "bytes": 41755,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:41Z",
+      "http": 200,
+      "sha256": "6c16170097b93456df1df2e9a6673f1b50d6fea316cf0ac2488ef550d7051a02"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.anrtic.km",
+     "rank": 2,
+     "snippet": "L'ANRTIC veille à la régulation équitable des télécommunications et du numérique aux Comores, au service de la population et du développement national.\n...\nMoroni, BP 6540, Union des Comores\n+269 773 87 62 contact@anrtic.km",
+     "title": "Accueil — Autorité Nationale de Régulation des TIC | Union ...",
+     "url": "https://www.anrtic.km/",
+     "verificacion": {
+      "bytes": 76903,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:43Z",
+      "http": 200,
+      "sha256": "516e0edb0611569e8ba246923cd41574ba6aa41330000666614fa62a99fb8a8c"
+     }
+    },
+    {
+     "date": "",
+     "host": "banque-comores.km",
+     "rank": 3,
+     "snippet": "Textes réglementaires de la BCC | Banque Centrale des Comores\n...\n- Réglementation bancaire et financière\n…\n...\n**\nRèglement 001 ** relatif au capital social minimum des institutions financières.\n**\nRèglement 002 ** relatif à la définition des fonds propres des établissements de crédit.",
+     "title": "Textes réglementaires de la BCC",
+     "url": "https://banque-comores.km/page/show/textes-reglementaires-de-la-bcc"
+    },
+    {
+     "date": "",
+     "host": "rulemaking.worldbank.org",
+     "rank": 4,
+     "snippet": "|Do ministries or regulatory agencies publish the text or summary of proposed (not yet adopted) regulations before their enactment?|Yes, in some ministries/regulatory agencies only| |\n...\n|Is there any existing requirement that regulations be periodically reviewed to see whether they are still neede",
+     "title": "Economy Data",
+     "url": "https://rulemaking.worldbank.org/en/data/explorecountries/comoros"
+    },
+    {
+     "date": "",
+     "host": "www.anrtic.km",
+     "rank": 5,
+     "snippet": "Portant promulgation de la loi N°23-024/AU portant modification de la loi N°14-031/AU du 17 mars 2014 relatif aux communications électroniques\n...\nRelatif aux régimes de la licence, de l'autorisation, de la déclaration et de l'agrément",
+     "title": "Décrets — Autorité Nationale de Régulation des TIC - ANRTIC",
+     "url": "https://www.anrtic.km/regulation/decrets"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Comoros national standards body standards catalogue",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2025-02-14",
+     "host": "ncsi.ega.ee",
+     "rank": 1,
+     "snippet": "Evidence presented in a foreign language\nhttps://ancs.gouv.km/guide-1/\n...\nEvidence presented in a foreign language\n###### Evidence\nhttps://ancs.gouv.km/manuel-des-normes-de-securite-informatique/\nComputer Security Standards Manual\n…",
+     "title": "NCSI :: Comoros",
+     "url": "https://ncsi.ega.ee/country/km/",
+     "verificacion": {
+      "bytes": 291439,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:45Z",
+      "http": 200,
+      "sha256": "d83e2c45ad0e9f9bab95cda1ab2a5faa8623d9e9cbe4585d0eaac58c26ff7227"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.wto.org",
+     "rank": 2,
+     "snippet": "…",
+     "title": "WTO | Accessions: Comoros",
+     "url": "https://www.wto.org/english/thewto_e/acc_e/com_e/a1_comoros_e.htm",
+     "verificacion": {
+      "bytes": 171701,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:46Z",
+      "http": 200,
+      "sha256": "030e9466ff0b41bafa5d7ca1e249f94ef5048802612fda5c5b1fece9668f2fe8"
+     }
+    },
+    {
+     "date": "2020-06-06",
+     "host": "www.arso-oran.org",
+     "rank": 3,
+     "snippet": "# Catalogue of African Standards\nThe Catalogue of African Standards provides a full list of Standards Harmonised or Adopted in ARSO.\nCatalogue of African Standards (ARS) – Version December 2025",
+     "title": "Catalogue of African Standards",
+     "url": "https://www.arso-oran.org/catalogue-of-african-standards/"
+    },
+    {
+     "date": "",
+     "host": "www.ifrs.org",
+     "rank": 4,
+     "snippet": "Website\nOHADA: http://www.ohada.org/index.php/en/\n...\nBRVM: http://www.brvm.org/\nEmail contact\nUEMOA: commission@uemoa.int\nComoros\n© IFRS Foundation\n2\n...\nIFRS Standards have been adopted in Comoros.",
+     "title": "IFRS® Standards—Jurisdiction Profiles",
+     "url": "https://www.ifrs.org/content/dam/ifrs/publications/jurisdictions/pdf-profiles/comoros-ifrs-profile.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Comoros mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.anrtic.km",
+     "rank": 1,
+     "snippet": "# Décrets\n...\nN° 24-003PR\nPortant promulgation de la loi N°23-024/AU portant modification de la loi N°14-031/AU du 17 mars 2014 relatif aux communications électroniques\n...\nTélécharger\nN° 15-093/PR",
+     "title": "Décrets — Autorité Nationale de Régulation des TIC - ANRTIC",
+     "url": "https://www.anrtic.km/regulation/decrets",
+     "verificacion": {
+      "bytes": 51692,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:47Z",
+      "http": 200,
+      "sha256": "97ad021bd457c40ea701628343d4a6448f14ac8f3b12f55dc51ed0357d54091c"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.anrtic.km",
+     "rank": 2,
+     "snippet": "# Avis & Décisions\nN° 25/001/ANRTIC/DG\n...\nN° 23/004/ANRTIC/DG\nPortant approbation du catalogue d'interconnexion de TELCO SA 2023-2024",
+     "title": "Avis & Décisions — Autorité Nationale de Régulation des TIC",
+     "url": "https://www.anrtic.km/regulation/avis-decisions",
+     "verificacion": {
+      "bytes": 60865,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:48Z",
+      "http": 200,
+      "sha256": "d047e7d282c7bdf91db8f4e71481c2f7ad716ad5b68a33c86dbcc33e398177e5"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.anrtic.km",
+     "rank": 3,
+     "snippet": "Conformité des équipements électroniques — Autorité Nationale de Régulation des TIC | Union des Comores",
+     "title": "Conformité des équipements électroniques",
+     "url": "https://www.anrtic.km/actualites/articles/conformite-des-equipements-electroniques"
+    },
+    {
+     "date": "",
+     "host": "www.eleoscompliance.com",
+     "rank": 4,
+     "snippet": "|ID de réglementation|Titre|Statut|Date d'entrée en vigueur|\n...\n|REG-XYZ-001|Standard for Short Range Devices|Active|2024-01-15|\n|REG-XYZ-002|EMC Requirements for ITE|Active|2023-09-01|",
+     "title": "Comores - Eleos Compliance",
+     "url": "https://www.eleoscompliance.com/fr/type-approval/comoros"
+    },
+    {
+     "date": "",
+     "host": "anrtic.km",
+     "rank": 5,
+     "snippet": "# Lois\n...\nN° 24-003/PR\nDécret portant promulgation de la loi N°23-024/AU portant modification de la loi N°14-031/AU du 17 mars 2014 relative aux communications électroniques.",
+     "title": "Lois — Autorité Nationale de Régulation des TIC | Union des ...",
+     "url": "https://anrtic.km/regulation/lois"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Comoros national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.oicstatcom.org",
+     "rank": 1,
+     "snippet": "OIC Statistical Commission\n|\n...\n|--|",
+     "title": "Comoros",
+     "url": "https://www.oicstatcom.org/databases-nso-detail.php?c_code=14",
+     "verificacion": {
+      "bytes": 17234,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:56Z",
+      "http": 200,
+      "sha256": "c248e715ba25b5c4152399db6e0c9f4c4d03e3de536f7a47c2e086146392f7c2"
+     }
+    },
+    {
+     "date": "",
+     "host": "ecastats.uneca.org",
+     "rank": 2,
+     "snippet": "|Mauritania|Office National de la Statistique|Monsieur Mohamed El Moctar  Ould Ahmed Sidi|Directeur Général|http://www.ons.mr/|",
+     "title": "National Statistics Offices in Africa - ECAStats",
+     "url": "https://ecastats.uneca.org/khub/en-us/Community/National-Statistical-Offices",
+     "verificacion": {
+      "bytes": 41831,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:58Z",
+      "http": 200,
+      "sha256": "dadc77efda4b2c19b61ba939a8edcec49b1f29cac99937d72a2cb53a61904c36"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.paris21.org",
+     "rank": 3,
+     "snippet": "statistiques fiables \npour le développement\ndes Comores ?\nDIRECTION NATIONALE DE LA STATISTIQUE\nCommissariat général au Plan\nPresidence de l’Union des Comores \nSite Web : www.cgplan-comores.org\n...\nSite Web : www.cgplan-comores.org",
+     "title": "Pourquoi faut-il des statistiques fiables pour le ...",
+     "url": "https://www.paris21.org/sites/default/files/media/document/2023-10/COMOROS_whystats_fr.pdf"
+    },
+    {
+     "date": "",
+     "host": "ecastats.uneca.org",
+     "rank": 4,
+     "snippet": "#### National Statistical Offices\n|Country|NSO|Web address|\n...\n|Comores|Direction de la Statistique|http://www.inseed.km/|",
+     "title": "National Statistical Offices",
+     "url": "https://ecastats.uneca.org/data/national-statistical-offices"
+    },
+    {
+     "date": "",
+     "host": "tradecouncil.org",
+     "rank": 5,
+     "snippet": "»\n...\n»\nCentral Bank of Comoros \n »\n...\n»\nNational Tourism Office of Comoros \n »\nWebsite: www.tourismecomores.km\n»\nComoros National Statistics Institute \n »\nWebsite: www.ins.km\n»\nWorld Bank – Comoros Overview",
+     "title": "ITC Website: www.tradecouncil.org",
+     "url": "https://tradecouncil.org/wp-content/uploads/2025/01/Investing-in-Comoros.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Comoros central bank statistics official website",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "banque-comores.km",
+     "rank": 1,
+     "snippet": "Statistiques monétaires | Banque Centrale des Comores\n...\n### Statistiques monétaires\nLes statistiques monétaires recouvrent les données des sociétés financières comoriennes suivantes :\n- la Banque Centrale,\n- BIC Comores,\n- EXIM Bank,\n- BFC,\n- BDC,",
+     "title": "Statistiques monétaires",
+     "url": "https://banque-comores.km/page/show/statistiques-monetaires",
+     "verificacion": {
+      "bytes": 55264,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:59Z",
+      "http": 200,
+      "sha256": "b95c0efa281c2b51bd6892e4bc424483c733ec5b0cc1170926f4662f47c987be"
+     }
+    },
+    {
+     "date": "",
+     "host": "banque-comores.km",
+     "rank": 2,
+     "snippet": "Statistiques | Banque Centrale des Comores\n- ** secretariat@banque-comores.km\n- **+269 773-18-14\n- ** Place de France, BP: 405 Moroni - Comores\n...\n- Statistiques\n...\n### Statistiques de la balance des paiements",
+     "title": "Statistiques | Banque Centrale des Comores",
+     "url": "https://banque-comores.km/r/statistiques",
+     "verificacion": {
+      "bytes": 43617,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:00Z",
+      "http": 200,
+      "sha256": "150c81ed2ff1d7a2bc3bdb07c1ebca53ccc02caa622cd533ff7c561cc04f6e60"
+     }
+    },
+    {
+     "date": "",
+     "host": "banque-comores.km",
+     "rank": 3,
+     "snippet": "Pour toute information complémentaire, il convient de s’adresser directement à la Banque Centrale des Comores à l’adresse secretariat@banque-comores.km, ou de consulter son site officiel : www.banque-comores.km.",
+     "title": "COMMUNIQUE DE LA BANQUE CENTRALE DES COMORES MISE EN GARDE ...",
+     "url": "https://banque-comores.km/uploads/COMMUNIQUE-BCC-banques-illegales(1).pdf"
+    },
+    {
+     "date": "",
+     "host": "banque-comores.km",
+     "rank": 4,
+     "snippet": "…\n...\nLe numéro 38 du bulletin trimestriel de la Banque Centrale est disponible et revient sur l'amélioration des principaux indicateurs économiques durant le premier trimestre de l'année 2023.\nTéléchargez le Bulletin trimestriel de la BCC - Mars 2023",
+     "title": "Bulletin trimestriel n°38 Mars 2023 | Banque Centrale des Comores",
+     "url": "https://banque-comores.km/article/show/bulletin-trimestriel-n38-mars-2023"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Comoros government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "africadata.org",
+     "rank": 1,
+     "snippet": "## Africa Information Highway\nComoros\nUnique Users 111\nIndicators Loaded 917\ncomoros.africadata.org\ncomoros.opendataforafrica.org",
+     "title": "Africa Information Highway",
+     "url": "https://africadata.org/",
+     "verificacion": {
+      "bytes": 158692,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:00Z",
+      "http": 200,
+      "sha256": "b524750fbce98960e604150006e351aabc89c67112e29f3da8e45c67124cfc06"
+     }
+    },
+    {
+     "date": "",
+     "host": "corpus.data-landscapers.io",
+     "rank": 2,
+     "snippet": "Archive nationale de microdonnées; national digital repository with an open data portal.\n...\nOn the map\nGovernment data was published for download on the Archive nationale de microdonnees in 2026; no open licence is on record.\n...\nOpen data portal (planned, national digital repository of SDG indicat",
+     "title": "Comoros — Maturity Assessment — Data Landscapers",
+     "url": "https://corpus.data-landscapers.io/reports/COM/COM-maturity-2026-10-18.pdf",
+     "verificacion": {
+      "bytes": 440080,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:43:00Z",
+      "http": 200,
+      "sha256": "1b9ea77e135615713213a1408bd67ae8d923bc0fa87ad280e97d59ba9bb078f7"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.linkedin.com",
+     "rank": 3,
+     "snippet": "### About\nComores Open Data est la plateforme nationale qui centralise, structure et publie des données ouvertes pour soutenir la recherche, l’innovation et la prise de décision aux Comores.\n...\n### Contacts\n**Website:** https://comoresopendata.org",
+     "title": "Comores Open Data | Digital Accessibility Services",
+     "url": "https://www.linkedin.com/company/comores-open-data"
+    },
+    {
+     "date": "2025-01-01",
+     "host": "comoros.opendataforafrica.org",
+     "rank": 4,
+     "snippet": "### Our Privacy Statement & Cookie Policy\nOur website uses cookies to improve your online experience.",
+     "title": "Comoros Data Portal",
+     "url": "https://comoros.opendataforafrica.org/wunyllc?lang=en"
+    },
+    {
+     "date": "",
+     "host": "africadata.org",
+     "rank": 5,
+     "snippet": "# AIH Projects\n|AFREC|Statistical Data Portal Open Data Portal|\n|--|--|\n|COMESA|Statistical Data Portal Open Data Portal|\n|Comoros|Statistical Data Portal Open Data Portal|",
+     "title": "AIH Projects | Africa Information Highway",
+     "url": "https://africadata.org/projects/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:31:11Z",
+ "pais": {
+  "iso2": "KM",
+  "iso3": "COM",
+  "nombre": "Comoros"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

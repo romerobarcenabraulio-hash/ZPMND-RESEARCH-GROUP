@@ -1,0 +1,589 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Kiribati constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2021-04-28",
+     "host": "wwws.loc.gov",
+     "rank": 1,
+     "snippet": "- Constitution (external link) *(Kiribati Parliament)*\n- Constitution of Kiribati (external link) *(PacLII)*\n…\n...\n- List of Acts (external link) *(Kiribati Parliament)*\n- PacLII Databases: Kiribati (external link) - includes legislation",
+     "title": "Guide to Law Online: Kiribati | Law Library of Congress",
+     "url": "https://wwws.loc.gov/law/help/guide/nations/kiribati.php"
+    },
+    {
+     "date": "2020-08-05",
+     "host": "guides.loc.gov",
+     "rank": 2,
+     "snippet": "This guide, prepared by the Law Library of Congress, includes links to free online resources regarding the country of Kiribati, focusing on its constitution; executive, legislative and judicial branches; legal guides; and general sources.\n...\n# Introduction\nThis Guide to Law Online research guide fo",
+     "title": "Introduction - Guide to Law Online: Kiribati - Research ...",
+     "url": "https://guides.loc.gov/law-kiribati"
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 3,
+     "snippet": "# Constitution of Kiribati, Kiribati\nLatest Version in WIPO Lex\nThis text has been amended and a consolidated version is not yet available in WIPO Lex.\n...\nThe Constitution was amended in 1995 by Constitution (Amendment) Act 1995.",
+     "title": "Constitution of Kiribati, Kiribati, WIPO Lex",
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/7546"
+    },
+    {
+     "date": "",
+     "host": "www.paclii.org",
+     "rank": 4,
+     "snippet": "Bound volumes:-\n...\nLinks to index of unbound acts held by USP:\nKiribati -\nIndex to Unbound Acts Link to legislation available in full text:\nKiribati -\nFull Text Legislation\nGovernment Gazette\n...\n*http://www.paclii.org/ki/sources.html*",
+     "title": "Kiribati Sources of Law Information",
+     "url": "https://www.paclii.org/ki/sources.html"
+    },
+    {
+     "date": "",
+     "host": "www.paclii.org",
+     "rank": 5,
+     "snippet": "# Kiribati - Legislation - Chronological Index\n**You are here:** PacLII >> Kiribati - Legislation - Indices\n…\n...\n8. Constitution (Amendment) Act 2013\n...\n10. Industrial Relations Code (Amendment) Act 2013\n…",
+     "title": "Kiribati - Legislation - table of ordinances and acts ...",
+     "url": "https://www.paclii.org/ki/indices/legis/Chrono_Index.html"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Kiribati national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.president.gov.ki",
+     "rank": 1,
+     "snippet": "## Gazettes & Instruments\n### Gazettes\n- 2026\nRecruitment Agencies Regulations 2026\n...\nState of Public Emergency (UXO) Regulation 2026\nStatutory salaries ordinance\nNotice of commencement - National digital identifaction Act 2025\nNational Identification General Regulations 2026",
+     "title": "Gazettes & Instruments - President Taneti Maamau",
+     "url": "https://www.president.gov.ki/resources/gazettes-instruments.html"
+    },
+    {
+     "date": "2019-01-01",
+     "host": "leap.unep.org",
+     "rank": 2,
+     "snippet": "##### Fisheries (Conservation and Management of Coastal Marine Resources) Regulations 2019.\n01 Jan 2019\nKiribati\nLegislation\nRegulation\nFAOLEX\nDownload:\nkir201949.pdf\n...\nKiribati\nLegislation\nRegulation\nFAOLEX\n...\nFAOLEX",
+     "title": "national-legislation",
+     "url": "https://leap.unep.org/en/countries/ki/national-legislation"
+    },
+    {
+     "date": "2022-11-01",
+     "host": "www.fao.org",
+     "rank": 3,
+     "snippet": "Date of text: 1979\n...\nDate of text: 03 September 2010\nCouncil Regulation (EC) No. 893/2007 on the conclusion of a Fisheries Partnership Agreement between the European Community and the Republic of Kiribati.\nDate of text: 23 July 2007",
+     "title": "Kiribati - Country Profiles",
+     "url": "https://www.fao.org/faolex/country-profiles/general-profile/en/?iso3=KIR"
+    },
+    {
+     "date": "",
+     "host": "huggingface.co",
+     "rank": 4,
+     "snippet": "# Kiribati Gazettes and Instruments (Office of the President)\nResearch snapshot of official national legislation from **Office of the President Gazettes & Instruments (president.gov.ki)**.\n...\n## Source\n- https://www.president.gov.ki/resources/gazettes-instruments.html\n...\nThin corpus.",
+     "title": "README.md",
+     "url": "https://huggingface.co/datasets/endomorphosis/ipfs_kiribati_laws/raw/main/README.md"
+    },
+    {
+     "date": "",
+     "host": "huggingface.co",
+     "rank": 5,
+     "snippet": "license: Official Kiribati President gazette/instrument texts; authentic text prevails; not legal advice\nretrieval: live-official\nlive_instruments: 165\n...\ncatalog_gap: -132\ngaps: Gazette/instrument PDFs from official president.gov.ki.\nThin corpus.",
+     "title": "MANIFEST.md",
+     "url": "https://huggingface.co/datasets/endomorphosis/ipfs_kiribati_laws/raw/main/MANIFEST.md"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Kiribati official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "president.gov.ki",
+     "rank": 1,
+     "snippet": "### Gazettes\n** National Public Holiday 2026\nPublication of Financial Statements -ANZ (Kiribati) Ltd**\n2025\n** Revised National Public Holiday 2025\nKiribati Building Act 2024\n**\n** Notice to publish the establishment of a Kiribati Building Code 2024",
+     "title": "Gazettes & Instruments",
+     "url": "https://president.gov.ki/resources/gazettes-instruments.html"
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 2,
+     "snippet": "## Kiribati: legislation: official gazette\nDescription:\n1 title containing the official gazette for Kiribati from 1970 to 1973 and 1976 to 1985.\nIt is an official publication and the text is in English.\nNew material is no longer added.",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag-country/kiribati-1978"
+    },
+    {
+     "date": "",
+     "host": "www.president.gov.ki",
+     "rank": 3,
+     "snippet": "An official publication of the Government of Kiribati.\nPublished on a monthly basis through the Communications\nUnit of the Office of Te Beretitenti.\n...\nOrders and Proclamations (public and official announcements) from the Government of Kiribati\nNo. 1\nREPUBLIC OF KIRIBATI",
+     "title": "Kiribati GAZETTE",
+     "url": "https://www.president.gov.ki/presidentgovki/wp-content/uploads/2019/09/No.2-Gazettes_Published-2019.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.president.gov.ki",
+     "rank": 4,
+     "snippet": "An official publication of the Government of Kiribati.\nPublished on a monthly basis through the Communications\nUnit of the Office of Te Beretitenti.\nThe Kiribati Gazette contains publications of Instruments, Acts, Notices,\n...\nNo. 1\n…",
+     "title": "[PDF] Kiribati GAZETTE - President Taneti Maamau",
+     "url": "https://www.president.gov.ki/presidentgovki/wp-content/uploads/2019/09/No.1-Gazettes_Published-2019.pdf"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "gov.ky",
+     "rank": 5,
+     "snippet": "##### 2026 Gazette 22\n26 October 2026 | Gazette\n...\n12 October 2026 | Gazette\n...\n28 September 2026 | Gazette\n...\n14 September 2026 | Gazette\n...\n31 August 2026 | Gazette\n...\n17 August 2026 | Gazette\n...\n22 December 2025 | Gazette",
+     "title": "Gazettes - CIG",
+     "url": "https://gov.ky/web/gazettes/gazettes"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Kiribati supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-10-26",
+     "host": "kiribatijudiciary.gov.ki",
+     "rank": 1,
+     "snippet": "## Kam na Mauri!\nOfficial website providing access to court information, judicial decisions, and public notices.\n…\n## Transparency & Updates\n...\n# Judiciary Kiribati\nVisitors can view court notices, judgments, cause lists, forms, fees, and publications, as well as find contact details and guidance o",
+     "title": "Judiciary Kiribati - Courts Website",
+     "url": "https://kiribatijudiciary.gov.ki/"
+    },
+    {
+     "date": "",
+     "host": "www.commonlii.org",
+     "rank": 2,
+     "snippet": "## Pacific Islands\n### Kiribati\n- Court of Appeal Kiribati Decisions 1988- (PacLII)\n- High Court of Kiribati Decisions 1975- (PacLII)\n...\n- Kiribati Consolidated Legislation (PacLII)",
+     "title": "CommonLII Databases",
+     "url": "https://www.commonlii.org/databases.html"
+    },
+    {
+     "date": "2018-05-08",
+     "host": "canterbury.libguides.com",
+     "rank": 3,
+     "snippet": "## Finding Pacific cases\nIn addition, a significant number of cases are available online on the Pacific Islands Legal Information Institute (PacLII) database.\n...\n…\n## Finding Kiribati cases\n...\n- Kiribati Law Reports [PacLII] This link opens in a new window",
+     "title": "Subject Guides: Pacific Law: Cases",
+     "url": "https://canterbury.libguides.com/pacificlaw/cases"
+    },
+    {
+     "date": "2020-08-05",
+     "host": "guides.loc.gov",
+     "rank": 4,
+     "snippet": "# Judicial\nThe following links to government and non-government websites provide access to free online legal resources related to the judicial branch of Kiribati's government.\n- Kiribati Magistrates' Bench Book (PDF) External This link opens in a new window",
+     "title": "Judicial - Guide to Law Online: Kiribati",
+     "url": "https://guides.loc.gov/law-kiribati/judicial"
+    },
+    {
+     "date": "",
+     "host": "www.paclii.org",
+     "rank": 5,
+     "snippet": "Links to index of reported judgments:\nKiribati -\nIndex to Gilbert Islands Law Reports\nDigest of Cases 1966-1972\nKiribati -\nIndex to Kiribati Law Reports Link to cases available in full text:\nKiribati -\nFull Text Cases\n...\nFull Text Cases",
+     "title": "Kiribati Sources of Law Information",
+     "url": "https://www.paclii.org/ki/sources.html"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Kiribati state or provincial legislation official portal",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.parliament.gov.ki",
+     "rank": 1,
+     "snippet": "Acts\nOur address:\n##### Ambo, Tarawa\nSend us an email\n##### info@parliament.gov.ki\n...\n##### +686 75021882 / +686 63030220\n...\n1. Parliament Business\n2. Acts\n# Acts passed by the Maneaba ni Maungatabu",
+     "title": "Acts - parliament.gov.ki",
+     "url": "https://www.parliament.gov.ki/index.php/parliament-business/acts"
+    },
+    {
+     "date": "",
+     "host": "www.president.gov.ki",
+     "rank": 2,
+     "snippet": "## Gazettes & Instruments\n### Gazettes\n- 2026\n...\nStatutory salaries ordinance\nNotice of commencement - National digital identifaction Act 2025\n...\nKiribati Building Act 2024\n**\n** Notice to publish the establishment of a Kiribati Building Code 2024",
+     "title": "President Taneti Maamau - Gazettes & Instruments",
+     "url": "https://www.president.gov.ki/resources/gazettes-instruments.html"
+    },
+    {
+     "date": "2019-01-01",
+     "host": "leap.unep.org",
+     "rank": 3,
+     "snippet": "Kiribati\nLegislation\nRegulation\nFAOLEX\nDownload:\n...\n##### Local Government (Amendment) Act No. 6 of 2006.\n26 Jan 2007\nKiribati\nLegislation\nLegislation\nFAOLEX\nDownload:\nkir204313.pdf",
+     "title": "national-legislation",
+     "url": "https://leap.unep.org/en/countries/ki/national-legislation"
+    },
+    {
+     "date": "",
+     "host": "huggingface.co",
+     "rank": 4,
+     "snippet": "Research snapshot of official national legislation from **Office of the President Gazettes & Instruments (president.gov.ki)**.\n...\n## Snapshot\n| Language | en |\n| Jurisdiction | Kiribati |\n...\n## Source\n- https://www.president.gov.ki/resources/gazettes-instruments.html",
+     "title": "README.md",
+     "url": "https://huggingface.co/datasets/endomorphosis/ipfs_kiribati_laws/raw/main/README.md"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Kiribati municipal bylaws regulations official portal",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "kiribati.tradeportal.org",
+     "rank": 1,
+     "snippet": "# Disclaimer\n`\n<iframe style=\"height: 100%; border:none; width: 100%;min-height: 400px;\" src=\"https://kiribati.tradeportal.org/Laws?page=1&letter=b&l=gl&embed=true&includeSearch=true\"></iframe>\n`\n…",
+     "title": "Disclaimer",
+     "url": "https://kiribati.tradeportal.org/Laws?page=1&letter=b&l=gl"
+    },
+    {
+     "date": "2019-01-01",
+     "host": "leap.unep.org",
+     "rank": 2,
+     "snippet": "Kiribati\nLegislation\nRegulation\nFAOLEX\n...\n##### Local Government (Amendment) Act No. 6 of 2006.\n26 Jan 2007\nKiribati\nLegislation\nLegislation\nFAOLEX\nDownload:\nkir204313.pdf\n...\nLegislation",
+     "title": "national-legislation",
+     "url": "https://leap.unep.org/en/countries/ki/national-legislation"
+    },
+    {
+     "date": "",
+     "host": "www.paclii.org",
+     "rank": 3,
+     "snippet": "Kiribati Law Index 2017 - compiled by the Kiribati Office of the Attorney General\n1980 Revised Edition of the Laws of Kiribati - Table of Ordinances and Acts\n...\nURL:\n*http://www.paclii.org/ki/indices/legis/index.html *",
+     "title": "Kiribati Legislation Indexes",
+     "url": "https://www.paclii.org/ki/indices/legis/"
+    },
+    {
+     "date": "",
+     "host": "faolex.fao.org",
+     "rank": 4,
+     "snippet": "l. \nThis Act may be cited as the Local Government (Amendment) Act 2006, and shall come into force on such date as the Minister may, by notice published in the Gazette, appoint.\n...\nTHE LOCAL GOVERNMENT (AMENDMENT) ACT 2006",
+     "title": "Republic of KiriBATI (No. 6 of2006) AN A.CT TO i4__,_~,fEl ...",
+     "url": "https://faolex.fao.org/docs/pdf/kir204313.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Kiribati regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "library.sprep.org",
+     "rank": 1,
+     "snippet": "• \n...\n• \n...\n…\n...\nThe Environment Act 1999 (as amended in 2007) is currently the principal legislative means through which Kiribati implements its obligations under relevant international conventions, with the Chemical and Waste Management Unit of the ECD in the MELAD as the principal implementing",
+     "title": "Assessment of Legislative Frameworks Governing Waste Management in Kiribati",
+     "url": "https://library.sprep.org/sites/default/files/2021-03/waste-legislation-Kiribati.pdf"
+    },
+    {
+     "date": "2012-04-18",
+     "host": "leap.unep.org",
+     "rank": 2,
+     "snippet": "Abstract\nThese Regulations lay down rules for the establishment, function and powers of the Kiribati Seafood Verification Agency under the Fisheries Act; powers of the authorized officers; regulation, licensing and control of the fish processing establishments; the verification of all seafood export",
+     "title": "Fish Export Regulations of 2012.",
+     "url": "https://leap.unep.org/en/countries/ki/national-legislation/fish-export-regulations-2012"
+    },
+    {
+     "date": "",
+     "host": "mtcic.gov.ki",
+     "rank": 3,
+     "snippet": "# Business Regulatory Centre\n...\n- Initiation, formulation and implementation of policies relating to Businesses, Commerce, Industries, Trade, Consumer Protection, Trade Marks, Copyrights, Patents and Designs Protection, Companies, Money Lenders, Cooperatives and Credit Unions;\n...\n- Enforcement of ",
+     "title": "Business Regulatory Centre",
+     "url": "https://mtcic.gov.ki/business-regulatory-centre/"
+    },
+    {
+     "date": "",
+     "host": "kiribati.tradeportal.org",
+     "rank": 4,
+     "snippet": "These Regulations are to establish the Kiribati Competent Authority under the Fisheries Act and to regulate and control the fish processing establishments and to make provisions for the verification of all seafood exports from Kiribati and for incidental matters connected therewith.\n...\nFisheries De",
+     "title": "[PDF] Fish Export Regulations 2012 - Kiribati Trade Portal",
+     "url": "https://kiribati.tradeportal.org/media/Fish%20export%20regulation%202012-min.pdf"
+    },
+    {
+     "date": "",
+     "host": "cck.ki",
+     "rank": 5,
+     "snippet": "# Supporting service providers, protecting consumers, and enforcing the standards that keep everyone safe.\n...\n## Our service\nAn Individual License authorizes the ownership or operation of specified communications networks and the provision of communications services in Kiribati.\nThese licenses may ",
+     "title": "CCK Communications Commission of Kiribati",
+     "url": "https://cck.ki/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Kiribati national standards body standards catalogue",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2022-10-21",
+     "host": "www.oiml.org",
+     "rank": 1,
+     "snippet": "# OIML-CS Utilizers and Associates: KIRIBATI\n## Organization: - Ministry of Commerce Industry Co-operative\nBusiness Regulatory Center\nMCIC Tarawa, Kiribati\n...\n…\n...\n|R 139:2018(en)|Compressed gaseous fuel measuring systems for vehicles|B|",
+     "title": "OIML-CS",
+     "url": "https://www.oiml.org/en/tc-sc-pg/tc-sc/en/oiml-cs/oimlcsutiassocsearch_view?IDStructure=2268"
+    },
+    {
+     "date": "2024-10-01",
+     "host": "pacificdata.org",
+     "rank": 2,
+     "snippet": "# Kiribati - National Teachers' Services...HELLO\n...\nThis standards provide a strategy to facilitate the continuous improvement of professional competencies of teachers which will contribute to higher quality teaching and improved learning outcomes",
+     "title": "Kiribati Inclusive Education - Kiribati - National Teachers' Services Standards Framework_2017-2019 - Pacific Data Hub",
+     "url": "https://pacificdata.org/data/dataset/kiribati/resource/deefa1dd-1f38-4f5e-a4b3-46069d681e1e"
+    },
+    {
+     "date": "2022-05-23",
+     "host": "livelearn.org",
+     "rank": 3,
+     "snippet": "As part of a consultancy with UNICEF South Pacific to produce a catalogue of WASH technologies and operations and maintenance for schools, Live & Learn is sharing the national standards that have been developed by the governments of Fiji, Kiribati and Solomon Islands.\nThese standards are correct as ",
+     "title": "WASH in Schools National Standards - Fiji, Kiribati, Papua New Guinea, Solomon Islands | Live & Learn",
+     "url": "https://livelearn.org/resources/wash-in-schools-national-standards-fiji-kiribati-papua-new-guinea-solomon-islands/"
+    },
+    {
+     "date": "",
+     "host": "pacificdata.org",
+     "rank": 4,
+     "snippet": "Standard Two: Curriculum .....................................................................................................................Competency One: National Curriculum ..........................................................................................",
+     "title": "The National Teachers' Service Standards Framework",
+     "url": "https://pacificdata.org/data/dataset/f3620dd2-33a5-494a-83e5-567d35de2c6b/resource/deefa1dd-1f38-4f5e-a4b3-46069d681e1e/download/kiribati-national-teachers-services-standards-framework.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Kiribati mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "wipolex-res.wipo.int",
+     "rank": 1,
+     "snippet": "1. These regulations may be cited as the Radio-Communications Regulations 2005.\n...\n32. (1) The Authority, acting after consultation with the Minister, may in writing from time to time fix minimum requirements and performance standards to be met by apparatus for use in or in connection with authoris",
+     "title": "Radio-Communications Regulations 2005.",
+     "url": "https://wipolex-res.wipo.int/edocs/lexdocs/laws/en/ki/ki012en.html"
+    },
+    {
+     "date": "2022-09-19",
+     "host": "www.tuv.com",
+     "rank": 2,
+     "snippet": "The list of equipment requiring type approval is listed in Appendix A of the Type Approval Rules.\n...\nHowever, it must have a compliance mark/label indicating that it meets the technical standards of:\n…\n- the ACMA (Australia Communications and Media Authority)\n- the CE (European Commission)",
+     "title": "Communications Commission of Kiribati updated Typ - TUV Rheinland",
+     "url": "https://www.tuv.com/regulations-and-standards/en/kiribati-communications-commission-of-kiribati-updated-type-approval-rules.html"
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 3,
+     "snippet": "Food Regulations and Standards 2014, Кирибати, WIPO Lex\n...\n…\n...\nnutrient declaration shall be mandatory for foods for which nutrition claims are made and the amount of that nutrient per 100g or per 100ml expressed in metric unit, and/or per serving shall be declared;\n...\n…",
+     "title": "Food Regulations and Standards 2014, Кирибати, WIPO Lex",
+     "url": "https://www.wipo.int/wipolex/ru/legislation/details/20528"
+    },
+    {
+     "date": "",
+     "host": "www.cambridge.org",
+     "rank": 4,
+     "snippet": "Safety Regulations\n2009\nRegulation under Food Act\nMandatory\nUSI\n...\n12. Kiribati\nExisting\nFood Regulations and Standards under\nFood Safety Act 2006\n2014\nRegulation under Food Act\nMandatory\nHousehold and food\nprocessing\nIn Regulations\n20–30",
+     "title": "untitled",
+     "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CBFB7D7B3D22EB307D4860DA8AA39ECD/S1368980017001689a.pdf/div-class-title-the-legislative-framework-for-salt-iodization-in-asia-and-the-pacific-and-its-impact-on-programme-implementation-div.pdf"
+    },
+    {
+     "date": "",
+     "host": "lca.logcluster.org",
+     "rank": 5,
+     "snippet": "## Telecommunications Regulations\n|HF Radio|Yes|Communications Commission of Kiribati|\n|UHF/VHF/HF Radio: Handheld, Base and Mobile|Yes|Communications Commission of Kiribati|\n|UHF/VHF Repeaters|Yes|Communications Commission of Kiribati|",
+     "title": "Export Preview",
+     "url": "https://lca.logcluster.org/print-preview-current-section/3931"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Kiribati national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-08-10",
+     "host": "nso.gov.ki",
+     "rank": 1,
+     "snippet": "Kiribati National Statistics Office | Kiribati Statistics Census and Surveys",
+     "title": "Kiribati National Statistics Office | Kiribati Statistics Census ...",
+     "url": "https://nso.gov.ki/"
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 2,
+     "snippet": "## Kiribati - Metadata\n|Agriculture, hunting, forestry, fishing|1979 - 2024|Kiribati National Statistics Office|Website (https://nso.gov.ki/)|Nominal values from this source are used|",
+     "title": "Metadata - amaWebClient - UNSD - the United Nations",
+     "url": "https://unstats.un.org/unsD/snaama/Metadata/?countrycode=296&groupid=201"
+    },
+    {
+     "date": "2025-06-25",
+     "host": "nso.gov.ki",
+     "rank": 3,
+     "snippet": "Census & Surveys | Kiribati National Statistics Office\n# Census & Surveys\n### Microdata Library\n...\n### Population and Housing Census\nAccess and download data and reports from the latest 2020-2021 Kiribati Population and Housing Census as they are being released by the National Statistics Office.",
+     "title": "Census & Surveys",
+     "url": "https://nso.gov.ki/census-surveys/"
+    },
+    {
+     "date": "2026-01-01",
+     "host": "data.un.org",
+     "rank": 4,
+     "snippet": "http://data.un.org/\nKiribati - National Statistics Office\nNational Statistical Office of Kiribati\nhttp://www.mfed.gov.ki/",
+     "title": "UNdata | country profile | Kiribati",
+     "url": "https://data.un.org/CountryProfile.aspx/_crDataProfile/CountryProfile.aspx?crName=Kiribati"
+    },
+    {
+     "date": "",
+     "host": "nso.gov.ki",
+     "rank": 5,
+     "snippet": "P.O.Box 67\nBairiki, Tarawa\nPhone: (686) 740 21806\nFax: (686) 730 42224\nmfed.gov.ki\n...\n##### National websites\n@2020 Kiribati National Statistics Office | Ministry of Finance & Economic Development",
+     "title": "About us",
+     "url": "https://nso.gov.ki/about-us/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Kiribati central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2025-06-01",
+     "host": "mfed.gov.ki",
+     "rank": 1,
+     "snippet": "##### Welcome to the Ministry of Finance, Economics and Development (MFED)\n**Kam na bane ni mauri!**\nWelcome to the official website of the **Ministry of Finance, Economics and Development (MFED)** of the Republic of Kiribati.",
+     "title": "Recent News",
+     "url": "https://mfed.gov.ki/"
+    },
+    {
+     "date": "2026-09-08",
+     "host": "kidb.adb.org",
+     "rank": 2,
+     "snippet": "# Kiribati\n...\n127,442persons*\n...\nLabor Force2020\n...\nGDP at current prices2024\n519.83 millionAustralian Dollar*\nGDP (% annual change)2024\n4.6%*\nCPI (national)-CPI (% annual change)2025\n5.1%",
+     "title": "Kiribati - Key Indicators Database – Asian Development Bank",
+     "url": "https://kidb.adb.org/economies/kiribati"
+    },
+    {
+     "date": "2026-08-10",
+     "host": "nso.gov.ki",
+     "rank": 3,
+     "snippet": "Economy | Kiribati National Statistics Office\n# Economic\nFind historical and current analytical tables and reports on topics such as gross domestic product, prices, trade in goods, trade in services, balance of payments, tourism arrivals, tourism earnings and employment.\n...\nOverall, prices remained",
+     "title": "Economy",
+     "url": "https://nso.gov.ki/statistics/economy/"
+    },
+    {
+     "date": "",
+     "host": "aric.adb.org",
+     "rank": 4,
+     "snippet": "- **Monthly**\nInflation, Industrial Production, Retail Sales\n...\nGDP and its Components\n...\n#### Monetary and Financial Sectors\n...\n**Monthly**\nBroad Money, Credit, Capital Adequacy Ratio, Policy Rate, Stock Price\n...\nBroad Money, Nonperforming Loans, Rate of Return, Risk-Weighted Capital",
+     "title": "Kiribati - Data :: Country/Economy Profile",
+     "url": "https://aric.adb.org/kiribati/data"
+    },
+    {
+     "date": "",
+     "host": "mfed.gov.ki",
+     "rank": 5,
+     "snippet": "**KIRIBATI NATIONAL STATISTICS OFFICE**\n...\nUpdates on statistics series are accessible through the link below:\nLink to Kiribati National Statistics Website\nFor further data requests, contact the Office at 74021806 ext statistics or email to us at statistics@mfep.gov.ki",
+     "title": "KNSO | Ministry of Finance and Economic Development",
+     "url": "https://mfed.gov.ki/node/40"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Kiribati government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 1,
+     "snippet": "# Kiribati (KI)\n### List of data catalogs\n|ID|Name|Indexed?|Datasets|Type|Owner type|Software|\n...\n|`cdi00001250`|Kiribati Environment Data Portal|Yes|488|Open data portal|Central government|DKAN|",
+     "title": "Dateno Registry and Dataset Search Engine",
+     "url": "https://dateno.io/registry/country/KI/"
+    },
+    {
+     "date": "",
+     "host": "documents1.worldbank.org",
+     "rank": 2,
+     "snippet": "…\n12\nhttps://id4d.worldbank.org/principles\n13\nA Kiribati national government portal is currently under development with an initial prototype is available at:\nhttp://www.kiribati.gov.ki/",
+     "title": "Concept-Project-Information-Document-PID-Kiribati-Digital ...",
+     "url": "https://documents1.worldbank.org/curated/en/164781631299073813/txt/Concept-Project-Information-Document-PID-Kiribati-Digital-Government-Project-P176108.txt"
+    },
+    {
+     "date": "2022-03-24",
+     "host": "kiribati-data.sprep.org",
+     "rank": 3,
+     "snippet": "## Featured Content\n### Training builds capacity of Kiribati protected area practitioners\n18 October 2021 - Protected area practitioners and government stakeholders of Kiribati are now equipped with the hands-on, practical knowledge of finding relevant up-to-date data, information resources and tech",
+     "title": "Kiribati Environment Data Portal: Home",
+     "url": "https://kiribati-data.sprep.org/"
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 4,
+     "snippet": "# Kiribati Environment Data Portal\nEnvironmental Information for Decision Making.\nDatasets cover Atmosphere and Climate, Biodiversity, Built Environment, Coastal, and more.\n...\n### General\n|Link|https://kiribati-data.sprep.org|\n|Status|active|\n...\n|Owner type|Central government|",
+     "title": "Kiribati Environment Data Portal",
+     "url": "https://dateno.io/registry/catalog/cdi00001250/"
+    },
+    {
+     "date": "2021-04-25",
+     "host": "en.wikipedia.org",
+     "rank": 5,
+     "snippet": "## List of national-level open government data sites\n****\n…\n|Government|Website|Portal Solution|\n...\n|Kiribati|https://pacificdata.org/data/organization/government-of-kiribati| |",
+     "title": "List of open government data sites - Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/List_of_Open_Government_Data_Sites"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:52:02Z",
+ "pais": {
+  "iso2": "KI",
+  "iso3": "KIR",
+  "nombre": "Kiribati"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

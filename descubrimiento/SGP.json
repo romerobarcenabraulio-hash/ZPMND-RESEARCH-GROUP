@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Singapore constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 1,
+     "snippet": "# Welcome to Singapore Statutes Online\nThis Singapore Government website provides free online access to Singapore's legislation.\n...\n# Welcome to Singapore Statutes Online\n## Search\n## Browse\n- Constitutional Instruments\n- Interpretation Act\n- Private Acts\n- English Acts\n- Imperial Acts\n…",
+     "title": "Announcements",
+     "url": "https://sso.agc.gov.sg/"
+    },
+    {
+     "date": "2026-09-15",
+     "host": "sso.agc.gov.sg",
+     "rank": 2,
+     "snippet": "Constitution of the Republic of Singapore - Singapore Statutes Online\nConstitution of the Republic of Singapore\n...\nCurrent version\nas at 30 Oct 2026\n...\nLast updated 29 Oct 2026\nSingapore Statutes Online is provided by the Legislation Division of the Attorney-General's Chambers of Singapore.",
+     "title": "Constitution of the Republic of Singapore - Singapore Statutes...",
+     "url": "https://sso.agc.gov.sg/Act/CONS1963?ProvIds=pr23-,pr24-,pr25-,pr26-,pr27-,pr31-,pr34-,pr35-,pr35A-"
+    },
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 3,
+     "snippet": "Browse Current Subsidiary Legislation - Constitutional Instruments - Singapore Statutes Online\n…\n...\n# Browse\n|Singapore Citizenship Rules Cap.\nCONST, R 1|Cap.\n...\n…\n|Constitution of the Republic of Singapore (Senior Diplomatic Officers) Order Cap.\nCONST, OR 1|Cap.",
+     "title": "Browse",
+     "url": "https://sso.agc.gov.sg/Browse/sl/Current/All/21?PageSize=20&SubType=Constitutional&SortBy=Title&SortOrder=DESC"
+    },
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 4,
+     "snippet": "Browse Subsidiary Legislation Supplement - All - Singapore Statutes Online\n...\n403    of 499\n...\n|1997|Constitution of the Republic of Singapore (Responsibility of the Minister for Law) Notification 1997 S 45/1997 1997|S 45/1997| |",
+     "title": "Browse",
+     "url": "https://sso.agc.gov.sg/Browse/sl-supp/published/All/402?PageSize=50&SortBy=Title&SortOrder=DESC"
+    },
+    {
+     "date": "2026-08-05",
+     "host": "www.judiciary.gov.sg",
+     "rank": 5,
+     "snippet": "## About the sources of law in Singapore\nThe Constitution is one of the sources of law in Singapore.\n...\nOther sources of law include:\n- **Legislation** (also known as statutes): These consist of Acts of Parliament and subsidiary legislation passed by the government.\nThese laws are published on Sing",
+     "title": "About the legal system",
+     "url": "https://www.judiciary.gov.sg/who-we-are/about-legal-system"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Singapore national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 1,
+     "snippet": "Browse Current Subsidiary Legislation - N - Singapore Statutes Online\n…\n...\n# Browse\n132 results in 7 pages\nPage\n...\n|--|--|--|--|--|\n...\nSingapore Statutes Online is provided by the Legislation Division of the Attorney-General's Chambers of Singapore.",
+     "title": "Browse",
+     "url": "https://sso.agc.gov.sg/Browse/sl/current/N?PageSize=20&SortBy=Number&SortOrder=DESC"
+    },
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 2,
+     "snippet": "|Sort by: Short Title|Number|\n|--|--|\n...\n|Rapid Transit Systems (Appeals) Regulations 2025|S 246/2025|\n...\n|Civil Aviation Authority of Singapore (Designated Operating Entities) Notification 2025|S 243/2025|\n...\n…",
+     "title": "Browse",
+     "url": "https://sso.agc.gov.sg/Browse/sl/Current/All?PageSize=250&SortBy=number&SortOrder=desc"
+    },
+    {
+     "date": "2023-08-01",
+     "host": "sso.agc.gov.sg",
+     "rank": 3,
+     "snippet": "National Symbols Regulations 2023 - Singapore Statutes Online\nNational Symbols Regulations 2023\nStatus:\nCurrent version\nas at 01 Nov 2026\n...\nor\nfind current version as at\n01 Aug 2023\n- 01 Aug 2023\nSL 536/2023",
+     "title": "National Symbols Regulations 2023 - Singapore Statutes Online",
+     "url": "https://sso.agc.gov.sg/SL/NSA2022-S536-2023"
+    },
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 4,
+     "snippet": "5879 results in 294 pages\n...\n|Foreign Employee Dormitories (Threshold Number under Section 3(3)) Notification 2023 S 175/2023 - Download PDF (32.0 KB) - Add to My Collections - Amendments RSS Feed|S 175/2023| | | |",
+     "title": "Browse",
+     "url": "https://sso.agc.gov.sg/Browse/sl/current/All/220?PageSize=20&SortBy=Title&SortOrder=DESC"
+    },
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 5,
+     "snippet": "Browse Current Subsidiary Legislation - All - Singapore Statutes Online\n…\n...\n5877 results in 294 pages\nPage\n...\n|--|--|\n...\nLast updated 29 Oct 2026\nSingapore Statutes Online is provided by the Legislation Division of the Attorney-General's Chambers of Singapore.",
+     "title": "Browse Current Subsidiary Legislation - Singapore Statutes Online",
+     "url": "https://sso.agc.gov.sg/Browse/SL/Current"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Singapore official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-08-31",
+     "host": "www.egazette.gov.sg",
+     "rank": 1,
+     "snippet": "Search | Republic of Singapore Government Gazette\nA Singapore Government Agency Website\nOfficial website links end with .gov.sg\nSecure websites use HTTPS\n...\n## Republic of Singapore Government Gazette\n© 2026 Government of Singapore, last updated on 28 October 2026\nBuilt by Open Government Products",
+     "title": "Browse - Singapore Government Gazette",
+     "url": "https://www.egazette.gov.sg/egazette-browse/"
+    },
+    {
+     "date": "2026-07-30",
+     "host": "www.egazette.gov.sg",
+     "rank": 2,
+     "snippet": "Gazettes | Republic of Singapore Government Gazette\nA Singapore Government Agency Website\n1. Gazettes\n# Gazettes\nRead up-to-date news articles, speeches, and press releases here.\n...\n2026 (3,974)\n3974 items\n30 October 2026\n...\n## Republic of Singapore Government Gazette",
+     "title": "Gazettes | Republic of Singapore Government Gazette",
+     "url": "https://www.egazette.gov.sg/gazettes/"
+    },
+    {
+     "date": "2026-07-20",
+     "host": "www.egazette.gov.sg",
+     "rank": 3,
+     "snippet": "Home | Republic of Singapore Government Gazette\nA Singapore Government Agency Website\nOfficial website links end with .gov.sg\nSecure websites use HTTPS\n# Government Gazette\nPublished by Authority\n...\nThis website is the prescribed website under section 48 of the Interpretation Act 1965.\n...\n## Repub",
+     "title": "Home | Republic of Singapore Government Gazette",
+     "url": "https://www.egazette.gov.sg/"
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.acra.gov.sg",
+     "rank": 4,
+     "snippet": "Entities to be struck off: First Gazette 2026 | Accounting and Corporate Regulatory Authority\nA Singapore Government Agency Website\n...\n# Entities to be struck off: First Gazette 2026\nView the official ACRA notice listing all entities meant to be struck off in 2026, as published in the First Gazette",
+     "title": "Entities to be struck off: First Gazette 2026",
+     "url": "https://www.acra.gov.sg/resources/gazettes/first-gazette/struck-off-first-gazette-2026/"
+    },
+    {
+     "date": "2026-07-03",
+     "host": "www.egazette.gov.sg",
+     "rank": 5,
+     "snippet": "Contact us | Republic of Singapore Government Gazette\nA Singapore Government Agency Website\nSecure websites use HTTPS\n1. Contact us\n...\neGazette Notices\n+65 6846 3894\n...\n## Republic of Singapore Government Gazette\n© 2026 Government of Singapore, last updated on 30 October 2026",
+     "title": "Contact us | Republic of Singapore Government Gazette",
+     "url": "https://www.egazette.gov.sg/contact-us/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Singapore supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-06-02",
+     "host": "www.judiciary.gov.sg",
+     "rank": 1,
+     "snippet": "Singapore Courts\n...\nNote: To search for hearing details for a specific case, visit the hearing list page.",
+     "title": "Singapore Courts",
+     "url": "https://www.judiciary.gov.sg/"
+    },
+    {
+     "date": "2025-08-27",
+     "host": "www.judiciary.gov.sg",
+     "rank": 2,
+     "snippet": "# Types of Decisions\n## Types of Judicial Decisions\nPublication of court decisions\nCourt decisions with neutral citations are considered as published decisions.\nAll published decisions of the Supreme Court since 2000 are available here.\nThe State Courts’ and Family Justice Courts’ published decision",
+     "title": "Types of Decisions",
+     "url": "https://www.judiciary.gov.sg/judgments/judicial-decisions"
+    },
+    {
+     "date": "2026-09-08",
+     "host": "www.elitigation.sg",
+     "rank": 3,
+     "snippet": "SG Courts Judgments\nType in the keywords that you are interested in and choose the correct Search Method depending on what you are searching for (all of the words, any of the words, the exact phrase or boolean).\nYou can also use Wildcard Characters and Search Operators.\n...\n- First",
+     "title": "SG Courts Judgments - :: eLitigation ::",
+     "url": "https://www.elitigation.sg/gdviewer/Home/Index?Filter=SUPCT&YearOfDecision=All&SortBy=DateOfDecision&CurrentPage=17&SortAscending=False&PageSize=0&Verbose=False&SearchQueryTime=0&SearchTotalHits=0&SearchMode=True&SpanMultiplePages=False"
+    },
+    {
+     "date": "2026-11-02",
+     "host": "www.elitigation.sg",
+     "rank": 4,
+     "snippet": "SG Courts Judgments\nType in the keywords that you are interested in and choose the correct Search Method depending on what you are searching for (all of the words, any of the words, the exact phrase or boolean).\nYou can also use Wildcard Characters and Search Operators.\n...\n…\n...\n- 1",
+     "title": "SG Courts Judgments",
+     "url": "https://www.elitigation.sg/gd/Home/Index?Filter"
+    },
+    {
+     "date": "2026-08-31",
+     "host": "www.judiciary.gov.sg",
+     "rank": 5,
+     "snippet": "…\n#### Supreme Court cases\nGenerally, if the case or appeal was filed in the Supreme Court before 2002 (or earlier, depending on the case type), you need to conduct a manual search at the Service Hub at Level 1 of the Supreme Court during the operating hours.",
+     "title": "Apply for Court Records: Civil and Family Cases",
+     "url": "https://www.judiciary.gov.sg/services/civil-family-court-records"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Singapore state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 1,
+     "snippet": "Home - Singapore Statutes Online\n...\n# Welcome to Singapore Statutes Online\nThis Singapore Government website provides free online access to Singapore's legislation.\n...\n# Welcome to Singapore Statutes Online\n## Search\n## Browse\n- Constitutional Instruments\n- Interpretation Act\n- Private Acts\n- Engl",
+     "title": "Home - Singapore Statutes Online",
+     "url": "https://sso.agc.gov.sg/Index"
+    },
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 2,
+     "snippet": "Browse Current Subsidiary Legislation - All - Singapore Statutes Online\n# Browse\n| |Acts|\n|--|--|\n| |Subsidiary Legislation|\n| |Acts Supplement|\n...\nSingapore Statutes Online is provided by the Legislation Division of the Attorney-General's Chambers of Singapore.",
+     "title": "Browse Current Subsidiary Legislation - All - Singapore ...",
+     "url": "https://sso.agc.gov.sg/Browse/sl/current/All/110?PageSize=20&SortBy=Number&SortOrder=DESC"
+    },
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 3,
+     "snippet": "Browse Acts Supplement - All - Singapore Statutes Online\n# Browse\n| |Acts|\n|--|--|\n| |Subsidiary Legislation|\n| |Acts Supplement|\n| |Bills Supplement|\n...\nSingapore Statutes Online is provided by the Legislation Division of the Attorney-General's Chambers of Singapore.",
+     "title": "Browse",
+     "url": "https://sso.agc.gov.sg/Browse/Acts-Supp/Published/All/2?PageSize=250&SortBy=Title&SortOrder=DESC"
+    },
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 4,
+     "snippet": "Browse Current Subsidiary Legislation - I - Singapore Statutes Online\n# Browse\n| |Acts|\n|--|--|\n| |Subsidiary Legislation|\n| |Acts Supplement|\n...\nSingapore Statutes Online is provided by the Legislation Division of the Attorney-General's Chambers of Singapore.",
+     "title": "Browse Current Subsidiary Legislation - I - Singapore Statutes ...",
+     "url": "https://sso.agc.gov.sg/Browse/sl/current/I/1?PageSize=10&SortBy=Title&SortOrder=ASC"
+    },
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 5,
+     "snippet": "Browse Current Subsidiary Legislation - All - Singapore Statutes Online\n# Browse\n| |Acts|\n|--|--|\n| |Subsidiary Legislation|\n| |Acts Supplement|\n...\nSingapore Statutes Online is provided by the Legislation Division of the Attorney-General's Chambers of Singapore.",
+     "title": "Browse",
+     "url": "https://sso.agc.gov.sg/Browse/sl/Current/All/311?PageSize=10&SortBy=Title&SortOrder=DESC"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Singapore municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 1,
+     "snippet": "# Browse\n|Town Council of Sembawang (Conservancy and Service Charges) By-laws 2016 S 134/2016 - Download PDF (97.4 KB) - Add to My Collections - Amendments RSS Feed|S 134/2016| | | |",
+     "title": "Browse",
+     "url": "https://sso.agc.gov.sg/Browse/sl/Current/T?PageSize=100&SortBy=Number&SortOrder=DESC"
+    },
+    {
+     "date": "",
+     "host": "sso.agc.gov.sg",
+     "rank": 2,
+     "snippet": "# Browse\n|--|--|--|--|--|\n|Town Councils (Model By-laws) Rules 2026 S 327/2026 - Download PDF (147.8 KB) - Add to My Collections - Amendments RSS Feed|S 327/2026| | | |",
+     "title": "Browse",
+     "url": "https://sso.agc.gov.sg/Browse/sl/current/All/55?PageSize=100&SortBy=title&SortOrder=ASC"
+    },
+    {
+     "date": "2026-08-05",
+     "host": "www1.bca.gov.sg",
+     "rank": 3,
+     "snippet": "Home | Building and Construction Authority\nA Singapore Government Agency Website\nOfficial website links end with .gov.sg\n...\n# Building and Construction Authority\n...\n### Safety and Standards\nAccess guidelines, regulations, and codes of practice to maintain safety across building works, lifts, amuse",
+     "title": "Building and Construction Authority: Home",
+     "url": "https://www1.bca.gov.sg/"
+    },
+    {
+     "date": "2026-10-19",
+     "host": "www.oneservice.gov.sg",
+     "rank": 4,
+     "snippet": "Official website links end with .gov.sg\n...\n# OneService\n## An Engaged Community for a Better Living Environment.\n### Who We Are\nThe Municipal Services Office (MSO) works with public agencies, Town Councils, and the community to build a better living environment for all.",
+     "title": "Home | OneService Community",
+     "url": "https://www.oneservice.gov.sg/"
+    },
+    {
+     "date": "2025-07-05",
+     "host": "sso.agc.gov.sg",
+     "rank": 5,
+     "snippet": "|Year|Sort by: Short Title|\n...\n|1998|Town Council of Potong Pasir (Common Property and Open Spaces) By-laws 1998|\n|1998|Town Council of Potong Pasir (Conservancy and Service Charges) By-laws 1998|\n...\n…",
+     "title": "Browse",
+     "url": "https://sso.agc.gov.sg/Browse/SL-Rev/Published/All/6?PageSize=250&SortBy=Year&SortOrder=ASC"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Singapore regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-09-24",
+     "host": "www.acra.gov.sg",
+     "rank": 1,
+     "snippet": "# Guide to accounting standards\n## Financial reporting frameworks issued by the ASC\nEntities should refer to the relevant issued Acts or Statutes and the applicable Statement of Applicability issued by the ASC that set out the requirements for the preparation of financial statements.",
+     "title": "Accounting Standards - Singapore - ACRA",
+     "url": "https://www.acra.gov.sg/regulations/accounting-standards-financial-reporting-surveillance/accounting-standards/"
+    },
+    {
+     "date": "2026-07-27",
+     "host": "www.acra.gov.sg",
+     "rank": 2,
+     "snippet": "Listed companies and Large non-listed companies (Large NLCos) need to comply from FY2025 and FY2030, respectively.\n...\n|1 January 2030|- **Non-STI constituent listed companies with market capitalisation of less than $1 billion:** Report other ISSB-based CRD|",
+     "title": "Sustainability reporting and assurance requirements",
+     "url": "https://www.acra.gov.sg/regulations/sustainability-reporting/requirements-timeline/"
+    },
+    {
+     "date": "2026-10-07",
+     "host": "www.acra.gov.sg",
+     "rank": 3,
+     "snippet": "# Government agencies & useful resources\nFind links to government agencies and online portals that support business registration, licensing, taxation, and other regulatory requirements in Singapore.\n...\nIRAS is the main tax administrator to the Government.\nThe Authority also advises the Government a",
+     "title": "Government agencies & useful resources",
+     "url": "https://www.acra.gov.sg/resources/government-agencies-useful-resources/"
+    },
+    {
+     "date": "2026-09-24",
+     "host": "www.acra.gov.sg",
+     "rank": 4,
+     "snippet": "Compliance requirements: Businesses and registered professionals | Accounting and Corporate Regulatory Authority\n...\n# Compliance requirements: Businesses and registered professionals\nCheck the requirements that you need to comply with based on your profile.\n...\n### Company\n...\nIncludes legal obliga",
+     "title": "Compliance requirements: Businesses and registered ...",
+     "url": "https://www.acra.gov.sg/regulations/compliance-requirements/"
+    },
+    {
+     "date": "2026-04-20",
+     "host": "www.acra.gov.sg",
+     "rank": 5,
+     "snippet": "From 9 June 2025, all corporate service providers (CSPs) must register with ACRA, comply with new obligations and vet nominee directors.\n...\n1. Require all business entities carrying on a business of providing corporate services in and from Singapore to register with ACRA as CSPs.",
+     "title": "Corporate Service Providers Act 2024 | Accounting and ...",
+     "url": "https://www.acra.gov.sg/regulations/legislation/corporate-service-providers-act/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Singapore national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.singaporestandardseshop.sg",
+     "rank": 1,
+     "snippet": "SS 533:2007 (2015)\nSingapore Standard for cleaning performance for public housing estates\nSS 553:2026\nCode of practice for air-conditioning and mechanical ventilation in buildings\nSS 554:2026\nCode of practice for indoor air quality in air-conditioned buildings\nMore Details\n...\n…",
+     "title": "Singapore Standards",
+     "url": "https://www.singaporestandardseshop.sg/Product/IndustrySubSectorProduct/8720832e-def8-4a79-bc89-d1366e7e4857?page=4"
+    },
+    {
+     "date": "",
+     "host": "www.singaporestandardseshop.sg",
+     "rank": 2,
+     "snippet": "# Singapore Standards\n...\nLtd.**\n...\n**Standards Division, Enterprise Singapore**\n230 Victoria Street, #09-00\nBugis Junction Towers\nSingapore 188024\n: (65) 6898 1800\n...\nLtd.\nEnterprise Singapore's appointed distributor of\nSingapore Standards and Overseas Standards.",
+     "title": "Product Status - Singapore Standards",
+     "url": "https://www.singaporestandardseshop.sg/Product/SSPdtList?page=35&StandardType=All"
+    },
+    {
+     "date": "2026-09-15",
+     "host": "www.enterprisesg.gov.sg",
+     "rank": 3,
+     "snippet": "Find a Standard\n# Find a Standard\n...\nDisplaying {current} of {count} items\n**Standards**\n...\n## Need additional help?\nGet in touch to learn more about what Singapore companies have to offer and how they can work with you on smart and sustainable development projects.\n## Enterprise Singapore",
+     "title": "Find a Standard",
+     "url": "https://www.enterprisesg.gov.sg/grow-your-business/boost-capabilities/quality-and-standards/explore-standards/find-a-standard"
+    },
+    {
+     "date": "2026-09-15",
+     "host": "www.enterprisesg.gov.sg",
+     "rank": 4,
+     "snippet": "## Browse standards\n**For soft copies:** You can use multimedia stations at the National Library and Public Libraries (except library@chinatown and library@orchard) to browse Singapore Standards, Technical References and Workshop Agreements for free.\n...\nFind a standard here.\n...\n- International Org",
+     "title": "Standards, Technical References and Workshop Agreements",
+     "url": "https://www.enterprisesg.gov.sg/grow-your-business/boost-capabilities/quality-and-standards/standards-technical-references-and-workshop-agreements"
+    },
+    {
+     "date": "",
+     "host": "www.singaporestandardseshop.sg",
+     "rank": 5,
+     "snippet": "# Search for Standards\n# Singapore Standards\nNote:\n...\nNEW SS ISO SS IEC REDLINE DRAFT\nTR 153:2026\nBaseline security requirements for blockchain and distributed ledger technology systems\nSS 562:2026\n…\n...\nSign up to get the latest information on new and revised Singapore Standards!",
+     "title": "www.singaporestandardseshop.sg › HomeSingapore Standards",
+     "url": "https://www.singaporestandardseshop.sg/Home/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Singapore mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "onemotoring.lta.gov.sg",
+     "rank": 1,
+     "snippet": "Vehicle components, features and fitted technologies, such as Camera Monitoring Systems, High-Intensity Discharge (HID) and LED headlamps, are also required to comply with internationally recognised vehicle safety standards such as those adopted by the European Union (EU) countries, Japan and the US",
+     "title": "LTA | Vehicle Technologies and Modifications - OneMotoring",
+     "url": "https://onemotoring.lta.gov.sg/content/onemotoring/home/owning/modification.html"
+    },
+    {
+     "date": "2026-08-19",
+     "host": "www.nea.gov.sg",
+     "rank": 2,
+     "snippet": "Registered suppliers who import or manufacture the following regulated goods are required to register such goods with NEA before they are supplied in Singapore.\n- Air-conditioner (including single-phase Portable Air-Conditioner)\n- Refrigerator\n- Clothes Dryer\n- Television\n- Lamp\n- Fluorescent Lamp B",
+     "title": "Registration and Renewal of Regulated Goods for Supply - NEA",
+     "url": "https://www.nea.gov.sg/our-services/climate-change-energy-efficiency/energy-efficiency/household-sector/registration-and-renewal-of-regulated-goods"
+    },
+    {
+     "date": "",
+     "host": "asean.org",
+     "rank": 3,
+     "snippet": "combination \nHS Code \nSingapore \n30 \n1. Air cooler \n- \n√ \nIEC 60335-2-98: 2002 \n- \n...\n2. Fuse (<13 \namperes) for \nuse in a plug\n…",
+     "title": "as of Nov 2019",
+     "url": "https://asean.org/wp-content/uploads/2012/05/Regulatory-requirements-of-Singapore_November-2019.pdf"
+    },
+    {
+     "date": "2026-08-19",
+     "host": "www.nea.gov.sg",
+     "rank": 4,
+     "snippet": "…\n- Energy Conservation (Prescribed Regulated Goods) Order 2017\n- Energy Conservation (Prescribed Regulated Goods) (Amendment) Order 2021\n- Energy Conservation (Regulated Goods and Registered Suppliers) Regulations 2017\n...\n…",
+     "title": "About Mandatory Energy Labelling Scheme and Minimum ... - NEA",
+     "url": "https://www.nea.gov.sg/our-services/climate-change-energy-efficiency/energy-efficiency/household-sector/about-mandatory-energy-labelling-and-minimum-energy-performance-standards"
+    },
+    {
+     "date": "2026-06-23",
+     "host": "www.consumerproductsafety.gov.sg",
+     "rank": 5,
+     "snippet": "# Consumer Protection (Safety Requirements) Regulations\nFind out how household electrical, electronic, and gas appliances must be tested, registered, and affixed with the SAFETY Mark before they can be sold in Singapore.",
+     "title": "Consumer Protection (Safety Requirements) Regulations",
+     "url": "https://www.consumerproductsafety.gov.sg/suppliers/cpsr/overview-of-cpsr/"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Singapore national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-01-15",
+     "host": "www.singstat.gov.sg",
+     "rank": 1,
+     "snippet": "Singapore Department of Statistics\n...\n# Singapore Department of Statistics\nEconomy & PricesIndustryTrade & InvestmentPopulationHouseholdsSociety",
+     "title": "Singapore Department of Statistics - singstat.gov.sg",
+     "url": "https://www.singstat.gov.sg/?lang=en"
+    },
+    {
+     "date": "",
+     "host": "www.tablebuilder.singstat.gov.sg",
+     "rank": 2,
+     "snippet": "Singapore Department of Statistics (DOS) | SingStat Table Builder\n...\n# Page Not Found\nThe page you requested is currently unavailable.\n...\nPlease email us via info@singstat.gov.sg.\n- SingStat Table Builder\n- Latest Updates",
+     "title": "table build er. sings tat. gov. sg",
+     "url": "https://www.tablebuilder.singstat.gov.sg/publicfacing/displayChart.action"
+    },
+    {
+     "date": "",
+     "host": "tablebuilder.singstat.gov.sg",
+     "rank": 3,
+     "snippet": "(DOS) | SingStat Table Builder – Latest Updates\n...\n# Latest Updates\n**SingStat Table Builder**\n- SingStat Table Builder\n- Latest Updates",
+     "title": "Latest Updates",
+     "url": "https://tablebuilder.singstat.gov.sg/latest-updates"
+    },
+    {
+     "date": "",
+     "host": "www.singstat.gov.sg",
+     "rank": 4,
+     "snippet": "Singapore Department of Statistics (DOS) | SingStat Table Builder\n...\nThe SingStat Table Builder facilitates access to some 2,800 data tables from 70 public sector agencies with close to 180,000 data series, providing a comprehensive statistical view of Singapore's economic and socio-demographic dom",
+     "title": "SingStat Table Builder",
+     "url": "https://www.singstat.gov.sg/tablebuilder"
+    },
+    {
+     "date": "2025-12-09",
+     "host": "www.singstat.gov.sg",
+     "rank": 5,
+     "snippet": "Singapore Department of Statistics - Role & Governance\n# About Us\nAs the National Statistics Office, we deliver insightful statistics and trusted statistical services that empower decision making.\n...\n## What We Do\nGet an introduction to the work of the various Divisions in the Department of Statist",
+     "title": "Role & Governance - Singapore Department of Statistics",
+     "url": "https://www.singstat.gov.sg/who-we-are/about-us/our-role-governance"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Singapore central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-16",
+     "host": "www.mas.gov.sg",
+     "rank": 1,
+     "snippet": "### Upcoming Releases\nMAS releases regular policy statements, publications and statistics on a weekly, monthly and quarterly basis.\n...\nWeekly S$ Nominal Effective Exchange Rate Index (S$NEER)\nData for Oct 2026\n06 Nov 2026\nOfficial Foreign Reserves\nData for Oct 2026",
+     "title": "Monetary Authority of Singapore",
+     "url": "https://www.mas.gov.sg/"
+    },
+    {
+     "date": "",
+     "host": "www.mas.gov.sg",
+     "rank": 2,
+     "snippet": "1. Home\n2. Statistics\n3. Reserve Statistics\n4. International Reserves/Foreign Currency Liquidity\n...\n# International Reserves and Foreign Currency Liquidity\nSingapore's Official Foreign Reserves according to the IMF's Data Template on International Reserves and Foreign Currency Liquidity\n…\n...\n*",
+     "title": "International Reserves and Foreign Currency Liquidity",
+     "url": "https://www.mas.gov.sg/statistics/reserve-statistics/international-reserves-and-foreign-currency-liquidity"
+    },
+    {
+     "date": "2026-06-05",
+     "host": "www.mas.gov.sg",
+     "rank": 3,
+     "snippet": "Find data on Singapore’s banking and insurance sectors.\nData on foreign reserves, currency statistics, exchange rates and interest rates are also available.\n...\nView statistics published in the Monthly Statistical Bulletin, which provides key monetary and banking data to inform market participants, ",
+     "title": "Statistics",
+     "url": "https://www.mas.gov.sg/statistics"
+    },
+    {
+     "date": "",
+     "host": "eservices.mas.gov.sg",
+     "rank": 4,
+     "snippet": "Official website links end with .gov.sg\nGovernment agencies communicate via .gov.sg websites (e.g.\n...\n2. Statistics\n3. Financial Database Application\n...\n- Average Daily Turnover Volume\n- Benchmark Prices And Yields\n...\n- SGS Issuance and Redemption Data\n- Treasury Bill Original Maturities",
+     "title": "Financial Database Application",
+     "url": "https://eservices.mas.gov.sg/statistics/fdanet/"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.mas.gov.sg",
+     "rank": 5,
+     "snippet": "# International Reserves and Foreign Currency Liquidity – August 2014\nSingapore's Official Foreign Reserves as at August 2014, published according to the IMF's Template on International Reserves and Foreign Currency Liquidity.\n*As at August 2014\nIn US$ million unless otherwise stated.*",
+     "title": "International Reserves and Foreign Currency Liquidity – August 2014",
+     "url": "https://www.mas.gov.sg/statistics/reserve-statistics/international-reserves-and-foreign-currency-liquidity/2014/international-reserves-and-foreign-currency-liquidity-august-2014"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Singapore government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "data.gov.sg",
+     "rank": 1,
+     "snippet": "data.gov.sg\nA Singapore Government Agency Website\n...\n# Singapore's open data portal\n## Explore national datasets and access APIs for development.\nSearch\n...\n## 4,500+ datasets from 70+ government agencies\n...\nAccess 4,500+ datasets from over 70 government agencies – all available for free",
+     "title": "Singapore's - Data.gov.sg",
+     "url": "https://data.gov.sg/?lang=en"
+    },
+    {
+     "date": "",
+     "host": "guide.data.gov.sg",
+     "rank": 2,
+     "snippet": "[data.gov.sg](http://data.gov.sg) is the Singapore Government's open data marketplace.\nIt brings together datasets from across public agencies — from housing and transport to health and the environment — in one place, so you can find, explore, and use government data without having to contact indivi",
+     "title": "Introduction to data.gov.sg",
+     "url": "https://guide.data.gov.sg/introduction-to-data.gov.sg"
+    },
+    {
+     "date": "",
+     "host": "data.gov.sg",
+     "rank": 3,
+     "snippet": "Agencies | data.gov.sg\nA Singapore Government Agency Website\nOfficial website links end with .gov.sg\nGovernment agencies communicate via .gov.sg websites (e.g. go.gov.sg/open).",
+     "title": "Agencies",
+     "url": "https://data.gov.sg/agencies"
+    },
+    {
+     "date": "2025-11-08",
+     "host": "data.gov.sg",
+     "rank": 4,
+     "snippet": "data.gov.sg\nA Singapore Government Agency Website\nSecure websites use HTTPS\n# NEA Offices (GEOJSON)\nNEA (National Environment Agency)\nList of NEA offices.",
+     "title": "data.gov.sg - Singapore's open data portal",
+     "url": "https://data.gov.sg/datasets?topics=environment&page=7&sidebar=true&resultId=d_5ff6c8be30ee24f83975ffae670c6246"
+    },
+    {
+     "date": "2026-07-28",
+     "host": "www.tech.gov.sg",
+     "rank": 5,
+     "snippet": "# Data.gov.sg\nExplore Data.gov.sg, an open data collective that allows government agencies to publish and make their real-time data available to the public.\n...\n- Data.gov.sg is an open government data platform where public agencies share their data for public use.",
+     "title": "Data.gov.sg | Government Technology Agency ...",
+     "url": "https://www.tech.gov.sg/products-and-services/for-government-agencies/data-and-ai/data-gov-sg/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:18:35Z",
+ "pais": {
+  "iso2": "SG",
+  "iso3": "SGP",
+  "nombre": "Singapore"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

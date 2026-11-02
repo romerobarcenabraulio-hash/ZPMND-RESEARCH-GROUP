@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Turkiye constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2004-01-01",
+     "host": "www.mevzuat.gov.tr",
+     "rank": 1,
+     "snippet": "Mevzuat Bilgi Sistemi\n…\n...\n…\n...\nKanunun tüm değişikliklerinin işlendiği güncel metne ulaşılmak istenirse, *Mevzuat Türü* bölümünün altındaki *Kanunlar* butonundan arama yapılması gerekmektedir.",
+     "title": "Mevzuat Bilgi Sistemi",
+     "url": "https://www.mevzuat.gov.tr/"
+    },
+    {
+     "date": "",
+     "host": "tbmm.gov.tr",
+     "rank": 2,
+     "snippet": "Sistemde kanun ve karar metinleri, kanunlara ve kararlara ilişkin bilgiler ile gerekçeler, komisyon raporu, görüşme tutanaklarından oluşan ilgili metinler yer almaktadır.\nKANUN VE KARAR BİLGİ SİSTEMİ\n...\n…",
+     "title": "kanun ve karar bilgi sistemi - TÜRKİYE BÜYÜK MİLLET MECLİSİ",
+     "url": "https://tbmm.gov.tr/kanun-ve-karar-bilgi-sistemi"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 3,
+     "snippet": "T.C. Resmî Gazete\nPDF Görüntüle\n...\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.",
+     "title": "https://www.resmigazete.gov.tr/arama.aspx",
+     "url": "https://www.resmigazete.gov.tr/arama.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 4,
+     "snippet": "T.C. Resmî Gazete\nPDF Görüntüle\n...\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.",
+     "title": "Resmi Gazete",
+     "url": "https://www.resmigazete.gov.tr/"
+    },
+    {
+     "date": "",
+     "host": "mevzuat.adalet.gov.tr",
+     "rank": 5,
+     "snippet": "UYAP Mevzuat ve İçtihat Programı\n# Mevzuat, İçtihat Ara\nMevzuat\nDetaylı Sorgulama\nKanunlar\n0 kayıt\n...\nSon Görüntülenenler\n...\nTritanopi (Mavi Körlüğü)",
+     "title": "UYAP Mevzuat ve İçtihat Programı",
+     "url": "https://mevzuat.adalet.gov.tr/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Turkiye national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 1,
+     "snippet": "T.C. Resmî Gazete\n...\n###### 01 Kasım 2026 Tarihli ve 33417 Sayılı Resmî Gazete\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.",
+     "title": "https://www.resmigazete.gov.tr/arama.aspx",
+     "url": "https://www.resmigazete.gov.tr/arama.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 2,
+     "snippet": "T.C. Resmî Gazete\nPDF Görüntüle\n...\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.",
+     "title": "Resmi Gazete",
+     "url": "https://www.resmigazete.gov.tr/"
+    },
+    {
+     "date": "2004-01-01",
+     "host": "www.mevzuat.gov.tr",
+     "rank": 3,
+     "snippet": "…\n...\nCumhurbaşkanlığı Kararnamesinin tüm değişikliklerinin işlendiği güncel metne ulaşılmak istenirse, Mevzuat Türü bölümünün altındaki Cumhurbaşkanlığı Kararnameleri butonundan arama yapılması gerekmektedir.",
+     "title": "Mevzuat Bilgi Sistemi",
+     "url": "https://www.mevzuat.gov.tr/"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 4,
+     "snippet": "###### 02 Ocak 2026 Tarihli ve 33125 Sayılı Resmî Gazete\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.",
+     "title": "https://www.resmigazete.gov.tr/02.01.2026",
+     "url": "https://www.resmigazete.gov.tr/02.01.2026"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 5,
+     "snippet": "T.C. Resmî Gazete\nPDF Görüntüle\n...\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.",
+     "title": "www.resmigazete.gov.tr › siteT.C. Resmî Gazete",
+     "url": "https://www.resmigazete.gov.tr/site.html"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Turkiye official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "resmigazete.gov.tr",
+     "rank": 1,
+     "snippet": "T.C. Resmî Gazete\n...\n###### 02 Kasım 2026 Tarihli ve 33418 Sayılı Resmî Gazete\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.",
+     "title": "T.C. Resmî Gazete",
+     "url": "https://resmigazete.gov.tr/%C2%A0"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 2,
+     "snippet": "T.C. Resmî Gazete\n...\n###### 30 Ekim 2026 Tarihli ve 33415 Sayılı Resmî Gazete\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.",
+     "title": "T.C. Resmî Gazete",
+     "url": "https://www.resmigazete.gov.tr/Kanunlar.aspx"
+    },
+    {
+     "date": "",
+     "host": "resmigazete.gov.tr",
+     "rank": 3,
+     "snippet": "T.C. Resmî Gazete\n...\n###### 01 Kasım 2026 Tarihli ve 33417 Sayılı Resmî Gazete\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.",
+     "title": "Resmi gazete.",
+     "url": "https://resmigazete.gov.tr/.,"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 4,
+     "snippet": "T.C. Resmî Gazete\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.\n...\nHukuk ve Mevzuat Genel Müdürlüğü 06560 Beştepe / Ankara",
+     "title": "https://www.resmigazete.gov.tr/01.01.2026",
+     "url": "https://www.resmigazete.gov.tr/01.01.2026"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 5,
+     "snippet": "T.C. Resmî Gazete\n...\n###### 02 Kasım 2026 Tarihli ve 33418 Sayılı Resmî Gazete\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.",
+     "title": "T.C. Resmî Gazete",
+     "url": "https://www.resmigazete.gov.tr/%E3%80%82%E3%80%8A"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Turkiye supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "kyb.uyap.gov.tr",
+     "rank": 1,
+     "snippet": "Emsal Karar Arama\nfalse\n...\nAdet Karar Mevcuttur.\nYıllara göre karar sayılarını görüntülemek için tıklayınız.\n2022 © Adalet\nBakanlığı Bilgi İşlem Genel Müdürlüğü",
+     "title": "Emsal Karar Arama",
+     "url": "https://kyb.uyap.gov.tr/"
+    },
+    {
+     "date": "",
+     "host": "www.yargitay.gov.tr",
+     "rank": 2,
+     "snippet": "Yargıtay - İnternet sayfasından Emsal Karar Arama nasıl yapılır?\n…\nArama neticesinde ekranın alt tarafında görüntülenen sonuçlardan istenilen karar üzerine tıklanarak tüm karar metnine erişilebilir.",
+     "title": "www.yargitay.gov.tr · sayfa · internet-sayfasindan-emsal-kararİnternet sayfasından Emsal Karar Arama nasıl yapılır?",
+     "url": "https://www.yargitay.gov.tr/sayfa/internet-sayfasindan-emsal-karar-arama-nasil-yapilir/71"
+    },
+    {
+     "date": "2026-01-13",
+     "host": "pmc.ncbi.nlm.nih.gov",
+     "rank": 3,
+     "snippet": "All data were obtained from the official website of the Turkish Supreme Court (https://karararama.yargitay.gov.tr/, accessed on 1 November 2025), which provides unrestricted public access to approximately nine million judicial decisions.\nNo login, registration, or special permissions are required to",
+     "title": "Fifteen Years of Orthopedic Malpractice Litigation in Türkiye - PMC",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12842310/"
+    },
+    {
+     "date": "",
+     "host": "mevzuat.adalet.gov.tr",
+     "rank": 4,
+     "snippet": "UYAP Mevzuat ve İçtihat Programı\n# Mevzuat, İçtihat Ara\nMevzuat\nDetaylı Sorgulama\n...\nYargıtay Kararları\n0 kayıt",
+     "title": "UYAP Mevzuat ve İçtihat Programı",
+     "url": "https://mevzuat.adalet.gov.tr/"
+    },
+    {
+     "date": "",
+     "host": "vatandasilam.yargitay.gov.tr",
+     "rank": 5,
+     "snippet": "|Dosya Ayrıntı Bilgileri|Dosya Ayrıntı Bilgileri|Dosya Ayrıntı Bilgileri|",
+     "title": "Yargıtay Dosya Sorgu - Dosya Ayrıntı Bilgileri",
+     "url": "https://vatandasilam.yargitay.gov.tr/proxyYargitay/jsp/yargitay_jsp/yargitayDosyaKapaliDetay.html?dosyaID="
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Turkiye state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 1,
+     "snippet": "T.C. Resmî Gazete\nPDF Görüntüle\n…\n...\nb - Artırma, Eksiltme ve İhale İlânları\n...\nT.C. Cumhurbaşkanlığı Genel Sekreterliği Hukuk ve Mevzuat Genel Müdürlüğü",
+     "title": "Resmi Gazete",
+     "url": "https://www.resmigazete.gov.tr/"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 2,
+     "snippet": "T.C. Resmî Gazete\nPDF Görüntüle\n...\n–– Ankara Yıldırım Beyazıt Üniversitesi Ön Lisans ve Lisans Eğitim-Öğretim Yönetmeliğinde Değişiklik Yapılmasına Dair Yönetmelik\n...\nT.C. Cumhurbaşkanlığı Külliyesi",
+     "title": "https://www.resmigazete.gov.tr/arama.aspx",
+     "url": "https://www.resmigazete.gov.tr/arama.aspx"
+    },
+    {
+     "date": "2004-01-01",
+     "host": "www.mevzuat.gov.tr",
+     "rank": 3,
+     "snippet": "*Bugün güncellenen mevzuat bulunmamaktadır.*\n...\nKanunun tüm değişikliklerinin işlendiği güncel metne ulaşılmak istenirse, *Mevzuat Türü* bölümünün altındaki *Kanunlar* butonundan arama yapılması gerekmektedir.",
+     "title": "Mevzuat Bilgi Sistemi",
+     "url": "https://www.mevzuat.gov.tr/"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 4,
+     "snippet": "T.C. Resmî Gazete\nPDF Görüntüle\n…\n...\nb - Artırma, Eksiltme ve İhale İlânları\n...\nT.C. Cumhurbaşkanlığı Genel Sekreterliği Hukuk ve Mevzuat Genel Müdürlüğü",
+     "title": "www.resmigazete.gov.tr › siteT.C. Resmî Gazete",
+     "url": "https://www.resmigazete.gov.tr/site.html"
+    },
+    {
+     "date": "",
+     "host": "www.tbmm.gov.tr",
+     "rank": 5,
+     "snippet": "KANUN VE KARAR BİLGİ SİSTEMİ\nKanunlar ile kararlara detaylı bilgi ve metinlerle aşağıdaki linkten ulaşabilirsiniz.\n…\n“HTML” uzantılı dosya şeklinde aşağıdaki linkten ulaşabilirsiniz.",
+     "title": "TÜRKİYE BÜYÜK MİLLET MECLİSİ - TBMM",
+     "url": "https://www.tbmm.gov.tr/kanun-ve-karar-bilgi-sistemi"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Turkiye municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.belediye.gov.tr",
+     "rank": 1,
+     "snippet": "# Duyurular\ne-Belediye ile ilgili duyurular\n...\n# Modüller\ne-Belediye Bilgi Sistemi Projesi toplamda 63 adet modülden oluşmaktadır.",
+     "title": "T.C. İçişleri Bakanlığı e-Belediye Bilgi Sistemi",
+     "url": "https://www.belediye.gov.tr/"
+    },
+    {
+     "date": "2004-01-01",
+     "host": "www.mevzuat.gov.tr",
+     "rank": 2,
+     "snippet": "KANUNLAR FİHRİSTİ*\n…\n* *Kanunlar Fihristinde* yapılan aramada çıkan Kanunun Resmî Gazete tarihi veya sayısına tıklandığında yayımlandığı günün Resmî Gazetesine gider.",
+     "title": "Mevzuat Bilgi Sistemi",
+     "url": "https://www.mevzuat.gov.tr/"
+    },
+    {
+     "date": "2026-11-01",
+     "host": "www.turkiye.gov.tr",
+     "rank": 3,
+     "snippet": "Muhtemelen JavaScript devre dışı veya tarayıcınız JavaScript'i desteklemiyor.\n- Arama kutusuna bir şehir ismi gibi sorgular girerek,doğrudan ilgili hizmete ulaşabilirsiniz.\n...\nToplam 25 kayıt bulunmuştur.\n...\n…",
+     "title": "İmar Durum Bilgisi Sorgulama",
+     "url": "https://www.turkiye.gov.tr/arama?aranan=%C4%B0mar%20Durum%20Bilgisi%20Sorgulama"
+    },
+    {
+     "date": "2021-07-13",
+     "host": "www.tbb.gov.tr",
+     "rank": 4,
+     "snippet": "# Kanunlar ve Uluslararası Anlaşmalar\n...\n5393 sayılı Beledı̇ye Kanunu\n5216 sayılı Büyükşehir Beledı̇yesı̇ Kanunu\n5355 sayılı Mahallî İdare Birlikleri Kanunu\n...\ntbb@tbb.gov.tr",
+     "title": "Kanunlar ve Uluslararası Anlaşmalar | Türkiye Belediyeler Birliği",
+     "url": "https://www.tbb.gov.tr/tr/kanunlar-ve-uluslararasi-anlasmalar"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 5,
+     "snippet": "T.C. Resmî Gazete\nPDF Görüntüle\n...\nT.C. Cumhurbaşkanlığı Külliyesi\nHukuk ve Mevzuat Genel Müdürlüğü 06560 Beştepe / Ankara\n- 0 (312) 525 3427",
+     "title": "Resmi Gazete",
+     "url": "https://www.resmigazete.gov.tr/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Turkiye regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 1,
+     "snippet": "T.C. Resmî Gazete\nPDF Görüntüle\n...\nResmî Gazete’nin 07.02.1921 tarihinden itibaren yayımlanan tüm sayılarına erişebilirsiniz.\nYÜRÜTME VE İDARE BÖLÜMÜ",
+     "title": "Resmi Gazete",
+     "url": "https://www.resmigazete.gov.tr/"
+    },
+    {
+     "date": "2026-10-22",
+     "host": "www.state.gov",
+     "rank": 2,
+     "snippet": "Important regulators in Türkiye include the:\n- Competition Authority (Rekabet Kurumu)\n- Excessive Pricing Evaluation Board\n- Energy Market Regulation Authority\n…\n...\nThe Competition Authority (Rekabet Kurumu) is the sole authority on competition issues in Türkiye and handles private sector transacti",
+     "title": "Türkiye - United States Department of State",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/turkiye"
+    },
+    {
+     "date": "2004-01-01",
+     "host": "www.mevzuat.gov.tr",
+     "rank": 3,
+     "snippet": "CUMHURBAŞKANLIĞI VE BAKANLAR KURULU YÖNETMELİKLERİ\nCUMHURBAŞKANI KARARLARI\nCUMHURBAŞKANLIĞI GENELGELERİ\n…\n...\n…",
+     "title": "Mevzuat Bilgi Sistemi",
+     "url": "https://www.mevzuat.gov.tr/"
+    },
+    {
+     "date": "",
+     "host": "ticaret.gov.tr",
+     "rank": 4,
+     "snippet": "T.C. Ticaret Bakanlığı\n…\n# T.C. Ticaret Bakanlığı\n## Mevzuat\n13 Mayıs 2026\n**6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun**",
+     "title": "Mevzuat",
+     "url": "https://ticaret.gov.tr/ic-ticaret/elektronik-ticaret/mevzuat"
+    },
+    {
+     "date": "",
+     "host": "www.state.gov",
+     "rank": 5,
+     "snippet": "Important regulators in Türkiye include the: \n• Competition Authority (Rekabet Kurumu) \n• Excessive Pricing Evaluation Board \n• Energy Market Regulation Authority \n• Banking Regulation and Supervision Authority \n• Information and Communication Technologies Authority \n• Privatization Administration \n",
+     "title": "2026 Türkiye Investment Climate Statement - U.S. Department ...",
+     "url": "https://www.state.gov/wp-content/uploads/2026/09/701264_2026-Turkiye-Investment-Climate-Statement.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Turkiye national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "intweb.tse.org.tr",
+     "rank": 1,
+     "snippet": "|Standard Arama|Standard Arama|\n...\nÖrnek: kablo+elektrik </td></tr><tr><td colspan=\"4\"> Ara </td></tr></table> ECE R dokümanlarının satışı Türk Standardları Enstitüsü tarafından yapılmamaktadır.",
+     "title": "Request Rejected",
+     "url": "https://intweb.tse.org.tr/Standard/Standard/StandardAra.aspx"
+    },
+    {
+     "date": "",
+     "host": "basvuruportal.tse.org.tr",
+     "rank": 2,
+     "snippet": "Türk Standardları Enstitüsü - Online Sorgulamalar\n#### Helal Sorgulama",
+     "title": "Türk Standardları Enstitüsü - Online Sorgulamalar",
+     "url": "https://basvuruportal.tse.org.tr/Genel/BelgeListesi.aspx?ID=5e2c342e-5788-4419-a40e-6a70b8657c52&FirmaAdi=G%C3%96ZDE%20ELEKTRON%C4%B0K-OSMAN%20H%C3%9CY%C3%9CK&BelgeUN=5f7f9e8b-9644-45e5-a97e-286e4fa7d263&BelgeTuruID=11&BelgeDurum=Y%C3%9CR%C3%9CRL%C3%9CKTE"
+    },
+    {
+     "date": "",
+     "host": "intweb.tse.org.tr",
+     "rank": 3,
+     "snippet": "|Standard Detayı|Standard Detayı|\n|--|--|",
+     "title": "Standard Detayı",
+     "url": "https://intweb.tse.org.tr/standard/standard/Standard.aspx"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.turkiye.gov.tr",
+     "rank": 4,
+     "snippet": "Toplam 1 kayıt bulunmuştur.\n- Türk Standardları Enstitüsü/Türk Standardı Arama ve Satışıhttp://intweb.tse.org.tr/standard/standard/standardara.aspx",
+     "title": "Arama - e-Devlet Kapısı",
+     "url": "https://www.turkiye.gov.tr/arama?aranan=TSE%20Standard%20Arama"
+    },
+    {
+     "date": "2019-12-20",
+     "host": "www.trade.gov",
+     "rank": 5,
+     "snippet": "The Turkish Standards Institution (TSE) is the national body responsible for standards and conformity assessments.\n...\nTSE, founded in 1960, is the sole authorized body for standardization in Türkiye.\n...\n06100 Bakanliklar\nAnkara, Türkiye\n...\nhttps://en.tse.org.tr",
+     "title": "Turkey - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/turkey-standards-trade"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Turkiye mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ticaret.gov.tr",
+     "rank": 1,
+     "snippet": "T.C. Ticaret Bakanlığı\n...\n# T.C. Ticaret Bakanlığı\n## Türkiye Ürün Kuralları Veritabanı\n7223 sayılı Kanunun amacı;\n…",
+     "title": "Türkiye Ürün Kuralları Veritabanı",
+     "url": "https://ticaret.gov.tr/urun-guvenligi/turkiye-urun-kurallari-veritabani"
+    },
+    {
+     "date": "",
+     "host": "www.ticaret.gov.tr",
+     "rank": 2,
+     "snippet": "…\n...\n- Teknik Mevzuatın ve Standartların Türkiye ile Avrupa Birliği arasında Bildirimine dair Yönetmelik\n- Uzaktan İletişim Araçları Yoluyla Piyasaya Arz Edilen Ürünlerin Piyasa Gözetimi ve Denetimi Yönetmeliği",
+     "title": "Ürün Güvenliği Çatı Mevzuatı (Kanun ve Uygulama Yönetmelikleri)",
+     "url": "https://www.ticaret.gov.tr/urun-guvenligi/ab-teknik-mevzuat-uyumu/urun-guvenligi-cati-mevzuati-kanun-ve-uygulama-yonetmelikleri"
+    },
+    {
+     "date": "",
+     "host": "www.resmigazete.gov.tr",
+     "rank": 3,
+     "snippet": "(ÜRÜN GÜVENLİĞİ\nVE DENETİMİ: 2023/25)\n...\nkapsam\n...\n…\n...\nMADDE 16- (1) Bu Tebliğ 1/1/2023 tarihinde yürürlüğe girer.\nYürütme",
+     "title": "Araç Parçalarının İthalat Denetimi Tebliği",
+     "url": "https://www.resmigazete.gov.tr/eskiler/2022/12/20221231M4-22.htm"
+    },
+    {
+     "date": "",
+     "host": "ticaret.gov.tr",
+     "rank": 4,
+     "snippet": "Bahse konu denetimlere ilişkin usul ve esaslar Bakanlığımızca belirlenmekte, denetimler ise Türk Standardları Enstitüsü eliyle yürütülmektedir.\nDenetim rehberine ulaşmak için tıklayınız.|",
+     "title": "İthalatta Denetimi Gerçekleştirilen Ürün Grupları",
+     "url": "https://ticaret.gov.tr/urun-guvenligi/ithalatta-urun-guvenligi-denetimleri/ithalatta-denetimi-gerceklestirilen-urun-gruplari"
+    },
+    {
+     "date": "2026-03-26",
+     "host": "btk.gov.tr",
+     "rank": 5,
+     "snippet": "Within the scope of the Electronic Communications Law No. 5809, the list of Harmonized European Standards and related Harmonized National Standards prepared by our Institution is updated and published in line with the standards published in the EU Official Journal.\n...\n1. Product Safety,\n2. Free Mov",
+     "title": "Düzenleme ve Standartlar",
+     "url": "https://btk.gov.tr/duzenleme-ve-standartlar"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Turkiye national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.tuik.gov.tr",
+     "rank": 1,
+     "snippet": "Türkiye İstatistik Kurumu (TÜİK)\n- ### İnsan Kaynakları\nDevlet Mah.\nNecatibey Cad.\nNo:114 06420 Çankaya/Ankara\n**0312 454 70 00**\nty.tuik.gov.tr",
+     "title": "Türkiye İstatistik Kurumu (TÜİK)",
+     "url": "https://www.tuik.gov.tr/"
+    },
+    {
+     "date": "",
+     "host": "cip.tuik.gov.tr",
+     "rank": 2,
+     "snippet": "TÜİK - Coğrafi İstatistik Portalı\n...\nCOĞRAFİ İSTATİSTİK PORTALI",
+     "title": "TÜİK",
+     "url": "https://cip.tuik.gov.tr/"
+    },
+    {
+     "date": "",
+     "host": "veriportali.tuik.gov.tr",
+     "rank": 3,
+     "snippet": "Kurumun ana dağıtım kanalı web sitesidir.\nhttps://tuik.gov.tr\n...\n…\n...\n…\nAyrıntılı bilgiye \nTÜİK web sitesinden (www.tuik.gov.tr) ulaşabilirsiniz.\nTürkiye İstatistik Kurumu\nDevlet Mah.",
+     "title": "[PDF] BİLGİ VE VERİLERE ERİŞİM - TÜİK",
+     "url": "https://veriportali.tuik.gov.tr/api/tr/data/downloads?t=y&p=mrqxJSWbKAyMIAlWf1dYLH25nijDg7NZugTyTZEBBNqDNzXLIALDCLC0yjEiT9Wf5SZ4honPAjgReS8Fj7rIQg=="
+    },
+    {
+     "date": "",
+     "host": "www.oicstatcom.org",
+     "rank": 4,
+     "snippet": "OIC Statistical Commission\n|\n...\nNo: 114, Ankara, Republic of Türkiye</td></tr><tr><td>Telephone : </td><td>(+90) 312 425 35 14;",
+     "title": "Türkiye",
+     "url": "https://www.oicstatcom.org/databases-nso-detail.php?c_code=1"
+    },
+    {
+     "date": "2021-12-24",
+     "host": "www.tuik.gov.tr",
+     "rank": 5,
+     "snippet": "Türkiye İstatistik Kurumu (TÜİK)\n- Devlet Mah.\nNecatibey Cad.\nNo:114 06420 Çankaya/Ankara\n**0312 454 70 00**",
+     "title": "Türkiye İstatistik Kurumu ne iş yapmaktadır?",
+     "url": "https://www.tuik.gov.tr/Kurumsal/Sikca_Sorulan_Sorular"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Turkiye central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.tcmb.gov.tr",
+     "rank": 1,
+     "snippet": "TCMB - Veriler\nMerkez Bankasının temel amacı **fiyat istikrarını** sağlamaktır.\n...\n# Veriler\nSektörel Enflasyon Beklentileri (Ekim 2026)\n...\nHaftalık Akım Faiz ve Kâr Payı İstatistikleri",
+     "title": "TCMB - Veriler",
+     "url": "https://www.tcmb.gov.tr/wps/wcm/connect/tr/tcmb%20tr/main%20page%20site%20area/veriler"
+    },
+    {
+     "date": "2026-09-28",
+     "host": "www.tcmb.gov.tr",
+     "rank": 2,
+     "snippet": "TCMB\nMerkez Bankasının temel amacı **fiyat istikrarını** sağlamaktır.\n...\n# Başkanımız Dr. Fatih Karahan’ın “Enflasyon ve Makroekonomik Görünüm” Başlıklı Sunumu\n2025 Yılı Yıllık Faaliyet Raporu",
+     "title": "TCMB",
+     "url": "https://www.tcmb.gov.tr/"
+    },
+    {
+     "date": "",
+     "host": "www.tcmb.gov.tr",
+     "rank": 3,
+     "snippet": "# Data\nBIS-Locational and Consolidated Banking Statistics (2026 Q2)\n...\nFinancial Services Statistics and Financial Services Confidence Index (October 2026)\n23.10.2026\nSectoral Inflation Expectations (October 2026)\n...\nHousehold Expectations Survey (October 2026)",
+     "title": "TCMB - Data - Türkiye Cumhuriyet Merkez Bankası",
+     "url": "https://www.tcmb.gov.tr/wps/wcm/connect/en/tcmb%20en/main%20page%20site%20area/data"
+    },
+    {
+     "date": "",
+     "host": "tcmb.gov.tr",
+     "rank": 4,
+     "snippet": "TCMB - Monetary and Financial Statistics\n...\nOn this page, you can access money, banking, finance and securities statistics for the banking and financial sector prepared by the Central Bank in accordance with international standards.\n...\nThis page also features the “Foreign Exchange Assets and Liabi",
+     "title": "Monetary and Financial Statistics",
+     "url": "https://tcmb.gov.tr/wps/wcm/connect/EN/TCMB+EN/Main+Menu/Statistics/Monetary+and+Financial+Statistics"
+    },
+    {
+     "date": "",
+     "host": "www.tcmb.gov.tr",
+     "rank": 5,
+     "snippet": "TCMB - Consumer Prices\n...\nAna Sayfa Main Menu Statistics Inflation Data Consumer Prices\n# Consumer Prices\nMonthly and annual inflation rates announced by the Turkish Statistical Institute (TURKSTAT) are listed below.\n...\n## Central Bank of the Republic of Türkiye Head Office\n...\nİstiklal Cad.",
+     "title": "Consumer Prices - TCMB",
+     "url": "https://www.tcmb.gov.tr/wps/wcm/connect/EN/TCMB+EN/Main+Menu/Statistics/Inflation+Data/Consumer+Prices"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Turkiye government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "thedocs.worldbank.org",
+     "rank": 1,
+     "snippet": "**OPEN DATA PORTAL**\n...\nWithin the scope of the \\\"Open Data Project\\\", it is aimed to create value from data by developing artificial\n...\nThe portal studies are completed and it is in the piloting stage: <https://veri.gov.tr/>\nDeveloping artificial intelligence and innovative technologies require d",
+     "title": "[DOC] Turkey-GTMI-Central-Survey-OpenDataPortal-I-29.docx",
+     "url": "https://thedocs.worldbank.org/en/doc/fea305a4f2c258c4aed8255c31c93f6a-0460012022/original/Turkey-GTMI-Central-Survey-OpenDataPortal-I-29.docx"
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 2,
+     "snippet": "- **Open data portals**\n19\n...\n|`cdi00004196`|TÜİK Açık Veri Kataloğu (evam.tuik.gov.tr)|No|–|Microdata catalog|Central government|Custom software|",
+     "title": "Turkey data catalogs",
+     "url": "https://dateno.io/registry/country/TR/"
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 3,
+     "snippet": "…\n# Republic of TÜRKIYE Ministry of Health Open Data Portal\nOpen data portal of the Turkish Ministry of Health, providing health-related datasets for preview, download, and project use.\n...\n|--|--|\n|Link|https://acikveri.saglik.gov.tr|",
+     "title": "Republic of TÜRKIYE Ministry of Health Open Data Portal",
+     "url": "https://dateno.io/registry/catalog/cdi00004694/"
+    },
+    {
+     "date": "",
+     "host": "data.ibb.gov.tr",
+     "rank": 4,
+     "snippet": "Telephone: 0212 449 44 05\nYou can contact us at https://data.ibb.gov.tr/contact.\nOnce you are a member of the IMM Open Data Portal, you can submit your data request to us at https://data.ibb.gov.tr/tr/datarequest/new.",
+     "title": "Frequently Asked Questions",
+     "url": "https://data.ibb.gov.tr/en/faq"
+    },
+    {
+     "date": "",
+     "host": "kamu.turkiye.gov.tr",
+     "rank": 5,
+     "snippet": "## Kamu Uygulamaları Merkezi'ne Hoş Geldiniz..\nKamu Uygulamaları Merkezi, resmi kurumların veri paylaşımı yapabileceği, diğer kurumlara hizmet sunabileceği ve hizmetlerine ait istatistiksel bilgilere erişebileceği bir platformdur.",
+     "title": "Kamu Uygulama Merkezi - e-Devlet Kapısı",
+     "url": "https://kamu.turkiye.gov.tr/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:26:56Z",
+ "pais": {
+  "iso2": "TR",
+  "iso3": "TUR",
+  "nombre": "Turkiye"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

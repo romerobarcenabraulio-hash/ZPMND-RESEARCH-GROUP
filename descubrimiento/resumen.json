@@ -1,0 +1,50 @@
+{
+ "datos/banco_central": {
+  "buscados": 193,
+  "con_candidato_accesible": 40
+ },
+ "datos/datos_abiertos": {
+  "buscados": 193,
+  "con_candidato_accesible": 42
+ },
+ "datos/estadistica": {
+  "buscados": 193,
+  "con_candidato_accesible": 41
+ },
+ "estandares/catalogo": {
+  "buscados": 193,
+  "con_candidato_accesible": 40
+ },
+ "estandares/obligatorias": {
+  "buscados": 193,
+  "con_candidato_accesible": 41
+ },
+ "ley/diario": {
+  "buscados": 193,
+  "con_candidato_accesible": 37
+ },
+ "ley/estatal": {
+  "buscados": 193,
+  "con_candidato_accesible": 40
+ },
+ "ley/jurisprudencia": {
+  "buscados": 193,
+  "con_candidato_accesible": 39
+ },
+ "ley/leyes": {
+  "buscados": 193,
+  "con_candidato_accesible": 41
+ },
+ "ley/municipal": {
+  "buscados": 193,
+  "con_candidato_accesible": 42
+ },
+ "ley/reglamentos": {
+  "buscados": 193,
+  "con_candidato_accesible": 40
+ },
+ "ley/sectorial": {
+  "buscados": 193,
+  "con_candidato_accesible": 35
+ }
+}

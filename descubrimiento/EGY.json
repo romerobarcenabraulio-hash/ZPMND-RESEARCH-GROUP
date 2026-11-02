@@ -1,0 +1,581 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Egypt constitution and national laws official legal database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "elpai.idsc.gov.eg",
+     "rank": 1,
+     "snippet": "قم بالبحث والاطلاع على المعلومات القانونية فى مختلف النواحي من خلال البوابة القانونية الالكترونية\nالباحث المساعد الذكى\nالمنصة الاعلامية\n...\nتضم البوابة القانونية العديد من الخدمات الهامة للعاملين بمجال التشريعات\n...\nالتشريعات",
+     "title": "الـبـوابـة الـقـانـونية للتشريعات المصرية",
+     "url": "https://elpai.idsc.gov.eg/"
+    },
+    {
+     "date": "2025-11-24",
+     "host": "register.cc.gov.eg",
+     "rank": 2,
+     "snippet": "قاعدة بيانات شاملة للتشريعات والقوانين المصرية مع تتبع التعديلات\nجميع التشريعات المنشورة في الجريدة الرسمية\n...\nالقوانين الأساسية والدستور\nالمعاهدات والاتفاقيات الدولية\n...\nعرض شامل لجميع التشريعات مع إمكانية الفلترة والبحث المتقدم",
+     "title": "بوابة التشريعات المصرية",
+     "url": "https://register.cc.gov.eg/legislations"
+    },
+    {
+     "date": "",
+     "host": "elpai.idsc.gov.eg",
+     "rank": 3,
+     "snippet": "اتصل بنا\nالقاعدة القومية للتشريعات المصرية.\nEgyptian Legislation Portal (ELP)\n02-27921487 / 02-27929898\n14 شارع السرايا الكبرى - جاردن سيتي - محافظة القاهرة\nelp@idsc.net.eg\n...\nالتالي",
+     "title": "بحث فى قاعدة التشريعات",
+     "url": "https://elpai.idsc.gov.eg/GeneralSearch/LegalDatabases?tab=legislation"
+    },
+    {
+     "date": "2020-01-08",
+     "host": "n-lex.europa.eu",
+     "rank": 4,
+     "snippet": "…\n...\nAll laws are available in .pdf format, in their official form as they were published in the Official Gazette.\nLaws date back to 1993 and, can be accessed on a yearly basis, on the basis of the subject matter or with the help of a search engine.",
+     "title": "Legislative websites of non-EU countries - N-Lex",
+     "url": "https://n-lex.europa.eu/n-lex/related_links/related_links"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Egypt national regulations decrees official government database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2025-11-01",
+     "host": "register.cc.gov.eg",
+     "rank": 1,
+     "snippet": "جميع التشريعات\nقاعدة بيانات شاملة للتشريعات المصرية\nالبحث والفلترة\nالبحث في النص\n...\n🔍 بحث وتطبيق الفلاتر\nمسح الفلاتر\n161,318\nتشريع\nعرض 151 - 180 من 161,318\n...\n0",
+     "title": "جميع التشريعات",
+     "url": "https://register.cc.gov.eg/legislations/all?page=6"
+    },
+    {
+     "date": "",
+     "host": "fra.gov.eg",
+     "rank": 2,
+     "snippet": "# Index of /wp-content/uploads/2025/02\n|قرار-مجلس-ادارة-رقم-227-لسنة-2024.pdf|2025-02-09 11:34|614K| |\n...\n|قواعد-",
+     "title": "Index of /wp-content/uploads/2025/02",
+     "url": "https://fra.gov.eg/wp-content/uploads/2025/02/"
+    },
+    {
+     "date": "2025-08-24",
+     "host": "register.cc.gov.eg",
+     "rank": 3,
+     "snippet": "# القرارات الوزارية\nقرارات الوزراء والوزارات\n67674\nإجمالي التشريعات\n1\n...\nعرض 361 - 390 من 67674 تشريع\n...\n816/2025وزارة الإسكان والمرافق والمجتمعات العمرانية\n...\n📅 2025-08-24",
+     "title": "محكمة النقض المصرية",
+     "url": "https://register.cc.gov.eg/legislations/ministerial-decrees?page=13"
+    },
+    {
+     "date": "",
+     "host": "www.moss.gov.eg",
+     "rank": 4,
+     "snippet": "- القوانين والتشريعات\n### القوانين والتشريعات\n|اسم القانون|التصنيف|تاريخ القانون|تحميل الملف|\n|--|--|--|--|\n...\n|تعديل قانون الطفل 7 لسنة 2015|قانون الطفل|2015| |",
+     "title": "القوانين والتشريعات",
+     "url": "https://www.moss.gov.eg/%D8%A7%D9%84%D8%A7%D8%B5%D8%AF%D8%A7%D8%B1%D8%A7%D8%AA/%D8%A7%D9%84%D9%82%D9%88%D8%A7%D9%86%D9%8A%D9%86-%D9%88%D8%A7%D9%84%D8%AA%D8%B4%D8%B1%D9%8A%D8%B9%D8%A7%D8%AA/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Egypt official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2014-01-01",
+     "host": "www.loc.gov",
+     "rank": 1,
+     "snippet": "- The Arab Republic of Egypt Presidency's Official Gazette; v.\n38/ no. 40\n...\n- Official title: al-Jarīdah al-rasmīyah; Jumhūrīyat Miṣr al-ʻArabīyah, Riyāsat al-Jumhūrīyah.",
+     "title": "The Arab Republic of Egypt Presidency's Official Gazette; v. 38/ no. 40",
+     "url": "https://www.loc.gov/resource/llegypt.eg19951005_00/"
+    },
+    {
+     "date": "2024-11-10",
+     "host": "register.cc.gov.eg",
+     "rank": 2,
+     "snippet": "# الجريدة الرسمية\nجميع التشريعات المنشورة في الجريدة الرسمية\n40864\nإجمالي التشريعات\n20\nمعدلة\n9\nآخر سنة\n1\nأقدم سنة\nعرض 901 - 930 من 40864 تشريع\nتم تحديد 0 تشريع",
+     "title": "محكمة النقض المصرية",
+     "url": "https://register.cc.gov.eg/legislations/official-gazette?page=31"
+    },
+    {
+     "date": "2021-10-27",
+     "host": "www.loc.gov",
+     "rank": 3,
+     "snippet": "# Periodical The Arab Republic of Egypt Presidency's Official Gazette; v .36/ no. 4 Official title: al-Jarīdah al-rasmīyah; Jumhūrīyat Miṣr al-ʻArabīyah, Riyāsat al-Jumhūrīyah.",
+     "title": "The Arab Republic of Egypt Presidency's Official Gazette; v .36/ no. 4",
+     "url": "https://www.loc.gov/item/eg19930128_00"
+    },
+    {
+     "date": "",
+     "host": "www.edaegypt.gov.eg",
+     "rank": 4,
+     "snippet": "(Article Two)\n(Article Two)\nThis decree shall be published in the Egyptian Official Gazette and shall come into effect from the day following the date of its publication.\n...\nIssued on\n...\n1 \n•Published in the Egyptian Gazette, Issue No. (379), issued on 4 August 2026",
+     "title": "صـــورة إلكتــرونــيــــة",
+     "url": "https://www.edaegypt.gov.eg/media/grxfjsxb/379-2026-e-n.pdf"
+    },
+    {
+     "date": "2021-10-27",
+     "host": "www.loc.gov",
+     "rank": 5,
+     "snippet": "## About this Item\n### Title\n- The Arab Republic of Egypt Presidency's Official Gazette; v.\n34/ no. 1 (cont.)\n...\n### Created / Published\n- Egypt, January 5, 1991",
+     "title": "The Arab Republic of Egypt Presidency's Official Gazette; v. 34/ no. 1 (cont.)",
+     "url": "https://www.loc.gov/item/eg19910103_01/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Egypt supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2023-09-02",
+     "host": "cc.gov.eg",
+     "rank": 1,
+     "snippet": "### \"دعوة السادة القضاة وأعضاء النيابة العامة إلى التسجيل الرقمي في موقع مجلس القضاء الأعلى\"\n...\n### \" محكمة النقض تُتيح الاستعلام عن الطعون المدنية والجنائية عبر بوابة مصر الرقمية في خطوة جديدة نحو ترسيخ العدالة الرقمية \"\nمنذ شهرين",
+     "title": "محكمة النقض المصرية: الرئيسية - محكمة النقض",
+     "url": "https://cc.gov.eg/"
+    },
+    {
+     "date": "2023-09-02",
+     "host": "www.cc.gov.eg",
+     "rank": 2,
+     "snippet": "# البحث في أحكام محكمة النقض\nاختر نوع الأحكام التي تريد البحث فيها — اختصاص مدني بفروعه المتعدّدة، أو اختصاص جنائي بدوائره المختلفة.\n...\nبحث دقيق بمعايير مركّبة (الكلمات، السنوات، الدوائر…)",
+     "title": "محكمة النقض المصرية",
+     "url": "https://www.cc.gov.eg/judgments_search"
+    },
+    {
+     "date": "",
+     "host": "moj.gov.eg",
+     "rank": 3,
+     "snippet": "جمهورية مصر العربية\nوزارة العدل\n...\nEnglish\n...\nالرئيسية",
+     "title": "الاستعلام عن موقف دعوى",
+     "url": "https://moj.gov.eg/services/courts/10050004"
+    },
+    {
+     "date": "",
+     "host": "moj.gov.eg",
+     "rank": 4,
+     "snippet": "جمهورية مصر العربية\nوزارة العدل\nعربي\nعربي\nEnglish\nFrançais\nالرئيسية\nالاستعلام عن رول دعوى\nالدرجة\nاختر\n...\nالمحكمة\n...\nنوع الدعوى",
+     "title": "الاستعلام عن رول دعوى",
+     "url": "https://moj.gov.eg/services/courts/10050002"
+    },
+    {
+     "date": "2023-09-02",
+     "host": "cc.gov.eg",
+     "rank": 5,
+     "snippet": "# المكتبة القانونية التراثية\nتراث القضاء المصري في بداياته منذ عام ١٨٩٩ — مصوَّرًا صفحةً صفحة، مع فهارس للأحكام والمنشورات تتيح البحث في المحاكم والموضوعات ومواد القوانين والمبادئ المستخلصة.",
+     "title": "المكتبة القانونية التراثية - محكمة النقض المصرية",
+     "url": "https://cc.gov.eg/heritage"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Egypt state or provincial legislation official portal",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2025-11-01",
+     "host": "register.cc.gov.eg",
+     "rank": 1,
+     "snippet": "جميع التشريعات\nقاعدة بيانات شاملة للتشريعات المصرية\n...\n🔍 بحث وتطبيق الفلاتر\nمسح الفلاتر\n...\nتشريع\n...\n1598/2025\nمحافظة المنوفية\nباعتماد محضر اللجنة العليا للتخطيط العمرانى رقم (160)",
+     "title": "جميع التشريعات",
+     "url": "https://register.cc.gov.eg/legislations/all?page=6"
+    },
+    {
+     "date": "2025-10-06",
+     "host": "register.cc.gov.eg",
+     "rank": 2,
+     "snippet": "# الجريدة الرسمية\nجميع التشريعات المنشورة في الجريدة الرسمية\n40877\n...\nعرض 91 - 120 من 40877 تشريع",
+     "title": "محكمة النقض المصرية",
+     "url": "https://register.cc.gov.eg/legislations/official-gazette?page=4"
+    },
+    {
+     "date": "2025-11-24",
+     "host": "register.cc.gov.eg",
+     "rank": 3,
+     "snippet": "قاعدة بيانات شاملة للتشريعات والقوانين المصرية مع تتبع التعديلات\nجميع التشريعات المنشورة في الجريدة الرسمية\nالتشريعات المنشورة في الوقائع المصرية\n...\nعرض شامل لجميع التشريعات مع إمكانية الفلترة والبحث المتقدم\n...\nمحافظة سوهاج",
+     "title": "بوابة التشريعات المصرية",
+     "url": "https://register.cc.gov.eg/legislations"
+    },
+    {
+     "date": "",
+     "host": "elpai.idsc.gov.eg",
+     "rank": 4,
+     "snippet": "قم بالبحث والاطلاع على المعلومات القانونية فى مختلف النواحي من خلال البوابة القانونية الالكترونية\n...\nتضم البوابة القانونية العديد من الخدمات الهامة للعاملين بمجال التشريعات\nاعداد المستندات القانونية",
+     "title": "النشرة القانونية",
+     "url": "https://elpai.idsc.gov.eg/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Egypt municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "fra.gov.eg",
+     "rank": 1,
+     "snippet": "# Index of /wp-content/uploads/2025/02\n|قواعد-القيد-والشطب-وفقًا-لآخر-تحديث-فبراير-2025.pdf|2025-12-30 17:24|7.4M| |\n|قواعد-",
+     "title": "Index of /wp-content/uploads/2025/02",
+     "url": "https://fra.gov.eg/wp-content/uploads/2025/02/"
+    },
+    {
+     "date": "",
+     "host": "moj.gov.eg",
+     "rank": 2,
+     "snippet": "بوابة وزارة العدل المصرية\n## جمهورية مصر العربية\n...\n## موقع المحاكم\n- هذا الحقل مطلوب\n- هذا الحقل مطلوب",
+     "title": "بوابة وزارة العدل المصرية",
+     "url": "https://moj.gov.eg/"
+    },
+    {
+     "date": "2025-11-01",
+     "host": "register.cc.gov.eg",
+     "rank": 3,
+     "snippet": "جميع التشريعات\nقاعدة بيانات شاملة للتشريعات المصرية",
+     "title": "جميع التشريعات",
+     "url": "https://register.cc.gov.eg/legislations/all?page=6"
+    },
+    {
+     "date": "",
+     "host": "www.cairo.gov.eg",
+     "rank": 4,
+     "snippet": "خدمات الحي - بوابة محافظة القاهرة\n# البوابة الإلكترونية لمحافظة القاهرة\n...\n# دليل الخدمات الموحد\nموقع خارجي\n### نماذج الخدمات المحلية\n### دليل الخدمات\n### القوانين المنظمة للخدمات\n23909123",
+     "title": "خدمات الحي - بوابة محافظة القاهرة",
+     "url": "https://www.cairo.gov.eg/ar/governorate-entities/neighborhoods/services/"
+    },
+    {
+     "date": "2025-11-24",
+     "host": "register.cc.gov.eg",
+     "rank": 5,
+     "snippet": "قاعدة بيانات شاملة للتشريعات والقوانين المصرية مع تتبع التعديلات\nجميع التشريعات المنشورة في الجريدة الرسمية\nالتشريعات المنشورة في الوقائع المصرية\n...\nعرض شامل لجميع التشريعات مع إمكانية الفلترة والبحث المتقدم",
+     "title": "بوابة التشريعات المصرية",
+     "url": "https://register.cc.gov.eg/legislations"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Egypt regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.edaegypt.gov.eg",
+     "rank": 1,
+     "snippet": "### Laws and Executive Regulations\n|--|--|--|\n|Law No. 151 for Year 2019|25/08/2019|Promulgating law establishing the Egyptian Authority for UnifiedProcurement, Medical Supply and Technology Management (AUPP)and the Egyptian Drug Authority (EDA)|",
+     "title": "EDA - Laws and Executive Regulations",
+     "url": "https://www.edaegypt.gov.eg/en/the-regulatory-reference-of-the-egyptian-drug-authority-eda/laws-and-executive-regulations/"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.state.gov",
+     "rank": 2,
+     "snippet": "Based on the recommendations provided in the proposal, including recommendations by presidential advisors, the president issues “Presidential Decrees” that function as implementing regulations.\nPresidential decrees are published in the Official Gazette for enforcement.\n...\nIn 2017, EFSA became the F",
+     "title": "2025 Investment Climate Statements: Egypt",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/egypt"
+    },
+    {
+     "date": "2019-12-20",
+     "host": "www.trade.gov",
+     "rank": 3,
+     "snippet": "The Egyptian Organization for Standards and Quality (EOS) has 8,500 standards including 5,000 Egyptian technical regulations or mandatory standards.\n...\nThe EOS is affiliated with the Ministry of Industry and Transportation, and issues standards and technical regulations through a consultative proce",
+     "title": "Egypt - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/egypt-standards-trade"
+    },
+    {
+     "date": "",
+     "host": "www.edaegypt.gov.eg",
+     "rank": 4,
+     "snippet": "Law No. 151 for Year 2019\nPromulgating law establishing the Egyptian Authority for Unified\nProcurement, Medical Supply and Technology Management (AUPP) and the Egyptian Drug Authority (EDA)\n...\nBiologicals (NORCB), established pursuant to Presidential Decree No.",
+     "title": "Law No. 151 for Year 2019 - edaegypt.gov.eg",
+     "url": "https://www.edaegypt.gov.eg/media/mvfjomwa/law-151-of-2019.pdf"
+    },
+    {
+     "date": "2020-08-11",
+     "host": "fra.gov.eg",
+     "rank": 5,
+     "snippet": "About Us – الهيئة العامة للرقابة المالية\n# الهيئة العامة للرقابة المالية\n## About Us\nFRA is responsible for supervising and regulating non-banking financial markets and instruments, including Capital Market, Futures Exchanges, Insurance Activities, Mortgage Finance, Financial Leasing, Factoring, and",
+     "title": "About Us – الهيئة العامة للرقابة المالية",
+     "url": "https://fra.gov.eg/en/about-us/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Egypt national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.eos.org.eg",
+     "rank": 1,
+     "snippet": "1. Purchase and Search Egyptian Standards\n### Purchase and Search Egyptian Standards\n**Total Search Results 12906**\nStandard No. 0 / 2010\n...\nStandard No. 1 / 2023\n...\n2005-02-13\n...\nStandard No. 3-10 / 2020",
+     "title": "English",
+     "url": "https://www.eos.org.eg/en/standards"
+    },
+    {
+     "date": "",
+     "host": "www.eos.org.eg",
+     "rank": 2,
+     "snippet": "# Electronic Services\n1. ** Purchase and Search Egyptian Standards\n### Purchase and Search Egyptian Standards\n** **Total Search Results 12755**\n** Standard No. 5370 / 2019\n##### Footwear - Test methods for whole shoe - Washability in a domestic washing machine\n...\n…",
+     "title": "Electronic Services",
+     "url": "https://www.eos.org.eg/en/standardSearch?page=253"
+    },
+    {
+     "date": "",
+     "host": "eos.org.eg",
+     "rank": 3,
+     "snippet": "# Electronic Services\n### Purchase and Search Egyptian Standards\nStandard No.: 8690 / 2023\n# Requirements for the approval of l-category vehicles\nEndorsement Date:\n2023-09-04\nSector:\nEngineering\nPages Count:\n203\nObligatory Status:\nNot Obligatory\n...\nNew",
+     "title": "8690 / 2023",
+     "url": "https://eos.org.eg/en/standard/15708"
+    },
+    {
+     "date": "",
+     "host": "www.eos.org.eg",
+     "rank": 4,
+     "snippet": "1. Purchase and Search Egyptian Standards\n### Purchase and Search Egyptian Standards\n**Total Search Results 12906**\nStandard No. 0 / 2010\n...\nStandard No. 1 / 2023\n...\n2005-02-13\n...\nStandard No. 3-10 / 2020",
+     "title": "Purchase and Search Egyptian Standards",
+     "url": "https://www.eos.org.eg/en/standardSearch"
+    },
+    {
+     "date": "",
+     "host": "www.eos.org.eg",
+     "rank": 5,
+     "snippet": "# Electronic Services\n1. Purchase and Search Egyptian Standards\n### Purchase and Search Egyptian Standards\n**Total Search Results 12887**\nStandard No. 0 / 2010\n...\nStandard No. 1 / 2023\n...\n…\n...\nStandard No. 3-10 / 2020",
+     "title": "Electronic Services",
+     "url": "https://www.eos.org.eg/en/standardSearch?page=1"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Egypt mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.eos.org.eg",
+     "rank": 1,
+     "snippet": "##### الهيدروجين الغازي - محطات التزود بالوقود- الجزء الاول: المتطلبات العامة (متبناة)\n2026-08-05\n2,770 ج.م.\nأضف للسلة\nرقم المواصفة 9306-2 / 2026",
+     "title": "الخدمات الإلكترونية",
+     "url": "https://www.eos.org.eg/ar/standardSearch?number=&obligatory=&sector=1&title=&page=120"
+    },
+    {
+     "date": "",
+     "host": "eos.org.eg",
+     "rank": 2,
+     "snippet": "# Specialized Units\n### Means of Transport bodies International testing and inspect\n...\n|--|--|--|--|\n|Download the List|**Regulation No.11 : Door latches and retention component**|Door latches and retention components|7084/2014|",
+     "title": "Means of Transport bodies International testing and inspect",
+     "url": "https://eos.org.eg/en/page/49"
+    },
+    {
+     "date": "",
+     "host": "www.eos.org.eg",
+     "rank": 3,
+     "snippet": "رقم المواصفة 7302 / 2019\n...\n##### متطلبات الأمان للأجهزة المنزلية الكهربائية وماشابهها - متطلبات خاصة بالأجهزة الكهربائية لتسخين أغذية الحيوانات (IEC 60335-2-71:2018)(متبناه)",
+     "title": "الخدمات الإلكترونية",
+     "url": "https://www.eos.org.eg/ar/standards?page=340"
+    },
+    {
+     "date": "",
+     "host": "www.goeic.gov.eg",
+     "rank": 4,
+     "snippet": "|1000 -cat-1039--cat-1019-|TCR For Electric Batteries|منح شهادات المطابقة|2022| |\n|1000 -cat-1039--cat-1019-|TCR For Food Safety Tools|منح شهادات المطا",
+     "title": "جمهورية مصر العربية وزارة الاستثمار والتجارة الخارجية الهيئة ...",
+     "url": "https://www.goeic.gov.eg/ar/laws-and-decisions/list"
+    },
+    {
+     "date": "",
+     "host": "www.eos.org.eg",
+     "rank": 5,
+     "snippet": "Standard No. 2405 / 2019\n##### Low-voltage electrical installations - Part 7-706: Requirements for special installations or locations - Conducting locations with restricted movement\n...\nStandard No. 2450 / 2021\n...\n…\n...\nStandard No. 2501-1 / 2024",
+     "title": "See more",
+     "url": "https://www.eos.org.eg/en/standardSearch?number&obligatory=1&sector&title&page=15"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Egypt national statistics office official website",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.capmas.gov.eg",
+     "rank": 1,
+     "snippet": "الجهاز المركزي للتعبئة العامة والإحصاء\nالبحـث بالموضـوع\n##### البيانـات غير موجـودة\n### الساعة السكانية\nإجمالي الجمهورية\n...\n###### جميع الحقوق محفوظة 2025 الجهاز المركزي للتعبئة العامة والإحصاء جمهورية مصر العربية",
+     "title": "الجهاز المركزي للتعبئة العامة والإحصاء",
+     "url": "https://www.capmas.gov.eg/home"
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 2,
+     "snippet": "Central Agency for Public Mobilisation and Statistics (CAPMAS)\nWeb address\nwww.capmas.gov.eg\n...\nCAPMAS web site : www.capmas.gov.eg",
+     "title": "Country Profile of Egypt - UNSD Document",
+     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=506&catID=7"
+    },
+    {
+     "date": "",
+     "host": "www.oicstatcom.org",
+     "rank": 3,
+     "snippet": "OIC Statistical Commission\n|\n...\n|--|",
+     "title": "Egypt",
+     "url": "https://www.oicstatcom.org/databases-nso-detail.php?c_code=17"
+    },
+    {
+     "date": "",
+     "host": "www.capmas.gov.eg",
+     "rank": 4,
+     "snippet": "الجهاز المركزي للتعبئة العامة والإحصاء\n- الإصدارات\n#### تصفح النشرات الإحصائية الدورية والإصدارات الأخرى\n...\n###### جميع الحقوق محفوظة 2025 الجهاز المركزي للتعبئة العامة والإحصاء جمهورية مصر العربية",
+     "title": "الإصدارات",
+     "url": "https://www.capmas.gov.eg/publications"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Egypt central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-21",
+     "host": "www.cbe.org.eg",
+     "rank": 1,
+     "snippet": "### Key Statistics\nOvernight Deposit Rate\n20.00%\nOvernight Lending Rate\n21.00%\nConia\n19.468%\nCORE INFLATION RATE\n14.100%\nHEADLINE INFLATION RATE\n13.900%\nMAIN OPERATION\n20.50%",
+     "title": "Ensuring monetary stability and banking system soundness, as ...",
+     "url": "https://www.cbe.org.eg/en"
+    },
+    {
+     "date": "",
+     "host": "www.cbe.org.eg",
+     "rank": 2,
+     "snippet": "(https://www.cbe.org.eg/).\n...\n4.2.1 Internal consistency \n...\n5.1.2.6 Electronic - On-line bulletin or data \nMonthly Statistical Bulletin, Quarterly Economic Review, and Annual \nReport are available free of charge on the CBE’s website",
+     "title": "analytical-accounts-of-the-banking-sector-2025.pdf",
+     "url": "https://www.cbe.org.eg/-/media/project/cbe/listing/sdds/sdds-files/analytical-accounts-of-the-banking-sector-2025.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.cbe.org.eg",
+     "rank": 3,
+     "snippet": "Central Bank of Egypt \n...\nThe Monthly Statistical Bulletin is available (in English and Arabic) free of charge on the CBE's website (https://www.cbe.org.eg/).\n...\nWeekly summary data on interest rates are published in the Monthly \n...\nCBE website (https://www.cbe.org.eg).",
+     "title": "Interest Rates",
+     "url": "https://www.cbe.org.eg/-/media/project/cbe/listing/sdds/sdds-files/interest-rates-2.pdf"
+    },
+    {
+     "date": "2025-10-20",
+     "host": "www.cbe.org.eg",
+     "rank": 4,
+     "snippet": "### Inflation Rates\n### Exchange Rates\n### CBE Exchange Rates\n### Liquidity\n### Discount Rates\n### Daily Interbank Rates & Volumes\n### Bi-Weekly Interbank Rates & Volumes\n### Monthly Interest Rates\n...\n### Cairo Overnight Index Average - CONIA\n...\n### Overnight Deposit and Lending Rate",
+     "title": "Statistics",
+     "url": "https://www.cbe.org.eg/en/economic-research/statistics"
+    },
+    {
+     "date": "",
+     "host": "www.cbe.org.eg",
+     "rank": 5,
+     "snippet": "the \nCBE \nwebsite \n(www.cbe.org.eg) and reported to the IMF in the \n...\n- Monthly Statistical Bulletin is available to the public as a hard copy and on the website (http://www.cbe.org.eg).\nHard copies are available at the CBE's Economic",
+     "title": "sources--methods-used-to-compile-bop-statistics-for-egypt. ...",
+     "url": "https://www.cbe.org.eg/-/media/project/cbe/listing/sdds/sdds-files/sources--methods-used-to-compile-bop-statistics-for-egypt.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Egypt government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2025-06-01",
+     "host": "ai.gov.eg",
+     "rank": 1,
+     "snippet": "A centralized digital platform is critical for user access, visibility, and cross-agency coordination.\n...\nA National Open Data Portal (data.gov.eg) will serve as the single point of access.\nAgencies may maintain sectoral sub-portals that must integrate with the national platform.\n...\nDataset search",
+     "title": "Open Data Policy Arab Republic of Egypt",
+     "url": "https://ai.gov.eg/SynchedFiles/en/Resources/Open%20Data%20Policy.pdf"
+    },
+    {
+     "date": "",
+     "host": "digital.gov.eg",
+     "rank": 2,
+     "snippet": "مصر الرقمية\n...\n## افتح حساب أو سجِّل الدخول\nاشترك وكن جزءاً من مصر الرقمية\n## تصفح كل الخدمات\nتصفح جميع خدمات مصر الرقمية الاَن\n...\nبوابة مصر الإلكترونية تقدم لك كل الخدمات الحكومية بطريقة فورية وسهلة وأنت فى مكانك!",
+     "title": "مصر الرقمية",
+     "url": "https://digital.gov.eg/"
+    },
+    {
+     "date": "",
+     "host": "www.un.org",
+     "rank": 3,
+     "snippet": "https: //Geoportal.CAPMAS.gov.eg/arcgis/home \n...\nfigure:\n...\n…\n...\nEgypt uses Open data policies and principles, and also after building and publishing the \nNSDI portal all the data will be accessed using Web services to enable dynamic accessing the to the geostatistical data.",
+     "title": "Country Report of Egypt",
+     "url": "https://www.un.org/globalgeospatial/sites/default/files/2026-07/Egypt-2016-country-report.pdf"
+    },
+    {
+     "date": "",
+     "host": "censusinfo.capmas.gov.eg",
+     "rank": 4,
+     "snippet": "# Central Data Catalog\nFound **629** studies out of **629**",
+     "title": "Central Data Catalog",
+     "url": "https://censusinfo.capmas.gov.eg/metadata-en-v4.2/index.php/catalog?&page=15"
+    },
+    {
+     "date": "",
+     "host": "mped.gov.eg",
+     "rank": 5,
+     "snippet": "They are data sets issued by the Egyptian national accounts in an interactive way, where the GDP data is available in different ways calculated at the current and fixed prices as well as the growth rates of GDP and investments, in addition to the results of regional accounts which provide different ",
+     "title": "National Accounts Data",
+     "url": "https://mped.gov.eg/Analytics?lang=en"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:37:13Z",
+ "pais": {
+  "iso2": "EG",
+  "iso3": "EGY",
+  "nombre": "Egypt"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

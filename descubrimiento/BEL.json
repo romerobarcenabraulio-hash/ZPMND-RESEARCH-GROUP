@@ -1,0 +1,765 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Belgium constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "en.const-court.be",
+     "rank": 1,
+     "snippet": "The Belgian Constitution | Constitutional Court\nConstitutional Court\n# The Belgian Constitution\nThe Constitution of Federal Belgium\n**Last updated: June 2025.**\n...\nThere is for all Belgium a Constitutional Court, the composition, competences and functioning of which are established by the law.",
+     "title": "The Belgian Constitution",
+     "url": "https://en.const-court.be/court/basic-text/constitution",
+     "verificacion": {
+      "bytes": 384791,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:38Z",
+      "http": 200,
+      "sha256": "86afe52c4d08c43abe2dbd4d0261a218a68e72f6993a38d8f1d866983ea1aee4"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ejustice.just.fgov.be",
+     "rank": 2,
+     "snippet": "**ELI in België** **Eli pour la Belgique** De elektronische documenten zijn voor de Belgische wetgeving toegankelijk via twee databanken (het Belgisch Staatsblad en Justel), deze worden beiden beheerd door de diensten van het Belgisch Staatsblad, het officiële dagblad van het Koninkrijk België.",
+     "title": "ELI - BELGIE ---- ELI - BELGIQUE - ejustice.just.fgov.be",
+     "url": "https://www.ejustice.just.fgov.be/eli-register/index.html",
+     "verificacion": {
+      "bytes": 27460,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:42Z",
+      "http": 200,
+      "sha256": "e616b042153e9594ff90ae42d89333fa324d6ec76a0143c8846924d762706615"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ejustice.just.fgov.be",
+     "rank": 3,
+     "snippet": "## Federale wetboeken (van kracht op het hele grondgebied en in alfabetische volgorde) :\n- Belgisch Scheepvaartwetboek\npdf\n- Boswetboek\npdf\n- Burgerlijk Wetboek\npdf\n- Consulair Wetboek\npdf\n- Gerechtelijk Wetboek",
+     "title": "https://www.ejustice.just.fgov.be/cgi_wet/codex.pl...",
+     "url": "https://www.ejustice.just.fgov.be/cgi_wet/codex.pl?language=nl&view_numac="
+    },
+    {
+     "date": "2012-02-10",
+     "host": "justiz.belgium.be",
+     "rank": 4,
+     "snippet": "Senlex sammelt die Verfassung und die wichtigsten institutionellen Normen und führt je Artikel sortiert, aussagekräftige Auszüge aus der parlamentarischen Vorbereitung, der Rechtsprechung des Verfassungsgerichts und Gutachten des Staatsrates auf.",
+     "title": "Belgische Gesetzgebung und Regelung",
+     "url": "https://justiz.belgium.be/de/belgische_gesetzgebung_und_regelung"
+    },
+    {
+     "date": "",
+     "host": "justitie.belgium.be",
+     "rank": 5,
+     "snippet": "Senlex bundelt de Grondwet en de belangrijkste institutionele normen en voorziet per artikel relevante fragmenten uit de parlementaire voorbereiding, de rechtspraak van het Grondwettelijk Hof en de adviezen van de Raad van State.",
+     "title": "Belgische wet- en regelgeving",
+     "url": "https://justitie.belgium.be/nl/belgische_wet_en_regelgeving"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Belgium national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.ejustice.just.fgov.be",
+     "rank": 1,
+     "snippet": "Justel databank\n...\n16 juli 1985.\n- Dekreet betreffende natuurparken.\n...\n1 juli 2012.\n...\n…\n...\n5 april 1995.\n- Decreet houdende algemene bepalingen inzake milieubeleid.\n(Aangehaald als : DABM) .",
+     "title": "Recente consolidaties",
+     "url": "https://www.ejustice.just.fgov.be//cgi_loi/summary.pl?language=nl&type=cons&sort=date_upd&view_numac=1994071438nx2026091117nx2026091009nx2026051312nx2026072405nx2025033103fx2025033103dx2025033103nx2023042705dx2023042705fx2023042705nx1985010675",
+     "verificacion": {
+      "bytes": 146070,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:43Z",
+      "http": 200,
+      "sha256": "ef727a7931c0d83da1413e1610dea253ed53420c0955151d5a88f06a146bf3e8"
+     }
+    },
+    {
+     "date": "",
+     "host": "justitie.belgium.be",
+     "rank": 2,
+     "snippet": "Consulteer zowel de databank van de wetgevingsindex als de databank van de geconsolideerde wetgeving.\n...\nOntdek de nieuwe publieke databank met reglementering van het gevangeniswezen.\nDe databank is niet exhaustief, omdat sommige documenten enkel voor intern gebruik bedoeld zijn.",
+     "title": "Belgische wet- en regelgeving",
+     "url": "https://justitie.belgium.be/nl/belgische_wet_en_regelgeving",
+     "verificacion": {
+      "bytes": 26941,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:45Z",
+      "http": 200,
+      "sha256": "dca92b21c7fac343a53b5f16cd8d0cf9078d47eb849c6a9f1cfd26e3c74d907b"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ejustice.just.fgov.be",
+     "rank": 3,
+     "snippet": "**ELI in België** **Eli pour la Belgique** De elektronische documenten zijn voor de Belgische wetgeving toegankelijk via twee databanken (het Belgisch Staatsblad en Justel), deze worden beiden beheerd door de diensten van het Belgisch Staatsblad, het officiële dagblad van het Koninkrijk België.",
+     "title": "ELI - BELGIE ---- ELI - BELGIQUE - ejustice.just.fgov.be",
+     "url": "https://www.ejustice.just.fgov.be/eli-register/index.html"
+    },
+    {
+     "date": "",
+     "host": "codex.vlaanderen.be",
+     "rank": 4,
+     "snippet": "### Bekijken van documenten\n...\n- “Kruispuntbank”: link naar de kruispuntbank van de wetgeving – Belgielex (voor documenten vanaf 1994)\n- “Parlementaire voorbereiding”: link naar de databank van het Vlaams Parlement (alleen bij decreten)",
+     "title": "Vlaamse Codex > Zoeken > Document",
+     "url": "https://codex.vlaanderen.be/Zoeken/Document.aspx"
+    },
+    {
+     "date": "",
+     "host": "justice.belgium.be",
+     "rank": 5,
+     "snippet": "Justel Faites une recherche tant sur les données de l'index législatif que sur celles de la législation consolidée.\n...\nRéglementation pénitentiaire Découvrez la nouvelle base de données publique relative à la réglementation pénitentiaire.",
+     "title": "Législation et réglementation belge",
+     "url": "https://justice.belgium.be/fr/legislation_et_reglementation_belge"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Belgium official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2025-01-07",
+     "host": "belgiumlex.be",
+     "rank": 1,
+     "snippet": "# Belgian Official Gazette\nThis group of data gives you access to the text in full of all the legislative acts published in the Moniteur belge since June 1997.\n__Type of contents__: Legislation and various legal publications\n...\n__Type of data__: Complete .pdf files and databank text in full",
+     "title": "Belgian Official Gazette - Belgiumlex",
+     "url": "https://belgiumlex.be/en/belgian-official-gazette/",
+     "verificacion": {
+      "error": "robots.txt disallows https://belgiumlex.be/en/belgian-official-gazette/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:01:45Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ejustice.just.fgov.be",
+     "rank": 2,
+     "snippet": "Das belgische Staatsblatt verfasst und verbreitet eine große Auswahl amtlicher und staatlicher Veröffentlichungen, gedruckt sowie in elektronischer Form.\n...\n- der offiziellen Website des Belgischen Staatsblattes,\n...\nBelgisches Staatsblatt\nChaussée d'Anvers 53\n1000 Brüssel",
+     "title": "Belgisches Staatsblatt - Belgisch Staatsblad - Justice",
+     "url": "https://www.ejustice.just.fgov.be/cgi/welcome.pl?language=de",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ejustice.just.fgov.be/cgi/welcome.pl?language=de",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:01:45Z"
+     }
+    },
+    {
+     "date": "2019-06-06",
+     "host": "www.belgiancompetition.be",
+     "rank": 3,
+     "snippet": "Publication in the Belgian Official Gazette of the Law of 2 May 2019 amending the Code of Economic Law | Belgian Competition Authority\n# Publication in the Belgian Official Gazette of the Law of 2 May 2019 amending the Code of Economic Law\nPublication date\n06 June 2019",
+     "title": "Publication in the Belgian Official Gazette of the Law of 2 May 2019 ...",
+     "url": "https://www.belgiancompetition.be/en/about-us/publications/publication-belgian-official-gazette-law-2-may-2019-amending-code-economic-law"
+    },
+    {
+     "date": "2020-01-08",
+     "host": "n-lex.europa.eu",
+     "rank": 4,
+     "snippet": "## Description\nThe ***Moniteur belge website*** is a public access portal to Belgian legislation online.\nIt gives direct access to the *Moniteur belge* (the Belgian Official Gazette) itself and to a collection of consolidated legislation and an index.\n...\nThe site is managed by the Federal Ministry ",
+     "title": "About the national database - N-Lex",
+     "url": "https://n-lex.europa.eu/n-lex/info/info-be/index"
+    },
+    {
+     "date": "",
+     "host": "lex.be",
+     "rank": 5,
+     "snippet": "# Belgian state gazette\n- 2202 (1)\n- 2108 (2)\n...\n- 2032 (1)\n- 2024 (33833)\n- 2023 (86798)\n- 2022 (85170)",
+     "title": "Blader door de officiële juridische documentatie",
+     "url": "https://lex.be/E/database/be/beml"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Belgium supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "de.const-court.be",
+     "rank": 1,
+     "snippet": "# Dokumentserver\n...\nDer Dokumentserver ist das historische Archiv der Entscheide des Verfassungsgerichtshofs, Jahr für Jahr aufbewahrt seit 1985.\n...\n- Nederlandshttps://nl.const-court.be/public/n/\n...\n- Deutschhttps://de.const-court.be/public/d/",
+     "title": "Dokumentserver — historisches Archiv der Entscheide",
+     "url": "https://de.const-court.be/document-archive",
+     "verificacion": {
+      "bytes": 69449,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:47Z",
+      "http": 200,
+      "sha256": "22f289ac50a3a5b369678bb1623504ee689f879b6078f6bbfc4ed60250ce4421"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.courdecassation.be",
+     "rank": 2,
+     "snippet": "1994, the rulings of the Court of cassation are also published on an open\nsource database, available through the “Juportal” search engine.\n...\nthese courts :\n- Court of cassation ;\n...\nThe same information, categorized by interpreted legal provision, is available on « Casslex ».",
+     "title": "Jurisprudence",
+     "url": "https://www.courdecassation.be/en/Jurisprudence-Rechtspraak.html",
+     "verificacion": {
+      "bytes": 79234,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:49Z",
+      "http": 200,
+      "sha256": "6c8f39a9cba9955e0fa3bcecfb72871460370ae2a69919989f4a26fde0582d50"
+     }
+    },
+    {
+     "date": "2025-01-07",
+     "host": "belgiquelex.be",
+     "rank": 3,
+     "snippet": "Base de données publique de la jurisprudence belge.\n...\nLa jurisprudence du système JUPORTAL est disponible sur le moteur de recherche JUPORTAL qui remplace l'ancien moteur de recherche Jure-Juridat depuis novembre 2020.\nType de contenu : Jurisprudence, avis et décisions",
+     "title": "JUPORTAL",
+     "url": "https://belgiquelex.be/fr/juportal/"
+    },
+    {
+     "date": "",
+     "host": "justonweb.be",
+     "rank": 4,
+     "snippet": "Just‑on‑web bundles **all the online services of the Justice FPS on one platform**.\nThrough Just‑on‑web, you can perform the legal actions you wish to perform, consult and manage files, and submit and request documents.\n...\n## Court file\nConsult your court file and court decisions.",
+     "title": "Just‑on‑web | Digital portal of the Justice FPS",
+     "url": "https://justonweb.be/en"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "fr.const-court.be",
+     "rank": 5,
+     "snippet": "Le serveur de documents est l'archive historique des arrêts de la Cour constitutionnelle, conservés année par année depuis 1985.\n...\n- Nederlandshttps://nl.const-court.be/public/n/\n...\nCliquez sur une langue, puis sur une année ; les arrêts apparaissent en PDF.",
+     "title": "Serveur de documents — archives historiques des arrêts",
+     "url": "https://fr.const-court.be/document-archive"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Belgium state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "codex.vlaanderen.be",
+     "rank": 1,
+     "snippet": "In de Vlaamse Codex vindt u de volledige geconsolideerde Vlaamse regelgeving vanaf 1 januari 1959 tot vandaag.\nDe Vlaamse Codex vormt geen officiële bekendmaking in de zin van de Grondwet.\nAlleen de publicatie in het Belgisch Staatsblad heeft een officieel karakter.",
+     "title": "Vlaamse Codex - Vlaamse overheid",
+     "url": "https://codex.vlaanderen.be/",
+     "verificacion": {
+      "bytes": 37148,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:50Z",
+      "http": 200,
+      "sha256": "1381a39036a7fc74fec54d442aae40fe49e5fc293e1702bb430cf98329568d77"
+     }
+    },
+    {
+     "date": "",
+     "host": "justitie.belgium.be",
+     "rank": 2,
+     "snippet": "Consulteer zowel de databank van de wetgevingsindex als de databank van de geconsolideerde wetgeving.",
+     "title": "Belgische wet- en regelgeving",
+     "url": "https://justitie.belgium.be/nl/belgische_wet_en_regelgeving",
+     "verificacion": {
+      "bytes": 26941,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:51Z",
+      "http": 200,
+      "sha256": "dca92b21c7fac343a53b5f16cd8d0cf9078d47eb849c6a9f1cfd26e3c74d907b"
+     }
+    },
+    {
+     "date": "2025-01-08",
+     "host": "belgiquelex.be",
+     "rank": 3,
+     "snippet": "# Banque carrefour de la législation\n...\nLe site portail est opérationnel depuis le 8 mars 2005 et porte les noms de domaine suivants: www.belgielex.be, www.belgiquelex.be, www.belgienlex.be, www.belgiumlex.be .",
+     "title": "Belgiquelex",
+     "url": "https://belgiquelex.be/fr/"
+    },
+    {
+     "date": "2025-01-08",
+     "host": "belgiumlex.be",
+     "rank": 4,
+     "snippet": "# Crossroads Bank for legislation\nThe outcome of a cooperation agreement between several federal, community and regional institutions, the Central Legislation Databank is designed to offer a portal site citizens can use to gain access to Belgian legislation and case-law.",
+     "title": "Belgiumlex",
+     "url": "https://belgiumlex.be/en/"
+    },
+    {
+     "date": "1997-06-01",
+     "host": "lex.be",
+     "rank": 5,
+     "snippet": "Législation belge (Belgian legislation) is a research interface that operates by mining two databases: Index législatif (legislative index) and Législation consolidée (consolidated legislation),\nthe\ncontent of which is managed by the Justel department at the Belgian Official Gazette.",
+     "title": "Legal databases - lex.be",
+     "url": "https://lex.be/en/content/databases"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Belgium municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2016-10-19",
+     "host": "www.bruxelles.be",
+     "rank": 1,
+     "snippet": "# Règlements communaux\nLes règlements communaux adoptés par la Ville de Bruxelles doivent figurer sur le site web communal en fonction d'une ordonnance de la Région de Bruxelles-Capitale.\n...\nIl s'agit notamment de règlements-taxes.\n...\nCentre administratif Brucity\n...\n1000 Bruxelles",
+     "title": "Règlements communaux - Ville de Bruxelles",
+     "url": "https://www.bruxelles.be/reglements-communaux",
+     "verificacion": {
+      "bytes": 231361,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:53Z",
+      "http": 200,
+      "sha256": "7960b1dd9f90f1ef4f36605fc05a327f4d925afa11a2e896dc7b94508dedb730"
+     }
+    },
+    {
+     "date": "2025-02-17",
+     "host": "www.vlaanderen.be",
+     "rank": 2,
+     "snippet": "# Besluitendatabank\nDe besluitendatabank is een verzamelplaats voor meldingsplichtige besluiten van lokale besturen en is toegankelijk voor alle lokale en centrale overheden.\n...\nDoorzoek de meer dan 170.000 lokale reglementen, besluiten of besluitenlijsten in deze toepassing.",
+     "title": "Besluitendatabank - Vlaanderen.be",
+     "url": "https://www.vlaanderen.be/lokaal-bestuur/data-en-tools/besluitendatabank",
+     "verificacion": {
+      "bytes": 74961,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:54Z",
+      "http": 200,
+      "sha256": "00965e9371ca71b27df7f14a189578cdd2408839291e85916aebee7047cde497"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.deliberations.be",
+     "rank": 3,
+     "snippet": "Délibérations.be – Le portail de transparence des pouvoirs locaux\nDélibérations.be – Le portail de transparence des pouvoirs locaux https://www.deliberations.be https://www.deliberations.be/@@site-logo/logo.svg",
+     "title": "Délibérations.be – Le portail de transparence des pouvoirs locaux",
+     "url": "https://www.deliberations.be/"
+    },
+    {
+     "date": "2024-08-29",
+     "host": "www.liege.be",
+     "rank": 4,
+     "snippet": "# Publications officielles\nConsultez les publications officielles ainsi que les règlements communaux de la Ville de Liège **adoptés après le 1^er^ septembre 2024** sur la plateforme **https://publicationsofficielles.liege.be**",
+     "title": "Publications officielles - Ville de Liège",
+     "url": "https://www.liege.be/mon-institution/administration/publications-officielles"
+    },
+    {
+     "date": "2025-03-26",
+     "host": "www.vlaanderen.be",
+     "rank": 5,
+     "snippet": "# Publicatieplicht\nDe publicatie- of bekendmakingsplicht is de plicht voor lokale besturen om binnen welbepaalde termijnen een aantal welomschreven besluiten, lijsten met besluiten en stukken te publiceren op hun webtoepassing.",
+     "title": "Publicatieplicht",
+     "url": "https://www.vlaanderen.be/lokaal-bestuur/organisatie-en-werking/publicatieplicht"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Belgium regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-26",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "In contrast, environmental regulations are developed mostly at the regional level.\n...\nBelgium publishes all its relevant legislation and administrative guidelines in the Belgian Official Gazette ( Het Staatsblad/Le Moniteur Belge ).\n...\nBelgium is a founding member of the EU and enforces its direct",
+     "title": "2026 Investment Climate Statements: Belgium",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/belgium",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/belgium",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:01:54Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.oecd.org",
+     "rank": 2,
+     "snippet": "The major federal regulatory agencies are the Competition Authority, the Belgian Institute for Posts and Telecommunications, the Electricity and Gas Regulatory Commission, the Banking, Finance and\n...\nGeneral context \n...\nThe DGEM is in charge of ensuring compliance with economic regulations, which ",
+     "title": "Better Regulation in Europe: Belgium 2010",
+     "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2010/07/better-regulation-in-europe-belgium-2010_g1g10544/9789264087859-en.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.oecd.org/content/dam/oecd/en/publications/reports/2010/07/better-regulation-in-europe-belgium-2010_g1g10544/9789264087859-en.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:01:54Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 3,
+     "snippet": "Food policy and safety are regulated at the federal level while \nagriculture policy is regulated at the regional level (Flanders and Wallonia).\n...\nSafety and Environment   \n...\n…\n...\nIn Belgium, the Federal Agency for the Safety of the Food Chain (FAVV/AFSCA) is responsible for the",
+     "title": "Report Name: FAIRS Country Report Annual",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS+Country+Report+Annual_Brussels+USEU_Belgium_BE2025-0009.pdf"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.state.gov",
+     "rank": 4,
+     "snippet": "In contrast, environmental regulations are developed mostly at the regional level.\n...\nBelgium publishes all its relevant legislation and administrative guidelines in an official Gazette, called Het Staatsblad/Le Moniteur Belge .\n...\nBelgium is a founding member of the EU and enforces its directives",
+     "title": "Belgium - United States Department of State",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/belgium"
+    },
+    {
+     "date": "",
+     "host": "rulemaking.worldbank.org",
+     "rank": 5,
+     "snippet": "|--|--|--|\n|Where is the draft text or summary published?|On a unified website where all proposed regulations are published; on the website of the relevant ministry or regulator; printed in a federal journal ...It is mandatory for some domains of regulation and case by case for the rest.|",
+     "title": "Belgium - Economy Data - World Bank",
+     "url": "https://rulemaking.worldbank.org/en/data/explorecountries/belgium"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Belgium national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2024-07-11",
+     "host": "app.nbn.be",
+     "rank": 1,
+     "snippet": "NBN B 15-001:2024\nConcrete – Specification, performance, production and conformity – National supplement to NBN EN 206:2013+A2:2021\n...\nPlugs and socket-outlets for domestic and similar purposes - Part 1 : General requirements\n22/06/2017",
+     "title": "Column Actions",
+     "url": "https://app.nbn.be/data/r/platform/public-portal/home",
+     "verificacion": {
+      "bytes": 37683,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:56Z",
+      "http": 200,
+      "sha256": "0ff430b477b2136d8259ffffb2e8f64d6a753a18a58c10f47e4e139e805ee962"
+     }
+    },
+    {
+     "date": "2025-01-01",
+     "host": "app.nbn.be",
+     "rank": 2,
+     "snippet": "Op zoek naar de geknipte norm voor jouw organisatie?\nDoorblader dan onze normencatalogus.\n...\nChirurgische en tandheelkundige handinstrumenten - Bepaling van de weerstand tegen autoclaveren, corrosie en thermische blootstelling (ISO 13402:2025)",
+     "title": "Resultaten verfijnen",
+     "url": "https://app.nbn.be/data/r/platform/frontend/all-standards?lang=nl",
+     "verificacion": {
+      "bytes": 167869,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:01:57Z",
+      "http": 200,
+      "sha256": "6eda7e86db060d6064e8944f09fbc39af32eeda52a4c5db4df4be760e6e40c72"
+     }
+    },
+    {
+     "date": "2025-01-01",
+     "host": "app.nbn.be",
+     "rank": 3,
+     "snippet": "On this page, you will find all the NBN standards that are referenced in Belgian legislation.\nAutomotive fuels - Diesel - Requirements and test methods\n...\nGlazing – Part 5: Detailed calculation of laminated glass for facade\n...\nResidential solid fuel burning appliances - Part 2-5: Slow heat release",
+     "title": "Filter",
+     "url": "https://app.nbn.be/data/r/platform/frontend/standards-linked-to-belgian-legislation"
+    },
+    {
+     "date": "",
+     "host": "bozi.ugent.be",
+     "rank": 4,
+     "snippet": "Alle Belgische en Europese normen uitgegeven door NBN, Bureau voor Normalisatie, zijn verzameld in de databank MyNBN.\n...\nKlik op \"Bekijk online\" in de Bibliotheekcatalogus van UGent.\nUGent heeft een** 'read-only' toegang** tot MyNBN.",
+     "title": "MyNBN",
+     "url": "https://bozi.ugent.be/nl/tips/00001728/"
+    },
+    {
+     "date": "",
+     "host": "app.nbn.be",
+     "rank": 5,
+     "snippet": "### Belgische normontwerpen\nRaadpleeg normontwerpen en geef feedback.\n...\nRaadpleeg normen vermeld in wetgeving.\n...\nBekijk recente publicaties\nBekijk ingetrokken normen\nBekijk normen in wetgeving\nRegistreer je op onze website en blader door onze normencatalogus!\n...\nBelgium",
+     "title": "Publiek Portaal - NBN",
+     "url": "https://app.nbn.be/data/r/platform/public-portal/home?p_lang=nl"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Belgium mandatory technical regulations official list",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.codedelaroute.be",
+     "rank": 1,
+     "snippet": "25 résultats\n...\n### Arrêté royal du 15 mars 1968 portant règlement général sur les conditions techniques auxquelles doivent répondre les véhicules automobiles et leurs remorques, leurs éléments ainsi que les accessoires de sécurité\n...\n- **Type**\nArrêté royal\n- **Portée**\nBelgique",
+     "title": "Règlements - Code de la route",
+     "url": "https://www.codedelaroute.be/fr/reglementation/theme/conditions-techniques",
+     "verificacion": {
+      "bytes": 143485,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:02:08Z",
+      "http": 200,
+      "sha256": "ce8419f20b20a69a0196ecd31a4e16178f5238d0e26ba1ad878b8528a11032fa"
+     }
+    },
+    {
+     "date": "2026-10-22",
+     "host": "www.codedelaroute.be",
+     "rank": 2,
+     "snippet": "Arrêté royal du 15 mars 1968 portant règlement général sur les conditions techniques auxquelles doivent répondre les véhicules automobiles et leurs remorques, leurs éléments ainsi que les accessoires de sécurité | Réglementation | Code de la route\n...\nConditions techniques\n...\n- **Portée :**\nBelgiqu",
+     "title": "Arrêté royal du 15 mars 1968 portant règlement général ...",
+     "url": "https://www.codedelaroute.be/fr/reglementation/1968031501~fhniyzocos",
+     "verificacion": {
+      "bytes": 1310943,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:02:19Z",
+      "http": 200,
+      "sha256": "a4768e2ec9cd16995800cf965a37926c3eb923100334ae1b679c6e8703053f04"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ejustice.just.fgov.be",
+     "rank": 3,
+     "snippet": "----------\n(1)<AR 2026-09-10/10, art.\n2, 002; En vigueur : 06-10-2026>\nArt.\n3. § 1er.\nLe présent arrêté a pour objectif de garantir que le matériel électrique se t",
+     "title": "Titel",
+     "url": "https://www.ejustice.just.fgov.be//cgi_loi/article.pl?language=de&lg_txt=d&caller=SUM&type=cons&sort=date_upd&cn_search=2016042108&2016042108=12&view_numac=2026093004dx2026092503dx2026091111dx2026091111nx2025033103fx2025033103dx2025033103nx2023042705dx2023042705fx2023042705nx1985010675"
+    },
+    {
+     "date": "",
+     "host": "batiments.wallonie.be",
+     "rank": 4,
+     "snippet": "|Répertoire Belgaqua| |Belgaqua - Repertoire des appareils conformes et protections agrees + Prescriptions techniques relatives aux installations interieures|2015|Belgaqua|www.belgaqua.be|\n...\n…",
+     "title": "Catalogue des documents de référence (CDR) - Wallonie",
+     "url": "https://batiments.wallonie.be/files/live/sites/SMD_CCT/files/unzip/html_CCTB_01.07/Content/Catalogue-des-documents-de-reference-CDR.html"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Belgium national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2014-03-10",
+     "host": "statbel.fgov.be",
+     "rank": 1,
+     "snippet": "Algemene Directie Statistiek\nGa verder in het Nederlands\nDirection générale Statistique\nContinuez en français\nGeneraldirektion Statistik\nWeiter auf Deutsch\nDirectorate-general Statistics\nContinue in English",
+     "title": "Statbel: Language selection",
+     "url": "https://statbel.fgov.be/",
+     "verificacion": {
+      "bytes": 20844,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:02:21Z",
+      "http": 200,
+      "sha256": "bb114cd0ab69c3543d844115e33c1ebf92921843833dd02cd7d6c2049cc4a2fa"
+     }
+    },
+    {
+     "date": "2025-01-01",
+     "host": "data.un.org",
+     "rank": 2,
+     "snippet": "Belgium - Statistics Belgium\nNational Statistical Office of Belgium\nhttp://www.statbel.fgov.be/",
+     "title": "country profile | Belgium",
+     "url": "https://data.un.org/CountryProfile.aspx/_Images/CountryProfile.aspx?crName=Belgium",
+     "verificacion": {
+      "bytes": 3769,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:02:21Z",
+      "http": 200,
+      "sha256": "8ef3da215ff1000f05581814f1e5ef349a5f18b070b18bec5eb0507e967b1d8a"
+     }
+    },
+    {
+     "date": "2014-04-09",
+     "host": "statbel.fgov.be",
+     "rank": 3,
+     "snippet": "# Statistische organisaties in België\n...\n## Federaal\n- Statbel : www.statbel.fgov.be\n- INR : Instituut voor de Nationale Rekeningen\n- IIS : Interfederaal Instituut voor de Statistiek\n- Federaal Planbureau: www.plan.be",
+     "title": "Statistische organisaties in België",
+     "url": "https://statbel.fgov.be/nl/over-statbel/onze-partners/statistisch-portaal/statistische-organisaties-belgie"
+    },
+    {
+     "date": "",
+     "host": "ec.europa.eu",
+     "rank": 4,
+     "snippet": "1. Statistics Belgium \nStatistics Belgium, officially ‘Directorate-General Statistics and Economic Information’ is one of the nine Directorates-General of the Federal Public Service (‘ministry’) Economy,\nSME’s, Self-employed and Energy.\n...\nFor more information: http://statbel.fgov.be/.",
+     "title": "Peer Review Belgium",
+     "url": "https://ec.europa.eu/eurostat/documents/64157/4372828/BE-description.pdf/f15033c9-958b-4bef-8b1d-30186b305954"
+    },
+    {
+     "date": "",
+     "host": "statbel.fgov.be",
+     "rank": 5,
+     "snippet": "# Statistischen Organisationen in Belgien\n...\n- Das Statistikportal der Deutschsprachigen Gemeinschaft Belgiens: www.ostbelgienstatistik.be\n- Statbel : www.statbel.fgov.be\n- Amt für volkswirtschaftliche Gesamtrechnungen",
+     "title": "Statistischen Organisationen in Belgien",
+     "url": "https://statbel.fgov.be/de/ueber-statbel/unsere-partner/das-statistische-portal/statistischen-organisationen-belgien"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Belgium central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-29",
+     "host": "www.nbb.be",
+     "rank": 1,
+     "snippet": "- ## Statistiques\nAccéder à nos statistiques, publications et calendrier.\n...\nLa BNB célèbre la Journée européenne de la statistique\nÀ l’occasion de cette journée, découvrez nos nouvelles pages statistiques, entièrement repensées pour faciliter l’accès à ces informations.",
+     "title": "Statistiques - Banque nationale de Belgique",
+     "url": "https://www.nbb.be/fr/statistiques",
+     "verificacion": {
+      "bytes": 139981,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:02:23Z",
+      "http": 200,
+      "sha256": "7b34c9ee39bc51a93480d45e3e2ae61f185cdc585c776cddcaba98f186c4da84"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.nbb.be",
+     "rank": 2,
+     "snippet": "Statistics | National Bank of Belgium\n...\nAccess our statistics, publications, and calendar.\n...\nHere you can access all publications and figures, a comprehensive calendar of upcoming updates and an overview of all contact details per statistical domain.\n...\nPages explaining our statistics, featurin",
+     "title": "Statistics | National Bank of Belgium",
+     "url": "https://www.nbb.be/en/statistics",
+     "verificacion": {
+      "bytes": 138388,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:02:24Z",
+      "http": 200,
+      "sha256": "150b8b8afffce88d2a12e88442fd690c1b8865d9df6ff2649df3f47b023b03dc"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.nbb.be",
+     "rank": 3,
+     "snippet": "# Statistical publications\nThe National Bank of Belgium issues statistical publications and press releases on a regular basis.\nAll publications and press releases are available at least in Dutch and French.\nYou may consult them online and download them (in PDF format) free of charge via this website",
+     "title": "Statistical publications",
+     "url": "https://www.nbb.be/en/statistics/topics/general/statistical-publications"
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.nbb.be",
+     "rank": 4,
+     "snippet": "# Welcome to the website of the National Bank of Belgium\n...\n## Latest statistical updates\nMonetary statistics\nPeriod: 2026M9\nMonetary aggregates\nData\nRelease date:\n30 Oct\n2026\nPublic finance\n...\nData\nRelease date:\n30 Oct\n2026\n...\n…",
+     "title": "National Bank of Belgium",
+     "url": "https://www.nbb.be/en"
+    },
+    {
+     "date": "",
+     "host": "www.nbb.be",
+     "rank": 5,
+     "snippet": "NBB.Stat data explorer | National Bank of Belgium\n...\nWhat is NBB.Stat?\nNBB.Stat is the dissemination portal for statistical data of the National Bank of Belgium.\nIt provides centralised access to a wide range of economic and financial data published by the NBB and other Belgian or international ins",
+     "title": "NBB.Stat data explorer | National Bank of ...",
+     "url": "https://www.nbb.be/en/statistics/contact-and-more-information/nbbstat-data-explorer"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Belgium government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2024-08-09",
+     "host": "bosa.belgium.be",
+     "rank": 1,
+     "snippet": "Le portail fédéral des données ouvertes contient des liens vers plus de 10.000 ensembles de données ouvertes d’autorités fédérales, régionales et locales ainsi que d’entreprises.",
+     "title": "Portail fédéral des données ouvertes | BOSA",
+     "url": "https://bosa.belgium.be/fr/applications/portail-federal-des-donnees-ouvertes",
+     "verificacion": {
+      "bytes": 79854,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:02:29Z",
+      "http": 200,
+      "sha256": "c1ef76111dc1b76caee3f67f8b3b4761df4814b345386319d384aee92bbf864a"
+     }
+    },
+    {
+     "date": "2024-08-09",
+     "host": "bosa.belgium.be",
+     "rank": 2,
+     "snippet": "The Federal Open Data Portal contains links to more than 10,000 open data sets from federal, regional and local authorities, as well as companies.",
+     "title": "Federal Open Data Portal - BOSA - Belgium.be",
+     "url": "https://bosa.belgium.be/en/applications/federal-open-data-portal",
+     "verificacion": {
+      "bytes": 54315,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:02:29Z",
+      "http": 200,
+      "sha256": "14e54660b804fd0990f585a015d1c1f725c3b1ab3d9d74b097a56988076e7abf"
+     }
+    },
+    {
+     "date": "2024-01-01",
+     "host": "data.gov.be",
+     "rank": 3,
+     "snippet": "## News\nStatbel, the Belgian statistical office, is providing a detailed overview of...",
+     "title": "The Belgian Data Portal",
+     "url": "https://data.gov.be/en"
+    },
+    {
+     "date": "",
+     "host": "data.europa.eu",
+     "rank": 4,
+     "snippet": "PT1,\"Is there a national portal in your country for that enables users to search for open datasets and find where to download open data?\nFor Explanation:\n* If yes, please provide the URL of the national portal.\",yes,https://data.gov.be,Confirm,,\nPT2,\"For Explanation:",
+     "title": "[XLS] Policy - The European Data Portal",
+     "url": "https://data.europa.eu/sites/default/files/2025-12/2025_odm_questionnaire_belgium.xlsx"
+    },
+    {
+     "date": "",
+     "host": "data.europa.eu",
+     "rank": 5,
+     "snippet": "1. data.gov.be\n# data.gov.be\n##### https://data.gov.be\n...\nBelgian open data portal, harvesting data from federal, regional and local portals in Belgium\n...\ndata.gov.be\n...\n- **Description**\nBelgian open data portal, harvesting data from federal, regional and local portals in Belgium",
+     "title": "data.gov.be - EU Open Data Portal",
+     "url": "https://data.europa.eu/data/catalogues/data-gov-be?locale=en"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:22:38Z",
+ "pais": {
+  "iso2": "BE",
+  "iso3": "BEL",
+  "nombre": "Belgium"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

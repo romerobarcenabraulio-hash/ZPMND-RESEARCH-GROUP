@@ -1,0 +1,540 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Bolivia constitution and national laws official legal database",
+   "descartados": 4,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "cancilleria.gob.bo",
+     "rank": 1,
+     "snippet": "### MARCO LEGAL\n|--|--|--|\n|MARCO CONSTITUCIONAL|Miércoles, 3 Febrero 2016|DESCARGAR|\n...\n|LEY DE CELEBRACIÓN DE TRATADOS|Miércoles, 3 Febrero 2016|DESCARGAR|",
+     "title": "marco legal",
+     "url": "https://cancilleria.gob.bo/mre/marco-legal/",
+     "verificacion": {
+      "bytes": 264387,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:25:08Z",
+      "http": 200,
+      "sha256": "1f67fb2b3a96950c9a654b40707ce7b41e21e8a59b90c1873bc9466a3cf58ed7"
+     }
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Bolivia national regulations decrees official government database",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-05-21",
+     "host": "www.impuestos.gob.bo",
+     "rank": 1,
+     "snippet": "Inicio\n...\n|D.S. 5595 de 30-03-2026|2026|El presente Decreto Supremo tiene por objeto establecer la política pública nacional de desregulación, simplificación administrativa y optimización normativa, denominada Programa «Tranca Cero».|Descargar DS Descargar reglamento|",
+     "title": "Decretos Supremos - Servicio de Impuestos Nacionales",
+     "url": "https://www.impuestos.gob.bo/index.php/decretos/",
+     "verificacion": {
+      "bytes": 142224,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:25:12Z",
+      "http": 200,
+      "sha256": "bf8e2b4d3ed1e9667e02dad9970ebec45db7ebe28bdec7b5343289703c5ae6f6"
+     }
+    },
+    {
+     "date": "2025-04-16",
+     "host": "agetic.gob.bo",
+     "rank": 2,
+     "snippet": "|3|Decreto Supremo|Decreto Supremo N° 5340|Crea la plataforma digital del Estado Plurinacional de Bolivia (\"gob.bo\"), con el objetivo de facilitar el acceso a la información pública, trámites y servicios estatales.|26/02/2025|Descargar Archivo|",
+     "title": "Normativa Nacional",
+     "url": "https://agetic.gob.bo/normativa/normativa-nacional",
+     "verificacion": {
+      "error": "robots.txt disallows https://agetic.gob.bo/normativa/normativa-nacional",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:25:13Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "cancilleria.gob.bo",
+     "rank": 3,
+     "snippet": "…\n...\n|DECRETO SUPREMO Nº 1440 REGLAMENTO A LA LEY N° 251, DE 20 DE JUNIO DE 2012, DE PROTECCIÓN A PERSONAS REFUGIADAS|Miércoles, 3 Febrero 2016|DESCARGAR|",
+     "title": "marco legal",
+     "url": "https://cancilleria.gob.bo/mre/marco-legal/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Bolivia official gazette",
+   "descartados": 5,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": []
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Bolivia supreme court decisions official database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2022-02-15",
+     "host": "jurisprudencia.tsj.bo",
+     "rank": 1,
+     "snippet": "### SISTEMA GÉNESIS\n...\n** BUSCADOR DE\n...\n|**Oficinas:**|Calle Luis Paz Arce Nº 352, Sucre – Bolivia|\n|--|--|\n...\n|**Correo**|jurisprudencia.tsj@organojudicial.gob.bo|",
+     "title": "UNIDAD DE SISTEMATIZACIÓN DE JURISPRUDENCIA",
+     "url": "https://jurisprudencia.tsj.bo/jurisprudencia/",
+     "verificacion": {
+      "bytes": 115066,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:25:16Z",
+      "http": 200,
+      "sha256": "dbd93f92e2c2f5f9902fe9922486c648be3c886f71deb9ff03554f43ce25dd0c"
+     }
+    },
+    {
+     "date": "",
+     "host": "tcpbolivia.bo",
+     "rank": 2,
+     "snippet": "### Buscador\nBuscador de Causas y Resoluciones\n...\nBuscador de Jurisprudencia\n...\n## TCP DA UN SALTO A LA MODERNIZACIÓN: IMPLEMENTA POR PRIMERA VEZ EL SORTEO DIGITAL DE CAUSAS CONSTITUCIONALES",
+     "title": "Tribunal Constitucional Plurinacional ::. – TCP",
+     "url": "https://tcpbolivia.bo/",
+     "verificacion": {
+      "bytes": 222843,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:25:25Z",
+      "http": 200,
+      "sha256": "a2fa5b6ec5fe06ad9500c5b538976f6dc343f55722ffbda28abd124085bab3ee"
+     }
+    },
+    {
+     "date": "2013-06-06",
+     "host": "magistratura.organojudicial.gob.bo",
+     "rank": 3,
+     "snippet": "## Misión y Visión\n### Misión:\n...\n118 y 183-parág.\n...\n## Objetivos\n– Compilar, sistematizar y publicar física y digitalmente la jurisprudencia del Tribunal Supremo de Justicia, fallos de los Tribunales Departamentales y Tribunal Agroambiental.",
+     "title": "Gaceta Judicial – Consejo de la Magistratura",
+     "url": "https://magistratura.organojudicial.gob.bo/gaceta-judicial/"
+    },
+    {
+     "date": "",
+     "host": "tsj.bo",
+     "rank": 4,
+     "snippet": "#### TRIBUNAL SUPREMO DE JUSTICIA\nCalle Luis Paz Arce Nº 352\n4 – 6453200\ntribunalsupremo@organojudicial.gob.bo\nSucre – Bolivia",
+     "title": "Archivos Judiciales",
+     "url": "https://tsj.bo/servicios-judiciales/archivos-judiciales/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Bolivia state or provincial legislation official portal",
+   "descartados": 5,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": []
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Bolivia municipal bylaws regulations official portal",
+   "descartados": 3,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.gmsantacruz.gob.bo",
+     "rank": 1,
+     "snippet": "GOBIERNO AUTÓNOMO MUNICIPAL DE SANTA CRUZ\nCall Center 800 12 5700",
+     "title": "GOBIERNO AUTÓNOMO MUNICIPAL DE SANTA CRUZ",
+     "url": "https://www.gmsantacruz.gob.bo/Publicaciones-Municipales/Publicaciones-Generales/",
+     "verificacion": {
+      "bytes": 37086,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:25:28Z",
+      "http": 200,
+      "sha256": "6f02e9a79d6c0a6e46d9ae8701cd0ae1b5de758f2ae3b1b13ecbfa577b38ba4d"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.planificacion.gob.bo",
+     "rank": 2,
+     "snippet": "LEY DE MUNICIPALIDADES\n...\nDISPOSICIONES GENERALES\nArtículo 1° (Objeto)\nLa presente Ley tiene por objeto regular el régimen municipal establecido en el Título VI de la\nParte Tercera, Artículos 200° al 206°, de la Constitución Política del Estado.",
+     "title": "LEY Nº 2028",
+     "url": "https://www.planificacion.gob.bo/uploads/marco-legal/Ley%20N%C2%B0%202028%20DE%20MUNICIPALIDADES.pdf",
+     "verificacion": {
+      "bytes": 171173,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:25:30Z",
+      "http": 200,
+      "sha256": "4b7e6493c76933214029b2defd1c471949b799ad86726a9d7dd6435fd255099f"
+     }
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Bolivia regulatory agencies official regulations",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "Regulatory authority regarding investment lies solely at the national level in \nBolivia.\n...\nThe Business Auditing Authority (AEMP) is tasked with regulating the business activities of public, private, mixed, or cooperative entities across all business sectors.\n...\nThe AEMP oversees business activit",
+     "title": "2026 Bolivia Investment Climate Statement",
+     "url": "https://www.state.gov/wp-content/uploads/2026/08/701264_2026-Bolivia-Investment-Climate-Statement.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/wp-content/uploads/2026/08/701264_2026-Bolivia-Investment-Climate-Statement.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:25:30Z"
+     }
+    },
+    {
+     "date": "2026-10-20",
+     "host": "www.state.gov",
+     "rank": 2,
+     "snippet": "Regulatory authority regarding investment lies solely at the national level in Bolivia.\n...\nOnline regulatory disclosures by the government can be found in the Official Gazette .\n    The Business Auditing Authority (AEMP) is tasked with regulating the business activities of public, private, mixed, o",
+     "title": "2026 Investment Climate Statements: Bolivia",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/bolivia",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/bolivia",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:25:30Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.asfi.gob.bo",
+     "rank": 3,
+     "snippet": "Teléfono: (591-2) 2174444 - (591-2) 2431919 FAX: (591-2) 2430028\nLínea gratuita: 800 103 103\nCorreo electrónico: asfi@asfi.gob.bo",
+     "title": "Recopilación de Normas para Servicios Financieros (RNSF)",
+     "url": "https://www.asfi.gob.bo/node/401"
+    },
+    {
+     "date": "",
+     "host": "www.gob.bo",
+     "rank": 4,
+     "snippet": "###### Agencia de Gobierno Electrónico y Tecnologías de Información y Comunicación\nAGETIC\n...\nAISEM\n...\n###### Autoridad de Fiscalización y Control de Pensiones y Seguros - APS\n...\nDS.\n5340\nResolución Ministerial No. 060/2025\nNo. 067/2025",
+     "title": "www.gob.bo · entidadesEntidades - Gob.bo",
+     "url": "https://www.gob.bo/entidades"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Bolivia national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.ibnorca.org",
+     "rank": 1,
+     "snippet": "Accede a normas técnicas a través de suscripciones, colecciones o en formato físico de acuerdo a tu necesidad.\n...\nBiblioteca virtual con acceso a todas las Normas Bolivianas dirigido a empresas y universidades.",
+     "title": "Normas Técnicas - Normalización - Ibnorca",
+     "url": "https://www.ibnorca.org/normalizacion/normalizacion",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ibnorca.org/normalizacion/normalizacion",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:25:32Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ibnorca.org",
+     "rank": 2,
+     "snippet": "Actualmente se cuenta con un catálogo de Normas Bolivianas que fueron desarrolladas por IBNORCA a través de los Comités Técnicos de Normalización, conoce el proceso y participa de la elaboración a nivel nacional o internacional.",
+     "title": "Ibnorca",
+     "url": "https://www.ibnorca.org/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ibnorca.org/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:25:32Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.pilcomayo.net",
+     "rank": 3,
+     "snippet": "NB\n146-76\nSeguridad Industrial - Sustancias peligrosas - Clasificació n\n...\n350-80\nSeguridad Industrial - Protección personal - Cascos de seguridad\n...\nDefiniciones y clasificación\nNB\n145-76\nSeguridad Industrial - Sustancias peligrosas - Definiciones y terminología",
+     "title": "CATÁLOGO D E",
+     "url": "https://www.pilcomayo.net/media/uploads/biblioteca/libro_213_HH-094.pdf"
+    },
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 4,
+     "snippet": "# Trade Policy Review\nApplication of an NB is voluntary.\nAccording to information provided by the authorities, IBNORCA currently has approximately 3,500 standards registered in its database; of these, some 30% are ISO standards adopted by IBNORCA.",
+     "title": "Members - ePing SPS&TBT platform",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C068"
+    },
+    {
+     "date": "2026-09-22",
+     "host": "www.minsalud.gob.bo",
+     "rank": 5,
+     "snippet": "# Normas y Manuales - Ministerio de Salud y Deportes\n### Normas y Manuales\n###### Ver todas las Normas ...",
+     "title": "Ministerio de Salud y Deportes de Bolivia - Normas y Manuales",
+     "url": "https://www.minsalud.gob.bo/6420-normas-y-manuales-ministerio-de-salud-y-deportes"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Bolivia mandatory technical regulations official list",
+   "descartados": 3,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2026-10-06",
+     "host": "mintrabajo.gob.bo",
+     "rank": 1,
+     "snippet": "|2|Resolución Ministerial|Resolución Ministerial No 1019/26|16/09/2026|- Descargar archivo|\n|3|Resolución Ministerial|Resolución Ministerial No 1556/25|07/11/2025|- Descargar archivo|",
+     "title": "Normas Técnicas de SST - Ministerio de Trabajo",
+     "url": "https://mintrabajo.gob.bo/index.php/normas-tecnicas-de-sst/",
+     "verificacion": {
+      "bytes": 87792,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:25:34Z",
+      "http": 200,
+      "sha256": "3c25a7811b9157b67d1f7bc13f7c52fc08aaeda35b46359b03bf6e990e3013af"
+     }
+    },
+    {
+     "date": "2010-05-09",
+     "host": "www.att.gob.bo",
+     "rank": 2,
+     "snippet": "|Archivo descargable|Formato|\n...\n|Decreto Supremo 1391 Reglamento General a la Ley 164 de Telecomunicaciones y Tecnologias de Inforacion y Comunicacion..pdf| |\n...\n|Decreto Supremo 3073 Reglamento Tecnico a la Ley 165 de Transporte.pdf| |",
+     "title": "Normas | Autoridad de Regulación y Fiscalización ...",
+     "url": "https://www.att.gob.bo/index.php/normas",
+     "verificacion": {
+      "bytes": 57719,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:25:36Z",
+      "http": 200,
+      "sha256": "2339dab26eef6a1146c4d8a309ff9a683001a3b79f3f8c8e474feca2c0bcb992"
+     }
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Bolivia national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-23",
+     "host": "www.ine.gob.bo",
+     "rank": 1,
+     "snippet": "Instituto Nacional de Estadística - INE\nLos portales oficiales del Estado Plurinacional de Bolivia\nemplean el dominio .gob.bo de forma exclusiva.\nEsto significa que estás conectado a un dominio .gob.bo de manera segura.\n...\n**Correo electrónico:** info@ine.gob.bo",
+     "title": "Instituto Nacional de Estadística - INE",
+     "url": "https://www.ine.gob.bo/?date",
+     "verificacion": {
+      "bytes": 299929,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:25:40Z",
+      "http": 200,
+      "sha256": "6e341b42119ab4f53868b581ebd41444404fcf029cef22063350180cdf1fe9c3"
+     }
+    },
+    {
+     "date": "2025-08-05",
+     "host": "www.ine.gob.bo",
+     "rank": 2,
+     "snippet": "Los portales oficiales del Estado Plurinacional de Bolivia\nemplean el dominio .gob.bo de forma exclusiva.\nEsto significa que estás conectado a un dominio .gob.bo de manera segura.\nInstituto Nacional de Estadística\n90 Años contando Bolivia\n# Bolivia en cifras 2025",
+     "title": "Bolivia en cifras 2025 - INE",
+     "url": "https://www.ine.gob.bo/index.php/bolivia-en-cifras-2025/",
+     "verificacion": {
+      "bytes": 201880,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:25:42Z",
+      "http": 200,
+      "sha256": "a529f1f0dddab645583dfbc8ce515957a80692f7936f9c61e0e901bcdfbd7077"
+     }
+    },
+    {
+     "date": "2026-06-30",
+     "host": "www.ine.gob.bo",
+     "rank": 3,
+     "snippet": "Cuadros Estadísticos - INE\nLos portales oficiales del Estado Plurinacional de Bolivia\nemplean el dominio .gob.bo de forma exclusiva.\n...\n# Cuadros Estadísticos\n1. Inicio\n2. Estadísticas económicas\n...\n© 2026 INE – Instituto Nacional de Estadística",
+     "title": "Cuadros Estadísticos - Ine.gob.bo",
+     "url": "https://www.ine.gob.bo/index.php/estadisticas-economicas/cuadros-estadisticos-publico/"
+    },
+    {
+     "date": "2025-08-05",
+     "host": "www.ine.gob.bo",
+     "rank": 4,
+     "snippet": "Bolivia en cifras 2025 - INE\nLos portales oficiales del Estado Plurinacional de Bolivia\nemplean el dominio .gob.bo de forma exclusiva.\n...\nInstituto Nacional de Estadística\n90 Años contando Bolivia\n# Bolivia en cifras 2025\n1. Inicio",
+     "title": "Bolivia en cifras 2025 - INE - Ine.gob.bo",
+     "url": "https://www.ine.gob.bo/index.php/publicaciones/bolivia-en-cifras-2025/"
+    },
+    {
+     "date": "2026-05-29",
+     "host": "www.ine.gob.bo",
+     "rank": 5,
+     "snippet": "Censos - INE\nLos portales oficiales del Estado Plurinacional de Bolivia\nemplean el dominio .gob.bo de forma exclusiva.\n...\n1. Inicio\n2. Censos y Banco de Datos\n3. Censos\n...\n© 2026 INE – Instituto Nacional de Estadística",
+     "title": "Censos",
+     "url": "https://www.ine.gob.bo/index.php/censos-y-banco-de-datos/censos/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Bolivia central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2025-11-21",
+     "host": "www.bcb.gob.bo",
+     "rank": 1,
+     "snippet": "4 2025 Credibilidad y Gobernanza del BCB BCB garantiza acceso a información estadística oportuna Se reactivó la publicación de Estadísticas Semanales tras un periodo de casi 3 años de paralización discrecional.\nA partir del 4 de diciembre...\nVer detalle 6",
+     "title": "Recursos y Contenido Institucional",
+     "url": "https://www.bcb.gob.bo//",
+     "verificacion": {
+      "bytes": 310412,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:25:53Z",
+      "http": 200,
+      "sha256": "5b1582d24e2b95a754bedfdf7bb85b62ba30eb8df21110e60c72424e4f8aa699"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcb.gob.bo",
+     "rank": 2,
+     "snippet": "Estadísticas Semanales — Banco Central de Bolivia\nBANCO CENTRAL DE BOLIVIA\nAsesoría de Política Económica\nSubgerencia de Estadísticas Económicas\nEstadísticas Semanales\n...\nDatos disponibles hasta: --/--/----\nCorte: Mes cerrado Semana cerrada Diario",
+     "title": "Estadísticas Semanales",
+     "url": "https://www.bcb.gob.bo/bcb_estadisticas/",
+     "verificacion": {
+      "bytes": 213021,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:03Z",
+      "http": 200,
+      "sha256": "1d05f046957acb152f92bfca1e98b332552dd0c05aee79448bf69fa3b05c0c34"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.bcb.gob.bo",
+     "rank": 3,
+     "snippet": "Cuarto trimestre de 2026” \nBanco Central de Bolivia\nAyacucho y Mercado\nCiudad de La Paz\nEstado Plurinacional de Bolivia\nTeléfono: (591) 2 2409090\nPágina web: www.bcb.gob.bo\nContenidos | Banco Central de Bolivia",
+     "title": "REPORTE DE INFLACIÓN Y POLÍTICA MONETARIA",
+     "url": "https://www.bcb.gob.bo/webdocs/ripm/RIPoM%20III_T_26%20(4)%20(2).pdf"
+    },
+    {
+     "date": "",
+     "host": "www.bcb.gob.bo",
+     "rank": 4,
+     "snippet": "COTIZACIONES OFICIALES DEL BOLIVIANO CON RELACIÓN AL DÓLAR ESTADOUNIDENSE\n...\nENERO\nFEBRERO\nMARZO\nABRIL\nMAYO\nJUNIO\n...\n6,96\n...\nBANCO CENTRAL DE BOLIVIA",
+     "title": "tipos de cambio históricos 2026",
+     "url": "https://www.bcb.gob.bo/tiposDeCambioHistorico/pdf.php?anio=2026"
+    },
+    {
+     "date": "2026-09-03",
+     "host": "www.wikidata.org",
+     "rank": 5,
+     "snippet": "monetary Authority of Bolivia\n...\n- Bolivian Central Bank\n...\napplies to name of subject\nBanco Central de Bolivia (Spanish)\n...\nBanco Central de Bolivia\nofficial website\nhttp://www.bcb.gob.bo\nCommons category\nBanco Central de Bolivia, La Paz",
+     "title": "Central Bank of Bolivia",
+     "url": "https://www.wikidata.org/wiki/Q806180"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Bolivia government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "agetic.gob.bo",
+     "rank": 1,
+     "snippet": "### Datos abiertos\n🌐 Ir a la Plataforma\nPASO 1\n...\nMandar una nota de solicitud de habilitación de Gestor Institucional para datos.gob.bo con los datos del responsable (nombre completo, ci, fecha de nacimiento, cargo, correo, celular y entidad a la pertenece).",
+     "title": "Datos Abiertos",
+     "url": "https://agetic.gob.bo/tramites-y-servicios/herramientas-y-servicios-digitales/datos-abiertos",
+     "verificacion": {
+      "error": "robots.txt disallows https://agetic.gob.bo/tramites-y-servicios/herramientas-y-servicios-digitales/datos-abiertos",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:26:03Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "anda.ine.gob.bo",
+     "rank": 2,
+     "snippet": "Catálogo Central de Datos y Microdatos\n# Catálogo de Metadatos y Microdatos\n...\nNavegar el Catálogo\n...\nEl catálogo de microdatos es una colección de bases de datos del Instituto Nacional de Estadística y otras entidades del Sistema de Estadísticas Oficiales del Estado Plurinacional de Bolivia",
+     "title": "Catálogo de Metadatos y Microdatos - anda.ine.gob.bo",
+     "url": "https://anda.ine.gob.bo/index.php/home/index.php/",
+     "verificacion": {
+      "bytes": 23012,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:05Z",
+      "http": 200,
+      "sha256": "a5e051e58f44782ebe11cd670b78ff6dca5cb0e870b39e2062431b7cb04e07da"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.gob.bo",
+     "rank": 3,
+     "snippet": "###### 2026 Ministerio de la Presidencia - Estado Plurinacional de Bolivia\nPlataforma gob.bo\nBienvenido a la plataforma gob.BO\nLa forma más fácil de encontrar información del Estado Plurinacional de Bolivia",
+     "title": "Plataforma gob.bo",
+     "url": "https://www.gob.bo/"
+    },
+    {
+     "date": "2026-03-13",
+     "host": "siip.produccion.gob.bo",
+     "rank": 4,
+     "snippet": "### Actividad Económica\n- Producto Interno Bruto (PIB)\n- Empleo y Salarios\n- Índice de Precios al Consumidor (IPC)\n- Nota de Prensa - PIB\n...\n- Precios diarios mayoristas\n...\n- Precios Internacionales\n- Tipos de cambio",
+     "title": "Sistema Integrado de Información Productiva - SIIP",
+     "url": "https://siip.produccion.gob.bo/"
+    },
+    {
+     "date": "",
+     "host": "agetic.gob.bo",
+     "rank": 5,
+     "snippet": "Es la Plataforma Digital del Estado Plurinacional de Bolivia con el nombre \"gob.bo\", facilita el acceso a la información pública, trámites y servicios de las entidades e instituciones públicas del Estado.\n### Componentes\nPortal de acceso a las páginas web institucionales.\n...\n- c.\nDatos abiertos del",
+     "title": "Plataforma Digital del Estado Plurinacional de Bolivia",
+     "url": "https://agetic.gob.bo/tramites-y-servicios/herramientas-y-servicios-digitales/plataforma-digital-del-estado-plurinacional-de-bolivia"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:24:14Z",
+ "pais": {
+  "iso2": "BO",
+  "iso3": "BOL",
+  "nombre": "Bolivia"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

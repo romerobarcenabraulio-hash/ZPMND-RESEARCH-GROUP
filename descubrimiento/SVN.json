@@ -1,0 +1,549 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Slovenia constitution and national laws official legal database",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 1,
+     "snippet": "# Zakonodaja v angleščini\n|7.|** **|Decree on the protection of classified information (*)|Uredba o varovanju tajnih podatkov|",
+     "title": "Zakonodaja v angleščini",
+     "url": "https://pisrs.si/aktualno/zakonodaja-v-anglescini"
+    },
+    {
+     "date": "",
+     "host": "www.gov.si",
+     "rank": 2,
+     "snippet": "## Legal Information System of the Republic of Slovenia (PISRS)\nThe website provides free access to legislative and other public documents of state authorities and bodies exercising public powers in the Republic of Slovenia and documents issued by the institutions of the European Union and the Counc",
+     "title": "Accessibility of legislation | GOV.SI",
+     "url": "https://www.gov.si/en/topics/accessibility-of-legislation/"
+    },
+    {
+     "date": "2020-01-08",
+     "host": "n-lex.europa.eu",
+     "rank": 3,
+     "snippet": "The *Pravno-informacijski sistem Republike Slovenije* (PIS) is a free, public database of information on national and EU laws, managed by the Slovenian Government Office for Legislation.\n...\n…\n...\nThey are:\n- subordinate to the Constitution but superior to any other Slovenian legal act",
+     "title": "About the national database - N-Lex - European Union",
+     "url": "https://n-lex.europa.eu/n-lex/info/info-sl/index?lang=en"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Slovenia national regulations decrees official government database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 1,
+     "snippet": "# Register predpisov\n### Opis zbirke\nRegister predpisov vsebuje podatke o predpisih Državnega zbora, vlade, ministrstev in organov v sestavi ministrstev ter vladnih služb, ki veljajo ali se uporabljajo v RS.",
+     "title": "Register predpisov - PISRS",
+     "url": "https://pisrs.si/zbirke/register-predpisov"
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.gov.si",
+     "rank": 2,
+     "snippet": "Dnevni red 39.\ndopisne seje Vlade Republike Slovenije | GOV.SI\n# Dnevni red 39. dopisne seje Vlade Republike Slovenije\n29. 10. 2026 - Vlada Republike Slovenije\n...\n30. 10. 2026",
+     "title": "Dnevni red 39. dopisne seje Vlade Republike Slovenije | GOV.SI",
+     "url": "https://www.gov.si/novice/2026-10-29-dnevni-red-39-dopisne-seje-vlade-republike-slovenije/"
+    },
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 3,
+     "snippet": "PisRS - Pravno informacijski sistem\nS 1.\nmarcem 2026 se spreminja način objavljanja aktov v Uradnem listu Republike Slovenije.\n...\npisrs.svz@gov.si\nPiškotki in nastavitve zasebnosti",
+     "title": "PisRS",
+     "url": "https://pisrs.si/Pis.web/normativniStevec"
+    },
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 4,
+     "snippet": "Napredni iskalnik pravni informacijski sistema Republike Slovenije (PISRS)\nS 1.\nmarcem 2026 se spreminja način objavljanja aktov v Uradnem listu Republike Slovenije.\n...\nPiškotki in nastavitve zasebnosti",
+     "title": "Napredni iskalnik pravni informacijski sistema Republike ...",
+     "url": "https://pisrs.si/napredni-iskalnik"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Slovenia official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2008-11-19",
+     "host": "elischolar.library.yale.edu",
+     "rank": 1,
+     "snippet": "\"Official Gazette of the Republic of Slovenia\" by Slovenia: Official Gazette (Uradni List Republike Slovenije)\n...\n# Official Gazette of the Republic of Slovenia\n...\n- **Slovenia: Official Gazette (Uradni List Republike Slovenije)**\n...\nSlovenia: Official Gazette (Uradni List Republike Slovenije)",
+     "title": "Official Gazette of the Republic of Slovenia",
+     "url": "https://elischolar.library.yale.edu/ypfs-documents/13017/"
+    },
+    {
+     "date": "2021-04-14",
+     "host": "www.mklj.si",
+     "rank": 2,
+     "snippet": "Official Gazette of the Republic of Slovenia - Mestna knjižnica Ljubljana\n...\n# Official Gazette of the Republic of Slovenia\n...\nThe Official Gazette of the Republic of Slovenia is accessible online for free.\n**The texts of laws and acts are available in Slovene only!**",
+     "title": "Official Gazette of the Republic of Slovenia",
+     "url": "https://www.mklj.si/en/digital-library/official-gazette-of-the-republic-of-slovenia/"
+    },
+    {
+     "date": "",
+     "host": "www.uradni-list.si",
+     "rank": 3,
+     "snippet": "Številka 99\n...\nOd tega datuma bodo vse objave dostopne izključno v elektronski obliki na spletišču Pravnega informacijskega sistema Republike Slovenije (PISRS), tiskana izdaja pa se z 28. 2. 2026 ukinja.",
+     "title": "Vsebina Uradnega lista",
+     "url": "https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2001-02-0078/zakon-o-ratifikaciji-dodatka-1-v-zvezi-z-garancijsko-pogodbo-podpisano-10-12--novembra-1998-med-skladom-sveta-evrope-za-socialni-razvoj-s-1--novembrom-1999-imenovanim-razvojna-banka-sveta-evrope-in-republiko-slovenijo-mssed1"
+    },
+    {
+     "date": "",
+     "host": "www.caa.si",
+     "rank": 4,
+     "snippet": "# Amendment of Legislation\n...\nThe Regulation on Aircraft for Research, Experimental or Scientific Purposes was published in the Official Gazette of the Republic of Slovenia, No. 1185/26, on 10 July 2026 and entered into force on 25 July 2026.",
+     "title": "Amendment of Legislation",
+     "url": "https://www.caa.si/en/legislation-1582547405.html"
+    },
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 5,
+     "snippet": "Št.\n50 – 18.\nVIII.\n1997   URADNI LIST REPUBLIKE SLOVENIJE   Stran 4387\nREPUBLIC OF SLOVENIA",
+     "title": "Dovoljenje radijske postaje",
+     "url": "https://pisrs.si/api/datoteke/integracije/468925193"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Slovenia supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 1,
+     "snippet": "Zbirka vrhovno sodišče pravnega informacijskega sistema Republike Slovenije (PISRS)\n...\n# Vrhovno sodišče\n### Opis zbirke\nPiškotki in nastavitve zasebnosti",
+     "title": "Zbirka vrhovno sodišče pravnega informacijskega sistema ...",
+     "url": "https://pisrs.si/zbirke/vrhovno-sodisce"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.sodisce.si",
+     "rank": 2,
+     "snippet": "## Izbor zadnjih odločb VSRS in VS\n24.09.2026 / Delovni in socialni oddelek\n...\n## Brezplačna pravna pomoč\n30.10.2026 / Okrožno sodišče v Ljubljani",
+     "title": "Sodstvo Republike Slovenije - sodisce.si",
+     "url": "https://www.sodisce.si/?s=index/"
+    },
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 3,
+     "snippet": "Napredni iskalnik pravni informacijski sistema Republike Slovenije (PISRS)\n...\n# Napredni iskalnik\npisrs.svz@gov.si\nPiškotki in nastavitve zasebnosti",
+     "title": "Napredni iskalnik pravni informacijski sistema Republike ...",
+     "url": "https://pisrs.si/napredni-iskalnik"
+    },
+    {
+     "date": "",
+     "host": "www.sodnapraksa.si",
+     "rank": 4,
+     "snippet": "Iskalnik po sodni praksi poganja odprtokodni strežnik SOLR.",
+     "title": "Iskalnik sodne prakse",
+     "url": "https://www.sodnapraksa.si/"
+    },
+    {
+     "date": "",
+     "host": "www.aca-europe.eu",
+     "rank": 5,
+     "snippet": "All decisions of the Supreme Court are published at the web site of Slovene court practice, jurisprudence\n(www.sodnapraksa.si).\n...\nThere are several possibilities to gain access to the published court decisions.\n...\nThis can be found on the web page https://www.sodnapraksa.si/",
+     "title": "[PDF] Colloquium organized by Supreme Administrative Court of the ...",
+     "url": "https://www.aca-europe.eu/colloquia/2016/Slovenia.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Slovenia state or provincial legislation official portal",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 1,
+     "snippet": "Pravni informacijski sistem Republike Slovenije (PISRS)\nS 1.\nmarcem 2026 se spreminja način objavljanja aktov v Uradnem listu Republike Slovenije.\n...\nMestni trg 4\n1000 Ljubljana\npisrs.svz@gov.si",
+     "title": "Pravni informacijski sistem Republike Slovenije (PISRS)",
+     "url": "https://pisrs.si/Pis.web/"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.gov.si",
+     "rank": 2,
+     "snippet": "## I. PREDLOGI RAVNANJA S STVARNIM PREMOŽENJEM\n...\n…\n- **Odgovorna institucija:**\nUrad Vlade Republike Slovenije za komuniciranje | 01 478 50 00 | is.vog@moku.pg",
+     "title": "Dnevni red 1. dopisna seje Komisije za administrativne zadeve in imenovanja | GOV.SI",
+     "url": "https://www.gov.si/novice/2026-10-27-dnevni-red-1-dopisna-seje-komisije-za-administrativne-zadeve-in-imenovanja/"
+    },
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 3,
+     "snippet": "Napredni iskalnik pravni informacijski sistema Republike Slovenije (PISRS)\nS 1.\nmarcem 2026 se spreminja način objavljanja aktov v Uradnem listu Republike Slovenije.\n...\n1000 Ljubljana\npisrs.svz@gov.si",
+     "title": "Napredni iskalnik pravni informacijski sistema Republike ...",
+     "url": "https://pisrs.si/napredni-iskalnik"
+    },
+    {
+     "date": "",
+     "host": "www.ip-rs.si",
+     "rank": 4,
+     "snippet": "# Access to Public Information Act\nAccess to Public Information Act, published on 22 March 2003 (Official Gazette of RS.",
+     "title": "Access to Public Information Act - IPRS",
+     "url": "https://www.ip-rs.si/en/legislation/access-to-public-information-act/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Slovenia municipal bylaws regulations official portal",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 1,
+     "snippet": "S 1.\n...\nRegister predpisov samoupravnih lokalnih skupnosti vsebuje podatke o predpisih, ki veljajo ali se uporabljajo v samoupravnih lokalnih skupnostih.\nSkrbnik registra je javno podjetje Uradni list Republike Slovenije.",
+     "title": "Predpisi lokalnih skupnosti - pisrs.si",
+     "url": "https://pisrs.si/zbirke/predpisi-lokalnih-skupnosti"
+    },
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 2,
+     "snippet": "Akti lokalnih skupnosti iz Registra pravnih aktov lokalnih skupnosti (RePALS)\nS 1.\nmarcem 2026 se spreminja način objavljanja aktov v Uradnem listu Republike Slovenije.\n...\nmarca 2026",
+     "title": "Akti lokalnih skupnosti iz Registra pravnih aktov lokalnih ... - PISRS",
+     "url": "https://pisrs.si/aktualno/akti-lokalnih-skupnosti"
+    },
+    {
+     "date": "",
+     "host": "pis.eprostor.gov.si",
+     "rank": 3,
+     "snippet": "**ZBIRKA PROSTORSKIH AKTOV**\nZbirka prostorskih aktov vsebuje podatke o strateških in izvedbenih prostorskih aktih, ki so v pristojnosti države, regij in občin.\n...\n**Republika Slovenija**",
+     "title": "PIS - Prostorski informacijski sistem - Portal GOV.SI",
+     "url": "https://pis.eprostor.gov.si/pis"
+    },
+    {
+     "date": "",
+     "host": "www.gov.si",
+     "rank": 4,
+     "snippet": "3000 Celje\n...\n- moc.celje.si\n…\n- ### Mestna občina Ljubljana\nMestni trg 1\n1000 Ljubljana\n- 01 306 11 62\n- is.anajlbujl@anrasip.anvalg\n- www.ljubljana.si",
+     "title": "Občine | GOV.SI",
+     "url": "https://www.gov.si/podrocja/drzava-in-druzba/lokalna-samouprava-in-regionalni-razvoj/lokalna-samouprava/obcine/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Slovenia regulatory agencies official regulations",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.jazmp.si",
+     "rank": 1,
+     "snippet": "|##### OSTALO|Zakon o inšpekcijskem nadzoru (ZIN) (PISRS)|Tarifa Javne agencije Republike Sloven\n…",
+     "title": "HUMANA ZDRAVILA – nacionalna zakonodaja",
+     "url": "https://www.jazmp.si/predpisi/"
+    },
+    {
+     "date": "",
+     "host": "www.gov.si",
+     "rank": 2,
+     "snippet": "Cankarjeva cesta 18\n1000 Ljubljana\n...\n- ### Securities Market Agency\nPoljanski nasip 6\n1000 Ljubljana\nShow on map\n- +386 1 280 04 00\n- is.pvta@ofni\n- www.a-tvp.si/eng",
+     "title": "Agencies, funds and surveys - GOV.SI",
+     "url": "https://www.gov.si/en/state-authorities/agencies-funds-and-surveys/"
+    },
+    {
+     "date": "2024-03-15",
+     "host": "www.akos-rs.si",
+     "rank": 3,
+     "snippet": "Here you will find the Agency's Articles of Association and all the relevant national and European regulation that falls under the authority of the Agency.\nThe legislation consists of the laws and implementing acts.\n...\nAgency for Communication Networks and Services of the Republic of Slovenia\nStegn",
+     "title": "Legislation - akos-rs.si",
+     "url": "https://www.akos-rs.si/en/legislation"
+    },
+    {
+     "date": "",
+     "host": "www.jazmp.si",
+     "rank": 4,
+     "snippet": "Agency for Medicinal Products and Medical Devices of the Republic of Slovenia\n...\nThe applicant shall obtain the marketing authorisation in accordance with the conditions defined in detail in the Medicinal Products Act (Official Gazette of the RS, No 17/14 with amendments; hereinafter: the Act).\n...",
+     "title": "National procedure – JAZMP",
+     "url": "https://www.jazmp.si/en/human-medicines/regulatory-information/marketing-authorisation/national-procedure/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Slovenia national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ecommerce.sist.si",
+     "rank": 1,
+     "snippet": "SIST EN IEC 60086-2-1:2026(Splošen)\n...\nSIST EN IEC 61373:2026(Splošen)\nRailway applications - Rolling stock equipment - Shock and vibration tests\n...\nSIST EN ISO 10993-3:2026(Splošen)",
+     "title": "Standards by SIST - Slovenian Institute for Standardization",
+     "url": "https://ecommerce.sist.si/catalog/standards/sist"
+    },
+    {
+     "date": "2026-04-10",
+     "host": "ecommerce.sist.si",
+     "rank": 2,
+     "snippet": "SIST EN 18235-1:2026 is a standard published by the Slovenian Institute for Standardization (SIST).\nIts full title is \"Trusted data transactions - Part 1: Terminology, concepts and mechanisms\".\n...\nSIST - Slovenski inštitut za standardizacijo",
+     "title": "SIST EN 18235-1:2026 - Trusted data transactions - Part 1:",
+     "url": "https://ecommerce.sist.si/catalog/standards/sist/1b4bd2d0-fd0a-4a18-93da-28567f3d8c51/sist-en-18235-1-2026"
+    },
+    {
+     "date": "2026-03-25",
+     "host": "ecommerce.sist.si",
+     "rank": 3,
+     "snippet": "Ta slovenski standard je istoveten z: EN 18235-1:2026\nICS:\n...\n35.030 Informacijska varnost IT Security\n...\nSIST - Slovenski inštitut za standardizacijo\nUlica gledališča BTC 2\n1000 Ljubljana, Slovenija",
+     "title": "EN 18235-1:2026 - Trusted data transactions - Part 1: Terminology,",
+     "url": "https://ecommerce.sist.si/catalog/standards/cen/0d63b56f-6dc0-4207-908e-3827e34b1f61/en-18235-1-2026"
+    },
+    {
+     "date": "2023-04-14",
+     "host": "ecommerce.sist.si",
+     "rank": 4,
+     "snippet": "# SIST EN ISO 7010:2020/A5:2023\n...\nTa slovenski standard je istoveten z: EN ISO 7010:2020/A5:2023\nICS:\n01.080.10 Simboli za javno obveščanje.\n...\nZnaki.",
+     "title": "SIST EN ISO 7010:2020/A5:2023 - Graphical symbols",
+     "url": "https://ecommerce.sist.si/catalog/standards/sist/89c68f1d-8205-4657-9957-0d83e94f7bfc/sist-en-iso-7010-2020-a5-2023"
+    },
+    {
+     "date": "2026-02-13",
+     "host": "ecommerce.sist.si",
+     "rank": 5,
+     "snippet": "SIST EN 14069:2026 - Liming materials - Denominations, specifications\n...\n# SIST EN 14069:2026\n(Splošen)\n## Liming materials - Denominations, specifications and labelling\n...\n…\n...\nSIST - Slovenski inštitut za standardizacijo",
+     "title": "SIST EN 14069:2026 - Liming materials",
+     "url": "https://ecommerce.sist.si/catalog/standards/sist/c4437d79-a6a9-4f3f-8d17-08dae257799b/sist-en-14069-2026"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Slovenia mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 1,
+     "snippet": "ŠT.\n...\nNa podlagi 5.\nčlena Zakona o tehničnih zahtevah za proizvode in o ugotavljanju skladnosti\n…\n...\nSpletni dostop: https://pisrs.si/api/uradni-list/objava/u20260645.pdf",
+     "title": "Uradni list RS - 645/2026",
+     "url": "https://pisrs.si/api/uradni-list/objava/u20260645.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.gov.si",
+     "rank": 2,
+     "snippet": "- Pravilnik o emisiji hrupa gospodinjskih strojev\n...\n- Pravilnik o emisiji hrupa strojev, ki se uporabljajo na prostem\n…\n- Delegirana uredba Komisije (EU) 2022/30 z dne 29.",
+     "title": "Zakonodaja v pristojnosti nadzora Tržnega inšpektorata | GOV.SI",
+     "url": "https://www.gov.si/drzavni-organi/organi-v-sestavi/trzni-inspektorat/zakonodaja/"
+    },
+    {
+     "date": "",
+     "host": "pisrs.si",
+     "rank": 3,
+     "snippet": "Pravilnik o spremembi Pravilnika o omejevanju uporabe določenih nevarnih snovi v električni in elektronski opremi (PISRS)\n1. 2026-01-1305\nS 1.\n...\njulija 2026.",
+     "title": "Kazalo",
+     "url": "https://pisrs.si/Pis.web/pregledPredpisa?sop=2026-01-1305"
+    },
+    {
+     "date": "",
+     "host": "www.uradni-list.si",
+     "rank": 4,
+     "snippet": "5004. Seznam standardov, katerih uporaba ustvarja domnevo o skladnosti proizvoda s predpisi o radijski in terminalski opremi\nUradni list Republike Slovenije\nNa podlagi tretjega odstavka 88.\n...\nSEZNAM\n...\nŠt.",
+     "title": "Seznam standardov za radijsko in terminalsko opremo",
+     "url": "https://www.uradni-list.si/files/RS_-2001-102-05004-OB~P001-0000.PDF"
+    },
+    {
+     "date": "2025-09-29",
+     "host": "technical-regulation-information-system.ec.europa.eu",
+     "rank": 5,
+     "snippet": "## Zakon o konoplji za omejeno osebno uporabo\nŠtevilka obvestila:\n2025/0415/SI (Slovenia)\nDatum prejema:\n30/07/2025\n...\n03/11/2025 (02/02/2026)",
+     "title": "Podrobnosti obvestila | TRIS - European Commission",
+     "url": "https://technical-regulation-information-system.ec.europa.eu/sl/notification/27121"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Slovenia national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-28",
+     "host": "www.stat.si",
+     "rank": 1,
+     "snippet": "SURS\n...\n## Population of Slovenia\nPopulation of Slovenia.\n...\n# Contact\n- Statistical Office of the Republic of Slovenia\nLitostrojska cesta 54\n1000 Ljubljana\n- T: +386 1 241 64 00\n- E: gp.surs@gov.si",
+     "title": "SURS - Stat",
+     "url": "https://www.stat.si/statweb/en/Home/Index"
+    },
+    {
+     "date": "",
+     "host": "www.stat.si",
+     "rank": 2,
+     "snippet": "National Statistics in Slovenia – Annual Report 2025\n...\n3. Development and Technology\n...\nSiStat\n...\n- Statistični urad RS\nLitostrojska cesta 54\n1000 Ljubljana\n- T: (01) 241 64 00\n- E: gp.surs@gov.si",
+     "title": "A review of the most important achievements of the Slovenian national statistics in 2025",
+     "url": "https://www.stat.si/StatWeb/gl/news/Index/14667"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.stat.si",
+     "rank": 3,
+     "snippet": "# Contact\n- Statistical Office of the Republic of Slovenia\nLitostrojska cesta 54\n1000 Ljubljana\n- T: +386 1 241 64 00\n- E: gp.surs@gov.si",
+     "title": "A review of the most important achievements of the Slovenian national statistics in 2025",
+     "url": "https://www.stat.si/statweb/en/News/Index/14667"
+    },
+    {
+     "date": "2025-10-17",
+     "host": "www.stat.si",
+     "rank": 4,
+     "snippet": "National Statistics in Slovenia – Annual Report 2024\n...\nSiStat\n...\n# Contact\n- Statistical Office of the Republic of Slovenia\nLitostrojska cesta 54\n1000 Ljubljana\n- T: +386 1 241 64 00\n- E: gp.surs@gov.si",
+     "title": "National Statistics in Slovenia – Annual Report 2024",
+     "url": "https://www.stat.si/StatWeb/en/News/Index/13921"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.stat.si",
+     "rank": 5,
+     "snippet": "Tables with the latest data are available in the SiStat Database.\n...\n|\n...\n# Contact\n- Statistical Office of the Republic of Slovenia\nLitostrojska cesta 54\n1000 Ljubljana\n- T: +386 1 241 64 00\n- E: gp.surs@gov.si",
+     "title": "Turnover in service activities, August 2026",
+     "url": "https://www.stat.si/statWeb/en/News/Index/14692"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Slovenia central bank statistics official website",
+   "descartados": 2,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "www.bsi.si",
+     "rank": 1,
+     "snippet": "Exchange Rates | Banka Slovenije\n# Exchange Rates\nBanka Slovenije's exchange rates - ECB reference rates\n...\nBanka Slovenije are publishing the ECB reference rates after 16:15.\nIn case of subsequent changes please see disclaimer.\nDownload data series from 2007",
+     "title": "Exchange Rates",
+     "url": "https://www.bsi.si/en/statistics/exchange-rates"
+    },
+    {
+     "date": "",
+     "host": "www.bsi.si",
+     "rank": 2,
+     "snippet": "Situation in the Slovenian banking system | Banka Slovenije\n...\n## Monthly report on bank performance\nBanka Slovenije publishes monthly the key data of the banking system for the last available month.\nMore detailed data on bank operations are also available in the form of an enriched statistical dat",
+     "title": "Situation in the Slovenian banking system",
+     "url": "https://www.bsi.si/en/situation-in-the-slovenian-banking-system"
+    },
+    {
+     "date": "",
+     "host": "www.bsi.si",
+     "rank": 3,
+     "snippet": "…\n# Interest Rates\n**The statistics on interest rates** for banks and savings banks (monetary financial institutions) monitor money market interest rates, deposit and loan interest rates for households and businesses (non-financial corporations), and revaluation rates.\n...\nThese interest rates by ca",
+     "title": "Interest Rates",
+     "url": "https://www.bsi.si/en/interest-rates"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Slovenia government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-04-20",
+     "host": "podatki.gov.si",
+     "rank": 1,
+     "snippet": "OPSI - Odprti podatki Slovenije\n...\nNa portalu OPSI boste našli vse od podatkov, orodij, do koristnih virov, s katerimi boste lahko razvijali spletne in mobilne aplikacije, oblikovali lastne infografike in drugo.",
+     "title": "Odprti podatki Slovenije: OPSI",
+     "url": "https://podatki.gov.si/"
+    },
+    {
+     "date": "",
+     "host": "opendata.si",
+     "rank": 2,
+     "snippet": "Open Data Slovenija - odprti podatki v Sloveniji\n...\nOpen data mednarodni projekt je izvedba ideje, da smo za določen sklop podatkov lastniki vsi prebivalci države in so posledično podatki skupno dobro, ter zato dostopni širši publiki.",
+     "title": "Open Data Slovenija - odprti podatki v Sloveniji",
+     "url": "https://opendata.si/"
+    },
+    {
+     "date": "",
+     "host": "epub.jku.at",
+     "rank": 3,
+     "snippet": "…\npublic datasets were being published, but the government open data portal OPSI was established in \n2016 (podatki.gov).\n...\nOpen government data in Slovenia are published on the OPSI portal since 2016\n(https://podatki.gov.si/).",
+     "title": "ASSESSMENT OF AN OPEN GOVERNMENT DATA ...",
+     "url": "https://epub.jku.at/download/pdf/9026838.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.sgi-network.org",
+     "rank": 4,
+     "snippet": "Slovenia \nScore 9  \nThe Ministry of Public Administration established the national open data portal OPSI \n(Odprti podatki Slovenije) in 2016.\nThe portal provides a single national online point for the publication of open data for the entire public sector.",
+     "title": "[PDF] Openness of Government | SGI Sustainable Governance Indicators ...",
+     "url": "https://www.sgi-network.org/docs/2024/thematic/SGI2024_Openness_of_Government.pdf"
+    },
+    {
+     "date": "",
+     "host": "pxweb.stat.si",
+     "rank": 5,
+     "snippet": "SiStat Database\n# A billion data points in the SiStat Database\n### Highlighted\n...\n- Statistical Office of the Republic of Slovenia\nLitostrojska cesta 54\n1000 Ljubljana\n- T: +386 1 241 64 00\n- E: gp.surs@gov.si",
+     "title": "SiStat Database - SURS",
+     "url": "https://pxweb.stat.si/sistat/en"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:19:23Z",
+ "pais": {
+  "iso2": "SI",
+  "iso3": "SVN",
+  "nombre": "Slovenia"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

@@ -1,0 +1,753 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Costa Rica constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.cso.go.cr",
+     "rank": 1,
+     "snippet": "# Constitución Política De La República De Costa Rica\n...\n|Contenedor|\n|--|\n|Descargar el documento completo|\nEn caso de\nque no pueda visualizar los documentos en formato PDF, puede descargar el Adobe\nAcrobat Reader aquí: https://get.adobe.com/es/reader/",
+     "title": "Constitución política - cso.go.cr",
+     "url": "https://www.cso.go.cr/legislacion/constitucion.aspx",
+     "verificacion": {
+      "bytes": 79829,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:44:00Z",
+      "http": 200,
+      "sha256": "4a207de6fdabc3e0226717694468333faa51fe10569f28174503d0a6256b1ed2"
+     }
+    },
+    {
+     "date": "2025-12-12",
+     "host": "pgrweb.go.cr",
+     "rank": 2,
+     "snippet": "CONSTITUCION POLITICA\nDE LA REPUBLICA DE COSTA RICA\n(Emitida por la Asamblea Nacional Constituyente\nel 7 de diciembre de 1871, con todas sus reformas y\nadiciones al 7 de diciembre de 1946)",
+     "title": "Sistema Costarricense de Información Jurídica",
+     "url": "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=41241&n",
+     "verificacion": {
+      "error": "host not in allowlist: sinalevi.go.cr",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:44:01Z"
+     }
+    },
+    {
+     "date": "2026-07-14",
+     "host": "www.pgr.go.cr",
+     "rank": 3,
+     "snippet": "En este sistema usted puede consultar la información normativa y jurisprudencial en forma integrada.\nContiene la legislación promulgada desde el año 1821 (leyes, decretos ejecutivos, convenios internacionales, reglamentos y demás normas de aplicación general).\n...\n### (506) 2243 - 8400",
+     "title": "Procuraduría General de la República de Costa Rica",
+     "url": "https://www.pgr.go.cr/servicios/sinalevi/"
+    },
+    {
+     "date": "2024-09-25",
+     "host": "salaconstitucional.poder-judicial.go.cr",
+     "rank": 4,
+     "snippet": "# Constitución Política Anotada con Jurisprudencia\nEn esta sección se encuentra la Constitución Política de Costa Rica divida en sus 18 títulos con la jurisprudencia respectiva a cada artículo.",
+     "title": "Constitución Política Anotada con Jurisprudencia",
+     "url": "https://salaconstitucional.poder-judicial.go.cr/index.php/jurisprudencia/constitucion-politica-anotada-con-jurisprudencia"
+    },
+    {
+     "date": "2026-01-10",
+     "host": "www.presidencia.go.cr",
+     "rank": 5,
+     "snippet": "Leyes y Decretos | Presidencia de la República de Costa Rica\n# Leyes y Decretos\nREGLAMENTO A LA LEY N° 10554\nDescargar PDF",
+     "title": "Leyes y Decretos | Presidencia de la República de Costa Rica",
+     "url": "https://www.presidencia.go.cr/leyes-y-decretos/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Costa Rica national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-01-10",
+     "host": "www.presidencia.go.cr",
+     "rank": 1,
+     "snippet": "Leyes y Decretos | Presidencia de la República de Costa Rica\n# Leyes y Decretos\nREGLAMENTO A LA LEY N° 10554\nDescargar PDF\n10/01/2026 - 06:00\n###### Presidencia de la República de Costa Rica",
+     "title": "Leyes y Decretos | Presidencia de la República de Costa Rica",
+     "url": "https://www.presidencia.go.cr/leyes-y-decretos/",
+     "verificacion": {
+      "bytes": 60775,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:44:03Z",
+      "http": 200,
+      "sha256": "fe064458352fae256f5f82b2996217ad5e1ce3720cfbeff80ab648ee0216fe42"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mideplan.go.cr",
+     "rank": 2,
+     "snippet": "# Decretos\nContiene decretos relacionados con el accionar de Mideplan.\nLos enlaces redirigen al Sistema Costarricense de Información Jurídica de la Procuraduría General de la República quien mantiene el registro y actualización de normas emitidas en Costa Rica.",
+     "title": "Decretos | Ministerio de Planificación Nacional y Política Económica",
+     "url": "https://www.mideplan.go.cr/documentos_decretos?page=0&title=&field_ano_value=&order=title&sort=asc",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mideplan.go.cr/documentos_decretos?page=0&title=&field_ano_value=&order=title&sort=asc",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:44:03Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "sinalevi.go.cr",
+     "rank": 3,
+     "snippet": "# Bienvenido al Sistema Nacional de Legislación Vigente\n...\nBusca texto libre en títulos y fichas básicas sin configurar filtros avanzados.\n### Búsqueda avanzada\nCombina múltiples criterios (tipo de norma, rango temporal, clase y contenido del documento) para obtener resultados más precisos y filtra",
+     "title": "Bienvenido al Sistema Nacional de Legislación Vigente",
+     "url": "https://sinalevi.go.cr/"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.imprentanacional.go.cr",
+     "rank": 4,
+     "snippet": "Comunicado Imprenta Nacional:\n...\n# doc en Imprenta Nacional\n# doc en Registro Nacional\nEsta opción es para usuarios que tramitaron documentos en la oficina del Registro Nacional entre el 3 de setiembre del 2009 y el 5 de julio del 2013",
+     "title": "Diario Oficial La Gaceta",
+     "url": "https://www.imprentanacional.go.cr/gaceta/"
+    },
+    {
+     "date": "",
+     "host": "micitt.go.cr",
+     "rank": 5,
+     "snippet": "# Marco Normativo\n|Categoría Ordenar descendente|Título|Documento(s)|Enlace URL|\n|--|--|--|--|",
+     "title": "Marco Normativo",
+     "url": "https://micitt.go.cr/micitt/marco-normativo?field_categoria_target_id=All&order=field_categoria&sort=asc&page=7"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Costa Rica official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.imprentanacional.go.cr",
+     "rank": 1,
+     "snippet": "AÑO CXLVIII\nNº 154\n148 páginas\nCertificación de publicación oficial: La presente edición del Diario Oficial \nLa Gaceta ha sido emitida electrónicamente por la Imprenta Nacional de \nCosta Rica.\n...\nPág 24",
+     "title": "LA GACETA N° 154 de la fecha 17 08 2026 - imprentanacional.go.cr",
+     "url": "https://www.imprentanacional.go.cr/pub/2026/08/17/COMP_17_08_2026.pdf",
+     "verificacion": {
+      "error": "response larger than 5000000 bytes: https://www.imprentanacional.go.cr/pub/2026/08/17/COMP_17_08_2026.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:44:06Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.imprentanacional.go.cr",
+     "rank": 2,
+     "snippet": "**Servicio al Cliente:**\n8000-GACETA (8000-422382)\nWhatsapp: 8599-1582\n...\nWhatsapp: 8598-3099\n...\nEn este buscador encontrará las ediciones del Boletín Judicial del 2006 al 23 de octubre del 2023",
+     "title": "Boletín Oficial",
+     "url": "https://www.imprentanacional.go.cr/salas/boletinOficial.aspx",
+     "verificacion": {
+      "bytes": 65753,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:44:06Z",
+      "http": 200,
+      "sha256": "e347cd5152437f8d5f4d66fedb561dbf147b4281778fe9e2724c6f51b0709a27"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.imprentanacional.go.cr",
+     "rank": 3,
+     "snippet": "AÑO CXLVIII\nNº 177\n140 páginas\nCertificación de publicación oficial: La presente edición del Diario Oficial \nLa Gaceta ha sido emitida electrónicamente por la Imprenta Nacional de \nCosta Rica.\n...\nPág 2\nFE DE ERRATAS\n...\n…",
+     "title": "LA GACETA N° 177 de la fecha 21 09 2026",
+     "url": "https://www.imprentanacional.go.cr/pub/2026/09/21/COMP_21_09_2026.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.imprentanacional.go.cr",
+     "rank": 4,
+     "snippet": "AÑO CXLVIII\nNº 153\n100 páginas\nCertificación de publicación oficial: La presente edición del Diario Oficial \nLa Gaceta ha sido emitida electrónicamente por la Imprenta Nacional de \nCosta Rica.\n...\nPág 2\nDOCUMENTOS VARIOS",
+     "title": "COMP_14_08_2026.pdf",
+     "url": "https://www.imprentanacional.go.cr/pub/2026/08/14/COMP_14_08_2026.pdf"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.imprentanacional.go.cr",
+     "rank": 5,
+     "snippet": "Artículo 7°—**Vigencia.** La presente resolución regirá a partir de su publicación en el Diario Oficial *La Gaceta*.\n...\n**Para ver las marcas con sus respectivas imágenes solo en *La\nGaceta* con formato PDF**\n...\nComunicado Imprenta Nacional:",
+     "title": "decretos",
+     "url": "https://www.imprentanacional.go.cr/gaceta/?date=0"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Costa Rica supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2026-06-19",
+     "host": "salaprimera.poder-judicial.go.cr",
+     "rank": 1,
+     "snippet": "En esta sección podrá accesar a las revistas en temas ambientales y pueblos indígenas, entre otros, siendo un espacio dedicado a la difusión\nde jurisprudencia relevante emitida por las Salas de la Corte Suprema de Justicia y resoluciones de los Tribunales de Justicia del Poder Judicial de Costa Rica",
+     "title": "Inicio",
+     "url": "https://salaprimera.poder-judicial.go.cr/",
+     "verificacion": {
+      "bytes": 186449,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:44:08Z",
+      "http": 200,
+      "sha256": "8fd91324a5ef58f5fae89e2055f705d110922e8d9f2bf0308c68850e53ff8200"
+     }
+    },
+    {
+     "date": "2018-02-22",
+     "host": "cij.poder-judicial.go.cr",
+     "rank": 2,
+     "snippet": "### Nexus-PJ\nA través de esta herramienta podrá autogestionar, de forma gratuita, la búsqueda de jurisprudencia judicial y disciplinaria, actas de Corte Plena, Consejo Superior y Consejo de la Judicatura, así como circulares y avisos.\n...\n8828-1855",
+     "title": "CIJ - Inicio",
+     "url": "https://cij.poder-judicial.go.cr/",
+     "verificacion": {
+      "bytes": 420641,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:44:10Z",
+      "http": 200,
+      "sha256": "429b4ece0f31b86138a523388b8859f08fe821571d8fce97227c90da9088afa8"
+     }
+    },
+    {
+     "date": "",
+     "host": "sinalevi.go.cr",
+     "rank": 3,
+     "snippet": "Al estar integrada la información contenida en el SCIJ, es posible consultar la normativa directamente o a través de la consulta de jurisprudencia que cite una norma; a su vez, es posible ver el texto de una sentencia, ingresando al sistema mediante la consulta de una norma específica que se cita en",
+     "title": "Acerca de SCIJ - SINALEVI",
+     "url": "https://sinalevi.go.cr/Escritorio/SCIJ"
+    },
+    {
+     "date": "2020-10-20",
+     "host": "pj.poder-judicial.go.cr",
+     "rank": 4,
+     "snippet": "El Boletín Judicial se publicará todos los días hábiles en la página oficial del Poder Judicial para consulta del público en general.",
+     "title": "Inicio",
+     "url": "https://pj.poder-judicial.go.cr/"
+    },
+    {
+     "date": "",
+     "host": "accesoalajusticia.poder-judicial.go.cr",
+     "rank": 5,
+     "snippet": "Jurisprudencia Costa Rica | Acceso a la justicia, Poder Judicial",
+     "title": "Jurisprudencia Costa Rica | Acceso a la justicia, Poder Judicial",
+     "url": "https://accesoalajusticia.poder-judicial.go.cr/index.php/jurisprudencia"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Costa Rica state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2025-09-09",
+     "host": "www.asamblea.go.cr",
+     "rank": 1,
+     "snippet": "Asamblea LegislativaRepública deCosta Rica\n...\n…\nBy means of this Act, the Historical Architectural Heritage regime, given by Executive Decree No. 28296-C, to the Catholic temple San Rafael Arcángel de Copey de Dota is disaffected.\n...\nSan José, Costa Rica.",
+     "title": "asamblea, ingresar, día, leyes, proyectos, diputados, diputadas, política, plenario, legislativa, ASAMBLEA, INGRESAR, DÍA, LEYES, PROYECTOS, DIPUTADOS, DIPUTADAS, POLÍTICA, PLENARIO, LEGISLATIVA",
+     "url": "https://www.asamblea.go.cr/sd/Lists/Archivo_Leyes/Legislacion_CR.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.asamblea.go.cr/sd/Lists/Archivo_Leyes/Legislacion_CR.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:45:41Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "sinalevi.go.cr",
+     "rank": 2,
+     "snippet": "PGR | SINALEVI\n# Bienvenido al Sistema Nacional de Legislación Vigente\n...\nRealiza consultas rápidas con una palabra o frase.\n...\nCombina múltiples criterios (tipo de norma, rango temporal, clase y contenido del documento) para obtener resultados más precisos y filtrados.",
+     "title": "Bienvenido al Sistema Nacional de Legislación Vigente",
+     "url": "https://sinalevi.go.cr/",
+     "verificacion": {
+      "error": "IncompleteRead",
+      "estado": "error",
+      "fecha": "2026-11-02T07:45:41Z"
+     }
+    },
+    {
+     "date": "2026-01-10",
+     "host": "www.presidencia.go.cr",
+     "rank": 3,
+     "snippet": "Leyes y Decretos | Presidencia de la República de Costa Rica\n# Leyes y Decretos\nREGLAMENTO A LA LEY N° 10554\nDescargar PDF\n...\n###### Presidencia de la República de Costa Rica\n###### Gobierno Fernández Delgado, 2026-2030",
+     "title": "Leyes y Decretos | Presidencia de la República de Costa Rica",
+     "url": "https://www.presidencia.go.cr/leyes-y-decretos/"
+    },
+    {
+     "date": "",
+     "host": "pgrweb.go.cr",
+     "rank": 4,
+     "snippet": "## Servicios en Línea\n### SCIJ-SINALEVI-PGR\nContiene la legislación promulgada desde el año 1821 (leyes, decretos ejecutivos, reglamentos y demás normas de aplicación general).\nAsimismo, la jurisprudencia administrativa de la Procuraduría General de la República.",
+     "title": "Procuraduría General de la República de Costa Rica",
+     "url": "https://pgrweb.go.cr/"
+    },
+    {
+     "date": "2025-09-03",
+     "host": "www.asamblea.go.cr",
+     "rank": 5,
+     "snippet": "Asamblea LegislativaRepública deCosta Rica\n...\nPara efectuar\nuna búsqueda digite los datos en el campo correspondiente y\nluego haga clic sobre el botón Buscar.\nPara observar el\n...\nContáctenos\n...\nSan José, Costa Rica.\nCentral telefónica: (+506) 2243-2000.",
+     "title": "Consultas información del plenario - Asamblea Legislativa",
+     "url": "https://www.asamblea.go.cr/Centro_de_informacion/Consultas_SIL/Pginas/Consultas%20informaci%C3%B3n%20del%20plenario.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Costa Rica municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.curridabat.go.cr",
+     "rank": 1,
+     "snippet": "30. Reglamento para el funcionamiento del fondo de caja chica de la Municipalidad de Curridabat\n31. Reglamento para el manejo, uso y mantenimiento de la flotilla de vehículos y de la maquinaria especial de la Municipalidad de Curridabat\n32. Reglamento para el pago de gastos de representación y de at",
+     "title": "Centro de documentos | Municipalidad de Curridabat",
+     "url": "https://www.curridabat.go.cr/cdocumentos/",
+     "verificacion": {
+      "bytes": 6414,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:45:42Z",
+      "http": 200,
+      "sha256": "49ffa256429fad7d690a5a5a3f21224a96fd1718b98eedab715a435ee874c5ff"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.imprentanacional.go.cr",
+     "rank": 2,
+     "snippet": "Registro Nacional de la Propiedad\n...\nEnlace a la página del Gobierno de Costa Rica Enlace a la página del Gobierno de Costa Rica",
+     "title": "Alcance número 13",
+     "url": "https://www.imprentanacional.go.cr/Gaceta/ViewAlcance.aspx?url=/pub/2026/02/06/ALCA13_06_02_2026.html",
+     "verificacion": {
+      "bytes": 177747,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:45:43Z",
+      "http": 200,
+      "sha256": "39e51e2a1b7acc6f27ae0f779b3c0b1e79c769e6d121c8341fd02660c3aef2b0"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cgr.go.cr",
+     "rank": 3,
+     "snippet": "# Municipal - Gobierno Local\n##### Municipal - Gobierno Local\n#### Toda la normativa\n#### Auditoría\n#### Auditoría Interna\n#### Contratación Pública\n#### Control Interno\n#### Leyes y Reglamentos\n...\n**Contraloría General de la República\n** San José, Costa Rica",
+     "title": "Municipal - Gobierno Local (NI)",
+     "url": "https://www.cgr.go.cr/03-docs-normativa-gl.html"
+    },
+    {
+     "date": "",
+     "host": "www.pgr.go.cr",
+     "rank": 4,
+     "snippet": "2 \nDirección: San José, Avenidas 2 y 6, calle 13, Internet Http://www.pgr.go.cr  \nApdo.\n78-1003 La Corte.",
+     "title": "Dirección: San José, Avenidas 2 y 6, calle 13, Internet Http://www.pgr.go.cr",
+     "url": "https://www.pgr.go.cr/wp-content/uploads/2026/04/RG-010817.pdf"
+    },
+    {
+     "date": "",
+     "host": "sinalevi.go.cr",
+     "rank": 5,
+     "snippet": "# Bienvenido al Sistema Nacional de Legislación Vigente\n...\nBusca texto libre en títulos y fichas básicas sin configurar filtros avanzados.\n### Búsqueda avanzada\nCombina múltiples criterios (tipo de norma, rango temporal, clase y contenido del documento) para obtener resultados más precisos y filtra",
+     "title": "Bienvenido al Sistema Nacional de Legislación Vigente",
+     "url": "https://sinalevi.go.cr/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Costa Rica regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-26",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "The stock and bond market regulator, SUGEVAL, requires IFRS for public companies, while banking entities under the supervision of the Superintendencia General de Entidades Financieras (Financial Regulator) must comply with corporate governance regulations such as transparency and accountability to s",
+     "title": "Costa Rica - United States Department of State",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/costa-rica",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/costa-rica",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:45:43Z"
+     }
+    },
+    {
+     "date": "2025-08-19",
+     "host": "www.meic.go.cr",
+     "rank": 2,
+     "snippet": "# Reglatec\n## Bienvenidos\nEl Departamento de Reglamentación Técnica de la Dirección de Regulación Técnica y Vigilancia de Mercado del MEIC le da la bienvenida a este sitio.",
+     "title": "Reglatec | Ministerio de Economía, Industria y Comercio",
+     "url": "https://www.meic.go.cr/tramites-y-servicios/reglatec/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.meic.go.cr/tramites-y-servicios/reglatec/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:47:13Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 3,
+     "snippet": "U.S. exporters should consult the latest FAS San José Food and Agricultural Import Regulations and \n...\nKey Costa Rican regulatory agencies and resources are linked below:\nMinistry of Health Registration and Control Department (Ministerio de Salud, Dirección de \nRegistros y Controles) handles proces",
+     "title": "Report Name: Exporter Guide Annual",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Exporter+Guide+Annual_San+Jose_Costa+Rica_CS2025-0029.pdf"
+    },
+    {
+     "date": "2025-01-04",
+     "host": "www.state.gov",
+     "rank": 4,
+     "snippet": "## 3. Legal Regime\nThe government has mechanisms to ensure laws and regulations are followed.\n...\n…\n...\nThe “Commission for the Promotion of Competition” (COPROCOM), an autonomous agency housed in the Ministry of Economy, Industry and Commerce, is charged with investigating and correcting anti-compe",
+     "title": "2021 Investment Climate Statements: Costa Rica",
+     "url": "https://www.state.gov/reports/2021-investment-climate-statements/costa-rica"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 5,
+     "snippet": "The main ones are the Ministry of Health, the Ministry of Agriculture (MAG), and the \nMinistry of Economy, Industry and Commerce (MEIC).\n...\nLabeling requirements are enforced by the Costa Rican Ministry of Economy’s \nConsumer’s Support Department.",
+     "title": "[PDF] Food and Agricultural Import Regulations and Standards",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Food%20and%20Agricultural%20Import%20Regulations%20and%20Standards%20-%20Narrative_San%20Jose_Costa%20Rica_12-19-2017.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Costa Rica national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.cso.go.cr",
+     "rank": 1,
+     "snippet": "<td> NTP 749 - Evaluacion del riesgo de accidente por agentes quimicos.\nMetodologia simplificada.pdf </td></tr><tr><td> NTP 750 - Evaluacion del riesgo por exposicion inhalatoria de agentes quimicos.",
+     "title": "Normas Técnicas - cso.go.cr",
+     "url": "https://www.cso.go.cr/legislacion/normas_tecnicas.aspx",
+     "verificacion": {
+      "bytes": 819217,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:47:14Z",
+      "http": 200,
+      "sha256": "ce7025c6373492a8f97ca06348aa50db7958bbaad5b35de9cc5fe46f2fb021ad"
+     }
+    },
+    {
+     "date": "2006-10-01",
+     "host": "iec.ch",
+     "rank": 2,
+     "snippet": "…\n...\n|ISO IEC 17021-2 Conformity assessment - Requirements for bodies providing audit and certification of management systems - Part 2: Competence requirements for auditing and certification of environmental management systems|SC ISO/CASCO|INTE-ISO/IEC 17021|2015|",
+     "title": "Costa Rica",
+     "url": "https://iec.ch/dyn/www/f?p=103:36:::::FSP_ORG_ID:1052",
+     "verificacion": {
+      "error": "robots.txt disallows https://iec.ch/dyn/www/f?p=103:36:::::FSP_ORG_ID:1052",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:47:14Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "inteco.org",
+     "rank": 3,
+     "snippet": "Catálogo normas INTECO\n# Catálogo de normas de INTECO\nDebido a mejoras internas esta página ya no está disponible, puede adquirir todas las normas en el siguiente enlace:\n...\n+506 4080 64 90\ninfo@inteco.org",
+     "title": "Catálogo normas INTECO",
+     "url": "https://inteco.org/catalogo-de-normas-de-inteco"
+    },
+    {
+     "date": "",
+     "host": "www.sicop.go.cr",
+     "rank": 4,
+     "snippet": "|--|--|--|\n...\nGESTIÓN DE EMERGENCIAS.\nREQUISITOS PARA LA GESTIÓN DE INCIDENTES.\nAUTOR INSTITUTO DE NORMAS TÉCNICAS DE COSTA RICA, INTE/ISO 22320:2021</td></",
+     "title": "Búsqueda de catálogo",
+     "url": "https://www.sicop.go.cr/moduloBid/common/co/EpSearchItemCode.jsp?page_no=29065"
+    },
+    {
+     "date": "2025-08-19",
+     "host": "www.meic.go.cr",
+     "rank": 5,
+     "snippet": "#### Publicado hasta\nEste acuerdo aplica a las llantas neumáticas nuevas fabricadas en el territorio de los Estados Unidos, importadas para su venta en el territorio de Costa Rica, y clasificadas en l partidas arancelarias del código arancelario de Costa Rica (ver documento).",
+     "title": "Reglatec | Ministerio de Economía, Industria y Comercio",
+     "url": "https://www.meic.go.cr/tramites-y-servicios/reglatec/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Costa Rica mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2025-08-19",
+     "host": "www.meic.go.cr",
+     "rank": 1,
+     "snippet": "# Reglatec\n## Realice sus Búsquedas\n#### Publicado hasta\nEste reglamento tiene por objeto establecer los requerimientos de seguridad que no representen peligro para la seguridad de las personas y sus propiedades; siempre y cuando su instalación y su aplicación sean los correctos.",
+     "title": "Reglatec | Ministerio de Economía, Industria y Comercio",
+     "url": "https://www.meic.go.cr/tramites-y-servicios/reglatec/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.meic.go.cr/tramites-y-servicios/reglatec/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:47:14Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cso.go.cr",
+     "rank": 2,
+     "snippet": "### Esta tercera etapa se desarrolló de la siguiente forma.\n</td></tr><tr><td> 2 </td><td> INTE T35 </td><td> Salud y seguridad en el trabajo.\nSistemas de detención contra caídas.\nRedes de Seguridad.\nRequisitos.",
+     "title": "Normas Técnicas - CSO: Consejo de Salud Ocupacional",
+     "url": "https://www.cso.go.cr/legislacion/normas_tecnicas.aspx",
+     "verificacion": {
+      "bytes": 819217,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:47:15Z",
+      "http": 200,
+      "sha256": "5d9f822675c9d5a081f21dbb46abdcfbe380d81ae9154343951344ed10105b8c"
+     }
+    },
+    {
+     "date": "",
+     "host": "micitt.go.cr",
+     "rank": 3,
+     "snippet": "# Marco Normativo\n|Categoría Ordenar descendente|Título|Documento(s)|Enlace URL|\n|--|--|--|--|",
+     "title": "Marco Normativo",
+     "url": "https://micitt.go.cr/micitt/marco-normativo?page=3&order=field_categoria&sort=asc"
+    },
+    {
+     "date": "2024-11-01",
+     "host": "www.minae.go.cr",
+     "rank": 4,
+     "snippet": "28-01-01:2015\nEficiencia energética.\nEquipos de refrigeración\n...\nEn Costa Rica se han\nestablecido diferentes Reglamentos Técnicos los cuales son de acatamiento\nobligatorio para todos los equipos fabricados o importados al país.\nEsto\n...\nReglamentos",
+     "title": "Reglamentación Técnica y Normas",
+     "url": "https://www.minae.go.cr/energia/Reglamentacion%20Tecnica%20y%20Normas.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.micitt.go.cr",
+     "rank": 5,
+     "snippet": "# Decretos\n## Decreto Ejecutivo n.° 37832-MICIT-MEIC Aprueba Reglamento Técnico RTCR 456:2011 Receptores ISDB-Tb y antenas de televisión características técnicas básicas aplicables para el estándar ISDB-Tb en Costa Rica.",
+     "title": "Decretos",
+     "url": "https://www.micitt.go.cr/taxonomy/term/610?page=4"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Costa Rica national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2025-12-02",
+     "host": "estadisticas.inec.cr",
+     "rank": 1,
+     "snippet": "# Bienvenidos al Portal Interactivo del INEC\n## Acerca de este Portal\nPortal Estadístico Interactivo: acceso claro y transparente a los datos oficiales de Costa Rica\nEste portal constituye una iniciativa del Instituto Nacional de Estadística y Censos (INEC), orientada de Costa Rica.",
+     "title": "Inicio | INEC estadísticas",
+     "url": "https://estadisticas.inec.cr/",
+     "verificacion": {
+      "bytes": 34817,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:47:16Z",
+      "http": 200,
+      "sha256": "961408a75953cddb1496a94da4f5876493b27b73a863a4f4e890ab8889085a62"
+     }
+    },
+    {
+     "date": "",
+     "host": "sen.inec.cr",
+     "rank": 2,
+     "snippet": "- #### Sistema de Estadística Nacional\nDe acuerdo con el artículo 4 de la Ley 9694, el Sistema de Estadística Nacional (SEN) se crea con el propósito de racionalizar y coordinar la actividad estadística.\nEncuentre aquí información sobre su conformación y funcionamiento.",
+     "title": "SEN - Inicio",
+     "url": "https://sen.inec.cr/",
+     "verificacion": {
+      "bytes": 125040,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:47:18Z",
+      "http": 200,
+      "sha256": "49f9c0d158f404c202561637c932cc485f580df179b498c6ebc3c6171f84d584"
+     }
+    },
+    {
+     "date": "",
+     "host": "sistemas.inec.cr",
+     "rank": 3,
+     "snippet": "##### Actualización del Directorio de Empresas y Establecimientos (DEE), 2025\nCosta Rica, 2025\nInstituto Nacional de Estadística y Censos\nColección: Directorio de Empresas y Establecimientos\n...\nInstituto Nacional de Estadística y Censos (INEC)",
+     "title": "Catálogo de Metadatos y microdatos - INEC",
+     "url": "https://sistemas.inec.cr/nada5.4/index.php/catalog/central"
+    },
+    {
+     "date": "",
+     "host": "estadisticas.inec.cr",
+     "rank": 4,
+     "snippet": "Resultado de Busqueda de Operaciones Estadisticas | INEC estadísticas\n## Operaciones Estadísticas\nLas operaciones estadísticas son los proyectos y estudios que desarrolla el INEC para recopilar, procesar y difundir información oficial sobre distintos ámbitos de la realidad nacional.\n...\n(506)2527-10",
+     "title": "Resultado de Busqueda de Operaciones Estadisticas",
+     "url": "https://estadisticas.inec.cr/es/operaciones-estadisticas"
+    },
+    {
+     "date": "",
+     "host": "sistemas.inec.cr",
+     "rank": 5,
+     "snippet": "Catálogo Central de Datos\n1. Página principal / Catálogo Central de Datos\n...\n# Catálogo Central de Datos\n- Colecciones\n- Bases de datos",
+     "title": "Catálogo Central de Datos - INEC",
+     "url": "https://sistemas.inec.cr/pad5/index.php/catalog/central"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Costa Rica central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-02-05",
+     "host": "www.bccr.fi.cr",
+     "rank": 1,
+     "snippet": "…\n...\n## Indicadores económicos más consultados\nPor un dólar EUA.\nTipo de cambio de referencia de compra del BCCR.\nPor un dólar EUA.\n...\nTasa de política monetaria\nTasa básica pasiva\nTasa efectiva en dólares\nInflación\nIMAE variación interanual",
+     "title": "Banco Central de Costa Rica",
+     "url": "https://www.bccr.fi.cr/",
+     "verificacion": {
+      "bytes": 172527,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:47:19Z",
+      "http": 200,
+      "sha256": "0cd1d9b4b1bffe4fc5737d53177dcbc3e9aa5511991bb60ca2afb49221aa7780"
+     }
+    },
+    {
+     "date": "",
+     "host": "gee.bccr.fi.cr",
+     "rank": 2,
+     "snippet": "|Contact:|\n|--|\n|Correo electronico: atencionalcliente@bccr.fi.cr, 2243-3333|",
+     "title": "Yield Curve - Banco Central de Costa Rica",
+     "url": "https://gee.bccr.fi.cr/indicadoreseconomicos/Cuadros/frmVerCatCuadro.aspx?idioma=2&CodCuadro=%202786",
+     "verificacion": {
+      "bytes": 224417,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:47:23Z",
+      "http": 200,
+      "sha256": "02c4e4209855932eb2e6cb501bc8590c92854e551f607236d75e93c3c04ad18f"
+     }
+    },
+    {
+     "date": "",
+     "host": "gee.bccr.fi.cr",
+     "rank": 3,
+     "snippet": "|--|--|--|--|--|--|--|--|\n...\n| | | | | | | | |\n| | | | | | | | |\n|Esta página se actualiza diariamente.|Esta página se actualiza diariamente.| | | | | | |",
+     "title": "Página Nacional de Resumen de Datos (NSDP)",
+     "url": "https://gee.bccr.fi.cr/indicadoreseconomicos/Documentos/NEDD/PAG_NAC_ESP.htm"
+    },
+    {
+     "date": "",
+     "host": "gee.bccr.fi.cr",
+     "rank": 4,
+     "snippet": "|--|\n|Financial System Survey /n1 /n6|\n|-Millions of colones; end of period-|\n...\n…\n...\n|Contact:|\n|Correo electronico: atencionalcliente@bccr.fi.cr, 2243-3333|",
+     "title": "Financial System Survey",
+     "url": "https://gee.bccr.fi.cr/indicadoreseconomicos/cuadros/frmvercatcuadro.aspx?idioma=2&codcuadro=%20665"
+    },
+    {
+     "date": "2026-02-05",
+     "host": "www.bccr.fi.cr",
+     "rank": 5,
+     "snippet": "# Banco Central renueva sitio de Indicadores Económicos con más funcionalidades y mayor interacción para los usuarios\nEstos datos son clave para comprender el estado y la evolución de la economía nacional.",
+     "title": "Banco Central renueva sitio de Indicadores Económicos ...",
+     "url": "https://www.bccr.fi.cr/cr/es/noticias/listado-de-noticias/2025/banco-central-renueva-sitio-de-indicadores-economicos-con-mas-funcionalidades-y-mayor-interaccion-pa.html"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Costa Rica government open data portal",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "datosabiertos.gob.go.cr",
+     "rank": 1,
+     "snippet": "Bienvenida - Portal de Datos Abiertos\n### Portal Nacional de Datos Abiertos de Costa Rica\n#### La plataforma donde podrás buscar y descargar la información necesaria para reutilizar",
+     "title": "Bienvenida - Portal de Datos Abiertos",
+     "url": "https://datosabiertos.gob.go.cr/",
+     "verificacion": {
+      "bytes": 13843,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:47:33Z",
+      "http": 200,
+      "sha256": "94b0806d29eb9c4ccb49f64a98002868b8f21b329fc5b076627381409bf8cf4a"
+     }
+    },
+    {
+     "date": "2020-03-25",
+     "host": "www.mideplan.go.cr",
+     "rank": 2,
+     "snippet": "…\nDicho portal permite la descarga de los datos en formato Excel, así como la posibilidad de compartir los datos por medio de redes sociales como Facebook y twitter.\n...\n## La plataforma Junar ya no está disponible por lo que estamos trabajando para presentar los datos de manera abierta en otro form",
+     "title": "Datos Abiertos (Open Data) - Mideplan",
+     "url": "https://www.mideplan.go.cr/node/1004",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mideplan.go.cr/node/1004",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:47:33Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "web-archive-storage.oecd.org",
+     "rank": 3,
+     "snippet": "Law.\n...\nThe Strategy’s goal is that data and information from all public institutions will be in a single open data portal at http://gobiernoabierto.go.cr/ organised by the Deputy Ministry of Political Affairs and Citizen Dialogue.",
+     "title": "DIGITAL ECONOMY POLICY IN COSTA RICA",
+     "url": "https://web-archive-storage.oecd.org/aemint-web-archive-prod/web-archive/13/135c21444d2d4aa6d3a5b3dbcaedcc26ae3d79b1666fa686047893fdc8d0cf81.pdf"
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 4,
+     "snippet": "El catálogo de datos le permite navegar, buscar y descargar los metadatos de la operación estadística y sus datos.\n...\n|Link|https://datosabiertos.inec.cr|\n...\n|Owner name|Instituto Nacional de Estadística y Censos Costa Rica|\n|Owner type|Central government|",
+     "title": "Catálogo Central de Datos - INEC (Costa Rica)",
+     "url": "https://dateno.io/registry/catalog/cdi00000393/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:32:00Z",
+ "pais": {
+  "iso2": "CR",
+  "iso3": "CRI",
+  "nombre": "Costa Rica"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

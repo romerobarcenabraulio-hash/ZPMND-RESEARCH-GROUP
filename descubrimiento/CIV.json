@@ -1,0 +1,775 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Cote d'Ivoire constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2025-06-04",
+     "host": "www.presidence.ci",
+     "rank": 1,
+     "snippet": "## Constitution de la 1 ère République (1960)\n**PREAMBULE**\n...\n…\nTélécharger la Constitution de la 1ère République\n…\nLe respect et la protection des libertés fondamentales tant individuelles que collectives ;\nLa séparation et l’équilibre des pouvoirs ;",
+     "title": "La Constitution",
+     "url": "https://www.presidence.ci/la-cote-divoire/la-constitution/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.presidence.ci/la-cote-divoire/la-constitution/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:38:40Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.cndj.ci",
+     "rank": 2,
+     "snippet": "#### La mémoire du droit en Côte d'Ivoire\n...\n1. Accueil\n...\n…\nEn vous connectant à notre base de données, vous franchissez la distance qui vous sépare des services du Journal Officiel au Secrétariat Général du Gouvernement, situé à Abidjan dans la Commune du Plateau.",
+     "title": "Textes Législatifs et Réglémentaires | CNDJ",
+     "url": "https://www.cndj.ci/bases-de-recherche/textes-legislatifs-et-reglementaires.html",
+     "verificacion": {
+      "bytes": 33391,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:42Z",
+      "http": 200,
+      "sha256": "88908df14d4eac735a584a7042189a187972bdd298ae510d23e2ae07472f8d69"
+     }
+    },
+    {
+     "date": "",
+     "host": "biblio.cndj.ci",
+     "rank": 3,
+     "snippet": "##### 59 résultats trouvés\n#### RECUEIL DE TEXTES - PROTECTION DES ŒUVRES DE L'ESPRIT\n...\n#### RECUEIL DE TEXTES FONCTION PUBLIQUE\n...\nTextes, codes, jurisprudence et doctrine du droit ivoirien, au même endroit.",
+     "title": "Codes et Recueils de textes - BIBLIOTHEQUE CNDJ",
+     "url": "https://biblio.cndj.ci/search/codes"
+    },
+    {
+     "date": "",
+     "host": "www.cndj.ci",
+     "rank": 4,
+     "snippet": "Notre base de données contient environ soixante Codes et recueils de textes, incluant les Codes usuels tels que :\n- **Code du Travail**\n- **Code Pénal**\n...\n- **Recueil de Textes sur les Personnes et la Famille**, etc.",
+     "title": "Codes et Recueils de Textes - CNDJ",
+     "url": "https://www.cndj.ci/bases-de-recherche/codes-et-recueils-de-textes.html"
+    },
+    {
+     "date": "",
+     "host": "extranet.who.int",
+     "rank": 5,
+     "snippet": "The Constitution was promulgated by the Law N° 2016-886 of 8 November 2016 and modified by constitutional law N° 2020-348 of 19 March 2020.\n...\nTo read the whole document please download the PDF file\n...\nCountry:\nCote d'Ivoire",
+     "title": "Constitution | WHO - CPCD",
+     "url": "https://extranet.who.int/cpcd/health-legislation/constitution"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Cote d'Ivoire national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-03-04",
+     "host": "biblio.cndj.ci",
+     "rank": 1,
+     "snippet": "#### DECRET N° 2026-113 du 18/03/2026, Portant obligation d`usage du système d`identification automatique des navires dans les eaux sous juridiction ivoirienne et en escale dans les ports ivoiriens..\nDroit Maritime\n...\n…",
+     "title": "Experts Reveal 3 Critical Steps for Long-term Success",
+     "url": "https://biblio.cndj.ci/search/textes?type=1&nature=6&page=20",
+     "verificacion": {
+      "bytes": 106550,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:45Z",
+      "http": 200,
+      "sha256": "e3935c5c2eb88677095aa4998ba6b6af03d7f7696e0742a8dbe849ee12cb1d61"
+     }
+    },
+    {
+     "date": "",
+     "host": "anssi.ci",
+     "rank": 2,
+     "snippet": "Ce document est un décret ivoirien du 22 décembre 2021 qui adopte le référentiel général d’interopérabilité des systèmes d’information de l’État.\n...\n…\n### DÉCRET 2021-916 DU 22 DÉCEMBRE 2021 RGSSI ET PPIC",
+     "title": "Décrets - Réglementations",
+     "url": "https://anssi.ci/reglementations/textes-nationaux/decrets-nationaux/",
+     "verificacion": {
+      "bytes": 59965,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:47Z",
+      "http": 200,
+      "sha256": "b547f7b97c2ed35891ce62735e7c5a9e5940976ccdad6af0c6871f6063522525"
+     }
+    },
+    {
+     "date": "2026-04-13",
+     "host": "www.anssi.gouv.ci",
+     "rank": 3,
+     "snippet": "## Ordonnances\n...\n## Décrets\n(15)\n...\nDécrets\n...\nCe document est le décret n°2021-911 du 22 décembre 2021 qui adopte le Cadre Commun d’Architecture de Référentiel de Données (CCARD) en Côte d’Ivoire.",
+     "title": "Textes nationaux - Réglementations - ANSSI Côte d'Ivoire",
+     "url": "https://www.anssi.gouv.ci/reglementations/textes-nationaux/"
+    },
+    {
+     "date": "2026-04-13",
+     "host": "anssi.gouv.ci",
+     "rank": 4,
+     "snippet": "## Décrets\nVoir tout (15)\n...\n### DÉCRET 2021-913 DU 22 DÉCEMBRE 2021 ADOPTION RÉFÉRENTIEL GÉNÉRAL D'INTEROPÉRABILITÉ SYSTÈMES D'INFORMATION",
+     "title": "Réglementations - ANSSI Côte d'Ivoire - Protéger l'espace ...",
+     "url": "https://anssi.gouv.ci/reglementations/"
+    },
+    {
+     "date": "",
+     "host": "www.cndj.ci",
+     "rank": 5,
+     "snippet": "Cette précieuse ressource, couvrant une période allant **de 1959 à aujourd'hui**, compile méticuleusement des lois, ordonnances, décrets et arrêtés publiés principalement dans les éditions du Journal Officiel de la République de Côte d’Ivoire.\n…",
+     "title": "Textes Législatifs et Réglémentaires | CNDJ",
+     "url": "https://www.cndj.ci/bases-de-recherche/textes-legislatifs-et-reglementaires.html"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Cote d'Ivoire official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 1,
+     "snippet": "Description:\n1 title containing the official gazette for Cote d'Ivoire from 1974 to 1990 and 1997 to 2008.\nIt is an official publication and the text is in French.\nNew material is no longer added.\n...\nCote d'Ivoire",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag/cote-divoire-legislation-ola346668082-42",
+     "verificacion": {
+      "bytes": 13724,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:48Z",
+      "http": 200,
+      "sha256": "4af6b9ccb7d7fb0d99718c58b602ab58b4120120feba9bd2e28eec90b2cb62ed"
+     }
+    },
+    {
+     "date": "2025-01-01",
+     "host": "www.sgg.gouv.ci",
+     "rank": 2,
+     "snippet": "Journal Officiel\n...\nLe Secrétariat Général du Gouvernement informe les usagers que seule la version originale du Journal Officiel disponible dans ses locaux, a valeur probante dans les actes de la vie civile.\n...\nSecrétariat Général du Gouvernement\nwww.sgg.gouv.ci - ©2025",
+     "title": "Journal Officiel - Secrétariat Général du Gouvernement",
+     "url": "https://www.sgg.gouv.ci/jo.php",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.sgg.gouv.ci/jo.php",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:38:50Z"
+     }
+    },
+    {
+     "date": "2025-05-28",
+     "host": "web.sgg.gouv.ci",
+     "rank": 3,
+     "snippet": "Secrétariat Général du Gouvernement :: Actualités\n## Journal officiel\n## Journal Officiel - N°18 du Jeudi 02 Mai 2002\n...\n- Gouvci\n...\n- Sécrétariat Général du Gouvernement de Côte d'Ivoi...## Secrétariat Général du Gouvernement",
+     "title": "Journal Officiel - Secrétariat Général du Gouvernement",
+     "url": "https://web.sgg.gouv.ci/journal-officiel"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.gouv.ci",
+     "rank": 4,
+     "snippet": "**Communication Gouvernementale :** Le Gouvernement a dévoilé ce mercredi 8 octobre 2025 à la Primature à Abidjan, son site internet (www.bilan.gouv.ci), qui fait le...\n…\nAccueil »Publications » Gouv'Publication",
+     "title": "Côte d'Ivoire - Portail officiel du Gouvernement :: Gouv ...",
+     "url": "https://www.gouv.ci/index.php/publications/gouv-publication"
+    },
+    {
+     "date": "2026-10-09",
+     "host": "www.state.gov",
+     "rank": 5,
+     "snippet": "…\n...\nThe government publishes tender notices in the local press and sometimes in international magazines and newspapers.",
+     "title": "2026 Investment Climate Statements: Côte d'Ivoire",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/cote-divoire"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Cote d'Ivoire supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "biblio.cndj.ci",
+     "rank": 1,
+     "snippet": "Vous êtes ici : Accueil Jurisprudence nationale\n**Recherche**\n...\n##### 502 résultats trouvés\nCOUR SUPREME / PENALE\n### N° 39.pe/14 du Jeudi 27 Novembre 2014\n##### Titrage\n...\n- Pays Côte d'Ivoire",
+     "title": "Côte d'Ivoire",
+     "url": "https://biblio.cndj.ci/search/decisions?juridiction=1242&category=1",
+     "verificacion": {
+      "bytes": 123800,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:51Z",
+      "http": 200,
+      "sha256": "68829b7e47a99f47303ac501b6ac9716b760798bce30446da8df15ecb3ad15a3"
+     }
+    },
+    {
+     "date": "2024-01-08",
+     "host": "courdecassation.ci",
+     "rank": 2,
+     "snippet": "# Bulletin des arrêts\n...\n## Contacts\nwww.courdecassation.ci",
+     "title": "Bulletin des arrêts - Cour de Cassation de Côte d'Ivoire",
+     "url": "https://courdecassation.ci/bulletin-des-arrets/",
+     "verificacion": {
+      "bytes": 172998,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:53Z",
+      "http": 200,
+      "sha256": "49b53c64c1d5877de20eecc6e0394b25764fb6d915c9d6fd381458601d7dbabb"
+     }
+    },
+    {
+     "date": "2025-12-31",
+     "host": "courdecassation.ci",
+     "rank": 3,
+     "snippet": "Répertoire des arrêts - Cour de Cassation de Côte d'Ivoire\n...\n|--|--|--|--|--|--|--|--|--|\n...\n## COUR DE CASSATION\n...\nwww.courdecassation.ci\ninfo@courdecassation.ci",
+     "title": "Répertoire des arrêts - Cour de Cassation de Côte d'Ivoire",
+     "url": "https://courdecassation.ci/repertoire-des-arrets/"
+    },
+    {
+     "date": "",
+     "host": "www.cndj.ci",
+     "rank": 4,
+     "snippet": "### Centre National de Documentation Juridique\n#### La mémoire du droit en Côte d'Ivoire\n...\nNotre base de données contient plus de neuf mille (9 000) jugements et arrêts, couvrant une gamme étendue de matières et de niveaux juridictionnels.",
+     "title": "Jurisprudence Nationale - CNDJ",
+     "url": "https://www.cndj.ci/index.php/bases-de-recherche/jurisprudence-nationale.html"
+    },
+    {
+     "date": "2025-02-13",
+     "host": "courdecassation.ci",
+     "rank": 5,
+     "snippet": "Jurisprudences - Cour de Cassation de Côte d'Ivoire\n...\n# Jurisprudences\n## Contacts\nwww.courdecassation.ci",
+     "title": "Jurisprudences - Cour de Cassation de Côte d'Ivoire",
+     "url": "https://courdecassation.ci/jurisprudences/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Cote d'Ivoire state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.assnat.ci",
+     "rank": 1,
+     "snippet": "Assemblée nationale de Côte d'Ivoire | Site officiel\n…\n...\nAssemblée nationale (Côte d'Ivoire)\nAbidan - plateau Boulvard Angolvant\n- 00225-111-111\n-\n- - info@assnat.ci\n-\n- - www.assnat.ci",
+     "title": "Lois - Assemblée nationale de Côte d'Ivoire | Site officiel",
+     "url": "https://www.assnat.ci/?-lois-82-",
+     "verificacion": {
+      "bytes": 82746,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:38:59Z",
+      "http": 200,
+      "sha256": "1beb8b4a6e2ff01e5ac3af4e9c5c24c535aaa130dc7592c36c3e90e3706905e0"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.gouv.ci",
+     "rank": 2,
+     "snippet": "…\n**Services pour citoyens :** www.gouv.ci s’impose comme un véritable guichet numérique avec l’accès à une large gamme de services en ligne.",
+     "title": "Côte d'Ivoire - Portail officiel du Gouvernement :: Accueil",
+     "url": "https://www.gouv.ci/accueil",
+     "verificacion": {
+      "bytes": 753790,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:04Z",
+      "http": 200,
+      "sha256": "44b3511edf666c8a7fd17ac94f0ce0898eb8be25d31a934b09173c6e10bb1e55"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.sgg.gouv.ci",
+     "rank": 3,
+     "snippet": "**Premier Ministre**\n**Secrétariat Général du Gouvernement**\nwww.sgg.gouv.ci - ©2026",
+     "title": "Documenthèque - sgg.gouv.ci",
+     "url": "https://www.sgg.gouv.ci/documentheque.php?id_cas=2&depart=30&c=s"
+    },
+    {
+     "date": "2026-04-13",
+     "host": "anssi.gouv.ci",
+     "rank": 4,
+     "snippet": "Lois\n...\nCe document est la Loi n° 2013-450 du 19 juin 2013 relative à la protection des données à caractère personnel en Côte d’Ivoire, publiée au Journal Officiel.",
+     "title": "Lois - Réglementations - ANSSI Côte d'Ivoire",
+     "url": "https://anssi.gouv.ci/reglementations/textes-nationaux/lois/"
+    },
+    {
+     "date": "2026-04-13",
+     "host": "anssi.gouv.ci",
+     "rank": 5,
+     "snippet": "## Lois\n...\nCe document est la Loi n° 2017-803 du 07 décembre 2017 d’orientation de la société de l’information en Côte d’Ivoire.\n...\n## Décrets\n(15)\n- 13 avril 2026\nDécrets",
+     "title": "Textes nationaux - Réglementations - ANSSI Côte d'Ivoire ...",
+     "url": "https://anssi.gouv.ci/reglementations/textes-nationaux/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Cote d'Ivoire municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.cndj.ci",
+     "rank": 1,
+     "snippet": "Textes Législatifs et Réglémentaires | CNDJ\n...\n## Textes Législatifs et Réglémentaires\n...\nDécouvrez notre base de données exceptionnelle, qui constitue le dépôt le plus complet des textes législatifs et réglementaires de la République de Côte d’Ivoire.",
+     "title": "Textes Législatifs et Réglémentaires | CNDJ",
+     "url": "https://www.cndj.ci/bases-de-recherche/textes-legislatifs-et-reglementaires.html",
+     "verificacion": {
+      "bytes": 33391,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:05Z",
+      "http": 200,
+      "sha256": "88908df14d4eac735a584a7042189a187972bdd298ae510d23e2ae07472f8d69"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.gouv.ci",
+     "rank": 2,
+     "snippet": "Côte d'Ivoire - Portail officiel du Gouvernement :: Bienvenue",
+     "title": "Côte d'Ivoire - Portail officiel du Gouvernement :: Bienvenue",
+     "url": "https://www.gouv.ci/",
+     "verificacion": {
+      "bytes": 5396,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:05Z",
+      "http": 200,
+      "sha256": "9b1463327988f873146b0c0438223a6263a0679dd44aed94d5616e81c1728c48"
+     }
+    },
+    {
+     "date": "2023-06-19",
+     "host": "servicepublic.gouv.ci",
+     "rank": 3,
+     "snippet": "Service Public de Côte d'Ivoire :: servicepublic.gouv.ci\n+225 22 40 98 98 | osep@modernisation.gouv.ci\nservicepublic.gouv.ci Le portail de l'Administration ivoirienne",
+     "title": "servicepublic.gouv.ci: Service Public de Côte d'Ivoire",
+     "url": "https://servicepublic.gouv.ci/"
+    },
+    {
+     "date": "",
+     "host": "cotedivoire.eregulations.org",
+     "rank": 4,
+     "snippet": "eRegulations Côte d'Ivoire\n| | |Journal d'annonce légal|\n...\nPowered by eRegulations (c), a content management system developed by UNCTAD's Investment and Enterprise Division, Business Facilitation Program and licensed under",
+     "title": "eRegulations Côte d'Ivoire",
+     "url": "https://cotedivoire.eregulations.org/Requirements?page=1&letter=j&l=fr"
+    },
+    {
+     "date": "2026-09-22",
+     "host": "construction.gouv.ci",
+     "rank": 5,
+     "snippet": "# e-Services\n## Vidéos\n### Le Ministère de l’Urbanisme est à votre service et plus proche de vous grâce au numéro +2250700260000\n## Publications\n...\nDECRET N°71-74 RELATIF AUX PROCEDURES DOMANIALES ET FONCIERES",
+     "title": "Ministère de l'Urbanisme, du Logement et du Cadre de Vie ...",
+     "url": "https://construction.gouv.ci/accueil"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Cote d'Ivoire regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-09",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "Since January 2025, the National Regulatory Authority for Public Procurement (ANRMP – Autorité Nationale de Régulation des Marchés Publics) is now known as the Public Procurement Regulatory Authority (ARCOP – Autorité de Régulation de la Commande Publique).",
+     "title": "2026 Investment Climate Statements: Côte d'Ivoire",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/cote-divoire",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/cote-divoire",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:39:05Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 2,
+     "snippet": "Role \nMinistry of Agriculture and Rural Développement - Ministère de l’Agriculture et du Développement Rural\n…\n...\nWebsite: https://www.douanes.ci/  \nNational Customs Authority \nCODINORM (Standards Authority) - Côte d’Ivoire Normes  \n...\n…",
+     "title": "Report Name:Cote d'Ivoire - Halal Overview - 2025",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Cote%20d'Ivoire%20-%20Halal%20Overview%20-%202025_Accra_Cote%20d'Ivoire_IV2025-0002.pdf",
+     "verificacion": {
+      "bytes": 787136,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:06Z",
+      "http": 200,
+      "sha256": "3b76251ea13c81a798b8515a0834c305e66d6cdc143385df5b36587d5018ce9c"
+     }
+    },
+    {
+     "date": "2025-01-04",
+     "host": "www.state.gov",
+     "rank": 3,
+     "snippet": "…\n...\nIn the telecommunications, electricity, cocoa, coffee, cotton, and cashew sectors, the government has established control boards or independent agencies to regulate the sector and pricing.\n...\n…\nThe National Authority for Regulation of Public Procurement (ANRMP) regulates public procurement wi",
+     "title": "2024 Investment Climate Statements: Côte d'Ivoire",
+     "url": "https://www.state.gov/reports/2024-investment-climate-statements/cote-divoire"
+    },
+    {
+     "date": "2025-05-05",
+     "host": "www.commerce.gouv.ci",
+     "rank": 4,
+     "snippet": "Ministère du Commerce, de l'Industrie et de l'Artisanat :: Organes de régulation\n...\n# Dossiers\n## Organisation Africaine de ...\n### Organisation Africaine de la Propriété Intellectuelle (OAPI)",
+     "title": "Ministère du Commerce, de l'Industrie et de l'Artisanat ...",
+     "url": "https://www.commerce.gouv.ci/organes-de-regulation"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 5,
+     "snippet": "Cote d'Ivoire's labeling regulation requires that consumer ready products must have French labeling or a readable translation not in an abridged form.\nAll pesticides have to be approved or have a provisional authorization for sale before importation or manufacture in Cote d’Ivoire.\n...\nWebsite: www.",
+     "title": "C:\\GAINSrvr\\data\\Fairs_ci.PDF",
+     "url": "https://apps.fas.usda.gov/gainfiles/200408/146107062.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Cote d'Ivoire national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.codinorm.ci",
+     "rank": 1,
+     "snippet": "## Catalogue de normes ivoiriennes\nDécouvrez la collection intégrale des normes ivoiriennes officiellement publiées par la CODINORM.\nCe catalogue regroupe l’ensemble des standards nationaux homologués, couvrant tous les domaines d’activité.\n...\n### Nous localiser\n...\ninfo@codinorm.ci",
+     "title": "Librairie de normes",
+     "url": "https://www.codinorm.ci/shop",
+     "verificacion": {
+      "bytes": 239107,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:07Z",
+      "http": 200,
+      "sha256": "4c847be3d10390f86fb33ec21948e809877e8d7af2c9586fff79135f6c84f2c3"
+     }
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 2,
+     "snippet": "19 CODINORM harmonizes standards; CODINORM’s catalogue is located at: https://www.codinorm.ci/catalogue/.\n...\nAuthority \nCODINORM (Côte d’Ivoire Normalisation) https://codinorm.ci\n...\nEmail: info@codinorm.ci",
+     "title": "Report Name: FAIRS Country Report Annual - 2025",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS+Country+Report+Annual_Accra_Cote+d'Ivoire_IV2025-0010.pdf",
+     "verificacion": {
+      "bytes": 754383,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:08Z",
+      "http": 200,
+      "sha256": "0224cdb4cf1072818bd16d418fd226c1e3ee325da2a9c346e3085a3730a11543"
+     }
+    },
+    {
+     "date": "2024-01-01",
+     "host": "www.codinorm.ci",
+     "rank": 3,
+     "snippet": "Placée sous la tutelle du ministère chargé de l’industrie, CODINORM est gérée par un Conseil d’Administration de 23 membres dont 9 représentants de l’Etat et 14 issus du Secteur Privé.",
+     "title": "Qui sommes-nous ?",
+     "url": "https://www.codinorm.ci/shopdetail/catalogue/index.php"
+    },
+    {
+     "date": "",
+     "host": "www.ic.ptb.de",
+     "rank": 4,
+     "snippet": "Codex Alimentarius standards.\n...\nAlthough the standards are voluntary, they can be made mandatory by decree.\nThere are currently 530 national standards in the standards catalog.\n...\nThe Ivorian Standards Body (CIN) prepares a report on the request for authorization upon referral by the relevant tec",
+     "title": "Report on the Rapid Assessment of Quality Infrastructure in Côte d’Ivoire",
+     "url": "https://www.ic.ptb.de/media/fileadmin/Publications/PTB_QI_Assessment_Report_Cote_d_Ivoire_EN.pdf"
+    },
+    {
+     "date": "",
+     "host": "web.wtocenter.org.tw",
+     "rank": 5,
+     "snippet": "NI 03 07 003: Farines de mil - Spécifications\n...\nNI 4529: farines de blé tendre - Beurre - Spécifications \n...\n• \n...\nNI 711: semoule de mil et semoule de maïs - Spécifications \n...\n•",
+     "title": "G/TBT/N/CIV/21",
+     "url": "https://web.wtocenter.org.tw/downFiles/18094/356282/004R00000wJzZfXsWBOk3syTRt1Rjsx700000nkjok25I5gCmNY1uKnYXv00000bXOVhUX5zzc1NhcdjiohSxYkzKF70iAHVAuSw=="
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Cote d'Ivoire mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.commerce.gouv.ci",
+     "rank": 1,
+     "snippet": "EN REPUBLIQUE DE COTE D’IVOIRE\nObjet : Programme de Vérification de la Conformité (VOC)\nRéférences :  \n...\n- Décret n° 2016-1152 du 28 décembre 2016 rendant certaines normes d’application obligatoire\n…",
+     "title": "republique de cote d'ivoire",
+     "url": "https://www.commerce.gouv.ci/uploads/publications/178638488173.pdf",
+     "verificacion": {
+      "bytes": 1654519,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:11Z",
+      "http": 200,
+      "sha256": "4eae8f132c74f8f84b6aa85ba2c3291e2e9264678233eb902e4dedbac11e0f3a"
+     }
+    },
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 2,
+     "snippet": "# Trade Policy Review\nIn Cte d'Ivoire, standards (non‑binding) may be made binding (technical regulations) by decree, after endorsement by the CIN.\n...\nFor technical regulations, an interministerial order has to be adopted to make its application mandatory",
+     "title": "Members - ePing SPS&TBT platform",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C384",
+     "verificacion": {
+      "bytes": 154704,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:12Z",
+      "http": 200,
+      "sha256": "a061d3d42661ae94e285b3cd4580b8527fedde001c623e4b02a38eb6bfb0af96"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.dge.gouv.ci",
+     "rank": 3,
+     "snippet": "|33|DIRECTIVE N°01/2013/CM/UEMOA RELATIVE A L'HARMONISATION DES REGLES REGISSANT LA PROFESSION D'ARCHITECTE AU SEIN DE L'UEMOA consulter|ARCHITECTE| | |",
+     "title": "Textes-légaux-uemoa | Direction Générale de l'Economie",
+     "url": "https://www.dge.gouv.ci/page-de-base/textes-legaux-uemoa"
+    },
+    {
+     "date": "2026-04-13",
+     "host": "anssi.gouv.ci",
+     "rank": 4,
+     "snippet": "Il vise à garantir la disponibilité des principaux biens et services essentiels au fonctionnement de la société ivoirienne, en obligeant les organismes publics et les entreprises privées à se conformer à ces référentiels de sécurité.",
+     "title": "Textes nationaux - Réglementations - ANSSI Côte d'Ivoire ...",
+     "url": "https://anssi.gouv.ci/reglementations/textes-nationaux/"
+    },
+    {
+     "date": "2026-04-13",
+     "host": "anssi.gouv.ci",
+     "rank": 5,
+     "snippet": "Ce référentiel établit les standards techniques obligatoires pour assurer la compatibilité et l’échange de données entre les différents systèmes informatiques des administrations publiques ivoiriennes.\n...\n### DÉCRET 2021-916 DU 22 DÉCEMBRE 2021 RGSSI ET PPIC",
+     "title": "Réglementations - ANSSI Côte d'Ivoire - Protéger l'espace ...",
+     "url": "https://anssi.gouv.ci/reglementations/"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Cote d'Ivoire national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2025-10-16",
+     "host": "www.anstat.ci",
+     "rank": 1,
+     "snippet": "NOTE TRIMESTRIELLE SUR LE COMMERCE INTERNATIONAL DE MARCHANDISE T3 2025",
+     "title": "Agence Nationale de la Statistique - Côte d'Ivoire",
+     "url": "https://www.anstat.ci/",
+     "verificacion": {
+      "bytes": 5392,
+      "estado": "http",
+      "fecha": "2026-11-02T07:39:13Z",
+      "http": 403,
+      "sha256": "df7ebd3a9b3838ecfc91d9d041f4e041d386703b8749e4fbd6b2cf9bbfc36fe0"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.oicstatcom.org",
+     "rank": 2,
+     "snippet": "OIC Statistical Commission\n|\n...\nThiékoro DOUMBIA (Director General)</td></tr><tr><td>Address : </td><td>Cité Administrative.",
+     "title": "Cote d'Ivoire",
+     "url": "https://www.oicstatcom.org/databases-nso-detail.php?c_code=15",
+     "verificacion": {
+      "bytes": 17259,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:14Z",
+      "http": 200,
+      "sha256": "fc28f5d31a7bf64db2b5dd9f1565d2b410643146d9ea4e2c44ed55a93acc28d8"
+     }
+    },
+    {
+     "date": "2025-08-22",
+     "host": "www.wikidata.org",
+     "rank": 3,
+     "snippet": "Ivory Coast's principal government institution in charge of statistics and census data\n...\n|English|Institut National de la Statistique|Ivory Coast's principal government institution in charge of statistics and census data|- INS|\n...\ncountry\nIvory Coast\n...\nAbidjan\nofficial website\nhttp://www.ins.ci",
+     "title": "Institut National de la Statistique",
+     "url": "https://www.wikidata.org/wiki/Q3152407"
+    },
+    {
+     "date": "2025-01-01",
+     "host": "www.anstat.ci",
+     "rank": 4,
+     "snippet": "Nous mettons à disposition nos données géospatiales à travers nos plateformes, des services de téléchargement, des requêtes adressées à l’Agence (statistiques@stat.plan.gouv.ci) et d'autres canaux.",
+     "title": "Agence Nationale de la Statistique - Côte d'Ivoire",
+     "url": "https://www.anstat.ci/faq"
+    },
+    {
+     "date": "2026-07-08",
+     "host": "data.gouv.ci",
+     "rank": 5,
+     "snippet": "Portail officiel des données ouvertes\n# Portail officiel des données ouvertes\n# Portail officiel des données ouvertes - accueil\n# Partagez, améliorez et réutilisez les données publiques\nBienvenue sur notre **portail de données**.",
+     "title": "Portail officiel des données ouvertes",
+     "url": "https://data.gouv.ci/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Cote d'Ivoire central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-05-12",
+     "host": "www.economie-ivoirienne.ci",
+     "rank": 1,
+     "snippet": "# Comptes Nationaux Trimestriels\n**Source** : Institut National de la Statistique (INS)\n## Les rubriques\n**12/05/2026 13:43:47**\n- Adresse :",
+     "title": "Comptes Nationaux Trimestriels | Portail d'Informations et de ...",
+     "url": "https://www.economie-ivoirienne.ci/comptes-nationaux-trimestriels",
+     "verificacion": {
+      "bytes": 82562,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:15Z",
+      "http": 200,
+      "sha256": "862d03519dcfb62eaebce2a5bff37813359c0ed94c940534c0f070268b8ab6a4"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.economie-ivoirienne.ci",
+     "rank": 2,
+     "snippet": "Entrez des mots-clés pour trouver un graphique spécifique dans la section indicateurs.",
+     "title": "Tous les indicateurs | Portail d'Informations et de Promotion ...",
+     "url": "https://www.economie-ivoirienne.ci/indicateurs-all",
+     "verificacion": {
+      "bytes": 98833,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:16Z",
+      "http": 200,
+      "sha256": "4297b7e8b447b80911d784fb79850a9ae39d975132e05133c7416dcd0e2c033a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.dge.gouv.ci",
+     "rank": 3,
+     "snippet": "Nouvelle publication **La Côte d'Ivoire en Chiffres — Édition 2025** L'ouvrage statistique de référence · 393 pages\n…\n## BANQUE DE DONNÉES ÉCONOMIQUES\n## SIGSEF\nStatistiques Économiques et Financières",
+     "title": "Direction Générale de l'Economie | DGE",
+     "url": "https://www.dge.gouv.ci/"
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.economie-ivoirienne.ci",
+     "rank": 4,
+     "snippet": "-3,8\nSolde Budgétaire (% du PIB)\n^(2026 - prev.)^\n-2,5\nSolde courant(% du PIB)\n^(2026 - prev.)^\n6,2\n…\n## BRVM\n*source :* brvm.org\n…",
+     "title": "Main navigation",
+     "url": "https://www.economie-ivoirienne.ci/"
+    },
+    {
+     "date": "",
+     "host": "www.economie-ivoirienne.ci",
+     "rank": 5,
+     "snippet": "Tous les indicateurs | Information and Promotion Portal for the Economy of Côte d'Ivoire\n1. Home /\n2. Tous les indicateurs /\nEntrez des mots-clés pour trouver un graphique spécifique dans la section indicateurs.",
+     "title": "Main navigation",
+     "url": "https://www.economie-ivoirienne.ci/en/indicateurs-all?page=5"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Cote d'Ivoire government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-07-08",
+     "host": "data.gouv.ci",
+     "rank": 1,
+     "snippet": "Données - Portail officiel des données ouvertes\n# Portail officiel des données ouvertes\n# 211 jeux de données\nRechercher Filtrer par concepts Trier par\nDate de création\n...\nImportations de produits de pêche et dérivés par pays d’origine et zone économique (2022-2023)",
+     "title": "Données - Portail officiel des données ouvertes",
+     "url": "https://data.gouv.ci/datasets",
+     "verificacion": {
+      "bytes": 141367,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:18Z",
+      "http": 200,
+      "sha256": "bffbf8f1223bb88970bb577fe524bb67ed5238a81994888a70bfe3798d62c766"
+     }
+    },
+    {
+     "date": "2026-07-08",
+     "host": "data.gouv.ci",
+     "rank": 2,
+     "snippet": "Portail officiel des données ouvertes\n# Portail officiel des données ouvertes\n...\nBienvenue sur notre **portail de données**.\nVous y trouverez tous les jeux de données que nous avons retravaillé et publiés, ainsi que des visualisations qui permettent de mieux comprendre les données.",
+     "title": "DATA.GOUV.CI",
+     "url": "https://data.gouv.ci/",
+     "verificacion": {
+      "bytes": 112667,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:39:19Z",
+      "http": 200,
+      "sha256": "6fab192c7da08d260b9e858bde92b709bd269259cd7ae84e09d36721b5549d1e"
+     }
+    },
+    {
+     "date": "",
+     "host": "bilan.gouv.ci",
+     "rank": 3,
+     "snippet": "…\n...\n#### vendredi 23 mai 2025\nCe portail, lancé depuis 2014 par le CICG, permet de consulter, réutiliser et redistribuer librement des données couvrant des secteurs clés comme la santé, l’éducation, l’économie ou encore l’environnement.",
+     "title": "open data : un pilier de la gouvernance ouverte en cote d'ivoire",
+     "url": "https://bilan.gouv.ci/actualite/18501"
+    },
+    {
+     "date": "2026-07-08",
+     "host": "data.gouv.ci",
+     "rank": 4,
+     "snippet": "Ce projet de plateforme nationale « data.gouv.ci » est la traduction technique des engagements pris par le Premier Ministre dans le cadre du Plan d’Action de la Côte d’Ivoire dans « Open Government Partnership-OGP », Organisation Internationale dont la Côte d’Ivoire est membre depuis 2015.",
+     "title": "L'initiative Ivoirienne de l'Open Data",
+     "url": "https://data.gouv.ci/pages/open-data"
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.cicg.gouv.ci",
+     "rank": 5,
+     "snippet": "…\n#### Vendredi 23 Mai 2025\nSelon lui, la plateforme www.data.gouv.ci incarne l’engagement de l’État à rendre les données publiques accessibles, lisibles et utiles.",
+     "title": "CICG - Centre d'Information et de Communication Gouvernementale :: Actualités",
+     "url": "https://www.cicg.gouv.ci/actualite/open-data-un-pilier-de-la-gouvernance-ouverte-en-cote-divoire-313"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:32:24Z",
+ "pais": {
+  "iso2": "CI",
+  "iso3": "CIV",
+  "nombre": "Cote d'Ivoire"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

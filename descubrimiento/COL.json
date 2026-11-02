@@ -1,0 +1,749 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Colombia constitution and national laws official legal database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "normativa.archivogeneral.gov.co",
+     "rank": 1,
+     "snippet": "# Repositorio Normativo del Archivo General de la Nación\n### Decreto 1080 de 2015\n### Constitución política de Colombia\n### Leyes\n### Decretos\n### Acuerdos\n### Directivas\n### Resoluciones\n### Circulares\nArchivo General de la Nación - AGN",
+     "title": "Repositorio Normativo del Archivo General de la Nación",
+     "url": "https://normativa.archivogeneral.gov.co/",
+     "verificacion": {
+      "bytes": 64299,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:28Z",
+      "http": 200,
+      "sha256": "9aa9cb9ca0e5bc83a893cc5911e69215fc1d8a7e4dd5e549a269d124f952937f"
+     }
+    },
+    {
+     "date": "",
+     "host": "leyes.senado.gov.co",
+     "rank": 2,
+     "snippet": "# Leyes de la República\n##### Búsqueda de Leyes\n#### Resultados de la Búsqueda\n...\n# Actos Legislativos\n##### Búsqueda de Actos Legislativos\n|N.º de Acto|Título|Origen|N.º Senado|N.º Cámara|Fecha|Detalle|",
+     "title": "Sección de Leyes - Senado de la República",
+     "url": "https://leyes.senado.gov.co/",
+     "verificacion": {
+      "bytes": 32137,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:30Z",
+      "http": 200,
+      "sha256": "29a23fe6c74087a92987d6121d80fe5ac5e3673c3cd42f7c5b703619e5c8d5b4"
+     }
+    },
+    {
+     "date": "2026-10-01",
+     "host": "www.banrep.gov.co",
+     "rank": 3,
+     "snippet": "# Political Constitution of Colombia 1991\n- Español\n- English\nView PDF\n...\n- TITLE V - ORGANIZATION OF THE STATE\n- TITLE VI - LEGISLATIVE BRANCH\n- TITLE VII - EXECUTIVE BRANCH\n- TITLE XII - ECONOMIC AND PUBLIC FINANCE REGIME",
+     "title": "Political Constitution of Colombia 1991",
+     "url": "https://www.banrep.gov.co/en/regulation/political-constitution-colombia-1991"
+    },
+    {
+     "date": "",
+     "host": "sidn.ramajudicial.gov.co",
+     "rank": 4,
+     "snippet": "#### Diario Oficial(53673) (2026-10)\nResolución 2482 de 2026\n...\n#### Diario Oficial(53673) (2026-10)\nDecreto 1621 de 2026",
+     "title": "Sistema Nacional de Bibliotecas Judiciales - Sistema de Información Doctrinario y Normativo (SIDN)",
+     "url": "https://sidn.ramajudicial.gov.co/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Colombia national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-08-13",
+     "host": "dapre.presidencia.gov.co",
+     "rank": 1,
+     "snippet": "Actos Legislativos\n...\nActos Legislativos\n2026\n...\nPublicado 28/07/2026\nDECRETO 0626 DEL 19 DE JUNIO DE 2026\nPor el cual se liquida el Ministerio de Igualdad y Equidad y se dictan otras disposiciones.",
+     "title": "Actos Legislativos - DAPRE - Presidencia",
+     "url": "https://dapre.presidencia.gov.co/normativa/actos-legislativos",
+     "verificacion": {
+      "bytes": 0,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:31Z",
+      "http": 200,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.minambiente.gov.co",
+     "rank": 2,
+     "snippet": "Boletín Legal Decretos archivos - Página 16 de 23 -\n### Boletín Legal Decretos\n### Boletín Legal Decretos por año\n2026\n2025\n...\n2024\nDecreto 909 de 2024\n...\nDecreto 510 de 2024",
+     "title": "Boletín Legal Decretos archivos - Página 16 de 23 -",
+     "url": "https://www.minambiente.gov.co/normativa/boletin_legal_decretos/page/16/",
+     "verificacion": {
+      "bytes": 985720,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:39Z",
+      "http": 200,
+      "sha256": "4c0e47a9e0011c4a8fabe4e6990ae670ad8332d393caf776ff064adef690a42c"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.minambiente.gov.co",
+     "rank": 3,
+     "snippet": "### Decretos por año\n2026\nDecreto 972 del 4 de agosto de 2026",
+     "title": "Decretos archivos - Página 18 de 28 -",
+     "url": "https://www.minambiente.gov.co/normativa/decretos/page/18/"
+    },
+    {
+     "date": "1995-08-18",
+     "host": "normativa.archivogeneral.gov.co",
+     "rank": 4,
+     "snippet": "Decretos | Normatividad AGN\n# Decretos\nEl Decreto es un acto administrativo promulgado por el poder ejecutivo con contenido normativo reglamentario sin necesidad de ser sometida al órgano legislativo.\n...\n### Decretos Digitalizados 61\n-\n…",
+     "title": "Decretos | Normatividad AGN - Archivo General",
+     "url": "https://normativa.archivogeneral.gov.co/inicio/decretos/"
+    },
+    {
+     "date": "",
+     "host": "normativa.archivogeneral.gov.co",
+     "rank": 5,
+     "snippet": "# Repositorio Normativo del Archivo General de la Nación\n### Decreto 1080 de 2015\n### Constitución política de Colombia\n### Leyes\n### Decretos\n### Acuerdos\n### Directivas\n### Resoluciones\n### Circulares\nArchivo General de la Nación - AGN",
+     "title": "Repositorio Normativo del Archivo General de la Nación",
+     "url": "https://normativa.archivogeneral.gov.co/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Colombia official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "svrpubindc.imprenta.gov.co",
+     "rank": 1,
+     "snippet": "…\n...\nCarrera 66 # 24-09 - Bogotá D.C. - Colombia\ncorrespondencia@imprenta.gov.co",
+     "title": "GACETAS DEL CONGRESO - Imprenta",
+     "url": "https://svrpubindc.imprenta.gov.co/gacetas/index.xhtml",
+     "verificacion": {
+      "bytes": 36308,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:53Z",
+      "http": 200,
+      "sha256": "65513ab54a1dc6c6dcd55057f4bf6df6daec6b44858490d7c1fcc049aae7e560"
+     }
+    },
+    {
+     "date": "",
+     "host": "svrpubindc.imprenta.gov.co",
+     "rank": 2,
+     "snippet": "Carrera 66 # 24-09 - Bogotá D.C. - Colombia\ncorrespondencia@imprenta.gov.co",
+     "title": "DIARIO OFICIAL - Imprenta",
+     "url": "https://svrpubindc.imprenta.gov.co/diario/",
+     "verificacion": {
+      "bytes": 45102,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:57Z",
+      "http": 200,
+      "sha256": "6ea2bc5f426d15eb6c186f53f3f5191dfb3b7d599ad653280a36c2dcc5a079bc"
+     }
+    },
+    {
+     "date": "2026-10-03",
+     "host": "vlex.com.co",
+     "rank": 3,
+     "snippet": "October 03, 2026 - Diario Oficial de Colombia - Legislation\n...\n- Legislation\n- Diario Oficial de Colombia\n# October 03, 2026\n** Contenido completo sólo para clientes\n...\n- Diario Oficial de Colombia de fecha 2026-10-03 (contenido completo)",
+     "title": "October 03, 2026 - Diario Oficial de Colombia - Legislation",
+     "url": "https://vlex.com.co/source/diario-oficial-2549/issue/2026/10/03"
+    },
+    {
+     "date": "",
+     "host": "actosadministrativos.ramajudicial.gov.co",
+     "rank": 4,
+     "snippet": "# Sistema de información de Relatoría Presidencia\n...\n|Gaceta No.|Fecha|Edición|Contenido|\n...\n|Año XXXIII - Vol.XXXIII - Ordinaria No.63|30/10/2026|Ordinaria|Documento Gaceta Contenido Gaceta|",
+     "title": "Busqueda de gacetas - Relatoria",
+     "url": "https://actosadministrativos.ramajudicial.gov.co/Home/Gacetas"
+    },
+    {
+     "date": "2026-05-19",
+     "host": "www.imprenta.gov.co",
+     "rank": 5,
+     "snippet": "Diario Oficial | Imprenta Nacional\n# Diario Oficial\n...\nRealice su búsqueda con la información del número de Diario, número de recibo, tipo de norma, número de norma, entidad o fecha de publicación.\n...\nAtención al público: Carrera 66 No. 24 - 09 Salitre",
+     "title": "Diario Oficial | Imprenta Nacional",
+     "url": "https://www.imprenta.gov.co/diario-oficial"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Colombia supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ojeador.cortesuprema.gov.co",
+     "rank": 1,
+     "snippet": "OJEADOR - Sistema Inteligente de Consulta Jurisprudencial\n...\nEntidadCorte Suprema de Justicia",
+     "title": "OJEADOR",
+     "url": "https://ojeador.cortesuprema.gov.co/",
+     "verificacion": {
+      "bytes": 50279,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:41:58Z",
+      "http": 200,
+      "sha256": "3de8f61e6aaef61e1d803eebd8ef55535d4c7b9a5d86875daf5be2dae16144f3"
+     }
+    },
+    {
+     "date": "",
+     "host": "consultajurisprudencial.ramajudicial.gov.co",
+     "rank": 2,
+     "snippet": "Consulta de Jurisprudencia - Corte Suprema de Justicia\n...\n| |Texto completo| |Consideraciones| |Asunto|\n|--|--|--|--|--|--|\n| |Decisión| |Parte resolutiva| | |\n|Formato: DD/MM/AAAA| |",
+     "title": "Consulta de Jurisprudencia - Corte Suprema de Justicia",
+     "url": "https://consultajurisprudencial.ramajudicial.gov.co/WebRelatoria/csj/index.xhtml",
+     "verificacion": {
+      "bytes": 86722,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:00Z",
+      "http": 200,
+      "sha256": "b2c81c75d302da1cd23cb37b88cf355e5a203bfe20997e9a55fb3115a07e45b7"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.corteconstitucional.gov.co",
+     "rank": 3,
+     "snippet": "## Buscador de Jurisprudencia\nEl buscador de jurisprudencia de la Corte Constitucional es una herramienta tecnológica integrada con técnicas de Inteligencia artificial que permite de manera rápida con un alto grado de precisión encontrar las providencias proferidas por la Corte y publicadas por la R",
+     "title": "Corte Constitucional de Colombia",
+     "url": "https://www.corteconstitucional.gov.co/relatoria/buscador-jurisprudencia"
+    },
+    {
+     "date": "",
+     "host": "ojeador.cortesuprema.gov.co",
+     "rank": 4,
+     "snippet": "Se muestran las 10.000 providencias más relevantes; acote la búsqueda con filtros para llegar a las demás.\n¿Muchos resultados?\nAfina con Búsqueda avanzada\n...\nResultado 1AC5883-2026\nCUI:11001020300020260427600\n...\nDescargar",
+     "title": "OJEADOR - Sistema Inteligente de Consulta Jurisprudencial",
+     "url": "https://ojeador.cortesuprema.gov.co/resultados"
+    },
+    {
+     "date": "2026-10-29",
+     "host": "cortesuprema.gov.co",
+     "rank": 5,
+     "snippet": "## ENTIDADES RELACIONADAS\n#### Corte Suprema de Justicia\n#### Dirección:\n...\n##### Palacio de Justicia Alfonso Reyes Echandía, Bogotá D. C. – Colombia",
+     "title": "Corte Suprema de Justicia de Colombia | Portal Oficial",
+     "url": "https://cortesuprema.gov.co/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Colombia state or provincial legislation official portal",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.gov.co",
+     "rank": 1,
+     "snippet": "## En Carpeta Ciudadana Digital\nConsulta el resultado de tus trámites y solicitudes con el Estado colombiano de manera fácil, rápida y segura.\n...\n###### Portal Único del Estado Colombiano\n...\n**Horarios de Atención:**\n...\nJornada Continua.\n...\nsoporteccc@mintic.gov.co",
+     "title": "Más de 78.000 trámites del Gobierno de Colombia | GOV.CO",
+     "url": "https://www.gov.co/",
+     "verificacion": {
+      "bytes": 5038,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:01Z",
+      "http": 200,
+      "sha256": "1812dc3acce74d3035d4e46f045099e3fed7c53af33823a3ab57d5cc54bc6c31"
+     }
+    },
+    {
+     "date": "1995-06-06",
+     "host": "www.renovacionterritorio.gov.co",
+     "rank": 2,
+     "snippet": "2.2.\nBúsqueda de normas | Agencia de Renovación del Territorio\n...\n2. Transparencia y Acceso A La Información Pública\n...\n# 2.2. Búsqueda de normas\n## Sistema Único de Información Normativa – SUIN\n...\n#### Agencia de Renovación del Territorio",
+     "title": "2.2. Búsqueda de normas - Agencia de Renovación del Territorio",
+     "url": "https://www.renovacionterritorio.gov.co/transparencia-acceso-informacion-publica/normativa/busqueda-de-normas",
+     "verificacion": {
+      "bytes": 105498,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:03Z",
+      "http": 200,
+      "sha256": "ff0c34026f7979fc14c8ef5fdfe71fdbb095183adc1773880fef155aa328b760"
+     }
+    },
+    {
+     "date": "2026-08-13",
+     "host": "dapre.presidencia.gov.co",
+     "rank": 3,
+     "snippet": "Normativa\n...\nACTO LEGISLATIVO No. 01 DEL 6 DE FEBRERO DE 2025\n\"POR EL CUAL SE MODIFICA El ARTÍCULO 65 DE LA CONSTITUCIÓN POLÍTICA DE COLOMBIA\" - SEGUNDA VUELTA",
+     "title": "Actos Legislativos - DAPRE - Presidencia",
+     "url": "https://dapre.presidencia.gov.co/normativa/actos-legislativos"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Colombia municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.alcaldiabogota.gov.co",
+     "rank": 1,
+     "snippet": "# RÉGIMEN LEGAL DE BOGOTÁ D.C.\nCompilación de Normatividad, Doctrina y\nJurisprudencia\n…\n...\n4317 Resolución 029 de 2022 Secretaría General Alcaldía Mayor de Bogotá, D.C.",
+     "title": "Régimen Legal de Bogotá",
+     "url": "https://www.alcaldiabogota.gov.co/sisjur/consulta_avanzada.jsp?dS=N&p_arg_names=vnorm_fechaexpedicion&tipodoc=%20&nrodoc&ano1=%20&ano2=%20&enti=4&enti1=%20&enti2=%20&diaexp&mesexp&anoexp&palabras&Consultar=Buscar",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.alcaldiabogota.gov.co/sisjur/consulta_avanzada.jsp?dS=N&p_arg_names=vnorm_fechaexpedicion&tipodoc=%20&nrodoc&ano1=%20&ano2=%20&enti=4&enti1=%20&enti2=%20&diaexp&mesexp",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:42:03Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.alcaldiabogota.gov.co",
+     "rank": 2,
+     "snippet": "# RÉGIMEN LEGAL DE BOGOTÁ D.C.\n...\n### Estatutos de Bogotá\nNormas estatutarias expedidas sobre el Distrito Capital,\nincluye históricos y el vigente.\n...\nDestaca las más importantes regulaciones normativas\nDistritales y Nacionales\n…",
+     "title": "Compilación de la Legislación Aplicable al Distrito Capital ...",
+     "url": "https://www.alcaldiabogota.gov.co/sisjur/index.jsp",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.alcaldiabogota.gov.co/sisjur/index.jsp",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:42:03Z"
+     }
+    },
+    {
+     "date": "2025-05-30",
+     "host": "www.concejodemedellin.gov.co",
+     "rank": 3,
+     "snippet": "### Sistema Único de Información Normativa – SUIN\n...\n- 7:00 a.m. a 12:00 p.m.\n- 1:00 p.m. a 5:00 p.m.\n...\n- 1:00 p.m. a 4:00 p.m.",
+     "title": "Búsqueda de normas - Concejo de Medellín",
+     "url": "https://www.concejodemedellin.gov.co/transparencia/normativa/busqueda-de-normas/"
+    },
+    {
+     "date": "",
+     "host": "www.alcaldiabogota.gov.co",
+     "rank": 4,
+     "snippet": "Decreto 652 de 2025 Alcaldía Mayor de Bogotá, D.C.\n...\n## Decreto 652 de 2025 Alcaldía Mayor de Bogotá, D.C.\nFecha de Expedición:\n22/12/2025\nFecha de Entrada en Vigencia:\n25/12/2025",
+     "title": "Decreto 652 de 2025 Alcaldía Mayor de Bogotá, D.C.",
+     "url": "https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=191872"
+    },
+    {
+     "date": "",
+     "host": "sidn.ramajudicial.gov.co",
+     "rank": 5,
+     "snippet": "###### Derogatorias\n...\n###### Desarrollo Normativo",
+     "title": "43",
+     "url": "https://sidn.ramajudicial.gov.co/Legislacion/BusquedaExtendidaFuenteNormativa?page=43&NumeroResultados=100"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Colombia regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-21",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "The Superintendence of Industry and Commerce (SIC), Colombia’s independent national competition authority, monitors and protects free economic competition, consumer rights, compliance with legal requirements and regulations, and protection of personal data.\n...\n- The National Institute for Food and ",
+     "title": "2026 Investment Climate Statements: Colombia",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/colombia",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/colombia",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:42:03Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 2,
+     "snippet": "…\n...\nColombian nutritional labeling requirements are established by Resolution 333 of February 10, 2011.\n...\nThe MARD – ICA is the sanitary and phytosanitary (SPS) regulatory authority for rules established by Decree 1843 of 1991 and subsequent resolutions.",
+     "title": "[PDF] FAIRS Country Report Food and Agricultural Import Regulations and ...",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Food+and+Agricultural+Import+Regulations+and+Standards+-+Narrative_Bogota_Colombia_12-14-2012.pdf",
+     "verificacion": {
+      "bytes": 271308,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:03Z",
+      "http": 200,
+      "sha256": "25453e250590e63c2793de97855205d46ee519c8c9721b07a2c4444806feb745"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mincit.gov.co",
+     "rank": 3,
+     "snippet": "# Normatividad\n#### Consulte, a continuación, circulares, conciliaciones, decretos, jurisprudencias, leyes, resoluciones y bases de datos del Ministerio de Comercio, Industria y Turismo:\n* **Decreto 1154 del 20 de agosto de 2020**\n...\n…",
+     "title": "MINCIT - Ministerio de Comercio, Industria y Turismo",
+     "url": "https://www.mincit.gov.co/normatividad"
+    },
+    {
+     "date": "",
+     "host": "normas.cra.gov.co",
+     "rank": 4,
+     "snippet": "### Comisión de Regulación de Agua Potable y Saneamiento Básico\n##### Sede principal\nCarrera 12 Nº 97-80, Piso 2, Bogotá D.C.,\nColombia\nHorario de atención: lunes a viernes de 8:00 am. a\n...\n001",
+     "title": "normas.cra.gov.co › gestor › compilacion_normativa_jurisprudenciaGestor Normativo de la CRA - Compilación",
+     "url": "https://normas.cra.gov.co/gestor/compilacion_normativa_jurisprudencia.html"
+    },
+    {
+     "date": "",
+     "host": "normas.cra.gov.co",
+     "rank": 5,
+     "snippet": "Gestor Normativo de la Comisión de Regulación de Agua Potable y\nSaneamiento Básico - CRA\n...\n### Comisión de Regulación de Agua Potable y Saneamiento Básico\n...\nCarrera 12 Nº 97-80, Piso 2, Bogotá D.C.,\nColombia\n...\n001",
+     "title": "GESTOR NORMATIVO - CRA",
+     "url": "https://normas.cra.gov.co/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Colombia national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2025-05-06",
+     "host": "inm.gov.co",
+     "rank": 1,
+     "snippet": "Listado-de-Normas-Tecnicas-Disponibles - Instituto Nacional de Metrología - INM\n...\n**Instituto Nacional de Metrología de Colombia INM**\nDirección: Av. Carrera 50 No 26 – 55 Int.\n2\n...\n**Contacto**",
+     "title": "Listado-de-Normas-Tecnicas-Disponibles - Instituto Nacional de ...",
+     "url": "https://inm.gov.co/listado-de-normas-tecnicas-disponibles/",
+     "verificacion": {
+      "bytes": 217712,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:05Z",
+      "http": 200,
+      "sha256": "1829bbaab212ee0d8e4ed94226a51f1938aa3e074964e2d5718271f1495a40cf"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mincit.gov.co",
+     "rank": 2,
+     "snippet": "# Normas técnicas colombianas y guías\n...\n##### Guía explicativa NTC-6496 SG Sostenibilidad para establecimiento gastronómicos, bares y similares\n...\n##### Guía explicativa NTC-6504 SG Sostenibilidad empresas comercializadoras de esquemas de tiempo compartido y multipropiedad",
+     "title": "Normas técnicas colombianas y guías",
+     "url": "https://www.mincit.gov.co/minturismo/calidad-y-desarrollo-sostenible/calidad-turistica/normas-tecnicas-colombianas-y-guias",
+     "verificacion": {
+      "bytes": 69226,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:08Z",
+      "http": 200,
+      "sha256": "5fae8cff27e9aec8475b98b500464fa24ab4dc78354b425e41b5c1ae4bb2d2a0"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.mincit.gov.co",
+     "rank": 3,
+     "snippet": "Normas técnicas sectoriales | MINCIT - Ministerio de Comercio, Industria y Turismo\n...\n##### NTS - Agencias de Viajes 1\n###### NormaTécnica Sectorial NTS- AV 014. Requisitos para la operación de actividades de cabalgata en turismo de aventura.",
+     "title": "Normas técnicas sectoriales",
+     "url": "https://www.mincit.gov.co/minturismo/calidad-y-desarrollo-sostenible/calidad-turistica/normas-tecnicas-sectoriales"
+    },
+    {
+     "date": "",
+     "host": "onac.org.co",
+     "rank": 4,
+     "snippet": "##### Medical or Clinical Laboratories\nISO 15189\n##### Testing Laboratories\nISO/IEC 17025\n...\nISO 17034\n...\n##### Product Certification Bodies\nISO/IEC 17065\n###### SUSTAINABILITY\nISO/IEC 17029\n...\nISO 14065\n...\nISO/IEC 17020",
+     "title": "Codes archivos — ONAC",
+     "url": "https://onac.org.co/en/tipo/codes/"
+    },
+    {
+     "date": "",
+     "host": "bibliotecadigital.oducal.com",
+     "rank": 5,
+     "snippet": "# Catálogo Normas Técnicas Colombianas /\n...\n|Autor principal:|ICONTEC 193264|\n|--|--|\n|Formato:|Texto (Text)|\n|Idioma:|Español (Spanish)|\n|Publicado:|Bogotá : El Instituto, 2003|",
+     "title": "Catálogo Normas Técnicas Colombianas /",
+     "url": "https://bibliotecadigital.oducal.com/Record/KOHA-UCATOLICA:28305/Similar"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Colombia mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2025-10-07",
+     "host": "mintransporte.gov.co",
+     "rank": 1,
+     "snippet": "…\n# Reglamentos Técnicos\n...\n### 1- Sistema de Contención Vehícular\n|Reglamento Técnico / Epígrafe|Resolución|Fecha de expedición|Publicación Diario oficial|Fecha de entrada en Vigencia|\n|--|--|--|--|--|",
+     "title": "Reglamentos Técnicos",
+     "url": "https://mintransporte.gov.co/publicaciones/12141/reglamentos-tecnicos/",
+     "verificacion": {
+      "bytes": 135393,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:09Z",
+      "http": 200,
+      "sha256": "6c49ab43d986c6b2ce2bc49cba84945180398483729aed49a475ec76c1959ebb"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.sic.gov.co",
+     "rank": 2,
+     "snippet": "…\n...\nResolución 40993 de 2018\nResolución 40094 de 2020\nPor la cual se expide el Reglamento Técnico de Instalaciones Eléctricas - RETIE.\n...\n…\n...\nResolución 481 de 2009\n...\nResolución 2899 de 2011",
+     "title": "Superintendencia de Industria y Comercio.",
+     "url": "https://www.sic.gov.co/reglamentos-tecnicos",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.sic.gov.co/reglamentos-tecnicos",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:42:12Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.minenergia.gov.co",
+     "rank": 3,
+     "snippet": "Reglamentos técnicos\n…\n## Información de interés sobre reglamentos técnicos\n#### Informes Proyectos de Inversión GRT\n- **2023** - Informe proyecto de inversión GRT - Cuarto trimestre 2023\n- Informe proyecto de inversión GRT - Tercer trimestre 2023",
+     "title": "Reglamentos Técnicos - minenergia.gov.co",
+     "url": "https://www.minenergia.gov.co/es/misional/energia-electrica-2/reglamentos-tecnicos/"
+    },
+    {
+     "date": "2019-01-01",
+     "host": "www.suin-juriscol.gov.co",
+     "rank": 4,
+     "snippet": "|Resolución|Ministerio de Comercio, Industria y Turismo|se expide el Reglamento Técnico para algunos Gasodomésticos, que se fabriquen nacionalmente o importen, para ser comercializados en Colombia|Resolución 899 de 2021|Ir a la Norma|",
+     "title": "Reglamentos Técnicos Ministerio de Comercio, Industria y ...",
+     "url": "https://www.suin-juriscol.gov.co/legislacion/reglamentostecnicosmincomercio.html"
+    },
+    {
+     "date": "2018-01-01",
+     "host": "www.suin-juriscol.gov.co",
+     "rank": 5,
+     "snippet": "\"Las normas aquí incluidas no han sido derogadas expresamente y tampoco han sido declaradas inexequibles o nulas.\n...\n|Producto|Entidad Responsable|Descripción|Acto Administrativo|Enlace|\n|--|--|--|--|--|\n...\n…",
+     "title": "Reglamentos Técnicos Conjuntos",
+     "url": "https://www.suin-juriscol.gov.co/legislacion/reglamentostecnicosconjuntos.html"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Colombia national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.dane.gov.co",
+     "rank": 1,
+     "snippet": "# Portal DANE - Contenido principal\n## Cuenta de Bioeconomía (CB)\n### Nombre de la entidad\nDepartamento Administrativo Nacional de Estadística (DANE)",
+     "title": "Inicio - DANE",
+     "url": "https://www.dane.gov.co/index.php/component/osmap/?view=html&amp;id=1",
+     "verificacion": {
+      "bytes": 197879,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:15Z",
+      "http": 200,
+      "sha256": "0566f31dcd77d83f7efeaa5101aada5922f4b45cb68493969f5d5896460a3c90"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.dane.gov.co",
+     "rank": 2,
+     "snippet": "### Nombre de la entidad\nDepartamento Administrativo Nacional de Estadística (DANE)\nSede principal\n...\nCorreo electrónico: contacto@dane.gov.co",
+     "title": "Portal DANE - Contenido principal",
+     "url": "https://www.dane.gov.co/",
+     "verificacion": {
+      "bytes": 162705,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:15Z",
+      "http": 200,
+      "sha256": "745f6d4503a9e9b893dd50a7208ecc8110283699fcd5a4e86c1d2a09a8a54a31"
+     }
+    },
+    {
+     "date": "2026-04-29",
+     "host": "www.sen.gov.co",
+     "rank": 3,
+     "snippet": "Sistema Estadístico Nacional (SEN)\n…\n## Home\n## SISTEMA ESTADÍSTICO NACIONAL (SEN)\n## INSTANCIAS DEL SEN\n...\nConsulte sus funciones y conozca cómo apoyan el Sistema Estadístico Nacional.\n...\n###### Sistema Estadístico Nacional (SEN)",
+     "title": "Sistema Estadístico Nacional (SEN)",
+     "url": "https://www.sen.gov.co/"
+    },
+    {
+     "date": "",
+     "host": "www.dane.gov.co",
+     "rank": 4,
+     "snippet": "## Herramientas\n### Nombre de la entidad\nDepartamento Administrativo Nacional de Estadística (DANE)",
+     "title": "DANE - Censo Nacional de Población y Vivienda 2018",
+     "url": "https://www.dane.gov.co/index.php/estadisticas-por-tema/demografia-y-poblacion/censo-nacional-de-poblacion-y-vivenda-2018"
+    },
+    {
+     "date": "",
+     "host": "microdatos.dane.gov.co",
+     "rank": 5,
+     "snippet": "Catálogo Central de Datos\n...\n## Metadatos y Microdatos Anonimizados\nConsulte los microdatos y metadatos de las diferentes operaciones estadísticas\ndel DANE.\nPara ello,\npodrá encontrar la información por tres temáticas: Sociedad, Economía y\nTerritorio.",
+     "title": "Catálogo Central de Datos",
+     "url": "https://microdatos.dane.gov.co/catalog/central"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Colombia central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-11-02",
+     "host": "totoro.banrep.gov.co",
+     "rank": 1,
+     "snippet": "…\nsonales",
+     "title": "Estadísticas Económicas - BANREP",
+     "url": "https://totoro.banrep.gov.co/estadisticas-economicas/faces/pages/Buscador.xhtml",
+     "verificacion": {
+      "bytes": 833302,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:19Z",
+      "http": 200,
+      "sha256": "0fb3146fc93fa8e7cc6ac5f1ca274c8ee614f24527ae5594e7f3b6efffa795dc"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.banrep.gov.co",
+     "rank": 2,
+     "snippet": "https://dsbb.imf.org/sdds/country/COL/advance-release-calendar-base|\n...\nEn la actualidad, el DANE empezó a divulgar información de Cuentas Nacionales anuales correspo",
+     "title": "Datos Económicos y Financieros de Colombia - Banco de la República",
+     "url": "https://www.banrep.gov.co/estad/dsbb/fmicolom.htm",
+     "verificacion": {
+      "bytes": 156764,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:21Z",
+      "http": 200,
+      "sha256": "7da7b329a74375c4575f0b3819067d9c47a942c0aa838a83462c880b43b8fb87"
+     }
+    },
+    {
+     "date": "2026-09-09",
+     "host": "suameca.banrep.gov.co",
+     "rank": 3,
+     "snippet": "# Graficador interactivo\n## Datos más consultados\n### Precios e inflación\n|Índice de precios al consumidor: Bogotá, D.C.|Mensual|08 de septiembre de 2026|Desde Enero de 2017 hasta Agosto de 2026|08 de octubre de 2026|",
+     "title": "graficador interactivo del Banco de la república",
+     "url": "https://suameca.banrep.gov.co/graficador-interactivo/"
+    },
+    {
+     "date": "",
+     "host": "suameca.banrep.gov.co",
+     "rank": 4,
+     "snippet": "|Balance fiscal del sector público no financiero - Intereses - Metodología caja|Miles de millones de pesos colombianos|Trimestral|31 de marzo de 1995|31 de diciembre de 2025|10 de junio de 2026| |",
+     "title": "Descarga múltiple de datos Banco de la República Colombia",
+     "url": "https://suameca.banrep.gov.co/descarga-multiple-de-datos/"
+    },
+    {
+     "date": "",
+     "host": "suameca.banrep.gov.co",
+     "rank": 5,
+     "snippet": "Portal corporativo\nPortal de investigaciones económicas\n...\nRetornar a\nEstadísticas económicas\nCatálogo para consulta de datos - estadísticas económicas\nPrecios e inflación\nInflación y meta\nIPC_Índice de Precios al Consumidor\nIPP_Índice de Precios del Productor\n…",
+     "title": "Catálogo de datos estadísticas económicas - | Banco de la República",
+     "url": "https://suameca.banrep.gov.co/estadisticas-economicas/catalogo"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Colombia government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.datos.gov.co",
+     "rank": 1,
+     "snippet": "Datos Abiertos Colombia | Portal Nacional de Datos Abiertos\n…\n...\n…\n## Colombia Open Data Portal\nMinistry of Information and Communications Technologies\nAddress: Murillo Toro Building, Cra.\n8a between calles 12A and 12B, Bogotá D.C.\nPostal code: 111711",
+     "title": "Datos Abiertos Colombia | Portal Nacional de Datos Abiertos",
+     "url": "https://www.datos.gov.co/en",
+     "verificacion": {
+      "bytes": 635213,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:22Z",
+      "http": 200,
+      "sha256": "b15baf8809a390e040cabf5aabda743e8a322b7a88f0fb1db7805fd632fd09bb"
+     }
+    },
+    {
+     "date": "2021-12-07",
+     "host": "www.datos.gov.co",
+     "rank": 2,
+     "snippet": "…\n...\n…\n...\nEl impacto que ha tenido la adquisición de la plataforma se puede observar a continuación, en el cual se evidencia un crecimiento sostenido en la apertura de datos en el país",
+     "title": "Acerca de Portal de Datos ...",
+     "url": "https://www.datos.gov.co/stories/s/Acerca-de-Portal-de-Datos-Abiertos/rbs9-xt6j/",
+     "verificacion": {
+      "bytes": 324071,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:42:23Z",
+      "http": 200,
+      "sha256": "26a527f289c292a06943405ad0a70258d983be4b237b9b61d31ad53f819df74d"
+     }
+    },
+    {
+     "date": "2026-09-21",
+     "host": "www.mininterior.gov.co",
+     "rank": 3,
+     "snippet": "Datos Abiertos Transparencia - Ministerio del Interior\n...\n# Datos Abiertos\n## Conjunto de datos publicados por el Ministerio del Interior\nEl catalogo completo de datos abiertos publicados por el Ministerio del Interior puede ser consultado en: Portal de datos abiertos",
+     "title": "Datos Abiertos Transparencia - Ministerio del Interior",
+     "url": "https://www.mininterior.gov.co/datos-abiertos/"
+    },
+    {
+     "date": "2026-02-20",
+     "host": "www.colombiacompra.gov.co",
+     "rank": 4,
+     "snippet": "# Datos Abiertos\n### Conjunto de Datos Abiertos del SECOP en www.datos.gov.co\nÚltima actualización: 21 May 2025 - 00:58",
+     "title": "Datos Abiertos",
+     "url": "https://www.colombiacompra.gov.co/transparencia/datos-abiertos"
+    },
+    {
+     "date": "",
+     "host": "herramientas.datos.gov.co",
+     "rank": 5,
+     "snippet": "Welcome!\n| Datos Abiertos\n## Herramientas\nConoce los vídeos, guías, manuales, presentaciones, tutoriales y preguntas frecuentes que te guiarán de manera sencilla en cada una de las funcionalidades que te ofrece la plataforma de datos abiertos del Estado.\n…",
+     "title": "Datos Abiertos: Welcome!",
+     "url": "https://herramientas.datos.gov.co/en"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:30:46Z",
+ "pais": {
+  "iso2": "CO",
+  "iso3": "COL",
+  "nombre": "Colombia"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

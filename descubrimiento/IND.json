@@ -1,0 +1,589 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "India constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2025-12-23",
+     "host": "legislative.gov.in",
+     "rank": 1,
+     "snippet": "Constitution of India | Legislative Department\n...\n# Constitution of India\n- Constitution of India\n- Acts and Policies\n- Guidelines\n- Orders and Notices\n- Publications\n- Reports\n...\nTitle: file_copyConstitution of India\n3\n...\nTitle: file_copyThe Constitution (Amendment) Acts\n114",
+     "title": "legislative.gov.in › documentsConstitution of India - Legislative Department",
+     "url": "https://legislative.gov.in/documents"
+    },
+    {
+     "date": "",
+     "host": "nationalarchives.nic.in",
+     "rank": 2,
+     "snippet": "The constitution of India | Official website of National Archives of India, Government of India\n...\n2. The constitution of India\n# The constitution of India\nThe constitution of India\n( **Size** - 91.5 MB , **Language** - English, **Format** - PDF )\n...\nGovernment of India.",
+     "title": "The constitution of India | Official website of National Archives of ...",
+     "url": "https://nationalarchives.nic.in/en/constitution-india"
+    },
+    {
+     "date": "",
+     "host": "www.indiacode.nic.in",
+     "rank": 3,
+     "snippet": "Search Results\nAll of Indiacode\nIndia Code Legislation\nCentral Act\nCentral Act Legislation\n...\nLong Title\nShort Title\nAct Year\nAct Id\nEnactment Date\nSo Reason\nEnforcement Date\nMinistry\nDepartment\nNotification Number\nState Acts\n...\n04\n...\nView...40",
+     "title": "India Code: Search Results",
+     "url": "https://www.indiacode.nic.in/handle/123456789/1362/simple-search?query=&filter_field_1=department&filter_type_1=equals&filter_value_1=Justice&sort_by=dc.date.issued_dt&order=asc&rpp=25&etal=0&start=25"
+    },
+    {
+     "date": "",
+     "host": "www.india.gov.in",
+     "rank": 4,
+     "snippet": "## Accessibility Tools\n### Ministry of Law and Justice\nThe India Code Information System contains all the Central legislations.\nUsers can find cause lists and orders.\nOne can also check the status of court cases, cause lists, daily orders and judgements.\n...\nThe Constitution of India is also given.",
+     "title": "Website of India Code | Your Rights and the Law",
+     "url": "https://www.india.gov.in/category/justice-law-grievances/subcategory/your-rights-and-the-law/details/website-of-india-code"
+    },
+    {
+     "date": "",
+     "host": "www.indiacode.nic.in",
+     "rank": 5,
+     "snippet": "141. The law declared by the Supreme Court shall be binding on all courts within the territory of India.\n...\nTHE CONSTITUTION OF INDIA\n(Part V.—The Union.—Arts. 139A—142.)",
+     "title": "www.indiacode.nic.in › 1 › constitution_of_indiaTHE CONSTITUTION OF INDIA",
+     "url": "https://www.indiacode.nic.in/indiacode/bitstream/123456789/19150/1/constitution_of_india.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "India national regulations decrees official government database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-07-02",
+     "host": "legislative.gov.in",
+     "rank": 1,
+     "snippet": "# Acts and Policies\n...\nTitle: file_copyText of the Central Regulations\n17\nPublished Date: 04.12.2025\n...\n30\n...\nTitle: file_copyOrders issued under the Constitution of India\n3\n...\nThis Website belong to Legislative Department, Ministry of Law & Justice, Government of India",
+     "title": "Acts and Policies - Legislative Department",
+     "url": "https://legislative.gov.in/documents/acts-and-policies"
+    },
+    {
+     "date": "",
+     "host": "www.india.gov.in",
+     "rank": 2,
+     "snippet": "Acts & Rules | My Government | National Portal of India\n...\nIndia Portal is developed under the Digital India Programme to provide citizens with open and easy access to information.\nIt is designed, developed, and maintained by the National Informatics Centre (NIC), under the Ministry of Electronics ",
+     "title": "Acts & Rules | My Government | National Portal of India",
+     "url": "https://www.india.gov.in/my-government/acts-and-rules?pagenumber=110"
+    },
+    {
+     "date": "",
+     "host": "www.india.gov.in",
+     "rank": 3,
+     "snippet": "Documents | My Government | National Portal of India\n...\n# Documents\nThis section provides a one-stop source for important documents and reports released or published by the Indian government at the central or state level.\nThis section is constantly enhanced, and the list presented below is not exha",
+     "title": "Documents | My Government | National Portal of India",
+     "url": "https://www.india.gov.in/my-government/documents"
+    },
+    {
+     "date": "2025-05-05",
+     "host": "www.india.gov.in",
+     "rank": 4,
+     "snippet": "## November\n### Toggle FAQ Section\nIndia Portal is developed under the Digital India Programme to provide citizens with open and easy access to information.\nIt is designed, developed, and maintained by the National Informatics Centre (NIC), under the Ministry of Electronics & Information Technology,",
+     "title": "Home | National Portal of India",
+     "url": "https://www.india.gov.in/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "India official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2024-07-05",
+     "host": "csl.nic.in",
+     "rank": 1,
+     "snippet": "Gazette of India is the official publication of the Government of India that carries the statutory orders and notifications.\nCentral Secretariat Library has digitized the Gazette from 1950 to 2002 and the data has been uploaded in the Department of Publication for online search for the benefit of th",
+     "title": "Gazette of India",
+     "url": "https://csl.nic.in/page/innerpage/gazette-of-india.php"
+    },
+    {
+     "date": "2010-01-30",
+     "host": "en.wikipedia.org",
+     "rank": 2,
+     "snippet": "***The Gazette of India*** is a public journal and an authorised legal document of the Government of India.^[1]^ It is published weekly by the Directorate of Printing Department of Publication, a subordinate office of the Ministry of Housing and Urban Affairs and printed by the Government of India P",
+     "title": "The Gazette of India - Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/The_Gazette_of_India"
+    },
+    {
+     "date": "",
+     "host": "egazette.gov.in",
+     "rank": 3,
+     "snippet": "Directorate of Printing\nDepartment of Publication\nM/o Housing and Urban Affairs\nGovernment of India\nThe Gazette of India\n...\nNational Portal of India\nRecent Extra Ordinary Gazettes\n...\nCredit Guarantee Fund Scheme for Skill Develo...\n16-Jul-2026\nCG-DL-E-16072026-274551",
+     "title": "eGazette Home",
+     "url": "https://egazette.gov.in/default.aspx"
+    },
+    {
+     "date": "",
+     "host": "ddd.gov.in",
+     "rank": 4,
+     "snippet": "|OFFICIAL GAZETTE: Series III No. 02|31/01/2025|Accessible Version : View(223 KB)|\n|OFFICIAL GAZETTE: Series II No. 08|31/01/2025|Accessible Version : View(361 KB)|",
+     "title": "Official Gazette | UT of Dadra and Nagar Haveli and Daman and Diu | India",
+     "url": "https://ddd.gov.in/document-category/official-gazette/page/22/"
+    },
+    {
+     "date": "",
+     "host": "ddd.gov.in",
+     "rank": 5,
+     "snippet": "|--|--|--|\n...\n|Official Gazette : Series II No. 36|09/10/2026|Accessible Version : View(266 KB)|\n...\n|Official Gazette : Extra Ordinary No. 75|06/10/2026|Accessible Version : View(290 KB)|",
+     "title": "Official Gazette | UT of Dadra and Nagar ... - Daman and Diu",
+     "url": "https://ddd.gov.in/document-category/official-gazette/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "India supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.sci.gov.in",
+     "rank": 1,
+     "snippet": "Cause List | Supreme Court of India | India\n**\nभारत का सर्वोच्च न्यायालय ** Supreme Court of India || यतो धर्मस्ततो जय: ||\n...\n2. Services\n3. Cause List",
+     "title": "Cause List",
+     "url": "https://www.sci.gov.in/cause-list/"
+    },
+    {
+     "date": "",
+     "host": "www.sci.gov.in",
+     "rank": 2,
+     "snippet": "|COURT NUMBER|JUDGE|JUDGE|JUDGE|JUDGE|JUDGE|CHAMBER|CHAMBER|SINGLE JUDGE|SINGLE JUDGE|REVIEW & CURATIVE|REVIEW & CURATIVE|REGISTRAR|REGISTRAR|WEEKLY|",
+     "title": "Published Cause List",
+     "url": "https://www.sci.gov.in/published-cause-list/"
+    },
+    {
+     "date": "",
+     "host": "www.sci.gov.in",
+     "rank": 3,
+     "snippet": "# वाद सूची\n## यहां से एैप डाउनलोड करें\nइस वेबसाइट में प्रकाशित\nजानकारी सर्वोच्च न्यायालय द्वारा विनियमित हैI ।",
+     "title": "वाद सूची | भारत का सर्वोच्च न्यायालय | भारत",
+     "url": "https://www.sci.gov.in/hi/%E0%A4%B5%E0%A4%BE%E0%A4%A6-%E0%A4%B8%E0%A5%82%E0%A4%9A%E0%A5%80/"
+    },
+    {
+     "date": "",
+     "host": "www.sci.gov.in",
+     "rank": 4,
+     "snippet": "Latest Orders | Supreme Court of India | India\n**\nभारत का सर्वोच्च न्यायालय ** Supreme Court of India || यतो धर्मस्ततो जय: ||\n1. Home\n2. Latest Orders\n# Latest Orders\nNo records found\n- Steps taken during COVID-19\n- Employee Corner",
+     "title": "Latest Orders",
+     "url": "https://www.sci.gov.in/latest-orders/"
+    },
+    {
+     "date": "2026-04-17",
+     "host": "scr.sci.gov.in",
+     "rank": 5,
+     "snippet": "Home | Judgements and Orders, Supreme Court and High courts of India\n- ## Accessibility Tools\n...\nEnter keywords, acts or any free text and find specific judgments and orders",
+     "title": "Home | Judgements and Orders, Supreme Court and High ...",
+     "url": "https://scr.sci.gov.in/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "India state or provincial legislation official portal",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2017-05-18",
+     "host": "law.rajasthan.gov.in",
+     "rank": 1,
+     "snippet": "Introduction\n...\nmay be accessible to a common user.\n...\nAny user may visit this website and click on available links of Acts, Rules, Regulations and other Statutory Notifications etc.\nshown on the home page.\nClicking on the link will open up the details.",
+     "title": "Introduction",
+     "url": "https://law.rajasthan.gov.in/content/law-justice/en/rajasthan-laws/about-portal/introduction.html"
+    },
+    {
+     "date": "",
+     "host": "nationalarchives.nic.in",
+     "rank": 2,
+     "snippet": "Provincial Gazettes | Official website of National Archives of India, Government of India\n...\n2. About NAI\n...\n# Provincial Gazettes\n...\n|4|Assam|1889-1970|926|-|\n|5|Bihar|1936-1970|352|-|",
+     "title": "Provincial Gazettes",
+     "url": "https://nationalarchives.nic.in/index.php/en/About-NAI/organisation/regional-office-bhopal/Provincial-Gazettes"
+    },
+    {
+     "date": "",
+     "host": "www.india.gov.in",
+     "rank": 3,
+     "snippet": "India Code - Digital Repository of All Central and State Acts | National Portal of India\n...\nIndia Code - Digital Repository of All Central and State Acts\n## November\n### Ministry of Law and Justice\nFully Online\n...\nFor More Information Visit\nhttps://indiacode.nic.in/Click Here",
+     "title": "India Code - Digital Repository of All Central and State Acts",
+     "url": "https://www.india.gov.in/services/details/india-code-digital-repository-of-all-central-and-state-acts"
+    },
+    {
+     "date": "",
+     "host": "igod.gov.in",
+     "rank": 4,
+     "snippet": "Integrated Government Online Directory : Legislature : State Legislative Assemblies/Councils of India\nA one-point source to access Indian Government Websites at all levels and from all\nsectors\n...\n- State Legislative Assemblies/Councils of India\n## State Legislative Assemblies/Councils of India\n40 R",
+     "title": "igod.gov.in › leg › L004State Legislative Assemblies/Councils of India",
+     "url": "https://igod.gov.in/leg/L004/organizations"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "India municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "mahadma.maharashtra.gov.in",
+     "rank": 1,
+     "snippet": "Municipal Acts and Regulations Archives - Directorate of Municipal Administration\nGovernment of Maharashtra\n# Directorate of Municipal Administration\n# Municipal Acts and Regulations\n...\n- Current\n- Archive\n...\n|1|The Maharashtra Municipal Councils, Nagar Panchayats And Industrial Townships Act, 196",
+     "title": "Municipal Acts and Regulations",
+     "url": "https://mahadma.maharashtra.gov.in/en/services-type/acts-policies-en/municipal-acts-regulations/"
+    },
+    {
+     "date": "",
+     "host": "mahadma.maharashtra.gov.in",
+     "rank": 2,
+     "snippet": "# Directorate of Municipal Administration\n# Rules and By-Laws\n...\n|11|Solid Waste (Management and Handling), Sanitation and Health Bye-laws for Municipal Councils/Nagar Panchayats, 2019|12-07-2025|—|354.06 KB (PDF)|View|",
+     "title": "Rules and By-Laws Archives - Page 2 of 2 - Directorate of Municipal ...",
+     "url": "https://mahadma.maharashtra.gov.in/en/services-type/acts-policies-en/rules-by-laws/page/2/"
+    },
+    {
+     "date": "",
+     "host": "mahadma.maharashtra.gov.in",
+     "rank": 3,
+     "snippet": "नियम आणि उपविधी Archives - Page 2 of 2 - Directorate of Municipal Administration\nमहाराष्ट्र शासन",
+     "title": "नियम आणि उपविधी Archives - Page 2 of 2",
+     "url": "https://mahadma.maharashtra.gov.in/services-type/acts-policies/rules-by-laws-mr/page/2/"
+    },
+    {
+     "date": "2026-10-14",
+     "host": "www.suratmunicipal.gov.in",
+     "rank": 4,
+     "snippet": "SMC has taken an initiative to make various downloaded forms available at free of cost.\n...\nRight To Information\nThe section on RTI provides details of the Public Information Officer, Assistant Public Information Officer, Proactive Disclosures, application forms and other important details.\n...\nThis",
+     "title": "Surat Municipal Corporation",
+     "url": "https://www.suratmunicipal.gov.in/"
+    },
+    {
+     "date": "",
+     "host": "mahadma.maharashtra.gov.in",
+     "rank": 5,
+     "snippet": "नियम आणि उपविधी Archives - Directorate of Municipal Administration\nमहाराष्ट्र शासन\n...\n# नियम आणि उपविधी\nNo services found in archive.",
+     "title": "mahadma.maharashtra.gov.in › services-type › actsनियम आणि उपविधी Archives - Directorate of Municipal ...",
+     "url": "https://mahadma.maharashtra.gov.in/services-type/acts-policies/rules-by-laws-mr/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "India regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.sebi.gov.in",
+     "rank": 1,
+     "snippet": "|2026|Securities and Exchange Board of India (Mutual Funds) Regulations, 2026 [Last amended on October 10, 2026]|\n...\n|2026|Securities and Exchange Board of India (Settlement of Administrative and Civil Proceedings) Regulations, 2026 Notification|\n...\n…",
+     "title": "SEBI | Regulations",
+     "url": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=2&ssid=3&smid=0"
+    },
+    {
+     "date": "2026-09-22",
+     "host": "www.trai.gov.in",
+     "rank": 2,
+     "snippet": "Regulations | Telecom Regulatory Authority of India | Government of India\n...\nRating of Properties for Digital Connectivity (Amendment) Regulations, 2026\n14/05/2026\nQuality of Service\nAmendment (Bilingual) Download(12.17 MB)\n...\n24/03/2026",
+     "title": "Regulations | Telecom Regulatory Authority of India",
+     "url": "https://www.trai.gov.in/release-publication/regulations"
+    },
+    {
+     "date": "2026-09-22",
+     "host": "financialservices.gov.in",
+     "rank": 3,
+     "snippet": "|Document Title|Published Date| | |\n|--|--|--|--|\n...\n|IRDAI (Regulatory Sandbox) Regulations, 2025|2025-01-03|IRDAI (Regulatory Sandbox) Regulations, 2025 (1.76 MB)|VIEW|",
+     "title": "Acts and Policies | Department of Financial Services ...",
+     "url": "https://financialservices.gov.in/act-and-policies/3485"
+    },
+    {
+     "date": "",
+     "host": "www.rbi.org.in",
+     "rank": 4,
+     "snippet": "REGULATIONS\n...\nCredit Information Companies (Amendment) Regulations, 2017\nCredit Information Companies (Amendment) Regulations, 2021\n...\nForeign Exchange Management Export of Goods & Services, Regulations 2019\n...\nReserve Bank of India (Board for Financial Supervision) Regulations, 1994",
+     "title": "RBI regulations",
+     "url": "https://www.rbi.org.in/Scripts/Regulations.aspx"
+    },
+    {
+     "date": "2026-11-01",
+     "host": "www.pib.gov.in",
+     "rank": 5,
+     "snippet": "- **Reserve Bank of India, Securities and Exchange Board of India, Insurance Regulatory and Development Authority of India** etc. are sectoral regulators enforcing domain-specific technology, cybersecurity, and risk management norms.\n...\n- **Establishing a national, federated AI incident reporting m",
+     "title": "India AI Governance Guidelines",
+     "url": "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2228315&reg=3%20&lang=1"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "India national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.crsbis.in",
+     "rank": 1,
+     "snippet": "Bureau Of Indian Standards\nBUREAU OF INDIAN STANDARDS Ministry Of Consumer Affairs , Food & Public Distribution\nGovernment of India\n...\n|1|IS 10322 (Part 5/Sec 1) : 2012|Fixed General Purpose LED Luminaires|MEITY|",
+     "title": "Bureau Of Indian Standards",
+     "url": "https://www.crsbis.in/BIS/publicdashAction.do?hmode=Standard_table"
+    },
+    {
+     "date": "",
+     "host": "www.services.bis.gov.in",
+     "rank": 2,
+     "snippet": "# Standards List\nKnow Your Standard Technical Department Wise Classification Ministry/Department Wise Classification\n...\n#### Total Standards : 1274\nRevised Standards New Standards\n...\n| |1|SP 1 : 1967|Comparison of indian and overseas standards on aluminium alloy castings|0|----|Download|Comment|",
+     "title": "Standards List",
+     "url": "https://www.services.bis.gov.in/php/BIS_2.0/dgdashboard/published/grp_stn_list/13"
+    },
+    {
+     "date": "2022-08-23",
+     "host": "www.bis.gov.in",
+     "rank": 3,
+     "snippet": "1. Know Your Standard\n## Know Your Standard\nThe ‘Know Your Standard’ feature provides a one-stop access to all the documents and data related to a selected Standard.\nThe Standard can be searched by entering the Indian Standard (IS) Number or a Keyword (like Product name) in the search box.",
+     "title": "Know Your Standard",
+     "url": "https://www.bis.gov.in/know-your-standard/?lang=en"
+    },
+    {
+     "date": "",
+     "host": "www.services.bis.gov.in",
+     "rank": 4,
+     "snippet": "Indian Standard Locator\n# Indian Standards Locator\n...\n|S.\n...\n|1|IS 10020 : Part 4: 1981|Recommendations for design and construction of port and harbour components: Part 4 slipways|CED 47| |Others|2022,July| |Buy|",
+     "title": "Indian Standards Locator",
+     "url": "https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/Group_wise_standards_list?GId=NA=="
+    },
+    {
+     "date": "",
+     "host": "www.services.bis.gov.in",
+     "rank": 5,
+     "snippet": "Indian_standards - BIS Connect\n# Know your standards\n...\n**All the standards published after 01 Oct 2025 are available in new portal.\nPlease click here to view the portal**\nPlease enter multiple keywords or keyword strings separated by comma(,) and press enter to see multiple keyword search results",
+     "title": "Know your standards - BIS Portal",
+     "url": "https://www.services.bis.gov.in/php/BIS_2.0/bisconnect/knowyourstandards/indian_standards/isdetails"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "India mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.nccs.gov.in",
+     "rank": 1,
+     "snippet": "NCCS - Notified ITSARs\n...\n3. अधिसूचित ITSARs\nThis table contains the ITSAR information.\n|क्रसं.|ITSAR का नाम|ITSAR नंबर|रिलीज़ की तिथि|प्रवर्तन तिथि|डाउनलोड करें|",
+     "title": "Itsars",
+     "url": "https://www.nccs.gov.in/home/itsars"
+    },
+    {
+     "date": "",
+     "host": "www.crsbis.in",
+     "rank": 2,
+     "snippet": "|1|AMPLIFIERS WITH INPUT POWER 2000W AND ABOVE|IS 616:2017|03 July 2013|\n|2|AUTOMATIC DATA PROCESSING MACHINE|IS 13252(Part 1):2010|03 July 2013|\n...\n…",
+     "title": "Following products are covered under Compulsory Registration ...",
+     "url": "https://www.crsbis.in/BIS/products-bis.do"
+    },
+    {
+     "date": "2018-08-11",
+     "host": "www.bis.gov.in",
+     "rank": 3,
+     "snippet": "**1.\nList of Electronics and IT Goods under ‘Compulsory Registration Scheme’ for Self Declaration of conformity-Notified by Ministry Of Electronics And Information Technology**\n|Sl.\nNo.|IS No.|Title|Product Category|Notification|\n|--|--|--|--|--|",
+     "title": "II (Registration Scheme)",
+     "url": "https://www.bis.gov.in/product-certification/products-under-compulsory-certification/scheme-ii-registration-scheme/?lang=en"
+    },
+    {
+     "date": "",
+     "host": "www.crsbis.in",
+     "rank": 4,
+     "snippet": "## Standard Number(s)\n|#### S.No.|#### Standard Number|#### Product Category|#### Ministry|\n...\n|122|IS/IEC 62368 (Part 1): 2023 & IS 18112: 2025|Plasma/LCD/LED Televisions|MEITY|",
+     "title": "Bureau Of Indian Standards",
+     "url": "https://www.crsbis.in/BIS/publicdashAction.do?hmode=Standard_table"
+    },
+    {
+     "date": "2018-07-30",
+     "host": "www.bis.gov.in",
+     "rank": 5,
+     "snippet": "**1) INDIAN STANDARD UNDER MANDATORY BIS CERTIFICATION**\n...\n30 Indian Standards on finished cosmetics are listed in Schedule ‘S’ of the Drugs and Cosmetics Rules, 1945 as per which the cosmetics in their finished form (manufactured or imported) need to conform to these Specifications.",
+     "title": "Indian standards referred in government regulations",
+     "url": "https://www.bis.gov.in/standards/indian-standards-referred-in-government-regulations/?lang=en"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "India national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "microdata.gov.in",
+     "rank": 1,
+     "snippet": "#### An Online Microdata Library\n##### Other Surveys\n###### Disclaimer\nMinistry of Statistics & Programme Implementation (MoSPI) disclaims any liability or responsibility arising from the use of the Microdata Portal - https://microdata[dot]gov[dot]in or the contents of the portal.",
+     "title": "Home [microdata.gov.in]",
+     "url": "https://microdata.gov.in/NADA/index.php/home"
+    },
+    {
+     "date": "",
+     "host": "www.mospi.gov.in",
+     "rank": 2,
+     "snippet": "The National Statistics Office (NSO) is the apex statistical body under the Ministry of Statistics and Programme Implementation (MoSPI), Government of India, responsible for coordinating statistical activities across the country which also includes conducting large-scale sample surveys.\n...\nThis Web",
+     "title": "www.mospi.gov.in › current-surveys-0Ministry of Statistics and Program Implementation ...",
+     "url": "https://www.mospi.gov.in/current-surveys-0"
+    },
+    {
+     "date": "",
+     "host": "www.mospi.gov.in",
+     "rank": 3,
+     "snippet": "About Ministry | MOSPI\n...\n2. मंत्रालय के बारे में\n...\nLinks to install GoIStats app\n- कुल आगंतुक: undefinedSourced from Google Analytics\n...\nThis Website belong to Ministry of Statistics and Programme Implementation, Government of India\n© 2025 Ministry of Statistics & Programme Implementation",
+     "title": "Ministry of Statistics and Program Implementation | Government Of ...",
+     "url": "https://www.mospi.gov.in/national-statistics-office-nso"
+    },
+    {
+     "date": "",
+     "host": "www.mospi.gov.in",
+     "rank": 4,
+     "snippet": "Publications & Reports | Ministry of Statistics\nभारत सरकारसांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय\n1. होम\n2. प्रकाशन/रिपोर्ट\n...\nLinks to install GoIStats app\n...\nThis Website belong to Ministry of Statistics and Programme Implementation, Government of India",
+     "title": "Publications / Survey Reports",
+     "url": "https://www.mospi.gov.in/download-reports"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "India central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-08-20",
+     "host": "rbi.org.in",
+     "rank": 1,
+     "snippet": "182 day T-bills 5.5678%*\n364 day T-bills5.7373%*\n* cut-off at the last auction",
+     "title": "Official website of Reserve Bank of India",
+     "url": "https://rbi.org.in/"
+    },
+    {
+     "date": "",
+     "host": "bulletin.rbi.org.in",
+     "rank": 2,
+     "snippet": "# RBI Bulletin\n|## Search Archives|## Search Archives|\n|--|--|",
+     "title": "bulletin.rbi.org.in",
+     "url": "https://bulletin.rbi.org.in/"
+    },
+    {
+     "date": "1998-05-21",
+     "host": "www.rbi.org.in",
+     "rank": 3,
+     "snippet": "Data Releases\n...\nData Releases\nThis Section provides data on various aspects of Indian economy, banking and finance.\nWhile the current data defined as data for the past one year is available at the links provided below, researchers may also access data series available in the\nDatabase on Indian Eco",
+     "title": "RBI Statistics",
+     "url": "https://www.rbi.org.in/Scripts/Statistics.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.rbi.org.in",
+     "rank": 4,
+     "snippet": "State Statistics and Finances\nStatistics\nData Releases\nDatabase on Indian Economy\nPublic Debt Statistics\nRegulatory Reporting\n...\nValidation rules/ Taxonomy\nList of RBI Reporting Portals\nFAQs of RBI Reporting Portals\n...\nPublications\nWeekly\nWeekly Statistical Supplement\nWSS - Extract\n...\nReserve Ban",
+     "title": "Weekly Statistical Supplement - Reserve Bank of India",
+     "url": "https://www.rbi.org.in/Scripts/BS_ViewWSS.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.rbi.org.in",
+     "rank": 5,
+     "snippet": "रिज़र्व बैंक बुलेटिन\nइतिहास\n...\nजारी आंकड़े\nभारतीय अर्थव्यवस्था पर डेटाबेस\n...\n…\n...\nभारतीय अर्थव्यवथा का डाटाबेस\nलिंक पर आँकड़ा श्रृंखला भी प्राप्त कर सकते हैं।",
+     "title": "भारतीय रिज़र्व बैंक - जारी आंकड़े",
+     "url": "https://www.rbi.org.in/hindi/Scripts/Statistics.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "India government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.india.gov.in",
+     "rank": 1,
+     "snippet": "Browse and Download Datasets from Open Government Data Platform - OGD India | National Portal of India\n...\nIndia Portal is developed under the Digital India Programme to provide citizens with open and easy access to information.\n...\nThe content available on India Portal is owned and managed by the r",
+     "title": "Browse and Download Datasets from Open Government Data Platform - OGD India",
+     "url": "https://www.india.gov.in/services/details/browse-and-download-datasets-from-open-government-data-platform-ogd-india"
+    },
+    {
+     "date": "2022-01-21",
+     "host": "www.data.gov.in",
+     "rank": 2,
+     "snippet": "-\nOpen Government Data Portal India\nHOME\nCATALOG\nAPIs\nCHIEF DATA OFFICER\n0\n...\nSearch Datasets Here\nSearch",
+     "title": "Government Open Data License - India",
+     "url": "https://www.data.gov.in/Godl"
+    },
+    {
+     "date": "2022-01-21",
+     "host": "www.data.gov.in",
+     "rank": 3,
+     "snippet": "Open Government Data Portal India\nHOME\nCATALOG\nAPIs\nCHIEF DATA OFFICER\n...\nHome\nSearch\nThe advanced search feature allows you to search Catalog and Resources with title, description, keywords, domain, sector, state/ ministry/department/organization, and asset jurisdiction.",
+     "title": "Search | Open Government Data (OGD) ...",
+     "url": "https://www.data.gov.in/search"
+    },
+    {
+     "date": "",
+     "host": "www.meity.gov.in",
+     "rank": 4,
+     "snippet": "Open Government Data (OGD) Platform India – An Overview\nThe Open Government Data (OGD) Platform India (https://data.gov.in) has been set-up by the National Informatics Centre (NIC) in compliance with the Open Data Policy\n(NDSAP) of India.",
+     "title": "Page 1 of 4",
+     "url": "https://www.meity.gov.in/writereaddata/files/OGD_Overview%20v_2.pdf"
+    },
+    {
+     "date": "2022-01-21",
+     "host": "www.data.gov.in",
+     "rank": 5,
+     "snippet": "The policy envisages the proactive dissemination of Government resources e.g. datasets, apps, tools etc. through the Open Government Data (OGD) Platform India – data.gov.in - to foster innovation; improve delivery of government information & services besides promoting transparency, accountability an",
+     "title": "Open Government Data Platform Help",
+     "url": "https://www.data.gov.in/help"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:47:13Z",
+ "pais": {
+  "iso2": "IN",
+  "iso3": "IND",
+  "nombre": "India"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

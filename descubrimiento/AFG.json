@@ -1,0 +1,691 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Afghanistan constitution and national laws official legal database",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "laws.af",
+     "rank": 1,
+     "snippet": "Afghanistan Law Database\n# Contact Us\n1. Classifications >\n2. Hierarchical Classification >\n3. Statutes\nAmendment to article 122 of income tax law\n...\n…\nLaw on National Police Force Reform Commission: Official Gazette\n...\nAfghanistan National Standard Law: Official Gazette",
+     "title": "Statutes",
+     "url": "https://laws.af/hierarchical-classification/statutes/page/8/",
+     "verificacion": {
+      "error": "robots.txt disallows https://laws.af/hierarchical-classification/statutes/page/8/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:33:23Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.af",
+     "rank": 2,
+     "snippet": "Afghanistan Law Database\n...\n# Search for Legislations on Afghanistan\n...\n1. ## By-Laws\n2. ## Decrees\n3. ## Directives\n...\n5. ## Procedures\n6. ## Regulations\n7. ## Statutes\n8. ## Sub Laws (Bills)\n9. ## The Constitution",
+     "title": "Afghanistan Law Database",
+     "url": "https://laws.af/",
+     "verificacion": {
+      "error": "robots.txt disallows https://laws.af/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:33:23Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "lpr.adb.org",
+     "rank": 3,
+     "snippet": "# Constitution of Afghanistan\nThe 2004 Constitution was designed to take into account the social, political, and religious dynamic of Afghanistan, and it established an Islamic Republic.\n...\nPower is divided between the President, the National Assembly, the Grand Assembly, and the Supreme Court.\nDow",
+     "title": "Constitution of Afghanistan | ADB's Law and Policy Reform Program",
+     "url": "https://lpr.adb.org/document/constitution-afghanistan"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Afghanistan national regulations decrees official government database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "laws.af",
+     "rank": 1,
+     "snippet": "Afghanistan Law Database\n# Contact Us\n1. Classifications >\n...\nThe Regulation on Governmental Offices Archive\n** March 5, 1981 | ** Valid | ** Regulation | ** Pamphlet CD981 R 466 1981 | ** 3ACKU000913235 |",
+     "title": "Governance",
+     "url": "https://laws.af/sectoral-classification/governance/page/12/",
+     "verificacion": {
+      "error": "robots.txt disallows https://laws.af/sectoral-classification/governance/page/12/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:33:23Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.af",
+     "rank": 2,
+     "snippet": "— By-Laws\n— Decrees\n— Directives\n— Legislative Decrees\n— Procedures\n— Regulations\n...\nLaw on National Police Force Reform Commission: Official Gazette\nSeptember 19, 2010\nValid\n...\nAfghanistan National Standard Law: Official Gazette\nSeptember 19, 2010",
+     "title": "22",
+     "url": "https://laws.af/scientific-classification/page/22/",
+     "verificacion": {
+      "error": "robots.txt disallows https://laws.af/scientific-classification/page/22/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:33:23Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "mail.gov.af",
+     "rank": 3,
+     "snippet": "Law & Documents | AfGOV\n- info@mail.gov.af\n...\n## Regulations:\n>\n|Document Title|DOWNLOAD|\n> |--|--|\n> |Regulation on Grains and Root Crops Reserve|Download File|\n> |Agricultural Research Institute Regulation|Download File|",
+     "title": "Law & Documents | AfGOV",
+     "url": "https://mail.gov.af/index.php/en/law-documents"
+    },
+    {
+     "date": "",
+     "host": "laws.af",
+     "rank": 4,
+     "snippet": "Afghanistan Law Database\n...\n# Search for Legislations on Afghanistan\n...\nHierarchical\n...\n# Hierarchical\n1. ## By-Laws\n2. ## Decrees\n3. ## Directives\n4. ## Legislative Decrees\n5. ## Procedures\n6. ## Regulations\n7. ## Statutes",
+     "title": "Afghanistan Law Database",
+     "url": "https://laws.af/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Afghanistan official gazette",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.moj.gov.af",
+     "rank": 1,
+     "snippet": "The Directorate of Publications and Public Relations, is one of the central directorates of the Ministry of Justice of Islamic Emirate of Afghanistan.\nThis ministry is the publisher of the official gazette.\n...\n…\nThe official gazette is the only official gazette of the Government of Islamic Emirate ",
+     "title": "Department of Publication and Public Relations",
+     "url": "https://www.moj.gov.af/en/department-publication-and-public-relations",
+     "verificacion": {
+      "bytes": 50983,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:28Z",
+      "http": 200,
+      "sha256": "6d37b19d0cc9d6558c0ca0a317695b7483afea676304157a1e9af54026c7a316"
+     }
+    },
+    {
+     "date": "2025-05-19",
+     "host": "moj.gov.af",
+     "rank": 2,
+     "snippet": "- ** info@moj.gov.af\n- ** 0202526849 : moj.afghanistan@gmail.com : اطلاع رسانی\n...\n### Official Gazette\nSun, Jul 28 2019 3:35 PM\ndlawa1397agahi hoqiqi.pdf \" target=\"_blank\">\n…",
+     "title": "خپرونې | Ministry of Justice",
+     "url": "https://moj.gov.af/en/publications",
+     "verificacion": {
+      "bytes": 36083,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:35Z",
+      "http": 200,
+      "sha256": "d2d7f1e8e694930b06906da79f8c5a3c985150d9e1978f811dea04404eef3e76"
+     }
+    },
+    {
+     "date": "",
+     "host": "mof.gov.af",
+     "rank": 3,
+     "snippet": "OF\nAFGHANISTAN\nMINISTRY OF JUSTICE\nOFFICIAL\nGAZETTE\nExtraordinary Issue\nDate: 5th OCTOBER .2016\nISSUE NO :(1228)\nھـ.ش\nPublic Private Partnership (PPP)Law\n1",
+     "title": "OFFICIAL GAZETTE",
+     "url": "https://mof.gov.af/sites/default/files/2019-02/PPPLawOfficialEnglish263201710202518553325325.pdf"
+    },
+    {
+     "date": "2014-08-18",
+     "host": "www.ilo.org",
+     "rank": 4,
+     "snippet": "# Afghan Labour Law - Official Gazette, 2007\nThis Gazette contains the following:\n· Decree No (94), dated January 17, 2007 of the President of Islamic Republic of Afghanistan;\n· Labour Law endorsement; and\n· Labour law\n...\n18 August 2014",
+     "title": "Afghan Labour Law - Official Gazette, 2007",
+     "url": "https://www.ilo.org/resource/afghan-labour-law-official-gazette-2007"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Afghanistan supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "supremecourt.gov.af",
+     "rank": 1,
+     "snippet": "- info@supremecourt.gov.af\n...\n### د سترې محکمې د نن سه شنبې ورځې د نشر شويو مهمو فعالیتونو غورچاڼ:\nسهشنبه ۱۴۰۵/۶/۳۱ - ۱۵:۴۰",
+     "title": "زموږ په خبر پاڼه کې شامل شئ",
+     "url": "https://supremecourt.gov.af/",
+     "verificacion": {
+      "bytes": 82733,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:39Z",
+      "http": 200,
+      "sha256": "ac7bf60a9da665384d590de8b74de372b8948a71cb9341b586e2d94a8bdfb0da"
+     }
+    },
+    {
+     "date": "",
+     "host": "supremecourt.gov.af",
+     "rank": 2,
+     "snippet": "Reports | Supremecourt\n...\n- +93(0) 20 230 22 63\n...\n**Address:** Public Health Square, Kabul, Afghanistan\n**Phone:** +93(0) 20 230 22 63\n**Email:** Info@supremecourt.gov.af",
+     "title": "Reports",
+     "url": "https://supremecourt.gov.af/index.php/en/reports",
+     "verificacion": {
+      "bytes": 24551,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:43Z",
+      "http": 200,
+      "sha256": "047696fcd218733f198f50106dfb2f0f12e53812e7ea84f4adb2a2b2d468555c"
+     }
+    },
+    {
+     "date": "",
+     "host": "supremecourt.gov.af",
+     "rank": 3,
+     "snippet": "Publications | Supremecourt\n- info@supremecourt.gov.af\n- +93(0) 20 230 22 63\n...\n2. د محاکمو قطعی پریکړې\n...\nof Afghanistan **\n...\n**Email:** Info@supremecourt.gov.af",
+     "title": "Publications | Supremecourt",
+     "url": "https://supremecourt.gov.af/en/publications"
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 4,
+     "snippet": "Official website of the Supreme Court of Afghanistan.\n...\nBrief details of selected decisions of the provincial courts are given on the site in English.\nThese are arranged by date and type of crime.\nParts of the site are still under development.\n...\nConnect to resource:https://supremecourt.gov.af/en",
+     "title": "Supreme Court of Afghanistan - IALS Digital resources",
+     "url": "https://resources.ials.sas.ac.uk/eagle-i/supreme-court-afghanistan"
+    },
+    {
+     "date": "",
+     "host": "supremecourt.gov.af",
+     "rank": 5,
+     "snippet": "Bulletin | Supremecourt\n- info@supremecourt.gov.af\n...\nof Afghanistan **\n**Address:** Public Health Square, Kabul, Afghanistan\n**Phone:** +93(0) 20 230 22 63\n**Email:** Info@supremecourt.gov.af",
+     "title": "Bulletin",
+     "url": "https://supremecourt.gov.af/index.php/en/bulletin"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Afghanistan state or provincial legislation official portal",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "laws.af",
+     "rank": 1,
+     "snippet": "Afghanistan Law Database\n...\n# Search for Legislations on Afghanistan\n# Classifications",
+     "title": "Afghanistan Law Database",
+     "url": "https://laws.af/",
+     "verificacion": {
+      "error": "robots.txt disallows https://laws.af/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:33:44Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.moj.gov.af",
+     "rank": 2,
+     "snippet": "Taqnin and Legislation | Ministry of Justice\n...\n# Taqnin and Legislation\n...\nThe process of legislation is based on Law on Processing Manner of Publication and Enforcement of Legislative Documents.\n...\nTo read the Dari and Pashto versions which are published in official gazette, please click here:",
+     "title": "Taqnin and Legislation | Ministry of Justice",
+     "url": "https://www.moj.gov.af/index.php/en/taqnin-and-legislation",
+     "verificacion": {
+      "bytes": 33323,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:46Z",
+      "http": 200,
+      "sha256": "806aea2ef8cfa3237f5bedec0bd5915556e7c30ae0a01622b1e5fde902e7855a"
+     }
+    },
+    {
+     "date": "",
+     "host": "laws.af",
+     "rank": 3,
+     "snippet": "اسناد تقنینی افغانستان را در اینجا جستجو کنید",
+     "title": "دیتابیس قوانین افغانستان",
+     "url": "https://laws.af/farsi/"
+    },
+    {
+     "date": "",
+     "host": "mail.gov.af",
+     "rank": 4,
+     "snippet": "Law & Documents | AfGOV\n- info@mail.gov.af\n...\n>\n|Document Title|DOWNLOAD|\n> |--|--|\n> |Law of Accessing Information|Download File|\n> |Law on Managing Land Affairs|Download File|\n> |Water Law|Download File|",
+     "title": "Law & Documents | AfGOV",
+     "url": "https://mail.gov.af/index.php/en/law-documents"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Afghanistan municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2018-04-18",
+     "host": "km.gov.af",
+     "rank": 1,
+     "snippet": "# Urban Laws and Regulations\n|**NO** ****|**Document Subject**|**Official Gazette**|**Attachements**|\n|--|--|--|--|\n|1|**Municipalities Law**|794| |\n...\n|6|**Urban Master Plan Regulation **|794| |",
+     "title": "Urban Laws and Regulations | Kabul Municipality - شاروالی کابل",
+     "url": "https://km.gov.af/19134/",
+     "verificacion": {
+      "bytes": 117557,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:48Z",
+      "http": 200,
+      "sha256": "28d9ea69de2908a2d87edef40772af68aac12671bb07fbf1e934c83edb8e926d"
+     }
+    },
+    {
+     "date": "2018-04-18",
+     "host": "km.gov.af",
+     "rank": 2,
+     "snippet": "Policies and Procedures | Kabul Municipality - شاروالی کابل\n…\n...\n|--|--|--|--|\n...\n|6|**Procedure for Classification in Issuing Building Permits**|1396/01/26| |\n...\n### Contacts\n...\n© 2017 km.gov.af All Rights Reserved.",
+     "title": "Policies and Procedures | Kabul Municipality",
+     "url": "https://km.gov.af/19135/policies-and-procedures",
+     "verificacion": {
+      "bytes": 96995,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:48Z",
+      "http": 200,
+      "sha256": "20028d38bf27356099828a2b3cbfe96aa53aabefc5fa9a07fc10aafa4721befa"
+     }
+    },
+    {
+     "date": "2018-04-21",
+     "host": "km.gov.af",
+     "rank": 3,
+     "snippet": "ښاری قوانین او مقررات | Kabul Municipality - شاروالی کابل\n…\n...\n|--|--|--|--|\n...\n|9|**د ښاری مقررو او قوانینو ټولګه چي په ۷۹۴ شمیره رسمی جریده کې خپره شوی **|۷۹۴| |",
+     "title": "ښاری قوانین او مقررات | Kabul Municipality - شاروالی کابل",
+     "url": "https://km.gov.af/1300/%DA%9A%D8%A7%D8%B1%DB%8C-%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D8%A7%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA"
+    },
+    {
+     "date": "2018-04-18",
+     "host": "km.gov.af",
+     "rank": 4,
+     "snippet": "قوانین و مقرره های شهری | Kabul Municipality - شاروالی کابل\n…\n...\n# قوانین و مقرره های شهری\n|--|--|--|--|\n|9|**مجموعه قوانین و مقرره های شهری منتشره جریده رسمی شماره 794 **|794| |",
+     "title": "قوانین و مقرره های شهری | Kabul Municipality",
+     "url": "https://km.gov.af/1294/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D9%87-%D9%87%D8%A7%DB%8C-%D8%B4%D9%87%D8%B1%DB%8C"
+    },
+    {
+     "date": "2006-09-27",
+     "host": "laws.af",
+     "rank": 5,
+     "snippet": "Hierarchical Classification\n— By-Laws\n— Decrees\n— Directives\n— Legislative Decrees\n...\nSeptember 9, 1978\nVoid\n...\nThe Statute of Housing (Tahiye Maskan), Residence and Cultural Buildings Governmental Enterprise\nSeptember 6, 1982\nValid",
+     "title": "Contact Us",
+     "url": "https://laws.af/sectoral-classification/municipalities/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Afghanistan regulatory agencies official regulations",
+   "descartados": 2,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "rulemaking.worldbank.org",
+     "rank": 1,
+     "snippet": "## Afghanistan\n|Are the laws that are currently in effect available in a single place?|Yes| |\n...\nSome of the government Departments publish their relevant laws in their websites.|\n|Are the secondary regulations that are currently in effect codified and available in a single place?|Yes| |",
+     "title": "Afghanistan",
+     "url": "https://rulemaking.worldbank.org/en/data/explorecountries/afghanistan",
+     "verificacion": {
+      "bytes": 128964,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:50Z",
+      "http": 200,
+      "sha256": "d63c3334f1c5428b2b3cb23babc3d20f881f070079e4ddfe85c2cf2d3553b97b"
+     }
+    },
+    {
+     "date": "",
+     "host": "dab.gov.af",
+     "rank": 2,
+     "snippet": "Da Afghanistan Bank (DAB) \nCREDIT REPORTING REGULATION  \n...\nArticle 2 - SHORT TITLE  \nThis Regulation may be called the Credit Reporting Regulation 2010.\n...\ncoming from a CIB, has the right to file a claim addressed to the specialized consumer unit of the CIB.",
+     "title": "CREDIT REPORTING REGULATION",
+     "url": "https://dab.gov.af/sites/default/files/2022-03/Credit%20Reporting%20Regulation.pdf",
+     "verificacion": {
+      "bytes": 777352,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:53Z",
+      "http": 200,
+      "sha256": "a84726acba34648357cd670c7049ba60562b471a3d4bcdef8e0b72bcad4d5093"
+     }
+    },
+    {
+     "date": "",
+     "host": "moph.gov.af",
+     "rank": 3,
+     "snippet": "قوانین و مقرره ها | وزارت صحت عامه\n- info.access@moph.gov.af\n- +93(0) 202 301 374\n...\n**شماره تماس**: 0093202301374\n**نشانی الکترونیکی**: info.access@moph.gov.af",
+     "title": "قوانین و مقرره ها",
+     "url": "https://moph.gov.af/dr/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D9%87-%D9%87%D8%A7"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Afghanistan national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 1,
+     "snippet": "|Name/Agency **|Contact information **|\n|--|--|",
+     "title": "Afghanistan - Members - ePing SPS&TBT platform",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C004",
+     "verificacion": {
+      "bytes": 154704,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:55Z",
+      "http": 200,
+      "sha256": "e137b0498c8b4ef8456740743eaa73c6fbf11ae4edb7a3007ced41ad3e58eb2b"
+     }
+    },
+    {
+     "date": "2017-10-24",
+     "host": "tbtcode.iso.org",
+     "rank": 2,
+     "snippet": "|Country/Territory|Acronym|Title|Type^*^|Year^*^|Work programme|\n|--|--|--|--|--|--|\n|Afghanistan|ASQA|Afghanistan Standard and Quality Authority|Central government|2016|Work Programme|",
+     "title": "List of standardizing bodies",
+     "url": "https://tbtcode.iso.org/list-of-standardizing-bodies.html",
+     "verificacion": {
+      "bytes": 154901,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:57Z",
+      "http": 200,
+      "sha256": "d37ef31914a7b814536ea3703f74f1e9ff2f4bcbf47ee38c031fbe0c9c949f39"
+     }
+    },
+    {
+     "date": "2026-01-20",
+     "host": "www.scribd.com",
+     "rank": 3,
+     "snippet": "# اداره ملــی ســتندرد\n## Afghanistan National Standards Authority\n## طرزالعمل تدوین و ترویج ستندرد",
+     "title": "طرزالعمل تدوین | PDF",
+     "url": "https://www.scribd.com/document/787089372/%D8%B7%D8%B1%D8%B2%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D8%AA%D8%AF%D9%88%DB%8C%D9%86"
+    },
+    {
+     "date": "",
+     "host": "chm.pops.int",
+     "rank": 4,
+     "snippet": "Sets national standards for consumer products\n15\n...\n• \nStandard for Construction Materials\n• \nNational Standard on Textiles\n• \nNational Standards on Pharmaceutical Products and Cosmetics\n• \nNational Electronics and Telecommunication Standards \n• \nNational Environmental Standards \n• \nNational Fuel S",
+     "title": "November 2017",
+     "url": "https://chm.pops.int/Portals/0/download.aspx?d=UNEP-POPS-NIP-Afghanistan-1.English.pdf"
+    },
+    {
+     "date": "2024-10-14",
+     "host": "link.springer.com",
+     "rank": 5,
+     "snippet": "# Current State of the Afghan Foreign Trade Legal Regime\n## Notes\n   MoIC, Afghanistan National Standards Authority (ANSA), Standards Adopted by the Afghan National Standards Authority (December 2012), http://moci.gov.af/Content/files/ANSA%20standards%20EN.pdf.",
+     "title": "Current State of the Afghan Foreign Trade Legal Regime - Springer",
+     "url": "https://link.springer.com/chapter/10.1007/978-3-030-73464-0_3"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Afghanistan mandatory technical regulations official list",
+   "descartados": 2,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 1,
+     "snippet": "|Notifying Member **|Symbol and title **|Distribution/Comments The (first) date listed in this column indicates when the notification was circulated to WTO Members, the hourglass and second date identify notifications for which the comment period is currently open and indicates until when.|Products ",
+     "title": "Afghanistan - Members - ePing SPS&TBT platform",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C004",
+     "verificacion": {
+      "bytes": 154704,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:33:58Z",
+      "http": 200,
+      "sha256": "ef72f3635d50ca446fb488ee3a06eeecb2702a6a141415e457c48fdc87e36554"
+     }
+    },
+    {
+     "date": "2026-10-24",
+     "host": "www.mcit.gov.af",
+     "rank": 2,
+     "snippet": "## اعلان مجدد\nدیر محترمو شرکتونو,\nمهرباني وکړئ ضمیمه شوې تخنيکي مشخصات د PDF په بڼه کې ترلاسه کړې.",
+     "title": "اعلان تدارکاتی",
+     "url": "https://www.mcit.gov.af/index.php/dr/%D8%A7%D8%B9%D9%84%D8%A7%D9%86-%D9%85%D8%AC%D8%AF%D8%AF-169",
+     "verificacion": {
+      "bytes": 91171,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:14Z",
+      "http": 200,
+      "sha256": "6b472b0e89f224154496ad6b88e26e411736b215ce6d4cfa22e3f713cb37cc44"
+     }
+    },
+    {
+     "date": "",
+     "host": "mcit.gov.af",
+     "rank": 3,
+     "snippet": "Regulations | Ministry of communications & IT\n...\n# Regulations\n|Name|Download file|\n|--|--|\n|Regulation for the Use of Radio Frequencies and Radio Communications Equipment in Afghanistan|Click here to download|\n...\n|Regulation of scholarships and education abroad|Click here to download|",
+     "title": "Regulations | Ministry of communications & IT",
+     "url": "https://mcit.gov.af/en/node/7083"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Afghanistan national statistics office official website",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-31",
+     "host": "www.sesric.org",
+     "rank": 1,
+     "snippet": "## Information on National Statistical Offices Located in Afghanistan\n|Organization :|National Statistics and Information Authority (NSIA)|\n...\n|Web Site :|http://www.nsia.gov.af|",
+     "title": "Information on National Statistical Offices Located in - SESRIC",
+     "url": "https://www.sesric.org/databases-nso-detail.php?c_code=3",
+     "verificacion": {
+      "bytes": 70019,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:16Z",
+      "http": 200,
+      "sha256": "597153cf47800eef8c36ae67fd5f84fbc7950c7a6d6c5b52525d18cb2180b2bd"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.un.org",
+     "rank": 2,
+     "snippet": "http://data.un.org/\nAfghanistan - Central Statistics Organization\nNational Statistical Office of Afghanistan\nhttp://www.cso.gov.af/",
+     "title": "country profile | Afghanistan - UNdata - UN.org.",
+     "url": "https://data.un.org/CountryProfile.aspx/_Docs/ws",
+     "verificacion": {
+      "bytes": 3769,
+      "estado": "http",
+      "fecha": "2026-11-02T06:34:17Z",
+      "http": 404,
+      "sha256": "8ef3da215ff1000f05581814f1e5ef349a5f18b070b18bec5eb0507e967b1d8a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.unescap.org",
+     "rank": 3,
+     "snippet": "Economic Statistics in Afghanistan1 \nNational Statistical Website: http://cso.gov.af/en                 Population (millions, 2014): 31.2 2",
+     "title": "Microsoft Word - Afghanistan National Summary_newtemplate",
+     "url": "https://www.unescap.org/sites/default/d8files/Afghanistan%20National%20Summary_0.pdf"
+    },
+    {
+     "date": "2025-01-01",
+     "host": "ghdx.healthdata.org",
+     "rank": 4,
+     "snippet": "Organizations\nCentral Statistics Organization (Afghanistan)\nCity\nKabul\nWebsite\nhttp://cso.gov.af\nDataset Records for Central Statistics Organization (Afghanistan)",
+     "title": "Central Statistics Organization (Afghanistan)",
+     "url": "https://ghdx.healthdata.org/organizations/central-statistics-organization-afghanistan"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Afghanistan central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "dab.gov.af",
+     "rank": 1,
+     "snippet": "Statistics | Da Afghanistan Bank\n- info@dab.gov.af\n...\n# Statistics\nCurrency Hijri And Meladi Average\nCurrency Auction\nCapital Note Auction\nExternal Sector Statistics\nMonetary and Fiscal sector Statistics\nReal Sector Statistics\n...\nKabul, Afghanistan\nPhone : +93 (20) 2104146",
+     "title": "Statistics",
+     "url": "https://dab.gov.af/statistics",
+     "verificacion": {
+      "bytes": 29029,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:22Z",
+      "http": 200,
+      "sha256": "f1f7e8de61358bb4639224e02a5e8e9ede6a6cf70087a746208a2101762d2f99"
+     }
+    },
+    {
+     "date": "2026-09-30",
+     "host": "dab.gov.af",
+     "rank": 2,
+     "snippet": "Da Afghanistan Bank | Da Afghanistan Bank\n- info@dab.gov.af\n...\n…\n## Inflation Rate\nLast updated: 26 September 2026\n...\n### One of the central bank's objectives is to have a reliable banking and financial sector and to create a stable, secure, and inclusive economy for all citizens.",
+     "title": "DAB Holds Supreme Council Meeting",
+     "url": "https://dab.gov.af/",
+     "verificacion": {
+      "bytes": 59479,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:24Z",
+      "http": 200,
+      "sha256": "0cbf23b12de9ca83d059dcb055cacac9ed87f7aeba414a76fa494ae94a6a2e51"
+     }
+    },
+    {
+     "date": "",
+     "host": "dab.gov.af",
+     "rank": 3,
+     "snippet": "…\n...\n# Financial Statistics\n|Quarterly Financial Sector Statistics for the 4th Quarter of 2018|Download|\n|Quarterly Financial Sector Statistics for the 4th Quarter of 2017|Download|\n|Quarterly Financial Sector Statistics for the 3rd Quarter of 2017|Download|",
+     "title": "Financial Statistics | Da Afghanistan Bank",
+     "url": "https://dab.gov.af/Financial-Statistics"
+    },
+    {
+     "date": "",
+     "host": "www.dab.gov.af",
+     "rank": 4,
+     "snippet": "Statistics | Da Afghanistan Bank\n- ** info@dab.gov.af\n...\nCurrency Hijri And Meladi Average\nCurrency Auction\nCapital Note Auction\nExternal Sector Statistics\nMonetary and Fiscal sector Statistics\nReal Sector Statistics\n...\nKabul, Afghanistan\nPhone : +93 (20) 2104146",
+     "title": "www.dab.gov.af · StatisticsStatistics | Da Afghanistan Bank",
+     "url": "https://www.dab.gov.af/Statistics"
+    },
+    {
+     "date": "2026-11-01",
+     "host": "dab.gov.af",
+     "rank": 5,
+     "snippet": "Exchange Rates | Da Afghanistan Bank\n- info@dab.gov.af\n- +93(20) 2104146",
+     "title": "Exchange Rates | Da Afghanistan Bank",
+     "url": "https://dab.gov.af/exchange-rates"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Afghanistan government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "infrastructuretransparency.org",
+     "rank": 1,
+     "snippet": "# CoST Afghanistan\n### Online data publication (disclosure) platforms\n...\nFour online platforms were created by the following bodies with the support of CoST Afghanistan (Figures last updated July 2021)\n- The Afghanistan Government Electronic Open and Procurement System (AGEOPS) has published inform",
+     "title": "CoST Afghanistan",
+     "url": "https://infrastructuretransparency.org/cost-afghanistan/",
+     "verificacion": {
+      "bytes": 87870,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:26Z",
+      "http": 200,
+      "sha256": "8f39244f659ae9cb9b647caeb1968d8624271d1341015be9f39ad6d5ccdfba09"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.worldbank.org",
+     "rank": 2,
+     "snippet": "# BOOST OPEN BUDGET PORTAL\n## Access country line item fiscal data\n...\n|Description/highlights|Link|\n|--|--|--|\n|Afghanistan|The Ministry of Finance has developed the BOOST Portal to facilitate access to data regarding the budget and expenditures for the development of economic analysis.",
+     "title": "Country Data - Boost Portal",
+     "url": "https://www.worldbank.org/en/programs/boost-portal/country-data",
+     "verificacion": {
+      "bytes": 93993,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:34:27Z",
+      "http": 200,
+      "sha256": "ccca7d3963cca5329a83bb89079f634f3b7fd4c2ab6319f4c38197d8704ec485"
+     }
+    },
+    {
+     "date": "",
+     "host": "eiti.org",
+     "rank": 3,
+     "snippet": "Progress since Validation \nThe MOMP Transparency Portal, launched in November 2018, provides all information listed under \nRequirement 2.3.b for all mining, oil and gas licenses, including historical data on lapsed and\n...\nFor instance, the MOMP \n...\nPortal publishes data in open format.",
+     "title": "EITI International Secretariat",
+     "url": "https://eiti.org/sites/default/files/attachments/afghanistan_second_validation_2020_final_assessment.pdf"
+    },
+    {
+     "date": "2025-07-31",
+     "host": "www.scribd.com",
+     "rank": 4,
+     "snippet": "E-services or similar\n...\nhttps://ageops.net/da/home\nhttp://iarcsc.com/en\nhttp://helms.edu.af/login/index.php\n…\n...\nSome are provided in above section\nOpen government data\nAll government organizations are posting the data and\ninformation in their websites and social media platforms.",
+     "title": "Afghanistan UN E-Gov Survey MSQ 2022",
+     "url": "https://www.scribd.com/document/791338765/Afghanistan-UN-E-Gov-Survey-MSQ-2022"
+    },
+    {
+     "date": "2026-09-27",
+     "host": "github.com",
+     "rank": 5,
+     "snippet": "## Open Data portals\n...\n- Ministry of Justice: Official Gazette — Official laws, decrees and gazette information; English and local-language material; verify free access to individual issues.\n- Da Afghanistan Bank: Statistics — Official monetary, exchange-rate and financial statistics; English and ",
+     "title": "GitHub - Provereno-Media/OSINT-Tools-Afghanistan: Draft OSINT resources and tools for Afghanistan — links pending validation",
+     "url": "https://github.com/Provereno-Media/OSINT-Tools-Afghanistan"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:16:12Z",
+ "pais": {
+  "iso2": "AF",
+  "iso3": "AFG",
+  "nombre": "Afghanistan"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

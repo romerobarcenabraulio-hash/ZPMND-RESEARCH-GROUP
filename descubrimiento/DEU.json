@@ -1,0 +1,628 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Germany constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2023-01-01",
+     "host": "www.gesetze-im-internet.de",
+     "rank": 1,
+     "snippet": "Das Bundesministerium der Justiz und das Bundesamt für Justiz stellen für interessierte Bürgerinnen und Bürger\n**nahezu das gesamte aktuelle Bundesrecht kostenlos im Internet** bereit.\nDie Gesetze und Rechtsverordnungen können in ihrer jeweils geltenden Fassung\nabgerufen werden.",
+     "title": "Gesetze im Internet",
+     "url": "https://www.gesetze-im-internet.de/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gesetze-im-internet.de/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:52:47Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.gesetze-im-internet.de",
+     "rank": 2,
+     "snippet": "Preamble\nI. Basic Rights\n|Article 1[Human dignity – Human rights – Legally binding force of basic rights]\n|Article 2[Personal freedoms]\n|Article 3[Equality before the law]\n...\nIII.\nThe Bundestag\n|Article 38[Elections]",
+     "title": "Basic Law for the Federal Republic of Germany",
+     "url": "https://www.gesetze-im-internet.de/englisch_gg/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gesetze-im-internet.de/englisch_gg/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:52:47Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.justiz.de",
+     "rank": 3,
+     "snippet": "## Inhalt\n### Bundes- und Landesrecht\n#### Gesetzestexte\nDas Bundesministerium der Justiz und die Landesverwaltungen stellen interessierten Bürgerinnen und Bürgern Gesetzestexte im Internet zur Verfügung.\nDie Angebote sind teilweise kostenpflichtig.\n- Bund\n- Baden-Württemberg\n- Bayern",
+     "title": "Justizportal des Bundes und der Länder",
+     "url": "https://www.justiz.de/onlinedienste/bundesundlandesrecht/index.php"
+    },
+    {
+     "date": "",
+     "host": "www.recht.bund.de",
+     "rank": 4,
+     "snippet": "Das Bundesgesetzblatt Teil I enthält Gesetze sowie Verordnungen und sonstige Bekanntmachungen von wesentlicher Bedeutung, soweit sie nicht im Bundesgesetzblatt Teil II zu veröffentlichen sind.\n...\nHier können Sie alle ab dem 1. Januar 2023 veröffentlichten Bundesgesetzblätter durchsuchen.",
+     "title": "Bundesgesetzblatt - Bundesgesetzblatt",
+     "url": "https://www.recht.bund.de/de/bundesgesetzblatt/bundesgesetzblatt_node.html"
+    },
+    {
+     "date": "2010-07-04",
+     "host": "www.bundestag.de",
+     "rank": 5,
+     "snippet": "The Basic Law is the constitution of the Federal Republic of Germany.\nIt lays down the fundamental structure and essential values of the state.\nAmong other things, the Basic Law defines the principles according to which the elections to the German Bundestag are conducted.\n...\nPrinted from the German",
+     "title": "Legal framework for the German Parliament",
+     "url": "https://www.bundestag.de/en/parliament/function/legal"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Germany national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-07-01",
+     "host": "www.bmas.de",
+     "rank": 1,
+     "snippet": "# Gesetze und Verordnungen\n## Gesetze und Verordnungen\nBitte geben Sie hier einen oder mehrere Suchbegriff(e) ein.\nEs werden alle Gesetze und Verordnungen auf www.bmas.de durchsucht.\nIn unseren Benutzerhinweisen finden Sie detaillierte Informationen zur Benutzung der Suche.",
+     "title": "BMAS - Gesetze und Verordnungen",
+     "url": "https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/gesetze-und-gesetzesvorhaben.html",
+     "verificacion": {
+      "error": "run deadline reached",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:55:47Z"
+     }
+    },
+    {
+     "date": "2023-01-01",
+     "host": "www.gesetze-im-internet.de",
+     "rank": 2,
+     "snippet": "Das Bundesministerium der Justiz und das Bundesamt für Justiz stellen für interessierte Bürgerinnen und Bürger\n**nahezu das gesamte aktuelle Bundesrecht kostenlos im Internet** bereit.\nDie Gesetze und Rechtsverordnungen können in ihrer jeweils geltenden Fassung\nabgerufen werden.",
+     "title": "Gesetze im Internet",
+     "url": "https://www.gesetze-im-internet.de/"
+    },
+    {
+     "date": "",
+     "host": "www.verwaltungsvorschriften-im-internet.de",
+     "rank": 3,
+     "snippet": "# Verwaltungsvorschriften im Internet\nDie Bundesregierung stellt unter Federführung des Bundesministeriums des Innern in einem gemeinsamen Projekt mit der juris GmbH für interessierte Bürgerinnen und Bürger eine umfangreiche Datenbank mit aktuellen Verwaltungsvorschriften der obersten Bundesbehörden",
+     "title": "Verwaltungsvorschriften im Internet",
+     "url": "https://www.verwaltungsvorschriften-im-internet.de/"
+    },
+    {
+     "date": "",
+     "host": "www.bundeswirtschaftsministerium.de",
+     "rank": 4,
+     "snippet": "Gesetze und Verordnungen\n| BMWE\n...\n# Gesetze und Verordnungen\nIn dieser Rubrik finden Sie Gesetze und Verordnungen zu den verschiedenen Politikbereichen des Bundesministeriums für Wirtschaft und Energie sowie dazugehörige Referentenentwürfe und Stellungnahmen.",
+     "title": "Gesetze und Verordnungen",
+     "url": "https://www.bundeswirtschaftsministerium.de/Navigation/DE/Service/Gesetze-und-Verordnungen/gesetze-und-verordnungen.html"
+    },
+    {
+     "date": "",
+     "host": "www.recht.bund.de",
+     "rank": 5,
+     "snippet": "Sie können das digitale BGBl.\nhier lesen, herunterladen, drucken oder über einen Link teilen.\n...\n## Recherche\nHier können Sie nach allen veröffentlichten Verkündungen und Bekanntmachungen ab dem Jahr 2023 suchen.\nSie haben die Möglichkeit, Ihre Recherche durch verschiedene Filter einzugrenzen.",
+     "title": "Die Verkündungsplattform... - Bundesgesetzblatt",
+     "url": "https://www.recht.bund.de/de/home/home_node.html&nbsp"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Germany official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bundesanzeiger.de",
+     "rank": 1,
+     "snippet": "The Federal Gazette (Bundesanzeiger) is the central platform for pronouncements and announcements, as well as for legally relevant company news.\n...\nPublications in the Official Section are normally depicted in an accessible HTML file.\nIn addition, each individual publication contains a link to a no",
+     "title": "Official Section of the Federal Gazette",
+     "url": "https://www.bundesanzeiger.de/pub/en/amtlicher-teil?0&year=2026&edition=BAnz+AT+21.10.2026"
+    },
+    {
+     "date": "",
+     "host": "www.bundesanzeiger.de",
+     "rank": 2,
+     "snippet": "The Federal Gazette (Bundesanzeiger) is an official promulgation and announcement organ of the Federal Republic of Germany and is published by the Federal Ministry of Justice and Consumer Protection.\n...\nPublication in the Federal Gazette takes place Monday to Friday, with the exception of public ho",
+     "title": "Search",
+     "url": "https://www.bundesanzeiger.de/pub/en/start?0&0=null"
+    },
+    {
+     "date": "2025-07-15",
+     "host": "www.bundesanzeiger.de",
+     "rank": 3,
+     "snippet": "Federal Gazette\n# Homepage\n...\n### Contents What the Federal Gazette offers and where you can find which content. » More\n### Search functions How to search the Federal Gazette quickly and in a targeted manner. » More",
+     "title": "www.bundesanzeiger.de · ebanzwww · wexsservletFederal Gazette - Bundesanzeiger",
+     "url": "https://www.bundesanzeiger.de/ebanzwww/wexsservlet?global_data.language=en&page.navid=gotolastpage"
+    },
+    {
+     "date": "",
+     "host": "publikations-plattform.de",
+     "rank": 4,
+     "snippet": "# The Federal Gazette\nThe Federal Gazette / Bundesanzeiger (BAnz) is an official promulgation and announcement organ of the Federal\nRepublic of Germany and is published by the Federal Ministry of Justice and Consumer Protection.\n...\nVia the Federal Gazette (www.bundesanzeiger.de) you have access to\n",
+     "title": "The Federal Gazette - Publication platform",
+     "url": "https://publikations-plattform.de/order/en/usefulinformation/howitworks/federalgazette"
+    },
+    {
+     "date": "",
+     "host": "www.recht.bund.de",
+     "rank": 5,
+     "snippet": "# Welcome to the Promulgation Platform of the Federal Law Gazette!\nThe Federal Law Gazette is the Federation’s official promulgation channel for federal laws and statutory instruments.\nIt is also the Federation's channel for notifications in cases where official announcements in the Federal Law Gaze",
+     "title": "Federal Law Gazette - Bundesgesetzblatt",
+     "url": "https://www.recht.bund.de/en/home/home_node.html"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Germany supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bundesgerichtshof.de",
+     "rank": 1,
+     "snippet": "# Recherchehinweise für die Entscheidungsdatenbank des Bundesgerichtshofs ab dem Jahr 2000\nIn dieser Datenbank finden Sie Entscheidungen des Bundesgerichtshofs ab dem 1. Januar 2000.\nNicht enthalten sind Entscheidungen ohne eine über den Gesetzestext hinausgehende Begründung.",
+     "title": "Der Bundesgerichtshof - Entscheidungen : Recherchehinweise",
+     "url": "https://www.bundesgerichtshof.de/DE/Entscheidungen/HinweiseNutzung/hinweiseNutzung_node.html"
+    },
+    {
+     "date": "",
+     "host": "www.bundesverfassungsgericht.de",
+     "rank": 2,
+     "snippet": "# Entscheidungen\n- Das Bundesverfassungsgericht veröffentlicht auf seinen Internetseiten alle wesentlichen Entscheidungen ab 1998 und einige ältere Entscheidungen.\n...\nDie Entscheidungen des Bundesverfassungsgerichts (BVerfGE) sind eine autorisierte Sammlung der wichtigen Entscheidungen des Bundesve",
+     "title": "Bundesverfassungsgericht - Entscheidungen",
+     "url": "https://www.bundesverfassungsgericht.de/DE/Entscheidungen/entscheidungen_node.html"
+    },
+    {
+     "date": "",
+     "host": "www.bundesgerichtshof.de",
+     "rank": 3,
+     "snippet": "# Entscheidungen des Bundesgerichtshofs\n**Entscheidungen des Bundesgerichtshofs ab dem 1. Januar 2000** finden Sie im Volltext\n**online in unserer Entscheidungsdatenbank.**\n- Nicht enthalten sind alle Entscheidungen ohne eine über den Gesetzestext hinausgehende Begründung.",
+     "title": "Der Bundesgerichtshof - Übersichtsseite Entscheidungen ...",
+     "url": "https://www.bundesgerichtshof.de/DE/Entscheidungen/entscheidungen.html"
+    },
+    {
+     "date": "2025-07-15",
+     "host": "data.gov.de",
+     "rank": 4,
+     "snippet": "Ausgewählte Entscheidungen des Bundesverfassungsgerichts, der obersten Gerichtshöfe des Bundes sowie des Bundespatentgerichts ab dem Jahr 2010 stellen das Bundesministerium der Justiz und für Verbraucherschutz und das Bundesamt für Justiz kostenlos im Internet bereit.\n...\n…",
+     "title": "Rechtsprechung im Internet - GovData - data.gov.de",
+     "url": "https://data.gov.de/suche/daten/rechtsprechung-im-internet"
+    },
+    {
+     "date": "",
+     "host": "www.bundesgerichtshof.de",
+     "rank": 5,
+     "snippet": "Der Bundesgerichtshof - Homepage\n...\n## Welcome to the Homepage of the Federal Court of Justice\n...\n### Judgments of the Federal Court of Justice\nJudgments made by the Federal Court of Justice since 1 January 2000 can be accessed via our judgments database.\nThe judgments are available only in German",
+     "title": "Homepage",
+     "url": "https://www.bundesgerichtshof.de/EN/Home/homeBGH_node"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Germany state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "recht.nrw.de",
+     "rank": 1,
+     "snippet": "dem Portal für Verkündungen und amtliche Veröffentlichungen des Landes Nordrhein-Westfalen sowie für Recherchen im Landesrecht\n## Landesrecht für Nordrhein-Westfalen\nHier finden Sie das geltende und historische Landesrecht, wie zum Beispiel Gesetze, Rechtsverordnungen und Verwaltungsvorschriften.",
+     "title": "Willkommen im Service-Portal RECHT.NRW | RECHT.NRW.DE",
+     "url": "https://recht.nrw.de/"
+    },
+    {
+     "date": "",
+     "host": "justiz.de",
+     "rank": 2,
+     "snippet": "Das Bundesministerium der Justiz und die Landesverwaltungen stellen interessierten Bürgerinnen und Bürgern Gesetzestexte im Internet zur Verfügung.\nDie Angebote sind teilweise kostenpflichtig.\n- Bund\n- Baden-Württemberg\n- Bayern\n...\n- Rheinland-Pfalz\n- Saarland\n- Sachsen\n...\n- Thüringen",
+     "title": "Justizportal des Bundes und der Länder: Startseite",
+     "url": "https://justiz.de/onlinedienste/bundesundlandesrecht/index.php"
+    },
+    {
+     "date": "",
+     "host": "www.baden-wuerttemberg.de",
+     "rank": 3,
+     "snippet": "Die Plattform Landesrecht BW ist ein kostenloser Service des Landes.\nSie bietet einen Überblick über die baden-württembergischen Gesetze, Rechtsverordnungen und Verwaltungsvorschriften.\n...\nEs wird ausschließlich in elektronischer Form geführt und auf dieser Verkündungsplattform zum Abruf bereitgeha",
+     "title": "Gesetze und Verordnungen: Baden-Württemberg.de",
+     "url": "https://www.baden-wuerttemberg.de/de/service/gesetze-und-verordnungen"
+    },
+    {
+     "date": "2026-04-28",
+     "host": "www.niedersachsen.de",
+     "rank": 4,
+     "snippet": "Rechtsvorschriften des Landes Hessen\nRechtsvorschriften des Landes Mecklenburg-Vorpommern\nRechtsvorschriften des Landes Nordrhein-Westfalen\nRechtsvorschriften des Landes Rheinland-Pfalz\nRechtsvorschriften des Saarlandes\nRechtsvorschriften des Landes Sachsen",
+     "title": "Gesetze, Verordnungen und Vorschriften der Länder, des Bundes ...",
+     "url": "https://www.niedersachsen.de/politik_staat/gesetze_verordnungen_und_sonstige_vorschriften/andere_lander_bund_eu/gesetze-verordnungen-und-vorschriften-der-lander-des-bundes-und-der-eu-105454.html"
+    },
+    {
+     "date": "2023-01-01",
+     "host": "www.gesetze-im-internet.de",
+     "rank": 5,
+     "snippet": "Das Bundesministerium der Justiz und das Bundesamt für Justiz stellen für interessierte Bürgerinnen und Bürger\n**nahezu das gesamte aktuelle Bundesrecht kostenlos im Internet** bereit.\nDie Gesetze und Rechtsverordnungen können in ihrer jeweils geltenden Fassung\nabgerufen werden.",
+     "title": "Gesetze im Internet",
+     "url": "https://www.gesetze-im-internet.de/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Germany municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2026-07-07",
+     "host": "verwaltung.bund.de",
+     "rank": 1,
+     "snippet": "In dieser zum Teil auch auf deren Internetseiten einsehbaren Publikation finden Sie amtliche Bekanntmachungen der Gemeinde wie beispielsweise Bebauungspläne, Abgabesatzungen und sonstiges örtliches Satzungsrecht, ggf. auch Ausschreibungen und Beschlüsse des Gemeinderats.",
+     "title": "Amtliche Bekanntmachungen der Gemeinde; Einsicht und Erhalt",
+     "url": "https://verwaltung.bund.de/leistungsverzeichnis/de/leistung/99094003140000/herausgeber/BY-25551/region/090000000000"
+    },
+    {
+     "date": "2026-10-08",
+     "host": "www.bonn.de",
+     "rank": 2,
+     "snippet": "10-1 Main statutes of the City of Bonn | Bundesstadt Bonn\n...\n|Bylaws effective as of|Entered into force|Amended Provisions|\n...\nCity of Bonn\n...\n## Contact.\n- New window: Service portal (online services) (opens in a new tab)\n- Sitemap www.bonn.de",
+     "title": "10-1 Main statutes of the City of Bonn",
+     "url": "https://www.bonn.de/service-bieten/stadtpolitik-ortsrecht/ortsrecht/rat-ausschuesse-allgemeines/hauptsatzung.php?loc=en"
+    },
+    {
+     "date": "2024-04-25",
+     "host": "verwaltung.bund.de",
+     "rank": 3,
+     "snippet": "Eine offizielle Website der Bundesrepublik Deutschland\n...\nAmtsblätter werden von den Kommunen herausgegeben, um Satzungen, Verordnungen und gesetzlichvorgeschriebene amtliche Mitteilungen öffentlich bekanntzumachen und über sonstige amtliche Mitteilungen zu informieren.",
+     "title": "Bundesportal | Veröffentlichung von amtlichen Bekanntmachungen",
+     "url": "https://verwaltung.bund.de/leistungsverzeichnis/DE/leistung/99094003140000/herausgeber/ST-374648814/region/150000000000"
+    },
+    {
+     "date": "2025-10-01",
+     "host": "www.berlin.de",
+     "rank": 4,
+     "snippet": "Rechtsvorschriften - Berlin.de\n...\n### Rechtsvorschriften im Land Berlin\n- Berliner Vorschrifteninformationssystem\n- Gesetze, Verordnungen und Verwaltungsvorschriften\n- Gesetze im Internet\n- Rechtsquellen öffentliche Auftragsvergabe\n- Nachhaltige Beschaffung",
+     "title": "Rechtsvorschriften",
+     "url": "https://www.berlin.de/sen/stadt/service/rechtsvorschriften/"
+    },
+    {
+     "date": "",
+     "host": "verwaltungsportal.hessen.de",
+     "rank": 5,
+     "snippet": "Rechts- und Verwaltungsvorschriften – Verwaltungsportal Hessen\nHessisches Ministerium für Digitalisierung und Innovation\n...\nÜber \"Hessenrecht - Rechts- und Verwaltungsvorschriften\" greifen Sie auf alle aktuell geltenden Gesetze und Verordnungen des Landes Hessen zu.",
+     "title": "Rechts- und Verwaltungsvorschriften – Verwaltungsportal Hessen",
+     "url": "https://verwaltungsportal.hessen.de/information/rechts-und-verwaltungsvorschriften"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Germany regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2023-01-01",
+     "host": "www.gesetze-im-internet.de",
+     "rank": 1,
+     "snippet": "Das Bundesministerium der Justiz und das Bundesamt für Justiz stellen für interessierte Bürgerinnen und Bürger\n**nahezu das gesamte aktuelle Bundesrecht kostenlos im Internet** bereit.\nDie Gesetze und Rechtsverordnungen können in ihrer jeweils geltenden Fassung\nabgerufen werden.",
+     "title": "Gesetze im Internet",
+     "url": "https://www.gesetze-im-internet.de/"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 2,
+     "snippet": "**Landwirtschaft, BMVEL**\n(Federal Ministry of Consumer Protection, Food and Agriculture\n...\n1\n...\nFax: (49-228) 529-4262\n...\n**Bundesamt fuer Verbraucherschutz und Lebensmittelsicherheit, BVL**\n(Federal Office of Consumer Protection and Food Safety)",
+     "title": "146107104.doc",
+     "url": "https://apps.fas.usda.gov/gainfiles/200408/146107104.doc"
+    },
+    {
+     "date": "2021-10-07",
+     "host": "www.trade.gov",
+     "rank": 3,
+     "snippet": "In Germany, the German Accreditation Body (DAkkS) is the only authority responsible nationwide for accrediting conformity assessment bodies according to EU regulations.\n...\nIn Germany, new or revised technical regulations are primarily published in the Federal Law Gazette (Bundesgesetzblatt).\n...\nTh",
+     "title": "Germany - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/germany-standards-trade"
+    },
+    {
+     "date": "",
+     "host": "www.baua.de",
+     "rank": 4,
+     "snippet": "Im Einvernehmen mit dem Bundesministerium für Arbeit und Soziales wirkt die BAuA in nationalen, europäischen und internationalen Gremien bei der Regelsetzung und Normung mit.\n...\n- Technische Regeln für Arbeitsstätten (ASR)\n- Regeln zum Arbeitsschutz auf Baustellen (RAB)",
+     "title": "Regelwerk - Bundesanstalt für Arbeitsschutz und Arbeitsmedizin",
+     "url": "https://www.baua.de/DE/Angebote/Regelwerk"
+    },
+    {
+     "date": "",
+     "host": "www.bundeswirtschaftsministerium.de",
+     "rank": 5,
+     "snippet": "The Bundeskartellamt (BKartA) is an independent competition authority based in Bonn.\n...\nThe Bundesnetzagentur (Federal Network Agency) for Electricity, Gas, Telecommunications, Post and Railway (BNetzA) is an independent federal authority based in Bonn.",
+     "title": "The Ministry's Agencies | BMWE",
+     "url": "https://www.bundeswirtschaftsministerium.de/Redaktion/EN/Textsammlungen/Ministry/ministry-agencies.html"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Germany national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.dinmedia.de",
+     "rank": 1,
+     "snippet": "Finden Sie hier alle Regelwerke, die bei DIN Media verfügbar sind.\nKlappen Sie dazu die folgenden Listen auf oder nutzen Sie – zur gezielten Recherche – einfach unser Suchfenster oben.\n...\nAlle aufgeführten Regelwerke sind im DIN Media Webshop recherchierbar",
+     "title": "Verfügbare Normen und Regelwerke im Überblick - DIN Media",
+     "url": "https://www.dinmedia.de/de/normen-produkte/normen-regelwerke"
+    },
+    {
+     "date": "",
+     "host": "www.din.de",
+     "rank": 2,
+     "snippet": "Bei rund 35.000 Normen fällt es manchmal nicht ganz leicht, die für den eigenen Bedarf richtigen herauszufinden.\nUnterstützung bieten Informationsportale, die Normen und Standards zu bestimmten Themen bündeln.\n## Normungsportal Baugewerbe\n...\n## Normungsportal Gesundheit",
+     "title": "Normungsportale bei DIN",
+     "url": "https://www.din.de/de/service-fuer-anwender/normungsportale"
+    },
+    {
+     "date": "",
+     "host": "www.baua.de",
+     "rank": 3,
+     "snippet": "BAuA - Normenverzeichnisse - Bundesanstalt für Arbeitsschutz und Arbeitsmedizin\n…\n...\n…\n...\nNicht harmonisierter Bereich des ProdSG - Teil 2 Nationale technische Spezifikationen - Stand: Juni 2026 (PDF, 104 KB, Datei ist barrierefrei)",
+     "title": "www.baua.de · DE · Die-BAuABAuA - Normenverzeichnisse - Bundesanstalt für Arbeitsschutz und...",
+     "url": "https://www.baua.de/DE/Die-BAuA/Aufgaben/Gesetzliche-und-hoheitliche-Aufgaben/Produktsicherheitsgesetz/Normenverzeichnisse_node"
+    },
+    {
+     "date": "",
+     "host": "www.din.de",
+     "rank": 4,
+     "snippet": "# Search list\n## Publications\nNumber: 115\n|Document number|Edition|Procedure|Title|Order from DIN Media|\n...\n|DIN 18014|2014-03|Standard|Foundation earth electrode - Planning, execution and documentation More|Order from DIN Media|",
+     "title": "Publications",
+     "url": "https://www.din.de/en/services/standards-portals/services-portal/branches-of-the-services-sector/services-in-the-skilled-trades/publications"
+    },
+    {
+     "date": "",
+     "host": "www.tu-chemnitz.de",
+     "rank": 5,
+     "snippet": "# Standards Infopoint\nAccess to full texts (PDF) is possible via the database \"Nautos\" within the campus network.\nThe database contains bibliographical descriptions of valid national and international standards, draft standards and data provided by the European and some International Standards Insti",
+     "title": "Standards | Search & Find | University Library",
+     "url": "https://www.tu-chemnitz.de/ub/suchen-und-finden/fachrecherche/normen/normen.html.en"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Germany mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2026-07-08",
+     "host": "www.bmv.de",
+     "rank": 1,
+     "snippet": "Nachfolgend aufgeführte UN-Regelungen sind über einen externen Link am Ende des Beitrags abrufbar.\n- R 0 Einheitliche Vorschriften für die internationale Typgenehmigung für das Gesamtfahrzeug\n- R 1 Kfz-Scheinwerfer\n...\nBundesministerium für Verkehr",
+     "title": "UN-Regelungen",
+     "url": "https://www.bmv.de/SharedDocs/DE/Artikel/StV/Strassenverkehr/un-ece-regelungen.html"
+    },
+    {
+     "date": "",
+     "host": "www.dibt.de",
+     "rank": 2,
+     "snippet": "# hEN-Liste\n|EN  997:2012/AC:2012 WC-Becken und WC-Anlagen mit angeformtem Geruchverschluss WC pans and WC suites with integral trap|EN  997:2003| | |2018/C 092/06|",
+     "title": "hEN-Liste",
+     "url": "https://www.dibt.de/de/service/listen-und-verzeichnisse/hen-liste"
+    },
+    {
+     "date": "",
+     "host": "www.baua.de",
+     "rank": 3,
+     "snippet": "Dabei muss sichergestellt sein, dass alle Produkte bestimmte Anforderungen im Bereich Sicherheit erfüllen.\nDiese Anforderungen werden für alle Staaten der EU einheitlich und verbindlich in sogenannten EG-Richtlinien formuliert.\nDie EG-Richtlinien gelten für alle Mitgliedstaaten, die diese in nationa",
+     "title": "www.baua.de · DE · Die-BAuABAuA - Normenverzeichnisse - Bundesanstalt für Arbeitsschutz und...",
+     "url": "https://www.baua.de/DE/Die-BAuA/Aufgaben/Gesetzliche-und-hoheitliche-Aufgaben/Produktsicherheitsgesetz/Normenverzeichnisse_node"
+    },
+    {
+     "date": "",
+     "host": "www.baua.de",
+     "rank": 4,
+     "snippet": "…\n...\nTRGS 500 \nSchutzmaßnahmen beim Umgang mit krebserzeugenden Gefahrstoffen, die nicht in\nAnhang II der GefStoffV aufgeführt sind \n3/88 \n6/94 \nTRgA 502 \nPentachlorethan",
+     "title": "TRGS-Bekanntmachungen.pdf",
+     "url": "https://www.baua.de/DE/Angebote/Regelwerk/TRGS/pdf/TRGS-Bekanntmachungen.pdf?__blob=publicationFile"
+    },
+    {
+     "date": "",
+     "host": "www.baua.de",
+     "rank": 5,
+     "snippet": "- Technical Rules for Biological Agents (TRBA)\n...\n…\n...\n- Baustellenverordnung (BaustellV) Verordnung über Sicherheit und Gesundheitsschutz auf Baustellen\n- Betriebssicherheitsverordnung (BetrSichV) Verordnung über Sicherheit und Gesundheitsschutz bei der Verwendung von Arbeitsmitteln",
+     "title": "Technical Rules - Federal Institute for Occupational Safety and Health",
+     "url": "https://www.baua.de/EN/Service/Technical-rules"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Germany national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2025-07-25",
+     "host": "www.destatis.de",
+     "rank": 1,
+     "snippet": "Startseite - Statistisches Bundesamt\n# Statistisches Bundesamt\n## Suche\n- 0,2 % Wirtschaftswachstum\n...\n### Anschrift\nStatistisches Bundesamt\nGustav-Stresemann-Ring 11\n65189 Wiesbaden",
+     "title": "Startseite - Statistisches Bundesamt",
+     "url": "https://www.destatis.de/DE/Home/_inhalt.html"
+    },
+    {
+     "date": "2025-12-04",
+     "host": "www.destatis.de",
+     "rank": 2,
+     "snippet": "Homepage - German Federal Statistical Office\n# Federal Statistical Office of Germany\n## Search\n...\n## Data and Analysis\n### Address\nStatistisches Bundesamt\nGustav-Stresemann-Ring 11\n65189 Wiesbaden",
+     "title": "Homepage",
+     "url": "https://www.destatis.de/EN/Home/_node.htm"
+    },
+    {
+     "date": "2026-08-28",
+     "host": "www.destatis.de",
+     "rank": 3,
+     "snippet": "Über uns - Statistisches Bundesamt\n...\nDas Statistische Bundesamt ist die erste Anlaufstelle für amtliche Daten zu Gesellschaft, Wirtschaft, Umwelt und Staat.\n...\n### Anschrift\nStatistisches Bundesamt\nGustav-Stresemann-Ring 11\n65189 Wiesbaden",
+     "title": "Über uns",
+     "url": "https://www.destatis.de/DE/Ueber-uns/_inhalt.html?templateQueryString=verkehr&templateQueryString=verkehr&templateQueryString=verkehr&templateQueryString=verkehr"
+    },
+    {
+     "date": "",
+     "host": "www.statistikportal.de",
+     "rank": 4,
+     "snippet": "Startseite | Statistikportal.de\n**\nInternationale Bildungsindikatoren\n...\n### Datenbanken\nDie Statistischen Ämter des Bundes und der Länder haben verschiedene Auskunftsdatenbanken aufgebaut, um das breit gefächerte Datenangebot der amtlichen Statistik in komfortabler Weise über das Internet zu ersch",
+     "title": "Statistikportal.de: Startseite",
+     "url": "https://www.statistikportal.de/de"
+    },
+    {
+     "date": "",
+     "host": "cis2.eea.europa.eu",
+     "rank": 5,
+     "snippet": "|Name|Federal Statistical Office of Germany|\n...\n|Description|The Federal Statistical Office of Germany is responsible for the production, collection, harmonization, and dissemination of official national statistics.\n...\n|Networks|-|\n|Acronym|Destatis|\n|Website|https://www.destatis.de/|",
+     "title": "Data provider",
+     "url": "https://cis2.eea.europa.eu/provider/1238/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Germany central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2025-11-18",
+     "host": "statistiken.bundesbank.de",
+     "rank": 1,
+     "snippet": "Statistiken der Bundesbank | Statistiken der Bundesbank\n- Statistiken der Bundesbank\n...\nBundesbank SDMX Webservice\n...\n|statistiken.bundesbank.de\nStatistische Veröffentlichungstermine\nfür Tabellen, Zeitreihen und neueste Daten für ausgewählte Statistiken.",
+     "title": "Statistiken der Bundesbank",
+     "url": "https://statistiken.bundesbank.de/statistiken-de"
+    },
+    {
+     "date": "2025-03-31",
+     "host": "www.bundesbank.de",
+     "rank": 2,
+     "snippet": "# Logo\nDie aktuellen makroökonomischen Statistiken und Echtzeitdaten der Deutschen Bundesbank werden in Form von Zeitreihen bereitgestellt.\n...\nstatistiken.bundesbank.de statistiken.bundesbank.de",
+     "title": "Zeitreihen und Echtzeitdaten | Deutsche Bundesbank",
+     "url": "https://www.bundesbank.de/de/statistiken/zeitreihen-und-echtzeitdaten"
+    },
+    {
+     "date": "2026-09-03",
+     "host": "statistiken.bundesbank.de",
+     "rank": 3,
+     "snippet": "Zeitreihensuche | Statistiken der Bundesbank\n...\nEuro-Geldmarkt\n...\n#### Makroökonomische Zeitreihen (11 Themengebiete)\nGeld- und Kapitalmärkte\n...\nVolkswirtschaftliche Gesamtrechnungen\n...\n**Diese Seite ist ein Informationsangebot der Deutschen Bundesbank.**",
+     "title": "Zeitreihensuche | Statistiken der Bundesbank",
+     "url": "https://statistiken.bundesbank.de/statistiken-de/suche/W59/W65"
+    },
+    {
+     "date": "2026-04-30",
+     "host": "www.bundesbank.de",
+     "rank": 4,
+     "snippet": "Statistiken | Deutsche Bundesbank\n…\n...\nStatistiken\nMonetäre, finanzielle und außenwirtschaftliche Statistiken sowie umfangreiche Indikatorensätze und saisonbereinigte Konjunkturdaten.\n...\n…\n...\nstatistiken.bundesbank.de statistiken.bundesbank.de",
+     "title": "Statistiken | Deutsche Bundesbank",
+     "url": "https://www.bundesbank.de/de/statistiken"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.bundesbank.de",
+     "rank": 5,
+     "snippet": "Statistical release calendar | Deutsche Bundesbank\n…\n# Statistical release calendar\n## Note:\nThe dates for the **seasonally adjusted business statistics** can be found on the following external websites:\ndestatis.de\nstatistik.arbeitsagentur.de (in German)",
+     "title": "Statistical release calendar | Deutsche Bundesbank",
+     "url": "https://www.bundesbank.de/en/statistics/statistical-release-calendar"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Germany government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-06-03",
+     "host": "www.govdata.de",
+     "rank": 1,
+     "snippet": "GovData - Das Datenportal für Deutschland\n# Das Datenportal für Deutschland\nOpen Government: Verwaltungsdaten transparent, offen und frei nutzbar",
+     "title": "GovData - Das Datenportal für Deutschland",
+     "url": "https://www.govdata.de/"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "daten.bundeswirtschaftsministerium.de",
+     "rank": 2,
+     "snippet": "Open Data Portal |\nDaten\n# Daten\nIn der angezeigten Liste finden Sie alle Datensätze dieses Portals.\nDie Datensätze lassen sich mittels Volltextsuche sowie mit den unten aufgeführten Filtern durchsuchen.",
+     "title": "Open Data Portal | Daten",
+     "url": "https://daten.bundeswirtschaftsministerium.de/ODP/Navigation/DE/Daten/daten.html"
+    },
+    {
+     "date": "",
+     "host": "language-data-space.ec.europa.eu",
+     "rank": 3,
+     "snippet": "4.1\nELRC and Open language Data in Germany\nThe open data portal for Germany is called GovData (www.govdata.de).\nGovData offers uniform, central access to all administrative data from the Federal Government (Bund), the federal states\n(Länder) and the municipalities.",
+     "title": "ELRC Workshop Report for Germany",
+     "url": "https://language-data-space.ec.europa.eu/document/download/2ec7889d-093c-48fb-b814-bcb7b500c986_en?filename=ELRC+%20Workshop%20Report%20Germany_Public%20-%20FINAL.pdf"
+    },
+    {
+     "date": "",
+     "host": "bmds.bund.de",
+     "rank": 4,
+     "snippet": "# Open Data\n## Metadatenportal GovData\nUm die Auffindbarkeit der von Bund-, Länder- und Kommunalverwaltungen bereitgestellten Open Data zu erleichtern, wurde als zentraler Einstiegspunkt zur Suche von offenen Daten der Verwaltung das nationale Metadatenportal GovData geschaffen.",
+     "title": "Open Data",
+     "url": "https://bmds.bund.de/themen/digitale-wirtschaft/daten/open-data"
+    },
+    {
+     "date": "2026-03-19",
+     "host": "data.gov.de",
+     "rank": 5,
+     "snippet": "# Fragen und Antworten\n### Rund um das Portal\n**Was ist „GovData – das Datenportal für Deutschland\"?**\n...\nDer Metadatenkatalog von GovData ist über eine Programmierschnittstelle (API) erreichbar: Informationen zur API des GovData Metadatenkatalogs.",
+     "title": "Fragen und Antworten",
+     "url": "https://data.gov.de/informationen/faq"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:42:28Z",
+ "pais": {
+  "iso2": "DE",
+  "iso3": "DEU",
+  "nombre": "Germany"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

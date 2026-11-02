@@ -1,0 +1,781 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Canada constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2002-07-07",
+     "host": "laws.justice.gc.ca",
+     "rank": 1,
+     "snippet": "Welcome to the Justice Laws Website, the online\nsource of the consolidated Acts and regulations of Canada.\nThis website provides access to federal Acts and regulations in both official languages, both language versions being equally authoritative.\n...\n*Canadian Charter of Rights and Freedoms*, Const",
+     "title": "laws.justice.gc.ca · engJustice Laws Website",
+     "url": "https://laws.justice.gc.ca/eng/",
+     "verificacion": {
+      "bytes": 20196,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:52Z",
+      "http": 200,
+      "sha256": "bc8d955e6e91796c3237231b47079d9ef0019c474d8e987f047bb65090bab61b"
+     }
+    },
+    {
+     "date": "2002-07-07",
+     "host": "laws-lois.justice.gc.ca",
+     "rank": 2,
+     "snippet": "Browse Constitutional documents, including the *Canadian Charter of Rights and Freedoms*, Constitution Acts and key reports from 1990.\n...\nThis consolidation contains the text of the Constitution Acts as amended since their enactment.\n...\nConstitutional texts from the 1990 report.\n...\n### Canadian C",
+     "title": "laws-lois.justice.gc.ca · eng · const-indexJustice Laws Website",
+     "url": "https://laws-lois.justice.gc.ca/eng/const-index.html",
+     "verificacion": {
+      "bytes": 15242,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:53Z",
+      "http": 200,
+      "sha256": "dd4ddd8dc8deb29c5e2e25fff7a8afa5ef1d5b07530e9df0edd6c1f3efbbb9f1"
+     }
+    },
+    {
+     "date": "2026-09-28",
+     "host": "laws-lois.justice.gc.ca",
+     "rank": 3,
+     "snippet": "# THE CONSTITUTION ACTS 1867 to 1982\n...\n- HTMLFull Document: THE CONSTITUTION ACTS 1867 to 1982 (Accessibility Buttons available) |\n- PDFFull Document: THE CONSTITUTION ACTS 1867 to 1982 [771 KB]",
+     "title": "laws-lois.justice.gc.ca · eng · constTHE CONSTITUTION ACTS 1867 to 1982 - Site Web de la ...",
+     "url": "https://laws-lois.justice.gc.ca/eng/const/"
+    },
+    {
+     "date": "2015-08-18",
+     "host": "laws-lois.justice.gc.ca",
+     "rank": 4,
+     "snippet": "This consolidation contains the text of the Constitution Act, 1867 (formerly the British North America Act, 1867), together with amendments made to it since its enactment, and the text of the Canada Act 1982 and the Constitution Act, 1982, as amended since its enactment.",
+     "title": "Consolidation of Constitution Acts, 1867 to 1982",
+     "url": "https://laws-lois.justice.gc.ca/eng/const/const_index.html"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.canlii.org",
+     "rank": 5,
+     "snippet": "Canadian Legal Information Institute | CanLII\n# Primary law\n- Canada (Federal)\n- British Columbia\n- Alberta\n- Saskatchewan\n- Manitoba",
+     "title": "Canadian Legal Information Institute",
+     "url": "https://www.canlii.org/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Canada national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2002-07-07",
+     "host": "lois.justice.gc.ca",
+     "rank": 1,
+     "snippet": "# Justice Laws Website\nWelcome to the Justice Laws Website, the online\nsource of the consolidated Acts and regulations of Canada.\nThis website provides access to federal Acts and regulations in both official languages, both language versions being equally authoritative.\nThe consolidations are genera",
+     "title": "lois.justice.gc.ca · engJustice Laws Website",
+     "url": "https://lois.justice.gc.ca/eng/",
+     "verificacion": {
+      "bytes": 20195,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:54Z",
+      "http": 200,
+      "sha256": "fe27f0df101245b1fa5dd87febc60a82bc76f58d29b1f3392791448d074548a0"
+     }
+    },
+    {
+     "date": "2015-08-18",
+     "host": "laws.justice.gc.ca",
+     "rank": 2,
+     "snippet": "# Consolidated Regulations\nThe Justice Laws Website provides an official consolidation, or updated version, of the federal Acts and regulations maintained by the Department of Justice as a convenient way for the public to view the state of the law, without having to carry out research and put togeth",
+     "title": "laws.justice.gc.ca · eng · regulationsConsolidated Regulations - laws.justice.gc.ca",
+     "url": "https://laws.justice.gc.ca/eng/regulations/",
+     "verificacion": {
+      "bytes": 19183,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:54Z",
+      "http": 200,
+      "sha256": "8f621a34c3a49f71e4084ce8d158daf34ce68b1205dea0726f31c66656372dc4"
+     }
+    },
+    {
+     "date": "",
+     "host": "orders-in-council.canada.ca",
+     "rank": 3,
+     "snippet": "Orders In Council - Search\n...\nThe Orders in Council online database makes it easy for you to search for Orders in Council (OICs) made from 1990 to the present.\n...\nthe Access to Information Act, the Privacy Act and the Investment Canada Act) contain provisions which prohibit the release of OICs",
+     "title": "orders-in-council.canada.caCanada - Orders In Council - Search",
+     "url": "https://orders-in-council.canada.ca/"
+    },
+    {
+     "date": "2025-09-04",
+     "host": "www.canada.ca",
+     "rank": 4,
+     "snippet": "Legislation governing Canada’s regulatory activities - Canada.ca\n...\n2. About government\n3. Treaties, laws and regulations\n...\n# Legislation governing Canada’s regulatory activities\nOfficial versions of federal acts and regulations\n...\n### Justice laws and regulations\nOfficial versions of federal ac",
+     "title": "Legislation governing Canada's regulatory activities",
+     "url": "https://www.canada.ca/en/government/system/laws/developing-improving-federal-regulations/laws-legislation.html"
+    },
+    {
+     "date": "2016-03-31",
+     "host": "gazette.gc.ca",
+     "rank": 5,
+     "snippet": "Canada Gazette – Consolidated Index\n1. Canada.ca\n2. Canada Gazette\n3. Publications\n...\n- **Minister of Justice Authority to Prescribe Fees Order, SI/86-55**\n[Décret autorisant le ministre de la Justice à prescrire des droits]",
+     "title": "Canada Gazette – Consolidated Index",
+     "url": "https://gazette.gc.ca/rp-pr/p2/2016/2016-03-31-c1/html/d-eng.html"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Canada official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-01-01",
+     "host": "gazette.gc.ca",
+     "rank": 1,
+     "snippet": "# Canada Gazette, Part II: Volume 160\nBrowse and read editions of the Canada Gazette, Part II.\nThis part contains all enacted regulations and statutory instruments.\nRegular editions are published every second Wednesday and are available online at 9 am eastern time.",
+     "title": "Canada Gazette, Part II: Volume 160 - Canada.ca",
+     "url": "https://gazette.gc.ca/rp-pr/p2/2026/index-eng.html",
+     "verificacion": {
+      "bytes": 29736,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:56Z",
+      "http": 200,
+      "sha256": "554a84ecf21efafa305ae99f706140a0e9c0e2897c560adbbe88e5774acf7bd9"
+     }
+    },
+    {
+     "date": "",
+     "host": "gazette.gc.ca",
+     "rank": 2,
+     "snippet": "Canada \nGazette\nPart I\nOTTAWA, Saturday, August 12, 2023\nVol. 157, no 32\nGazette \ndu Canada\nPartie I\nOTTAWA, LE samedi 12 août 2023\n...\nand \n...\nPart III",
+     "title": "Canada Gazette, Part I",
+     "url": "https://gazette.gc.ca/rp-pr/p1/2023/2023-08-12/pdf/g1-15732.pdf",
+     "verificacion": {
+      "bytes": 677117,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:57Z",
+      "http": 200,
+      "sha256": "4bdd18f7148cf169f7d367477b79197b6b57d4ad468d66d19d9a695622254097"
+     }
+    },
+    {
+     "date": "2024-01-01",
+     "host": "gazette.gc.ca",
+     "rank": 3,
+     "snippet": "# Canada Gazette, Part I: Volume 158\nBrowse and read editions of the Canada Gazette, Part I. This part contains public notices, official appointments and proposed regulations from the Government of Canada.\nRegular editions are published every Saturday and are available online on the Friday at 2 pm e",
+     "title": "Canada Gazette, Part I: Volume 158",
+     "url": "https://gazette.gc.ca/rp-pr/p1/2024/index-eng.html"
+    },
+    {
+     "date": "2002-07-01",
+     "host": "publications.gc.ca",
+     "rank": 4,
+     "snippet": "Part I = Gazette du Canada.\n...\n|Note(s)|- Since April 1, 2003, the on-line version in Portable Document Format (PDF) of the Canada Gazette, Parts I, II and III has the official status and will therefore be published simultaneously with the printed version.",
+     "title": "Canada gazette. Part I = Gazette du Canada. Partie I.",
+     "url": "https://publications.gc.ca/site/eng/9.500165/publication.html"
+    },
+    {
+     "date": "",
+     "host": "gazette.gc.ca",
+     "rank": 5,
+     "snippet": "Canada\n...\nA Portable Document Format\n(PDF) version of Part I, Part II and Part III as an official version since April 1, 2003, and a HyperText Mark-up\nLanguage (HTML) version of Part I and Part II as an alternate format are available on the Canada Gazette website.",
+     "title": "[PDF] Canada Gazette, Part I",
+     "url": "https://gazette.gc.ca/rp-pr/p1/2026/2026-02-21/pdf/g1-16008.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Canada supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2025-12-12",
+     "host": "decisions.scc-csc.ca",
+     "rank": 1,
+     "snippet": "Decisions and Resources\n...\nHelp\nSearch All Databases\nSearch\nSyntax: \"\", OR, AND, EXACT(), /p, /s, /n\nAdvanced Search\nBrowse Decisions\nCollection\nSubjects\nSupreme Court Judgments\nApplications for Leave\nRecent Additions\n...\n2025 SCC 43",
+     "title": "Decisions and Resources - SCC Cases",
+     "url": "https://decisions.scc-csc.ca/scc-csc/en/nav.do?site_preference=normal&pedisable=false&iframe=true",
+     "verificacion": {
+      "bytes": 25611,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:58Z",
+      "http": 200,
+      "sha256": "c92c971d596b9119023e6d079f72342460d8422f803c15041f4caea43c5a2ac0"
+     }
+    },
+    {
+     "date": "",
+     "host": "scc-csc.gc.ca",
+     "rank": 2,
+     "snippet": "- - ### Judgments on appeals\n# Cases\nInformation on existing matters and upcoming appeal hearings of the Supreme Court of Canada.\n...\n## Search case information\nConduct a refined search of the Supreme Court of Canada database to obtain details on the status of a matter before the Court.\n...\n## Acces",
+     "title": "scc-csc.gc.ca · cases-dossiersSupreme Court of Canada | Cases",
+     "url": "https://scc-csc.gc.ca/cases-dossiers/",
+     "verificacion": {
+      "bytes": 35847,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:33:59Z",
+      "http": 200,
+      "sha256": "882dddeece3a6b8d92ff249bd26ae369396e76516d4f2714105fe7e6f89c28d3"
+     }
+    },
+    {
+     "date": "",
+     "host": "scc-csc.gc.ca",
+     "rank": 3,
+     "snippet": "Supreme Court of Canada | Search case information\n...\nEnter search criteria in any of the relevant fields and launch the search.\nEnter all or part of the 5-digit Supreme Court of Canada case number.\n...\nChoose where the case comes from, such as a province, a territory, or for\n...\nthe proceeding).",
+     "title": "scc-csc.gc.ca · cases-dossiers · search-rechercheSupreme Court of Canada | Search case information",
+     "url": "https://scc-csc.gc.ca/cases-dossiers/search-recherche/"
+    },
+    {
+     "date": "",
+     "host": "scc-csc.gc.ca",
+     "rank": 4,
+     "snippet": "Judgments on leave applications, judgments on appeals, archive of sources cited in Supreme Court of Canada reasons for judgment, *Case in Brief* summaries and *Canada Supreme Court Reports*.\n...\n…\n...\nThe *Canada Supreme Court Reports* include the official English and French versions of the judgment",
+     "title": "scc-csc.gc.ca · judgments-jugementsSupreme Court of Canada | Judgments",
+     "url": "https://scc-csc.gc.ca/judgments-jugements/"
+    },
+    {
+     "date": "",
+     "host": "decisions.scc-csc.ca",
+     "rank": 5,
+     "snippet": "Cases\nCases\nSearch case information\nCourt hearings\n...\nBulletins of proceedings\nJudgments\nJudgments\nJudgments on leave applications\nJudgments on appeals\nCases in Brief\n...\nCanada Supreme Court Reports\n...\n>\nDecisions and Resources\n>\nCanada Supreme Court Reports\n>",
+     "title": "Part 2, 2020 Vol. 3 ([2020] 3 SCR 247-497) - SCC Cases",
+     "url": "https://decisions.scc-csc.ca/scc-csc/scr/en/item/7752/index.do"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Canada state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.ontario.ca",
+     "rank": 1,
+     "snippet": "e-Laws | Ontario.ca\n# e-Laws\ne-Laws provides online access to official copies of Ontario’s statutes and regulations.\n...\n- Current consolidated statutes\n...\n- Source statutes\n...\n- Current consolidated regulations\n- Historical regulations\n- Repealed/revoked/spent regulations\n- Source regulations",
+     "title": "e-Laws - Ontario.ca",
+     "url": "https://www.ontario.ca/laws?filterstate[0]=current&filteroption=source&source_type[0]=regulation&browse=on&from=0",
+     "verificacion": {
+      "bytes": 7645,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:00Z",
+      "http": 200,
+      "sha256": "ecde2cf006e25f048dc95a12d35943d1b7d75cab927cfbc4fd6d4bac0704cd34"
+     }
+    },
+    {
+     "date": "2026-09-28",
+     "host": "laws.justice.gc.ca",
+     "rank": 2,
+     "snippet": "Table of Public Statutes and Responsible Ministers\n# Table of Public Statutes and Responsible Ministers\nShowing all the chapters of the Revised Statutes of Canada, 1985, with their amendments, and certain other public Acts and their amendments\n...\nFootnote*\nAccess to individual Statutes beginning wi",
+     "title": "Table of Public Statutes and Responsible Ministers",
+     "url": "https://laws.justice.gc.ca/eng/TablePublicStatutes/index.html",
+     "verificacion": {
+      "bytes": 25458,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:01Z",
+      "http": 200,
+      "sha256": "d227f3d09c9b055da4839e1606cd6e829d99d2bebef60dccf157d46f22ad1792"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.parl.ca",
+     "rank": 3,
+     "snippet": "Explore LEGIS*info*\n## Recently introduced bills\nShowing the last three sitting days on which a bill was introduced in either chamber.\n...\n### Senate\n#### Thursday, October 29, 2026\n- S-253\nSenate Public Bill\n…\n...\n- **Short title**",
+     "title": "Home - LEGISinfo - Parliament of Canada",
+     "url": "https://www.parl.ca/legisinfo/"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.alberta.ca",
+     "rank": 4,
+     "snippet": "# Alberta King’s Printer\nThe official source of Alberta government laws, materials and publications since 1906.\n...\n## Featured publications\n### Laws Online Catalogue\nView or purchase Alberta acts, regulations, codes, legislative publications and official materials in various formats.\n### The Albert",
+     "title": "Alberta King’s Printer",
+     "url": "https://www.alberta.ca/alberta-kings-printer"
+    },
+    {
+     "date": "2002-07-07",
+     "host": "laws-lois.justice.gc.ca",
+     "rank": 5,
+     "snippet": "Justice Laws Website\n# Justice Laws Website\nWelcome to the Justice Laws Website, the online\nsource of the consolidated Acts and regulations of Canada.\nThis website provides access to federal Acts and regulations in both official languages, both language versions being equally authoritative.",
+     "title": "laws-lois.justice.gc.ca · eng · indexJustice Laws Website",
+     "url": "https://laws-lois.justice.gc.ca/eng/index.html"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Canada municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.greatersudbury.ca",
+     "rank": 1,
+     "snippet": "# Bylaws\nA bylaw is a law passed by a municipality.\nBylaws must be founded on statutory authority, delegated to the municipality by the Province.\n...\nOfficial versions may be obtained by contacting Clerk’s Services at 311 or by email at clerks@greatersudbury.ca.",
+     "title": "Bylaws - Greater Sudbury",
+     "url": "https://www.greatersudbury.ca/city-hall/bylaws/",
+     "verificacion": {
+      "bytes": 74831,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:02Z",
+      "http": 200,
+      "sha256": "1a3f084bceb2d40fbcca3bacbb2102c12bcfc8ae86de10b1d18c4843bb58af91"
+     }
+    },
+    {
+     "date": "2026-04-01",
+     "host": "www.hamilton.ca",
+     "rank": 2,
+     "snippet": "# Search By-laws\n...\n1. Use the Search By-laws tool and enter a keyword (e.g. Fence) or a by-law number (e.g. 22-001).\n2. Narrow your search results by using the Category and Sort By filter options.\n3. Browse the search results.",
+     "title": "www.hamilton.ca · city-council · by-laws-enforcementSearch By-laws - City of Hamilton",
+     "url": "https://www.hamilton.ca/city-council/by-laws-enforcement/search-by-laws",
+     "verificacion": {
+      "bytes": 5706,
+      "estado": "http",
+      "fecha": "2026-11-02T07:34:03Z",
+      "http": 403,
+      "sha256": "fb79273c98fc2e02b8286fbae8a8df568ba8eb4b9df92c68c5986928722cf479"
+     }
+    },
+    {
+     "date": "",
+     "host": "montreal.ca",
+     "rank": 3,
+     "snippet": "Search for by-laws | Ville de Montréal\n...\n# Search for by-laws\nLast updated September 29, 2021\nThis online service enables you to find, consult, download and print Montréal by-laws.\n## Description\nSeveral search options are available to find current by-laws.",
+     "title": "Search for by-laws | Ville de Montréal",
+     "url": "https://montreal.ca/en/services/search-laws"
+    },
+    {
+     "date": "",
+     "host": "www.waterloo.ca",
+     "rank": 4,
+     "snippet": "These bylaws are digital reproductions of the official legal documents.\nThey are intended for information purposes only.\nFor any questions about these bylaws contact 519-747-8785 or municipalenforcement@waterloo.ca\n...\n### Z\n...\nThe zoning bylaw controls land development and how it's used.",
+     "title": "Bylaw directory",
+     "url": "https://www.waterloo.ca/bylaws-and-enforcement/bylaw-directory/"
+    },
+    {
+     "date": "",
+     "host": "www.toronto.ca",
+     "rank": 5,
+     "snippet": "Toronto By-laws and Municipal Code - Home\n# Welcome to the Toronto City Clerk website for Bills, By-laws and Municipal Code\n|\n...\n…",
+     "title": "Toronto By-laws and Municipal Code - Home",
+     "url": "https://www.toronto.ca/legdocs/bylaws/lawhome.htm"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Canada regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2017-03-07",
+     "host": "www.canada.ca",
+     "rank": 1,
+     "snippet": "Find the regulations, policies and laws relevant to any department or agency of the Government of Canada.\n…\n...\nDescribes acts and regulations related to agriculture and food in Canada.\n...\n…\n...\nIncludes regulations related to environmental assessments in Canada, their funding, and designated proje",
+     "title": "Policies, regulations and laws by department or agency - Canada.ca",
+     "url": "https://www.canada.ca/en/government/policy/dept.html",
+     "verificacion": {
+      "bytes": 42078,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:08Z",
+      "http": 200,
+      "sha256": "ff29a717fcd2b798b7a0fcb92b507d4ddb26942df784e532f2b1a7597beabbe1"
+     }
+    },
+    {
+     "date": "2011-03-11",
+     "host": "inspection.canada.ca",
+     "rank": 2,
+     "snippet": "# Acts and regulations\nThe Department of Justice is responsible for maintaining the consolidated statutes and regulations for the Government of Canada.\n...\n- Completed regulatory and CFIA Fees Notice amendments\n- Regulatory archive\n...\nAs a federal agency, the CFIA is responsible for administering a",
+     "title": "Acts and regulations",
+     "url": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations",
+     "verificacion": {
+      "bytes": 32889,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:09Z",
+      "http": 200,
+      "sha256": "1f28424bd309774c840f5801712744ca20c2273cd0697ef5433e462d508ceecd"
+     }
+    },
+    {
+     "date": "2026-10-01",
+     "host": "www.canada.ca",
+     "rank": 3,
+     "snippet": "Section C.01.050 of the Food and Drug Regulations requires Drug Identification Number (DIN) and Notice of Compliance (NOC) holders to submit information to Health Canada that they receive or become aware of regarding actions taken in foreign countries.\n...\n|The European Medicines Agency|European Com",
+     "title": "List of regulatory authorities for the purpose of Notifying ...",
+     "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/applications-submissions/guidance-documents/notifying-foreign-action/countries-list.html"
+    },
+    {
+     "date": "2023-08-21",
+     "host": "www.osfi-bsif.gc.ca",
+     "rank": 4,
+     "snippet": "|**Acts**|**Regulations**|\n...\n|*Office of the Superintendent of Financial Institutions Act*|Regulations made under the *Office of the Superintendent of Financial Institutions Act*|\n...\n|*Cooperative Credit Associations Act*|Regulations made under the *Cooperative Credit Associations Act*|",
+     "title": "Acts and regulations - Office of the Superintendent of Financial ...",
+     "url": "https://www.osfi-bsif.gc.ca/en/guidance/acts-regulations"
+    },
+    {
+     "date": "2015-08-18",
+     "host": "laws-lois.justice.gc.ca",
+     "rank": 5,
+     "snippet": "# Consolidated Regulations\nThe Justice Laws Website provides an official consolidation, or updated version, of the federal Acts and regulations maintained by the Department of Justice as a convenient way for the public to view the state of the law, without having to carry out research and put togeth",
+     "title": "Consolidated Regulations",
+     "url": "https://laws-lois.justice.gc.ca/eng/regulations/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Canada national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2025-05-29",
+     "host": "www.canada.ca",
+     "rank": 1,
+     "snippet": "As of April 1, 2026, the Canadian General Standards Board (CGSB) will no longer offer standards development or conformity assessment services.\nOrganizations can continue to access CGSB standards at no cost through our catalogue.\n## Services and information\n### Standards catalogue\nFind standards for ",
+     "title": "Canadian General Standards Board - Canada.ca",
+     "url": "https://www.canada.ca/en/public-services-procurement/services/standards-oversight/canadian-general-standards-board.html",
+     "verificacion": {
+      "bytes": 22729,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:10Z",
+      "http": 200,
+      "sha256": "3c702020d63cbd5d19dd6121fea35c2c199fe540b47898926d6ab47412876989"
+     }
+    },
+    {
+     "date": "2023-09-11",
+     "host": "scc-ccn.ca",
+     "rank": 2,
+     "snippet": "### CAN/ULC 770:2025\nStandard Test Method for Determination of Long-Term Thermal Resistance of Closed-Cell Thermal Insula...\nScope\n...\nmeasured after 5-year storage in a laboratory environment and provides means for its prediction based on\nan accelerated laboratory test.",
+     "title": "Search - Standards Council of Canada",
+     "url": "https://scc-ccn.ca/search/standardsdb",
+     "verificacion": {
+      "bytes": 5550,
+      "estado": "http",
+      "fecha": "2026-11-02T07:34:11Z",
+      "http": 403,
+      "sha256": "9992009e3208a4f4bf14b971b6463a66cd8d0e2b9689c6f095f27d50593b0824"
+     }
+    },
+    {
+     "date": "2023-04-28",
+     "host": "scc-ccn.ca",
+     "rank": 3,
+     "snippet": "## Find and buy standards\nBrowse our database to search for published National Standards of Canada and international standards.\nYou can also search for Other Recognized Documents.\nFind out where to buy the standards you need.\n...\n## Flexible standards-based solutions\n• National Standards of Canada\n•",
+     "title": "Standards Council of Canada",
+     "url": "https://scc-ccn.ca/standards"
+    },
+    {
+     "date": "2012-08-13",
+     "host": "epe.lac-bac.gc.ca",
+     "rank": 4,
+     "snippet": "# Canadian General Standards Board (CGSB) Catalogue\nISSN 1719-2528\n...\n6\n...\n- Standards Numerical Index;\n...\nThe Standards Numerical Index lists our standards numerically by product and service and includes:\n- document title;\n- date of publication of the latest issue and its price; and",
+     "title": "Canadian General Standards Board (CGSB) Catalogue",
+     "url": "https://epe.lac-bac.gc.ca/100/201/301/comptes_publics_can/html/2013/ongc-cgsb/publications/catalogue/index-eng.html?nodisclaimer=1"
+    },
+    {
+     "date": "2025-05-29",
+     "host": "www.canada.ca",
+     "rank": 5,
+     "snippet": "Organizations can continue to access CGSB standards at no cost through our catalogue.\n...\n## Standards Catalogue\nThe catalogue contains standards that are available at no cost.\n...\nThe Standards Numerical Index lists our standards numerically by product and service and includes:\n- document title\n- p",
+     "title": "Canadian General Standards Board Catalogue",
+     "url": "https://www.canada.ca/en/public-services-procurement/services/standards-oversight/canadian-general-standards-board/catalogue.html"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Canada mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2013-03-01",
+     "host": "www.canada.ca",
+     "rank": 1,
+     "snippet": "List of Acts and Regulations - Canada.ca\n# List of Acts and Regulations\n...\n- Passenger Automobile and Light Truck Greenhouse Gas Emission Regulations (SOR/2010-201; last amended 2023-12-15)\n...\n- Persistence and Bioaccumulation Regulations (SOR/2000-107)",
+     "title": "List of Acts and Regulations",
+     "url": "https://www.canada.ca/en/health-canada/corporate/about-health-canada/legislation-guidelines/acts-regulations/list-acts-regulations.html",
+     "verificacion": {
+      "bytes": 70969,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:15Z",
+      "http": 200,
+      "sha256": "d6a894f3d0eaf604d23be619c89ab26b0888fb31149838f6eb4d0ff7b41a8b6f"
+     }
+    },
+    {
+     "date": "2026-03-04",
+     "host": "laws-lois.justice.gc.ca",
+     "rank": 2,
+     "snippet": "- Railway Prevention of Electric Sparks Regulations\nPDF [117 KB] SOR/82-1015\n...\n780\n...\nPDF [91 KB] C.R.C., c.\n991\n...\n- Railway Safety Appliance Standards Regulations\nPDF [2816 KB] C.R.C., c.\n1171",
+     "title": "Consolidated Regulations - Justice Laws Website",
+     "url": "https://laws-lois.justice.gc.ca/eng/regulations/r.html",
+     "verificacion": {
+      "bytes": 153872,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:15Z",
+      "http": 200,
+      "sha256": "82e6fcfa7308b078ebf34def4eaa3dfbdaf951491dd43c8b80b1bcbe70975c6f"
+     }
+    },
+    {
+     "date": "2025-01-01",
+     "host": "laws-lois.justice.gc.ca",
+     "rank": 3,
+     "snippet": "### CMVSS 119 — New Tires for Motor Vehicles With a GVWR of More Than 4 536 kg and Motorcycles\n...\n(2) Every tire of a class prescribed by subsection 5(1) must have\n- (a) a tire identification number on one of its sidewalls; and",
+     "title": "laws-lois.justice.gc.ca · eng · regulationsMotor Vehicle Tire Safety Regulations (",
+     "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2013-198/FullText.html"
+    },
+    {
+     "date": "2019-12-19",
+     "host": "ised-isde.canada.ca",
+     "rank": 4,
+     "snippet": "Equipment must meet technical regulations and requires certification by Innovation, Science and Economic Development Canada or a Certification Body ^Footnote1^.\nAll Category I equipment for use in Canada must be labelled with Hardware Version Identification Number (HVIN formerly model number) and ce",
+     "title": "Compliance information",
+     "url": "https://ised-isde.canada.ca/site/certification-engineering-bureau/en/publications/compliance-information"
+    },
+    {
+     "date": "2021-11-08",
+     "host": "ised-isde.canada.ca",
+     "rank": 5,
+     "snippet": "## Phase 1\n...\n|Normes|Liste|\n...\n…\n...\n|--|--|\n|NTMR|Normes techniques de matériel de radiodiffusion (disponible à http://ic.gc.ca/epic/site/smt-gst.nsf/fra/h_sf06125.html|",
+     "title": "Annexe I — Aux procédures des phases 1 et 2 – Liste de la réglementation technique du Canada",
+     "url": "https://ised-isde.canada.ca/site/accords-reconnaissance-mutuelle/fr/annexe-i-aux-procedures-phases-1-2-liste-reglementation-technique-canada"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Canada national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www12.statcan.gc.ca",
+     "rank": 1,
+     "snippet": "Statistics Canada: Canada's national statistical agency /\nStatistique Canada : Organisme statistique national du Canada\nStatistics Canada",
+     "title": "Statistics Canada: Canada's national statistical agency",
+     "url": "https://www12.statcan.gc.ca/",
+     "verificacion": {
+      "bytes": 21604,
+      "estado": "http",
+      "fecha": "2026-11-02T07:34:25Z",
+      "http": 403,
+      "sha256": "701a3f365efc764f7212b2c11dcaadf1bef044b7ec288f191602cc1d360630be"
+     }
+    },
+    {
+     "date": "2025-01-30",
+     "host": "www.statcan.gc.ca",
+     "rank": 2,
+     "snippet": "# Archived - Statistics Canada's 2025-26 Departmental Plan\n## Corporate information\n### Departmental profile\n#### Other:\nDepartmental contact information\n### Departmental contact information\n...\n#### Website:\nwww.statcan.gc.ca",
+     "title": "Archived - Statistics Canada's 2025-26 Departmental Plan",
+     "url": "https://www.statcan.gc.ca/en/transparency-accountability/corporate-management-reporting/departmental-plan/2025-2026",
+     "verificacion": {
+      "bytes": 143497,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:26Z",
+      "http": 200,
+      "sha256": "095cd5b0f17d0b882b157b7542bc094ed3648fda51b50a939916042e1fbe63f6"
+     }
+    },
+    {
+     "date": "",
+     "host": "publications.gc.ca",
+     "rank": 3,
+     "snippet": "Please visit Statistics Canada’s website at http://www.statcan.gc.ca and discover a wealth of Canadian statistical information:\n• The Daily offers unparalleled access to newly-released data, schedules of major releases and announcements of new products and services.\n...\naccess to data on many aspect",
+     "title": "[PDF] Statistics Canada provides data in many forms",
+     "url": "https://publications.gc.ca/collections/collection_2009/statcan/12-581-X/12-581-x2008001-eng.pdf"
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.statcan.gc.ca",
+     "rank": 4,
+     "snippet": "Statistics Canada: Canada's national statistical agency\n# Statistics Canada\nStatistics Canada is the national statistical office.\nThe agency ensures Canadians have the key information on Canada's economy, society and environment that they require to function effectively as citizens and decision make",
+     "title": "Canada's national statistical agency",
+     "url": "https://www.statcan.gc.ca/en/start"
+    },
+    {
+     "date": "",
+     "host": "www150.statcan.gc.ca",
+     "rank": 5,
+     "snippet": "(604) 666-3691\nWinnipeg \n(204) 983-4020\nYou can also visit our World Wide Web site: http://www.statcan.ca\nToll-free access is provided for all users who reside outside the local dialing area of any of the Regional Reference Centres.",
+     "title": "[PDF] &(1686",
+     "url": "https://www150.statcan.gc.ca/n1/pub/92-350-u/4198729-eng.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Canada central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2009-12-07",
+     "host": "www.banqueducanada.ca",
+     "rank": 1,
+     "snippet": "Banque du Canada\n…\n- ## En vedette\n...\n- - **Toutes les publications**\n- L’Économie claire et simple\n- Rapport annuel\n- Rapport financier trimestriel\n- Rapport sur la politique monétaire\n- Rapport sur la stabilité financière\n- Résumé des délibérations",
+     "title": "Banque du Canada",
+     "url": "https://www.banqueducanada.ca/",
+     "verificacion": {
+      "bytes": 219932,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:27Z",
+      "http": 200,
+      "sha256": "9ef835f48cbc821ca9d8dcc1a31650ad816db116649969c2aeff9ccc93a57d3d"
+     }
+    },
+    {
+     "date": "2010-02-10",
+     "host": "www.bankofcanada.ca",
+     "rank": 2,
+     "snippet": "Consumer price index - Bank of Canada\n- ## Featured\n...\n# Consumer price index\nA modern browser with javascript enabled is required to view our charts.\nAlternatively, the data is available for download in:\n- XML\n- JSON\n- CSV",
+     "title": "Consumer price index",
+     "url": "https://www.bankofcanada.ca/rates/price-indexes/cpi/",
+     "verificacion": {
+      "bytes": 350561,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:28Z",
+      "http": 200,
+      "sha256": "dfcfaf42f64aed145776594883e1d3b5d08da6895d9f3632f4374a45a6523b17"
+     }
+    },
+    {
+     "date": "2017-09-25",
+     "host": "www.bankofcanada.ca",
+     "rank": 3,
+     "snippet": "Bank of Canada assets and liabilities: Weekly (formerly B2) - Bank of Canada\n…\n# Bank of Canada assets and liabilities: Weekly (formerly B2)\nView or download the latest weekly data.\nFor metadata and background information, see the notes.\n...\nJanuary data are typically published in February.",
+     "title": "Bank of Canada assets and liabilities: Weekly (formerly B2)",
+     "url": "https://www.bankofcanada.ca/rates/banking-and-financial-statistics/bank-of-canada-assets-and-liabilities-weekly-formerly-b2/"
+    },
+    {
+     "date": "2009-12-07",
+     "host": "www.bankofcanada.ca",
+     "rank": 4,
+     "snippet": "Bank of Canada\n- ## Featured\n...\nInflation in Canada has been higher than anticipated and is projected to remain around 3% through much of 2027.\nIt then returns close to 2% by the middle of 2028.\nThe outlook for growth has improved, but uncertainty remains elevated.",
+     "title": "Bank of Canada",
+     "url": "https://www.bankofcanada.ca/"
+    },
+    {
+     "date": "2010-06-01",
+     "host": "www.bankofcanada.ca",
+     "rank": 5,
+     "snippet": "- ## Featured\n...\nView the latest data on the Government of Canada's purchases and holdings of Canadian Mortgage Bonds.\n...\n# Policy interest rate\nThe Bank carries out monetary policy by influencing short-term interest rates.\nIt does this by adjusting the target for the overnight rate on eight fixed",
+     "title": "Policy interest rate",
+     "url": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Canada government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "search.open.canada.ca",
+     "rank": 1,
+     "snippet": "Open Government Portal\n# Open Government Portal\n**Maintenance**\nWe are performing scheduled maintenance from 7:00 a.m. to 12:00 p.m.\nEastern Time on Saturday, October 31, 2026.",
+     "title": "Open Government Portal - Canada",
+     "url": "https://search.open.canada.ca/opendata/",
+     "verificacion": {
+      "bytes": 426673,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:30Z",
+      "http": 200,
+      "sha256": "6edebb892f8ba0da56246c791696dd4cad688d3e8e6bb1340d667379fcaed345"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "host": "open.canada.ca",
+     "rank": 2,
+     "snippet": "Open Government | Open Government - Government of Canada\n...\nAccess information that is disclosed as part of the federal government’s commitment to enhance accountability and transparency.\n## Find open data and information\n### Search for open data and information\nInformation resources and data sets ",
+     "title": "Open Government",
+     "url": "https://open.canada.ca/en",
+     "verificacion": {
+      "bytes": 23436,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:34:50Z",
+      "http": 200,
+      "sha256": "41631c587939d77c7c65fbf0e5a0c88bfcf747ebff7e775f19170d47b8eaff86"
+     }
+    },
+    {
+     "date": "",
+     "host": "open.canada.ca",
+     "rank": 3,
+     "snippet": "Open Data Portal Catalogue - Open Government Portal\n...\n# Open Data Portal Catalogue\nOpen Data Portal Catalogue The open data portal catalogue is a downloadable dataset containing some key metadata for the general datasets available on the Government of Canada's Open Data portal.",
+     "title": "Open Data Portal Catalogue",
+     "url": "https://open.canada.ca/data/en/dataset/c4c5c7f1-bfa6-4ff6-b4a0-c164cb2060f7"
+    },
+    {
+     "date": "",
+     "host": "search.open.canada.ca",
+     "rank": 4,
+     "snippet": "Open Government Portal\n# Open Government Portal\n**Maintenance**\nWe are performing scheduled maintenance from 7:00 a.m. to 12:00 p.m.\nEastern Time on Saturday, October 31, 2026.",
+     "title": "Notice: Basic HTML - Open Government Portal",
+     "url": "https://search.open.canada.ca/opendata/?id"
+    },
+    {
+     "date": "2024-01-12",
+     "host": "open.canada.ca",
+     "rank": 5,
+     "snippet": "## General\n- What is Canada’s Open Government Portal?\nCanada’s Open Government Portal provides one-stop access to the Government of Canada’s searchable open data and open information, together with open dialogue, as part of the federal government’s commitment to enhance transparency and accountabili",
+     "title": "open.canada.ca · en · frequently-asked-questionsFrequently Asked Questions - Open Government",
+     "url": "https://open.canada.ca/en/frequently-asked-questions"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:28:42Z",
+ "pais": {
+  "iso2": "CA",
+  "iso3": "CAN",
+  "nombre": "Canada"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

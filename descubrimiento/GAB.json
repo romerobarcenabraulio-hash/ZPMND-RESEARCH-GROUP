@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Gabon constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 1,
+     "snippet": "Journal Officiel de la République Gabonaise\n...\nLes lois organiques ne peuvent être promulguées qu'après avoir été déclarées conformes à la Constitution par la Cour Constitutionnelle.",
+     "title": "N° 002-R/2024 du 19/12/2024 portant Constitution de la ...",
+     "url": "https://journal-officiel.ga/21489-002-r-2024-/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 2,
+     "snippet": "**Chapitre VII : Des dispositions diverses et finales**\n**Article 34 :** Le Secrétaire Général du Gouvernement assure la tenue du fichier législatif et réglementaire des textes de portée générale et individuelle de la République.",
+     "title": "Journal Officiel de la République Gabonaise",
+     "url": "https://journal-officiel.ga/17555-00178-pr-mricaai/"
+    },
+    {
+     "date": "",
+     "host": "www.journal-officiel.ga",
+     "rank": 3,
+     "snippet": "## JOURNAL OFFICIEL N°17 DU 1 MAI 2024\n### Décision N° 030/CC du 11/07/2011 relative au contrôle de constitutionnalité de la loi n°001/2011 relative à la protection des données à caractère personnel",
+     "title": "Journal Officiel de la République Gabonaise",
+     "url": "https://www.journal-officiel.ga/7229-030-cc/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 4,
+     "snippet": "Journal Officiel de la République Gabonaise\n# Journal Officiel\nFlash Infos\n...\n- Assemblée nationale : Les projets de loi portant modification des Codes pénal et civil adoptés ! ||\n...\nInscrivez-vous et recevez votre exemplaire du journal Officiel de la république Gabonaise.",
+     "title": "Journal Officiel de la République Gabonaise",
+     "url": "https://journal-officiel.ga/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 5,
+     "snippet": "Journal Officiel de la République Gabonaise\n...\n### Décret N° 0458/PR du 19/12/2024 portant promulgation de la loi référendaire n°002-R/2024 du 19 décembre 2024 portant Constitution de la République Gabonaise\n...\nDECRETE :",
+     "title": "JOURNAL OFFICIEL N°47 BIS DU 19 DéCEMBRE 2024",
+     "url": "https://journal-officiel.ga/21491-0458-pr/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Gabon national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 1,
+     "snippet": "### Décret N° 0369/PR/MI du 30/12/2022 portant création, attributions et organisation de la Direction Générale de l'Industrie, de la Coordination et de la Promotion des Activités Industrielles\n...\nPar le Président de la République,\nChef de l'Etat",
+     "title": "Décret N° 0369/PR/MI du 30/12/2022 portant création ...",
+     "url": "https://journal-officiel.ga/19612-0369-pr-mi-/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 2,
+     "snippet": "Journal Officiel de la République Gabonaise\n…\n...\n### Décret N° 000297/PR/MCAPMEI du 14/08/2020 réglementant le suivi et le contrôle des activités industrielles en République Gabonaise\nLe Président de la République,\n...\n…",
+     "title": "Décret N° 000297/PR/MCAPMEI du 14/08/2020 réglementant le ...",
+     "url": "https://journal-officiel.ga/8836-000297-pr-mcapmei-/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 3,
+     "snippet": "# Journal Officiel\n## JOURNAL OFFICIEL N°102 DU 8 FéVRIER 2021\n...\n**Article 2** : Le présent décret sera enregistré, publié au Journal Officiel et communiqué partout où besoin sera.\nFait à Libreville, le 11 janvier 2021",
+     "title": "https://journal-officiel.ga/12085-0006-pr-/",
+     "url": "https://journal-officiel.ga/12085-0006-pr-/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 4,
+     "snippet": "Journal Officiel de la République Gabonaise\n…\n# Liste des Ordonnance\n- Ordonnance N° 0003/PR/2026 du 26/02/2026 relative à l’archivage électronique en République Gabonaise\n...\n…\n...\n…",
+     "title": "Liste des Ordonnance - Journal Officiel de la République Gabonaise",
+     "url": "https://journal-officiel.ga/740-ordonnance/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 5,
+     "snippet": "### N° 0440/PR/MENNTI du 25/11/2024 portant création, attributions et organisation de la Direction Générale de l’Économie Numérique et des Nouvelles Technologies de l’Information",
+     "title": "N° 0440/PR/MENNTI du 25/11/2024 portant création, attributions et ...",
+     "url": "https://journal-officiel.ga/21460-0440-pr-mennti-/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Gabon official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.journal-officiel.ga",
+     "rank": 1,
+     "snippet": "Journal Officiel de la République Gabonaise\n# Journal Officiel\n...\n## JOURNAL OFFICIEL N°134 TER DU 14 OCTOBRE 2026\nSOMMAIRE\n...\nInscrivez-vous et recevez votre exemplaire du journal Officiel de la république Gabonaise.",
+     "title": "Journal Officiel",
+     "url": "https://www.journal-officiel.ga/"
+    },
+    {
+     "date": "2019-05-16",
+     "host": "www.loc.gov",
+     "rank": 2,
+     "snippet": "# Periodical Official Gazette of the Gabonese Republic; Année 60, No. 19\n...\n**Contributor:**Government of the Gabonese Republic\n**Date:**2019-05-16\n...\n### Title\n...\n### Created / Published\n- Gabon, May 16, 2019",
+     "title": "Official Gazette of the Gabonese Republic; Année 60, No. 19",
+     "url": "https://www.loc.gov/resource/llflg.sn95026309_20190516_01/?st=gallery"
+    },
+    {
+     "date": "2019-08-16",
+     "host": "www.loc.gov",
+     "rank": 3,
+     "snippet": "# Periodical Official Gazette of the Gabonese Republic; Année 60, No. 14 Official title: Journal officiel de la République Gabonaise\n...\n### Names\n- Government of the Gabonese Republic\n### Created / Published\n- Gabon, April 8, 2019\n…",
+     "title": "Official Gazette of the Gabonese Republic; Année 60, No. 14",
+     "url": "https://www.loc.gov/item/sn95026309_20190408_01/"
+    },
+    {
+     "date": "2011-02-01",
+     "host": "www.loc.gov",
+     "rank": 4,
+     "snippet": "# Periodical Official Gazette of the Gabonese Republic; Année 52, No. 80 Official title: Journal officiel de la République Gabonaise\n...\nView 16 images in sequence.\n...\n### Created / Published\n- Gabon, December 1, 2011\n...\n### Digital Id",
+     "title": "Official Gazette of the Gabonese Republic; Année 52, No. 80",
+     "url": "https://www.loc.gov/item/sn95026309_20111201_01/"
+    },
+    {
+     "date": "2011-02-01",
+     "host": "www.loc.gov",
+     "rank": 5,
+     "snippet": "# Periodical Official Gazette of the Gabonese Republic; Année 3, No. 6 Official title: Journal officiel de la République Gabonaise\n...\n### Title\n...\n### Created / Published\n- Gabon, February 25, 1961\n...\n- Periodical\n...\n- - pages 146-153",
+     "title": "Official Gazette of the Gabonese Republic; Année 3, No. 6",
+     "url": "https://www.loc.gov/item/sn95026309_19610225_01/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Gabon supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 1,
+     "snippet": "**Article 4** : La présente décision sera notifiée au requérant, au Président de la République, au Président du Sénat, au Président de l'Assemblée Nationale et publiée au Journal Officiel de la République Gabonaise ou dans un journal d'annonces légales.",
+     "title": "journal officiel n°145 du 1 janvier 2022",
+     "url": "https://journal-officiel.ga/18189-030-cc-/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 2,
+     "snippet": "Journal Officiel de la République Gabonaise\n...\n### Décision N° 026/CC du 30/07/2021 relative à la requête présentée par le Premier Ministre, tendant au contrôle de constitutionnalité de la loi n°006/2021 portant élimination des violences faites aux femmes",
+     "title": "journal officiel n°131 du 16 septembre 2021",
+     "url": "https://journal-officiel.ga/17695-026-cc/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 3,
+     "snippet": "**Article 3** : La présente décision sera notifiée au requérant, au Président de la République, au Président du Sénat, au Président de l'Assemblée Nationale et publiée au Journal Officiel de la République Gabonaise ou dans un journal d'annonces légales.",
+     "title": "JOURNAL OFFICIEL N°27 BIS SPéCIAL DU 17 JUILLET 2019 DU ...",
+     "url": "https://journal-officiel.ga/4961-327-cc-/"
+    },
+    {
+     "date": "",
+     "host": "www.nyulawglobal.org",
+     "rank": 4,
+     "snippet": "### 3.4 Resources by Country\n- *Cour Constitutionnelle* – the Constitutional Court for legal and constitutional affairs.\n...\n- Supreme Court decisions are on Juricaf (1962-).\n...\n**Gabon**\n...\nJurisprudence:\n- Juricaf has selected Gabon case law.",
+     "title": "Sources of Online Legal Information for African Countries",
+     "url": "https://www.nyulawglobal.org/globalex/african_law1.html"
+    },
+    {
+     "date": "2026-07-16",
+     "host": "courcomptes.ga",
+     "rank": 5,
+     "snippet": "### Le Premier Président à Gabon 24\nPour plus de détail, un recueil commenté des décisions de la Cour des Comptes sera prochainement édité et mis en ligne dans la rubrique « Téléchargements».",
+     "title": "JURISPRUDENCE",
+     "url": "https://courcomptes.ga/jurisprudence/?mo=5&yr=2051"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Gabon state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.journal-officiel.ga",
+     "rank": 1,
+     "snippet": "Journal Officiel de la République Gabonaise\n# Journal Officiel\nFlash Infos\n...\n- Assemblée nationale : Les projets de loi portant modification des Codes pénal et civil adoptés ! ||\n...\nInscrivez-vous et recevez votre exemplaire du journal Officiel de la république Gabonaise.",
+     "title": "Journal Officiel",
+     "url": "https://www.journal-officiel.ga/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 2,
+     "snippet": "**Article 18** : Il est créé, dans chaque province, un service provincial de l'état civil rattaché au Centre National de l'Etat Civil.\nCe service est notamment chargé de gérer le serveur provincial de l'état civil.",
+     "title": "Loi N° 008/2022 du 15/06/2022 portant organisation de l'état civil en ...",
+     "url": "https://journal-officiel.ga/18873-008-2022-/"
+    },
+    {
+     "date": "",
+     "host": "www.assemblee-nationale.ga",
+     "rank": 3,
+     "snippet": "Lois promulguées – Assemblée Nationale\n- Ouvert du Lundi au Vendredi de 07h30 à 15h30\n- infos@assemblee-nationale.ga\n...\n# Lois promulguées\n## Liens Utiles\n...\n|--|--|--|--|",
+     "title": "Lois promulguées",
+     "url": "https://www.assemblee-nationale.ga/lois/repertoire-des-lois-promulguees/"
+    },
+    {
+     "date": "",
+     "host": "www.journal-officiel.ga",
+     "rank": 4,
+     "snippet": "Journal Officiel de la République Gabonaise\n# Journal Officiel\n...\n- Assemblée nationale : Les projets de loi portant modification des Codes pénal et civil adoptés ! ||\n## JOURNAL OFFICIEL N°34 TER DU 13 SEPTEMBRE 2024",
+     "title": "Arrêté N° 539/PM/MAE du 09/09/2024 fixant les modalités de prise ...",
+     "url": "https://www.journal-officiel.ga/21311-539-pm-mae-/"
+    },
+    {
+     "date": "2022-06-08",
+     "host": "gouvernement.ga",
+     "rank": 5,
+     "snippet": "Portail Officiel du Gouvernement Gabonais : Votre accès direct et unique à l'information publique et aux actualités officielles de la République.\nRetrouvez ici la transparence des actions gouvernementales, les communiqués de presse, les décrets et les grands projets qui façonnent notre Nation.",
+     "title": "Gouvernement.ga: Portail Gouvernemental du Gabon",
+     "url": "https://gouvernement.ga/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Gabon municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 1,
+     "snippet": "Journal Officiel de la République Gabonaise\n# Journal Officiel\n...\n## Recherche avancée\nLes codes\nTextes législatifs et réglementaires\n...\nDesign & developpement ANINF © 2016 www.journal-officiel.ga",
+     "title": "Recherche Avancée",
+     "url": "https://journal-officiel.ga/advanced-search.twg"
+    },
+    {
+     "date": "",
+     "host": "www.journal-officiel.ga",
+     "rank": 2,
+     "snippet": "**Article 5** : Des textes règlementaires déterminent, en tant que de besoin, les dispositions de toute nature nécessaires à l’application de la présente loi.",
+     "title": "www.journal-officiel.ga · 20003/023/2023-Journal Officiel de la République Gabonaise",
+     "url": "https://www.journal-officiel.ga/20003-023-2023-/"
+    },
+    {
+     "date": "",
+     "host": "www.journal-officiel.ga",
+     "rank": 3,
+     "snippet": "Journal Officiel de la République Gabonaise\n# Journal Officiel\n...\n## Abonnez-vous au Journal Officiel de la République Gabonaise\nInscrivez-vous et recevez votre exemplaire du journal Officiel de la république Gabonaise.",
+     "title": "Journal Officiel",
+     "url": "https://www.journal-officiel.ga/"
+    },
+    {
+     "date": "2024-11-28",
+     "host": "habitat.gouv.ga",
+     "rank": 4,
+     "snippet": "# Etats generaux de la ville gabonaise\n## À propos de ce Ministère\n- accompagner les collectivités locales dans la planification et le développement urbain.",
+     "title": "Ministère du Logement, de l'Habitat, de l'Urbanisme et du Cadastre",
+     "url": "https://habitat.gouv.ga/"
+    },
+    {
+     "date": "2025-08-18",
+     "host": "gouvernement.ga",
+     "rank": 5,
+     "snippet": "eGouv - Gouvernement.ga\n**Tous les services numériques du Gouvernement**\n...\nPortail Officiel du Gouvernement Gabonais : Votre accès direct et unique à l'information publique et aux actualités officielles de la République.",
+     "title": "eGouv",
+     "url": "https://gouvernement.ga/egouv/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Gabon regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "…\nAgencies responsible for enforcing intellectual property rights in Gabon include the:\n- Customs Directorate,\n- General Directorate for Competition Policy and Consumer Affairs (DGCC), and\n- Gabonese Copyright and Related Rights Office (BUGADA), which acts as a collective management organization.",
+     "title": "2025 Investment Climate Statements: Gabon",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/gabon"
+    },
+    {
+     "date": "",
+     "host": "www.arcep.ga",
+     "rank": 2,
+     "snippet": "### Ordonnances\n#### Consulter ou télécharger nos documents\n##### Ordonnance n°006/PR/2014 Modifiant certaines dispositions de la loi n°005/2001 du 27 juin 2001 portant réglementation du secteur des Télécommunications en République Gabonaise\nTelecharger\n...\nTelecharger\n…",
+     "title": "ARCEP | Ordonnances",
+     "url": "https://www.arcep.ga/pages/detail_reglementation/2"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 3,
+     "snippet": "# Journal Officiel\n## JOURNAL OFFICIEL N°120 BIS DU 30 JUIN 2021\n### Arrêté N° 011/MAEPA du 22/04/2021 portant création et organisation du Laboratoire d'Analyses Alimentaires\n...\nVu la Constitution ;\n...\n…",
+     "title": "journal officiel n°120 bis du 30 juin 2021",
+     "url": "https://journal-officiel.ga/17102-011-maepa-/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 4,
+     "snippet": "## JOURNAL OFFICIEL N°128 DU 24 AOûT 2021\n### Arrêté N° 096/MMI du 09/03/2016 portant sur l'application obligatoire des normes des produits alimentaires\nLe Ministre des Mines et de l'industrie ;\nVu la constitution ;",
+     "title": "Arrêté N° 096/MMI du 09/03/2016 portant sur l'application ...",
+     "url": "https://journal-officiel.ga/17589-096-mmi-/"
+    },
+    {
+     "date": "2024-07-17",
+     "host": "2021-2025.state.gov",
+     "rank": 5,
+     "snippet": "Both CEMAC and ECCAS work to promote economic cooperation among members.\n...\n### Competition and Antitrust Laws\n...\n- the Gabon data protection authority (CNPDCP);\n- the Electronic Communications and Postal Authority (ARCEP); and\n- the General Population and Housing Census (the GPHC Order).",
+     "title": "2024 Investment Climate Statements: Gabon",
+     "url": "https://2021-2025.state.gov/reports/2024-investment-climate-statements/gabon/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Gabon national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.iec.ch",
+     "rank": 1,
+     "snippet": "|IEC 60072-2 Dimensions and output ratings of electrical machines - Part 2: Dimensions of mounting flanges|TC 2|NGA IEC 60072-2|2019|",
+     "title": "Gabon",
+     "url": "https://www.iec.ch/dyn/www/f?p=103:36:::::FSP_ORG_ID:1146"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 2,
+     "snippet": "…\n...\n2. NGA ISO 6935-2 : 2007, Aciers pour l'armature du béton -Partie 2 : Barres à verrous ;\n...\n6. NGA 206 Béton-spécification, performances, production et conformité ;",
+     "title": "Arrêté N° 095/MMI du 09/03/2016 portant sur l'application ...",
+     "url": "https://journal-officiel.ga/17588-095-mmi-/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 3,
+     "snippet": "1. **Norme solutions et gels hydro-alcooliques ;**\n...\n-**NGA ISO 11357-2** : Analyse calorimétrique différentielle (DSC) Partie 2 : Détermination de la température et de la hauteur de palier de transition vitreuse ;",
+     "title": "JOURNAL OFFICIEL N°128 DU 24 AOûT 2021",
+     "url": "https://journal-officiel.ga/17600-2017-20-mcpmei-/"
+    },
+    {
+     "date": "2025-11-01",
+     "host": "fr.scribd.com",
+     "rank": 4,
+     "snippet": "## 30 NGA 13809 Norme pour le manioc amer 2020 13 30 000\n...\ndans le domaine des bâtiments et des ouvrages de génie civil notamment la terminologie, la conception,\nla fabrication, la construction, les matériaux et composants de construction, les bases de calcul des",
+     "title": "Catalogue Des Normes Gabonais | PDF | Béton | Nourritures",
+     "url": "https://fr.scribd.com/document/938290223/Catalogue-Des-Normes-Gabonais"
+    },
+    {
+     "date": "",
+     "host": "www.lloydsbanktrade.com",
+     "rank": 5,
+     "snippet": "## Standards\n- **National Standards Organisations**\nAgence Gabonaise de Normalisation (AGANOR)\n- **Integration in the International Standards Network**\nAGANOR is a member of the International Organisation for Standardisation (ISO).\n- **Classification of Standards**\nGAB\n- **Certification Organisation",
+     "title": "Industrial and commercial standards in Gabon",
+     "url": "https://www.lloydsbanktrade.com/en/market-potential/gabon/standards"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Gabon mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 1,
+     "snippet": "Journal Officiel de la République Gabonaise\n...\n1.NGA 13505 : 2011, Etiquetage des denrées alimentaires préemballées ;\n2.NGA 13517 : 2013, Les aliments diversifiés de l'enfance (« BABY FOODS ») ;",
+     "title": "Arrêté N° 096/MMI du 09/03/2016 portant sur l'application ...",
+     "url": "https://journal-officiel.ga/17589-096-mmi-/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 2,
+     "snippet": "# Liste des Arrêté\n- Arrêté N° 838/PR-MF-MEN-DDI, du 28/07/1965 fixant les valeurs mercuriales officielles des minerais de manganèse et des huiles brutes de pétrole à l'exportation.",
+     "title": "Liste des Arrêté",
+     "url": "https://journal-officiel.ga/737-arrete/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 3,
+     "snippet": "**Article 2** : Sont rendues d'application obligatoire sur tout l'étendue du territoire, les Normes Gabonaises suivantes :\n...\n-**NGA 2002 version 2020** Hydro-alcooliques-Exigences pour la production locale des solutions et gels hydro alcooliques ;",
+     "title": "JOURNAL OFFICIEL N°128 DU 24 AOûT 2021",
+     "url": "https://journal-officiel.ga/17600-2017-20-mcpmei-/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 4,
+     "snippet": "Journal Officiel de la République Gabonaise\n...\nA R R E T E :\n...\n…\n3. NGA ISO 6935-3 : 2007, Aciers pour l'armature du béton -Partie 3 : Treillis soudés ;\n...\n…",
+     "title": "Arrêté N° 095/MMI du 09/03/2016 portant sur l'application ...",
+     "url": "https://journal-officiel.ga/17588-095-mmi-/"
+    },
+    {
+     "date": "",
+     "host": "journal-officiel.ga",
+     "rank": 5,
+     "snippet": "Journal Officiel de la République Gabonaise\n...\nA R R E T E N T :\n...\n**Article 2** : La norme suscitée est rendue d'application obligatoire sur toute l'étendue du territoire.",
+     "title": "Arrêté N° 0370-21/MCPMEI/MTPEI du 06/04/2021 portant ...",
+     "url": "https://journal-officiel.ga/17601-0370-21-mcpmei-mtpei-/"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Gabon national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "instatgabon.org",
+     "rank": 1,
+     "snippet": "L’Institut National de la Statistique est connu sous le sigle INSTAT GABON.\n...\n### Contact\nOLOUMI, Immeuble Planification\n2119, Libreville (Gabon)\n...\ncontact@instatgabon.org\nwww.instatgabon.org",
+     "title": "INSTAT Gabon | accueil",
+     "url": "https://instatgabon.org/"
+    },
+    {
+     "date": "",
+     "host": "ecastats.uneca.org",
+     "rank": 2,
+     "snippet": "|Gabon|Direction Générale de la Statistique et des Etudes Economiques|Mr Janvier MALI OYOUOMI|Directeur Général|http://www.stat-gabon.ga|",
+     "title": "National Statistics Offices in Africa - ECAStats",
+     "url": "https://ecastats.uneca.org/khub/en-us/Community/National-Statistical-Offices"
+    },
+    {
+     "date": "",
+     "host": "ecastats.uneca.org",
+     "rank": 3,
+     "snippet": "#### National Statistical Offices\n|Country|NSO|Web address|\n|--|--|--|\n|Gabon|Direction Générale de la Statistique et des Etudes Economiques|http://www.stat-gabon.ga|",
+     "title": "National Statistical Offices",
+     "url": "https://ecastats.uneca.org/data/national-statistical-offices"
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 4,
+     "snippet": "Main statistical agency name\nDirection Generale de la Statistique et des Etudes Economiques (DGSEE)\nWeb address\nwww.stat-gabon.ga/Home/Index1.htm\n...\nLa DGSEE a le plaisir de mettre à la disposition des utilisateurs les données statistiques officielles du Gabon.",
+     "title": "Country Profile of Gabon - UNSD Document",
+     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=581"
+    },
+    {
+     "date": "",
+     "host": "www.wikidata.org",
+     "rank": 5,
+     "snippet": "|français|direction générale de la Statistique et des Études économiques|service officiel des statistiques du Gabon, créé en 1976|- DGS - DGSEE|\n...\nGabon\n...\nsite officiel\nhttps://www.instatgabon.org/\n...\nhttp://www.stat-gabon.org/",
+     "title": "direction générale de la Statistique et des Études économiques",
+     "url": "https://www.wikidata.org/wiki/Q3029555?uselang=fr"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Gabon central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.beac.int",
+     "rank": 1,
+     "snippet": "## Statistiques Monétaires\n|Statistiques monétaires du Gabon - février 2023|591 KB|Ga\n…",
+     "title": "Statistiques Monétaires - BEAC",
+     "url": "https://www.beac.int/economie-stats/statistiques-monetaires/"
+    },
+    {
+     "date": "",
+     "host": "www.beac.int",
+     "rank": 2,
+     "snippet": "## Statistiques Economiques\n|Statistiques de base : Gabon|29 KB|Gabon|2023|\n...\n|Principaux indicateurs du Gabon|48 KB|Gabon|2023|\n...\n|Tableau des opérations financières : Gabon|17 KB|Gabon|2019|",
+     "title": "Statistiques Economiques",
+     "url": "https://www.beac.int/economie-stats/statistiques-economiques/"
+    },
+    {
+     "date": "",
+     "host": "dsbb.imf.org",
+     "rank": 3,
+     "snippet": "BEAC\n...\n|**3.1 Source data**|**3.1.1 Source data collection programs** Published data on the central bank aggregates of BEAC (Gabon), in particular the monetary base, are calculated on the basis of the monthly survey of the central bank-BEAC National Office.|",
+     "title": "GDDS DQAF Base (DSBB) - IMF",
+     "url": "https://dsbb.imf.org/e-gdds/dqaf-base/country/GAB/category/AAC00"
+    },
+    {
+     "date": "",
+     "host": "globaledge.msu.edu",
+     "rank": 4,
+     "snippet": "# Gabon: Resources\n## Other Resources\nThe Gabonese Republic's main government website, also known as Portail Officiel Du Gouvernement Gabonais, provides detailed information on international and national affairs, government news, and general economic and investment activities.\nOnly available in Fren",
+     "title": "Gabon: Resources - globalEDGE",
+     "url": "https://globaledge.msu.edu/countries/gabon/resources"
+    },
+    {
+     "date": "",
+     "host": "www.banque-france.fr",
+     "rank": 5,
+     "snippet": "Inflation (2024) : 1,2 % \nPIB (2024) : 12 489,7 milliards de francs CFA (XAF) \n17,6 milliards de dollars US \n...\n2| STATISTIQUES DU SYSTÈME BANCAIRE",
+     "title": "CMAF_CEMAC_Gabon2024 - Banque de France",
+     "url": "https://www.banque-france.fr/system/files/2025-12/CMAF_CEMAC_Gabon2024.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Gabon government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2022-06-08",
+     "host": "gouvernement.ga",
+     "rank": 1,
+     "snippet": "Portail Officiel du Gouvernement Gabonais : Votre accès direct et unique à l'information publique et aux actualités officielles de la République.\nRetrouvez ici la transparence des actions gouvernementales, les communiqués de presse, les décrets et les grands projets qui façonnent notre Nation.",
+     "title": "Gouvernement.ga: Portail Gouvernemental du Gabon",
+     "url": "https://gouvernement.ga/"
+    },
+    {
+     "date": "",
+     "host": "corpus.data-landscapers.io",
+     "rank": 2,
+     "snippet": "Open data\nGabon has no open data portal publishing government datasets for reuse (2025), and disclosure of public records is one of its ten worst governance indicators, at 11.7 of 100 in 2023, 49th of 54 African states and barely moved across\n…",
+     "title": "Gabon: status report — Data Landscapers",
+     "url": "https://corpus.data-landscapers.io/reports/GAB/GAB-status-2026-10-20.pdf"
+    },
+    {
+     "date": "",
+     "host": "instatgabon.org",
+     "rank": 3,
+     "snippet": "INSTAT Gabon | accueil\n…\n##### OPEN DATA\nAccédez au portail de nos bases de données, exécutez les requêtes de votre choix et générez les diagrammes correspondants.\n...\n### Contact\n2119, Libreville (Gabon)\n...\nwww.instatgabon.org",
+     "title": "INSTAT Gabon | accueil",
+     "url": "https://instatgabon.org/"
+    },
+    {
+     "date": "",
+     "host": "documents1.worldbank.org",
+     "rank": 4,
+     "snippet": "55.    The project supported the modernization of the DGS website including its open data portal, where all recent\nand past survey results and their microdata are available.\n...\nenhancement of its Open Data portal—which now hosts all recent and past surveys and their corresponding microdata—",
+     "title": "BOSIB-ecc2d880-e3d9-4e59-9480 ... - Documents & Reports",
+     "url": "https://documents1.worldbank.org/curated/en/099062624235536118/txt/BOSIB-ecc2d880-e3d9-4e59-9480-94318a7f05d2.txt"
+    },
+    {
+     "date": "2025-08-18",
+     "host": "gouvernement.ga",
+     "rank": 5,
+     "snippet": "Portail Officiel du Gouvernement Gabonais : Votre accès direct et unique à l'information publique et aux actualités officielles de la République.\nRetrouvez ici la transparence des actions gouvernementales, les communiqués de presse, les décrets et les grands projets qui façonnent notre Nation.",
+     "title": "eGouv",
+     "url": "https://gouvernement.ga/egouv/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:41:15Z",
+ "pais": {
+  "iso2": "GA",
+  "iso3": "GAB",
+  "nombre": "Gabon"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

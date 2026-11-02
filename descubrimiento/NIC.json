@@ -1,0 +1,485 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Nicaragua constitution and national laws official legal database",
+   "descartados": 4,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2020-09-05",
+     "host": "www.cgr.gob.ni",
+     "rank": 1,
+     "snippet": "Marco Legal\nJurídico\nConstitución Política de la República de Nicaragua\nLeyes\nNormativo\nControl\nLeyes\n...\nConstitución Política de la República de Nicaragua",
+     "title": "CGR - Leyes",
+     "url": "https://www.cgr.gob.ni/index.php/leyes"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Nicaragua national regulations decrees official government database",
+   "descartados": 4,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "www.lagaceta.gob.ni",
+     "rank": 1,
+     "snippet": "# La Gaceta Nicaragua\nDiario Oficial de Nicaragua\n...\nDiario oficial de Nicaragua\n...\nNuestras ediciones disponibles en formato digital\n...\nLea nuestra última edición en el formato digital de su preferencia para mantenerse informado de las leyes, decretos y demás publicaciones de su interés y …\nLeer",
+     "title": "La Gaceta Nicaragua",
+     "url": "https://www.lagaceta.gob.ni/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Nicaragua official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "www.lagaceta.gob.ni",
+     "rank": 1,
+     "snippet": "# La Gaceta Nicaragua\nDiario Oficial de Nicaragua\n##### La Gaceta\nDiario oficial de Nicaragua\n...\n##### Sobre nosotros\nDiario Oficial La Gaceta Nicaragua\n...\n### Últimas ediciones\nLea nuestras últimas ediciones de La Gaceta Diario Oficial.",
+     "title": "www.lagaceta.gob.niLa Gaceta Nicaragua",
+     "url": "https://www.lagaceta.gob.ni/?edno=20"
+    },
+    {
+     "date": "2026-10-23",
+     "host": "www.lagaceta.gob.ni",
+     "rank": 2,
+     "snippet": "# Ediciones\nLea nuestras ediciones más recientes\n- ### La Gaceta - No 200 Viernes 30 de Octubre de 2026\n30/10/2026\n- ### La Gaceta - No. 199 Jueves 29 de Octubre de 2026\n...\n…",
+     "title": "Ediciones - lagaceta.gob.ni",
+     "url": "https://www.lagaceta.gob.ni/ediciones/"
+    },
+    {
+     "date": "",
+     "host": "www.lagaceta.gob.ni",
+     "rank": 3,
+     "snippet": "La Gaceta - No. 103 Martes 09 de Junio de 2026\n...\n# La Gaceta - No. 103 Martes 09 de Junio de 2026\n...\n### La Gaceta - No. 103 Martes 09 de Junio de 2026",
+     "title": "No. 103 Martes 09 de Junio de 2026",
+     "url": "https://www.lagaceta.gob.ni/la-gaceta-no-103-martes-09-de-junio-de-2026/"
+    },
+    {
+     "date": "",
+     "host": "www.dgi.gob.ni",
+     "rank": 4,
+     "snippet": "LA GACETA \nDIARIO OFICIAL \nTeléfonos: 2228-3791 / 2222-7344 \n...\nManagua, Martes 26 de Diciembre de 2023 \nNo. 234 \n...\nASAMBLEA NACIONAL \n...\n…",
+     "title": "La Gaceta, Diario Oficial N°. 234 del 26/12/2023",
+     "url": "https://www.dgi.gob.ni/pdfLegislacion/1188"
+    },
+    {
+     "date": "2024-08-20",
+     "host": "www.lagaceta.gob.ni",
+     "rank": 5,
+     "snippet": "La Gaceta - Descargables\n### Consulta\n# La Gaceta - Descargables\nDescargue archivos gratuitos\n...\n- ### La Gaceta - Nº 190 Jueves 21 de Octubre de 2023 - Ley No 1011 Digesto Materia Sistema De Administración Financiera",
+     "title": "La Gaceta - Descargables",
+     "url": "https://www.lagaceta.gob.ni/descargables"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Nicaragua supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.poderjudicial.gob.ni",
+     "rank": 1,
+     "snippet": "Sistema de Publicaciones Judiciales.\n...\nServicio de Consulta Especializada de Sentencias, Jurisprudencia, Doctrina, Legislación y Libros publicados por el CEDIJ.",
+     "title": "Poder Judicial de Nicaragua",
+     "url": "https://www.poderjudicial.gob.ni/site/intranet/"
+    },
+    {
+     "date": "",
+     "host": "www.poderjudicial.gob.ni",
+     "rank": 2,
+     "snippet": "Bibliográfico)\nR Boletines Judiciales Digitales en la Web.\n(1913-1922, 1990-1997)\nR Sentencias en formato Digital a través del correo electrónico (Magistrados\nAsesores y Jueces).\n...\nEl usuario consulta en línea la",
+     "title": "Corte Suprema de Justicia de Nicaragua::. Biblioteca Jurídica",
+     "url": "https://www.poderjudicial.gob.ni/bijun2/servicios.asp"
+    },
+    {
+     "date": "",
+     "host": "www.poderjudicial.gob.ni",
+     "rank": 3,
+     "snippet": "Búsqueda en Biblioteca\n...\nEstadísticas de Asuntos\nPenales.\nResoluciones Penales\nEstadísticas de Resoluciones\nPenales.",
+     "title": "PODER JUDICIAL DE NICARAGUA",
+     "url": "https://www.poderjudicial.gob.ni/paginas/cplena.asp"
+    },
+    {
+     "date": "",
+     "host": "www.nyulawglobal.org",
+     "rank": 4,
+     "snippet": "To access jurisprudence, the website for the judicial power does not provide a unique search engine; therefore, the search should be made through the different chambers of the Court.\nIt is available through the Constitutional Chamber, the Criminal Chamber, the Civil Chamber, and finally the Contenti",
+     "title": "Overview of Select Databases for Spanish-Speaking ...",
+     "url": "https://www.nyulawglobal.org/globalex/databases_spanish-speaking_jurisdictions1.html"
+    },
+    {
+     "date": "2014-01-01",
+     "host": "www.poderjudicial.gob.ni",
+     "rank": 5,
+     "snippet": "Libro de Actas de Corte Plena.\nACTA No 1.",
+     "title": "SALA CIVIL",
+     "url": "https://www.poderjudicial.gob.ni/scivil_1/origen.asp"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Nicaragua state or provincial legislation official portal",
+   "descartados": 3,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "www.lagaceta.gob.ni",
+     "rank": 1,
+     "snippet": "La Gaceta Nicaragua\n...\n# La Gaceta Nicaragua\nDiario Oficial de Nicaragua\n##### La Gaceta\nDiario oficial de Nicaragua\n...\nPonemos a su disposición lo último en tecnología para que se mantenga informado con La Gaceta Diario Oficial de Nicaragua, gracias por su preferencia.",
+     "title": "La Gaceta Nicaragua",
+     "url": "https://www.lagaceta.gob.ni/"
+    },
+    {
+     "date": "2024-08-20",
+     "host": "www.lagaceta.gob.ni",
+     "rank": 2,
+     "snippet": "La Gaceta - Descargables\n### Consulta\n# La Gaceta - Descargables\nDescargue archivos gratuitos\n- ### Ley No 1175 - Ley del Digesto Jurídico Nicaragüense de la Materia de Banca y Finanzas",
+     "title": "La Gaceta - Descargables",
+     "url": "https://www.lagaceta.gob.ni/descargables"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Nicaragua municipal bylaws regulations official portal",
+   "descartados": 4,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "www.lagaceta.gob.ni",
+     "rank": 1,
+     "snippet": "La Gaceta Nicaragua\n### Consulta\n# La Gaceta Nicaragua\nDiario Oficial de Nicaragua\n##### La Gaceta\nDiario oficial de Nicaragua\n...\n##### Sobre nosotros\nDiario Oficial La Gaceta Nicaragua",
+     "title": "La Gaceta Nicaragua",
+     "url": "https://www.lagaceta.gob.ni/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Nicaragua regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2018-07-20",
+     "host": "www.siboif.gob.ni",
+     "rank": 1,
+     "snippet": "# Documentos\nIntendencia\n...\n|Norma para la Autorización y Funcionamiento de los Intermediarios de Seguros|CD-SIBOIF-719-2-MAR14-2012|Normas|05/01/2012| |Seguros|",
+     "title": "Documentos | SIBOIF - siboif.gob.ni",
+     "url": "https://www.siboif.gob.ni/consultas/documentos2"
+    },
+    {
+     "date": "2022-02-01",
+     "host": "www.minsa.gob.ni",
+     "rank": 2,
+     "snippet": "Publicaciones Autoridad Nacional de Regulación Sanitaria | MINSA\n## Publicaciones Autoridad Nacional de Regulación Sanitaria\n|Título|Tipo Publicación|Fecha Publicación|Grupo Ordenar ascendente|Sub Área|Área|\n|--|--|--|--|--|--|",
+     "title": "Navegación principal",
+     "url": "https://www.minsa.gob.ni/publicaciones/direccion-general-de-regulacion-sanitaria?field_sub_area_target_id=All&field_grupo_target_id=All&field_tipo_publicacion_target_id=All&title=&items_per_page=10&order=field_grupo&sort=desc&page=48"
+    },
+    {
+     "date": "2021-09-26",
+     "host": "www.trade.gov",
+     "rank": 3,
+     "snippet": "The Technical Standards and Quality Law establishes a National Standards and Quality Commission, including public and private sector members, to develop standards and regulations.\n...\nThe Ministry of Development, Industry, and Trade’s Normalization and Metrology Department is in charge of managing a",
+     "title": "Nicaragua - Standards for Trade",
+     "url": "https://www.trade.gov/country-commercial-guides/nicaragua-standards-trade"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.lagaceta.gob.ni",
+     "rank": 4,
+     "snippet": "# La Gaceta Nicaragua\nDiario Oficial de Nicaragua\n##### La Gaceta\nDiario oficial de Nicaragua\n...\nLea nuestra última edición en el formato digital de su preferencia para mantenerse informado de las leyes, decretos y demás publicaciones de su interés y …\nLeer más",
+     "title": "www.lagaceta.gob.niLa Gaceta Nicaragua",
+     "url": "https://www.lagaceta.gob.ni/?edno=20"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.state.gov",
+     "rank": 5,
+     "snippet": "In February 2025, Nicaragua’s National Assembly approved a new Foreign Investment Law (Law No. 1240), which created the National Foreign Investment Commission (Comisión Nacional de Inversión Extranjera, CNIE) to oversee and regulate all foreign direct investment (FDI) in the country.",
+     "title": "Nicaragua - United States Department of State",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/nicaragua/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Nicaragua national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.delcampo.net.ni",
+     "rank": 1,
+     "snippet": "#### ISO 9001_2015: Sistemas de Gestión de la Calidad\n...\n#### NTON 14 023-12 de Instalaciones de Tanques Estacionarios para Almacenamiento y Distribución de Gas Licuado de Petroleo (GLP). Especificaciones Técnicas y de Seguridad",
+     "title": "Normas de Calidad",
+     "url": "https://www.delcampo.net.ni/ncal.php"
+    },
+    {
+     "date": "2022-09-01",
+     "host": "www.minsa.gob.ni",
+     "rank": 2,
+     "snippet": "### NTON 03 096 11 Norma Técnica Obligatoria Nicaragüense\nNorma Técnica\n01/09/2022\n…\n### NTON 03 088 10 Directrices Sobre Procedimientos Básicos Para la Inspección Visual de Lotes de Alimentos Envasados",
+     "title": "Norma Técnica | MINSA",
+     "url": "https://www.minsa.gob.ni/index.php/taxonomy/term/649?page=2"
+    },
+    {
+     "date": "2022-09-01",
+     "host": "www.minsa.gob.ni",
+     "rank": 3,
+     "snippet": "|--|--|--|--|--|--|\n|NTON 03 089 10 Frutas, Vegetales y Hortalizas Encurtidas|Norma Técnica| |Frutas y Vegetales|Dirección de Alimentos|Autoridad Nacional de Regulación Sanitaria|",
+     "title": "Publicaciones Autoridad Nacional de Regulación Sanitaria | MINSA",
+     "url": "https://www.minsa.gob.ni/index.php/publicaciones/direccion-general-de-regulacion-sanitaria?field_sub_area_target_id=128&field_grupo_target_id=All&field_tipo_publicacion_target_id=All&items_per_page=25&page=3&title=&order=title&sort=asc"
+    },
+    {
+     "date": "2022-02-01",
+     "host": "www.minsa.gob.ni",
+     "rank": 4,
+     "snippet": "…\n...\n|NTON 03 035 00 Norma de Especificaciones de Bebidas Alcohólica - Rones|Norma Técnica|01/09/2022|Bebidas Alcóholicas|Dirección de Alimentos|Autoridad Nacional de Regulación Sanitaria|",
+     "title": "Publicaciones Autoridad Nacional de Regulación Sanitaria - MINSA",
+     "url": "https://www.minsa.gob.ni/publicaciones/direccion-general-de-regulacion-sanitaria?field_sub_area_target_id=All&field_grupo_target_id=All&field_tipo_publicacion_target_id=All&title=&items_per_page=25&page=20"
+    },
+    {
+     "date": "",
+     "host": "www.ipsa.gob.ni",
+     "rank": 5,
+     "snippet": "**\n...\n**\n...\n**\n…\n**NTON 03 093-10 RTCA Guía de Verificación BPH Alimentos no procesados 1**\n...\n**NTON 03 097- 11 Norma Técnica Nicaragüense.\nGuayaba**\n...\nIPSA",
+     "title": "INOCUIDAD ALIMENTARIA - IPSA",
+     "url": "https://www.ipsa.gob.ni/INOCUIDAD-ALIMENTARIA"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Nicaragua mandatory technical regulations official list",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2026-08-06",
+     "host": "www.minsa.gob.ni",
+     "rank": 1,
+     "snippet": "### NTON 03 096 11 Norma Técnica Obligatoria Nicaragüense\nNorma Técnica\n01/09/2022\n…\n...\nNorma Técnica\n01/09/2022",
+     "title": "Generales",
+     "url": "https://www.minsa.gob.ni/index.php/taxonomy/term/165"
+    },
+    {
+     "date": "2026-10-05",
+     "host": "nicaragua.justia.com",
+     "rank": 2,
+     "snippet": "Medicamentos Para Uso Humano.\n...\n90. Norma Técnica Obligatoria Nicaragüense.\nEficiencia Energética.\nRefrigeradores Electrodomésticos Y Congeladores Electrodomésticos.\nMétodo De Ensayo - Feb 08 2010\n...\nEficiencia Energética.",
+     "title": "Normas Técnicas",
+     "url": "https://nicaragua.justia.com/nacionales/normas-tecnicas/"
+    },
+    {
+     "date": "2022-09-01",
+     "host": "www.minsa.gob.ni",
+     "rank": 3,
+     "snippet": "### NTON 03 096 11 Norma Técnica Obligatoria Nicaragüense\nNorma Técnica\n01/09/2022\n…\n### NTON 03 088 10 Directrices Sobre Procedimientos Básicos Para la Inspección Visual de Lotes de Alimentos Envasados",
+     "title": "Norma Técnica | MINSA",
+     "url": "https://www.minsa.gob.ni/index.php/taxonomy/term/649?page=2"
+    },
+    {
+     "date": "",
+     "host": "agriexchange.apeda.gov.in",
+     "rank": 4,
+     "snippet": "list of these Technical Regulations is available online.\nNicaragua has also a series of mandatory and voluntary technical norms (known as NTON) that regulate plants, animals, food products, agrochemicals and other products.\n...\nA complete list of these regulations is available online.\n...\n…",
+     "title": "Food and Agricultural Import Regulations and Standards ...",
+     "url": "https://agriexchange.apeda.gov.in/ImportRegulations/Food%20and%20Agricultural%20Import%20Regulations%20and%20Standards%20%20NarrativeManaguaNicaragua12212016.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Nicaragua national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.inide.gob.ni",
+     "rank": 1,
+     "snippet": "### Publicaciones Recientes\n...\n### Informe Encuesta Continua de los Hogares al IV-Trimestre 2020\nSistema Estadístico Nacional\nGeoPortal INIDE",
+     "title": "INIDE: Instituto Nacional de Información de Desarrollo",
+     "url": "https://www.inide.gob.ni/"
+    },
+    {
+     "date": "",
+     "host": "unstats.un.org",
+     "rank": 2,
+     "snippet": "</td><td>\n**\nSign in ** </td></tr><tr><td colspan=\"2\">\n</td></tr></table>| |Country Profile of Nicaragua",
+     "title": "Country Profile of Nicaragua - UNSD Document",
+     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=633"
+    },
+    {
+     "date": "",
+     "host": "www.inide.gob.ni",
+     "rank": 3,
+     "snippet": "Instituto Nacional de Información de Desarrollo - INIDE\n## Anuarios Estadísticos\n## EL Instituto Nacional de Información de Desarrollo (INIDE), pone a disposición del público, los anuarios estadísticos.\nEstadísticas Económicas Estadística Social Demografica\n…",
+     "title": "Anuarios Estadísticos",
+     "url": "https://www.inide.gob.ni/Home/anuarios"
+    },
+    {
+     "date": "",
+     "host": "www.inide.gob.ni",
+     "rank": 4,
+     "snippet": "### Misión\nEl Instituto Nacional de Información de Desarrollo (INIDE), tiene como misión proporcionar información y elemento de juicio estadístico en forma oportuna\ny accesible, para apoyar la toma de decisiones y facilitar la formulación y ejecución de políticas y programas de interés nacional.",
+     "title": "Misión y Visión",
+     "url": "https://www.inide.gob.ni/Home/Institucion"
+    },
+    {
+     "date": "",
+     "host": "www.inide.gob.ni",
+     "rank": 5,
+     "snippet": "## Sistema Estadístico Nacional - S.E.N.\n...\nEl Sistema Estadístico Nacional (en adelante SEN o “Sistema”), definido como el conjunto de entidades del sector público interrelacionadas entre sí que\n...\nEl INIDE está ubicado en Residencial Los Arcos Frente al Hospital Lenin Fonseca, Managua-Nicaragua.",
+     "title": "Sistema Estadístico Nacional - SEN",
+     "url": "https://www.inide.gob.ni/home/sen"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Nicaragua central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bcn.gob.ni",
+     "rank": 1,
+     "snippet": "Estadísticas | Banco Central de Nicaragua\n...\nEl contenido principal de la sección son los indicadores macroeconómicos y estadísticas de síntesis, agrupados en el menú Datos.\n...\n…\n...\nContiene información estadística de los diferentes sectores con periodicidad mensual.\n...\nContiene información hist",
+     "title": "Estadísticas",
+     "url": "https://www.bcn.gob.ni/estadisticas"
+    },
+    {
+     "date": "2026-10-14",
+     "host": "bcn.gob.ni",
+     "rank": 2,
+     "snippet": "|PIB|3.7%|IV T/24| |\n...\n|IMAE|3.4%|01/25| |\n|Inflación|0.83%|03/25| |\n|Ocupación|66.2%|02/25| |",
+     "title": "PRINCIPALES INDICADORES",
+     "url": "https://bcn.gob.ni/"
+    },
+    {
+     "date": "",
+     "host": "www.bcn.gob.ni",
+     "rank": 3,
+     "snippet": "Anuario Estadístico | Banco Central de Nicaragua\n### Anuario Estadístico\nEn esta sección encontrará series de estadísticas macroeconómicas para el período de 2006 - 2022: producción, precios, empleo, salario, sector monetario y financiero, sector público, sector externo y deuda pública.",
+     "title": "Anuario Estadístico | Banco Central de Nicaragua",
+     "url": "https://www.bcn.gob.ni/anuario-estadistico"
+    },
+    {
+     "date": "",
+     "host": "www.bcn.gob.ni",
+     "rank": 4,
+     "snippet": "Base de Datos Estadísticos | Banco Central de Nicaragua\n...\n|3.\n...\n|1.\nBanco Central de Nicaragua: Reservas Internacionales Brutas (RIB)| | |\n|2.\nBanco Central de Nicaragua: Reservas Internacionales Netas (RIN)| | |\n|3.",
+     "title": "Base de Datos Estadísticos | Banco Central de Nicaragua",
+     "url": "https://www.bcn.gob.ni/base-de-datos-estadisticos"
+    },
+    {
+     "date": "",
+     "host": "www.bcn.gob.ni",
+     "rank": 5,
+     "snippet": "Estadísticas Monetarias | Banco Central de Nicaragua\n...\nEn esta sección se presenta el conjunto de indicadores de seguimiento diario con cuadros seleccionados de las principales variables monetarias en saldos y flujos.\nAsí mismo se presentan las estadísticas monetarias y financieras mensuales histó",
+     "title": "Estadísticas Monetarias",
+     "url": "https://www.bcn.gob.ni/estadisticas-monetarias"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Nicaragua government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2025-01-01",
+     "host": "www.ineter.gob.ni",
+     "rank": 1,
+     "snippet": "Los geoportales de la Infraestructura de Datos Espaciales (IDE) del Instituto Nicaragüense de Estudios Territoriales (INETER) ofrecen una plataforma interactiva que integra una variedad de mapas temáticos y cartografía de alta relevancia para Nicaragua.",
+     "title": "IDE-INETER | Geoportales",
+     "url": "https://www.ineter.gob.ni/geoportales.html"
+    },
+    {
+     "date": "",
+     "host": "www.bcn.gob.ni",
+     "rank": 2,
+     "snippet": "|Internet|\n|Sitios web del MHCP:www.finanzas.gob.ni y del BCN:www.bcn.gob.ni|",
+     "title": "Sistema General de Divulgación de Datos (SGDD)",
+     "url": "https://www.bcn.gob.ni/sistema-general-de-divulgaci%C3%B3n-de-datos-sgdd"
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 3,
+     "snippet": "- **Total**\n4\n- **Open data portals**\n–",
+     "title": "Nicaragua data catalogs",
+     "url": "https://dateno.io/registry/country/NI/"
+    },
+    {
+     "date": "2026-06-10",
+     "host": "github.com",
+     "rank": 4,
+     "snippet": "- Open Data Nicaragua – National open data portal aggregating government datasets including statistics, budgets and administrative records.\n...\n- ⬛ Portals of open data and datasets in various directions\n- **Datos Abiertos Nicaragua** – National open data portal hosting government datasets on econom",
+     "title": "OSINT_in_Nicaragua/README.md at main · OSINT-for-countries/OSINT_in_Nicaragua",
+     "url": "https://github.com/OSINT-for-countries/OSINT_in_Nicaragua/blob/main/README.md"
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 5,
+     "snippet": "# Data Catalogs & Data Portals\n|`cdi00002127`|mapserveride.ineter.gob.ni/geonetwork|Yes|202|Geoportal|Central government|Nicaragua|Geonetwork|",
+     "title": "Registry of Data Catalogs and Portals",
+     "url": "https://dateno.io/registry/browse/?skip=2100"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:05:42Z",
+ "pais": {
+  "iso2": "NI",
+  "iso3": "NIC",
+  "nombre": "Nicaragua"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

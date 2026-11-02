@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "France constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.conseil-constitutionnel.fr",
+     "rank": 1,
+     "snippet": "L'initiative de la révision de la Constitution appartient concurremment au Président de la République sur proposition du Premier ministre et aux membres du Parlement.",
+     "title": "Texte intégral de la Constitution du 4 octobre 1958 en ...",
+     "url": "https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur"
+    },
+    {
+     "date": "",
+     "host": "www.conseil-constitutionnel.fr",
+     "rank": 2,
+     "snippet": "# Constitution of 4 October 1958\n...\n- Copier l'URLhttps://www.conseil-constitutionnel.fr/en/constitution-of-4-october-1958\n...\n- Télécharger\n...\nPDF Version\nConstitution of October 4, 1958Pdf 272.75 KB",
+     "title": "Constitution of 4 October 1958",
+     "url": "https://www.conseil-constitutionnel.fr/en/constitution-of-4-october-1958"
+    },
+    {
+     "date": "2023-02-13",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 3,
+     "snippet": "## Journal officiel de la République française (JORF)\n- JORF n° 0199\ndu 28 août 2025\n- JORF n° 0198\ndu 27 août 2025\n...\ndu 22 août 2025",
+     "title": "Votre avis nous intéresse !",
+     "url": "https://www.legifrance.gouv.fr/"
+    },
+    {
+     "date": "",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 4,
+     "snippet": "- Constitution du 4 octobre 1958\n...\n### Législatif et réglementaire\n- Dossiers législatifs\n- Etudes d'impact des lois\n- Les avis du Conseil d'État rendus sur les projets de loi\n- Application des lois\n...\n- Statistiques de la norme",
+     "title": "Plan du site",
+     "url": "https://www.legifrance.gouv.fr/contenu/pied-de-page/plan-du-site"
+    },
+    {
+     "date": "2019-03-12",
+     "host": "www.dila.gouv.fr",
+     "rank": 5,
+     "snippet": "# Les Codes et textes consolidés\n...\nLa rubrique des « codes et textes consolidés » sur Légifrance.gouv.fr a pour objet de mettre en ligne le texte intégral consolidé de la législation et de la réglementation nationale.\nIl est essentiellement constitué des :\n…",
+     "title": "Les Codes et textes consolidés - Direction de l'information ...",
+     "url": "https://www.dila.gouv.fr/home/les-codes-et-textes-consolides"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "France national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2004-06-02",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 1,
+     "snippet": "# 2902953 résultats trouvés\nTriés par pertinence\nLa liste sera mise à\n...\n## Abonnez-vous au Journal officiel de la République française\n...\nLe site Légifrance est placé sous la responsabilité éditoriale du Secrétariat général du Gouvernement (SGG).",
+     "title": "Résultats de recherche, page 1",
+     "url": "https://www.legifrance.gouv.fr/search"
+    },
+    {
+     "date": "2025-05-08",
+     "host": "journal-officiel.legifrance.gouv.fr",
+     "rank": 2,
+     "snippet": "La présente interface vous permet d’accéder aux versions électroniques du Journal officiel de la République française, publiées depuis le 2 juin 2004, dans le cas où survient une indisponibilité technique, partielle ou totale, du site Légifrance.",
+     "title": "Légifrance",
+     "url": "https://journal-officiel.legifrance.gouv.fr/"
+    },
+    {
+     "date": "2025-08-29",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 3,
+     "snippet": "# Journal officiel \"Lois et Décrets\"\n...\nELI: https://www.legifrance.gouv.fr/eli/jo/2025/8/29/0200Télécharger le Journal officiel authentifié PDF - 12,2 Mo\n## Décrets, arrêtés, circulaires",
+     "title": "Journal officiel \"Lois et Décrets\"",
+     "url": "https://www.legifrance.gouv.fr/jorf/jo"
+    },
+    {
+     "date": "2023-02-13",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 4,
+     "snippet": "## Journal officiel de la République française (JORF)\n- JORF n° 0199\ndu 28 août 2025\n- JORF n° 0198\n...\nLes équipes de Légifrance sont à votre écoute pour\naméliorer le site et ses services.",
+     "title": "Votre avis nous intéresse !",
+     "url": "https://www.legifrance.gouv.fr/"
+    },
+    {
+     "date": "2019-10-31",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 5,
+     "snippet": "# Recherche avancée\nLa liste des fonds sera filtrée au fur et à mesure en temps réel|",
+     "title": "Recherche avancée",
+     "url": "https://www.legifrance.gouv.fr/recherche"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "France official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2025-05-08",
+     "host": "journal-officiel.legifrance.gouv.fr",
+     "rank": 1,
+     "snippet": "La présente interface vous permet d’accéder aux versions électroniques du Journal officiel de la République française, publiées depuis le 2 juin 2004, dans le cas où survient une indisponibilité technique, partielle ou totale, du site Légifrance.",
+     "title": "Légifrance",
+     "url": "https://journal-officiel.legifrance.gouv.fr/"
+    },
+    {
+     "date": "2023-02-13",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 2,
+     "snippet": "## Journal officiel de la République française (JORF)\n- JORF n° 0199\ndu 28 août 2025\n...\ndu 26 août 2025\n...\ndu 24 août 2025\n...\n- JORF n° 0194\ndu 22 août 2025",
+     "title": "Votre avis nous intéresse !",
+     "url": "https://www.legifrance.gouv.fr/"
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 3,
+     "snippet": "Description:\n1 title containing the official gazette for France from 1789 to 1847, for 1871 and from 1919 onwards.\n1927 and 1936 to 1940 are on microfiche.\nIt is an official publication and the text is in French.",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag/france-legislation-officialnprq561b21-syn0871q5-41"
+    },
+    {
+     "date": "2020-09-16",
+     "host": "www.journal-officiel.gouv.fr",
+     "rank": 4,
+     "snippet": "# Journal officiel\nLe *Journal officiel* publie les textes législatifs et réglementaires de la République française.\nIl est disponible sur le site Légifrance.\n...\nRetrouver tous les textes publiés au *Journal officiel* de la République française « Lois et décrets ».",
+     "title": "Pages",
+     "url": "https://www.journal-officiel.gouv.fr/pages/journal-officiel/"
+    },
+    {
+     "date": "",
+     "host": "archives.seine-et-marne.fr",
+     "rank": 5,
+     "snippet": "**Contenu :** Ce fond contient les publications officielles nationales.\nDès 1631, récits de guerre et commentaires sur la vie politique de la nation sont publiés dans la Gazette de Théophraste Renaudot, le premier journal français.",
+     "title": "Publications officielles nationales, journaux officiels",
+     "url": "https://archives.seine-et-marne.fr/fr/publications-officielles-nationales-journaux-officiels"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "France supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.courdecassation.fr",
+     "rank": 1,
+     "snippet": "# Judilibre\n## Accès rapide aux décisions de la Cour de cassation\n### Par chambre\n- Assemblée plénière\n- Chambre mixte\n...\n- Chambre sociale\n- Chambre criminelle\n### Par date\n- Par dates décroissantes\n- Par dates croissantes",
+     "title": "Judilibre",
+     "url": "https://www.courdecassation.fr/acces-rapide-judilibre"
+    },
+    {
+     "date": "",
+     "host": "www.courdecassation.fr",
+     "rank": 2,
+     "snippet": "Page 1 sur 56952 - Recherche Judilibre | Cour de cassation\n1. Accueil\n2. Recherche Judilibre\n# Recherche Judilibre\n## 569520 résultat(s) - 56952 page(s)",
+     "title": "Page 1 sur 56952 - Recherche Judilibre",
+     "url": "https://www.courdecassation.fr/recherche-judilibre"
+    },
+    {
+     "date": "",
+     "host": "www.courdecassation.fr",
+     "rank": 3,
+     "snippet": "**Judilibre** est le traitement mis en œuvre par la Cour de cassation pour mettre à la disposition du public, gratuitement, une base de données ouverte alimentée par les décisions rendues publiquement par la Cour de cassation éventuellement enrichies et pseudonymisées.",
+     "title": "Données ouvertes (open data) et API - Cour de cassation",
+     "url": "https://www.courdecassation.fr/acces-rapide-judilibre/donnees-ouvertes-open-data-et-api"
+    },
+    {
+     "date": "",
+     "host": "www.courdecassation.fr",
+     "rank": 4,
+     "snippet": "# Mise en données ouvertes (open data) des décisions de justice\nC’est sur Judilibre, la plateforme administrée par la Cour de cassation, que la diffusion des décisions de justice de l’ordre judiciaire est réalisée.",
+     "title": "L'open data des décisions judiciaires - Cour de cassationwww.courdecassation.fr › la-cour-de-cassation › demain › lopen-data-des-...",
+     "url": "https://www.courdecassation.fr/la-cour-de-cassation/demain/lopen-data-des-decisions-judiciaires"
+    },
+    {
+     "date": "",
+     "host": "www.courdecassation.fr",
+     "rank": 5,
+     "snippet": "## Les dernières décisions aux Bulletins et au Rapport\n### procedures civiles d'execution\nDeuxième chambre civile\n22 Oct\nPourvoi n°23-21.018",
+     "title": "Cour de cassation",
+     "url": "https://www.courdecassation.fr/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "France state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2023-02-13",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 1,
+     "snippet": "## Journal officiel de la République française (JORF)\n- JORF n° 0199\n...\n- JORF n° 0198",
+     "title": "Votre avis nous intéresse !",
+     "url": "https://www.legifrance.gouv.fr/"
+    },
+    {
+     "date": "2025-08-29",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 2,
+     "snippet": "# Journal officiel \"Lois et Décrets\"\n...\nELI: https://www.legifrance.gouv.fr/eli/jo/2025/8/29/0200Télécharger le Journal officiel authentifié PDF - 12,2 Mo\n…",
+     "title": "Journal officiel \"Lois et Décrets\"",
+     "url": "https://www.legifrance.gouv.fr/jorf/jo"
+    },
+    {
+     "date": "2004-06-02",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 3,
+     "snippet": "## LOI n° 2023-703 du 1er août 2023 relative à la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense (1)\nTextes consolidés\nen vigueur\n- Version initiale\n- Version consolidée",
+     "title": "Résultats de recherche, page 1",
+     "url": "https://www.legifrance.gouv.fr/search"
+    },
+    {
+     "date": "2024-06-30",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 4,
+     "snippet": "Autour de la loi\nLes lois\n## Les lois publiées depuis le début de la XIIe législature (juin 2002)",
+     "title": "Les lois",
+     "url": "https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/legislatif-et-reglementaire/application-des-lois/les-lois"
+    },
+    {
+     "date": "2025-05-08",
+     "host": "journal-officiel.legifrance.gouv.fr",
+     "rank": 5,
+     "snippet": "La présente interface vous permet d’accéder aux versions électroniques du Journal officiel de la République française, publiées depuis le 2 juin 2004, dans le cas où survient une indisponibilité technique, partielle ou totale, du site Légifrance.",
+     "title": "Légifrance",
+     "url": "https://journal-officiel.legifrance.gouv.fr/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "France municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.geoportail-urbanisme.gouv.fr",
+     "rank": 1,
+     "snippet": "…\n| | |**Vous êtes un particulier :** vous avez des projets de construction ou d’extension ? Consultez les règlements d’urbanisme qui s’appliquent sur votre parcelle ou votre commune|\nPubliez vos données sur le Géoportail de l’urbanisme »|",
+     "title": "Géoportail de l'Urbanisme: Accueil",
+     "url": "https://www.geoportail-urbanisme.gouv.fr/"
+    },
+    {
+     "date": "2026-08-05",
+     "host": "www.service-public.gouv.fr",
+     "rank": 2,
+     "snippet": "## Textes de loi et références\n...\n- Code général des collectivités territoriales : article R2131-1\nCommune - Mise à disposition des actes publiés sous forme électronique sur le site internet de la commune (article R2131-1)",
+     "title": "Comment consulter les décisions de sa mairie, son ...",
+     "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2513"
+    },
+    {
+     "date": "",
+     "host": "www.geoportail-urbanisme.gouv.fr",
+     "rank": 3,
+     "snippet": "```\n*Le Géoportail de l’urbanisme a été créé en avril 2016 pour accueillir en 2020 tous les documents d’urbanisme\net les servitudes d’utilité publique applicables sur le territoire national.\n...\n```",
+     "title": "www.geoportail-urbanisme.gouv.fr · comment-ca-marcheComment ça marche - Géoportail de l'Urbanisme",
+     "url": "https://www.geoportail-urbanisme.gouv.fr/comment-ca-marche/"
+    },
+    {
+     "date": "",
+     "host": "www.geoportail-urbanisme.gouv.fr",
+     "rank": 4,
+     "snippet": "Géoportail de l'Urbanisme\n...\n|\n**Quels services vous offre le Géoportail de l'urbanisme ?**|Le Géoportail de l'urbanisme (GPU) donne accès aux règlementations d’urbanisme des territoires.\n...\n- service-public.gouv.fr",
+     "title": "A propos",
+     "url": "https://www.geoportail-urbanisme.gouv.fr/info-general/"
+    },
+    {
+     "date": "",
+     "host": "www.banatic.interieur.gouv.fr",
+     "rank": 5,
+     "snippet": "# Documents\n## Lois\n- LOI n° 2022-217 du 21 février 2022 relative à la différenciation, la décentralisation, la déconcentration et portant diverses mesures de simplification de l'action publique locale",
+     "title": "Document",
+     "url": "https://www.banatic.interieur.gouv.fr/ressources/document"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "France regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "lannuaire.service-public.gouv.fr",
+     "rank": 1,
+     "snippet": "- Autorité de contrôle des nuisances aéroportuaires\n- Autorité de régulation des communications électroniques, des postes et de la distribution de la presse (ARCEP)\n- Autorité de la concurrence\n...\n- Autorité de régulation de la communication audiovisuelle et numérique (Arcom)\n...\n…",
+     "title": "Autorités indépendantes",
+     "url": "https://lannuaire.service-public.gouv.fr/navigation/autorites-independantes"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.amf-france.org",
+     "rank": 2,
+     "snippet": "The AMF publishes its recommendations on the liquidity of Money Market Funds\n...\nThe Autorité des marchés financiers (AMF) is publishing its recommendations on the liquidity of money market funds, following a public consultation conducted during the summer of 2026.",
+     "title": "The AMF publishes its recommendations on the liquidity of ...",
+     "url": "https://www.amf-france.org/en/news-publications/news/amf-publishes-its-recommendations-liquidity-money-market-funds"
+    },
+    {
+     "date": "2026-09-11",
+     "host": "www.amf-france.org",
+     "rank": 3,
+     "snippet": "GR into force since 11/09/2026 | AMF\n- **Presentation of the AMF**\nAccess the presentation of the AMF\n- **General Regulation**\nConsult the current General Regulation\n**Policy**\nConsult the AMF Policy",
+     "title": "General regulation of the AMF into force since 11/09/2026",
+     "url": "https://www.amf-france.org/en/eli/fr/aai/amf/rg/book/3/title/1_2/chapter/3/section/10/20260911/notes"
+    },
+    {
+     "date": "",
+     "host": "www.entreprises.gouv.fr",
+     "rank": 4,
+     "snippet": "En France, la surveillance du marché est principalement exercée par sept acteurs, 4 ministères et 3 agences de l’État, qui surveillent les produits relevant de leurs domaines de compétences.\n...\nl’Agence nationale des fréquences (ANFR), pour la surveillance du marché des équipements hertziens ;",
+     "title": "www.entreprises.gouv.fr · files · filesStratégie nationale de surveillance du marché - Synthèse -",
+     "url": "https://www.entreprises.gouv.fr/files/files/Espace-entreprises/Reglementation/synthese-strategie-fr-de-surveillance-du-marche.pdf"
+    },
+    {
+     "date": "2022-06-14",
+     "host": "www.santepubliquefrance.fr",
+     "rank": 5,
+     "snippet": "Regulatory texts | Santé publique France\n...\n- Santé publique France is the national public health agency.\n...\n- Decree No. 2006-99 of February 1, 2006, concerning the French Blood Establishment and hemovigilance and amending the Public Health Code (regulatory provisions)",
+     "title": "Regulatory texts | Santé publique France",
+     "url": "https://www.santepubliquefrance.fr/en/regulatory-texts"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "France national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "norminfo.afnor.org",
+     "rank": 1,
+     "snippet": "Norme en conception\nLes normes sont élaborées par des commissions de normalisation, gérées par AFNOR et les Bureaux de normalisation sectoriels, qui rassemblent des représentants de toutes les parties intéressées (producteurs, utilisateurs, pouvoirs publics, associations, centres techniques, …).\n...",
+     "title": "Norm'Info - Structures et Normes",
+     "url": "https://norminfo.afnor.org/search"
+    },
+    {
+     "date": "",
+     "host": "www.boutique.afnor.org",
+     "rank": 2,
+     "snippet": "Bienvenue sur la boutique AFNOR\nDistributeur officiel des normes en France\nDécouvrez plus de 100 000 normes françaises européennes et internationales, notre collection de livres ainsi que nos différentes solutions d’abonnements adaptées à chacun de vos besoins.\n...\nLes normes Retrouvez toutes les no",
+     "title": "www.boutique.afnor.orgAccueil - AFNOR Editions",
+     "url": "https://www.boutique.afnor.org/?reloadInfos=true&Culture=fr-FR"
+    },
+    {
+     "date": "",
+     "host": "www.francenormalisation.fr",
+     "rank": 3,
+     "snippet": "AR 20040701A \nNF EN 14253+A1 \nE90253 \n20080201 Vibrations \n...\nspécifications, \nmarquage \nAR 20030905A;AR \n20100902A; AR \n...\n20151211B",
+     "title": "Liste des normes d'application obligatoire",
+     "url": "https://www.francenormalisation.fr/wp-content/uploads/2016/06/normes-application-obligatoire.pdf"
+    },
+    {
+     "date": "2026-05-14",
+     "host": "www.afnor.org",
+     "rank": 4,
+     "snippet": "# Découvrir les normes\n## Découvrir les normes\n### La normalisation en France\nAFNOR agit en tant qu’animateur central de la normalisation en France, recense les besoins en normalisation et mobilise les parties intéressées.",
+     "title": "Normes",
+     "url": "https://www.afnor.org/normes/"
+    },
+    {
+     "date": "2026-09-13",
+     "host": "www.afnor.org",
+     "rank": 5,
+     "snippet": "#### Stay informed\n11 rue Francis de Pressensé 93210 Saint-Denis01 41 62 80 00\n...\n## Learn about the standards\n### Standardization in France\nAFNOR serves as the central coordinating body for standardization in France, identifies standardization needs, and engages stakeholders.",
+     "title": "Standards | Groupe AFNOR",
+     "url": "https://www.afnor.org/en/standards/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "France mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2025-06-17",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 1,
+     "snippet": "Ces normes d’application obligatoire sont consultables sur le site de l’AFNOR en cliquant sur la référence de la norme figurant dans la colonne de gauche du tableau ci-joint, qui les recense.",
+     "title": "Normes AFNOR d'application obligatoire",
+     "url": "https://www.legifrance.gouv.fr/contenu/menu/autour-de-la-loi/entreprises/normes-afnor-d-application-obligatoire"
+    },
+    {
+     "date": "2022-11-14",
+     "host": "www.entreprises.gouv.fr",
+     "rank": 2,
+     "snippet": "## Réglementation générale applicable aux matériels électriques et électroniques\n...\nSi le produit comporte des composants électroniques actifs, il relève du décret n°2015-1084 du 27 août 2015, transposition de la directive compatibilité électromagnétique 2014/30/UE.",
+     "title": "Réglementation applicable aux matériels électriques et ...",
+     "url": "https://www.entreprises.gouv.fr/espace-entreprises/s-informer-sur-la-reglementation/reglementation-applicable-aux-materiels"
+    },
+    {
+     "date": "2025-02-05",
+     "host": "www.francenormalisation.fr",
+     "rank": 3,
+     "snippet": "…\nConformément à l’article 17 du décret n° 2009-697 du 16 juin 2009 modifié par le décret n° 2021-1473 du 10 novembre 2021, les normes ainsi rendues d’application obligatoire sont accessibles gratuitement ici.",
+     "title": "Les normes d’application obligatoire - France Normalisation",
+     "url": "https://www.francenormalisation.fr/les-acteurs-de-la-normalisation/normes-obligatoires/"
+    },
+    {
+     "date": "",
+     "host": "www.francenormalisation.fr",
+     "rank": 4,
+     "snippet": "Indice de \nclassement \nDate de la \nnorme \nTitre de la norme \nTexte réglementaire de \nmise en application \nobligatoire \nNF S70-003-1 \nS70003-1 \n20120701 Travaux à proximité",
+     "title": "Liste des normes d'application obligatoire",
+     "url": "https://www.francenormalisation.fr/wp-content/uploads/2016/06/normes-application-obligatoire.pdf"
+    },
+    {
+     "date": "2022-11-16",
+     "host": "www.legifrance.gouv.fr",
+     "rank": 5,
+     "snippet": "Modifié par Arrêté du 16 novembre 2022 - art.\n6",
+     "title": "Arrêté du 24 octobre 1984 portant mise en application obligatoire de normes",
+     "url": "https://www.legifrance.gouv.fr/loda/id/LEGITEXT000006071883"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "France national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "www.insee.fr",
+     "rank": 1,
+     "snippet": "Accueil − Insee − Institut national de la statistique et des études économiques | Insee\n## L’Institut national de la statistique et des études économiques collecte, produit, analyse et diffuse des informations sur l’économie et la société françaises",
+     "title": "www.insee.fr · fr · accueilAccueil - Insee - Institut national de la statistique et des ...",
+     "url": "https://www.insee.fr/fr/accueil?fr=nav"
+    },
+    {
+     "date": "",
+     "host": "catalogue-donnees.insee.fr",
+     "rank": 2,
+     "snippet": "Catalogue de données | Insee\n1. Accueil insee.fr\n2. Catalogue\n# Catalogue de données\nmelodi\nL'application Melodi (Mon Espace de Livraison en Open Data de l'Insee) met à disposition des jeux de données statistiques en open data.",
+     "title": "Catalogue de données - INSEE",
+     "url": "https://catalogue-donnees.insee.fr/fr/catalogue/recherche"
+    },
+    {
+     "date": "2026-10-23",
+     "host": "www.insee.fr",
+     "rank": 3,
+     "snippet": "Statistics and studies | Insee\n...\n# Statistics and studies\nThe Statistics section lists all the publications and data available on insee.fr.\nTo refine your search, two tools are at your disposal:\n...\n- the search engine on the upper right of each page, with results displayed starting from the most ",
+     "title": "Statistics and studies",
+     "url": "https://www.insee.fr/en/statistiques?idprec=7750780"
+    },
+    {
+     "date": "",
+     "host": "www.insee.fr",
+     "rank": 4,
+     "snippet": "Résultats de la recherche | Insee\n1. Accueil\n2. Statistiques et études\n# Statistiques et Études FR",
+     "title": "Statistiques et Études FR",
+     "url": "https://www.insee.fr/fr/statistiques?theme=2&debut=0"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.insee.fr",
+     "rank": 5,
+     "snippet": "Accueil − Insee − Institut national de la statistique et des études économiques | Insee\n## L’Institut national de la statistique et des études économiques collecte, produit, analyse et diffuse des informations sur l’économie et la société françaises",
+     "title": "National Institute of Statistics and Economic Studies",
+     "url": "https://www.insee.fr/en/accueil"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "France central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.banque-france.fr",
+     "rank": 1,
+     "snippet": "Statistiques | Banque de France\n1. Publications et statistiques\n2. Statistiques\n# Statistiques\nDécouvrez toutes les publications statistiques régulières de la Banque de France : ces publications vous offrent un aperçu des dernières tendances économiques et vous aident à mieux les comprendre grâce au",
+     "title": "Statistiques page 1 sur 911",
+     "url": "https://www.banque-france.fr/fr/publications-et-statistiques/statistiques"
+    },
+    {
+     "date": "",
+     "host": "acpr.banque-france.fr",
+     "rank": 2,
+     "snippet": "Statistiques | Banque de France\n...\n- CCSF\n...\n# Statistiques\nDécouvrez toutes les publications statistiques régulières de la Banque de France : ces publications vous offrent un aperçu des dernières tendances économiques et vous aident à mieux les comprendre grâce aux analyses des Stat Info.\nUtilise",
+     "title": "Statistiques | Banque de France",
+     "url": "https://acpr.banque-france.fr/fr/publications-et-statistiques/statistiques?page=1"
+    },
+    {
+     "date": "",
+     "host": "www.banque-france.fr",
+     "rank": 3,
+     "snippet": "Statistics | Banque de France\n1. Publications and statistics\n...\n# Statistics\nDiscover all the regular statistical publications from the Banque de France.\nThese publications provide insights into the latest economic trends and help you better understand them through the Stat Info analyses.\n...\nRates",
+     "title": "Statistics",
+     "url": "https://www.banque-france.fr/en/publications-and-statistics/statistics"
+    },
+    {
+     "date": "",
+     "host": "www.banque-france.fr",
+     "rank": 4,
+     "snippet": "Accès au portail Webstat | Banque de France\n...\nUn accès libre et gratuit à des milliers de données économiques, monétaires et financières...\nEt aussi des séries sur l'activité internationale et les taux.\n## Le portail statistique de la Banque de France\n## Webstat\n...\nConsulter",
+     "title": "Accès au portail Webstat - Banque de France",
+     "url": "https://www.banque-france.fr/fr/publications-et-statistiques/outils-statistiques/webstat"
+    },
+    {
+     "date": "",
+     "host": "www.banque-france.fr",
+     "rank": 5,
+     "snippet": "Search | Banque de France\n1. Search\n# Search\n- Statistics 11021\nDisable\nAll our statistics\nDiscover all the regular statistical publications from the Banque de France\nList of statistics\n## Results (11021)\n...\n### Banque de France Monthly Monetary Statement - 2026-09",
+     "title": "Search",
+     "url": "https://www.banque-france.fr/en/recherche?thematic[132]=132&f[0]=global_search_facet:statistics"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "France government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-10-12",
+     "host": "www.data.gouv.fr",
+     "rank": 1,
+     "snippet": "Catalogue des jeux de données publics - data.gouv.fr\n1. Accueil\n...\n# Rechercher un jeu de données\nparmi les 74995 jeux de données sur data.gouv.fr\n…\n...\nInstitut national de la statistique et des études économiques (Insee)\n...\n- API du portail",
+     "title": "Catalogue des jeux de données publics - data.gouv.fr",
+     "url": "https://www.data.gouv.fr/datasets"
+    },
+    {
+     "date": "",
+     "host": "www.numerique.gouv.fr",
+     "rank": 2,
+     "snippet": "# Accéder aux données publiques françaises data.gouv.fr\n- DINUM\n...\n- Agents publics\n...\n(Ouvre une nouvelle fenêtre) **data.gouv.fr** est la plateforme ouverte et communautaire qui vise à centraliser et structurer les données ouvertes en France.",
+     "title": "Accéder aux données publiques françaises data.gouv.fr",
+     "url": "https://www.numerique.gouv.fr/offre-accompagnement/offre-data-gouv/"
+    },
+    {
+     "date": "2026-11-01",
+     "host": "www.data.gouv.fr",
+     "rank": 3,
+     "snippet": "La plateforme data.gouv.fr est le portail unique interministériel destiné à rassembler et à mettre à disposition librement l’ensemble des informations publiques de l’État, de ses établissements publics administratifs, des collectivités territoriales et des personnes de droit public ou de droit privé",
+     "title": "Catalogue des données de data.gouv.fr",
+     "url": "https://www.data.gouv.fr/datasets/catalogue-des-donnees-de-data-gouv-fr"
+    },
+    {
+     "date": "",
+     "host": "guides.data.gouv.fr",
+     "rank": 4,
+     "snippet": "Il est possible que les données recherchées ne soient pas encore mises à disposition en open data.\nS’il s’agit de données produites par un organisme chargé d’une mission de service public (administrations, certains acteurs privés, etc.), vous pouvez faire une demande de publication en open data/d’ou",
+     "title": "Trouver des données | Guides sur les données | Guides de data ...",
+     "url": "https://guides.data.gouv.fr/guides/reutiliser-des-donnees/guide-traitement-et-analyse-de-donnees/trouver-des-donnees"
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.data.gouv.fr",
+     "rank": 5,
+     "snippet": "data.gouv.fr : Plateforme ouverte des données publiques françaises\n...\n# La plateforme des données publiques françaises\nUtilisez, partagez et améliorez les données publiques\n...\ndata.gouv.fr assure la mise à disposition de ces informations en organisant leur diffusion et leur exploitation.",
+     "title": "data.gouv.fr : Plateforme ouverte des données publiques ...",
+     "url": "https://www.data.gouv.fr/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:40:50Z",
+ "pais": {
+  "iso2": "FR",
+  "iso3": "FRA",
+  "nombre": "France"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

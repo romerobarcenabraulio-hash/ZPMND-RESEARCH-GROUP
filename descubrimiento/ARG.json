@@ -1,0 +1,763 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Argentina constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.infoleg.gob.ar",
+     "rank": 1,
+     "snippet": "Infoleg – Información Legislativa y Documental | Ministerio de Justicia de la Nación\n# BUSQUEDA POR NORMA\nBÚSQUEDA: POR TEXTO | POR BOLETÍN OFICIAL\n…",
+     "title": "Infoleg – Información Legislativa y Documental | Ministerio de ...",
+     "url": "https://www.infoleg.gob.ar/",
+     "verificacion": {
+      "bytes": 19636,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:40:59Z",
+      "http": 200,
+      "sha256": "ae447a64d68788119e7e3293c7b14ee34fc7434bc92ffb06e0e22cd42568f9e5"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.congreso.gob.ar",
+     "rank": 2,
+     "snippet": "Artículo 78.- Aprobado un proyecto de ley por la cámara de su origen, pasa para su discusión a la otra cámara.\nAprobado por ambas, pasa al Poder Ejecutivo de la Nación para su examen; y si también obtiene su aprobación, lo promulga como ley.",
+     "title": "Las Leyes",
+     "url": "https://www.congreso.gob.ar/leyes.php",
+     "verificacion": {
+      "bytes": 15235,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:41:01Z",
+      "http": 200,
+      "sha256": "92143095912225903ab481f76a152c93315795473dd4aa0e8d12dc2187f874c1"
+     }
+    },
+    {
+     "date": "2017-12-07",
+     "host": "www.argentina.gob.ar",
+     "rank": 3,
+     "snippet": "# Leyes Argentinas\nOfrecemos la versión actualizada de leyes, decretos, resoluciones y otras regulaciones argentinas.\n...\nPodés usar el buscador para encontrar una norma específica.\n...\n## Más normativa\n### Constituciones\nConstitución Nacional, de CABA, y Provinciales\n…",
+     "title": "Leyes Argentinas",
+     "url": "https://www.argentina.gob.ar/normativa"
+    },
+    {
+     "date": "",
+     "host": "www.congreso.gob.ar",
+     "rank": 4,
+     "snippet": "Congreso de la Nación Argentina\nConstitución Nacional\nCapítulo Segundo\nNuevos derechos y garantías\n...\n**Art.\n...\nLa ley de convocatoria no podrá ser vetada.\nEl voto afirmativo del proyecto por el pueblo de la Nación lo convertirá en ley y su promulgación será automática.",
+     "title": "Constitución Nacional",
+     "url": "https://www.congreso.gob.ar/constitucionParte1Cap2.php"
+    },
+    {
+     "date": "",
+     "host": "www.boletinoficial.gob.ar",
+     "rank": 5,
+     "snippet": "### 1\nsección\nLegislación y Avisos\nOficiales\nIngresar\nDescargar\n...\n#### Biblioteca de Normativas\nAl hacer clic en este enlace usted está siendo dirigido a la página https://www.argentina.gob.ar/normativa.\n...\n**Boletín Oficial",
+     "title": "www.boletinoficial.gob.arBOLETIN OFICIAL REPUBLICA ARGENTINA",
+     "url": "https://www.boletinoficial.gob.ar/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Argentina national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2017-12-07",
+     "host": "www.argentina.gob.ar",
+     "rank": 1,
+     "snippet": "Ofrecemos la versión actualizada de leyes, decretos, resoluciones y otras regulaciones argentinas.\n...\nPodés usar el buscador para encontrar una norma específica.\nSi necesitás consultar el boletín completo de un día, ingresá a la búsqueda por boletín oficial.\nBúsqueda avanzada",
+     "title": "Leyes Argentinas",
+     "url": "https://www.argentina.gob.ar/normativa",
+     "verificacion": {
+      "bytes": 257055,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:41:11Z",
+      "http": 200,
+      "sha256": "5840938921d09544b7fb0fb5b46da27f5dc1aa9acad910c2942740e659705219"
+     }
+    },
+    {
+     "date": "2019-09-20",
+     "host": "www.argentina.gob.ar",
+     "rank": 2,
+     "snippet": "Normativa | Argentina.gob.ar\n...\n…\n...\n- Implementa el Repositorio Único de Documentos Oficiales (RUDO) - Decreto 1131/2016\n#### Resoluciones\n- Plazos Mínimos de Conservación y Guarda de Actuaciones - Resolución 44/2016",
+     "title": "www.argentina.gob.ar › interior › archivo-generalNormativa - Argentina.gob.ar",
+     "url": "https://www.argentina.gob.ar/interior/archivo-general/normativa",
+     "verificacion": {
+      "bytes": 39091,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:41:22Z",
+      "http": 200,
+      "sha256": "01ed6cdb744d67c9a5f312d072d1bef6307030a809b4a27d29dc64f28950c97f"
+     }
+    },
+    {
+     "date": "2018-09-28",
+     "host": "www.argentina.gob.ar",
+     "rank": 3,
+     "snippet": "Leyes Argentinas\nBúsqueda simple\nBúsqueda simple\nBúsqueda simple\nBúsqueda avanzada\nBúsqueda por Boletín Oficial\nBúsqueda Nacional\nBúsqueda Provincial\n...\nTodas\nLey\nDecreto\nDecisión Administrativa\n...\nDecisión\nDecreto/Ley",
+     "title": "Búsqueda simple",
+     "url": "https://www.argentina.gob.ar/normativa/buscar?jurisdiccion=nacional"
+    },
+    {
+     "date": "",
+     "host": "www.boletinoficial.gov.ar",
+     "rank": 4,
+     "snippet": "BOLETIN OFICIAL REPUBLICA ARGENTINA\n...\nsección\nLegislación y Avisos\nOficiales\nIngresar\nDescargar\n...\n#### Biblioteca de Normativas\nAl hacer clic en este enlace usted está siendo dirigido a la página https://www.argentina.gob.ar/normativa.",
+     "title": "Boletín Oficial de la República Argentina",
+     "url": "https://www.boletinoficial.gov.ar/"
+    },
+    {
+     "date": "",
+     "host": "www.infoleg.gob.ar",
+     "rank": 5,
+     "snippet": "Infoleg – Información Legislativa y Documental | Ministerio de Justicia de la Nación\n# BUSQUEDA POR NORMA\nBÚSQUEDA: POR TEXTO | POR BOLETÍN OFICIAL\n…",
+     "title": "Infoleg – Información Legislativa y Documental | Ministerio de ...",
+     "url": "https://www.infoleg.gob.ar/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Argentina official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.boletinoficial.gov.ar",
+     "rank": 1,
+     "snippet": "BOLETIN OFICIAL REPUBLICA ARGENTINA\n...\n## Legislación y Avisos Oficiales Primera sección\nAvisos oficiales\n...\nDisposiciones\n...\n#### Biblioteca de Normativas\nAl hacer clic en este enlace usted está siendo dirigido a la página https://www.argentina.gob.ar/normativa.",
+     "title": "Ingresar",
+     "url": "https://www.boletinoficial.gov.ar/seccion/primera",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.boletinoficial.gov.ar/seccion/primera",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:42:53Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.boletinoficial.gov.ar",
+     "rank": 2,
+     "snippet": "BOLETIN OFICIAL REPUBLICA ARGENTINA\n...\nLegislación y Avisos\nOficiales\nIngresar\n...\nAl hacer clic en este enlace usted está siendo dirigido a la página https://www.argentina.gob.ar/normativa.\n...\n**Boletín Oficial\nde la República Argentina**",
+     "title": "www.boletinoficial.gov.arBOLETIN OFICIAL REPUBLICA ARGENTINA",
+     "url": "https://www.boletinoficial.gov.ar/?KC=true",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.boletinoficial.gov.ar/?KC=true",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:42:53Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.boletinoficial.gob.ar",
+     "rank": 3,
+     "snippet": "BOLETIN OFICIAL REPUBLICA ARGENTINA\n...\n#### Biblioteca de Normativas\nAl hacer clic en este enlace usted está siendo dirigido a la página https://www.argentina.gob.ar/normativa.\n...\n**Secretaría\nLegal y Técnica**\n**Boletín Oficial\nde la República Argentina**",
+     "title": "Búsqueda avanzada - BOLETIN OFICIAL REPUBLICA ARGENTINA",
+     "url": "https://www.boletinoficial.gob.ar/busquedaAvanzada/primera"
+    },
+    {
+     "date": "2017-12-11",
+     "host": "www.argentina.gob.ar",
+     "rank": 4,
+     "snippet": "Leyes Argentina - Infoleg | Búsqueda por número y fecha del Boletín Oficial | Argentina.gob.ar\n...\n# Búsqueda por número y fecha del Boletín Oficial\n...\nPodés consultar por fecha o número.\nSi necesitás acceder a una norma específica, ingresá al buscador general.",
+     "title": "Búsqueda por número y fecha del Boletín Oficial",
+     "url": "https://www.argentina.gob.ar/normativa/buscar-boletin"
+    },
+    {
+     "date": "2021-04-08",
+     "host": "www.boletinoficial.gob.ar",
+     "rank": 5,
+     "snippet": "BOLETIN OFICIAL REPUBLICA ARGENTINA\n...\n#### Biblioteca de Normativas\nAl hacer clic en este enlace usted está siendo dirigido a la página https://www.argentina.gob.ar/normativa.\n...\n**Secretaría\nLegal y Técnica**\n**Boletín Oficial\nde la República Argentina**",
+     "title": "Búsqueda avanzada",
+     "url": "https://www.boletinoficial.gob.ar/busquedaAvanzada/busquedaEspecial"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Argentina supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.csjn.gov.ar",
+     "rank": 1,
+     "snippet": "# Decisiones\n## Sentencias\nLa Secretaría de\nJurisprudencia gestiona, organiza y publica todas las\nsentencias de la Corte y administra la base de datos con los\nfallos del Tribunal desde su creación en 1863.\nAcceder(Abre en otra pestaña)",
+     "title": "Decisiones",
+     "url": "https://www.csjn.gov.ar/decisiones",
+     "verificacion": {
+      "bytes": 22050,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:42:55Z",
+      "http": 200,
+      "sha256": "672817d5965a7280bf6bfa42fe1ba7d22fc40283f22d969f930bbe8d7c4d8719"
+     }
+    },
+    {
+     "date": "",
+     "host": "sentencias.scba.gov.ar",
+     "rank": 2,
+     "snippet": "Listado completo de sentencias definitivas e interlocutorias de la Suprema Corte de Justicia\n## Criterio de búsqueda\nRegistros:\nA continuación podrá seleccionar la cantidad de registros por página.\n...\n|Cod|Número del registro|Fecha|Número del expediente|Carátula| |",
+     "title": "Listado completo de sentencias definitivas e interlocutorias ...",
+     "url": "https://sentencias.scba.gov.ar/",
+     "verificacion": {
+      "bytes": 28702,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:42:57Z",
+      "http": 200,
+      "sha256": "5e63ff837e45c5f12ec9784eb6496f6d5f8fe015dcbfff115736a0ce46f7c183"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.csjn.gov.ar",
+     "rank": 3,
+     "snippet": "de Justicia de la Nación pone a disposición de la ciudadanía la\ntotalidad de sus fallos, acordadas y resoluciones.\nEn esta sección, se encuentran todas las resoluciones\nadministrativas e informes del tribunal, categorizados según\ndiversos criterios de interés público, conforme lo establecido en",
+     "title": "Transparencia - Corte Suprema de Justicia de la Nación - CSJN",
+     "url": "https://www.csjn.gov.ar/transparencia/"
+    },
+    {
+     "date": "",
+     "host": "sjservicios.csjn.gov.ar",
+     "rank": 4,
+     "snippet": "Tomos de Fallos completos - Secretaría de Jusrisprudencia - Corte Suprema de Justicia de la Nación\n› Tomos Colección “Fallos” 1863 - 2026 (1 a 349)\nLa primera Corte de 1863.\n346:1571",
+     "title": "Tomos Colección ”Fallos” 1863 - 2025 1 a 347",
+     "url": "https://sjservicios.csjn.gov.ar/sj/tomosFallos.do?method=iniciar"
+    },
+    {
+     "date": "",
+     "host": "www.csjn.gov.ar",
+     "rank": 5,
+     "snippet": "En esta sección se puede acceder a todas las sentencias dictadas por la Corte Suprema de Justicia de la Nación desde 1863; a su base de sumarios, fallos relevantes y búsqueda por citas.\nTambién se pueden buscar las acordadas y resoluciones administrativas del Máximo Tribunal.",
+     "title": "Búsqueda de sentencias, acordadas y resoluciones",
+     "url": "https://www.csjn.gov.ar/archivo-cij/nota-33142-B-squeda-de-sentencias--acordadas-y-resoluciones-.html"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Argentina state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "web.legisrn.gov.ar",
+     "rank": 1,
+     "snippet": "# Legislación Provincial\n...\nLa información esta producida sobre los textos originales.\nLa información consignada en esta pagina esta producida sobre los textos originales sancionados por la Legislatura Provincial.\nPara consultar textos vigentes consolidados diríjase al Digesto Jurídico Provincial\n*",
+     "title": "web.legisrn.gov.ar › legislativa › legislacionLegislación Provincial - Legislatura de Río Negro",
+     "url": "https://web.legisrn.gov.ar/legislativa/legislacion",
+     "verificacion": {
+      "bytes": 1261199,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:42:58Z",
+      "http": 200,
+      "sha256": "e7325020dd19b7c324c364a7ed4f7d30fbe2874aa023e70bc234c1ba668df237"
+     }
+    },
+    {
+     "date": "2016-06-06",
+     "host": "datos.jus.gob.ar",
+     "rank": 2,
+     "snippet": "# Base SAIJ de Normativa Provincial\n...\nSecretaría de Justicia.\nDirección Nacional del Sistema Argentino de Información Jurídica\nBase de documentos digitales normativos provinciales: leyes, decretos leyes, textos ordenados, códigos y Constituciones publicados en el Boletín Oficial de la Provincia co",
+     "title": "Portal de Datos Justicia Argentina - Base SAIJ de Normativa ...",
+     "url": "https://datos.jus.gob.ar/dataset/base-saij-de-normativa-provincial",
+     "verificacion": {
+      "bytes": 52094,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:43:13Z",
+      "http": 200,
+      "sha256": "a1bbc2224c35d02ba189d55b25e32d15fcdbe5a6b654088178a76bb809dc8a1d"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.infoleg.gob.ar",
+     "rank": 3,
+     "snippet": "Ingresando a la Dirección Provincial de Informática Jurídico Legal y Entidades Profesionales podrá consultarse todo tipo de normativa.\nEl usuario podrá orientar su búsqueda por número de norma o por palabra clave.",
+     "title": "www.infoleg.gob.ar › basehome › info_provincialCentro de Documentación e Información del Ministerio de ...",
+     "url": "https://www.infoleg.gob.ar/basehome/info_provincial.htm"
+    },
+    {
+     "date": "",
+     "host": "web.legisrn.gov.ar",
+     "rank": 4,
+     "snippet": "# Legislación Provincial\n...\nLa información esta producida sobre los textos originales.\nLa información consignada en esta pagina esta producida sobre los textos originales sancionados por la Legislatura Provincial.\nPara consultar textos vigentes consolidados diríjase al Digesto Jurídico Provincial\n*",
+     "title": "Legislación Provincial",
+     "url": "https://web.legisrn.gov.ar/legislativa/legislacion/index?ejecutar=DOCU.SECU=1830&tab=&page=105&per-page=100"
+    },
+    {
+     "date": "",
+     "host": "www.infoleg.gob.ar",
+     "rank": 5,
+     "snippet": "Acceso a Códigos desde la Página del Gobierno de la Provincia de Buenos Aires desde aquí\n...\nSe buscan por número de Ley en la siguiente URL: http://www.legislaturachaco.gov.ar/legisdev/BusquedaDocumentos.aspx\n...\nEn http://www.legisrn.gov.ar/",
+     "title": "Códigos Provinciales",
+     "url": "https://www.infoleg.gob.ar/index/?page_id=87"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Argentina municipal bylaws regulations official portal",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.infoleg.gob.ar",
+     "rank": 1,
+     "snippet": "Desde el portal del Centro de Documentación e Información de la Subsecretaría de Asuntos Municipales, podrá conseguir: a- Legislación General: (textos completos de normas de uso frecuente) Constitución Nacional, Constitución Provincial, Ley Orgánica Municipal, etc.",
+     "title": "www.infoleg.gob.ar › basehome › info_provincialCentro de Documentación e Información del Ministerio de ...",
+     "url": "https://www.infoleg.gob.ar/basehome/info_provincial.htm",
+     "verificacion": {
+      "bytes": 38148,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:43:14Z",
+      "http": 200,
+      "sha256": "8d9d34e5c7f97b555860e480ae0233dc3612c35076ee652345684456fc0558ba"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.concordia.gob.ar",
+     "rank": 2,
+     "snippet": "# Municipal Digest\nThe digest is the organized and codified compendium of current regulations, as well as precedents regarding the resolution of administrative claims and appeals, whether against the Municipality or initiated by it.\n...\n### Official Gazette No. 3837 - Concordia, October 30, 2026\nSUM",
+     "title": "Municipal Digest - City of Concordia",
+     "url": "https://www.concordia.gob.ar/en/digesto",
+     "verificacion": {
+      "bytes": 392528,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:43:16Z",
+      "http": 200,
+      "sha256": "6151c1478ea640e136d0f30eaf7257a9e9e494831fbef41f833296b72172e593"
+     }
+    },
+    {
+     "date": "",
+     "host": "portal.entrerios.gov.ar",
+     "rank": 3,
+     "snippet": "Ingresá para más información: www.entrerios.gov.ar/sijer\nCONSULTA DE DECRETOS\n...\nEl Boletín Oficial de Entre Ríos fue creado por la Ley N° 2.486/1913 en el ámbito del Ministerio de Gobierno y Justicia.\n...\n…",
+     "title": "portal.entrerios.gov.ar › ps › transparenciaGobierno de Entre Ríos",
+     "url": "https://portal.entrerios.gov.ar/ps/transparencia/normativas"
+    },
+    {
+     "date": "",
+     "host": "buenosaires.gob.ar",
+     "rank": 4,
+     "snippet": "**El Servicio de Información Normativa contiene**\n**Todas las normas publicadas por el Boletín Oficial de la Ciudad**, desde el 6 de agosto de 1996, cuando se publicó el 1° Boletín de la Ciudad Autónoma de Buenos Aires (BOCABA).",
+     "title": "buenosaires.gob.ar › gcaba_historico › legalytecnicaSistema de Información Normativa - Buenos Aires Ciudad",
+     "url": "https://buenosaires.gob.ar/gcaba_historico/legalytecnica/normativa/sistema-de-informacion-normativa"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Argentina regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-05-04",
+     "host": "www.boletinoficial.gob.ar",
+     "rank": 1,
+     "snippet": "Qué, asimismo, las Normas Técnicas incluyen todos los documentos normativos de carácter técnico, Adendas, Reglamentos Técnicos y Resoluciones de carácter técnico normativo, que deben ser cumplidos en forma obligatoria por los sujetos alcanzados por las incumbencias de regulación y control del ENARGA",
+     "title": "ENTE NACIONAL REGULADOR DEL GAS - Resolución 441/2026",
+     "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/341477/20260504",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.boletinoficial.gob.ar/detalleAviso/primera/341477/20260504",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:44:48Z"
+     }
+    },
+    {
+     "date": "2019-12-20",
+     "host": "www.trade.gov",
+     "rank": 2,
+     "snippet": "- Agricultural and health-related products are subject to specific and different voluntary standards and mandatory technical regulations.\n- Medical devices, pharmaceuticals, and foods are the purview of the National Administration of Drugs, Foods, and Medical Devices (Administración Nacional de Medi",
+     "title": "Argentina - Trade Standards",
+     "url": "https://www.trade.gov/country-commercial-guides/argentina-trade-standards",
+     "verificacion": {
+      "bytes": 272552,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:44:49Z",
+      "http": 200,
+      "sha256": "1fcbb765a83f8aeb63700437ec21838edbce31d804419c331b3a372b7e89d57a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.boletinoficial.gob.ar",
+     "rank": 3,
+     "snippet": "Resolución 578/2026\n...\nDisposición 6726/2026\nDI-2026-6726-APN-ANMAT#MS\n...\n#### Biblioteca de Normativas\nAl hacer clic en este enlace usted está siendo dirigido a la página https://www.argentina.gob.ar/normativa.",
+     "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA",
+     "url": "https://www.boletinoficial.gob.ar/seccion/primera"
+    },
+    {
+     "date": "2017-12-07",
+     "host": "www.argentina.gob.ar",
+     "rank": 4,
+     "snippet": "# Leyes Argentinas\nOfrecemos la versión actualizada de leyes, decretos, resoluciones y otras regulaciones argentinas.\n...\nPodés usar el buscador para encontrar una norma específica.\nSi necesitás consultar el boletín completo de un día, ingresá a la búsqueda por boletín oficial.",
+     "title": "Leyes Argentinas",
+     "url": "https://www.argentina.gob.ar/normativa"
+    },
+    {
+     "date": "2022-11-25",
+     "host": "www.argentina.gob.ar",
+     "rank": 5,
+     "snippet": "Decreto 1490/92: **Creación de la Administración Nacional de Medicamentos, Alimentos y Tecnología Médica**.\n...\nNormativa Alimentos\n...\nDecreto 2126/71: **Reglamentación de la Ley N° 18.284**.\n...\nNormativa Productos Médicos",
+     "title": "Normativa - Argentina.gob.ar",
+     "url": "https://www.argentina.gob.ar/anmat/programa-ar-id/normativa"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Argentina national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2023-11-09",
+     "host": "www.iram.org.ar",
+     "rank": 1,
+     "snippet": "#### IRAM-ISO 9001\nSistemas de gestión de la calidad.\nRequisitos.\n(ISO 9001:2026, traducción oficial, IDT)\n...\n#### IRAM-ISO 9000\nGestión de la calidad - Fundamentos y vocabulario.\n...\n### Newsletter\nArgentina",
+     "title": "Buscá tu Norma | Conocé las más Populares",
+     "url": "https://www.iram.org.ar/normalizacion/busca-tu-norma/",
+     "verificacion": {
+      "bytes": 211020,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:44:50Z",
+      "http": 200,
+      "sha256": "bc0f0aabaf0da1ef5479f03fa563061e6ef04d782c18653142ef6a0922877fc4"
+     }
+    },
+    {
+     "date": "",
+     "host": "digesto.scba.gov.ar",
+     "rank": 2,
+     "snippet": "SCBA - Digesto\n...\n|--|\n|**Ingresando los términos (palabras y/o números) a buscar, el sistema realizará la búsqueda sobre los campos tildados** (Marque o Desmarque los campos sobre los que desea buscar)|\n...\n0810-444-7222 WhatsApp",
+     "title": "SCBA - Digesto",
+     "url": "https://digesto.scba.gov.ar/Buscar.aspx",
+     "verificacion": {
+      "bytes": 19941,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:44:52Z",
+      "http": 200,
+      "sha256": "490a9ae143d41810bba5986c0f234f73b97aefdc355ae8a38f02f6e6c3fd46c1"
+     }
+    },
+    {
+     "date": "2021-09-01",
+     "host": "www.iram.org.ar",
+     "rank": 3,
+     "snippet": "Encontrá las Normas Publicadas en Nuestro Buscador | IRAM\n...\n# Búsqueda avanzada de normas IRAM\nEncontrá todas las normas publicadas completando nuestro filtro avanzado.\n...\nBuenos Aires\n...\nTel +54 11 7078-0542 iram-iso@iram.org.ar",
+     "title": "Normas",
+     "url": "https://www.iram.org.ar/busqueda-avanzada-de-normas-iram/"
+    },
+    {
+     "date": "2024-11-14",
+     "host": "www.iram.org.ar",
+     "rank": 4,
+     "snippet": "# Documentation Center\n- **More than 9.400 IRAM standards ** for a wide range of industries: food, environment, fuel, construction, energy efficiency, electrical engineering, energy, quality management, chemistry, mechanics, metallurgy and iron steel industry, social responsibility, health, safety, ",
+     "title": "www.iram.org.ar › en › documentation-centerDocumentation Center | IRAM",
+     "url": "https://www.iram.org.ar/en/documentation-center/"
+    },
+    {
+     "date": "2026-09-18",
+     "host": "aea.org.ar",
+     "rank": 5,
+     "snippet": "###### Lista de Documentos AEA\nVisualice y descargue el listado completo de nuestros documentos publicados\n...\nAEA 90079-14 Atmósferas explosivas.\n...\nAEA 90706 Guía para la gestión del mantenimiento en instalaciones eléctricas.\nEdición 2006\n...\nEdición 2012",
+     "title": "Versiones Impresas",
+     "url": "https://aea.org.ar/reglamentaciones/impresas/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Argentina mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2025-03-21",
+     "host": "www.argentina.gob.ar",
+     "rank": 1,
+     "snippet": "Conocé los requisitos de calidad y seguridad establecidos en cada reglamento técnico para los productos e insumos que querés comercializar.\n...\n### Ascensores\n...\n### Elementos de protección personal\n...\n### Productos eléctricos\nPara comercializar cualquier tipo de producto eléctrico de baja tensión",
+     "title": "Reglamentos Técnicos - Argentina.gob.ar",
+     "url": "https://www.argentina.gob.ar/economia/industria-comercio-y-pyme/reglamentos-tecnicos",
+     "verificacion": {
+      "bytes": 35496,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:44:52Z",
+      "http": 200,
+      "sha256": "34f0e85ae3026d74c49c562c6c5f90e1f37b8d526629862927562283e3509b25"
+     }
+    },
+    {
+     "date": "2025-02-25",
+     "host": "www.boletinoficial.gov.ar",
+     "rank": 2,
+     "snippet": "## Resolución 18/2025\n...\nARTÍCULO 1°.- OBJETO.\n...\nARTÍCULO 2°.- ALCANCE.\n...\n…\nARTÍCULO 12.- La presente medida empezará a regir a partir del día siguiente de su publicación en el Boletín Oficial.",
+     "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE ECONOMÍA SECRETARÍA DE INDUSTRIA Y COMERCIO - Resolución 18/2025",
+     "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/321816/20250225",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.boletinoficial.gov.ar/detalleAviso/primera/321816/20250225",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:44:52Z"
+     }
+    },
+    {
+     "date": "2025-02-25",
+     "host": "www.boletinoficial.gov.ar",
+     "rank": 3,
+     "snippet": "## Resolución 16/2025\n...\n…\nARTÍCULO 1°.- OBJETO.\n...\nARTÍCULO 2°.- ALCANCE.\n...\nARTÍCULO 12.- La presente medida empezará a regir a partir del día siguiente de su publicación en el Boletín Oficial.",
+     "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE ECONOMÍA SECRETARÍA DE INDUSTRIA Y COMERCIO - Resolución 16/2025",
+     "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/321814/20250225"
+    },
+    {
+     "date": "2025-08-12",
+     "host": "servicios.infoleg.gob.ar",
+     "rank": 4,
+     "snippet": "**\nResolución\n313/2025\nSECRETARIA DE INDUSTRIA Y COMERCIO\n**\n12-ago-2025\nPublicada en el Boletín Oficial del 13-ago-2025 Número: 35727 Página: 46\n** Resumen:**",
+     "title": "reglamento tecnico - apruebase - Jus.gob.ar - Infoleg",
+     "url": "https://servicios.infoleg.gob.ar/infolegInternet/verNorma.do;jsessionid=A654DDA9BF7F5BE285BD044BA3DBA296?id=416329"
+    },
+    {
+     "date": "2025-02-24",
+     "host": "servicios.infoleg.gob.ar",
+     "rank": 5,
+     "snippet": "**\nResolución\n16/2025\nSECRETARIA DE INDUSTRIA Y COMERCIO\n**\n24-feb-2025\nPublicada en el Boletín Oficial del 25-feb-2025 Número: 35617 Página: 40\n** Resumen:**",
+     "title": "REGLAMENTO TECNICO - APRUEBASE",
+     "url": "https://servicios.infoleg.gob.ar/infolegInternet/verNorma.do;jsessionid=B827FF2FF1DA73EEB6DCE5E184182750?id=410052"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Argentina national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.indec.gob.ar",
+     "rank": 1,
+     "snippet": "INDEC: Instituto Nacional de Estadística y Censos de la República Argentina\n...\nNo encontramos la página que busca.\n...\nINDEC - Argentina\nAv. Presidente Julio A. Roca 609.\nP.B. C1067ABB\nCiudad Autónoma de Buenos Aires, Argentina.",
+     "title": "www.indec.gob.ar › principalINDEC: Instituto Nacional de Estadística y Censos de la ... -...",
+     "url": "https://www.indec.gob.ar/principal.asp",
+     "verificacion": {
+      "bytes": 37465,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:44:54Z",
+      "http": 200,
+      "sha256": "06f9342dbc06080582f71a1c637d270b41c95fecdbc7ea2c17d24497b213a0d7"
+     }
+    },
+    {
+     "date": "2020-09-15",
+     "host": "www.indec.gob.ar",
+     "rank": 2,
+     "snippet": "El INDEC presidió la XXVIII Reunión Especializada de Estadísticas del Mercosur (REES), que se realizó el 27 de mayo en forma virtual bajo la presidencia pro tempore de la Argentina.",
+     "title": "INDEC: Instituto Nacional de Estadística y Censos de la ...",
+     "url": "https://www.indec.gob.ar/indec/Portada",
+     "verificacion": {
+      "bytes": 2154964,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:44:56Z",
+      "http": 200,
+      "sha256": "065459e9d8309f331e11deddf8e25af6649487f89a074e376210593de6d744bd"
+     }
+    },
+    {
+     "date": "2025-04-21",
+     "host": "censo.gob.ar",
+     "rank": 3,
+     "snippet": "## Censo 2022\n...\n## ¿Cómo se puede consultar la información?\nEn este sitio web se presenta la publicación de resultados provisionales en formato pdf con los cuadros estadísticos y los aspectos metodológicos del Censo.\nLos cuadros estadísticos están disponibles también en formato xlsx.",
+     "title": "Censo 2022",
+     "url": "https://censo.gob.ar/"
+    },
+    {
+     "date": "2020-09-15",
+     "host": "www.indec.gob.ar",
+     "rank": 4,
+     "snippet": "El INDEC presenta la edición digital del Anuario Estadístico 2024/2025, con un nuevo formato que permite explorar fácilmente los distintos temas, visualizar gráficos y descargar los datos producidos en el ámbito del Sistema Estadístico Nacional (SEN).",
+     "title": "INDEC: Instituto Nacional de Estadística y Censos de la ...",
+     "url": "https://www.indec.gob.ar/"
+    },
+    {
+     "date": "2025-07-08",
+     "host": "censo.gob.ar",
+     "rank": 5,
+     "snippet": "## Resultados del Censo 2022\n...\nDesde esta página se pueden consultar las publicaciones temáticas de resultados definitivos en formato pdf y los cuadros en formato .xlsx.",
+     "title": "Resultados del Censo 2022 - Censo Nacional de Población, Hogares y Viviendas",
+     "url": "https://censo.gob.ar/index.php/datos_definitivos/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Argentina central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2021-04-06",
+     "host": "www.bcra.gob.ar",
+     "rank": 1,
+     "snippet": "|Boletín Estadístico|13 nov 2026|\n…\n### Estadísticas e indicadores\nDatos, series históricas y estadísticas diarias para el análisis monetario, financiero y del sector externo, elaboradas por el Banco Central.\n...\nBanco Central\nde la República Argentina",
+     "title": "BCRA",
+     "url": "https://www.bcra.gob.ar/",
+     "verificacion": {
+      "bytes": 144001,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:44:57Z",
+      "http": 200,
+      "sha256": "5738724bca5d79eed4f6e67008105eb194e1139c5189fd0cc071d33153115c00"
+     }
+    },
+    {
+     "date": "2025-11-24",
+     "host": "www.bcra.gob.ar",
+     "rank": 2,
+     "snippet": "## En esta página se pueden realizar consultas interactivas sobre las series estadísticas monetarias publicadas por el Banco Central de la República Argentina, seleccionando y combinando hasta 10 series en forma simultánea.\n...\n**– Por jerarquía:** navegación a través del árbol de jerarquías temátic",
+     "title": "Consultas personalizadas de series estadísticas | BCRA",
+     "url": "https://www.bcra.gob.ar/consultas-personalizadas-de-series-estadisticas/",
+     "verificacion": {
+      "bytes": 68981,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:44:58Z",
+      "http": 200,
+      "sha256": "09f00129e6c0f621d968efbdd53621710f82c100aa06c0fe4fddd2b79a7f7f0b"
+     }
+    },
+    {
+     "date": "2021-05-06",
+     "host": "www.bcra.gob.ar",
+     "rank": 3,
+     "snippet": "# ESTADÍSTICAS E INDICADORES\nVariables, series históricas y datos diarios para el análisis económico: dinero, crédito, tasas, pagos, sector externo y más.\n...\n|--|--|--|\n...\n| | | |\n...\n|Inflación mensual (variación en %)| | |",
+     "title": "Cotizaciones por fecha",
+     "url": "https://www.bcra.gob.ar/estadisticas-indicadores/"
+    },
+    {
+     "date": "2025-12-11",
+     "host": "web2.bcra.gob.ar",
+     "rank": 4,
+     "snippet": "Boletín Estadístico, diciembre de 202512/12/2025\n...\n|Base Monetaria Total (en millones de $) 05/02/2026|42.122.917|\n...\n|Inflación mensual Diciembre 2025|2,8%|",
+     "title": "Banco Central de la República Argentina | Inicio",
+     "url": "https://web2.bcra.gob.ar/"
+    },
+    {
+     "date": "2025-11-24",
+     "host": "www.bcra.gob.ar",
+     "rank": 5,
+     "snippet": "# Consultas personalizadas de series estadísticas\n...\nPor consultas, escribir a: [email protected]\n…\n### Catálogo de series estadísticas\n#### Archivo en formato .TXT\n...\nTXT: https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/es_series.txt\n…",
+     "title": "Consulta de series estadísticas en formato TXT",
+     "url": "https://www.bcra.gob.ar/consulta-de-series-estadisticas-en-formato-txt/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Argentina government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2023-03-01",
+     "host": "www.argentina.gob.ar",
+     "rank": 1,
+     "snippet": "Portal Andino | Argentina.gob.ar\n...\n# Portal Andino\nLa plataforma Andino es una herramienta que permite a cualquier organismo nacional, provincial y/o local contar con su propio portal de datos abiertos a los fines de ofrecer información estructurada, oportuna, pertinente y accesible a la ciudadaní",
+     "title": "Portal Andino - Argentina.gob.ar",
+     "url": "https://www.argentina.gob.ar/datos-abiertos/portal-andino",
+     "verificacion": {
+      "bytes": 30166,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:45:02Z",
+      "http": 200,
+      "sha256": "c65fb3d563d131a84c808c0fea6f022e8f8700f63ec7f7abd5a7cada23e339d1"
+     }
+    },
+    {
+     "date": "",
+     "host": "datos.gob.ar",
+     "rank": 2,
+     "snippet": "Portal Nacional de Datos Abiertos de la República Argentina.\nPlataforma de publicación de datos abiertos para organismos del Estado.\n...\nPortal de datos abiertos de la República Argentina.\nLos datos publicados acá son públicos y se pueden reutilizar libremente citando la fuente.",
+     "title": "Recursos",
+     "url": "https://datos.gob.ar/recursos/",
+     "verificacion": {
+      "error": "scheme or host not allowed: http://datos.gob.ar/recursos",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:45:38Z"
+     }
+    },
+    {
+     "date": "2024-10-01",
+     "host": "www.argentina.gob.ar",
+     "rank": 3,
+     "snippet": "Ponemos a tu alcance datos públicos en formatos abiertos para que puedas usarlos, modificarlos y compartirlos.\n...\nEsta es una versión liviana del Portal Nacional de Datos Públicos creada para que puedas seguir accediendo a los datos abiertos de Argentina mientras realizamos tareas de mantenimiento ",
+     "title": "Portal Nacional de Datos Públicos",
+     "url": "https://www.argentina.gob.ar/datos-abiertos/portal"
+    },
+    {
+     "date": "2018-01-15",
+     "host": "www.argentina.gob.ar",
+     "rank": 4,
+     "snippet": "# Presidencia de la Nación\n...\n- Datos Argentina\n- Catálogo de la Agencia de Acceso a la Información Pública\n- Dataset solicitudes de acceso a la información desde el 29 de septiembre de 2017\n- Dataset reclamos sobre solicitudes de acceso desde el 29 de septiembre de 2017",
+     "title": "Portales de datos abiertos - Argentina.gob.ar",
+     "url": "https://www.argentina.gob.ar/aaip/accesoinformacion/datospublicos"
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.argentina.gob.ar",
+     "rank": 5,
+     "snippet": "La Secretaría de Innovación, Ciencia y Tecnología presentó nuevas herramientas para facilitar el acceso y la reutilización de datos públicos.\n...\n…\nEl nuevo Portal Nacional de Datos Públicos facilita la búsqueda y el acceso a conjuntos de datos publicados por organismos nacionales, organizados por t",
+     "title": "Los datos públicos, cada vez más accesibles",
+     "url": "https://www.argentina.gob.ar/noticias/los-datos-publicos-cada-vez-mas-accesibles"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:18:38Z",
+ "pais": {
+  "iso2": "AR",
+  "iso3": "ARG",
+  "nombre": "Argentina"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

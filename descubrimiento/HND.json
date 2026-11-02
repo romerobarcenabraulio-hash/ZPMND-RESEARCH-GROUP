@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Honduras constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "tsc.gob.hn",
+     "rank": 1,
+     "snippet": "Biblioteca Virtual TSC\n...\n### Lo más visto\n- Constitución de la República de Honduras\n- Código Penal (2019)\n- Código Tributario (Decreto No. 170-2016)\n- LEY DE PROCEDIMIENTO ADMINISTRATIVO\n- LEY FUNDAMENTAL DE EDUCACIÓN",
+     "title": "Biblioteca Virtual TSC",
+     "url": "https://tsc.gob.hn/biblioteca/"
+    },
+    {
+     "date": "2026-10-23",
+     "host": "oncae.gob.hn",
+     "rank": 2,
+     "snippet": "- Biblioteca Virtual\n- Normativa\n- Constitución de la República de Honduras\n# Constitución de la República de Honduras\n- Constitución de la República de Honduras\n- Decreto-200-2018\n- Decreto-192-2020\n- Decreto-3-2021\n- Decreto-2-2019",
+     "title": "Constitución de la República de Honduras | ONCAE - oncae.gob.hn",
+     "url": "https://oncae.gob.hn/biblioteca/constitucion/"
+    },
+    {
+     "date": "",
+     "host": "www.tsc.gob.hn",
+     "rank": 3,
+     "snippet": "### Lo más visto\n- Constitución de la República de Honduras\n- Código Penal (2019)\n- Código Tributario (Decreto No. 170-2016)\n- LEY DE PROCEDIMIENTO ADMINISTRATIVO\n- LEY FUNDAMENTAL DE EDUCACIÓN\n...\n**Poder Legislativo**",
+     "title": "Leyes",
+     "url": "https://www.tsc.gob.hn/biblioteca/index.php/leyes"
+    },
+    {
+     "date": "",
+     "host": "www.poderjudicial.gob.hn",
+     "rank": 4,
+     "snippet": "Constitución Política de 1982 \nAsamblea Nacional Constituyente \nDECRETO NUMERO Nº 131 \nDe fecha 11 de enero de 1982 publicada en el Diario Oficial La Gaceta No.23,612 de fecha 20 de enero de 1982",
+     "title": "Constitución Política de 1982",
+     "url": "https://www.poderjudicial.gob.hn/Cedij/CR/CONSTITUCIONDELAREPUBLICADEHONDURAS(actualizada2025).pdf"
+    },
+    {
+     "date": "",
+     "host": "www.tsc.gob.hn",
+     "rank": 5,
+     "snippet": "- Código Penal (2019)\n...\n- LEY DE PROCEDIMIENTO ADMINISTRATIVO\n...\n# Constitución de la República de Honduras\n...\n**Constitución de la República de Honduras, 1982**\n**DECRETO NÚMERO N° 131 11 de Enero 1982**",
+     "title": "Constitución de la República de Honduras",
+     "url": "https://www.tsc.gob.hn/biblioteca/index.php/leyes/177-constitucion-de-la-republica-de-honduras"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Honduras national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-10-01",
+     "host": "enag.gob.hn",
+     "rank": 1,
+     "snippet": "# Octubre\n...\n**PODER EJECUTIVO**\n**Decretos Ejecutivos Números 028-2026, 029-2026, 030-2026 OFICINA PRESIDENCIAL DE COMERCIO EXTERIOR (OPCE)**",
+     "title": "Octubre",
+     "url": "https://enag.gob.hn/index.php/gaceta-digital/2026/octubre"
+    },
+    {
+     "date": "2026-10-14",
+     "host": "enag.gob.hn",
+     "rank": 2,
+     "snippet": "El Congreso Nacional garantiza el acceso universal y gratuito a la legislación hondureña mediante la firma de un convenio estratégico.\n...\n** Sección B                                Avisos Legales                       B.\n...\nNombre del Archivo\n20261001 - 37260.pdf\n...\n3.42 MB",
+     "title": "20261001 - 37260",
+     "url": "https://enag.gob.hn/index.php/gaceta-digital/2026/octubre/20261001-37260"
+    },
+    {
+     "date": "2026-07-02",
+     "host": "enag.gob.hn",
+     "rank": 3,
+     "snippet": "El Congreso Nacional garantiza el acceso universal y gratuito a la legislación hondureña mediante la firma de un convenio estratégico.\n...\n**PODER LEGISLATIVO**\nDecretos Nos.\n129-2026, 135-2026\nResolución No. 7-2026",
+     "title": "Julio - ENAG",
+     "url": "https://enag.gob.hn/index.php/gaceta-digital/2026/julio"
+    },
+    {
+     "date": "2026-02-25",
+     "host": "sep.gob.hn",
+     "rank": 4,
+     "snippet": "PCM - Secretaría de Estado de la Presidencia\nTodos 2026 2025 2024 2023 2022\n...\n|Decreto|Detalle|Fecha|\n|--|--|--|\n...\n…",
+     "title": "PCM - Secretaría de Estado de la ...",
+     "url": "https://sep.gob.hn/publicaciones/pcm/"
+    },
+    {
+     "date": "2026-05-15",
+     "host": "enag.gob.hn",
+     "rank": 5,
+     "snippet": "### 20260103 - 37034 216 Descargas 3.38 MB Fecha de creación: 15-05-2026\n**PODER EJECUTIVO**\nDecreto Ejecutivo Número PCM 003-2026\n...\n0279-2025, 0286-2025",
+     "title": "Enero",
+     "url": "https://enag.gob.hn/index.php/gaceta-digital/2026/enero"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Honduras official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-10-01",
+     "host": "enag.gob.hn",
+     "rank": 1,
+     "snippet": "### Convenio de Cooperación Interinstitucional\nEl Congreso Nacional garantiza el acceso universal y gratuito a la legislación hondureña mediante la firma de un convenio estratégico.\n...\n### Navegación\n1. Está aquí:\n2. Gaceta Digital\n3. 2026\n4. Octubre",
+     "title": "Octubre",
+     "url": "https://enag.gob.hn/index.php/gaceta-digital/2026/octubre"
+    },
+    {
+     "date": "",
+     "host": "enag.gob.hn",
+     "rank": 2,
+     "snippet": "La Gaceta - ENAG\n### Convenio de Cooperación Interinstitucional\nEl Congreso Nacional garantiza el acceso universal y gratuito a la legislación hondureña mediante la firma de un convenio estratégico.\n...\n2. Documentos\n# La Gaceta\n### 2026 ( 253 Documentos )",
+     "title": "La Gaceta",
+     "url": "https://enag.gob.hn/index.php/inicio-lagaceta"
+    },
+    {
+     "date": "2020-12-20",
+     "host": "www.loc.gov",
+     "rank": 3,
+     "snippet": "# Periodical The Official Gazette of the Republic of Honduras; Año 142, Num. 35,208 Official title: La Gaceta, diario oficial de la República de Honduras\n...\n### Title\n...\n35,208\n...\n- Official title: La Gaceta, diario oficial de la República de Honduras",
+     "title": "The Official Gazette of the Republic of Honduras; Año 142, Num. 35,208",
+     "url": "https://www.loc.gov/item/13024708_20200324_01/"
+    },
+    {
+     "date": "",
+     "host": "tzibalnaah.unah.edu.hn",
+     "rank": 4,
+     "snippet": "Gaceta 2026\nhttps://tzibalnaah.unah.edu.hn/handle/123456789/20347\n...\n2026-09-17T22:56:51Z\nLa Gaceta Diario Oficial de la República de Honduras (No.37,056).",
+     "title": "Gaceta 2026",
+     "url": "https://tzibalnaah.unah.edu.hn/xmlui/feed/rss_2.0/123456789/20347"
+    },
+    {
+     "date": "2026-05-13",
+     "host": "enag.gob.hn",
+     "rank": 5,
+     "snippet": "# Enero\n...\n### 20240105 - 36426 124 Descargas 8.67 MB Fecha de creación: 13-05-2026\n...\n### 20240111 - 36431 109 Descargas 3.75 MB Fecha de creación: 13-05-2026",
+     "title": "Enero",
+     "url": "https://enag.gob.hn/index.php/gaceta-digital/2024/enero"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Honduras supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2020-11-05",
+     "host": "www.poderjudicial.gob.hn",
+     "rank": 1,
+     "snippet": "Poder Judicial de Honduras - Portal Poder Judicial\n...\n## ENLACES DIRECTOS\nBiblioteca Judicial Electrónica\nSistema de Estadísticas Judiciales\nPlataforma Escuela Judicial\nSistema de Expediente Judicial Electrónico\nPortal de Transparencia\nDatos Abiertos SEJE\nSistema de Indexación Jurisprudencial",
+     "title": "Poder Judicial de Honduras - Portal Poder Judicial",
+     "url": "https://www.poderjudicial.gob.hn/"
+    },
+    {
+     "date": "2024-07-17",
+     "host": "sejeinfo.poderjudicial.gob.hn",
+     "rank": 2,
+     "snippet": "Electrónica es el punto de acceso único al Sistema de Expediente Judicial\nElectrónico (SEJE), para efectos de consulta en línea o envío y recepción de\nescritos y documentos, a la cual se podrá ingresar a través del Portal Web Institucional\ndel Poder Judicial de Honduras.",
+     "title": "Bienvenida al nuevo Pleno de Magistrados",
+     "url": "https://sejeinfo.poderjudicial.gob.hn/sejeinfo/"
+    },
+    {
+     "date": "2026-06-12",
+     "host": "portalunico.iaip.gob.hn",
+     "rank": 3,
+     "snippet": "Descubre toda la información relevante sobre las sentencias de las cuatro Salas del Poder Judicial.\n...\nPara consultar las sentencias emitidas por la Corte Suprema de Justicia ingrese al siguiente link - Sistema de Indexación Jurisprudencial|2015-08-05|2015|Ninguno| |",
+     "title": "Resoluciones de Poder Judicial de Honduras (PJ) en PORTAL ...",
+     "url": "https://portalunico.iaip.gob.hn/384/26/"
+    },
+    {
+     "date": "2024-07-17",
+     "host": "sejeinfo.poderjudicial.gob.hn",
+     "rank": 4,
+     "snippet": "### Datos Abiertos del Tribunal de Sentencia de Tegucigalpa, Francisco Morazán de enero 2025 a junio 2025\n...\nEsta base de datos contiene la información correspondiente a las actuaciones procesales emitidas por el Tribunal de Sentencia de Tegucigalpa, Francisco Morazán.",
+     "title": "Justicia Abierta",
+     "url": "https://sejeinfo.poderjudicial.gob.hn/sejeinfo/justicia-abierta/"
+    },
+    {
+     "date": "2021-06-28",
+     "host": "www.poderjudicial.gob.hn",
+     "rank": 5,
+     "snippet": "Medio por el cual se publican las sentencias emitidas por las Salas de la Corte Suprema de Justicia.",
+     "title": "Gaceta Judicial",
+     "url": "https://www.poderjudicial.gob.hn/Cedij/SitePages/Gaceta-Judicial.aspx"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Honduras state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-05-13",
+     "host": "enag.gob.hn",
+     "rank": 1,
+     "snippet": "### Convenio de Cooperación Interinstitucional\nEl Congreso Nacional garantiza el acceso universal y gratuito a la legislación hondureña mediante la firma de un convenio estratégico.",
+     "title": "Enero - ENAG",
+     "url": "https://enag.gob.hn/index.php/gaceta-digital/2024/enero?start=0"
+    },
+    {
+     "date": "",
+     "host": "www.tsc.gob.hn",
+     "rank": 2,
+     "snippet": "## Ley Especial para el Combate a Asociaciones Terroristas, Maras y Pandillas y el Fortalecimiento del Sistema Penitenciario Nacional\n- **Detalles**\n...\nVisto: 255\n**Poder Legislativo**\nDecreto No. 208-2026\n**Descargar**",
+     "title": "Leyes",
+     "url": "https://www.tsc.gob.hn/biblioteca/index.php/leyes"
+    },
+    {
+     "date": "2026-10-23",
+     "host": "oncae.gob.hn",
+     "rank": 3,
+     "snippet": "# Normativa\n- Biblioteca Virtual\n- Normativa\n## Constitución de la República de Honduras\n...\n## Normativa\n- DECRETO 10-2005 CREACIÓN DE HONDUCOMPRAS\n...\n## Instituciones garantes\nOficina Normativa de Contratación y Adquisiciones del Estado",
+     "title": "Normativa | ONCAE",
+     "url": "https://oncae.gob.hn/biblioteca/normativa/"
+    },
+    {
+     "date": "",
+     "host": "www.enag.gob.hn",
+     "rank": 4,
+     "snippet": "La Gaceta - ENAG\n### Convenio de Cooperación Interinstitucional\nEl Congreso Nacional garantiza el acceso universal y gratuito a la legislación hondureña mediante la firma de un convenio estratégico.\n...\n### Navegación\n...\n2. Gaceta Digital",
+     "title": "La Gaceta",
+     "url": "https://www.enag.gob.hn/index.php/gaceta-digital"
+    },
+    {
+     "date": "",
+     "host": "www.tsc.gob.hn",
+     "rank": 5,
+     "snippet": "### Lo más visto\n- Constitución de la República de Honduras\n- Código Penal (2019)\n- Código Tributario (Decreto No. 170-2016)\n- LEY DE PROCEDIMIENTO ADMINISTRATIVO\n- LEY FUNDAMENTAL DE EDUCACIÓN\n...\n# Biblioteca Virtual TSC",
+     "title": "Biblioteca Virtual TSC",
+     "url": "https://www.tsc.gob.hn/biblioteca/index.php?start=567"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Honduras municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2017-07-12",
+     "host": "sde.gob.hn",
+     "rank": 1,
+     "snippet": "Ley-y-Reglamento-de-Municipalidades – Secretaría de Desarrollo Económico\n# Ley-y-Reglamento-de-Municipalidades\nLey-y-Reglamento-de-Municipalidades\n**Oficina Principal:**\n...\n**Tel:** +504 2242-8341\n**Horario de Atención:**",
+     "title": "Ley-y-Reglamento-de-Municipalidades – Secretaría de ...",
+     "url": "https://sde.gob.hn/tramites-empresariales/leyes-y-reglamentos-3/ley-y-reglamento-de-municipalidades/"
+    },
+    {
+     "date": "",
+     "host": "leyes.hn",
+     "rank": 2,
+     "snippet": "Municipal Ordinances - Leyes.HN\n- Primary Legislation\n- Secondary Legislation\n- Municipal Regulations\n- Other / Special\n...\nLeyes.HN is free for everyone.\n...\nThis site provides access to public legal documents for informational purposes only.",
+     "title": "Ordenanzas Municipales",
+     "url": "https://leyes.hn/ordenanza"
+    },
+    {
+     "date": "",
+     "host": "www.tsc.gob.hn",
+     "rank": 3,
+     "snippet": "2. Inicio\n3. Leyes\n4. Ley de Municipalidades\n...\n**LEY DE MUNICIPALIDADES**\nTITULO I\nOBJETO, DEFINICION Y TERRITORIO\n...\n**Descargar**\n**Descargar Ley de Municipalidades (Gaceta 26,292)**\n...\n**",
+     "title": "Ley de Municipalidades",
+     "url": "https://www.tsc.gob.hn/biblioteca/index.php/leyes/4-ley-de-municipalidades"
+    },
+    {
+     "date": "",
+     "host": "sde.gob.hn",
+     "rank": 4,
+     "snippet": "Diario Oficial La Gaceta N                26603 del 27\nde  noviembre  de  1991,  cuyo  texto  íntegro  aparece  al\n...\njerarquía normativa siguiente:\n...\nLa Constitución de la República;\n...\nLos Tratados Internacionales ratificados por Honduras;",
+     "title": "LEY DE MUNICIPALIDADES",
+     "url": "https://sde.gob.hn/wp-content/uploads/2017/06/Ley-de-Municipalidades.pdf"
+    },
+    {
+     "date": "",
+     "host": "leyes.hn",
+     "rank": 5,
+     "snippet": "### Support Leyes.HN\n# 729 results in Category: Municipal\n...\n### La Gaceta alerts\nThis site provides access to public legal documents for informational purposes only.\nIt does not constitute legal advice.\n...\n© 2026 Leyes.HN — Made in Utila, Bay Islands, Honduras",
+     "title": "Municipal - Leyes.HN",
+     "url": "https://leyes.hn/categoria/municipal"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Honduras regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-08-03",
+     "host": "www.cnbs.gob.hn",
+     "rank": 1,
+     "snippet": "…\n...\nReglamento de Gobierno Corporativo para las Instituciones Supervisadas\nNorma para la Autorización y Funcionamiento de Agentes Corresponsales\nNormas Complementarias para el Fortalecimiento de la Transparencia, la Cultura Financiera, Conducta de Mercado y Atención al Usuario Financiero",
+     "title": "Otras regulaciones aplicables",
+     "url": "https://www.cnbs.gob.hn/documentos-fintech/otras-regulaciones-aplicables/"
+    },
+    {
+     "date": "2025-01-28",
+     "host": "www.cnbs.gob.hn",
+     "rank": 2,
+     "snippet": "## Reglamentos\n- Reglamento de Intermediación de Seguros y Finanzas (Resolución GES No.973-10-12-2019)\n- Reglamento del Registro Especial del Mercado de Valores (Resolución CNBS No. 1559/11-12-2008)",
+     "title": "Reglamentos",
+     "url": "https://www.cnbs.gob.hn/reglamentos/"
+    },
+    {
+     "date": "2026-03-18",
+     "host": "www.cnbs.gob.hn",
+     "rank": 3,
+     "snippet": "Marco Regulatorio Honduras - Comisión Nacional de Bancos y Seguros\n...\n#### Regulación Fintech Honduras\n#### Posición Regulatoria de la CNBS y BCH respecto a los Activos Virtuales y similares\n#### Regulación Tecnologías Habilitadoras\n...\n#### Regulación del Sistema Nacional de Pagos",
+     "title": "www.cnbs.gob.hn · marco-regulatorio-hondurasMarco Regulatorio Honduras - Comisión Nacional de Bancos y ...",
+     "url": "https://www.cnbs.gob.hn/documentos-fintech/marco-regulatorio-honduras/"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.state.gov",
+     "rank": 4,
+     "snippet": "- The National Investment Council\n...\nPublic comments received by regulators are not published.\n...\nHonduras publishes many trade-related regulations online.\nThe Customs Administration (Aduanas) and Sanitary Regulatory Agency (ARSA) have improved publication of regulations through their official onl",
+     "title": "2026 Investment Climate Statement: Honduras",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/honduras"
+    },
+    {
+     "date": "2019-07-19",
+     "host": "www.cree.gob.hn",
+     "rank": 5,
+     "snippet": "Leyes, Reglamentos y Normas Técnicas | CREE\n###### Correos:\ninfo@cree.gob.hn\nsecretaria@cree.gob.hn\n###### Teléfono:\n+504-2235-9494\n...\n|Ley General de la Industria Eléctrica.",
+     "title": "Leyes, Reglamentos, Normas Técnicas y Procedimientos",
+     "url": "https://www.cree.gob.hn/leyes-reglamentos-y-normas-tecnicas/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Honduras national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "sde.gob.hn",
+     "rank": 1,
+     "snippet": "Normas Hondureñas OHN \nA continuación, se listan las 255 Normas, Guías, Especificaciones Técnicas, Informes Técnicos y Acuerdos de Taller Nacional vigentes publicados por el OHN en Honduras al 12 de diciembre de 2025.",
+     "title": "sde.gob.hn › wp-content › uploadsNormas Hondureñas OHN - sde.gob.hn",
+     "url": "https://sde.gob.hn/wp-content/uploads/2025/12/255_normas_OHN_publicadas_2025-12-12.pdf"
+    },
+    {
+     "date": "2024-07-08",
+     "host": "sde.gob.hn",
+     "rank": 2,
+     "snippet": "Hacemos accesibles normas relacionadas con acreditación, alimentos, ambiente, antisoborno, calidad, certificación, electrotecnología, energía, gestión del riesgo, innovación, responsabilidad social, salud y seguridad ocupacional , tecnologías de la información, transporte y muchas más.\n...\n**Horario",
+     "title": "Catálogo de las Normas - Secretaría de Desarrollo Económico",
+     "url": "https://sde.gob.hn/ohn-catalogo-normas/"
+    },
+    {
+     "date": "2023-07-04",
+     "host": "sde.gob.hn",
+     "rank": 3,
+     "snippet": "# Normas OHN\n## Todos los productos\nOHN 67000:2014 Frijol en grano (Phaseolus vulgaris)\n...\nOHN 45:2022-Eficiencia energética de acondicionadores de aire tipo ventana, tipo dividido y tipo paquete — Límites de eficiencia energética",
+     "title": "Normas OHN - Secretaría de Desarrollo Económico",
+     "url": "https://sde.gob.hn/normas-ohn/"
+    },
+    {
+     "date": "",
+     "host": "sde.gob.hn",
+     "rank": 4,
+     "snippet": "1. \n...\nORGANIZACIÓN CORPORATIVA.\n...\n8. OHN-ISO/IEC 17050-2:2004 “Evaluación de la conformidad — Declaración de conformidad del proveedor — Parte 2: Documentación de apoyo”\n...\nAdministración \n1.",
+     "title": "Normas Hondureñas OHN - sde.gob.hn",
+     "url": "https://sde.gob.hn/wp-content/uploads/2026/06/260_normas_OHN_publicadas_2026-06-30.pdf"
+    },
+    {
+     "date": "2022-12-02",
+     "host": "sde.gob.hn",
+     "rank": 5,
+     "snippet": "Organismo Hondureño de Normalización (OHN) – Secretaría de Desarrollo Económico\n…\n...\n#### Membresías\nhttp://www.iso.org\n...\n#### Haga sus consultas, sugerencias o reclamos a: infoohn@sde.gob.hn\n...\nTegucigalpa, Honduras",
+     "title": "Organismo Hondureño de Normalización (OHN)",
+     "url": "https://sde.gob.hn/ohn/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Honduras mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2023-07-04",
+     "host": "sde.gob.hn",
+     "rank": 1,
+     "snippet": "## Todos los productos\nOHN 45:2022-Eficiencia energética de acondicionadores de aire tipo ventana, tipo dividido y tipo paquete — Límites de eficiencia energética\nObjeto y campo de aplicación: Esta Norma Hondureña especifica los rangos de eficiencia energética de los acondicionadores de aire.",
+     "title": "Normas OHN - Secretaría de Desarrollo Económico",
+     "url": "https://sde.gob.hn/normas-ohn/"
+    },
+    {
+     "date": "2019-07-19",
+     "host": "www.cree.gob.hn",
+     "rank": 2,
+     "snippet": "Leyes, Reglamentos y Normas Técnicas | CREE\n###### Correos:\ninfo@cree.gob.hn\nsecretaria@cree.gob.hn\n###### Teléfono:\n+504-2235-9494\n...\n…\n|Ley General de la Industria Eléctrica.",
+     "title": "Leyes, Reglamentos, Normas Técnicas y Procedimientos",
+     "url": "https://www.cree.gob.hn/leyes-reglamentos-y-normas-tecnicas/"
+    },
+    {
+     "date": "",
+     "host": "sde.gob.hn",
+     "rank": 3,
+     "snippet": "1. \nOHN-ISO/IEC Guía 2:2004 “Normalización y actividades relacionadas — Vocabulario general”\n...\n1. \nOHN 6:2010 “Hotel pequeño — Requisitos” \n...\n1. \n...\nParte 1: Requisitos generales”",
+     "title": "Normas Hondureñas OHN - Secretaría de Desarrollo Económico",
+     "url": "https://sde.gob.hn/wp-content/uploads/2024/01/228_normas_OHN_publicadas_2023-12-15.pdf"
+    },
+    {
+     "date": "2017-06-26",
+     "host": "sde.gob.hn",
+     "rank": 4,
+     "snippet": "- Constitución de la República\n- Ley de Protección al Consumidor\n...\n- Reglamento de la Ley de Protección al Consumidor\n- Acuerdo 005-2014 Listado de los artículos esenciales de consumo popular exonerados del pago del Impuesto Sobre Ventas\n- Reglamento Técnico Hondureño Canopy",
+     "title": "Leyes Y Reglamentos",
+     "url": "https://sde.gob.hn/proteccion-al-consumidor/leyes-y-reglamentos/"
+    },
+    {
+     "date": "",
+     "host": "eping.wto.org",
+     "rank": 5,
+     "snippet": "|--|--|--|--|\n...\n# Number of TBT notifications per year\nThree-phase squirrel-cage AC induction motors, with nominal power of between 0.746 and 373 kW.\nLimits, test method and labelling.",
+     "title": "Honduras",
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C340"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Honduras national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2024-11-15",
+     "host": "ine.gob.hn",
+     "rank": 1,
+     "snippet": "Bases de Datos - INE Honduras - Estadísticas Oficiales\n- Tegucigalpa, Honduras.\nHorario de atención al público: 7:00 a. m. – 3:00 p. m.\n...\n##### Solicitud de información\nCopyright © 2026 Instituto Nacional de Estadística, Honduras.",
+     "title": "Bases de Datos - INE Honduras - Estadísticas Oficiales",
+     "url": "https://ine.gob.hn/bases-de-datos/"
+    },
+    {
+     "date": "2024-11-15",
+     "host": "ine.gob.hn",
+     "rank": 2,
+     "snippet": "Tegucigalpa, Honduras.\nHorario de atención al público: 7:00 a. m. – 3:00 p. m.\n...\nCopyright © 2026 Instituto Nacional de Estadística, Honduras.",
+     "title": "Ronda de censos 2024 – 2025",
+     "url": "https://ine.gob.hn/category/estadisticas-honduras/censos/"
+    },
+    {
+     "date": "2024-11-15",
+     "host": "ine.gob.hn",
+     "rank": 3,
+     "snippet": "Serie de indicadores - INE Honduras - Estadísticas Oficiales\n- Tegucigalpa, Honduras.\n...\n##### Solicitud de información\nCopyright © 2026 Instituto Nacional de Estadística, Honduras.\n...\nTegucigalpa, M.D.C. Honduras C.A",
+     "title": "Serie de indicadores - INE Honduras - Estadísticas Oficiales",
+     "url": "https://ine.gob.hn/serie-de-indicadores/"
+    },
+    {
+     "date": "2024-11-15",
+     "host": "ine.gob.hn",
+     "rank": 4,
+     "snippet": "Proyectos en curso - INE Honduras - Estadísticas Oficiales\n- Tegucigalpa, Honduras.\nHorario de atención al público: 7:00 a. m. – 3:00 p. m.\n...\nCopyright © 2026 Instituto Nacional de Estadística, Honduras.",
+     "title": "Proyectos",
+     "url": "https://ine.gob.hn/proyectos-en-curso/"
+    },
+    {
+     "date": "2024-11-15",
+     "host": "ine.gob.hn",
+     "rank": 5,
+     "snippet": "INE - Instituto Nacional de Estadística de Honduras\n- Tegucigalpa, Honduras.\nHorario de atención al público: 7:00 a. m. – 3:00 p. m.",
+     "title": "INE - Instituto Nacional de Estadística de Honduras",
+     "url": "https://ine.gob.hn/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Honduras central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-29",
+     "host": "www.bch.hn",
+     "rank": 1,
+     "snippet": "Gestión de Información Económica\nEstadísticas y Publicaciones\nReportes Dinámicos\nTipo de Cambio\nÍndice del Tipo de Cambio Efectivo Real\nEstadísticas Cambiarias\nOperaciones de Mercado Abierto\nSeries Estadísticas Consolidadas\nSector Externo",
+     "title": "Gestión de Información Económica - Banco Central de Honduras",
+     "url": "https://www.bch.hn/estadisticas-y-publicaciones-economicas/reportes-dinamicos/tipo-de-cambio/indice-del-tipo-de-cambio-efectivo-real"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.bch.hn",
+     "rank": 2,
+     "snippet": "Banco Central de Honduras\n...\nEl Banco Central de Honduras se complace en poner al servicio de la comunidad de usuarios en general su nueva herramienta de consulta de información macroeconómica y financiera, relacionada con el quehacer institucional.\n...\nLe invitamos a acceder a los contenidos por m",
+     "title": "Banco Central de Honduras Reportes dinámicos",
+     "url": "https://www.bch.hn/estadisticas-y-publicaciones-economicas/reportes-dinamicos/"
+    },
+    {
+     "date": "",
+     "host": "www.bch.hn",
+     "rank": 3,
+     "snippet": "…\n...\nSitio web: www.bch.hn \n...\nCalendario de informes: https://www.bch.hn/estadisticas-y-publicaciones-economicas/sector-monetario/resumen-ejecutivo-semanal-de-indicadores-del-sistema-financiero",
+     "title": "www.bch.hn › estadisticos › EFINFORME EJECUTIVO SEMANAL DE INDICADORES DEL SISTEMA - bch.hn",
+     "url": "https://www.bch.hn/estadisticos/EF/LIBRES/RES_24_9_2026.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.bch.hn",
+     "rank": 4,
+     "snippet": "…\n...\nSitio web: www.bch.hn \n...\nCalendario de informes: https://www.bch.hn/estadisticas-y-publicaciones-economicas/sector-monetario/resumen-ejecutivo-semanal-de-indicadores-del-sistema-financiero",
+     "title": "Subgerencia de Estudios Económicos Departamento de ...",
+     "url": "https://www.bch.hn/estadisticos/EF/LIBRES/RES_7_5_2026.pdf"
+    },
+    {
+     "date": "2026-09-17",
+     "host": "www.bch.hn",
+     "rank": 5,
+     "snippet": "Generalidades de Estabilidad Financiera\nInforme de Estabilidad Financiera (IEF)\n...\nSector Real\nFortalecimiento Estadístico\nCuentas Nacionales Anuales Base 2000\nÍndice Mensual de Actividad Económica\nProducto Interno Bruto Trimestral\nInformes y Publicaciones",
+     "title": "Gestión de Información Económica",
+     "url": "https://www.bch.hn/estadisticas-y-publicaciones-economicas/reportes-dinamicos/tipo-de-cambio"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Honduras government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-10-23",
+     "host": "oncae.gob.hn",
+     "rank": 1,
+     "snippet": "Datos abiertos | ONCAE\n# Datos abiertos\nBusca, explora y visualiza las contrataciones de las instituciones del gobierno de Honduras Portal de contrataciones abiertas de Honduras\n...\n# DESCARGA DE ARCHIVOS\nOficina Normativa de Contratación y Adquisiciones del Estado",
+     "title": "Datos abiertos - ONCAE",
+     "url": "https://oncae.gob.hn/datos-abiertos/"
+    },
+    {
+     "date": "",
+     "host": "diger.gob.hn",
+     "rank": 2,
+     "snippet": "Gobierno Abierto\n# Portal Nacional de Datos Abiertos\nInformación pública accesible en formatos abiertos para impulsar la innovación, la transparencia y el desarrollo de Honduras.\n...\nDatos Abiertos Hondurasdatosabiertos.gob.hn\n...\nTodos los datasets gubernamentales organizados por categoría, institu",
+     "title": "Portal Nacional de Datos Abiertos | DIGER - Gobierno de Honduras",
+     "url": "https://diger.gob.hn/datos-abiertos"
+    },
+    {
+     "date": "2025-11-13",
+     "host": "www.sefin.gob.hn",
+     "rank": 3,
+     "snippet": "Secretaria de Finanzas, ha mejorado su sitio web: sefin.gob.hn, incorporándose a un ciclo de mejora continua y uniéndose a las iniciativas de datos abiertos.\nAquí pordá acceder a nuestro presupuesto abierto en formato descargable , informarse y participar enviando sus comentarios.",
+     "title": "Datos Abiertos",
+     "url": "https://www.sefin.gob.hn/datos-abiertos/"
+    },
+    {
+     "date": "",
+     "host": "portalunico.iaip.gob.hn",
+     "rank": 4,
+     "snippet": "para\nfacilitar a las personas el ejercicio del derecho de acceso a la información completa,\nveraz,\nadecuada y oportuna que generan las diferentes instituciones que manejan fondos públicos, en\nlos\n...\nEsta herramienta forma parte del Sistema Nacional de Información Pública (SINAIP)\n...\ncon",
+     "title": "Portal Único de Transparencia",
+     "url": "https://portalunico.iaip.gob.hn/"
+    },
+    {
+     "date": "2024-11-15",
+     "host": "ine.gob.hn",
+     "rank": 5,
+     "snippet": "Bases de Datos - INE Honduras - Estadísticas Oficiales\n...\nTegucigalpa, M.D.C. Honduras C.A\nTeléfonos: +504 2242-8673, 2242-8676 y 2242-8677 E-mail: info@ine.gob.hn",
+     "title": "Bases de Datos - INE Honduras - Estadísticas Oficiales",
+     "url": "https://ine.gob.hn/bases-de-datos/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:46:01Z",
+ "pais": {
+  "iso2": "HN",
+  "iso3": "HND",
+  "nombre": "Honduras"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

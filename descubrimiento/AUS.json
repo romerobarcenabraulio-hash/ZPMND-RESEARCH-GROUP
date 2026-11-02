@@ -1,0 +1,763 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Australia constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2026-10-15",
+     "host": "www.legislation.gov.au",
+     "rank": 1,
+     "snippet": "Constitution - Federal Register of Legislation\n# Federal Register of Legislation\n...\n# Constitution\nThe Australian Constitution was drafted at two conventions in the 1890s and approved by the people of the colonies of Australia at a series of referendums between 1898 and 1900.",
+     "title": "Constitution",
+     "url": "https://www.legislation.gov.au/constitution",
+     "verificacion": {
+      "bytes": 86748,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:50:45Z",
+      "http": 200,
+      "sha256": "b2fe02f387f242dd1f9e3455ba84c8a6465fa2137b475fa14155105fac6db95e"
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "host": "www.legislation.gov.au",
+     "rank": 2,
+     "snippet": "Federal Register of Legislation Home Page\n# Federal Register of Legislation",
+     "title": "Federal Register of Legislation",
+     "url": "https://www.legislation.gov.au/'",
+     "verificacion": {
+      "bytes": 37447,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:50:54Z",
+      "http": 200,
+      "sha256": "22b9fb9b81c14e1c89d9cc6cc7be8be27e71de4054577e1fe5222c3fe9b3f5a5"
+     }
+    },
+    {
+     "date": "1996-12-02",
+     "host": "www.legislation.gov.au",
+     "rank": 3,
+     "snippet": "No longer in force\nNLIF\n...\nA New Tax System (Australian Business Number) Amendment (Display of Trading Names) Regulations 2025\nF2025L01227**Registered:** 03/10/2025\n...\nIn force\nIF\nA New Tax System (Family Assistance) Act 1999",
+     "title": "Search",
+     "url": "https://www.legislation.gov.au/search"
+    },
+    {
+     "date": "2026-10-15",
+     "host": "www.legislation.gov.au",
+     "rank": 4,
+     "snippet": "# Explore the Federal Register of Legislation\nThe Federal Register of Legislation (the Register) is the authorised whole-of-government website for Commonwealth legislation and related documents.\nIt contains the full text and details of the lifecycle of individual laws and the relationships between t",
+     "title": "Federal Register of Legislation annual survey",
+     "url": "https://www.legislation.gov.au/;"
+    },
+    {
+     "date": "",
+     "host": "peo.gov.au",
+     "rank": 5,
+     "snippet": "Overview\nby the Australian Government Solicitor\nThe Australian Constitution has properly been described as ‘the birth certificate of a nation’.\nIt also provides the basic rules for the government of Australia.\nIndeed, the Constitution is the fundamental law of Australia binding everybody including t",
+     "title": "AUSTRALIA’S CONSTITUTION",
+     "url": "https://peo.gov.au/assets/Public/Australian_Constitution.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Australia national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-02-11",
+     "host": "www.legislation.gov.au",
+     "rank": 1,
+     "snippet": "Search results - Federal Register of Legislation\n# Federal Register of Legislation\n## Federal Register of Legislation annual survey\nHave your say on the Federal Register of Legislation.\n...\n2. Search results\nShowing 96 results\nCollection: Legislative instrument\nClassification: All\n...\nCompetition an",
+     "title": "Search results - Federal Register of Legislation",
+     "url": "https://www.legislation.gov.au/search/registrationdate(today-7,today)/collection(LegislativeInstrument)/sort(registeredat%20desc)",
+     "verificacion": {
+      "bytes": 615015,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:51:05Z",
+      "http": 200,
+      "sha256": "a0e27604ce4d83d00501db9a2f3863480cf8950e504678bc024b06385a53bae4"
+     }
+    },
+    {
+     "date": "1996-12-02",
+     "host": "www.legislation.gov.au",
+     "rank": 2,
+     "snippet": "Search results - Federal Register of Legislation\n…\n132,749 total\n...\nNo longer in force\n...\nIn force\nIF\n...\nA New Tax System (Australian Business Number) Amendment (Display of Trading Names) Regulations 2025\nF2025L01227**Registered:** 03/10/2025",
+     "title": "Search",
+     "url": "https://www.legislation.gov.au/search",
+     "verificacion": {
+      "bytes": 620160,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:51:17Z",
+      "http": 200,
+      "sha256": "40bb14e91f1b9f2f00d4be25b257364c2207794a051bce02caafb5698f07edab"
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "host": "www.legislation.gov.au",
+     "rank": 3,
+     "snippet": "Federal Register of Legislation Home Page\n# Federal Register of Legislation\n## Federal Register of Legislation annual survey\n...\ncheck that you entered the address correctlysearch the website using keywordsnavigate from the homepage or use the browse menuaccess previous versions of this website on t",
+     "title": "Federal Register of Legislation",
+     "url": "https://www.legislation.gov.au/browse/current"
+    },
+    {
+     "date": "2026-10-15",
+     "host": "www.legislation.gov.au",
+     "rank": 4,
+     "snippet": "The Federal Register of Legislation (the Register) is the authorised whole-of-government website for Commonwealth legislation and related documents.\nIt contains the full text and details of the lifecycle of individual laws and the relationships between them.\n...\nNotifiable Instruments\nGazettes\nAdmin",
+     "title": "Federal Register of Legislation annual survey",
+     "url": "https://www.legislation.gov.au/;"
+    },
+    {
+     "date": "2026-10-15",
+     "host": "www.legislation.gov.au",
+     "rank": 5,
+     "snippet": "# Legislative instruments\n...\nExamples of LIs include regulations, rules and determinations.\n...\nThe Federal Register of Legislation contains authorised versions of every legislative instrument made since 1 January 2005 and every instrument made before then but still in force on 1 January 2008.\n...\n",
+     "title": "Legislative Instruments",
+     "url": "https://www.legislation.gov.au/legislative-instruments"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Australia official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "gazette.nsw.gov.au",
+     "rank": 1,
+     "snippet": "NSW Government Gazette\n## Welcome\nWelcome to the official website of the NSW Government Gazette.\nThe Gazette is the permanent public record of official NSW Government, local council, non-government and other notices where a requirement exists in NSW legislation that the notice be published in the Ga",
+     "title": "NSW Government Gazette",
+     "url": "https://gazette.nsw.gov.au/",
+     "verificacion": {
+      "bytes": 29015,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:51:19Z",
+      "http": 200,
+      "sha256": "639293a843b23be2fc8da42e0d124bc6ed2dc9fb6b9f249752010b3af17e8c87"
+     }
+    },
+    {
+     "date": "2021-02-09",
+     "host": "governmentgazette.sa.gov.au",
+     "rank": 2,
+     "snippet": "**GOVERNMENT GAZETTE**\nThe official publication of the\nSouth Australian Government\n# The South Australian Government Gazette is a weekly record of all legislation passed, notices of state and local government, court notices and many other notices required to be published under law, published each Th",
+     "title": "Home | Government Gazette",
+     "url": "https://governmentgazette.sa.gov.au/",
+     "verificacion": {
+      "error": "robots.txt disallows https://governmentgazette.sa.gov.au/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:51:19Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "gazette.nsw.gov.au",
+     "rank": 3,
+     "snippet": "of the State of\nNew South Wales\n...\nThe New South Wales Government Gazette is the permanent public record of official NSW Government notices.\n...\nThe Gazette is compiled by the Parliamentary Counsel’s Office and published on the NSW legislation website\n(www.legislation.nsw.gov.au) under the authorit",
+     "title": "Government Gazette No 226 of Friday 28 May 2021",
+     "url": "https://gazette.nsw.gov.au/gazette/2021/5/2021-226.pdf"
+    },
+    {
+     "date": "",
+     "host": "gazette.nsw.gov.au",
+     "rank": 4,
+     "snippet": "of the State of\nNew South Wales\n...\nThe New South Wales Government Gazette is the permanent public record of official NSW Government notices.\n...\nThe Gazette is compiled by the Parliamentary Counsel’s Office and published on the NSW legislation website\n(www.legislation.nsw.gov.au) under the authorit",
+     "title": "Government Gazette No 250 of Friday 2 October 2020",
+     "url": "https://gazette.nsw.gov.au/gazette/2020/10/2020-250.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.legislation.gov.au",
+     "rank": 5,
+     "snippet": "Gazette Office, Australian Government Publishing Service, \nG.P.O. Box 4007, Canberra, A.C.T. 2601 (Telephone 95 \n4722) \nor lodged at the Gazette Office located on the ground floor,\n...\nBrisbane: \n...\nHobart:",
+     "title": "Commonwealth",
+     "url": "https://www.legislation.gov.au/files/gazettes/historic/1984/1984GN16.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Australia supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.hcourt.gov.au",
+     "rank": 1,
+     "snippet": "Cases which have been completed are available through the Decided Cases page.\n...\nHigh Court case files from 2020 onwards are electronic only and are available for public searching through the DLS Portal.\n...\nTitle\nJudgments\nDescription\nAccess judgments and judgment summaries\n...\nLodge documents and",
+     "title": "Cases and Judgments | High Court of Australia",
+     "url": "https://www.hcourt.gov.au/cases-and-judgments",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.hcourt.gov.au/cases-and-judgments",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:52:50Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.hcourt.gov.au",
+     "rank": 2,
+     "snippet": "This page links to the Commonwealth Law Reports volumes 1-100 (1903–1959), High Court of Australia unreported judgments 1906-1994 (incomplete set), Judgments since 1998, and Single Justice Judgments since January 2024.\n...\nSince January 1998",
+     "title": "Judgments",
+     "url": "https://www.hcourt.gov.au/cases-and-judgments/judgments",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.hcourt.gov.au/cases-and-judgments/judgments",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:52:50Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.hcourt.gov.au",
+     "rank": 3,
+     "snippet": "Current Cases | High Court of Australia\n...\n# Current Cases\nThese are the current cases before the Full Court, including:\n- Appeals;\n...\n- Matters in the original jurisdiction to be heard by the Full Court.\n...\nMatters are displayed on this page until the judgment is handed down by the Court.",
+     "title": "Current Cases",
+     "url": "https://www.hcourt.gov.au/cases-and-judgments/cases/current"
+    },
+    {
+     "date": "",
+     "host": "www.caselaw.nsw.gov.au",
+     "rank": 4,
+     "snippet": "NSW Caselaw\n# Recent decisions for all Courts and Tribunals\nThe recent decisions list displays the 200 most recent decisions in order of publication date.\n...\nSelect from the options provided below.\nTo browse all decisions see the Browse page.",
+     "title": "Recent decisions for all Courts and Tribunals",
+     "url": "https://www.caselaw.nsw.gov.au/"
+    },
+    {
+     "date": "2026-04-23",
+     "host": "www.wa.gov.au",
+     "rank": 5,
+     "snippet": "…\n# Supreme Court Decisions: Office of the Information Commissioner\n...\n|[2025] WASC 167|08/05/2025|PEARLMAN -v- WA INFORMATION COMMISSIONER [2025] WASC 167|D0062024|28/03/2024|",
+     "title": "Supreme Court Decisions: Office of the Information Commissioner",
+     "url": "https://www.wa.gov.au/organisation/office-of-the-information-commissioner/supreme-court-decisions-office-of-the-information-commissioner"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Australia state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.legislation.qld.gov.au",
+     "rank": 1,
+     "snippet": "Home - Queensland Legislation - Queensland Government\n## Quick links:\nWelcome to Queensland’s legislation website, the official Queensland Government website providing access to authorised Queensland legislation and related information—Bills introduced, Acts as passed, subordinate legislation as mad",
+     "title": "Home - Queensland Legislation",
+     "url": "https://www.legislation.qld.gov.au/",
+     "verificacion": {
+      "bytes": 23750,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:52:54Z",
+      "http": 200,
+      "sha256": "7e7ded0aba47701a157c657c3aa35455a2d9e09f5a6c06c620f1692bdf427247"
+     }
+    },
+    {
+     "date": "2001-05-25",
+     "host": "legislation.nsw.gov.au",
+     "rank": 2,
+     "snippet": "The NSW legislation website is the primary source for NSW legislation.\nIt is managed by the Parliamentary Counsel's Office.\n...\nThe Parliamentary Counsel's Office is delighted to announce the NSW Government Gazette standalone website and portal was launched on 1 July 2024.",
+     "title": "Home",
+     "url": "https://legislation.nsw.gov.au/",
+     "verificacion": {
+      "error": "robots.txt disallows https://legislation.nsw.gov.au/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:52:54Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.legislation.wa.gov.au",
+     "rank": 3,
+     "snippet": "## Acts of the Parliament of Western Australia:\n➤ in force (including historical versions, where available)\n...\n➤ by portfolio\n...\n## Government Gazettes of Western Australia (including historical versions).\n...\n## All Bills that have been considered by the Parliament of Western Australia since 1997",
+     "title": "WALW",
+     "url": "https://www.legislation.wa.gov.au/"
+    },
+    {
+     "date": "2024-04-09",
+     "host": "www.legislation.vic.gov.au",
+     "rank": 4,
+     "snippet": "Victorian legislation | legislation.vic.gov.au\n# Victorian legislation\nThe primary source for Victorian legislation.\nFind Bills considered by Parliament, Acts of Parliament and statutory rules.\n### Legislation in force\nCurrent and superseded versions of Acts and statutory rules incorporating any ame",
+     "title": "Victorian legislation",
+     "url": "https://www.legislation.vic.gov.au/"
+    },
+    {
+     "date": "",
+     "host": "www.legislation.wa.gov.au",
+     "rank": 5,
+     "snippet": "# Original Acts as passed\n## 'I' List of Acts\n|Information Commissioner Act 2024|052 of 2024|Official Version|Word|HTML| |\n|Infrastructure Western Australia Act 2019|013 of 2019|Official Version|Word|HTML| |",
+     "title": "Original Acts as passed - WA Legislation",
+     "url": "https://www.legislation.wa.gov.au/legislation/statutes.nsf/aspassed_i.html"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Australia municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.legislation.wa.gov.au",
+     "rank": 1,
+     "snippet": "Official Version \n[PCO 03-q0-00] \nPublished on www.legislation.wa.gov.au \nWestern Australia \nLocal Government Act 1995 \nLocal Government (Functions and General) \nRegulations 1996\n...\nOfficial Version \n...\nWestern Australia",
+     "title": "As at 17 Dec 2025",
+     "url": "https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/mrdoc_49079.pdf/$FILE/Local%20Government%20(Functions%20and%20General)%20Regulations%201996%20-%20%5B03-q0-00%5D.pdf?OpenElement",
+     "verificacion": {
+      "bytes": 384288,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:52:59Z",
+      "http": 200,
+      "sha256": "57eae30f47d2dc1740bb28b19a4a5352dad4fc9d6ed179fc623eaaa900b62df6"
+     }
+    },
+    {
+     "date": "2026-10-09",
+     "host": "www.olg.nsw.gov.au",
+     "rank": 2,
+     "snippet": "Policy and legislation | Office of Local Government\n...\nView the vast range of guidelines and policy resources available for local Government.\n...\n- Local Government (General) Regulation 2021 open_in_new\n- Companion Animals Regulation 2018 open_in_new\n...\nFor access to all NSW acts and regulations, ",
+     "title": "Policy and legislation - Office of Local Government NSW",
+     "url": "https://www.olg.nsw.gov.au/councils/policy-and-legislation",
+     "verificacion": {
+      "bytes": 114516,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:53:01Z",
+      "http": 200,
+      "sha256": "24109e516e8661457027db79b24e4cdf74f11049b9f13308cb616224e1f2e34e"
+     }
+    },
+    {
+     "date": "2026-06-18",
+     "host": "www.wa.gov.au",
+     "rank": 3,
+     "snippet": "## Resources\nLocal law information is accessible from the department’s website.\nThe Local Law Register is a database of all local law titles made by each local government.\nIt has a search facility to allow local governments to look for gazettal information.\n...\nWALGA operates a local laws service to",
+     "title": "Local laws",
+     "url": "https://www.wa.gov.au/government/publications/local-laws"
+    },
+    {
+     "date": "2025-04-27",
+     "host": "www.brisbane.qld.gov.au",
+     "rank": 4,
+     "snippet": "View and download the local laws that help to keep Brisbane safe, protect our environment and safeguard our way of life.\n...\nLocal laws regulate specific issues within our community, such as building and development, land use and parking.\n...\nDownload and read the local laws that help protect Brisba",
+     "title": "Council's local laws database - Brisbane City Council",
+     "url": "https://www.brisbane.qld.gov.au/laws-and-permits/local-laws/council-s-local-laws-database"
+    },
+    {
+     "date": "",
+     "host": "www.legislation.wa.gov.au",
+     "rank": 5,
+     "snippet": "Local Government (Miscellaneous Provisions) Act 1960\n...\nA466:201907081546\n...\nPCO Helpdesk\nlegislation@pco.wa.gov.au\nLocal Government (Qualification of Municipal Officers) Regulations 1984\nS2413:201108111320\n...\nPCO Helpdesk",
+     "title": "law_a466.atom&content=text&subsidiary=yes",
+     "url": "https://www.legislation.wa.gov.au/legislation/statutes.nsf/law_a466.atom&content=text&subsidiary=yes"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Australia regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-11-01",
+     "host": "www.finance.gov.au",
+     "rank": 1,
+     "snippet": "Regulatory functions are listed by portfolio with a short summary on regulator function, whether they are internal to a department or an external entity, relevant legislation, regulated community and links to SOEs and SOIs where available.\nFound 116 result(s).\n...\n|Australian Prudential Regulation A",
+     "title": "Australian Government regulator stocktake",
+     "url": "https://www.finance.gov.au/government/regulatory-reform/regulator-stocktake",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.finance.gov.au/government/regulatory-reform/regulator-stocktake",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:54:32Z"
+     }
+    },
+    {
+     "date": "2004-05-27",
+     "host": "www.rba.gov.au",
+     "rank": 2,
+     "snippet": "Responsibilities for financial stability are shared across four main agencies in Australia – the\nRBA, the Australian Prudential Regulation Authority (APRA), the Australian Securities and\nInvestments Commission (ASIC), and the Treasury.\nThese four agencies comprise the **Council of Financial Regulato",
+     "title": "The Australian Regulatory Framework | RBA",
+     "url": "https://www.rba.gov.au/fin-stability/reg-framework/overview.html",
+     "verificacion": {
+      "bytes": 24683,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:54:33Z",
+      "http": 200,
+      "sha256": "13ebfa55dfbd70cf15d2d0be06fdeea6a42c72a97b951a80951b9c0fbb7fac59"
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "host": "www.legislation.gov.au",
+     "rank": 3,
+     "snippet": "# Explore the Federal Register of Legislation\nThe Federal Register of Legislation (the Register) is the authorised whole-of-government website for Commonwealth legislation and related documents.\nIt contains the full text and details of the lifecycle of individual laws and the relationships between t",
+     "title": "Federal Register of Legislation annual survey",
+     "url": "https://www.legislation.gov.au/"
+    },
+    {
+     "date": "",
+     "host": "www.ahpra.gov.au",
+     "rank": 4,
+     "snippet": "Australian Health Practitioner Regulation Agency - What we do\n...\nAhpra works in partnership with 15 National Boards to implement the National Registration and Accreditation Scheme (the National Scheme).\nThe National Scheme regulates 16 health professions, helping to protect the public by setting st",
+     "title": "Australian Health Practitioner Regulation Agency - What we do",
+     "url": "https://www.ahpra.gov.au/About-Ahpra/What-We-Do.aspx"
+    },
+    {
+     "date": "",
+     "host": "www.rba.gov.au",
+     "rank": 5,
+     "snippet": "Regulation in Australia\n...\nIt includes the \nReserve Bank of Australia (RBA), the Australian Prudential \nRegulation Authority (APRA), the Australian Securities and \nInvestments Commission (ASIC) and the Australian Treasury.\n...\nsupervision of financial institutions \nto protect the financial interest",
+     "title": "Financial System Regulation in Australia",
+     "url": "https://www.rba.gov.au/education/resources/in-a-nutshell/pdf/financial-system-regulation.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Australia national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2025-01-01",
+     "host": "www.standards.org.au",
+     "rank": 1,
+     "snippet": "Please be aware there are certain websites purporting to offer Australian Standard® brand standards for sale that are not authorised or controlled by Standards Australia Limited.\nPeople wishing to purchase Australian Standard® brand standards or any of our other publications can do so at Standards S",
+     "title": "Standards Catalogue - AS 5227.1:2021",
+     "url": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-5227-1-2021",
+     "verificacion": {
+      "bytes": 132814,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:54:35Z",
+      "http": 200,
+      "sha256": "70b4890ab179d0ada3494d8e4dd2330301dc642fbc3b12e4ddf891e66cc30c2c"
+     }
+    },
+    {
+     "date": "2025-01-01",
+     "host": "www.standards.org.au",
+     "rank": 2,
+     "snippet": "# Standards Catalogue\n...\nPlease be aware there are certain websites purporting to offer Australian Standard® brand standards for sale that are not authorised or controlled by Standards Australia Limited.\nPeople wishing to purchase Australian Standard® brand standards or any of our other publication",
+     "title": "Committee Standards - Standards Catalogue | Standards Australia",
+     "url": "https://www.standards.org.au/standards-catalogue/sa-snz/standards-by-committee?committee=CH-029",
+     "verificacion": {
+      "bytes": 134782,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:54:35Z",
+      "http": 200,
+      "sha256": "7854830cc78d6619478bdd6dac1e787a3dd453366b15bce6bc63135bc5332494"
+     }
+    },
+    {
+     "date": "2026-02-12",
+     "host": "store.standards.org.au",
+     "rank": 3,
+     "snippet": "371 Documents\nThe NCC Primary References Set provides access to the Australian Standards and other publications that are primary referenced in the currently adopted editions of the National Construction Code (NCC).\n...\n21 Documents\n...\nThis set includes AS 3000, commonly known as the Wiring Rules, a",
+     "title": "Standards Australia Store: Convenient solutions to buy and access standards",
+     "url": "https://store.standards.org.au/"
+    },
+    {
+     "date": "",
+     "host": "www.standards.org.au",
+     "rank": 4,
+     "snippet": "## Standards Store – low cost access to standards via our new mobile app\n## About Us\n# We are the nation’s leading non-government, not-for-profit standards organisation. Our standards support safety, quality and consistency in the products, services and systems we rely on every day.",
+     "title": "Standards Australia: Home",
+     "url": "https://www.standards.org.au/"
+    },
+    {
+     "date": "",
+     "host": "store.standards.org.au",
+     "rank": 5,
+     "snippet": "We're sorry!\nWe couldn't find any results based on your search.",
+     "title": "Advanced Search - Standards Australia Store",
+     "url": "https://store.standards.org.au/search"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Australia mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2019-05-20",
+     "host": "www.acma.gov.au",
+     "rank": 1,
+     "snippet": "# Technical standards\n...\nOur rules include our technical standards, labelling requirements and equipment rules.\n...\n…\nOur technical standards are the:\n- telecommunications standards\n- radiocommunications standards\n- electromagnetic compatibility standard\n- electromagnetic energy standard\n- parental",
+     "title": "Technical standards",
+     "url": "https://www.acma.gov.au/technical-standards",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.acma.gov.au/technical-standards",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:06Z"
+     }
+    },
+    {
+     "date": "2019-05-20",
+     "host": "www.acma.gov.au",
+     "rank": 2,
+     "snippet": "## Our rules\n- *Broadcasting Services Act 1992*\n- *Telecommunications Act 1997*\n...\nYour product might need to comply with our rules for:\n- telecommunications equipment\n- radiocommunications equipment\n- electromagnetic compatibility (EMC)\n- electromagnetic energy (EME).",
+     "title": "Step 1: check the rules to follow",
+     "url": "https://www.acma.gov.au/step-1-check-rules-follow",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.acma.gov.au/step-1-check-rules-follow",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:06Z"
+     }
+    },
+    {
+     "date": "2024-09-30",
+     "host": "www.productsafety.gov.au",
+     "rank": 3,
+     "snippet": "- Suppliers must comply with any relevant mandatory standards for a product.\n...\nSee a list of products that have mandatory standards.\n...\nThese can relate to:\n- performance\n- composition\n- contents\n- methods of manufacture or processing\n- design\n- construction\n- finish\n- packaging or labelling.",
+     "title": "Product safety standards and how to comply",
+     "url": "https://www.productsafety.gov.au/business/understand-product-safety-rules/product-safety-standards-and-how-to-comply"
+    },
+    {
+     "date": "",
+     "host": "www.safeworkaustralia.gov.au",
+     "rank": 4,
+     "snippet": "|Australian / Joint New Zealand Standard|Title|Model WHS Regulation|\n...\n|AS/NZS 1200:2015|Pressure equipment|Schedule 5 Part 2|\n...\n|AS/NZS 1716:2012|Respiratory protective devices|Regulation 529B|",
+     "title": "Australian and other Standards",
+     "url": "https://www.safeworkaustralia.gov.au/law-and-regulation/duties-under-whs-laws/australian-and-other-standards"
+    },
+    {
+     "date": "",
+     "host": "www.infrastructure.gov.au",
+     "rank": 5,
+     "snippet": "The following tables show the list of the United Nations (UN) Regulations that have been applied under the United Nations  Agreement concerning the Adoption of \nHarmonized Technical United Nations Regulations for Wheeled Vehicles, Equipment and Parts which can be Fitted and/or be Used on Wheeled Veh",
+     "title": "Guide to vehicle type approvals—Appendix 4",
+     "url": "https://www.infrastructure.gov.au/sites/default/files/documents/guide-to-vehicle-type-approvals-appendix-4-un-regulations-that-have-been-applied-october2025.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Australia national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-05-13",
+     "host": "www.abs.gov.au",
+     "rank": 1,
+     "snippet": "# How to verify ABS official channels\n### Our websites\nThe official Australian Bureau of Statistics website is www.abs.gov.au.\n...\nMost Australian Government websites use the ‘.gov.au’ extension in the address.\nThese websites will never use ‘.org’, ‘.net’ or ‘.com’.",
+     "title": "How to verify ABS official channels",
+     "url": "https://www.abs.gov.au/media-centre/how-verify-abs-official-channels",
+     "verificacion": {
+      "bytes": 83514,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:07Z",
+      "http": 200,
+      "sha256": "f31ce25ce8f2929fd968835e1454595c6927f800b4e2200cc40ab0201dec0c33"
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "host": "www.abs.gov.au",
+     "rank": 2,
+     "snippet": "Australian Bureau of Statistics\nAustralian Bureau of Statistics\nWelcome to the\n# Australian Bureau of Statistics\n### Population\n...\n### Unemployment rate\nSeasonally adjusted\n1. Welcome to the Australian Bureau of Statistics\n...\n### Media centre\nBrowse our media releases and find out the latest ABS n",
+     "title": "Australian Bureau of Statistics",
+     "url": "https://www.abs.gov.au:/",
+     "verificacion": {
+      "bytes": 104383,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:09Z",
+      "http": 200,
+      "sha256": "0ca5859f00146da75855dca39688c47ab6bd26875f622ccb454bf603a2b16e6a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.abs.gov.au",
+     "rank": 3,
+     "snippet": "This page last updated 1 November 2026\nFor the latest information and statistics visit the ABS Website.",
+     "title": "By Release Date - Australian Bureau of Statistics",
+     "url": "https://www.abs.gov.au/ausstats/abs@.nsf/ViewContent?readform&view=ProductsbyReleaseDate&Action=Expand&Num=10.1"
+    },
+    {
+     "date": "2026-11-02",
+     "host": "www.abs.gov.au",
+     "rank": 4,
+     "snippet": "Caution: Data in the Data Explorer is currently released after the 11:30am release on the ABS website.\nPlease check the time period when using Data Explorer.",
+     "title": "Building Approvals, Australia, September 2026",
+     "url": "https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release"
+    },
+    {
+     "date": "2026-07-20",
+     "host": "www.abs.gov.au",
+     "rank": 5,
+     "snippet": "About our website | Australian Bureau of Statistics\n...\n## About our website\n...\nFormat: abs.gov.au/statistics/theme/parent-topic/topic/latest-release\nExample: https://www.abs.gov.au/statistics/economy/national-accounts/australian-national-accounts-national-income-expenditure-and-product/latest-rele",
+     "title": "About our website",
+     "url": "https://www.abs.gov.au/welcome-abs-website"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Australia central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2001-03-23",
+     "host": "www.rba.gov.au",
+     "rank": 1,
+     "snippet": "# Statistics\n...\nStatistical releases relate to key data produced by the Bank\nwhich are accompanied by commentary.\nThese releases are among\nthe outputs of the Bank that are reported in ‘Latest News’\n...\nStatistical tables for a range of economic and financial data produced by the Reserve Bank and ot",
+     "title": "Statistics | RBA",
+     "url": "https://www.rba.gov.au/statistics/",
+     "verificacion": {
+      "bytes": 30141,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:10Z",
+      "http": 200,
+      "sha256": "5e38fdbf840ff101fa44b1209233b71c66737aa1abd4af06197fc7ea978355d9"
+     }
+    },
+    {
+     "date": "2001-03-28",
+     "host": "www.rba.gov.au",
+     "rank": 2,
+     "snippet": "Statistical Tables | RBA\n# Statistical Tables\nThis page lists statistical tables for a range of economic and financial data produced\nby the Reserve Bank of Australia and other organisations.\n...\nor in part).\n...\n- International Banking Statistics – Banks & RFCs\n…\n- Housing Loan Payments – E13\n...\nDa",
+     "title": "Statistical Tables | RBA",
+     "url": "https://www.rba.gov.au/statistics/tables/",
+     "verificacion": {
+      "bytes": 95489,
+      "estado": "accesible",
+      "fecha": "2026-11-02T06:56:10Z",
+      "http": 200,
+      "sha256": "ae0cd4682ec5dee68d4e4522c9a8871a8451a790f1987dd51d400438bc634986"
+     }
+    },
+    {
+     "date": "2023-01-01",
+     "host": "www.rba.gov.au",
+     "rank": 3,
+     "snippet": "Reserve Bank of Australia\n## The Bank's mission and key statistics\nWe are Australias central bank and serve the people of Australia.\n...\n### Cash rate target\n...\n%\n...\n#### Chart Pack: Graphs on the Australian economy and financial markets\n4 November 2026 11.30 am AEDT",
+     "title": "Reserve Bank of Australia",
+     "url": "https://www.rba.gov.au/"
+    },
+    {
+     "date": "2026-02-27",
+     "host": "www.rba.gov.au",
+     "rank": 4,
+     "snippet": "Financial Aggregates 2026 | RBA\n# Financial Aggregates 2026\nSeptember 2026\nAugust 2026\nJuly 2026\nJune 2026\nMay 2026\n...\nJanuary 2026\n...\n© Reserve Bank of Australia, 2001–2026.",
+     "title": "Financial Aggregates 2026 | RBA",
+     "url": "https://www.rba.gov.au/statistics/frequency/fin-agg/"
+    },
+    {
+     "date": "2015-09-01",
+     "host": "www.rba.gov.au",
+     "rank": 5,
+     "snippet": "Data produced by the Reserve Bank will generally be available at 11.30 am, released\nin accordance with a published schedule.\nData produced by other organisations will generally be updated on this website at 11.30 am one day after their release.\n...\n…\n...\n|--|--|--|",
+     "title": "Schedule of All Releases | RBA",
+     "url": "https://www.rba.gov.au/schedules-events/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Australia government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2015-03-17",
+     "host": "www.data.gov.au",
+     "rank": 1,
+     "snippet": "Explore the central\nsource of Australian open government data.\nAnyone can access the public data\npublished by federal, state and local government agencies.",
+     "title": "Datasets - Page 1",
+     "url": "https://www.data.gov.au/data/dataset/?res_format=CSV&_tags_limit=0&_license_id_limit=0&tags=community&license_id=cc-by-4",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.data.gov.au/data/dataset/?res_format=CSV&_tags_limit=0&_license_id_limit=0&tags=community&license_id=cc-by-4",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:11Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "data.gov.au",
+     "rank": 2,
+     "snippet": "#### Recent Developments\nFind out the latest updates on Data.gov.au along with known issues under investigation.\n...\n#### Contact us\nIf you require further assistance please contact us at support@data.gov.au and allow up to 5 business days turn around.",
+     "title": "Australian Government Data",
+     "url": "https://data.gov.au/",
+     "verificacion": {
+      "error": "robots.txt disallows https://data.gov.au/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T06:56:11Z"
+     }
+    },
+    {
+     "date": "2020-04-06",
+     "host": "www.nsw.gov.au",
+     "rank": 3,
+     "snippet": "# Resources and infrastructure\n### Open Data Portal\nThe Open Data Portal provides openly accessible Australian Government data.",
+     "title": "Resources and infrastructure",
+     "url": "https://www.nsw.gov.au/nsw-government/engage-us/waratah-research-network/resources-and-infrastructure"
+    },
+    {
+     "date": "",
+     "host": "govdataguide.org",
+     "rank": 4,
+     "snippet": "### data.gov.au\nAustralia\nhttps://data.gov.au\nAustralian Government open data portal powered by CKAN.\nPublishes datasets from Commonwealth agencies covering geography, environment, economy, and government operations.\nDatasets:100,000+\nAPI:CKAN API",
+     "title": "International Open Data Portals | Gov Data Guide",
+     "url": "https://govdataguide.org/portals/international"
+    },
+    {
+     "date": "",
+     "host": "eresources.sl.nsw.gov.au",
+     "rank": 5,
+     "snippet": "# data.gov.au\nData.gov.au is the central source of Australian open government data published by federal, state and local government agencies.\n...\nIn addition to free, open datasets, data.gov.au now includes information about unpublished data and data available for purchase.",
+     "title": "data.gov.au | Eresources & databases | State Library of NSW",
+     "url": "https://eresources.sl.nsw.gov.au/datagovau"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:19:27Z",
+ "pais": {
+  "iso2": "AU",
+  "iso3": "AUS",
+  "nombre": "Australia"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

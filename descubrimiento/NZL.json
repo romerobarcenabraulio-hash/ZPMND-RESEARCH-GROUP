@@ -1,0 +1,613 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "New Zealand constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.justice.govt.nz",
+     "rank": 1,
+     "snippet": "New Zealand's constitution is drawn from a number of important statutes (laws), judicial decisions, and customary rules (constitutional conventions).\n...\nTogether with New Zealand's constitutional conventions (generally legally accepted ways of doing things), the following documents form our constit",
+     "title": "The basis for all law | New Zealand Ministry of Justice",
+     "url": "https://www.justice.govt.nz/about/learn-about-the-justice-system/how-the-justice-system-works/the-basis-for-all-law/"
+    },
+    {
+     "date": "2017-07-01",
+     "host": "gg.govt.nz",
+     "rank": 2,
+     "snippet": "Other laws that outline the powers and functions of the three branches of government in more detail include the State Sector Act 1988, the Electoral Act 1993, the Judicature Act 1908 and the Senior Courts Act 2016 and the District Court Act 2016.",
+     "title": "New Zealand’s Constitution",
+     "url": "https://gg.govt.nz/office-governor-general/roles-and-functions-governor-general/constitutional-role/constitution/constitution"
+    },
+    {
+     "date": "2025-11-13",
+     "host": "www.legislation.govt.nz",
+     "rank": 3,
+     "snippet": "## Constitution Act 1986\n...\nAn Act to reform the constitutional law of New Zealand, to bring together into one enactment certain provisions of constitutional significance, and to provide that the New Zealand Constitution Act 1852 of the Parliament of the United Kingdom shall cease to have effect as",
+     "title": "New Zealand Legislation",
+     "url": "https://www.legislation.govt.nz/act/public/1986/114/en/latest/"
+    },
+    {
+     "date": "",
+     "host": "www.legislation.govt.nz",
+     "rank": 4,
+     "snippet": "Find and use legislation\nWhiwhi whakautu ki ō pātai ture\n…\n...\nContent contains\nAdvanced search\n...\nBrowse by\nActs\n17,427\nSecondary legislation\n19,954\nBills\n1,848\nAgencies\n112\n...\nWelcome to the new NZ Legislation website",
+     "title": "New Zealand Legislation",
+     "url": "https://www.legislation.govt.nz/"
+    },
+    {
+     "date": "",
+     "host": "www.justice.govt.nz",
+     "rank": 5,
+     "snippet": "### Key statutes\n- Constitution Act 1986\n- Imperial Laws Application Act 1988\n- Legislation Act 2012 (disallowance only)\n- Oaths and Declarations Act 1957\n- Royal Succession Act 2013\n...\n- Interpretation Act 1999\n…",
+     "title": "Foundations for the State | New Zealand Ministry of Justice",
+     "url": "https://www.justice.govt.nz/justice-sector-policy/regulatory-stewardship/regulatory-systems/constitutional/foundations-for-the-state/"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "New Zealand national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2025-02-04",
+     "host": "www.legislation.govt.nz",
+     "rank": 1,
+     "snippet": "These regulations are administered by Land Information New Zealand.\n...\nThese regulations are the Land Information New Zealand (Fees and Charges) Regulations 2003.\nThese regulations come into force on 1 July 2003.",
+     "title": "Land Information New Zealand (Fees and Charges) Regulations 2003",
+     "url": "https://www.legislation.govt.nz/regulation/public/2003/0124/latest/whole.html"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.regulation.govt.nz",
+     "rank": 2,
+     "snippet": "Ministry for Regulation | Ministry for Regulation\n# Ministry for Regulation\n...\nAll government agencies must engage with the Ministry before proposing a regulatory change to Cabinet.\n- ### Publications and resources\nWe publish corporate publications, reports, information releases, regulatory resourc",
+     "title": "Ministry for Regulation | Ministry for Regulation",
+     "url": "https://www.regulation.govt.nz/"
+    },
+    {
+     "date": "",
+     "host": "gazette.govt.nz",
+     "rank": 3,
+     "snippet": "You can use the search bar on each page of the website to find a Gazette notice.\n...\n- enter a keyword\n- choose a year from the dropdown list or\n- enter the:\n...\nThe Gazette website contains all notices published since 2000.\n...\nDigitalNZ has made Gazette data available in their API.",
+     "title": "Find a notice - New Zealand Gazette",
+     "url": "https://gazette.govt.nz/find-a-notice"
+    },
+    {
+     "date": "",
+     "host": "www.govt.nz",
+     "rank": 4,
+     "snippet": "Welcome to Govt.nz | New Zealand Government\n# Kia ora . Govt.nz is your guide to finding and using government services.",
+     "title": "New Zealand Government | Information and Services",
+     "url": "https://www.govt.nz/"
+    },
+    {
+     "date": "",
+     "host": "www.legislation.govt.nz",
+     "rank": 5,
+     "snippet": "Find and use legislation\nWhiwhi whakautu ki ō pātai ture\n...\nAdvanced search\nAdvanced search\nLegislation type\nLegislation type\nAct\nSecondary legislation\nBill\nAmendment Paper\nTitle\nContent\n...\nconstruction)\nOR\n– for OR (e.g. apples",
+     "title": "Advanced Search | New Zealand Legislation",
+     "url": "https://www.legislation.govt.nz/advanced_search/"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "New Zealand official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "gazette.govt.nz",
+     "rank": 1,
+     "snippet": "Using the Gazette\nThe New Zealand Gazette, the official newspaper of the Government of New Zealand, is published online on\nThursdays between 10.00am and 11.00am.\n...\nAvailability\nNew Zealand Gazette notices are published directly online at www.gazette.govt.nz",
+     "title": "3",
+     "url": "https://gazette.govt.nz/issues/31753"
+    },
+    {
+     "date": "",
+     "host": "gazette.govt.nz",
+     "rank": 2,
+     "snippet": "Using the Gazette\nThe New Zealand Gazette, the official newspaper of the Government of New Zealand, is published online on\nThursdays between 10.00am and 11.00am.\n...\nAvailability\nNew Zealand Gazette notices are published directly online at www.gazette.govt.nz",
+     "title": "FRIDAY, 20 JANUARY 2017 — No. 5 CONTENTS",
+     "url": "https://gazette.govt.nz/issues/31795"
+    },
+    {
+     "date": "",
+     "host": "gazette.govt.nz",
+     "rank": 3,
+     "snippet": "Using the Gazette\nThe New Zealand Gazette, the official newspaper of the Government of New Zealand, is published online on\nThursdays between 10.00am and 11.00am.\nThe online version is the official publication and authoritative constitutional record.\n...\nNew Zealand Gazette",
+     "title": "[PDF] WELLINGTON: TUESDAY, 20 JANUARY 2015 — No. 5 CONTENTS",
+     "url": "https://gazette.govt.nz/issues/31101"
+    },
+    {
+     "date": "",
+     "host": "gazette.govt.nz",
+     "rank": 4,
+     "snippet": "Using the Gazette\nThe New Zealand Gazette, the official newspaper of the Government of New Zealand, is published online on\nThursdays between 10.00am and 11.00am.\nThe online version is the official publication and authoritative constitutional record.",
+     "title": "WELLINGTON: MONDAY, 15 JUNE 2015 — No. 66 ...",
+     "url": "https://gazette.govt.nz/issues/31269"
+    },
+    {
+     "date": "",
+     "host": "gazette.govt.nz",
+     "rank": 5,
+     "snippet": "Notice of Discontinued Official and Recorded Geographic Names\n...\n|--|--|--|--|--|\n|Pukeora Forest|Forest|BL37 983689|Unofficial recorded name|No longer exists|\n...\n|Wairakai|Trig Station|BL37 985662|",
+     "title": "Notice of Discontinued Official and Recorded Geographic Names",
+     "url": "https://gazette.govt.nz/notice/id/2025-ln5443"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "New Zealand supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.courtsofnz.govt.nz",
+     "rank": 1,
+     "snippet": "Supreme Court case information — Courts of New Zealand\n...\nListed below are the substantive Supreme Court cases for the year along with appeals still to be determined or cases awaiting hearing.\nInformation giving an overview of the case is included along with media releases and links to judgments be",
+     "title": "Supreme Court case information",
+     "url": "https://www.courtsofnz.govt.nz/the-courts/supreme-court/case-summaries?CaseNum=&Search=&Year=all&start=1360"
+    },
+    {
+     "date": "",
+     "host": "www.courtsofnz.govt.nz",
+     "rank": 2,
+     "snippet": "# Supreme Court Judgments of Public Interest\nThis page provides access to judgments of the Supreme Court in the last 90 days deemed to be of particular public interest.\nAll Supreme Court judgments including leave judgments published in chronological order can be found in the Supreme Court Judgment s",
+     "title": "Supreme Court Judgments of Public Interest",
+     "url": "https://www.courtsofnz.govt.nz/judgments/supreme-court"
+    },
+    {
+     "date": "",
+     "host": "www.courtsofnz.govt.nz",
+     "rank": 3,
+     "snippet": "# Supreme Court case information\nListed below are the substantive Supreme Court cases for the year along with appeals still to be determined or cases awaiting hearing.\nInformation giving an overview of the case is included along with media releases and links to judgments being appealed when availabl",
+     "title": "Supreme Court case information — Courts of New Zealand",
+     "url": "https://www.courtsofnz.govt.nz/the-courts/supreme-court/case-summaries?Filter=all&Search=V+&Year=all&action_search=Search&start=1336"
+    },
+    {
+     "date": "",
+     "host": "www.courtsofnz.govt.nz",
+     "rank": 4,
+     "snippet": "# Access to court information\n## Judgments\nJudicial Decisions Online provides a searchable database of judgments and decisions from the High Court (from 2005), the Court of Appeal (from 2003), and the Supreme Court.\n...\nAll decisions from the Supreme Court are permanently available on the Courts web",
+     "title": "Access to court information - Courts of New Zealand",
+     "url": "https://www.courtsofnz.govt.nz/going-to-court/media/finding-out-about-a-case"
+    },
+    {
+     "date": "",
+     "host": "www.justice.govt.nz",
+     "rank": 5,
+     "snippet": "Document finders\n# Ministry of Justice\nOur website has tools to help customers find the documents they need, whether they are forms, publications or judicial decisions.\n...\n### Decision finder\nSome judicial decisions are published here by the judiciary from courts and tribunals.\nFind a decision with",
+     "title": "Document Finders",
+     "url": "https://www.justice.govt.nz/about/document-finders/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "New Zealand state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.legislation.govt.nz",
+     "rank": 1,
+     "snippet": "Find and use legislation\nWhiwhi whakautu ki ō pātai ture\n...\nRecent updates to the new website\n06 March 2026\nWelcome to the new NZ Legislation website",
+     "title": "New Zealand Legislation",
+     "url": "https://www.legislation.govt.nz/"
+    },
+    {
+     "date": "",
+     "host": "www.legislation.govt.nz",
+     "rank": 2,
+     "snippet": "Tirohia i ngā tari kāwanatanga\n...\nFind and use legislation\nWhiwhi whakautu ki ō pātai ture\n…\nAdvanced search\nAdvanced search\nLegislation type\nLegislation type\nAct\nSecondary legislation\nBill\nAmendment Paper\nTitle\nContent",
+     "title": "Advanced Search | New Zealand Legislation",
+     "url": "https://www.legislation.govt.nz/advanced_search/"
+    },
+    {
+     "date": "",
+     "host": "www.legislation.govt.nz",
+     "rank": 3,
+     "snippet": "This regulation sets out the requirements for official versions of legislation for the purposes of section 78 of the Legislation Act 2019.\nAn official electronic version must be published on the legislation website (http://www.legislation.govt.nz).",
+     "title": "Legislation (Publication) Regulations 2021",
+     "url": "https://www.legislation.govt.nz/regulation/public/2021/0246/latest/whole.html"
+    },
+    {
+     "date": "2026-07-23",
+     "host": "www.regulation.govt.nz",
+     "rank": 4,
+     "snippet": "# Regulatory Standards (Excluded Legislation) Notice 2026\n...\nThis legislation is administered by the Ministry for Regulation.\nFor more information please see: http://www.regulation.govt.nz\nContact address: Ministry for Regulation, PO Box 577, Wellington 6140",
+     "title": "Regulatory Standards (Excluded Legislation) Notice 2026",
+     "url": "https://www.regulation.govt.nz/legislation/regulatory-standards-excluded-legislation-notice-2026/"
+    },
+    {
+     "date": "",
+     "host": "www.justice.govt.nz",
+     "rank": 5,
+     "snippet": "Legislation | New Zealand Ministry of Justice\n...\njustice.govt.nz\n# Ministry of Justice\nLegislation 1.\n...\nYou can find the secondary legislation administered by the Ministry of Justice on the New Zealand Legislation website, including:\n- regulations\n- rules\n- orders\n- corrections\n- amendments",
+     "title": "Legislation | New Zealand Ministry of Justice",
+     "url": "https://www.justice.govt.nz/justice-sector-policy/legislation/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "New Zealand municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "2026-10-11",
+     "host": "www.rotorualakescouncil.nz",
+     "rank": 1,
+     "snippet": "Bylaws are local rules and regulations that affect how we live, play and work in Rotorua.\nThey are made by a Local Authority (Rotorua Lakes Council) to protect our district and your rights.\n...\n### General\nGeneral Bylaw 2025 - (PDF, 33.8MB) **",
+     "title": "Bylaws",
+     "url": "https://www.rotorualakescouncil.nz/our-council/plans-policies-bylaws/bylaws"
+    },
+    {
+     "date": "",
+     "host": "www.southlanddc.govt.nz",
+     "rank": 2,
+     "snippet": "Bylaws are local laws which ensure our communities are safe and healthy.\n## Southland District Council bylaws\n|Description|Type|Size|Download|\n...\n|Alcohol Control Bylaw|PDF|793 KB| |\n|Ashton Flats Roading Bylaw|PDF|151 KB| |",
+     "title": "Bylaws | Southland District Council",
+     "url": "https://www.southlanddc.govt.nz/council/bylaws-and-policies/bylaws/"
+    },
+    {
+     "date": "",
+     "host": "www.upperhutt.govt.nz",
+     "rank": 3,
+     "snippet": "The Local Government Act 2002 (Act) allows Council to make bylaws.\n...\n- ** Solid Waste Management and Minimisation Bylaw 2020(PDF, 306KB)\n...\n## Search\nBylaws can be enforced by Council staff or external agencies such as the New Zealand Police.",
+     "title": "Bylaws (Ture ā-Rohe)",
+     "url": "https://www.upperhutt.govt.nz/council/policies-and-bylaws/bylaws"
+    },
+    {
+     "date": "",
+     "host": "www.ruapehudc.govt.nz",
+     "rank": 4,
+     "snippet": "# Bylaws\nBylaws are rules or regulations Council makes, under national legislation, that affect how people live, work and play.\nBylaws are designed to protect both our district and your rights with the purpose of making our district a safe and healthy place.\n...\n- Protecting the public from nuisance",
+     "title": "Bylaws - Ruapehu District Council",
+     "url": "https://www.ruapehudc.govt.nz/our-council/about-our-council/governance-statement/dbylaws"
+    },
+    {
+     "date": "",
+     "host": "hamilton.govt.nz",
+     "rank": 5,
+     "snippet": "Policies, bylaws, and legislation | Hamilton City Council\n...\nFind a policy, look at Hamilton's rules and regulations, or view some of the key legislation that applies to Council.\n- ### Policies\n...\n- ### Bylaws\nLook at the local bylaws that help make Hamilton a safe and healthy city.",
+     "title": "Policies, bylaws, and legislation - Hamilton City Council",
+     "url": "https://hamilton.govt.nz/your-council/policies-bylaws-and-legislation/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "New Zealand regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.legislation.govt.nz",
+     "rank": 1,
+     "snippet": "# Tirohia i ngā tari kāwanatanga Browse agencies\n## 112 agencies\n...\n## Broadcasting Standards Authority\nSecondary legislation\n...\n## Environmental Protection Authority\n...\n## Ministry for Primary Industries\n...\n## Ministry for Regulation\nAct\n(1)\n...\n## New Zealand Qualification Authority\n...\n## New",
+     "title": "Browse Agencies | New Zealand Legislation",
+     "url": "https://www.legislation.govt.nz/browse/agencies/"
+    },
+    {
+     "date": "",
+     "host": "www.regulation.govt.nz",
+     "rank": 2,
+     "snippet": "Information and guidance for government agencies on meeting regulatory requirements.\n- ### The Regulatory Management System\nNew Zealand's RMS is the set of policies, institutions, processes and tools used by central government to pursue and maintain good quality regulation\n...\nThe Regulatory Standar",
+     "title": "For agencies | Ministry for Regulation",
+     "url": "https://www.regulation.govt.nz/for-agencies/"
+    },
+    {
+     "date": "",
+     "host": "www.regulation.govt.nz",
+     "rank": 3,
+     "snippet": "Regulators carry out a range of regulatory activities.\nThey have the authority to set standards, guidelines and rules to ensure that people work in a way that is\n…\n...\nGot questions?\nGet in touch\nEmail: systemcapability@regulation.govt.nz\nWebsite: www.regulation.govt.nz",
+     "title": "Regulation in New Zealand Quick Guide",
+     "url": "https://www.regulation.govt.nz/assets/Resource-Documents/Quick-Guide-Regulation-in-New-Zealand.pdf"
+    },
+    {
+     "date": "2026-07-23",
+     "host": "www.regulation.govt.nz",
+     "rank": 4,
+     "snippet": "# Regulatory Standards (Excluded Legislation) Notice 2026\n...\nThis legislation is administered by the Ministry for Regulation.\nFor more information please see: http://www.regulation.govt.nz\nContact address: Ministry for Regulation, PO Box 577, Wellington 6140",
+     "title": "Regulatory Standards (Excluded Legislation) Notice 2026",
+     "url": "https://www.regulation.govt.nz/legislation/regulatory-standards-excluded-legislation-notice-2026/"
+    },
+    {
+     "date": "",
+     "host": "www.legislation.govt.nz",
+     "rank": 5,
+     "snippet": "Find and use legislation\nWhiwhi whakautu ki ō pātai ture\n…\n...\nBrowse by\nActs\n17,427\nSecondary legislation\n19,954\nBills\n1,848\nAgencies\n112\n...\n06 March 2026\nWelcome to the new NZ Legislation website",
+     "title": "New Zealand Legislation",
+     "url": "https://www.legislation.govt.nz/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "New Zealand national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2026-09-24",
+     "host": "www.standards.govt.nz",
+     "rank": 1,
+     "snippet": "Get in touch to discuss.\n...\n## Full Catalogue (NZS & AS/NZS)\nCatering for diverse sectors with nearly 3,500 current New Zealand Standards and joint AS/NZS standards\n## New Zealand Catalogue\nOver 400 standards developed exclusively for a New Zealand context, across multiple sectors.",
+     "title": "Collections",
+     "url": "https://www.standards.govt.nz/get-standards/collections"
+    },
+    {
+     "date": "",
+     "host": "www.standards.govt.nz",
+     "rank": 2,
+     "snippet": "Standards New Zealand supplies New Zealand, joint Australia-New Zealand and international standards\n## Browse Standards\n## How to access standards\n## Online Library subscriptions\nAn Online Library subscription lets you maintain a library of New Zealand and joint Australian/New Zealand standards\n## C",
+     "title": "Get Standards",
+     "url": "https://www.standards.govt.nz/get-standards"
+    },
+    {
+     "date": "",
+     "host": "www.standards.govt.nz",
+     "rank": 3,
+     "snippet": "- ### NZS ISO/IEC 27036.3:2026\nCybersecurity – Supplier relationships Part 3: Guidelines for hardware, software, and services supply chain security\n...\nInformation security — Security requirements, test and evaluation methods for quantum key distribution — Part 2: Evaluation and testing methods\n…",
+     "title": "Standards New Zealand",
+     "url": "https://www.standards.govt.nz/"
+    },
+    {
+     "date": "",
+     "host": "www.standards.govt.nz",
+     "rank": 4,
+     "snippet": "Search Results :: Standards New Zealand\n- - - NZS 3604:2011 revision updates\n- NZS 4121:2001 revision updates\n...\n19 Mechanical testing and equipment\n...\n19 Particle size analysis.\nSieving\n...\n21 Characteristics and design of machines, apparatus, equipment\n21 Screw threads",
+     "title": "Browse Standards",
+     "url": "https://www.standards.govt.nz/search/doSearch?filterby=standards"
+    },
+    {
+     "date": "",
+     "host": "www.dns.govt.nz",
+     "rank": 5,
+     "snippet": "====================\n...\nIntroduction:,,,\n,\"This excel workbook is the Government Digtial Standards Catalogue.\nFormally known as the GEA-NZ (Government Enterprise Architecture for NZ) standards reference, the government digital standards is a catalogue of digital standards and related guidance that ",
+     "title": "Standards catalogue - Government domain names",
+     "url": "https://www.dns.govt.nz/assets/Standards-guidance/Technology-and-architecture/GEA-NZ/Government-digital-standards-catalogue.xlsx"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "New Zealand mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "gazette.govt.nz",
+     "rank": 1,
+     "snippet": "## Table 1 – Radio Standards\n|**Applicable Standards**|**Applicable Standards**|**Level of Conformity**|\n...\n|**1.\n...\n|Near Field Communication (NFC) Devices (13.56 MHz)|EN 300 330 V2.1.1|A1|",
+     "title": "Radiocommunications Regulations (Radio Standards ...",
+     "url": "https://gazette.govt.nz/notice/id/2025-go4751"
+    },
+    {
+     "date": "2025-11-06",
+     "host": "vehicleinspection.nzta.govt.nz",
+     "rank": 2,
+     "snippet": "|27 February 2005|Installation standard for lighting on class LD vehiclesORFitting requirements in Lighting Rule*|Land Transport Rule: Vehicle Lighting 2004|\n|1 October 2002|Light-vehicle brakes|Land Transport Rule: Light-vehicle Brakes 2002|\n...\n…",
+     "title": "2-1 Standards Compliance - Vehicle Inspection Portal",
+     "url": "https://vehicleinspection.nzta.govt.nz/virms/entry-cert-nlv/standards-compliance/standards-compliance"
+    },
+    {
+     "date": "",
+     "host": "www.rsm.govt.nz",
+     "rank": 3,
+     "snippet": "## Radiocommunications (Radio Standards) Notice 2025\nThis notice describes the performance standards required to be met by different classes of radio product, and the unwanted emission power limit for any transmitter not covered by those standards.\nAdditionally, limits of unwanted emissions are spec",
+     "title": "Product compliance gazette notices",
+     "url": "https://www.rsm.govt.nz/about/publications/gazette-notices/product-compliance-gazette-notices"
+    },
+    {
+     "date": "",
+     "host": "www.productsafety.govt.nz",
+     "rank": 4,
+     "snippet": "A list of products regulated in New Zealand, that must meet specific requirements of products safety standards.\n...\n- ### Children's nightwear standard\n...\n- ### Multipurpose ladders\n...\n- ### Sunscreen standard\nSunscreen products must meet the ‘AS/NZ 2604:2012 Sunscreen products’ standard.",
+     "title": "Mandatory product safety standards",
+     "url": "https://www.productsafety.govt.nz/for-businesses/making-sure-products-are-safe/mandatory-product-safety-standards"
+    },
+    {
+     "date": "",
+     "host": "www.rsm.govt.nz",
+     "rank": 5,
+     "snippet": "### Technical standards\nThe technical standards these devices are required to comply with are listed in the Radiocommunications (EMC Standards) Notice.\n...\n### Labelling requirements\n...\n### Technical standards\nThe technical standards these products are required to comply with are listed in the Radi",
+     "title": "Buying overseas or online",
+     "url": "https://www.rsm.govt.nz/business-individuals/buying-electrical-and-electronic-products-in-new-zealand/buying-overseas-or-online"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "New Zealand national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-02",
+     "host": "www.stats.govt.nz",
+     "rank": 1,
+     "snippet": "Home | Stats NZ\n# Home\n...\n## Statistics\nEconomy\n## Data tools\n- ### Aotearoa Data Explorer\nView, customise, and download data tables.\n- ### Place and ethnic group summaries\nStats about the population by region, district, and smaller areas, and by ethnic group.",
+     "title": "Home | Stats NZ",
+     "url": "https://www.stats.govt.nz/?lang=en-NZ"
+    },
+    {
+     "date": "2017-08-04",
+     "host": "www.stats.govt.nz",
+     "rank": 2,
+     "snippet": "Release calendar | Stats NZ\n- Home\n- Release calendar\n# Release calendar\nThe release calendar lists published and upcoming releases of official statistics.\nIt includes regular, scheduled information releases only.\n...\nIf you have questions about these publications, email our Information Centre: info",
+     "title": "Release calendar",
+     "url": "https://www.stats.govt.nz/release-calendar/"
+    },
+    {
+     "date": "2026-10-01",
+     "host": "www.stats.govt.nz",
+     "rank": 3,
+     "snippet": "Tools | Stats NZ\n- Home\n- Tools\n# Tools\n...\n## Population clock\nThe population clock estimates New Zealand's population in real time.\n...\n## Aotearoa Data Explorer\nA data tool to search for data, create tables customising the variables and layout, and download Excel or CSV files.",
+     "title": "Tools",
+     "url": "https://www.stats.govt.nz/tools/"
+    },
+    {
+     "date": "",
+     "host": "link.springer.com",
+     "rank": 4,
+     "snippet": "# New Zealand\n## Further Reading\n- *National Statistical Office*: Statistics New Zealand, Statistics House, The Boulevard, Harbour Quays, PO Box 2922, Wellington 6140.\n- *Website*: http://www.stats.govt.nz",
+     "title": "NEW ZEALAND - Springer Nature",
+     "url": "https://link.springer.com/content/pdf/10.1007/978-1-349-67278-3_288.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.stats.govt.nz",
+     "rank": 5,
+     "snippet": "Contact  \n...\ninfo@stats.govt.nz  \nPhone toll-free 0508 525 525  \nPhone international +64 4 931 4600 www.stats.govt.nz\n...\nFinance Act 1989 and in accordance with section 94 of the Data and Statistics Act 2022.",
+     "title": "Stats NZ Annual report 2024/2025 | Tatauranga Aotearoa ...",
+     "url": "https://www.stats.govt.nz/assets/Uploads/Corporate/Stats-NZ-annual-report-2025/Stats-NZs-annual-report-Purongo-a-tau-o-Tatauranga-Aotearoa-for-the-year-ended-30-June-2025.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "New Zealand central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-10-28",
+     "host": "www.rbnz.govt.nz",
+     "rank": 1,
+     "snippet": "Home - Reserve Bank of New Zealand - Te Pūtea Matua\n...\nWe are Aotearoa New Zealand's central bank\n# The Reserve Bank of New Zealand – Te Pūtea Matua\n...\n### Official Cash Rate\n2.75\n%\n...\n### Inflation\n3.7\ny/y%",
+     "title": "Home - Reserve Bank of New Zealand - Te Pūtea Matua",
+     "url": "https://www.rbnz.govt.nz/"
+    },
+    {
+     "date": "2022-03-04",
+     "host": "www.rbnz.govt.nz",
+     "rank": 2,
+     "snippet": "Key statistics - Reserve Bank of New Zealand - Te Pūtea Matua\n...\n# Key statistics\nThe key statistics summarise macroeconomic and financial market trends in New Zealand.\n...\nMacroeconomic measures of economic performance and activity.\nCharts include CPI, GDP, BoP Current Account, Employment and Unem",
+     "title": "Key statistics - Reserve Bank of New Zealand - Te Pūtea Matua",
+     "url": "https://www.rbnz.govt.nz/statistics/key-statistics"
+    },
+    {
+     "date": "",
+     "host": "www.rbnz.govt.nz",
+     "rank": 3,
+     "snippet": "Statistics - Reserve Bank of New Zealand - Te Pūtea Matua\n...\n# Statistics\n## Tatauranga\nWe publish daily statistics and insights that relate to our policy and regulatory responsibilities.\n...\n### Economic indicators\n...\nData is released from 3pm daily.\n...\nData is not released on New Zealand nation",
+     "title": "Statistics - Reserve Bank of New Zealand - Te Pūtea Matua",
+     "url": "https://www.rbnz.govt.nz/statistics"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.rbnz.govt.nz",
+     "rank": 4,
+     "snippet": "# Banks: Liabilities – Deposits by size (value) (S45)\nThis data displays the total value of NZD deposits grouped together in bands based on deposits that have a balance that is equal to a value within the specified band as at the end of the reporting month.\nReleased:\n...\nMonthly",
+     "title": "Banks: Liabilities – Deposits by size (value) (S45)",
+     "url": "https://www.rbnz.govt.nz/statistics/series/registered-banks/banks-liabilities-deposits-by-size-value"
+    },
+    {
+     "date": "2022-05-09",
+     "host": "www.rbnz.govt.nz",
+     "rank": 5,
+     "snippet": "Statistical series data files page - Reserve Bank of New Zealand - Te Pūtea Matua\n...\nThis page lists our current data files from our Statistical series.\n...\nB3|https://rbnz.govt.nz/-/media/project/sites/rbnz/files/statistics/series/b/b3/hb3.xlsx|",
+     "title": "Statistical series data files page",
+     "url": "https://www.rbnz.govt.nz/statistics/series/data-file-index-page"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "New Zealand government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-07-08",
+     "host": "www.data.govt.nz",
+     "rank": 1,
+     "snippet": "Discover and use data\n- data.govt.nz\n# Discover and use data\n...\n## The Government Data Strategy\nIt provides a shared direction for the government data system of Aotearoa NZ.\n33.2k datasets 194 organisations 40 groups",
+     "title": "Discover and use data",
+     "url": "https://www.data.govt.nz/"
+    },
+    {
+     "date": "2021-04-07",
+     "host": "www.digital.govt.nz",
+     "rank": 2,
+     "snippet": "# Data.govt.nz open data catalogue\nThe data.govt.nz catalogue is an all-of-government data discovery service that helps the public, businesses and other government agencies find thousands of freely usable open datasets released by public sector agencies under open licence.\n...\n### Service URL\ncatalo",
+     "title": "Data.govt.nz open data catalogue",
+     "url": "https://www.digital.govt.nz/products-and-services/products-and-services-a-z/data-govt-nz-open-data-catalogue"
+    },
+    {
+     "date": "2016-10-12",
+     "host": "data.govt.nz",
+     "rank": 3,
+     "snippet": "Releasing open data on data.govt.nz\n...\nOptions include:\n...\n- Hosted on data.govt.nz's catalogue (contact info@data.govt.nz for more information on this option)\n...\nGovernment agencies can publish and update their datasets on the data.govt.nz catalogue by applying for a publisher account.",
+     "title": "Releasing open data on data.govt.nz",
+     "url": "https://data.govt.nz/catalogue-guide/step-by-step-guides/releasing-open-data-on-data-govt-nz"
+    },
+    {
+     "date": "2020-08-12",
+     "host": "catalogue.data.govt.nz",
+     "rank": 4,
+     "snippet": "Dataset - data.govt.nz - discover and use data\n# Search datasets\n...\n## 33,214 datasets found\n- ## Directory of educational institutions\n...\n- ArcGIS GeoServices REST API",
+     "title": "Search datasets",
+     "url": "https://catalogue.data.govt.nz/"
+    },
+    {
+     "date": "",
+     "host": "data.govt.nz",
+     "rank": 5,
+     "snippet": "# Data.govt.nz\nData.govt.nz helps people discover and use open data; empowering decision making, and problem-solving for citizens and businesses.\nUsers can search for and download thousands of freely usable datasets released by New Zealand Government organisations, as well as finding out about how t",
+     "title": "Data.govt.nz",
+     "url": "https://data.govt.nz/about/about-data-govt-nz"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T06:05:17Z",
+ "pais": {
+  "iso2": "NZ",
+  "iso3": "NZL",
+  "nombre": "New Zealand"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

@@ -1,0 +1,702 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Cuba constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "2021-02-22",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 1,
+     "snippet": "Constitución de 2019 de Asamblea Nacional del Poder Popular | Gaceta Oficial\n...\nGaceta Oficial No. 5 Extraordinaria de 2019\n...\nSe aprueba y pone en vigor la Constitución de la República de Cuba proclamada el 10 de abril de 2019.",
+     "title": "Constitución de 2019 de Asamblea Nacional del Poder Popular",
+     "url": "https://www.gacetaoficial.gob.cu/es/constitucion-de-2019-de-asamblea-nacional-del-poder-popular",
+     "verificacion": {
+      "bytes": 27089,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:47:44Z",
+      "http": 200,
+      "sha256": "24828907ea1a410a4a05c313be89726dd7091353cb2e11b9b5c6c69f3264f507"
+     }
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 2,
+     "snippet": "## Constitución de 2019 de Asamblea Nacional del Poder Popular\nEstado:\nAnotada y Concordada\n...\n***NOTA:*** De esta norma jurídica fue publicada una versión Anotada - Concordada en la Edición Especial No. 9 de fecha 06/11/2025.",
+     "title": "Constitución | Gaceta Oficial",
+     "url": "https://www.gacetaoficial.gob.cu/es/constitucion",
+     "verificacion": {
+      "bytes": 23975,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:47:54Z",
+      "http": 200,
+      "sha256": "297860fac6d1a5ddfe4d3aa92b0a21fa7c7e900ecc76d578eab1f6793eb7b95e"
+     }
+    },
+    {
+     "date": "2021-01-08",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 3,
+     "snippet": "leyes que desarrollan los preceptos establecidos en esta Constitución.\n...\nSEGUNDA: La presente Constitución entra en vigor, una vez proclamada, a partir de su publicación en la Gaceta Oficial de la República.\nFichero:\ngoc-2019-ex5.pdf",
+     "title": "Constitución de la República de Cuba | Gaceta Oficial",
+     "url": "https://www.gacetaoficial.gob.cu/es/constitucion-de-la-republica-de-cuba"
+    },
+    {
+     "date": "2009-01-22",
+     "host": "www.fgr.gob.cu",
+     "rank": 4,
+     "snippet": "Normas jurídicas | Fiscalía General de la República de Cuba\n# Normas jurídicas\nConstituciÃ³n de la RepÃºblica de Cuba.\n...\nLey 160 de 2022 \"De la FiscalÃa General de la RepÃºblica\"\n13 Enero 2023",
+     "title": "Normas jurídicas | Fiscalía General de la República de Cuba",
+     "url": "https://www.fgr.gob.cu/normas-juridicas"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 5,
+     "snippet": "VER\n...\nLa Gaceta Oficial de la República de Cuba es la encargada de la publicidad normativa a tenor de lo dispuesto en el artículo 165, sección segunda, Capítulo VIII, Título VI, de la Constitución de la República, proclamada el 10 de abril de 2019.",
+     "title": "Gaceta Oficial",
+     "url": "https://www.gacetaoficial.gob.cu/es"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Cuba national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 1,
+     "snippet": "## Decreto 182 de 2026 de Consejo de Ministros\nIdentificador de norma:\nGOC-2026-619-O88\nResumen:\nDe la creación de la estructura organizativa de las direcciones de trabajo social de las administraciones provinciales y municipales del Poder Popular.",
+     "title": "Decreto | Gaceta Oficial",
+     "url": "https://www.gacetaoficial.gob.cu/es/decreto",
+     "verificacion": {
+      "bytes": 33598,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:48:04Z",
+      "http": 200,
+      "sha256": "3acfabe90d0d5b5579e3c5a5ff9daeb0e7a2011ad094c4e0050d9372eb970078"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.mep.gob.cu",
+     "rank": 2,
+     "snippet": "### Decreto 174 del 2026 Para la Gestión Estratégica del Desarrollo Territorial y sus normas complementarias\nEdición ordinaria de la Gaceta Oficial de la República No.87 del 2026 que publica:\nDecreto 174/2026 \"Para la Gestión Estratégica del Desarrollo Territorial\"",
+     "title": "Marco Regulatorio - Ministerio de Economía y Planificación",
+     "url": "https://www.mep.gob.cu/en/marco-regulatorio",
+     "verificacion": {
+      "bytes": 63613,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:48:09Z",
+      "http": 200,
+      "sha256": "9cbbc81ed15c60e14b9e103a343419e8ee4f5ef1b8e59cbd59b1073ae79222d9"
+     }
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 3,
+     "snippet": "Derogada\n...\nGOC-2000-1525-O98\n...\n## Decreto 104 de 2024 de Consejo de Ministros\nIdentificador de norma:\nGOC-2024-526-O88\nResumen:\nReglamento de la seguridad y protección de la información clasificada y limitada.",
+     "title": "información oficial",
+     "url": "https://www.gacetaoficial.gob.cu/es/informacion-oficial"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 4,
+     "snippet": "VER\n...\nLa Gaceta Oficial de la República de Cuba es la encargada de la publicidad normativa a tenor de lo dispuesto en el artículo 165, sección segunda, Capítulo VIII, Título VI, de la Constitución de la República, proclamada el 10 de abril de 2019.\n...\nVER",
+     "title": "Gaceta Oficial",
+     "url": "https://www.gacetaoficial.gob.cu/es"
+    },
+    {
+     "date": "2026-09-03",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 5,
+     "snippet": "## Decreto Ley 128 de 2026 de Consejo de Estado\nIdentificador de norma:\nGOC-2026-484-O73\nResumen:\n...\n## Resolución 68 de 2026 de Ministerio de Turismo\nIdentificador de norma:\nGOC-2026-490-O73",
+     "title": "Gaceta Oficial No. 73 Ordinaria de 2026",
+     "url": "https://www.gacetaoficial.gob.cu/es/gaceta-oficial-no-73-ordinaria-de-2026"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Cuba official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2026-09-02",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 1,
+     "snippet": "## Gaceta Oficial No. 72 Ordinaria de 2026\nDESCARGAR GACETA\nTipo de Edición:\nOrdinaria\nFecha:\n02/09/2026\nNúmero:\n72\n## Decreto Ley 120 de 2026 de Consejo de Estado",
+     "title": "Gaceta Oficial No. 72 Ordinaria de 2026 - La Habana",
+     "url": "https://www.gacetaoficial.gob.cu/es/gaceta-oficial-no-72-ordinaria-de-2026",
+     "verificacion": {
+      "bytes": 28987,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:48:14Z",
+      "http": 200,
+      "sha256": "f9708ea7f6c18c85fbb05a85cb839b808055a98b1219c2547b690014e7e42d65"
+     }
+    },
+    {
+     "date": "2026-09-10",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 2,
+     "snippet": "Gaceta Oficial No. 76 Ordinaria de 2026\n...\nFecha:\n10/09/2026\nNúmero:\n76\nGaceta Oficial No. 75 Ordinaria de 2026\nDESCARGAR GACETA\nFecha:\n09/09/2026\n...\n75",
+     "title": "Ordinaria",
+     "url": "https://www.gacetaoficial.gob.cu/en/ordinaria",
+     "verificacion": {
+      "bytes": 43395,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:48:24Z",
+      "http": 200,
+      "sha256": "af027eda26f3879d7b346985d56cba2c6407f8c554bef5afac95efe10d89cc5b"
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "host": "www.tsp.gob.cu",
+     "rank": 3,
+     "snippet": "Gaceta Oficial de la República de Cuba | Tribunal Supremo Popular de la República de Cuba\n# Gaceta Oficial de la República de Cuba\n...\n2. Gaceta Oficial de la República de Cuba\nhttps://www.gacetaoficial.gob.cu/\n...\nCP.\n10 100",
+     "title": "Gaceta Oficial de la República de Cuba - tsp.gob.cu",
+     "url": "https://www.tsp.gob.cu/gaceta-oficial-de-la-republica-de-cuba"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 4,
+     "snippet": "VER\n...\n…\nLa Gaceta Oficial de la República de Cuba es la encargada de la publicidad normativa a tenor de lo dispuesto en el artículo 165, sección segunda, Capítulo VIII, Título VI, de la Constitución de la República, proclamada el 10 de abril de 2019.",
+     "title": "Gaceta Oficial |",
+     "url": "https://www.gacetaoficial.gob.cu/en"
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 5,
+     "snippet": "GACETAS DESDE 1996 | Gaceta Oficial\n...\n#### GACETAS DESDE 1996\nGaceta Oficiales\nwww.gacetaoficial.gob.cu Todos los Derechos Reservados | © DESOFT 2019, La Habana, Cuba",
+     "title": "GACETAS DESDE 1996 | Gaceta Oficial",
+     "url": "https://www.gacetaoficial.gob.cu/es/gacetas-oficiales"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Cuba supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "2021-12-29",
+     "host": "www.tsp.gob.cu",
+     "rank": 1,
+     "snippet": "29 de Mayo de 2025\nDictamen 475 del Consejo de Gobierno del Tribunal Supremo Popular\n...\nTribunal Supremo Popular\n2,713\n21 de Octubre de 2026\nEl debido proceso: garantía constitucional de justicia en Cuba",
+     "title": "Tribunal Supremo Popular de la República de Cuba",
+     "url": "https://www.tsp.gob.cu/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.tsp.gob.cu/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:48:30Z"
+     }
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 2,
+     "snippet": "## Dictamen 393 de 2000 de Tribunal Supremo Popular\nIdentificador de norma:\nGOC-2000-1230-O80\n...\n## Acuerdo 162 de 2025 de Tribunal Supremo Popular\nIdentificador de norma:\nGOC-2025-256-EX30",
+     "title": "tribunales",
+     "url": "https://www.gacetaoficial.gob.cu/es/tribunales",
+     "verificacion": {
+      "bytes": 34132,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:48:34Z",
+      "http": 200,
+      "sha256": "56cbecebc4cd3ba201885469427389b4321acbfb487afb66562d328c7b08c038"
+     }
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 3,
+     "snippet": "resoluciones judiciales | Gaceta Oficial\n## Instrucción 176 de 2004 de Tribunal Supremo Popular\nIdentificador de norma:\n...\n## Instrucción 265 de 2022 de Tribunal Supremo Popular\nIdentificador de norma:\nGOC-2022-107-EX13",
+     "title": "resoluciones judiciales - Gaceta Oficial |",
+     "url": "https://www.gacetaoficial.gob.cu/es/resoluciones-judiciales"
+    },
+    {
+     "date": "",
+     "host": "www.nyulawglobal.org",
+     "rank": 4,
+     "snippet": "To access Cuban jurisprudence, the website of the Supreme Court (Tribunal Supremo Popular) offers a selection of its jurisprudence organized by date and subject.\n...\nThe information is in Spanish and English, and the site does not offer a search engine, but instead a list of leading cases divided by",
+     "title": "Overview of Select Databases for Spanish-Speaking ...",
+     "url": "https://www.nyulawglobal.org/globalex/databases_spanish-speaking_jurisdictions1.html"
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 5,
+     "snippet": "## Aviso s/n de 2024 de Tribunal Supremo Popular\nIdentificador de norma:\nGOC-2024-396-O66\nResumen:\nDeclara la terminación del contrato de Asociación Económica Internacional Constructora Pilar II, y el inicio del proceso de liquidación.",
+     "title": "proceso judicial | Gaceta Oficial",
+     "url": "https://www.gacetaoficial.gob.cu/es/proceso-judicial"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Cuba state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-10-27",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 1,
+     "snippet": "La Gaceta Oficial de la República de Cuba es la encargada de la publicidad normativa a tenor de lo dispuesto en el artículo 165, sección segunda, Capítulo VIII, Título VI, de la Constitución de la República, proclamada el 10 de abril de 2019.",
+     "title": "Gaceta Oficial",
+     "url": "https://www.gacetaoficial.gob.cu/es",
+     "verificacion": {
+      "bytes": 26667,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:48:44Z",
+      "http": 200,
+      "sha256": "45cb3542f5cff92b4cd1cb4eba9a89a9bca8e255e77a1d91bc104f5b28391c00"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 2,
+     "snippet": "## Gaceta Oficial No. 88 Ordinaria de 2026\n...\nOrdinaria\n...\n88\nDecreto Ley 136 de 2026 de Consejo de Estado\n...\nwww.gacetaoficial.gob.cu Todos los Derechos Reservados | © DESOFT 2019, La Habana, Cuba",
+     "title": "Ordinaria - Gaceta Oficial |",
+     "url": "https://www.gacetaoficial.gob.cu/es/ordinaria",
+     "verificacion": {
+      "bytes": 45071,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:48:54Z",
+      "http": 200,
+      "sha256": "f1c0c5aa6fc8d2b3d19d0dc2f2e3daab704a4f2286ad8c6964fc58baa0badb64"
+     }
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 3,
+     "snippet": "Legislaciones Cubanas | Gaceta Oficial\n...\n#### Legislaciones Cubanas\n|Decreto-Ley 86/2024 “De la Caja de Resarcimientos”.| |\n...\n|Decreto-Ley 89/2024 “De las cooperativas no agropecuarias”.| |",
+     "title": "Legislaciones Cubanas - Gaceta Oficial |",
+     "url": "https://www.gacetaoficial.gob.cu/en/algunas-legislaciones-cubanas"
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 4,
+     "snippet": "Código | Gaceta Oficial\n...\n## Resolución 59 de 2026 de Ministerio de Trabajo y Seguridad Social\n...\n## Ley 189 de 2026 de Asamblea Nacional del Poder Popular\nIdentificador de norma:\nGOC-2026-540-O78\nResumen:\nCódigo de Trabajo.",
+     "title": "Código | Gaceta Oficial",
+     "url": "https://www.gacetaoficial.gob.cu/en/codigo"
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 5,
+     "snippet": "Legislaciones Cubanas | Page 2 | Gaceta Oficial\n...\n|--|--|\n...\n|Constitución de la República de Cuba| |\n...\nwww.gacetaoficial.gob.cu Todos los Derechos Reservados | © DESOFT 2019, La Habana, Cuba",
+     "title": "Legislaciones Cubanas | Page 2 - Gaceta Oficial |",
+     "url": "https://www.gacetaoficial.gob.cu/es/algunas-legislaciones-cubanas?page=1"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Cuba municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.parlamentocubano.gob.cu",
+     "rank": 1,
+     "snippet": "# Ley de Organización y Funcionamiento de las Asambleas Municipales del Poder Popular y de los Consejos Populares\n...\nLey de Organización y Funcionamiento de las Asambleas Municipales del Poder Popular y de los Consejos Populares.pdf\n...\n**Teléfono:** (+53) 78694200",
+     "title": "Ley de Organización y Funcionamiento de las Asambleas ...",
+     "url": "https://www.parlamentocubano.gob.cu/index.php/ley-de-organizacion-y-funcionamiento-de-las-asambleas-municipales-del-poder-popular-y-de-los",
+     "verificacion": {
+      "bytes": 30347,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:48:56Z",
+      "http": 200,
+      "sha256": "e249df5923161830ab79bcdedd3c2270c9443e65928802579b9eb6f3bbe4be49"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.parlamentocubano.gob.cu",
+     "rank": 2,
+     "snippet": "Ley de Organización y Funcionamiento de las Asambleas Municipales del Poder Popular y de los Consejos Populares | Asamblea Nacional del Poder Popular\n# Ley de Organización y Funcionamiento de las Asambleas Municipales del Poder Popular y de los Consejos Populares",
+     "title": "Ley de Organización y Funcionamiento de las Asambleas Municipales del Poder Popular y de los Consejos Populares",
+     "url": "https://www.parlamentocubano.gob.cu/en/node/1025",
+     "verificacion": {
+      "bytes": 29593,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:48:57Z",
+      "http": 200,
+      "sha256": "c177c0075663b34428f9004256f31c9572201ee8cb9cbe1d9f1419373f11235a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.lahabana.gob.cu",
+     "rank": 3,
+     "snippet": "Ley No. 132/2019 De Organización y Funcionamiento de las Asambleas Municipales del Poder Popular y de los Consejos Populares\n# Marco normativo\n...\n# Documentos asociados\nContactos del Gobierno:\n+53 78682320\ngobierno@lahabana.gob.cu",
+     "title": "Ley No. 132/2019 De Organización y Funcionamiento de las ...",
+     "url": "https://www.lahabana.gob.cu/post_detalles/es/10265/ley-no-132-2019-de-organizacion-y-funcionamiento-de-las-asambleas-municipales-del-poder-popular-y-de-los-consejos-populares"
+    },
+    {
+     "date": "",
+     "host": "www.parlamentocubano.gob.cu",
+     "rank": 4,
+     "snippet": "# Ley de Organización y Funcionamiento del Consejo de la Administración Municipal\nLey de Organización y Funcionamiento del Consejo de la Administración Municipal\nLey de organización y funcionamiento del Gobierno Provincial del Poder Popular y Ley de Organización y Funcionamiento del Consejo de la Ad",
+     "title": "Ley de Organización y Funcionamiento del Consejo de la ...",
+     "url": "https://www.parlamentocubano.gob.cu/index.php/ley-de-organizacion-y-funcionamiento-del-consejo-de-la-administracion-municipal"
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 5,
+     "snippet": "reglamento | Gaceta Oficial\n...\n## Resolución 115 de 2026 de Ministerio de Salud Pública\n...\nGOC-2026-549-O78\n...\nwww.gacetaoficial.gob.cu Todos los Derechos Reservados | © DESOFT 2019, La Habana, Cuba",
+     "title": "reglamento - Gaceta Oficial |",
+     "url": "https://www.gacetaoficial.gob.cu/en/reglamento"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Cuba regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 1,
+     "snippet": "Aduana General de la República\nAsamblea Nacional del Poder Popular\n...\nBanco Nacional de Cuba\nBanco Popular de Ahorro\nCámara de Comercio de la República de Cuba\nCentral de Trabajadores de Cuba\n...\n…\n...\nInstituto Cubano de la Música\nInstituto Cubano de Radio y Televisión",
+     "title": "EMISORES DE NORMAS",
+     "url": "https://www.gacetaoficial.gob.cu/es/emisores-de-normas",
+     "verificacion": {
+      "bytes": 26305,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:49:04Z",
+      "http": 200,
+      "sha256": "11f4c7e460b7b904b8ac6880e5e629db61f9aebdd020b4b83a44e61712321c44"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.mep.gob.cu",
+     "rank": 2,
+     "snippet": "# Marco Regulatorio\n### En la presente página se muestran las resoluciones del Ministerio de Economía y Planificación que constituyen normas que se emitieron en virtud de las funciones del organismo.\n### Decreto 174 del 2026 Para la Gestión Estratégica del Desarrollo Territorial y sus normas complem",
+     "title": "Marco Regulatorio - Ministerio de Economía y Planificación ...",
+     "url": "https://www.mep.gob.cu/es/marco-regulatorio",
+     "verificacion": {
+      "bytes": 64794,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:49:06Z",
+      "http": 200,
+      "sha256": "0244f1f22d4f6df3633377703f252f54109e3b275336bb23833759554d49ab54"
+     }
+    },
+    {
+     "date": "2026-10-29",
+     "host": "www.cecmed.cu",
+     "rank": 3,
+     "snippet": "Autoridad Reguladora de Medicamentos, Equipos y Dispositivos Médicos de la República de Cuba.\nEncargada de promover y proteger la salud pública, a través de\n...\n## Últimas regulaciones\n...\nRequisitos de los concentrados leucocitarios humanos como materia prima para la industria farmacéutica",
+     "title": "CECMED",
+     "url": "https://www.cecmed.cu/"
+    },
+    {
+     "date": "2026-09-03",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 4,
+     "snippet": "73\n...\n## Resolución 70 de 2026 de Ministerio de Turismo\n...\n## Resolución 68 de 2026 de Ministerio de Turismo\nIdentificador de norma:\nGOC-2026-490-O73\nResumen:\nReglamento de las agencias de viajes de la República de Cuba.",
+     "title": "Gaceta Oficial No. 73 Ordinaria de 2026",
+     "url": "https://www.gacetaoficial.gob.cu/es/gaceta-oficial-no-73-ordinaria-de-2026"
+    },
+    {
+     "date": "",
+     "host": "www.bc.gob.cu",
+     "rank": 5,
+     "snippet": "### Manual de Regulaciones\nCompendio actualizado de disposiciones emitidas por el Banco Central de Cuba para regular la actividad bancaria, financiera y cambiaria.\nReúne resoluciones, instrucciones y circulares que orientan a bancos, entidades financieras no bancarias y otros actores del sistema.",
+     "title": "Marco Legal y Normativo | Banco Central de Cuba",
+     "url": "https://www.bc.gob.cu/normas-y-regulaciones"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Cuba national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 1,
+     "snippet": "## Resolución 5 de 1996 de Oficina Nacional de Normalización\nIdentificador de norma:\nGOC-1996-077-O6\n...\nAprueba como norma cubana la Guía ISO-IEC.\n...\nIdentificador de norma:\nGOC-2001-1396-O76",
+     "title": "www.gacetaoficial.gob.cu · es · normalizacionnormalización | Gaceta Oficial",
+     "url": "https://www.gacetaoficial.gob.cu/es/normalizacion",
+     "verificacion": {
+      "bytes": 34202,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:49:14Z",
+      "http": 200,
+      "sha256": "26eaa3e2b8b15f9d201d10f9eb15e25bb737ff4e3a8ca0909ffb3d2b0177c5b1"
+     }
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 2,
+     "snippet": "## Resolución 47 de 1996 de Oficina Nacional de Normalización\nIdentificador de norma:\nGOC-1996-560-O35\n...\nIdentificador de norma:\nGOC-1996-077-O6\n...\nIdentificador de norma:\nGOC-2000-432-O33",
+     "title": "Oficina Nacional de Normalización",
+     "url": "https://www.gacetaoficial.gob.cu/es/oficina-nacional-de-normalizacion",
+     "verificacion": {
+      "bytes": 34375,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:49:24Z",
+      "http": 200,
+      "sha256": "d937f7697b9085014c4af07758000f78c23a1e2643f6a0bb886ecabba7f12eba"
+     }
+    },
+    {
+     "date": "2026-09-24",
+     "host": "tbtcode.iso.org",
+     "rank": 3,
+     "snippet": "### Oficina Nacional de Normalización\n### Cuba\n...\nTel: + 53 7 830 00 22\n...\nEmail: [email protected]\nWebsite: http://www.nc.cubaindustria.cu\n...\n###### Access\n1) Revista Normalización\n2) Boletín Páginas Sueltas",
+     "title": "C192 - Cuba - NC - WTO ISO Standards Information Gateway",
+     "url": "https://tbtcode.iso.org/contents/json/41.html"
+    },
+    {
+     "date": "2023-10-30",
+     "host": "especialidades.sld.cu",
+     "rank": 4,
+     "snippet": "|NC ISO/IEC 27001|2023|Seguridad de la información, ciberseguridad y protección a la privacidad.\nSistemas de Gestión de Seguridad de la Información.\nRequisitos  (ISO/IEC 27001:2022, IDT) [CTN18]|",
+     "title": "Normas cubanas publicadas, sustituidas y corregidas durante el ...",
+     "url": "https://especialidades.sld.cu/higienepidemiologia/2023/10/30/normas-cubanas-publicadas-sustituidas-y-corregidas-durante-el-mes-de-septiembre-de-2023/"
+    },
+    {
+     "date": "2020-09-28",
+     "host": "especialidades.sld.cu",
+     "rank": 5,
+     "snippet": "|NC 1352|2020|Servicios para la reparación y mantenimiento de equipos electrodomésticos.\n|NC 1353-2|2020|Análisis sensorial.\nModelo integral para la evaluación de la calidad sensorial en la gestión de la calidad de los alimentos.",
+     "title": "Normas cubanas publicadas y sustituidas durante el mes de ...",
+     "url": "https://especialidades.sld.cu/higienepidemiologia/2020/09/28/normas-cubanas-publicadas-y-sustituidas-durante-el-mes-de-agosto-de-2020/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Cuba mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2026-10-29",
+     "host": "www.cecmed.cu",
+     "rank": 1,
+     "snippet": "Gestión de Señales en Farmacovigilancia\n...\nProtocolos de respuesta rápida ante emergencias epidemiológicas, desastres naturales, crisis energética y desabastecimiento de medicamentos, equipos y dispositivos médicos\n...\nRequisitos de los concentrados leucocitarios humanos como materia prima para la ",
+     "title": "CECMED",
+     "url": "https://www.cecmed.cu/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.cecmed.cu/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:49:44Z"
+     }
+    },
+    {
+     "date": "2026-08-06",
+     "host": "www.lahabana.gob.cu",
+     "rank": 2,
+     "snippet": "**4.\n¿Qué equipos requieren autorización técnica obligatoria?**\nRouters Wi-Fi, switches, pizarras telefónicas, sistemas de alarma inalámbrica, walkie-talkies, receptores de TV satelital, micrófonos profesionales.\n**5.\n...\n**6.\n...\nSerá retenido.",
+     "title": "Ministerio de Comunicaciones de Cuba publica respuesta a ...",
+     "url": "https://www.lahabana.gob.cu/post_detalles/es/28960/ministerio-de-comunicaciones-de-cuba-publica-respuesta-a-preguntas-frecuentes-sobre-las-resoluciones-1-y-2-de-2026",
+     "verificacion": {
+      "bytes": 71691,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:49:49Z",
+      "http": 200,
+      "sha256": "804fc93768921fa19c65a3e0b117016393813cbac0daa02d8487e72e7a231a70"
+     }
+    },
+    {
+     "date": "",
+     "host": "vuceregulaciones.mincex.gob.cu",
+     "rank": 3,
+     "snippet": "MARCO REGULATORIO EN \nREQUISITOS TÉCNICOS Y \nCALIDAD EN LA ACTIVIDAD \n...\n    REPÚBLICA DE CUBA \nMINISTERIO DEL COMERCIO EXTERIOR Y LA  INVERSIÓN \nEXTRANJERA\n…\n...\n…",
+     "title": "Microsoft Word - MARCO REGULATORIO REQUISITOS TÉCNICOS Y CALIDAD.doc",
+     "url": "https://vuceregulaciones.mincex.gob.cu/media/Marco_Regulatorio_Cuba_ComercioExterior.pdf"
+    },
+    {
+     "date": "2021-06-15",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 4,
+     "snippet": "## Resolución 2 de 2026 de Ministerio de Comunicaciones\n...\nGOC-2026-325-EX66\n...\nReglamento sobre la autorización técnica, el certificado de homologación o de aceptación de equipos, dispositivos y aparatos de telecomunicaciones y de tecnologías de la información y la comunicación.",
+     "title": "Ministerio de Comunicaciones",
+     "url": "https://www.gacetaoficial.gob.cu/es/ministerio-de-comunicaciones"
+    },
+    {
+     "date": "",
+     "host": "www.gacetaoficial.gob.cu",
+     "rank": 5,
+     "snippet": "DE HOMOLOGACIÓN O DE ACEPTACION DE EQUIPOS, DISPOSITIVOS\nY APARATOS DE TELECOMUNICACIONES Y DE TECNOLOGÍAS\nDE LA INFORMACIÓN Y LA COMUNICACIÓN\n...\nEl presente Reglamento tiene como objeto establecer el conjunto de acciones,\n…",
+     "title": "[PDF] goc-2026-ex66.pdf - La Habana - Gaceta Oficial |",
+     "url": "https://www.gacetaoficial.gob.cu/sites/default/files/goc-2026-ex66.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Cuba national statistics office official website",
+   "descartados": 4,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2023-09-07",
+     "host": "www.onei.gob.cu",
+     "rank": 1,
+     "snippet": "## Comentario\nEn el Anuario Demográfico de Cuba 2022 edición 2023, puede encontrar la información que solicita por municipios\nhttps://www.onei.gob.cu/anuario-demografico-de-cuba-enero-diciembre-2022\n…",
+     "title": "Anuario Estadístico de Cuba 2022 | Oficina Nacional de ...",
+     "url": "https://www.onei.gob.cu/anuario-estadistico-de-cuba-2022",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.onei.gob.cu/anuario-estadistico-de-cuba-2022",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:49:51Z"
+     }
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Cuba central bank statistics official website",
+   "descartados": 1,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.bc.gob.cu",
+     "rank": 1,
+     "snippet": "# Tablero integral de indicadores del Banco Central de Cuba\nAnaliza la salud macroeconómica de Cuba con visualizaciones actualizadas, comparativos históricos y acceso directo a los informes oficiales del Banco Central.\n...\n### Política Monetaria\n...\nindicadores@bc.gob.cu para gestionar credenciales ",
+     "title": "Indicadores económicos | Banco Central de Cuba",
+     "url": "https://www.bc.gob.cu/indicadores",
+     "verificacion": {
+      "bytes": 89402,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:49:53Z",
+      "http": 200,
+      "sha256": "0c516b543670580b8fcd52775118427e45ff3f567d5ab686a5fb3bdbc852b40a"
+     }
+    },
+    {
+     "date": "2026-11-01",
+     "host": "www.bc.gob.cu",
+     "rank": 2,
+     "snippet": "Consulta las tasas de cambio del Banco Central de Cuba.\n...\n<iframe\nsrc=\"https://www.bc.gob.cu/widget/tasas-de-cambio\"\nstyle=\"width:100%;height:520px;border:0;\"\nloading=\"lazy\"\nreferrerpolicy=\"no-referrer\"\n...\n```",
+     "title": "Tasa de cambio | Banco Central de Cuba",
+     "url": "https://www.bc.gob.cu/tasas-de-cambio/",
+     "verificacion": {
+      "bytes": 191360,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:49:54Z",
+      "http": 200,
+      "sha256": "64a9aacf30d54f670697e928744cdb6d6129945eae1c90cc7b468ffe60d40517"
+     }
+    },
+    {
+     "date": "2026-10-22",
+     "host": "www.bc.gob.cu",
+     "rank": 3,
+     "snippet": "Banco Central de Cuba | Sitio oficial\n...\n# Banco Central de Cuba\n...\n## Tasa de cambio oficial\nVigente el **domingo, 1 de noviembre**\nSegmento IEstatal Segmento IIEspecial Segmento IIIPoblación y FGNE\n...\nTodas las monedas e histórico → Calculadora",
+     "title": "Banco Central de Cuba | Sitio oficial",
+     "url": "https://www.bc.gob.cu/"
+    },
+    {
+     "date": "2026-10-10",
+     "host": "www.bc.gob.cu",
+     "rank": 4,
+     "snippet": "Tasas de Cambio - Banco Central de Cuba\nTasas de Cambio Oficiales\n...\nII|Seg.\n...\n|--|--|--|--|\n...\n|Bancos y entidades financieras|Transferencia desde el exterior|Compra|691.0200|773.5623|483.8736|",
+     "title": "Tasas de Cambio - Banco Central de Cuba",
+     "url": "https://www.bc.gob.cu/widget/tasas-de-cambio"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Cuba government open data portal",
+   "descartados": 3,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-04-23",
+     "host": "www.onei.gob.cu",
+     "rank": 1,
+     "snippet": "## Cuba en cifras\n## Anuario\nAnuario Estadístico de Cuba 2025",
+     "title": "Cuba en cifras",
+     "url": "https://www.onei.gob.cu/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.onei.gob.cu/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:49:54Z"
+     }
+    },
+    {
+     "date": "2026-06-02",
+     "host": "github.com",
+     "rank": 2,
+     "snippet": "- ⬛ Portals of open data and datasets in various directions\n...\n- **Portal de Datos Abiertos de Cuba** – Government open-data portal hosting selected statistical and administrative datasets.\n...\n## Archival Data in Cuba\n- Cuba Open Data Portal – Aggregated public datasets released by Cuban state age",
+     "title": "OSINT_in_Cuba/README.md at main · OSINT-for-countries/OSINT_in_Cuba",
+     "url": "https://github.com/OSINT-for-countries/OSINT_in_Cuba/blob/main/README.md",
+     "verificacion": {
+      "bytes": 422066,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:49:56Z",
+      "http": 200,
+      "sha256": "e5511f9a7c50d7fb532776caa07af6358e2a4aa10a97a3cb9fb8b83cab056b97"
+     }
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:33:12Z",
+ "pais": {
+  "iso2": "CU",
+  "iso3": "CUB",
+  "nombre": "Cuba"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

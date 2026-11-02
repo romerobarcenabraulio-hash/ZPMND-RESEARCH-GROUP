@@ -1,0 +1,765 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Bhutan constitution and national laws official legal database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "oag.gov.bt",
+     "rank": 1,
+     "snippet": "The Kingdom of Bhutan\nISBN 99936-754-0-7\n...\nDzongkha is the National Language of Bhutan.\n9.\nThis Constitution is the Supreme Law of the State.\n...\nThe Supreme Court shall be the guardian of this Constitution and the final authority on its interpretation.",
+     "title": "The Constitution of The Kingdom of Bhutan",
+     "url": "https://oag.gov.bt/wp-content/uploads/2026/08/Constitution_of_Bhutan.pdf",
+     "verificacion": {
+      "bytes": 2343010,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:57Z",
+      "http": 200,
+      "sha256": "116cda2967afc6665a5b032461addcc5e674fbb30b7b2044e6675fd8b52ef841"
+     }
+    },
+    {
+     "date": "2019-05-15",
+     "host": "guides.loc.gov",
+     "rank": 2,
+     "snippet": "This guide, prepared by the Law Library of Congress, includes links to free online resources regarding the country of Bhutan, focusing on its constitution; executive, legislative and judicial branches; legal guides; and general sources.\n...\n# Introduction\nThis Guide to Law Online research guide focu",
+     "title": "Research Guides: Guide to Law Online: Bhutan: Introduction",
+     "url": "https://guides.loc.gov/law-bhutan",
+     "verificacion": {
+      "bytes": 36558,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:58Z",
+      "http": 200,
+      "sha256": "c193b82b76622bf7ae6c553cc167ec0dc757bb17a4a3293d30222d70d8163196"
+     }
+    },
+    {
+     "date": "2008-07-18",
+     "host": "leap.unep.org",
+     "rank": 3,
+     "snippet": "# Constitution of the Kingdom of Bhutan.\n...\n# Constitution of the Kingdom of Bhutan.\nCountry\nBhutan\nType of law\nConstitution\n...\nAttached files\nhttp://faolex.fao.org/docs/pdf/bhu117663E.pdf\n...\nDate of text\n18 Jul 2008\n...\nNo\n...\nEnglish",
+     "title": "Constitution of the Kingdom of Bhutan.",
+     "url": "https://leap.unep.org/en/countries/bt/national-legislation/constitution-kingdom-bhutan"
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 4,
+     "snippet": "Official web portal of the Government of Bhutan.\n...\nSelected legislation is provided in full text in English including a copy of the Constitution.\n...\nSelected laws of Bhutan are available here on the AsianLII (Asian Legal Information Institute) website.\nThey can be browsed alphabetically by title,",
+     "title": "Bhutan | IALS Digital resources",
+     "url": "https://resources.ials.sas.ac.uk/eagle-i-jurisdiction/bhutan"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Bhutan national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bhutan.eregulations.org",
+     "rank": 1,
+     "snippet": "eRegulations Bhutan\n...\n| | |Bhutan Building Rules 2018|\n...\n| | |Companies Act of Bhutan 2016|\n...\n| | |Development Control Regulations 2016|\n| | |Development Control Regulations-2004|\n| | |Environmental Assessment Act, 2000|",
+     "title": "eRegulations Bhutan",
+     "url": "https://bhutan.eregulations.org/Laws?l=en",
+     "verificacion": {
+      "bytes": 233037,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:28:59Z",
+      "http": 200,
+      "sha256": "65c833196d23754cf6933fca33970c6f6daeb52606c958bc4ebae6ae7bdf8fc1"
+     }
+    },
+    {
+     "date": "",
+     "host": "pmo.gov.bt",
+     "rank": 2,
+     "snippet": "## Lifting Vehicle Import Moratorium\nGovernment: FOURTH GOVERNMENT Period: 2024 – 2029 Download Executive Order (PDF)\n...\nGovernment: SECOND GOVERNMENT Period: 2013 – 2018 Download Executive Order (PDF)\n...\n## Establishment of Better Business Council of Bhutan",
+     "title": "Executive Orders",
+     "url": "https://pmo.gov.bt/category/executive-orders/page/4/",
+     "verificacion": {
+      "bytes": 135230,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:29:07Z",
+      "http": 200,
+      "sha256": "60219c6af06bd80b81c79977f002765553e036214f5d93da9ddac75a594b0853"
+     }
+    },
+    {
+     "date": "",
+     "host": "pmo.gov.bt",
+     "rank": 3,
+     "snippet": "Executive Orders – Page 17 – PMO\n...\n- Executive Orders/\n- Page 17\n...\n## National Environment Commission to recommend ratification of bilateral and multilateral environmental instruments\nGovernment: SECOND GOVERNMENT Period: 2014 – 2018 Download Executive Order (PDF)",
+     "title": "Executive Orders",
+     "url": "https://pmo.gov.bt/category/executive-orders/page/17/"
+    },
+    {
+     "date": "",
+     "host": "pmo.gov.bt",
+     "rank": 4,
+     "snippet": "### POLICIES\nPolicies\n##### Policy Protocol (Past)\n##### Policy Protocol (Revised)\n...\n##### Policy Harmonization Report\n...\nApproved Policies\n|**Approved Policy**|**Approved** Date|\n|--|--|\n|National Energy Policy|6/9/2025|",
+     "title": "Policies",
+     "url": "https://pmo.gov.bt/policies/"
+    },
+    {
+     "date": "2026-10-08",
+     "host": "www.moha.gov.bt",
+     "rank": 5,
+     "snippet": "# Acts\n# Rules and Regulations\n- Transfer guidelines of MOHCA\n- Disaster Management Rules and Regulations 2014\n- Immigration Rules & Regulations of the Kingdom of Bhutan (Rev. Dec 2015)\n- Local Government Rules and Regulations 2012\n- Community Contracting Protocol\n…",
+     "title": "Laws, Policies and Guidelines - Ministry of Home Affairs",
+     "url": "https://www.moha.gov.bt/?page_id=215"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Bhutan official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "2023-11-22",
+     "host": "mof.gov.bt",
+     "rank": 1,
+     "snippet": "## དངུལ་རྩིས་ལྷན་ཁག། དཔལ་ལྡན་འབྲུག་གཞུང་།",
+     "title": "Notifications – Page 10 - Ministry of Finance",
+     "url": "https://mof.gov.bt/category/notifications/page/10/",
+     "verificacion": {
+      "bytes": 124230,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:29:13Z",
+      "http": 200,
+      "sha256": "5d343e77b5abe680abff8eccf40d9cd0344c54285faeb3442950b7171bf2a96c"
+     }
+    },
+    {
+     "date": "2026-09-14",
+     "host": "www.bicma.gov.bt",
+     "rank": 2,
+     "snippet": "The Bhutan InfoComm and Media Authority is pleased to share the Public Notification on New Limit on SIM Card Ownership.\nClick the link below: PUBLIC NOTICE_ New Limit on SIM Card Ownership\n...\nThe Bhutan InfoComm and Media Authority shares the Consultation Study Paper on Mobile Number Portability.",
+     "title": "Photo Gallery",
+     "url": "https://www.bicma.gov.bt/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.bicma.gov.bt/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:30:44Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.dlgdm.gov.bt",
+     "rank": 3,
+     "snippet": "## 09 Jun 2026\nRead More\n...\nAll rights reserved\n### Privacy Policy\nThis privacy policy is for this website www.dlg.mohca.gov.bt and\nserved by Department of Local Governance, Ministry of Home and Cultural Affairs and governs the\nprivacy of its users who choose to use it.",
+     "title": "གནས་ཚུལ་དང་བརྡ་དོན།",
+     "url": "https://www.dlgdm.gov.bt/news-list?language=dz"
+    },
+    {
+     "date": "",
+     "host": "www.bicma.gov.bt",
+     "rank": 4,
+     "snippet": "This Order shall cover tariffs for leasing of Dark Fiber, Domestic \nLeased Circuits, International Private Leased Circuits and Internet \n...\nThe Order shall come into force on the date of its notification in the Official Gazette.",
+     "title": "[PDF] Bhutan InfoComm and Media Authority Royal Government ... - Bicma",
+     "url": "https://www.bicma.gov.bt/data/publications/rules-regulations-guidelines/Tariff_Order_2009.pdf"
+    },
+    {
+     "date": "2026-08-04",
+     "host": "mof.gov.bt",
+     "rank": 5,
+     "snippet": "## Ministry of Finance Royal Government of Bhutan\n...\n## Notification on Performance-Based Grant (PBG) Assessment framework for Dzongkhags and Thromdes (04-Aug-2026)\n...\n## Budget Notification FY 2026-2027 (30-June-2026)...### Ministry of Finance",
+     "title": "Departmentof Planning, Budget and Performance",
+     "url": "https://mof.gov.bt/category/notifications/notifications-dpbp/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Bhutan supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.judiciary.gov.bt",
+     "rank": 1,
+     "snippet": "Judiciary Of Bhutan | Supreme Court\n...\n### Announcements\n...\n## Online Services",
+     "title": "Downloads",
+     "url": "https://www.judiciary.gov.bt/",
+     "verificacion": {
+      "bytes": 71915,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:30:50Z",
+      "http": 200,
+      "sha256": "40bd897dab44a5c13638434e09379df48ee6be2fcd4cd7b1154a9e2fd84d2a91"
+     }
+    },
+    {
+     "date": "2019-05-15",
+     "host": "guides.loc.gov",
+     "rank": 2,
+     "snippet": "# Judicial\nThe following links to government websites provide access to free online legal resources related to the judicial branch of Bhutan's government.\n- Judiciary of Bhutan External This link opens in a new window\n- Supreme Court's Judgments External This link opens in a new window\n(Judiciary of",
+     "title": "Judicial - Guide to Law Online: Bhutan",
+     "url": "https://guides.loc.gov/law-bhutan/judicial",
+     "verificacion": {
+      "bytes": 32014,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:30:50Z",
+      "http": 200,
+      "sha256": "932ce2f0f44318d8e9562bb21bad89d1f456da122c1a13539ff0aa827cd24202"
+     }
+    },
+    {
+     "date": "",
+     "host": "lawstronaut.com",
+     "rank": 3,
+     "snippet": "Structured Bhutan coverage is not yet live; Team and Enterprise customers can request priority onboarding of the sources below.\n...\n- Judiciary of Bhutan — Supreme Court and High Court\n...\n### Case Law\nCourt and tribunal decisions from official and authoritative Bhutanese sources, including Supreme ",
+     "title": "Bhutan legal data | Lawstronaut | Lawstronaut",
+     "url": "https://lawstronaut.com/jurisdictions/bhutan"
+    },
+    {
+     "date": "2011-02-24",
+     "host": "oag.gov.bt",
+     "rank": 4,
+     "snippet": "According to […]\n- ## Supreme Court Judgement\nThe judgment passed by the Supreme Court of Bhutan for the constitutional case between the Government of Bhutan and the Opposition Party can be accessed here: Judgement of the Supreme Court (English/Dzongkha)",
+     "title": "February 2011 - Office of the Attorney General",
+     "url": "https://oag.gov.bt/language/en/2011/02/"
+    },
+    {
+     "date": "2026-05-19",
+     "host": "github.com",
+     "rank": 5,
+     "snippet": "## Government and Semi-Official Online Services in Bhutan\n- ⬛ Services for court decisions and trial results\n- **Supreme Court of Bhutan – Judgments and Case Information** – Provides access to selected published judgments and information on court proceedings; coverage is not comprehensive.",
+     "title": "OSINT in Bhutan: Legal Information Search and Open Sources",
+     "url": "https://github.com/OSINT-for-countries/OSINT_in_Bhutan"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Bhutan state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bhutan.eregulations.org",
+     "rank": 1,
+     "snippet": "The Bhutan eRegulations site is brought to you by the Department of Industry under the Ministry of Economic Affairs.\nYou can access step-by-step guides on investment procedures in all 20 Dzongkhags, describing the actual practice from the user's point of view.\n...\n`\n...\n|--|--|--|",
+     "title": "eRegulations Bhutan",
+     "url": "https://bhutan.eregulations.org/Laws?l=en",
+     "verificacion": {
+      "bytes": 233037,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:30:50Z",
+      "http": 200,
+      "sha256": "1dcb1c10ad6910a383ef5da3141ae94c2bde432b7714a2e58a1a1a6de73ce2e2"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.legislation.gov.bt",
+     "rank": 2,
+     "snippet": "Depository of Laws\nLaws are the foundation of order, security, prosperity, and social harmony.\n...\nTitle\nContent\nLegislations\nLatest Legislations",
+     "title": "legislation - Depository of Laws",
+     "url": "https://www.legislation.gov.bt/",
+     "verificacion": {
+      "bytes": 5928,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:30:55Z",
+      "http": 200,
+      "sha256": "4af7bc971f1589e9efbeb010fe175c61fee2ef4081b2a355881dabdac1bd5b64"
+     }
+    },
+    {
+     "date": "",
+     "host": "rcsc.gov.bt",
+     "rank": 3,
+     "snippet": "Government Acts & Rules – RCSC\n...\n# Royal Civil Service Commission\n## BHUTAN\n...\n- Government Acts & Rules\n# Government Acts & Rules\nCivil Service Reform Act of Bhutan 2022\nBCSR 2023(Dzongkha)\nBCSR 2023(English)",
+     "title": "Government Acts & Rules",
+     "url": "https://rcsc.gov.bt/government-acts-rules/"
+    },
+    {
+     "date": "",
+     "host": "pmo.gov.bt",
+     "rank": 4,
+     "snippet": "Executive Orders – Page 4 – PMO\n...\n- Executive Orders/\n- Page 4\n...\n## Establishment of Better Business Council of Bhutan\n### Mail Us At\n- pmo@cabinet.gov.bt",
+     "title": "Executive Orders",
+     "url": "https://pmo.gov.bt/category/executive-orders/page/4/"
+    },
+    {
+     "date": "2026-10-08",
+     "host": "www.moha.gov.bt",
+     "rank": 5,
+     "snippet": "# Laws, Policies and Guidelines\n# Acts\n# Rules and Regulations\n- Transfer guidelines of MOHCA\n- Disaster Management Rules and Regulations 2014\n- Immigration Rules & Regulations of the Kingdom of Bhutan (Rev. Dec 2015)\n- Local Government Rules and Regulations 2012",
+     "title": "Laws, Policies and Guidelines - Ministry of Home Affairs",
+     "url": "https://www.moha.gov.bt/?page_id=215"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Bhutan municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bhutan.eregulations.org",
+     "rank": 1,
+     "snippet": "`\n<iframe style=\"height: 100%; border:none; width: 100%;min-height: 400px;\" src=\"https://bhutan.eregulations.org/Laws?l=en&embed=true&includeSearch=true\"></iframe>\n...\n| | |Bhutan Building Rules 2018|",
+     "title": "eRegulations Bhutan",
+     "url": "https://bhutan.eregulations.org/Laws?l=en",
+     "verificacion": {
+      "bytes": 233037,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:30:56Z",
+      "http": 200,
+      "sha256": "552619d352999311af6fecde2e5c89552bd877f0b6764e33932574f021c6eea6"
+     }
+    },
+    {
+     "date": "",
+     "host": "moit.gov.bt",
+     "rank": 2,
+     "snippet": "OF BHUTAN \nBHUTAN MUNICIPAL \nACT  \n1999\n1\nTHE BHUTAN MUNICIPAL ACT, 1999.\n...\n26\nARITICLES OF INCORPORATION [CHARTER] OF THE THIMPHU MUNICIPAL CORPORATION.\n...\nNAME",
+     "title": "[PDF] ROYAL GOVERNMENT OF BHUTAN BHUTAN MUNICIPAL ACT 1999 - MoIT",
+     "url": "https://moit.gov.bt/wp-content/uploads/2026/03/The-Bhutan-Municipal-Act-1999-1.pdf",
+     "verificacion": {
+      "bytes": 197919,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:02Z",
+      "http": 200,
+      "sha256": "86649266ed8c49f6d41bfe59a5f715a112dcd0956659e4d056cd6072fb585d7e"
+     }
+    },
+    {
+     "date": "",
+     "host": "moit.gov.bt",
+     "rank": 3,
+     "snippet": "These rules shall be called the Bhutan Building Rules - 2002 (BBR-2002) and shall come into force with effect from 1st January 2003.\nThese rules shall apply to all the declared urban areas and supersede all other rules and circulars on building regulations.",
+     "title": "moit.gov.bt › 03 › Bhutan-Building-Rules-2002Bhutan Building Rules - 2002 - moit.gov.bt",
+     "url": "https://moit.gov.bt/wp-content/uploads/2026/03/Bhutan-Building-Rules-2002.pdf"
+    },
+    {
+     "date": "2026-10-08",
+     "host": "www.moha.gov.bt",
+     "rank": 4,
+     "snippet": "# Laws, Policies and Guidelines\n# Acts\n# Rules and Regulations\n...\n- Disaster Management Rules and Regulations 2014\n- Immigration Rules & Regulations of the Kingdom of Bhutan (Rev. Dec 2015)\n- Local Government Rules and Regulations 2012\n- Community Contracting Protocol\n…",
+     "title": "Laws, Policies and Guidelines - Ministry of Home Affairs",
+     "url": "https://www.moha.gov.bt/?page_id=215"
+    },
+    {
+     "date": "",
+     "host": "www.dlgdm.gov.bt",
+     "rank": 5,
+     "snippet": "DLGDM\n|Report Title|Date|Document|\n...\n#### Contact Info\nDepartment of Local Governance & Disaster Management\nMinistry of Home Affairs, Thimphu.\nPhone: 02-338981/334512",
+     "title": "DLGDM",
+     "url": "https://www.dlgdm.gov.bt/documents"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Bhutan regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bhutan.eregulations.org",
+     "rank": 1,
+     "snippet": "# Disclaimer\nThe Bhutan eRegulations site is brought to you by the Department of Industry under the Ministry of Economic Affairs.\n...\n## Forms and documents\n| | |Bhutan Building Rules 2018|\n...\n| | |Development Control Regulations 2016|\n...\n| | |FDI Regulations 2019|",
+     "title": "eRegulations Bhutan",
+     "url": "https://bhutan.eregulations.org/Laws?l=en",
+     "verificacion": {
+      "bytes": 233037,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:02Z",
+      "http": 200,
+      "sha256": "7e1ec950b331f97ba17c139132d236f3a574886f9d522d84e9516f86ed945415"
+     }
+    },
+    {
+     "date": "",
+     "host": "bfda.gov.bt",
+     "rank": 2,
+     "snippet": "In exercise of the powers conferred under Section 57 (5), Chapter VII of the Narcotic Drugs, Psychotropic Substances and Substance Abuse Act of Bhutan, 2015, the Narcotics Control Board hereby makes the following\nRules and Regulations for carrying into effect the provisions of the Act.\n...\n50",
+     "title": "[PDF] NARCOTIC DRUGS, PSYCHOTROPIC SUBSTANCES AND ...",
+     "url": "https://bfda.gov.bt/wp-content/uploads/2026/07/Narcotic-Drugs-Psychotropic-Substances-and-Substance-Abuse-Rules-and-Regulation-2026-.pdf",
+     "verificacion": {
+      "bytes": 1890260,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:09Z",
+      "http": 200,
+      "sha256": "4c5026143067897f6a56f1c5bc292ed5c6d9a4ae111b8d649467b21486df7363"
+     }
+    },
+    {
+     "date": "",
+     "host": "bfda.gov.bt",
+     "rank": 3,
+     "snippet": "Guidelines for Regulating Health \n...\nBhutan Medicines Rules and Regulation 2019; \n...\nRoyal Government of Bhutan \nPhone: 337074.337075, Fax: 33580, P.O 1556 \nEmail: dra@dra.gov.bt   Website: www.dra.gov.bt",
+     "title": "[PDF] Guideline for Regulating Health Supplements",
+     "url": "https://bfda.gov.bt/wp-content/uploads/2025/09/Guideline-for-Regulating-Health-Supplements.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.state.gov",
+     "rank": 4,
+     "snippet": "Various government agencies have regulatory enforcement responsibilities.\nMoICE enforces laws related to business, investment, and trade.\nThe Ministry of Finance (MoF) oversees tax \nInvestment Climate Statement for Bhutan | 2025 \nU.S. Department of State\n…\n...\nThe Anti-",
+     "title": "[PDF] 2025 Bhutan Investment Climate Statement - State Department",
+     "url": "https://www.state.gov/wp-content/uploads/2025/09/638719_2025-Bhutan-Investment-Climate-Statement.pdf"
+    },
+    {
+     "date": "",
+     "host": "bfda.gov.bt",
+     "rank": 5,
+     "snippet": "The Medicines Act of the Kingdom of Bhutan 2003 empowers the Medical Product Division \n(MPD) of the Bhutan Food and Drug Authority (BFDA) to regulate medicinal products, ensuring they meet the required standards of safety, quality and efficacy/effectiveness.\n...\n…\n...\nRoyal Government of Bhutan",
+     "title": "Guideline-for-Authorization-and-Establishment-of- ...",
+     "url": "https://bfda.gov.bt/wp-content/uploads/2025/10/Guideline-for-Authorization-and-Establishment-of-Manufacturing-Facility-for-Medicinal-Products.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Bhutan national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bsb.gov.bt",
+     "rank": 1,
+     "snippet": "Standardization Division was established as per the Bhutan Standards Act 2010 to develop and publish national standards and also facilitate their implementation to assure promotion of quality infrastructure, and services critical to the economic development of the country.\n...\n# LIST OF NATIONAL STA",
+     "title": "Standardization – Bhutan Standards Bureau-BSB",
+     "url": "https://bsb.gov.bt/downloads/standardization/",
+     "verificacion": {
+      "bytes": 335201,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:14Z",
+      "http": 200,
+      "sha256": "6ec97b8a2d042b4762a7390bf13a86dd789edb4a59229924709cf778d00994b3"
+     }
+    },
+    {
+     "date": "",
+     "host": "bsb.gov.bt",
+     "rank": 2,
+     "snippet": "Downloads – Bhutan Standards Bureau-BSB\n# Downloads SD\n...\n**Guideline for Standards Development 2018** - Guideline for Standards Development\n**List of Standards available in BSB Library** - Indian Standard on Civil Engineering\n- Indian Standard on Electrical and Electronics\n…\n...\n## OUR LOCATION\n- ",
+     "title": "bsb.gov.bt › downloadsDownloads – Bhutan Standards Bureau-BSB",
+     "url": "https://bsb.gov.bt/downloads/",
+     "verificacion": {
+      "bytes": 347337,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:17Z",
+      "http": 200,
+      "sha256": "a689cb58c07bd5e2312dc5f9e28670bae2750d1f8ca2ee7ffaac761b35c0c0a8"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.moit.gov.bt",
+     "rank": 3,
+     "snippet": "BHUTAN STANDARD \nRoad – Geometric Design and Alignment Requirements \n...\nFree Standard provided by BSB to Department of Roads, MoWHS (jigmet@mowhs.gov.bt) [for non-commercial use only]\n...\nBTS 342: 2021 \n2 \n...\nDrain",
+     "title": "cd 5 - moit.gov.bt",
+     "url": "https://www.moit.gov.bt/wp-content/uploads/2024/09/Bhutan-Standard-Geometric-Design-and-Alignment-Requirement.pdf"
+    },
+    {
+     "date": "",
+     "host": "bsb.gov.bt",
+     "rank": 4,
+     "snippet": "The total number of Bhutan Standards stands at 245 as of FY 18-19.\n...\n…\n...\n5.BTS 44: 2018 - Bhutan Standard for raw ‘Brag-zhun’ and processed ‘Brag-zhun’ paste\n...\n…\nBhutan Standards Bureau",
+     "title": "[PDF] SD Annual Report 2018-2019 - Bhutan Standards Bureau-BSB",
+     "url": "https://bsb.gov.bt/wp-content/uploads/2025/12/SD-Annual-Report-2018-2019.pdf"
+    },
+    {
+     "date": "",
+     "host": "un-csam.org",
+     "rank": 5,
+     "snippet": "Website: www.bsb.gov.bt\n...\nBTS 34: 2017\nPower Tillers- Basic Requirements (Part 1)\nDeveloped\n...\nBTS 35: 2018\nPower Tiller Test Code (Part 2)\nDeveloped\n...\nBTS 36: 2018",
+     "title": "Bhutan Standards Bureau (BSB)",
+     "url": "https://un-csam.org/sites/default/files/2023-03/Bhutan.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Bhutan mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2022-12-05",
+     "host": "www.bicma.gov.bt",
+     "rank": 1,
+     "snippet": "#### Cable Television\n...\n#### Radio Communication\n- Frequency Band Plan for 850 MHZ in Bhutan (2012)\n- Frequency Band Plan for WiMax in Bhutan (2013)\n- 700MHz Frequency Band Plan for Bhutan (2015)\n...\n- National Radio Rules and Regulations (2021)",
+     "title": "Rules and Regulations - Bicma",
+     "url": "https://www.bicma.gov.bt/?page_id=242",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.bicma.gov.bt/?page_id=242",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:31:17Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "bfda.gov.bt",
+     "rank": 2,
+     "snippet": "Page     1/21                         \nBHUTAN MANDATORY STANDARD FOR FOOD ADDITIVES \n1.  \nPREAMBLE \nThis standard is issued pursuant to the Food Rules and Regulations of Bhutan 2017.",
+     "title": "Bhutan MANDATORY STANDARD FOR FOOD ADDITIVES",
+     "url": "https://bfda.gov.bt/wp-content/uploads/2025/09/Technical-Regulations-for-FOOD-ADDITIVES.pdf",
+     "verificacion": {
+      "bytes": 667264,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:20Z",
+      "http": 200,
+      "sha256": "baf31fc17fe65f20a4bdcb38e5e15a4dbeea946afbc3385feba379f736f0c7fc"
+     }
+    },
+    {
+     "date": "",
+     "host": "mof.gov.bt",
+     "rank": 3,
+     "snippet": "ITEMS TO THE RULES ON \nTHE FISCAL INCENTIVES \nACT OF BHUTAN 2021\n...\nChemical treatment plant/kiln",
+     "title": "REVISED SCHEDULE OF ITEMS TO THE RULES ON ...",
+     "url": "https://mof.gov.bt/wp-content/uploads/2026/05/Revised-schedule-of-items-Amended-on-12th-December-2025.pdf"
+    },
+    {
+     "date": "",
+     "host": "bfda.gov.bt",
+     "rank": 4,
+     "snippet": "BHUTAN MANDATORY STANDARD FOR VETERINARY DRUG RESIDUE IN FOOD     \n1. \n...\nThis Technical Regulation is issued pursuant to the Food Rules and Regulations of Bhutan 2017.\n...\nThis Technical Regulation applies to Residues of Veterinary drugs in foods.\nThe Residues of",
+     "title": "BMS-02:2017 Page 1/13 BHUTAN MANDATORY ...",
+     "url": "https://bfda.gov.bt/wp-content/uploads/2025/09/Technical-Regulations-for-VETERINARY__DRUG_RESIDUES_IN_FOOD.pdf"
+    },
+    {
+     "date": "",
+     "host": "bhutan.eregulations.org",
+     "rank": 5,
+     "snippet": "# Disclaimer\n## Forms and documents\n| | |Bhutan Building Rules 2018|\n|--|--|--|\n| | |Bhutanese Architectural Guidelines 2014|\n...\n| | |Development Control Regulations 2016|\n...\n| | |FDI Regulations 2019|",
+     "title": "eRegulations Bhutan",
+     "url": "https://bhutan.eregulations.org/Laws?l=en"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Bhutan national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-26",
+     "host": "nsb.gov.bt",
+     "rank": 1,
+     "snippet": "National Statistics Bureau – National Statistics Bureau\n...\n# Request Data\nData request Form\n### NSFD\nNational Sampling Frame Database\n### BSDS\nBhutan Statistical Database System\n...\n- P.O. Box No. 338\n...\n- Phone: +975-2-333296 or +975-2-335848",
+     "title": "nsb.gov.bt",
+     "url": "https://nsb.gov.bt/?id=6",
+     "verificacion": {
+      "bytes": 480747,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:28Z",
+      "http": 200,
+      "sha256": "8454acb574f65b442a9c0fae9e27a5d335394d90b7876647b2d1a8cc936ccf3b"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.fao.org",
+     "rank": 2,
+     "snippet": "Microdata can be requested through a form on the National Statistics Bureau website available at https://www.nsb.gov.bt/services/statistical-data-request/\n...\nAgricultural Statistics Division, National Statistics Bureau  \n...\nE-mail: asd@nsb.gov.bt \nWebsite: https://www.nsb.gov.bt/",
+     "title": "BHUTAN RENEWABLE NATURAL RESOURCES CENSUS 2019 METADATA ...",
+     "url": "https://www.fao.org/fileadmin/templates/ess/ess_test_folder/World_Census_Agriculture/WCA_2020/WCA2020_new_MRs/MR_Bhutan_2019_VF.pdf",
+     "verificacion": {
+      "bytes": 208414,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:29Z",
+      "http": 200,
+      "sha256": "3e8a61ec059e13664e93a87afd225db688d715b418fe29a36d61ff815b4aa37d"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.nsb.gov.bt",
+     "rank": 3,
+     "snippet": "རྒྱལ་ཡོངས་རྩིས་དཔྱད་བཀོད་འཛིན། www.nsb.gov.bt\nNational Statistics Bureau\n...\nRoyal Government of Bhutan",
+     "title": "རྒྱལ་ཡོོངས་རྩིིས་དཔྱད་བཀོོད་འཛིིན།",
+     "url": "https://www.nsb.gov.bt/wp-content/uploads/2026/09/Statistical-Yearbook-2025.pdf"
+    },
+    {
+     "date": "",
+     "host": "nsb.gov.bt",
+     "rank": 4,
+     "snippet": "# Message from the Director General\n##### Director General, Dasho Sonam Tenzin\nstenzinplannsb.gov.bt\nWelcome to the official website of the National Statistics Bureau (NSB), the central authority for collection and release of any official data, and their custodian!",
+     "title": "Message from the Director General",
+     "url": "https://nsb.gov.bt/message-from-the-director-general/"
+    },
+    {
+     "date": "",
+     "host": "nsb.gov.bt",
+     "rank": 5,
+     "snippet": "Advanced Release Calendar – National Statistics Bureau\nThe Food and Non-Food inflation rates for September 2026 are 4.97% and 6.34%, respectively.\n...\nNo matching rows found.\n- Near Tashichho Dzong\n- P.O. Box No. 338",
+     "title": "Advanced Release Calendar",
+     "url": "https://nsb.gov.bt/advanced-release-calendar/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Bhutan central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-01-20",
+     "host": "www.rma.org.bt",
+     "rank": 1,
+     "snippet": "##### Dec. 31, 2025\n...\nThe Royal Monetary Authority of Bhutan (RMA) is pleased to publish its Annual Report for FY 2024/25, providing an overview of Bhutan’s macroeconomic situation, and financial sector developments spanning July 2024 to June 2025.",
+     "title": "Royal Monetary Authority",
+     "url": "https://www.rma.org.bt/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.rma.org.bt/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:31:32Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.rma.org.bt",
+     "rank": 2,
+     "snippet": "23971.8\nGovt.\n...\nRoyal Monetary Authority of Bhutan (1)",
+     "title": "[PDF] Monthly Bulletin May 2019.pdf - Royal Monetary Authority of Bhutan",
+     "url": "https://www.rma.org.bt/bank/RMA%20Publication/MSB/2019/Monthly%20Bulletin%20May%202019.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.rma.org.bt/bank/RMA%20Publication/MSB/2019/Monthly%20Bulletin%20May%202019.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:31:32Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.rma.org.bt",
+     "rank": 3,
+     "snippet": "POLICY \nSTATEMENT \nRoyal Monetary Authority of Bhutan\nRoyal Monetary Authority of Bhutan \nP.O Box 154\n...\nEmail: rma.rsd@rma.org.bt\nWebsite: www.rma.org.bt\nRMA Financial Literacy Webpage: www.rma.org.bt/flp/index.html",
+     "title": "[PDF] MONETARY POLICY STATEMENT",
+     "url": "https://www.rma.org.bt/bank/RMA%20Publication/MPS/RMA%20Monetary%20Policy%20Statement%202013.pdf"
+    },
+    {
+     "date": "",
+     "host": "mof.gov.bt",
+     "rank": 4,
+     "snippet": "please visit www.mof.gov.bt or contact mfpd@mof.gov.bt.\n...\nInflation (average)",
+     "title": "[PDF] macroeconomic situation report",
+     "url": "https://mof.gov.bt/wp-content/uploads/2025/10/Macroeconomic-Report-3rd-Quarter-Updatetr-FY-2024-25.pdf"
+    },
+    {
+     "date": "2025-12-01",
+     "host": "www.rma.org.bt",
+     "rank": 5,
+     "snippet": "Home\nLegal Framework\nPublications & Statistics\nPayment & Settlement Systems\nFinancial Intelligence Reports\nRMA's Financial Statements\nMacro-economic Data\nFinancial Sector Publication & Statistics\nAdvocacy & Resources\n...\nRGOB T-Bills & Bonds",
+     "title": "Currency in Circulation",
+     "url": "https://www.rma.org.bt/cmReports/"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Bhutan government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2025-06-09",
+     "host": "data.gov.bt",
+     "rank": 1,
+     "snippet": "# Explore Bhutan Data Sharing Platform\n### Harnessing the potential of data to enhance accessibility, cultivate data culture, derive insights and drive innovation.\n# 88\n### Datasets\n# 234\n### Resources\n...\n### Resource downloads\n## Explore by Categories\n### Discover datasets curated by various categ",
+     "title": "Bhutan Data Sharing Platform",
+     "url": "https://data.gov.bt/",
+     "verificacion": {
+      "bytes": 62743,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:41Z",
+      "http": 200,
+      "sha256": "147f9f52e8e6576a7e1a36aa2a28ea6c68ed062ba3ce493329ff29cc5a612762"
+     }
+    },
+    {
+     "date": "2006-07-01",
+     "host": "mof.gov.bt",
+     "rank": 2,
+     "snippet": "## Ministry of Finance Royal Government of Bhutan\nEconomic Outlook Dashboard — Ministry of Finance, Bhutan\nLoading latest data...\nFetching from Google Sheets\n### Dashboard Password\n...\n# Economic Outlook Dashboard\n### Ministry of Finance\n- Tashichhodzong Dzong,\n- Thimphu, Bhutan.",
+     "title": "mof.gov.bt › macro-economic-dataMacro-Economic Data – Ministry of Finance",
+     "url": "https://mof.gov.bt/macro-economic-data/",
+     "verificacion": {
+      "bytes": 639321,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:31:52Z",
+      "http": 200,
+      "sha256": "6a118ea74f37f63e645dbf6abf689f93c77d83f797e6f8cb44cc53dc19fd9878"
+     }
+    },
+    {
+     "date": "2026-05-19",
+     "host": "github.com",
+     "rank": 3,
+     "snippet": "- ⬛ Portals of open data and datasets in various directions\n- **National Statistics Bureau** – Official source of national statistical datasets, census data, and economic indicators.\n- **Bhutan Open Data Portal** – Government platform hosting selected open datasets across sectors such as health, edu",
+     "title": "OSINT in Bhutan: Legal Information Search and Open Sources",
+     "url": "https://github.com/OSINT-for-countries/OSINT_in_Bhutan"
+    },
+    {
+     "date": "",
+     "host": "www.worldbank.org",
+     "rank": 4,
+     "snippet": "In collaboration with the World Bank, the NSB created the Bhutan Interactive Data Portal, which features more than 1,000 statistical indicators on Bhutan.\n...\nThe website, interactive data portal, and mobile app were developed with technical and financial support from the World Bank.",
+     "title": "World Bank Helps Strengthen Bhutan’s Statistical Capacity",
+     "url": "https://www.worldbank.org/en/news/press-release/2021/02/02/world-bank-helps-strengthen-bhutans-statistical-capacity"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "mof.gov.bt",
+     "rank": 5,
+     "snippet": "Ministry of Finance – Royal Government of Bhutan\n...\n## EVENTS\n### Ministry of Finance\n...\n- Thimphu, Bhutan.",
+     "title": "དངུལ་རྩིས་ལྷན་ཁག། དཔལ་ལྡན་འབྲུག་གཞུང་།",
+     "url": "https://mof.gov.bt/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:23:49Z",
+ "pais": {
+  "iso2": "BT",
+  "iso3": "BTN",
+  "nombre": "Bhutan"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

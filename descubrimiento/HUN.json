@@ -1,0 +1,605 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Hungary constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "njt.jog.gov.hu",
+     "rank": 1,
+     "snippet": "1 \nContact: jogszabford@im.gov.hu \nTHE FUNDAMENTAL LAW OF HUNGARY \nEnglish translation of the consolidated version of the Fundamental Law of Hungary incorporating:\n...\nThe Fundamental Law of Hungary \n(as in force on 1 October 2026)",
+     "title": "The Fundamental Law of Hungary",
+     "url": "https://njt.jog.gov.hu/jogszabaly/en/2011-4301-02-00"
+    },
+    {
+     "date": "2026-10-01",
+     "host": "njt.jog.gov.hu",
+     "rank": 2,
+     "snippet": "Nemzeti Jogszabálytár – MKIFK Magyar Közlönykiadó és Igazságügyi Fordítóközpont Zrt.\n# Translated legislation\n...\nThe Fundamental Law of Hungary\n01/10/2026\n(25th April 2011)",
+     "title": "Translated legislation - Nemzeti Jogszabálytár",
+     "url": "https://njt.jog.gov.hu/translations/-:-:-:-/1/10"
+    },
+    {
+     "date": "",
+     "host": "net.jogtar.hu",
+     "rank": 3,
+     "snippet": "Keresés: - 1.oldal - Hatályos Jogszabályok Gyűjteménye\n...\n### 9303 találat\nA találati lista a keresés napján hatályos jogszabályokat tartalmazza.\n...\n## Magyarország Alaptörvénye",
+     "title": "Keresés",
+     "url": "https://net.jogtar.hu/gyorskereso"
+    },
+    {
+     "date": "",
+     "host": "njt.jog.gov.hu",
+     "rank": 4,
+     "snippet": "A Nemzeti Jogszabálytár egy web alapú szolgáltatás, amely jogszabályban meghatározott körben ingyenesen hozzáférhető jogszabálytár szolgáltatást biztosít számítógépen és mobiltelefonon.",
+     "title": "Nemzeti Jogszabálytár – MKIFK Magyar Közlönykiadó és Igazságügyi Fordítóközpont Zrt.",
+     "url": "https://njt.jog.gov.hu/"
+    },
+    {
+     "date": "",
+     "host": "njt.jog.gov.hu",
+     "rank": 5,
+     "snippet": "##### A Jogszabályfordítások aloldal hírei\n**Megjelent az Alaptörvény frissített angol, német és francia fordítása**",
+     "title": "Jogszabályfordítások - Nemzeti Jogszabálytár",
+     "url": "https://njt.jog.gov.hu/forditasok"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Hungary national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "2026-10-30",
+     "host": "kormany.hu",
+     "rank": 1,
+     "snippet": "Az itt megtalálható információk a közérdekű adatokra vonatkozó jogszabályokban előírt határidők szerint frissülnek.\n...\n**Összesen 6030 találat**\n#### Jogszabálytervezetek\n...\n…",
+     "title": "Dokumentumtár | Magyarország Kormánya",
+     "url": "https://kormany.hu/dokumentumtar?ministry=29&limit_rows_on_page=8&limit_page=0"
+    },
+    {
+     "date": "",
+     "host": "njt.jog.gov.hu",
+     "rank": 2,
+     "snippet": "…\n...\nA Nemzeti Jogszabálytár egy web alapú szolgáltatás, amely jogszabályban meghatározott körben ingyenesen hozzáférhető jogszabálytár szolgáltatást biztosít számítógépen és mobiltelefonon.",
+     "title": "Nemzeti Jogszabálytár – MKIFK Magyar Közlönykiadó és Igazságügyi Fordítóközpont Zrt.",
+     "url": "https://njt.jog.gov.hu/"
+    },
+    {
+     "date": "",
+     "host": "njt.jog.gov.hu",
+     "rank": 3,
+     "snippet": "határozatát.\n...\n8. § (1)^17^ A Nemzeti Jogszabálytár a www.njt.hu honlapon működik, és a www.kormany.hu kormányportálról is elérhető.",
+     "title": "338/2011. (XII. 29.) Korm. rendelet - Nemzeti Jogszabálytár",
+     "url": "https://njt.jog.gov.hu/jogszabaly/2011-338-20-22"
+    },
+    {
+     "date": "2026-10-31",
+     "host": "kormany.hu",
+     "rank": 4,
+     "snippet": "Dokumentumtár | Magyarország Kormánya\nDokumentumtár\n# Dokumentumtár\n...\nAz itt megtalálható információk a közérdekű adatokra vonatkozó jogszabályokban előírt határidők szerint frissülnek.",
+     "title": "Dokumentumtár | Magyarország Kormánya",
+     "url": "https://kormany.hu/en/document-library"
+    },
+    {
+     "date": "",
+     "host": "net.jogtar.hu",
+     "rank": 5,
+     "snippet": "Keresés: g - 8.oldal - Hatályos Jogszabályok Gyűjteménye\n...\nCVIII, 108\n...\n20, 189/A\n...\nA találati lista a keresés napján hatályos jogszabályokat tartalmazza.",
+     "title": "Keresés: g - 8.oldal - Hatályos Jogszabályok Gyűjteménye",
+     "url": "https://net.jogtar.hu/gyorskereso?keyword=g&pagenum=8"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Hungary official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "technical-regulation-information-system.ec.europa.eu",
+     "rank": 1,
+     "snippet": "3529\nDecree No 9/2026 of 24 July 2026 of the Minister for Agriculture and Food amending Decree No 152/2009 of the Ministry of Agriculture and Rural Development of 12 November\n...\nThis Decree shall enter into force on the third day following its publication.",
+     "title": "THE HUNGARIAN OFFICIAL GAZETTE • Issue 98 of 2026",
+     "url": "https://technical-regulation-information-system.ec.europa.eu/da/notification/27205/text/F/EN"
+    },
+    {
+     "date": "2026-05-23",
+     "host": "jog.gov.hu",
+     "rank": 2,
+     "snippet": "Aktuális Magyar Közlönyök - Magyar Jogi Információs Portál\n# Hungarian Gazette\n...\n# Magyar Közlöny 2026. évi 151. szám\n2026. október 9.",
+     "title": "Hungarian Gazette - Magyar Jogi Információs Portál",
+     "url": "https://jog.gov.hu/en/magyar-kozlony"
+    },
+    {
+     "date": "",
+     "host": "sztnh.gov.hu",
+     "rank": 3,
+     "snippet": "# Gazette for Patents and Trade Marks - the official journal of the Hungarian Intellectual Property Office\n...\nHungarian Intellectual Property Office, the Gazette for Patents and Trade Marks, is officially published online, free of charge,\nin PDF format on the website of the Office from January 2006",
+     "title": "Gazette | Hungarian Intellectual Property Office",
+     "url": "https://sztnh.gov.hu/en/home/gazette"
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 4,
+     "snippet": "# Digital Resources\n# Hungary: legislation: official gazette\nDescription:\n1 title containing the official gazette for Hungary from 1985 to 2006.\nIt is an official publication and the text is in Hungarian.\nNew material is no longer added.",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag/hungary-legislation-officiadepositoryperiodicalss-4451-41"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "magyarkozlony.hu",
+     "rank": 5,
+     "snippet": "**Magyar Közlöny 2026.\névi 162.\nszám** **Magyar Közlöny 2026.\névi 162.\n...\n**Hivatalos Értesítő 2026.\névi 54.\n...\nszám**",
+     "title": "Magyar Közlöny",
+     "url": "https://magyarkozlony.hu/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Hungary supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "kuria-birosag.hu",
+     "rank": 1,
+     "snippet": "Common Portal | Kúria\n# Common Portal\n4/2026.\nJEH (Jpe.III.60.039/2025/15. szám) 5/2026.\n...\nDisplaying 1 - 50 of 315",
+     "title": "Common Portal",
+     "url": "https://kuria-birosag.hu/hu/common-portal"
+    },
+    {
+     "date": "",
+     "host": "kuria-birosag.hu",
+     "rank": 2,
+     "snippet": "Landmark decisions | THE CURIA OF HUNGARY\n...\n# Landmark decisions\nThe integral translation in English of the ten landmark decisions of the Curia (Supreme Court) of Hungary rendered between the years 2008 and 2018 can be found, in a chronological order, hereunder:",
+     "title": "Landmark decisions | THE CURIA OF HUNGARY - kuria-birosag.hu",
+     "url": "https://kuria-birosag.hu/en/landmark-decisions"
+    },
+    {
+     "date": "2026-07-17",
+     "host": "birosag.hu",
+     "rank": 3,
+     "snippet": "### Bírósági Határozatok Gyűjteménye\n...\n### Bírósági Határozatok Gyűjteménye\nA bíróságok által hozott nyilvánosan kereshető, anonimizált határozatok\n…",
+     "title": "Főoldal | Magyarország Bíróságai",
+     "url": "https://birosag.hu/"
+    },
+    {
+     "date": "2020-11-05",
+     "host": "birosag.hu",
+     "rank": 4,
+     "snippet": "…\nA birosag.hu honlapról megújult oldalon elérhető Bírósági Határozatok Gyűjteménye új keresési lehetőségekkel is bővült.",
+     "title": "Megújult a Bírósági Határozatok Gyűjteménye oldal",
+     "url": "https://birosag.hu/hirek/kategoria/birosagokrol/megujult-birosagi-hatarozatok-gyujtemenye-oldal"
+    },
+    {
+     "date": "",
+     "host": "birosag.hu",
+     "rank": 5,
+     "snippet": "# Bírósági Határozatok Gyűjteménye\nA\n**Bírósági Határozatok Gyűjteménye** (BHGY) digitális formában tartalmazza\n- a Kúria jogegységi határozatát;",
+     "title": "Bírósági Határozatok Gyűjteménye",
+     "url": "https://birosag.hu/ugyfeleknek/birosagi-hatarozatok-gyujtemenye"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Hungary state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "2026-10-20",
+     "host": "jog.gov.hu",
+     "rank": 1,
+     "snippet": "Magyar Jogi Információs Portál\n# Mesterséges intelligencia alapú jogi információ kereső\n## Kérdezze meg, hogy mit mond a jog!\nMagyar KözlönyÁgazati közlöny",
+     "title": "Magyar Jogi Információs Portál",
+     "url": "https://jog.gov.hu/"
+    },
+    {
+     "date": "2026-10-01",
+     "host": "njt.jog.gov.hu",
+     "rank": 2,
+     "snippet": "Nemzeti Jogszabálytár – MKIFK Magyar Közlönykiadó és Igazságügyi Fordítóközpont Zrt.\n# Translated legislation\n### Results - {{ savedAdvancedSearchName }}\nThe Fundamental Law of Hungary",
+     "title": "Translated legislation - Nemzeti Jogszabálytár",
+     "url": "https://njt.jog.gov.hu/translations/-:-:-:-/1/10"
+    },
+    {
+     "date": "",
+     "host": "net.jogtar.hu",
+     "rank": 3,
+     "snippet": "Keresés: - 1.oldal - Hatályos Jogszabályok Gyűjteménye\n...\n### 9303 találat\nA találati lista a keresés napján hatályos jogszabályokat tartalmazza.",
+     "title": "Keresés: - 1.oldal - Hatályos Jogszabályok Gyűjteménye",
+     "url": "https://net.jogtar.hu/jogszabaly-kereso"
+    },
+    {
+     "date": "",
+     "host": "net.jogtar.hu",
+     "rank": 4,
+     "snippet": "### 4447 találat\nA találati lista a keresés napján hatályos jogszabályokat tartalmazza.\n...\n## Magyarország Alaptörvénye\n(2011. április 25.)",
+     "title": "Keresés: g - 1.oldal - Hatályos Jogszabályok Gyűjteménye",
+     "url": "https://net.jogtar.hu/gyorskereso?keyword=g"
+    },
+    {
+     "date": "",
+     "host": "njt.jog.gov.hu",
+     "rank": 5,
+     "snippet": "A Nemzeti Jogszabálytár egy web alapú szolgáltatás, amely jogszabályban meghatározott körben ingyenesen hozzáférhető jogszabálytár szolgáltatást biztosít számítógépen és mobiltelefonon.",
+     "title": "Nemzeti Jogszabálytár – MKIFK Magyar Közlönykiadó és Igazságügyi Fordítóközpont Zrt.",
+     "url": "https://njt.jog.gov.hu/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Hungary municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "net.jogtar.hu",
+     "rank": 1,
+     "snippet": "Keresés - 1.oldal - Önkormányzati rendelettár\n1. Önkormányzati rendelettár\n...\nParagrafus: pl.\n20, 189/A\nA kereséshez egy feltétel megadása is elegendő.",
+     "title": "Keresés - 1.oldal - Önkormányzati rendelettár",
+     "url": "https://net.jogtar.hu/rendelet-kereso/jogszabaly"
+    },
+    {
+     "date": "2026-10-16",
+     "host": "njt.jog.gov.hu",
+     "rank": 2,
+     "snippet": "Nemzeti Jogszabálytár – MKIFK Magyar Közlönykiadó és Igazságügyi Fordítóközpont Zrt.\n# Önkormányzati rendeletek\n...\nÖsszesen 337 találat találat / oldal",
+     "title": "Önkormányzati rendeletek - Nemzeti Jogszabálytár",
+     "url": "https://njt.jog.gov.hu/or/-:-:-:-:-:-:-:1:-:-:9:1824:-/1/10"
+    },
+    {
+     "date": "",
+     "host": "net.jogtar.hu",
+     "rank": 3,
+     "snippet": "Önkormányzati rendelettár\n## Hatályos Jogszabályok Gyűjteménye fejléc\n## Önkormányzati rendelettár\nKiadónk vállalja, hogy elkészíti az önkormányzatok rendelettárát.",
+     "title": "Önkormányzati rendelettár",
+     "url": "https://net.jogtar.hu/onkormanyzati-rendelettar"
+    },
+    {
+     "date": "2026-09-30",
+     "host": "njt.jog.gov.hu",
+     "rank": 4,
+     "snippet": "# Önkormányzati rendeletek\n...\nÖsszesen 511 találat találat / oldal\n1 / 52\n...\nKerület Rákospalota, Pestújhely, Újpalota Önkormányzat Képviselő-testületének 12/2026.",
+     "title": "MKIFK Magyar Közlönykiadó és ... - Nemzeti Jogszabálytár",
+     "url": "https://njt.jog.gov.hu/or/-:-:-:-:-:-:-:1:-:-:1:264:-/1/10"
+    },
+    {
+     "date": "2026-10-01",
+     "host": "njt.jog.gov.hu",
+     "rank": 5,
+     "snippet": "Nemzeti Jogszabálytár – MKIFK Magyar Közlönykiadó és Igazságügyi Fordítóközpont Zrt.\n...\n…\n- Önkormányzati rendeletek\n** Jogszabálykereső\n- {{ page.url }}",
+     "title": "Translated legislation - Nemzeti Jogszabálytár",
+     "url": "https://njt.jog.gov.hu/translations/-:-:-:-/1/10"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Hungary regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2025-06-04",
+     "host": "nkfh.gov.hu",
+     "rank": 1,
+     "snippet": "# Authorities\n## Hungarian Competition Authority\n...\nThe National Centre for Public Health and Pharmacy (Nemzeti Népegészségügyi és Gyógyszerészeti Központ, NNGYK) is responsible for public health, epidemiology, health development, health administration and coordination, and labour health.",
+     "title": "Authorities",
+     "url": "https://nkfh.gov.hu/en/authorities"
+    },
+    {
+     "date": "",
+     "host": "apps.fas.usda.gov",
+     "rank": 2,
+     "snippet": "Government Resolution No. 2243/2006 decreed the establishment of a unified food safety organization to control the whole food chain, build consumer confidence, and achieve a more efficient food safety authority body.\n...\n…\n...\nHungarian Food Codex \n \n...\nMinistry of Agriculture (in Hungarian)",
+     "title": "Report Name: FAIRS Annual Country Report Annual",
+     "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=FAIRS%20Annual%20Country%20Report%20Annual_Budapest_Hungary_HU2023-0005.pdf&v=1790040966075"
+    },
+    {
+     "date": "2026-10-22",
+     "host": "www.state.gov",
+     "rank": 3,
+     "snippet": "All EU regulations and decisions are immediately applicable in Hungary, without further domestic measures, while directives must be transposed and adopted by Hungarian legislation.\n...\nEU competition law is binding in Hungary.\nThe Hungarian Competition Authority is tasked with safeguarding the publi",
+     "title": "Hungary - United States Department of State",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/hungary/"
+    },
+    {
+     "date": "",
+     "host": "ec.europa.eu",
+     "rank": 4,
+     "snippet": "Designation of authorities\nNational level\nThe Ministry of Agriculture (MA) has full responsibility for official controls in the whole of the food chain.\nAct No XLVI of 2008 has centralised the policy responsibility for the whole food\n...\nNational \n...\nOffice\n...\nAgricultural \n...\nResources \nDirector",
+     "title": "Hungary Country Profile - European Commission",
+     "url": "https://ec.europa.eu/food/audits-analysis/country/profile/download/681"
+    },
+    {
+     "date": "",
+     "host": "njt.jog.gov.hu",
+     "rank": 5,
+     "snippet": "A Nemzeti Jogszabálytár egy web alapú szolgáltatás, amely jogszabályban meghatározott körben ingyenesen hozzáférhető jogszabálytár szolgáltatást biztosít számítógépen és mobiltelefonon.",
+     "title": "Nemzeti Jogszabálytár – MKIFK Magyar Közlönykiadó és Igazságügyi Fordítóközpont Zrt.",
+     "url": "https://njt.jog.gov.hu/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Hungary national standards body standards catalogue",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.privacyshield.gov",
+     "rank": 1,
+     "snippet": "Hungarian Customs and Finance Guards http://en.nav.gov.hu/\nHungarian Licensing and Export Control Office http://mkeh.gov.hu\nHungarian Standards Office: http://www.mszt.hu/angol/index_eng.htm\nHungarian Accreditation Board: http://www.nat.hu/",
+     "title": "Hungary - Trade Standards | Privacy Shield",
+     "url": "https://www.privacyshield.gov/ps/article?id=Hungary-Trade-Standards"
+    },
+    {
+     "date": "2023-07-04",
+     "host": "eur-lex.europa.eu",
+     "rank": 2,
+     "snippet": "17. HUNGARY\nMSZT\nMagyar Szabványügyi Testület",
+     "title": "C_2023236EN.01000301.xml",
+     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52023XC0704(01)"
+    },
+    {
+     "date": "",
+     "host": "www.parlament.hu",
+     "rank": 3,
+     "snippet": "Nemzeti szabványok \n2017/57.\n...\nA MAGYAR SZABVÁNYÜGYI TESTÜLET  \nFELADATAI \nForrások: \n \na Magyar Szabványügyi Testület (MSZT) honlapja",
+     "title": "2017/57.",
+     "url": "https://www.parlament.hu/documents/10181/1202209/Infojegyzet_2017_57_nemzeti_szabvanyok.pdf/8a1f14e9-7edd-436a-808d-1c8ff3141614"
+    },
+    {
+     "date": "2026-09-24",
+     "host": "tbtcode.iso.org",
+     "rank": 4,
+     "snippet": "## MSZT\n### Magyar Szabványügyi Testület\n### Hungary\n...\nPreparation and publication of national standards, implementation of European and international standards, certification services, sales of standards and related publications (in hardcopy and/or electronic form), training/education, informatio",
+     "title": "C348 - Hungary - MSZT - WTO ISO Standards Information Gateway",
+     "url": "https://tbtcode.iso.org/contents/json/75.html"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Hungary mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "technical-regulation-information-system.ec.europa.eu",
+     "rank": 1,
+     "snippet": "## Nem találja, amit keres?\nHa nem találja a nemzeti szinten elfogadott műszaki szabályt a TRIS adatbázisban, fontolja meg, hogy az alábbi linken keresztül bejelenti nekünk ezt a szabálytalanságot.”",
+     "title": "Hu Magyar",
+     "url": "https://technical-regulation-information-system.ec.europa.eu/hu/home"
+    },
+    {
+     "date": "",
+     "host": "njt.jog.gov.hu",
+     "rank": 2,
+     "snippet": "# 40/2017. (XII. 4.) NGM rendelet\n...\n3. **Műszaki biztonsági követelmények**\n...\n7. § Ez a rendelet 2018.\njanuár 1-jén lép hatályba.",
+     "title": "40/2017. (XII. 4.) NGM rendelet - Nemzeti Jogszabálytár",
+     "url": "https://njt.jog.gov.hu/jogszabaly/2017-40-20-2X"
+    },
+    {
+     "date": "",
+     "host": "njt.jog.gov.hu",
+     "rank": 3,
+     "snippet": "(XII. 18.) Korm.\nrendelet (a továbbiakban: RoHS rendelet) 16.\n§-a helyébe a következő rendelkezés lép:\n...\n§ Ez a rendelet",
+     "title": "258/2014. (X. 10.) Korm. rendelet - Nemzeti Jogszabálytár",
+     "url": "https://njt.jog.gov.hu/jogszabaly/2014-258-20-22"
+    },
+    {
+     "date": "",
+     "host": "net.jogtar.hu",
+     "rank": 4,
+     "snippet": "Hatályos joganyag\n...\n## 28/2025. (IX. 11.) ÉKM rendelet\naz állami építési beruházásokra vonatkozó minősített szolgáltatásokra alkalmazandó címkék jegyzékéről\n...\nHatályos joganyag",
+     "title": "Keresés: - 32.oldal - Hatályos Jogszabályok Gyűjteménye",
+     "url": "https://net.jogtar.hu/gyorskereso?pagenum=32"
+    },
+    {
+     "date": "",
+     "host": "ec.europa.eu",
+     "rank": 5,
+     "snippet": "- DocsRoom\n- Documents\n- standardisa\n...\n|--|",
+     "title": "DocsRoom",
+     "url": "https://ec.europa.eu/docsroom/documents?locale=hu&pageSize=10&page=19"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Hungary national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ksh.gov.hu",
+     "rank": 1,
+     "snippet": "Hungarian Central Statistical Office\n...\nOne of the main objectives of the Hungarian Central Statistical Office as a professionally independent government office responsible for official statistics is the coordination of the Official Statistical Service’s activity, publication of guidelines and reco",
+     "title": "Summary tables (STADAT) - General information - ksh.gov.hu",
+     "url": "https://ksh.gov.hu/stadat_tables_general_information"
+    },
+    {
+     "date": "2026-10-12",
+     "host": "www.ksh.hu",
+     "rank": 2,
+     "snippet": "Hungarian Central Statistical Office\n...\nOne of the main objectives of the Hungarian Central Statistical Office as a professionally independent government office responsible for official statistics is the coordination of the Official Statistical Service’s activity, publication of guidelines and reco",
+     "title": "Press release, 12.10.2026. – Hungarian Central Statistical ...",
+     "url": "https://www.ksh.hu/press_release_12_10_2026"
+    },
+    {
+     "date": "2025-10-20",
+     "host": "www.ksh.hu",
+     "rank": 3,
+     "snippet": "Hungarian Central Statistical Office\n...\nPhone number: (+36-1) 345-6000\nPostal address: H-1525 Budapest, P.O.Box 51\nwww.ksh.hu\n**Hungarian Central Statistical Office**\n5–7 Keleti Károly Street, 1024 Budapest",
+     "title": "Press release, 20.10.2025. – Hungarian Central Statistical ...",
+     "url": "https://www.ksh.hu/press_release_20_10_2025_2"
+    },
+    {
+     "date": "",
+     "host": "www.ksh.hu",
+     "rank": 4,
+     "snippet": "Hungarian Central Statistical Office\n- # Data\n...\n# Official statistics (HSSz)\nOne of the main objectives of the Hungarian Central Statistical Office as a professionally independent government office responsible for official statistics is the coordination of the Official Statistical Service’s activi",
+     "title": "Intrastat - Registration form – Hungarian Central Statistical Office",
+     "url": "https://www.ksh.hu/intrastat_registration_form"
+    },
+    {
+     "date": "2022-10-24",
+     "host": "www.ksh.hu",
+     "rank": 5,
+     "snippet": "…\nHungarian Central Statistical Office\nH-1024 Budapest, Keleti Károly u.\n5-7.\nPhone: +36 (1) 345 6000\nPostal address: P.O.B. 51 Budapest, H-1525\nhttp://www.ksh.hu",
+     "title": "Press release, 24.10.2022. – Hungarian Central Statistical ...",
+     "url": "https://www.ksh.hu/press_release_24_10_2022"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Hungary central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "2026-09-25",
+     "host": "statisztika.mnb.hu",
+     "rank": 1,
+     "snippet": "MNB Statistics\n...\n- MNB Statistics\n- MNB Statistics\n# Key statistical indicators\n...\n-244.6\n...\nThe\nEuropean System of Central Banks (ESCB) releases its statistics and related methodologies via the websites of the European Central Bank (ECB) and of the national central banks (NCBs).",
+     "title": "MNB Statistics",
+     "url": "https://statisztika.mnb.hu/en"
+    },
+    {
+     "date": "",
+     "host": "statisztika.mnb.hu",
+     "rank": 2,
+     "snippet": "- MNB Statistics\n...\nHere you will find the interactive graphs, the press releases and the time series related to the statistical balance sheet\ncompiled from the MNB’s month-end preliminary data and to its balance sheet containing the monthly average balances, and the\nmethodological notes for the in",
+     "title": "Statistical release - Magyar Nemzeti Bank (MNB)",
+     "url": "https://statisztika.mnb.hu/statistical-topics/balance-sheets-of-financial-institutions/monetary-and-other-balance-sheet-statistics/statistical-release---magyar-nemzeti-bank-_mnb_"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.mnb.hu",
+     "rank": 3,
+     "snippet": "EN | MNB.hu\n1. Aktuális oldal: EN\n...\nThe annual rate of house price growth moderated across all types of settlements in 2026 Q3\n...\n- - Magyar Nemzeti Bank\n- **Cím**\n1054 Budapest, Szabadság tér 8-9.",
+     "title": "EN | MNB.hu",
+     "url": "https://www.mnb.hu/en//"
+    },
+    {
+     "date": "",
+     "host": "statisztika.mnb.hu",
+     "rank": 4,
+     "snippet": "- MNB Statistics\n...\n# Supervisory statistics\nInteractive graphs, time series, press releases, notices, methodological notes and Golden Book of public interest, based on\ndata supplies by supervised financial organisations.\n...\nthe reporting obligations of money and credit market institutions to the ",
+     "title": "Supervisory statistics",
+     "url": "https://statisztika.mnb.hu/statistical-topics/supervisory-statistics"
+    },
+    {
+     "date": "",
+     "host": "statisztika.mnb.hu",
+     "rank": 5,
+     "snippet": "- MNB Statistics\n- Statistical topics\n...\nThe data published here include the summary table of key macroeconomic releases, the utilisation of the MNB’s monetary policy\ninstruments, the mandatory reserve rate, the list of eligible collaterals and changes in interbank interest rates.\n...\nproduct and c",
+     "title": "Statistical topics",
+     "url": "https://statisztika.mnb.hu/statistical-topics"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Hungary government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2021-04-25",
+     "host": "en.wikipedia.org",
+     "rank": 1,
+     "snippet": "## List of national-level open government data sites\n****\n|Government|Website|Portal Solution|\n|--|--|--|\n...\n|Austria|https://www.data.gv.at/| |\n...\n|Bulgaria|https://data.egov.bg/| |",
+     "title": "List of open government data sites - Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/List_of_Open_Government_Data_Sites"
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 2,
+     "snippet": "|ID|Name|Indexed?|Datasets|Catalog type|Owner type|Owner country|Software|\n...\n|`cdi00004266`|The National Public Data Portal of Hungary|Yes|2,286|Open data portal|Central government|Hungary|CKAN|",
+     "title": "Registry of Data Catalogs and Portals - Dateno",
+     "url": "https://dateno.io/registry/browse/?skip=300"
+    },
+    {
+     "date": "",
+     "host": "data.ksh.hu",
+     "rank": 3,
+     "snippet": "This guide provides technical information required to access the High-Value Datasets published by the Hungarian Central Statistical Office (HCSO) through a programmable interface (API).\n...\n### Access URL\nThe base URL of the API is: `https://data.ksh.hu/`\n...\nNo authentication is required for access",
+     "title": "High-Value Datasets – Hungarian Central Statistical Office",
+     "url": "https://data.ksh.hu/en/documentation"
+    },
+    {
+     "date": "2020-01-21",
+     "host": "pmc.ncbi.nlm.nih.gov",
+     "rank": 4,
+     "snippet": "# Open government data portals in the European Union: A dataset from 2015 to 2017\n## 2. Experimental design, materials, and methods\n### Table 3.\nURLs of the official open government data portals of the EU countries.",
+     "title": "Open government data portals in the European Union: A dataset from 2015 to 2017",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7005416/"
+    },
+    {
+     "date": "",
+     "host": "dateno.io",
+     "rank": 5,
+     "snippet": "…",
+     "title": "cdi00004266.json",
+     "url": "https://dateno.io/registry/catalog/cdi00004266.json"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:46:25Z",
+ "pais": {
+  "iso2": "HU",
+  "iso3": "HUN",
+  "nombre": "Hungary"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

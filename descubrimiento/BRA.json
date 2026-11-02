@@ -1,0 +1,739 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Brazil constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.planalto.gov.br",
+     "rank": 1,
+     "snippet": "Leis Ordinárias de 2024\n...\nda República\nCasa Civil\nSecretaria Especial para Assuntos Jurídicos**\n**\nLeis Ordinárias de 2026**\n**\n...\n|** Nº da Lei **|** Ementa **|\n|--|--|\n...\nMensagem de veto|",
+     "title": "Leis Ordinárias de 2026 - Planalto",
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/_leis2026.htm",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/_leis2026.htm",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:26:08Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "normas.leg.br",
+     "rank": 2,
+     "snippet": "Normas.leg.br : Legislação Federal\n**normas**.leg.br\nAs normas federais na linha do tempo\nConstituição Código Civil CPC ADCT LAI LGPD\nSelecione o período desejado:\n...\nConstituição\nCódigo Civil\nCódigo de Processo Civil - CPC",
+     "title": "Legislação Federal",
+     "url": "https://normas.leg.br/",
+     "verificacion": {
+      "bytes": 66002,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:10Z",
+      "http": 200,
+      "sha256": "ac27de17b1214543569122323a9c976f53d4b297692d6781b4aaf1b3c56cd55a"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.camara.leg.br",
+     "rank": 3,
+     "snippet": "# Busca de legislação\n- 2026 1376 filtro encontrado\n- 2025 1531 filtro encontrado\n- 2024 1484 filtro encontrado\n- 2023 1433 filtro encontrado\n- 2022 1202 filtro encontrado\n...\n…\n...\n- Constituição 7 filtros encontrados",
+     "title": "Busca de legislação - Portal da Câmara dos Deputados",
+     "url": "https://www.camara.leg.br/legislacao/busca"
+    },
+    {
+     "date": "",
+     "host": "www2.camara.leg.br",
+     "rank": 4,
+     "snippet": "# Constituição Federal de 1988\n**Constituição Federal de 1988 atualizada até a Emenda Constitucional nº 141, de 2026**\n...\n**Acesse a página da Livraria da Câmara dos Deputados para baixar a Constituição em diversos formatos**\n**\n...\nformato docx",
+     "title": "Constituição Federal de 1988 - Legislação",
+     "url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/constituicao1988"
+    },
+    {
+     "date": "",
+     "host": "www.planalto.gov.br",
+     "rank": 5,
+     "snippet": "**\n> > CONSTITUIÇÃO DA REPÚBLICA FEDERATIVA DO BRASIL DE 1988**\n...\n**\nTexto compilado**\n**\nPREÂMBULO**",
+     "title": "Constituição - Planalto",
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Brazil national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www4.planalto.gov.br",
+     "rank": 1,
+     "snippet": "Decretos — Portal da Legislação\nVocê está aqui: Página Inicial > Legislação > Legislação > Decretos\n...\n# Decretos\nEditados pelo Presidente da República, regulamentam as leis e dispõem sobre a organização da administração pública.",
+     "title": "Decretos — Portal da Legislação - Planalto",
+     "url": "https://www4.planalto.gov.br/legislacaoportal-legis/legislacao-1/decretos1/decretos-1",
+     "verificacion": {
+      "error": "robots.txt disallows https://www4.planalto.gov.br/legislacaoportal-legis/legislacao-1/decretos1/decretos-1",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:26:13Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www4.planalto.gov.br",
+     "rank": 2,
+     "snippet": "2026 - Decretos — Portal da Legislação\n...\n# 2026 - Decretos\n|Nº do Decreto|Ementa|\n|--|--|",
+     "title": "2026 - Decretos — Portal da Legislação - Planalto",
+     "url": "https://www4.planalto.gov.br/legislacao/portal-legis/legislacao-1/decretos1/2026-decretos",
+     "verificacion": {
+      "error": "robots.txt disallows https://www4.planalto.gov.br/legislacao/portal-legis/legislacao-1/decretos1/2026-decretos",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:26:13Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.planalto.gov.br",
+     "rank": 3,
+     "snippet": "Decreto ano\n...\n***Decretos*** ^A\ninexistęncia de atos neste site năo significa sua revogaçăo.^\n|",
+     "title": "www.planalto.gov.br › ccivil_03 › decretoDecreto ano - Planalto",
+     "url": "https://www.planalto.gov.br/ccivil_03/decreto/_dec_ano.htm"
+    },
+    {
+     "date": "",
+     "host": "www.camara.leg.br",
+     "rank": 4,
+     "snippet": "Busca de legislação - Portal da Câmara dos Deputados\n# Busca de legislação\n- 2026 1376 filtro encontrado\n- 2025 1531 filtro encontrado\n- 2024 1484 filtro encontrado\n...\n- Decreto 159172 filtros encontrados\n- Decreto Legislativo 15944 filtros encontrados",
+     "title": "Busca de legislação - Portal da Câmara dos Deputados",
+     "url": "https://www.camara.leg.br/legislacao/busca"
+    },
+    {
+     "date": "",
+     "host": "www.gov.br",
+     "rank": 5,
+     "snippet": "Decretos — Ministério das Comunicações\n...\n# Decretos\nDECRETO Nº 13.031, DE 17 DE JUNHO DE 2026\n...\nDECRETO Nº 12.050, DE 11 DE JUNHO DE 2024",
+     "title": "Decretos — Ministério das Comunicações - Portal Gov.br",
+     "url": "https://www.gov.br/mcom/pt-br/acesso-a-informacao/legislacao/decretos"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Brazil official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "in.gov.br",
+     "rank": 1,
+     "snippet": "Diário Oficial da União\nDiário Oficial da União\nAcesse os serviços disponíveis de consulta ao DOU\nMenu de Navegação\nLeitura do Jornal\nDestaques do Diário Oficial da União\nBase de Dados de Publicações do DOU\nVerificação de autenticidade",
+     "title": "https://in.gov.br/web/guest/servicos/diario-oficia...",
+     "url": "https://in.gov.br/web/guest/servicos/diario-oficial-da-uniao",
+     "verificacion": {
+      "error": "robots.txt disallows https://in.gov.br/web/guest/servicos/diario-oficial-da-uniao",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:26:17Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.gov.br",
+     "rank": 2,
+     "snippet": "- O que é?\nAcesso aos atos oficiais publicados nas edições normais, extras e suplementares do Diário Oficial da União, por meio do sítio eletrônico da Imprensa Nacional, do aplicativo do DOU e da Biblioteca Machado de Assis.\n...\nQualquer pessoa pode utilizar este serviço",
+     "title": "Acessar o Diário Oficial da União - gov",
+     "url": "https://www.gov.br/pt-br/servicos/acessar-o-diario-oficial-da-uniao",
+     "verificacion": {
+      "bytes": 110779,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:18Z",
+      "http": 200,
+      "sha256": "3a0dce04751888ea4b14a1106d3998b19a6dd1840daa2e7c3fcbac30275caf32"
+     }
+    },
+    {
+     "date": "",
+     "host": "dbpedia.org",
+     "rank": 3,
+     "snippet": "# About: Diário Oficial da União\nAn Entity of Type: Government gazette, from Named Graph: http://dbpedia.org, within Data Space: dbpedia.org\nOfficial journal of the Brazilian government\n|Property|Value|",
+     "title": "About: Diário Oficial da União",
+     "url": "https://dbpedia.org/page/Di%C3%A1rio_Oficial_da_Uni%C3%A3o"
+    },
+    {
+     "date": "",
+     "host": "in.gov.br",
+     "rank": 4,
+     "snippet": "# Leitura do Jornal\n## Diário Oficial da União\n## Diário Oficial da União\n## Pesquisa\n...\nPara pesquisas em um intervalo de tempo grande insira ao menos 3 caracteres para efetuar sua busca.\n...\n### DATA *\nO ano da data fim deve ser o mesmo que o ano da data inicio.",
+     "title": "https://in.gov.br/web/guest/leiturajornal",
+     "url": "https://in.gov.br/web/guest/leiturajornal"
+    },
+    {
+     "date": "",
+     "host": "imprensa2.in.gov.br",
+     "rank": 5,
+     "snippet": "## Acervo Histórico do Diário Oficial\n## Acervo Histórico do Diário Oficial da União - DOU\n...\n## Acervo Histórico do Diário da Justiça - DJ\n...\nConsulte abaixo as edições do Diário da Justiça publicadas entre 1990 e 2010.",
+     "title": "Acervo Histórico do Diário Oficial da União - DOU",
+     "url": "https://imprensa2.in.gov.br/pt/web/dou/dou"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Brazil supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "portal.stf.jus.br",
+     "rank": 1,
+     "snippet": "### O que você procura?\nInteiro Teor de Acórdãos - Pesquisa\n...\nNesta base é possível consultar a íntegra de acórdãos publicados.\nCaso o acórdão não tenha sido publicado, sugere-se que o usuário cadastre seu e-mail no STF-Push para acompanhar o andamento processual.",
+     "title": "Inteiro Teor de Acórdãos",
+     "url": "https://portal.stf.jus.br/jurisprudencia/pesquisarInteiroTeor.asp",
+     "verificacion": {
+      "bytes": 57286,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:21Z",
+      "http": 200,
+      "sha256": "148f66009439e361e726c16974301533f89c305cb0485f689c4f3fa970288803"
+     }
+    },
+    {
+     "date": "",
+     "host": "portal.stf.jus.br",
+     "rank": 2,
+     "snippet": "Página Principal | Portal STF\n...\n### O que você procura?\nPortal de Sessões de Julgamento\nJulgamentos Presenciais",
+     "title": "Página Principal",
+     "url": "https://portal.stf.jus.br/",
+     "verificacion": {
+      "bytes": 76124,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:23Z",
+      "http": 200,
+      "sha256": "ea8b67ad775c160f45a9330e64a780da6cbb52b5f0bdc132eec1a5eac44b5108"
+     }
+    },
+    {
+     "date": "",
+     "host": "portal.stf.jus.br",
+     "rank": 3,
+     "snippet": "Julgamentos de especial relevância | Portal STF\n...\n- 2026 (atualizado até o Informativo STF 1219/2026)\n- 2025\n- 2024\n- 2023\n- 2022\n- 2021\n...\n- 2019",
+     "title": "Julgamentos de especial relevância",
+     "url": "https://portal.stf.jus.br/textos/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=casos_notorios"
+    },
+    {
+     "date": "",
+     "host": "portal.stf.jus.br",
+     "rank": 4,
+     "snippet": "Inteiro Teor de Acórdãos\nConsulte a íntegra dos acórdãos já publicados no Diário da Justiça.\n* Informe apenas o número do processo, sem ponto ou dígito verificador.\n...\n## Solicitar pesquisa\nServiço personalizado de consulta à jurisprudência do Supremo Tribunal Federal.",
+     "title": "Supremo Tribunal Federal",
+     "url": "https://portal.stf.jus.br/Jurisprudencia/"
+    },
+    {
+     "date": "",
+     "host": "www.cjf.jus.br",
+     "rank": 5,
+     "snippet": "CJF - Enunciados\nNova Busca\n...\n-- Selecione uma Jornada --",
+     "title": "Consulta de Enunciados",
+     "url": "https://www.cjf.jus.br/enunciados/"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Brazil state or provincial legislation official portal",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www4.planalto.gov.br",
+     "rank": 1,
+     "snippet": "Legislação estadual — Portal da Legislação\n...\n# Legislação estadual\nAqui você encontra as Constituições de todos os estados brasileiros e ferramentas de pesquisa de legislações estaduais.\n##### Atenção! O conteúdo dos links abaixo é de responsabilidade dos governos estaduais.",
+     "title": "Legislação estadual — Portal da Legislação",
+     "url": "https://www4.planalto.gov.br/legislacao/portal-legis/legislacao-estadual",
+     "verificacion": {
+      "error": "robots.txt disallows https://www4.planalto.gov.br/legislacao/portal-legis/legislacao-estadual",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:26:23Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www4.planalto.gov.br",
+     "rank": 2,
+     "snippet": "Legislações estaduais — Portal da Legislação\nVocê está aqui: Página Inicial > Legislação > Legislação estadual > Legislações estaduais\n- **Legislação Histórica**\n- **Legislação Estadual**\n...\n# Legislações estaduais",
+     "title": "Legislações estaduais - Portal da Legislação",
+     "url": "https://www4.planalto.gov.br/legislacao/portal-legis/legislacao-estadual/legislacoes-estaduais",
+     "verificacion": {
+      "error": "robots.txt disallows https://www4.planalto.gov.br/legislacao/portal-legis/legislacao-estadual/legislacoes-estaduais",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:26:23Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.planalto.gov.br",
+     "rank": 3,
+     "snippet": "Leis Ordinárias de 2024\n...\nda República\nCasa Civil\nSecretaria Especial para Assuntos Jurídicos**\n**\nLeis Ordinárias de 2026**\n...\n|** Nº da Lei **|** Ementa **|\n|--|--|\n...\nMensagem de veto|",
+     "title": "Leis Ordinárias de 2026 - Planalto",
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/_leis2026.htm"
+    },
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 4,
+     "snippet": "# Portal da legislaçao\nPortal da legislacao\nDescription:\nOfficial Brazilian legislation portal, providing federal legislation and federal bills, together with links to state legislation, federal cases and treaties.\n...\nConnect to resource:\nhttps://www4.planalto.gov.br/legislacao/",
+     "title": "Portal da legislaçao | IALS Digital resources | IALS Digital ...",
+     "url": "https://resources.ials.sas.ac.uk/eagle-i/portal-da-legislacao"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Brazil municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "egov.santos.sp.gov.br",
+     "rank": 1,
+     "snippet": "Legis\n...\n### Leis e atos normativos municipais com as últimas atualizações\nServiço que possibilita a consulta à legislação consolidada, compilada e versionada do município para facilitar o acesso e o conhecimento de maneira transparente, segura e rápida.\n## Legis\n...\nConsulta à legislação individua",
+     "title": "Legis - Prefeitura de Santos",
+     "url": "https://egov.santos.sp.gov.br/legis/",
+     "verificacion": {
+      "error": "robots.txt disallows https://egov.santos.sp.gov.br/legis/",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:26:25Z"
+     }
+    },
+    {
+     "date": "2018-03-02",
+     "host": "prefeitura.pbh.gov.br",
+     "rank": 2,
+     "snippet": "## Legislação\n...\nA Controladoria-Geral do Município de Belo Horizonte (CTGM-BH) reúne nesta página os diplomas normativos que regulamentam a governança, a auditoria pública, o controle interno e os parâmetros éticos e de integridade do Poder Executivo municipal.",
+     "title": "prefeitura.pbh.gov.br › controladoria › legislacaoLegislação | Prefeitura de Belo Horizonte",
+     "url": "https://prefeitura.pbh.gov.br/controladoria/legislacao",
+     "verificacion": {
+      "bytes": 405804,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:29Z",
+      "http": 200,
+      "sha256": "9a11e0d7c2e4a11dd684e89c0d3dc3fa40734694a3b3e5552087474ff678f169"
+     }
+    },
+    {
+     "date": "2023-04-24",
+     "host": "www.ipanema.mg.leg.br",
+     "rank": 3,
+     "snippet": "Leis — Câmara Municipal de Ipanema\n...\n# Leis\nSeção que contém as leis válidas para o município, que poderão ser buscadas e acessadas pelos visitantes.\n## Lei Orgânica Municipal\n...\n## Legislação Municipal\nAcervo com os textos integrais das normas jurídicas do município.",
+     "title": "Leis - Câmara Municipal de Ipanema",
+     "url": "https://www.ipanema.mg.leg.br/leis"
+    },
+    {
+     "date": "2015-10-23",
+     "host": "legislacao.prefeitura.sp.gov.br",
+     "rank": 4,
+     "snippet": "### Resultado da Pesquisa\n#### PORTARIA PREFEITO - PREF Nº 668 de 9 de Agosto de 2018\nConstitui o Grupo de Ação Executiva e o Grupo de Integração do Portal de Licenciamento.\n...\n**Casa Civil do Gabinete do Prefeito**\nEd.",
+     "title": "legislacao.prefeitura.sp.gov.br › buscaLegislação Municipal - Catálogo de Legislação Municipal",
+     "url": "https://legislacao.prefeitura.sp.gov.br/busca?assunto=portal+leis+municipais"
+    },
+    {
+     "date": "2025-11-27",
+     "host": "legislacao.prefeitura.sp.gov.br",
+     "rank": 5,
+     "snippet": "### Transparência\n#### LEI Nº 17.688 de 19 de Outubro de 2021\n...\n#### DECRETO Nº 59.574 de 1 de Julho de 2020\nDispõe sobre a realização das audiências públicas sobre os Instrumentos de Planejamento Municipal que especifica.",
+     "title": "RESULTADO DA PESQUISA « Catálogo de Legislação Municipal",
+     "url": "https://legislacao.prefeitura.sp.gov.br/busca/pg/3?tema=Transpar%C3%AAncia&area="
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Brazil regulatory agencies official regulations",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-26",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "Of Brazil’s 10 federal regulatory agencies, the most prominent include:\n...\n- ANP (Agência Nacional do Petróleo, Gás Natural e Biocombustíveis), the National Petroleum Agency which regulates oil and gas contracts and oversees auctions for oil and natural gas exploration and production",
+     "title": "2025 Investment Climate Statements: Brazil",
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/brazil",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2025-investment-climate-statements/brazil",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:26:29Z"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.planalto.gov.br",
+     "rank": 2,
+     "snippet": "…\n**\n...\n…\nArt.\n...\nIII - a Agęncia Nacional de Telecomunicaçőes (Anatel);\nIV - a Agęncia Nacional de Vigilância Sanitária (Anvisa);\nV - a Agęncia Nacional de Saúde Suplementar (ANS);",
+     "title": "L13848 - Planalto",
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13848.htm",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13848.htm",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T07:26:29Z"
+     }
+    },
+    {
+     "date": "2026-03-01",
+     "host": "www.gov.br",
+     "rank": 3,
+     "snippet": "# Law\n|**Law**|**Yer**|**Subject**|\n|--|--|--|\n|LAW NO.\n14,874 OF 28 MAY 2024|2024|Provides for research involving humans and establishes the Brazilian System of Ethics in Research involving Humans.|",
+     "title": "Law",
+     "url": "https://www.gov.br/anvisa/en/rules-and-regulations/law"
+    },
+    {
+     "date": "",
+     "host": "www.gov.br",
+     "rank": 4,
+     "snippet": "for \n...\nThe Collegiate Board of Directors of the Brazilian Health Regulatory Agency, in the use of the attributions vested in it under Article 11, item IV of the Brazilian Health Regulatory\nAgency Regulation approved by Decree no. 3,029 of 16 April 1999, and according to",
+     "title": "collegiate board resolution – rdc no. 96 of 17 december 2008",
+     "url": "https://www.gov.br/anvisa/en/rules-and-regulations/arquivos/rdc-96-2008-e.pdf/@@download/file"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Brazil national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2024-03-19",
+     "host": "abnt.org.br",
+     "rank": 1,
+     "snippet": "Normas Publicadas: Acesse nossa biblioteca de normas para orientar suas práticas.\n## Normas publicadas\n...\nAs normas listadas a seguir são documentos publicados pela ABNT, aprovados por consenso das partes interessadas e homologados.\n|Nome da norma|Nome|Status|Data| |",
+     "title": "Normas Publicadas: Acesse nossa biblioteca de normas para ...",
+     "url": "https://abnt.org.br/normalizacao/normas-publicadas/",
+     "verificacion": {
+      "bytes": 214395,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:30Z",
+      "http": 200,
+      "sha256": "9995844dd40ce653977eafbccf5259689b83878dd1e2ff61bbd46280fcb10601"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.abntcatalogo.com.br",
+     "rank": 2,
+     "snippet": "ABNT Catálogo\n...\n…\n## ABNT NBR ISO 14001:2026\n###### Environmental management systems — Requirements with guidance for use\nBRL 550,00\n…\n...\nSupport for viewing standards: +55 11 3017-3621 | suporte@abnt.org.br",
+     "title": "ABNT NBR ISO 9001:2026",
+     "url": "https://www.abntcatalogo.com.br/default.aspx/faq.aspx",
+     "verificacion": {
+      "bytes": 275717,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:32Z",
+      "http": 200,
+      "sha256": "720dda5553bd07e265a31889955f03591ddf1d670578827d0fb49a95a8d2e1c8"
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "host": "abnt.org.br",
+     "rank": 3,
+     "snippet": "Associação Brasileira de Normas Técnicas (ABNT)\n...\n### Adquira normas\nNacionais e Internacionais\n...\n#### ABNT NBR ISO 15189:2024\nLaboratório clínico — Requisitos da qualidade e competência.\n#### ABNT NBR ISO 14971:2020",
+     "title": "Associação Brasileira de Normas Técnicas (ABNT )",
+     "url": "https://abnt.org.br/"
+    },
+    {
+     "date": "2026-10-31",
+     "host": "www.trade.gov",
+     "rank": 4,
+     "snippet": "# Standards Resources by Country\nAssociação Brasileira de Normas Técnicas (ABNT) - Brazil’s national standards body\nNational Institute of Metrology, Quality and Technology (INMETRO)",
+     "title": "Standards Resources by Country",
+     "url": "https://www.trade.gov/standards-resources-country"
+    },
+    {
+     "date": "",
+     "host": "www.normas.com.br",
+     "rank": 5,
+     "snippet": "Target Normas: Busca e acesso de normas ABNT NBR Mercosul\n...\n**446** Mais utilizadas\n...\n**330** Mais utilizadas\n**3** Em destaque\n...\nBusque e visualize todas as normas ABNT NBR\ne Mercosul na palma da sua mão com o app Target Normas.",
+     "title": "Target Normas: Busca e acesso de normas ABNT NBR ...",
+     "url": "https://www.normas.com.br/"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Brazil mandatory technical regulations official list",
+   "descartados": 1,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "2026-09-15",
+     "host": "www.gov.br",
+     "rank": 1,
+     "snippet": "# Normas Técnicas compulsórias conforme regulamento Anvisa\n...\nINSTRUÇÃO NORMATIVA - IN N° 283, DE 7 DE MARÇO DE 2024\nRESOLUÇÃO RDC Nº 539, DE 30 DE AGOSTO DE 2021",
+     "title": "Normas Técnicas compulsórias conforme regulamento ...",
+     "url": "https://www.gov.br/anvisa/pt-br/assuntos/produtosparasaude/lista-de-normas-tecnicas-reconhecidas/normas-compulsorias-conforme-regulamento-anvisa",
+     "verificacion": {
+      "bytes": 440209,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:33Z",
+      "http": 200,
+      "sha256": "cc5e0e4e141df33feda1234150d0318d1987b420093c435ada186f2c1f8765df"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.gov.br",
+     "rank": 2,
+     "snippet": "## Regulamentos para produtos e serviços\nAcesse aqui a relação de produtos e serviços regulados pelo Inmetro bem como as portarias que deram publicidade aos referidos regulamentos.\n- Compulsórios\n...\n…\n- Portaria Inmetro nº 282, de 26 de agosto de 2020",
+     "title": "Produtos e serviços regulados — INMETRO - Portal Gov.br",
+     "url": "https://www.gov.br/inmetro/pt-br/assuntos/regulamentacao/avaliacao-da-conformidade/produtos-e-servicos-regulados",
+     "verificacion": {
+      "bytes": 126660,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:35Z",
+      "http": 200,
+      "sha256": "9ac9d2dc5e890fe43c182770aa4ae4e5d5e885a6bbe9a99bcea408a76196a2c7"
+     }
+    },
+    {
+     "date": "",
+     "host": "anvisalegis.datalegis.net",
+     "rank": 3,
+     "snippet": "Lista das normas técnicas a serem adotadas na certificação de conformidade, no âmbito do Sistema Brasileiro de Avaliação da Conformidade (SBAC), dos equipamentos sob regime de Vigilância Sanitária:\n...\n| |Norma Geral|Exigibilidade compulsória|\n|--|--|--|",
+     "title": "Instrução Normativa - IN nº 283, de 07/03/2024 - AnvisaLegis",
+     "url": "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&link=S&tipo=INM&numeroAto=00000283&seqAto=000&valorAno=2024&orgao=DC/ANVISA/MS&cod_modulo=310&cod_menu=9431"
+    },
+    {
+     "date": "",
+     "host": "www.gov.br",
+     "rank": 4,
+     "snippet": "Regulamentação — INMETRO\n...\n# Regulamentação\nRegulamentação Técnica Metrológica",
+     "title": "Regulamentação - INMETRO",
+     "url": "https://www.gov.br/inmetro/pt-br/assuntos/metrologia-legal/regulamentacao"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Brazil national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.ibge.gov.br",
+     "rank": 1,
+     "snippet": "# Instituto Brasileiro de Geografia e Estatística\nNossos serviços estão apresentando instabilidade no momento.\nAlgumas informações podem não estar disponíveis.\n###### População Estimativas da População 2026\n214.211.951",
+     "title": "Portal do IBGE",
+     "url": "https://www.ibge.gov.br/ibge/",
+     "verificacion": {
+      "bytes": 5516,
+      "estado": "http",
+      "fecha": "2026-11-02T07:26:36Z",
+      "http": 403,
+      "sha256": "a77b68df559e9ab5398745ee78cdc500777316d273e8fe91f2a78408e8f68d50"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ibge.gov.br",
+     "rank": 2,
+     "snippet": "# Instituto Brasileiro de Geografia e Estatística\nNossos serviços estão apresentando instabilidade no momento.\nAlgumas informações podem não estar disponíveis.",
+     "title": "Instituto Brasileiro de Geografia e Estatística",
+     "url": "https://www.ibge.gov.br/",
+     "verificacion": {
+      "bytes": 5501,
+      "estado": "http",
+      "fecha": "2026-11-02T07:26:37Z",
+      "http": 403,
+      "sha256": "c67fe7bced058091302a6bb9d0f339d7cac787e5e0f5121d6a5c843ede2ac752"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.ibge.gov.br",
+     "rank": 3,
+     "snippet": "# Instituto Brasileiro de Geografia e Estatística\nNossos serviços estão apresentando instabilidade no momento.\n...\n###### Population Population Estimates 2026\n...\n## Our websites\n2022 Census\nBrazilian Population Census\n2017 Census of Agriculture\nInformation on the 2017 Census of Agriculture\nSIDRA\nEN",
+     "title": "www.ibge.gov.br › en › homeIBGE | Portal do IBGE | IBGE",
+     "url": "https://www.ibge.gov.br/en/home"
+    },
+    {
+     "date": "",
+     "host": "www.ibge.gov.br",
+     "rank": 4,
+     "snippet": "# Instituto Brasileiro de Geografia e Estatística\nNossos serviços estão apresentando instabilidade no momento.\nAlgumas informações podem não estar disponíveis.\n...\n## Nossos sites\nPesquisa de Avaliação de Serviços\nSIDRA\nPrograma Nacional de Inteligência e Governança Estatística e Geocientífica",
+     "title": "www.ibge.gov.br › pt › institucionalIBGE | Portal do IBGE | IBGE",
+     "url": "https://www.ibge.gov.br/pt/institucional/o-que-e.html"
+    },
+    {
+     "date": "",
+     "host": "www.ibge.gov.br",
+     "rank": 5,
+     "snippet": "Busca | IBGE\n# Instituto Brasileiro de Geografia e Estatística\nNossos serviços estão apresentando instabilidade no momento.\nAlgumas informações podem não estar disponíveis.\n**Não há resultados para a sua busca.**",
+     "title": "Busca | IBGE",
+     "url": "https://www.ibge.gov.br/busca.html"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Brazil central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "bcb.gov.br",
+     "rank": 1,
+     "snippet": "…\n...\nEstatísticas\nTaxas de Juros\nNotas econômico-financeiras\nSéries temporais (SGS)\nTabelas especiais\nIndicadores Econômicos Selecionados\nPoupança\nMais estatísticas\nCalendário de divulgação\n...\nEstatísticas monetárias e de crédito",
+     "title": "Estatísticas - Banco Central",
+     "url": "https://bcb.gov.br/estatisticas",
+     "verificacion": {
+      "bytes": 2871,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:39Z",
+      "http": 200,
+      "sha256": "e64d3a8ecfc66b359e640b507d59ff35fe4ac1be596e969812068cc0aa3fb1d4"
+     }
+    },
+    {
+     "date": "",
+     "host": "opendata.bcb.gov.br",
+     "rank": 2,
+     "snippet": "- ## STR – Daily Progress\nThis statistic shows the sum of transfers of funds made on each date at the Central Bank of Brazil by the participants in the Reserves Transfer System - STR, since 22/4/2002....- ## Exchange rates – daily bulletins\n...\n- HTML\n- API",
+     "title": "Welcome - Banco Central do Brasil Open Data Portal",
+     "url": "https://opendata.bcb.gov.br/",
+     "verificacion": {
+      "bytes": 44322,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:50Z",
+      "http": 200,
+      "sha256": "ae3dc1c60a3087055801349e9b1cbe9f1415a63497e2bcb45b30688205e582ac"
+     }
+    },
+    {
+     "date": "",
+     "host": "dadosabertos.bcb.gov.br",
+     "rank": 3,
+     "snippet": "Bem vindo - Portal de Dados Abertos do Banco Central do Brasil\n…\n...\nO Banco Central do Brasil divulga mensalmente informações agregadas das operações de crédito recebidas através do Sistema de Informações de Créditos – SCR.\n...\n- ## Taxas de Câmbio - todos os boletins diários",
+     "title": "Bem vindo - Portal de Dados Abertos do Banco Central do Brasil",
+     "url": "https://dadosabertos.bcb.gov.br/"
+    },
+    {
+     "date": "",
+     "host": "bcb.gov.br",
+     "rank": 4,
+     "snippet": "Banco Central do Brasil\n...\n…\n...\n- Taxas de Juros\n- Notas econômico-financeiras\n- Séries temporais (SGS)\n- Tabelas especiais\n- Indicadores Econômicos Selecionados\n- Poupança\n- Mais estatísticas\n- Calendário de divulgação",
+     "title": "Banco Central do Brasil",
+     "url": "https://bcb.gov.br/"
+    },
+    {
+     "date": "",
+     "host": "dadosabertos.bcb.gov.br",
+     "rank": 5,
+     "snippet": "Conjunto de dados - Portal de Dados Abertos do Banco Central do Brasil\n…\n...\n# 3.582 conjuntos de dados encontrados\nFormatos: JSON ** CSV **\n...\n- ## Produto interno bruto em R$ correntes\n...\n- ## Taxa de juros - Selic anualizada base 252",
+     "title": "Conjunto de dados",
+     "url": "https://dadosabertos.bcb.gov.br/dataset/?res_format=JSON&res_format=CSV&sort=views_recent+desc"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Brazil government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-05-07",
+     "host": "portaldatransparencia.gov.br",
+     "rank": 1,
+     "snippet": "# Respeitamos a sua Privacidade\nAqui é possível baixar os dados apresentados no Portal da Transparência, em formato aberto, possibilitando que os usuários façam cruzamentos e análises específicas, de acordo com as necessidades.",
+     "title": "Dados Abertos | Portal da Transparência do Governo Federal",
+     "url": "https://portaldatransparencia.gov.br/download-de-dados",
+     "verificacion": {
+      "bytes": 2559,
+      "estado": "http",
+      "fecha": "2026-11-02T07:26:51Z",
+      "http": 405,
+      "sha256": "dd2b6a914ce8ec7e53d1ab7c1e28b82350bcadbb05e9953ed2dffee7a30ca018"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.gov.br",
+     "rank": 2,
+     "snippet": "## O que são dados abertos?\n...\nEste portal disponibiliza dados do Sistema Integrado de Administração e Serviços Gerais (SIASG) e do Compras.gov.br, abrangendo todo o ciclo de contratações públicas do Governo Federal e organizando o acesso à documentação técnica e aos recursos de reuso.",
+     "title": "Portal de Dados Abertos — Portal de Compras do Governo ...",
+     "url": "https://www.gov.br/compras/pt-br/cidadao/portal-de-dados-abertos",
+     "verificacion": {
+      "bytes": 199174,
+      "estado": "accesible",
+      "fecha": "2026-11-02T07:26:52Z",
+      "http": 200,
+      "sha256": "9c167a2f25771ee3cdf38a1b4ee91f7c960f6e5f921d8be26e82d81bc317eb7f"
+     }
+    },
+    {
+     "date": "",
+     "host": "www.gov.br",
+     "rank": 3,
+     "snippet": "…\n# Abertos\n## Portal de Dados Abertos\nPortal público onde podem ser encontrados os conjuntos de dados disponibilizados pelo governo federal em formato aberto, bem como as organizações responsáveis e exemplos de reuso dos dados.\nPortal de Dados Abertos",
+     "title": "Dados Abertos — Governo Digital",
+     "url": "https://www.gov.br/governodigital/pt-br/IND/dados-abertos"
+    },
+    {
+     "date": "2026-05-07",
+     "host": "portaldatransparencia.gov.br",
+     "rank": 4,
+     "snippet": "O Portal da Transparência integra e apresenta dados de diversos sistemas utilizados pelo Governo Federal para a sua gestão financeira e administrativa, objetivando prover transparência da gestão pública, além de instrumentalizar a sociedade para a realização do controle social.\n...\n### DOWNLOADS DE ",
+     "title": "Origem dos Dados - Portal da Transparência do Governo Federal",
+     "url": "https://portaldatransparencia.gov.br/origem-dos-dados"
+    },
+    {
+     "date": "",
+     "host": "www.gov.br",
+     "rank": 5,
+     "snippet": "…\n# Dados Abertos\n## Sobre Dados Abertos\nPortal Brasileiro de Dados Abertos O Portal Brasileiro de Dados Abertos é o ponto central para a busca e o acesso aos dados públicos no Brasil.",
+     "title": "Dados Abertos",
+     "url": "https://www.gov.br/governodigital/pt-br/dados-abertos"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:25:26Z",
+ "pais": {
+  "iso2": "BR",
+  "iso3": "BRA",
+  "nombre": "Brazil"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

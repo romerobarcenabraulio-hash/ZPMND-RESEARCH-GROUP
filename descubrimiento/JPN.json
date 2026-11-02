@@ -1,0 +1,605 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Japan constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "hourei.ndl.go.jp",
+     "rank": 1,
+     "snippet": "明治19年2月の公文式施行以後の法令と、帝国議会及び国会に提出された法案が検索できます。また、法令の改廃経過や法案の審議経過等が参照できます。",
+     "title": "日本法令索引",
+     "url": "https://hourei.ndl.go.jp/"
+    },
+    {
+     "date": "",
+     "host": "laws.e-gov.go.jp",
+     "rank": 2,
+     "snippet": "# ヘルプ\ne-Gov法令検索（以下「当サイト」といいます。）は、憲法・法律・政令・勅令・府令・省令・規則の法令データを提供しています。\n...\n- 法令データの検索：",
+     "title": "ヘルプ - e-Gov 法令検索",
+     "url": "https://laws.e-gov.go.jp/help/"
+    },
+    {
+     "date": "",
+     "host": "laws.e-gov.go.jp",
+     "rank": 3,
+     "snippet": "日本国憲法\n昭和二十一年憲法\n19461103\n106DF0000000065\n明治六年太政官布告第六十五号（絞罪器械図式）\n明治六年太政官布告第六十五号",
+     "title": "[XML] https://laws.e-gov.go.jp/api/1/lawlists/2 - e-Gov 法令検索",
+     "url": "https://laws.e-gov.go.jp/api/1/lawlists/2"
+    },
+    {
+     "date": "",
+     "host": "www.sangiin.go.jp",
+     "rank": 4,
+     "snippet": "## The Constitution of Japan\n### Chapter X. Supreme Law\n...\n**Article 98.** This Constitution shall be the supreme law of the nation and no law, ordinance, imperial rescript or other act of government, or part thereof, contrary to the provisions hereof, shall have legal force or validity.",
+     "title": "Diet-related Laws The Constitution of Japan",
+     "url": "https://www.sangiin.go.jp/eng/law/tcoj/index.htm"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Japan national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "hourei.ndl.go.jp",
+     "rank": 1,
+     "snippet": "明治19年2月の公文式施行以後の法令と、帝国議会及び国会に提出された法案が検索できます。また、法令の改廃経過や法案の審議経過等が参照できます。",
+     "title": "日本法令索引",
+     "url": "https://hourei.ndl.go.jp/"
+    },
+    {
+     "date": "2026-10-09",
+     "host": "www.digital.go.jp",
+     "rank": 2,
+     "snippet": "法令｜デジタル庁\n...\n## その他文書\n### 各府省等において取り交わされた文書の公表について\nデジタル庁において取り交わされた主な文書（覚書）を掲載しています。",
+     "title": "法令 - デジタル庁",
+     "url": "https://www.digital.go.jp/laws"
+    },
+    {
+     "date": "",
+     "host": "laws.e-gov.go.jp",
+     "rank": 3,
+     "snippet": "更新法令一覧 | e-Gov法令検索\n# 更新法令一覧\n更新法令: **144** 件\n防衛省設置法（昭和二十九年法律第百六十四号）",
+     "title": "更新法令一覧",
+     "url": "https://laws.e-gov.go.jp/update/"
+    },
+    {
+     "date": "",
+     "host": "www.e-gov.go.jp",
+     "rank": 4,
+     "snippet": "各行政機関が所管する法令、告示、通達等の情報を掲載するWebページへのリンク集を提供しています。\n...\n…\n- ## e-Gov法令検索\n現行施行されている法令を検索できます。\n...\n厚生労働省",
+     "title": "法令・くらしの安心",
+     "url": "https://www.e-gov.go.jp/laws-and-secure-life"
+    },
+    {
+     "date": "",
+     "host": "www.e-gov.go.jp",
+     "rank": 5,
+     "snippet": "各行政機関が所管する法令、告示、通達等の情報を掲載するWebページへのリンク集を提供しています。\n- ## 所管法令\n内閣官房\n- ## 所管の法令\n内閣法制局\n...\n人事院",
+     "title": "所管法令・告示・通達",
+     "url": "https://www.e-gov.go.jp/laws-and-secure-life/law-in-force.html"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Japan official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.kanpo.go.jp",
+     "rank": 1,
+     "snippet": "### 【お知らせ】\n2025年4月1日　　　官報発行サイトを開設しました\n...\n### 書面官報発行情報\n...\n以下は独立行政法人国立印刷局提供サイトのリンクです。\n...\n|--|--|--|",
+     "title": "官報",
+     "url": "https://www.kanpo.go.jp/"
+    },
+    {
+     "date": "",
+     "host": "www.digital.archives.go.jp",
+     "rank": 2,
+     "snippet": "- **[Accepted Medium]**\n紙\n<No Item>\n- **[Storage Location]**\nMain Office-3A-044-00\n- **[Use Restriction Classification]**\nOpen",
+     "title": "Official Gazette of Japan",
+     "url": "https://www.digital.archives.go.jp/fonds/en/568546?&page=1"
+    },
+    {
+     "date": "",
+     "host": "jpsearch.go.jp",
+     "rank": 3,
+     "snippet": "Official gazette 1947-12-08 - Japan Search\nNational Diet Library Digital CollectionsOfficial gazette 1947-12-08\n...\nThe NDL Digital Collections enables a user to search and view a variety of resources, collected and stored by the National Diet Library of Japan.",
+     "title": "Official gazette 1947-12-08 - Japan Search",
+     "url": "https://jpsearch.go.jp/en/item/dignl-2893460"
+    },
+    {
+     "date": "",
+     "host": "jpsearch.go.jp",
+     "rank": 4,
+     "snippet": "Official gazette 1948-10-06 - Japan Search\n...\n## Data source\n#### National Diet Library Digital Collections\nThe NDL Digital Collections enables a user to search and view a variety of resources, collected and stored by the National Diet Library of Japan.",
+     "title": "Official gazette 1948-10-06 - Japan Search",
+     "url": "https://jpsearch.go.jp/en/item/dignl-2893721"
+    },
+    {
+     "date": "",
+     "host": "jpsearch.go.jp",
+     "rank": 5,
+     "snippet": "Official gazette 1946-12-11 - Japan Search\nNational Diet Library Digital CollectionsOfficial gazette 1946-12-11\n...\nThe NDL Digital Collections enables a user to search and view a variety of resources, collected and stored by the National Diet Library of Japan.",
+     "title": "Official gazette 1946-12-11 - Japan Search",
+     "url": "https://jpsearch.go.jp/en/item/dignl-2893153"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Japan supreme court decisions official database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.courts.go.jp",
+     "rank": 1,
+     "snippet": "Search screen | Supreme Court of Japan\n## Search screen\n- Supreme Court of Japan\n- / Judgments of the Supreme Court\n- / Search screen\n### Search screen\nKeyword\nAll of the translations of judgments on this website are unofficial.\n...\nDisplay\n1～10Record(s) / Total:11",
+     "title": "Search screen | Supreme Court of Japan - 裁判所",
+     "url": "https://www.courts.go.jp/english/Judgments/search/index.html?filter[recent]=1"
+    },
+    {
+     "date": "",
+     "host": "www.courts.go.jp",
+     "rank": 2,
+     "snippet": "Judgments of the Supreme Court | Supreme Court of Japan\n## Judgments of the Supreme Court\n- Supreme Court of Japan\n- / Judgments of the Supreme Court\n- / Search screen\n- / Judgments of the Supreme Court\n...\n#### 2024(A)753\n...\n- **Case Number**",
+     "title": "Judgments of the Supreme Court | Supreme Court of Japan",
+     "url": "https://www.courts.go.jp/english/Judgments/search/2030/index.html"
+    },
+    {
+     "date": "",
+     "host": "www.courts.go.jp",
+     "rank": 3,
+     "snippet": "### 検索条件指定画面\n裁判所のタブをクリックすると裁判所ごとの検索画面へ切り替わり、裁判例を絞り込み検索することができます。\n## 各判例について\n### 「最高裁判所」について",
+     "title": "裁判例検索 | 裁判所",
+     "url": "https://www.courts.go.jp/hanrei/search2/index.html"
+    },
+    {
+     "date": "",
+     "host": "www.courts.go.jp",
+     "rank": 4,
+     "snippet": "### Search Results\n#### 2023(A)237\n- **Date of the judgment (decision)**\n2025.12.10\n- **Case Number**\n2023(A)237\n- **Reporter**\nKeishu Vol. 79, No. 8\n...\n- **Case name**",
+     "title": "Judgments of the Supreme Court",
+     "url": "https://www.courts.go.jp/english/Judgments/search/2100/index.html"
+    },
+    {
+     "date": "2026-03-17",
+     "host": "ndlsearch.ndl.go.jp",
+     "rank": 5,
+     "snippet": "# 日本-大審院・最高裁判所判例集\n...\n※デジタル化作業等のため、一部資料を閲覧できない場合があります。",
+     "title": "日本-大審院・最高裁判所判例集 | リサーチ・ナビ | 国立国会図書館",
+     "url": "https://ndlsearch.ndl.go.jp/rnavi/politics/Japan_hanrei_sup"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Japan state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "laws.e-gov.go.jp",
+     "rank": 1,
+     "snippet": "更新法令一覧 | e-Gov法令検索\n# 更新法令一覧\n...\n防衛省設置法（昭和二十九年法律第百六十四号）",
+     "title": "更新法令一覧",
+     "url": "https://laws.e-gov.go.jp/update/"
+    },
+    {
+     "date": "",
+     "host": "hourei.ndl.go.jp",
+     "rank": 2,
+     "snippet": "日本法令索引\n# 日本法令索引\n...\n…",
+     "title": "日本法令索引",
+     "url": "https://hourei.ndl.go.jp/"
+    },
+    {
+     "date": "",
+     "host": "laws.e-gov.go.jp",
+     "rank": 3,
+     "snippet": "民間あっせん機関による養子縁組のあっせんに係る児童の保護等に関する法律施行令",
+     "title": "https://laws.e-gov.go.jp/api/1/lawlists/1",
+     "url": "https://laws.e-gov.go.jp/api/1/lawlists/1"
+    },
+    {
+     "date": "",
+     "host": "www.e-gov.go.jp",
+     "rank": 4,
+     "snippet": "- ## 所管法令・告示・通達\n各行政機関が所管する法令、告示、通達等の情報を掲載するWebページへのリンク集を提供しています。\n...\n各行政機関等が提出した法律案等へ案内します。",
+     "title": "法令・くらしの安心",
+     "url": "https://www.e-gov.go.jp/laws-and-secure-life"
+    },
+    {
+     "date": "",
+     "host": "laws.e-gov.go.jp",
+     "rank": 5,
+     "snippet": "法令API Version1 | e-Gov 法令検索\n...\n公布済み現行法令の法令ID、名称、法令番号及び公布年月日を取得します。\n...\nまた、取得した法令番号は、法令取得APIで利用できます。",
+     "title": "法令api",
+     "url": "https://laws.e-gov.go.jp/apitop/"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Japan municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.reiki.metro.tokyo.lg.jp",
+     "rank": 1,
+     "snippet": "東京都のすべての条例及び規則のほか、訓令、告示等を、体系検索、五十音検索、年月日検索、用語検索から検索し、参照することができます。",
+     "title": "東京都例規集データベース",
+     "url": "https://www.reiki.metro.tokyo.lg.jp/"
+    },
+    {
+     "date": "2026-10-28",
+     "host": "www.pref.saitama.lg.jp",
+     "rank": 2,
+     "snippet": "…\n埼玉県法規集へ（ここからデータベースに入ります。）\n...\n（3）五十音検索\n例規の題名の読みの頭文字から、閲覧したい例規を検索します。",
+     "title": "埼玉県法規集データベース",
+     "url": "https://www.pref.saitama.lg.jp/a0203/reikisyokigamen.html"
+    },
+    {
+     "date": "2020-08-12",
+     "host": "www.city.minato.tokyo.jp",
+     "rank": 3,
+     "snippet": "区のホームページで条例や規則（例規集）を調べたい。\n...\n総務部総務課文書係",
+     "title": "区のホームページで条例や規則（例規集）を調べたい。",
+     "url": "https://www.city.minato.tokyo.jp/bunsho/kuse/kocho/faq/reki/002.html"
+    },
+    {
+     "date": "",
+     "host": "www.mlit.go.jp",
+     "rank": 4,
+     "snippet": "### 自治体の条例制定状況\n各自治体の条例の制定状況の一覧（令和3年4月1日時点）はこちらです。\n各自治体の主な条例内容（令和3年4月1日時点）はこちらです。",
+     "title": "各自治体の情報・窓口案内（条例等の状況等） | 民泊制度 ...",
+     "url": "https://www.mlit.go.jp/kankocho/minpaku/municipality.html"
+    },
+    {
+     "date": "2026-10-26",
+     "host": "www.city.nagoya.jp",
+     "rank": 5,
+     "snippet": "# 劇場等の客席の基準に係る特例適用申請書の電子申請サービス\n## このページに関する お問い合わせ\nEメール：00yobo@fd.city.nagoya.lg.jp",
+     "title": "劇場等の客席の基準に係る特例適用申請書の電子申請サービス｜名古屋市公式ウェブサイト",
+     "url": "https://www.city.nagoya.jp/bousai/shoubou/1013208/1034498/1013209/1013224/1054825/1048141.html"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Japan regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "2026-10-20",
+     "host": "www.state.gov",
+     "rank": 1,
+     "snippet": "They are generally available online in Japanese along with regular publication in an official gazette.\n...\nRegulatory authority primarily resides at the national level and is exercised by ministries and agencies such as MOF, the Financial Services Agency (FSA), and METI.",
+     "title": "Japan - United States Department of State",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/japan/"
+    },
+    {
+     "date": "",
+     "host": "www.fsa.go.jp",
+     "rank": 2,
+     "snippet": "Japanese\n...\n## Name of Laws and Regulations\n...\n- Comprehensive Guidelines for Supervision of Major Banks, etc (PDF:3,980KB)\n- Comprehensive Guidelines for Supervision of Insurance Companies (PDF:2,277KB)\n- Comprehensive Guidelines for Supervision of Financial Instruments Business Operators, etc.\n.",
+     "title": "Laws & Regulations : FSA",
+     "url": "https://www.fsa.go.jp/en/laws_regulations/index.html"
+    },
+    {
+     "date": "",
+     "host": "www.fsa.go.jp",
+     "rank": 3,
+     "snippet": "Bitcoin, Ether) focuses on intermediaries and has no regulations regarding issuers.\n...\nof\ncrypto-assets,\n“crypto-asset\nexchange\nservice\nproviders,” are required not to handle crypto-assets that may hinder user protection\n...\n9\n...\nissued by banks, fund transfer service providers, or trust companies",
+     "title": "Regulatory Framework for Crypto-assets and Stablecoins",
+     "url": "https://www.fsa.go.jp/inter/etc/20220914-2/02.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.fsa.go.jp",
+     "rank": 4,
+     "snippet": "### What’s New on the FSA Website\nThis page contains the latest in events, developments, and updates to the FSA website.\n...\n## Site Map\nFinancial Services Agency, The Japanese Government (Corporate Number 6000012010023)",
+     "title": "FSA Weekly Review No.625 February 28, 2025",
+     "url": "https://www.fsa.go.jp/en/newsletter/weekly2025/625.html"
+    },
+    {
+     "date": "",
+     "host": "www.fsa.go.jp",
+     "rank": 5,
+     "snippet": "## Site Map\n- **Laws & Regulations**\nName of Laws and Regulations(PDF)\nRecent Changes (Legislation, Ordinances, Guidelines)\nGuidelines\nFinancial Instruments and Exchange Act\nFinancial Monitoring Policy\nPublic Comment\nNo-Action Letter System\nProcedures concerning Foreign Account Management Institutio",
+     "title": "Financial Services Agency - 金融庁",
+     "url": "https://www.fsa.go.jp/en/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Japan national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "2025-12-11",
+     "host": "webdesk.jsa.or.jp",
+     "rank": 1,
+     "snippet": "## Complete Set of JIS\n|A Civil Engineering and Architecture include 237 standards,5 volume set|JPY1,257,500excl.tax|\n|--|--|\n...\n|Total include 4,496 standards,141 volume set|JPY23,470,900excl.tax|",
+     "title": "JIS Complete set - 日本規格協会",
+     "url": "https://webdesk.jsa.or.jp/common/W10K0070/?post_type=book_common&page_id=b_e_zensyuban"
+    },
+    {
+     "date": "",
+     "host": "www.jisc.go.jp",
+     "rank": 2,
+     "snippet": "JISC 日本産業標準調査会\n...\n### 一般・共通\n...\n- JISC資料・議事要旨・議事録\n...\n## データベース検索\n※本サイトでは、JISの閲覧は可能ですが、印刷・購入はできません。",
+     "title": "JISC 日本産業標準調査会",
+     "url": "https://www.jisc.go.jp/"
+    },
+    {
+     "date": "2026-03-09",
+     "host": "ndlsearch.ndl.go.jp",
+     "rank": 3,
+     "snippet": "- \"JAS Standards\" (Japan Agricultural Standards Association)(in Japanese)\nJAS standard books compile JAS regulations related to each standard.\nIn order to find standards held by the NDL, please look them up on NDL Search with the standard name (in Japanese) and \"JAS\".",
+     "title": "Standards (Materials available at Tokyo Main Library) | Research Navi",
+     "url": "https://ndlsearch.ndl.go.jp/en/rnavi/stm/489800"
+    },
+    {
+     "date": "",
+     "host": "www.jisc.go.jp",
+     "rank": 4,
+     "snippet": "Japanese Industrial Standards Committee:JIS Work Programme\n…\n...\n| |Method for evaluating long-term thermal insulation properties of building insulation materials-Part 4: Fiber-based insulation materials (Loose fill thermal insulation materials)| |1| |Thermal Insulation Standard Council|a|\n...\n*\n1～5",
+     "title": "JIS Work Programme, New JIS, All",
+     "url": "https://www.jisc.go.jp/app/jis/general/GnrWorkScheduleCreationInfEng?show&pubNoticeCD=001"
+    },
+    {
+     "date": "",
+     "host": "www.city.yokohama.lg.jp",
+     "rank": 5,
+     "snippet": "# JIS規格を探す（改訂３版）\n...\n…\nJIS規格番号をクリックすると、JIS本文を閲覧できます（印刷やダウンロードはできません）。\n『ＪＩＳ総目録 ２０２０』（外部サイト）",
+     "title": "JIS規格を探す（改訂3版） - 横浜市",
+     "url": "https://www.city.yokohama.lg.jp/kurashi/kyodo-manabi/library/shirabemono/mikata/shizen/jiskikaku.html"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Japan mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.mlit.go.jp",
+     "rank": 1,
+     "snippet": "### 目次\n- 細目告示：道路運送車両の保安基準の細目を定める告示（平成14年国土交通省告示第619号）\n...\n#### 関係通達",
+     "title": "道路運送車両の保安基準（2026年3月31日現在） - 自動車",
+     "url": "https://www.mlit.go.jp/jidosha/jidosha_fr7_000007.html"
+    },
+    {
+     "date": "",
+     "host": "www.japaneselawtranslation.go.jp",
+     "rank": 2,
+     "snippet": "Ministerial Order on Ministry of Economy, Trade and Industry Technical Requirements for Specified Products - Japanese/English - Japanese Law Translation\n...\nLast Version： Order of the Ministry of Economy, Trade and Industry No. 92 of 2020\n...\n- Article 4 (Notification of Sales-Related Exceptions)",
+     "title": "Ministerial Order on Ministry of Economy, Trade and Industry ...",
+     "url": "https://www.japaneselawtranslation.go.jp/en/laws/view/4228"
+    },
+    {
+     "date": "",
+     "host": "www.jqa.jp",
+     "rank": 3,
+     "snippet": "Specified Radio Equipment (eg. Bluetooth, WiFi, etc...) and High-Frequency Devices (eg. most ISM devices, including microwaves, arc-welders, ultrasonic devices, etc... ) are subject to mandatory approvals.\n...\n- Unit-type air conditioners\n- Television sets\n- Refrigerators",
+     "title": "Japanese Approvals Overview | Testing and Certification of ... - JQA",
+     "url": "https://www.jqa.jp/english/safety/service/"
+    },
+    {
+     "date": "2019-07-01",
+     "host": "www.japaneselawtranslation.go.jp",
+     "rank": 4,
+     "snippet": "Ministerial Order on Ministry of Economy, Trade and Industry Technical Requirements for Specified Products（Order of the Ministry of International Trade and Industry No. 18 of 1974）\nLast Version： Order of the Ministry of Economy, Trade and Industry No. 92 of 2020",
+     "title": "経済産業省関係特定製品の技術上の基準等に関する省令 - 英語",
+     "url": "https://www.japaneselawtranslation.go.jp/ja/laws/view/4228/en"
+    },
+    {
+     "date": "",
+     "host": "www.japaneselawtranslation.go.jp",
+     "rank": 5,
+     "snippet": "Ministerial Order on Technical Requirements for Specified Products Concerning the Ministry of Economy, Trade and Industry（Order of the Ministry of International Trade and Industry No. 18 of 1974）\n最終更新：令和元年経済産業省令第十七号",
+     "title": "経済産業省関係特定製品の技術上の基準等に関する省令 - 日本語／英語",
+     "url": "https://www.japaneselawtranslation.go.jp/ja/laws/view/3853/je"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Japan national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "2026-10-23",
+     "host": "www.stat.go.jp",
+     "rank": 1,
+     "snippet": "Statistics Bureau Home Page\n...\n- ### Tools for utilizing government statistics\ne-Stat is a portal site for Japanese Government Statistics.\n- ### Statistical data of the Statistics Bureau\nPopulation and Households\nPopulation Census Population Estimates\nHousehold Economy and Prices\nFamily Income and\n",
+     "title": "Statistics Bureau Home Page",
+     "url": "https://www.stat.go.jp/english/index.htm"
+    },
+    {
+     "date": "2026-10-27",
+     "host": "www.stat.go.jp",
+     "rank": 2,
+     "snippet": "統計局ホームページ\n...\n政府統計や諸外国の統計情報を網羅的にまとめた報告書\n地域別に整備された各種統計データから、地域や項目を抽出した統計表やグラフの表示が可能",
+     "title": "統計局ホームページ",
+     "url": "https://www.stat.go.jp/"
+    },
+    {
+     "date": "2026-10-30",
+     "host": "www.e-stat.go.jp",
+     "rank": 3,
+     "snippet": "政府統計の総合窓口\n統計で見る日本\ne-Statは、日本の統計が閲覧できる政府統計ポータルサイトです",
+     "title": "政府統計の総合窓口",
+     "url": "https://www.e-stat.go.jp/"
+    },
+    {
+     "date": "2026-07-24",
+     "host": "www.stat.go.jp",
+     "rank": 4,
+     "snippet": "…\nWebsite: https://www.stat.go.jp/english/info/meetings/bilateral/mongolia2606.html\n…\n...\n- 1.\nLabour Force Survey\n...\n…\nis \"Portal Site of Official Statistics of Japan\" (external site) where you can browse statistics tables and database.",
+     "title": "Statistics Bureau Home Page/News Bulletin July 24, 2026",
+     "url": "https://www.stat.go.jp/english/info/news/20260724.html"
+    },
+    {
+     "date": "",
+     "host": "www.e-stat.go.jp",
+     "rank": 5,
+     "snippet": "All | Browse Statistics | 政府統計の総合窓口\n1. Top Page\n2. Browse Statistics\n3. All",
+     "title": "All | Browse Statistics | Portal Site of Official Statistics of Japan",
+     "url": "https://www.e-stat.go.jp/en/stat-search?layout=dataset&page=1&query=FSI"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Japan central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.stat-search.boj.or.jp",
+     "rank": 1,
+     "snippet": "日本銀行時系列統計データ検索サイト\n## 主要統計データ閲覧\n...\n### データ系列名称による検索\n全時系列統計データから、統計種別・カテゴリ、データ系列名称によるキーワード検索を行えます。",
+     "title": "日本銀行時系列統計データ検索サイト",
+     "url": "https://www.stat-search.boj.or.jp/"
+    },
+    {
+     "date": "2026-08-14",
+     "host": "www.boj.or.jp",
+     "rank": 2,
+     "snippet": "## 新着情報\n- 10/22（木）統計営業毎旬報告（10月20日現在）\n- 10/22（木）統計FSBレポ統計の日本分集計結果（2026年9月）",
+     "title": "ホーム : 日本銀行 Bank of Japan",
+     "url": "https://www.boj.or.jp/"
+    },
+    {
+     "date": "",
+     "host": "www.stat-search.boj.or.jp",
+     "rank": 3,
+     "snippet": "データ系列数が多量にのぼる統計（物価統計、資金循環統計、短観、国際収支統計、BIS関連統計）について、一括ダウンロードを可能にしています。",
+     "title": "物価、資金循環、短観、国際収支、BIS関連統計データの一括 ...",
+     "url": "https://www.stat-search.boj.or.jp/info/dload.html"
+    },
+    {
+     "date": "",
+     "host": "www.boj.or.jp",
+     "rank": 4,
+     "snippet": "Monetary Base : 日本銀行 Bank of Japan\n# Monetary Base\nBOJ Time-Series Data Search\n- Explanation\n...\n## Explanation\n- Explanation of \"Monetary Base Statistics\"\n...\n## Data / Notes\n**Table : Long-Term Time-Series Data**\n|Date|Data|\n|--|--|",
+     "title": "Monetary Base - Bank of Japan Statistics",
+     "url": "https://www.boj.or.jp/en/statistics/boj/other/mb/index.htm"
+    },
+    {
+     "date": "",
+     "host": "www.boj.or.jp",
+     "rank": 5,
+     "snippet": "## 公表データ\n### 四半期計数\n**表　四半期計数**\n...\n- 全体版は、「四半期計数」のうち「速報」と「時系列」を統合したものです。\n...\n|掲載日|公表対象年度|データ|",
+     "title": "資金循環 : 日本銀行 Bank of Japan",
+     "url": "https://www.boj.or.jp/statistics/sj/index.htm"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Japan government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "2026-09-09",
+     "host": "www.digital.go.jp",
+     "rank": 1,
+     "snippet": "オープンデータ｜デジタル庁\n1. オープンデータ\n# オープンデータ\n...\n2026年9月9日\nオープンデータに関する決定文書や各種資料等について掲載しています。",
+     "title": "オープンデータ - デジタル庁",
+     "url": "https://www.digital.go.jp/resources/open_data"
+    },
+    {
+     "date": "",
+     "host": "data.e-gov.go.jp",
+     "rank": 2,
+     "snippet": "中央行政のオープンデータポータルです。\nオープンデータをご自身のプロジェクトや業務にご活用ください。\nDATASET\n...\nデータポータルでは、複数の切り口からデータセットを探すことができます。",
+     "title": "データセット",
+     "url": "https://data.e-gov.go.jp/info/ja"
+    },
+    {
+     "date": "",
+     "host": "www.e-stat.go.jp",
+     "rank": 3,
+     "snippet": "All | Browse Statistics | 政府統計の総合窓口\nStatistics of Japan\n1. Top Page\n2. Browse Statistics\n3. All\nFiltered by:\nLooking for government statistics.\nIf you want to search for a data set, select the data set and search.",
+     "title": "e-Stat Portal Site of Official Statistics of Japan",
+     "url": "https://www.e-stat.go.jp/en/stat-search?page=1&query=export&layout=dataset"
+    },
+    {
+     "date": "",
+     "host": "opengov.jp",
+     "rank": 4,
+     "snippet": "OpenGov.jp\nOpen Government Data\n# Making government open data easier to understand\nVisualizing Japan's government open data — gasoline prices, CPI, healthcare, real estate, demographics, and more — through charts and rankings.\n17datasets\nPublic datasets\n...\nThis page is based on Japanese government ",
+     "title": "Visualizing Japan's government open data - OpenGov.jp",
+     "url": "https://opengov.jp/en/"
+    },
+    {
+     "date": "2020-12-07",
+     "host": "data.e-gov.go.jp",
+     "rank": 5,
+     "snippet": "Dataset\n| e-Govデータポータル\n…\n## Data and Resources\n- Annual Report of the Japan Fair Trade...\nHTML\n...\n|Title|Annual Report of the Japan Fair Trade Commission (April 2022-March 2023)|\n...\n|Publisher|Japan Fair Trade Commission|",
+     "title": "Annual Report of the Japan Fair Trade Commission (April 2022- ...",
+     "url": "https://data.e-gov.go.jp/data/en/dataset/jftc_yyyymmdd_0704"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:50:26Z",
+ "pais": {
+  "iso2": "JP",
+  "iso3": "JPN",
+  "nombre": "Japan"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}

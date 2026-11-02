@@ -1,0 +1,605 @@
+{
+ "capas": [
+  {
+   "capa": "leyes",
+   "consulta": "Madagascar constitution and national laws official legal database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Constitución y leyes nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "cnlegis.gov.mg",
+     "rank": 1,
+     "snippet": "loi | ordonnance | décret | arrêté | constitution | texte | Finance\nE-CD\n...\n## LOIS ET REGLEMENTS\n...\n### Journal Officiel\nJournal Officiel de la République de Madagascar en ligne\n…",
+     "title": "loi | ordonnance | décret | arrêté | constitution | texte ...",
+     "url": "https://cnlegis.gov.mg/"
+    },
+    {
+     "date": "",
+     "host": "cnlegis.gov.mg",
+     "rank": 2,
+     "snippet": "Article premier.\nLes lois acquièrent force exécutoire en vertu de la promulgation qui en est faite dans les formes constitutionnelles.\nArticle 2.\nLa publication des lois résulte de leur insertion au Journal officiel de la République.\nArticle 3.",
+     "title": "pouvoir exécutif | président de la république | Malagasy ...",
+     "url": "https://cnlegis.gov.mg/page_lois_reglements_cnL/"
+    },
+    {
+     "date": "",
+     "host": "cnlegis.gov.mg",
+     "rank": 3,
+     "snippet": "27 / 38\n…\n...\nLa présente Constitution sera adoptée par référendum.\nElle entrera en vigueur dès sa promulgation par le Président de la Haute Autorité de la Transition, dans les dix jours suivant la proclamation des résultats définitifs du référendum par la Haute Cour Constitutionnelle.",
+     "title": "[PDF] la constitution - CNLEGIS",
+     "url": "https://cnlegis.gov.mg/page_acces_pdf/fpUblYeoV45"
+    },
+    {
+     "date": "",
+     "host": "www.wipo.int",
+     "rank": 4,
+     "snippet": "Constitution of the Fourth Republic of Madagascar, Madagascar, WIPO Lex\n...\nYear of Version 2010\nDates\nPromulgated: December 11, 2010\n...\nSubject Matter Other\n...\nMain text(s)\nEnglish Constitution of the Fourth Republic of Madagascar\nFrench Constitution de la Quatrième République de Madagascar",
+     "title": "Constitution of the Fourth Republic of Madagascar, - WIPO",
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/13738"
+    },
+    {
+     "date": "",
+     "host": "cnlegis.gov.mg",
+     "rank": 5,
+     "snippet": "-----------------------------\nConstitution de la Première République.\nTitre premier.\nDispositions générales.\n...\nTitre III.\nL'Assemblée nationale.\nTitre IV.\nLe Sénat.\nTitre V. La fonction législative et les rapports entre le Gouvernement et le Parlement.\n...\n 11 / 24",
+     "title": "Madagascar ----------------------------- Constitution de la ...",
+     "url": "https://cnlegis.gov.mg/page_acces_pdf/eoVisRcmXhrSdnW"
+    }
+   ]
+  },
+  {
+   "capa": "reglamentos",
+   "consulta": "Madagascar national regulations decrees official government database",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Reglamentos nacionales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "cnlegis.gov.mg",
+     "rank": 1,
+     "snippet": "loi | ordonnance | décret | arrêté | constitution | texte | Finance\n...\nCe sont les textes de portée générale parus dans le Journal Officiel qui sont accessibles dans cette rubrique.\nElle contient les références des textes parus depuis 1897 et les textes intégraux parus depuis 1998.",
+     "title": "loi | ordonnance | décret | arrêté | constitution | texte ...",
+     "url": "https://cnlegis.gov.mg/"
+    },
+    {
+     "date": "",
+     "host": "www.mef.gov.mg",
+     "rank": 2,
+     "snippet": "## Textes et Lois relatifs à l'Organigramme du\n...\n**2019**\nDécret n° 2019/093 du 13 février 2019 fixant les attributions du Ministre de l’Economie et des Finances ainsi que l’organisation générale de son Ministère.",
+     "title": "Textes et Lois",
+     "url": "https://www.mef.gov.mg/page_personnalisee/index/menu/13"
+    },
+    {
+     "date": "2026-10-01",
+     "host": "assemblee-nationale.mg",
+     "rank": 3,
+     "snippet": "Toetry : Famoahana\nKarazana : Loi ordinaire\nDaty nametrahana : 01/10/2026\n...\nToetry : Famoahana\nKarazana : Loi ordinaire\nDaty nametrahana : 01/10/2026",
+     "title": "Textes Législatifs",
+     "url": "https://assemblee-nationale.mg/mg/textes/?status=PROMULGATION"
+    },
+    {
+     "date": "",
+     "host": "www.mef.gov.mg",
+     "rank": 4,
+     "snippet": "- Décret n°2026-1256 Modifiant et complétant certaines dispositions du Décret 2008-668 portant régime de déplacement\n...\n- Arrêté n°24235/2026 Fixant le taux des indemnités de déplacement temporaire auprès des villes en pôle de croissance",
+     "title": "Loi de Règlement",
+     "url": "https://www.mef.gov.mg/page_personnalisee/index/menu/18"
+    },
+    {
+     "date": "",
+     "host": "cnlegis.gov.mg",
+     "rank": 5,
+     "snippet": "PRIMATURE\n...\nDIRCNLEGIS\n...\nPortant ratification de l’Accord de l’Organisation Mondiale du Commerce (OMC) sur les subventions à la Pêche.\n...\n------------------\nDECRET N° 2026-713\nCliquez-ici\n...\n---------------------",
+     "title": "LISTE DES THEMES - DROIT COMMERCIAL",
+     "url": "https://cnlegis.gov.mg/page_data_liste_docs_filter/326/1"
+    }
+   ]
+  },
+  {
+   "capa": "diario",
+   "consulta": "Madagascar official gazette",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Diario oficial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "resources.ials.sas.ac.uk",
+     "rank": 1,
+     "snippet": "# Madagascar: legislation: official gazette\nDescription:\n1 title containing the official gazette for Madagascar from 1940 to 1993 (1957 to 1969 duplicated on microform).\nIt is an official publication and the text is in French.\nNew material is no longer added.",
+     "title": "Digital Resources",
+     "url": "https://resources.ials.sas.ac.uk/flag/madagascar-legislation-offiogm20ogm202sw1102s-49"
+    },
+    {
+     "date": "",
+     "host": "rulemaking.worldbank.org",
+     "rank": 2,
+     "snippet": "## Madagascar\n|How are the laws that are in force accessed?|On a unified website managed by the government Printed in an official gazette / journal or other publication|www.cnlegis.gov.mg/ Official Gazette of the Republic of Madagascar (Journal Officiel de la République de Madagascar)|",
+     "title": "Economy Data - Global Indicators of Regulatory Governance",
+     "url": "https://rulemaking.worldbank.org/en/data/explorecountries/madagascar"
+    },
+    {
+     "date": "",
+     "host": "www.samifin.gov.mg",
+     "rank": 3,
+     "snippet": "Official Gazette n°1950 of \n14/08/89 ORDINANCE No. 89-019 \nestablishing a regime for the protection \nof industrial property in the Democratic \nRepublic of Madagascar.\n...\nArt.",
+     "title": "[PDF] Official Gazette n°1950 of 14/08/89 ORDINANCE No. 89-019 ...",
+     "url": "https://www.samifin.gov.mg/sites/default/files/2024-12/R3.C3.2%20Ordinance%2089-019%20%E2%80%93Protection_Industrial_Property_Eng_Translated.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.nyulawglobal.org",
+     "rank": 4,
+     "snippet": "Tananarive, Impr.\n...\nSucceeded by Journal officiel de la République malgache.\nNo. 1–1,101, 17 Oct 1958–1975.\nAtananarivo, 1958–1975.\n...\nLegislation is contained in the Journal officiel.",
+     "title": "Law and Legal Systems in Madagascar: A Political Siege - GlobaLex",
+     "url": "https://www.nyulawglobal.org/globalex/madagascar.html"
+    },
+    {
+     "date": "",
+     "host": "www.cnlegis.gov.mg",
+     "rank": 5,
+     "snippet": "Ce sont les textes de portée générale parus dans le Journal Officiel qui sont accessibles dans cette rubrique.\n...\n### Journal Officiel\nJournal Officiel de la République de Madagascar en ligne\n…\n##### Contact\n...\n- Mahazoarivo\n...\n- Antananarivo - 101\n- MADAGASCAR",
+     "title": "loi | ordonnance | décret | arrêté | constitution | texte",
+     "url": "https://www.cnlegis.gov.mg/"
+    }
+   ]
+  },
+  {
+   "capa": "jurisprudencia",
+   "consulta": "Madagascar supreme court decisions official database",
+   "descartados": 1,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Jurisprudencia",
+   "resultados": [
+    {
+     "date": "",
+     "host": "jurisprudence.justice.gov.mg",
+     "rank": 1,
+     "snippet": "Madagascar.\nAffichage : 834 décisions trouvées\n...\nJurisprudence Madagascar : un portail web qui a été mis en place afin de\nvulgariser les arrêts de principe rendus par la Cour de Cassation à partir de 2009 en matière civile, commerciale et sociale.",
+     "title": "Liste des décisions juridiques de la Cour de Cassation",
+     "url": "https://jurisprudence.justice.gov.mg/decision/civile"
+    },
+    {
+     "date": "",
+     "host": "jurisprudence.justice.gov.mg",
+     "rank": 2,
+     "snippet": "### Contenu de la décision ( Télécharger PDF )\nJurisprudence Madagascar : un portail web qui a été mis en place afin de\nvulgariser les arrêts de principe rendus par la Cour de Cassation à partir de 2009 en matière civile, commerciale et sociale.",
+     "title": "Détails de la décision N° 69 - jurisprudence.justice.gov.mg",
+     "url": "https://jurisprudence.justice.gov.mg/decision/details/DCS67AB5DFB3D2E9"
+    },
+    {
+     "date": "",
+     "host": "jurisprudence.justice.gov.mg",
+     "rank": 3,
+     "snippet": "### Contenu de la décision ( Télécharger PDF )\n...\nJurisprudence Madagascar : un portail web qui a été mis en place afin de\nvulgariser les arrêts de principe rendus par la Cour de Cassation à partir de 2009 en matière civile, commerciale et sociale.",
+     "title": "Détails de la décision N° 237 - Jurisprudence de Madagascar",
+     "url": "https://jurisprudence.justice.gov.mg/decision/details/DCS68389AFFECF2F"
+    },
+    {
+     "date": "",
+     "host": "jurisprudence.justice.gov.mg",
+     "rank": 4,
+     "snippet": "ARRET N° 496 du 25 juillet 2017\n...\nJurisprudence Madagascar : un portail web qui a été mis en place afin de\nvulgariser les arrêts de principe rendus par la Cour de Cassation à partir de 2009 en matière civile, commerciale et sociale.",
+     "title": "Détails de la décision N° 496 - Jurisprudence de Madagascar",
+     "url": "https://jurisprudence.justice.gov.mg/decision/details/DCS6806DD1E135AD"
+    }
+   ]
+  },
+  {
+   "capa": "estatal",
+   "consulta": "Madagascar state or provincial legislation official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Legislación estatal o provincial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "cnlegis.gov.mg",
+     "rank": 1,
+     "snippet": "loi | ordonnance | décret | arrêté | constitution | texte | Finance\n...\nCe sont les textes de portée générale parus dans le Journal Officiel qui sont accessibles dans cette rubrique.\n...\nLes types d'accès proposés:\n### Journal Officiel\nJournal Officiel de la République de Madagascar en ligne\n…",
+     "title": "loi | ordonnance | décret | arrêté | constitution | texte ...",
+     "url": "https://cnlegis.gov.mg/"
+    },
+    {
+     "date": "2026-10-01",
+     "host": "assemblee-nationale.mg",
+     "rank": 2,
+     "snippet": "Textes Législatifs - Assemblée Nationale\n…\n...\n** Toetry : Dépôt officiel\n** Karazana : Projet de loi",
+     "title": "Textes Législatifs",
+     "url": "https://assemblee-nationale.mg/mg/textes/?page=2&status=TOUS&sort=-date_depot&per_page=8"
+    },
+    {
+     "date": "",
+     "host": "assemblee-nationale.mg",
+     "rank": 3,
+     "snippet": "Assemblée Nationale de Madagascar\n...\nL'Assemblée Nationale est l'institution représentative du peuple malgache.\n...\nAccédez aux textes législatifs adoptés, aux projets de loi en cours d’examen, ainsi qu’aux documents officiels publiés par les commissions et les services parlementaires.",
+     "title": "Assemblée Nationale de Madagascar",
+     "url": "https://assemblee-nationale.mg/?loi=loi-n2016-029-portant-code-communication-mediatisee"
+    },
+    {
+     "date": "2026-10-04",
+     "host": "www.mef.gov.mg",
+     "rank": 4,
+     "snippet": "###### Guides Pratiques aux usagers\n- Décret n°2026-1256 Modifiant et complétant certaines dispositions du Décret 2008-668 portant régime de déplacement",
+     "title": "Ministère de l'Economie et des Finances",
+     "url": "https://www.mef.gov.mg/"
+    },
+    {
+     "date": "",
+     "host": "www.mef.gov.mg",
+     "rank": 5,
+     "snippet": "Ministère de l'Economie et des Finances\n...\n###### Guides Pratiques aux usagers\n- Hetraonline\n...\n- Décret n°2026-1256 Modifiant et complétant certaines dispositions du Décret 2008-668 portant régime de déplacement",
+     "title": "Textes et Lois",
+     "url": "https://www.mef.gov.mg/page_personnalisee/index/menu/13"
+    }
+   ]
+  },
+  {
+   "capa": "municipal",
+   "consulta": "Madagascar municipal bylaws regulations official portal",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Normas municipales",
+   "resultados": [
+    {
+     "date": "",
+     "host": "cnlegis.gov.mg",
+     "rank": 1,
+     "snippet": "## LISTE DES THEMES\n1. LISTE DES THEMES\n2. ORGANISATION ADMINISTRATIVE\n3. Collectivités Locales - Communes - Organisation municipale - Conseils Municipaux\n31 résultat(s)",
+     "title": "liste des themes",
+     "url": "https://cnlegis.gov.mg/page_data_liste_docs_filter/110/2"
+    },
+    {
+     "date": "",
+     "host": "www.dgfag.mg",
+     "rank": 2,
+     "snippet": "régissant les compétences, les modalités d’organisation et de fonctionnement des Collectivités territoriales décentralisées, ainsi que celles de la gestion de leurs propres affaires.\n...\nArt.\n54 – La présente loi organique sera publiée au Journal officiel de la République.\n...\nPar le Président de la",
+     "title": "Loi organique 2014-018 régissant les compétences des CTD...",
+     "url": "https://www.dgfag.mg/wp-content/uploads/2021/04/Loi_organique_2014-018_regissant_les_competences_des_CTD.pdf"
+    },
+    {
+     "date": "2024-10-17",
+     "host": "www.bnm.mg",
+     "rank": 3,
+     "snippet": "Bureau des Normes de Madagascar – Bureau des Normes de Madagascar\n...\n### Nous contacter\n06 bis, Rue Rainandriamampandry - Soarano.\n101 Antananarivo - Madagascar + 261 3x xx xxx xx bnm@bnm.mg",
+     "title": "Bureau des Normes de Madagascar",
+     "url": "https://www.bnm.mg/"
+    },
+    {
+     "date": "",
+     "host": "cnlegis.gov.mg",
+     "rank": 4,
+     "snippet": "## LOIS ET REGLEMENTS\n...\n(J.O N°244 du 28 septembre 1962, page 1989).\n...\n### Journal Officiel\nJournal Officiel de la République de Madagascar en ligne",
+     "title": "loi | ordonnance | décret | arrêté | constitution | texte ...",
+     "url": "https://cnlegis.gov.mg/"
+    },
+    {
+     "date": "2026-10-23",
+     "host": "www.justice.mg",
+     "rank": 5,
+     "snippet": "Ministère de la Justice\n...\n## Cour Suprême\n...\n##### Présentation\nLa Cour Suprême est la plus haute instance juridictionnelle sur le territoire de la République de Madagascar.",
+     "title": "Ministère de la Justice",
+     "url": "https://www.justice.mg/"
+    }
+   ]
+  },
+  {
+   "capa": "sectorial",
+   "consulta": "Madagascar regulatory agencies official regulations",
+   "descartados": 0,
+   "eje": "ley",
+   "estado": "ok",
+   "nombre": "Regulación sectorial",
+   "resultados": [
+    {
+     "date": "",
+     "host": "amm.mg",
+     "rank": 1,
+     "snippet": "Loi n°2011-002 du 15/07/2011 Code de la santé.\n...\n…\n...\nDécret n° 2010-960 du 30/11/2010 / Portant création, organisation et fonctionnement de l'Agence du Médicament de Madagascar (AMM)",
+     "title": "Textes Réglementations - AMM",
+     "url": "https://amm.mg/dossiers.html"
+    },
+    {
+     "date": "",
+     "host": "www.pic.commerce.mg",
+     "rank": 2,
+     "snippet": "…\n#### Arrêté interministériel n°30486/2021 du 30 novembre 2021 portant sur les modalités de mise en œuvre des mesures incitativesà l'importation des kits solaires et de systèmes solaires domestiques de qualité\n...\n- Code partie prenante: BNM",
+     "title": "Règlementations nationales | Madagascar",
+     "url": "https://www.pic.commerce.mg/mg/reglementations-nationales?page=16"
+    },
+    {
+     "date": "",
+     "host": "www.pic.commerce.mg",
+     "rank": 3,
+     "snippet": "#### Arrêté Interministériel N°28520/2011 relatif à la règlementation de la commercialisation des savons et détergents\n...\n- Ministère concerné: Ministère de l'industrialisation, du commerce et de la consommation\n...\n- Code partie prenante: DPC",
+     "title": "Règlementations nationales - PIC Madagascar",
+     "url": "https://www.pic.commerce.mg/fr/reglementations-nationales?page=1"
+    },
+    {
+     "date": "2026-10-09",
+     "host": "www.state.gov",
+     "rank": 4,
+     "snippet": "Obtaining official approval is mandatory for any FDI.\nThe EDBM assists the investor with the application process and Madagascar’s Council of Ministers decides whether to grant agreement based on EDBM’s written guidance.",
+     "title": "2026 Investment Climate Statements: Madagascar",
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/madagascar/"
+    },
+    {
+     "date": "",
+     "host": "amm.mg",
+     "rank": 5,
+     "snippet": "Agence du Médicament de Madagascar\n…\n...\nLe Gouvernement a confié à l’Agence du Médicament de Madagascar, un Établissement Public à caractère Administratif (EPA), la mission d’assurer la qualité des médicaments à Madagascar dans les secteurs public et privé dans le respect des normes nationales et i",
+     "title": "Agence du Médicament de Madagascar",
+     "url": "https://amm.mg/"
+    }
+   ]
+  },
+  {
+   "capa": "catalogo",
+   "consulta": "Madagascar national standards body standards catalogue",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Catálogo nacional de normas (metadatos)",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.wto.org",
+     "rank": 1,
+     "snippet": "As the last report noted, the Madagascar Standards Bureau (BNM) is the body responsible for implementing national policy on standardization and quality.\n...\nViewed at: https://www.bnm.mg/travaux-de-normalisation/.\n107 BNM (2024), List of standards.\nViewed at:",
+     "title": "RESTRICTED - WT/TPR/S/466 8 January 2025",
+     "url": "https://www.wto.org/english/tratop_e/tpr_e/s466_e.pdf"
+    },
+    {
+     "date": "",
+     "host": "cnlegis.gov.mg",
+     "rank": 2,
+     "snippet": "Commerce et de l’Artisanat, en date du 4 juin 2020, le présent arrêté a pour objet d’homologuer les Normes Nationales Malgaches, en abrégé NMG, élaborées par le Bureau des Normes de Madagascar.",
+     "title": "Par arrêté n° 11 385/2020-MICA du Ministre de l’Industrie, du ...",
+     "url": "https://cnlegis.gov.mg/uploads/A11385-2020-VF-VM%20(1).pdf"
+    },
+    {
+     "date": "2021-10-17",
+     "host": "www.trade.gov",
+     "rank": 3,
+     "snippet": "Bureau National des Normes (BNM)\n06 bis Rue Rainandriamampandry, Soarano, Postal code 101,\nPO Box 1316, Antananarivo 101, Madagascar\n...\nE-mail: bnm@bnm.mg",
+     "title": "Madagascar - Labeling and Marking Requirements",
+     "url": "https://www.trade.gov/country-commercial-guides/madagascar-labeling-and-marking-requirements"
+    },
+    {
+     "date": "",
+     "host": "www.wto.org",
+     "rank": 4,
+     "snippet": "The Madagascar Bureau of Standards (BNM) was established in 1997 and began operating in 2002 under the technical supervision of the Ministry in charge of industry.\n...\n…\nSPS and TBT Agreements.\nThe BNM maintains a directory of some 60 national standards mainly covering food products.",
+     "title": "RESTRICTED WT/TPR/S/318 9 June 2015 (15-2981) Page",
+     "url": "https://www.wto.org/english/tratop_e/tpr_e/s318_e.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.lloydsbanktrade.com",
+     "rank": 5,
+     "snippet": "## Standards\n- **National Standards Organisations**\nNational Standards Body (BNM - Bureau de Normes de Madagascar)\n- **Integration in the International Standards Network**\n...\n- **Classification of Standards**\n...\n- **Certification Organisations**\nNational Standards Body (BNM - Bureau de Normes de M",
+     "title": "Industrial and commercial standards in Madagascar",
+     "url": "https://www.lloydsbanktrade.com/en/market-potential/madagascar/standards"
+    }
+   ]
+  },
+  {
+   "capa": "obligatorias",
+   "consulta": "Madagascar mandatory technical regulations official list",
+   "descartados": 0,
+   "eje": "estandares",
+   "estado": "ok",
+   "nombre": "Normas obligatorias vigentes",
+   "resultados": [
+    {
+     "date": "",
+     "host": "www.pic.commerce.mg",
+     "rank": 1,
+     "snippet": "#### DECRET N° 2012-898 du 09 Octobre 2012 portant contrôle et homologation des matériaux de construction.\n...\n- Secteurs concernés: Commerce\n...\n- Partie prenante concernée: Bureau des normes de Madagascar (BNM)\n- Code partie prenante: BNM",
+     "title": "Règlementations nationales | Madagascar",
+     "url": "https://www.pic.commerce.mg/mg/reglementations-nationales?page=16"
+    },
+    {
+     "date": "",
+     "host": "www.pic.commerce.mg",
+     "rank": 2,
+     "snippet": "## Importation\n...\n- Catégorie: Arrêté\n- Secteurs concernés: Pêche\n...\n#### Arrêté N°1075/2012 du 24 janvier 2012 fixant les indications obligatoires pour l'étiquetage des produits et denrées alimentaires préemballées.",
+     "title": "Règlementations nationales - PIC Madagascar",
+     "url": "https://www.pic.commerce.mg/mg/reglementations-nationales?page=39"
+    },
+    {
+     "date": "",
+     "host": "www.pic.commerce.mg",
+     "rank": 3,
+     "snippet": "## Importation\n#### Loi n°2015-014 sur les garanties et la protection des consommateurs\n- Catégorie: Loi\n- Secteurs concernés: Commerce\n...\n- Partie prenante concernée: Bureau des normes de Madagascar (BNM)\n- Code partie prenante: BNM",
+     "title": "Règlementations nationales",
+     "url": "https://www.pic.commerce.mg/fr/reglementations-nationales?page=46"
+    },
+    {
+     "date": "",
+     "host": "www.wto.org",
+     "rank": 4,
+     "snippet": "https://www.bnm.mg/wp-content/uploads/2024/07/Liste-des-normes-malagasy-NMG.pdf.\n108 BNM, List of Malagasy standards.\nViewed at: https://www.bnm.mg/liste-des-normes-malagasy/.",
+     "title": "RESTRICTED - WT/TPR/S/466 8 January 2025",
+     "url": "https://www.wto.org/english/tratop_e/tpr_e/s466_e.pdf"
+    },
+    {
+     "date": "2021-10-17",
+     "host": "www.trade.gov",
+     "rank": 5,
+     "snippet": "When developing standards, BNM follows international norms, mainly those established by ISO.\n...\n- Technical regulations and standards developed by the different laboratories are published in the National Gazette of the Republic of Madagascar.\nIf required by law, foreign entities can approach the di",
+     "title": "Madagascar - Licensing Requirements for Professional Services",
+     "url": "https://www.trade.gov/country-commercial-guides/madagascar-licensing-requirements-professional-services"
+    }
+   ]
+  },
+  {
+   "capa": "estadistica",
+   "consulta": "Madagascar national statistics office official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Oficina nacional de estadística",
+   "resultados": [
+    {
+     "date": "",
+     "host": "ecastats.uneca.org",
+     "rank": 1,
+     "snippet": "#### National Statistical Offices\n|Country|NSO|Web address|\n|--|--|--|\n|Libya|National Board for Information and Documentation|http://www.bsc.ly/|\n|Madagascar|Institut National de la Statistique|http://www.instat.mg/|",
+     "title": "National Statistical Offices",
+     "url": "https://ecastats.uneca.org/data/national-statistical-offices"
+    },
+    {
+     "date": "",
+     "host": "www.instat.mg",
+     "rank": 2,
+     "snippet": "INSTAT Madagascar - Institut National de la Statistique\n...\n##### Articles similaires\n###### Contact info\n- ** INSTAT - Rue Jules RANAIVO - ANOSY, BP 485 Antananarivo 101\n...\n- ** [email protected]\n- ** www.instat.mg",
+     "title": "MICS - 2018 | Rapport des résultats de l'enquête - Août 2019",
+     "url": "https://www.instat.mg/p/mics-2018-rapport-des-resultats-de-lenquete-aout-2019"
+    },
+    {
+     "date": "",
+     "host": "www.instat.mg",
+     "rank": 3,
+     "snippet": "INSTAT Madagascar - Institut National de la Statistique\n...\n###### Contact info\n- INSTAT - Rue Jules RANAIVO - ANOSY, BP 485 Antananarivo 101\n- +261 32 11 086 66\n- [email protected]\n- www.instat.mg",
+     "title": "INSTAT Madagascar - Institut National de la Statistique",
+     "url": "https://www.instat.mg/index.php/p/resultats-de-lenquete-mics-2018"
+    },
+    {
+     "date": "",
+     "host": "www.instat.mg",
+     "rank": 4,
+     "snippet": "INSTAT Madagascar - Institut National de la Statistique\n...\n###### Contact info\n- ** INSTAT - Rue Jules RANAIVO - ANOSY, BP 485 Antananarivo 101\n...\n- ** [email protected]\n- ** www.instat.mg",
+     "title": "Annuaire statistique",
+     "url": "https://www.instat.mg/statistiques/annuaires-statistiques/item/annuaire-statistique?page=6"
+    },
+    {
+     "date": "",
+     "host": "www.statcap.mg",
+     "rank": 5,
+     "snippet": "INSTAT Madagascar | Portail des statistiques officielles\n# INSTAT STATCAP II MADAGASCAR\n## Ligne d'assistance aux Usagers\n#### INSTAT Madagascar\nEmail: infos@instat.mg\n...\n#### Newsletter\nPortail National des Statistiques Officielles",
+     "title": "INSTAT Madagascar | Portail des statistiques officielles",
+     "url": "https://www.statcap.mg/"
+    }
+   ]
+  },
+  {
+   "capa": "banco_central",
+   "consulta": "Madagascar central bank statistics official website",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Banco central",
+   "resultados": [
+    {
+     "date": "",
+     "host": "dsbb.imf.org",
+     "rank": 1,
+     "snippet": "# Dissemination Standards Bulletin Board (DSBB)\n## Enhanced General Data Dissemination System\n#### Quick Links\nstatistics** **Central Bank ** The Central Bank of Madagascar is responsible for compiling, producing, and disseminating balance of payments statistics and monetary statistics.",
+     "title": "IMF -GDDS DQAF Base (DSBB)",
+     "url": "https://dsbb.imf.org/e-gdds/dqaf-base/country/MDG/category/AAB00"
+    },
+    {
+     "date": "",
+     "host": "www.banky-foibe.mg",
+     "rank": 2,
+     "snippet": "# TAHA\n...\nCoefficient des réserves obligatoires **\n...\nDernier résultat des Soumissions de BTA **\n...\nTaux d’inflation % (glissement du Nouvel Indice des Prix à la Consommation : base 100 en 2016) en Aout 2026",
+     "title": "Banky Foiben'i Madagasikara: Banky Foiben'ny Madagasikara",
+     "url": "https://www.banky-foibe.mg/"
+    },
+    {
+     "date": "",
+     "host": "www.banky-foibe.mg",
+     "rank": 3,
+     "snippet": "BANKY  FOIBEN’I  MADAGASIKARA \n...\nSite web \n : www.banky-foibe.mg \n...\nPays \n : Madagasikara \nCe document est téléchargeable à partir du site web de BFM dans la rubrique « Statistiques & Publications »",
+     "title": "SOMMAIRE - banky-foibe.mg",
+     "url": "https://www.banky-foibe.mg/admin/wp-content/uploads/2024/09/Bulletin_BFM_Mars_2024.pdf"
+    },
+    {
+     "date": "",
+     "host": "www.banky-foibe.mg",
+     "rank": 4,
+     "snippet": "| Banky Foiben'i Madagasikara\n...\n# TAHA\n## Contact\n101 Antananarivo,",
+     "title": "TAHA - Banky Foiben'i Madagasikara",
+     "url": "https://www.banky-foibe.mg/vente_bulletin"
+    },
+    {
+     "date": "",
+     "host": "www.banky-foibe.mg",
+     "rank": 5,
+     "snippet": "Adresse électronique \n: doc-press@bfm.mg  \nSite web \n: www.banky-foibe.mg \n...\nVille \n...\n: Madagasikara \nCe document est téléchargeable à partir du site web de BFM dans la rubrique « Statistiques & Publications »",
+     "title": "SA_BFM_2024.pdf",
+     "url": "https://www.banky-foibe.mg/admin/wp-content/uploads/2026/07/SA_BFM_2024.pdf"
+    }
+   ]
+  },
+  {
+   "capa": "datos_abiertos",
+   "consulta": "Madagascar government open data portal",
+   "descartados": 0,
+   "eje": "datos",
+   "estado": "ok",
+   "nombre": "Portal de datos abiertos",
+   "resultados": [
+    {
+     "date": "",
+     "host": "opendata.mg",
+     "rank": 1,
+     "snippet": "OpenData Madagascar\n#### Des données ouvertes pour tous\n# MADA OPENDATA\n...\n## Ensembles de données par catégorie\n...\n#### Gouvernement\nExplorez les données sur les dépenses publiques, les politiques gouvernementales et les services publics à Madagascar pour favoriser la transparence et la responsab",
+     "title": "OpenData Madagascar",
+     "url": "https://opendata.mg/"
+    },
+    {
+     "date": "",
+     "host": "assemblee-nationale.mg",
+     "rank": 2,
+     "snippet": "Open Data — Assemblée Nationale de Madagascar\n# Open Data Parlementaire\nAccueil Open Data\n...\nL'Assemblée Nationale de Madagascar s'engage dans une démarche de transparence en mettant à disposition des citoyens, chercheurs, journalistes et développeurs les données parlementaires sous formats ouverts",
+     "title": "Open Data Parlementaire - Assemblée Nationale de Madagascar",
+     "url": "https://assemblee-nationale.mg/opendata/"
+    },
+    {
+     "date": "2026-10-29",
+     "host": "digital.gov.mg",
+     "rank": 3,
+     "snippet": "## Transparence et responsabilité\n#### Plateformes\n- contact@digital.gov.mg\n- +261 34 45 467 32\n- Antananarivo, Madagascar\n© 2026 Unité de Gouvernance Digitale — digital.gov.mg — République de Madagascar",
+     "title": "UGD — Transformer l'État par le numérique",
+     "url": "https://digital.gov.mg/"
+    },
+    {
+     "date": "2026-10-21",
+     "host": "corpus.data-landscapers.io",
+     "rank": 4,
+     "snippet": "***Noted, not assessed* **.\n## Governance\n### Strategies, plans and policies\n#### Open data policy\nOpen Data Parlementaire (parlement.mg/opendata); INSTAT Madagascar microdata sharing platform (microdata.instat.mg); OpenData Madagascar (opendata.mg).",
+     "title": "Maturity Assessment",
+     "url": "https://corpus.data-landscapers.io/maturity/countries/mdg/"
+    },
+    {
+     "date": "",
+     "host": "africadata.org",
+     "rank": 5,
+     "snippet": "Madagascar\nUnique Users 288\nIndicators Loaded 133\nmadagascar.africadata.org\nmadagascar.opendataforafrica.org\nMalawi",
+     "title": "Africa Information Highway",
+     "url": "https://africadata.org/"
+    }
+   ]
+  }
+ ],
+ "completo": true,
+ "generado": "2026-11-02T05:56:50Z",
+ "pais": {
+  "iso2": "MG",
+  "iso3": "MDG",
+  "nombre": "Madagascar"
+ },
+ "proveedor": "perplexity search",
+ "tipo_busqueda": "web"
+}
