@@ -62,7 +62,8 @@ class AuditorGpt(unittest.TestCase):
     def test_it_checks_out_main_and_never_the_pr_head(self):
         job = self.jobs['audit-gpt']
         uses = [s['uses'].split('@')[0] for s in job['steps'] if 'uses' in s]
-        self.assertEqual(uses, ['actions/checkout', 'actions/download-artifact', 'actions/download-artifact'])
+        self.assertEqual(uses, ['actions/checkout', 'actions/download-artifact', 'actions/download-artifact',
+                                'actions/upload-artifact'])  # the result, as a file (test_the_result_travels_as_a_file...)
         downloads = [s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/download-artifact@')]
         self.assertEqual([(d['name'], d['path']) for d in downloads],
                          [('evidence', '${{ runner.temp }}/gpt-audit/evidence'),
@@ -118,11 +119,25 @@ class AuditorGpt(unittest.TestCase):
         upload = next(s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/upload-artifact@'))
         self.assertEqual(upload['name'], 'packet-gate')
 
+    def test_the_result_travels_as_a_file_never_as_a_job_output(self):
+        # GitHub drops a job output it suspects of holding a secret: three GPT REVISE were lost so (#73, #89, #91)
+        gpt, post = self.jobs['audit-gpt'], self.jobs['post-gpt']
+        self.assertNotIn('outputs', gpt)
+        self.assertNotIn('GITHUB_OUTPUT', yaml.safe_dump(gpt))
+        key = next(i for i, s in enumerate(gpt['steps']) if 'secrets.' in yaml.safe_dump(s))
+        up = next(i for i, s in enumerate(gpt['steps']) if s.get('uses', '').startswith('actions/upload-artifact@')
+                  and s['with']['name'] == 'gpt-result')
+        self.assertGreater(up, key)  # after the step with the key, never in it
+        self.assertEqual(gpt['steps'][up]['with']['path'], '${{ runner.temp }}/gpt-result.json')
+        down = [s['with'] for s in post['steps'] if s.get('uses', '').startswith('actions/download-artifact@')]
+        self.assertEqual(down, [{'name': 'gpt-result', 'path': '${{ runner.temp }}/gpt'}])
+        self.assertNotIn('needs.audit-gpt.outputs', self.raw)
+
     def test_post_gpt_speaks_only_as_gpt(self):
         job = self.jobs['post-gpt']
         self.assertEqual(job['permissions'], {'pull-requests': 'write', 'statuses': 'write'})
         self.assertNotIn('secrets.', yaml.safe_dump(job))
-        self.assertFalse(any('uses' in s for s in job['steps']))
+        self.assertEqual([s['uses'].split('@')[0] for s in job['steps'] if 'uses' in s], ['actions/download-artifact'])
         run = '\n'.join(s.get('run', '') for s in job['steps'])
         self.assertIn('[ "$(head -n 1 verdict.md)" = "GPT REVIEW: $verdict $SHA" ]', run)
         self.assertIn('[ "$(grep -ci \'AUDIT VERDICT\' verdict.md)" = 0 ]', run)
