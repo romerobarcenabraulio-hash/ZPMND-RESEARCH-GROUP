@@ -1,0 +1,94 @@
+name: descubrir
+# For each cell of the world map (sources/cobertura.json: a UN member state × a layer) a web search finds candidate
+# official sites, and each candidate is asked once (rg/descubrir.py, docs/DESCUBRIR.md). Results go to branch
+# descubrimiento as descubrimiento/<ISO3>.json and descubrimiento/resumen.json: candidates, never evidence.
+# Code from main only, by schedule or dispatch, never for a PR. The Perplexity key reaches only the search step; the
+# push token only the two steps that read and write the data branch; the step that asks candidate sites has neither.
+on:
+  schedule:
+    - cron: '41 6 * * *'  # daily: the next countries, 120 searches ($0.60 at search_type web) until the map is done
+  workflow_dispatch:
+    inputs:
+      busquedas:
+        description: 'Searches in this run, 12 to 2400 (12 per country; all 193 countries = 2316, about $11.60 at web)'
+        required: true
+        default: '120'
+      tipo:
+        description: 'web ($5 per 1000) or fast ($1 per 1000)'
+        type: choice
+        options: [web, fast]
+        default: web
+permissions: {}
+concurrency:
+  group: descubrir
+  cancel-in-progress: false
+jobs:
+  descubrir:
+    if: github.ref == 'refs/heads/main'  # a dispatch of any other branch never spends the key or writes the data branch
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    permissions:
+      contents: write  # read and push branch descubrimiento; nothing else
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { ref: main, persist-credentials: false }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - name: Tests of the discovery before anything is asked
+        run: python -m unittest tests.test_descubrir
+      - name: Read what was already found (branch descubrimiento)
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          set -euo pipefail
+          git init -q "$RUNNER_TEMP/datos" && cd "$RUNNER_TEMP/datos"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          rc=0
+          GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader GIT_CONFIG_VALUE_0="$auth" \
+            git ls-remote --exit-code --heads origin descubrimiento >/dev/null || rc=$?
+          if [ "$rc" = 0 ]; then
+            GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader GIT_CONFIG_VALUE_0="$auth" \
+              git fetch -q --depth 1 origin descubrimiento
+            git checkout -q -b descubrimiento FETCH_HEAD
+          elif [ "$rc" = 2 ]; then  # the remote answered and has no such branch: the first run
+            git checkout -q --orphan descubrimiento
+          else  # GPT on 2ebcc5b: a failed read is not an absent branch; nothing is searched (or paid) twice
+            echo "branch descubrimiento could not be read (git exit $rc): nothing is searched"; exit 1
+          fi
+          mkdir -p descubrimiento
+      - name: Search the next countries (the only step with the key)
+        id: buscar
+        timeout-minutes: 110  # the run stops itself at 100 (rg/descubrir.py PLAZO_BUSCAR) and writes country by country
+        env:
+          PERPLEXITY_API_KEY: '${{ secrets.PERPLEXITY_API_KEY }}'
+          BUSQUEDAS: "${{ inputs.busquedas || '120' }}"
+          TIPO: "${{ inputs.tipo || 'web' }}"
+        run: |
+          python -m rg.descubrir buscar --carpeta "$RUNNER_TEMP/datos/descubrimiento" \
+            --max-busquedas "$BUSQUEDAS" --tipo "$TIPO"
+      - name: Ask each candidate once, without the key
+        if: always() && steps.buscar.outcome != 'skipped'  # countries found before a stop are still checked
+        timeout-minutes: 90
+        run: python -m rg.descubrir verificar --carpeta "$RUNNER_TEMP/datos/descubrimiento" --por-capa 2
+      - name: Commit the result to the data branch
+        if: always() && steps.buscar.outcome != 'skipped'  # what was paid for is never lost
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/datos"
+          git config user.name "rg-descubrir-bot"
+          git config user.email "rg-descubrir-bot@users.noreply.github.com"
+          git add -A descubrimiento
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -q -m "descubrimiento: run ${GITHUB_RUN_ID}"
+          # token only for this command, through the environment (never on a command line or on disk)
+          # three tries: a push that still fails loses this run's results, and the next run pays those searches again
+          # (at most one run, 2400 searches: SECURITY T22 residual, GPT on cb11715)
+          for i in 1 2 3; do
+            GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader \
+              GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" \
+              git push -q origin HEAD:descubrimiento && exit 0
+            sleep $((i * 20))
+          done
+          echo "the push failed three times: this run's results are lost"; exit 1
