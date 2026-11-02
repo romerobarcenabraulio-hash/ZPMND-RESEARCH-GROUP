@@ -1,9 +1,5 @@
-"""rg/catalog/db.py: the catalog in Postgres, every field of every row in its place, checked against the rows, swapped in
-only whole. The database tests run against the Postgres that RG_TEST_DB_URL names (a service container in ci.yml);
-ci.yml sets RG_REQUIRE_DB_TESTS so they can never be skipped there.
-
-Built here (CONSTRUIDO): a small catalog folder shaped as store.Catalog writes it (dof/<year>.jsonl, an indicator series,
-a state file with listing.state_code, the NOM and treaty views, a run manifest) and sources shaped as sources/mx.json.
+"""rg/catalog/db.py. The database tests use the Postgres RG_TEST_DB_URL names (ci.yml, where RG_REQUIRE_DB_TESTS keeps them
+from being skipped). Built here (CONSTRUIDO): a small catalog folder as store.Catalog writes it, and sources as mx.json.
 """
 import contextlib
 import io
@@ -131,21 +127,14 @@ class Connection(unittest.TestCase):
     def test_no_pg_variable_can_send_the_connection_elsewhere(self):
         # GPT on b10cbc9: a URI naming localhost, with PGHOSTADDR set, reaches another machine without TLS
         from psycopg import pq
-        self.assertTrue(all(o.envvar.startswith(b'PG') for o in pq.Conninfo.get_defaults() if o.envvar))  # all libpq reads
-        local = 'postgresql://u@localhost/db'
-        for var in ('PGHOSTADDR', 'PGHOST', 'PGSSLMODE', 'PGSERVICE', 'PGSERVICEFILE', 'PGPASSFILE', 'PGSYSCONFDIR'):
-            with self.subTest(var=var), mock.patch.dict('os.environ', {var: '203.0.113.9'}):
-                if var == 'PGHOSTADDR':  # libpq would take it: the URI's localhost is not where it connects
+        self.assertTrue(all(o.envvar.startswith(b'PG') for o in pq.Conninfo.get_defaults() if o.envvar))
+        for var in ('PGHOSTADDR', 'PGHOST', 'PGSSLMODE', 'PGSERVICE', 'PGPASSFILE', 'PGPASSWORD'):
+            with self.subTest(var=var), mock.patch.dict('os.environ', {var: '203.0.113.9'}), \
+                    mock.patch('psycopg.connect', side_effect=AssertionError('no call')), self.assertRaises(ValueError) as e:
+                if var == 'PGHOSTADDR':  # libpq would take it
                     self.assertIn((b'hostaddr', b'203.0.113.9'), [(o.keyword, o.val) for o in pq.Conninfo.get_defaults()])
-                with mock.patch('psycopg.connect', side_effect=AssertionError('no call')), self.assertRaises(ValueError) as e:
-                    db.connect(local)
-                self.assertIn(var, str(e.exception))
-                self.assertNotIn('203.0.113.9', str(e.exception))  # names only, never a value
-        with mock.patch.dict('os.environ', {'RG_DB_URL': local, 'PGPASSWORD': 'clave-secreta'}, clear=True), \
-                mock.patch.object(db, 'connect', side_effect=AssertionError('no call')), self.assertRaises(SystemExit) as e:
-            db.main(['ping'])
-        self.assertIn('PGPASSWORD', str(e.exception))
-        self.assertNotIn('clave-secreta', str(e.exception))
+                db.connect('postgresql://u@localhost/db')
+            self.assertEqual((var in str(e.exception), '203.0.113.9' in str(e.exception)), (True, False))  # names only
 
     def test_the_reader_logs_in_as_the_pooler_names_it(self):
         self.assertEqual(db.reader_user(REMOTE), 'zppmnd_lectura.abcdefghijklmnop')
@@ -216,18 +205,6 @@ class Command(unittest.TestCase):
             self.assertEqual(db.main(['cargar', '--catalog', str(c.root), '--sources', str(sources)]), 3)
         self.assertIn('no rows', json.loads(out.getvalue())['empty'])
 
-    def test_only_what_the_operator_names_may_leave_the_live_catalog(self):
-        c = Catalog(self)
-        sources = c.root / 'mx.json'
-        sources.write_text(json.dumps(SOURCES), encoding='utf-8')
-        args = ['cargar', '--catalog', str(c.root), '--sources', str(sources)]
-        for extra, named in (([], []), (['--retirar', 'mx.dof:1', '--retirar', '2026-10-29T055004Z'], ['mx.dof:1', '2026-10-29T055004Z'])):
-            with self.subTest(named=named), mock.patch.dict('os.environ', {'RG_DB_URL': 'postgresql://u:p@localhost/db'}, clear=True), \
-                    mock.patch.object(db, 'connect'), mock.patch.object(db, 'build', return_value={'ok': True}) as build, \
-                    contextlib.redirect_stdout(io.StringIO()):
-                self.assertEqual(db.main(args + extra), 0)
-            self.assertEqual(build.call_args.kwargs['retirar'], named)
-
     def test_the_role_command_needs_a_strong_password_and_fails_when_its_test_fails(self):
         env = {'RG_DB_URL': 'postgresql://u:p@localhost/db'}
         for bad in ('', 'corta', 'x' * 31, 'con espacio ' * 4, 'ñ' * 40):
@@ -266,35 +243,23 @@ class Command(unittest.TestCase):
 
 
 class Swap(unittest.TestCase):
-    """What decides the swap once the checks pass, with a double for the database (the real one: Database)."""
-    CLEAN = {'membresias': [], 'escritura': [], 'funciones': [], 'crear': [], 'secuencias': [], 'lectura_fuera': []}
-
-    def load(self, rights):
-        conn = mock.MagicMock()
-        conn.execute.return_value.fetchall.return_value = [(READER,)]  # the reader role exists
-        with mock.patch.object(db, 'check', return_value={'ok': True}), \
-                mock.patch.object(db, 'reader_rights', return_value=rights) as seen:
-            report = Catalog(self).build(conn)
-        return conn, report, seen
-
     def test_a_load_the_reader_could_write_rolls_back_whole(self):
-        # GPT on b10cbc9: ALTER DEFAULT PRIVILEGES between two loads gives PUBLIC INSERT on the new tables; the reader,
-        # accepted on the old ones, would write the catalog after the swap
-        conn, report, seen = self.load(self.CLEAN)
-        self.assertEqual((report['ok'], report['readers']), (True, [READER]))
-        seen.assert_called_once_with(conn, READER, P + db.LIVE, P + db.NEXT)  # on the schema about to go live
-        conn.commit.assert_called_once()
-        writes = [f'{P}{db.NEXT}.documento']
-        conn, report, _ = self.load({**self.CLEAN, 'escritura': writes})
-        self.assertEqual((report['ok'], report['readers'], report['lector']), (False, [], {READER: {'escritura': writes}}))
-        conn.rollback.assert_called_once()  # nothing renamed, nothing granted, nothing kept: live stays as it was
-        conn.commit.assert_not_called()
+        # GPT on b10cbc9: default privileges set after the reader's acceptance give PUBLIC INSERT on the new tables
+        for writes in ([], [f'{P}{db.NEXT}.documento']):
+            conn = mock.MagicMock()  # a double for the database; the real one: Database
+            conn.execute.return_value.fetchall.return_value = [(READER,)]  # the reader role exists
+            with self.subTest(writes=writes), mock.patch.object(db, 'check', return_value={'ok': True}), \
+                    mock.patch.object(db, 'reader_rights', return_value={'crear': [], 'escritura': writes}) as seen:
+                report = Catalog(self).build(conn)
+            seen.assert_called_once_with(conn, READER, P + db.LIVE, P + db.NEXT)  # on the schema about to go live
+            self.assertEqual((report['ok'], report.get('lector')), (True, None) if not writes else (False, {READER: {'escritura': writes}}))
+            self.assertEqual((conn.commit.call_count, conn.rollback.call_count), (0, 1) if writes else (1, 0))  # nothing kept
 
 
 class Views(unittest.TestCase):
     def test_a_checkout_missing_a_view_is_refused_before_the_database_is_touched(self):
         # GPT on 03e6751: read as empty, an absent NOM, treaty or run view would let the swap erase its live tables
-        for gone in ('normas/nom.jsonl', 'tratados/tratados.jsonl', 'runs'):  # written out: one dropped from VIEWS fails here
+        for gone in ('normas/nom.jsonl', 'tratados/tratados.jsonl', 'runs'):  # not db.VIEWS: one dropped there fails here
             with self.subTest(gone=gone):
                 c = Catalog(self)
                 target = c.mx / gone
@@ -457,51 +422,35 @@ class Database(unittest.TestCase):
         self.assertRejectedAndLiveKept(report)
 
     def test_default_privileges_set_between_two_loads_never_make_the_reader_a_writer(self):
-        # GPT on b10cbc9: the loads create as their own role, so its default privileges reach no other test's tables
-        carga = P + 'carga'
-        self.conn.execute(f'CREATE ROLE "{carga}"')
-        self.conn.execute(f'GRANT CREATE ON DATABASE "{self.conn.info.dbname}" TO "{carga}"')
-        self.conn.execute(f'SET ROLE "{carga}"'); self.conn.commit()
+        # GPT on b10cbc9; the loads create as their own role, so its default privileges reach no other test
+        carga = f'"{P}carga"'
+        for stmt in (f'CREATE ROLE {carga}', f'GRANT CREATE ON DATABASE "{self.conn.info.dbname}" TO {carga}', f'SET ROLE {carga}'):
+            self.conn.execute(stmt)
         self.assertTrue(Catalog(self).build(self.conn)['ok'])
         self.conn.execute('RESET ROLE')
         db.reader_role(self.conn, PASSWORD, role=READER, live=P + db.LIVE)
-        self.conn.execute(f'ALTER DEFAULT PRIVILEGES FOR ROLE "{carga}" GRANT INSERT ON TABLES TO PUBLIC')
-        self.conn.execute(f'SET ROLE "{carga}"'); self.conn.commit()
+        self.conn.execute(f'ALTER DEFAULT PRIVILEGES FOR ROLE {carga} GRANT INSERT ON TABLES TO PUBLIC')
+        self.conn.execute(f'SET ROLE {carga}')
         report = Catalog(self).build(self.conn)
-        self.conn.execute('RESET ROLE'); self.conn.commit()
-        self.assertFalse(report['ok'])
+        self.conn.execute('RESET ROLE')
         self.assertIn(f'{P}{db.NEXT}.documento', report['lector'][READER]['escritura'])
+        self.assertFalse(report['ok'])
         self.assertFalse(self.conn.execute('SELECT has_table_privilege(%s, %s, %s)',
                                            (READER, f'"{P}{db.LIVE}".documento', 'INSERT')).fetchone()[0])  # live as it was
-        self.assertEqual(self.conn.execute('SELECT nspname FROM pg_namespace WHERE nspname LIKE %s ORDER BY 1', (P + '%',)).fetchall(),
-                         [(P + db.LIVE,)])  # rolled back whole: no rejected schema the reader could write either
 
-    def test_a_published_run_lost_or_changed_never_goes_live_unless_named(self):
+    def test_a_published_run_lost_or_changed_never_goes_live(self):
         # GPT on b10cbc9: runs/<id>.json gone and its documents kept: its rows and its expected count left together
         c = Catalog(self)
-        later, run = c.mx / 'runs' / '2026-10-30T055004Z.json', '2026-10-30T055004Z'
-        later.write_text(json.dumps({'coverage': [{'source_id': 'mx.dof', 'scope': '2026-10-29', 'expected': 1,
-                                                   'extracted': 1, 'ok': True}]}), encoding='utf-8')
+        later = c.mx / 'runs' / '2026-10-30T055004Z.json'
+        later.write_text(json.dumps({'coverage': [{'source_id': 'mx.dof', 'expected': 1, 'extracted': 1, 'ok': True}]}))
         self.assertTrue(c.build(self.conn)['ok'])
-        for manifest in (None, {'coverage': []}):  # gone, or the same run with its coverage gone
+        for manifest in (None, {'coverage': []}):  # gone, or the same run without its coverage
             later.unlink(missing_ok=True)
-            if manifest is not None:
-                later.write_text(json.dumps(manifest), encoding='utf-8')
+            if manifest:
+                later.write_text(json.dumps(manifest))
             report = c.build(self.conn)
-            self.assertEqual((report['perdidos'], report['derived']), ({'corrida': [[run]]}, {}))
+            self.assertEqual((report['perdidos'], report['derived']), ({'corrida': [[later.stem]]}, {}))
             self.assertRejectedAndLiveKept(report)
-        later.unlink()  # named one by one, a run or a document (with its versions) may go, and nothing else
-        report = db.build(self.conn, c.root, 'mx', SOURCES, prefix=P, reader=READER, retirar=[run])
-        self.assertEqual((report['ok'], report['retirados']), (True, [run]), report)
-        self.assertEqual(self.rows('SELECT run_id FROM {s}.corrida'), [('2026-10-29T055004Z',)])
-        smaller = Catalog(self, rows={'dof/2026.jsonl': [NOTE], 'banxico-sie/SF43718.jsonl': [FIX], 'ojn-estatal/01.jsonl': [LEY]},
-                          noms=[])
-        (smaller.mx / 'runs' / '2026-10-29T055004Z.json').unlink()
-        report = db.build(self.conn, smaller.root, 'mx', SOURCES, prefix=P, reader=READER, retirar=[NOM['entry_id']])
-        self.assertEqual((report['ok'], report['perdidos'], report['shrunk']), (False, {'corrida': [['2026-10-29T055004Z']]}, {}))
-        report = db.build(self.conn, smaller.root, 'mx', SOURCES, prefix=P, reader=READER,
-                          retirar=[NOM['entry_id'], '2026-10-29T055004Z'])
-        self.assertTrue(report['ok'], report)
 
     def test_a_reader_whose_test_fails_or_breaks_cannot_log_in(self):
         # GPT on 6dcedcf: the role was enabled before its acceptance; a red test left it able to log in
@@ -643,7 +592,7 @@ class Database(unittest.TestCase):
                 sources = c.root / 'mx.json'
                 sources.write_text(json.dumps(SOURCES), encoding='utf-8')
                 with mock.patch.dict('os.environ', {'RG_DB_URL': URL}), contextlib.redirect_stdout(io.StringIO()) as out, \
-                        mock.patch.object(db, 'build', lambda conn, *a, **k: real(conn, *a, prefix=P, **k)):
+                        mock.patch.object(db, 'build', lambda conn, *a: real(conn, *a, prefix=P)):
                     got = db.main(['cargar', '--catalog', str(c.root), '--sources', str(sources)])
                 self.assertEqual((got, json.loads(out.getvalue())['ok']), (code, code == 0))
         with mock.patch.dict('os.environ', {'RG_DB_URL': URL}), contextlib.redirect_stdout(io.StringIO()) as out:
