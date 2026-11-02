@@ -1,5 +1,6 @@
 """Rules 21 and 23 (docs/REGLAS.md, rg/alcance.py, SECURITY.md T28): a source runs only naming who asked for it (a request
 of requests/ or a ZPPMND unit) and how it is acquired; the legacy frontier of sources/mx.json keeps running as it is."""
+import ast
 import copy
 import json
 import tempfile
@@ -59,6 +60,33 @@ class Frontera(unittest.TestCase):
         self.assertIn('mx.otro', alcance.frontera(mx))
         mx['sources'][0]['legacy'] = 'true'
         self.assertNotIn('mx.viejo', alcance.frontera(mx))  # only the JSON true is legacy
+
+
+class NadieLeeVeredictos(unittest.TestCase):
+    """Rule 22, T28: until the PR that verifies the constancia, no code of RG names verdicts/ (docstrings aside), so a
+    file put there, even a schema-valid one, changes nothing."""
+    @staticmethod
+    def nombran(raiz):
+        out = []
+        for f in sorted(list(Path(raiz).glob('rg/**/*.py')) + list(Path(raiz).glob('scripts/**/*.py'))):
+            if f.name == 'mutar.py':  # mutant definitions name files, they read nothing
+                continue
+            tree = ast.parse(f.read_text(encoding='utf-8'))
+            docs = {id(n.body[0].value) for n in ast.walk(tree)
+                    if isinstance(n, (ast.Module, ast.ClassDef, ast.FunctionDef, ast.AsyncFunctionDef)) and n.body
+                    and isinstance(n.body[0], ast.Expr) and isinstance(n.body[0].value, ast.Constant)}
+            out += [f'{f}:{n.lineno}' for n in ast.walk(tree) if isinstance(n, ast.Constant) and isinstance(n.value, str)
+                    and 'verdicts' in n.value and id(n) not in docs]
+        return out
+
+    def test_no_code_names_verdicts(self):
+        self.assertEqual(self.nombran(ROOT), [])
+
+    def test_a_reader_would_be_caught(self):
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / 'rg').mkdir()
+            (Path(d) / 'rg' / 'x.py').write_text('"""Mentions verdicts/ in a docstring."""\nP = "verdicts/a.json"\n', encoding='utf-8')
+            self.assertEqual(len(self.nombran(d)), 1)
 
 
 class Pedidos(unittest.TestCase):

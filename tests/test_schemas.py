@@ -181,6 +181,10 @@ class VerdictEvents(unittest.TestCase):
         for reason in ('AUTHORIZED', 'OTHER', 'used', ''):
             self.assertTrue(self.bad(lambda v: v.update(reason_code=reason)), reason)
 
+    def test_every_field_is_required(self):
+        for k in ('packet_id', 'verdict', 'reason_code', 'finding_ids', 'issued_by', 'issued_at', 'constancia'):
+            self.assertTrue(self.bad(lambda v: v.pop(k)), k)
+
     def test_the_constancia_is_required_and_names_a_bundle_in_verdicts_and_a_zpmnd_workflow_on_main(self):
         self.assertTrue(self.bad(lambda v: v.pop('constancia')))
         self.assertTrue(self.bad(lambda v: v['constancia'].pop('bundle')))
