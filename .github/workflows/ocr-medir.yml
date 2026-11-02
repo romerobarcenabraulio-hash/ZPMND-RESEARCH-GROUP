@@ -25,9 +25,12 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with: { python-version: '3.12' }
       - run: pip install -r requirements-dev.txt
-      - name: Engines as Ubuntu 24.04 ships them (their versions go to the result)
-        run: sudo apt-get install -y -q tesseract-ocr tesseract-ocr-spa poppler-utils libreoffice-writer-nogui
-      - name: Tests before anything is fetched
+      - name: Engines as Ubuntu 24.04 ships them (their exact apt versions go to the result, or preparar fails)
+        run: sudo apt-get update -q && sudo apt-get install -y -q tesseract-ocr tesseract-ocr-spa poppler-utils libreoffice-writer-nogui
+      - name: The parsers' own user, which owns nothing in the checkout or the results (SECURITY T12, T25)
+        run: sudo useradd --system --no-create-home --shell /usr/sbin/nologin rgparse
+      - name: Tests before anything is fetched; the real write attempt as rgparse runs here and is never skipped
+        env: { RG_OCR_EXIGIR_AISLADO: '1' }
         run: python -m unittest tests.test_ocr_medir
       - name: The catalog's OJN entries (branch catalog, public, read as data)
         run: |
@@ -38,8 +41,9 @@ jobs:
             [[ "$f" =~ ^mx/ojn-(estatal|municipal)/[0-9]{2}\.jsonl$ ]] || continue
             git show "FETCH_HEAD:$f" > "$d/${f//\//_}"
           done
-      - name: Fetch, select and read with Tesseract and LibreOffice (no key in this job)
-        env: { PAGINAS: '${{ inputs.paginas }}' }
+      - name: Fetch, select and read with Tesseract and LibreOffice (no key in this job; every parser as rgparse)
+        timeout-minutes: 40  # nothing starts after 30 min (PLAZO_PREPARAR) and no parser runs past it
+        env: { PAGINAS: '${{ inputs.paginas }}', RG_EXTRACT_AS: rgparse }
         run: |
           set -euo pipefail
           [[ "$PAGINAS" =~ ^[0-9]{1,2}$ ]] && [ "$PAGINAS" -ge 1 ] && [ "$PAGINAS" -le 40 ] || { echo "paginas: 1 to 40"; exit 2; }
