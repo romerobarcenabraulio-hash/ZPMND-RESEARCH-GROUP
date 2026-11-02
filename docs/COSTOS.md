@@ -35,15 +35,17 @@ reemplazado por un job comprometido, así que aquí ningún runner vive más que
 - cada job corre como `rgjob`, sin sudo, en una unidad de systemd propia, con una copia nueva del runner, una carpeta
   vacía y un home vacío; al terminar se matan sus procesos y se borran las dos carpetas: nada de un job llega al
   siguiente (ni un proceso, ni un venv, ni un `.pth`); si un proceso sobrevive, o si no se puede matar o comprobar que no
-  queda ninguno, el servicio se detiene sin borrar ni empezar nada;
-- el guardia de root rechaza cualquier otro job antes de su primer paso;
+  queda ninguno, el controlador sale sin borrar ni empezar nada (systemd lo vuelve a arrancar al minuto y la limpieza
+  corre otra vez antes de cualquier job);
+- el controlador no pide runner mientras un job de otra corrida pide la etiqueta, ni si las corridas o los jobs no caben
+  en una página; el guardia de root revisa cada job antes de su primer paso, pero corre con el entorno de ese job: es un
+  control, no una frontera, y queda la ventana entre la revisión del controlador y la asignación de GitHub (T19);
 - el token (fino, solo este repositorio, Administration escritura y Actions lectura) vive en `/etc/rg/auth-header`, de
   root y oculto para la unidad; nunca va en una línea de comandos.
 Se instala así: `runner_setup.sh`, `runner_controller.sh` y `runner_reach.sh`, bajados por el commit exacto de `main` y
 comprobados por su sha256, corren como root en el servidor y piden el token sin mostrarlo; antes de encender nada el
 instalador prueba que `rgjob` no entra a `/etc/rg` ni escribe el runner, el controlador, el guardia ni el servicio, y si
 esa prueba no puede terminar, falla; luego se fija `CATALOG_RUNS_ON`; un despacho de
-`catalog-mx` corre en el servidor y uno de cualquier otro flujo nunca recibe runner (y si lo recibiera, el guardia lo
-rechaza).
+`catalog-mx` corre en el servidor, y uno de otro flujo no recibe runner salvo en esa ventana (T19).
 
 **Siguiente recorte (PR #20):** la evidencia del auditor corre solo los mutantes de `main` que el PR quitó o cambió.

@@ -41,9 +41,11 @@ echo
 
 apt-get update -q
 DEBIAN_FRONTEND=noninteractive apt-get install -yq ca-certificates curl git jq python3 python3-venv python3-pip
-id rgjob >/dev/null 2>&1 || useradd --create-home --shell /bin/bash rgjob
+id rgjob >/dev/null 2>&1 || useradd --create-home --shell /bin/bash --user-group rgjob
 passwd -l rgjob >/dev/null
-gpasswd -d rgjob sudo >/dev/null 2>&1 || true
+# An rgjob made by someone else may carry docker, sudo or adm: then it is refused, never trimmed (GPT on 2416dfe)
+[ "$(id -nG rgjob)" = rgjob ] || { echo "rgjob belongs to other groups ($(id -nG rgjob)): remove them or the account, then run this again"; exit 1; }
+sudo -l -U rgjob 2>/dev/null | grep -q 'is not allowed to run sudo' || { echo "rgjob has sudo rules: remove them, then run this again"; exit 1; }
 
 # The token, root's alone, as a header file curl reads with -H @file: never an argument, never in a job's reach.
 install -d -o root -g root -m 700 /etc/rg

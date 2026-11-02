@@ -28,6 +28,8 @@ queued_for_label() {  # "<allowed> <other>": queued jobs asking for our label, i
   # environment acts before the guard can (BASH_ENV: GPT on 6a25cda). So no runner is asked while another run's job waits.
   local runs rows id ok k a=0 o=0
   runs=$(api "$API/runs?status=queued&per_page=100" && api "$API/runs?status=in_progress&per_page=100") || return 1
+  # one page only: a run beyond it could hide a job asking for the label, so more runs than a page is no runner (GPT on 2416dfe)
+  if jq -e 'select(.total_count > (.workflow_runs | length))' <<<"$runs" >/dev/null; then echo "more runs than one page"; return 1; fi
   rows=$(jq -r --arg repo "$REPO" '.workflow_runs[] | "\(.id) \(if .repository.full_name == $repo and .head_repository.full_name == $repo
         and .head_branch == "main" and (.event == "schedule" or .event == "workflow_dispatch") and ((.path | split("@")[0]) as $p
         | $p == ".github/workflows/catalog-mx.yml" or $p == ".github/workflows/texto-mx.yml") then 1 else 0 end)"' <<<"$runs") || return 1
@@ -35,7 +37,8 @@ queued_for_label() {  # "<allowed> <other>": queued jobs asking for our label, i
     [ -n "$id" ] || continue
     [[ "$id" =~ ^[0-9]+$ ]] || return 1
     k=$(api "$API/runs/$id/jobs?filter=latest&per_page=100" |
-        jq --arg l "$LABEL" '[.jobs[] | select(.status == "queued" and (.labels | index($l)))] | length') || return 1
+        jq --arg l "$LABEL" 'if .total_count > (.jobs | length) then error("more jobs than one page")
+          else [.jobs[] | select(.status == "queued" and (.labels | index($l)))] | length end') || return 1
     if [ "$ok" = 1 ]; then a=$((a + k)); else o=$((o + k)); fi
   done <<<"$rows"
   echo "$a $o"
@@ -62,7 +65,7 @@ run_one() {  # one just-in-time runner, one job, then nothing left
   jit=$(jq -r '.encoded_jit_config // empty' <<<"$resp")
   id=$(jq -r '.runner.id // empty' <<<"$resp")
   [ -n "$jit" ] && [[ "$id" =~ ^[0-9]+$ ]] || { echo "GitHub gave no runner"; return 1; }
-  clean
+  ( clean ) || { api -X DELETE "$API/runners/$id" >/dev/null 2>&1; exit 1; }  # its runner is removed before stopping (auditor on 2416dfe)
   # every step of the fresh folder must succeed, or the runner is removed and nothing starts (GPT on 2d9f26d)
   install -d -o "$JOBUSER" -g "$JOBGROUP" -m 700 "$JOB" "$JOBHOME" &&
     cp -a "$RUNNER/." "$JOB/runner" &&

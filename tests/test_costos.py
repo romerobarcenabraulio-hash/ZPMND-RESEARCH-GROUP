@@ -185,6 +185,14 @@ class OwnRunner(unittest.TestCase):
         self.assertIn("python3 -c 'import sys; sys.exit(sys.version_info < (3, 12))'", self.script)
         self.assertLess(self.script.index('sys.version_info < (3, 12)'), self.script.index('apt-get update'))
 
+    def test_an_rgjob_with_other_groups_or_sudo_rules_is_refused_before_anything_starts(self):
+        # GPT on 2416dfe: an existing rgjob in docker or with sudo rules reached the host through its socket or sudo
+        for guard in ('[ "$(id -nG rgjob)" = rgjob ] ||', "sudo -l -U rgjob 2>/dev/null | grep -q 'is not allowed to run sudo' ||"):
+            with self.subTest(guard=guard):
+                self.assertIn(guard, self.script)
+                self.assertLess(self.script.index(guard), self.script.index('systemctl enable --now rg-runner'))
+        self.assertNotIn('gpasswd -d rgjob sudo', self.script)  # trimming one group is not enough: refuse instead
+
     def test_the_runner_is_verified(self):
         self.assertIn('echo "$RUNNER_SHA256  $tmp/runner.tgz" | sha256sum -c -', self.script)
         halves = re.findall(r'^RUNNER_SHA256\+?=([0-9a-f]{32})$', self.script, re.M)
@@ -453,6 +461,29 @@ class Controller(unittest.TestCase):
         (self.stubs / 'jobs_6.json').write_text('{"jobs": [{"status": "queued", "labels": ["ubuntu-24.04"]}]}')
         self.run_pass()  # another run that does not ask for the label stops nothing
         self.assertTrue(self.started())
+
+    def test_a_running_run_with_a_queued_job_for_the_label_also_stops_it(self):
+        # auditor on 2416dfe: a hostile run with one job running and another queued is in_progress, not queued
+        otro = {'id': 6, 'path': '.github/workflows/evil.yml', 'event': 'pull_request', 'head_branch': 'x',
+                'repository': {'full_name': self.REPO}, 'head_repository': {'full_name': 'otro/repo'}}
+        (self.stubs / 'runs_progress.json').write_text(self.json.dumps({'workflow_runs': [otro]}))
+        (self.stubs / 'jobs_6.json').write_text(self.json.dumps({'jobs': [{'status': 'queued', 'labels': ['self-hosted', 'rg-catalog']}]}))
+        r = self.run_pass()
+        self.assertIn('a job of another run asks for rg-catalog', r.stdout, r.stdout + r.stderr)
+        self.assertFalse(self.started())
+
+    def test_runs_or_jobs_beyond_one_page_start_nothing(self):
+        # GPT on 2416dfe: a run on a second page could hide a job asking for the label
+        (self.stubs / 'runs_queued.json').write_text(self.json.dumps({'total_count': 101, 'workflow_runs': self.json.loads(
+            (self.stubs / 'runs_queued.json').read_text())['workflow_runs']}))
+        r = self.run_pass()
+        self.assertIn('GitHub did not answer', r.stdout, r.stdout + r.stderr)
+        self.assertFalse(self.started())
+        self.queue(run={})
+        (self.stubs / 'jobs_5.json').write_text(self.json.dumps({'total_count': 101, 'jobs': [{'status': 'queued', 'labels': ['self-hosted', 'rg-catalog']}]}))
+        r = self.run_pass()
+        self.assertIn('GitHub did not answer', r.stdout)
+        self.assertFalse(self.started())
 
     def test_github_not_answering_or_giving_no_runner_starts_nothing(self):
         (self.stubs / 'runs_queued.json').unlink()
