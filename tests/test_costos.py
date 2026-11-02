@@ -321,7 +321,9 @@ class Controller(unittest.TestCase):
         bin_ = self.t / 'bin'; bin_.mkdir()
         for name, body in (('curl', STUB_CURL), ('systemd-run', STUB_SYSTEMD_RUN), ('systemctl', STUB_SYSTEMCTL),
                            ('pkill', '#!/bin/bash\nexit "${STUB_PKILL_RC:-1}"\n'),
-                           ('pgrep', '#!/bin/bash\n[ -z "${STUB_SURVIVOR:-}" ] || exit 0\nexit "${STUB_PGREP_RC:-1}"\n')):
+                           ('pgrep', '#!/bin/bash\n[ -z "${STUB_SURVIVOR:-}" ] || exit 0\nexit "${STUB_PGREP_RC:-1}"\n'),
+                           *((n, f'#!/bin/bash\n[ "${{STUB_FAIL:-}}" = {n} ] && exit 1\nPATH="${{PATH#*:}}" exec {n} "$@"\n')
+                             for n in ('cp', 'install', 'rm'))):
             (bin_ / name).write_text(body); (bin_ / name).chmod(0o755)
         (self.t / 'etc-rg').mkdir()
         self.header = self.t / 'etc-rg' / 'auth-header'
@@ -391,6 +393,22 @@ class Controller(unittest.TestCase):
                 self.assertIn('stopping', r.stdout)
                 self.assertFalse(self.started())
                 self.assertTrue(self.job.exists())  # nothing is deleted or reused on a cleanup that could not finish
+
+    def test_a_fresh_folder_that_cannot_be_prepared_or_old_folders_that_stay_start_nothing(self):
+        # GPT on 2d9f26d: a failed copy or install went on to start the unit without the fresh folder it promises
+        for tool in ('cp', 'install'):
+            with self.subTest(tool=tool):
+                (self.stubs / 'deleted').unlink(missing_ok=True)
+                r = self.run_pass(STUB_FAIL=tool)
+                self.assertIn('could not be prepared', r.stdout, r.stdout + r.stderr)
+                self.assertFalse(self.started())
+                self.assertEqual((self.stubs / 'deleted').read_text().split(), ['77'])  # its one-job runner is removed
+                self.assertFalse(self.job.exists())
+        self.job.mkdir()
+        r = self.run_pass(STUB_FAIL='rm')
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn('could not delete', r.stdout)
+        self.assertFalse(self.started())
 
     def test_the_token_never_reaches_a_command_line(self):
         self.run_pass()

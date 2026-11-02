@@ -49,7 +49,8 @@ clean() {  # nothing of a job outlives it: its unit, its processes, its folder, 
   pgrep -u "$JOBUSER" >/dev/null
   rc=$?  # only 1, no process, lets the next job start: 0 is a survivor, anything else means we could not tell
   [ "$rc" = 1 ] || { echo "a process of $JOBUSER survived its job, or pgrep could not tell ($rc): stopping"; exit 1; }
-  rm -rf "$JOB" "$JOBHOME"
+  rm -rf "$JOB" "$JOBHOME" ||
+    { echo "could not delete the job's folders: stopping"; exit 1; }  # never a next job on what is left (GPT on 2d9f26d)
 }
 
 run_one() {  # one just-in-time runner, one job, then nothing left
@@ -61,12 +62,14 @@ run_one() {  # one just-in-time runner, one job, then nothing left
   id=$(jq -r '.runner.id // empty' <<<"$resp")
   [ -n "$jit" ] && [[ "$id" =~ ^[0-9]+$ ]] || { echo "GitHub gave no runner"; return 1; }
   clean
-  install -d -o "$JOBUSER" -g "$JOBGROUP" -m 700 "$JOB" "$JOBHOME"
-  cp -a "$RUNNER/." "$JOB/runner"
-  printf 'ACTIONS_RUNNER_HOOK_JOB_STARTED=/opt/rg/runner_guard.sh\n' > "$JOB/runner/.env"  # root's guard, before every job
-  install -o "$JOBUSER" -g "$JOBGROUP" -m 600 /dev/null "$JOB/jit"
-  printf '%s' "$jit" > "$JOB/jit"  # the job's own one-job credential, deleted with the folder
-  chown -R "$JOBUSER:$JOBGROUP" "$JOB/runner"
+  # every step of the fresh folder must succeed, or the runner is removed and nothing starts (GPT on 2d9f26d)
+  install -d -o "$JOBUSER" -g "$JOBGROUP" -m 700 "$JOB" "$JOBHOME" &&
+    cp -a "$RUNNER/." "$JOB/runner" &&
+    printf 'ACTIONS_RUNNER_HOOK_JOB_STARTED=/opt/rg/runner_guard.sh\n' > "$JOB/runner/.env" &&  # root's guard, before every job
+    install -o "$JOBUSER" -g "$JOBGROUP" -m 600 /dev/null "$JOB/jit" &&
+    printf '%s' "$jit" > "$JOB/jit" &&  # the job's own one-job credential, deleted with the folder
+    chown -R "$JOBUSER:$JOBGROUP" "$JOB/runner" ||
+    { echo "the fresh folder for rg-job-$id could not be prepared"; finish "$id"; return 1; }
   systemd-run --unit="rg-job-$id" --uid="$JOBUSER" --gid="$JOBGROUP" --collect --quiet \
     -p WorkingDirectory="$JOB/runner" -p Environment=HOME="$JOBHOME" -p RuntimeMaxSec=86400 \
     -p KillMode=control-group -p NoNewPrivileges=yes -p PrivateTmp=yes -p ProtectSystem=strict \
