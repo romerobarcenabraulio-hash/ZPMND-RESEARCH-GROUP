@@ -23,21 +23,22 @@ api() {  # the token goes to curl from its file, never on a command line another
 
 nap() { [ "${RG_CONTROLLER_ONCE:-}" = 1 ] || sleep "$1"; }
 
-allowed_queued() {  # queued jobs that may run here: catalog-mx.yml or texto-mx.yml on main, by schedule or dispatch, our label
-  local runs ids id k n=0
-  runs=$(api "$API/runs?status=queued&branch=main&per_page=50" && api "$API/runs?status=in_progress&branch=main&per_page=50") || return 1
-  ids=$(jq -r --arg repo "$REPO" '.workflow_runs[]
-        | select(.repository.full_name == $repo and .head_repository.full_name == $repo and .head_branch == "main")
-        | select(.event == "schedule" or .event == "workflow_dispatch")
-        | select((.path | split("@")[0]) as $p | $p == ".github/workflows/catalog-mx.yml" or $p == ".github/workflows/texto-mx.yml")
-        | .id' <<<"$runs") || return 1
-  for id in $ids; do
+queued_for_label() {  # "<allowed> <other>": queued jobs asking for our label, in runs that may run here and in any other
+  # A just-in-time runner is not reserved for one job: GitHub hands it to any queued job with its label, and a job's own
+  # environment acts before the guard can (BASH_ENV: GPT on 6a25cda). So no runner is asked while another run's job waits.
+  local runs rows id ok k a=0 o=0
+  runs=$(api "$API/runs?status=queued&per_page=100" && api "$API/runs?status=in_progress&per_page=100") || return 1
+  rows=$(jq -r --arg repo "$REPO" '.workflow_runs[] | "\(.id) \(if .repository.full_name == $repo and .head_repository.full_name == $repo
+        and .head_branch == "main" and (.event == "schedule" or .event == "workflow_dispatch") and ((.path | split("@")[0]) as $p
+        | $p == ".github/workflows/catalog-mx.yml" or $p == ".github/workflows/texto-mx.yml") then 1 else 0 end)"' <<<"$runs") || return 1
+  while read -r id ok; do
+    [ -n "$id" ] || continue
     [[ "$id" =~ ^[0-9]+$ ]] || return 1
     k=$(api "$API/runs/$id/jobs?filter=latest&per_page=100" |
         jq --arg l "$LABEL" '[.jobs[] | select(.status == "queued" and (.labels | index($l)))] | length') || return 1
-    n=$((n + k))
-  done
-  echo "$n"
+    if [ "$ok" = 1 ]; then a=$((a + k)); else o=$((o + k)); fi
+  done <<<"$rows"
+  echo "$a $o"
 }
 
 clean() {  # nothing of a job outlives it: its unit, its processes, its folder, its home
@@ -94,8 +95,10 @@ finish() {  # GitHub removes a used runner; this removes one never used. Then no
 [ -r "$HEADER" ] || { echo "no token at $HEADER: run scripts/runner_setup.sh"; exit 1; }
 clean  # a crash or a reboot in the middle of a job leaves nothing behind either
 while true; do
-  if n=$(allowed_queued); then
-    if [ "$n" -gt 0 ]; then run_one || { echo "no runner ran; retrying in a minute"; nap 60; }; else nap 30; fi
+  if q=$(queued_for_label); then
+    read -r n o <<<"$q"
+    if [ "$o" -gt 0 ]; then echo "a job of another run asks for $LABEL: no runner while it waits"; nap 60
+    elif [ "$n" -gt 0 ]; then run_one || { echo "no runner ran; retrying in a minute"; nap 60; }; else nap 30; fi
   else
     echo "GitHub did not answer; retrying in a minute"; nap 60
   fi

@@ -437,6 +437,23 @@ class Controller(unittest.TestCase):
                 self.run_pass()
                 self.assertFalse((self.stubs / 'jit.body').exists())
 
+    def test_no_runner_while_a_job_of_another_run_asks_for_the_label(self):
+        # GPT on 6a25cda: a just-in-time runner goes to any queued job with its label, and that job's environment acts
+        # before the guard, so an allowed job never gets a runner while another run's job waits for the same label
+        base = {'path': '.github/workflows/catalog-mx.yml', 'event': 'schedule', 'head_branch': 'main',
+                'repository': {'full_name': self.REPO}, 'head_repository': {'full_name': self.REPO}}
+        otro = {**base, 'id': 6, 'path': '.github/workflows/evil.yml', 'event': 'pull_request', 'head_branch': 'x',
+                'head_repository': {'full_name': 'otro/repo'}}
+        (self.stubs / 'runs_queued.json').write_text(self.json.dumps({'workflow_runs': [{**base, 'id': 5}, otro]}))
+        (self.stubs / 'jobs_6.json').write_text(self.json.dumps({'jobs': [{'status': 'queued', 'labels': ['self-hosted', 'rg-catalog']}]}))
+        r = self.run_pass()
+        self.assertIn('a job of another run asks for rg-catalog', r.stdout, r.stdout + r.stderr)
+        self.assertFalse((self.stubs / 'jit.body').exists())
+        self.assertFalse(self.started())
+        (self.stubs / 'jobs_6.json').write_text('{"jobs": [{"status": "queued", "labels": ["ubuntu-24.04"]}]}')
+        self.run_pass()  # another run that does not ask for the label stops nothing
+        self.assertTrue(self.started())
+
     def test_github_not_answering_or_giving_no_runner_starts_nothing(self):
         (self.stubs / 'runs_queued.json').unlink()
         r = self.run_pass()
