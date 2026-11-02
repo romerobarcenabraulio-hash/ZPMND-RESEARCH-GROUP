@@ -13,8 +13,9 @@ Organization (schema `catalogo`):
   corrida, cobertura      each run's manifest and its coverage checks
   arbol                   counts per level, a view; documento.titulo_busqueda feeds full-text search (accents folded)
 Readers: the role READER (ZPPMND, 2026-10-29) may log in and SELECT the live schema, nothing else; its rights are given to
-each new schema before the swap, so a load never takes them away (GPT on 358b5d8). Remote connections verify the server
-against Supabase's root CA, pinned here by sha256; only a local host (the tests' Postgres) connects as its URI says.
+each new schema before the swap, so a load never takes them away (GPT on 358b5d8), and checked again there, so a load never
+makes it a writer (GPT on b10cbc9). Remote connections verify the server against Supabase's root CA, pinned here by
+sha256; only a local host (the tests' Postgres) connects as its URI says. The URI alone says where: no PG* variable.
 Nothing is computed, inferred or classified: every column is copied from a row, a view or a manifest, except
 titulo_busqueda, the title folded for search, which is never read back as data.
 """
@@ -39,6 +40,7 @@ READER = 'zppmnd_lectura'
 CA = Path(__file__).with_name('supabase-prod-ca-2021.crt')
 CA_SHA256 = '700723581420dd1ac98fd7e9ac529f0ef210eadcaf87fc868a3ad7d114c2f3b7'
 LOCAL = ('localhost', '127.0.0.1', '::1')
+URI_KEYS = ('host', 'port', 'dbname', 'user', 'password')  # all a URI may set; TLS, hostaddr, service, passfile... are not its
 # every field of schemas/catalog_entry.schema.json has a place (tests.test_db pins it): a new field is never dropped
 COLUMNS = {'entry_id': 'entry_id', 'country': 'country', 'source_id': 'source_id', 'native_id': 'native_id',
            'title': 'title', 'url': 'url', 'date_source': 'date_source', 'raw_status': 'raw_status',
@@ -182,10 +184,11 @@ class Empty(Exception):
     """A load with no rows: refused before the database is touched."""
 
 
-def build(conn, root, country, sources, prefix='', reader=READER):
+def build(conn, root, country, sources, prefix='', reader=READER, retirar=()):
     """Loads <root>/<country>/ into schema next_, checks it, and swaps it in as live only if every check passes (one
     transaction: readers never see half a catalog); otherwise it is kept as rejected for inspection and live stays.
-    prefix and reader only name the schemas and the role apart in tests that run side by side."""
+    retirar names the entry_ids and run_ids that may leave live (check). prefix and reader only name the schemas and the
+    role apart in tests that run side by side."""
     from psycopg import sql
     live, next_, rejected = prefix + LIVE, prefix + NEXT, prefix + REJECTED
     from psycopg.types.json import Jsonb
@@ -245,13 +248,18 @@ def build(conn, root, country, sources, prefix='', reader=READER):
                              for c in m.get('coverage', [])])
     for stmt in filter(str.strip, INDEXES.split(';')):
         ddl(stmt)
-    report = check(conn, cc_dir, next_, want, live)
+    report = check(conn, cc_dir, next_, want, live, retirar)
     report['readers'] = []
     if report['ok']:  # the reader's rights go on the new schema before the swap; a rejected load never gets them
         for (role,) in conn.execute('SELECT rolname FROM pg_roles WHERE rolname = %s', (reader,)).fetchall():
             conn.execute(sql.SQL('GRANT USAGE ON SCHEMA {} TO {}').format(S, sql.Identifier(role)))
             conn.execute(sql.SQL('GRANT SELECT ON ALL TABLES IN SCHEMA {} TO {}').format(S, sql.Identifier(role)))
             report['readers'].append(role)
+        for role in report['readers']:  # GPT on b10cbc9: default privileges or a grant made since its acceptance can let the
+            bad = {k: v for k, v in reader_rights(conn, role, live, next_).items() if v}  # reader write the new tables
+            if bad:  # accepted again on the schema about to go live, or the whole load rolls back: live and its grants stay
+                conn.rollback()
+                return {**report, 'ok': False, 'readers': [], 'lector': {role: bad}}
     conn.execute(sql.SQL('INSERT INTO {}.meta VALUES (%s, %s), (%s, %s)').format(S),
                  ('schema_version', str(SCHEMA_VERSION), 'report', json.dumps(report, ensure_ascii=False, sort_keys=True)))
     target = live if report['ok'] else rejected
@@ -261,24 +269,31 @@ def build(conn, root, country, sources, prefix='', reader=READER):
     return report
 
 
-def check(conn, cc_dir, schema, want, live=None):
+def check(conn, cc_dir, schema, want, live=None, retirar=()):
     """Rows per source against lines per source on disk, every row read back against its line (by digest), each
     derived table against its view's own count, no reference to a missing document, no unregistered source, and, when
-    a live schema exists, no source with fewer rows than it has there: the catalog rows only grow (a partial checkout,
-    a truncated file)."""
+    a live schema exists, no source with fewer rows than it has there and no document, version or run of live missing
+    or changed: the catalog rows only grow (a partial checkout, a truncated file), except the entry_ids and run_ids named
+    in retirar (cargar --retirar, one by one: an operator's decision, kept in the report)."""
     from psycopg import sql
     S = sql.Identifier(schema)
     q = lambda text, *a: conn.execute(sql.SQL(text).format(s=S), a).fetchall()
     in_db = dict(q('SELECT source_id, count(*) FROM {s}.documento GROUP BY source_id'))
     before, perdidos = {}, {}
     if live and conn.execute('SELECT 1 FROM pg_namespace WHERE nspname = %s', (live,)).fetchone():
-        L = sql.Identifier(live)
-        before = dict(conn.execute(sql.SQL('SELECT source_id, count(*) FROM {}.documento GROUP BY source_id').format(L)).fetchall())
+        L, keep = sql.Identifier(live), (list(retirar),)  # the live rows to find again: all but those named in retirar
+        before = dict(conn.execute(sql.SQL('SELECT source_id, count(*) FROM {}.documento WHERE entry_id <> ALL(%s) GROUP BY source_id')
+                                   .format(L), keep).fetchall())
         # GPT on 2f0c5b3: equal counts do not keep identities; every published document and version must still be there
-        lost = lambda what: [list(r) for r in conn.execute(sql.SQL(what).format(L=L, S=S)).fetchall()]
-        perdidos = {'documento': lost('SELECT entry_id FROM {L}.documento EXCEPT SELECT entry_id FROM {S}.documento ORDER BY 1 LIMIT 20'),
-                    'version': lost('SELECT entry_id, sha256 FROM {L}.version EXCEPT SELECT entry_id, sha256 FROM {S}.version '
-                                    'ORDER BY 1, 2 LIMIT 20')}
+        lost = lambda what: [list(r) for r in conn.execute(sql.SQL(what).format(L=L, S=S), keep).fetchall()]
+        perdidos = {'documento': lost('SELECT entry_id FROM {L}.documento WHERE entry_id <> ALL(%s) '
+                                      'EXCEPT SELECT entry_id FROM {S}.documento ORDER BY 1 LIMIT 20'),
+                    'version': lost('SELECT entry_id, sha256 FROM {L}.version WHERE entry_id <> ALL(%s) '
+                                    'EXCEPT SELECT entry_id, sha256 FROM {S}.version ORDER BY 1, 2 LIMIT 20'),
+                    # GPT on b10cbc9: a run's JSON gone takes its rows and its expected count with it; live is the count
+                    # that stays: every published run must be there, its manifest (and coverage) as it was
+                    'corrida': lost('SELECT run_id FROM (SELECT run_id, manifest FROM {L}.corrida WHERE run_id <> ALL(%s) '
+                                    'EXCEPT SELECT run_id, manifest FROM {S}.corrida) x ORDER BY 1 LIMIT 20')}
         perdidos = {k: v for k, v in perdidos.items() if v}
     on_disk = lines_per_source(cc_dir)
     duplicated = [r[0] for r in q('SELECT entry_id FROM {s}.documento GROUP BY entry_id HAVING count(*) > 1 LIMIT 20')]
@@ -309,7 +324,7 @@ def check(conn, cc_dir, schema, want, live=None):
               'round_trip_differs': len(differ), 'round_trip_examples': differ[:20], 'derived': derived,
               'dangling': {t: ids for t, ids in dangling.items() if ids}, 'unregistered_sources': unregistered,
               'shrunk': {s: {'live': n, 'new': in_db.get(s, 0)} for s, n in sorted(before.items()) if in_db.get(s, 0) < n},
-              'perdidos': perdidos}
+              'perdidos': perdidos, 'retirados': sorted(retirar)}
     report['ok'] = not (report['missing_or_extra'] or duplicated or differ or derived or report['dangling'] or unregistered
                         or report['perdidos'] or report['shrunk'])  # GPT on 6dcedcf: an entry moved to another
     # source keeps every identity and every count but its old source; a source with fewer rows than live never goes live
@@ -317,13 +332,18 @@ def check(conn, cc_dir, schema, want, live=None):
 
 
 def tls(url):
-    """The TLS options RG imposes: verify-full against the pinned CA for any host but a local one. A URI that sets its own
-    TLS options is refused, so none can weaken this (GPT on 358b5d8)."""
+    """The TLS options RG imposes: verify-full against the pinned CA for any host but a local one. The URI may set only
+    URI_KEYS, so none can weaken this (GPT on 358b5d8), and libpq reads no PG* variable (every one it reads starts so):
+    PGHOSTADDR, PGHOST or a service would send a URI's local host elsewhere (GPT on b10cbc9). The host decided on here
+    is the one it connects to."""
     from psycopg.conninfo import conninfo_to_dict
     params = conninfo_to_dict(url)
-    own = sorted(k for k in params if k.startswith('ssl') or k in ('requiressl', 'gssencmode', 'hostaddr'))
-    if own:  # hostaddr too: with it a host named local could connect anywhere without TLS
+    own = sorted(set(params) - set(URI_KEYS))
+    if own:  # hostaddr or service: a host named local could connect anywhere without TLS
         raise ValueError(f'the connection URI sets options RG sets or refuses ({", ".join(own)})')
+    env = sorted(k for k in os.environ if k.startswith('PG'))
+    if env:  # names only: a value (PGPASSWORD) is never printed
+        raise ValueError(f'the environment sets {", ".join(env)}; libpq would read them, and only the URI may say where to connect')
     hosts = str(params.get('host') or 'localhost').split(',')
     if all(h in LOCAL or h.startswith('/') for h in hosts):
         return {}
@@ -405,7 +425,21 @@ def reader_probe(admin, role=READER, live=LIVE, other='rg_sonda'):
     finally:
         admin.execute(sql.SQL('DROP SCHEMA IF EXISTS {} CASCADE').format(sql.Identifier(other)))
         admin.commit()
-    q = lambda text: [r[0] for r in admin.execute(text, {'role': role, 'live': live}).fetchall()]
+    got.update(reader_rights(admin, role, live))
+    admin.commit()
+    ok = (got.get('select_catalogo') == 'ok' and all(got.get(k, '').startswith('refused') for k in ('insert_catalogo', 'select_otro_schema'))
+          and not (got['membresias'] or got['escritura'] or got['lectura_fuera'] or got['funciones'] or got['crear']
+                   or got['secuencias']))
+    return {'role': role, **got, 'ok': ok}
+
+
+def reader_rights(conn, role, live=LIVE, also=None):
+    """What the role could do besides reading live (and also, the schema about to replace it), read from the catalogs:
+    the roles it belongs to, the tables or columns it may write, the SECURITY DEFINER functions it may run, where it may
+    create, the sequences it may change, the tables or columns it may read elsewhere. Every list is empty when it only
+    reads (reader_probe, and each load before its swap: build)."""
+    q = lambda text: [r[0] for r in conn.execute(text, {'role': role, 'live': live, 'also': also or live}).fetchall()]
+    got = {}
     got['membresias'] = q('SELECT r.rolname FROM pg_auth_members m JOIN pg_roles r ON r.oid = m.roleid '
                           'JOIN pg_roles u ON u.oid = m.member WHERE u.rolname = %(role)s')
     tables = ("FROM pg_class c JOIN pg_namespace n ON n.oid = c.relnamespace WHERE c.relkind IN ('r', 'v', 'm', 'p', 'f') "
@@ -424,14 +458,11 @@ def reader_probe(admin, role=READER, live=LIVE, other='rg_sonda'):
     got['secuencias'] = q("SELECT c.oid::regclass::text FROM pg_class c JOIN pg_namespace n ON n.oid = c.relnamespace "
                           "WHERE c.relkind = 'S' AND n.nspname NOT IN ('pg_catalog', 'information_schema') "
                           "AND (has_sequence_privilege(%(role)s, c.oid, 'USAGE, UPDATE') "
-                          "OR (n.nspname <> %(live)s AND has_sequence_privilege(%(role)s, c.oid, 'SELECT'))) ORDER BY 1 LIMIT 20")
-    got['lectura_fuera'] = q("SELECT c.oid::regclass::text " + tables +
-                             " AND n.nspname <> %(live)s AND has_any_column_privilege(%(role)s, c.oid, 'SELECT') ORDER BY 1 LIMIT 20")
-    admin.commit()
-    ok = (got.get('select_catalogo') == 'ok' and all(got.get(k, '').startswith('refused') for k in ('insert_catalogo', 'select_otro_schema'))
-          and not (got['membresias'] or got['escritura'] or got['lectura_fuera'] or got['funciones'] or got['crear']
-                   or got['secuencias']))
-    return {'role': role, **got, 'ok': ok}
+                          "OR (n.nspname NOT IN (%(live)s, %(also)s) AND has_sequence_privilege(%(role)s, c.oid, 'SELECT'))) "
+                          "ORDER BY 1 LIMIT 20")
+    got['lectura_fuera'] = q("SELECT c.oid::regclass::text " + tables + " AND n.nspname NOT IN (%(live)s, %(also)s) "
+                             "AND has_any_column_privilege(%(role)s, c.oid, 'SELECT') ORDER BY 1 LIMIT 20")
+    return got
 
 
 def reader_disable(conn, role=READER):
@@ -480,6 +511,8 @@ def main(argv=None):
     load.add_argument('--catalog', required=True, help='the catalog root (the checkout of branch catalog)')
     load.add_argument('--country', default='mx')
     load.add_argument('--sources', required=True, help='sources/<cc>.json')
+    load.add_argument('--retirar', action='append', default=[], metavar='ID',
+                      help='an entry_id or run_id this load may drop from the live catalog, one per flag; nothing else may go')
     sub.add_parser('ping')
     sub.add_parser('lector', help='create or update the read-only role (password: RG_LECTURA_PASSWORD) and test it as itself')
     x = a.parse_args(argv)
@@ -513,7 +546,7 @@ def main(argv=None):
             return 0 if report['ok'] else 3
         with open(x.sources, encoding='utf-8') as f:
             try:
-                report = build(conn, x.catalog, x.country, json.load(f))
+                report = build(conn, x.catalog, x.country, json.load(f), retirar=x.retirar)
             except Empty as e:
                 report = {'ok': False, 'empty': str(e)}
     print(json.dumps(report, ensure_ascii=False, indent=1, sort_keys=True))
