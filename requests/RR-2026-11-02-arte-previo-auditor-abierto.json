@@ -1,0 +1,19 @@
+{
+  "request_id": "RR-2026-11-02-arte-previo-auditor-abierto",
+  "issued_by": "OWNER",
+  "issued_at": "2026-11-02T20:05:00Z",
+  "question": "¿Qué modelos de lenguaje de pesos abiertos, de una familia distinta a los de Anthropic y OpenAI, pueden servirse localmente detrás de un servidor compatible con el protocolo de chat de OpenAI, con licencia que permita uso comercial interno, y qué tamaño, memoria requerida, contexto máximo y desempeño publicado en revisión de código tienen, para usarse como tercera opinión de auditoría solo cuando dos auditores discrepan?",
+  "why_needed": "Regla 27 y #91: una tercera opinión descorrelacionada de Claude y GPT, que mide y no decide, y que se mantiene solo si en 30 PR encuentra defectos reales que los otros dos no vieron.",
+  "affected_component": "auditor.yml (tercer auditor) y scripts/auditor_gpt.py (base_url configurable)",
+  "desired_evidence": [
+    "por candidato: nombre, versión, licencia leída literalmente con cita y sha256; cláusulas de uso comercial o restricciones",
+    "tamaños disponibles y memoria requerida documentados por el proveedor; contexto máximo",
+    "servidores que lo sirven con protocolo compatible con OpenAI, según su documentación oficial",
+    "resultados publicados en evaluaciones de revisión de código o detección de defectos, con fuente; lo no publicado marcado como desconocido",
+    "qué requiere del servidor rentado: HIPÓTESIS hasta medir en #75",
+    "lo que no se encontró"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Instalar un modelo cuya licencia no permite el uso, o uno correlacionado con los otros dos que no aporta hallazgos únicos y solo añade tiempo de CI.",
+  "privacy_class": "PUBLIC"
+}

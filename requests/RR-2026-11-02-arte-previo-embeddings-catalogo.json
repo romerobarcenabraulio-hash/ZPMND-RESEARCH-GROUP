@@ -1,0 +1,19 @@
+{
+  "request_id": "RR-2026-11-02-arte-previo-embeddings-catalogo",
+  "issued_by": "OWNER",
+  "issued_at": "2026-11-02T20:10:00Z",
+  "question": "Para indexar semánticamente un catálogo de alrededor de trescientos mil registros de legislación, normas y notas oficiales en español, ¿qué modelos de embeddings de pesos abiertos y multilingües existen con licencia de uso comercial, qué dimensión y longitud de entrada tienen, cómo se desempeñan en evaluaciones publicadas de recuperación en español y jurídico, y qué costo de cómputo documentan para indexar y consultar localmente, de modo que la búsqueda semántica complemente, no sustituya, la búsqueda léxica y por identificadores?",
+  "why_needed": "ESTADO del 2026-10-19 punto 3 (índice semántico con medición de tokens ahorrados) y NORTE §45 (búsqueda no solo por vectores). Antes de elegir bge-m3 por costumbre hace falta el panorama con licencias.",
+  "affected_component": "índice del catálogo (rama catalog) y búsqueda de la compuerta",
+  "desired_evidence": [
+    "por candidato: nombre, versión, licencia leída literalmente con cita y sha256",
+    "dimensión, longitud máxima de entrada, idiomas declarados por el proveedor",
+    "resultados en evaluaciones públicas de recuperación multilingüe o en español, con fuente y fecha; lo no publicado marcado como desconocido",
+    "costo de indexación y consulta: solo cifras publicadas por el proveedor; el resto HIPÓTESIS",
+    "alternativas léxicas o híbridas documentadas con las que se compara",
+    "lo que no se encontró"
+  ],
+  "priority": "P2",
+  "risk_if_wrong": "Indexar trescientos mil registros con un modelo que luego no se puede usar o que no mejora la recuperación frente a la búsqueda léxica, y pagar la indexación dos veces.",
+  "privacy_class": "PUBLIC"
+}

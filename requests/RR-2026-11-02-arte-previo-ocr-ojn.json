@@ -1,0 +1,19 @@
+{
+  "request_id": "RR-2026-11-02-arte-previo-ocr-ojn",
+  "issued_by": "OWNER",
+  "issued_at": "2026-11-02T20:00:00Z",
+  "question": "Para extraer texto con posición de página de los documentos del Orden Jurídico Nacional que no tienen capa de texto (archivos .doc antiguos y PDF escaneados de legislación estatal y municipal), ¿qué extractores y modelos de OCR y layout existen con licencia que permita uso en producción, versión fijable, salida con confianza por página y ejecución local en un servidor sin GPU dedicada o con una GPU de consumo, y cuál es su precisión y costo por página medidos sobre documentos reales de esa fuente?",
+  "why_needed": "La compuerta de RG exige cita literal en el texto del crudo; sin texto, ninguna obligación estatal o municipal puede llegar confirmada (ZPPMND G06, G07, G09). La medición de #93 compara Tesseract, nemotron-parse y LibreOffice; falta el panorama completo con licencias y arte previo antes de fijar uno.",
+  "affected_component": "rg/text (extractores fijados) y mx/texto",
+  "desired_evidence": [
+    "por candidato: nombre, versión, licencia leída literalmente de su repositorio o documentación oficial con cita y sha256 del documento de licencia",
+    "requisitos de hardware y forma de ejecución local documentados por el proveedor",
+    "si publica confianza por página o por bloque, y en qué formato",
+    "resultados publicados sobre documentos legales en español o en escaneos de calidad similar, con su fuente; lo no publicado marcado como desconocido",
+    "costo por página: solo si el proveedor lo publica; lo demás como HIPÓTESIS",
+    "lo que no se encontró: consultas hechas sin resultado"
+  ],
+  "priority": "P0",
+  "risk_if_wrong": "Elegir un extractor que no se pueda fijar por versión o cuya licencia no permita el uso, y tener que rehacer mx/texto; o atribuir a una página una confianza que el extractor no produce.",
+  "privacy_class": "PUBLIC"
+}
