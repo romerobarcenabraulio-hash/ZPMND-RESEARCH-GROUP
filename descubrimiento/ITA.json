@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "# Normattiva - Il portale della legge vigente\n## Ricerca degli atti statali in multivigenza\n...\nDalla presente pagina è possibile consultare la Costituzione della Repubblica Italiana ed i principali \"Codici\" disponibili su \"Normattiva\", elencati in ordine...",
      "title": "Normattiva - Il portale della legge vigente",
-     "url": "https://www.normattiva.it/"
+     "url": "https://www.normattiva.it/",
+     "verificacion": {
+      "bytes": 46883,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:37:00Z",
+      "http": 200,
+      "sha256": "3622349d0eb028b067e3ccdeca55212409295a4345d4b39e25cb8acb313fb308"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,12 @@
      "rank": 2,
      "snippet": "Fonti normative | Senato della Repubblica\n...\n# Fonti normative\n...\nOpera sui singoli articoli delle fonti normative presenti nel canale *Istituzioni*:\n- Costituzione della Repubblica italiana\n- Regolamento del Senato\nI testi sono aggiornati all'ultima versione vigente.",
      "title": "www.senato.it · guida-al-sito · banche-datiFonti normative - Senato della Repubblica",
-     "url": "https://www.senato.it/guida-al-sito/banche-dati/fonti-normative"
+     "url": "https://www.senato.it/guida-al-sito/banche-dati/fonti-normative",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.senato.it/guida-al-sito/banche-dati/fonti-normative",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T16:37:00Z"
+     }
     },
     {
      "date": "",
@@ -64,7 +76,12 @@
      "rank": 1,
      "snippet": "Decreti direttoriali\nMinistero delle Imprese e del Made in Italy\n1. Normativa\n...\n…\n- ## Decreto direttoriale 8 ottobre 2026 - Scoperta imprenditoriale II.\nSospensione dei termini di presentazione delle domande di agevolazione",
      "title": "Decreti direttoriali",
-     "url": "https://www.mimit.gov.it/it/normativa/decreti-direttoriali"
+     "url": "https://www.mimit.gov.it/it/normativa/decreti-direttoriali",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mimit.gov.it/it/normativa/decreti-direttoriali",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T16:38:30Z"
+     }
     },
     {
      "date": "",
@@ -72,7 +89,12 @@
      "rank": 2,
      "snippet": "Decreti ministeriali\nMinistero delle Imprese e del Made in Italy\n...\nAggiornamento importi\n- ## Decreto ministeriale 28 agosto 2026 - Modifiche al decreto del Ministro dello sviluppo economico 11 maggio 2016 di Istituzione del SINFI",
      "title": "Decreti ministeriali - Mimit",
-     "url": "https://www.mimit.gov.it/it/normativa/decreti-ministeriali"
+     "url": "https://www.mimit.gov.it/it/normativa/decreti-ministeriali",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mimit.gov.it/it/normativa/decreti-ministeriali",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T16:38:30Z"
+     }
     },
     {
      "date": "",
@@ -114,7 +136,14 @@
      "rank": 1,
      "snippet": "Gazzetta Ufficiale\nSerie Generale\n...\nElenco delle Gazzette\npubblicate negli ultimi 30 giorni :\nConsulta PDF paginato Download PDF Download PDF criptato n° 229 del 02-10-2026\n...\n…\n...\nAccedi all'archivio completo",
      "title": "Serie Generale - Gazzetta Ufficiale",
-     "url": "https://www.gazzettaufficiale.it/30giorni/serie_generale"
+     "url": "https://www.gazzettaufficiale.it/30giorni/serie_generale",
+     "verificacion": {
+      "bytes": 64716,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:33Z",
+      "http": 200,
+      "sha256": "0ac46fb5bc0052270f428342f2acfd2d800fe02afd9fc384549b36f325acbbfb"
+     }
     },
     {
      "date": "",
@@ -122,7 +151,14 @@
      "rank": 2,
      "snippet": "- Serie Generale 253 del 30-10-2026\n- Corte Costituzionale\n43 del 28-10-2026\n- Unione Europea 85 del 29-10-2026\n...\n- Contratti pubblici 124 del 30-10-2026",
      "title": "Gazzetta Ufficiale",
-     "url": "https://www.gazzettaufficiale.it/"
+     "url": "https://www.gazzettaufficiale.it/",
+     "verificacion": {
+      "bytes": 42185,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:35Z",
+      "http": 200,
+      "sha256": "5b50f8d6fc2386c9e63e90f35f42c4f98da250213035605d4082af1e87cf76b9"
+     }
     },
     {
      "date": "",
@@ -164,7 +200,14 @@
      "rank": 1,
      "snippet": "Corte Suprema di Cassazione | Risultati ricerca\n...\nSentenza\n### Sentenza del 02/03/23\nCorte di Giustizia, Sezione Terza, Sentenza del 2 marzo 2023, causa C-268/21, Norra Stockholm Bygg AB c.",
      "title": "www.cortedicassazione.it · it · risultati_ricercaCorte Suprema di Cassazione | Risultati ricerca",
-     "url": "https://www.cortedicassazione.it/it/risultati_ricerca.page?search=AB"
+     "url": "https://www.cortedicassazione.it/it/risultati_ricerca.page?search=AB",
+     "verificacion": {
+      "bytes": 85022,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:37Z",
+      "http": 200,
+      "sha256": "8db55094cf02d641d5fb2c3b21fb4e16048242715447e0a75c85616d7e15242d"
+     }
     },
     {
      "date": "",
@@ -172,7 +215,14 @@
      "rank": 2,
      "snippet": "# Tutte le sentenze, ordinanze e questioni\nEsplora tutte le ultime sentenze e ordinanze, le questioni , le relazioni, i ricorsi e le rassegne della Corte di Cassazione.\n## Sentenze, ordinanze, relazioni e documenti\n...\n…",
      "title": "Corte Suprema di Cassazione | Le ultime sentenze, ordinanze e ...",
-     "url": "https://www.cortedicassazione.it/it/ultime_sent_ord_e_questioni.page"
+     "url": "https://www.cortedicassazione.it/it/ultime_sent_ord_e_questioni.page",
+     "verificacion": {
+      "bytes": 72721,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:38Z",
+      "http": 200,
+      "sha256": "2f89941152c249a32fd4aa40eac17aeec07d64f3e2b3df58e2bbd8d35f509135"
+     }
     },
     {
      "date": "",
@@ -214,7 +264,14 @@
      "rank": 1,
      "snippet": "# Normattiva - Il portale della legge vigente\n...\n#### Legislazione Regionale\nLe raccolte legislative delle singole Regioni sono pubblicate dai siti delle Assemblee legislative regionali e delle Province autonome di Trento e Bolzano.\nNormattiva pubblica l'elenco completo dei link.",
      "title": "Legislazione Regionale - Normattiva",
-     "url": "https://www.normattiva.it/legislazioneRegionale"
+     "url": "https://www.normattiva.it/legislazioneRegionale",
+     "verificacion": {
+      "bytes": 35562,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:42Z",
+      "http": 200,
+      "sha256": "2c376b24e81a90491cba0d6c243ae2aa8d6cf8163f2a760e4715caadf1c42f64"
+     }
     },
     {
      "date": "",
@@ -222,7 +279,14 @@
      "rank": 2,
      "snippet": "# Normattiva Regioni - Motore di ricerca federato regionale\n...\nRegioni/Province autonome\n...\nLa pagina consente di ricercare gli atti normativi regionali impostando, singolarmente o in combinazione tra loro, le seguenti opzioni:\n...\n#### Regioni/Province autonome.",
      "title": "Normattiva Regioni - Motore di ricerca federato regionale",
-     "url": "https://www.normattiva.it/mfr/"
+     "url": "https://www.normattiva.it/mfr/",
+     "verificacion": {
+      "bytes": 34811,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:44Z",
+      "http": 200,
+      "sha256": "76076db07e4c3ae158f2948705f67a48defe3f656e0210a84ca5971c094e7c05"
+     }
     },
     {
      "date": "",
@@ -264,7 +328,14 @@
      "rank": 1,
      "snippet": "# Atti normativi\nSezione dedicata alla pubblicazione dello statuto, dei regolamenti dell'Ente e altre norme.\n...\n### Regolamento per le attività commerciali e la tutela e fruibilità del centro urbano\n...\n- **Numero e data documento:**\n...\n### Statuto Comunale",
      "title": "Atti normativi - Comune di Palma Campania",
-     "url": "https://www.comune.palmacampania.na.it/it/amministrazione/documenti/list/atto-normativo"
+     "url": "https://www.comune.palmacampania.na.it/it/amministrazione/documenti/list/atto-normativo",
+     "verificacion": {
+      "bytes": 168830,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:46Z",
+      "http": 200,
+      "sha256": "a0fca688b5785b6ace37a41c17895b8c825301ca81649ae3db413cef873d2615"
+     }
     },
     {
      "date": "",
@@ -272,7 +343,14 @@
      "rank": 2,
      "snippet": "# Atto normativo\nSezione dedicata alla pubblicazione dello statuto, dei regolamenti dell'Ente e altre norme\n## Esplora Atto normativo",
      "title": "Atto normativo - Comune di Mottola",
-     "url": "https://www.comune.mottola.ta.it/it/page/atto-normativo"
+     "url": "https://www.comune.mottola.ta.it/it/page/atto-normativo",
+     "verificacion": {
+      "bytes": 87044,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:48Z",
+      "http": 200,
+      "sha256": "08f67ce30ddfc6e27f664eb3466c5640937298c20bcbec5fe9cf335ed10b7852"
+     }
     },
     {
      "date": "",
@@ -314,7 +392,14 @@
      "rank": 1,
      "snippet": "Normattiva\n...\n## In evidenza\n...\nLa Gazzetta Ufficiale della Repubblica Italiana, quale fonte ufficiale di conoscenza delle norme in vigore in Italia e strumento di diffusione, informazione e ufficializzazione di testi legislativi, atti pubblici e privati...",
      "title": "Normattiva - Il portale della legge vigente",
-     "url": "https://www.normattiva.it/"
+     "url": "https://www.normattiva.it/",
+     "verificacion": {
+      "bytes": 46883,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:50Z",
+      "http": 200,
+      "sha256": "3622349d0eb028b067e3ccdeca55212409295a4345d4b39e25cb8acb313fb308"
+     }
     },
     {
      "date": "2026-04-28",
@@ -322,7 +407,12 @@
      "rank": 2,
      "snippet": "- ## REGOLAMENTO (UE) 425/2016\n-\n...\n…\n- Le funzioni prevalenti di Autorità di vigilanza sono svolte dal Ministero delle infrastrutture e dei Trasporti – Comando Generale del Corpo delle capitanerie di Porto.\n...\n### Contatti",
      "title": "Sicurezza dei prodotti di consumo - Mimit",
-     "url": "https://www.mimit.gov.it/it/mercato-e-consumatori/tutela-del-consumatore/diritti-del-consumatore/normativa-sulla-sicurezza-dei-prodotti"
+     "url": "https://www.mimit.gov.it/it/mercato-e-consumatori/tutela-del-consumatore/diritti-del-consumatore/normativa-sulla-sicurezza-dei-prodotti",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mimit.gov.it/it/mercato-e-consumatori/tutela-del-consumatore/diritti-del-consumatore/normativa-sulla-sicurezza-dei-prodotti",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T16:38:50Z"
+     }
     },
     {
      "date": "",
@@ -364,7 +454,14 @@
      "rank": 1,
      "snippet": "Standard - UNI - Italian Standards Body\n...\n# Demographic transition\n## Browse previous issues\n### Pets\nThe PDF standards downloadable from UNI Store are protected by Digital Rights Management (DRM).\nRead the **instructions** carefully before downloading.",
      "title": "Standard - UNI - Italian Standards Body",
-     "url": "https://www.uni.com/en/standard/"
+     "url": "https://www.uni.com/en/standard/",
+     "verificacion": {
+      "bytes": 69295,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:52Z",
+      "http": 200,
+      "sha256": "49dccbfefdfc0c4faf030e22dffe237d78e4ea0eeb274142864857e76b5f3a88"
+     }
     },
     {
      "date": "2022-10-03",
@@ -372,7 +469,14 @@
      "rank": 2,
      "snippet": "## UNI – Ente Italiano di Normazione\nSiamo un’associazione privata senza scopo di lucro che da oltre 100 anni studia, elabora, pubblica e diffonde gli standard: le norme tecniche volontarie.\n...\nVuoi consultare il catalogo degli standard esistenti?",
      "title": "UNI - Ente Italiano di Normazione",
-     "url": "https://www.uni.com/"
+     "url": "https://www.uni.com/",
+     "verificacion": {
+      "bytes": 123714,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:53Z",
+      "http": 200,
+      "sha256": "845c338e9e48a4b3bf3cfed0d4b6804f6a0da859a932d8701842d33efdb5b730"
+     }
     },
     {
      "date": "2026-10-27",
@@ -414,7 +518,12 @@
      "rank": 1,
      "snippet": "## 1. Trasparenza mercato interno\n...\n…\n## 7. Strumenti di misura (MID)\n...\n**Pagina web dello stato italiano per visionare l’archivio degli atti normativi aggiornati nella versione vigente (testi coordinati)**\nhttp://www.normattiva.it/",
      "title": "Normativa tecnica - Direttive e regolamenti dell'Unione europea",
-     "url": "https://www.mimit.gov.it/it/mercato-e-consumatori/normativa-tecnica/disciplina-comunitaria-e-nazionale"
+     "url": "https://www.mimit.gov.it/it/mercato-e-consumatori/normativa-tecnica/disciplina-comunitaria-e-nazionale",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mimit.gov.it/it/mercato-e-consumatori/normativa-tecnica/disciplina-comunitaria-e-nazionale",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T16:38:53Z"
+     }
     },
     {
      "date": "",
@@ -422,7 +531,12 @@
      "rank": 2,
      "snippet": "# Mezzi stradali\n...\nSupplemento 3 alla Serie 02 di Emendamenti al Regolamento 131\nPrescrizioni uniformi relative all’omologazione dei veicoli a motore per ciò che concerne i sistemi avanzati di frenata di emergenza (AEBS).",
      "title": "Mezzi stradali - Ministero delle infrastrutture e dei trasporti",
-     "url": "https://www.mit.gov.it/temi/patenti-mezzi-abilitazioni/mezzi-stradali/normativa"
+     "url": "https://www.mit.gov.it/temi/patenti-mezzi-abilitazioni/mezzi-stradali/normativa",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mit.gov.it/temi/patenti-mezzi-abilitazioni/mezzi-stradali/normativa",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T16:38:56Z"
+     }
     },
     {
      "date": "2026-04-28",
@@ -464,7 +578,14 @@
      "rank": 1,
      "snippet": "Istat\n**1** risultati trovati.\n# Home page\n## Principali indicatori\n### PIL (Trimestrale, milioni di euro e variazione congiunturale)\n...\n### POPOLAZIONE RESIDENTE (migliaia)",
      "title": "Home page",
-     "url": "https://www.istat.it/"
+     "url": "https://www.istat.it/",
+     "verificacion": {
+      "bytes": 283664,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:59Z",
+      "http": 200,
+      "sha256": "cd3332c3da8b36c5d872cfde3eb06d636a9ade944ce2b34a9fd1894c8cdc062d"
+     }
     },
     {
      "date": "2024-02-07",
@@ -472,7 +593,14 @@
      "rank": 2,
      "snippet": "…\n# Risultati del Censimento permanente della popolazione\n...\nI risultati del Censimento permanente della popolazione e delle abitazioni vengono diffusi dall’Istat, a partire dal 15 dicembre 2020, su tre piattaforme caratterizzate da diverse funzionalità e contenuti.",
      "title": "Risultati del Censimento permanente della popolazione - Istat",
-     "url": "https://www.istat.it/statistiche-per-temi/censimenti/popolazione-e-abitazioni/risultati/"
+     "url": "https://www.istat.it/statistiche-per-temi/censimenti/popolazione-e-abitazioni/risultati/",
+     "verificacion": {
+      "bytes": 184869,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:38:59Z",
+      "http": 200,
+      "sha256": "3c3a9e5325de137c44fde0152f5c967afbfd34576afc3889e2941a9205f16e3b"
+     }
     },
     {
      "date": "",
@@ -514,7 +642,14 @@
      "rank": 1,
      "snippet": "Il patrimonio statistico prodotto dalla Banca d'Italia è accessibile tramite il Portale delle Statistiche o tramite l'accesso diretto alla basi dati (vedi accesso ai dati).\nUna consultazione per tematica è disponibile anche tramite i riquadri di selezione sotto riportati.",
      "title": "Statistiche - Banca d'Italia",
-     "url": "https://www.bancaditalia.it/statistiche/"
+     "url": "https://www.bancaditalia.it/statistiche/",
+     "verificacion": {
+      "bytes": 127307,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:39:07Z",
+      "http": 200,
+      "sha256": "02efe18993e1cf87ac0af9a5e32ca8f42ac5a7ea81311e5e67a65d95267c70fb"
+     }
     },
     {
      "date": "",
@@ -522,7 +657,14 @@
      "rank": 2,
      "snippet": "Banca d'Italia - Il sito ufficiale della Banca Centrale Italiana\n…\n...\n## Indicatori\n...\n- ### Inflazione\nperiodo: settembre 2026 - settembre 2025\n- **Italia**\n+4,2%\n- **Area Euro**\n+3,8%",
      "title": "Banca d'Italia",
-     "url": "https://www.bancaditalia.it/"
+     "url": "https://www.bancaditalia.it/",
+     "verificacion": {
+      "bytes": 164101,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:39:11Z",
+      "http": 200,
+      "sha256": "cc2414485e6513d6fa32c3508766948f2fc54fe1db7a7f2577ae2a9d5f7c4ada"
+     }
     },
     {
      "date": "",
@@ -564,7 +706,14 @@
      "rank": 1,
      "snippet": "# OpenBDAP I dati della finanza pubblica accessibili a tutti\nBanca Dati Amministrazioni Pubbliche\n...\n# I Dati della Finanza Pubblica accessibili a tutti",
      "title": "I Dati della Finanza Pubblica accessibili a tutti",
-     "url": "https://openbdap.rgs.mef.gov.it/it/Home/"
+     "url": "https://openbdap.rgs.mef.gov.it/it/Home/",
+     "verificacion": {
+      "bytes": 265853,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:39:18Z",
+      "http": 200,
+      "sha256": "05bdbe9d6df3f6dfd788cf54a5449e4de97b76f7db5ea3c119d189c2d15152e6"
+     }
     },
     {
      "date": "",
@@ -572,7 +721,14 @@
      "rank": 2,
      "snippet": "Open Government Data Portal\nThe portal Dati.gov.it enables easy access to open data from the Italian government.",
      "title": "[PDF] OECD OURdata Index: 2019",
-     "url": "https://web-archive-storage.oecd.org/aemint-web-archive-prod/web-archive/ca/ca1c3974767c4c254293c38e4b857164682034c3f5615329ad2d91efd70fb5bd.pdf"
+     "url": "https://web-archive-storage.oecd.org/aemint-web-archive-prod/web-archive/ca/ca1c3974767c4c254293c38e4b857164682034c3f5615329ad2d91efd70fb5bd.pdf",
+     "verificacion": {
+      "bytes": 294718,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:39:20Z",
+      "http": 200,
+      "sha256": "2e5c830dfdd571a13ab9160af988808e5aff866193172cd46c8c6c8b37621761"
+     }
     },
     {
      "date": "2026-07-31",

@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "שירות זה מאפשר לאתר במאגר החקיקה הלאומי את כל חוקי מדינת ישראל שהתקבלו מאז תקופת המנדט הבריטי ושעדיין נמצאים בתוקף.\n...\n- נוסחי הצעת החוק.",
      "title": "חוקי מדינת ישראל במאגר החקיקה הלאומי",
-     "url": "https://www.gov.il/he/service/the_laws_of_the_state_of_israel_in_the_national_legislation_database"
+     "url": "https://www.gov.il/he/service/the_laws_of_the_state_of_israel_in_the_national_legislation_database",
+     "verificacion": {
+      "bytes": 5818,
+      "estado": "http",
+      "fecha": "2026-11-02T16:36:13Z",
+      "http": 403,
+      "sha256": "af7b95168a534fd96de88ee05ccee2d04c2eeca545f9498ce2967889de12246c"
+     }
     },
     {
      "date": "2023-07-26",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "# כל הצעות החוק מהכנסת הראשונה ועד היום במאגר החקיקה הלאומי\nשירות זה מאפשר לאתר במאגר החקיקה הלאומי את כל הצעות החוק מהכנסת הראשונה עד הכנסת הנוכחית.",
      "title": "כל הצעות החוק מהכנסת הראשונה ועד היום במאגר החקיקה הלאומי",
-     "url": "https://www.gov.il/he/service/bills_from_the_first_to_the_the_present_knesset_in_the_national_legislation_database"
+     "url": "https://www.gov.il/he/service/bills_from_the_first_to_the_the_present_knesset_in_the_national_legislation_database",
+     "verificacion": {
+      "bytes": 5867,
+      "estado": "http",
+      "fecha": "2026-11-02T16:36:14Z",
+      "http": 403,
+      "sha256": "ff4fb36262076b014cba0e6d357c6dc14c1353485778853b47413910a76e551e"
+     }
     },
     {
      "date": "2023-07-26",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "מנוע ההסדרה והחקיקה עומד לרשותכם לצרכי איתור הסדרות מסוג, חוקים, תקנות, חוזרים, הבהרות, עמדות ממונה, הכרעות עקרוניות וטיוטות, באופן המהיר והידידותי ביותר.",
      "title": "אתר השירותים והמידע הממשלתי",
-     "url": "https://www.gov.il/he/Departments/DynamicCollectors/regulation-legislation"
+     "url": "https://www.gov.il/he/Departments/DynamicCollectors/regulation-legislation",
+     "verificacion": {
+      "bytes": 5725,
+      "estado": "http",
+      "fecha": "2026-11-02T16:36:15Z",
+      "http": 403,
+      "sha256": "238201aef85e87bbb264fc45473b6494cf8b5b30bac228e5cae593e0deb8ad92"
+     }
     },
     {
      "date": "2023-07-26",
@@ -72,7 +93,14 @@
      "rank": 2,
      "snippet": "במאגר ניתן למצוא את כל החוקים כפי שהתקבלו ופורסמו עד היום, החל בתקופת המנדט הבריטי, דרך תקופת מועצת המדינה הזמנית ועד הכנסת הנוכחית.\n...\n- פקודות שחוקק מועצת המדינה הזמנית.",
      "title": "החוקים כפי שנחקקו במאגר החקיקה הלאומי",
-     "url": "https://www.gov.il/he/service/laws_as_enacted_in_the_national_legislation_database"
+     "url": "https://www.gov.il/he/service/laws_as_enacted_in_the_national_legislation_database",
+     "verificacion": {
+      "bytes": 5749,
+      "estado": "http",
+      "fecha": "2026-11-02T16:36:16Z",
+      "http": 403,
+      "sha256": "88006ee35890790eed0de42b86ca989d96ed4e4468321df8c570939b4fa711f5"
+     }
     },
     {
      "date": "2023-12-31",
@@ -114,7 +142,14 @@
      "rank": 1,
      "snippet": "# Israel\n...\n|The official Gazette|https://www.justice.gov.il/Units/Reshomot/pub...|The items mentioned in Article 1, subparagraphs 1.1(a) to (j) are published in Israel's domestic law, Ministry of Justice \"Reshumot\"|",
      "title": "Israel",
-     "url": "https://tfadatabase.org/index.php/en/members/israel/publication-of-information-for-governments-and-traders"
+     "url": "https://tfadatabase.org/index.php/en/members/israel/publication-of-information-for-governments-and-traders",
+     "verificacion": {
+      "bytes": 148532,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:18Z",
+      "http": 200,
+      "sha256": "9cce943009be9c2acbdd2e0a655ecb18b0516797a14251b13ff966b2ca42a8e1"
+     }
     },
     {
      "date": "",
@@ -122,7 +157,14 @@
      "rank": 2,
      "snippet": "# Israel - Update on SI 32 Mandatory Standard for Plugs and Socket Outlets\n...\nSource Link: G/TBT/N/ISR/1302/Add.1",
      "title": "www.tuv.com · regulations-and-standards · enIsrael - Update on SI 32 Mandatory Standard for Plugs and So",
-     "url": "https://www.tuv.com/regulations-and-standards/en/israel-update-on-si-32-mandatory-standard-for-plugs-and-socket-outlets.html"
+     "url": "https://www.tuv.com/regulations-and-standards/en/israel-update-on-si-32-mandatory-standard-for-plugs-and-socket-outlets.html",
+     "verificacion": {
+      "bytes": 54847,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:20Z",
+      "http": 200,
+      "sha256": "0188065648ab3c3836c613a14158421552e2dac94d7e99a9ca0bae58fa492902"
+     }
     },
     {
      "date": "2025-02-23",
@@ -164,7 +206,14 @@
      "rank": 1,
      "snippet": "דף הבית\n...\n© בית המשפט העליון 2018\nחיפוש מתקדם",
      "title": "תוצאות חיפוש // <![CDATA[ _spBodyOnLoadFunctionNames.push(\"setupPageDescriptionCallout\"); // ]]>",
-     "url": "https://supreme.court.gov.il/Pages/%D7%AA%D7%95%D7%A6%D7%90%D7%95%D7%AA%20%D7%97%D7%99%D7%A4%D7%95%D7%A9.aspx"
+     "url": "https://supreme.court.gov.il/Pages/%D7%AA%D7%95%D7%A6%D7%90%D7%95%D7%AA%20%D7%97%D7%99%D7%A4%D7%95%D7%A9.aspx",
+     "verificacion": {
+      "bytes": 139025,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:25Z",
+      "http": 200,
+      "sha256": "d2a142190ebbc61b366b83b169df45a3c3ecd40309f83b23323bc1b9d806dde7"
+     }
     },
     {
      "date": "2026-10-30",
@@ -172,7 +221,14 @@
      "rank": 2,
      "snippet": "זוהתה פעילות בלתי מורשית, אנא פנה לתמיכת המחשוב בארגונך\n...\nThe Israeli Judicial Authority",
      "title": "חיפוש מתקדם - בית המשפט העליון",
-     "url": "https://supreme.court.gov.il/Pages/fullsearch.aspx"
+     "url": "https://supreme.court.gov.il/Pages/fullsearch.aspx",
+     "verificacion": {
+      "bytes": 134433,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:27Z",
+      "http": 200,
+      "sha256": "6465d8c14c272ad14c17253588df43549fb3fb114301e3bdbcd9a26d0728df44"
+     }
     },
     {
      "date": "",
@@ -214,7 +270,14 @@
      "rank": 1,
      "snippet": "# חוקי מדינת ישראל במאגר החקיקה הלאומי\nשירות זה מאפשר לאתר במאגר החקיקה הלאומי את כל חוקי מדינת ישראל שהתקבלו מאז תקופת המנדט הבריטי ושעדיין נמצאים בתוקף.",
      "title": "חוקי מדינת ישראל במאגר החקיקה הלאומי",
-     "url": "https://www.gov.il/he/service/the_laws_of_the_state_of_israel_in_the_national_legislation_database"
+     "url": "https://www.gov.il/he/service/the_laws_of_the_state_of_israel_in_the_national_legislation_database",
+     "verificacion": {
+      "bytes": 5818,
+      "estado": "http",
+      "fecha": "2026-11-02T16:36:27Z",
+      "http": 403,
+      "sha256": "bf6f258bc2d03e479760ed00de369910ba004d2e446e418bec84d25435752c35"
+     }
     },
     {
      "date": "",
@@ -222,7 +285,14 @@
      "rank": 2,
      "snippet": "מנוע ההסדרה והחקיקה עומד לרשותכם לצרכי איתור הסדרות מסוג, חוקים, תקנות, חוזרים, הבהרות, עמדות ממונה, הכרעות עקרוניות וטיוטות, באופן המהיר והידידותי ביותר.",
      "title": "אתר השירותים והמידע הממשלתי",
-     "url": "https://www.gov.il/he/Departments/DynamicCollectors/regulation-legislation"
+     "url": "https://www.gov.il/he/Departments/DynamicCollectors/regulation-legislation",
+     "verificacion": {
+      "bytes": 5725,
+      "estado": "http",
+      "fecha": "2026-11-02T16:36:28Z",
+      "http": 403,
+      "sha256": "96c4ae9ba650b169f3f9a271eefb398ebae8a0dab3e740695787c6739c88cd9f"
+     }
     },
     {
      "date": "2017-09-14",
@@ -264,7 +334,14 @@
      "rank": 1,
      "snippet": "### כללי\n- **עיריית חריש** (להלן: \"הרשות\") מכבדת את פרטיות המבקרים והמשתמשים באתר האינטרנט העירוני שהיא מנהלת ומפעילה (להלן \"האתר\").\n...\n## Accessibility Statement\n- www.harish.muni.il",
      "title": "ארכיון דוחות וצווים - עמוד 11 מתוך 12 - עיריית חריש",
-     "url": "https://www.harish.muni.il/report/page/11/"
+     "url": "https://www.harish.muni.il/report/page/11/",
+     "verificacion": {
+      "bytes": 622558,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:31Z",
+      "http": 200,
+      "sha256": "d4e1c87ba46b37e7da19a4cf07ab5214b6da92dd1c4a617cf04b88ff02c3e515"
+     }
     },
     {
      "date": "",
@@ -272,7 +349,14 @@
      "rank": 2,
      "snippet": "מנוע ההסדרה והחקיקה עומד לרשותכם לצרכי איתור הסדרות מסוג, חוקים, תקנות, חוזרים, הבהרות, עמדות ממונה, הכרעות עקרוניות וטיוטות, באופן המהיר והידידותי ביותר.",
      "title": "אתר השירותים והמידע הממשלתי",
-     "url": "https://www.gov.il/he/Departments/DynamicCollectors/regulation-legislation"
+     "url": "https://www.gov.il/he/Departments/DynamicCollectors/regulation-legislation",
+     "verificacion": {
+      "bytes": 5725,
+      "estado": "http",
+      "fecha": "2026-11-02T16:36:31Z",
+      "http": 403,
+      "sha256": "bd0f55e8c5c9efcaf23aaa95254896336de585dfd93f103f1756fdd6a8935a14"
+     }
     },
     {
      "date": "2025-09-08",
@@ -314,7 +398,12 @@
      "rank": 1,
      "snippet": "## 3. Legal Regime\n### International Regulatory Considerations\nIsraeli regulatory bodies in the Ministry of Economy and Industry (Standards Institute of Israel), Ministry of Health (Food Control Services), and the Ministry of Agriculture (Veterinary Services and the Plant Protection Service) often a",
      "title": "2023 Investment Climate Statements: Israel",
-     "url": "https://www.state.gov/reports/2023-investment-climate-statements/israel"
+     "url": "https://www.state.gov/reports/2023-investment-climate-statements/israel",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2023-investment-climate-statements/israel",
+      "estado": "rechazado",
+      "fecha": "2026-11-02T16:36:31Z"
+     }
     },
     {
      "date": "",
@@ -322,7 +411,14 @@
      "rank": 2,
      "snippet": "…\n...\nPlant Protection and Inspection Service: The Plant Protection and Inspection Service (PPIS) is the authority in charge of permitting the importation of plants and plant products into Israel.\n...\nIsrael’s Public Health Protection Law, (Food) 2015 (Hebrew), which came into force September 2016,",
      "title": "Israel Food and Agricultural Import Regulations and Standards ...",
-     "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Food%20and%20Agricultural%20Import%20Regulations%20and%20Standards%20Report_Tel%20Aviv_Israel_12-17-2018.pdf"
+     "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Food%20and%20Agricultural%20Import%20Regulations%20and%20Standards%20Report_Tel%20Aviv_Israel_12-17-2018.pdf",
+     "verificacion": {
+      "bytes": 708686,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:32Z",
+      "http": 200,
+      "sha256": "7a1521fae6389cba9289a552e461f39a58a28954907f2b1be6558764e72f70ec"
+     }
     },
     {
      "date": "2020-12-21",
@@ -364,7 +460,14 @@
      "rank": 1,
      "snippet": "1. דף הבית - מכון התקנים הישראלי\n2. תקינה\n...\n- צפייה בתקנים ובאוספים באזור האישי\n- כניסה לאתר לצפייה בתקנים רשמיים/מחייבים\n- צפייה במידע על אוספים",
      "title": "חיפוש תקנים מורחב - מכון התקנים הישראלי",
-     "url": "https://www.sii.org.il/he/lobby/standardization/standards-search"
+     "url": "https://www.sii.org.il/he/lobby/standardization/standards-search",
+     "verificacion": {
+      "bytes": 81260,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:34Z",
+      "http": 200,
+      "sha256": "d803e41ae2b00f1eb0f5e51092ad5a09f148fe303458f28fc93d6ef344eff4be"
+     }
     },
     {
      "date": "",
@@ -372,7 +475,14 @@
      "rank": 2,
      "snippet": "Expanded Standard search - Standards Institution of Israel\n# Expanded Standard search\n**To place an order, please email library@sii.org.il**\n1. Home page - Standards Institution of Israel\n2. Standardization\n3. Expanded Standard search\nFound 0 Results\nExport to Excel Print\n...\n#### Contact us",
      "title": "Expanded Standard search - Standards Institution of Israel",
-     "url": "https://www.sii.org.il/en/standards-search"
+     "url": "https://www.sii.org.il/en/standards-search",
+     "verificacion": {
+      "bytes": 48198,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:34Z",
+      "http": 200,
+      "sha256": "af507321d386f73b091813275c2d1919ddae809cb4b722b950c6a8f1dcee0b1a"
+     }
     },
     {
      "date": "2025-01-27",
@@ -414,7 +524,14 @@
      "rank": 1,
      "snippet": "The Israeli Mandatory Requirements (IMR) for motor vehicles manufactured according to the European Union directives is the statutory document for importing vehicles into the State of Israel.\nThis IMR document is for informational purposes only.\n...\n…\n...\n…\nThis regulation does not replace other mand",
      "title": "000211.docx",
-     "url": "https://www.gov.il/BlobFolder/policy/imr_rr_m_n_o_2026/he/000211.docx"
+     "url": "https://www.gov.il/BlobFolder/policy/imr_rr_m_n_o_2026/he/000211.docx",
+     "verificacion": {
+      "bytes": 179426,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:35Z",
+      "http": 200,
+      "sha256": "4ca8375d7d333bb7bed4c790933ccaffd32ea3eebe086642ced73089f67fb10b"
+     }
     },
     {
      "date": "",
@@ -422,7 +539,14 @@
      "rank": 2,
      "snippet": "Commercial vehicles with air braking devices.<br>2.\nABS effective as required on FMVSS regulation and includes the following:<br>2.1 Taxis & tourist vehicles.<br>3.\nRegulation (EU) 2019/2144 is mandatory for vehicles in Category O |\n...\n|",
      "title": "000191.docx - Gov.il",
-     "url": "https://www.gov.il/BlobFolder/policy/imr_rr_m_n_o_2026/he/000191.docx"
+     "url": "https://www.gov.il/BlobFolder/policy/imr_rr_m_n_o_2026/he/000191.docx",
+     "verificacion": {
+      "bytes": 498887,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:37Z",
+      "http": 200,
+      "sha256": "ed53d184c3f304b1232ae9e372213504b0eb2da7fd6bb29963b29eb2eaa4c00e"
+     }
     },
     {
      "date": "",
@@ -464,7 +588,14 @@
      "rank": 1,
      "snippet": "CBS publications may also be viewed at the Statistical \nInformation Center in Tel Aviv-Yafo.\nCBS website:  \nwww.cbs.gov.il\nE-mail: \ninfo@cbs.gov.il",
      "title": "[PDF] isr_in_n14e.pdf",
-     "url": "https://www.cbs.gov.il/he/publications/DocLib/isr_in_n/isr_in_n14e.pdf"
+     "url": "https://www.cbs.gov.il/he/publications/DocLib/isr_in_n/isr_in_n14e.pdf",
+     "verificacion": {
+      "bytes": 3726231,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:42Z",
+      "http": 200,
+      "sha256": "02455ac8f2dea68472ec55b1f24fecd550a46b71ed6c038b9206f03b5491ce85"
+     }
     },
     {
      "date": "2026-06-08",
@@ -472,7 +603,14 @@
      "rank": 2,
      "snippet": "The Central Bureau of Statistics (CBS) is the official body in the country that is responsible for collecting, processing, and publishing statistical data about the population, economy, and society in Israel.\nThis data is essential for decision-making, policymakers, and the general public.\n...\ninfo@",
      "title": "CBS Site",
-     "url": "https://www.cbs.gov.il/en/Pages/default.aspx"
+     "url": "https://www.cbs.gov.il/en/Pages/default.aspx",
+     "verificacion": {
+      "bytes": 160984,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:45Z",
+      "http": 200,
+      "sha256": "477e5844aef3374ac97804f95a8ef99a2be5e7e17a65a2509ba52e770d270a76"
+     }
     },
     {
      "date": "",
@@ -514,7 +652,14 @@
      "rank": 1,
      "snippet": "Data and Statistics | בנק ישראל - הבנק המרכזי של ישראל\n...\n# Data and Statistics\nThe Bank of Israel's Equalizer\n...\n## Additional information\n## Information and Statistics\nInformation that is accessible and interactive.\nPlease choose your topic from the menu on the left to view the information you n",
      "title": "Data and Statistics",
-     "url": "https://boi.org.il/en/economic-roles/statistics/"
+     "url": "https://boi.org.il/en/economic-roles/statistics/",
+     "verificacion": {
+      "bytes": 118350,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:48Z",
+      "http": 200,
+      "sha256": "78af54b0a3eb6ea1bdd99a709238bf1d96eb38a8211dc1d41d90d24387fd6fdd"
+     }
     },
     {
      "date": "2026-11-01",
@@ -522,7 +667,14 @@
      "rank": 2,
      "snippet": "דף הבית | בנק ישראל - הבנק המרכזי של ישראל\n- - נגיד בנק ישראל פרופ' אמיר ירון",
      "title": "אתר בנק ישראל | הבנק המרכזי",
-     "url": "https://www.boi.org.il/"
+     "url": "https://www.boi.org.il/",
+     "verificacion": {
+      "bytes": 118350,
+      "estado": "accesible",
+      "fecha": "2026-11-02T16:36:50Z",
+      "http": 200,
+      "sha256": "9a2e0ae8e8c15cce92802c8080a298138701e143b3839325dec671882feef361"
+     }
     },
     {
      "date": "2025-09-30",
@@ -564,7 +716,14 @@
      "rank": 1,
      "snippet": "# אודות אתר המידע הממשלתי\n## מה זה DataGov\nאתר data.gov.il הוא הפלטפורמה המרכזית של ממשלת ישראל לפרסום מאגרי מידע המוגדרים כמידע פתוח (מידע שלא חלים עליו חסיונות).",
      "title": "מאגרי המידע הממשלתיים | אודות",
-     "url": "https://data.gov.il/he/about"
+     "url": "https://data.gov.il/he/about",
+     "verificacion": {
+      "bytes": 919,
+      "estado": "http",
+      "fecha": "2026-11-02T16:36:51Z",
+      "http": 403,
+      "sha256": "b83a4d1a5c862f2455dfdfb7e69997d5c0e098e3ddd51dcbce03ea9c4435409d"
+     }
     },
     {
      "date": "",
@@ -572,7 +731,14 @@
      "rank": 2,
      "snippet": "אתר מאגרי המידע הממשלתיים מרכז מאגרי נתונים מכלל משרדי הממשלה הפתוחים לשימוש הציבור, מאפשר חיפוש נתונים בקלות וביעילות.\n...\n- החלטת ממשלה מספר 1933\n...\n- מדיניות שימוש בקוד פתוח",
      "title": "מאגרי המידע הממשלתיים",
-     "url": "https://data.gov.il/"
+     "url": "https://data.gov.il/",
+     "verificacion": {
+      "bytes": 919,
+      "estado": "http",
+      "fecha": "2026-11-02T16:36:52Z",
+      "http": 403,
+      "sha256": "7686d2a64ea7e659c17aa21fe577e73ba6e5d4eca458c43be4c66f28cc0ab555"
+     }
     },
     {
      "date": "2026-08-12",
