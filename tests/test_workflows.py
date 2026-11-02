@@ -116,8 +116,11 @@ class AuditorGpt(unittest.TestCase):
         user = next(i for i, s in enumerate(job['steps']) if 'useradd' in s.get('run', ''))  # raws parsed as another user
         self.assertEqual(job['steps'][user]['run'], 'sudo useradd --system --no-create-home --shell /usr/sbin/nologin rgparse')
         self.assertLess(user, job['steps'].index(gate_step))
-        upload = next(s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/upload-artifact@'))
-        self.assertEqual(upload['name'], 'packet-gate')
+        self.assertIn('--out "$d/packets.json" --recibo "$d/citas.jsonl"', run)  # data/, the raws downloaded again, never travels
+        upload = next(s for s in job['steps'] if s.get('uses', '').startswith('actions/upload-artifact@'))
+        self.assertEqual((upload['with']['name'], upload['if'], upload['with']['path'].splitlines()),
+                         ('packet-gate', 'always()', ['${{ runner.temp }}/packet-gate/packets.json',
+                                                      '${{ runner.temp }}/packet-gate/citas.jsonl']))
 
     def test_the_result_travels_as_a_file_never_as_a_job_output(self):
         # GitHub drops a job output it suspects of holding a secret: three GPT REVISE were lost so (#73, #89, #91)

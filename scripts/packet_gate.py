@@ -6,22 +6,25 @@ Runs main's rg.packets, never the PR's. The head's research-packets/<RP>/ trees 
 blob is written with git cat-file, byte for byte: no checkout, no PR code run, and no archive (git archive applies the
 head's own export-subst and export-ignore attributes, so it could hand the gate bytes or a file list that are not the
 head's). A folder whose tree holds anything but regular files (a link, a submodule), a blob over MAX_BLOB or a head over
-MAX_TOTAL is not written and fails. Every changed folder that still exists gets rg.packets.check; it passes only with no
-problem and no warning (--strict). Any error is that folder's failed result, and packets.json is always written: it
-names the head and, for each folder, its result and, only when it passed, the path and sha256 of each raw file.
+MAX_TOTAL is not written and fails. Every changed folder that still exists gets rg.packets.check, with the raws its quotes
+cite and it does not keep downloaded again into <data>/recrudos/ (rg.recrudo; never published; --recibo gets its lines);
+it passes only with no problem and no warning (--strict). Any error is that folder's failed result, and packets.json is
+always written: it names the head and, for each folder, its result and, only when it passed, each kept raw's sha256.
 audit-gpt reads it as a TRUSTED section: a raw listed there arrives in the diff as one line instead of its bytes.
 """
 import argparse
 import hashlib
 import json
+import os
 import re
 import subprocess
 import sys
+import time
 from pathlib import Path, PurePosixPath
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # main's rg, from main's checkout
 
-from rg.packets import check  # noqa: E402
+from rg.recrudo import PLAZO, verificar  # noqa: E402
 
 SHA = re.compile(r'^[0-9a-f]{40}$')
 PACKET = re.compile(r'^RP-[A-Za-z0-9._-]{3,64}$')
@@ -65,7 +68,7 @@ def write_blobs(rows, rp, data, repo='.'):
     return Path(data) / 'research-packets' / rp
 
 
-def one(sha, rp, data, budget, repo='.'):
+def one(sha, rp, data, budget, repo='.', recibo=None, deadline=None):
     """(result, bytes reserved) for one changed packet folder; an error is a failed result. The folder's bytes are
     reserved before the first one is written, so an error after that still counts them against the head's budget."""
     reserved = 0
@@ -82,7 +85,7 @@ def one(sha, rp, data, budget, repo='.'):
             return {'packet': rp, 'status': 'failed', 'problems': problems}, 0
         reserved = total
         folder = write_blobs(rows, rp, data, repo)
-        problems, warnings, stats = check(folder)
+        problems, warnings, stats = verificar(folder, Path(data) / 'recrudos' / rp, recibo, deadline)
         ok = not problems and not warnings
         raws = {}
         if ok:
@@ -95,10 +98,10 @@ def one(sha, rp, data, budget, repo='.'):
             'stats': stats, 'raws': raws}, reserved
 
 
-def gate(base, sha, data, repo='.'):
-    results, budget = [], MAX_TOTAL
+def gate(base, sha, data, repo='.', recibo=None):
+    results, budget, deadline = [], MAX_TOTAL, time.monotonic() + PLAZO
     for rp in changed(base, sha, repo):
-        result, used = one(sha, rp, data, budget, repo)
+        result, used = one(sha, rp, data, budget, repo, recibo, deadline)
         results.append(result)
         budget -= used
     return {'head_sha': sha, 'packets': results}
@@ -111,13 +114,16 @@ def main(argv=None):
     a.add_argument('--data', required=True)
     a.add_argument('--out', required=True)
     a.add_argument('--repo', default='.')
+    a.add_argument('--recibo', help='one JSON line per artifact asked again and per quote, written as each is decided')
     x = a.parse_args(argv)
     if not SHA.match(x.sha):
         raise SystemExit('bad head sha')
+    recibo = open(x.recibo or os.devnull, 'w', encoding='utf-8')  # noqa: SIM115 - closed below, after any error
     try:
-        result = gate(x.base, x.sha, x.data, x.repo)
+        result = gate(x.base, x.sha, x.data, x.repo, recibo)
     except Exception as e:  # noqa: BLE001 - no result is written as one: no raw is verified, so audit-gpt reads them whole
         result = {'head_sha': x.sha, 'packets': [], 'error': f'the gate did not run: {type(e).__name__}'}
+    recibo.close()
     Path(x.out).write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     print(json.dumps({p['packet']: p['status'] for p in result['packets']} or result.get('error', {}), ensure_ascii=False))
     return 0
