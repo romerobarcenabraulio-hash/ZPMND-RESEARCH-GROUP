@@ -40,7 +40,9 @@ jobs:
     timeout-minutes: 90  # private runners have 2 cores: ~55 mutants took over 30 min on one runner (2026-10-21)
     strategy:
       fail-fast: false  # every shard reports all of its mutants
-      matrix: { shard: [0, 1, 2, 3] }  # 4 runners in parallel
+      # 8 runners in parallel: with 4, #86's shards took 77-82 of the 90 minutes (fb3b01b, 2026-11-02); a public repo's
+      # GitHub minutes cost nothing, and the shards derive from the matrix (tests/test_mutar.py)
+      matrix: { shard: [0, 1, 2, 3, 4, 5, 6, 7] }
     services:  # a throwaway Postgres for the database tests (tests/test_postgres.py); its password is the container's, never a real one
       postgres:
         # alpine: its postgres user is uid 70. Debian's is 999, the uid `useradd --system` gives the extraction user of
