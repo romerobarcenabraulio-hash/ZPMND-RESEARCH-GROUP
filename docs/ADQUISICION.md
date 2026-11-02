@@ -51,13 +51,9 @@ Cada fuente termina en `completo` solo si llegó a su última página y sus regi
 `contador` (`no_cuadra` si difieren, `sin_conteo` si no declara tamaño). Cualquier otro final dice su motivo
 (`max_paginas`, `cursor repetido`, `ilegible`, `bloqueada_por_robots`, `pendiente` al plazo). Los registros de cada página se escriben enteros (`registros/<n>.jsonl.gz`) antes de que el manifiesto los nombre, y todas las fuentes de una corrida comparten un solo plazo. Los registros y el
 manifiesto van a la rama `adquisicion`; las páginas crudas, al artefacto de la corrida (90 días), con su sha256 en el
-manifiesto. Una ruta de cursor termina solo cuando la fuente dice que no hay siguiente cursor (nulo o vacío): una página
-vacía que aún nombra un cursor sigue, y una página sin ese campo es `ilegible`. Cada fuente escribe en una carpeta que no
-existía, y a la rama solo van el manifiesto y los archivos de registros que nombra (`rg.adquirir.publicar`): una fuente
-`completo` reemplaza su carpeta; cualquier otro final va a su `parcial/` y nunca toca registros completos. Primer uso: los
-dominios y campos de OpenAlex, probados con páginas reales (`tests/fixtures/openalex`) y declarados en
-`sources/registro/I.json`; subcampos y temas conservan solo su contador hasta capturar sus propias páginas con la llave
-(GPT sobre 17d66b3).
+manifiesto; a la rama solo va lo que el manifiesto nombra, y lo que no es `completo` va a `parcial/`. Primer uso: los
+dominios y campos de OpenAlex (`sources/registro/I.json`), probados con páginas reales; subcampos y temas esperan las
+suyas.
 
 ## Orden de construcción
 

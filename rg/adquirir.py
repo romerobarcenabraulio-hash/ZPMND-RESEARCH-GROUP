@@ -1,7 +1,7 @@
 """Acquisition by declaration (docs/ADQUISICION.md, contract on main since #85): a source of sources/registro/ whose
 `adquisicion` says how to load it is loaded with no code of its own. This module runs the `api` route; the others follow.
 
-  python -m rg.adquirir --solo int.openalex-temas --salida DIR
+  python -m rg.adquirir --solo int.openalex-campos --salida DIR
 
 For each source, with the catalog's Fetcher (https, the source's hosts, robots.txt, public addresses, a size cap, a
 budget of max_paginas plus a few, the pause per host):
@@ -11,18 +11,15 @@ budget of max_paginas plus a few, the pause per host):
 - each record is the item at `ruta_items` with its id at `registro.id_ruta`; a page that is not a list of such records
   ends the source as `ilegible`; a repeated id is counted, never kept twice;
 - it ends on the source's own last page, on a cursor seen before, at max_paginas or at the run's deadline, and says
-  which; a cursor route ends only on an explicit null or empty next cursor, so an empty page that still names a next
-  cursor goes on and a page without that field is `ilegible` (GPT on 17d66b3); only an end on the last page whose
-  distinct records equal the declared size is `completo` (cuadre);
+  which (a cursor route only on a null or empty next cursor); only an end on the last page whose distinct records
+  equal the declared size is `completo` (cuadre);
 - a credential (`credencial.secreto`, the name of an environment variable the workflow sets from a repo secret) goes
   only in the header Authorization: Bearer, only to the host of `url` (Fetcher secrets): never in a URL, a manifest or
   a message; a page whose body holds it, raw or JSON-decoded, is refused and nothing of it is kept.
 Each page's new records go to registros/<n>.jsonl.gz, written whole (os.replace) before the manifest names them, and
 the manifest is written after every page: a run cut short keeps every record its manifest announces (GPT on d705bce).
-Every source of a run shares one deadline (main's), so the last one never outlives the step. Each source writes into a
-folder of its own that did not exist (a repeated source_id or an old output is refused before anything is asked), and
-`publicar` copies only the manifest and the record files it names: a complete source replaces its folder on the data
-branch, any other end goes to its parcial/ and never touches complete records (GPT and the auditor on 17d66b3).
+Every source of a run shares one deadline (main's). Each source writes into a new folder, and `publicar` sends only
+what its manifest names.
 """
 import argparse
 import gzip
@@ -63,17 +60,7 @@ def _con(url, **params):
     return urlunsplit(p._replace(query=urlencode(q + [(k, str(v)) for k, v in params.items()])))
 
 
-def _contiene(x, key, hondo=0):
-    """True when any text of a decoded answer holds the key; too deep a nesting counts as holding it."""
-    if hondo > 50:
-        return True
-    if isinstance(x, str):
-        return key in x
-    if isinstance(x, dict):
-        return any(_contiene(k, key, hondo + 1) or _contiene(v, key, hondo + 1) for k, v in x.items())
-    if isinstance(x, list):
-        return any(_contiene(v, key, hondo + 1) for v in x)
-    return False
+_CADENA = re.compile(r'"(?:[^"\\]|\\.)*"', re.S)  # one JSON string literal, escapes included
 
 
 def _primero(pag):
@@ -195,13 +182,17 @@ def adquirir(f, salida, entorno=None, nuevo_fetcher=None, ahora=None, reloj=None
 
 
 def _eco(body, key):
-    """True when a body holds the key in any text once decoded as JSON (\\u escapes included). With a key, a body that
-    cannot be decoded whole counts as holding it, so a key outside a JSON string, in a page that is not JSON or under a
-    nesting too deep for the decoder is never kept (GPT on bbf8695); a separate bytes search would add nothing."""
+    """True when the key is in the body's bytes or in any of its JSON string literals, each decoded on its own: the raw
+    text, not the decoded tree, so no repeated property, nesting or escape hides it (GPT on bbf8695 and 4197c37). With a
+    key, a body that is not JSON counts as holding it."""
     if not key:
         return False
+    if key.encode('utf-8') in body:
+        return True
     try:
-        return _contiene(json.loads(body.decode('utf-8')), key)
+        texto = body.decode('utf-8')
+        json.loads(texto)  # JSON only: outside JSON the escapes this scan decodes mean nothing
+        return any(key in json.loads(c) for c in _CADENA.findall(texto) if '\\' in c)
     except (ValueError, UnicodeDecodeError, RecursionError):
         return True
 

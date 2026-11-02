@@ -130,7 +130,9 @@ class Api(unittest.TestCase):
         # GPT on bbf8695: a nesting too deep for the decoder hid a \\u-escaped key and its raw page was kept
         escapada = KEY.replace('o', '\\u006f').encode()
         hondo = b'{"meta": {"next_cursor": null}, "results": [{"id": "T1", "x": ' + b'[' * 5000 + b'"' + escapada + b'"' + b']' * 5000 + b'}]}'
-        for cuerpo in (hondo, b'<html>', b'\xff\xfe'):
+        repetida = b'{"x": "' + escapada + b'", "x": "limpio", "meta": {"next_cursor": null}, "results": [{"id": "T1"}]}'
+        nombre = b'{"' + escapada + b'": 1, "meta": {"next_cursor": null}, "results": [{"id": "T1"}]}'
+        for cuerpo in (hondo, repetida, nombre, b'<html>', b'\xff\xfe'):  # GPT on 4197c37: the decoder keeps the last x
             with self.subTest(cuerpo=cuerpo[:20]):
                 m = self.run_([cuerpo], declarado=1)
                 self.assertEqual((m['estado'], m['paginas']), ('rechazado', []))
