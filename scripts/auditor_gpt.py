@@ -32,9 +32,10 @@ API_URL = 'https://api.openai.com/v1/responses'
 MAX_OUTPUT_TOKENS = 12_000  # reasoning tokens count here too; a cut answer is incomplete, hence REVISE
 TIMEOUT_S = 600
 PREFIX = 'GPT REVIEW: '  # never contains "AUDIT VERDICT": no search for the Claude verdict, anchored or not, matches it
-CRITERIA_CAP = 30_000  # per criteria file. SECURITY.md reached 17k on 2026-10-29 (#60, #67) and every review read it
+CRITERIA_CAP = 45_000  # per criteria file. SECURITY.md reached 17k on 2026-10-29 (#60, #67) and every review read it
 # cut, so every one was REVISE and no data PR could merge by itself; tests/test_auditor_gpt.py now fails a tree whose
-# criteria file does not fit, before the reviewer ever reads it cut.
+# criteria file does not fit, before the reviewer ever reads it cut. 30k -> 45k on 2026-11-02: main's SECURITY.md was
+# 23,591 and the rows of six open PRs (T19, T24-T28) add about 10k, so the last of them to merge would not fit.
 # (path, character cap, keep the end?) in reading order. The caps are fixed; their sum is the budget for diff +
 # evidence. The evidence keeps its end, where the test summary and "exit=" are.
 SECTIONS = (
