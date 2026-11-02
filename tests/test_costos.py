@@ -185,9 +185,25 @@ class OwnRunner(unittest.TestCase):
         self.assertIn("python3 -c 'import sys; sys.exit(sys.version_info < (3, 12))'", self.script)
         self.assertLess(self.script.index('sys.version_info < (3, 12)'), self.script.index('apt-get update'))
 
+    def test_the_account_checks_accept_a_clean_rgjob_and_refuse_any_other(self):
+        # GPT on 2c7ebd3: with pipefail, sudo's exit 1 for "no rules" made the clean account fail; run the real lines
+        lines = [l for l in self.script.split('\n') if l.startswith(('[ "$(id -nG rgjob)"', 'reglas=$(sudo', "grep -q 'is not allowed"))]
+        self.assertEqual(len(lines), 3)
+        for grupos, sudo_out, sudo_rc, ok in (('rgjob', 'User rgjob is not allowed to run sudo on host.', 1, True),
+                                              ('rgjob docker', 'User rgjob is not allowed to run sudo on host.', 1, False),
+                                              ('rgjob', 'User rgjob may run the following commands on host:', 0, False)):
+            with self.subTest(grupos=grupos, sudo=sudo_out[:20]), tempfile.TemporaryDirectory() as d:
+                d = Path(d)
+                (d / 'id').write_text(f'#!/bin/bash\necho "{grupos}"\n'); (d / 'sudo').write_text(f'#!/bin/bash\necho "{sudo_out}"\nexit {sudo_rc}\n')
+                for f in ('id', 'sudo'):
+                    (d / f).chmod(0o755)
+                r = subprocess.run(['bash', '-c', 'set -euo pipefail\n' + '\n'.join(lines) + '\necho PASA'], capture_output=True, text=True,
+                                   env={**os.environ, 'PATH': f'{d}:{os.environ["PATH"]}'})
+                self.assertEqual('PASA' in r.stdout, ok, r.stdout + r.stderr)
+
     def test_an_rgjob_with_other_groups_or_sudo_rules_is_refused_before_anything_starts(self):
         # GPT on 2416dfe: an existing rgjob in docker or with sudo rules reached the host through its socket or sudo
-        for guard in ('[ "$(id -nG rgjob)" = rgjob ] ||', "sudo -l -U rgjob 2>/dev/null | grep -q 'is not allowed to run sudo' ||"):
+        for guard in ('[ "$(id -nG rgjob)" = rgjob ] ||', "grep -q 'is not allowed to run sudo' <<<\"$reglas\" ||"):
             with self.subTest(guard=guard):
                 self.assertIn(guard, self.script)
                 self.assertLess(self.script.index(guard), self.script.index('systemctl enable --now rg-runner'))
@@ -369,7 +385,7 @@ class Controller(unittest.TestCase):
                          {'runner_group_id': 1, 'labels': ['self-hosted', 'rg-catalog'], 'work_folder': '_work'})
         argv = (self.stubs / 'systemd-run.argv').read_text().split('\n')
         for want in ('--unit=rg-job-77', f'--uid={self.env["RG_JOB_USER"]}', 'KillMode=control-group', 'NoNewPrivileges=yes',
-                     'PrivateTmp=yes', 'ProtectSystem=strict', f'ReadWritePaths={self.job}', f'ReadWritePaths={self.home}',
+                     'PrivateTmp=yes', 'PrivateDevices=yes', 'PrivateIPC=yes', 'ProtectSystem=strict', f'ReadWritePaths={self.job}', f'ReadWritePaths={self.home}',
                      f'InaccessiblePaths={self.header.parent}', 'RestrictSUIDSGID=yes', 'RuntimeMaxSec=86400'):
             self.assertIn(want, argv)
         self.assertEqual((self.stubs / 'jit.mode').read_text().strip(), '600')

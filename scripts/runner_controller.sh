@@ -77,6 +77,7 @@ run_one() {  # one just-in-time runner, one job, then nothing left
   systemd-run --unit="rg-job-$id" --uid="$JOBUSER" --gid="$JOBGROUP" --collect --quiet \
     -p WorkingDirectory="$JOB/runner" -p Environment=HOME="$JOBHOME" -p RuntimeMaxSec=86400 \
     -p KillMode=control-group -p NoNewPrivileges=yes -p PrivateTmp=yes -p ProtectSystem=strict \
+    -p PrivateDevices=yes -p PrivateIPC=yes \
     -p ReadWritePaths="$JOB" -p ReadWritePaths="$JOBHOME" -p InaccessiblePaths="$(dirname "$HEADER")" \
     -p RestrictSUIDSGID=yes -p ProtectKernelTunables=yes -p ProtectControlGroups=yes \
     /bin/bash -c 'exec ./run.sh --jitconfig "$(cat ../jit)"' || { echo "rg-job-$id did not start"; finish "$id"; return 1; }
