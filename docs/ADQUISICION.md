@@ -39,6 +39,26 @@ se guarda junto a su crudo (hueco 2: la licencia leída de la fuente, no supuest
 - **Plazo y guardado** como el sondeo: plazo propio menor al del job, guardado tras cada archivo o página, publicación
   aunque se corte.
 
+## Motor `api` (rg/adquirir.py, workflow adquirir.yml)
+
+Construido el 2026-11-01. Además de lo de arriba, la vía `api` admite:
+- `paginacion.inicio`: el primer valor del cursor (OpenAlex: `*`). Sin él, una página empieza en 1 y un offset en 0.
+- `credencial.secreto`: el nombre de un secreto del repo que el workflow pone en el entorno de un solo paso. La llave
+  viaja solo en el encabezado `Authorization: Bearer`, solo al host de `url` (el Fetcher se niega a mandarla a otro), y
+  nunca va en una URL, un manifiesto ni un mensaje. Una página que la contenga se rechaza entera. Sin la llave declarada
+  no se pide nada.
+Cada fuente termina en `completo` solo si llegó a su última página y sus registros distintos son los que declara su
+`contador` (`no_cuadra` si difieren, `sin_conteo` si no declara tamaño). Cualquier otro final dice su motivo
+(`max_paginas`, `cursor repetido`, `ilegible`, `bloqueada_por_robots`, `pendiente` al plazo). Los registros de cada página se escriben enteros (`registros/<n>.jsonl.gz`) antes de que el manifiesto los nombre, y todas las fuentes de una corrida comparten un solo plazo. Los registros y el
+manifiesto van a la rama `adquisicion`; las páginas crudas, al artefacto de la corrida (90 días), con su sha256 en el
+manifiesto. Una ruta de cursor termina solo cuando la fuente dice que no hay siguiente cursor (nulo o vacío): una página
+vacía que aún nombra un cursor sigue, y una página sin ese campo es `ilegible`. Cada fuente escribe en una carpeta que no
+existía, y a la rama solo van el manifiesto y los archivos de registros que nombra (`rg.adquirir.publicar`): una fuente
+`completo` reemplaza su carpeta; cualquier otro final va a su `parcial/` y nunca toca registros completos. Primer uso: los
+dominios y campos de OpenAlex, probados con páginas reales (`tests/fixtures/openalex`) y declarados en
+`sources/registro/I.json`; subcampos y temas conservan solo su contador hasta capturar sus propias páginas con la llave
+(GPT sobre 17d66b3).
+
 ## Orden de construcción
 
 1. `volcado` (más conocimiento por hora), probado con fuentes reales que ya publican volcados (índice de RFC, licencias
