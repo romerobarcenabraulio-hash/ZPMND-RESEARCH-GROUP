@@ -8,14 +8,16 @@
 |---|---|
 | Código, contrato, seguridad | `main` |
 | Reglas | `docs/REGLAS.md` (1–19; 21–23 en #95; el resto entra con su prueba) |
-| Órdenes de la semana | `ORDENES-RG.md` |
+| Órdenes de la semana | `ORDENES-RG.md` (plan del dueño) |
+| Entregable activo y los tres siguientes (WIP = 1) | `COLA.md` |
+| Plan día por día hasta el 2026-12-31 | `ITINERARIO-2026-Q4.md` |
 | Catálogo de México | rama `catalog`, `mx/`; crudos en release `raw-mx`; texto en `text-mx` (aún no existe: primera corrida de `texto-mx` en curso) |
 | Registro de fuentes | `sources/mx.json` (15 fuentes: 8 activas con 7 adaptadores, marca `legacy` en #95; 7 `planned`) + `sources/registro/` (143 fuentes candidatas, 16 familias) |
 | Pedidos abiertos | `requests/` (11 + RR-2026-11-02-nom035-autoauditoria P0 + 3 de arte previo) |
 | Paquetes | `research-packets/`, con constancia Sigstore |
 | Veredictos de ZPPMND | `verdicts/` (esquema en #95; verificación en CI pendiente) |
 | Huecos del NORTE | `docs/NORTE.md` → `ORDENES-RG.md` §2 (calendario) |
-| Diferidos | `ORDENES-RG.md` §2 (6, con condición de reapertura); `BACKLOG.md` se crea el día 11 |
+| Diferidos | `BACKLOG.md` (cada uno con su condición de reapertura) |
 
 ## Alcance (reglas 21 y 23)
 
@@ -35,11 +37,14 @@ Ordenado por consumidor. Toda fuente nueva nombra `consumer` antes de `active`. 
 | mx.inegi-bie | active · legacy | indicadores | sí (39877667471) | 1 / 0 / 0 |
 | 143 del registro | candidate | ninguno | — | — |
 
-Déficit: ninguna `legacy` tiene los tres casos. Se registra; aplica completo a toda fuente nueva.
+La marca `legacy` llega a `sources/mx.json` con #95. Los conteos cuadra / descuadra / cuarentena son conteo manual
+del dueño: ninguna prueba los comprueba hasta la de la regla 29. Déficit: ninguna `legacy` tiene los tres casos. Se
+registra; aplica completo a toda fuente nueva.
 
 ## Pendiente, en orden
 
-Ver `ORDENES-RG.md` §1 (merge de 12 PR; #94 ya está en `main`) y §2 (11 días). Después del día 11: sellado del gold
+`COLA.md` (activo: E0, cerrar el día 1; siguiente: E1, primer paquete verificado) y su calendario en
+`ITINERARIO-2026-Q4.md`. #94 y #98 ya están en `main`. Después del día 11: sellado del gold
 de ZPPMND contra crudos. INEGI BIE ya es `active` con bytes reales (corrida 39877667471).
 
 ## Bloqueado (no se rodea)

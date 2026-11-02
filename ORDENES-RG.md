@@ -8,6 +8,13 @@ Decisiones cerradas (no reabrir): RG no se congela. Los 7 adaptadores de México
 `VerdictEvent` entra en #95. #89 queda draft; el primer uso del motor `api` es INEGI BIE. Auditor NVIDIA solo en
 discrepancia y solo mide (#91). OCR primero mide (#93). GOODWARE no es repo: es `canon/` dentro de ZPPMND.
 
+**Estado de este documento.** Es el plan del dueño para la semana, no una regla en vigor. Gobiernan el código, las
+pruebas, `docs/REGLAS.md` y `RESEARCH_CONTRACT.md`; cada regla de la sección 3 entra a `REGLAS.md` solo con su prueba.
+El canal `VerdictEvent` (§1 #95, §2 días 8 y 10, §3 regla 22) es una propuesta pendiente de reconciliar con
+`RESEARCH_CONTRACT.md` §3: hasta el PR que verifica la constancia y cambia ese contrato con su prueba, RG conoce un
+veredicto solo por un pedido nuevo y ningún código lee `verdicts/`. El orden de trabajo vigente está en `COLA.md` e
+`ITINERARIO-2026-Q4.md` (el dueño aprobó el 2026-11-02 ir primero por la cadena crudo → texto → compuerta → paquete).
+
 ## 1. Orden de merge de los 12 PR abiertos
 
 | Orden | PR | Acción | Regla | Qué comprobar antes del merge |
@@ -82,72 +89,9 @@ como flujo; artefactos privados con scope de tenant (§59–61).
 
 ## 4. `docs/ESTADO.md` (reemplaza al del 2026-10-19)
 
-```markdown
-# Estado de RESEARCH GROUP · 2026-11-02
-
-Única entrada del repo (regla 24). Se actualiza en cada entrega; lo superseded se borra.
-
-## Dónde está cada cosa
-
-| Qué | Dónde |
-|---|---|
-| Código, contrato, seguridad | `main` |
-| Reglas | `docs/REGLAS.md` (1–29) |
-| Órdenes de la semana | `ORDENES-RG.md` |
-| Catálogo de México | rama `catalog`, `mx/`; crudos en release `raw-mx`; texto en `text-mx` |
-| Registro de fuentes | `sources/mx.json` (8 fuentes `legacy`, 7 adaptadores) + `sources/registro/` (143 fuentes candidatas, 16 familias) |
-| Pedidos abiertos | `requests/` (11 + RR-2026-11-02-nom035-autoauditoria P0 + 3 de arte previo) |
-| Paquetes | `research-packets/`, con constancia Sigstore |
-| Veredictos de ZPPMND | `verdicts/` (esquema en #95; verificación en CI pendiente) |
-| Huecos del NORTE | `docs/NORTE.md` → `CIERRE-HUECOS-NORTE.md` (11 PR) |
-| Diferidos | `BACKLOG.md` (6, con condición de reapertura) |
-
-## Alcance (reglas 21 y 23)
-
-Ordenado por consumidor. Toda fuente nueva nombra `consumer` antes de `active`. Legacy: 8 fuentes, no se tocan.
-
-## Casos de aceptación por fuente (regla 29)
-
-| Fuente | Estado | Consumidor | Fixture real | Cuadra / Descuadra / Cuarentena |
-|---|---|---|---|---|
-| mx.dof | active · legacy | catálogo MX; RR nom035 | sí | 1 / 0 / 0 |
-| mx.leyes-federales | active · legacy | RR nom035 (LFT); gold ZPPMND | sí | 1 / 0 / 0 |
-| mx.reglamentos-federales | active · legacy | gold ZPPMND | sí | 1 / 0 / 0 |
-| mx.ojn-estatal | active · legacy | gold ZPPMND G06–G09 (sin texto: OCR) | sí | 1 / 0 / 0 |
-| mx.ojn-municipal | active · legacy | gold ZPPMND G09 | sí | 1 / 0 / 0 |
-| mx.hf-tesis-scjn | active · legacy · secundaria | — (sin consumidor: candidato a revisión semanal) | sí | 1 / 0 / 1 |
-| mx.banxico-sie | active · legacy | indicadores (RR unidades-de-referencia) | sí (39709378896) | 1 / 1 / 0 |
-| mx.inegi-bie | trial · legacy | indicadores | no (401/400) | 0 / 0 / 0 |
-| 143 del registro | candidate | ninguno | — | — |
-
-Déficit: ninguna `legacy` tiene los tres casos. Se registra; aplica completo a toda fuente nueva.
-
-## Pendiente, en orden
-
-Ver `ORDENES-RG.md` §1 (merge de 12 PR) y §2 (11 días). Después del día 11: sellado del gold de ZPPMND contra
-crudos; INEGI BIE a `active` cuando el dueño reponga `INEGI_TOKEN` y corra `indicadores-mx` con `-f sources=mx.inegi-bie`.
-
-## Bloqueado (no se rodea)
-
-SCJN (403), SRE (reto anti-bots), datos.gob.mx (`/api/` prohibido), CONAMER (403), SINEC (no resuelve). INEGI BIE:
-pendiente del dueño.
-
-## Revisión de muerte semanal (regla 26)
-
-| Semana | Revertido | Nota |
-|---|---|---|
-| 2026-11-02 | — | Primera entrada. Candidatos próxima semana: `mx.hf-tesis-scjn` (sin consumidor), 143 fuentes del registro (regla 23: siguen `candidate`, no se activan) |
-
-## Muestreo del dueño (regla 25)
-
-| PR | Afirmación verificada | Resultado |
-|---|---|---|
-| — | — | — |
-
-## Último merge en `main`
-
-`(actualizar en cada entrega: número de PR, SHA, fecha)`
-```
+El estado vigente vive solo en `docs/ESTADO.md` (regla 24). La plantilla que el dueño escribió aquí se aplicó allí
+contrastada con el repo el 2026-11-02: INEGI BIE ya es `active` con bytes reales (corrida 39877667471), `text-mx`
+aún no existe y `CIERRE-HUECOS-NORTE.md` no existe (su calendario es la sección 2).
 
 ## 5. CapabilityDemand autorizados y su arte previo
 
@@ -160,100 +104,15 @@ dueño. Ninguno se instala antes del paquete. Licencia leída, no asumida. Costo
 | Modelo abierto para auditor 3 | regla 27 | Candidatos de familia distinta a Claude/GPT (Nemotron, Qwen, DeepSeek, Llama, Mistral): licencia, tamaño que cabe en el servidor rentado, servidor compatible con protocolo OpenAI (vLLM/NIM/Ollama), costo por auditoría | Un auditor que bloquee; un cuarto auditor |
 | Embeddings para índice del catálogo | hueco 7 (búsqueda del catálogo), NORTE §45 | bge-m3 y alternativas abiertas: licencia, dimensión, costo de indexar ~300 mil registros, tokens ahorrados medidos (ya pedido en ESTADO del 10-19 punto 3) | Una base vectorial como única búsqueda (§45, §71) |
 
-### `requests/RR-2026-11-02-arte-previo-ocr-ojn.json`
+Los tres pedidos de arte previo son archivos, sin copia aquí:
+[`RR-2026-11-02-arte-previo-ocr-ojn`](requests/RR-2026-11-02-arte-previo-ocr-ojn.json),
+[`RR-2026-11-02-arte-previo-auditor-abierto`](requests/RR-2026-11-02-arte-previo-auditor-abierto.json),
+[`RR-2026-11-02-arte-previo-embeddings-catalogo`](requests/RR-2026-11-02-arte-previo-embeddings-catalogo.json).
 
-```json
-{
-  "request_id": "RR-2026-11-02-arte-previo-ocr-ojn",
-  "issued_by": "OWNER",
-  "issued_at": "2026-11-02T20:00:00Z",
-  "question": "Para extraer texto con posición de página de los documentos del Orden Jurídico Nacional que no tienen capa de texto (archivos .doc antiguos y PDF escaneados de legislación estatal y municipal), ¿qué extractores y modelos de OCR y layout existen con licencia que permita uso en producción, versión fijable, salida con confianza por página y ejecución local en un servidor sin GPU dedicada o con una GPU de consumo, y cuál es su precisión y costo por página medidos sobre documentos reales de esa fuente?",
-  "why_needed": "La compuerta de RG exige cita literal en el texto del crudo; sin texto, ninguna obligación estatal o municipal puede llegar confirmada (ZPPMND G06, G07, G09). La medición de #93 compara Tesseract, nemotron-parse y LibreOffice; falta el panorama completo con licencias y arte previo antes de fijar uno.",
-  "affected_component": "rg/text (extractores fijados) y mx/texto",
-  "desired_evidence": [
-    "por candidato: nombre, versión, licencia leída literalmente de su repositorio o documentación oficial con cita y sha256 del documento de licencia",
-    "requisitos de hardware y forma de ejecución local documentados por el proveedor",
-    "si publica confianza por página o por bloque, y en qué formato",
-    "resultados publicados sobre documentos legales en español o en escaneos de calidad similar, con su fuente; lo no publicado marcado como desconocido",
-    "costo por página: solo si el proveedor lo publica; lo demás como HIPÓTESIS",
-    "lo que no se encontró: consultas hechas sin resultado"
-  ],
-  "priority": "P0",
-  "risk_if_wrong": "Elegir un extractor que no se pueda fijar por versión o cuya licencia no permita el uso, y tener que rehacer mx/texto; o atribuir a una página una confianza que el extractor no produce.",
-  "privacy_class": "PUBLIC"
-}
-```
+## 6. Pedido P0 de autoauditoría NOM-035
 
-### `requests/RR-2026-11-02-arte-previo-auditor-abierto.json`
-
-```json
-{
-  "request_id": "RR-2026-11-02-arte-previo-auditor-abierto",
-  "issued_by": "OWNER",
-  "issued_at": "2026-11-02T20:05:00Z",
-  "question": "¿Qué modelos de lenguaje de pesos abiertos, de una familia distinta a los de Anthropic y OpenAI, pueden servirse localmente detrás de un servidor compatible con el protocolo de chat de OpenAI, con licencia que permita uso comercial interno, y qué tamaño, memoria requerida, contexto máximo y desempeño publicado en revisión de código tienen, para usarse como tercera opinión de auditoría solo cuando dos auditores discrepan?",
-  "why_needed": "Regla 27 y #91: una tercera opinión descorrelacionada de Claude y GPT, que mide y no decide, y que se mantiene solo si en 30 PR encuentra defectos reales que los otros dos no vieron.",
-  "affected_component": "auditor.yml (tercer auditor) y scripts/auditor_gpt.py (base_url configurable)",
-  "desired_evidence": [
-    "por candidato: nombre, versión, licencia leída literalmente con cita y sha256; cláusulas de uso comercial o restricciones",
-    "tamaños disponibles y memoria requerida documentados por el proveedor; contexto máximo",
-    "servidores que lo sirven con protocolo compatible con OpenAI, según su documentación oficial",
-    "resultados publicados en evaluaciones de revisión de código o detección de defectos, con fuente; lo no publicado marcado como desconocido",
-    "qué requiere del servidor rentado: HIPÓTESIS hasta medir en #75",
-    "lo que no se encontró"
-  ],
-  "priority": "P1",
-  "risk_if_wrong": "Instalar un modelo cuya licencia no permite el uso, o uno correlacionado con los otros dos que no aporta hallazgos únicos y solo añade tiempo de CI.",
-  "privacy_class": "PUBLIC"
-}
-```
-
-### `requests/RR-2026-11-02-arte-previo-embeddings-catalogo.json`
-
-```json
-{
-  "request_id": "RR-2026-11-02-arte-previo-embeddings-catalogo",
-  "issued_by": "OWNER",
-  "issued_at": "2026-11-02T20:10:00Z",
-  "question": "Para indexar semánticamente un catálogo de alrededor de trescientos mil registros de legislación, normas y notas oficiales en español, ¿qué modelos de embeddings de pesos abiertos y multilingües existen con licencia de uso comercial, qué dimensión y longitud de entrada tienen, cómo se desempeñan en evaluaciones publicadas de recuperación en español y jurídico, y qué costo de cómputo documentan para indexar y consultar localmente, de modo que la búsqueda semántica complemente, no sustituya, la búsqueda léxica y por identificadores?",
-  "why_needed": "ESTADO del 2026-10-19 punto 3 (índice semántico con medición de tokens ahorrados) y NORTE §45 (búsqueda no solo por vectores). Antes de elegir bge-m3 por costumbre hace falta el panorama con licencias.",
-  "affected_component": "índice del catálogo (rama catalog) y búsqueda de la compuerta",
-  "desired_evidence": [
-    "por candidato: nombre, versión, licencia leída literalmente con cita y sha256",
-    "dimensión, longitud máxima de entrada, idiomas declarados por el proveedor",
-    "resultados en evaluaciones públicas de recuperación multilingüe o en español, con fuente y fecha; lo no publicado marcado como desconocido",
-    "costo de indexación y consulta: solo cifras publicadas por el proveedor; el resto HIPÓTESIS",
-    "alternativas léxicas o híbridas documentadas con las que se compara",
-    "lo que no se encontró"
-  ],
-  "priority": "P2",
-  "risk_if_wrong": "Indexar trescientos mil registros con un modelo que luego no se puede usar o que no mejora la recuperación frente a la búsqueda léxica, y pagar la indexación dos veces.",
-  "privacy_class": "PUBLIC"
-}
-```
-
-## 6. `requests/RR-2026-11-02-nom035-autoauditoria.json`
-
-```json
-{
-  "request_id": "RR-2026-11-02-nom035-autoauditoria",
-  "issued_by": "OWNER",
-  "issued_at": "2026-11-02T20:15:00Z",
-  "question": "Para un centro de trabajo en México, ¿cuál es el conjunto completo de obligaciones del patrón bajo la NOM-035-STPS-2018 (numerales 5 a 10 y guías de referencia), a qué tramo de trabajadores aplica cada una, qué documento o registro demuestra su cumplimiento según el propio texto, y qué dicen literalmente los transitorios sobre su entrada en vigor por fases? Cada obligación con su cita literal en tramos de 300 caracteres o menos.",
-  "why_needed": "Primera unidad de autoauditoría de ZPPMND: una lista de obligaciones tipadas, con evidencia exigible y vigencia, que una empresa pueda contestar sola. Hoy solo están curados el numeral 2 y parte de 5 a 8 (RR-2026-10-21-nom035-obligaciones). Es el consumidor del primer VerdictEvent.",
-  "affected_component": "autoauditoría tipada de ZPPMND, plano de conocimiento",
-  "desired_evidence": [
-    "texto del DOF del 23 de octubre de 2018 con sha256 y fecha, y cualquier aclaración o modificación posterior publicada en el DOF, con su linaje NOM-035-STPS",
-    "por cada obligación: numeral, condición de aplicación (tramo de trabajadores u otra), evidencia documental que el texto exige, cita literal",
-    "transitorios: fechas de entrada en vigor por fase, con cita literal",
-    "lo que el texto no decide, marcado como desconocido; lo que solo diga una fuente secundaria, como candidate_claim",
-    "lo que no se encontró: consultas hechas sin resultado"
-  ],
-  "priority": "P0",
-  "risk_if_wrong": "Una empresa se declara en cumplimiento por una obligación que no le aplica, o se le exige evidencia que la norma no pide.",
-  "privacy_class": "PUBLIC"
-}
-```
+[`requests/RR-2026-11-02-nom035-autoauditoria.json`](requests/RR-2026-11-02-nom035-autoauditoria.json): el consumidor del
+primer `VerdictEvent`.
 
 ## 7. Lo que NO se toca esta semana
 
