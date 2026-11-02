@@ -310,6 +310,25 @@ class Corrida(unittest.TestCase):
             self.assertTrue(any(q.startswith('Mexico') for q in asked))
             self.assertEqual([p['iso3'] for p in d.pendientes(MINI, c)], ['KEN'])
 
+    def test_every_pending_country_gets_its_turn_round_robin(self):
+        # GPT on 165036a: KEN fails forever and comes first in the map; MEX, tried before and failed once, must be retried
+        with tempfile.TemporaryDirectory() as t:
+            c, asked, tick = Path(t), [], iter(f'2026-11-01T00:00:{i:02d}Z' for i in range(60))
+            ahora = lambda: next(tick)  # noqa: E731
+
+            def buscar(q, *a):
+                asked.append(q)
+                if q.startswith('Kenya'):
+                    raise http_error(500)
+                return {'results': [HIT]}
+            for iso in ('KEN', 'MEX'):  # both tried once, both incomplete; KEN's attempt is the older
+                p = next(x for x in MINI['paises'] if x['iso3'] == iso)
+                (c / f'{iso}.json').write_text(json.dumps(d._doc(p, 'web', ahora, [], 2)))
+            for _ in range(2):  # a budget for one country per run
+                d.correr_busqueda(MINI, c, KEY, 2, 'web', ahora, buscar, sleep=lambda s: None)
+            self.assertTrue(any(q.startswith('Mexico') for q in asked))
+            self.assertTrue(json.loads((c / 'MEX.json').read_text())['completo'])
+
     def test_no_country_starts_past_the_deadline(self):
         with tempfile.TemporaryDirectory() as t:
             out = self.run_(Path(t), 10, lambda *a: {'results': [HIT]}, reloj=iter([0.0, d.PLAZO_BUSCAR - 1]).__next__)
