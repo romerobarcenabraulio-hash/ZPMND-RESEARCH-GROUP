@@ -39,6 +39,8 @@ Al fusionar #3 en `main`, `catalog-mx.yml` corre cada 3 días (días 1, 4, 7… 
 
 Para ponerse al día más rápido: `gh workflow run catalog-mx.yml -f budget=12000`.
 
+`vigia.yml` revisa cada día (23:37 UTC) las últimas corridas en `main` de catalog-mx, texto-mx, indicadores-mx, sondeo, descubrir y sondeo-inegi, y mantiene abierta una sola issue, «Vigía de producción», mientras alguno está en rojo o sin una corrida terminada dentro de su tope de días; la cierra con un comentario cuando todo está bien (`scripts/vigia.py`, SECURITY.md T26).
+
 ## Bloqueado (no se rodea)
 
 | Fuente | Causa | Qué lo destraba |
