@@ -62,7 +62,10 @@ class AuditorGpt(unittest.TestCase):
     def test_it_checks_out_main_and_never_the_pr_head(self):
         job = self.jobs['audit-gpt']
         uses = [s['uses'].split('@')[0] for s in job['steps'] if 'uses' in s]
-        self.assertEqual(uses, ['actions/checkout', 'actions/download-artifact', 'actions/download-artifact'])
+        self.assertEqual(uses, ['actions/checkout', 'actions/download-artifact', 'actions/download-artifact',
+                                'actions/upload-artifact'])  # the same text, for audit-tercero (tests/test_auditor_tercero.py)
+        upload = next(s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/upload-artifact@'))
+        self.assertEqual((upload['name'], upload['path']), ('audit-inputs', '${{ runner.temp }}/gpt-audit'))
         downloads = [s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/download-artifact@')]
         self.assertEqual([(d['name'], d['path']) for d in downloads],
                          [('evidence', '${{ runner.temp }}/gpt-audit/evidence'),
