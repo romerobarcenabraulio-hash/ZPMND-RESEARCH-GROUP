@@ -83,10 +83,11 @@ def _escribir(path, doc):
     os.replace(tmp, path)
 
 
-def adquirir(f, salida, entorno=None, nuevo_fetcher=None, ahora=None, reloj=time.monotonic, fin=None):
+def adquirir(f, salida, entorno=None, nuevo_fetcher=None, ahora=None, reloj=None, fin=None):
     """One source by its `api` declaration until `fin` (a reloj() value, the run's deadline); returns its manifest (also
     written to <salida>/<source_id>/manifiesto.json)."""
     a, entorno = f['adquisicion'], os.environ if entorno is None else entorno
+    reloj = reloj or time.monotonic  # read at call time: a default bound at import would ignore the host's clock in tests
     pag = a['paginacion']
     ahora = ahora or (lambda: datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
     host = urlsplit(a['url']).hostname
