@@ -40,8 +40,7 @@ Déficit: ninguna `legacy` tiene los tres casos. Se registra; aplica completo a 
 ## Pendiente, en orden
 
 Ver `ORDENES-RG.md` §1 (merge de 12 PR; #94 ya está en `main`) y §2 (11 días). Después del día 11: sellado del gold
-de ZPPMND contra crudos. INEGI BIE ya es `active` con bytes reales (corrida 39877667471); `docs/CATALOGO.md` y
-`docs/SOLICITUDES.md` #6 siguen diciendo `trial`.
+de ZPPMND contra crudos. INEGI BIE ya es `active` con bytes reales (corrida 39877667471).
 
 ## Bloqueado (no se rodea)
 
