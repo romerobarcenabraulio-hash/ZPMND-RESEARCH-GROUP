@@ -1,6 +1,7 @@
 """scripts/auditor_gpt.py, the second auditor: each guard that keeps it fail-closed and cheap, with the API mocked.
 
-No test reaches the network: urlopen is replaced in every test, and a call nobody expected fails the test.
+No test reaches the network: pedir (rg/llamada.py) is replaced in every test, or only its transport, and a call
+nobody expected fails the test.
 """
 import hashlib
 import importlib.util
@@ -15,10 +16,14 @@ import subprocess
 import tempfile
 import unittest
 import urllib.error
+import urllib.request
 from pathlib import Path
 from unittest import mock
 
 import yaml
+
+from rg import llamada
+from rg.llamada import Rechazo
 
 ROOT = Path(__file__).resolve().parents[1]
 _spec = importlib.util.spec_from_file_location('auditor_gpt', ROOT / 'scripts' / 'auditor_gpt.py')
@@ -69,17 +74,17 @@ def response(ans=None, status='completed', text=None, content_type='output_text'
 
 
 class FakeHTTP:
-    """Stands in for urllib.request.urlopen: records every request and returns one canned body or raises."""
+    """Stands in for rg.llamada.pedir: records every request and returns one canned body or raises."""
 
     def __init__(self, body=None, error=None):
         self.calls, self.body, self.error = [], body, error
 
-    def __call__(self, req, timeout=None):
-        self.calls.append({'url': req.full_url, 'headers': dict(req.header_items()), 'payload': json.loads(req.data),
-                           'timeout': timeout})
+    def __call__(self, metodo, url, *, llave, host, cuerpo, plazo, tope, espera=None):
+        self.calls.append({'url': url, 'metodo': metodo, 'llave': llave, 'host': host, 'payload': json.loads(cuerpo),
+                           'plazo': plazo, 'espera': espera})
         if self.error is not None:
             raise self.error
-        return io.BytesIO(json.dumps(self.body).encode('utf-8'))
+        return json.dumps(self.body).encode('utf-8')
 
 
 def no_network(*a, **k):
@@ -95,13 +100,13 @@ class Base(unittest.TestCase):
         make_inputs(self.root)
         self.summary = self.tmp / 'summary.md'
         for p in (mock.patch.dict(os.environ, {'GITHUB_STEP_SUMMARY': str(self.summary)}),
-                  mock.patch.object(gpt.urllib.request, 'urlopen', no_network),
+                  mock.patch.object(gpt, 'pedir', no_network),
                   mock.patch('sys.stdout', new_callable=io.StringIO)):
             p.start()
             self.addCleanup(p.stop)
 
     def run_audit(self, http, model='a-model', key='test-key-not-real'):
-        with mock.patch.object(gpt.urllib.request, 'urlopen', http):
+        with mock.patch.object(gpt, 'pedir', http):
             return gpt.audit(self.root, '7', SHA, model, key)
 
     def assertRevise(self, r, note):
@@ -137,9 +142,9 @@ class Request(Base):
         self.assertEqual((fmt['type'], fmt['strict']), ('json_schema', True))
         self.assertEqual(fmt['schema']['required'], ['verdict', 'head_sha', 'criteria_quote', 'body'])
         self.assertIs(fmt['schema']['additionalProperties'], False)
-        self.assertEqual(call['headers']['Authorization'], 'Bearer test-key-not-real')
-        self.assertNotIn('test-key-not-real', json.dumps(p))  # the key travels in the header only
-        self.assertEqual(call['timeout'], gpt.TIMEOUT_S)
+        self.assertEqual((call['metodo'], call['llave'], call['host']), ('POST', 'test-key-not-real', 'api.openai.com'))
+        self.assertNotIn('test-key-not-real', json.dumps(p))  # pedir puts it in the header only (test_llamada.py)
+        self.assertEqual((call['plazo'], call['espera']), (gpt.TIMEOUT_S, gpt.TIMEOUT_S))  # it answers only when done
         for text in ('contrato de prueba', 'seguridad de prueba', 'reglas de prueba', '+hola = 1', 'exit=0',
                      'abc1234 un cambio', 'skipped: identical', ' x.py | 1 +'):
             self.assertIn(text, p['input'])
@@ -324,7 +329,7 @@ class Skip(Base):
         out = self.tmp / 'result.json'
         http = FakeHTTP(response(answer(body='Línea uno\nlínea dos fin')))
         with mock.patch.dict(os.environ, {'OPENAI_AUDIT_MODEL': 'a-model', 'OPENAI_API_KEY': 'k'}), \
-                mock.patch.object(gpt.urllib.request, 'urlopen', http):
+                mock.patch.object(gpt, 'pedir', http):
             gpt.main(['--inputs', str(self.root), '--pr', '7', '--sha', SHA, '--out', str(out)])
         raw = out.read_bytes()
         self.assertEqual(raw.count(b'\n'), 1)
@@ -343,15 +348,20 @@ class Usage(Base):
 
 class ApiFailures(Base):
     def test_an_http_error_is_revise_and_its_body_is_not_published(self):
-        err = urllib.error.HTTPError(gpt.API_URL, 429, 'Too Many Requests', {},
-                                     io.BytesIO(b'{"error": {"message": "Incorrect API key provided: ...abcd"}}'))
-        r = self.run_audit(FakeHTTP(error=err))
+        class Falso(urllib.request.HTTPSHandler):  # the real pedir, on a transport that answers 429 naming the key
+            def https_open(self, req):
+                cuerpo = b'{"error": {"message": "Incorrect API key provided: ...abcd"}}'
+                raise urllib.error.HTTPError(req.full_url, 429, 'Too Many Requests', {}, io.BytesIO(cuerpo))
+        with mock.patch.object(llamada, '_PublicHTTPS', Falso), mock.patch('urllib.request.getproxies', dict), \
+                mock.patch('socket.create_connection', side_effect=OSError), \
+                mock.patch('socket.getaddrinfo', side_effect=OSError):  # no socket opens, not even under a mutant
+            r = self.run_audit(llamada.pedir)
         self.assertRevise(r, 'HTTP 429')
         self.assertNotIn('Incorrect', r['comment'])
         self.assertIn('entrada: None', self.summary.read_text(encoding='utf-8'))  # still logged, with no usage
 
     def test_no_connection_is_revise(self):
-        self.assertRevise(self.run_audit(FakeHTTP(error=urllib.error.URLError('down'))), 'sin respuesta de la API')
+        self.assertRevise(self.run_audit(FakeHTTP(error=Rechazo('red', tipo='URLError'))), 'sin respuesta de la API')
 
     def test_an_incomplete_answer_is_revise_even_if_it_says_pass(self):
         r = self.run_audit(FakeHTTP(response(answer(), status='incomplete')))
