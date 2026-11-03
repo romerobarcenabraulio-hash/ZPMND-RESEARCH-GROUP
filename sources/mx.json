@@ -6,6 +6,7 @@
     {
       "source_id": "mx.dof",
       "status": "active",
+      "legacy": true,
       "tier": 1,
       "adapter": "sidof",
       "title": "Diario Oficial de la Federación (via SIDOF, Secretaría de Gobernación)",
@@ -31,6 +32,7 @@
     {
       "source_id": "mx.leyes-federales",
       "status": "active",
+      "legacy": true,
       "tier": 1,
       "adapter": "leyesbiblio",
       "listing": "index.htm",
@@ -51,6 +53,7 @@
     {
       "source_id": "mx.reglamentos-federales",
       "status": "active",
+      "legacy": true,
       "tier": 1,
       "adapter": "leyesbiblio",
       "listing": "regla.htm",
@@ -71,6 +74,7 @@
     {
       "source_id": "mx.ojn-estatal",
       "status": "active",
+      "legacy": true,
       "tier": 1,
       "adapter": "ojn",
       "title": "Legislación estatal de las 32 entidades (Orden Jurídico Nacional, SEGOB)",
@@ -133,6 +137,7 @@
     {
       "source_id": "mx.ojn-municipal",
       "status": "active",
+      "legacy": true,
       "tier": 1,
       "adapter": "ojn-municipal",
       "title": "Normatividad municipal por municipio (Orden Jurídico Nacional, SEGOB)",
@@ -190,6 +195,7 @@
     {
       "source_id": "mx.hf-tesis-scjn",
       "status": "active",
+      "legacy": true,
       "tier": 1,
       "role": "secondary",
       "adapter": "hf-tesis",
@@ -259,6 +265,7 @@
     {
       "source_id": "mx.banxico-sie",
       "status": "active",
+      "legacy": true,
       "tier": 1,
       "adapter": "banxico-sie",
       "title": "Banco de México, Sistema de Información Económica (API SIE): indicadores oficiales para cálculo",
@@ -334,6 +341,7 @@
     {
       "source_id": "mx.inegi-bie",
       "status": "active",
+      "legacy": true,
       "tier": 1,
       "adapter": "inegi-bie",
       "title": "INEGI, Banco de Información Económica (API del Banco de Indicadores): INPC",

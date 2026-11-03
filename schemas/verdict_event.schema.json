@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zpmnd-research-group/schemas/verdict_event.schema.json",
+  "title": "VerdictEvent (ZPMND airlock -> RESEARCH GROUP, verdicts/; docs/REGLAS.md rules 21 and 22)",
+  "description": "What the ZPMND airlock did with one packet, so RG can measure its precision. Fixed lists and patterns only: no free text and no field that carries authority, at any depth. issued_by ZPMND is worth nothing by itself: it counts only with its constancia verified (the Sigstore bundle against the identity of the ZPMND workflow that signed it). That verification in CI is a later PR and does not exist yet; until it does, a VerdictEvent carries no authority into RG (rule 22): nothing in RG reads verdicts/.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["packet_id", "verdict", "reason_code", "finding_ids", "issued_by", "issued_at", "constancia"],
+  "properties": {
+    "packet_id": {
+      "description": "RP-YYYY-MM-DD-slug, the form of every packet in research-packets/ (RP- plus the request id's tail).",
+      "type": "string", "maxLength": 67,
+      "pattern": "^RP-[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "verdict": {
+      "description": "The airlock outcomes of RESEARCH_CONTRACT.md section 3.",
+      "enum": ["REJECT", "UNKNOWN", "CONFLICT", "HYPOTHESIS", "EXPERIMENT", "DECISION", "CANON_DELTA"]
+    },
+    "reason_code": {
+      "enum": ["USED", "ALREADY_KNOWN", "QUOTE_NOT_IN_SOURCE", "CLAIM_EXCEEDS_QUOTE", "SOURCE_NOT_AUTHORITATIVE",
+               "NOT_CURRENT", "CONFLICTS_WITH_CANON", "OFF_REQUEST", "INCOMPLETE"]
+    },
+    "finding_ids": {
+      "description": "JSON pointers to the findings of that packet the verdict is about (empty: the whole packet).",
+      "type": "array", "maxItems": 200, "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^/findings/(confirmed|conflicting)/(0|[1-9][0-9]?)$" }
+    },
+    "issued_by": { "const": "ZPMND" },
+    "issued_at": { "$ref": "common.schema.json#/$defs/timestamp" },
+    "constancia": {
+      "description": "The Sigstore bundle, under verdicts/, and the certificate identity of the workflow that signed it: one of ZPMND's repository, romerobarcenabraulio-hash/ZPPMND, on main (issued_by names the system; this names its repository).",
+      "type": "object", "additionalProperties": false, "required": ["bundle", "workflow"],
+      "properties": {
+        "bundle": { "type": "string", "pattern": "^verdicts/[A-Za-z0-9][A-Za-z0-9._-]{0,99}\\.sigstore\\.json$" },
+        "workflow": {
+          "type": "string",
+          "pattern": "^https://github\\.com/romerobarcenabraulio-hash/ZPPMND/\\.github/workflows/[A-Za-z0-9][A-Za-z0-9._-]{0,99}\\.ya?ml@refs/heads/main$"
+        }
+      }
+    }
+  }
+}
