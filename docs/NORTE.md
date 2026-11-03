@@ -542,21 +542,22 @@ el mundo. Falta el puente: un registro único que mande la adquisición en masa 
 sitemap, rastreo), con la lógica de cada fuente como datos y no como código. El sondeo (#79) es su primer paso: mide;
 todavía no adquiere.
 
-**Pendiente de diseño, en orden** (cada uno con la evidencia que lo muestra):
-1. Adquisición declarativa por registro: un solo registro (`sources/mx.json` y `sources/registro/`) y adaptadores
-   genéricos por vía, para que ninguna fuente nueva pida código. Hoy: 7 adaptadores a la medida de México.
-2. Licencia leída de la fuente en el SourceArtifact (§7, §29): en #80 todos los artefactos dicen "NO VERIFICADA";
-   ningún módulo lee una licencia literal.
-3. Compuerta que verifica citas sin republicar el crudo: con fuentes solo-metadatos la compuerta verificó 0 de 42 citas
-   (#80); debe bajar el crudo de nuevo, comprobar su sha256 y leer ahí, sin publicarlo.
-4. Presupuesto de lectura por fuente en el análisis: el PDF de la ley (1,368,763 caracteres) llenó partes enteras y dejó
-   fuera a las demás fuentes (limitaciones de #80).
-5. Cambios como eventos (§21-23): `change_event.schema.json` existe, pero ningún vigía lo produce; las sustituciones
-   solo existen para NOM.
-6. Linaje, deduplicación y resolución de entidades entre fuentes (§12-13, §46): sin código fuera de los linajes NOM.
-7. Mapa de cobertura como código (§19): hoy vive en el tablero (5 de 5,300 celdas), no en el repo.
-8. Frescura (§20), búsqueda negativa (§15), caza de contradicciones (§14) y explorador de capacidades (§34-36) como
-   flujos: no hay código.
+**Pendiente de diseño, en orden** (regla 28: cinco a lo más, cada uno con su forma de cierre, su prueba mecánica y su
+consumidor; la decisión por hueco está en `docs/CIERRE-HUECOS.md` y el orden de ejecución en `COLA.md`):
+1. Compuerta que verifica citas sin republicar el crudo (§3 de CIERRE-HUECOS). Forma A (#101). Prueba: #80 repetido con
+   fuentes solo-metadatos (0 de 42 hoy; 29 de 42 con #101 en la Mac). Consumidor: `RR-2026-11-02-nom035-autoauditoria`.
+2. Presupuesto de lectura por fuente (§4). Forma A. Prueba: las 8 fuentes de #80 aparecen leídas; el PDF de 1,368,763
+   caracteres no deja fuera a ninguna. Consumidor: todo paquete de `investigar.yml`, empezando por el de NOM-035.
+3. Licencia leída de la fuente (§2). Forma A. Prueba: un artefacto de fuente activa nunca sale `NO VERIFICADA`.
+   Consumidor: el paquete de NOM-035 (hoy todos dicen `NO VERIFICADA`).
+4. Mapa de cobertura con denominador (§7). Forma A. Prueba: ningún porcentaje sin denominador > 0 citado del manifiesto.
+   Consumidor: el dueño (la cifra que lleva semanas pidiendo) y ZPPMND (qué cubre RG).
+5. Adquisición declarativa por registro (§1). Forma B en `main` (#95: siete adaptadores `legacy`, consumidor antes de
+   `active`) + A pendiente: el motor `api` con `mx.inegi-bie` (#89). Prueba: una fuente real carga con cuadre.
+   Consumidor: indicadores (`RR-2026-10-21-unidades-de-referencia`).
+
+Los otros tres (cambios como eventos, identificadores canónicos, frescura y búsqueda negativa) esperan en `BACKLOG.md`
+hasta que uno de estos cinco cierre.
 
 **Pendiente de operación** (diseñado, en revisión): base de datos (#73), noche (#77, #61), servidor (#75), sondeo (#79),
 filtro y evidencia del auditor (#81, #82).

@@ -1,0 +1,20 @@
+{
+  "request_id": "RR-2026-11-03-arte-previo-entornos-agentes",
+  "issued_by": "OWNER",
+  "issued_at": "2026-11-03T18:00:00Z",
+  "question": "Para correr un agente externo en el entorno de un cliente bajo el contrato de adaptación de 14 dimensiones de ZPPMND, ¿qué ofrecen hoy OpenClaw y OpenShell como entornos de ejecución de agentes: versión vigente y cambios desde OpenClaw v2026.10.5, si un mismo gateway puede aislar a dos tenants o no, qué hace exactamente tools.elevated y si sale del sandbox, qué licencia declaran literalmente, y qué avisos de seguridad nuevos tienen, frente a lo que RG ya midió en docs/OPENCLAW_EVALUATION.md el 2026-10-19?",
+  "why_needed": "Paso 3 del orden híbrido del norte compartido del 2026-11-03: antes de adaptar un agente externo en SHADOW, ZPPMND necesita saber si el aislamiento por tenant es real o si el agente entra en modo ASSISTED. La evaluación de RG del 2026-10-19 tiene versión, cadena de suministro, avisos y modelo de confianza (los plugins corren con los privilegios del gateway), pero no tools.elevated, aislamiento por tenant, licencia leída ni OpenShell como entorno, y tiene dos semanas. NeMo Agent Toolkit queda fuera por deprecación; el paquete solo registra la fuente de esa deprecación.",
+  "affected_component": "contrato de adaptación de capacidades externas de ZPPMND (paso 3) y docs/OPENCLAW_EVALUATION.md de RG",
+  "desired_evidence": [
+    "por entorno: nombre, versión vigente, fecha, URL oficial y notas de versión desde v2026.10.5, con sha256 del documento leído",
+    "licencia leída literalmente de su repositorio, con cita y sha256",
+    "qué dice su documentación oficial sobre aislamiento entre tenants en un mismo gateway, con cita; lo que no diga, marcado como desconocido",
+    "qué es tools.elevated, qué permisos otorga y si ejecuta fuera del sandbox, con cita",
+    "avisos de seguridad publicados desde el 2026-10-19 (GHSA u otro), con su identificador y fecha",
+    "la fuente primaria de la deprecación de NeMo Agent Toolkit, con fecha",
+    "lo que no se encontró: consultas hechas sin resultado"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Desplegar un agente externo creyendo que el gateway aísla a cada cliente cuando comparte privilegios, o darle tools.elevated sin saber que sale del sandbox.",
+  "privacy_class": "PUBLIC"
+}

@@ -19,6 +19,10 @@ Reglas del plan:
   `✗ REVERTIR`). Si fue REVISAR o REVERTIR, se regenera desde ese día hasta la siguiente puerta. Cada regeneración es un
   commit con su motivo.
 
+**Regenerado el 2026-11-03** con el norte compartido de ese día: E4 pasa antes que E3, porque el primer `VerdictEvent`
+llega con el paso 6 de ZPPMND (31-dic, HIPÓTESIS). Los paquetes de arte previo (OCR, entornos de agentes, auditor,
+embeddings) corren por la cadena de E1 una vez que E1 esté terminado.
+
 **Recurrente:** cada lunes (09, 16, 23 y 30-nov; 07, 14, 21 y 28-dic) entra el pedido del explorador semanal con la
 fecha del día y se corre `investigar.yml`. Sale un paquete, nunca una instalación, y no cuenta como entregable.
 
@@ -44,7 +48,7 @@ va por tramo de puerta a puerta.
 |---|---|---|---|
 | Decisión: crudo sellado en almacén privado (R2, secretos ya puestos y sin usar) | Braulio | sáb 07-nov (puerta 1) | E1 cierra con #80 en la cifra que dé la re-descarga (29/42 medido en la Mac); el almacén sigue en `BACKLOG.md` |
 | Acceso a ZPPMND: identidad del workflow que firma y forma en que un `VerdictEvent` llega a `verdicts/` | Braulio | vie 27-nov | E3 se salta y se toma E4; E3 vuelve en la puerta siguiente a su llegada |
-| Primer `VerdictEvent` de ZPPMND sobre el paquete NOM-035 de E1 | ZPPMND (su sesión) | lun 07-dic | E3 no tiene caso dorado real: se salta y se toma E4 |
+| Primer `VerdictEvent` de ZPPMND sobre el paquete NOM-035 de E1 | ZPPMND (su sesión) | jue 31-dic (paso 6 del norte compartido del 2026-11-03; HIPÓTESIS) | E3 no tiene caso dorado real: queda bloqueado y pasa al plan de 2027; E4 y el siguiente de la cola siguen |
 | OCR de RG para G06–G09 de ZPPMND | RG (E2) + decisión del dueño sobre el extractor | lun 07-dic (HIPÓTESIS) | ZPPMND trabaja G01–G05 y G10; RG sigue con E3 |
 | `INEGI_TOKEN` vigente | Braulio | vigente (la corrida 41506372436 cerró con `mx.inegi-bie` activo) | `mx.inegi-bie` vuelve a `trial`; nada de `COLA.md` depende de él |
 | Auditores (OpenAI y la acción de Claude) | Braulio (cuentas) | continuo | sin dos PASS no hay merge: los días se consumen como colchón y se registra la causa |
@@ -124,31 +128,31 @@ condiciones:
 
 | Tramo | Trabajo | Sesión | Criterio de salida | PASÓ → | REVISAR → | REVERTIR → |
 |---|---|---|---|---|---|---|
-| 08 a 12-dic | **E3 · `VerdictEvent` verificado**: verificación Sigstore en CI contra el workflow de ZPPMND; `RESEARCH_CONTRACT.md` §3 abre el canal en el mismo PR | A, B | el primer `VerdictEvent` real verifica en CI y uno alterado falla | tramo 9 | BLOQUEADO (sin `VerdictEvent` real): se toma E4 y E3 vuelve en la puerta siguiente a su llegada | la verificación acepta algo que no debe: revert; nada lee `verdicts/` |
+| 08 a 12-dic | **E4 · presupuesto de lectura por fuente** (hueco 4): tope de caracteres por fuente en cada parte; el exceso va a `limitations` con su conteo | A, B | caso dorado hecho del paquete real de #80 en verde | tramo 9 | el tope recorta una cita: se corrige el tope, no la cita | revert; los paquetes salen como hoy |
 
 ## Tramo 9 · dom 13 a jue 17-dic (colchón mié 16, puerta jue 17)
 
 | Tramo | Trabajo | Sesión | Criterio de salida | PASÓ → | REVISAR → | REVERTIR → |
 |---|---|---|---|---|---|---|
-| 13 a 17-dic | E3: `rg/precision.py` publica `docs/PRECISION.md`; cierre de E3 | B, C | `docs/PRECISION.md` generado en `main` con la precisión del paquete NOM-035 | E3 terminado; E4 activo | igual que el tramo 8 | revert de `precision.py`; el veredicto sigue verificado |
+| 13 a 17-dic | E4 a `main` y terminado | C | E4 MERGED con su caso dorado en verde y `docs/ESTADO.md` con el SHA | tramo 10 | lo que falte se corrige en el mismo PR | revert; E4 sigue activo |
 
 ## Tramo 10 · vie 18 a mar 22-dic (colchón lun 21, puerta mar 22)
 
 | Tramo | Trabajo | Sesión | Criterio de salida | PASÓ → | REVISAR → | REVERTIR → |
 |---|---|---|---|---|---|---|
-| 18 a 22-dic | **E4 · presupuesto de lectura por fuente** (hueco 4): tope de caracteres por fuente en cada parte; el exceso va a `limitations` con su conteo | A, B | caso dorado hecho del paquete real de #80 en verde | tramo 11 | el tope recorta una cita: se corrige el tope, no la cita | revert; los paquetes salen como hoy |
+| 18 a 22-dic | **E3 · `VerdictEvent` verificado** si ya llegó el primero de ZPPMND: verificación Sigstore en CI contra su workflow y `RESEARCH_CONTRACT.md` §3 abre el canal en el mismo PR. Si no llegó (lo esperado: el paso 6 es el 31-dic), se toma el siguiente de `COLA.md`: licencia leída de la fuente (hueco 2) | A, B | el `VerdictEvent` real verifica en CI y uno alterado falla; o el PR de licencias con su prueba | tramo 11 | BLOQUEADO: se trabaja lo independiente | la verificación acepta algo que no debe: revert; nada lee `verdicts/` |
 
 ## Tramo 11 · mié 23 a dom 27-dic (colchón sáb 26, puerta dom 27)
 
 | Tramo | Trabajo | Sesión | Criterio de salida | PASÓ → | REVISAR → | REVERTIR → |
 |---|---|---|---|---|---|---|
-| 23 a 27-dic | E4 a `main` y terminado | C | E4 MERGED con su caso dorado en verde y `docs/ESTADO.md` con el SHA | tramo 12 | lo que falte se corrige en el mismo PR | revert; E4 sigue activo |
+| 23 a 27-dic | Cierre del entregable del tramo 10 (`rg/precision.py` si fue E3) | B, C | MERGED con su caso dorado y `docs/ESTADO.md` con el SHA | tramo 12 | lo que falte se corrige en el mismo PR | revert; sigue activo |
 
 ## Tramo 12 · lun 28 a jue 31-dic (colchón mié 30, puerta jue 31)
 
 | Tramo | Trabajo | Sesión | Criterio de salida | PASÓ → | REVISAR → | REVERTIR → |
 |---|---|---|---|---|---|---|
-| 28 a 31-dic | Se toma el siguiente de `COLA.md` (licencia leída de la fuente, hueco 2) solo si E4 está terminado. **Puerta final** el 31: medición del trimestre y regeneración | A, C | `ITINERARIO-2027-Q1.md` en un PR con la medición del trimestre | fin del trimestre | lo que no cerró pasa a 2027 con su causa | — |
+| 28 a 31-dic | Se toma el siguiente de `COLA.md` solo si el activo está terminado. **Puerta final** el 31: medición del trimestre y regeneración | A, C | `ITINERARIO-2027-Q1.md` en un PR con la medición del trimestre | fin del trimestre | lo que no cerró pasa a 2027 con su causa | — |
 
 ## AMBIGÜEDADES (lo que supuse)
 

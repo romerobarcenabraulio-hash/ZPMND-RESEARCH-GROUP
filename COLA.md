@@ -22,11 +22,17 @@ veredicto de ZPPMND.
 1. **E2 · OCR para OJN** (#93 partido en dos PR, medición sobre 20 crudos reales, paquete de
    `RR-2026-11-02-arte-previo-ocr-ojn`, decisión del dueño, OCR determinista con versión fijada). Va primero porque
    G06–G09 de ZPPMND están detenidos sin texto de los documentos estatales y municipales escaneados.
-2. **E3 · `VerdictEvent` verificado en CI** (Sigstore contra el workflow de ZPPMND, `RESEARCH_CONTRACT.md` §3 abre el
-   canal en ese mismo PR, `rg/precision.py`). Va segundo porque cierra el circuito con el paquete de E1, y solo puede
-   empezar cuando ZPPMND emita su primer veredicto firmado (dependencia externa).
-3. **E4 · presupuesto de lectura por fuente** (hueco 4). Va tercero porque mejora todos los paquetes pero no destraba a
-   ningún consumidor. Si E3 queda bloqueado, E4 se adelanta.
+2. **E4 · presupuesto de lectura por fuente** (hueco 4). Va segundo porque mejora todos los paquetes y no depende de
+   ningún otro frente.
+3. **E3 · `VerdictEvent` verificado en CI** (Sigstore contra el workflow de ZPPMND, `RESEARCH_CONTRACT.md` §3 abre el
+   canal en ese mismo PR, `rg/precision.py`). Va tercero y bloqueado: el primer veredicto llega con el paso 6 de ZPPMND
+   (31-dic según el norte compartido del 2026-11-03, HIPÓTESIS). Sin él no hay caso dorado real.
+
+## Paquetes de arte previo (corren por la cadena de E1 cuando E1 esté terminado)
+
+En este orden: `RR-2026-11-02-arte-previo-ocr-ojn` (P0, alimenta E2), `RR-2026-11-03-arte-previo-entornos-agentes` (P1,
+antes del paso 3 de ZPPMND), `RR-2026-11-02-arte-previo-auditor-abierto` (P1), `RR-2026-11-02-arte-previo-embeddings-catalogo`
+(P2). Cada uno es un paquete con su compuerta; ninguno instala nada.
 
 ## Recurrente (no cuenta contra WIP = 1)
 
