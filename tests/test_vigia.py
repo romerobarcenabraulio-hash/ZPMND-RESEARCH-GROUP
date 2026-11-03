@@ -1,7 +1,9 @@
 """Vigía de producción (scripts/vigia.py, vigia.yml, SECURITY.md T26): one state per watched workflow from its runs and
 the time alone, an issue text with nothing the API wrote, and the workflow's own steps run against a stub gh. Built here
-(CONSTRUIDO): run lists shaped like GET /repos/{repo}/actions/workflows/{file}/runs. No network."""
+(CONSTRUIDO): run lists shaped like GET /repos/{repo}/actions/workflows/{file}/runs and states like GET
+/repos/{repo}/actions/workflows/{file}. No network."""
 import importlib.util
+import io
 import json
 import os
 import re
@@ -10,6 +12,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from unittest import mock
@@ -25,6 +28,7 @@ WF = yaml.safe_load(TEXT)
 JOB = WF['jobs']['vigia']
 AHORA = datetime(2026, 11, 2, 23, 37, tzinfo=timezone.utc)
 H, D = timedelta(hours=1), timedelta(days=1)
+ACTIVO = {'state': 'active'}
 
 
 def run(i, conclusion='success', hace=H, status='completed', ahora=AHORA, **kw):
@@ -37,8 +41,8 @@ def issue(n, login=vigia.AUTOR, title=vigia.TITULO, **kw):
     return {'number': n, 'title': title, 'state': 'open', 'user': {'login': login}, **kw}
 
 
-def estado(*runs, tope=2):
-    return vigia.decidir({'workflow_runs': list(runs)}, tope, AHORA)['estado']
+def estado(*runs, tope=2, gh='active'):
+    return vigia.decidir({'workflow_runs': list(runs)}, tope, AHORA, {'state': gh})['estado']
 
 
 class Decision(unittest.TestCase):
@@ -53,7 +57,7 @@ class Decision(unittest.TestCase):
         self.assertEqual(estado(run(1, hace=3 * D)), 'sin_correr')                 # the third whole day
 
     def test_no_run_or_only_runs_not_of_main_by_schedule_or_dispatch_is_sin_correr(self):
-        self.assertEqual(vigia.decidir({'workflow_runs': []}, 8, AHORA), {'estado': 'sin_correr', 'corrida': None, 'exito': None})
+        self.assertEqual(vigia.decidir({'workflow_runs': []}, 8, AHORA, ACTIVO), {'estado': 'sin_correr', 'corrida': None, 'exito': None})
         self.assertEqual(estado(run(1, head_branch='otra')), 'sin_correr')
         self.assertEqual(estado(run(1, event='pull_request')), 'sin_correr')  # a fork's branch can be called main
         self.assertEqual(estado(run(1, event='workflow_dispatch')), 'ok')
@@ -62,7 +66,7 @@ class Decision(unittest.TestCase):
     def test_a_run_going_on_within_the_cap_is_en_curso_and_one_stuck_past_it_is_not(self):
         for s in ('queued', 'in_progress'):
             self.assertEqual(estado(run(1, status=s)), 'en_curso')
-        d = vigia.decidir({'workflow_runs': [run(1, hace=5 * D), run(2, status='in_progress')]}, 2, AHORA)
+        d = vigia.decidir({'workflow_runs': [run(1, hace=5 * D), run(2, status='in_progress')]}, 2, AHORA, ACTIVO)
         self.assertEqual((d['estado'], d['corrida']['id'], d['exito']['id']), ('en_curso', 2, 1))
         self.assertEqual(estado(run(1, status='queued', hace=2 * D)), 'en_curso')  # the cap's edge
         self.assertEqual(estado(run(1, status='in_progress', hace=3 * D)), 'sin_correr')
@@ -80,16 +84,32 @@ class Decision(unittest.TestCase):
                      ('created_at', '2026-11-02 10:00:00'), ('run_started_at', '')):
             bad.append({'workflow_runs': [{**run(1), k: v}]})
         for b in bad:
-            self.assertRaises(ValueError, vigia.decidir, b, 2, AHORA)
+            self.assertRaises(ValueError, vigia.decidir, b, 2, AHORA, ACTIVO)
+
+    def test_paused_by_a_person_is_pausado_and_off_by_github_or_deleted_is_apagado_whatever_the_runs_say(self):
+        for runs in ([run(1, 'failure')], [run(1)], [], [run(1, status='in_progress')], [run(1, hace=9 * D)]):
+            self.assertEqual(estado(*runs, gh='disabled_manually'), 'pausado', runs)
+            for s in ('disabled_inactivity', 'disabled_fork', 'deleted'):
+                self.assertEqual(estado(*runs, gh=s), 'apagado', (s, runs))
+        d = vigia.decidir({'workflow_runs': [run(1, 'failure', D), run(2, status='queued')]}, 2, AHORA, {'state': 'disabled_manually'})
+        self.assertEqual((d['corrida']['id'], d['exito']), (1, None))  # the row shows its last finished run
+
+    def test_an_unknown_or_malformed_workflow_state_stops_the_decision(self):
+        for f in (None, [], 'active', {}, {'state': None}, {'state': ['active']}, {'state': 'Active'}, {'state': 'disabled'},
+                  {'state': '@evil <b>'}, {'estado': 'active'}):
+            self.assertRaises(ValueError, vigia.decidir, {'workflow_runs': [run(1)]}, 2, AHORA, f)
 
 
 class Texto(unittest.TestCase):
     def todos(self, **cambios):
         return {n: {'workflow_runs': cambios.get(n, [run(1)])} for n, _ in vigia.VIGILADOS}
 
+    def revisar(self, datos, estados=(), repo='o/r', **extra):
+        return vigia.revisar(datos, {n: {'state': dict(estados).get(n, 'active'), **extra} for n, _ in vigia.VIGILADOS}, AHORA, repo)
+
     def test_a_row_names_the_run_by_its_number_link_and_start_and_the_days_since_the_last_success(self):
         datos = self.todos(**{'catalog-mx.yml': [run(41329499070, 'failure', hace=6 * H, run_number=46), run(9, hace=2 * D)]})
-        alerta, texto = vigia.revisar(datos, AHORA, 'o/r')
+        alerta, texto = self.revisar(datos)
         self.assertTrue(alerta)
         self.assertIn('| `catalog-mx.yml` | rojo | [#46](https://github.com/o/r/actions/runs/41329499070) '
                       '2026-11-02 17:37 UTC, failure | 2 | 2 |\n', texto)
@@ -99,20 +119,56 @@ class Texto(unittest.TestCase):
         hostil = {'display_title': '@braulio <img src=x> evil', 'name': 'evil', 'html_url': 'https://evil.example/',
                   'head_commit': {'message': '@evil'}, 'actor': {'login': 'evil'}, 'path': 'evil'}
         datos = self.todos(**{n: [run(7, '@evil <b>' if n == 'sondeo.yml' else 'success', **hostil)] for n, _ in vigia.VIGILADOS})
-        alerta, texto = vigia.revisar(datos, AHORA, 'o/r')
+        alerta, texto = self.revisar(datos, {'descubrir.yml': 'disabled_manually', 'texto-mx.yml': 'deleted'}, **hostil)
         self.assertTrue(alerta)
         self.assertIn('| `sondeo.yml` | rojo | [#7](https://github.com/o/r/actions/runs/7) 2026-11-02 22:37 UTC, otra |', texto)
         for s in ('@', '<', 'evil'):
             self.assertNotIn(s, texto)
         self.assertEqual(set(re.findall(r'\]\(([^)]*)\)', texto)), {'https://github.com/o/r/actions/runs/7'})
+        self.assertIn('| `descubrir.yml` | pausado |', texto)
         self.assertRegex(texto, r'^[\w\s|`#\[\]():/.,-]*$')
-        self.assertFalse(vigia.revisar(self.todos(**{'texto-mx.yml': [run(1, status='queued')]}), AHORA, 'o/r')[0])
-        self.assertTrue(vigia.revisar(self.todos(**{'sondeo-inegi.yml': []}), AHORA, 'o/r')[0])
+        self.assertFalse(self.revisar(self.todos(**{'texto-mx.yml': [run(1, status='queued')]}))[0])
+        self.assertTrue(self.revisar(self.todos(**{'sondeo-inegi.yml': []}))[0])
+
+    def test_pausado_never_alerts_even_after_a_failed_run_and_apagado_alerts_even_after_a_good_one(self):
+        datos = self.todos(**{'descubrir.yml': [run(5, 'failure', hace=D)]})
+        alerta, texto = self.revisar(datos, {'descubrir.yml': 'disabled_manually'})
+        self.assertFalse(alerta)
+        self.assertIn('| `descubrir.yml` | pausado | [#5](https://github.com/o/r/actions/runs/5) 2026-11-01 23:37 UTC, failure '
+                      '| ninguno entre los últimos 20 | 2 |\n', texto)
+        self.assertTrue(self.revisar(self.todos(**{'sondeo.yml': [run(1, 'failure')]}), {'descubrir.yml': 'disabled_manually'})[0])
+        for s in ('disabled_inactivity', 'disabled_fork', 'deleted'):
+            alerta, texto = self.revisar(self.todos(), {'sondeo.yml': s})
+            self.assertTrue(alerta, s)
+            self.assertIn('| `sondeo.yml` | apagado | [#1](https://github.com/o/r/actions/runs/1) 2026-11-02 22:37 UTC, success |', texto)
 
     def test_a_missing_workflow_or_a_repo_that_is_not_owner_name_stops_it(self):
         for repo in ('o/r/../x', 'o/r\n@x', 'evil.example/o/r'):
-            self.assertRaises(ValueError, vigia.revisar, self.todos(), AHORA, repo)
-        self.assertRaises(KeyError, vigia.revisar, {k: v for k, v in self.todos().items() if k != 'sondeo.yml'}, AHORA, 'o/r')
+            self.assertRaises(ValueError, self.revisar, self.todos(), repo=repo)
+        self.assertRaises(KeyError, self.revisar, {k: v for k, v in self.todos().items() if k != 'sondeo.yml'})
+        self.assertRaises(KeyError, vigia.revisar, self.todos(), {'sondeo.yml': ACTIVO}, AHORA, 'o/r')
+
+    def test_a_state_file_missing_unreadable_or_unknown_stops_it_with_nothing_written(self):
+        t = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, t)
+        for n, _ in vigia.VIGILADOS:
+            (t / f'{n}.json').write_text(json.dumps({'workflow_runs': [run(1, ahora=datetime.now(timezone.utc))]}))
+            (t / f'{n}.estado.json').write_text(json.dumps(ACTIVO))
+        salidas = ('vigia.md', 'nueva.json', 'cuerpo.json', 'cierre.json')
+        for roto in ('{"state": "active"}', None, '{', '[]', '{"state": "disabled"}', '{"state": null}'):
+            for x in salidas:
+                (t / x).unlink(missing_ok=True)
+            f = t / 'descubrir.yml.estado.json'
+            f.unlink(missing_ok=True) if roto is None else f.write_text(roto)
+            out = io.StringIO()
+            with redirect_stdout(out):
+                if roto == '{"state": "active"}':  # the same files whole: decided and written
+                    vigia.main(['decidir', '--repo', 'o/r', '--dir', str(t)])
+                else:
+                    self.assertRaises((OSError, ValueError), vigia.main, ['decidir', '--repo', 'o/r', '--dir', str(t)])
+            ok = roto == '{"state": "active"}'
+            self.assertEqual((out.getvalue(), [x for x in salidas if (t / x).exists()]),
+                             ('alerta=false\n', list(salidas)) if ok else ('', []), roto)
 
 
 class Issue(unittest.TestCase):
@@ -168,8 +224,8 @@ campos = dict(a[k + 1].split('=') for k in range(len(a)) if a[k] == '-f')
 with open(os.environ['STUB_LOG'], 'a') as f:
     f.write(json.dumps([metodo, url, carga or campos]) + '\\n')
 issues = json.load(open(os.environ['STUB_ISSUES']))
-if ruta[3:5] == ['actions', 'workflows']:
-    print(open(os.path.join(os.environ['STUB_RUNS'], ruta[5] + '.json')).read())
+if ruta[3:5] == ['actions', 'workflows']:  # a workflow's runs, or the workflow itself with its state
+    print(open(os.path.join(os.environ['STUB_RUNS'], ruta[5] + ('.json' if ruta[6:] == ['runs'] else '.estado.json'))).read())
 elif metodo == 'GET':  # every open issue, newest first as the API answers; the page in STUB_FALLA fails as gh does
     if q['page'] == [os.environ['STUB_FALLA']]:
         print('{"message": "Server Error"}')
@@ -184,7 +240,8 @@ elif metodo == 'PATCH':
     next(i for i in issues if i['number'] == int(ruta[4])).update(carga or campos)
 json.dump(issues, open(os.environ['STUB_ISSUES'], 'w'))
 """
-RUNS = [f'repos/o/r/actions/workflows/{n}/runs?branch=main&per_page=20' for n, _ in vigia.VIGILADOS]
+RUNS = [u for n, _ in vigia.VIGILADOS
+        for u in (f'repos/o/r/actions/workflows/{n}/runs?branch=main&per_page=20', f'repos/o/r/actions/workflows/{n}')]
 PAGINA = 'repos/o/r/issues?state=open&creator=github-actions%5Bbot%5D&per_page=100&page={}'
 
 
@@ -205,12 +262,13 @@ class Pasos(unittest.TestCase):
     def abiertas(self):
         return [i['number'] for i in json.loads((self.t / 'issues.json').read_text()) if i['state'] == 'open']
 
-    def correr(self, rojo, alerta=None, falla=0):
+    def correr(self, rojo, alerta=None, falla=0, estados=()):
         """One run on a fresh runner; the calls that write, (method, path, payload). Only an unreadable page fails a step."""
         t, ahora = self.t, datetime.now(timezone.utc)
         for n, _ in vigia.VIGILADOS:
             runs = [run(2, 'failure', ahora=ahora)] if n in rojo else [run(1, ahora=ahora)]
             (t / 'runs' / f'{n}.json').write_text(json.dumps({'workflow_runs': runs}))
+            (t / 'runs' / f'{n}.estado.json').write_text(json.dumps({'id': 9, 'name': '@evil', 'state': dict(estados).get(n, 'active')}))
         shutil.rmtree(t / 'vigia', ignore_errors=True)
         for f in ('log', 'out', 'summary'):
             (t / f).write_text('')
@@ -249,6 +307,18 @@ class Pasos(unittest.TestCase):
         for rojo, metodos, abiertas in (({'catalog-mx.yml'}, ['POST'], [1]), ({'sondeo.yml'}, ['PATCH'], [1]),
                                         (set(), ['POST', 'PATCH'], []), ({'descubrir.yml'}, ['POST'], [2])):
             self.assertEqual(([m for m, _, _ in self.correr(rojo)], self.abiertas()), (metodos, abiertas), rojo)
+
+    def test_a_paused_workflow_with_the_rest_well_closes_ours_instead_of_opening_one_and_apagado_opens_one(self):
+        pausa = {'descubrir.yml': 'disabled_manually'}
+        self.assertEqual(self.correr({'descubrir.yml'}, estados=pausa), [])  # its last run failed: no issue opened
+        self.assertEqual(self.lecturas, RUNS + [PAGINA.format(1)])
+        self.poner([issue(7)])
+        escritas = self.correr({'descubrir.yml'}, estados=pausa)
+        self.assertEqual([(m, u) for m, u, _ in escritas], [('POST', 'repos/o/r/issues/7/comments'), ('PATCH', 'repos/o/r/issues/7')])
+        self.assertIn('| `descubrir.yml` | pausado |', escritas[0][2]['body'])
+        escritas = self.correr(set(), estados={'texto-mx.yml': 'disabled_inactivity'})
+        self.assertEqual(escritas, [('POST', 'repos/o/r/issues', {'title': vigia.TITULO, 'body': mock.ANY})])
+        self.assertIn('| `texto-mx.yml` | apagado |', escritas[0][2]['body'])
 
     def test_every_page_of_open_issues_is_read_first_and_an_unreadable_page_writes_nothing(self):
         otras = [issue(n, title=f'otra {n}') for n in range(8, 160)]  # 152 newer issues of the bot: ours is on page 2
