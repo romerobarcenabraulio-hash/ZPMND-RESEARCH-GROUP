@@ -4,7 +4,7 @@
 
 Runs in auditor.yml's `audit-gpt` job from a checkout of main, so no PR code runs where the key is. The model has no
 tools: it gets only text that the workflow prepared without running PR code (main's criteria, the diff computed by git
-from main) plus the evidence job's output, which is labelled untrusted. Standard library only.
+from main) plus the evidence job's output, which is labelled untrusted. Standard library and main's rg/llamada.py only.
 
 Fail closed by construction: whatever this script cannot establish (a well-formed answer for this head, the quote of
 main's README, a full read of every input, a body with nothing shaped like a credential) makes the verdict REVISE.
@@ -17,20 +17,21 @@ diff.patch}, evidence/{tests.txt,mutation-main.txt}. The result is one line of J
 """
 import argparse
 import hashlib
-import http.client
 import json
 import math
 import os
 import re
 import secrets
 import sys
-import urllib.error
-import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # main's rg, from main's checkout (python3 -I)
+from rg.llamada import Rechazo, pedir  # noqa: E402 - the one way to call an API with a key (SECURITY.md T27)
 
 API_URL = 'https://api.openai.com/v1/responses'
 MAX_OUTPUT_TOKENS = 12_000  # reasoning tokens count here too; a cut answer is incomplete, hence REVISE
-TIMEOUT_S = 600
+TIMEOUT_S = 600  # the whole call; also one wait on the socket: the API sends nothing until its answer is done
+MAX_RESPUESTA = 2_000_000  # bytes of the API's answer (the output is capped at MAX_OUTPUT_TOKENS)
 PREFIX = 'GPT REVIEW: '  # never contains "AUDIT VERDICT": no search for the Claude verdict, anchored or not, matches it
 CRITERIA_CAP = 45_000  # per criteria file. SECURITY.md reached 17k on 2026-10-29 (#60, #67) and every review read it
 # cut, so every one was REVISE and no data PR could merge by itself; tests/test_auditor_gpt.py now fails a tree whose
@@ -238,7 +239,7 @@ def build_input(root, nonce, sha=''):
 
 
 def call_model(model, key, instructions, text):
-    """One POST to the Responses API. No tools, no stored response, capped output, strict JSON schema."""
+    """One POST to the Responses API through pedir. No tools, no stored response, capped output, strict JSON schema."""
     payload = {
         'model': model,
         'instructions': instructions,
@@ -247,10 +248,9 @@ def call_model(model, key, instructions, text):
         'store': False,
         'text': {'format': {'type': 'json_schema', 'name': 'audit_verdict', 'strict': True, 'schema': SCHEMA}},
     }
-    req = urllib.request.Request(API_URL, data=json.dumps(payload).encode('utf-8'), method='POST',
-                                 headers={'Authorization': f'Bearer {key}', 'Content-Type': 'application/json'})
-    with urllib.request.urlopen(req, timeout=TIMEOUT_S) as r:
-        return json.loads(r.read().decode('utf-8'))
+    cuerpo = json.dumps(payload).encode('utf-8')
+    return json.loads(pedir('POST', API_URL, llave=key, host='api.openai.com', cuerpo=cuerpo, plazo=TIMEOUT_S,
+                            tope=MAX_RESPUESTA, espera=TIMEOUT_S))
 
 
 def parse_response(resp):
@@ -405,10 +405,8 @@ def audit(root, pr, sha, model, key):
     try:
         resp = call_model(model, key, INSTRUCTIONS.format(pr=pr, sha=sha, nonce=nonce), text)
         answer, problem = parse_response(resp)
-    except urllib.error.HTTPError as e:  # the error body is not published: it can echo part of the key
-        problem = f'HTTP {e.code}'
-    except (urllib.error.URLError, http.client.HTTPException, OSError, ValueError) as e:
-        problem = f'sin respuesta de la API ({type(e).__name__})'
+    except Rechazo as e:  # a fixed reason, a code or an error's kind: never the answer's text, it can echo the key
+        problem = f'HTTP {e.codigo}' if e.motivo == 'http' else f'sin respuesta de la API ({e})'
     log_usage(model, resp, len(text), complete)
     verdict, notes, body = judge(answer, problem, sha, quote, complete)
     omitted = text.count('[fixture binario omitido:')
