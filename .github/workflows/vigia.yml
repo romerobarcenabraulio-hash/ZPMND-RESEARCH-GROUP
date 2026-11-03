@@ -1,10 +1,10 @@
 name: vigia
 # Vigía de producción (SECURITY.md T26): daily, the last runs on main and the state of every production workflow (list
 # and caps in scripts/vigia.py); ONE open issue "Vigía de producción" while any is red, has not finished a run within its
-# cap or was turned off by GitHub (apagado), closed with a comment when all are ok, running or paused by a person
-# (pausado); only fixed names, states, dates and this repo's run numbers and links reach it. The job ends red while
-# anything is red, not running or apagado. Main's code, no secret, contents and runs read, issues write; it reads every
-# page of open issues before choosing one.
+# cap or is off without being in the script's PAUSADOS list (apagado), closed with a comment when all are ok, running or
+# paused by hand and listed (pausado); only fixed names, states, dates and this repo's run numbers and links reach it.
+# The job ends red while anything is red, not running or apagado. Main's code, no secret, contents and runs read, issues
+# write; it reads every page of open issues before choosing one.
 on:
   schedule:
     - cron: '37 23 * * *'  # daily 23:37 UTC, after catalog-mx's usual window

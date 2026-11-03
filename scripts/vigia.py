@@ -2,9 +2,9 @@
 last 6 scheduled runs and that texto-mx.yml had never run. From the last 20 runs on main (schedule or dispatch only) of
 each workflow below and the time alone, one state each: rojo (the last finished run did not succeed), ok (it succeeded
 and started no more whole days ago than the cap), en_curso (neither, but a run started within the cap is queued or
-running), sin_correr (none of these); a workflow that is not active is pausado or apagado whatever its runs say (GH
-below). The issue text holds only the fixed names, these states, dates and numbers formatted here and run links built
-here from the repo name and the run id, never text the API carries."""
+running), sin_correr (none of these); a workflow that is not active is pausado (only if PAUSADOS names it) or apagado
+whatever its runs say. The issue text holds only the fixed names, these states, dates and numbers formatted here and
+run links built here from the repo name and the run id, never text the API carries."""
 import argparse
 import json
 import re
@@ -22,11 +22,14 @@ EVENTOS = ('schedule', 'workflow_dispatch')  # the triggers of every watched wor
 EN_CURSO = ('queued', 'in_progress', 'waiting', 'requested', 'pending')
 CONCLUSIONES = ('success', 'failure', 'cancelled', 'timed_out', 'action_required', 'neutral', 'skipped', 'stale', 'startup_failure')
 ALERTA = ('rojo', 'sin_correr')
-# GitHub's state of a watched workflow (GET /repos/{repo}/actions/workflows/{file}): active is decided from its runs; one
-# a person disabled is pausado, which never alerts; any other (disabled_inactivity, set by GitHub alone after 60 days in a
-# public repo, disabled_fork, deleted) is apagado, which alerts; anything else stops the decision.
-GH = {'active': None, 'disabled_manually': 'pausado', 'disabled_inactivity': 'apagado', 'disabled_fork': 'apagado',
+# GitHub's state of a watched workflow (GET /repos/{repo}/actions/workflows/{file}): active is decided from its runs; any
+# other (disabled_manually, disabled_inactivity set by GitHub alone after 60 days in a public repo, disabled_fork,
+# deleted) is apagado, which alerts, unless it is disabled_manually and PAUSADOS names it; anything else stops it all.
+GH = {'active': None, 'disabled_manually': 'apagado', 'disabled_inactivity': 'apagado', 'disabled_fork': 'apagado',
       'deleted': 'apagado'}
+# The workflows the owner paused on purpose, with the date and the reason: only these are pausado, which never alerts.
+# Disabling a workflow takes only a token with actions write; changing this list takes a reviewed PR (GPT on 328b336).
+PAUSADOS = {'descubrir.yml': ('2026-11-03', 'decisión del dueño; reabre cuando un pedido de requests/ lo necesite')}
 REPO = re.compile(r'[A-Za-z0-9-]{1,39}/[A-Za-z0-9._-]{1,100}')
 
 
@@ -54,11 +57,14 @@ def corridas(datos):
     return sorted(out, key=lambda c: (c['creada'], c['id']), reverse=True)
 
 
-def estado_gh(flujo):
-    """None for an active workflow, else 'pausado' or 'apagado'; a state not in GH stops it all (ValueError)."""
+def estado_gh(flujo, nombre):
+    """None for an active workflow, 'pausado' for one disabled by hand that PAUSADOS names, else 'apagado'; a state not
+    in GH stops it all (ValueError)."""
     s = flujo.get('state') if isinstance(flujo, dict) else None
     if not isinstance(s, str) or s not in GH:
         raise ValueError('a workflow without a known state')
+    if s == 'disabled_manually' and nombre in PAUSADOS:
+        return 'pausado'
     return GH[s]
 
 
@@ -66,8 +72,8 @@ def dias(desde, ahora):  # whole days gone by
     return (ahora - desde) // timedelta(days=1)
 
 
-def decidir(datos, tope, ahora, flujo):
-    gh = estado_gh(flujo)
+def decidir(nombre, datos, tope, ahora, flujo):
+    gh = estado_gh(flujo, nombre)
     runs = corridas(datos)
     hechas = [c for c in runs if c['status'] == 'completed']
     ultima = hechas[0] if hechas else None
@@ -94,7 +100,8 @@ def fila(nombre, tope, d, ahora, repo):
         que = 'en curso' if c['status'] in EN_CURSO else (c['conclusion'] if c['conclusion'] in CONCLUSIONES else 'otra')
         corrida = f"[#{c['numero']}](https://github.com/{repo}/actions/runs/{c['id']}) {c['inicio']:%Y-%m-%d %H:%M} UTC, {que}"
     exito = 'ninguno entre los últimos 20' if d['exito'] is None else str(dias(d['exito']['inicio'], ahora))
-    return f"| `{nombre}` | {d['estado']} | {corrida} | {exito} | {tope} |"
+    sobra = ', sobra en PAUSADOS' if nombre in PAUSADOS and d['estado'] != 'pausado' else ''  # so the list is cleaned
+    return f"| `{nombre}` | {d['estado']}{sobra} | {corrida} | {exito} | {tope} |"
 
 
 def revisar(datos, flujos, ahora, repo):
@@ -103,7 +110,7 @@ def revisar(datos, flujos, ahora, repo):
         raise ValueError('repo must be owner/name')
     filas, alerta = [], False
     for nombre, tope in VIGILADOS:
-        d = decidir(datos[nombre], tope, ahora, flujos[nombre])
+        d = decidir(nombre, datos[nombre], tope, ahora, flujos[nombre])
         alerta = alerta or d['estado'] in ALERTA or d['estado'] == 'apagado'
         filas.append(fila(nombre, tope, d, ahora, repo))
     texto = '\n'.join([
@@ -112,8 +119,9 @@ def revisar(datos, flujos, ahora, repo):
         *filas, '',
         'rojo: la última corrida terminada no fue success. sin_correr: ninguna corrida terminada dentro del tope '
         '(días enteros). en_curso: una corrida iniciada dentro del tope sigue en marcha.',
-        'pausado: una persona desactivó el workflow, no alerta y la fila muestra su última corrida. apagado: GitHub lo '
-        'desactivó (60 días sin actividad) o se borró, y alerta.', ''])
+        'pausado: desactivado a mano y anotado en PAUSADOS (scripts/vigia.py) con fecha y motivo, no alerta y la fila '
+        'muestra su última corrida. apagado: desactivado fuera de esa lista, por GitHub (60 días sin actividad) o '
+        'borrado, y alerta. sobra en PAUSADOS: está en la lista sin estar desactivado a mano, hay que quitarlo.', ''])
     return alerta, texto
 
 

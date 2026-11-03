@@ -41,8 +41,8 @@ def issue(n, login=vigia.AUTOR, title=vigia.TITULO, **kw):
     return {'number': n, 'title': title, 'state': 'open', 'user': {'login': login}, **kw}
 
 
-def estado(*runs, tope=2, gh='active'):
-    return vigia.decidir({'workflow_runs': list(runs)}, tope, AHORA, {'state': gh})['estado']
+def estado(*runs, tope=2, gh='active', nombre='catalog-mx.yml'):
+    return vigia.decidir(nombre, {'workflow_runs': list(runs)}, tope, AHORA, {'state': gh})['estado']
 
 
 class Decision(unittest.TestCase):
@@ -57,7 +57,7 @@ class Decision(unittest.TestCase):
         self.assertEqual(estado(run(1, hace=3 * D)), 'sin_correr')                 # the third whole day
 
     def test_no_run_or_only_runs_not_of_main_by_schedule_or_dispatch_is_sin_correr(self):
-        self.assertEqual(vigia.decidir({'workflow_runs': []}, 8, AHORA, ACTIVO), {'estado': 'sin_correr', 'corrida': None, 'exito': None})
+        self.assertEqual(vigia.decidir('texto-mx.yml', {'workflow_runs': []}, 8, AHORA, ACTIVO), {'estado': 'sin_correr', 'corrida': None, 'exito': None})
         self.assertEqual(estado(run(1, head_branch='otra')), 'sin_correr')
         self.assertEqual(estado(run(1, event='pull_request')), 'sin_correr')  # a fork's branch can be called main
         self.assertEqual(estado(run(1, event='workflow_dispatch')), 'ok')
@@ -66,7 +66,7 @@ class Decision(unittest.TestCase):
     def test_a_run_going_on_within_the_cap_is_en_curso_and_one_stuck_past_it_is_not(self):
         for s in ('queued', 'in_progress'):
             self.assertEqual(estado(run(1, status=s)), 'en_curso')
-        d = vigia.decidir({'workflow_runs': [run(1, hace=5 * D), run(2, status='in_progress')]}, 2, AHORA, ACTIVO)
+        d = vigia.decidir('catalog-mx.yml', {'workflow_runs': [run(1, hace=5 * D), run(2, status='in_progress')]}, 2, AHORA, ACTIVO)
         self.assertEqual((d['estado'], d['corrida']['id'], d['exito']['id']), ('en_curso', 2, 1))
         self.assertEqual(estado(run(1, status='queued', hace=2 * D)), 'en_curso')  # the cap's edge
         self.assertEqual(estado(run(1, status='in_progress', hace=3 * D)), 'sin_correr')
@@ -84,20 +84,23 @@ class Decision(unittest.TestCase):
                      ('created_at', '2026-11-02 10:00:00'), ('run_started_at', '')):
             bad.append({'workflow_runs': [{**run(1), k: v}]})
         for b in bad:
-            self.assertRaises(ValueError, vigia.decidir, b, 2, AHORA, ACTIVO)
+            self.assertRaises(ValueError, vigia.decidir, 'catalog-mx.yml', b, 2, AHORA, ACTIVO)
 
-    def test_paused_by_a_person_is_pausado_and_off_by_github_or_deleted_is_apagado_whatever_the_runs_say(self):
+    def test_only_a_listed_workflow_disabled_by_hand_is_pausado_and_any_other_off_one_is_apagado_whatever_the_runs(self):
         for runs in ([run(1, 'failure')], [run(1)], [], [run(1, status='in_progress')], [run(1, hace=9 * D)]):
-            self.assertEqual(estado(*runs, gh='disabled_manually'), 'pausado', runs)
-            for s in ('disabled_inactivity', 'disabled_fork', 'deleted'):
-                self.assertEqual(estado(*runs, gh=s), 'apagado', (s, runs))
-        d = vigia.decidir({'workflow_runs': [run(1, 'failure', D), run(2, status='queued')]}, 2, AHORA, {'state': 'disabled_manually'})
+            self.assertEqual(estado(*runs, gh='disabled_manually', nombre='descubrir.yml'), 'pausado', runs)
+            for n, s in [(n, s) for n, _ in vigia.VIGILADOS for s in ('disabled_inactivity', 'disabled_fork', 'deleted')] + [
+                    (n, 'disabled_manually') for n, _ in vigia.VIGILADOS if n != 'descubrir.yml']:  # a token can disable one
+                self.assertEqual(estado(*runs, gh=s, nombre=n), 'apagado', (n, s, runs))
+        self.assertEqual(estado(run(1, 'failure'), nombre='descubrir.yml'), 'rojo')  # listed but active: as always
+        d = vigia.decidir('descubrir.yml', {'workflow_runs': [run(1, 'failure', D), run(2, status='queued')]}, 2, AHORA,
+                          {'state': 'disabled_manually'})
         self.assertEqual((d['corrida']['id'], d['exito']), (1, None))  # the row shows its last finished run
 
     def test_an_unknown_or_malformed_workflow_state_stops_the_decision(self):
         for f in (None, [], 'active', {}, {'state': None}, {'state': ['active']}, {'state': 'Active'}, {'state': 'disabled'},
                   {'state': '@evil <b>'}, {'estado': 'active'}):
-            self.assertRaises(ValueError, vigia.decidir, {'workflow_runs': [run(1)]}, 2, AHORA, f)
+            self.assertRaises(ValueError, vigia.decidir, 'descubrir.yml', {'workflow_runs': [run(1)]}, 2, AHORA, f)
 
 
 class Texto(unittest.TestCase):
@@ -137,10 +140,20 @@ class Texto(unittest.TestCase):
         self.assertIn('| `descubrir.yml` | pausado | [#5](https://github.com/o/r/actions/runs/5) 2026-11-01 23:37 UTC, failure '
                       '| ninguno entre los últimos 20 | 2 |\n', texto)
         self.assertTrue(self.revisar(self.todos(**{'sondeo.yml': [run(1, 'failure')]}), {'descubrir.yml': 'disabled_manually'})[0])
-        for s in ('disabled_inactivity', 'disabled_fork', 'deleted'):
+        for s in ('disabled_manually', 'disabled_inactivity', 'disabled_fork', 'deleted'):  # sondeo is not in PAUSADOS
             alerta, texto = self.revisar(self.todos(), {'sondeo.yml': s})
             self.assertTrue(alerta, s)
             self.assertIn('| `sondeo.yml` | apagado | [#1](https://github.com/o/r/actions/runs/1) 2026-11-02 22:37 UTC, success |', texto)
+
+    def test_a_listed_workflow_github_reports_active_is_decided_as_always_and_its_row_says_it_should_leave_the_list(self):
+        alerta, texto = self.revisar(self.todos(**{'descubrir.yml': [run(5, 'failure')]}))
+        self.assertTrue(alerta)
+        self.assertIn('| `descubrir.yml` | rojo, sobra en PAUSADOS | [#5]', texto)
+        alerta, texto = self.revisar(self.todos())
+        self.assertFalse(alerta)
+        self.assertIn('| `descubrir.yml` | ok, sobra en PAUSADOS | [#1]', texto)
+        self.assertEqual(texto.count('sobra en PAUSADOS'), 2)  # that row and the legend only
+        self.assertNotIn('sobra', self.revisar(self.todos(), {'descubrir.yml': 'disabled_manually'})[1].split('\n\n')[1])
 
     def test_a_missing_workflow_or_a_repo_that_is_not_owner_name_stops_it(self):
         for repo in ('o/r/../x', 'o/r\n@x', 'evil.example/o/r'):
@@ -194,6 +207,12 @@ class Workflow(unittest.TestCase):
         for n, _ in vigia.VIGILADOS:
             doc = yaml.safe_load((ROOT / '.github' / 'workflows' / n).read_text(encoding='utf-8'))
             self.assertLessEqual(set(doc.get('on') or doc[True]), set(vigia.EVENTOS), n)
+
+    def test_only_the_owners_list_in_the_script_pauses_a_workflow_and_each_entry_says_when_and_why(self):
+        self.assertEqual(vigia.PAUSADOS, {'descubrir.yml': ('2026-11-03', 'decisión del dueño; reabre cuando un pedido de requests/ lo necesite')})
+        for n, (fecha, motivo) in vigia.PAUSADOS.items():
+            self.assertIn(n, dict(vigia.VIGILADOS))
+            self.assertEqual((datetime.strptime(fecha, '%Y-%m-%d').strftime('%Y-%m-%d'), bool(motivo.strip())), (fecha, True))
 
     def test_mains_code_only_daily_or_by_dispatch_reading_runs_and_writing_issues_and_nothing_else(self):
         on = WF.get('on') or WF[True]
@@ -308,7 +327,7 @@ class Pasos(unittest.TestCase):
                                         (set(), ['POST', 'PATCH'], []), ({'descubrir.yml'}, ['POST'], [2])):
             self.assertEqual(([m for m, _, _ in self.correr(rojo)], self.abiertas()), (metodos, abiertas), rojo)
 
-    def test_a_paused_workflow_with_the_rest_well_closes_ours_instead_of_opening_one_and_apagado_opens_one(self):
+    def test_a_listed_paused_workflow_with_the_rest_well_closes_ours_and_one_disabled_off_the_list_opens_one(self):
         pausa = {'descubrir.yml': 'disabled_manually'}
         self.assertEqual(self.correr({'descubrir.yml'}, estados=pausa), [])  # its last run failed: no issue opened
         self.assertEqual(self.lecturas, RUNS + [PAGINA.format(1)])
@@ -316,9 +335,11 @@ class Pasos(unittest.TestCase):
         escritas = self.correr({'descubrir.yml'}, estados=pausa)
         self.assertEqual([(m, u) for m, u, _ in escritas], [('POST', 'repos/o/r/issues/7/comments'), ('PATCH', 'repos/o/r/issues/7')])
         self.assertIn('| `descubrir.yml` | pausado |', escritas[0][2]['body'])
-        escritas = self.correr(set(), estados={'texto-mx.yml': 'disabled_inactivity'})
-        self.assertEqual(escritas, [('POST', 'repos/o/r/issues', {'title': vigia.TITULO, 'body': mock.ANY})])
-        self.assertIn('| `texto-mx.yml` | apagado |', escritas[0][2]['body'])
+        for s in ('disabled_manually', 'disabled_inactivity'):  # texto-mx failed and was disabled, by hand or by GitHub
+            self.poner([])
+            escritas = self.correr({'texto-mx.yml'}, estados={**pausa, 'texto-mx.yml': s})
+            self.assertEqual(escritas, [('POST', 'repos/o/r/issues', {'title': vigia.TITULO, 'body': mock.ANY})], s)
+            self.assertIn('| `texto-mx.yml` | apagado |', escritas[0][2]['body'])
 
     def test_every_page_of_open_issues_is_read_first_and_an_unreadable_page_writes_nothing(self):
         otras = [issue(n, title=f'otra {n}') for n in range(8, 160)]  # 152 newer issues of the bot: ours is on page 2
