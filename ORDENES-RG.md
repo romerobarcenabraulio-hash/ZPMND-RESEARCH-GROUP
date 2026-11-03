@@ -9,7 +9,9 @@ Decisiones cerradas (no reabrir): RG no se congela. Los 7 adaptadores de México
 discrepancia y solo mide (#91). OCR primero mide (#93). GOODWARE no es repo: es `canon/` dentro de ZPPMND.
 
 **Estado de este documento.** Es el plan del dueño para la semana, no una regla en vigor. Gobiernan el código, las
-pruebas, `docs/REGLAS.md` y `RESEARCH_CONTRACT.md`; cada regla de la sección 3 entra a `REGLAS.md` solo con su prueba.
+pruebas, `docs/REGLAS.md` y `RESEARCH_CONTRACT.md`. Las filas 20–29 de la sección 3 están en `REGLAS.md`; las que todavía
+no tienen su prueba dicen "Pendiente" en su columna de cumplimiento hasta el PR que la trae. Este archivo es la parte A
+del documento único del dueño; la parte B es `docs/CIERRE-HUECOS.md` y la parte C va como anexo al final.
 El canal `VerdictEvent` (§1 #95, §2 días 8 y 10, §3 regla 22) es una propuesta pendiente de reconciliar con
 `RESEARCH_CONTRACT.md` §3: hasta el PR que verifica la constancia y cambia ese contrato con su prueba, RG conoce un
 veredicto solo por un pedido nuevo y ningún código lee `verdicts/`. El orden de trabajo vigente está en `COLA.md` e
@@ -109,6 +111,20 @@ Los tres pedidos de arte previo son archivos, sin copia aquí:
 [`RR-2026-11-02-arte-previo-auditor-abierto`](requests/RR-2026-11-02-arte-previo-auditor-abierto.json),
 [`RR-2026-11-02-arte-previo-embeddings-catalogo`](requests/RR-2026-11-02-arte-previo-embeddings-catalogo.json).
 
+### Explorador de capacidades semanal (NORTE §34–41; decisión del dueño 2026-11-02)
+
+Un pedido recurrente, mismo texto cada semana con la fecha cambiada, sobre tres fuentes fijas ya registradas
+(`int.hf-hub`, `int.mcp-registry`, releases de los repos fijados en `requests/plans/`). Sale un paquete; nunca una
+instalación. ZPPMND lo convierte en `CapabilityDemand` solo con consumidor. El primero es
+[`RR-2026-11-09-explorador-semanal`](requests/RR-2026-11-09-explorador-semanal.json); cada lunes se agrega el de esa
+fecha con el mismo texto.
+
+### Seguridad: lista para el especialista (sin contratar hoy)
+
+`SECURITY.md` ya es el mapa (T1–T28). Lleva una sección "Pendiente" con filas abiertas, sin prueba todavía, para que el
+especialista llegue a una lista y no a una arqueología. Una fila `PENDIENTE` se abre cuando aparece; se cierra solo con
+prueba.
+
 ## 6. Pedido P0 de autoauditoría NOM-035
 
 [`requests/RR-2026-11-02-nom035-autoauditoria.json`](requests/RR-2026-11-02-nom035-autoauditoria.json): el consumidor del
@@ -128,3 +144,30 @@ primer `VerdictEvent`.
 | `SECURITY.md` como lugar de reglas nuevas | Ya pasó dos veces el tope de criterios (#72, #98); las reglas van a `REGLAS.md` |
 | Diff semántico del DOF, watchers externos, entidades entre fuentes, contradicciones, capacidades como flujo, tenancy privado | Forma C: en `BACKLOG.md` con condición; sin pedido que los necesite |
 | Cualquier cosa de Alquimia | Fuera del alcance de RG esta semana por decisión del dueño |
+
+## Anexo · Reseña de reglas y tercer auditor (parte C)
+
+**Reseña.** Las 19 reglas que ya existían cubren el nivel de datos: cuadre independiente, categorías sin LLM, cita
+literal, robots sin rodeos, tokens atados a host, mutantes con línea base. Las reglas 1, 2, 3 y 10 no se tocan. Lo que
+faltaba no es de datos: es de alcance, retroalimentación y revisión humana. Ninguna protegía contra que entre demasiado,
+contra que RG no sepa si lo que produce sirve, ni contra que el único humano apruebe por cansancio. Dos observaciones:
+la regla 14/14b evita apilar PR pero no pone tope de tamaño (lo pone la 20); y el segundo auditor (GPT) no está medido:
+no hay una línea en el repo que diga cuántos REVISE de GPT fueron defectos reales que Claude no vio (lo mide la 27).
+
+**Tercer auditor: cuándo sí, cómo, y sin clavarse.** El argumento a favor es la descorrelación: un modelo de pesos
+abiertos de otra familia (Qwen, DeepSeek, Llama, Mistral) se equivoca distinto que Claude y GPT. Basta para probarlo, no
+para instalarlo como ley. Diseño mínimo, reutilizando lo que existe:
+1. Mismo contrato que GPT: `scripts/auditor_gpt.py` ya habla el protocolo de OpenAI; un servidor local compatible
+   (vLLM u Ollama) se conecta cambiando `base_url` y el modelo por variable del repo (`LOCAL_AUDIT_MODEL`,
+   `LOCAL_AUDIT_URL`), con una prueba de que sin la variable no se llama a nada.
+2. Mismas guardas: código de `main`, nunca el head; sin herramientas; filtro de credenciales; su comentario lleva su
+   propia línea (`LOCAL REVIEW: PASS|REVISE <sha>`) que `post` y `post-gpt` no confunden con un veredicto.
+3. Solo desempate: corre únicamente cuando Claude y GPT discrepan sobre el mismo head, o en PR de datos.
+4. Treinta PR y una cifra: `docs/PRECISION.md` dice cuántos hallazgos únicos tuvo cada auditor; si el local encontró
+   algo real que los otros no vieron en más de 1 de cada 10 discrepancias, se queda; si no, se apaga con su registro.
+
+No se instala antes del paquete de `RR-2026-11-02-arte-previo-auditor-abierto` (§5). Qué no hacer: auditar todo desde el
+primer día, dejarlo bloquear merges antes de tener la cifra, o darle otro prompt que el de los criterios de `main` y el
+diff. La máquina contratada tiene un uso más seguro que auditar: el OCR determinista de la pista estatal y municipal
+(G06, G07 y G09 de ZPPMND), que necesita cómputo, no juicio.
+

@@ -28,9 +28,14 @@ veredicto de ZPPMND.
 3. **E4 · presupuesto de lectura por fuente** (hueco 4). Va tercero porque mejora todos los paquetes pero no destraba a
    ningún consumidor. Si E3 queda bloqueado, E4 se adelanta.
 
+## Recurrente (no cuenta contra WIP = 1)
+
+El explorador de capacidades semanal (`ORDENES-RG.md` §5): cada lunes desde el 09-nov, el pedido de esa fecha y una
+corrida de `investigar.yml`. Sale un paquete, nunca una instalación; ZPPMND decide si algo tiene consumidor.
+
 ## Congelados (no reciben rondas hasta su turno)
 
-#75 runner y #73 Postgres (decisión del dueño 2026-11-02: se parten en su turno), #91 tercer revisor (espera la regla
+#75 runner y #73 Postgres (decisión del dueño 2026-11-02: se parten en su turno; en draft), #91 tercer revisor (espera la regla
 27), #77 despachador nocturno (al final), #89 motor `api` (draft hasta que su primer uso sea `mx.inegi-bie`). #97
 (vigía) y #99 (plazo del descubrimiento) ya están construidos: entran si tienen dos PASS; si vuelven a REVISE pasan a
 `BACKLOG.md`.
