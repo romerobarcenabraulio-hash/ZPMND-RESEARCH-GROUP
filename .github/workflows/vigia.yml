@@ -1,9 +1,10 @@
 name: vigia
-# Vigía de producción (SECURITY.md T26): daily, the last runs on main of every production workflow (list and caps in
-# scripts/vigia.py); ONE open issue "Vigía de producción" while any is red or has not finished a run within its cap,
-# closed with a comment when all are ok or running; only fixed names, states, dates and this repo's run numbers and
-# links reach it. The job ends red while anything is red or not running. Main's code, no secret, contents and runs
-# read, issues write; it reads every page of open issues before choosing one.
+# Vigía de producción (SECURITY.md T26): daily, the last runs on main and the state of every production workflow (list
+# and caps in scripts/vigia.py); ONE open issue "Vigía de producción" while any is red, has not finished a run within its
+# cap or is off without being in the script's PAUSADOS list (apagado), closed with a comment when all are ok, running or
+# paused by hand and listed (pausado); only fixed names, states, dates and this repo's run numbers and links reach it.
+# The job ends red while anything is red, not running or apagado. Main's code, no secret, contents and runs read, issues
+# write; it reads every page of open issues before choosing one.
 on:
   schedule:
     - cron: '37 23 * * *'  # daily 23:37 UTC, after catalog-mx's usual window
@@ -22,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { ref: main, persist-credentials: false }
-      - name: Read the last runs on main of every watched workflow
+      - name: Read the last runs on main and the state of every watched workflow
         env: { GH_TOKEN: '${{ github.token }}', REPO: '${{ github.repository }}' }
         run: |
           set -euo pipefail
@@ -30,6 +31,7 @@ jobs:
           python3 -I scripts/vigia.py lista > "$d/lista"
           while read -r f; do
             gh api "repos/$REPO/actions/workflows/$f/runs?branch=main&per_page=20" > "$d/$f.json"
+            gh api "repos/$REPO/actions/workflows/$f" > "$d/$f.estado.json"  # active, disabled_manually, ...
           done < "$d/lista"
       - name: Decide each one's state and write the issue text
         id: decidir
@@ -56,6 +58,6 @@ jobs:
             gh api -X POST "repos/$REPO/issues/$n/comments" --input "$d/cierre.json" > /dev/null
             gh api -X PATCH "repos/$REPO/issues/$n" -f state=closed -f state_reason=completed > /dev/null
           fi
-      - name: Red while anything is red or has not run within its cap
+      - name: Red while anything is red, has not run within its cap or is apagado
         if: steps.decidir.outputs.alerta != 'false'
         run: exit 1
