@@ -1,0 +1,18 @@
+{
+  "request_id": "RR-2026-11-02-nom035-autoauditoria",
+  "issued_by": "OWNER",
+  "issued_at": "2026-11-02T20:15:00Z",
+  "question": "Para un centro de trabajo en México, ¿cuál es el conjunto completo de obligaciones del patrón bajo la NOM-035-STPS-2018 (numerales 5 a 10 y guías de referencia), a qué tramo de trabajadores aplica cada una, qué documento o registro demuestra su cumplimiento según el propio texto, y qué dicen literalmente los transitorios sobre su entrada en vigor por fases? Cada obligación con su cita literal en tramos de 300 caracteres o menos.",
+  "why_needed": "Primera unidad de autoauditoría de ZPPMND: una lista de obligaciones tipadas, con evidencia exigible y vigencia, que una empresa pueda contestar sola. Hoy solo están curados el numeral 2 y parte de 5 a 8 (RR-2026-10-21-nom035-obligaciones). Es el consumidor del primer VerdictEvent.",
+  "affected_component": "autoauditoría tipada de ZPPMND, plano de conocimiento",
+  "desired_evidence": [
+    "texto del DOF del 23 de octubre de 2018 con sha256 y fecha, y cualquier aclaración o modificación posterior publicada en el DOF, con su linaje NOM-035-STPS",
+    "por cada obligación: numeral, condición de aplicación (tramo de trabajadores u otra), evidencia documental que el texto exige, cita literal",
+    "transitorios: fechas de entrada en vigor por fase, con cita literal",
+    "lo que el texto no decide, marcado como desconocido; lo que solo diga una fuente secundaria, como candidate_claim",
+    "lo que no se encontró: consultas hechas sin resultado"
+  ],
+  "priority": "P0",
+  "risk_if_wrong": "Una empresa se declara en cumplimiento por una obligación que no le aplica, o se le exige evidencia que la norma no pide.",
+  "privacy_class": "PUBLIC"
+}

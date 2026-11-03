@@ -69,8 +69,7 @@ API**: sin cálculos, conversiones ni variaciones.
     la pide.
   - `BANXICO_TOKEN` llega solo a dos pasos de `catalog-mx`: el del catálogo y un escaneo que busca el token en `data` y
     `raw` antes de subir crudos y de hacer commit. Si lo encuentra, o no puede leer una carpeta, no se sube nada.
-  - `mx.inegi-bie` sigue `trial`. Corre solo si se nombra en `--sources` (workflow `indicadores-mx`), e `INEGI_TOKEN`
-    nunca llega a `catalog-mx`.
+  - `mx.inegi-bie` es `active` desde la corrida real 39877667471 (2026-10-23). `catalog-mx` la pide con `INEGI_TOKEN`.
   - Una fuente `trial` pasa a `active` solo con bytes reales. Sus fixtures `CONSTRUIDO_DE_DOCS` se reemplazan por los
     crudos de una corrida real, y una prueba impide `active` mientras quede alguna. Otra prueba impide `active`
     mientras alguna serie no tenga `confirmed_by`.
@@ -78,9 +77,8 @@ API**: sin cálculos, conversiones ni variaciones.
     manifiesto. Antes de subir, un paso busca los tokens en todo lo que se sube.
 - **Confirmado con bytes reales (Banxico):** la forma de cada respuesta, y que los días sin dato llegan como "N/E"
   (en SF43783).
-- **HIPÓTESIS (INEGI, todavía sin bytes reales):**
-  - la clave `628194`, la fuente `BIE` (los ejemplos documentados usan `BISE`) y el área `00`;
-  - el formato de `TIME_PERIOD`.
+- **Confirmado con bytes reales (INEGI, corrida 39877667471):** la clave `910392`, la fuente `BIE-BISE`, el área `00`
+  y el formato de `TIME_PERIOD`.
 
 ### Primera corrida real (2026-10-22)
 
@@ -124,14 +122,10 @@ Workflow `indicadores-mx`, corrida 39709378896 (2026-10-22 02:06 UTC, artefacto 
 - Cada corrida baja la historia completa: unos 1.34 MB de crudo por corrida en `raw-mx`.
 - HIPÓTESIS: si las respuestas cambian en cada corrida (un dato nuevo al día), son unos 160 MB al año.
 
-**Pendiente para el dueño (INEGI).**
+**INEGI en esa corrida.**
 - `CL_INDICATOR` respondió HTTP 401 "No autorizado" (ErrorCode 110).
 - `INDICATOR/628194` respondió HTTP 400 "No se encontraron resultados" (ErrorCode 100).
-- No se guardó nada y la fuente sigue `trial`.
-- HIPÓTESIS: el 401 apunta al token. El 400 puede venir del mismo token o de la combinación clave `628194`, fuente
-  `BIE` y área `00`.
-- Acción: volver a poner el secreto `INEGI_TOKEN` y correr
-  `gh workflow run indicadores-mx.yml -f sources=mx.inegi-bie`.
+- No se guardó nada. Resuelto en la corrida 39877667471 (clave `910392`, fuente `BIE-BISE`): bytes reales, `active`.
 
 ## Normas Oficiales Mexicanas (NOM): linajes desde el DOF
 
@@ -300,8 +294,7 @@ Están en `sources/mx.json` con su causa observada:
 - Catálogo de NOM: el dominio ya no resuelve; las NOM se cubren desde el DOF.
 - CONAMER: robots responde 403 y el dominio no resuelve.
 - Periódicos oficiales estatales y congresos locales: 32 formatos distintos.
-- INEGI (más allá del INPC): estadística y geografía; por ahora solo el INPC entra, en prueba. Su primera corrida
-  real respondió 401 y 400 (pendiente para el dueño, arriba).
+- INEGI (más allá del INPC): estadística y geografía; por ahora solo entra el INPC, `active`.
 - Tratados de la SRE: es una aplicación con JavaScript; falta revisar sus reglas.
 
 Nada de esto se rodea: o se abre por la vía permitida o queda bloqueado con su causa.
