@@ -19,6 +19,9 @@ Reglas del plan:
   `✗ REVERTIR`). Si fue REVISAR o REVERTIR, se regenera desde ese día hasta la siguiente puerta. Cada regeneración es un
   commit con su motivo.
 
+**Recurrente:** cada lunes (09, 16, 23 y 30-nov; 07, 14, 21 y 28-dic) entra el pedido del explorador semanal con la
+fecha del día y se corre `investigar.yml`. Sale un paquete, nunca una instalación, y no cuenta como entregable.
+
 ## Puertas (cada 5 días)
 
 sáb 07-nov, jue 12-nov, mar 17-nov, dom 22-nov, vie 27-nov, mié 02-dic, lun 07-dic, sáb 12-dic, jue 17-dic, mar 22-dic,

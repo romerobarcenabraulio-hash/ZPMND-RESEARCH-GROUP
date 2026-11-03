@@ -1,0 +1,17 @@
+{
+  "request_id": "RR-2026-11-09-explorador-semanal",
+  "issued_by": "OWNER",
+  "issued_at": "2026-11-09T06:00:00Z",
+  "question": "En los últimos siete días, ¿qué modelos, servidores MCP, herramientas o versiones nuevas aparecieron en Hugging Face Hub (tendencias), en el registro oficial de MCP y en los releases de los repositorios ya fijados en los planes de fuentes de RG, que podrían ampliar una capacidad con consumidor nombrado en ZPPMND (OCR de documentos legales, auditoría de código por modelo abierto, embeddings multilingües, lectura de aplicaciones por MCP)? Para cada uno: qué hace, licencia leída, versión, requisitos de ejecución local y qué capacidad con consumidor ampliaría.",
+  "why_needed": "Serendipia acotada (NORTE §41): que el sistema proponga capacidades sin depender de que el dueño las descubra. Solo entra lo que tenga consumidor; lo demás queda como RG_PROPOSED.",
+  "affected_component": "explorador de capacidades; CapabilityDemand de ZPPMND",
+  "desired_evidence": [
+    "por candidato: nombre, versión, fecha de aparición, URL oficial, licencia leída literalmente con cita y sha256",
+    "qué capacidad con consumidor nombrado ampliaría y por qué; si no amplía ninguna, se lista sin recomendación",
+    "requisitos de ejecución declarados por el proveedor; lo no declarado como desconocido",
+    "lo que no se encontró: consultas hechas sin resultado"
+  ],
+  "priority": "P2",
+  "risk_if_wrong": "Instalar una capacidad sin consumidor, o pasar por alto una que destrabe un caso dorado.",
+  "privacy_class": "PUBLIC"
+}

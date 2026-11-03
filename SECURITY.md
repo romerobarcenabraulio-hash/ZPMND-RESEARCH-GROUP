@@ -60,3 +60,17 @@ sh substrate/runtime/verify_e2e.sh      # the real gateway's own tools through t
 - **Hooks are not a boundary.** OpenClaw advisory GHSA-68xw-r643-9p5w: skill dispatch skipped before-tool-call hooks.
   The Research Goodware hook will inject the contract and record provenance; enforcement stays in config, network and
   container.
+
+## Pending (open, no test yet; owner's list for a security specialist, 2026-11-02)
+
+A row here is a known gap, not a control: it is opened when the gap appears and closed only by a T row with its test.
+
+| Pending | Gap | Where |
+|---|---|---|
+| P1 | Supabase and Cloudflare credentials must reach only steps of `main` workflows, never PR code | RG workflows (#73, R2) |
+| P2 | Rented server AX42: access, the one-use runner (#75) and any secret left on disk after a job | RG server |
+| P3 | Tenancy of client profiles | ZPPMND |
+| P4 | Effective revocation of connections (EXP-14) | ZPPMND |
+| P5 | Personal data in interview transcripts | ZPPMND |
+| P6 | Client-owned API keys (BYO) in the harness | ZPPMND |
+
