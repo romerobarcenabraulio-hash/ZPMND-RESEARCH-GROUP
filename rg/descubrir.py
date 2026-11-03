@@ -15,6 +15,8 @@ Two commands, two steps of .github/workflows/descubrir.yml:
   verificar  no key. Each candidate (the first `por_capa` of each layer) is asked once with the catalog's Fetcher:
              https, its own host and its www twin only, robots.txt, public addresses, a size cap. Only the HTTP status,
              the size and the sha256 are kept (accesible on a 200): a page that answers says nothing of what it holds.
+             One at a time, each in a child process the parent kills, its request with it, at 5 minutes or at the
+             run's 80: what the run's deadline cuts stays pending, and a country is saved after every candidate.
 
 A result is kept only when its URL is https on a host name (no address, port, user or password), its text visible
 (rg.catalog.categorize.clean_text) and cut to a fixed length; everything else is counted in `descartados`.
@@ -24,6 +26,7 @@ import hashlib
 import http.client
 import ipaddress
 import json
+import multiprocessing
 import os
 import re
 import sys
@@ -36,7 +39,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from rg.catalog.categorize import clean_text
-from rg.catalog.fetch import Fetcher, FetchRefused, _NoRedirect, _PublicHTTPS
+from rg.catalog.fetch import Fetcher, FetchRefused, Response, _NoRedirect, _PublicHTTPS
 from rg.sondeo import HOST
 
 API = 'https://api.perplexity.ai/search'
@@ -47,6 +50,8 @@ MAX_BUSQUEDAS = 2400  # one run: every cell of the per-country axes (2316) fits;
 PAUSA = 1.0  # seconds between two searches
 PLAZO_BUSCAR = 100 * 60  # the step allows 110 minutes
 PLAZO_VERIFICAR = 80 * 60  # the step allows 90
+PLAZO_CANDIDATO = 5 * 60  # one candidate whole (robots.txt, retries, redirects): its process is killed past it
+MAX_HIJO = 6_000_000  # bytes of a child's answer: a line of JSON and the body (the Fetcher's cap is 5 MB)
 ALTO = (401, 402, 403, 429)  # the key or the account says no: asking again only spends
 ISO2, ISO3 = re.compile(r'[A-Z]{2}'), re.compile(r'[A-Z]{3}')
 CAPA_ID = re.compile(r'[a-z_]{2,20}')
@@ -296,22 +301,91 @@ def correr_busqueda(cob, carpeta, key, max_busquedas, tipo, ahora=None, buscar=b
     return {'busquedas': usadas[0], 'paises': hechos, 'pendientes': len(pendientes(cob, carpeta))}
 
 
-def verificar(carpeta, por_capa, nuevo_fetcher=None, ahora=None, reloj=time.monotonic, plazo=PLAZO_VERIFICAR):
-    """Asks each unverified candidate once; saves every country as soon as its candidates are asked."""
+_HIJOS = multiprocessing.get_context('fork')  # the child is a copy of the parent: its fetcher is never pickled; the
+# verifying process runs no thread of its own (buscar, with _abrir's threads, is another step), so fork is safe here
+
+
+class _Corte(BaseException):
+    """The run's deadline cut a candidate: it stays pending. Not an Exception, so _ver never records it."""
+
+
+class _Fallo(Exception):
+    """What a child raised, by its kind only."""
+    def __init__(self, tipo):
+        super().__init__(tipo)
+        self.tipo = tipo
+
+
+def _hijo(pedir, conn):
+    """In the child: the request, then one message, a line of JSON and the body. Nothing is pickled."""
+    try:
+        resp = pedir()
+        conn.send_bytes(json.dumps({'status': resp.status, 'url': resp.url}).encode() + b'\n' + resp.body)
+    except FetchRefused as e:
+        conn.send_bytes(json.dumps({'rechazo': str(e)[:200]}).encode() + b'\n')
+    except BaseException as e:  # noqa: BLE001 - its kind is the candidate's result
+        conn.send_bytes(json.dumps({'error': type(e).__name__}).encode() + b'\n')
+
+
+class _Aislado:
+    """A fetcher whose get runs in a child process the parent kills at `tope`, its request with it: the Fetcher checks
+    its deadline only before a request, a socket timeout bounds one wait, and a Crawl-delay or a lookup has no bound
+    (run 41483944219 spent its 90 minutes on KOR and saved nothing). One candidate at a time: two GPT REVISEs of a pool
+    of threads (963eb17, 403ef17) found races in it. An answer counts only when it is in before `tope`; past it the
+    candidate is an error, or pending when `tope` is the run's deadline."""
+    def __init__(self, fetcher, hosts, tope, fin, reloj, ultimo):
+        self.fetcher, self.hosts, self.tope, self.fin, self.reloj, self.ultimo = fetcher, hosts, tope, fin, reloj, ultimo
+
+    def get(self, url):
+        lee, escribe = _HIJOS.Pipe(duplex=False)
+        hijo = _HIJOS.Process(target=_hijo, args=(lambda: self.fetcher.get(url), escribe), daemon=True)
+        hijo.start()
+        escribe.close()
+        cabeza = None
+        try:
+            if lee.poll(max(0.0, self.tope - self.reloj())) and self.reloj() < self.tope:
+                cabeza, _, cuerpo = lee.recv_bytes(MAX_HIJO).partition(b'\n')
+        finally:
+            hijo.kill()
+            hijo.join(5)  # a SIGKILL ends it at once; no wait in this run is without a bound
+            lee.close()
+            for h in self.hosts:  # its requests ended with it: the pause per host holds for the next candidate
+                self.ultimo[h] = self.reloj()
+        if cabeza is None:
+            if self.tope < self.fin:
+                raise TimeoutError()
+            raise _Corte()
+        out = json.loads(cabeza)
+        if 'rechazo' in out:
+            raise FetchRefused(str(out['rechazo']))
+        if 'error' in out:
+            raise _Fallo(str(out['error'])[:60])
+        return Response(int(out['status']), cuerpo, str(out['url']))
+
+
+def verificar(carpeta, por_capa, nuevo_fetcher=None, ahora=None, reloj=time.monotonic, plazo=PLAZO_VERIFICAR,
+              por_candidato=PLAZO_CANDIDATO):
+    """Asks each unverified candidate once, one at a time, each in a child process killed at `por_candidato` seconds or
+    at the run's deadline (_Aislado); its country is saved after every candidate. Returns how many got a result."""
     ahora = ahora or (lambda: datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
     fin, ritmo, n = reloj() + plazo, {}, 0
     nuevo_fetcher = nuevo_fetcher or (lambda hosts: Fetcher(hosts, budget=6, max_bytes=5_000_000, timeout=45, retries=1,
                                                             clock=reloj, deadline=fin, compartido=ritmo))
+    ultimo = ritmo.setdefault('last', {})  # the Fetcher's pause per host, kept by the parent from child to child
     for path in sorted(carpeta.glob('[A-Z][A-Z][A-Z].json')):
-        doc, cambio = _leer(path), False
+        doc = _leer(path)
         for capa in (doc or {}).get('capas', []):
             for r in capa.get('resultados', [])[:por_capa]:
                 if 'verificacion' in r or reloj() >= fin:
                     continue
-                r['verificacion'] = _ver(r, nuevo_fetcher, ahora)
-                cambio, n = True, n + 1
-        if cambio:
-            _escribir(path, doc)
+                tope = min(fin, reloj() + por_candidato)
+                aislado = lambda hosts: _Aislado(nuevo_fetcher(hosts), hosts, tope, fin, reloj, ultimo)  # noqa: E731
+                try:
+                    r['verificacion'] = _ver(r, aislado, ahora)
+                except _Corte:
+                    return n  # the run's deadline: this candidate and the rest stay pending
+                n += 1
+                _escribir(path, doc)
     return n
 
 
@@ -326,7 +400,7 @@ def _ver(r, nuevo_fetcher, ahora):
     except FetchRefused as e:
         return {'estado': 'rechazado', 'error': str(e)[:200], 'fecha': ahora()}
     except Exception as e:  # noqa: BLE001 - one candidate's failure is its own result
-        return {'estado': 'error', 'error': type(e).__name__, 'fecha': ahora()}
+        return {'estado': 'error', 'error': getattr(e, 'tipo', None) or type(e).__name__, 'fecha': ahora()}
     return {'estado': 'accesible' if resp.status == 200 else 'http', 'http': resp.status, 'bytes': len(resp.body),
             'sha256': hashlib.sha256(resp.body).hexdigest(), 'fecha': ahora()}
 
