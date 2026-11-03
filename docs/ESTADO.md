@@ -43,9 +43,11 @@ Lectura del documento `ZPMND_Norte_Compartido_Completo_2026-11-03.pdf` (sha256
 - §4.1 "reemplazar el ESTADO del 10-19 por el del 11-02": hecho en #100 (`637b3aa`); la plantilla del 11-02 traía tres
   datos falsos (INEGI BIE ya era `active` con la corrida 39877667471; `text-mx` no existe; `CIERRE-HUECOS-NORTE.md` no
   existía) que se corrigieron contra el repo.
-- §2 "el plan de 11 días es exactamente lo que la híbrida exige de obtener": el primer eslabón está roto: la corrida
-  41502576714 de `texto-mx` terminó en `failure` y no hay texto de ningún crudo; #80 verificó 0 de 42 citas (29 de 42 con
-  la compuerta de #101, medido en la Mac).
+- §2 "el plan de 11 días es exactamente lo que la híbrida exige de obtener": la primera corrida de `texto-mx`
+  (41502576714) extrajo 72,920 de 76,131 documentos y los publicó (release `text-mx`, `mx/texto` en `catalog`); 1,106
+  necesitan OCR, 1,851 tienen formato no soportado y 254 fallaron. El job terminó en `failure` por la revisión de cobertura
+  y por dos bultos con un miembro de 3.6 GB sobre el tope de 200 MB. #80 verificó 0 de 42 citas (29 de 42 con la
+  compuerta de #101, medido en la Mac).
 - §3 "puertas cada cinco días hábiles": el dueño decidió el 2026-11-02 que cuentan todos los días; `ITINERARIO-2026-Q4.md`
   usa días de calendario.
 - §3 paso 6 "VerdictEvent a RG" (fecha objetivo 2026-12-31): la verificación del `VerdictEvent` en RG (E3) no puede ir
