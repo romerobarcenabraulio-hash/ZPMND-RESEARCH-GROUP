@@ -1,4 +1,4 @@
-# Estado de RESEARCH GROUP · 2026-11-02
+# Estado de RESEARCH GROUP · 2026-11-03
 
 Única entrada del repo (regla 24). Se actualiza en cada entrega; lo superseded se borra.
 
@@ -23,13 +23,32 @@
 ## Entregable activo
 
 E0 (cerrar el día 1 de las órdenes): #95, #96 y #100 en `main`; CI de `main` en verde en `dfa9f4b` con `tests.test_registro`,
-`tests.test_llamada` y `tests.test_schemas`; #103 (documento único) en `414766a`. Este archivo con esos SHA lo cierra.
-Siguiente: E1 (`COLA.md`).
+`tests.test_llamada` y `tests.test_schemas`; #103 (documento único) en `414766a`. Este archivo con esos SHA lo cierra
+(#105, `c1fc920`).
+
+Antes de E1 van las órdenes de proceso del dueño del 2026-11-03, una por PR chico con su prueba: 1 medir el lead time
+(este PR), 2 mutación por diff en PR y completa de noche, 3 runner propio, 4 tope de REVISE, 5 automerge ampliado,
+6 caja de tiempo (fila 30 de `docs/REGLAS.md`), 7 `make check` en el AX42. Prohibido: fuentes nuevas, motores nuevos,
+tocar `legacy`. Las correcciones de RG a 2, 3, 4 y 5 (enviadas al dueño el mismo día) entran con el PR de cada una.
 
 ## Horas del dueño (norte compartido, meta ≤ 10 por semana)
 
 Sin medir en horas (HIPÓTESIS). Lo que RG sí ve: PR fusionados por el dueño desde el 2026-10-27: 43 (uno más lo fusionó
 `automerge`). Desde el 2026-11-02, con WIP = 1: 8 (#86, #92, #94, #95, #96, #97, #98, #100).
+
+## Lead time de los PR (orden 1 del dueño)
+
+Medido con `scripts/lead_time.py` sobre los 30 últimos PR fusionados; los comandos que bajan sus datos están en su
+docstring. Horas, mediana (p90). Es el "antes" de las órdenes 2–7; se repite a los 10 PR siguientes.
+
+| Fusionados | PR | Abrir → merge | Abrir → último head | CI del head | Head → dos PASS | Dos PASS → CI terminado | → merge | REVISE |
+|---|---|---|---|---|---|---|---|---|
+| 2026-10-28 → 2026-11-03 | 30 | 10.4 (28.4) | 1.1 (21.3) | 1.0 (1.4) | 0.1 (0.1) | 0.9 (1.2) | 1.9 (20.8) | 49 (8 PR con 2+) |
+
+Lectura: la auditoría tarda minutos. Cada PR espera casi una hora más, tras sus dos PASS, a que terminen los mutantes
+(orden 2). La cola larga está antes del último head, en las rondas de REVISE de 8 PR (órdenes 4 y 6), y en la espera
+del merge (orden 5). #81 y #72 entraron sin los dos PASS sobre su head: no cuentan en las tres columnas de auditoría y
+espera.
 
 ## Norte compartido del 2026-11-03: refutación, delta y pedidos
 
