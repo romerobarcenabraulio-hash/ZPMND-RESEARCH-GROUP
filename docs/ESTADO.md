@@ -38,8 +38,10 @@ Sin medir en horas (HIPÓTESIS). Lo que RG sí ve: PR fusionados por el dueño d
 
 ## Lead time de los PR (orden 1 del dueño)
 
-Medido con `scripts/lead_time.py` sobre los 30 últimos PR fusionados; los comandos que bajan sus datos están en su
-docstring. Horas, mediana (p90). Es el "antes" de las órdenes 2–7; se repite a los 10 PR siguientes.
+Medido con `scripts/lead_time.py` sobre los 30 últimos PR fusionados. Sus datos de entrada, recortados a lo que la
+medición lee y con sus comandos, están en `docs/medicion/lead-time-2026-11-03.json` (capturados el 2026-11-04 00:46 UTC);
+`tests.test_lead_time` recalcula esta fila de ellos. Cuenta solo lo ocurrido antes de cada merge, y un CI solo si estaba
+completo. Horas, mediana (p90). Es el "antes" de las órdenes 2–7; se repite a los 10 PR siguientes.
 
 | Fusionados | PR | Abrir → merge | Abrir → último head | CI del head | Head → dos PASS | Dos PASS → CI terminado | → merge | REVISE |
 |---|---|---|---|---|---|---|---|---|
@@ -47,8 +49,8 @@ docstring. Horas, mediana (p90). Es el "antes" de las órdenes 2–7; se repite 
 
 Lectura: la auditoría tarda minutos. Cada PR espera casi una hora más, tras sus dos PASS, a que terminen los mutantes
 (orden 2). La cola larga está antes del último head, en las rondas de REVISE de 8 PR (órdenes 4 y 6), y en la espera
-del merge (orden 5). #81 y #72 entraron sin los dos PASS sobre su head: no cuentan en las tres columnas de auditoría y
-espera.
+del merge (orden 5). Los 30 tienen su CI completo; #81 y #72 entraron sin los dos PASS sobre su head y no cuentan en
+las tres columnas de auditoría y espera.
 
 ## Norte compartido del 2026-11-03: refutación, delta y pedidos
 
