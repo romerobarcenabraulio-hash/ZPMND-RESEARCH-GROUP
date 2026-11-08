@@ -3,7 +3,7 @@
  "issued_by": "OWNER",
  "issued_at": "2026-11-08T06:00:00Z",
  "question": "Para cada categoría de apps listada en why_needed: ¿qué apps relevantes en el mundo y en México publican referencia de API u OpenAPI oficial, qué objetos y operaciones exponen, en qué formato exportan los datos del cliente, qué precio publican y con qué fecha, y qué términos de uso de la API declaran? Páginas de venta no cuentan como evidencia.",
- "why_needed": "Subáreas L01 ERP, L02 CRM, L03 contabilidad (CONTPAQi, Aspel, Alegra), L04 correo y calendario, L05 proyectos, L06 CAD, L07 BI, L08 inventario, L09 RH y nómina, L10 banca y pagos, L11 automatización, L12 comunicación y L13 constructores de apps. ZPMND necesita saber qué capacidad de cada app puede usar y qué datos puede sacar (§34-36).",
+ "why_needed": "Subáreas: L01 ERP (Mundo y México); L02 CRM (Mundo y México); L03 Contabilidad (incluye CONTPAQi, Aspel, Alegra y otros de México) (Mundo y México); L04 Correo y calendario (Mundo y México); L05 Gestión de proyectos (Mundo y México); L06 CAD (Mundo y México); L07 BI y analítica (Mundo y México); L08 Inventario y almacén (Mundo y México); L09 Recursos humanos y nómina (Mundo y México); L10 Banca y pagos (APIs) (Mundo y México); L11 Automatización (catálogos de conectores) (Mundo y México); L12 Comunicación (Mundo y México); L13 Frontend y constructores de apps (Mundo y México). ZPMND necesita saber qué capacidad de cada app puede usar y qué datos puede sacar (§34-36).",
  "affected_component": "capability scout e inventario de capacidades de apps (§34-36), familia L",
  "desired_evidence": [
   "por app: referencia de API u OpenAPI oficial, URL, versión y sha256 de lo bajado",

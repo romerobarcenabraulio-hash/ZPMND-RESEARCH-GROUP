@@ -3,7 +3,7 @@
  "issued_by": "OWNER",
  "issued_at": "2026-11-08T06:00:00Z",
  "question": "Para cada norma o regla contable o fiscal listada en why_needed: ¿quién la emite, cuál es su versión vigente y su historial, dónde se obtiene el texto oficial (DOF, SAT o emisor), con qué licencia o condición de acceso (gratuito, registro o pago), y para G04 qué esquemas XSD y catálogos del CFDI están vigentes y desde qué fecha?",
- "why_needed": "Subáreas G01 NIF, G02 IFRS, G03 US GAAP, G04 CFDI (Anexo 20 y XSD), G05 criterios del SAT, G06 leyes fiscales (cruce con A03), G07 convenios de doble tributación, G08 NIA/ISA, G09 costos y G10 OCDE (BEPS y precios de transferencia). ZPMND necesita la versión vigente de cada regla y su historia.",
+ "why_needed": "Subáreas: G01 Normas de Información Financiera (NIF) (México); G02 IFRS / NIIF (Internacional); G03 US GAAP (ASC) (Internacional); G04 CFDI y sus especificaciones técnicas (México; Anexo 20 y XSD); G05 Criterios normativos y no vinculativos (México); G06 Leyes fiscales (LISR, LIVA, CFF, LIEPS) (México; cruce con A03); G07 Convenios para evitar la doble tributación (México); G08 Normas de auditoría (NIA/ISA) (Internacional); G09 Contabilidad de costos y administrativa (Transversal); G10 Fiscal internacional: OCDE (BEPS, precios de transferencia) (Internacional). ZPMND necesita la versión vigente de cada regla y su historia.",
  "affected_component": "reglas contables y fiscales candidatas con versión, familia G",
  "desired_evidence": [
   "por norma: emisor, versión vigente, versiones previas, URL y sha256 de lo bajado",

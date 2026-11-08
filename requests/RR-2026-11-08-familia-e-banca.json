@@ -3,7 +3,7 @@
  "issued_by": "OWNER",
  "issued_at": "2026-11-08T06:00:00Z",
  "question": "Para cada subárea de banca listada en why_needed: ¿qué autoridad publica el dato o la regla (Banxico, CNBV, CONDUSEF, BIS, Fed, FDIC u OCC), por qué canal oficial se adquiere (API, descarga o DOF), cuántos registros o series declara a qué fecha, y con qué licencia o términos? Para E01, el catálogo completo de series del SIE.",
- "why_needed": "Subáreas E01 (SIE: hoy 4 series), E02 circulares de Banxico, E03 disposiciones CNBV, E04 comisiones y CAT, E05 RECA, E06 SPEI/CoDi/DiMo, E07 estadísticas CNBV, E08 Basilea III, E09 regulación de EE. UU. y E10 open banking. ZPMND necesita productos, tasas y reglas bancarias con fuente primaria y fecha.",
+ "why_needed": "Subáreas: E01 Series de Banxico (SIE) (México; hoy 4 series); E02 Circulares y reglas de Banxico (México); E03 Disposiciones de la CNBV (México); E04 Comisiones, tasas y CAT por producto (México); E05 Contratos de adhesión (RECA) (México); E06 Sistema de pagos: SPEI, CoDi, DiMo (México); E07 Estadísticas de la banca (México); E08 Basilea III y estándares del BIS (Internacional); E09 Regulación bancaria de EE. UU. (Internacional); E10 Open banking y APIs bancarias (Internacional y México). ZPMND necesita productos, tasas y reglas bancarias con fuente primaria y fecha.",
  "affected_component": "registro de fuentes de RG y tablero #desglose, familia E",
  "desired_evidence": [
   "por subárea: autoridad, URL del punto de acceso, formato y sha256 de lo bajado",

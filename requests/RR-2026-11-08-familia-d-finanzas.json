@@ -3,7 +3,7 @@
  "issued_by": "OWNER",
  "issued_at": "2026-11-08T06:00:00Z",
  "question": "Para cada tema de finanzas listado en why_needed: ¿qué fuente primaria publica el método o el dato de referencia (autor académico, banco de desarrollo, hacienda pública, o calificadora para su propia metodología), con qué licencia o términos, en qué formato descargable, con qué fecha de actualización y qué supuestos declara?",
- "why_needed": "Subáreas D01 valuación, D02 VPN/TIR/TCO, D03 costo de capital, D04 riesgo y portafolio, D05 crédito, D06 project finance, D07 capital de trabajo y D08 finanzas públicas de México. Todas esperan el sondeo de su primera fuente. ZPMND necesita métodos tipados (§27) con datos de referencia fechados para decir de dónde sale cada número.",
+ "why_needed": "Subáreas: D01 Valuación (DCF, múltiplos) (Transversal); D02 VPN, TIR, TCO y presupuesto de capital (Transversal); D03 Estructura de capital y costo de capital (Transversal); D04 Riesgo y portafolio (Transversal); D05 Análisis de crédito (Transversal); D06 Project finance (Transversal); D07 Capital de trabajo y tesorería (Transversal); D08 Finanzas públicas de México (México). Todas esperan el sondeo de su primera fuente. ZPMND necesita métodos tipados (§27) con datos de referencia fechados para decir de dónde sale cada número.",
  "affected_component": "métodos financieros tipados (§27), familia D",
  "desired_evidence": [
   "por tema: editor, URL, formato, fecha de actualización y sha256 de lo bajado",

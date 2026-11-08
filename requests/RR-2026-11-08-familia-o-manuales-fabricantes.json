@@ -3,7 +3,7 @@
  "issued_by": "OWNER",
  "issued_at": "2026-11-08T06:00:00Z",
  "question": "Para cada categoría listada en why_needed: ¿qué dos fabricantes publican un índice público de documentos técnicos (hoja de datos, manual, boletín, SDS o tabla de compatibilidad), cuántos documentos declara ese índice, qué campos trae (modelo, revisión, fecha), qué términos rigen bajarlos y redistribuirlos y qué prohíbe su robots.txt?",
- "why_needed": "Subáreas O01 semiconductores, O02 motores y variadores, O03 HVAC, O04 maquinaria pesada, O05 instrumentación, O06 PLC, O07 SDS (incluye PubChem), O08 boletines, O09 compatibilidad y O10 manuales de instalación. Siguiente paso: elegir 2 fabricantes y medir su índice. ZPMND necesita la revisión exacta del documento del fabricante.",
+ "why_needed": "Subáreas: O01 Semiconductores: hojas de datos (Mundo); O02 Motores, variadores y equipo eléctrico (Mundo); O03 HVAC y refrigeración (Mundo); O04 Maquinaria pesada (Mundo); O05 Instrumentación y medición (Mundo); O06 Automatización industrial (PLC) (Mundo); O07 Hojas de seguridad de químicos (SDS) (Mundo; incluye PubChem); O08 Boletines técnicos y avisos (Mundo); O09 Tablas de compatibilidad (Mundo); O10 Manuales de instalación y mantenimiento (Mundo). Siguiente paso: elegir 2 fabricantes y medir su índice. ZPMND necesita la revisión exacta del documento del fabricante.",
  "affected_component": "índices de documentos de fabricantes, familia O",
  "desired_evidence": [
   "por fabricante: URL del índice, campos que trae y sha256 de lo bajado",

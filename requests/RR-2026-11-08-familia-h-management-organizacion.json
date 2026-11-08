@@ -3,7 +3,7 @@
  "issued_by": "OWNER",
  "issued_at": "2026-11-08T06:00:00Z",
  "question": "Para cada área listada en why_needed: ¿qué fuente primaria la cubre (organismo público, ley, emisor del marco o libro abierto), con qué licencia y canal, y para H11 qué volcados oficiales de CIUO-08, ESCO, O*NET y SINCO existen, con versión, cuenta de ocupaciones y correspondencias? Marcos de pago, solo metadatos.",
- "why_needed": "Subáreas H01 operaciones, H02 compras (Compras MX), H03 cadena de suministro, H04 trabajo (LFT, STPS, IMSS), H05 calidad, H06 proyectos, H07 estrategia, H08 gobierno corporativo, H09 ventas y precios, H10 TI y H11 ocupaciones (eje del medidor). ZPMND necesita métodos de gestión citables y el eje de ocupaciones completo.",
+ "why_needed": "Subáreas: H01 Operaciones y procesos (Transversal); H02 Compras y abastecimiento (Transversal); H03 Cadena de suministro (Transversal); H04 Recursos humanos y trabajo (Transversal); H05 Calidad (Transversal); H06 Gestión de proyectos (Transversal); H07 Estrategia (Transversal); H08 Gobierno corporativo (Transversal); H09 Ventas, marketing y precios (Transversal); H10 Servicio y operación de TI (Transversal); H11 Clasificaciones de ocupaciones y competencias (Mundo y México; eje del medidor). ZPMND necesita métodos de gestión citables y el eje de ocupaciones completo.",
  "affected_component": "métodos de gestión y eje de ocupaciones del medidor, familia H",
  "desired_evidence": [
   "por área: editor, versión, URL y sha256 de lo bajado",

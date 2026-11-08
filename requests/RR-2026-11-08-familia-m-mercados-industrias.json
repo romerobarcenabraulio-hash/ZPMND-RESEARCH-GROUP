@@ -3,7 +3,7 @@
  "issued_by": "OWNER",
  "issued_at": "2026-11-08T06:00:00Z",
  "question": "Para cada fuente listada en why_needed: ¿qué organismo la publica, por qué API o descarga oficial se adquiere, cuántos registros declara a qué fecha de corte, con qué licencia o términos, y para M13 qué tablas de correspondencia oficiales unen CIIU Rev. 4, CPC, NAICS y SCIAN?",
- "why_needed": "Subáreas M01 DENUE, M02 BMV y BIVA, M03 EDGAR, M04 PROFECO QQP, M05 SIAVI y UN Comtrade, M06 Compras MX, M07 patentes y marcas, M08 COFECE, M09 Censos Económicos, M10 fichas técnicas, M11 cámaras industriales, M12 SIGER y M13 clasificaciones (eje del medidor). ZPMND necesita empresas, precios y estructura de mercado con fuente y fecha.",
+ "why_needed": "Subáreas: M01 Establecimientos y empresas (DENUE) (México); M02 Emisoras y reportes de bolsa (México); M03 Reportes de empresas de EE. UU. (EDGAR) (Internacional); M04 Precios al consumidor por producto (México); M05 Comercio exterior por producto (México e internacional); M06 Contrataciones públicas (México); M07 Patentes y marcas por industria (México e internacional); M08 Estructura de mercado y concentración (México); M09 Censos económicos (México); M10 Productos y fichas técnicas (Internacional); M11 Proveedores y capacidad industrial (México); M12 Registro público de comercio (México); M13 Clasificaciones de industrias y productos (Mundo y México; eje del medidor). ZPMND necesita empresas, precios y estructura de mercado con fuente y fecha.",
  "affected_component": "registro de fuentes de mercados y eje de industrias del medidor, familia M",
  "desired_evidence": [
   "por fuente: organismo, URL de la API o descarga, formato y sha256 de lo bajado",

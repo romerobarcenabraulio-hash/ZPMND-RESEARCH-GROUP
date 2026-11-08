@@ -3,7 +3,7 @@
  "issued_by": "OWNER",
  "issued_at": "2026-11-08T06:00:00Z",
  "question": "Para cada área de economía listada en why_needed: ¿qué fuente abierta base (libro de licencia abierta, organismo público o índice bibliográfico) la cubre, con qué licencia, en qué formato descargable o API, cuántas obras o capítulos declara, y qué metadatos de papers (RePEc, NBER) se bajan en volumen y con qué términos?",
- "why_needed": "Subáreas F01 micro, F02 macro, F03 econometría, F04 economía industrial, F05 pública, F06 conductual, F07 comercio, F08 regional y urbana y F09 RePEc/NBER. Su siguiente paso es elegir la fuente abierta base. ZPMND necesita teoría y evidencia económica citable para justificar criterios; los datos van por la familia N.",
+ "why_needed": "Subáreas: F01 Microeconomía (Transversal); F02 Macroeconomía (Transversal); F03 Econometría y métodos (Transversal); F04 Economía industrial (Transversal); F05 Economía pública (Transversal); F06 Economía conductual (Transversal); F07 Comercio internacional (Transversal); F08 Economía regional y urbana (Transversal); F09 Literatura económica (RePEc, NBER) (Transversal). Su siguiente paso es elegir la fuente abierta base. ZPMND necesita teoría y evidencia económica citable para justificar criterios; los datos van por la familia N.",
  "affected_component": "métodos y evidencia económica candidatos, familia F",
  "desired_evidence": [
   "por área: editor, edición, URL, formato y sha256 de lo bajado",

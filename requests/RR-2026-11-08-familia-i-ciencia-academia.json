@@ -3,7 +3,7 @@
  "issued_by": "OWNER",
  "issued_at": "2026-11-08T06:00:00Z",
  "question": "Para cada fuente académica listada en why_needed: ¿cuál es su canal masivo oficial (snapshot, volcado, OAI-PMH o API), cuántas obras declara a qué fecha, qué licencia rige los metadatos y cuál el texto completo, con qué cadencia se actualiza y qué registro o límite de tasa exige?",
- "why_needed": "Subáreas I01 OpenAlex, I02 Crossref, I03 PubMed/PMC, I04 arXiv, I05 Semantic Scholar, I06 CORE/BASE, I07 DOAJ, I08 DataCite/Zenodo, I09 revisiones sistemáticas, I10 OAPEN/DOAB, I11 Redalyc/SciELO/SECIHTI, I12 tesis de México e I13 patentes (IMPI, USPTO, EPO, WIPO). ZPMND necesita identificadores nativos y licencia por obra.",
+ "why_needed": "Subáreas: I01 Metadatos de toda la literatura (OpenAlex) (Mundo); I02 Crossref (Mundo); I03 PubMed y PubMed Central (acceso abierto) (Mundo); I04 arXiv (Mundo); I05 Semantic Scholar (Mundo); I06 Repositorios abiertos (CORE, BASE) (Mundo); I07 Revistas abiertas (DOAJ) (Mundo); I08 Datasets académicos (DataCite, Zenodo) (Mundo); I09 Revisiones sistemáticas y metaanálisis (Mundo); I10 Libros académicos abiertos (Mundo); I11 Ciencia en México e Iberoamérica (México y LATAM); I12 Tesis universitarias de México (México); I13 Patentes como conocimiento técnico (Mundo y México). ZPMND necesita identificadores nativos y licencia por obra.",
  "affected_component": "metadatos académicos e identificadores nativos (§8), familia I",
  "desired_evidence": [
   "por fuente: editor, URL del canal masivo, formato, cadencia y sha256 de lo bajado",
