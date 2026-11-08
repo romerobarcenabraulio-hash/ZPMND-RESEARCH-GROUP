@@ -14,7 +14,7 @@ from pathlib import Path
 
 # (workflow, cap in whole days); catalog-mx runs on days 1, 4, ... 31, so a cap of 2 whole days alarms on the third.
 VIGILADOS = (('catalog-mx.yml', 2), ('texto-mx.yml', 8), ('indicadores-mx.yml', 8), ('sondeo.yml', 8),
-             ('descubrir.yml', 2), ('sondeo-inegi.yml', 35))
+             ('descubrir.yml', 2), ('sondeo-inegi.yml', 35), ('mutacion-noche.yml', 2))
 TITULO = 'Vigía de producción'
 AUTOR = 'github-actions[bot]'  # the issue this workflow opened; anyone can open one with the same title
 POR_PAGINA, PAGINAS = 100, 30  # per_page of vigia.yml's listing of open issues, and the most pages it reads
