@@ -38,10 +38,10 @@ Sin medir en horas (HIPÓTESIS). Lo que RG sí ve: PR fusionados por el dueño d
 
 ## Lead time de los PR (orden 1 del dueño)
 
-Medido con `scripts/lead_time.py` sobre los 30 últimos PR fusionados. Sus datos de entrada, recortados a lo que la
-medición lee y con sus comandos, están en `docs/medicion/lead-time-2026-11-03.json` (capturados el 2026-11-04 00:46 UTC);
-`tests.test_lead_time` recalcula esta fila de ellos. Cuenta solo lo ocurrido antes de cada merge, y un CI solo si estaba
-completo. Horas, mediana (p90). Es el "antes" de las órdenes 2–7; se repite a los 10 PR siguientes.
+Medido con `scripts/lead_time.py` sobre los 30 últimos PR por fecha de merge, elegidos de los 80 fusionados. Sus datos
+de entrada, recortados a lo que la medición lee y con sus comandos, están en `docs/medicion/lead-time-2026-11-03.json`
+(capturados el 2026-11-08 01:02 UTC); `tests.test_lead_time` recalcula esta fila de ellos. Cuenta solo lo ocurrido
+antes de cada merge, y un CI solo si el último intento de `ci.yml` antes del merge estaba completo con todos sus jobs. Horas, mediana (p90). Es el "antes" de las órdenes 2–7; se repite a los 10 PR siguientes.
 
 | Fusionados | PR | Abrir → merge | Abrir → último head | CI del head | Head → dos PASS | Dos PASS → CI terminado | → merge | REVISE |
 |---|---|---|---|---|---|---|---|---|

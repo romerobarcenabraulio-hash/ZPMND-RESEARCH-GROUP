@@ -11,14 +11,20 @@ For each merged PR, from its comments, its commits and the check runs of the hea
   espera_dueno  the later of both PASS and CI finished -> merged (the owner's merge, including order waits)
   revise        REVISE verdicts before the merge, by auditor (Claude "AUDIT VERDICT", GPT "GPT REVIEW")
 A verdict counts only from github-actions (auditor.yml posts them), in its exact first-line form; a PASS counts only if
-it names the merged head. A CI is complete only with `checks` and shards 0..n-1 of `mutation`, each one's last run
-before the merge finished before the merge; otherwise the PR is listed in ci_incompleto and has no ci, espera_ci nor
+it names the merged head. The CI is ci.yml's pull_request run for the head, in its last attempt started before the merge:
+complete only if that attempt's status is completed and every job the attempt itself lists (its total checked against the
+listing) finished before the merge; otherwise the PR is listed in ci_incompleto and has no ci, espera_ci nor
 espera_dueno (never a partial CI counted as whole). A PR merged without both PASS on its head is listed in sin_dos_pass.
+The sample is the LIMIT last PRs by merge time, chosen here from a listing of every merged PR (refused if the listing
+reached its own limit, since it may then be cut).
 
 Data (docs/medicion/: the input, trimmed by --recortar to what is read here, with its capture time and commands):
-  gh pr list -R <repo> --state merged -L 30 --json number,createdAt,mergedAt,headRefOid,additions,deletions,comments,commits > prs.json
-  for s in $(jq -r '.[].headRefOid' prs.json); do gh api "repos/<repo>/commits/$s/check-runs?per_page=100" > checks/$s.json; done
-  python scripts/lead_time.py prs.json --checks checks --recortar docs/medicion/lead-time-<date>.json --capturado <UTC time>
+  gh pr list -R <repo> --state merged -L 1000 --json number, then for each: gh pr view <n> --json number,createdAt,mergedAt,
+    headRefOid,additions,deletions,comments,commits -> prs.json (the list of all of them)
+  for s in <the 30 heads by mergedAt>; do for each ci.yml pull_request run <id> of head_sha=$s and each attempt <n>:
+    gh api repos/<repo>/actions/runs/<id>/attempts/<n> and, paginated, .../attempts/<n>/jobs -> corridas/$s.json
+    as [{"run_id","run_attempt","status","run_started_at","jobs_total","jobs":[{"name","status","completed_at"}]}]
+  python scripts/lead_time.py prs.json --corridas corridas --recortar docs/medicion/lead-time-<date>.json --capturado <UTC time>
   python scripts/lead_time.py docs/medicion/lead-time-<date>.json
 """
 import argparse
@@ -31,8 +37,8 @@ from statistics import median
 
 AUTORES = ('github-actions', 'github-actions[bot]')
 VEREDICTO = re.compile(r'(AUDIT VERDICT|GPT REVIEW): (PASS|REVISE) ([0-9a-f]{40})$')
-CI = re.compile(r'checks$|mutation \((\d+)\)$')  # ci.yml's job names as check runs
 SHA = re.compile(r'[0-9a-f]{40}')
+LIMITE_LISTA, ULTIMOS = 1000, 30
 COMPONENTES = ('total', 'antes_head', 'ci', 'auditoria', 'espera_ci', 'espera_dueno')
 COMANDOS = [x.strip() for x in __doc__.split('Data (')[1].split('\n', 1)[1].strip().splitlines()]
 
@@ -57,25 +63,18 @@ def veredictos(comments, hasta):
     return out
 
 
-def ci_tramo(runs, hasta):
-    """(first start, last finish) of the head's ci.yml jobs as they stood at `hasta`, or None if not complete then."""
-    ultimo = {}
-    for r in runs or ():
-        nombre = str(r.get('name', ''))
-        if not CI.fullmatch(nombre) or not r.get('started_at') or _t(r['started_at']) > hasta:
-            continue
-        clave = (_t(r['started_at']), r.get('id') or 0)
-        if nombre not in ultimo or clave > ultimo[nombre][0]:
-            ultimo[nombre] = (clave, r)  # a re-run replaces the run it repeats
-    shards = sorted(int(CI.fullmatch(n).group(1)) for n in ultimo if n != 'checks')
-    if 'checks' not in ultimo or not shards or shards != list(range(len(shards))):
+def ci_tramo(intentos, hasta):
+    """(start, last job finish) of ci.yml's last attempt started by `hasta`, or None unless that attempt was complete then."""
+    previos = [x for x in intentos or () if x.get('run_started_at') and _t(x['run_started_at']) <= hasta]
+    if not previos:
         return None
-    fines = []
-    for _, r in ultimo.values():
-        if r.get('status') != 'completed' or not r.get('completed_at') or _t(r['completed_at']) > hasta:
-            return None
-        fines.append(_t(r['completed_at']))
-    return min(k[0] for k, _ in ultimo.values()), max(fines)
+    x = max(previos, key=lambda x: (_t(x['run_started_at']), x.get('run_id') or 0, x.get('run_attempt') or 0))
+    jobs = x.get('jobs') or []
+    if x.get('status') != 'completed' or not jobs or x.get('jobs_total') != len(jobs):
+        return None
+    if any(j.get('status') != 'completed' or not j.get('completed_at') or _t(j['completed_at']) > hasta for j in jobs):
+        return None
+    return _t(x['run_started_at']), max(_t(j['completed_at']) for j in jobs)
 
 
 def medir(pr, runs):
@@ -128,8 +127,8 @@ def fila_estado(r, desde, hasta):
             f"{c('espera_ci')} | {c('espera_dueno')} | {r['revise']['total']} ({r['revise']['prs_con_2_o_mas']} PR con 2+) |")
 
 
-def recortar(prs, runs, capturado):
-    """What medir reads, and nothing else (the head's commit, verdict-shaped first lines from any author, ci.yml's runs):
+def recortar(prs, runs, capturado, listados):
+    """What medir reads, and nothing else (the head's commit, verdict-shaped first lines from any author, ci.yml's attempts):
     the data file docs/ESTADO.md's figures are recomputed from (tests). Small on purpose: the PR's diff must fit what
     its reviewers read (scripts/auditor_gpt.py)."""
     _t(capturado)
@@ -141,14 +140,15 @@ def recortar(prs, runs, capturado):
                         if c.get('oid') == pr['headRefOid']][-1:],
             'comments': [{'author': {'login': (c.get('author') or {}).get('login')}, 'createdAt': c.get('createdAt'), 'body': l}
                          for c, l in primeras if VEREDICTO.match(l)],
-            'check_runs': [{k: r.get(k) for k in ('id', 'name', 'status', 'started_at', 'completed_at')}
-                           for r in runs[pr['headRefOid']] if CI.fullmatch(str(r.get('name', '')))]})
-    return {'capturado': capturado, 'comandos': COMANDOS, 'prs': out}
+            'corridas': [{k: x.get(k) for k in ('run_id', 'run_attempt', 'status', 'run_started_at', 'jobs_total')} |
+                         {'jobs': [{k: j.get(k) for k in ('name', 'status', 'completed_at')} for j in x.get('jobs') or ()]}
+                         for x in runs[pr['headRefOid']]]})
+    return {'capturado': capturado, 'comandos': COMANDOS, 'listados': listados, 'prs': out}
 
 
 def escribir(datos):
     """Compact JSON, one PR per line (a small, readable diff)."""
-    cab = json.dumps({k: datos[k] for k in ('capturado', 'comandos')}, ensure_ascii=False)
+    cab = json.dumps({k: datos[k] for k in ('capturado', 'comandos', 'listados')}, ensure_ascii=False)
     filas = ',\n'.join(json.dumps(pr, ensure_ascii=False, separators=(',', ':')) for pr in datos['prs'])
     return cab[:-1] + ',"prs":[\n' + filas + '\n]}\n'
 
@@ -160,33 +160,40 @@ def calcular(prs, runs):
     return {'resumen': r, 'fila': fila_estado(r, fechas[0], fechas[-1]) if fechas else None, 'prs': filas}
 
 
-def leer(ruta, checks=None):
-    """(prs, runs by head) from gh's output plus a check-runs folder, or from a trimmed data file."""
+def ultimos(prs, n=ULTIMOS):
+    """The n last PRs by merge time (a PR opened long ago and merged late is not left out by its opening)."""
+    return sorted(prs, key=lambda pr: (pr['mergedAt'], pr['number']), reverse=True)[:n]
+
+
+def leer(ruta, corridas=None):
+    """(prs, attempts by head, how many were listed) from gh's full listing plus a corridas folder, or a trimmed data file."""
     datos = json.loads(Path(ruta).read_text(encoding='utf-8'))
     if isinstance(datos, dict):
-        return datos['prs'], {pr['headRefOid']: pr['check_runs'] for pr in datos['prs']}
-    if checks is None:
-        raise SystemExit('gh output needs --checks with one <head sha>.json per PR')
-    faltan = [pr['headRefOid'] for pr in datos if not (Path(checks) / f"{pr['headRefOid']}.json").is_file()]
+        return datos['prs'], {pr['headRefOid']: pr['corridas'] for pr in datos['prs']}, datos['listados']
+    if corridas is None:
+        raise SystemExit('gh output needs --corridas with one <head sha>.json per chosen PR')
+    if len(datos) >= LIMITE_LISTA:
+        raise SystemExit(f'the listing reached its limit ({LIMITE_LISTA}): it may be cut, so the last merges are not known')
+    prs = ultimos(datos)
+    faltan = [pr['headRefOid'] for pr in prs if not (Path(corridas) / f"{pr['headRefOid']}.json").is_file()]
     if faltan:
-        raise SystemExit(f'missing check runs for {len(faltan)} heads: {" ".join(faltan)}')
-    runs = {pr['headRefOid']: json.loads((Path(checks) / f"{pr['headRefOid']}.json").read_text(encoding='utf-8'))['check_runs']
-            for pr in datos}
-    return datos, runs
+        raise SystemExit(f'missing ci.yml attempts for {len(faltan)} heads: {" ".join(faltan)}')
+    runs = {pr['headRefOid']: json.loads((Path(corridas) / f"{pr['headRefOid']}.json").read_text(encoding='utf-8')) for pr in prs}
+    return prs, runs, len(datos)
 
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     ap.add_argument('prs', type=Path)
-    ap.add_argument('--checks', type=Path, help='folder with <head sha>.json from the check-runs API')
+    ap.add_argument('--corridas', type=Path, help="folder with <head sha>.json: ci.yml's attempts and their jobs")
     ap.add_argument('--recortar', type=Path, help='also write the trimmed data file here')
     ap.add_argument('--capturado', help='UTC time the data was fetched, YYYY-MM-DDTHH:MM:SSZ (with --recortar)')
     a = ap.parse_args(argv)
-    prs, runs = leer(a.prs, a.checks)
+    prs, runs, listados = leer(a.prs, a.corridas)
     if a.recortar:
         if not a.capturado:
             raise SystemExit('--recortar needs --capturado')
-        a.recortar.write_text(escribir(recortar(prs, runs, a.capturado)), encoding='utf-8')
+        a.recortar.write_text(escribir(recortar(prs, runs, a.capturado, listados)), encoding='utf-8')
     print(json.dumps(calcular(prs, runs), ensure_ascii=False, indent=1))
     return 0
 
