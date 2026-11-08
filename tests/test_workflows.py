@@ -3,6 +3,7 @@
 2026-10-20: a step name containing ': ' made catalog-mx.yml invalid; GitHub would reject the file and the scheduled
 catalog would never run. Neither the tests nor three audits noticed, because nothing parsed the workflows.
 """
+import json
 import os
 import re
 import shutil
@@ -171,7 +172,7 @@ case "$*" in
   *baseRefName*) echo main ;;
   *isCrossRepository*) printf '%s' "$STUB_CROSS" ;;
   *headRefOid*) echo 0123456789abcdef0123456789abcdef01234567 ;;
-  *comments*) echo '{"comments": []}' ;;
+  *comments*) if [ -n "$STUB_COMMENTS" ]; then printf '%s' "$STUB_COMMENTS"; else echo '{"comments": []}'; fi ;;
   *check-runs*) [ "$STUB_CI" = down ] && exit 1; printf '%s' "$STUB_CI" ;;
   *) exit 9 ;;
 esac
@@ -183,7 +184,7 @@ class AuditorGate(unittest.TestCase):
     """The repo is public since 2026-10-22: a fork's PR must never reach the jobs that hold the Claude and OpenAI
     secrets. The gate's own script runs here against a stub gh."""
 
-    def gate(self, cross, ci='completed success', event='pull_request_target'):
+    def gate(self, cross, ci='completed success', event='pull_request_target', comments=()):
         script = yaml.safe_load(AUDITOR.read_text(encoding='utf-8'))['jobs']['gate']['steps'][0]['run']
         with tempfile.TemporaryDirectory() as d:
             (Path(d) / 'gh').write_text(GH_STUB, encoding='utf-8')
@@ -194,7 +195,8 @@ class AuditorGate(unittest.TestCase):
             out.write_text('', encoding='utf-8')
             env = {**os.environ, 'PATH': d + os.pathsep + os.environ['PATH'], 'GITHUB_OUTPUT': str(out),
                    'STUB_CROSS': cross, 'EVENT': event, 'PR_EVENT': '7', 'REPO': 'o/r', 'OWNER': 'o', 'STUB_CI': ci,
-                   'SLEPT': str(Path(d) / 'slept'), 'PR_ISSUE': '7', 'ON_PR': 'true', 'ASSOC': 'OWNER', 'BODY': 'otra ronda'}
+                   'SLEPT': str(Path(d) / 'slept'), 'PR_ISSUE': '7', 'ON_PR': 'true', 'ASSOC': 'OWNER', 'BODY': 'otra ronda',
+                   'STUB_COMMENTS': json.dumps({'comments': list(comments)}) if comments else ''}
             r = subprocess.run(['bash', '-c', script], env=env, capture_output=True, text=True, timeout=60)
             self.assertEqual(r.returncode, 0, r.stderr)
             return dict(l.split('=', 1) for l in out.read_text(encoding='utf-8').split())
@@ -209,6 +211,35 @@ class AuditorGate(unittest.TestCase):
             with self.subTest(ci=ci):
                 self.assertEqual(self.gate('false', ci=ci), want)
         self.assertEqual(self.gate('false', ci='completed failure', event='issue_comment'), audited)  # the owner's "otra ronda"
+
+    def test_two_revise_from_the_same_auditor_stop_the_rounds_until_the_owner_asks(self):
+        # owner's order 4 (2026-11-03), REGLAS 30: two REVISE from Claude, or two from GPT, and a push is not audited
+        rev = lambda body, who='github-actions': {'author': {'login': who}, 'body': f'{body} {"f" * 40}\nbody'}
+        sha = '0123456789abcdef0123456789abcdef01234567'
+        capped, audited = {'run': 'false', 'tope': 'true', 'pr': '7', 'sha': sha}, {'run': 'true', 'pr': '7', 'sha': sha}
+        for comments, want in (([rev('GPT REVIEW: REVISE')] * 2, capped), ([rev('AUDIT VERDICT: REVISE')] * 2, capped),
+                               ([rev('AUDIT VERDICT: REVISE'), rev('GPT REVIEW: REVISE')], audited),
+                               ([rev('GPT REVIEW: REVISE', 'someone')] * 2, audited), ([rev('GPT REVIEW: REVISE', 'o')] * 2, capped)):
+            with self.subTest(comments=comments):
+                self.assertEqual(self.gate('false', comments=comments), want)
+        self.assertEqual(self.gate('false', comments=[rev('GPT REVIEW: REVISE')] * 2, event='issue_comment'), audited)  # 'otra ronda'
+
+    def test_a_capped_head_shows_it_waits_for_the_owner(self):
+        tope = yaml.safe_load(AUDITOR.read_text(encoding='utf-8'))['jobs']['tope']
+        self.assertEqual((tope['needs'], tope['if'], tope['permissions']), ('gate', "needs.gate.outputs.tope == 'true'", {'statuses': 'write'}))
+        self.assertIn('-f state=failure -f context=auditor -f description="decisión del dueño', tope['steps'][0]['run'])
+
+    def test_the_capped_status_refuses_a_head_that_is_not_a_sha_before_calling_github(self):
+        run = yaml.safe_load(AUDITOR.read_text(encoding='utf-8'))['jobs']['tope']['steps'][0]['run']
+        for sha, code, called in (('', 1, False), ('g' * 40, 1, False), ('0' * 39, 1, False), ('a' * 40, 0, True)):
+            with self.subTest(sha=sha), tempfile.TemporaryDirectory() as d:
+                (Path(d) / 'gh').write_text('#!/bin/sh\necho "$*" >> "$CALLS"\n', encoding='utf-8')
+                (Path(d) / 'gh').chmod(0o755)
+                env = {**os.environ, 'PATH': d + os.pathsep + os.environ['PATH'], 'CALLS': str(Path(d) / 'calls'), 'SHA': sha, 'REPO': 'o/r'}
+                r = subprocess.run(['bash', '-c', run], env=env, capture_output=True, text=True, timeout=60)
+                self.assertEqual((r.returncode, (Path(d) / 'calls').exists()), (code, called))
+                if called:
+                    self.assertIn(f'repos/o/r/statuses/{sha}', (Path(d) / 'calls').read_text(encoding='utf-8'))
 
     def test_a_fork_is_never_audited(self):
         self.assertEqual(self.gate('true'), {'run': 'false'})
