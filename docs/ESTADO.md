@@ -7,7 +7,7 @@
 | Qué | Dónde |
 |---|---|
 | Código, contrato, seguridad | `main` |
-| Reglas | `docs/REGLAS.md` (1–29; 20 y 24–29 dicen "Pendiente" hasta el PR que trae su prueba) |
+| Reglas | `docs/REGLAS.md` (1–30; 20 y 24–30 dicen "Pendiente" hasta el PR que trae su prueba) |
 | Órdenes de la semana | `ORDENES-RG.md` (plan del dueño) |
 | Entregable activo y los tres siguientes (WIP = 1) | `COLA.md` |
 | Plan día por día hasta el 2026-12-31 | `ITINERARIO-2026-Q4.md` |
