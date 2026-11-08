@@ -203,7 +203,8 @@ class Issue(unittest.TestCase):
 class Workflow(unittest.TestCase):
     def test_the_watched_workflows_and_their_caps_are_fixed_and_start_only_by_schedule_or_dispatch(self):
         self.assertEqual(dict(vigia.VIGILADOS), {'catalog-mx.yml': 2, 'texto-mx.yml': 8, 'indicadores-mx.yml': 8,
-                                                 'sondeo.yml': 8, 'descubrir.yml': 2, 'sondeo-inegi.yml': 35})
+                                                 'sondeo.yml': 8, 'descubrir.yml': 2, 'sondeo-inegi.yml': 35,
+                                                 'mutacion-noche.yml': 2})
         for n, _ in vigia.VIGILADOS:
             doc = yaml.safe_load((ROOT / '.github' / 'workflows' / n).read_text(encoding='utf-8'))
             self.assertLessEqual(set(doc.get('on') or doc[True]), set(vigia.EVENTOS), n)

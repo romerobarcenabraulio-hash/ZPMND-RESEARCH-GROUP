@@ -32,7 +32,7 @@ class Shards(unittest.TestCase):
 
     def test_ci_derives_the_shard_from_the_matrix(self):
         job = yaml.safe_load((ROOT / '.github' / 'workflows' / 'ci.yml').read_text(encoding='utf-8'))['jobs']['mutation']
-        env = next(s['env'] for s in job['steps'] if 'mutar.py' in s.get('run', ''))
+        env = next(s['env'] for s in job['steps'] if 'scripts/mutar' in s.get('run', ''))
         self.assertEqual(env['RG_SHARD'], '${{ strategy.job-index }}/${{ strategy.job-total }}')
         self.assertFalse(job['strategy']['fail-fast'])
 

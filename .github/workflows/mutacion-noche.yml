@@ -1,0 +1,43 @@
+name: mutacion-noche
+# The whole mutant list every night on main (owner's order 2, 2026-11-03): a PR runs only the mutants of the files it
+# changes (scripts/mutar_pr.py), so a guard it did not touch is proved here within a day. scripts/vigia.py watches this
+# workflow: a red or missing night shows in its issue. GitHub-hosted, no secrets, read-only token, nothing is pushed.
+on:
+  schedule:
+    - cron: '23 7 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency: { group: mutacion-noche, cancel-in-progress: false }
+jobs:
+  mutation:
+    # Every catalog guard must have a test that fails without it (scripts/mutar.py; REGLAS 16b). Throwaway copies
+    # with git init and no remote; the baseline must pass first. Read-only token, nothing is pushed.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90  # private runners have 2 cores: ~55 mutants took over 30 min on one runner (2026-10-21)
+    strategy:
+      fail-fast: false  # every shard reports all of its mutants
+      # 8 runners in parallel: with 4, #86's shards took 77-82 of the 90 minutes (fb3b01b, 2026-11-02); a public repo's
+      # GitHub minutes cost nothing, and the shards derive from the matrix (tests/test_mutar.py)
+      matrix: { shard: [0, 1, 2, 3, 4, 5, 6, 7] }
+    services:  # a throwaway Postgres for the database tests (tests/test_postgres.py); its password is the container's, never a real one
+      postgres:
+        # alpine: its postgres user is uid 70. Debian's is 999, the uid `useradd --system` gives the extraction user of
+        # tests/test_aislamiento.py, whose kill-every-process-of-the-user check then killed this database (2026-10-29)
+        image: postgres:16-alpine
+        env: { POSTGRES_PASSWORD: postgres }
+        ports: ['5432:5432']
+        options: --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      RG_TEST_DB_URL: postgresql://postgres:postgres@localhost:5432/postgres
+      RG_REQUIRE_DB_TESTS: '1'  # tests/test_postgres.py fails instead of skipping when the Postgres is missing
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - run: git config --global user.email ci@invalid && git config --global user.name ci
+      - run: python scripts/mutar.py
+        env:  # index/total come from the matrix itself, so no shard can be skipped or run twice
+          RG_SHARD: '${{ strategy.job-index }}/${{ strategy.job-total }}'
