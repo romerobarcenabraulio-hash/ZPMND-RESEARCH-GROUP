@@ -1,22 +1,7 @@
 """Lead time of merged PRs (owner's order 1, 2026-11-03: "MEDIR PRIMERO"; no process change is declared a success
 without this). Pure: it reads what `gh` printed and calls nothing (no key, no network; tests/test_llamada.py).
 
-For each merged PR, from its comments, its commits and the check runs of the head it merged, as they stood at the merge
-(a verdict, a run or a re-run after the merge does not count):
-  total         opened -> merged
-  antes_head    opened -> the merged head was committed (writing, earlier rounds, rebases); 0 if the head is older
-  ci            the merged head's ci.yml jobs (`checks` and every `mutation (k)` shard): first start -> last finish
-  auditoria     the head was up for review (committed, not before the PR opened) -> both PASS on that head
-  espera_ci     both PASS -> CI finished, when it finished later (merge commands wait for every check)
-  espera_dueno  the later of both PASS and CI finished -> merged (the owner's merge, including order waits)
-  revise        REVISE verdicts before the merge, by auditor (Claude "AUDIT VERDICT", GPT "GPT REVIEW")
-A verdict counts only from github-actions (auditor.yml posts them), in its exact first-line form; a PASS counts only if
-it names the merged head. The CI is ci.yml's pull_request run for the head, in its last attempt started before the merge:
-complete only if that attempt's status is completed and every job the attempt itself lists (its total checked against the
-listing) finished before the merge; otherwise the PR is listed in ci_incompleto and has no ci, espera_ci nor
-espera_dueno (never a partial CI counted as whole). A PR merged without both PASS on its head is listed in sin_dos_pass.
-The sample is the LIMIT last PRs by merge time, chosen here from a listing of every merged PR (refused if the listing
-reached its own limit, since it may then be cut).
+Each column and every rule of what counts: docs/medicion/README.md.
 
 Data (docs/medicion/: the input, trimmed by --recortar to what is read here, with its capture time and commands):
   gh pr list -R <repo> --state merged -L 1000 --json number, then for each: gh pr view <n> --json number,createdAt,mergedAt,
@@ -85,7 +70,11 @@ def medir(pr, runs):
     commits = [c for c in pr.get('commits') or () if c.get('oid') == head]
     head_t = min(max(_t(commits[-1]['committedDate']), abierto), fusionado) if commits else None  # up for review
     v = veredictos(pr.get('comments'), fusionado)
-    pas = {a: max((t for a2, ver, s, t in v if a2 == a and ver == 'PASS' and s == head), default=None) for a in ('claude', 'gpt')}
+    pas = {}
+    for a2, ver, s, t in sorted(v, key=lambda x: x[3]):  # a later REVISE on the head cancels a PASS; a repeated PASS does not move it
+        if s == head:
+            pas[a2] = (pas.get(a2) or t) if ver == 'PASS' else None
+    pas = {a: pas.get(a) for a in ('claude', 'gpt')}
     dos = max(pas.values()) if all(pas.values()) else None
     ci = ci_tramo(runs, fusionado)
     listo = max(dos, ci[1]) if dos and ci else None  # merge commands are given once both PASS and every check finished
@@ -121,16 +110,13 @@ def resumen(filas):
 
 
 def fila_estado(r, desde, hasta):
-    """One line for docs/ESTADO.md: medians (p90) in hours."""
     c = lambda k: f"{r[k]['mediana']} ({r[k]['p90']})" if r[k].get('n') else 's/d'
     return (f"| {desde} → {hasta} | {r['prs']} | {c('total')} | {c('antes_head')} | {c('ci')} | {c('auditoria')} | "
             f"{c('espera_ci')} | {c('espera_dueno')} | {r['revise']['total']} ({r['revise']['prs_con_2_o_mas']} PR con 2+) |")
 
 
 def recortar(prs, runs, capturado, listados):
-    """What medir reads, and nothing else (the head's commit, verdict-shaped first lines from any author, ci.yml's attempts):
-    the data file docs/ESTADO.md's figures are recomputed from (tests). Small on purpose: the PR's diff must fit what
-    its reviewers read (scripts/auditor_gpt.py)."""
+    """What medir reads and nothing else: small, so the PR's diff fits what its reviewers read."""
     _t(capturado)
     out = []
     for pr in prs:
@@ -147,7 +133,6 @@ def recortar(prs, runs, capturado, listados):
 
 
 def escribir(datos):
-    """Compact JSON, one PR per line (a small, readable diff)."""
     cab = json.dumps({k: datos[k] for k in ('capturado', 'comandos', 'listados')}, ensure_ascii=False)
     filas = ',\n'.join(json.dumps(pr, ensure_ascii=False, separators=(',', ':')) for pr in datos['prs'])
     return cab[:-1] + ',"prs":[\n' + filas + '\n]}\n'
@@ -161,7 +146,6 @@ def calcular(prs, runs):
 
 
 def ultimos(prs, n=ULTIMOS):
-    """The n last PRs by merge time (a PR opened long ago and merged late is not left out by its opening)."""
     return sorted(prs, key=lambda pr: (pr['mergedAt'], pr['number']), reverse=True)[:n]
 
 

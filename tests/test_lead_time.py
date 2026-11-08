@@ -1,6 +1,4 @@
-"""scripts/lead_time.py: each component from fixed timestamps; verdicts only from github-actions naming the merged head;
-CI only when ci.yml's last attempt before the merge was whole; nothing after the merge counts; the sample is the last
-merges; docs/ESTADO.md's row is recomputed from its data file."""
+"""scripts/lead_time.py with fixed timestamps; the rules it enforces are listed in docs/medicion/README.md."""
 import io
 import json
 import re
@@ -51,13 +49,14 @@ class Medir(unittest.TestCase):
         self.assertEqual((f['total'], f['antes_head'], f['ci'], f['auditoria'], f['espera_ci'], f['espera_dueno']),
                          (10.0, 4.0, 1.0, 2.0, 0.0, 4.0))
         self.assertEqual((f['revise'], f['lineas']), ({'claude': 1, 'gpt': 1}, 35))
+        self.assertEqual(lt.medir(pr(comments=list(reversed(DOS_PASS))), CI_OK)['espera_dueno'], 4.0)  # the later PASS starts it
+        f = lt.medir(pr(comments=DOS_PASS, created='2026-11-01T04:30:00Z'), CI_OK)
+        self.assertEqual((f['antes_head'], f['auditoria'], f['total']), (0.0, 1.5, 5.5))
 
     def test_a_ci_that_ends_after_both_passes_is_its_own_wait_not_the_owners(self):
         late = [intento('2026-11-01T04:01:00Z', JOBS[:2] + [job('mutation (1)', '2026-11-01T07:30:00Z')])]
         f = lt.medir(pr(comments=DOS_PASS), late)
         self.assertEqual((f['auditoria'], f['espera_ci'], f['espera_dueno']), (2.0, 1.5, 2.5))
-
-    def test_a_pending_last_shard_makes_the_ci_incomplete_never_a_shorter_one(self):
         # the attempt itself lists the shards it runs: a trailing one still queued is seen, whatever finished before it
         pending = [intento('2026-11-01T04:01:00Z', JOBS + [job('mutation (2)', None, 'queued')], status='in_progress')]
         f = lt.medir(pr(comments=DOS_PASS), pending)
@@ -70,6 +69,8 @@ class Medir(unittest.TestCase):
         self.assertIsNone(lt.medir(pr(comments=DOS_PASS), [intento('2026-11-01T04:01:00Z', [])])['ci'])
         self.assertIsNone(lt.medir(pr(comments=DOS_PASS), [intento('2026-11-01T04:01:00Z', JOBS, status='in_progress')])['ci'])  # run not done
         self.assertIsNone(lt.medir(pr(comments=DOS_PASS), [])['ci'])
+        after = [intento('2026-11-01T04:01:00Z', JOBS[:2] + [job('mutation (1)', '2026-11-01T11:00:00Z')])]  # job ends after merge
+        self.assertEqual((lt.medir(pr(comments=DOS_PASS), after)['ci'], lt.medir(pr(comments=DOS_PASS), after)['espera_dueno']), (None, None))
 
     def test_the_last_attempt_started_before_the_merge_is_the_one_measured(self):
         primero = intento('2026-11-01T04:01:00Z', JOBS[:2] + [job('mutation (1)', None, 'cancelled')], status='in_progress')
@@ -78,35 +79,23 @@ class Medir(unittest.TestCase):
         tarde = intento('2026-11-02T08:00:00Z', [job(j['name'], '2026-11-02T09:00:00Z') for j in JOBS], attempt=3)
         self.assertEqual(lt.medir(pr(comments=DOS_PASS), [rerun, tarde, primero])['ci'], round(20 / 60, 2))
 
-    def test_a_job_finishing_after_the_merge_makes_the_ci_incomplete(self):
-        ends_after = [intento('2026-11-01T04:01:00Z', JOBS[:2] + [job('mutation (1)', '2026-11-01T11:00:00Z')])]
-        f = lt.medir(pr(comments=DOS_PASS), ends_after)
-        self.assertEqual((f['ci'], f['espera_dueno']), (None, None))
-
     def test_a_verdict_after_the_merge_does_not_count(self):
         late = DOS_PASS[:3] + [c(f'GPT REVIEW: PASS {HEAD}', '2026-11-01T12:00:00Z'), c(f'GPT REVIEW: REVISE {HEAD}', '2026-11-01T13:00:00Z')]
         f = lt.medir(pr(comments=late), CI_OK)
         self.assertEqual((f['dos_pass'], f['espera_dueno'], f['revise']['gpt']), (False, None, 1))
-
-    def test_a_head_older_than_the_pr_counts_from_the_opening(self):
-        f = lt.medir(pr(comments=DOS_PASS, created='2026-11-01T04:30:00Z'), CI_OK)
-        self.assertEqual((f['antes_head'], f['auditoria'], f['total']), (0.0, 1.5, 5.5))
-
-    def test_a_pass_on_an_older_head_is_not_a_pass_of_the_merged_one(self):
         old = [c(f'AUDIT VERDICT: PASS {VIEJO}', '2026-11-01T01:00:00Z'), c(f'GPT REVIEW: PASS {HEAD}', '2026-11-01T06:00:00Z')]
-        f = lt.medir(pr(comments=old), CI_OK)
-        self.assertEqual((f['espera_dueno'], f['auditoria'], f['dos_pass']), (None, None, False))
+        self.assertEqual(lt.medir(pr(comments=old), CI_OK)['dos_pass'], False)  # a PASS on an older head is not one on the merged
 
-    def test_the_later_of_the_two_passes_starts_the_owner_wait(self):
-        self.assertEqual(lt.medir(pr(comments=list(reversed(DOS_PASS))), CI_OK)['espera_dueno'], 4.0)
+    def test_a_later_revise_on_the_head_cancels_its_pass_and_a_repeated_pass_does_not_move_it(self):
+        again = DOS_PASS + [c(f'GPT REVIEW: PASS {HEAD}', '2026-11-01T07:00:00Z')]
+        self.assertEqual(lt.medir(pr(comments=again), CI_OK)['espera_dueno'], 4.0)
+        self.assertFalse(lt.medir(pr(comments=again + [c(f'GPT REVIEW: REVISE {HEAD}', '2026-11-01T08:00:00Z')]), CI_OK)['dos_pass'])
 
     def test_a_verdict_not_posted_by_github_actions_is_ignored(self):
         fake = [c(f'AUDIT VERDICT: PASS {HEAD}', '2026-11-01T05:00:00Z', {'login': 'someone'}),
                 c(f'GPT REVIEW: PASS {HEAD}', '2026-11-01T06:00:00Z')]
         self.assertIsNone(lt.medir(pr(comments=fake), CI_OK)['espera_dueno'])
         self.assertEqual(lt.medir(pr(comments=[c(f'AUDIT VERDICT: REVISE {HEAD}', '2026-11-01T05:00:00Z', None)]), CI_OK)['revise']['claude'], 0)
-
-    def test_only_the_first_line_in_its_exact_form_is_a_verdict(self):
         loose = [c(f'note\nAUDIT VERDICT: PASS {HEAD}', '2026-11-01T05:00:00Z'), c(f'AUDIT VERDICT: PASS {HEAD} ok', '2026-11-01T05:00:00Z'),
                  c(f'GPT REVIEW: PASS {HEAD}', '2026-11-01T06:00:00Z')]
         self.assertIsNone(lt.medir(pr(comments=loose), CI_OK)['espera_dueno'])
@@ -116,8 +105,6 @@ class Medir(unittest.TestCase):
     def test_without_the_head_commit_there_is_no_before_head_nor_audit_time(self):
         f = lt.medir(pr(comments=DOS_PASS, commits=[]), CI_OK)
         self.assertEqual((f['antes_head'], f['auditoria'], f['espera_dueno']), (None, None, 4.0))
-
-    def test_a_head_that_is_not_a_sha_is_refused(self):
         with self.assertRaises(ValueError):
             lt.medir(pr(head='main'), CI_OK)
 
@@ -128,8 +115,6 @@ class Muestra(unittest.TestCase):
         nuevo = pr(2, created='2026-11-04T00:00:00Z', merged='2026-11-04T01:00:00Z')
         otro = pr(3, created='2026-11-03T00:00:00Z', merged='2026-11-03T01:00:00Z')
         self.assertEqual([p['number'] for p in lt.ultimos([nuevo, otro, viejo], 2)], [1, 2])
-
-    def test_a_listing_at_its_limit_is_refused(self):
         with tempfile.TemporaryDirectory() as d:
             Path(d, 'prs.json').write_text(json.dumps([pr(i, head=f'{i:040x}') for i in range(lt.LIMITE_LISTA)]), encoding='utf-8')
             with self.assertRaises(SystemExit) as e:
@@ -145,13 +130,8 @@ class Resumen(unittest.TestCase):
         self.assertEqual(r['espera_dueno'], {'n': 1, 'mediana': 4.0, 'p90': 4.0})
         self.assertEqual(r['revise'], {'total': 5, 'mediana': 2, 'prs_con_2_o_mas': 2})
         self.assertEqual(r['ci'], {'n': 2, 'mediana': 1.0, 'p90': 1.0})
-
-    def test_p90_is_the_nearest_rank(self):
         self.assertEqual((lt._p90(list(range(1, 11))), lt._p90([5]), lt._p90(list(range(1, 31)))), (9, 5, 27))
-
-    def test_the_estado_row(self):
-        r = lt.resumen([lt.medir(pr(1, DOS_PASS), CI_OK)])
-        self.assertEqual(lt.fila_estado(r, '2026-10-20', '2026-11-03'),
+        self.assertEqual(lt.fila_estado(lt.resumen([lt.medir(pr(1, DOS_PASS), CI_OK)]), '2026-10-20', '2026-11-03'),
                          '| 2026-10-20 → 2026-11-03 | 1 | 10.0 (10.0) | 4.0 (4.0) | 1.0 (1.0) | 2.0 (2.0) | 0.0 (0.0) | 4.0 (4.0) | 2 (1 PR con 2+) |')
 
 
@@ -195,13 +175,10 @@ class Datos(unittest.TestCase):
                 lt.main([str(Path(d, 'prs.json')), '--corridas', str(Path(d, 'corridas'))])
             with self.assertRaises(SystemExit):
                 lt.leer(Path(d, 'prs.json'))  # gh output without --corridas
-        self.assertIn(HEAD, str(e.exception.code))
-
-    def test_trimming_needs_its_capture_time(self):
-        with tempfile.TemporaryDirectory() as d:
-            self.escribir(d)
-            with self.assertRaises(SystemExit):
+            Path(d, 'corridas', f'{HEAD}.json').write_text(json.dumps(CI_OK), encoding='utf-8')
+            with self.assertRaises(SystemExit):  # trimming needs its capture time
                 lt.main([str(Path(d, 'prs.json')), '--corridas', str(Path(d, 'corridas')), '--recortar', str(Path(d, 'r.json'))])
+        self.assertIn(HEAD, str(e.exception.code))
 
     def test_every_lead_time_row_in_estado_is_recomputed_from_its_committed_data(self):
         estado = (ROOT / 'docs' / 'ESTADO.md').read_text(encoding='utf-8')
