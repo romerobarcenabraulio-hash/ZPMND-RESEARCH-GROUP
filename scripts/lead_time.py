@@ -129,17 +129,28 @@ def fila_estado(r, desde, hasta):
 
 
 def recortar(prs, runs, capturado):
-    """What medir reads, and nothing else: the data file docs/ESTADO.md's figures are recomputed from (tests)."""
+    """What medir reads, and nothing else (the head's commit, verdict-shaped first lines from any author, ci.yml's runs):
+    the data file docs/ESTADO.md's figures are recomputed from (tests). Small on purpose: the PR's diff must fit what
+    its reviewers read (scripts/auditor_gpt.py)."""
     _t(capturado)
     out = []
     for pr in prs:
+        primeras = [(c, str(c.get('body', '')).split('\n', 1)[0].rstrip('\r')) for c in pr.get('comments') or ()]
         out.append({k: pr[k] for k in ('number', 'createdAt', 'mergedAt', 'headRefOid', 'additions', 'deletions')} | {
-            'commits': [{'oid': c.get('oid'), 'committedDate': c.get('committedDate')} for c in pr.get('commits') or ()],
-            'comments': [{'author': {'login': (c.get('author') or {}).get('login')}, 'createdAt': c.get('createdAt'),
-                          'body': str(c.get('body', '')).split('\n', 1)[0][:200]} for c in pr.get('comments') or ()],
+            'commits': [{'oid': c['oid'], 'committedDate': c.get('committedDate')} for c in pr.get('commits') or ()
+                        if c.get('oid') == pr['headRefOid']][-1:],
+            'comments': [{'author': {'login': (c.get('author') or {}).get('login')}, 'createdAt': c.get('createdAt'), 'body': l}
+                         for c, l in primeras if VEREDICTO.match(l)],
             'check_runs': [{k: r.get(k) for k in ('id', 'name', 'status', 'started_at', 'completed_at')}
-                           for r in runs[pr['headRefOid']]]})
+                           for r in runs[pr['headRefOid']] if CI.fullmatch(str(r.get('name', '')))]})
     return {'capturado': capturado, 'comandos': COMANDOS, 'prs': out}
+
+
+def escribir(datos):
+    """Compact JSON, one PR per line (a small, readable diff)."""
+    cab = json.dumps({k: datos[k] for k in ('capturado', 'comandos')}, ensure_ascii=False)
+    filas = ',\n'.join(json.dumps(pr, ensure_ascii=False, separators=(',', ':')) for pr in datos['prs'])
+    return cab[:-1] + ',"prs":[\n' + filas + '\n]}\n'
 
 
 def calcular(prs, runs):
@@ -175,7 +186,7 @@ def main(argv=None):
     if a.recortar:
         if not a.capturado:
             raise SystemExit('--recortar needs --capturado')
-        a.recortar.write_text(json.dumps(recortar(prs, runs, a.capturado), ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+        a.recortar.write_text(escribir(recortar(prs, runs, a.capturado)), encoding='utf-8')
     print(json.dumps(calcular(prs, runs), ensure_ascii=False, indent=1))
     return 0
 

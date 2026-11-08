@@ -157,6 +157,17 @@ class Datos(unittest.TestCase):
         self.assertEqual(datos['capturado'], '2026-11-03T23:00:00Z')
         self.assertEqual(datos['prs'][0]['comments'][0]['body'], f'AUDIT VERDICT: REVISE {VIEJO}')  # first line only
         self.assertTrue(any(x.startswith('gh pr list') for x in datos['comandos']))
+        self.assertEqual([r['name'] for r in datos['prs'][0]['check_runs']], ['checks', 'mutation (0)', 'mutation (1)'])  # no audit
+        self.assertEqual([c['oid'] for c in datos['prs'][0]['commits']], [HEAD])
+
+    def test_trimming_keeps_only_verdict_lines_but_from_every_author(self):
+        otros = DOS_PASS + [c('just a note', '2026-11-01T03:00:00Z'), c(f'AUDIT VERDICT: PASS {HEAD}', '2026-11-01T05:30:00Z', {'login': 'x'})]
+        d = lt.recortar([pr(1, otros)], {HEAD: CI_OK}, '2026-11-03T23:00:00Z')
+        self.assertEqual(len(d['prs'][0]['comments']), 5)
+        self.assertEqual(lt.medir(d['prs'][0], d['prs'][0]['check_runs']), lt.medir(pr(1, otros), CI_OK))
+        texto = lt.escribir(d)
+        self.assertEqual(json.loads(texto), d)
+        self.assertEqual(texto.count('\n'), 3)  # header line, one line per PR, closing line
 
     def test_a_missing_check_runs_file_is_refused_not_read_as_no_data(self):
         with tempfile.TemporaryDirectory() as d:

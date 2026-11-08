@@ -47,9 +47,10 @@ completo. Horas, mediana (p90). Es el "antes" de las órdenes 2–7; se repite a
 |---|---|---|---|---|---|---|---|---|
 | 2026-10-28 → 2026-11-03 | 30 | 10.4 (28.4) | 1.1 (21.3) | 1.0 (1.4) | 0.1 (0.1) | 0.9 (1.2) | 1.9 (20.8) | 49 (8 PR con 2+) |
 
-Lectura: la auditoría tarda minutos. Cada PR espera casi una hora más, tras sus dos PASS, a que terminen los mutantes
-(orden 2). La cola larga está antes del último head, en las rondas de REVISE de 8 PR (órdenes 4 y 6), y en la espera
-del merge (orden 5). Los 30 tienen su CI completo; #81 y #72 entraron sin los dos PASS sobre su head y no cuentan en
+Lectura: del último head a sus dos PASS la mediana es de 0.1 h (no mide las auditorías de los heads anteriores). Tras
+los dos PASS, cada PR espera 0.9 h de mediana a que terminen los mutantes (orden 2). HIPÓTESIS, sin medir las rondas
+completas: la cola larga antes del último head viene de las rondas de REVISE (49 en 30 PR, 8 con dos o más; órdenes 4 y 6)
+y la del merge, de la espera del dueño (orden 5). Los 30 tienen su CI completo; #81 y #72 entraron sin los dos PASS sobre su head y no cuentan en
 las tres columnas de auditoría y espera.
 
 ## Norte compartido del 2026-11-03: refutación, delta y pedidos
