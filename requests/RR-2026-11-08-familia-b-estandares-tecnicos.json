@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-11-08-familia-b-estandares-tecnicos",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada organismo o catálogo listado en why_needed: ¿qué metadatos de sus estándares expone sin pago (clave, título, edición, estado, fecha, sustitución, alcance), por qué canal (índice, API o volcado), cuántos registros declara a qué fecha, y qué términos rigen reutilizarlos? El texto de pago no se baja (NORTE §29).",
+ "why_needed": "Subáreas B01 (DGN, cierra A05), B02 ISO, B03 IEC, B04 IEEE, B05 ASTM, B06 NFPA, B07 ASME, B08 API, B09 CEN/DIN/BS, B10 ANSI, B11 SAE, B12 UL, B13 RFC, B14 W3C/ITU-T/OASIS y B15 (sustitución, de los mismos catálogos). ZPMND necesita la edición y el estado vigentes de cada estándar y saber cuándo comprarlo (§30).",
+ "affected_component": "registro de estándares candidatos y grafo de sustitución (§23), familia B",
+ "desired_evidence": [
+  "por catálogo: editor, URL de acceso, campos sin pago y sha256 de lo bajado",
+  "términos de uso de los metadatos con cita literal de 300 caracteres o menos",
+  "total de estándares declarado y fecha de corte; sustituciones que el catálogo imprima",
+  "qué exige pago, registro o llave; lo no expuesto, como desconocido",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Republicar texto con derechos, o que ZPMND exija como vigente una edición sustituida o retirada.",
+ "privacy_class": "PUBLIC"
+}

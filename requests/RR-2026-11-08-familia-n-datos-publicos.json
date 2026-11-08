@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-11-08-familia-n-datos-publicos",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada fuente de datos públicos listada en why_needed: ¿cuál es su API o descarga oficial, cuántas series, tablas o conjuntos declara la propia fuente a qué fecha, cómo publica sus revisiones y versiones, qué llave o registro exige y qué licencia rige su reutilización?",
+ "why_needed": "Subáreas N01 (BIE: hoy solo INPC), N02, N03, N04, N06, N07, N08, N09, N10, N11, N12, N13, N14, N15, N16, N17, N18, N19, N20, N21 y N22 (M49, eje de países). N05 queda fuera: datos.gob.mx está bloqueado. ZPMND necesita series con definición, unidad, periodicidad y fecha de corte (§31, §76) para calcular con datos oficiales.",
+ "affected_component": "registro de fuentes de datos y vigía de revisiones (§76), familia N",
+ "desired_evidence": [
+  "por fuente: editor, URL de la API o descarga, formato y sha256 de lo bajado",
+  "licencia o términos con cita literal de 300 caracteres o menos; si no hay, desconocido",
+  "total declarado por la fuente y fecha de corte, con cita literal",
+  "política de revisiones y versiones, con cita literal",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P0",
+ "risk_if_wrong": "Calcular con una serie revisada o descontinuada, o declarar cobertura con una cuenta que la fuente no publica.",
+ "privacy_class": "PUBLIC"
+}

@@ -1,0 +1,17 @@
+{
+ "request_id": "RR-2026-11-08-familia-p-conocimiento-practico",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada fuente listada en why_needed: ¿qué dicen los términos oficiales de la plataforma sobre acceso automatizado, transcripción y reutilización, qué API o volcado ofrece y con qué licencia de contenido, y para P09 y P10 qué métodos o herramientas abiertas pasan video a línea de tiempo y verifican lo práctico contra fuentes primarias?",
+ "why_needed": "Subáreas P01 videos, P02 charlas, P03 cursos abiertos, P04 Stack Exchange, P05 foros, P06 blogs, P07 podcasts, P08 demostraciones, P09 video a línea de tiempo (§5) y P10 autoridad de lo práctico (§11). ZPMND necesita conocimiento tácito con autor, fecha y licencia, que entra con menor autoridad hasta verificarse.",
+ "affected_component": "adquisición multimodal (§5) y autoridad de lo práctico (§11), familia P",
+ "desired_evidence": [
+  "por plataforma: términos de acceso, transcripción y reutilización con cita literal de 300 caracteres o menos",
+  "API o volcado oficial, licencia del contenido y sha256 de lo bajado",
+  "P09 y P10: método o herramienta, repositorio, licencia y evidencia publicada de que funciona",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P2",
+ "risk_if_wrong": "Rastrear o transcribir contra los términos de una plataforma, o tratar un tutorial como fuente primaria.",
+ "privacy_class": "PUBLIC"
+}

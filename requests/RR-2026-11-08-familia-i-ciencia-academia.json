@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-11-08-familia-i-ciencia-academia",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada fuente académica listada en why_needed: ¿cuál es su canal masivo oficial (snapshot, volcado, OAI-PMH o API), cuántas obras declara a qué fecha, qué licencia rige los metadatos y cuál el texto completo, con qué cadencia se actualiza y qué registro o límite de tasa exige?",
+ "why_needed": "Subáreas I01 OpenAlex, I02 Crossref, I03 PubMed/PMC, I04 arXiv, I05 Semantic Scholar, I06 CORE/BASE, I07 DOAJ, I08 DataCite/Zenodo, I09 revisiones sistemáticas, I10 OAPEN/DOAB, I11 Redalyc/SciELO/SECIHTI, I12 tesis de México e I13 patentes (IMPI, USPTO, EPO, WIPO). ZPMND necesita identificadores nativos y licencia por obra.",
+ "affected_component": "metadatos académicos e identificadores nativos (§8), familia I",
+ "desired_evidence": [
+  "por fuente: editor, URL del canal masivo, formato, cadencia y sha256 de lo bajado",
+  "licencia o términos con cita literal de 300 caracteres o menos; si no hay, desconocido",
+  "total declarado por la fuente y fecha de corte, con cita literal",
+  "licencia de metadatos y de texto completo por separado",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Copiar texto completo que la licencia de la obra no permite, o citar un paper por una copia sin identificador nativo.",
+ "privacy_class": "PUBLIC"
+}

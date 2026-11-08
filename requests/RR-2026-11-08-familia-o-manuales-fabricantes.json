@@ -1,0 +1,17 @@
+{
+ "request_id": "RR-2026-11-08-familia-o-manuales-fabricantes",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada categoría listada en why_needed: ¿qué dos fabricantes publican un índice público de documentos técnicos (hoja de datos, manual, boletín, SDS o tabla de compatibilidad), cuántos documentos declara ese índice, qué campos trae (modelo, revisión, fecha), qué términos rigen bajarlos y redistribuirlos y qué prohíbe su robots.txt?",
+ "why_needed": "Subáreas O01 semiconductores, O02 motores y variadores, O03 HVAC, O04 maquinaria pesada, O05 instrumentación, O06 PLC, O07 SDS (incluye PubChem), O08 boletines, O09 compatibilidad y O10 manuales de instalación. Siguiente paso: elegir 2 fabricantes y medir su índice. ZPMND necesita la revisión exacta del documento del fabricante.",
+ "affected_component": "índices de documentos de fabricantes, familia O",
+ "desired_evidence": [
+  "por fabricante: URL del índice, campos que trae y sha256 de lo bajado",
+  "términos de descarga y redistribución con cita literal de 300 caracteres o menos",
+  "documentos declarados por el índice y su fecha; reglas de robots.txt",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P2",
+ "risk_if_wrong": "Especificar o mantener equipo con una revisión obsoleta del manual, o redistribuir documentos que el fabricante no permite.",
+ "privacy_class": "PUBLIC"
+}
