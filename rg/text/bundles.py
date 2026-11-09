@@ -7,7 +7,7 @@ A bundle is one `<tar>.sha256` asset. Its lines hash either each `<tar>.partNN` 
 are then `<tar>` itself or its parts in order; raw-mx holds both forms (2026-10-21). Nothing of a bundle is unpacked
 unless every hash matches, every part on disk is covered by one and the parts run 00, 01, ... without a gap. Only
 regular members named sha256/<2>/<sha>.<ext> are written, at the path rebuilt from that name; links, absolute paths,
-'..' and any other member are skipped and counted. A member larger than MAX_MEMBER is never written: it is read once
+'..', GNU sparse members (they read back far more than the tar holds) and any other member are skipped and counted. A member larger than MAX_MEMBER is never written: it is read once
 from the stream, its sha256 computed and checked against its name, and it is recorded under `oversize` with its size and
 first HEAD bytes, so the text run gives it its status (extract.too_large) and the rest of its bundle goes on; a raw can be
 that large (the whole SCJN tesis dataset of hf-tesis-scjn is one raw of 3.6 GB, 2026-11-03). A member to write
@@ -157,6 +157,9 @@ def unpack(files, raw, budget=None, oversize=None):
     with io.BufferedReader(_Concat(files), CHUNK) as fh, tarfile.open(fileobj=fh, mode='r|') as tar:
         for m in tar:
             if m.isdir():
+                continue
+            if m.issparse():  # a GNU sparse member reads back far more than the tar holds (GPT on #114): never read it
+                skipped += 1
                 continue
             g = MEMBER.match(m.name)
             if not (m.isreg() and g and g.group(1) == g.group(2)[:2]):

@@ -692,6 +692,27 @@ class Bundles(unittest.TestCase):
         # a member bundles.unpack does not write must be one the run gives a too_large line (Claude on #114, point 4)
         self.assertEqual(bundles.MAX_MEMBER, tr.MAX_BYTES)
 
+    def test_a_gnu_sparse_member_is_skipped_before_a_byte_of_it_is_read(self):
+        # GPT on #114 (00ffe00): a 10 KB tar declared a sparse member of 5 MB and extractfile read back all of it as zeros
+        buf = io.BytesIO()
+        name = f'sha256/{PDF_SHA[:2]}/{PDF_SHA}.json'
+        with tarfile.open(fileobj=buf, mode='w', format=tarfile.GNU_FORMAT) as t:
+            info = tarfile.TarInfo(name)
+            info.size = 600
+            t.addfile(info, io.BytesIO(b'x' * 600))
+        b = bytearray(buf.getvalue())
+        b[156:157] = b'S'  # CONSTRUIDO: GNUTYPE_SPARSE, with a logical size (realsize) far over what the tar holds
+        b[483:495] = (b'%011o' % 5_000_000) + b'\0'
+        b[148:156] = b' ' * 8
+        b[148:156] = (b'%06o' % sum(b[:512])) + b'\0 '
+        h = self.write('s.tar', bytes(b))
+        (self.d / 's.tar.sha256').write_text(f'{h}  s.tar\n', encoding='utf-8')
+        with mock.patch.object(bundles, 'MAX_MEMBER', 1000), mock.patch.object(bundles, 'measure', side_effect=AssertionError('read')):
+            record = bundles.unpack_all(self.d, self.raw)
+        self.assertEqual(record['errors'], [])
+        self.assertEqual(record['bundles']['s.tar.sha256']['skipped_members'], 1)
+        self.assertEqual(record['bundles']['s.tar.sha256']['raws'], [])
+
     def test_an_oversize_member_whose_bytes_do_not_hash_to_its_name_stops_its_bundle(self):
         big, wrong = self.big(), 'f' * 64
         h = self.write('w.tar', _tar([(f'sha256/ff/{wrong}.json', big)]))

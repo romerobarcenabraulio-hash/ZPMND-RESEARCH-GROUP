@@ -628,6 +628,7 @@ MUT = [
  ('rg/text/bundles.py', 'if (d / tar).is_file() and parts:', 'if False:'),
  ('rg/text/bundles.py', 'if [p.name for p in parts] != [p.name for p in files]:', 'if False:'),
  ('rg/text/bundles.py', 'if _sha([f]) != listed[f.name]:', 'if False:'),
+ ('rg/text/bundles.py', 'if m.issparse():  # a GNU sparse member', 'if False:  # a GNU sparse member'),
  ('rg/text/bundles.py', "if m.size > MAX_MEMBER or m.size > budget['left']:", 'if False:'),
  ('rg/text/bundles.py', 'if m.size > MAX_MEMBER:  # a raw too large to write', 'if False:  # a raw too large to write'),
  ('rg/text/bundles.py', "if mode == 'nuevos' and is_done(done.get(s)):", 'if False:'),

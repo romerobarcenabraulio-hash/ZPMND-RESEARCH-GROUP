@@ -89,7 +89,8 @@ tras subir la versión de un extractor o para reintentar los `fallo`.
 1. Corre las pruebas.
 2. Baja de raw-mx los paquetes pendientes. Cada uno se verifica contra su `.sha256`, que puede traer el tar entero, sus
    partes concatenadas o cada parte por separado (raw-mx tiene las tres formas).
-3. Desempaca sin token. Solo escribe archivos regulares con nombre `sha256/<2>/<sha>.<ext>`. Un miembro de más de
+3. Desempaca sin token. Solo escribe archivos regulares con nombre `sha256/<2>/<sha>.<ext>`; un miembro sparse de GNU se
+   descarta sin leerlo (al leerse entregaría mucho más de lo que el tar trae). Un miembro de más de
    200 MB no se escribe: se lee una vez del flujo, su sha256 se compara con su nombre (si no coincide, su paquete se
    detiene) y queda en el registro con su tamaño y sus primeros bytes, de los que sale su estado como el de cualquier
    crudo de ese tamaño; el resto de su paquete sigue (el dataset entero de hf-tesis-scjn es un crudo de 3.6 GB y
