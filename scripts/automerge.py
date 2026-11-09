@@ -7,7 +7,12 @@ commit is merged, pinned to it, only when all of this holds; anything else leave
 - it comes from a branch of this repository (a fork never qualifies), is not a draft and still has that head;
 - every file it touches is data: added (never modified, removed or renamed) under research-packets/<RP>/ for an <RP>
   main does not have yet, since a packet on main never changes, not even by a file added beside it (docs/OUTBOX.md), or
-  added or modified as a source plan requests/plans/<RR>.json. Never code, workflows, docs, tests or mutants;
+  added or modified as a source plan requests/plans/<RR>.json; or, only while the owner has set the repository
+  variable RG_AUTOMERGE_DOCS=si (owner's order 5, 2026-11-03; in a personal repository only the owner can set it, so
+  the authorization is his and not a PR's text), a doc docs/<name>.md added or modified, but never the owner's rules, decisions and contracts (GOBIERNO: REGLAS, NORTE,
+  CIERRE-HUECOS, OUTBOX, SOLICITUDES). Acceptance cases stay with the owner: their fixture, expected result and raw
+  sha256 define what is correct (REGLAS 29). Never code, workflows, tests, fixtures or mutants: one such file anywhere
+  in the PR leaves it with the owner;
 - the trusted runs on that commit for that PR passed (TRUSTED): the newest run of .github/workflows/auditor.yml for
   pull_request_target (whose file always comes from main) and of .github/workflows/ci.yml for pull_request (the PR's
   copy, which a data-only PR cannot change) both finished success, and every job in them succeeded, none skipped, among
@@ -32,11 +37,14 @@ TRUSTED = {  # workflow file -> (the event of its trusted run, jobs that run mus
                                                               'post', 'post-gpt', 'pass-both'}),
     '.github/workflows/ci.yml': ('pull_request', {'checks'}),
 }
+DOCS = re.compile(r'^docs/[A-Za-z0-9._-]+\.md$')
+# the owner's rules, decisions and contracts (REGLAS is also a criteria file); DOCS admits no '/', so no '..' either
+GOBIERNO = {'docs/REGLAS.md', 'docs/NORTE.md', 'docs/CIERRE-HUECOS.md', 'docs/OUTBOX.md', 'docs/SOLICITUDES.md'}
 MAX_FILES = 3000  # the files API lists at most 3,000 per PR: a longer list could hide one
 PACKET = re.compile(r'^research-packets/(RP-[A-Za-z0-9._-]{3,64})/')
 
 
-def data_only(files):
+def data_only(files, docs=False):
     """None when every file is data, added or modified; else why not."""
     if not files:
         return 'it touches no file'
@@ -46,6 +54,10 @@ def data_only(files):
         name = f.get('filename', '')
         if f.get('status') not in ('added', 'modified'):
             return f"{name}: {f.get('status')} (only added or modified data merges by itself)"
+        if docs and DOCS.match(name):
+            if name in GOBIERNO:
+                return f'{name}: the owner\'s rules, decisions and contracts never merge by themselves'
+            continue
         if not DATA.match(name) or any(part in ('.', '..') for part in name.split('/')):
             return f'{name}: not data'
         if name.startswith('research-packets/') and f.get('status') != 'added':
@@ -94,7 +106,7 @@ def republished(files, exists, branch=''):
     return None
 
 
-def decide(pr, files, runs, jobs_of, repo, sha, *, exists):
+def decide(pr, files, runs, jobs_of, repo, sha, *, exists, docs=False):
     """None to merge; else the reason the PR stays with the owner."""
     head = pr.get('head') or {}
     if pr.get('state') != 'open' or pr.get('draft'):
@@ -110,6 +122,8 @@ def decide(pr, files, runs, jobs_of, repo, sha, *, exists):
     already = republished(files, exists, head.get('ref') or '')
     if already:
         return already
+    if docs:  # the owner's switch is on: docs may merge too, with the same verification
+        return data_only(files, docs=True) or verified(runs, jobs_of, sha, pr.get('number'))
     return data_only(files) or verified(runs, jobs_of, sha, pr.get('number'))
 
 
@@ -141,6 +155,7 @@ def main(env=None, call=None):
         print('REPO and SHA are required')
         return 2
     call = call or (lambda method, path, body=None: api(method, path, body, env.get('GH_TOKEN', '')))
+    docs = env.get('RG_AUTOMERGE_DOCS') == 'si'  # the owner's switch (automerge.yml reads it from vars)
     runs = pages(call, f'/repos/{repo}/actions/runs?head_sha={sha}', 'workflow_runs')
 
     def jobs_of(run_id):
@@ -160,7 +175,7 @@ def main(env=None, call=None):
         if listed.get('state') != 'open' or not isinstance(n, int):
             continue
         pr = call('GET', f'/repos/{repo}/pulls/{n}')
-        why = decide(pr, pages(call, f'/repos/{repo}/pulls/{n}/files'), runs, jobs_of, repo, sha, exists=exists)
+        why = decide(pr, pages(call, f'/repos/{repo}/pulls/{n}/files'), runs, jobs_of, repo, sha, exists=exists, docs=docs)
         if why:
             print(f'#{n} stays with the owner: {why}')
             continue

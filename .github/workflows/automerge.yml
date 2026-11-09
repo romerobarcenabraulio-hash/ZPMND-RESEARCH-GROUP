@@ -27,4 +27,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
           SHA: ${{ github.event.workflow_run.head_sha }}
+          RG_AUTOMERGE_DOCS: ${{ vars.RG_AUTOMERGE_DOCS }}  # docs merge by themselves only after the owner sets it to si
         run: python3 scripts/automerge.py
