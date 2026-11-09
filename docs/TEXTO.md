@@ -94,8 +94,9 @@ tras subir la versión de un extractor o para reintentar los `fallo`.
    detiene) y queda en el registro con su tamaño y sus primeros bytes, de los que sale su estado como el de cualquier
    crudo de ese tamaño; el resto de su paquete sigue (el dataset entero de hf-tesis-scjn es un crudo de 3.6 GB y
    detuvo dos paquetes con 28,425 crudos, 2026-11-03). Un miembro de más de lo que queda del presupuesto de la corrida
-   (40 GB entre todos los paquetes, HIPÓTESIS; todo miembro escrito o solo leído paga su tamaño declarado antes de su primer
-   byte, aunque se corte a la mitad) detiene su paquete antes de escribirse o leerse; los demás paquetes siguen.
+   (40 GB entre todos los paquetes, HIPÓTESIS; todo miembro del flujo paga su tamaño declarado en su encabezado, se escriba,
+   solo se lea, se repita o se descarte, y aunque se corte a la mitad) detiene su paquete antes de leer su cuerpo; los demás
+   paquetes siguen.
 4. Extrae el texto.
 5. Sube los textos nuevos.
 6. Hace commit solo de `mx/texto`, con rebase sobre lo que catalog-mx haya escrito mientras tanto.

@@ -136,8 +136,9 @@ def verify(sums):
 
 
 def charge(budget, m):
-    """Spend a member's declared size before a byte of it is read or written, whatever happens next: a member that
-    fails half-way (a cut tar) still spent it, so no later bundle reads on the same budget (GPT on #114, twice)."""
+    """Spend a member's declared size before a byte of its body is read, whatever happens next: written, only read,
+    repeated or skipped, and also when it fails half-way (a cut tar). One place, so no path reads past the budget
+    (GPT on #114: three REVISE, one per path, until the charge moved here)."""
     if m.size > budget['left']:
         raise ValueError(f'{m.name}: {m.size} bytes, over the {budget["left"]} left in the run')
     budget['left'] -= m.size
@@ -155,22 +156,22 @@ def measure(src):
 
 def unpack(files, raw, budget=None, oversize=None):
     """Write the raw files of one tar (its parts in order) under raw/; returns (raw shas, members skipped). `budget`
-    ({'left': bytes}) is shared by every bundle of the run; a member over what is left raises. A member over MAX_MEMBER
-    is not written: it is appended to `oversize` with its checked sha256, size and head, and counts as a raw."""
+    ({'left': bytes}) is shared by every bundle of the run and charged by every member's declared size before its body
+    is read, whatever happens to it; a member over what is left raises. A member over MAX_MEMBER is not written: it is
+    appended to `oversize` with its checked sha256, size and head, and counts as a raw."""
     raw, shas, skipped = Path(raw), [], 0
     oversize = [] if oversize is None else oversize
     budget = {'left': MAX_TOTAL} if budget is None else budget
     with io.BufferedReader(_Concat(files), CHUNK) as fh, tarfile.open(fileobj=fh, mode='r|') as tar:
         for m in tar:
+            charge(budget, m)  # every member, before the stream reads past its body: written, only read, repeated or skipped
             if m.isdir():
                 continue
             g = MEMBER.match(m.name)
             if not (m.isreg() and g and g.group(1) == g.group(2)[:2]):
                 skipped += 1
                 continue
-            path = raw / 'sha256' / g.group(1) / f'{g.group(2)}.{g.group(3)}'
             if m.size > MAX_MEMBER:  # a raw too large to write: hashed on the stream, its status comes from its head
-                charge(budget, m)  # read, not written, it still spends the run's budget
                 with tar.extractfile(m) as src:
                     sha, head = measure(src)
                 if sha != g.group(2):
@@ -178,11 +179,8 @@ def unpack(files, raw, budget=None, oversize=None):
                 oversize.append({'sha256': sha, 'ext': g.group(3), 'bytes': m.size, 'head': head.hex()})
                 shas.append(sha)
                 continue
+            path = raw / 'sha256' / g.group(1) / f'{g.group(2)}.{g.group(3)}'
             if not path.exists():
-                if m.size > MAX_MEMBER or m.size > budget['left']:  # checked on the header, before writing anything
-                    raise ValueError(f'{m.name}: {m.size} bytes, over the limit '
-                                     f'({MAX_MEMBER} per member, {budget["left"]} left in the run)')
-                charge(budget, m)  # before the copy: one cut half-way spent it too
                 path.parent.mkdir(parents=True, exist_ok=True)
                 tmp = path.with_name(path.name + '.part')
                 with tar.extractfile(m) as src, open(tmp, 'wb') as dst:

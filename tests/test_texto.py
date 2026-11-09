@@ -706,6 +706,26 @@ class Bundles(unittest.TestCase):
         self.assertEqual(len(record['errors']), 2, record['errors'])
         self.assertIn('left in the run', record['errors'][1])  # b.tar finds a's size already spent
 
+    def test_a_member_read_past_without_being_written_still_spends_its_size(self):
+        # GPT on #114 (bbd1af3): a repeated member found its file on disk and a skipped one was not a raw, so neither paid
+        # for the body the stream reads past; now every member pays at its header, whatever happens to it
+        small = _tar([(f'sha256/{PDF_SHA[:2]}/{PDF_SHA}.bin', PDF)] * 3)  # the same member three times
+        h = self.write('r.tar', small)
+        (self.d / 'r.tar.sha256').write_text(f'{h}  r.tar\n', encoding='utf-8')
+        rep = bundles.unpack_all(self.d, self.raw, max_total=2 * len(PDF))
+        self.assertEqual(rep['bundles'], {})
+        self.assertIn('left in the run', rep['errors'][0])
+        (self.d / 'r.tar').unlink(); (self.d / 'r.tar.sha256').unlink()
+        h = self.write('s.tar', _tar([('otro/nombre.bin', PDF), (f'sha256/{DOCX_SHA[:2]}/{DOCX_SHA}.doc', DOCX)]))
+        (self.d / 's.tar.sha256').write_text(f'{h}  s.tar\n', encoding='utf-8')
+        skip = bundles.unpack_all(self.d, self.raw, max_total=len(DOCX) + len(PDF) - 1)  # the skipped member paid
+        self.assertEqual(skip['bundles'], {})
+        self.assertIn('left in the run', skip['errors'][0])
+
+    def test_the_member_limit_is_the_size_the_text_run_reads_whole(self):
+        # a member bundles.unpack does not write must be one the run gives a too_large line (Claude on #114, point 4)
+        self.assertEqual(bundles.MAX_MEMBER, tr.MAX_BYTES)
+
     def test_an_oversize_member_whose_bytes_do_not_hash_to_its_name_stops_its_bundle(self):
         big, wrong = self.big(), 'f' * 64
         h = self.write('w.tar', _tar([(f'sha256/ff/{wrong}.json', big)]))
