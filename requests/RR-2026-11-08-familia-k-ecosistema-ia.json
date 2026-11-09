@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-11-08-familia-k-ecosistema-ia",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada subárea listada en why_needed: ¿qué fuente oficial la publica (API del Hub, registro oficial, repositorio o changelog del proveedor), por qué canal se consulta, cuántos elementos declara a qué fecha, qué feed permite vigilarla cada semana y con qué licencia o términos? Leaderboards solo si publican su método.",
+ "why_needed": "Subáreas: K01 Modelos y sus fichas (Mundo); K02 Datasets de IA (Mundo); K03 Agentes y frameworks de agentes (Mundo); K04 Servidores MCP (Mundo); K05 Skills y plugins (Mundo); K06 Evals y benchmarks (Mundo); K07 Sistemas de inferencia y orquestación (Mundo); K08 Proveedores: precios, límites y cambios (Mundo); K09 Métodos de entrenamiento y de contexto (Mundo); K10 Vigía de práctica de IA (§39) (Mundo). K11 queda fuera: paquetes ya hechos, por mergear. ZPMND necesita qué existe, con qué evidencia y desde cuándo.",
+ "affected_component": "vigías del ecosistema de IA (§39), familia K",
+ "desired_evidence": [
+  "por subárea: editor, URL del canal o feed, formato y sha256 de lo bajado",
+  "licencia o términos con cita literal de 300 caracteres o menos; si no hay, desconocido",
+  "total declarado por la fuente y fecha de corte, con cita literal",
+  "acceso: libre, con registro o de pago; límites de tasa y robots.txt",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Adoptar una capacidad de IA por un anuncio sin evidencia, o con precio o límite vencido.",
+ "privacy_class": "PUBLIC"
+}

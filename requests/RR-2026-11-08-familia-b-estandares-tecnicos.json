@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-11-08-familia-b-estandares-tecnicos",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada organismo o catálogo listado en why_needed: ¿qué metadatos de sus estándares expone sin pago (clave, título, edición, estado, fecha, sustitución, alcance), por qué canal (índice, API o volcado), cuántos registros declara a qué fecha, y qué términos rigen reutilizarlos? El texto de pago no se baja (NORTE §29).",
+ "why_needed": "Subáreas: B01 Catálogo oficial de NOM y NMX (México; cierra A05); B02 ISO: metadatos de estándares (Internacional); B03 IEC: metadatos de estándares (Internacional); B04 IEEE: metadatos de estándares (Internacional); B05 ASTM: metadatos de estándares (Internacional); B06 NFPA: metadatos de estándares (Internacional); B07 ASME: metadatos de estándares (Internacional); B08 API (petróleo): metadatos de estándares (Internacional); B09 CEN/EN, DIN y BS: metadatos de estándares (Internacional); B10 ANSI: metadatos de estándares (Internacional); B11 SAE: metadatos de estándares (Internacional); B12 UL: metadatos de estándares (Internacional); B13 IETF RFC (Internacional); B14 W3C, ITU-T y OASIS (Internacional); B15 Sustitución y retiro de estándares (Transversal; de los mismos catálogos). ZPMND necesita la edición y el estado vigentes de cada estándar y saber cuándo comprarlo (§30).",
+ "affected_component": "registro de estándares candidatos y grafo de sustitución (§23), familia B",
+ "desired_evidence": [
+  "por catálogo: editor, URL de acceso, campos sin pago y sha256 de lo bajado",
+  "términos de uso de los metadatos con cita literal de 300 caracteres o menos",
+  "total de estándares declarado y fecha de corte; sustituciones que el catálogo imprima",
+  "qué exige pago, registro o llave; lo no expuesto, como desconocido",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Republicar texto con derechos, o que ZPMND exija como vigente una edición sustituida o retirada.",
+ "privacy_class": "PUBLIC"
+}

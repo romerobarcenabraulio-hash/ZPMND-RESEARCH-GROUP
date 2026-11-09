@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-11-08-familia-c-ingenieria",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada rama listada en why_needed: ¿qué tres fuentes abiertas u oficiales (manual de organismo público, norma técnica, base de datos de instituto o libro de licencia abierta) cubren sus métodos, ecuaciones, criterios de diseño, propiedades o métodos de prueba, con qué tamaño declarado, licencia y canal de descarga?",
+ "why_needed": "Subáreas: C01 Mecánica (Transversal); C02 Estructural (Transversal); C03 Eléctrica (Transversal); C04 Civil e hidráulica (Transversal); C05 Química y procesos (Transversal); C06 Materiales (Transversal); C07 Industrial y manufactura (Transversal); C08 Ambiental (Transversal); C09 Acústica y vibraciones (Transversal); C10 Control y automatización (Transversal); C11 Métodos de prueba (Transversal); C12 Ecuaciones y fórmulas como objetos (Transversal; §26). Siguiente paso: elegir 3 fuentes abiertas y medir su tamaño. ZPMND necesita métodos y fórmulas con unidades, dominio y fuente.",
+ "affected_component": "métodos y fórmulas candidatos (§26-27), familia C",
+ "desired_evidence": [
+  "por rama: tres fuentes con editor, edición, URL y sha256 de lo bajado",
+  "licencia o términos con cita literal de 300 caracteres o menos; si no hay, desconocido",
+  "tamaño declarado por la fuente y su fecha",
+  "C12: fórmulas publicadas con variables y unidades legibles por máquina",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P2",
+ "risk_if_wrong": "Calcular con una fórmula o propiedad sin fuente verificable o fuera de su dominio, o republicar un manual con derechos.",
+ "privacy_class": "PUBLIC"
+}

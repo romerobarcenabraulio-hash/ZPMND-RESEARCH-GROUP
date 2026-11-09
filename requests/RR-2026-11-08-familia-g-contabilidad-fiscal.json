@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-11-08-familia-g-contabilidad-fiscal",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada norma o regla contable o fiscal listada en why_needed: ¿quién la emite, cuál es su versión vigente y su historial, dónde se obtiene el texto oficial (DOF, SAT o emisor), con qué licencia o condición de acceso (gratuito, registro o pago), y para G04 qué esquemas XSD y catálogos del CFDI están vigentes y desde qué fecha?",
+ "why_needed": "Subáreas: G01 Normas de Información Financiera (NIF) (México); G02 IFRS / NIIF (Internacional); G03 US GAAP (ASC) (Internacional); G04 CFDI y sus especificaciones técnicas (México; Anexo 20 y XSD); G05 Criterios normativos y no vinculativos (México); G06 Leyes fiscales (LISR, LIVA, CFF, LIEPS) (México; cruce con A03); G07 Convenios para evitar la doble tributación (México); G08 Normas de auditoría (NIA/ISA) (Internacional); G09 Contabilidad de costos y administrativa (Transversal); G10 Fiscal internacional: OCDE (BEPS, precios de transferencia) (Internacional). ZPMND necesita la versión vigente de cada regla y su historia.",
+ "affected_component": "reglas contables y fiscales candidatas con versión, familia G",
+ "desired_evidence": [
+  "por norma: emisor, versión vigente, versiones previas, URL y sha256 de lo bajado",
+  "licencia o términos con cita literal de 300 caracteres o menos; si no hay, desconocido",
+  "total declarado por la fuente y fecha de corte, con cita literal",
+  "acceso: libre, con registro o de pago; límites de tasa y robots.txt",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Validar un CFDI contra un esquema viejo o citar una norma no vigente, o republicar NIF o IFRS que exigen licencia.",
+ "privacy_class": "PUBLIC"
+}

@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-11-08-familia-d-finanzas",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada tema de finanzas listado en why_needed: ¿qué fuente primaria publica el método o el dato de referencia (autor académico, banco de desarrollo, hacienda pública, o calificadora para su propia metodología), con qué licencia o términos, en qué formato descargable, con qué fecha de actualización y qué supuestos declara?",
+ "why_needed": "Subáreas: D01 Valuación (DCF, múltiplos) (Transversal); D02 VPN, TIR, TCO y presupuesto de capital (Transversal); D03 Estructura de capital y costo de capital (Transversal); D04 Riesgo y portafolio (Transversal); D05 Análisis de crédito (Transversal); D06 Project finance (Transversal); D07 Capital de trabajo y tesorería (Transversal); D08 Finanzas públicas de México (México). Todas esperan el sondeo de su primera fuente. ZPMND necesita métodos tipados (§27) con datos de referencia fechados para decir de dónde sale cada número.",
+ "affected_component": "métodos financieros tipados (§27), familia D",
+ "desired_evidence": [
+  "por tema: editor, URL, formato, fecha de actualización y sha256 de lo bajado",
+  "licencia o términos con cita literal de 300 caracteres o menos; si no hay, desconocido",
+  "método: insumos, supuestos y limitaciones que la fuente declara, con cita literal",
+  "lo de pago o restringido, solo metadatos",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P2",
+ "risk_if_wrong": "Un cálculo financiero con una tasa o un supuesto sin fuente fechada, o con datos cuya licencia no permite reutilizarlos.",
+ "privacy_class": "PUBLIC"
+}

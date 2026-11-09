@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-11-08-familia-e-banca",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada subárea de banca listada en why_needed: ¿qué autoridad publica el dato o la regla (Banxico, CNBV, CONDUSEF, BIS, Fed, FDIC u OCC), por qué canal oficial se adquiere (API, descarga o DOF), cuántos registros o series declara a qué fecha, y con qué licencia o términos? Para E01, el catálogo completo de series del SIE.",
+ "why_needed": "Subáreas: E01 Series de Banxico (SIE) (México; hoy 4 series); E02 Circulares y reglas de Banxico (México); E03 Disposiciones de la CNBV (México); E04 Comisiones, tasas y CAT por producto (México); E05 Contratos de adhesión (RECA) (México); E06 Sistema de pagos: SPEI, CoDi, DiMo (México); E07 Estadísticas de la banca (México); E08 Basilea III y estándares del BIS (Internacional); E09 Regulación bancaria de EE. UU. (Internacional); E10 Open banking y APIs bancarias (Internacional y México). ZPMND necesita productos, tasas y reglas bancarias con fuente primaria y fecha.",
+ "affected_component": "registro de fuentes de RG y tablero #desglose, familia E",
+ "desired_evidence": [
+  "por subárea: autoridad, URL del punto de acceso, formato y sha256 de lo bajado",
+  "licencia o términos con cita literal de 300 caracteres o menos; si no hay, desconocido",
+  "total declarado por la fuente y fecha de corte, con cita literal",
+  "acceso: libre, con registro o de pago; límites de tasa y robots.txt",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Comparar productos con tasas o comisiones vencidas o de fuente no oficial, o citar una regla bancaria derogada.",
+ "privacy_class": "PUBLIC"
+}

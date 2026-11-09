@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-11-08-familia-a-derecho-regulacion",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada subárea listada en why_needed: ¿cuál es su fuente primaria oficial (diario oficial, legislatura, tribunal u organismo emisor), por qué canal se adquiere (API, volcado, XML, SPARQL o web), cuántos documentos declara la fuente a qué fecha, y qué licencia o términos de reutilización publica?",
+ "why_needed": "Subáreas: A05 Normas Oficiales Mexicanas: linajes (México · federal); A06 Tratados internacionales (México · federal); A08 Semanario Judicial de la Federación (fuente primaria) (México · federal); A10 Reglamentos municipales (México · municipal); A11 Periódicos oficiales de los 32 estados (México · estatal); A12 Congresos locales (México · estatal); A13 CONAMER: catálogo nacional de regulaciones y trámites (México · federal y estatal); A14 Disposiciones fiscales del SAT (México · federal); A15 Disposiciones financieras (México · federal); A16 Regulación de energía, salud, telecom y ambiente (México · federal); A17 Tribunales federales distintos de la SCJN (México · federal); A18 Poderes judiciales estatales (México · estatal); A19 Estados Unidos: código federal (Internacional · EE. UU.); A20 Estados Unidos: regulación federal (Internacional · EE. UU.); A21 Unión Europea (Internacional · UE); A22 España (Internacional · España); A23 Latinoamérica: Chile, Colombia, Argentina, Perú y Brasil (Internacional · LATAM); A24 Canadá y Reino Unido (Internacional); A25 Tratados multilaterales (Internacional); A26 Normas de organismos internacionales (Internacional); A27 Inventario mundial de diarios oficiales (Mundo · 193 países). Su siguiente paso es sondeo o inventario de fuente. ZPMND necesita normas y su linaje con procedencia oficial. A02 queda fuera: es extracción del crudo ya guardado.",
+ "affected_component": "registro de fuentes de RG (sources/) y tablero #desglose, familia A",
+ "desired_evidence": [
+  "por subárea: editor oficial, URL del punto de acceso, formato y sha256 de lo bajado",
+  "licencia o términos con cita literal de 300 caracteres o menos; si no hay, desconocido",
+  "total declarado por la fuente y fecha de corte, con cita literal",
+  "acceso: libre, con registro o de pago; límites de tasa y robots.txt",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P0",
+ "risk_if_wrong": "Marcar hecha una subárea con copia secundaria, cuenta no declarada o licencia mal leída; ZPMND citaría una norma sin procedencia oficial.",
+ "privacy_class": "PUBLIC"
+}

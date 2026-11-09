@@ -1,0 +1,18 @@
+{
+ "request_id": "RR-2026-11-08-familia-j-software",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-08T06:00:00Z",
+ "question": "Para cada subárea de software listada en why_needed: ¿qué fuente oficial la publica (proyecto, registro de paquetes, base de avisos o lista SPDX), por qué API o volcado se adquiere, cuántos elementos declara a qué fecha, qué feed de cambios o releases ofrece y con qué licencia o términos de uso?",
+ "why_needed": "Subáreas: J01 Documentación oficial de lenguajes y plataformas (Mundo); J02 Registros de paquetes (Mundo); J03 Repositorios y releases (Mundo); J04 Avisos de seguridad (Mundo); J05 Catálogos de APIs (Mundo); J06 Protocolos (Mundo); J07 Bases de datos y motores (Mundo); J08 Frameworks y patrones de arquitectura (Mundo); J09 Benchmarks (Mundo); J10 Licencias de software (Mundo); J11 Código como conocimiento (Mundo). ZPMND necesita versiones y avisos con procedencia.",
+ "affected_component": "registro de fuentes de software y vigía de releases (§21), familia J",
+ "desired_evidence": [
+  "por subárea: editor, URL de la API o volcado, feed de cambios y sha256 de lo bajado",
+  "licencia o términos con cita literal de 300 caracteres o menos; si no hay, desconocido",
+  "total declarado por la fuente y fecha de corte, con cita literal",
+  "acceso: libre, con registro o de pago; límites de tasa y robots.txt",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Elegir una dependencia con un aviso de seguridad no visto o una licencia mal leída, o fechar mal una versión.",
+ "privacy_class": "PUBLIC"
+}
