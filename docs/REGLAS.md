@@ -75,7 +75,9 @@ sobre el head exacto. Un `GPT REVIEW: REVISE` se lee, y antes del merge se respo
 bloquea mientras Braulio no decida volverlo obligatorio (por ejemplo, exigiendo el estado `auditor-gpt` en `main`).
 
 **Merge automático de datos (Braulio, 2026-10-27: "sí, fusión automática para PRs de datos"):** un PR que solo agrega
-o modifica paquetes (`research-packets/<RP>/`) o planes de fuentes (`requests/plans/<RR>.json`), desde una rama de este
+o modifica paquetes (`research-packets/<RP>/`) o planes de fuentes (`requests/plans/<RR>.json`), o, desde la orden 5 del
+dueño (2026-11-03) y solo mientras él tenga puesta la variable del repo `RG_AUTOMERGE_DOCS=si`, documentos `docs/<nombre>.md` que no sean sus reglas, decisiones ni contratos (`REGLAS.md`, `NORTE.md`,
+`CIERRE-HUECOS.md`, `OUTBOX.md`, `SOLICITUDES.md`); los casos de aceptación no, porque definen qué es correcto, desde una rama de este
 repo, se fusiona solo cuando los dos auditores dieron PASS sobre su commit exacto y todo CI está verde
 (`scripts/automerge.py`, flujo `automerge.yml`, SECURITY.md T15). Para datos, GPT sí bloquea: hace falta su PASS. La
 aprobación se lee de las corridas de `auditor.yml` (su trabajo `pass-both`) y de `ci.yml` sobre ese commit, nunca de un

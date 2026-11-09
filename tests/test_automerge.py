@@ -33,8 +33,8 @@ PR = {'number': 7, 'state': 'open', 'draft': False, 'title': 'Paquete RP-2026-10
       'base': {'ref': 'main'}, 'head': {'sha': SHA, 'ref': 'investigar/RP-2026-10-27-x', 'repo': {'full_name': REPO}}}
 
 
-def decide(pr=PR, files=FILES, runs=RUNS, jobs=JOBS, on_main=()):
-    return am.decide(pr, files, runs, lambda rid: jobs.get(rid, []), REPO, SHA, exists=lambda rp: rp in on_main)
+def decide(pr=PR, files=FILES, runs=RUNS, jobs=JOBS, on_main=(), docs=False):
+    return am.decide(pr, files, runs, lambda rid: jobs.get(rid, []), REPO, SHA, exists=lambda rp: rp in on_main, docs=docs)
 
 
 def change(pr=None, **head):
@@ -84,13 +84,38 @@ class Decide(unittest.TestCase):
 
     def test_code_workflows_docs_tests_and_mutants_never_merge_by_themselves(self):
         for name in ('rg/investigar.py', '.github/workflows/automerge.yml', 'scripts/mutar.py', 'tests/test_x.py',
-                     'docs/REGLAS.md', 'README.md', 'requests/RR-2026-10-27-x.json', 'requests/plans/RR-x/plan.json',
+                     'docs/sub/a.md', 'docs/a.txt', 'README.md', 'requests/RR-2026-10-27-x.json', 'requests/plans/RR-x/plan.json',
                      'requests/plans/RR-2026-10-27-x.py', 'requests/plans/RR-2026-10-27-x.jsonx', 'research-packets/README.md',
                      'research-packets/x/packet.json', 'research-packets/RP-2026-10-27-x/../../scripts/a.py',
-                     'research-packets/RP-2026-10-27-x/./a', 'knowledge-demand/KNOWLEDGE_DEMAND_MAP.json'):
+                     'research-packets/RP-2026-10-27-x/./a', 'knowledge-demand/KNOWLEDGE_DEMAND_MAP.json',
+                     'tests/aceptacion/x/fixtures/../../test_x.py'):
             with self.subTest(name):
                 files = FILES + [{'filename': name, 'status': 'modified'}]
                 self.assertIn('not data', decide(change({'changed_files': 4}), files))
+
+    def test_a_doc_merges_by_itself_but_a_mixed_pr_never(self):
+        # owner's order 5 (2026-11-03): docs/*.md, with both PASS and CI green
+        doc = [{'filename': 'docs/ESTADO.md', 'status': 'modified'}]
+        for files in (doc, doc + FILES, [{'filename': 'docs/NUEVO.md', 'status': 'added'}]):
+            with self.subTest(files=[f['filename'] for f in files]):
+                self.assertIsNone(decide(change({'changed_files': len(files)}), files, docs=True))
+        mixed = doc + [{'filename': 'rg/investigar.py', 'status': 'modified'}]
+        self.assertEqual(decide(change({'changed_files': 2}), mixed, docs=True), 'rg/investigar.py: not data')
+        self.assertIsNotNone(decide(change({'changed_files': 1}), doc, jobs=jobs(20, 'pass-both', 'skipped'), docs=True))  # one PASS is not two
+        self.assertEqual(decide(change({'changed_files': 1}), doc, docs=False), 'docs/ESTADO.md: not data')  # owner's switch off
+        self.assertEqual(am.data_only(doc), 'docs/ESTADO.md: not data')  # off by default
+
+    def test_the_owners_rules_contracts_and_acceptance_cases_never_change_by_themselves(self):
+        for name in sorted(am.GOBIERNO):
+            with self.subTest(name):
+                self.assertIn('never merge by themselves', decide(change({'changed_files': 1}), [{'filename': name, 'status': 'modified'}], docs=True))
+        self.assertEqual(am.GOBIERNO, {'docs/REGLAS.md', 'docs/NORTE.md', 'docs/CIERRE-HUECOS.md', 'docs/OUTBOX.md', 'docs/SOLICITUDES.md'})
+        for name in ('docs/sub/a.md', 'docs/a.txt', 'docs/x.md.py'):  # even with the switch on: top-level docs/*.md only
+            with self.subTest(name):
+                self.assertEqual(decide(change({'changed_files': 1}), [{'filename': name, 'status': 'modified'}], docs=True), f'{name}: not data')
+        for name in ('tests/aceptacion/mx.dof/fixtures/nota.html', 'tests/aceptacion/mx.dof/esperado.json'):  # REGLAS 29
+            with self.subTest(name):
+                self.assertEqual(decide(change({'changed_files': 1}), [{'filename': name, 'status': 'added'}], docs=True), f'{name}: not data')
 
     def test_a_packet_file_main_already_holds_never_changes_by_itself(self):
         # a packet on main never changes (docs/OUTBOX.md): a modified packet file stays with the owner; a plan may change
@@ -206,6 +231,15 @@ class Main(unittest.TestCase):
         self.assertEqual([s for s in sent if s[0] != 'GET'], [
             ('PUT', f'/repos/{REPO}/pulls/7/merge', {'sha': SHA, 'merge_method': 'squash', 'commit_title': 'Paquete RP-2026-10-27-x (#7)'})])
 
+    def test_a_docs_pr_merges_only_while_the_owner_has_set_the_switch(self):
+        doc = [{'filename': 'docs/ESTADO.md', 'status': 'modified'}]
+        for value, merged in (('si', True), ('', False), ('no', False), ('SI', False)):
+            with self.subTest(value=value):
+                call, sent = self.caller(change({'changed_files': 1}))
+                files_call = lambda method, path, body=None: doc if ('/files?' in path and method == 'GET') else call(method, path, body)
+                self.assertEqual(am.main({'REPO': REPO, 'SHA': SHA, 'GH_TOKEN': 'x', 'RG_AUTOMERGE_DOCS': value}, files_call), 0)
+                self.assertEqual(any(s[0] == 'PUT' for s in sent), merged)
+
     def test_nothing_is_written_for_a_pr_that_does_not_qualify_or_is_not_open(self):
         for name, (pr, pulls) in (('fork', (change(repo={'full_name': 'x/y'}), None)),
                                   ('closed in the listing', (PR, [{'number': 7, 'state': 'closed'}])),
@@ -252,7 +286,8 @@ class Workflow(unittest.TestCase):
         self.assertEqual(checkout['with'], {'persist-credentials': False})  # main's code: no ref of the PR, no token kept
         self.assertEqual(step['run'], 'python3 scripts/automerge.py')
         self.assertEqual(step['env'], {'GH_TOKEN': '${{ github.token }}', 'REPO': '${{ github.repository }}',
-                                       'SHA': '${{ github.event.workflow_run.head_sha }}'})
+                                       'SHA': '${{ github.event.workflow_run.head_sha }}',
+                                       'RG_AUTOMERGE_DOCS': '${{ vars.RG_AUTOMERGE_DOCS }}'})  # the owner's switch, never a literal
 
     def test_the_merge_policy_is_written_where_the_rules_are(self):
         self.assertIn('| T15 |', (ROOT / 'SECURITY.md').read_text(encoding='utf-8'))
