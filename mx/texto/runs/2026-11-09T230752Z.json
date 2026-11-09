@@ -1,0 +1,85 @@
+{
+ "already_current": 455,
+ "bundle_errors": [],
+ "coverage": {
+  "first": {
+   "name_mismatch": [],
+   "referenced_without_status": [
+    "0047c776f8e0001357bc7143dde0ae6ee9657066cfb4fe030540535c8fc202a4",
+    "00802e806f975e35f3334393c50ad39b577846f4c26ddb748096dcb92f2850a5",
+    "008ca2ba4e9aec82f8f2c29ef7c495bff8f3d92900d15ebf4a64d8cf6a7eae64",
+    "00a876c2b691175df0253958b3f337e05d3610e11b79336ad1570539013d2865",
+    "011031e0a620fe806c14afc44c9ca60aaf8991d3ea663424b0a84c3db5de3014",
+    "0125eed7519ad260330f9a04f78c0e4a1ce93c06e67c98ac3c535416787656ba",
+    "012a7b3a18d987229f48c98a36b9b9cf91f5227b5e888ff09f535fd609e31c21",
+    "015c5a3a65a6b20e357bc8a0f6bc8c8c6ebb007bbdd15e4223c3ba01ce463202",
+    "01a4f3744413d1efb7eb22af5b812f6ce60b61b71bc91dc50dc7bbb858b15607",
+    "01a9b609397e354014b0511a81438ad96ddba6e85157f82ff4d778e5979ca795",
+    "01b72308e67d46ba6ca8a6b07fb7584c6a74e905ea0c4b5be5c0c0d32a6d817a",
+    "023ab969c6d75efcd32f1686ad27e0dcbd2dadb901c46dbdb7aafd4670e9241e",
+    "025de5f30e5b2b422e8654f9470ddefda03486c72a732489146cfe09065d5409",
+    "02bf4543bd8e99d1bb980a3c513749114a6db35ee94a9ce8ef678cf73d95165b",
+    "02db8bbc863f4edd1855dd0bd034d7a9d3b5aad6653f2abe4b3e5f4681284bdd",
+    "02e415ad9a86d568e25ccdc954bbb82679ed7510127977a8d391b90442a6e621",
+    "02fe2afc021cdf42249b2003da14bf738f24157375ffc0b420e1e7d7a5c20fd5",
+    "02ff746c921b436a1ab6c74e5f1bc429976595b1b0f82cb8c5b50db1004128c1",
+    "0305c9a7ba90c8d0bbe973be2a134a650976ce5d25c304458cb0fd5401b8ddde",
+    "030ed4c6e3950adecfd4c6376b31d216dc4d876d90b21190c982bccac0b03d7a"
+   ],
+   "repeated_lines": [],
+   "stale_extractor": [],
+   "stored_without_status": [],
+   "texts_not_matching": []
+  },
+  "in_store": 32327,
+  "lines": 107963,
+  "name_mismatch": 0,
+  "ok": false,
+  "referenced": 109099,
+  "referenced_without_status": 1166,
+  "repeated_lines": 0,
+  "stale_extractor": 0,
+  "stored_without_status": 0,
+  "texts_not_matching": 0
+ },
+ "errors": [],
+ "extractors": {
+  "docx": "rg-docx==1",
+  "html": "rg-html==1",
+  "json": "rg-sniff==1",
+  "ole2": "rg-sniff==1",
+  "otro": "rg-sniff==1",
+  "pdf": "rg-pdf==1+pypdf.6.21.1",
+  "rtf": "rg-sniff==1"
+ },
+ "finished_at": "2026-11-09T23:53:32Z",
+ "format": {
+  "docx": 3422,
+  "html": 75112,
+  "json": 64,
+  "ole2": 1950,
+  "otro": 35,
+  "pdf": 27371,
+  "rtf": 9
+ },
+ "max_memory_bytes": 2000000000,
+ "new_texts": 31055,
+ "oversize": 1,
+ "run_id": "2026-11-09T230752Z",
+ "started_at": "2026-11-09T23:07:52Z",
+ "status": {
+  "fallo": 565,
+  "formato_no_soportado": 2058,
+  "necesita_ocr": 1241,
+  "ok": 104099
+ },
+ "status_referenced": {
+  "fallo": 565,
+  "formato_no_soportado": 2028,
+  "necesita_ocr": 1241,
+  "ok": 104099
+ },
+ "timeout_s": 300,
+ "to_extract": 31872,
+ "workers": 4
+}

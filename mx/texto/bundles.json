@@ -38,6 +38,32 @@
    "raw-mx-2026-10-21-39644985129-1.tar"
   ]
  },
+ "raw-mx-2026-10-22-39691250207-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 15195,
+  "run_id": "2026-11-09T230752Z",
+  "tars": [
+   "raw-mx-2026-10-22-39691250207-1.tar"
+  ]
+ },
+ "raw-mx-2026-10-23-39876138130-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 13233,
+  "run_id": "2026-11-09T230752Z",
+  "tars": [
+   "raw-mx-2026-10-23-39876138130-1.tar"
+  ]
+ },
  "raw-mx-2026-10-25-40204440474-1.tar.sha256": {
   "extractors": {
    "docx": "rg-docx==1",
@@ -504,6 +530,45 @@
   "run_id": "2026-11-02T190928Z",
   "tars": [
    "raw-mx-2026-11-01-41329499070-1.tar"
+  ]
+ },
+ "raw-mx-2026-11-02-41506372436-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1303,
+  "run_id": "2026-11-09T230752Z",
+  "tars": [
+   "raw-mx-2026-11-02-41506372436-1.tar"
+  ]
+ },
+ "raw-mx-2026-11-04-41888126115-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1301,
+  "run_id": "2026-11-09T230752Z",
+  "tars": [
+   "raw-mx-2026-11-04-41888126115-1.tar"
+  ]
+ },
+ "raw-mx-2026-11-07-42393060258-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1301,
+  "run_id": "2026-11-09T230752Z",
+  "tars": [
+   "raw-mx-2026-11-07-42393060258-1.tar"
   ]
  }
 }
