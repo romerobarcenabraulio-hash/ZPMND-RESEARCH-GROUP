@@ -10,9 +10,10 @@ regular members named sha256/<2>/<sha>.<ext> are written, at the path rebuilt fr
 '..' and any other member are skipped and counted. A member larger than MAX_MEMBER is never written: it is read once
 from the stream, its sha256 computed and checked against its name, and it is recorded under `oversize` with its size and
 first HEAD bytes, so the text run gives it its status (extract.too_large) and the rest of its bundle goes on; a raw can be
-that large (the whole SCJN tesis dataset of hf-tesis-scjn is one raw of 3.6 GB, 2026-11-03). A member larger than what
-is left of the run's budget (MAX_TOTAL, all bundles together, spent by what is written and by what is only read) stops
-its bundle before a byte of it is written or read: a hostile tar can neither fill the disk nor keep the run reading. A bundle that fails goes to `errors` in the record, and the others go on. A bundle counts as done only
+that large (the whole SCJN tesis dataset of hf-tesis-scjn is one raw of 3.6 GB, 2026-11-03). A member to write
+larger than what is left of the run's room on the disk (MAX_TOTAL, all bundles together, charged before each copy starts)
+stops its bundle before a byte of it is written: a hostile tar cannot fill the disk. What is only read is bounded by the
+bundle itself, whose sha256 check already read every byte. A bundle that fails goes to `errors` in the record, and the others go on. A bundle counts as done only
 for the extractor versions it was done with, so a version bump reopens it even in mode 'nuevos'.
 """
 import argparse
@@ -135,15 +136,6 @@ def verify(sums):
     return out
 
 
-def charge(budget, m):
-    """Spend a member's declared size before a byte of its body is read, whatever happens next: written, only read,
-    repeated or skipped, and also when it fails half-way (a cut tar). One place, so no path reads past the budget
-    (GPT on #114: three REVISE, one per path, until the charge moved here)."""
-    if m.size > budget['left']:
-        raise ValueError(f'{m.name}: {m.size} bytes, over the {budget["left"]} left in the run')
-    budget['left'] -= m.size
-
-
 def measure(src):
     """sha256 and first HEAD bytes of a member read from the stream to its end, nothing written; a member cut short
     hashes to something else than its name, which unpack refuses."""
@@ -156,15 +148,14 @@ def measure(src):
 
 def unpack(files, raw, budget=None, oversize=None):
     """Write the raw files of one tar (its parts in order) under raw/; returns (raw shas, members skipped). `budget`
-    ({'left': bytes}) is shared by every bundle of the run and charged by every member's declared size before its body
-    is read, whatever happens to it; a member over what is left raises. A member over MAX_MEMBER is not written: it is
-    appended to `oversize` with its checked sha256, size and head, and counts as a raw."""
+    ({'left': bytes}) is the run's room on the disk, shared by every bundle: a member to write is charged before its copy
+    starts and one over what is left raises. A member over MAX_MEMBER is not written: it is appended to `oversize` with
+    its checked sha256, size and head, and counts as a raw."""
     raw, shas, skipped = Path(raw), [], 0
     oversize = [] if oversize is None else oversize
     budget = {'left': MAX_TOTAL} if budget is None else budget
     with io.BufferedReader(_Concat(files), CHUNK) as fh, tarfile.open(fileobj=fh, mode='r|') as tar:
         for m in tar:
-            charge(budget, m)  # every member, before the stream reads past its body: written, only read, repeated or skipped
             if m.isdir():
                 continue
             g = MEMBER.match(m.name)
@@ -172,7 +163,7 @@ def unpack(files, raw, budget=None, oversize=None):
                 skipped += 1
                 continue
             if m.size > MAX_MEMBER:  # a raw too large to write: hashed on the stream, its status comes from its head
-                with tar.extractfile(m) as src:
+                with tar.extractfile(m) as src:  # bytes the bundle's sha256 check already read whole; nothing reaches the disk
                     sha, head = measure(src)
                 if sha != g.group(2):
                     raise ValueError(f'{m.name}: its bytes hash to {sha}')
@@ -181,6 +172,10 @@ def unpack(files, raw, budget=None, oversize=None):
                 continue
             path = raw / 'sha256' / g.group(1) / f'{g.group(2)}.{g.group(3)}'
             if not path.exists():
+                if m.size > MAX_MEMBER or m.size > budget['left']:  # checked on the header, before writing anything
+                    raise ValueError(f'{m.name}: {m.size} bytes, over the limit '
+                                     f'({MAX_MEMBER} per member, {budget["left"]} left in the run)')
+                budget['left'] -= m.size  # spent before the copy: one cut half-way still spent its room on the disk
                 path.parent.mkdir(parents=True, exist_ok=True)
                 tmp = path.with_name(path.name + '.part')
                 with tar.extractfile(m) as src, open(tmp, 'wb') as dst:

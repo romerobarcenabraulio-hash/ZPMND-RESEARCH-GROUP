@@ -673,54 +673,20 @@ class Bundles(unittest.TestCase):
         self.assertEqual(b['oversize'], [{'sha256': sha, 'ext': 'json', 'bytes': len(big), 'head': big[:ex.HEAD].hex()}])
         self.assertEqual(sorted(p.name for p in self.raw.rglob('*') if p.is_file()), sorted([f'{PDF_SHA}.bin', f'{DOCX_SHA}.doc']))
 
-    def test_a_member_read_but_not_written_still_spends_the_run_budget(self):
-        # GPT on #114 (b5fd1e9): unwritten, a big member was read whole even with no budget left, and spent none of it
-        one, two = self.big(), self.big() + b' '
-        s1, s2 = hashlib.sha256(one).hexdigest(), hashlib.sha256(two).hexdigest()
-        h = self.write('a.tar', _tar([(f'sha256/{s1[:2]}/{s1}.json', one)]))
-        (self.d / 'a.tar.sha256').write_text(f'{h}  a.tar\n', encoding='utf-8')
-        h = self.write('b.tar', _tar([(f'sha256/{s2[:2]}/{s2}.json', two)]))
-        (self.d / 'b.tar.sha256').write_text(f'{h}  b.tar\n', encoding='utf-8')
-        with mock.patch.object(bundles, 'MAX_MEMBER', len(one) - 1):
-            alone = bundles.unpack_all(self.d, self.raw, max_total=len(one) - 1)  # the first is over what is left
-            both = bundles.unpack_all(self.d, self.raw, max_total=len(one) + len(two) - 1)  # together they are
-        self.assertEqual(alone['bundles'], {})
-        self.assertTrue(all('left in the run' in e for e in alone['errors']), alone['errors'])
-        self.assertEqual(sorted(both['bundles']), ['a.tar.sha256'])
-        self.assertEqual(len(both['errors']), 1)
-        self.assertTrue(both['errors'][0].startswith('b.tar.sha256: ValueError:'), both['errors'][0])
-
-    def test_a_member_cut_half_way_spends_its_size_so_no_later_bundle_reads_on_the_same_budget(self):
-        # GPT on #114 (96ddcfd): a cut tar raised before its bytes were spent, and the next bundle read on the same budget
-        one, two = self.big(), self.big() + b' '
-        s1, s2 = hashlib.sha256(one).hexdigest(), hashlib.sha256(two).hexdigest()
-        cut = _tar([(f'sha256/{s1[:2]}/{s1}.json', one)])
+    def test_a_member_cut_half_way_still_spent_its_room_on_the_disk(self):
+        # GPT on #114 (96ddcfd): a cut tar raised before its size was charged, so the next bundle wrote on the same room
+        one, two = PDF, DOCX
+        cut = _tar([(f'sha256/{PDF_SHA[:2]}/{PDF_SHA}.bin', one)])
         cut = cut[:cut.index(one) + len(one) // 2]  # the header declares all of it; half of it is there
         h = self.write('a.tar', cut)
         (self.d / 'a.tar.sha256').write_text(f'{h}  a.tar\n', encoding='utf-8')
-        h = self.write('b.tar', _tar([(f'sha256/{s2[:2]}/{s2}.json', two)]))
+        h = self.write('b.tar', _tar([(f'sha256/{DOCX_SHA[:2]}/{DOCX_SHA}.doc', two)]))
         (self.d / 'b.tar.sha256').write_text(f'{h}  b.tar\n', encoding='utf-8')
-        with mock.patch.object(bundles, 'MAX_MEMBER', len(one) - 1):
-            record = bundles.unpack_all(self.d, self.raw, max_total=len(one) + len(two) - 1)
+        record = bundles.unpack_all(self.d, self.raw, max_total=len(one) + len(two) - 1)
         self.assertEqual(record['bundles'], {})
         self.assertEqual(len(record['errors']), 2, record['errors'])
-        self.assertIn('left in the run', record['errors'][1])  # b.tar finds a's size already spent
-
-    def test_a_member_read_past_without_being_written_still_spends_its_size(self):
-        # GPT on #114 (bbd1af3): a repeated member found its file on disk and a skipped one was not a raw, so neither paid
-        # for the body the stream reads past; now every member pays at its header, whatever happens to it
-        small = _tar([(f'sha256/{PDF_SHA[:2]}/{PDF_SHA}.bin', PDF)] * 3)  # the same member three times
-        h = self.write('r.tar', small)
-        (self.d / 'r.tar.sha256').write_text(f'{h}  r.tar\n', encoding='utf-8')
-        rep = bundles.unpack_all(self.d, self.raw, max_total=2 * len(PDF))
-        self.assertEqual(rep['bundles'], {})
-        self.assertIn('left in the run', rep['errors'][0])
-        (self.d / 'r.tar').unlink(); (self.d / 'r.tar.sha256').unlink()
-        h = self.write('s.tar', _tar([('otro/nombre.bin', PDF), (f'sha256/{DOCX_SHA[:2]}/{DOCX_SHA}.doc', DOCX)]))
-        (self.d / 's.tar.sha256').write_text(f'{h}  s.tar\n', encoding='utf-8')
-        skip = bundles.unpack_all(self.d, self.raw, max_total=len(DOCX) + len(PDF) - 1)  # the skipped member paid
-        self.assertEqual(skip['bundles'], {})
-        self.assertIn('left in the run', skip['errors'][0])
+        self.assertIn('left in the run', record['errors'][1])  # b.tar finds a's size already charged
+        self.assertFalse((self.raw / 'sha256' / DOCX_SHA[:2] / f'{DOCX_SHA}.doc').exists())
 
     def test_the_member_limit_is_the_size_the_text_run_reads_whole(self):
         # a member bundles.unpack does not write must be one the run gives a too_large line (Claude on #114, point 4)

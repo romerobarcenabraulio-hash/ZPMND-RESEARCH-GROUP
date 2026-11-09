@@ -93,10 +93,10 @@ tras subir la versión de un extractor o para reintentar los `fallo`.
    200 MB no se escribe: se lee una vez del flujo, su sha256 se compara con su nombre (si no coincide, su paquete se
    detiene) y queda en el registro con su tamaño y sus primeros bytes, de los que sale su estado como el de cualquier
    crudo de ese tamaño; el resto de su paquete sigue (el dataset entero de hf-tesis-scjn es un crudo de 3.6 GB y
-   detuvo dos paquetes con 28,425 crudos, 2026-11-03). Un miembro de más de lo que queda del presupuesto de la corrida
-   (40 GB entre todos los paquetes, HIPÓTESIS; todo miembro del flujo paga su tamaño declarado en su encabezado, se escriba,
-   solo se lea, se repita o se descarte, y aunque se corte a la mitad) detiene su paquete antes de leer su cuerpo; los demás
-   paquetes siguen.
+   detuvo dos paquetes con 28,425 crudos, 2026-11-03); leerlo no cuesta más que el sha256 del paquete, que ya lo leyó
+   entero. Un miembro por escribir de más de lo que queda del espacio en disco de la corrida (40 GB entre todos los
+   paquetes, HIPÓTESIS; se cobra antes de empezar a copiarlo, aunque se corte a la mitad) detiene su paquete antes de
+   escribirse; los demás paquetes siguen.
 4. Extrae el texto.
 5. Sube los textos nuevos.
 6. Hace commit solo de `mx/texto`, con rebase sobre lo que catalog-mx haya escrito mientras tanto.
