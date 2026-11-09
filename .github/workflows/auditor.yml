@@ -76,8 +76,13 @@ jobs:
           if [ "$EVENT" != issue_comment ] && [ "$done" -ge 1 ]; then  # a push never re-audits a head with a verdict; the owner's "otra ronda" always can
             echo "#$pr head $sha already has a verdict"; echo run=false >> "$GITHUB_OUTPUT"; exit 0
           fi
-          revise=$(gh pr view "$pr" -R "$REPO" --json comments | jq --arg o "$OWNER" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | startswith("AUDIT VERDICT: REVISE")))] | length')
-          revise_gpt=$(gh pr view "$pr" -R "$REPO" --json comments | jq --arg o "$OWNER" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | startswith("GPT REVIEW: REVISE")))] | length')
+          # Owner, 2026-11-09 ("arregla las reglas"): a REVISE that a later PASS of the same auditor answered no longer counts,
+          # so a PR that reached its PASS and is only rebased is audited again (#111 waited for "otra ronda" over 3 old REVISE)
+          after_pass() {  # the verdict comments of github-actions or the owner after the last PASS whose first line starts with $1
+            gh pr view "$pr" -R "$REPO" --json comments | jq --arg o "$OWNER" --arg p "$1" '{comments: ([.comments[] | select(.author.login | IN("github-actions", "github-actions[bot]", $o))] | .[((map(.body | startswith($p + "PASS")) | rindex(true)) // -1) + 1:])}'
+          }
+          revise=$(after_pass 'AUDIT VERDICT: ' | jq --arg o "$OWNER" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | startswith("AUDIT VERDICT: REVISE")))] | length')
+          revise_gpt=$(after_pass 'GPT REVIEW: ' | jq --arg o "$OWNER" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | startswith("GPT REVIEW: REVISE")))] | length')
           # Owner's order 4 (2026-11-03), docs/REGLAS.md row 30: two REVISE from the same auditor stop the rounds; the job
           # tope says so on the head, and only the owner's "otra ronda" audits again (a push does not)
           if [ "$EVENT" != issue_comment ] && { [ "$revise" -ge 2 ] || [ "$revise_gpt" -ge 2 ]; }; then

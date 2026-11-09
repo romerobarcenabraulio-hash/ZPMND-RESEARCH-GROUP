@@ -224,6 +224,19 @@ class AuditorGate(unittest.TestCase):
                 self.assertEqual(self.gate('false', comments=comments), want)
         self.assertEqual(self.gate('false', comments=[rev('GPT REVIEW: REVISE')] * 2, event='issue_comment'), audited)  # 'otra ronda'
 
+    def test_a_revise_a_later_pass_of_the_same_auditor_answered_no_longer_counts(self):
+        # owner, 2026-11-09: #111, rebased after its two PASS, was capped by three GPT REVISE of earlier rounds
+        rev = lambda body, who='github-actions': {'author': {'login': who}, 'body': f'{body} {"f" * 40}\nbody'}
+        sha = '0123456789abcdef0123456789abcdef01234567'
+        capped, audited = {'run': 'false', 'tope': 'true', 'pr': '7', 'sha': sha}, {'run': 'true', 'pr': '7', 'sha': sha}
+        g, gp, c, cp = rev('GPT REVIEW: REVISE'), rev('GPT REVIEW: PASS'), rev('AUDIT VERDICT: REVISE'), rev('AUDIT VERDICT: PASS')
+        for comments, want in (([g, g, gp], audited), ([c, c, cp], audited), ([g, gp, g, g], capped),
+                               ([c, c, gp], capped), ([g, g, cp], capped),  # a PASS of the other auditor answers nothing
+                               ([g, g, rev('GPT REVIEW: PASS', 'someone')], capped),  # nor a PASS that is not a verdict
+                               ([g, g, rev('GPT REVIEW: PASS', 'o')], audited)):
+            with self.subTest(comments=[x['body'].split()[2] + '/' + x['author']['login'] for x in comments]):
+                self.assertEqual(self.gate('false', comments=comments), want)
+
     def test_a_capped_head_shows_it_waits_for_the_owner(self):
         tope = yaml.safe_load(AUDITOR.read_text(encoding='utf-8'))['jobs']['tope']
         self.assertEqual((tope['needs'], tope['if'], tope['permissions']), ('gate', "needs.gate.outputs.tope == 'true'", {'statuses': 'write'}))

@@ -48,6 +48,8 @@ MUT = [
  ('.github/workflows/auditor.yml', 'if [ "$cross" != false ]; then', 'if false; then'),
  ('.github/workflows/auditor.yml', "or bool(re.search(r'(?:github_pat_|gh[pousr]_)[A-Za-z0-9_]{20,}', text, re.I))", 'or False'),
  ('.github/workflows/auditor.yml', 'python3 -I scripts/auditor_gpt.py --inputs', 'python3 scripts/auditor_gpt.py --inputs'),
+ ('.github/workflows/auditor.yml', 'select(.author.login | IN("github-actions", "github-actions[bot]", $o))', 'select(true)'),
+ ('.github/workflows/auditor.yml', '| .[((map(.body | startswith($p + "PASS")) | rindex(true)) // -1) + 1:])}\'', '| .[0:])}\''),
  ('.github/workflows/auditor.yml', '|| [ "$revise_gpt" -ge 2 ]; };', '|| [ "$revise_gpt" -ge 3 ]; };'),
  ('.github/workflows/automerge.yml', '          RG_AUTOMERGE_DOCS: ${{ vars.RG_AUTOMERGE_DOCS }}', '          RG_AUTOMERGE_DOCS: si'),
  ('.github/workflows/automerge.yml', '        with: { persist-credentials: false }\n', '        with: { persist-credentials: true }\n'),
