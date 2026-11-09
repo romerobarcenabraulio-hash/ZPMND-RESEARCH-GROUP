@@ -90,8 +90,12 @@ tras subir la versión de un extractor o para reintentar los `fallo`.
 2. Baja de raw-mx los paquetes pendientes. Cada uno se verifica contra su `.sha256`, que puede traer el tar entero, sus
    partes concatenadas o cada parte por separado (raw-mx tiene las tres formas).
 3. Desempaca sin token. Solo escribe archivos regulares con nombre `sha256/<2>/<sha>.<ext>`. Un miembro de más de
-   200 MB, o de más de lo que queda del presupuesto de la corrida (40 GB entre todos los paquetes, HIPÓTESIS), detiene
-   su paquete antes de escribirse; los demás paquetes siguen.
+   200 MB no se escribe: se lee una vez del flujo, su sha256 se compara con su nombre (si no coincide, su paquete se
+   detiene) y queda en el registro con su tamaño y sus primeros bytes, de los que sale su estado como el de cualquier
+   crudo de ese tamaño; el resto de su paquete sigue (el dataset entero de hf-tesis-scjn es un crudo de 3.6 GB y
+   detuvo dos paquetes con 28,425 crudos, 2026-11-03). Un miembro de más de lo que queda del presupuesto de la corrida
+   (40 GB entre todos los paquetes, HIPÓTESIS; todo miembro escrito o solo leído paga su tamaño declarado antes de su primer
+   byte, aunque se corte a la mitad) detiene su paquete antes de escribirse o leerse; los demás paquetes siguen.
 4. Extrae el texto.
 5. Sube los textos nuevos.
 6. Hace commit solo de `mx/texto`, con rebase sobre lo que catalog-mx haya escrito mientras tanto.

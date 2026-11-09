@@ -45,6 +45,7 @@ MAX_MEMORY = 2_000_000_000  # bytes of address space per worker; HIPÓTESIS unti
 MAX_ANSWER = 64_000_000  # bytes of one isolated child's answer read at most; HIPÓTESIS: a longer one is a fallo
 MAX_CONTAINERS = 200_000  # JSON lists and objects an answer may hold before it is parsed (a PDF's page offsets fit)
 NAME = re.compile(r'^([0-9a-f]{64})\.[a-z0-9]{1,5}$')
+SHA = re.compile(r'[0-9a-f]{64}')
 RAW_PATH = re.compile(r'^sha256/[0-9a-f]{2}/([0-9a-f]{64})\.[a-z0-9]{1,5}$')
 EXTRACT_AS = 'RG_EXTRACT_AS'  # env: the OS user hostile raws are parsed as (rg.text.isolated); unset: this process
 USER = re.compile(r'^[a-z_][a-z0-9_-]{0,31}$')
@@ -342,6 +343,20 @@ def stored(raw):
     return out
 
 
+def oversize_lines(bundles_done, max_bytes):
+    """{sha: result} for the raws rg.text.bundles did not write for their size (record 'oversize', its sha256 taken from
+    the bytes): the status a raw that large gets anyway (extract.too_large), from its first bytes."""
+    record = json.loads(Path(bundles_done).read_text(encoding='utf-8')) if bundles_done and Path(bundles_done).exists() else {}
+    out = {}
+    for b in record.get('bundles', {}).values():
+        for o in b.get('oversize', ()):
+            sha, size = o.get('sha256'), o.get('bytes')
+            if not (isinstance(sha, str) and SHA.fullmatch(sha) and type(size) is int and size > max_bytes):
+                raise ValueError(f'oversize entry {sha!r} is not a raw too large to read')
+            out[sha] = {**too_large(bytes.fromhex(o['head'])[:HEAD], max_bytes), 'raw_sha256': sha, 'bytes': size}
+    return out
+
+
 def current(line):
     """The line was made by the current extractor of its format and is not a fallo: nothing to redo."""
     return bool(line) and line['status'] != FAILED and not stale(line)
@@ -375,6 +390,12 @@ def run(catalog, raw, out, text, bundles_done=None, workers=1, timeout=TIMEOUT, 
     lines = {line['raw_sha256']: line for line in previous}
     published = {line['text_sha256'] for line in previous if line.get('text_sha256')}
     store = stored(raw)
+    big = oversize_lines(bundles_done, max_bytes)
+    for sha, res in sorted(big.items()):
+        if not current(lines.get(sha)):
+            lines[sha] = make_line(res)
+            report['extractors'][lines[sha]['format']] = lines[sha]['extractor']
+    report['oversize'] = len(big)
     todo = [p for sha, p in sorted(store.items()) if not current(lines.get(sha))]
     report['to_extract'], report['already_current'] = len(todo), len(store) - len(todo)
     new_texts, mismatched, crashed = set(), [], None

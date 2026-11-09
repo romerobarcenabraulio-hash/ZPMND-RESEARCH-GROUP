@@ -506,6 +506,31 @@ class Run(unittest.TestCase):
         self.assertIn('a.tar.sha256', json.loads(done.read_text(encoding='utf-8')))
         self.assertEqual(bundles.plan(assets, json.loads(done.read_text(encoding='utf-8')), 'nuevos'), [])
 
+    def test_a_raw_too_large_to_unpack_gets_its_status_and_its_bundle_is_done(self):
+        # bundles.unpack records such a raw instead of writing it; the run gives it the status any raw that large gets
+        body = (FX / 'hf_tesis_scjn_sample.json').read_bytes()
+        sj = hashlib.sha256(body).hexdigest()
+        next(self.raw.glob(f'sha256/{sj[:2]}/{sj}.*')).unlink()  # never in the store
+        record = Path(self.tmp.name) / 'unpacked.json'
+        record.write_text(json.dumps({'bundles': {'h.tar.sha256': {'tars': ['h.tar'], 'raws': [sj], 'oversize': [
+            {'sha256': sj, 'ext': 'json', 'bytes': len(body), 'head': body[:ex.HEAD].hex()}]}}, 'errors': []}),
+            encoding='utf-8')
+        rc, rep = self.go(bundles_done=record, max_bytes=len(body) - 1)
+        self.assertEqual((rc, rep['oversize'], rep['coverage']['referenced_without_status']), (0, 1, 0), rep['coverage'])
+        line = self.lines()[sj]
+        self.assertEqual((line['status'], line['format'], line['bytes']), (ex.UNSUPPORTED, 'json', len(body)))
+        self.assertIn('h.tar.sha256', json.loads((self.out / 'bundles.json').read_text(encoding='utf-8')))
+
+    def test_an_oversize_entry_that_is_not_a_raw_too_large_to_read_stops_the_run(self):
+        record = Path(self.tmp.name) / 'unpacked.json'
+        for bad in ({'sha256': 'x' * 64, 'bytes': 10 ** 9}, {'sha256': 'a' * 64, 'bytes': 10},
+                    {'sha256': 'a' * 64, 'bytes': True}, {'sha256': 'a' * 64, 'bytes': '1000000000'}):
+            with self.subTest(bad=bad):
+                record.write_text(json.dumps({'bundles': {'h': {'oversize': [{**bad, 'ext': 'json', 'head': ''}]}}}),
+                                  encoding='utf-8')
+                with self.assertRaises(ValueError):
+                    tr.oversize_lines(record, 1000)
+
     def test_a_line_removed_from_the_manifest_leaves_the_disk(self):
         # Audit of #21 (125f1e3): write_manifest rewrote only the part files that still had rows, so a part whose
         # rows were all removed kept its old lines on disk and coverage counted them.
@@ -629,15 +654,66 @@ class Bundles(unittest.TestCase):
         run = next(s['run'] for s in dl['jobs']['run']['steps'] if s.get('name', '').startswith('Download the raw bundles'))
         self.assertIn('[ -n "$asset" ] || continue', run)
 
-    def test_a_member_over_the_size_limit_stops_its_bundle_before_it_is_written(self):
-        # GPT review of #21 (5c164de): the copy had no size limit; a hostile member could fill the disk.
-        h = self.write('w.tar', self.good)
+    def big(self):
+        return b'{"tesis": "' + b'x' * (len(PDF) + 100) + b'"}'  # CONSTRUIDO: larger than the PDF beside it
+
+    def test_a_member_over_the_size_limit_is_hashed_on_the_stream_and_recorded_never_written(self):
+        # GPT review of #21 (5c164de): a hostile member could fill the disk, so it is never written. 2026-11-03: the
+        # whole hf-tesis-scjn dataset is one raw of 3.6 GB and stopped two bundles with 28,425 raws; the rest goes on.
+        big = self.big()
+        sha = hashlib.sha256(big).hexdigest()
+        h = self.write('w.tar', _tar([(f'./sha256/{PDF_SHA[:2]}/{PDF_SHA}.bin', PDF), (f'./sha256/{sha[:2]}/{sha}.json', big),
+                                      (f'./sha256/{DOCX_SHA[:2]}/{DOCX_SHA}.doc', DOCX)]))  # one after it too (GPT on #114)
         (self.d / 'w.tar.sha256').write_text(f'{h}  w.tar\n', encoding='utf-8')
-        with mock.patch.object(bundles, 'MAX_MEMBER', 1000):
+        with mock.patch.object(bundles, 'MAX_MEMBER', len(big) - 1):
+            record = bundles.unpack_all(self.d, self.raw, max_total=len(PDF) + len(big) + len(DOCX))
+        self.assertEqual(record['errors'], [])
+        b = record['bundles']['w.tar.sha256']
+        self.assertEqual(b['raws'], sorted([PDF_SHA, sha, DOCX_SHA]))
+        self.assertEqual(b['oversize'], [{'sha256': sha, 'ext': 'json', 'bytes': len(big), 'head': big[:ex.HEAD].hex()}])
+        self.assertEqual(sorted(p.name for p in self.raw.rglob('*') if p.is_file()), sorted([f'{PDF_SHA}.bin', f'{DOCX_SHA}.doc']))
+
+    def test_a_member_read_but_not_written_still_spends_the_run_budget(self):
+        # GPT on #114 (b5fd1e9): unwritten, a big member was read whole even with no budget left, and spent none of it
+        one, two = self.big(), self.big() + b' '
+        s1, s2 = hashlib.sha256(one).hexdigest(), hashlib.sha256(two).hexdigest()
+        h = self.write('a.tar', _tar([(f'sha256/{s1[:2]}/{s1}.json', one)]))
+        (self.d / 'a.tar.sha256').write_text(f'{h}  a.tar\n', encoding='utf-8')
+        h = self.write('b.tar', _tar([(f'sha256/{s2[:2]}/{s2}.json', two)]))
+        (self.d / 'b.tar.sha256').write_text(f'{h}  b.tar\n', encoding='utf-8')
+        with mock.patch.object(bundles, 'MAX_MEMBER', len(one) - 1):
+            alone = bundles.unpack_all(self.d, self.raw, max_total=len(one) - 1)  # the first is over what is left
+            both = bundles.unpack_all(self.d, self.raw, max_total=len(one) + len(two) - 1)  # together they are
+        self.assertEqual(alone['bundles'], {})
+        self.assertTrue(all('left in the run' in e for e in alone['errors']), alone['errors'])
+        self.assertEqual(sorted(both['bundles']), ['a.tar.sha256'])
+        self.assertEqual(len(both['errors']), 1)
+        self.assertTrue(both['errors'][0].startswith('b.tar.sha256: ValueError:'), both['errors'][0])
+
+    def test_a_member_cut_half_way_spends_its_size_so_no_later_bundle_reads_on_the_same_budget(self):
+        # GPT on #114 (96ddcfd): a cut tar raised before its bytes were spent, and the next bundle read on the same budget
+        one, two = self.big(), self.big() + b' '
+        s1, s2 = hashlib.sha256(one).hexdigest(), hashlib.sha256(two).hexdigest()
+        cut = _tar([(f'sha256/{s1[:2]}/{s1}.json', one)])
+        cut = cut[:cut.index(one) + len(one) // 2]  # the header declares all of it; half of it is there
+        h = self.write('a.tar', cut)
+        (self.d / 'a.tar.sha256').write_text(f'{h}  a.tar\n', encoding='utf-8')
+        h = self.write('b.tar', _tar([(f'sha256/{s2[:2]}/{s2}.json', two)]))
+        (self.d / 'b.tar.sha256').write_text(f'{h}  b.tar\n', encoding='utf-8')
+        with mock.patch.object(bundles, 'MAX_MEMBER', len(one) - 1):
+            record = bundles.unpack_all(self.d, self.raw, max_total=len(one) + len(two) - 1)
+        self.assertEqual(record['bundles'], {})
+        self.assertEqual(len(record['errors']), 2, record['errors'])
+        self.assertIn('left in the run', record['errors'][1])  # b.tar finds a's size already spent
+
+    def test_an_oversize_member_whose_bytes_do_not_hash_to_its_name_stops_its_bundle(self):
+        big, wrong = self.big(), 'f' * 64
+        h = self.write('w.tar', _tar([(f'sha256/ff/{wrong}.json', big)]))
+        (self.d / 'w.tar.sha256').write_text(f'{h}  w.tar\n', encoding='utf-8')
+        with mock.patch.object(bundles, 'MAX_MEMBER', len(big) - 1):
             record = bundles.unpack_all(self.d, self.raw)
         self.assertEqual(record['bundles'], {})
-        self.assertEqual(len(record['errors']), 1)
-        self.assertIn('over the limit', record['errors'][0])
+        self.assertIn('its bytes hash to', record['errors'][0])
         self.assertFalse(self.raw.exists() and any(p.is_file() for p in self.raw.rglob('*')))
 
     def test_the_unpack_budget_spans_every_bundle_of_the_run(self):
