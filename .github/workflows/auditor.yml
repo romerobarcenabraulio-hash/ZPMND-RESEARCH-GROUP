@@ -11,8 +11,8 @@ name: auditor
 #   checkout but not the system or runner directories where the token or other credentials could be found.
 # - Proof of reading: the answer must quote main's README first line; the `post` job checks it. An answer that cannot
 #   prove it read the criteria, that names another head, or whose body looks like a credential is never posted as PASS.
-# - Goodware rule: after 3 REVISE on a PR, a push does not trigger a new round; the owner comments exactly
-#   "otra ronda". Nothing here can merge.
+# - Goodware rule (owner's order 4, REGLAS 30): after 2 REVISE from the same auditor (Claude or GPT), a push does not
+#   trigger a new round; the job tope marks the head and the owner comments exactly "otra ronda". Nothing here can merge.
 #
 # Second, independent opinion (audit-gpt, post-gpt): one OpenAI call per audited head, under the same gate. The job
 # checks out main, never the PR head; it fetches the head as git objects only to compute the same diff, and sends
@@ -37,6 +37,7 @@ jobs:
       run: ${{ steps.g.outputs.run }}
       pr: ${{ steps.g.outputs.pr }}
       sha: ${{ steps.g.outputs.sha }}
+      tope: ${{ steps.g.outputs.tope }}
     steps:
       - id: g
         env:
@@ -76,9 +77,12 @@ jobs:
             echo "#$pr head $sha already has a verdict"; echo run=false >> "$GITHUB_OUTPUT"; exit 0
           fi
           revise=$(gh pr view "$pr" -R "$REPO" --json comments | jq --arg o "$OWNER" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | startswith("AUDIT VERDICT: REVISE")))] | length')
-          if [ "$EVENT" != issue_comment ] && [ "$revise" -ge 3 ]; then
-            echo "#$pr has $revise REVISE verdicts: the next round waits for the owner's 'otra ronda'"
-            echo run=false >> "$GITHUB_OUTPUT"; exit 0
+          revise_gpt=$(gh pr view "$pr" -R "$REPO" --json comments | jq --arg o "$OWNER" '[.comments[] | select((.author.login == "github-actions" or .author.login == "github-actions[bot]" or .author.login == $o) and (.body | startswith("GPT REVIEW: REVISE")))] | length')
+          # Owner's order 4 (2026-11-03), docs/REGLAS.md row 30: two REVISE from the same auditor stop the rounds; the job
+          # tope says so on the head, and only the owner's "otra ronda" audits again (a push does not)
+          if [ "$EVENT" != issue_comment ] && { [ "$revise" -ge 2 ] || [ "$revise_gpt" -ge 2 ]; }; then
+            echo "#$pr has $revise Claude and $revise_gpt GPT REVISE: the owner decides; the next round waits for 'otra ronda'"
+            { echo run=false; echo tope=true; echo "pr=$pr"; echo "sha=$sha"; } >> "$GITHUB_OUTPUT"; exit 0
           fi
           # No LLM audit of a head CI already rejects (Braulio, 2026-10-28: spend tokens only where a rule cannot decide):
           # a push waits for ci.yml's checks job on this head, 15 minutes at most; red means no audit until a head passes
@@ -96,6 +100,17 @@ jobs:
           fi
           { echo run=true; echo "pr=$pr"; echo "sha=$sha"; } >> "$GITHUB_OUTPUT"
 
+  tope:
+    # The head shows that it waits for the owner's decision, not for an audit that will not come (order 4, REGLAS 30)
+    needs: gate
+    if: needs.gate.outputs.tope == 'true'
+    runs-on: ubuntu-24.04
+    permissions: { statuses: write }
+    steps:
+      - env: { GH_TOKEN: '${{ github.token }}', REPO: '${{ github.repository }}', SHA: '${{ needs.gate.outputs.sha }}' }
+        run: |
+          [[ "$SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "bad head"; exit 1; }
+          gh api "repos/$REPO/statuses/$SHA" -f state=failure -f context=auditor -f description="decisión del dueño: dos REVISE del mismo auditor; 'otra ronda' reabre"
   evidence:
     # Runs the PR's code: no secrets, read-only token. Everything it produces is UNTRUSTED.
     needs: gate
