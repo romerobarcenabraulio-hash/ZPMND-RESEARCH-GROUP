@@ -29,6 +29,21 @@ ResearchRequest (from ZPMND or Braulio) ──► RESEARCH GROUP ──► Resea
 
 Raw downloads, the agent workspace and run outputs live in `work/`. That folder is never committed.
 
+## Before a PR: make check
+
+No PR is opened or updated red (owner's order 7). `make check` runs what CI runs on a pull request: the whole suite and
+the offline policy check, then the mutants of the files the branch changes against `origin/main` (`scripts/mutar_pr.py`;
+all of them when it touches `tests/`, the mutant runner or the dependencies). Commit first: the changed files come from
+git. On the 16-thread test server, with Python 3.12 from `requirements-dev.txt` and the Postgres tests on:
+
+```
+export TMPDIR=$(mktemp -d ~/tmp/run.XXXXXX) RG_TEST_DB_URL='postgresql:///rgtest?host=/var/run/postgresql' RG_REQUIRE_DB_TESTS=1
+make -j16 check SHARDS=16
+```
+
+`BASE=origin/<branch>` compares with another base and `PYTHON=` picks the interpreter. The PR carries the last lines of
+that run as its receipt.
+
 ## Startup protocol for a new session
 
 1. Read this README, the contract and the security notes.
