@@ -7,9 +7,13 @@ A bundle is one `<tar>.sha256` asset. Its lines hash either each `<tar>.partNN` 
 are then `<tar>` itself or its parts in order; raw-mx holds both forms (2026-10-21). Nothing of a bundle is unpacked
 unless every hash matches, every part on disk is covered by one and the parts run 00, 01, ... without a gap. Only
 regular members named sha256/<2>/<sha>.<ext> are written, at the path rebuilt from that name; links, absolute paths,
-'..' and any other member are skipped and counted. A member larger than MAX_MEMBER, or than what is left of the run's
-unpack budget (MAX_TOTAL, all bundles together), stops its bundle before a byte of it is written: a hostile tar cannot
-fill the disk. A bundle that fails goes to `errors` in the record, and the others go on. A bundle counts as done only
+'..', GNU sparse members (they read back far more than the tar holds) and any other member are skipped and counted. A member larger than MAX_MEMBER is never written: it is read once
+from the stream, its sha256 computed and checked against its name, and it is recorded under `oversize` with its size and
+first HEAD bytes, so the text run gives it its status (extract.too_large) and the rest of its bundle goes on; a raw can be
+that large (the whole SCJN tesis dataset of hf-tesis-scjn is one raw of 3.6 GB, 2026-11-03). A member to write
+larger than what is left of the run's room on the disk (MAX_TOTAL, all bundles together, charged before each copy starts)
+stops its bundle before a byte of it is written: a hostile tar cannot fill the disk. What is only read is bounded by the
+bundle itself, whose sha256 check already read every byte. A bundle that fails goes to `errors` in the record, and the others go on. A bundle counts as done only
 for the extractor versions it was done with, so a version bump reopens it even in mode 'nuevos'.
 """
 import argparse
@@ -24,7 +28,7 @@ import tarfile
 from collections import defaultdict
 from pathlib import Path
 
-from .extract import VERSIONS
+from .extract import HEAD, VERSIONS
 
 ASSET = re.compile(r'^[A-Za-z0-9][A-Za-z0-9._-]{0,200}$')  # asset names reach `gh release download --pattern`
 PART = re.compile(r'^(.+)\.part(\d+)$')
@@ -132,30 +136,54 @@ def verify(sums):
     return out
 
 
-def unpack(files, raw, budget=None):
+def measure(src):
+    """sha256 and first HEAD bytes of a member read from the stream to its end, nothing written; a member cut short
+    hashes to something else than its name, which unpack refuses."""
+    h, head = hashlib.sha256(), b''
+    for chunk in iter(lambda: src.read(CHUNK), b''):
+        h.update(chunk)
+        head += chunk[:HEAD - len(head)]
+    return h.hexdigest(), head
+
+
+def unpack(files, raw, budget=None, oversize=None):
     """Write the raw files of one tar (its parts in order) under raw/; returns (raw shas, members skipped). `budget`
-    ({'left': bytes}) is shared by every bundle of the run; a member over MAX_MEMBER or over what is left raises."""
+    ({'left': bytes}) is the run's room on the disk, shared by every bundle: a member to write is charged before its copy
+    starts and one over what is left raises. A member over MAX_MEMBER is not written: it is appended to `oversize` with
+    its checked sha256, size and head, and counts as a raw."""
     raw, shas, skipped = Path(raw), [], 0
+    oversize = [] if oversize is None else oversize
     budget = {'left': MAX_TOTAL} if budget is None else budget
     with io.BufferedReader(_Concat(files), CHUNK) as fh, tarfile.open(fileobj=fh, mode='r|') as tar:
         for m in tar:
             if m.isdir():
                 continue
+            if m.issparse():  # a GNU sparse member reads back far more than the tar holds (GPT on #114): never read it
+                skipped += 1
+                continue
             g = MEMBER.match(m.name)
             if not (m.isreg() and g and g.group(1) == g.group(2)[:2]):
                 skipped += 1
+                continue
+            if m.size > MAX_MEMBER:  # a raw too large to write: hashed on the stream, its status comes from its head
+                with tar.extractfile(m) as src:  # bytes the bundle's sha256 check already read whole; nothing reaches the disk
+                    sha, head = measure(src)
+                if sha != g.group(2):
+                    raise ValueError(f'{m.name}: its bytes hash to {sha}')
+                oversize.append({'sha256': sha, 'ext': g.group(3), 'bytes': m.size, 'head': head.hex()})
+                shas.append(sha)
                 continue
             path = raw / 'sha256' / g.group(1) / f'{g.group(2)}.{g.group(3)}'
             if not path.exists():
                 if m.size > MAX_MEMBER or m.size > budget['left']:  # checked on the header, before writing anything
                     raise ValueError(f'{m.name}: {m.size} bytes, over the limit '
                                      f'({MAX_MEMBER} per member, {budget["left"]} left in the run)')
+                budget['left'] -= m.size  # spent before the copy: one cut half-way still spent its room on the disk
                 path.parent.mkdir(parents=True, exist_ok=True)
                 tmp = path.with_name(path.name + '.part')
                 with tar.extractfile(m) as src, open(tmp, 'wb') as dst:
                     shutil.copyfileobj(src, dst, CHUNK)
                 tmp.replace(path)
-                budget['left'] -= m.size
             shas.append(g.group(2))
     return shas, skipped
 
@@ -165,15 +193,16 @@ def unpack_all(d, raw, delete=False, max_total=MAX_TOTAL):
     for sums in sorted(Path(d).glob('*.sha256')):
         try:
             tars = verify(sums)
-            shas, skipped = set(), 0
+            shas, skipped, big = set(), 0, []
             for _, files in tars:
-                got, n = unpack(files, raw, budget)
+                got, n = unpack(files, raw, budget, big)
                 shas.update(got)
                 skipped += n
         except (ValueError, OSError, tarfile.TarError) as e:
             record['errors'].append(f'{sums.name}: {type(e).__name__}: {e}')
             continue
-        record['bundles'][sums.name] = {'tars': [t for t, _ in tars], 'raws': sorted(shas), 'skipped_members': skipped}
+        record['bundles'][sums.name] = {'tars': [t for t, _ in tars], 'raws': sorted(shas), 'skipped_members': skipped,
+                                        'oversize': big}
         if delete:
             for _, files in tars:
                 for f in files:
