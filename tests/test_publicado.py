@@ -1,8 +1,4 @@
-"""Every raw a catalog row points to is published (rg/catalog/publicado.py, SECURITY.md T30).
-
-2026-11-09: 1,166 mx rows said 'stored' while no raw-mx bundle held their bytes: test attempts had left the files on the
-disk of a manual run, the store did not count them as new and the bundle held only new files. These tests replay that.
-"""
+"""rg/catalog/publicado.py (SECURITY.md T30): replays the 2026-11-09 incident and the guard's edges."""
 import contextlib
 import hashlib
 import io
@@ -29,10 +25,8 @@ def rel_of(body, ext='html'):
 
 
 def row(nid, rel, versions=()):
-    e = {'entry_id': f'mx.dof:{nid}', 'source_id': 'mx.dof', 'native_id': nid, 'raw_path': rel, 'raw_status': 'stored'}
-    if versions:
-        e['versions'] = [{'sha256': r.split('/')[2][:64], 'retrieved_at': '2026-10-20T00:00:00Z', 'raw_path': r} for r in versions]
-    return e
+    vs = {'versions': [{'sha256': r.split('/')[2][:64], 'retrieved_at': '2026-10-20T00:00:00Z', 'raw_path': r} for r in versions]}
+    return {'entry_id': f'mx.dof:{nid}', 'source_id': 'mx.dof', 'native_id': nid, 'raw_path': rel, 'raw_status': 'stored', **(vs if versions else {})}
 
 
 class Ledger(unittest.TestCase):
@@ -77,7 +71,54 @@ class Ledger(unittest.TestCase):
         sha, _ = rel_of(b'misplaced')
         wrong = f"sha256/{'00' if sha[:2] != '00' else '01'}/{sha}.html"  # a path that is not its content address
         self.rows(row('1', new, versions=[old, new]), row('2', wrong))
-        self.assertEqual(sorted(publicado.referencias(self.mx).values()), sorted([new, old]))
+        refs, bad = publicado.referencias(self.mx)
+        self.assertEqual(sorted(refs.values()), sorted([new, old]))
+        self.assertEqual(len(bad), 1)
+        self.assertIn(wrong, bad[0])
+
+    def test_a_malformed_reference_now_or_in_a_version_is_lost_never_skipped(self):
+        sha, _ = rel_of(b'x')
+        misplaced = f"sha256/{'00' if sha[:2] != '00' else '01'}/{sha}.html"
+        for current, versions in ((misplaced, ()), ('raw/x.pdf', ()), (None, ['sha256/zz/nope.pdf'])):
+            with self.subTest(current=current, versions=versions):
+                e = {'entry_id': 'mx.dof:1', 'source_id': 'mx.dof', 'native_id': '1', 'raw_status': 'stored', 'raw_path': current}
+                if versions:
+                    e['versions'] = [{'sha256': 'a' * 64, 'retrieved_at': '2026-10-20T00:00:00Z', 'raw_path': v} for v in versions]
+                self.rows(e)
+                self.assertEqual(len(publicado.faltan(self.mx, self.raw)['perdidos']), 1)
+                with contextlib.redirect_stdout(io.StringIO()):
+                    self.assertEqual(publicado.main(['--catalog', str(self.mx)]), 5)
+        self.rows({'entry_id': 'mx.dof:2', 'source_id': 'mx.dof', 'native_id': '2', 'raw_status': 'metadata_only', 'raw_path': ''})
+        self.assertEqual(publicado.faltan(self.mx), {'por_publicar': [], 'perdidos': []})  # no raw: nothing to check
+
+    def test_a_linked_raw_or_a_linked_folder_is_never_on_disk_nor_in_the_ledger(self):
+        body = b'<html>enlazado</html>'
+        sha, rel = rel_of(body)
+        real = Path(self.tmp.name, 'fuera'); real.mkdir()
+        (real / f'{sha}.html').write_bytes(body)
+        (self.raw / 'sha256' / sha[:2]).mkdir(parents=True)
+        (self.raw / rel).symlink_to(real / f'{sha}.html')  # the file is a link
+        self.rows(row('1', rel))
+        self.assertEqual(publicado.faltan(self.mx, self.raw), {'por_publicar': [], 'perdidos': [rel]})
+        self.assertEqual(publicado.anotar(self.mx, self.raw), 0)
+        with self.assertRaises(OSError):  # O_NOFOLLOW: a link is refused, not followed
+            publicado.empaquetar(Path(self.tmp.name, 'b.tar'), self.raw, [rel])
+        (self.raw / rel).unlink(); (self.raw / 'sha256' / sha[:2]).rmdir()
+        (self.raw / 'sha256' / sha[:2]).symlink_to(real, target_is_directory=True)  # the folder is a link
+        self.assertEqual(publicado.faltan(self.mx, self.raw)['por_publicar'], [])
+        self.assertEqual(publicado.anotar(self.mx, self.raw), 0)
+        with self.assertRaisesRegex(ValueError, 'without links'):
+            publicado.empaquetar(Path(self.tmp.name, 'b.tar'), self.raw, [rel])
+
+    def test_a_raw_whose_bytes_do_not_match_its_name_is_never_bundled(self):
+        _, rel = rel_of(b'what the name says')
+        (self.raw / rel).parent.mkdir(parents=True)
+        (self.raw / rel).write_bytes(b'other bytes')
+        with self.assertRaisesRegex(ValueError, 'hash to'):
+            publicado.empaquetar(Path(self.tmp.name, 'b.tar'), self.raw, [rel])
+        (self.raw.parent / 'fuera.html').write_bytes(b'x')
+        with self.assertRaisesRegex(ValueError, 'content address'):  # never a path outside the store
+            publicado.empaquetar(Path(self.tmp.name, 'b.tar'), self.raw, ['../fuera.html'])
 
     def test_a_malformed_sha_in_texto_or_in_the_ledger_stops_the_check(self):
         (self.mx / 'texto').mkdir()
@@ -133,11 +174,8 @@ class Incident(unittest.TestCase):
             dof = next(s for s in self_.registry['sources'] if s['source_id'] == 'mx.dof')
             url = 'https://sidof.segob.gob.mx/notas/5799706'
             got_sha, got_rel = (self_.raw.put(body, 'html') if on_disk_before else (sha, rel))
-            self_.catalog.upsert({'entry_id': 'mx.dof:5799706', 'country': 'MX', 'source_id': 'mx.dof', 'native_id': '5799706',
-                                  'title': 'Acuerdo x', 'url': url, 'first_seen': '2026-10-20T00:00:00Z',
-                                  'category': {'jurisdiction': 'federal', 'collection': 'DOF', 'doc_type': 'ACUERDO'},
-                                  'dates': {'published': '2026-10-20'}, 'raw_status': 'stored', 'raw_path': got_rel,
-                                  'artifact': _artifact(dof, url, got_sha, body, 'text/html', got_rel)})
+            cat = {'jurisdiction': 'federal', 'collection': 'DOF', 'doc_type': 'ACUERDO'}
+            self_.catalog.upsert({'entry_id': 'mx.dof:5799706', 'country': 'MX', 'source_id': 'mx.dof', 'native_id': '5799706', 'title': 'Acuerdo x', 'url': url, 'first_seen': '2026-10-20T00:00:00Z', 'category': cat, 'dates': {'published': '2026-10-20'}, 'raw_status': 'stored', 'raw_path': got_rel, 'artifact': _artifact(dof, url, got_sha, body, 'text/html', got_rel)})
             return {}
         log = io.StringIO()
         with mock.patch.object(Run, 'run_indicadores', runner), contextlib.redirect_stdout(log):
