@@ -93,8 +93,7 @@ class _Leido:
         self.fh, self.h = fh, hashlib.sha256()
 
     def read(self, n=-1):
-        b = self.fh.read(n)
-        self.h.update(b)
+        self.h.update(b := self.fh.read(n))
         return b
 
 
@@ -141,8 +140,8 @@ def main(argv=None):
     a.add_argument('--catalog', required=True, help='country folder of the data branch, e.g. data/mx')
     a.add_argument('--publicar', metavar='RAW', help='write the verified tar of RAW to stdout and add it to the ledger')
     x = a.parse_args(argv)
-    if not (Path(x.catalog).is_dir() and row_files(x.catalog)):  # a wrong or empty path never passes (GPT on 2c55288)
-        print(f'{x.catalog}: no catalog rows there', file=sys.stderr)
+    if not (Path(x.catalog).is_dir() and any(l.strip() for f in row_files(x.catalog) for l in f.read_text(encoding='utf-8').splitlines())):
+        print(f'{x.catalog}: no catalog rows there', file=sys.stderr)  # a wrong path, no files, empty files (GPT on 65b74f5)
         return 2
     if x.publicar:  # only publishes: a loss found elsewhere never stops this upload; the gate step decides the commit
         shas = empaquetar(sys.stdout.buffer, x.publicar, crudos(x.publicar))

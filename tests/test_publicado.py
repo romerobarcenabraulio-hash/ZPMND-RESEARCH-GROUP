@@ -160,7 +160,8 @@ class Ledger(unittest.TestCase):
         self.assertEqual(self.publicar().returncode, 5)  # the gate step: no commit while a row's raw is lost
 
     def test_a_missing_or_empty_catalog_never_passes_and_writes_no_ledger(self):
-        for cat in (self.tmp.name + '/nada', str(self.mx)):  # no folder; a folder with no rows
+        for cat, text in ((self.tmp.name + '/nada', None), (str(self.mx), None), (str(self.mx), ''), (str(self.mx), ' \n\t\n')):
+            _ = text is None or (self.mx / 'dof' / '2026.jsonl').write_text(text, encoding='utf-8')  # a file of no rows (GPT, 65b74f5)
             p, q = self.publicar(cat=cat), self.publicar('--publicar', str(self.raw), cat=cat)
             self.assertEqual((p.returncode, q.returncode, q.stdout), (2, 2, b''))
         self.assertFalse((self.mx / 'raw').exists())
