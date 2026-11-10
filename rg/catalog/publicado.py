@@ -10,6 +10,7 @@ import sys
 import tarfile
 from pathlib import Path
 
+from ..schemas import validate
 from .store import row_files
 
 RAW_PATH = re.compile(r'^sha256/([0-9a-f]{2})/([0-9a-f]{64})\.[a-z0-9]{1,5}$')
@@ -19,24 +20,25 @@ SAMPLE = 20  # rels named in a report; the count is always whole
 
 
 def referencias(country_dir):
-    """({sha256: raw_path}, [malformed]) over each row's raw_path and its versions'; malformed counts as lost (GPT, 2d88340)."""
-    refs, bad = {}, []
+    """({sha256: raw_path}, [lost], rows): only a valid catalog_entry with content-address raw_paths counts (GPT, 5521f27)."""
+    refs, bad, n = {}, [], 0
     d = Path(country_dir)
     if not d.is_dir():  # a wrong path is never a catalog with nothing to check (GPT on 2c55288)
         raise ValueError(f'{d}: not a catalog folder')
     for f in row_files(d):
-        for line in f.read_text(encoding='utf-8').splitlines():
+        for k, line in enumerate(f.read_text(encoding='utf-8').splitlines(), 1):
             if line.strip():
-                e = json.loads(line)
-                for rp in [e.get('raw_path')] + [v.get('raw_path') for v in e.get('versions', [])]:
-                    if rp is None or rp == '':
-                        continue
-                    m = RAW_PATH.fullmatch(rp) if isinstance(rp, str) else None
+                e, n = json.loads(line), n + 1
+                if errs := validate('catalog_entry', e):
+                    bad.append(f'{f.name}:{k}: {errs[0][:200]}')
+                    continue
+                for rp in filter(None, [e.get('raw_path')] + [v['raw_path'] for v in e.get('versions', [])]):  # the schema: stored has one
+                    m = RAW_PATH.fullmatch(rp)
                     if m and m.group(1) == m.group(2)[:2]:
                         refs.setdefault(m.group(2), rp)
                     else:
                         bad.append(f'{f.name}: {str(rp)[:200]!r}')
-    return refs, bad
+    return refs, bad, n
 
 
 def _crudo(raw_root, rel):
@@ -77,7 +79,7 @@ def publicados(country_dir):
 def faltan(country_dir, raw_root=None):
     """{'por_publicar': [raw_path on disk, not published], 'perdidos': [raw_path neither published nor on disk]}."""
     pub = publicados(country_dir)
-    refs, malformadas = referencias(country_dir)
+    refs, malformadas, _ = referencias(country_dir)
     por_publicar, perdidos = [], list(malformadas)
     for sha, rp in sorted(refs.items()):
         if sha in pub:
@@ -140,7 +142,7 @@ def main(argv=None):
     a.add_argument('--catalog', required=True, help='country folder of the data branch, e.g. data/mx')
     a.add_argument('--publicar', metavar='RAW', help='write the verified tar of RAW to stdout and add it to the ledger')
     x = a.parse_args(argv)
-    if not (Path(x.catalog).is_dir() and any(l.strip() for f in row_files(x.catalog) for l in f.read_text(encoding='utf-8').splitlines())):
+    if not (Path(x.catalog).is_dir() and referencias(x.catalog)[2]):
         print(f'{x.catalog}: no catalog rows there', file=sys.stderr)  # a wrong path, no files, empty files (GPT on 65b74f5)
         return 2
     if x.publicar:  # only publishes: a loss found elsewhere never stops this upload; the gate step decides the commit

@@ -1,5 +1,4 @@
 """rg/catalog/publicado.py (SECURITY.md T30): replays the 2026-11-09 incident and the guard's edges."""
-import contextlib
 import hashlib
 import io
 import json
@@ -13,8 +12,10 @@ from pathlib import Path
 import yaml
 
 from rg.catalog import publicado
+from rg.catalog.run import _artifact
 
 ROOT = Path(__file__).resolve().parents[1]
+DOF = {'source_type': 'primary_official', 'publisher': 'DOF', 'license': 'LFDA', 'redistribution': 'allowed'}
 
 
 def rel_of(body, ext='html'):
@@ -23,8 +24,16 @@ def rel_of(body, ext='html'):
 
 
 def row(nid, rel, versions=()):
-    vs = {'versions': [{'sha256': r.split('/')[2][:64], 'retrieved_at': '2026-10-20T00:00:00Z', 'raw_path': r} for r in versions]}
-    return {'entry_id': f'mx.dof:{nid}', 'source_id': 'mx.dof', 'native_id': nid, 'raw_path': rel, 'raw_status': 'stored', **(vs if versions else {})}
+    """A valid catalog_entry: stored with its artifact when rel is given, metadata_only without a raw when it is None."""
+    url = f'https://sidof.segob.gob.mx/notas/{nid}'
+    e = {'entry_id': f'mx.dof:{nid}', 'country': 'MX', 'source_id': 'mx.dof', 'native_id': nid, 'title': 'Acuerdo x', 'url': url,
+         'first_seen': '2026-10-20T00:00:00Z', 'dates': {'published': '2026-10-20'}, 'raw_status': 'stored' if rel else 'metadata_only',
+         'category': {'jurisdiction': 'federal', 'collection': 'DOF', 'doc_type': 'ACUERDO'}}
+    if rel:
+        e.update(raw_path=rel, artifact=_artifact(DOF, url, (rel.split('/')[-1] + 'a' * 64)[:64], b'x', 'text/html', rel))
+    if versions:
+        e['versions'] = [{'sha256': r.split('/')[-1][:64], 'retrieved_at': '2026-10-20T00:00:00Z', 'raw_path': r} for r in versions]
+    return e
 
 
 class Ledger(unittest.TestCase):
@@ -36,8 +45,12 @@ class Ledger(unittest.TestCase):
     def tearDown(self):
         self.tmp.cleanup()
 
+    def write(self, rel, text):
+        (self.mx / rel).parent.mkdir(parents=True, exist_ok=True)
+        (self.mx / rel).write_text(text, encoding='utf-8')
+
     def rows(self, *entries):
-        (self.mx / 'dof' / '2026.jsonl').write_text(''.join(json.dumps(e) + '\n' for e in entries), encoding='utf-8')
+        self.write('dof/2026.jsonl', ''.join(json.dumps(e) + '\n' for e in entries))
 
     def put(self, body, ext='html'):
         sha, rel = rel_of(body, ext)
@@ -50,10 +63,8 @@ class Ledger(unittest.TestCase):
         b, rb = rel_of(b'b', 'pdf')
         c, rc = rel_of(b'c')
         self.rows(row('1', ra), row('2', rb), row('3', rc))
-        (self.mx / 'texto').mkdir()
-        (self.mx / 'texto' / 'dof.jsonl').write_text(json.dumps({'raw_sha256': a}) + '\n', encoding='utf-8')
-        (self.mx / 'raw').mkdir()
-        (self.mx / 'raw' / 'publicados.txt').write_text(b + '\n', encoding='utf-8')
+        self.write('texto/dof.jsonl', json.dumps({'raw_sha256': a}) + '\n')
+        self.write('raw/publicados.txt', b + '\n')
         self.assertEqual(publicado.faltan(self.mx), {'por_publicar': [], 'perdidos': [rc]})
 
     def test_a_raw_on_disk_is_to_publish_and_one_nowhere_is_lost(self):
@@ -66,28 +77,25 @@ class Ledger(unittest.TestCase):
     def test_every_version_a_row_keeps_is_pointed_to(self):
         _, new = rel_of(b'new')
         _, old = rel_of(b'old', 'pdf')
-        sha, _ = rel_of(b'misplaced')
-        wrong = f"sha256/{'00' if sha[:2] != '00' else '01'}/{sha}.html"  # a path that is not its content address
-        self.rows(row('1', new, versions=[old, new]), row('2', wrong))
-        refs, bad = publicado.referencias(self.mx)
-        self.assertEqual(sorted(refs.values()), sorted([new, old]))
-        self.assertEqual(len(bad), 1)
-        self.assertIn(wrong, bad[0])
+        self.rows(row('1', new, versions=[old, new]))
+        refs, bad, _ = publicado.referencias(self.mx)
+        self.assertEqual((sorted(refs.values()), bad), (sorted([new, old]), []))
 
-    def test_a_malformed_reference_now_or_in_a_version_is_lost_never_skipped(self):
-        sha, _ = rel_of(b'x')
-        misplaced = f"sha256/{'00' if sha[:2] != '00' else '01'}/{sha}.html"
-        for current, versions in ((misplaced, ()), ('raw/x.pdf', ()), (None, ['sha256/zz/nope.pdf'])):
-            with self.subTest(current=current, versions=versions):
-                e = {'entry_id': 'mx.dof:1', 'source_id': 'mx.dof', 'native_id': '1', 'raw_status': 'stored', 'raw_path': current}
-                if versions:
-                    e['versions'] = [{'sha256': 'a' * 64, 'retrieved_at': '2026-10-20T00:00:00Z', 'raw_path': v} for v in versions]
+    def test_a_row_that_is_not_a_valid_entry_or_points_badly_is_lost_never_skipped(self):
+        misplaced = f"sha256/{'00' if (sha := rel_of(b'x')[0])[:2] != '00' else '01'}/{sha}.html"
+        stored = row('1', misplaced)
+        self.write('raw/publicados.txt', sha + '\n')  # its sha is published: only the address check makes it lost
+        for e in (stored, row('1', 'raw/x.pdf'), row('1', None, ['sha256/zz/nope.pdf']), {}, {**stored, 'raw_path': None},
+                  {**stored, 'raw_path': ''}, {k: v for k, v in stored.items() if k != 'raw_path'}):  # GPT on 2d88340, 5521f27
+            with self.subTest(e=e):
                 self.rows(e)
                 self.assertEqual(len(publicado.faltan(self.mx, self.raw)['perdidos']), 1)
-                with contextlib.redirect_stdout(io.StringIO()):
-                    self.assertEqual(publicado.main(['--catalog', str(self.mx)]), 5)
-        self.rows({'entry_id': 'mx.dof:2', 'source_id': 'mx.dof', 'native_id': '2', 'raw_status': 'metadata_only', 'raw_path': ''})
-        self.assertEqual(publicado.faltan(self.mx), {'por_publicar': [], 'perdidos': []})  # no raw: nothing to check
+                self.assertEqual(self.publicar().returncode, 5)
+        self.rows(row('2', None))  # metadata_only, no raw: a valid row with nothing to check
+        self.assertEqual(publicado.faltan(self.mx), {'por_publicar': [], 'perdidos': []})
+        (self.mx / 'dof' / '2026.jsonl').write_text('no es json\n', encoding='utf-8')
+        with self.assertRaises(ValueError):  # fails closed
+            publicado.faltan(self.mx)
 
     def test_a_linked_raw_or_a_linked_folder_is_never_on_disk_nor_in_the_ledger(self):
         body = b'<html>enlazado</html>'
@@ -112,13 +120,11 @@ class Ledger(unittest.TestCase):
         self.assertEqual((publicado.crudos(plain), publicado.crudos(link)), ([rel], []))
 
     def test_a_malformed_sha_in_texto_or_in_the_ledger_stops_the_check(self):
-        (self.mx / 'texto').mkdir()
-        (self.mx / 'texto' / 'dof.jsonl').write_text(json.dumps({'raw_sha256': 'A' * 64}) + '\n', encoding='utf-8')
+        self.write('texto/dof.jsonl', json.dumps({'raw_sha256': 'A' * 64}) + '\n')
         with self.assertRaisesRegex(ValueError, 'dof.jsonl:1'):
             publicado.publicados(self.mx)
-        (self.mx / 'texto' / 'dof.jsonl').write_text('', encoding='utf-8')
-        (self.mx / 'raw').mkdir()
-        (self.mx / 'raw' / 'publicados.txt').write_text('a' * 64 + '\n../x\n', encoding='utf-8')
+        self.write('texto/dof.jsonl', '')
+        self.write('raw/publicados.txt', 'a' * 64 + '\n../x\n')
         with self.assertRaisesRegex(ValueError, 'publicados.txt:2'):
             publicado.publicados(self.mx)
 
@@ -126,9 +132,8 @@ class Ledger(unittest.TestCase):
         a, _ = self.put(b'a')
         b, _ = self.put(b'b', 'pdf')
         c, _ = rel_of(b'c')
-        wrong = '00' if c[:2] != '00' else '01'
-        (self.raw / 'sha256' / wrong).mkdir(exist_ok=True)
-        (self.raw / 'sha256' / wrong / (c + '.html')).write_bytes(b'c')  # in a folder that is not its prefix
+        (self.raw / 'sha256' / ('00' if c[:2] != '00' else '01')).mkdir(exist_ok=True)
+        (self.raw / 'sha256' / ('00' if c[:2] != '00' else '01') / (c + '.html')).write_bytes(b'c')  # in a folder not its prefix
         (self.raw / 'sha256' / a[:2] / (a + '.html.123.part')).write_bytes(b'x')  # a write cut short
         self.assertEqual([r.split('/')[2][:64] for r in publicado.crudos(self.raw)], sorted([a, b]))
         self.assertEqual((publicado.anotar(self.mx, [a, b]), publicado.anotar(self.mx, [b])), (2, 0))
@@ -168,13 +173,6 @@ class Ledger(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'not a catalog folder'):
             publicado.faltan(Path(self.tmp.name, 'nada'))
 
-    def test_a_malformed_row_or_version_stops_the_check(self):
-        for text in ('no es json\n', json.dumps({**row('1', None), 'versions': ['sha256/aa/x.pdf']}) + '\n'):
-            (self.mx / 'dof' / '2026.jsonl').write_text(text, encoding='utf-8')
-            with self.assertRaises((ValueError, AttributeError)):  # fails closed, never skips the row
-                publicado.faltan(self.mx)
-
-
     def test_a_raw_whose_name_is_not_its_bytes_stops_the_publication_and_the_ledger(self):
         _, rel = rel_of(b'what the name says')
         (self.raw / rel).parent.mkdir(parents=True)
@@ -191,8 +189,7 @@ class Ledger(unittest.TestCase):
     def test_a_trailing_newline_never_makes_a_reference_or_a_ledger_line(self):
         sha, rel = rel_of(b'x')
         self.rows(row('1', rel + '\n'))
-        (self.mx / 'raw').mkdir()
-        (self.mx / 'raw' / 'publicados.txt').write_text(sha + '\n', encoding='utf-8')
+        self.write('raw/publicados.txt', sha + '\n')
         self.assertEqual(len(publicado.faltan(self.mx)['perdidos']), 1)  # malformed, so lost even with its sha published
 
 
