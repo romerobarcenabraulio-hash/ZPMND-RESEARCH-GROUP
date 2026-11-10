@@ -93,9 +93,7 @@ jobs:
           # One copy only: stream the tar straight into <=1.9 GB parts, then drop the originals (2026-10-21: the run
           # that kept raw files, a tar and its parts at once died while packing, with no log).
           name="raw-mx-$(date -u +%F)-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.tar"  # a re-run gets its own asset name
-          # SECURITY T30: the tar is written by rg.catalog.publicado, which hashes each member as it writes it (a name that
-          # is not its bytes, or a link, stops the pipe) and adds exactly those members to data/mx/raw/publicados.txt,
-          # committed only if the upload below succeeds (a failed step stops the job before the commit).
+          # SECURITY T30: publicado hashes each member as it writes the tar and adds exactly those to data/mx/raw/publicados.txt
           python -m rg.catalog.publicado --catalog data/mx --publicar raw | split -b 1900m -d - "$name.part"
           rm -rf raw
           sha256sum "$name".part* > "$name.sha256"

@@ -107,16 +107,9 @@ class Ledger(unittest.TestCase):
         self.assertEqual(publicado.crudos(self.raw), [])
         with self.assertRaisesRegex(ValueError, 'without links'):
             publicado.empaquetar(Path(self.tmp.name, 'b.tar'), self.raw, [rel])
-
-    def test_a_raw_whose_bytes_do_not_match_its_name_is_never_bundled(self):
-        _, rel = rel_of(b'what the name says')
-        (self.raw / rel).parent.mkdir(parents=True)
-        (self.raw / rel).write_bytes(b'other bytes')
-        with self.assertRaisesRegex(ValueError, 'hash to'):
-            publicado.empaquetar(Path(self.tmp.name, 'b.tar'), self.raw, [rel])
-        (self.raw.parent / 'fuera.html').write_bytes(b'x')
-        with self.assertRaisesRegex(ValueError, 'content address'):  # never a path outside the store
-            publicado.empaquetar(Path(self.tmp.name, 'b.tar'), self.raw, ['../fuera.html'])
+        plain = Path(self.tmp.name, 'plano'); (plain / rel).parent.mkdir(parents=True); (plain / rel).write_bytes(body)
+        link = Path(self.tmp.name, 'enlace'); link.symlink_to(plain, target_is_directory=True)  # the root is a link
+        self.assertEqual((publicado.crudos(plain), publicado.crudos(link)), ([rel], []))
 
     def test_a_malformed_sha_in_texto_or_in_the_ledger_stops_the_check(self):
         (self.mx / 'texto').mkdir()
@@ -141,8 +134,8 @@ class Ledger(unittest.TestCase):
         self.assertEqual((publicado.anotar(self.mx, [a, b]), publicado.anotar(self.mx, [b])), (2, 0))
         self.assertEqual((self.mx / 'raw' / 'publicados.txt').read_text(encoding='utf-8'), ''.join(f'{s}\n' for s in sorted([a, b])))
 
-    def publicar(self, *extra):
-        return subprocess.run([sys.executable, '-m', 'rg.catalog.publicado', '--catalog', str(self.mx), *extra], cwd=ROOT,
+    def publicar(self, *extra, cat=None):
+        return subprocess.run([sys.executable, '-m', 'rg.catalog.publicado', '--catalog', cat or str(self.mx), *extra], cwd=ROOT,
                               capture_output=True, timeout=60)
 
     def test_as_the_workflow_calls_it_the_tar_on_stdout_and_the_ledger_are_the_same_verified_members(self):
@@ -154,7 +147,32 @@ class Ledger(unittest.TestCase):
         with tarfile.open(fileobj=io.BytesIO(p.stdout)) as tar:
             self.assertEqual([(m.name, tar.extractfile(m).read()) for m in tar], [(ra, b'only on this disk')])
         self.assertEqual((self.mx / 'raw' / 'publicados.txt').read_text(encoding='utf-8'), a + '\n')
-        self.assertIn(b'"perdidos": 0', p.stderr)
+        self.assertEqual(self.publicar().returncode, 0)
+
+    def test_a_loss_never_stops_the_upload_and_the_gate_still_stops_the_commit(self):
+        a, ra = self.put(b'new this run')
+        _, gone = rel_of(b'lost before')
+        self.rows(row('1', ra), row('2', gone))
+        p = self.publicar('--publicar', str(self.raw))
+        self.assertEqual(p.returncode, 0, p.stderr)  # the new raw is uploaded all the same (auditor on 2c55288)
+        with tarfile.open(fileobj=io.BytesIO(p.stdout)) as tar:
+            self.assertEqual(tar.getnames(), [ra])
+        self.assertEqual(self.publicar().returncode, 5)  # the gate step: no commit while a row's raw is lost
+
+    def test_a_missing_or_empty_catalog_never_passes_and_writes_no_ledger(self):
+        for cat in (self.tmp.name + '/nada', str(self.mx)):  # no folder; a folder with no rows
+            p, q = self.publicar(cat=cat), self.publicar('--publicar', str(self.raw), cat=cat)
+            self.assertEqual((p.returncode, q.returncode, q.stdout), (2, 2, b''))
+        self.assertFalse((self.mx / 'raw').exists())
+        with self.assertRaisesRegex(ValueError, 'not a catalog folder'):
+            publicado.faltan(Path(self.tmp.name, 'nada'))
+
+    def test_a_malformed_row_or_version_stops_the_check(self):
+        for text in ('no es json\n', json.dumps({**row('1', None), 'versions': ['sha256/aa/x.pdf']}) + '\n'):
+            (self.mx / 'dof' / '2026.jsonl').write_text(text, encoding='utf-8')
+            with self.assertRaises((ValueError, AttributeError)):  # fails closed, never skips the row
+                publicado.faltan(self.mx)
+
 
     def test_a_raw_whose_name_is_not_its_bytes_stops_the_publication_and_the_ledger(self):
         _, rel = rel_of(b'what the name says')
@@ -165,6 +183,9 @@ class Ledger(unittest.TestCase):
         self.assertNotEqual(p.returncode, 0)  # the pipe fails, the step fails, nothing is committed
         self.assertIn(b'hash to', p.stderr)
         self.assertFalse((self.mx / 'raw' / 'publicados.txt').exists())
+        (self.raw.parent / 'fuera.html').write_bytes(b'x')
+        with self.assertRaisesRegex(ValueError, 'content address'):  # never a path outside the store
+            publicado.empaquetar(Path(self.tmp.name, 'b.tar'), self.raw, ['../fuera.html'])
 
     def test_a_trailing_newline_never_makes_a_reference_or_a_ledger_line(self):
         sha, rel = rel_of(b'x')

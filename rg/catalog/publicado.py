@@ -1,12 +1,5 @@
-"""Every raw a catalog row points to must be published (SECURITY.md T30: the 1,166 mx rows of 2026-10-19/20 said
-'stored' while their bytes, left on a manual run's disk by test attempts, were never in a bundle).
-
-Published = a line in <country>/texto/*.jsonl (texto-mx writes one per bundle member it read) or a sha256 in
-<country>/raw/publicados.txt (written by catalog-mx when it uploads a bundle). A bundle holds what the rows point to
-and is unpublished, never what one process remembers writing.
-
-    python -m rg.catalog.publicado --catalog data/mx [--publicar raw > bundle.tar]   # exit 5: a row's raw is unpublished
-"""
+"""Every raw a catalog row points to is published: a texto line or a ledger sha (SECURITY.md T30, the 1,166 rows of
+2026-10-19/20). `--catalog data/mx` exits 5 on a lost raw; `--publicar RAW` writes RAW's verified tar to stdout."""
 import argparse
 import hashlib
 import json
@@ -29,8 +22,8 @@ def referencias(country_dir):
     """({sha256: raw_path}, [malformed]) over each row's raw_path and its versions'; malformed counts as lost (GPT, 2d88340)."""
     refs, bad = {}, []
     d = Path(country_dir)
-    if not d.is_dir():
-        return refs, bad
+    if not d.is_dir():  # a wrong path is never a catalog with nothing to check (GPT on 2c55288)
+        raise ValueError(f'{d}: not a catalog folder')
     for f in row_files(d):
         for line in f.read_text(encoding='utf-8').splitlines():
             if line.strip():
@@ -49,6 +42,8 @@ def referencias(country_dir):
 def _crudo(raw_root, rel):
     """A regular file reached through no symbolic link at all: tar keeps a link, not its bytes (GPT on 2d88340)."""
     p = Path(raw_root)
+    if os.path.islink(p):  # the root itself too (GPT on 2c55288)
+        return False
     for part in Path(rel).parts:
         p = p / part
         try:
@@ -110,9 +105,7 @@ def crudos(raw_root):
 
 
 def empaquetar(destino, raw_root, rels):
-    """Write the tar of rels to destino (a path, or a binary stream) and return their sha256. Each member is a regular
-    file reached without links whose bytes, hashed as they are written, are the ones its name says; anything else stops
-    the tar with an error, so its caller publishes nothing."""
+    """Tar of rels to destino (path or stream), each a linkless regular file whose bytes, hashed as written, are its name."""
     shas = []
     with (tarfile.open(destino, 'w') if isinstance(destino, (str, Path)) else tarfile.open(fileobj=destino, mode='w|')) as tar:
         for rel in rels:
@@ -146,14 +139,17 @@ def anotar(country_dir, shas):
 def main(argv=None):
     a = argparse.ArgumentParser(description='every raw a catalog row points to is published')
     a.add_argument('--catalog', required=True, help='country folder of the data branch, e.g. data/mx')
-    a.add_argument('--publicar', metavar='RAW', help='write the verified tar of RAW to stdout, add it to the ledger, check')
+    a.add_argument('--publicar', metavar='RAW', help='write the verified tar of RAW to stdout and add it to the ledger')
     x = a.parse_args(argv)
-    log = sys.stderr if x.publicar else sys.stdout  # stdout carries the tar then
-    if x.publicar:
+    if not (Path(x.catalog).is_dir() and row_files(x.catalog)):  # a wrong or empty path never passes (GPT on 2c55288)
+        print(f'{x.catalog}: no catalog rows there', file=sys.stderr)
+        return 2
+    if x.publicar:  # only publishes: a loss found elsewhere never stops this upload; the gate step decides the commit
         shas = empaquetar(sys.stdout.buffer, x.publicar, crudos(x.publicar))
-        print(json.dumps({'publicados': len(shas), 'nuevos': anotar(x.catalog, shas)}), file=log)
+        print(json.dumps({'publicados': len(shas), 'nuevos': anotar(x.catalog, shas)}), file=sys.stderr)
+        return 0
     r = faltan(x.catalog)
-    print(json.dumps({'perdidos': len(r['perdidos']), 'muestra': r['perdidos'][:SAMPLE]}), file=log)
+    print(json.dumps({'perdidos': len(r['perdidos']), 'muestra': r['perdidos'][:SAMPLE]}))
     return 5 if r['perdidos'] else 0
 
 
