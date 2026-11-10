@@ -1,0 +1,59 @@
+{
+ "already_current": 0,
+ "bundle_errors": [],
+ "coverage": {
+  "first": {
+   "name_mismatch": [],
+   "referenced_without_status": [],
+   "repeated_lines": [],
+   "stale_extractor": [],
+   "stored_without_status": [],
+   "texts_not_matching": []
+  },
+  "in_store": 1166,
+  "lines": 109129,
+  "name_mismatch": 0,
+  "ok": true,
+  "referenced": 109099,
+  "referenced_without_status": 0,
+  "repeated_lines": 0,
+  "stale_extractor": 0,
+  "stored_without_status": 0,
+  "texts_not_matching": 0
+ },
+ "errors": [],
+ "extractors": {
+  "html": "rg-html==1",
+  "pdf": "rg-pdf==1+pypdf.6.21.1"
+ },
+ "finished_at": "2026-11-10T04:14:52Z",
+ "format": {
+  "docx": 3422,
+  "html": 75810,
+  "json": 64,
+  "ole2": 1950,
+  "otro": 35,
+  "pdf": 27839,
+  "rtf": 9
+ },
+ "max_memory_bytes": 2000000000,
+ "new_texts": 1166,
+ "oversize": 0,
+ "run_id": "2026-11-10T040336Z",
+ "started_at": "2026-11-10T04:03:36Z",
+ "status": {
+  "fallo": 565,
+  "formato_no_soportado": 2058,
+  "necesita_ocr": 1241,
+  "ok": 105265
+ },
+ "status_referenced": {
+  "fallo": 565,
+  "formato_no_soportado": 2028,
+  "necesita_ocr": 1241,
+  "ok": 105265
+ },
+ "timeout_s": 300,
+ "to_extract": 1166,
+ "workers": 4
+}
