@@ -20,8 +20,26 @@
     "published_at": { "$ref": "common.schema.json#/$defs/timestamp" },
     "license": { "$ref": "common.schema.json#/$defs/short_text" },
     "redistribution": { "enum": ["allowed", "metadata_only", "unknown"] },
-    "stored_at": { "enum": ["none", "local_corpus", "repo"] }
+    "stored_at": { "enum": ["none", "local_corpus", "repo"] },
+    "modo": {
+      "description": "Owner 2026-11-09: how ZPMND should hold this source. nativo = kept with its footprint because a decision on it must be reproducible; a_pedido = only its definition, pointer and cut date, fetched when needed (it changes faster than it is used, its license allows metadata only, or it is a huge corpus used sparsely).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["valor", "razon", "vigilancia"],
+      "properties": {
+        "valor": { "enum": ["nativo", "a_pedido"] },
+        "razon": { "enum": ["reproducible", "cambia_rapido", "licencia", "corpus_grande"] },
+        "vigilancia": { "enum": ["diaria", "semanal", "mensual", "por_version", "ninguna"] }
+      },
+      "allOf": [
+        { "if": { "properties": { "valor": { "const": "nativo" } } }, "then": { "properties": { "razon": { "const": "reproducible" } } } },
+        { "if": { "properties": { "valor": { "const": "a_pedido" } } }, "then": { "properties": { "razon": { "enum": ["cambia_rapido", "licencia", "corpus_grande"] } } } }
+      ]
+    }
   },
   "if": { "properties": { "stored_at": { "const": "repo" } } },
-  "then": { "properties": { "redistribution": { "const": "allowed" } } }
+  "then": { "properties": { "redistribution": { "const": "allowed" } } },
+  "allOf": [
+    { "if": { "properties": { "redistribution": { "const": "metadata_only" } }, "required": ["modo"] }, "then": { "properties": { "modo": { "properties": { "valor": { "const": "a_pedido" } } } } } }
+  ]
 }
