@@ -583,5 +583,18 @@
   "tars": [
    "raw-mx-2026-11-09-recuperado.tar"
   ]
+ },
+ "raw-mx-2026-11-10-42876338357-1.tar.sha256": {
+  "extractors": {
+   "docx": "rg-docx==1",
+   "html": "rg-html==1",
+   "pdf": "rg-pdf==1+pypdf.6.21.1",
+   "sniff": "rg-sniff==1"
+  },
+  "raws": 1299,
+  "run_id": "2026-11-10T223122Z",
+  "tars": [
+   "raw-mx-2026-11-10-42876338357-1.tar"
+  ]
  }
 }

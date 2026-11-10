@@ -1,0 +1,59 @@
+{
+ "already_current": 0,
+ "bundle_errors": [],
+ "coverage": {
+  "first": {
+   "name_mismatch": [],
+   "referenced_without_status": [],
+   "repeated_lines": [],
+   "stale_extractor": [],
+   "stored_without_status": [],
+   "texts_not_matching": []
+  },
+  "in_store": 1299,
+  "lines": 110428,
+  "name_mismatch": 0,
+  "ok": true,
+  "referenced": 110397,
+  "referenced_without_status": 0,
+  "repeated_lines": 0,
+  "stale_extractor": 0,
+  "stored_without_status": 0,
+  "texts_not_matching": 0
+ },
+ "errors": [],
+ "extractors": {
+  "html": "rg-html==1",
+  "json": "rg-sniff==1"
+ },
+ "finished_at": "2026-11-10T22:31:54Z",
+ "format": {
+  "docx": 3422,
+  "html": 77103,
+  "json": 70,
+  "ole2": 1950,
+  "otro": 35,
+  "pdf": 27839,
+  "rtf": 9
+ },
+ "max_memory_bytes": 2000000000,
+ "new_texts": 1293,
+ "oversize": 0,
+ "run_id": "2026-11-10T223122Z",
+ "started_at": "2026-11-10T22:31:22Z",
+ "status": {
+  "fallo": 565,
+  "formato_no_soportado": 2064,
+  "necesita_ocr": 1241,
+  "ok": 106558
+ },
+ "status_referenced": {
+  "fallo": 565,
+  "formato_no_soportado": 2033,
+  "necesita_ocr": 1241,
+  "ok": 106558
+ },
+ "timeout_s": 300,
+ "to_extract": 1299,
+ "workers": 4
+}
