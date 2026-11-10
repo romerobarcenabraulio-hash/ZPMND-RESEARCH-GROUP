@@ -141,6 +141,30 @@ class PrivacyAndRights(unittest.TestCase):
         self.assertTrue(validate('source_artifact', mutate(ARTIFACT, lambda a: a.update(stored_at='repo'))))
         self.assertEqual(validate('source_artifact', mutate(ARTIFACT, lambda a: a.update(stored_at='repo', redistribution='allowed'))), [])
 
+    def test_a_source_says_how_zpmnd_should_hold_it_and_why(self):
+        # owner 2026-11-09: native when a decision on it must be reproducible, on demand when it changes faster than it is
+        # used, its license allows metadata only or it is a huge corpus used sparsely; optional, so older packets stay valid
+        modo = lambda v, r, w='por_version': (lambda a: a.update(modo={'valor': v, 'razon': r, 'vigilancia': w}))
+        self.assertEqual(validate('source_artifact', ARTIFACT), [])
+        for v, r in (('nativo', 'reproducible'), ('a_pedido', 'cambia_rapido'), ('a_pedido', 'licencia'), ('a_pedido', 'corpus_grande')):
+            with self.subTest(valor=v, razon=r):
+                self.assertEqual(validate('source_artifact', mutate(ARTIFACT, modo(v, r))), [])
+        for v, r in (('nativo', 'cambia_rapido'), ('nativo', 'licencia'), ('nativo', 'corpus_grande'), ('a_pedido', 'reproducible'),
+                     ('otro', 'reproducible'), ('nativo', 'otro')):
+            with self.subTest(valor=v, razon=r):
+                self.assertTrue(validate('source_artifact', mutate(ARTIFACT, modo(v, r))))
+        self.assertTrue(validate('source_artifact', mutate(ARTIFACT, modo('nativo', 'reproducible', 'cada_rato'))))
+        self.assertTrue(validate('source_artifact', mutate(ARTIFACT, lambda a: a.update(modo={'valor': 'nativo', 'razon': 'reproducible'}))))
+
+    def test_a_source_licensed_for_metadata_only_cannot_be_held_natively(self):
+        meta = lambda v, r: (lambda a: a.update(redistribution='metadata_only', modo={'valor': v, 'razon': r, 'vigilancia': 'mensual'}))
+        self.assertTrue(validate('source_artifact', mutate(ARTIFACT, meta('nativo', 'reproducible'))))
+        self.assertEqual(validate('source_artifact', mutate(ARTIFACT, meta('a_pedido', 'licencia'))), [])
+        self.assertEqual(validate('source_artifact', mutate(ARTIFACT, lambda a: a.update(redistribution='metadata_only'))), [])
+        packet = mutate(PACKET, lambda p: p['artifacts'][0].update(redistribution='metadata_only',
+                                                                     modo={'valor': 'nativo', 'razon': 'reproducible', 'vigilancia': 'ninguna'}))
+        self.assertTrue(validate('research_packet', packet))  # the packet's artifacts are checked by the same rule
+
     def test_requested_demand_needs_request_id(self):
         self.assertTrue(validate('knowledge_demand', mutate(DEMAND, lambda d: d.update(origin='RESEARCH_REQUEST'))))
 
