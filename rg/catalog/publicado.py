@@ -5,7 +5,7 @@ Published = a line in <country>/texto/*.jsonl (texto-mx writes one per bundle me
 <country>/raw/publicados.txt (written by catalog-mx when it uploads a bundle). A bundle holds what the rows point to
 and is unpublished, never what one process remembers writing.
 
-    python -m rg.catalog.publicado --catalog data/mx [--anotar raw]    # exit 5 if a row points to an unpublished raw
+    python -m rg.catalog.publicado --catalog data/mx [--publicar raw > bundle.tar]   # exit 5: a row's raw is unpublished
 """
 import argparse
 import hashlib
@@ -38,7 +38,7 @@ def referencias(country_dir):
                 for rp in [e.get('raw_path')] + [v.get('raw_path') for v in e.get('versions', [])]:
                     if rp is None or rp == '':
                         continue
-                    m = RAW_PATH.match(rp) if isinstance(rp, str) else None
+                    m = RAW_PATH.fullmatch(rp) if isinstance(rp, str) else None
                     if m and m.group(1) == m.group(2)[:2]:
                         refs.setdefault(m.group(2), rp)
                     else:
@@ -67,13 +67,13 @@ def publicados(country_dir):
         for n, line in enumerate(f.read_text(encoding='utf-8').splitlines(), 1):
             if line.strip():
                 sha = json.loads(line).get('raw_sha256')
-                if not (isinstance(sha, str) and SHA.match(sha)):
+                if not (isinstance(sha, str) and SHA.fullmatch(sha)):
                     raise ValueError(f'{f.name}:{n}: raw_sha256 is not a sha256')
                 out.add(sha)
     ledger = d / LEDGER
     if ledger.exists():
         for n, line in enumerate(ledger.read_text(encoding='utf-8').splitlines(), 1):
-            if not SHA.match(line):
+            if not SHA.fullmatch(line):
                 raise ValueError(f'{LEDGER}:{n}: not a sha256')
             out.add(line)
     return out
@@ -92,11 +92,31 @@ def faltan(country_dir, raw_root=None):
     return {'por_publicar': por_publicar, 'perdidos': perdidos}
 
 
-def empaquetar(bundle, raw_root, rels):
-    """Write the tar of `rels` (faltan(...)['por_publicar']: on disk, pointed to, not published) under raw_root."""
-    with tarfile.open(bundle, 'w') as tar:
+class _Leido:
+    """The bytes tarfile copies, hashed as they pass: what is written is what is checked (GPT on e100e9c)."""
+    def __init__(self, fh):
+        self.fh, self.h = fh, hashlib.sha256()
+
+    def read(self, n=-1):
+        b = self.fh.read(n)
+        self.h.update(b)
+        return b
+
+
+def crudos(raw_root):
+    """Content addresses under raw_root that are regular files reached without links, sorted."""
+    rels = (f'sha256/{p.parent.name}/{p.name}' for p in Path(raw_root).glob('sha256/*/*'))
+    return sorted(r for r in rels if (m := RAW_PATH.fullmatch(r)) and m.group(1) == m.group(2)[:2] and _crudo(raw_root, r))
+
+
+def empaquetar(destino, raw_root, rels):
+    """Write the tar of rels to destino (a path, or a binary stream) and return their sha256. Each member is a regular
+    file reached without links whose bytes, hashed as they are written, are the ones its name says; anything else stops
+    the tar with an error, so its caller publishes nothing."""
+    shas = []
+    with (tarfile.open(destino, 'w') if isinstance(destino, (str, Path)) else tarfile.open(fileobj=destino, mode='w|')) as tar:
         for rel in rels:
-            m = RAW_PATH.match(rel)
+            m = RAW_PATH.fullmatch(rel)
             if not (m and m.group(1) == m.group(2)[:2]):
                 raise ValueError(f'{rel!r} is not a content address')
             fd = os.open(Path(raw_root) / rel, os.O_RDONLY | os.O_NOFOLLOW)  # a link is refused here, not followed
@@ -104,40 +124,36 @@ def empaquetar(bundle, raw_root, rels):
                 st = os.fstat(fh.fileno())
                 if not (stat.S_ISREG(st.st_mode) and _crudo(raw_root, rel)):
                     raise ValueError(f'{rel}: not a regular file reached without links')
-                h = hashlib.file_digest(fh, 'sha256')  # streamed, never the whole raw in memory
-                if h.hexdigest() != m.group(2):
-                    raise ValueError(f'{rel}: its bytes hash to {h.hexdigest()}')
-                fh.seek(0)
-                info = tarfile.TarInfo(rel)
+                info, src = tarfile.TarInfo(rel), _Leido(fh)
                 info.size, info.mode, info.mtime = st.st_size, 0o644, int(st.st_mtime)
-                tar.addfile(info, fh)  # the bytes just hashed, from the same open file
+                tar.addfile(info, src)
+                if src.h.hexdigest() != m.group(2):
+                    raise ValueError(f'{rel}: its bytes hash to {src.h.hexdigest()}')
+            shas.append(m.group(2))
+    return shas
 
 
-def anotar(country_dir, raw_root):
-    """Add to the ledger the sha256 of every raw file under raw_root (the members of the bundle just uploaded)."""
-    new = set()
-    for p in Path(raw_root).glob('sha256/*/*'):
-        rel = f'sha256/{p.parent.name}/{p.name}'
-        m = RAW_PATH.match(rel)
-        if m and m.group(1) == m.group(2)[:2] and _crudo(raw_root, rel):
-            new.add(m.group(2))
+def anotar(country_dir, shas):
+    """Add shas (the members of a bundle empaquetar wrote) to the ledger; returns how many were new."""
     ledger = Path(country_dir) / LEDGER
     old = set(ledger.read_text(encoding='utf-8').splitlines()) if ledger.exists() else set()
-    if new - old:
+    if set(shas) - old:
         ledger.parent.mkdir(parents=True, exist_ok=True)
-        ledger.write_text(''.join(f'{s}\n' for s in sorted(old | new)), encoding='utf-8')
-    return len(new - old)
+        ledger.write_text(''.join(f'{s}\n' for s in sorted(old | set(shas))), encoding='utf-8')
+    return len(set(shas) - old)
 
 
 def main(argv=None):
     a = argparse.ArgumentParser(description='every raw a catalog row points to is published')
     a.add_argument('--catalog', required=True, help='country folder of the data branch, e.g. data/mx')
-    a.add_argument('--anotar', metavar='RAW', help='add the raw files under RAW to the ledger, then check')
+    a.add_argument('--publicar', metavar='RAW', help='write the verified tar of RAW to stdout, add it to the ledger, check')
     x = a.parse_args(argv)
-    if x.anotar:
-        print(json.dumps({'anotados': anotar(x.catalog, x.anotar)}))
+    log = sys.stderr if x.publicar else sys.stdout  # stdout carries the tar then
+    if x.publicar:
+        shas = empaquetar(sys.stdout.buffer, x.publicar, crudos(x.publicar))
+        print(json.dumps({'publicados': len(shas), 'nuevos': anotar(x.catalog, shas)}), file=log)
     r = faltan(x.catalog)
-    print(json.dumps({'perdidos': len(r['perdidos']), 'muestra': r['perdidos'][:SAMPLE]}))
+    print(json.dumps({'perdidos': len(r['perdidos']), 'muestra': r['perdidos'][:SAMPLE]}), file=log)
     return 5 if r['perdidos'] else 0
 
 

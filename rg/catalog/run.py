@@ -11,6 +11,7 @@ import json
 import os
 import re
 import sys
+import tarfile
 import threading
 import time
 from collections import defaultdict
@@ -18,7 +19,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import hf_tesis, indicadores, leyesbiblio, normas, ojn, publicado, sidof
+from . import hf_tesis, indicadores, leyesbiblio, normas, ojn, sidof
 from .categorize import clean_text, doc_type, dof_doc_type, fold
 from .fetch import BudgetExhausted, Fetcher, FetchRefused, FileSink, Response, decode_html
 from .store import Catalog, RawStore
@@ -800,7 +801,7 @@ def main(argv=None):
     a.add_argument('--forward-days', type=int, default=30, help='first run: days back from today to index')
     a.add_argument('--index-days', type=int, default=120, help='older days to index per run, toward the floor')
     a.add_argument('--sources', help='comma-separated source ids (default: all active)')
-    a.add_argument('--bundle', help='write a tar of every raw the rows point to that is on disk and not published')
+    a.add_argument('--bundle', help='write a tar of the raw files new in this run')
     a.add_argument('--deadline-minutes', type=float, help='stop sending requests after this many minutes (job time limit)')
     x = a.parse_args(argv)
     today = date.fromisoformat(x.today) if x.today else datetime.now(CDMX).date()
@@ -816,6 +817,11 @@ def main(argv=None):
         manifest['errors'].append(f'run crashed: {crashed}')
         manifest['requests_total'], manifest['raw_new_files'] = run.used, len(run.raw.new_files)
         manifest['finished_at'] = now_iso()
+    if x.bundle and run.raw.new_files:
+        with tarfile.open(x.bundle, 'w') as tar:
+            for rel in sorted(run.raw.new_files):
+                tar.add(Path(x.raw) / rel, arcname=rel)
+        manifest['raw_bundle'] = Path(x.bundle).name
     recategorize(run.catalog.entries.values())
     removed = [0]
     run.catalog.entries = {eid: normalize_strings(e, removed) for eid, e in run.catalog.entries.items()}
@@ -827,13 +833,6 @@ def main(argv=None):
         manifest['errors'].append(f'{len(invalid)} entries quarantined (fail the catalog_entry schema), see quarantined')
     manifest = redact_secrets(manifest, secrets_in_env(run.registry))  # the manifest and the log never hold a token
     run.catalog.write()
-    falta = publicado.faltan(run.catalog.dir, x.raw)  # the rows as written: every raw they point to is published or here
-    manifest['coverage'].append({'source_id': 'raw', 'scope': 'crudos citados sin publicar ni en disco', 'expected': 0,
-                                 'extracted': len(falta['perdidos']), 'ok': not falta['perdidos'],
-                                 'entries': falta['perdidos'][:publicado.SAMPLE]})
-    if x.bundle and falta['por_publicar']:  # what the rows point to and is unpublished, not what this process wrote
-        publicado.empaquetar(x.bundle, x.raw, falta['por_publicar'])
-        manifest['raw_bundle'], manifest['raw_bundle_members'] = Path(x.bundle).name, len(falta['por_publicar'])
     if x.country.lower() == 'mx':  # NOM lineages come from the DOF; no other country has them
         dof = run.catalog.snapshot('mx.dof')
         manifest['nom_lineages'] = normas.write(run.catalog.dir, dof)

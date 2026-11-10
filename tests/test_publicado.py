@@ -9,12 +9,10 @@ import tarfile
 import tempfile
 import unittest
 from pathlib import Path
-from unittest import mock
 
 import yaml
 
 from rg.catalog import publicado
-from rg.catalog.run import Run, _artifact, main
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -100,13 +98,13 @@ class Ledger(unittest.TestCase):
         (self.raw / rel).symlink_to(real / f'{sha}.html')  # the file is a link
         self.rows(row('1', rel))
         self.assertEqual(publicado.faltan(self.mx, self.raw), {'por_publicar': [], 'perdidos': [rel]})
-        self.assertEqual(publicado.anotar(self.mx, self.raw), 0)
+        self.assertEqual(publicado.crudos(self.raw), [])
         with self.assertRaises(OSError):  # O_NOFOLLOW: a link is refused, not followed
             publicado.empaquetar(Path(self.tmp.name, 'b.tar'), self.raw, [rel])
         (self.raw / rel).unlink(); (self.raw / 'sha256' / sha[:2]).rmdir()
         (self.raw / 'sha256' / sha[:2]).symlink_to(real, target_is_directory=True)  # the folder is a link
         self.assertEqual(publicado.faltan(self.mx, self.raw)['por_publicar'], [])
-        self.assertEqual(publicado.anotar(self.mx, self.raw), 0)
+        self.assertEqual(publicado.crudos(self.raw), [])
         with self.assertRaisesRegex(ValueError, 'without links'):
             publicado.empaquetar(Path(self.tmp.name, 'b.tar'), self.raw, [rel])
 
@@ -139,67 +137,41 @@ class Ledger(unittest.TestCase):
         (self.raw / 'sha256' / wrong).mkdir(exist_ok=True)
         (self.raw / 'sha256' / wrong / (c + '.html')).write_bytes(b'c')  # in a folder that is not its prefix
         (self.raw / 'sha256' / a[:2] / (a + '.html.123.part')).write_bytes(b'x')  # a write cut short
-        self.assertEqual(publicado.anotar(self.mx, self.raw), 2)
-        self.assertEqual(publicado.anotar(self.mx, self.raw), 0)
+        self.assertEqual([r.split('/')[2][:64] for r in publicado.crudos(self.raw)], sorted([a, b]))
+        self.assertEqual((publicado.anotar(self.mx, [a, b]), publicado.anotar(self.mx, [b])), (2, 0))
         self.assertEqual((self.mx / 'raw' / 'publicados.txt').read_text(encoding='utf-8'), ''.join(f'{s}\n' for s in sorted([a, b])))
 
-    def test_main_refuses_with_5_until_the_raw_is_in_the_ledger(self):
-        _, rel = self.put(b'only on this disk')
+    def publicar(self, *extra):
+        return subprocess.run([sys.executable, '-m', 'rg.catalog.publicado', '--catalog', str(self.mx), *extra], cwd=ROOT,
+                              capture_output=True, timeout=60)
+
+    def test_as_the_workflow_calls_it_the_tar_on_stdout_and_the_ledger_are_the_same_verified_members(self):
+        a, ra = self.put(b'only on this disk')
+        self.rows(row('1', ra))
+        self.assertEqual(self.publicar().returncode, 5)
+        p = self.publicar('--publicar', str(self.raw))
+        self.assertEqual(p.returncode, 0, p.stderr)
+        with tarfile.open(fileobj=io.BytesIO(p.stdout)) as tar:
+            self.assertEqual([(m.name, tar.extractfile(m).read()) for m in tar], [(ra, b'only on this disk')])
+        self.assertEqual((self.mx / 'raw' / 'publicados.txt').read_text(encoding='utf-8'), a + '\n')
+        self.assertIn(b'"perdidos": 0', p.stderr)
+
+    def test_a_raw_whose_name_is_not_its_bytes_stops_the_publication_and_the_ledger(self):
+        _, rel = rel_of(b'what the name says')
+        (self.raw / rel).parent.mkdir(parents=True)
+        (self.raw / rel).write_bytes(b'other bytes')
         self.rows(row('1', rel))
-        out = io.StringIO()
-        with contextlib.redirect_stdout(out):
-            self.assertEqual(publicado.main(['--catalog', str(self.mx)]), 5)
-            self.assertEqual(publicado.main(['--catalog', str(self.mx), '--anotar', str(self.raw)]), 0)
-        self.assertIn(rel, out.getvalue().splitlines()[0])
+        p = self.publicar('--publicar', str(self.raw))
+        self.assertNotEqual(p.returncode, 0)  # the pipe fails, the step fails, nothing is committed
+        self.assertIn(b'hash to', p.stderr)
+        self.assertFalse((self.mx / 'raw' / 'publicados.txt').exists())
 
-    def test_the_module_runs_as_the_workflow_calls_it(self):
-        _, rel = rel_of(b'x')
-        self.rows(row('1', rel))
-        p = subprocess.run([sys.executable, '-m', 'rg.catalog.publicado', '--catalog', str(self.mx)], cwd=ROOT,
-                           capture_output=True, text=True, timeout=60)
-        self.assertEqual(p.returncode, 5, p.stderr)
-
-
-class Incident(unittest.TestCase):
-    """The run itself: its bundle holds what the rows point to and is unpublished, never only what it wrote now."""
-
-    def run_main(self, tmp, body, on_disk_before, *extra):
-        out, raw = Path(tmp, 'o'), Path(tmp, 'r')
-        sha, rel = rel_of(body)
-        if on_disk_before:  # left by an earlier attempt on the same disk
-            (raw / rel).parent.mkdir(parents=True)
-            (raw / rel).write_bytes(body)
-
-        def runner(self_, src):
-            dof = next(s for s in self_.registry['sources'] if s['source_id'] == 'mx.dof')
-            url = 'https://sidof.segob.gob.mx/notas/5799706'
-            got_sha, got_rel = (self_.raw.put(body, 'html') if on_disk_before else (sha, rel))
-            cat = {'jurisdiction': 'federal', 'collection': 'DOF', 'doc_type': 'ACUERDO'}
-            self_.catalog.upsert({'entry_id': 'mx.dof:5799706', 'country': 'MX', 'source_id': 'mx.dof', 'native_id': '5799706', 'title': 'Acuerdo x', 'url': url, 'first_seen': '2026-10-20T00:00:00Z', 'category': cat, 'dates': {'published': '2026-10-20'}, 'raw_status': 'stored', 'raw_path': got_rel, 'artifact': _artifact(dof, url, got_sha, body, 'text/html', got_rel)})
-            return {}
-        log = io.StringIO()
-        with mock.patch.object(Run, 'run_indicadores', runner), contextlib.redirect_stdout(log):
-            rc = main(['--country', 'mx', '--out', str(out), '--raw', str(raw), '--sources', 'mx.inegi-bie', *extra])
-        manifest = json.loads(next((out / 'mx' / 'runs').glob('*.json')).read_text(encoding='utf-8'))
-        return rc, rel, manifest
-
-    def test_a_file_an_earlier_attempt_left_on_the_disk_goes_in_the_bundle(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            bundle = Path(tmp, 'b.tar')
-            rc, rel, manifest = self.run_main(tmp, b'<html>nota</html>', True, '--bundle', str(bundle))
-            with tarfile.open(bundle) as tar:
-                self.assertEqual(tar.getnames(), [rel])
-        self.assertEqual(manifest['raw_bundle_members'], 1)
-        self.assertEqual(rc, 0)
-        self.assertTrue(next(c for c in manifest['coverage'] if c['source_id'] == 'raw')['ok'])
-
-    def test_a_row_whose_bytes_are_nowhere_fails_the_run(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            rc, rel, manifest = self.run_main(tmp, b'<html>perdida</html>', False, '--bundle', str(Path(tmp, 'b.tar')))
-            self.assertFalse(Path(tmp, 'b.tar').exists())
-        check = next(c for c in manifest['coverage'] if c['source_id'] == 'raw')
-        self.assertEqual((check['ok'], check['extracted'], check['entries']), (False, 1, [rel]))
-        self.assertEqual(rc, 3)
+    def test_a_trailing_newline_never_makes_a_reference_or_a_ledger_line(self):
+        sha, rel = rel_of(b'x')
+        self.rows(row('1', rel + '\n'))
+        (self.mx / 'raw').mkdir()
+        (self.mx / 'raw' / 'publicados.txt').write_text(sha + '\n', encoding='utf-8')
+        self.assertEqual(len(publicado.faltan(self.mx)['perdidos']), 1)  # malformed, so lost even with its sha published
 
 
 class Workflow(unittest.TestCase):
@@ -207,7 +179,8 @@ class Workflow(unittest.TestCase):
         steps = yaml.safe_load((ROOT / '.github' / 'workflows' / 'catalog-mx.yml').read_text(encoding='utf-8'))['jobs']['run']['steps']
         names = [s.get('name', '') for s in steps]
         up = steps[next(i for i, n in enumerate(names) if n.startswith('Upload raw bundle'))]['run']
-        self.assertLess(up.index('python -m rg.catalog.publicado --catalog data/mx --anotar raw'), up.index('rm -rf raw'))
+        self.assertLess(up.index('python -m rg.catalog.publicado --catalog data/mx --publicar raw | split -b 1900m'), up.index('rm -rf raw'))
+        self.assertIn('set -euo pipefail', up)  # a publicado that fails fails the pipe
         gate = names.index('Every raw a row points to is published, or nothing is committed')
         self.assertEqual(steps[gate]['run'], 'python -m rg.catalog.publicado --catalog data/mx')
         self.assertNotIn('if', steps[gate])
