@@ -1,0 +1,370 @@
+{
+ "request_id": "RR-2026-11-08-familia-b-estandares-tecnicos",
+ "fetched": [
+  {
+   "url": "https://www.iso.org/open-data.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.iso.org/open-data.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:19Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://github.com/metanorma/iso-data-importer",
+   "status": 200,
+   "error": null,
+   "sha256": "263f3cae04c404c68309a67e15e6302218d633b3e347cfe11a28b94fc3a4fe38",
+   "bytes": 360561,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:19Z",
+   "text_status": "ok",
+   "text_chars": 12597
+  },
+  {
+   "url": "https://catalogomexicanodenormas.economia.gob.mx/",
+   "status": "refused",
+   "error": "robots.txt disallows https://catalogomexicanodenormas.economia.gob.mx/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:21Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://platiica.economia.gob.mx/normas-mexicanas-nmx/",
+   "status": 200,
+   "error": null,
+   "sha256": "5fd0ecb0903bad4e2be682661952fbba407a5d9f6a6057443ea965b764dda70a",
+   "bytes": 91792,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:27Z",
+   "text_status": "ok",
+   "text_chars": 1865
+  },
+  {
+   "url": "https://www.sinec.gob.mx/SINEC/",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.sinec.gob.mx/SINEC/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:30Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.rfc-editor.org/rfc-index.xml",
+   "status": 200,
+   "error": null,
+   "sha256": "4c921e6d1f24ee5d226de6cd71d208d794ed8fd39ecbe2f198ceb9e312b47aea",
+   "bytes": 13750210,
+   "media_type": "application/xml",
+   "retrieved_at": "2026-11-11T16:48:35Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 13750085
+  },
+  {
+   "url": "https://www.w3.org/policies/process/",
+   "status": 200,
+   "error": null,
+   "sha256": "f9aed05872f8669701c73f1b5dae32afc88ccc1a57b06a444506a3af35befb23",
+   "bytes": 674015,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:36Z",
+   "text_status": "ok",
+   "text_chars": 210204
+  },
+  {
+   "url": "https://w3c.github.io/browser-specs/",
+   "status": 200,
+   "error": null,
+   "sha256": "dcdf39e9793dddfde84001e71b90728e0a417765e7d193050dace8e474ddf9f2",
+   "bytes": 61640,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:37Z",
+   "text_status": "ok",
+   "text_chars": 27198
+  },
+  {
+   "url": "https://www.itu.int/itu-t/recommendations/rec.aspx?rec=X.509",
+   "status": 200,
+   "error": null,
+   "sha256": "f17b68d2965c3a76fa6c447baaaa8804076002e94f092bedf7945fbbb7526ac9",
+   "bytes": 160446,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:38Z",
+   "text_status": "ok",
+   "text_chars": 6775
+  },
+  {
+   "url": "https://webstore.iec.ch/en/terms-conditions",
+   "status": 200,
+   "error": null,
+   "sha256": "76c9f10b6ce7ddfcd275ae1e758650ae102a72174b1e6d95da50ea53e6c53b41",
+   "bytes": 364343,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:41Z",
+   "text_status": "ok",
+   "text_chars": 10921
+  },
+  {
+   "url": "https://developer.ieee.org/docs/read/Metadata_API_responses",
+   "status": 200,
+   "error": null,
+   "sha256": "de03aa311ec54a261cb6c60ab860bc641ec2666e2a49eb4d83fbc885905c12a8",
+   "bytes": 24495,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:42Z",
+   "text_status": "ok",
+   "text_chars": 5538
+  },
+  {
+   "url": "https://standards.cencenelec.eu/dyn/www/f?p=205%3A105%3A0%3A%3A%3A%3A%3A",
+   "status": "refused",
+   "error": "robots.txt disallows https://standards.cencenelec.eu/dyn/www/f?p=205%3A105%3A0%3A%3A%3A%3A%3A",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:44Z",
+   "text_status": null,
+   "text_chars": null
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43061660377",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "El índice del RFC Editor es un volcado XML que expone por RFC la clave, título, fecha y relaciones de sustitución (obsoleted-by).",
+    "now": "El índice del RFC Editor (rfc-index.xml) registra relaciones de sustitución (obsoleted-by), p. ej. con RFC10.",
+    "cut": "Que sea un volcado y que exponga por RFC la clave, título y fecha."
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "El índice RFC declara estado actual por entrada; RFC20 figura como Internet Standard.",
+    "now": "El índice RFC declara un estado actual por entrada, p. ej. Internet Standard.",
+    "cut": "Que la entrada sea RFC20."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "IEC prohíbe copiar o publicar sus productos sin permiso escrito.",
+    "now": "Los términos de IEC establecen que no se debe copiar, transferir, vender, licenciar, arrendar, dar, modificar, publicar, ceder, transmitir ni reproducir de otro modo.",
+    "cut": "Que se refiera a 'sus productos' y la condición 'sin permiso escrito'."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "IEC prohíbe el uso de robots o scripts para extraer datos de sus productos.",
+    "now": "Los términos de IEC mencionan el uso de robots, scripts u otros mecanismos manuales o automáticos para extraer datos (data mine o scrape) de los productos IEC.",
+    "cut": "Que IEC lo prohíba."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "El glosario de PLATIICA define NMX como de cumplimiento voluntario.",
+    "now": "PLATIICA indica que el cumplimiento de las NMX es de carácter voluntario.",
+    "cut": "Que sea un glosario."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Catálogos oficiales mexicanos (SE: Catálogo Mexicano de Normas, PLATIICA, SINEC)",
+   "Datos abiertos del organismo (ISO Open Data, ODC-By)",
+   "Índices del propio organismo (RFC Editor, ITU-T, OASIS, W3C)",
+   "Términos de uso / licencias del sitio (IEC, ANSI, ASTM, UL)",
+   "API del proveedor (IEEE Xplore Metadata API)",
+   "Catálogos con exportación (CEN-CENELEC)",
+   "Definiciones de estado (IEEE, SAE, BSI, ASME)",
+   "Secundario: importadores/agregadores (metanorma, browser-specs)"
+  ],
+  "searches": [
+   {
+    "query": "ISO Open Data catalogue standards metadata download licence",
+    "intent": "official"
+   },
+   {
+    "query": "Catálogo Mexicano de Infraestructura de la Calidad NOM NMX consulta normas",
+    "intent": "official"
+   },
+   {
+    "query": "RFC Editor rfc-index.xml format status obsoletes updated by",
+    "intent": "official"
+   },
+   {
+    "query": "W3C API technical reports specifications status obsoleted by superseded",
+    "intent": "official"
+   },
+   {
+    "query": "IEC webstore metadata standards open data API terms of use",
+    "intent": "limitations"
+   },
+   {
+    "query": "ITU-T recommendations status in force superseded database list",
+    "intent": "official"
+   },
+   {
+    "query": "ASTM terms of use website data scraping standards catalog copyright",
+    "intent": "limitations"
+   },
+   {
+    "query": "IEEE Standards Association standards status active withdrawn superseded search metadata IEEE Xplore API",
+    "intent": "official"
+   },
+   {
+    "query": "NFPA codes and standards list edition next edition free access terms of use",
+    "intent": "limitations"
+   },
+   {
+    "query": "CEN CENELEC standards catalogue search open data",
+    "intent": "official"
+   },
+   {
+    "query": "ANSI NSSN search standards metadata ANSI Webstore terms of use",
+    "intent": "limitations"
+   },
+   {
+    "query": "OASIS Open standards list status approved metadata IPR",
+    "intent": "official"
+   },
+   {
+    "query": "ISO open data deliverables metadata dataset fields total records license ODC-By",
+    "intent": "support"
+   },
+   {
+    "query": "API Standards store terms of use catalog status",
+    "intent": "official"
+   },
+   {
+    "query": "SAE Mobilus standards status stabilized cancelled superseded terms of use",
+    "intent": "official"
+   },
+   {
+    "query": "UL Standards catalog status edition terms of use",
+    "intent": "limitations"
+   },
+   {
+    "query": "ASME codes and standards catalog status withdrawn reaffirmed supersedes terms of use",
+    "intent": "official"
+   },
+   {
+    "query": "BSI Knowledge DIN Media catalogue metadata status withdrawn superseded terms",
+    "intent": "official"
+   }
+  ],
+  "not_found": [
+   "B05 ASTM: no se halló página de términos del sitio sobre metadatos; solo el License Agreement (prohíbe descarga sistemática de material) en astm.org/astm-license-agreement.",
+   "B06 NFPA: no se vio la página oficial de términos del lector; solo acceso gratuito de lectura (con cuenta), sin descarga/scraping, según resúmenes.",
+   "B07 ASME, B08 API, B11 SAE: no se halló índice abierto, API/volcado ni términos de metadatos oficiales; solo listas de retiradas de ASME y definiciones de estado SAE Mobilus FAQ.",
+   "B09 DIN y BS: sin términos ni API verificados; BSI Knowledge muestra Current/Withdrawn en ficha.",
+   "B10 ANSI: términos (webstore.ansi.org/Info/Terms) limitan reproducción a uso personal; NSSN declara >300,000 registros (brochure, sin fecha verificada).",
+   "B12 UL: términos de ulse.org limitan a uso personal no comercial; no hay volcado.",
+   "B14 OASIS: página /standards/ existe pero no se leyó su contenido ni licencia.",
+   "Totales declarados con fecha de corte: no hallados para ningún catálogo salvo IEEE Xplore (facetas) y ANSI NSSN; ISO sin conteo visible.",
+   "Citas literales de términos de ≤300 caracteres y sha256: no obtenidos (solo búsqueda, sin descarga).",
+   "B01: no se confirmó volcado/API ni términos de reutilización del Catálogo Mexicano de Normas; estado y sustitución por verificar."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://www.iso.org/open-data.html",
+    "family": "ISO Open Data",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Volcado gratuito (Parquet/JSONL/CSV) con campos reference, edition, currentStage, replaces, replacedBy, publicationDate, scope; licencia ODC-By 1.0; actualización diaria. Total de registros no visto: contar tras bajar y calcular sha256."
+   },
+   {
+    "url": "https://github.com/metanorma/iso-data-importer",
+    "family": "Importadores secundarios",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Herramienta de terceros que consume ISO Open Data; solo candidate_claim, útil para ver URLs/esquema de los archivos."
+   },
+   {
+    "url": "https://catalogomexicanodenormas.economia.gob.mx/",
+    "family": "Catálogo MX",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Índice oficial de NOM y NMX (vigentes y canceladas); canal web; términos y volcado/API por verificar."
+   },
+   {
+    "url": "https://platiica.economia.gob.mx/normas-mexicanas-nmx/",
+    "family": "Catálogo MX",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Portal oficial de NMX; las NMX de ONN están bajo derecho de autor y no se muestra su texto (según resumen de búsqueda)."
+   },
+   {
+    "url": "https://www.sinec.gob.mx/SINEC/",
+    "family": "Catálogo MX",
+    "stance": "context",
+    "role": "primary",
+    "why": "Sistema que alberga catálogo y proyectos de NOM/NMX; canal alterno de consulta."
+   },
+   {
+    "url": "https://www.rfc-editor.org/rfc-index.xml",
+    "family": "IETF RFC",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Volcado oficial en XML con estado, fecha, obsoletes/obsoleted-by, updates/updated-by; permite contar RFC y fecha de corte."
+   },
+   {
+    "url": "https://www.w3.org/policies/process/",
+    "family": "W3C",
+    "stance": "context",
+    "role": "primary",
+    "why": "Define Superseded y Obsolete para Recomendaciones; base de la semántica de sustitución."
+   },
+   {
+    "url": "https://w3c.github.io/browser-specs/",
+    "family": "W3C",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Lista legible por máquina con obsoletedBy; secundaria respecto a la API W3C (que expone superseded-by)."
+   },
+   {
+    "url": "https://www.itu.int/itu-t/recommendations/rec.aspx?rec=X.509",
+    "family": "ITU-T",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Muestra por edición estado In force/Superseded, fecha de aprobación; ejemplo del canal de índice."
+   },
+   {
+    "url": "https://webstore.iec.ch/en/terms-conditions",
+    "family": "IEC",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Prohíbe robots/scraping sin permiso escrito; límite para reutilizar metadatos del Webstore."
+   },
+   {
+    "url": "https://developer.ieee.org/docs/read/Metadata_API_responses",
+    "family": "IEEE",
+    "stance": "supports",
+    "role": "primary",
+    "why": "API con standard_status y standard_number; requiere llave (por verificar términos y cobertura)."
+   },
+   {
+    "url": "https://standards.cencenelec.eu/dyn/www/f?p=205%3A105%3A0%3A%3A%3A%3A%3A",
+    "family": "CEN/EN",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Índice oficial con estado y exportación a xls; no se halló API ni volcado documentado."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ },
+ "cut": [
+  {
+   "artifact_id": "SA-4c921e6d1f24ee5d226de6cd",
+   "read": 324902,
+   "of": 13750085
+  }
+ ]
+}
