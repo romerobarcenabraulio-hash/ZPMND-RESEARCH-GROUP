@@ -1,4 +1,5 @@
 """rg/catalog/publicado.py (SECURITY.md T30): replays the 2026-11-09 incident and the guard's edges."""
+import contextlib
 import hashlib
 import io
 import json
@@ -12,7 +13,7 @@ from pathlib import Path
 import yaml
 
 from rg.catalog import publicado
-from rg.catalog.run import _artifact
+from rg.catalog.run import _artifact, main as catalog_run
 
 ROOT = Path(__file__).resolve().parents[1]
 DOF = {'source_type': 'primary_official', 'publisher': 'DOF', 'license': 'LFDA', 'redistribution': 'allowed'}
@@ -163,6 +164,12 @@ class Ledger(unittest.TestCase):
         with tarfile.open(fileobj=io.BytesIO(p.stdout)) as tar:
             self.assertEqual(tar.getnames(), [ra])
         self.assertEqual(self.publicar().returncode, 5)  # the gate step: no commit while a row's raw is lost
+
+    def test_a_catalog_run_has_no_bundle_of_its_own(self):
+        # its --bundle packed the files new to that process and left 1,166 rows without bytes: one bundler reads the rows
+        with contextlib.redirect_stderr(err := io.StringIO()), self.assertRaises(SystemExit) as cm:
+            catalog_run(['--country', 'mx', '--out', self.tmp.name, '--raw', str(self.raw), '--bundle', 'x.tar'])
+        self.assertEqual((cm.exception.code, 'unrecognized arguments: --bundle x.tar' in err.getvalue()), (2, True))
 
     def test_a_missing_or_empty_catalog_never_passes_and_writes_no_ledger(self):
         for cat, text in ((self.tmp.name + '/nada', None), (str(self.mx), None), (str(self.mx), ''), (str(self.mx), ' \n\t\n')):
