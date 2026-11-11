@@ -1,0 +1,294 @@
+{
+ "country": "MX",
+ "coverage": [
+  {
+   "expected": 59678,
+   "extracted": 59678,
+   "ok": true,
+   "scope": "tesis_scjn_v5_complete.json @ f233341df3b9 (total_points declarado vs filas leídas)",
+   "source_id": "mx.hf-tesis-scjn"
+  },
+  {
+   "expected": 51189,
+   "extracted": 51189,
+   "ok": true,
+   "scope": "tesis_scjn_v5_complete.json @ f233341df3b9 (registros digitales distintos vs catalogados)",
+   "source_id": "mx.hf-tesis-scjn"
+  },
+  {
+   "expected": 319,
+   "extracted": 319,
+   "ok": true,
+   "scope": "index.htm (every PDF on the page accounted for)",
+   "source_id": "mx.leyes-federales"
+  },
+  {
+   "expected": null,
+   "extracted": 0,
+   "ok": false,
+   "scope": "SF43718 (serie no leída)",
+   "source_id": "mx.banxico-sie"
+  },
+  {
+   "expected": null,
+   "extracted": 0,
+   "ok": false,
+   "scope": "SP68257 (serie no leída)",
+   "source_id": "mx.banxico-sie"
+  },
+  {
+   "expected": null,
+   "extracted": 0,
+   "ok": false,
+   "scope": "SF331451 (serie no leída)",
+   "source_id": "mx.banxico-sie"
+  },
+  {
+   "expected": null,
+   "extracted": 0,
+   "ok": false,
+   "scope": "SF43783 (serie no leída)",
+   "source_id": "mx.banxico-sie"
+  },
+  {
+   "expected": 694,
+   "extracted": 694,
+   "ok": true,
+   "scope": "910392 serie histórica completa (observaciones servidas vs catalogadas)",
+   "source_id": "mx.inegi-bie"
+  },
+  {
+   "expected": 962,
+   "extracted": 962,
+   "ok": true,
+   "scope": "edo 1 poder 1 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 962,
+   "extracted": 962,
+   "ok": true,
+   "scope": "edo 1 poder 1 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 163,
+   "extracted": 163,
+   "ok": true,
+   "scope": "regla.htm (every PDF on the page accounted for)",
+   "source_id": "mx.reglamentos-federales"
+  },
+  {
+   "expected": 464,
+   "extracted": 464,
+   "ok": true,
+   "scope": "edo 1 poder 2 (filas leídas vs total impreso)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 458,
+   "extracted": 458,
+   "ok": true,
+   "scope": "edo 1 poder 2 (fichas distintas en la página vs catalogadas)",
+   "source_id": "mx.ojn-estatal"
+  },
+  {
+   "expected": 79,
+   "extracted": 79,
+   "ok": true,
+   "scope": "2026-11-08",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 79,
+   "extracted": 79,
+   "ok": true,
+   "scope": "2026-11-08 fecha oficial",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 44,
+   "extracted": 44,
+   "ok": true,
+   "scope": "2026-11-09",
+   "source_id": "mx.dof"
+  },
+  {
+   "expected": 44,
+   "extracted": 44,
+   "ok": true,
+   "scope": "2026-11-09 fecha oficial",
+   "source_id": "mx.dof"
+  },
+  {
+   "entries": [],
+   "expected": 0,
+   "extracted": 0,
+   "ok": true,
+   "scope": "titulos con NOM sin codigo leido",
+   "source_id": "mx.normas"
+  },
+  {
+   "entries": [],
+   "expected": 1940,
+   "extracted": 1931,
+   "ok": true,
+   "scope": "decretos de tratado: chequeo independiente vs tabla fija",
+   "source_id": "mx.tratados"
+  },
+  {
+   "entries": [],
+   "expected": 1908,
+   "extracted": 1902,
+   "ok": true,
+   "scope": "decretos de la SRE con acto sobre un instrumento: emisor vs tabla fija",
+   "source_id": "mx.tratados"
+  }
+ ],
+ "errors": [
+  "mx.banxico-sie: request budget reached (continues next run)",
+  "mx.leyes-federales: request budget reached (continues next run)",
+  "mx.ojn-estatal: request budget reached (continues next run)",
+  "mx.reglamentos-federales: request budget reached (continues next run)",
+  "mx.dof: request budget reached (continues next run)",
+  "mx.ojn-municipal: request budget reached (continues next run)"
+ ],
+ "finished_at": "2026-11-11T00:28:08Z",
+ "invisible_chars_removed": 0,
+ "nom_lineages": 1946,
+ "planned_sources": {
+  "mx.conamer-cnartys": "catalogonacional.gob.mx answers robots.txt with 403 and cna.conamer.gob.mx does not resolve (2026-10-19).",
+  "mx.congresos-locales": "32 different sites and formats; the OJN compilation (mx.ojn-estatal) covers state legislation meanwhile",
+  "mx.datos-gob": "robots.txt disallows /api/ and asks Crawl-Delay 10; no bulk export found (data.json, catalog.json: 404). Needs an operator-approved export or permission.",
+  "mx.normas-nom-nmx": "www.sinec.gob.mx and sinec.gob.mx do not resolve (2026-10-19); the OJN NOM catalog page is from 2014. NOMs, PROY-NOMs and comment responses are catalogued from the DOF (doc_type NORMA OFICIAL MEXICANA, PROYECTO DE NORMA OFICIAL MEXICANA, RESPUESTA A COMENTARIOS). NMX texts are often sold: metadata only.",
+  "mx.periodicos-oficiales-estatales": "32 different sites and formats; one adapter per format",
+  "mx.scjn-sjf": "sjf2.scjn.gob.mx answers robots.txt with 403 (JSON, looks like a firewall), 2026-10-19; access method and terms not yet reviewed. Sentences of the SCJN Pleno published in the DOF are already catalogued (doc_type SENTENCIA). Tesis are catalogued meanwhile from the secondary source mx.hf-tesis-scjn.",
+  "mx.tratados-sre": "cja.sre.gob.mx/tratadosmexico serves a Radware bot-protection challenge page (2026-10-19); bot protection is never bypassed. Needs an official export or operator permission. The OJN treaty list is a 2012 compilation (stale), not used as primary."
+ },
+ "quarantined": {},
+ "raw_new_files": 2,
+ "requests_total": 22,
+ "robots": {
+  "https://huggingface.co": {
+   "redirects": 0,
+   "status": 200,
+   "url": "https://huggingface.co/robots.txt"
+  },
+  "https://sidof.segob.gob.mx": {
+   "redirects": 0,
+   "status": 200,
+   "url": "https://sidof.segob.gob.mx/robots.txt"
+  },
+  "https://www.banxico.org.mx": {
+   "redirects": 1,
+   "status": 200,
+   "url": "https://anterior.banxico.org.mx/robots.txt"
+  },
+  "https://www.diputados.gob.mx": {
+   "redirects": 0,
+   "status": 404,
+   "url": "https://www.diputados.gob.mx/robots.txt"
+  },
+  "https://www.inegi.org.mx": {
+   "redirects": 0,
+   "status": 200,
+   "url": "https://www.inegi.org.mx/robots.txt"
+  },
+  "https://www.ordenjuridico.gob.mx": {
+   "redirects": 0,
+   "status": 404,
+   "url": "https://www.ordenjuridico.gob.mx/robots.txt"
+  }
+ },
+ "run_id": "2026-11-11T002758Z",
+ "sources": {
+  "mx.banxico-sie": {
+   "entries_changed": 0,
+   "entries_new": 0,
+   "observations_served": 0,
+   "raw": {
+    "metadatos": "sha256/38/38d31dc5dd0eca326ff06dc2e60532c9361c5ae266b0802b348263bb389bb9a8.json"
+   },
+   "raw_stored": 1,
+   "requests": 3,
+   "series": 4
+  },
+  "mx.dof": {
+   "days_indexed": 2,
+   "days_owed_at_end": 0,
+   "days_requeued": 0,
+   "days_short_unresolved": 0,
+   "notes_dated_by_page": 0,
+   "notes_new": 0,
+   "raw_failed": 0,
+   "raw_robots_disallowed": 0,
+   "raw_skipped_metadata_only": 260460,
+   "raw_stored": 0,
+   "requests": 3
+  },
+  "mx.hf-tesis-scjn": {
+   "distinct": 0,
+   "downloaded": false,
+   "new_entries": 0,
+   "requests": 2,
+   "rows_read": 0,
+   "source_repeated_rows": 0,
+   "source_rows_without_registro": 0,
+   "source_rows_without_registro_point_ids": [],
+   "source_rows_without_rubro": 0,
+   "source_rows_without_rubro_point_ids": []
+  },
+  "mx.inegi-bie": {
+   "entries_changed": 0,
+   "entries_new": 0,
+   "observations_served": 694,
+   "raw": {
+    "910392": "sha256/6b/6b6d59dbc5562eddfc7e0c21e5bcba7ea2d177584ab9d9dba13143cf2e1a76a6.json"
+   },
+   "raw_stored": 1,
+   "requests": 2,
+   "series": 1
+  },
+  "mx.leyes-federales": {
+   "listed": 318,
+   "new_instruments": 0,
+   "new_versions": 0,
+   "raw_failed": 0,
+   "requests": 3,
+   "unchanged": 1
+  },
+  "mx.ojn-estatal": {
+   "listed": 1420,
+   "listings": 2,
+   "new_instruments": 0,
+   "no_document_link": 0,
+   "raw_failed": 0,
+   "raw_stored": 0,
+   "raw_unchanged": 0,
+   "reform_changed": 0,
+   "requests": 3,
+   "source_repeated_rows": 6
+  },
+  "mx.ojn-municipal": {
+   "listed": 0,
+   "municipalities_listed": 0,
+   "new_instruments": 0,
+   "no_document_link": 0,
+   "raw_failed": 1,
+   "raw_stored": 0,
+   "raw_unchanged": 0,
+   "requests": 3,
+   "states": 0
+  },
+  "mx.reglamentos-federales": {
+   "listed": 150,
+   "new_instruments": 0,
+   "new_versions": 0,
+   "raw_failed": 0,
+   "requests": 3,
+   "unchanged": 1
+  }
+ },
+ "started_at": "2026-11-11T00:27:58Z",
+ "treaty_instruments": 1131
+}
