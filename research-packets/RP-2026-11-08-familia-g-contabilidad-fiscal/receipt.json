@@ -1,0 +1,267 @@
+{
+ "request_id": "RR-2026-11-08-familia-g-contabilidad-fiscal",
+ "fetched": [
+  {
+   "url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/rmf/RMF_2026-DOF-28122025.pdf",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/rmf/RMF_2026-DOF-28122025.pdf",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:09Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/compiladas/Compilado_Tercera_Modificacion_a_la-Resolucion_Miscelanea_Fiscal_para_2026.pdf",
+   "status": "refused",
+   "error": "robots.txt disallows https://sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/compiladas/Compilado_Tercera_Modificacion_a_la-Resolucion_Miscelanea_Fiscal_para_2026.pdf",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:09Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/index1.htm",
+   "status": 200,
+   "error": null,
+   "sha256": "ad5a90b98a2a111c4f96dfc2c4113ec4790ee1b2ce4f874d74213f14662e7fc4",
+   "bytes": 588796,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:09Z",
+   "text_status": "ok",
+   "text_chars": 31511
+  },
+  {
+   "url": "https://www.cinif.org.mx/normatividad_NIF2026.php",
+   "status": 200,
+   "error": null,
+   "sha256": "38acef7b7d0df2b6a061e9162d0255ae542cc77eaab0de4ebc4c9723ae3a90cb",
+   "bytes": 23093,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:11Z",
+   "text_status": "ok",
+   "text_chars": 5261
+  },
+  {
+   "url": "https://www.ifrs.org/legal/terms-and-conditions/",
+   "status": 200,
+   "error": null,
+   "sha256": "94df8c3731aaf0324b98904c4aafc49155ee27e54bfd943ec84043de188ed2fc",
+   "bytes": 156210,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:12Z",
+   "text_status": "ok",
+   "text_chars": 49428
+  },
+  {
+   "url": "https://www.ifrs.org/products-and-services/ifrs-accounting-licensing/",
+   "status": 200,
+   "error": null,
+   "sha256": "a9e20b2994381c7743752518ac3a3b01d15627911150346243c4f8065d8ed021",
+   "bytes": 119991,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:14Z",
+   "text_status": "ok",
+   "text_chars": 12834
+  },
+  {
+   "url": "https://ifacweb.blob.core.windows.net/publicfiles/2026-09/IAASB-Handbook-2026-Edition-Volume-2.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "9f7757949c193c8fc82ba49839670ad658cbe647f423a0a6895eff15447e999d",
+   "bytes": 1647161,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-11T16:48:15Z",
+   "text_status": "fallo",
+   "text_chars": null
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43061693961",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "El índice de la Cámara de Diputados registra el Código Fiscal de la Federación con fecha de publicación original 31/12/1981 y última reforma DOF 09/04/2026.",
+    "now": "El índice de Leyes Federales de México registra el Código Fiscal de la Federación con las fechas DOF 31/12/1981 y DOF 09/04/2026.",
+    "cut": "Que el índice sea de la Cámara de Diputados (eso solo lo dice la dirección, no la cita) y las etiquetas «fecha de publicación original» y «última reforma». La cita da las dos fechas DOF sin decir qué es cada una."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Emisores oficiales mexicanos (SAT, DOF, Cámara de Diputados)",
+   "Emisor de NIF (CINIF) y distribuidor IMCP",
+   "IFRS Foundation (licencia)",
+   "FASB ASC",
+   "IAASB/IFAC",
+   "OCDE",
+   "Proveedores secundarios (Scribd, blogs)"
+  ],
+  "searches": [
+   {
+    "query": "SAT CFDI 4.0 Anexo 20 esquemas XSD catálogos vigentes",
+    "intent": "official"
+   },
+   {
+    "query": "CINIF NIF 2026 vigentes licencia de uso derechos de autor",
+    "intent": "official"
+   },
+   {
+    "query": "IFRS Foundation licensing terms IFRS Accounting Standards copyright access free",
+    "intent": "limitations"
+   },
+   {
+    "query": "FASB Accounting Standards Codification basic view free access terms",
+    "intent": "limitations"
+   },
+   {
+    "query": "Cámara de Diputados leyes federales vigentes LISR LIVA CFF LIEPS última reforma",
+    "intent": "official"
+   },
+   {
+    "query": "SAT convenios para evitar la doble tributación México lista vigentes",
+    "intent": "official"
+   },
+   {
+    "query": "IAASB Handbook of International Auditing Standards copyright permissions free download",
+    "intent": "limitations"
+   },
+   {
+    "query": "OECD Transfer Pricing Guidelines 2022 BEPS Pillar Two Model Rules terms and conditions",
+    "intent": "official"
+   },
+   {
+    "query": "Resolución Miscelánea Fiscal 2026 DOF Anexo 1-A criterios normativos SAT",
+    "intent": "official"
+   }
+  ],
+  "not_found": [
+   "G03 US GAAP: no se obtuvo página oficial de FASB (asc.fasb.org); solo guías de bibliotecas universitarias sobre Basic View gratuito con registro y términos; versión/historial de ASC no confirmados.",
+   "G09 Contabilidad de costos y administrativa: no se buscó; probablemente sin emisor normativo único (IMA/CIMA/IFAC), por determinar.",
+   "G10 OCDE: no se halló URL oficial de oecd.org de las Directrices de Precios de Transferencia ni de los Pillar Two Model Rules con términos; solo bloques de firmas de consultoría y un PDF OCDE de guía administrativa (no incluido).",
+   "G01: historial de NIF previas (2025 y anteriores) y lista de NIF vigentes con fechas de entrada en vigor no verificados en fuente primaria; solo resumen en búsqueda (NIF B-1 y B-3 vigentes 2028).",
+   "G04: no se verificó en el DOF la versión del Anexo 20 (estándar 13/01/2022) ni el historial de XSD (3.3 a 4.0); no se obtuvieron sha256, robots.txt ni límites de tasa.",
+   "G05: Anexo de criterios normativos RMF 2026 (art. 35 CFF) no localizado con URL confirmada.",
+   "G06: fechas de última reforma de LISR y LIVA posiblemente desactualizadas; falta confirmar contra DOF y reformas 2026; LIEPS PDF visto sin verificar fecha.",
+   "G07: lista vigente de convenios a 2026 no hallada.",
+   "Citas literales de licencia ≤300 caracteres, totales declarados por fuente y sha256: no obtenidos (solo búsqueda, sin descarga)."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 7,
+  "rejected": [
+   {
+    "url": "http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20.htm",
+    "reason": "not https"
+   },
+   {
+    "url": "http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/Anexo_20_Guia_de_llenado_CFDI.pdf",
+    "reason": "not https"
+   },
+   {
+    "url": "http://omawww.sat.gob.mx/normatividad_RMF_RGCE/Paginas/documentos2025/rmf/anexos/Anexo7_RMF2025_03012025.pdf",
+    "reason": "not https"
+   },
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+    "reason": "not https"
+   },
+   {
+    "url": "http://omawww.sat.gob.mx/informacion_fiscal/normatividad/Paginas/tratados_fiscales.aspx",
+    "reason": "not https"
+   }
+  ],
+  "sources": [
+   {
+    "url": "http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20.htm",
+    "family": "Emisores oficiales mexicanos (SAT, DOF, Cámara de Diputados)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "G04: página oficial con XSD cfdv40, catálogos (xls), matriz de errores y fechas de modificación (catálogos 06/11/2026; xsd 04/06/2024; cadena original 17/04/2026). Verificar fecha de vigencia en cada archivo y sha256."
+   },
+   {
+    "url": "http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/Anexo_20_Guia_de_llenado_CFDI.pdf",
+    "family": "Emisores oficiales mexicanos (SAT, DOF, Cámara de Diputados)",
+    "stance": "context",
+    "role": "primary",
+    "why": "G04: guía de llenado de CFDI 4.0 (actualizada según portal 16/01/2026); necesaria para reglas de validación junto al XSD."
+   },
+   {
+    "url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/rmf/RMF_2026-DOF-28122025.pdf",
+    "family": "Emisores oficiales mexicanos (SAT, DOF, Cámara de Diputados)",
+    "stance": "context",
+    "role": "primary",
+    "why": "G05/G06/G04: RMF vigente con vigencia 2026; sus anexos (incl. 20 y criterios normativos) y modificaciones compiladas fijan versión vigente e historial."
+   },
+   {
+    "url": "https://sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/compiladas/Compilado_Tercera_Modificacion_a_la-Resolucion_Miscelanea_Fiscal_para_2026.pdf",
+    "family": "Emisores oficiales mexicanos (SAT, DOF, Cámara de Diputados)",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Historial de modificaciones de la RMF 2026; compilado del SAT (no oficial en sentido DOF, contrastar con DOF)."
+   },
+   {
+    "url": "http://omawww.sat.gob.mx/normatividad_RMF_RGCE/Paginas/documentos2025/rmf/anexos/Anexo7_RMF2025_03012025.pdf",
+    "family": "Emisores oficiales mexicanos (SAT, DOF, Cámara de Diputados)",
+    "stance": "context",
+    "role": "primary",
+    "why": "G05: ejemplo de anexo con criterios no vinculativos de tratados; falta localizar el equivalente 2026 y criterios normativos art. 35 CFF."
+   },
+   {
+    "url": "https://www.diputados.gob.mx/LeyesBiblio/index1.htm",
+    "family": "Emisores oficiales mexicanos (SAT, DOF, Cámara de Diputados)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "G06: índice con fecha de última reforma por ley; texto libre. Las fechas vistas (LISR 01-04-2024, LIVA 12-11-2021) pueden estar desactualizadas respecto al paquete 2026; confirmar contra DOF."
+   },
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+    "family": "Emisores oficiales mexicanos (SAT, DOF, Cámara de Diputados)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "G06: texto vigente del CFF; última reforma indicada 09-04-2026 (según resultado de búsqueda)."
+   },
+   {
+    "url": "http://omawww.sat.gob.mx/informacion_fiscal/normatividad/Paginas/tratados_fiscales.aspx",
+    "family": "Emisores oficiales mexicanos (SAT, DOF, Cámara de Diputados)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "G07: lista de convenios de doble tributación y estado; la lista hallada estaba actualizada a 2018, falta confirmar vigencia a 2026."
+   },
+   {
+    "url": "https://www.cinif.org.mx/normatividad_NIF2026.php",
+    "family": "Emisor de NIF (CINIF) y distribuidor IMCP",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "G01: emisor, edición 2026 vigente, libro electrónico con licencia personal, cuota $500 y copyright del CINIF; no se pueden republicar."
+   },
+   {
+    "url": "https://www.ifrs.org/legal/terms-and-conditions/",
+    "family": "IFRS Foundation (licencia)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "G02: términos literales: extractos máx. 25 %, sin reproducción ni sublicencia; riesgo de republicación."
+   },
+   {
+    "url": "https://www.ifrs.org/products-and-services/ifrs-accounting-licensing/",
+    "family": "IFRS Foundation (licencia)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "G02: uso gratuito no comercial; integración en productos requiere licencia (licences@ifrs.org)."
+   },
+   {
+    "url": "https://ifacweb.blob.core.windows.net/publicfiles/2026-09/IAASB-Handbook-2026-Edition-Volume-2.pdf",
+    "family": "IAASB/IFAC",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "G08: edición 2026 (sept.) vigente; descarga libre para uso personal no comercial, permisos en permissions@ifac.org para reproducir. PDF largo."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
