@@ -1,0 +1,479 @@
+{
+ "research_id": "RP-2026-11-08-familia-m-mercados-industrias",
+ "request_id": "RR-2026-11-08-familia-m-mercados-industrias",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T22:15:57Z",
+ "question": "Para cada fuente listada en why_needed: ¿qué organismo la publica, por qué API o descarga oficial se adquiere, cuántos registros declara a qué fecha de corte, con qué licencia o términos, y para M13 qué tablas de correspondencia oficiales unen CIIU Rev. 4, CPC, NAICS y SCIAN?",
+ "why_zpmnd_needs_it": "Subáreas: M01 Establecimientos y empresas (DENUE) (México); M02 Emisoras y reportes de bolsa (México); M03 Reportes de empresas de EE. UU. (EDGAR) (Internacional); M04 Precios al consumidor por producto (México); M05 Comercio exterior por producto (México e internacional); M06 Contrataciones públicas (México); M07 Patentes y marcas por industria (México e internacional); M08 Estructura de mercado y concentración (México); M09 Censos económicos (México); M10 Productos y fichas técnicas (Internacional); M11 Proveedores y capacidad industrial (México); M12 Registro público de comercio (México); M13 Clasificaciones de industrias y productos (Mundo y México; eje del medidor). ZPMND necesita empresas, precios y estructura de mercado con fuente y fecha.",
+ "scope": "Lectura de 9 fuentes primarias oficiales: API DENUE, descarga masiva INEGI, términos de uso INEGI, SEC developer, Censos Económicos 2024, INPC, readme UNSD ISIC4–CPC2.1, concordancias NAICS del Census, suscripciones Comtrade y SIAVI Data. Se extrae organismo, vía de adquisición, totales declarados, términos y tablas de correspondencia. No se descargó nada, así que no hay sha256 ni se pudo revisar robots.txt.",
+ "sources": {
+  "primary": [
+   "SA-ae08c2793e824244f7481561",
+   "SA-48437f19ce18d2760b052e13",
+   "SA-97e97599169f75f455877e85",
+   "SA-ac3e9e05a5b17f949f5ef0b3",
+   "SA-1149d9169642a3723e6e090d",
+   "SA-58b48de4b21dcef1632e59ae",
+   "SA-3036f6fa00f2f49ddc0666bf",
+   "SA-b5bede53942de1bdd648054a",
+   "SA-ca1a3e850323cf82ebc1352a",
+   "SA-a907650eec832db2aaf445a4",
+   "SA-c6f4c72187f2476642147567"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-ae08c2793e824244f7481561",
+   "url": "https://www.inegi.org.mx/servicios/api_denue.html",
+   "retrieved_at": "2026-11-11T22:13:42Z",
+   "sha256": "ae08c2793e824244f748156179a09b8b938ca4957551e3da5b630d3e6580b3f6",
+   "bytes": 112663,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "INEGI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "API del DENUE"
+  },
+  {
+   "artifact_id": "SA-48437f19ce18d2760b052e13",
+   "url": "https://www.inegi.org.mx/app/descarga/default.html",
+   "retrieved_at": "2026-11-11T22:13:44Z",
+   "sha256": "48437f19ce18d2760b052e133080c3ff8e06d5b651e1e01a84c70404511e22dd",
+   "bytes": 31650,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "INEGI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Descarga masiva INEGI"
+  },
+  {
+   "artifact_id": "SA-97e97599169f75f455877e85",
+   "url": "https://www.inegi.org.mx/inegi/terminos.html",
+   "retrieved_at": "2026-11-11T22:13:45Z",
+   "sha256": "97e97599169f75f455877e85edffcf941d512f56c5c00197ebfec783d802c67a",
+   "bytes": 10442,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "INEGI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Términos de uso (libre uso)"
+  },
+  {
+   "artifact_id": "SA-ac3e9e05a5b17f949f5ef0b3",
+   "url": "https://www.sec.gov/about/developer-resources",
+   "retrieved_at": "2026-11-11T22:13:46Z",
+   "sha256": "ac3e9e05a5b17f949f5ef0b3818e64c9b4d61196f0afcd89e34a601aa76d116b",
+   "bytes": 68446,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "U.S. SEC",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "SEC Developer Resources"
+  },
+  {
+   "artifact_id": "SA-1149d9169642a3723e6e090d",
+   "url": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2025/ce/CE_2024_RO_Nal.pdf",
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "sha256": "1149d9169642a3723e6e090d1eb65c5178bbac4a32128e46bbf8cd1ba2008d0d",
+   "bytes": 185288,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "INEGI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Censos Económicos 2024 resultados definitivos (nacional)"
+  },
+  {
+   "artifact_id": "SA-58b48de4b21dcef1632e59ae",
+   "url": "https://www.inegi.org.mx/temas/inpc/",
+   "retrieved_at": "2026-11-11T22:13:48Z",
+   "sha256": "58b48de4b21dcef1632e59ae8cdff5a7c22e818bb483038eed30286b0340e811",
+   "bytes": 4399,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "INEGI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "INPC base 2018, actualización 2024"
+  },
+  {
+   "artifact_id": "SA-3036f6fa00f2f49ddc0666bf",
+   "url": "https://www.inegi.org.mx/contenidos/app/scian/tablaxvi.pdf",
+   "retrieved_at": "2026-11-11T22:13:48Z",
+   "sha256": "3036f6fa00f2f49ddc0666bfaae9a66a88ce4e3036dc9e38920a48029e11f0b9",
+   "bytes": 5755369,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "INEGI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "SCIAN México 2023 – CIIU Rev. 4 (tabla XVI)"
+  },
+  {
+   "artifact_id": "SA-b5bede53942de1bdd648054a",
+   "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_CPCv21/readme.txt",
+   "retrieved_at": "2026-11-11T22:13:58Z",
+   "sha256": "b5bede53942de1bdd648054a4e96cb0bfb6e3302ce89725983a2fe8e0ca7ecc6",
+   "bytes": 458,
+   "media_type": "text/plain",
+   "source_type": "primary_official",
+   "publisher": "UNSD",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Readme ISIC Rev.4 – CPC 2.1"
+  },
+  {
+   "artifact_id": "SA-ca1a3e850323cf82ebc1352a",
+   "url": "https://www.census.gov/naics/concordances/concordances.html",
+   "retrieved_at": "2026-11-11T22:13:59Z",
+   "sha256": "ca1a3e850323cf82ebc1352a44c08d430108082ca8f9e6fd6a6ea3526359295e",
+   "bytes": 42047,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "U.S. Census Bureau",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "NAICS Concordances"
+  },
+  {
+   "artifact_id": "SA-a907650eec832db2aaf445a4",
+   "url": "https://comtradeplus.un.org/en/subscriptions",
+   "retrieved_at": "2026-11-11T22:14:00Z",
+   "sha256": "a907650eec832db2aaf445a48b98b2e486bc3fa869d3f31dbbff2a42ee3fa591",
+   "bytes": 56492,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "UN Comtrade",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "UN Comtrade suscripciones"
+  },
+  {
+   "artifact_id": "SA-c6f4c72187f2476642147567",
+   "url": "https://www.snice.gob.mx/cs/avi/snice/hce.siavi.data.html",
+   "retrieved_at": "2026-11-11T22:14:03Z",
+   "sha256": "c6f4c72187f2476642147567a63a6780480a54384256056caa54a82fabdcd906",
+   "bytes": 207117,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Economía (SNICE)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "SIAVI Data"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "La API del DENUE declara más de 5 millones de establecimientos (cifra de la página de la API, sin fecha de corte en ese texto).",
+    "artifact_ids": [
+     "SA-ae08c2793e824244f7481561"
+    ],
+    "quote": "El INEGI pone a tu disposición la siguiente información de más de 5 millones de establecimientos.",
+    "locator": "API del DENUE, Información disponible"
+   },
+   {
+    "claim": "La API del DENUE usa un número único que permite hacer consultas y que se obtiene al registrarse.",
+    "artifact_ids": [
+     "SA-ae08c2793e824244f7481561"
+    ],
+    "quote": "Número único que permite hacer consultas, el cual se puede obtener al registrarse aquí.",
+    "locator": "Método Buscar, parámetro Token"
+   },
+   {
+    "claim": "La API del DENUE se consulta por URL con la ruta base indicada (ejemplo de Ficha).",
+    "artifact_ids": [
+     "SA-ae08c2793e824244f7481561"
+    ],
+    "quote": "https://www.inegi.org.mx/app/api/denue/v1/consulta/Ficha/34185/[aquí va tu Token]",
+    "locator": "Cómo utilizar la API, Ficha"
+   },
+   {
+    "claim": "La API del DENUE indica que la distancia máxima es de 5,000 metros.",
+    "artifact_ids": [
+     "SA-ae08c2793e824244f7481561"
+    ],
+    "quote": "La distancia máxima es de 5,000 metros.",
+    "locator": "Método Buscar, parámetro Distancia"
+   },
+   {
+    "claim": "El método Cuantificar realiza un conteo de todos los establecimientos, con opción de acotar por área geográfica, actividad económica y estrato.",
+    "artifact_ids": [
+     "SA-ae08c2793e824244f7481561"
+    ],
+    "quote": "Realiza un conteo de todos los establecimientos con la opción de acotar la búsqueda por área geográfica, actividad económica y estrato.",
+    "locator": "Método Cuantificar"
+   },
+   {
+    "claim": "El ejemplo de la API del DENUE muestra el campo Fecha_Alta con valor \"2018-03\".",
+    "artifact_ids": [
+     "SA-ae08c2793e824244f7481561"
+    ],
+    "quote": "\"Fecha_Alta\": \"2018-03\",",
+    "locator": "BuscarAreaAct, respuesta de ejemplo"
+   },
+   {
+    "claim": "La API del DENUE permite indicar el número de registro final que se mostrará en los resultados de la búsqueda.",
+    "artifact_ids": [
+     "SA-ae08c2793e824244f7481561"
+    ],
+    "quote": "Número de registro final que se mostrará en los resultados de la búsqueda.",
+    "locator": "Método Nombre/BuscarEntidad"
+   },
+   {
+    "claim": "La sección de descarga masiva de INEGI permite descargar los archivos del DENUE, el Banco de Indicadores, el Inventario Nacional de Viviendas, Microdatos y la Sala de prensa.",
+    "artifact_ids": [
+     "SA-48437f19ce18d2760b052e13"
+    ],
+    "quote": "En esta sección podrás descargar los archivos del DENUE, el Banco de Indicadores, el Inventario Nacional de Viviendas, Microdatos y la Sala de prensa",
+    "locator": "Descarga masiva, introducción"
+   },
+   {
+    "claim": "El paquete de descarga masiva contiene DescargaMasivaApp.exe.",
+    "artifact_ids": [
+     "SA-48437f19ce18d2760b052e13"
+    ],
+    "quote": "Ejecuta el archivo DescargaMasivaApp.exe para iniciar automáticamente la descarga de los archivos en la ruta que selecciones.",
+    "locator": "Descargar todos los archivos de DENUE"
+   },
+   {
+    "claim": "Se puede explotar comercialmente la información del INEGI, usándola como insumo para generar otros productos o servicios.",
+    "artifact_ids": [
+     "SA-97e97599169f75f455877e85"
+    ],
+    "quote": "Puede explotar comercialmente la información, utilizándola como insumo para generar otros productos o servicios.",
+    "locator": "Términos de uso, Del libre uso de la información del INEGI"
+   },
+   {
+    "claim": "Debe darse crédito al INEGI como autor.",
+    "artifact_ids": [
+     "SA-97e97599169f75f455877e85"
+    ],
+    "quote": "Debe otorgar los créditos correspondientes al INEGI como autor",
+    "locator": "Términos de uso, Del libre uso"
+   },
+   {
+    "claim": "Quien use la información no debe aparentar aval oficial del INEGI.",
+    "artifact_ids": [
+     "SA-97e97599169f75f455877e85"
+    ],
+    "quote": "No debe aparentar que el uso que haga de la información representa una postura oficial del INEGI",
+    "locator": "Términos de uso, Del libre uso"
+   },
+   {
+    "claim": "El INEGI no garantiza el suministro continuo de la información.",
+    "artifact_ids": [
+     "SA-97e97599169f75f455877e85"
+    ],
+    "quote": "No garantiza el suministro continuo de la información.",
+    "locator": "Términos de uso, El INEGI"
+   },
+   {
+    "claim": "Según los Censos Económicos 2024, en 2024 había en el país 7 056 499 establecimientos.",
+    "artifact_ids": [
+     "SA-1149d9169642a3723e6e090d"
+    ],
+    "quote": "En 2024, en nuestro país  había 7 056  499 establecimientos en los que laboraban",
+    "locator": "Comunicado 05/25, sección I"
+   },
+   {
+    "claim": "El comunicado anuncia que el 24 de julio de ese año se publicarán los resultados definitivos con todas las variables.",
+    "artifact_ids": [
+     "SA-1149d9169642a3723e6e090d"
+    ],
+    "quote": "El 24 de julio de este año se publicarán los resultados definitivos con todas las variables",
+    "locator": "Comunicado 05/25, p. 7"
+   },
+   {
+    "claim": "Operaban 5 451 113 unidades económicas en 2023.",
+    "artifact_ids": [
+     "SA-1149d9169642a3723e6e090d"
+    ],
+    "quote": "operaban 5 451 113  unidades económicas en 2023",
+    "locator": "Comunicado 05/25, sección II"
+   },
+   {
+    "claim": "La fuente cargada de INPC solo contiene el título del producto: base 2ª quincena julio 2018, actualización de canasta y ponderadores 2024.",
+    "artifact_ids": [
+     "SA-58b48de4b21dcef1632e59ae"
+    ],
+    "quote": "Base 2ª Quincena Julio 2018. Actualización de Canasta y Ponderadores 2024.",
+    "locator": "Título completo"
+   },
+   {
+    "claim": "Existe una tabla de correspondencia entre ISIC Rev.4 y CPC versión 2.1.",
+    "artifact_ids": [
+     "SA-b5bede53942de1bdd648054a"
+    ],
+    "quote": "correspondence table between the International Standard Industrial Classification of All Economic Activities (ISIC) Rev.4 and the Central Product Classification (CPC) Version 2.1",
+    "locator": "Readme"
+   },
+   {
+    "claim": "La tabla de correspondencia ISIC4–CPC2.1 aún no incluye las divisiones 45, 46 y 47 de ISIC; se añadirán después.",
+    "artifact_ids": [
+     "SA-b5bede53942de1bdd648054a"
+    ],
+    "quote": "The correspondence does not yet include divisions 45, 46 and 47 of ISIC. These will be added later.",
+    "locator": "Readme, Update History 19.08.2015"
+   },
+   {
+    "claim": "Se ofrece la concordancia 2017 NAICS a ISIC Rev. 4 en XLSX (126KB).",
+    "artifact_ids": [
+     "SA-ca1a3e850323cf82ebc1352a"
+    ],
+    "quote": "2017 NAICS to ISIC Rev. 4 [XLSX, 126KB]",
+    "locator": "NAICS Concordances, sección 2017"
+   },
+   {
+    "claim": "Se ofrece la concordancia ISIC Rev. 4 a 2017 NAICS en XLSX (125KB).",
+    "artifact_ids": [
+     "SA-ca1a3e850323cf82ebc1352a"
+    ],
+    "quote": "ISIC Rev. 4 to 2017 NAICS [XLSX, 125KB]",
+    "locator": "NAICS Concordances, sección 2017"
+   },
+   {
+    "claim": "Se ofrece la concordancia 2012 NAICS a ISIC Rev. 4 (Revised) en XLSX (112KB).",
+    "artifact_ids": [
+     "SA-ca1a3e850323cf82ebc1352a"
+    ],
+    "quote": "2012 NAICS to ISIC Rev. 4 (Revised) [XLSX, 112KB]",
+    "locator": "NAICS Concordances, sección 2012"
+   },
+   {
+    "claim": "Las pautas de la SEC limitan a cada usuario a no más de 10 solicitudes por segundo en total, sin importar el número de máquinas usadas.",
+    "artifact_ids": [
+     "SA-ac3e9e05a5b17f949f5ef0b3"
+    ],
+    "quote": "Current guidelines limit each user to a total of no more than 10 requests per second, regardless of the number of machines used to submit requests.",
+    "locator": "Developer Resources, Fair Access"
+   },
+   {
+    "claim": "La SEC ofrece APIs REST en data.sec.gov con JSON.",
+    "artifact_ids": [
+     "SA-ac3e9e05a5b17f949f5ef0b3"
+    ],
+    "quote": "Submissions by company and extracted XBRL data are available via RESTful APIs on data.sec.gov, offering JSON formatted data.",
+    "locator": "Developer Resources"
+   },
+   {
+    "claim": "UN Comtrade es gratis para todo usuario registrado.",
+    "artifact_ids": [
+     "SA-a907650eec832db2aaf445a4"
+    ],
+    "quote": "UN Comtrade is free for every registered user.",
+    "locator": "Free and Premium subscriptions"
+   },
+   {
+    "claim": "La tabla de suscripciones de Comtrade indica 500, 5,000 e ilimitadas llamadas diarias a la API según el plan.",
+    "artifact_ids": [
+     "SA-a907650eec832db2aaf445a4"
+    ],
+    "quote": "API calls a day \t500 \t5,000 \tUnlimited",
+    "locator": "Main limits (Free / Premium Individual / Institutional)"
+   },
+   {
+    "claim": "La tabla de suscripciones de Comtrade indica límites de 1, 5 y 5 llamadas por segundo según el plan.",
+    "artifact_ids": [
+     "SA-a907650eec832db2aaf445a4"
+    ],
+    "quote": "Rate limit \t1 call a second \t5 calls a second \t5 calls a second",
+    "locator": "API access"
+   },
+   {
+    "claim": "La tabla de suscripciones de Comtrade indica descargas de 100,000, 250,000 y 250,000 registros por solicitud según el plan.",
+    "artifact_ids": [
+     "SA-a907650eec832db2aaf445a4"
+    ],
+    "quote": "Download per request \t100,000 records \t250,000 records \t250,000 records",
+    "locator": "Main limits"
+   },
+   {
+    "claim": "SIAVI Data ofrece información sobre el valor y volumen de las importaciones y exportaciones en los últimos 20 meses.",
+    "artifact_ids": [
+     "SA-c6f4c72187f2476642147567"
+    ],
+    "quote": "información sobre el valor y volumen de las importaciones y exportaciones en los últimos 20 meses",
+    "locator": "SIAVI Data"
+   },
+   {
+    "claim": "SIAVI Data invita a registrarse en SNICE para usarlo.",
+    "artifact_ids": [
+     "SA-c6f4c72187f2476642147567"
+    ],
+    "quote": "¡Regístrate en SNICE y comienza tu búsqueda en SIAVI Data!",
+    "locator": "SIAVI Data"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "sha256 y tamaño de lo descargado por fuente: no se descargó ningún archivo.",
+   "robots.txt de cada sitio: no estaba entre los textos.",
+   "Fecha de corte y total exacto de registros del DENUE vigente (la API dice solo 'más de 5 millones'; el total sale de Cuantificar con token).",
+   "Límites de tasa de la API DENUE y de SIAVI Data: no declarados en el texto.",
+   "Licencia o términos específicos de SEC EDGAR, Comtrade (el texto remite a un 'License agreement' sin contenido), SIAVI y Census Bureau: no aparecen.",
+   "Tablas oficiales entre CIIU Rev.4/CPC y SCIAN, y entre SCIAN y NAICS: no aparecen. Solo se leyeron ISIC4–CPC2.1 (UNSD) y NAICS–ISIC4 (Census).",
+   "Cualquier tabla CPC–NAICS o CPC–SCIAN: no hallada.",
+   "Versión de SCIAN usada por el DENUE vigente: no indicada en el texto.",
+   "Datos del INPC (series, API, licencia): solo se leyó el título."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Las claves de 2 a 6 dígitos de sector a clase de la API DENUE coinciden con la estructura SCIAN; el texto no nombra SCIAN ni su versión, así que no basta para fijar la correspondencia.",
+  "INTERPRETACIÓN: Los términos de libre uso del INEGI cubren la información publicada en su sitio, y es razonable aplicarlos al DENUE y a los Censos, pero el texto leído no nombra al DENUE.",
+  "INTERPRETACIÓN: Los totales difieren por definición: más de 5 millones (DENUE, sin fecha) frente a 7 056 499 establecimientos (Censos 2024, que incluyen zonas rurales y servicios públicos). No son comparables sin definir el universo.",
+  "INTERPRETACIÓN: Un enlace ISIC4–CPC2.1 y otro NAICS–ISIC4 permitirían encadenar CPC con NAICS usando ISIC4 como puente. Faltaría SCIAN–NAICS, y la cadena perdería precisión y sería mal correspondida donde las relaciones no sean 1 a 1.",
+  "INTERPRETACIÓN: La tabla ISIC4–CPC2.1 de 2015 omitía las divisiones 45–47 (comercio), así que cualquier uso que dependa de comercio sería incompleto salvo que exista una actualización posterior."
+ ],
+ "candidate_tests": [
+  "Llamar a Cuantificar con actividad 0 y área 0, y registrar el total junto con la fecha y hora de consulta como corte observado.",
+  "Comparar el total por sector de Cuantificar con el de los Censos Económicos 2024 para medir la diferencia de universo."
+ ],
+ "possible_implications_for_zpmnd": [
+  "La cobertura de M13 no debe medirse con CIIU/CPC/NAICS/SCIAN hasta tener tablas oficiales verificadas (INEGI SCIAN–NAICS y la vigente de UNSD), porque la cadena por puente ISIC es hipotética."
+ ],
+ "limitations": [
+  "Solo se leyeron textos de páginas; no hay hashes, cabeceras HTTP ni robots.txt.",
+  "El texto del INPC contiene solo el título, así que casi nada de lo pedido sobre esa fuente es contestable.",
+  "La página de concordancias del Census indica 'Last Revised: July 13, 2026', fecha que no se pudo contrastar.",
+  "La licencia de Census, SEC, Comtrade y SIAVI no aparece en el texto leído.",
+  "No se consultó INEGI para las tablas de correspondencia SCIAN–NAICS ni SCIAN–CIIU; no estaban entre las fuentes dadas.",
+  "El texto de la API DENUE muestra ejemplos con campos que difieren entre métodos (p. ej. campos 20–22), lo que sugiere documentación inconsistente.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 22 de 30 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 12 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.inegi.org.mx/contenidos/app/scian/tablaxvi.pdf (200, sin texto); https://www3.inegi.org.mx/sistemas/clasificaciones/tigie/doc/tigie/tigie_scian.pdf (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}

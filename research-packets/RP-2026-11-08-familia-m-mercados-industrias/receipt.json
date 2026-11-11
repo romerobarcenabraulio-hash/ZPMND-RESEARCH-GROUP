@@ -1,0 +1,448 @@
+{
+ "request_id": "RR-2026-11-08-familia-m-mercados-industrias",
+ "fetched": [
+  {
+   "url": "https://www.inegi.org.mx/servicios/api_denue.html",
+   "status": 200,
+   "error": null,
+   "sha256": "ae08c2793e824244f748156179a09b8b938ca4957551e3da5b630d3e6580b3f6",
+   "bytes": 112663,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:42Z",
+   "text_status": "ok",
+   "text_chars": 42670
+  },
+  {
+   "url": "https://www.inegi.org.mx/app/descarga/default.html",
+   "status": 200,
+   "error": null,
+   "sha256": "48437f19ce18d2760b052e133080c3ff8e06d5b651e1e01a84c70404511e22dd",
+   "bytes": 31650,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:44Z",
+   "text_status": "ok",
+   "text_chars": 4276
+  },
+  {
+   "url": "https://www.inegi.org.mx/inegi/terminos.html",
+   "status": 200,
+   "error": null,
+   "sha256": "97e97599169f75f455877e85edffcf941d512f56c5c00197ebfec783d802c67a",
+   "bytes": 10442,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:45Z",
+   "text_status": "ok",
+   "text_chars": 5974
+  },
+  {
+   "url": "https://www.sec.gov/about/developer-resources",
+   "status": 200,
+   "error": null,
+   "sha256": "ac3e9e05a5b17f949f5ef0b3818e64c9b4d61196f0afcd89e34a601aa76d116b",
+   "bytes": 68446,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:46Z",
+   "text_status": "ok",
+   "text_chars": 6812
+  },
+  {
+   "url": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2025/ce/CE_2024_RO_Nal.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "1149d9169642a3723e6e090d1eb65c5178bbac4a32128e46bbf8cd1ba2008d0d",
+   "bytes": 185288,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "text_status": "ok",
+   "text_chars": 10196
+  },
+  {
+   "url": "https://www.inegi.org.mx/temas/inpc/",
+   "status": 200,
+   "error": null,
+   "sha256": "58b48de4b21dcef1632e59ae8cdff5a7c22e818bb483038eed30286b0340e811",
+   "bytes": 4399,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:48Z",
+   "text_status": "ok",
+   "text_chars": 123
+  },
+  {
+   "url": "https://www.inegi.org.mx/contenidos/app/scian/tablaxvi.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "3036f6fa00f2f49ddc0666bfaae9a66a88ce4e3036dc9e38920a48029e11f0b9",
+   "bytes": 5755369,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-11T22:13:48Z",
+   "text_status": "fallo",
+   "text_chars": null
+  },
+  {
+   "url": "https://www3.inegi.org.mx/sistemas/clasificaciones/tigie/doc/tigie/tigie_scian.pdf",
+   "status": "refused",
+   "error": "robots.txt disallows https://www3.inegi.org.mx/sistemas/clasificaciones/tigie/doc/tigie/tigie_scian.pdf",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T22:13:52Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_CPCv21/readme.txt",
+   "status": 200,
+   "error": null,
+   "sha256": "b5bede53942de1bdd648054a4e96cb0bfb6e3302ce89725983a2fe8e0ca7ecc6",
+   "bytes": 458,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-11-11T22:13:58Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 458
+  },
+  {
+   "url": "https://www.census.gov/naics/concordances/concordances.html",
+   "status": 200,
+   "error": null,
+   "sha256": "ca1a3e850323cf82ebc1352a44c08d430108082ca8f9e6fd6a6ea3526359295e",
+   "bytes": 42047,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:59Z",
+   "text_status": "ok",
+   "text_chars": 3135
+  },
+  {
+   "url": "https://comtradeplus.un.org/Subscriptions",
+   "status": 200,
+   "error": null,
+   "sha256": "a907650eec832db2aaf445a48b98b2e486bc3fa869d3f31dbbff2a42ee3fa591",
+   "bytes": 56492,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:14:00Z",
+   "text_status": "ok",
+   "text_chars": 8340
+  },
+  {
+   "url": "https://www.snice.gob.mx/cs/avi/snice/hce.siavi.data.html",
+   "status": 200,
+   "error": null,
+   "sha256": "c6f4c72187f2476642147567a63a6780480a54384256056caa54a82fabdcd906",
+   "bytes": 207117,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:14:03Z",
+   "text_status": "ok",
+   "text_chars": 1426
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43109727154",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[1]",
+    "claim": "La API del DENUE requiere un token obtenido por registro.",
+    "now": "La API del DENUE usa un número único que permite hacer consultas y que se obtiene al registrarse.",
+    "cut": "«requiere» y el término «token»"
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "La búsqueda por radio tiene una distancia máxima de 5,000 metros.",
+    "now": "La API del DENUE indica que la distancia máxima es de 5,000 metros.",
+    "cut": "«búsqueda por radio»"
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "El método Cuantificar permite conteos por actividad (2 a 5 dígitos), área geográfica y estrato.",
+    "now": "El método Cuantificar realiza un conteo de todos los establecimientos, con opción de acotar por área geográfica, actividad económica y estrato.",
+    "cut": "«(2 a 5 dígitos)»"
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "BuscarAreaAct devuelve el campo Fecha_Alta del establecimiento y los IDs de clase, sector, subsector, rama y subrama (ejemplo mostrado).",
+    "now": "El ejemplo de la API del DENUE muestra el campo Fecha_Alta con valor \"2018-03\".",
+    "cut": "BuscarAreaAct y los IDs de clase, sector, subsector, rama y subrama"
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "La documentación de la API no declara límites de tasa en el texto leído, pero sí paginación por registro inicial y final.",
+    "now": "La API del DENUE permite indicar el número de registro final que se mostrará en los resultados de la búsqueda.",
+    "cut": "que no declara límites de tasa; paginación por registro inicial"
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "La descarga masiva de INEGI incluye archivos del DENUE y otros productos, y se hace con una aplicación ejecutable.",
+    "now": "La sección de descarga masiva de INEGI permite descargar los archivos del DENUE, el Banco de Indicadores, el Inventario Nacional de Viviendas, Microdatos y la Sala de prensa.",
+    "cut": "que se hace con una aplicación ejecutable"
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "El INEGI permite explotar comercialmente su información, con crédito al INEGI como autor.",
+    "now": "Se puede explotar comercialmente la información del INEGI, usándola como insumo para generar otros productos o servicios.",
+    "cut": "«con crédito al INEGI como autor»"
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "Debe darse crédito al INEGI con la fórmula de fuente.",
+    "now": "Debe darse crédito al INEGI como autor.",
+    "cut": "«con la fórmula de fuente»"
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "Los Censos Económicos 2024 declaran 7 056 499 establecimientos y 36 793 604 personas ocupadas (comunicado del 23 de enero de 2025).",
+    "now": "Según los Censos Económicos 2024, en 2024 había en el país 7 056 499 establecimientos.",
+    "cut": "36 793 604 personas ocupadas; fecha del comunicado (23 de enero de 2025)"
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "El comunicado fecha la publicación el 23 de enero de 2025 y anuncia resultados definitivos para el 24 de julio.",
+    "now": "El comunicado anuncia que el 24 de julio de ese año se publicarán los resultados definitivos con todas las variables.",
+    "cut": "fecha de publicación del 23 de enero de 2025"
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "El sector privado y paraestatal registró 5 451 113 unidades económicas en 2023.",
+    "now": "Operaban 5 451 113 unidades económicas en 2023.",
+    "cut": "«sector privado y paraestatal»"
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "UNSD publica la tabla de correspondencia ISIC Rev.4–CPC 2.1.",
+    "now": "Existe una tabla de correspondencia entre ISIC Rev.4 y CPC versión 2.1.",
+    "cut": "UNSD como publicador"
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "La tabla ISIC4–CPC2.1 omitía en 2015 las divisiones 45, 46 y 47 de ISIC.",
+    "now": "La tabla de correspondencia ISIC4–CPC2.1 aún no incluye las divisiones 45, 46 y 47 de ISIC; se añadirán después.",
+    "cut": "«en 2015»"
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "El Census Bureau publica la concordancia 2017 NAICS a ISIC Rev. 4 en XLSX.",
+    "now": "Se ofrece la concordancia 2017 NAICS a ISIC Rev. 4 en XLSX (126KB).",
+    "cut": "Census Bureau como publicador"
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "El Census Bureau publica la concordancia inversa ISIC Rev. 4 a 2017 NAICS.",
+    "now": "Se ofrece la concordancia ISIC Rev. 4 a 2017 NAICS en XLSX (125KB).",
+    "cut": "Census Bureau como publicador"
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "El Census Bureau publica también la concordancia 2012 NAICS a ISIC Rev. 4 (Revised).",
+    "now": "Se ofrece la concordancia 2012 NAICS a ISIC Rev. 4 (Revised) en XLSX (112KB).",
+    "cut": "Census Bureau como publicador"
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "La SEC fija un límite de 10 solicitudes por segundo por usuario y no permite bots no clasificados.",
+    "now": "Las pautas de la SEC limitan a cada usuario a no más de 10 solicitudes por segundo en total, sin importar el número de máquinas usadas.",
+    "cut": "«no permite bots no clasificados»"
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "UN Comtrade es gratis para usuarios registrados, con Premium de pago.",
+    "now": "UN Comtrade es gratis para todo usuario registrado.",
+    "cut": "«con Premium de pago»"
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "El plan gratuito de Comtrade permite 500 llamadas diarias a la API.",
+    "now": "La tabla de suscripciones de Comtrade indica 500, 5,000 e ilimitadas llamadas diarias a la API según el plan.",
+    "cut": "que 500 corresponde al plan gratuito"
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "El plan gratuito de Comtrade tiene un límite de 1 llamada por segundo.",
+    "now": "La tabla de suscripciones de Comtrade indica límites de 1, 5 y 5 llamadas por segundo según el plan.",
+    "cut": "que 1 llamada por segundo corresponde al plan gratuito"
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "El plan gratuito de Comtrade permite descargar 100,000 registros por solicitud y excluye los archivos bulk.",
+    "now": "La tabla de suscripciones de Comtrade indica descargas de 100,000, 250,000 y 250,000 registros por solicitud según el plan.",
+    "cut": "que 100,000 corresponde al plan gratuito; exclusión de archivos bulk"
+   },
+   {
+    "id": "confirmed[28]",
+    "claim": "SIAVI Data (Secretaría de Economía/SNICE) ofrece datos de comercio exterior de los últimos 20 meses y requiere registro en SNICE.",
+    "now": "SIAVI Data ofrece información sobre el valor y volumen de las importaciones y exportaciones en los últimos 20 meses.",
+    "cut": "«Secretaría de Economía/SNICE»; requisito de registro en SNICE"
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "INEGI: DENUE, INPC, Censos Económicos, términos de libre uso",
+   "SEC EDGAR: políticas de acceso",
+   "BMV/CNBV: emisoras y XBRL",
+   "Comercio exterior: UN Comtrade, SIAVI",
+   "ComprasMX/RUPC",
+   "IMPI y WIPO",
+   "Registro Público de Comercio (SIGER/PSM)",
+   "Clasificaciones: SCIAN/CIIU (INEGI), UNSD ISIC-CPC, Census NAICS"
+  ],
+  "searches": [
+   {
+    "query": "INEGI DENUE API consulta descarga datos abiertos términos de libre uso",
+    "intent": "official"
+   },
+   {
+    "query": "SEC EDGAR API documentation rate limit fair access 10 requests per second",
+    "intent": "official"
+   },
+   {
+    "query": "INEGI tablas de correspondencia SCIAN 2023 NAICS CIIU Rev. 4 CPC",
+    "intent": "official"
+   },
+   {
+    "query": "UN Statistics Division ISIC Rev.4 CPC correspondence tables download",
+    "intent": "official"
+   },
+   {
+    "query": "Census Bureau NAICS 2022 concordance 2017 NAICS ISIC CPC correspondence",
+    "intent": "official"
+   },
+   {
+    "query": "ComprasMX datos abiertos contrataciones abiertas OCDS descarga licencia",
+    "intent": "official"
+   },
+   {
+    "query": "UN Comtrade API free access terms of use rate limits",
+    "intent": "limitations"
+   },
+   {
+    "query": "BMV emisoras listadas API datos CNBV portal",
+    "intent": "official"
+   },
+   {
+    "query": "INEGI INPC API indicadores BIE precios al consumidor genéricos descarga",
+    "intent": "official"
+   },
+   {
+    "query": "IMPI datos abiertos patentes marcas descarga; WIPO PATENTSCOPE API terms",
+    "intent": "limitations"
+   },
+   {
+    "query": "INEGI Censos Económicos 2024 resultados definitivos unidades económicas total",
+    "intent": "support"
+   },
+   {
+    "query": "INEGI Términos de libre uso texto oficial",
+    "intent": "official"
+   },
+   {
+    "query": "SIAVI datos abiertos importaciones exportaciones",
+    "intent": "contradict"
+   },
+   {
+    "query": "Registro Público de Comercio SIGER PSM datos abiertos proveedores",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "No hallé sha256 ni formatos verificados: solo se pueden calcular al descargar los archivos.",
+   "No hallé robots.txt de ninguna fuente; hay que consultarlo directamente.",
+   "Ni la API ni la licencia oficial de ComprasMX/RUPC quedaron confirmadas (datos-abiertos de comprasmx.buengobierno.gob.mx se vio solo en un resumen).",
+   "No hallé una tabla oficial directa SCIAN 2023–NAICS 2022 (INEGI) ni NAICS–CPC; solo la ruta por ISIC.",
+   "No hallé una API oficial de CNBV; la BMV ofrece Web Services y bases de datos de pago.",
+   "M08 (concentración), M10 (fichas técnicas) y M11 (capacidad industrial) quedaron sin búsqueda dirigida.",
+   "Registro Público de Comercio (SIGER/PSM): solo hallé fuentes secundarias; no hay API ni descarga masiva confirmada y los términos de SIGER prohíben extraer datos.",
+   "No hallé la licencia oficial de IMPI para patentes y marcas; solo el plan de apertura (CC BY 4.0) y ViDoc.",
+   "Fechas de corte de DENUE, INPC y Comtrade no verificadas con cita literal."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://www.inegi.org.mx/servicios/api_denue.html",
+    "family": "INEGI DENUE",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Vía oficial de la API (requiere token de registro); declara más de 5 millones de establecimientos; fecha de corte a verificar en la ficha de descarga."
+   },
+   {
+    "url": "https://www.inegi.org.mx/app/descarga/default.html",
+    "family": "INEGI DENUE",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Descarga oficial en CSV de DENUE por entidad; permite calcular sha256 y ver fecha de corte."
+   },
+   {
+    "url": "https://www.inegi.org.mx/inegi/terminos.html",
+    "family": "INEGI términos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto oficial de licencia: libre uso con cita de fuente; fuente para la cita literal."
+   },
+   {
+    "url": "https://www.sec.gov/about/developer-resources",
+    "family": "SEC EDGAR",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Límite de 10 solicitudes/s, User-Agent requerido, APIs sin clave y descargas masivas."
+   },
+   {
+    "url": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2025/ce/CE_2024_RO_Nal.pdf",
+    "family": "INEGI Censos Económicos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Total declarado (5 451 113 unidades económicas; 7 056 499 establecimientos) y referencia temporal 2023/2024."
+   },
+   {
+    "url": "https://www.inegi.org.mx/temas/inpc/",
+    "family": "INEGI INPC",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Programa oficial de precios al consumidor; 292 genéricos; acceso por BIE/API de indicadores y tabulados."
+   },
+   {
+    "url": "https://www.inegi.org.mx/contenidos/app/scian/tablaxvi.pdf",
+    "family": "Clasificaciones",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Tabla oficial de correspondencia SCIAN 2023–CIIU Rev.4, con marca de correspondencia parcial."
+   },
+   {
+    "url": "https://www3.inegi.org.mx/sistemas/clasificaciones/tigie/doc/tigie/tigie_scian.pdf",
+    "family": "Clasificaciones",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Puente a CIIU y CPC vía fracción arancelaria; probable versión SCIAN anterior a 2023, hay que validarla."
+   },
+   {
+    "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_CPCv21/readme.txt",
+    "family": "Clasificaciones",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Tabla oficial CIIU–CPC; readme de 2015 avisa de divisiones faltantes, por lo que se debe comprobar la versión actual."
+   },
+   {
+    "url": "https://www.census.gov/naics/concordances/concordances.html",
+    "family": "Clasificaciones",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Concordancias oficiales NAICS 2022/2017 e ISIC Rev.4; no hay NAICS–CPC directo (se pasa por ISIC)."
+   },
+   {
+    "url": "https://comtradeplus.un.org/Subscriptions",
+    "family": "Comercio exterior",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Niveles de acceso y límites de tasa (clave gratuita, 500 llamadas/día); los términos de redistribución hay que leerlos del texto oficial."
+   },
+   {
+    "url": "https://www.snice.gob.mx/cs/avi/snice/hce.siavi.data.html",
+    "family": "Comercio exterior",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Datos abiertos de comercio por fracción, solo 20 meses y con registro; otra página indica que se dejó de actualizar desde 2022."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
