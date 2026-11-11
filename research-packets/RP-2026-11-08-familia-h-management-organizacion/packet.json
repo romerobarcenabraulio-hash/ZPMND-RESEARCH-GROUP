@@ -1,0 +1,534 @@
+{
+ "research_id": "RP-2026-11-08-familia-h-management-organizacion",
+ "request_id": "RR-2026-11-08-familia-h-management-organizacion",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T16:50:31Z",
+ "question": "Para cada área listada en why_needed: ¿qué fuente primaria la cubre (organismo público, ley, emisor del marco o libro abierto), con qué licencia y canal, y para H11 qué volcados oficiales de CIUO-08, ESCO, O*NET y SINCO existen, con versión, cuenta de ocupaciones y correspondencias? Marcos de pago, solo metadatos.",
+ "why_zpmnd_needs_it": "Subáreas: H01 Operaciones y procesos (Transversal); H02 Compras y abastecimiento (Transversal); H03 Cadena de suministro (Transversal); H04 Recursos humanos y trabajo (Transversal); H05 Calidad (Transversal); H06 Gestión de proyectos (Transversal); H07 Estrategia (Transversal); H08 Gobierno corporativo (Transversal); H09 Ventas, marketing y precios (Transversal); H10 Servicio y operación de TI (Transversal); H11 Clasificaciones de ocupaciones y competencias (Mundo y México; eje del medidor). ZPMND necesita métodos de gestión citables y el eje de ocupaciones completo.",
+ "scope": "Parte 1 de 3. Se leyeron completas las fuentes primarias sobre ESCO (descarga, v1.2.1, FAQ, crosswalk O*NET), O*NET 31.0 (base y licencia), ISCO-08 (ficha OIT) y la tabla ISCO-08/ISCO-88. Solo cubre H11 (CIUO-08, ESCO, O*NET). No se aborda SINCO ni las demás áreas de why_needed, y no hay sha256 ni robots.txt. / Parte 2 de 3: solo el SINCO 2019 de INEGI (texto de los caracteres 0 a 600000 de 1196905). Cubre la parte de H11 sobre SINCO: versión, estructura, cuenta de ocupaciones y correspondencias. No cubre CIUO-08, ESCO ni O*NET, ni las demás áreas de why_needed. / Parte 3 de 3 de SINCO 2019 (INEGI, 2020), caracteres 599000–1196905: finales del grupo 28 a la división 9, anexo de equivalencia SINCO 2011–2019, glosario, bibliografía y fe de erratas. Solo cubre la parte de H11 sobre SINCO. No contiene ESCO, O*NET, CIUO-08 como volcado, ni datos de licencia, URL, sha256, robots.txt o límites de tasa.",
+ "sources": {
+  "primary": [
+   "SA-24c4d43ec95a824da68def2e",
+   "SA-9e947ca069e588940a5f576a",
+   "SA-3c36c3a363aeb6be78cbb86d",
+   "SA-54193b7b07cca0aded383249",
+   "SA-4b3d73ed9648d8f4edac65f3",
+   "SA-c5713b54238da9640d7cad86",
+   "SA-ecc4c9a66932832efc9c8cdb",
+   "SA-6521594e9c321c84e08312a4",
+   "SA-6a8a80d6e193ecb466d2b3d8"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-24c4d43ec95a824da68def2e",
+   "url": "https://esco.ec.europa.eu/en/use-esco/download",
+   "retrieved_at": "2026-11-11T16:48:17Z",
+   "sha256": "24c4d43ec95a824da68def2ec250aeafb45e58fa5597265159189d058d21b1d1",
+   "bytes": 75604,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Comisión Europea (ESCO)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "ESCO Download"
+  },
+  {
+   "artifact_id": "SA-9e947ca069e588940a5f576a",
+   "url": "https://esco.ec.europa.eu/en/about-esco/escopedia/escopedia/esco-v121",
+   "retrieved_at": "2026-11-11T16:48:18Z",
+   "sha256": "9e947ca069e588940a5f576a2bbea8fdfdc5f9c94adef5c7cb7a9130ce98116e",
+   "bytes": 86720,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Comisión Europea (ESCO)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "ESCO v1.2.1"
+  },
+  {
+   "artifact_id": "SA-3c36c3a363aeb6be78cbb86d",
+   "url": "https://esco.ec.europa.eu/en/about-esco/faq",
+   "retrieved_at": "2026-11-11T16:48:20Z",
+   "sha256": "3c36c3a363aeb6be78cbb86d3e2a36795b6ff1b1247cfb3e2dfa4afe1b8352eb",
+   "bytes": 144114,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Comisión Europea (ESCO)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "ESCO FAQ"
+  },
+  {
+   "artifact_id": "SA-54193b7b07cca0aded383249",
+   "url": "https://esco.ec.europa.eu/en/about-esco/data-science-and-esco/crosswalk-between-esco-and-onet",
+   "retrieved_at": "2026-11-11T16:48:21Z",
+   "sha256": "54193b7b07cca0aded3832497d1ac824eaa071c7b3f03a2106b2fe68a26a4ea4",
+   "bytes": 59629,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Comisión Europea (ESCO)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Crosswalk between ESCO and O*NET"
+  },
+  {
+   "artifact_id": "SA-4b3d73ed9648d8f4edac65f3",
+   "url": "https://www.onetcenter.org/database.html",
+   "retrieved_at": "2026-11-11T16:48:22Z",
+   "sha256": "4b3d73ed9648d8f4edac65f3ebb636226169f35c326c084ab62e9d115ad0ce57",
+   "bytes": 424509,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "National Center for O*NET Development (DOL)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "O*NET Database"
+  },
+  {
+   "artifact_id": "SA-c5713b54238da9640d7cad86",
+   "url": "https://www.onetcenter.org/license_db.html",
+   "retrieved_at": "2026-11-11T16:48:23Z",
+   "sha256": "c5713b54238da9640d7cad86b08ce00aa6e32b78596a40543af35878a10810b3",
+   "bytes": 40673,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "National Center for O*NET Development",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "O*NET 31.0 Database Content License"
+  },
+  {
+   "artifact_id": "SA-ecc4c9a66932832efc9c8cdb",
+   "url": "https://www.ilo.org/resource/isco-08-structure",
+   "retrieved_at": "2026-11-11T16:48:24Z",
+   "sha256": "ecc4c9a66932832efc9c8cdb186d4c9ffe04b93cbe5b862b879318d57a2d3140",
+   "bytes": 40848,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OIT",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "ISCO 08 Structure"
+  },
+  {
+   "artifact_id": "SA-6521594e9c321c84e08312a4",
+   "url": "https://www.ilo.org/media/42051/download",
+   "retrieved_at": "2026-11-11T16:48:26Z",
+   "sha256": "6521594e9c321c84e08312a4195d20456c7ae89f624cd9e79df7bbdedd94d081",
+   "bytes": 46617,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "OIT",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Tabla de correspondencia ISCO-08 a ISCO-88"
+  },
+  {
+   "artifact_id": "SA-6a8a80d6e193ecb466d2b3d8",
+   "url": "https://www.inegi.org.mx/contenido/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825198411.pdf",
+   "retrieved_at": "2026-11-11T16:48:27Z",
+   "sha256": "6a8a80d6e193ecb466d2b3d85478b62c310476dc84d6b6a15b1af2530176f5f6",
+   "bytes": 5895824,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "INEGI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "SINCO 2019"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El conjunto de datos de ESCO se puede descargar gratis en los 28 idiomas de ESCO.",
+    "artifact_ids": [
+     "SA-24c4d43ec95a824da68def2e"
+    ],
+    "quote": "You can download ESCO dataset free of charge in all 28 ESCO languages.",
+    "locator": "Download ESCO Dataset"
+   },
+   {
+    "claim": "Para descargar ESCO hay que leer y aceptar la declaración y después indicar una dirección de correo electrónico.",
+    "artifact_ids": [
+     "SA-24c4d43ec95a824da68def2e"
+    ],
+    "quote": "Read and accept the statement, then enter your email address.",
+    "locator": "Download steps (iii)"
+   },
+   {
+    "claim": "La versión vigente de ESCO es la v1.2.1, con última actualización el 10/12/2025.",
+    "artifact_ids": [
+     "SA-24c4d43ec95a824da68def2e"
+    ],
+    "quote": "Current version: ESCO v1.2.1 (Last update 10/12/2025)",
+    "locator": "Pie de página"
+   },
+   {
+    "claim": "Cualquier interesado puede descargar, usar, reproducir y reutilizar gratis la clasificación ESCO para cualquier fin.",
+    "artifact_ids": [
+     "SA-3c36c3a363aeb6be78cbb86d"
+    ],
+    "quote": "the ESCO classification can be downloaded, used, reproduced and reused for any purpose and by any interested party free of charge.",
+    "locator": "FAQ, pregunta sobre licencia"
+   },
+   {
+    "claim": "Toda versión modificada o adaptada de ESCO debe indicarse claramente como tal.",
+    "artifact_ids": [
+     "SA-3c36c3a363aeb6be78cbb86d"
+    ],
+    "quote": "Any modified or adapted version of ESCO must be clearly indicated as such.",
+    "locator": "FAQ, condición 2"
+   },
+   {
+    "claim": "Cada ocupación ESCO se asigna a exactamente un código CIUO-08 (ISCO-08).",
+    "artifact_ids": [
+     "SA-3c36c3a363aeb6be78cbb86d"
+    ],
+    "quote": "In ESCO, each occupation is mapped to exactly one ISCO-08 code.",
+    "locator": "FAQ, estructura de la jerarquía de ocupaciones"
+   },
+   {
+    "claim": "ESCO ofrece descripciones de 2942 ocupaciones y 13.485 capacidades, traducidas a 27 idiomas.",
+    "artifact_ids": [
+     "SA-3c36c3a363aeb6be78cbb86d"
+    ],
+    "quote": "provides descriptions of 2942 occupations and 13.485 skills translated into 27 languages",
+    "locator": "FAQ, What is ESCO?"
+   },
+   {
+    "claim": "ESCO v1.2.1 no añade ni elimina contenido de la base de datos.",
+    "artifact_ids": [
+     "SA-9e947ca069e588940a5f576a"
+    ],
+    "quote": "without adding or removing content from the database",
+    "locator": "ESCOpedia v1.2.1"
+   },
+   {
+    "claim": "ESCO v1.2.1 se ofrece en CSV, JSON-LD, ODS, RDF, TTL y XML.",
+    "artifact_ids": [
+     "SA-9e947ca069e588940a5f576a"
+    ],
+    "quote": "CSV, JSON-LD, ODS, RDF, TTL and XML",
+    "locator": "ESCOpedia v1.2.1, Supporting documentation"
+   },
+   {
+    "claim": "La versión mayor más reciente es ESCO v1.2.0, de mayo de 2024.",
+    "artifact_ids": [
+     "SA-24c4d43ec95a824da68def2e"
+    ],
+    "quote": "the latest major version, ESCO v.1.2.0 released in May 2024",
+    "locator": "Download the ESCO delta files"
+   },
+   {
+    "claim": "El cruce ESCO–O*NET asigna cada ocupación ESCO a al menos una ocupación O*NET.",
+    "artifact_ids": [
+     "SA-54193b7b07cca0aded383249"
+    ],
+    "quote": "All the ESCO occupations are mapped to at least one O*NET occupation",
+    "locator": "Results"
+   },
+   {
+    "claim": "Ciertos datos del cruce ESCO–O*NET deben considerarse de menor calidad.",
+    "artifact_ids": [
+     "SA-54193b7b07cca0aded383249"
+    ],
+    "quote": "hence it must be considered as data of lower quality",
+    "locator": "Results"
+   },
+   {
+    "claim": "O*NET 31.0 se publica bajo CC BY 4.0.",
+    "artifact_ids": [
+     "SA-c5713b54238da9640d7cad86"
+    ],
+    "quote": "the content of the O*NET 31.0 Database is licensed under a Creative Commons Attribution 4.0 International License",
+    "locator": "Content License"
+   },
+   {
+    "claim": "Hay que indicar dónde se hicieron cambios respecto al original.",
+    "artifact_ids": [
+     "SA-c5713b54238da9640d7cad86"
+    ],
+    "quote": "indicate where any changes were made to the original.",
+    "locator": "Content License"
+   },
+   {
+    "claim": "Un archivo de la base de datos O*NET tiene 1,016 filas y contiene cada código O*NET-SOC, el título de la ocupación y su definición/descripción.",
+    "artifact_ids": [
+     "SA-4b3d73ed9648d8f4edac65f3"
+    ],
+    "quote": "1,016 rows This file contains each O*NET-SOC code, occupational title, and definition/description.",
+    "locator": "Occupation Titles, Occupation Data"
+   },
+   {
+    "claim": "En O*NET Database se pide completar un formulario de registro opcional.",
+    "artifact_ids": [
+     "SA-4b3d73ed9648d8f4edac65f3"
+    ],
+    "quote": "are asked to complete an optional registration form",
+    "locator": "Developer Notice"
+   },
+   {
+    "claim": "Un archivo de O*NET contiene la taxonomía de ocupaciones O*NET-SOC 2019.",
+    "artifact_ids": [
+     "SA-4b3d73ed9648d8f4edac65f3"
+    ],
+    "quote": "This file contains the O*NET-SOC 2019 occupation taxonomy.",
+    "locator": "Competency Frameworks"
+   },
+   {
+    "claim": "El acceso a O*NET Web Services requiere registro.",
+    "artifact_ids": [
+     "SA-4b3d73ed9648d8f4edac65f3"
+    ],
+    "quote": "Sign up for access to all O*NET Web Services",
+    "locator": "Web Services"
+   },
+   {
+    "claim": "La ficha 'ISCO 08 Structure' tiene fecha de publicación 13 de septiembre de 2014 y un PDF descargable de 29.12 KB.",
+    "artifact_ids": [
+     "SA-ecc4c9a66932832efc9c8cdb"
+    ],
+    "quote": "Date of publication 13 September 2014 Files for download PDF 29.12 KB",
+    "locator": "Resource details"
+   },
+   {
+    "claim": "La tabla de correspondencia ISCO-08 a ISCO-88 tiene columnas de título y código ISCO-08, código ISCO-88, parte ISCO-88, título ISCO-88 y comentarios.",
+    "artifact_ids": [
+     "SA-6521594e9c321c84e08312a4"
+    ],
+    "quote": "ISCO-08 Title EN ISCO 08 Code ISCO-88 code ISC O- 88 part ISCO-88 Title EN Comments",
+    "locator": "Encabezado de la tabla"
+   },
+   {
+    "claim": "El documento es el Sistema Nacional de Clasificación de Ocupaciones 2019 (SINCO) del Instituto Nacional de Estadística y Geografía, México: INEGI, c2020.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "Sistema Nacional de Clasificación de Ocupaciones 2019  : SINCO / Instituto Nacional de Estadística y Geografía.-- México : INEGI, c2020.",
+    "locator": "Portada, catalogación en la fuente"
+   },
+   {
+    "claim": "La tabla del SINCO 2019 da como totales 9, 53, 156 y 468, y 9, 52, 163 y 490.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "Total 9 53 156 468 9 52 163 490",
+    "locator": "Aspectos relevantes de la actualización, cuadro comparativo 2011-2019"
+   },
+   {
+    "claim": "El texto declara que el SINCO 2019 tiene un grupo principal menos, siete subgrupos más y 22 grupos unitarios más que el de 2011.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "el SINCO 2019 cuenta con un grupo principal menos, así como siete subgrupos y 22 grupos unitarios más que su versión de 2011",
+    "locator": "Aspectos relevantes de la actualización"
+   },
+   {
+    "claim": "El grupo unitario es el nivel más detallado, con 490 grupos de clave de cuatro dígitos.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "Este es el cuarto nivel de agregación o nivel más detallado de la clasificación, constituido por 490 grupos unitarios que se identifican porque cuentan con una clave de cuatro dígitos.",
+    "locator": "Principios de la clasificación, Grupos unitarios"
+   },
+   {
+    "claim": "En el anexo se incluye una tabla comparativa entre el SINCO 2011 y el SINCO 2019.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "Finalmente, en el anexo se incluye una tabla comparativa entre el SINCO 2011 y el SINCO 2019.",
+    "locator": "Introducción; Índice (Anexo, Tabla de equivalencia SINCO 2011 - 2019)"
+   },
+   {
+    "claim": "El SINCO se apega a la CIUO 2008 en la medida de lo posible.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "Se apega, en la medida de lo posible, a la CIUO de 2008 de la OIT",
+    "locator": "Principios de la clasificación, inciso e"
+   },
+   {
+    "claim": "El Instituto mantiene desde 2012 un sistema de consulta sobre esta clasificación en su página de internet.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "ha mantenido desde 2012 un sistema de consulta sobre esta clasificación en la página del Instituto en internet",
+    "locator": "Antecedentes"
+   },
+   {
+    "claim": "La estructura de la clasificación tiene cuatro niveles: división, grupo principal, subgrupo y grupo unitario.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "En el SINCO el nivel más general es la división, le sigue el grupo principal, después el subgrupo y finalmente el grupo unitario.",
+    "locator": "Estructura de la clasificación"
+   },
+   {
+    "claim": "Se prevé una actualización al menos una vez al año para dar de alta nuevas ocupaciones, y otra a largo plazo (cinco o diez años).",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "una actualización de al menos una vez al año, cuando se trate de dar de alta nuevas ocupaciones; y otra a largo plazo (cinco o diez años)",
+    "locator": "Principios de la clasificación, inciso h"
+   },
+   {
+    "claim": "El texto lleva la cita: INEGI. Sistema Nacional de Clasificación de Ocupaciones 2019. SINCO. 2020.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "INEGI. Sistema Nacional de Clasificación de Ocupaciones 2019. SINCO. 2020.",
+    "locator": "Pie de página, p. 190 y siguientes"
+   },
+   {
+    "claim": "Hay una tabla de equivalencia SINCO 2011 - 2019.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "Tabla de equivalencia SINCO 2011 - 2019",
+    "locator": "Anexo, p. 359"
+   },
+   {
+    "claim": "Se integró la página 230 porque no se incluyó en la publicación inicial.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "Se integró la página número 230 debido a que no fue incluida en la publicación inicial.",
+    "locator": "Fe de erratas, p. final"
+   },
+   {
+    "claim": "Se cambiaron los ejemplos del grupo unitario 5115 Cantineros.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "Cambio de ejemplos en el grupo unitario 5115 Cantineros",
+    "locator": "Fe de erratas, p. 227"
+   },
+   {
+    "claim": "El texto remite a 'Trabajadores en el beneficio de productos agrícolas' con la clave 6117 Trabajadores en actividades de beneficio de productos agrícolas.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "Trabajadores en el beneficio de productos agrícolas (6117 Trabajadores en actividades de beneficio de productos agrícolas).",
+    "locator": "Fe de erratas, p. 331"
+   },
+   {
+    "claim": "El SINCO 2019 cita la Clasificación Internacional Uniforme de Ocupaciones CIUO-88.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "Clasificación Internacional Uniforme de Ocupaciones CIUO-88",
+    "locator": "Bibliografía, p. 401"
+   },
+   {
+    "claim": "El SINCO 2019 incluye la clave 3999 Otros trabajadores auxiliares en actividades administrativas, no clasificados anteriormente.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "3999 Otros trabajadores auxiliares en actividades administrativas, no clasificados anteriormente",
+    "locator": "División 3, p. 211"
+   },
+   {
+    "claim": "El SINCO 2019 menciona algo que constituye una clave especial.",
+    "artifact_ids": [
+     "SA-6a8a80d6e193ecb466d2b3d8"
+    ],
+    "quote": "Por lo anterior, constituye una clave especial.",
+    "locator": "Grupo 99, p. 356"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Cuenta de ocupaciones ESCO de v1.2.1 con su cita: la única cifra en estas fuentes es la de v1.0 (2942). Sin sha256 ni URL de archivo.",
+   "Total de unidades de CIUO-08 y fecha de corte: la ficha OIT es solo un PDF sin texto. Sin licencia OIT ni sha256.",
+   "Límites de tasa y robots.txt de ESCO, O*NET y OIT: no están en estas fuentes.",
+   "SINCO (DANE) y las demás áreas de why_needed: no cubiertas en esta parte.",
+   "Marcos de pago: no aparecen en esta parte.",
+   "Cuenta y versión del cruce ESCO–O*NET: la página no da números ni la versión de ESCO usada.",
+   "Licencia o términos de uso del SINCO: en las partes leídas solo aparece '2020, Instituto Nacional de Estadística y Geografía' y 'Registro en trámite'; no hay una cláusula de licencia citable.",
+   "URL canónica, sha256 del archivo descargado, límites de tasa y robots.txt del sitio de INEGI: no figuran en el texto.",
+   "Fecha de corte exacta de la versión del SINCO: no figura salvo el año 2019 y la edición de 2020.",
+   "Volcados oficiales de CIUO-08, ESCO y O*NET, con versión, número de ocupaciones y correspondencias: esta parte no los cubre.",
+   "Las demás áreas de why_needed (leyes, emisores de marcos, libros abiertos y marcos de pago): esta parte no las cubre.",
+   "Detalle de la tabla de equivalencia SINCO 2011-2019 (anexo) y de los grupos principales 28 a 99 en versión ampliada: el texto está cortado en el grupo 28.",
+   "Licencia o términos de uso del SINCO 2019, con cita literal: no aparecen en esta parte.",
+   "URL de descarga, sha256, límites de tasa y robots.txt del SINCO: no están en esta parte.",
+   "Total declarado de ocupaciones (grupos unitarios) del SINCO 2019 y fecha de corte: no se declara en esta parte; el conteo sería una derivación propia.",
+   "Volcados oficiales de CIUO-08, ESCO y O*NET: no aparecen en esta parte.",
+   "Correspondencia oficial SINCO–CIUO-08: no vista aquí; solo la tabla SINCO 2011–2019.",
+   "Fuentes primarias para las demás áreas de why_needed: esta parte no las trata."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: la cuenta de 1,016 filas de O*NET Occupation Data (31.0) no es comparable directamente con las ocupaciones ESCO. ESCO v1.2.1 no tiene cifra declarada en estas fuentes.",
+  "INTERPRETACIÓN: ESCO es de acceso libre pero con registro por correo, y su licencia exige atribución. O*NET es CC BY 4.0, con registro opcional.",
+  "INTERPRETACIÓN: la tabla ISCO-08/ISCO-88 contiene correspondencias parciales ('p'). Medir cobertura con ella exige tratar uno-a-muchos.",
+  "INTERPRETACIÓN: para medir cobertura con SINCO, la unidad de conteo comparable es el grupo unitario de 4 dígitos (490 en 2019); contra 2011 (468) la serie no es idéntica y hay que usar la tabla de equivalencia del anexo.",
+  "INTERPRETACIÓN: SINCO 2019 es de grano grueso frente a catálogos con miles de ocupaciones; sus 490 clases agrupan ocupaciones y listan ejemplos de títulos, así que no equivale a un inventario fino de ocupaciones.",
+  "INTERPRETACIÓN: la fuente es un PDF editorial, no un volcado estructurado; la extracción a CSV es trabajo propio y puede introducir errores (el texto muestra guiones de corte y espacios dentro de palabras).",
+  "INTERPRETACIÓN: la cuenta de la tabla (490) coincide con la del texto de grupos unitarios, pero no se contó una a una; falta verificarlo contra la lista abreviada.",
+  "INTERPRETACIÓN: La tabla de equivalencia 2011–2019 muestra cambios de estructura (por ejemplo 2429 desdoblado, 5119, 5319, 5419, 7199, 7299, 7399, 7599 nuevos o separados). Medir cobertura con SINCO 2011 frente a 2019 produce cifras distintas.",
+  "INTERPRETACIÓN: Las erratas de 2024 y 2025 implican que hay versiones de la publicación 2019 con contenido distinto; conviene fijar versión y sha256 al descargar.",
+  "INTERPRETACIÓN: El SINCO describe en cada grupo unitario ocupaciones ilustrativas, funciones y exclusiones; la unidad de conteo sería el grupo unitario de cuatro dígitos, no las ocupaciones listadas."
+ ],
+ "candidate_tests": [
+  "Contar las claves de 4 dígitos de la versión abreviada y comprobar que son 490; contar también las de 3 dígitos (163) y las de 2 dígitos (52).",
+  "Verificar la tabla de equivalencia 2011-2019 del anexo: cada clave 2011 debe tener correspondencia, y las 468 deben mapear a las 490.",
+  "Contar los códigos de cuatro dígitos en el texto completo del SINCO 2019 y compararlos con el total que declare la parte inicial o el catálogo de INEGI."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Si H11 usa SINCO como marco de ocupaciones mexicano, declarar versión 2019 (edición 2020) y 490 grupos unitarios como total de la fuente.",
+  "Registrar que el PDF indica 'Registro en trámite' y que no se halló licencia explícita: tratar la licencia como desconocida hasta consultar los términos de uso de INEGI."
+ ],
+ "affected_existing_concepts": [
+  "SINCO 2019",
+  "H11 cobertura de ocupaciones"
+ ],
+ "limitations": [
+  "Las fuentes se leyeron completas en 3 partes, una llamada por parte; un \"unknown\" de una parte puede estar respondido en otra.",
+  "Las fuentes son páginas web convertidas a texto; no hay hashes ni archivos descargados.",
+  "La tabla ISCO-08/ISCO-88 aparece sin fuente, fecha ni licencia en su texto y está truncada en algunas celdas.",
+  "La fecha de O*NET ('Site updated October 6, 2026') es de la página, no de corte de datos.",
+  "Esta parte no cubre SINCO ni los marcos de pago.",
+  "Solo se leyó el SINCO 2019: los primeros 600000 de 1196905 caracteres. El texto termina en el grupo principal 28 de la división 2, así que la parte restante (divisiones 3 a 9 en versión ampliada, anexo de equivalencia, glosario y bibliografía) no se leyó.",
+  "No se leyó ninguna otra fuente: CIUO-08, ESCO y O*NET, las demás áreas y los marcos de pago quedan fuera de esta parte.",
+  "No se pudo calcular sha256 ni confirmar la URL de descarga: el texto no las incluye.",
+  "Los conteos (490, 163, 52) son lo que declara el texto; no se recontaron.",
+  "La conversión a texto del PDF tiene ruido (cortes de palabras, espacios) y puede afectar la fidelidad de las citas.",
+  "Solo se leyó la segunda mitad del texto del SINCO (caracteres 599000 a 1196905); la introducción, la licencia, la metodología y el total de ocupaciones pueden estar en las partes 1 y 2.",
+  "El texto es un PDF convertido, sin metadatos de URL, licencia ni hash.",
+  "No se contaron los grupos unitarios de forma exhaustiva, por lo que no se da un total.",
+  "No se evaluaron ESCO, O*NET ni CIUO-08, que requieren otras fuentes.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 32 de 43 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 11 aceptadas, 1 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Se descartaron 6 hallazgos cuya cita no aparece tal cual en el texto de la fuente que citan (detalle en receipt.json): sin su cita no son hechos.",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://esco.ec.europa.eu/en/about-esco/escopedia/escopedia/esco-v12 (429); https://ilostat.ilo.org/methods/concepts-and-definitions/classification-occupation/ (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
