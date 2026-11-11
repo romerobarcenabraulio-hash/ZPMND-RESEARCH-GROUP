@@ -1,0 +1,517 @@
+{
+ "research_id": "RP-2026-11-08-familia-j-software",
+ "request_id": "RR-2026-11-08-familia-j-software",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T22:15:59Z",
+ "question": "Para cada subárea de software listada en why_needed: ¿qué fuente oficial la publica (proyecto, registro de paquetes, base de avisos o lista SPDX), por qué API o volcado se adquiere, cuántos elementos declara a qué fecha, qué feed de cambios o releases ofrece y con qué licencia o términos de uso?",
+ "why_zpmnd_needs_it": "Subáreas: J01 Documentación oficial de lenguajes y plataformas (Mundo); J02 Registros de paquetes (Mundo); J03 Repositorios y releases (Mundo); J04 Avisos de seguridad (Mundo); J05 Catálogos de APIs (Mundo); J06 Protocolos (Mundo); J07 Bases de datos y motores (Mundo); J08 Frameworks y patrones de arquitectura (Mundo); J09 Benchmarks (Mundo); J10 Licencias de software (Mundo); J11 Código como conocimiento (Mundo). ZPMND necesita versiones y avisos con procedencia.",
+ "scope": "Revisión de las fuentes entregadas sobre feeds, volcados y licencias de registros de paquetes (npm, PyPI, crates.io), bases de avisos (OSV, GitHub Advisory DB, NVD) y la lista SPDX. La solicitud no incluye la lista why_needed, así que solo se cubren las subáreas que las fuentes permiten identificar. No se descargó nada: no hay sha256 propios.",
+ "sources": {
+  "primary": [
+   "SA-a6971a03a4d0ee9206cee401",
+   "SA-d0be7130e5bb98d882b767c5",
+   "SA-37e4db61ee6211492a76f762",
+   "SA-d587becc405890b52a715cce",
+   "SA-e7db396419da10c3d00f004f",
+   "SA-38bc003854696635fd384093",
+   "SA-008d9d1ec487e0cf9c428b49",
+   "SA-38f2f8605235267d67aa58f3",
+   "SA-dd40cfb23c69f2656773450a"
+  ],
+  "secondary": [
+   "SA-781080716ecd02c1f96cac63",
+   "SA-5994a135cd9a3f12419df926",
+   "SA-6aaa82b41af969d2a8d57e6b"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-a6971a03a4d0ee9206cee401",
+   "url": "https://github.com/orgs/community/discussions/152515",
+   "retrieved_at": "2026-11-11T22:13:09Z",
+   "sha256": "a6971a03a4d0ee9206cee4017a04155c80cc4546742b50a06fd1155ad3e197c5",
+   "bytes": 1309298,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "GitHub Community (npm/GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "npm replication API changes and migration guide"
+  },
+  {
+   "artifact_id": "SA-781080716ecd02c1f96cac63",
+   "url": "https://docs.couchdb.org/en/stable/replication/protocol.html",
+   "retrieved_at": "2026-11-11T22:13:12Z",
+   "sha256": "781080716ecd02c1f96cac631b53a4d5140ee0b36a9367f919cf78fcf3144335",
+   "bytes": 176141,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "Apache CouchDB",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "CouchDB Replication Protocol"
+  },
+  {
+   "artifact_id": "SA-d0be7130e5bb98d882b767c5",
+   "url": "https://docs.pypi.org/api/",
+   "retrieved_at": "2026-11-11T22:13:13Z",
+   "sha256": "d0be7130e5bb98d882b767c5710cdfe58ac30a752b14a2d027776e0e428072af",
+   "bytes": 64479,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "PyPI / PSF",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Introduction - PyPI User Documentation"
+  },
+  {
+   "artifact_id": "SA-37e4db61ee6211492a76f762",
+   "url": "https://dev.pypi.org/api-reference/xml-rpc/",
+   "retrieved_at": "2026-11-11T22:13:14Z",
+   "sha256": "37e4db61ee6211492a76f76298a9de765f8b78f836a30d8788c1d2044bcb4cfc",
+   "bytes": 63274,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "PyPI Warehouse",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "XML-RPC - Warehouse Developer Documentation"
+  },
+  {
+   "artifact_id": "SA-5994a135cd9a3f12419df926",
+   "url": "https://github.com/pypi/warehouse/issues/12488",
+   "retrieved_at": "2026-11-11T22:13:15Z",
+   "sha256": "5994a135cd9a3f12419df9268f735bd7a7ea3f01e201376b425ff1b32c10f2fc",
+   "bytes": 252346,
+   "media_type": "text/html",
+   "source_type": "other",
+   "publisher": "pypi/warehouse (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "RSS feeds and JSON APIs don't provide the capabilities of Mirroring Support that XML-RPC does"
+  },
+  {
+   "artifact_id": "SA-d587becc405890b52a715cce",
+   "url": "https://rust-lang.github.io/rfcs/3463-crates-io-policy-update.html",
+   "retrieved_at": "2026-11-11T22:13:17Z",
+   "sha256": "d587becc405890b52a715cce7fa60bea66de8f90a38e1457aef70c7b55b32f13",
+   "bytes": 38043,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Rust project",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "RFC 3463 crates.io policy update"
+  },
+  {
+   "artifact_id": "SA-e7db396419da10c3d00f004f",
+   "url": "https://google.github.io/osv.dev/data/",
+   "retrieved_at": "2026-11-11T22:13:19Z",
+   "sha256": "e7db396419da10c3d00f004f2ebf38c74fc400ddd5ec5b2032750ad19d8cde81",
+   "bytes": 27554,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Google OSV",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Data sources (OSV.dev)"
+  },
+  {
+   "artifact_id": "SA-38bc003854696635fd384093",
+   "url": "https://github.com/github/advisory-database",
+   "retrieved_at": "2026-11-11T22:13:20Z",
+   "sha256": "38bc003854696635fd3840933c0e8703660c43e9f21ac47eb1cb169069bd8530",
+   "bytes": 279642,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "GitHub",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "github/advisory-database"
+  },
+  {
+   "artifact_id": "SA-008d9d1ec487e0cf9c428b49",
+   "url": "https://nvd.nist.gov/general/news/changes-to-feeds-and-apis",
+   "retrieved_at": "2026-11-11T22:13:20Z",
+   "sha256": "008d9d1ec487e0cf9c428b49f940b58443375f9da817634418e80576411b6575",
+   "bytes": 2629,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "NIST NVD",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Changes to feeds and APIs"
+  },
+  {
+   "artifact_id": "SA-38f2f8605235267d67aa58f3",
+   "url": "https://spdx.org/licenses/",
+   "retrieved_at": "2026-11-11T22:13:41Z",
+   "sha256": "38f2f8605235267d67aa58f34d58aac41d250d2ccdea71561352821f43d4fd75",
+   "bytes": 277994,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "SPDX / Linux Foundation",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "SPDX License List"
+  },
+  {
+   "artifact_id": "SA-dd40cfb23c69f2656773450a",
+   "url": "https://github.com/spdx/license-list-data",
+   "retrieved_at": "2026-11-11T22:13:43Z",
+   "sha256": "dd40cfb23c69f2656773450a1ed448e960044e7335dbc80070f852ca118329e4",
+   "bytes": 256052,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "SPDX",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "spdx/license-list-data"
+  },
+  {
+   "artifact_id": "SA-6aaa82b41af969d2a8d57e6b",
+   "url": "https://docs.deps.dev/api/",
+   "retrieved_at": "2026-11-11T22:13:44Z",
+   "sha256": "6aaa82b41af969d2a8d57e6b4d4e5b443e33d73ce4f6687b68388a76a2015357",
+   "bytes": 2992,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Google Open Source Insights",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "deps.dev API"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "npm: la cita muestra la petición GET https://replicate.npmjs.com/registry/_changes.",
+    "artifact_ids": [
+     "SA-a6971a03a4d0ee9206cee401"
+    ],
+    "quote": "GET https://replicate.npmjs.com/registry/_changes",
+    "locator": "Discusión #152515, post inicial, 'Supported Endpoints'"
+   },
+   {
+    "claim": "npm: el parámetro limit de la API de replicación tiene valor por defecto 1000 y máximo 10000.",
+    "artifact_ids": [
+     "SA-a6971a03a4d0ee9206cee401"
+    ],
+    "quote": "The limit parameter will have a default value of 1000 and a maximum value of 10000 across all endpoints.",
+    "locator": "Discusión #152515, 'limit Parameter'"
+   },
+   {
+    "claim": "npm: https://replicate.npmjs.com/ dejará de admitirse para obtener packuments.",
+    "artifact_ids": [
+     "SA-a6971a03a4d0ee9206cee401"
+    ],
+    "quote": "https://replicate.npmjs.com/ will no longer be supported for fetching packuments.",
+    "locator": "Discusión #152515, 'include_docs Deprecation'"
+   },
+   {
+    "claim": "npm: una salida de la API muestra db_name \"registry\", engine \"npm-replicate\", doc_count 3501535 y update_seq 61159494.",
+    "artifact_ids": [
+     "SA-a6971a03a4d0ee9206cee401"
+    ],
+    "quote": "{\"db_name\":\"registry\",\"engine\":\"npm-replicate\",\"doc_count\":3501535,\"update_seq\":61159494}",
+    "locator": "Discusión #152515, respuesta de monishcm, 3 abr 2025"
+   },
+   {
+    "claim": "npm: los endpoints existentes quedarán totalmente obsoletos el jueves 29 de mayo de 2025 (12:00 UTC).",
+    "artifact_ids": [
+     "SA-a6971a03a4d0ee9206cee401"
+    ],
+    "quote": "The existing endpoints will be fully deprecated on Thursday, May 29, 2025 (12:00 UTC).",
+    "locator": "Discusión #152515, 'Overview'"
+   },
+   {
+    "claim": "npm: se calificó cierto comportamiento como normal en el feed («That is indeed normal feed behavior»).",
+    "artifact_ids": [
+     "SA-a6971a03a4d0ee9206cee401"
+    ],
+    "quote": "That is indeed normal feed behavior",
+    "locator": "Discusión #152515, jumoel, 24 jun 2025"
+   },
+   {
+    "claim": "npm: se reportan paquetes que deberían existir según la API de replicación (tienen cambios válidos y ningún evento de borrado), pero para los que el registro devuelve un error 404.",
+    "artifact_ids": [
+     "SA-a6971a03a4d0ee9206cee401"
+    ],
+    "quote": "which should exist according to the replication API (there are valid changes for them, and no delete events), but the registry returns a 404 error for them.",
+    "locator": "Discusión #152515, MartinKolarik, 1 jul 2025"
+   },
+   {
+    "claim": "PyPI: la documentación indica que actualmente no hay límite de tasa en el borde para las APIs de PyPI; la API XML-RPC puede limitarse si su uso degrada el servicio.",
+    "artifact_ids": [
+     "SA-d0be7130e5bb98d882b767c5"
+    ],
+    "quote": "there is currently no rate limiting of PyPI APIs at the edge. The XML-RPC API may be rate limited if usage is causing degradation of service.",
+    "locator": "Introducción, 'Rate limiting'"
+   },
+   {
+    "claim": "PyPI: para consultar periódicamente paquetes nuevos o actualizados se recomiendan los feeds RSS.",
+    "artifact_ids": [
+     "SA-d0be7130e5bb98d882b767c5"
+    ],
+    "quote": "For periodically checking for new packages or updates to existing packages, use our RSS feeds.",
+    "locator": "Introducción, 'API Preference'"
+   },
+   {
+    "claim": "PyPI: las peticiones a las APIs JSON, RSS e Index se cachean en su proveedor de CDN.",
+    "artifact_ids": [
+     "SA-d0be7130e5bb98d882b767c5"
+    ],
+    "quote": "Requests to the JSON, RSS or Index APIs are cached by our CDN provider.",
+    "locator": "Introducción, 'Caching'"
+   },
+   {
+    "claim": "PyPI: se pide un User-Agent que identifique al consumidor.",
+    "artifact_ids": [
+     "SA-d0be7130e5bb98d882b767c5"
+    ],
+    "quote": "Set your consumer's User-Agent header to uniquely identify your requests.",
+    "locator": "Introducción, 'Rate limiting'"
+   },
+   {
+    "claim": "PyPI: los métodos XML-RPC para mirroring son actualmente los únicos que se consideran totalmente soportados.",
+    "artifact_ids": [
+     "SA-37e4db61ee6211492a76f762"
+    ],
+    "quote": "XML-RPC methods for mirroring support are currently the only methods we consider fully supported",
+    "locator": "XML-RPC, 'Mirroring Support'"
+   },
+   {
+    "claim": "PyPI: changelog_since_serial devuelve las acciones desde un serial dado.",
+    "artifact_ids": [
+     "SA-37e4db61ee6211492a76f762"
+    ],
+    "quote": "Retrieve a list of (name, version, timestamp, action, serial) since the event identified by the given since_serial.",
+    "locator": "XML-RPC, changelog_since_serial"
+   },
+   {
+    "claim": "PyPI: esta API tiene un límite de tasa muy restrictivo y puede ser necesario hacer pausas entre peticiones sucesivas.",
+    "artifact_ids": [
+     "SA-37e4db61ee6211492a76f762"
+    ],
+    "quote": "this API has a very restrictive rate limit and it may be necessary to pause between successive requests.",
+    "locator": "XML-RPC, advertencia inicial"
+   },
+   {
+    "claim": "crates.io (RFC 3463): se publica un volcado de la base de datos cada 24 horas.",
+    "artifact_ids": [
+     "SA-d587becc405890b52a715cce"
+    ],
+    "quote": "we also publish a database dump every 24 hours.",
+    "locator": "RFC 3463, 'Data Access'"
+   },
+   {
+    "claim": "crates.io (RFC 3463): el volcado de base de datos más reciente está en https://static.crates.io/db-dump.tar.gz.",
+    "artifact_ids": [
+     "SA-d587becc405890b52a715cce"
+    ],
+    "quote": "The latest database dump is available at https://static.crates.io/db-dump.tar.gz",
+    "locator": "RFC 3463, 'Data Access'"
+   },
+   {
+    "claim": "crates.io (RFC 3463): se exige a quienes usan la API de crates.io que no pasen de 1 petición por segundo.",
+    "artifact_ids": [
+     "SA-d587becc405890b52a715cce"
+    ],
+    "quote": "We require users of the crates.io API to limit themselves to a maximum of 1 request per second.",
+    "locator": "RFC 3463, 'Data Access'"
+   },
+   {
+    "claim": "crates.io (RFC 3463): este repositorio se actualiza en vivo cada vez que se publican versiones nuevas.",
+    "artifact_ids": [
+     "SA-d587becc405890b52a715cce"
+    ],
+    "quote": "This repository is updated live whenever new versions are published",
+    "locator": "RFC 3463, 'Data Access'"
+   },
+   {
+    "claim": "OSV: el volcado completo está en gs://osv-vulnerabilities/all.zip.",
+    "artifact_ids": [
+     "SA-e7db396419da10c3d00f004f"
+    ],
+    "quote": "gs://osv-vulnerabilities/all.zip",
+    "locator": "OSV 'Data sources', 'Full database download'"
+   },
+   {
+    "claim": "OSV: los archivos modified_id.csv sirven para descargar solo los registros nuevos o actualizados.",
+    "artifact_ids": [
+     "SA-e7db396419da10c3d00f004f"
+    ],
+    "quote": "To efficiently download only new or updated records, you can use the modified_id.csv files.",
+    "locator": "OSV 'Data sources', 'Downloading recent changes'"
+   },
+   {
+    "claim": "OSV: GitHub Advisory Database figura con la licencia CC-BY 4.0.",
+    "artifact_ids": [
+     "SA-e7db396419da10c3d00f004f"
+    ],
+    "quote": "GitHub Advisory Database (CC-BY 4.0)",
+    "locator": "OSV 'Data sources', 'Current data sources'"
+   },
+   {
+    "claim": "OSV: Chainguard / Wolfi figura con CC-BY-NC-ND 4.0 o con la Chainguard License for Commercial Scanners.",
+    "artifact_ids": [
+     "SA-e7db396419da10c3d00f004f"
+    ],
+    "quote": "Chainguard / Wolfi (CC-BY-NC-ND 4.0 / Chainguard License for Commercial Scanners)",
+    "locator": "OSV 'Data sources', 'Current data sources'"
+   },
+   {
+    "claim": "OSV: la lista de ecosistemas actuales está en ecosystems.txt del bucket.",
+    "artifact_ids": [
+     "SA-e7db396419da10c3d00f004f"
+    ],
+    "quote": "A list of all current ecosystems is available at gs://osv-vulnerabilities/ecosystems.txt",
+    "locator": "OSV 'Data sources', 'Ecosystem naming'"
+   },
+   {
+    "claim": "GitHub Advisory Database: los avisos se almacenan como archivos individuales en formato OSV.",
+    "artifact_ids": [
+     "SA-38bc003854696635fd384093"
+    ],
+    "quote": "All advisories acknowledged by GitHub are stored as individual files in this repository. They are formatted in the Open Source Vulnerability (OSV) format.",
+    "locator": "README, 'Features'"
+   },
+   {
+    "claim": "GitHub Advisory Database: el repositorio se licencia bajo CC-BY 4.0.",
+    "artifact_ids": [
+     "SA-38bc003854696635fd384093"
+    ],
+    "quote": "This project is licensed under the terms of the CC-BY 4.0 open source license.",
+    "locator": "README, 'License'"
+   },
+   {
+    "claim": "GitHub Advisory Database: el repositorio muestra 120,802 commits en la fecha de captura.",
+    "artifact_ids": [
+     "SA-38bc003854696635fd384093"
+    ],
+    "quote": "120,802 Commits",
+    "locator": "Cabecera del repositorio (fecha de captura no indicada)"
+   },
+   {
+    "claim": "GitHub Advisory Database: se advierte de que podrían hacerse cambios incompatibles hacia atrás.",
+    "artifact_ids": [
+     "SA-38bc003854696635fd384093"
+    ],
+    "quote": "potentially make backwards-incompatible changes to it.",
+    "locator": "README, FAQ 'Will the structure of the database change?'"
+   },
+   {
+    "claim": "SPDX: la página de la lista indica la versión 3.29.0 con fecha 2026-09-16.",
+    "artifact_ids": [
+     "SA-38f2f8605235267d67aa58f3"
+    ],
+    "quote": "Version: 3.29.0 2026-09-16",
+    "locator": "SPDX License List, encabezado de tabla"
+   },
+   {
+    "claim": "SPDX: el repositorio spdx/license-list-data incluye la lista de licencias en formato JSON.",
+    "artifact_ids": [
+     "SA-dd40cfb23c69f2656773450a"
+    ],
+    "quote": "json - JSON format for the license list.",
+    "locator": "README, 'Data Formats'"
+   },
+   {
+    "claim": "SPDX license-list-data: el repositorio recibe una etiqueta cada vez que se actualiza la SPDX License List.",
+    "artifact_ids": [
+     "SA-dd40cfb23c69f2656773450a"
+    ],
+    "quote": "The repository is tagged whenever the SPDX License List is updated.",
+    "locator": "README, 'Repository Tags and Versions'"
+   },
+   {
+    "claim": "SPDX license-list-data: para la información de licencias remite a los repositorios respectivos.",
+    "artifact_ids": [
+     "SA-dd40cfb23c69f2656773450a"
+    ],
+    "quote": "Please see the respective repositories for licensing information.",
+    "locator": "README, 'Licensing Information'"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Lista why_needed: no figura en la solicitud, por lo que las subáreas se infirieron de las fuentes.",
+   "NVD: la fuente 'Changes to feeds and APIs' solo devolvió el texto 'NVD - Home'; no hay datos de API, volcados, límites ni términos.",
+   "Totales declarados por la fuente y fecha de corte: solo hay un doc_count de npm de abril de 2025 (en un comentario) y los 120,802 commits del repositorio de GitHub. No se halló total oficial para PyPI, crates.io, OSV ni el número de licencias SPDX.",
+   "sha256 de lo bajado: no se descargó ningún volcado.",
+   "robots.txt: no se leyó ninguno.",
+   "Licencia o términos de uso de npm replicate, de los datos de PyPI y de la lista SPDX: no se hallaron con cita literal en estas fuentes.",
+   "Licencia del volcado de OSV como conjunto: solo constan licencias por fuente.",
+   "Feed de releases de la lista SPDX: solo hay tags en el repositorio; no se leyó un feed específico.",
+   "Otros registros (Maven, NuGet, RubyGems, Go, Packagist, Hex, Pub): sin fuente entregada."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: npm y PyPI ofrecen feeds de cambios con secuencia (npm _changes con since, PyPI changelog_since_serial); OSV ofrece modified_id.csv y SPDX, tags de repositorio.",
+  "INTERPRETACIÓN: las fuentes dan señales de inestabilidad: npm tuvo saltos de seq y caídas en abril de 2025, y el XML-RPC de PyPI está en camino de deprecarse. Un consumidor debe tolerar cambios de feed.",
+  "SECUNDARIA: el issue pypi/warehouse #12488 indica que RSS y JSON no sustituyen al XML-RPC de mirroring; un contribuyente mencionó que PEP 691 y bandersnatch permiten consultar cambios, sin que se confirmara en una fuente primaria.",
+  "SECUNDARIA: la documentación del CouchDB 3.5 (Apache CouchDB) describe el protocolo de replicación y el formato del feed _changes. Una discusión en la fuente npm indica que ya no hay vínculo con CouchDB más que histórico.",
+  "SECUNDARIA: la página de deps.dev (Google) solo ofrece menús (API v3, v3alpha, BigQuery) y no aporta datos citables sobre límites, totales ni licencia."
+ ],
+ "candidate_controls": [
+  "Registrar en cada adquisición la URL, la fecha UTC, la cabecera Date, el ETag y el sha256 del archivo bajado.",
+  "Verificar en la fuente primaria vigente la licencia de cada volcado antes de reutilizarlo; no heredar la licencia agregada de OSV.",
+  "Usar User-Agent identificativo y respetar el límite de 1 petición por segundo en crates.io, o el volcado diario."
+ ],
+ "candidate_tests": [
+  "Contrastar el doc_count del endpoint raíz de npm con el recuento de _all_docs en la fecha de cobro.",
+  "Descargar all.zip de OSV y comparar su recuento con la suma de los all.zip por ecosistema.",
+  "Contar los identificadores de licencia de licenses.json de SPDX frente a la versión 3.29.0 declarada."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Un aviso de seguridad no visto es un riesgo real si se usa un solo feed: conviene cruzar OSV con la GitHub Advisory Database y tratar NVD como pendiente.",
+  "La licencia varía por fuente dentro de OSV (CC0, CC-BY, CC-BY-SA, CC-BY-NC-ND), así que el registro de licencia debe ser por fuente de origen."
+ ],
+ "affected_existing_concepts": [
+  "Registro de fuentes oficiales por subárea de software",
+  "Fechado de versiones y de cortes de datos"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: los términos del volcado de crates.io vigentes pueden diferir de la propuesta del RFC 3463; hay que verificar en crates.io/policies.",
+  "HIPÓTESIS: el feed de cambios de npm puede tener lagunas (paquetes sin evento de borrado), por lo que conviene reconciliar periódicamente con _all_docs."
+ ],
+ "limitations": [
+  "Las fuentes de GitHub Community y GitHub son páginas renderizadas. No se conoce la fecha de captura, solo las fechas de los comentarios.",
+  "La fuente de npm es una discusión de comunidad con mantenedores de npm. No es documentación formal y contiene comentarios de terceros y posible spam.",
+  "El RFC 3463 es una propuesta de 2023. Se ignora si la política se adoptó tal cual.",
+  "La fuente de NVD está prácticamente vacía y la de deps.dev es solo un menú; ninguna sirve como evidencia.",
+  "La página de SPDX solo da la versión y fecha; no se contaron las entradas ni se leyó su licencia de datos.",
+  "Sin la lista why_needed y sin descargas, no se pudo cubrir todas las subáreas ni aportar sha256 ni robots.txt.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 21 de 31 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 12 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json)."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
