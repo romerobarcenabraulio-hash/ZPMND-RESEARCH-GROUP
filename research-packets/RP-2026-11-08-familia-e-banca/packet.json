@@ -1,0 +1,116 @@
+{
+ "research_id": "RP-2026-11-08-familia-e-banca",
+ "request_id": "RR-2026-11-08-familia-e-banca",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T16:50:14Z",
+ "question": "Para cada subárea de banca listada en why_needed: ¿qué autoridad publica el dato o la regla (Banxico, CNBV, CONDUSEF, BIS, Fed, FDIC u OCC), por qué canal oficial se adquiere (API, descarga o DOF), cuántos registros o series declara a qué fecha, y con qué licencia o términos? Para E01, el catálogo completo de series del SIE.",
+ "why_zpmnd_needs_it": "Subáreas: E01 Series de Banxico (SIE) (México; hoy 4 series); E02 Circulares y reglas de Banxico (México); E03 Disposiciones de la CNBV (México); E04 Comisiones, tasas y CAT por producto (México); E05 Contratos de adhesión (RECA) (México); E06 Sistema de pagos: SPEI, CoDi, DiMo (México); E07 Estadísticas de la banca (México); E08 Basilea III y estándares del BIS (Internacional); E09 Regulación bancaria de EE. UU. (Internacional); E10 Open banking y APIs bancarias (Internacional y México). ZPMND necesita productos, tasas y reglas bancarias con fuente primaria y fecha.",
+ "scope": "Solicitud RR-2026-11-08-familia-e-banca: por subárea de banca, autoridad, canal, totales, licencia y acceso; para E01, catálogo del SIE. Solo se entregó una fuente: la entrada de blog de la CNBV sobre Datos Abiertos (30 de junio de 2023). Cubre únicamente la CNBV, de forma muy general.",
+ "sources": {
+  "primary": [
+   "SA-6e58c13af899c99aae366e2a"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-6e58c13af899c99aae366e2a",
+   "url": "https://www.gob.mx/cnbv/es/articulos/consulta-y-usa-los-datos-abiertos-de-la-cnbv",
+   "retrieved_at": "2026-11-11T16:48:57Z",
+   "sha256": "6e58c13af899c99aae366e2a37df40fcb6397900062ed4f3c4b7a74be47512c4",
+   "bytes": 54663,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "CNBV / gob.mx",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Consulta y usa los Datos Abiertos de la CNBV"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "Los datos abiertos son información pública, disponible de manera gratuita, a la que cualquier persona puede acceder, usar y compartir.",
+    "artifact_ids": [
+     "SA-6e58c13af899c99aae366e2a"
+    ],
+    "quote": "Los Datos Abiertos son información pública, disponible de manera gratuita a la que cualquier persona puede acceder, usar y compartir.",
+    "locator": "Subtítulo de la entrada, 30 de junio de 2023"
+   },
+   {
+    "claim": "La CNBV publica sus datos abiertos en su página web, en formatos de fácil descarga y de uso libre.",
+    "artifact_ids": [
+     "SA-6e58c13af899c99aae366e2a"
+    ],
+    "quote": "publica en su página web sus datos abiertos, en formatos de fácil descarga y uso libre",
+    "locator": "Párrafo 1 del cuerpo"
+   },
+   {
+    "claim": "La CNBV participa en la iniciativa de datos abiertos mediante el sitio datos.gob.mx.",
+    "artifact_ids": [
+     "SA-6e58c13af899c99aae366e2a"
+    ],
+    "quote": "la CNBV participa activamente en esta iniciativa del Gobierno de la República mediante el sitio web www.datos.gob.mx.",
+    "locator": "Párrafo 2 del cuerpo"
+   },
+   {
+    "claim": "La página indica que los Datos Abiertos están disponibles en https://bit.ly/DatosAbiertosCNBV.",
+    "artifact_ids": [
+     "SA-6e58c13af899c99aae366e2a"
+    ],
+    "quote": "Datos Abiertos disponibles en: https://bit.ly/DatosAbiertosCNBV",
+    "locator": "Último párrafo del cuerpo"
+   },
+   {
+    "claim": "La responsabilidad por la legalidad, veracidad y calidad de la información recae en la dependencia que la proporcionó.",
+    "artifact_ids": [
+     "SA-6e58c13af899c99aae366e2a"
+    ],
+    "quote": "La legalidad, veracidad y la calidad de la información es estricta responsabilidad de la dependencia, entidad o empresa productiva del Estado que la proporcionó",
+    "locator": "Pie de página gob.mx"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Catálogo completo de series del SIE (E01, Banxico): no hay fuente al respecto entre las leídas.",
+   "Autoridad, canal, formato, sha256, totales y fecha de corte de cada subárea: no aparecen en la fuente. Subáreas de why_needed no recibidas en la solicitud.",
+   "Licencia con cita literal: la página dice 'uso libre' pero no nombra licencia; términos formales desconocidos.",
+   "Límites de tasa y robots.txt: no consultados.",
+   "Datos de Banxico, CONDUSEF, BIS, Fed, FDIC, OCC y reglas del DOF: sin fuentes en este paquete.",
+   "Número de registros o series de la CNBV y fecha de corte: no declarados en la página."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: el acceso a los datos abiertos de la CNBV parece libre y gratuito, pero la licencia exacta debe verificarse en datos.gob.mx o en el portal de la CNBV antes de reutilizar."
+ ],
+ "candidate_tests": [
+  "Resolver el enlace bit.ly y registrar la URL oficial final, el formato, la fecha de corte y el sha256 de lo descargado."
+ ],
+ "limitations": [
+  "Solo se leyó una fuente (blog CNBV, 2023); no cubre la mayoría de autoridades ni subáreas.",
+  "El texto es una página gob.mx con ruido de encuesta; el enlace bit.ly no se siguió, así que el contenido real de los datos es desconocido.",
+  "No hubo descarga de archivos, por lo que no hay sha256.",
+  "La política citada (2021-2024) puede estar desactualizada para 2026.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 2 de 5 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 20 propuestas, 12 aceptadas, 8 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.banxico.org.mx/SieAPIRest/service/v1/doc/catalogoSeries (refused); https://www.banxico.org.mx/SieAPIRest/service/v1/token (refused); https://www.banxico.org.mx/SieAPIRest/service/v1/doc/limiteConsultas (refused); https://www.banxico.org.mx/SieInternet/ (refused); https://www.banxico.org.mx/marco-normativo/normativa-agrupada-por-ano-cr.html (refused); https://www.banxico.org.mx/marco-normativo/normativa-emitida-por-el-banco-de-mexico/circular-3-2012/%7B00CCCF12-909C-D2F7-D9A6-80162EAAAD19%7D.pdf (refused); https://www.cnbv.gob.mx/paginas/normatividad.aspx (refused); https://portafolioinfo.cnbv.gob.mx/Paginas/Inicio.aspx (refused); https://www.cnbv.gob.mx/SECTORES-SUPERVISADOS/BANCA-MULTIPLE/Paginas/Informaci%C3%B3n-Estad%C3%ADstica.aspx (refused); https://registros.condusef.gob.mx/reca/ (refused); https://www.condusef.gob.mx/?p=tasas-interes (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
