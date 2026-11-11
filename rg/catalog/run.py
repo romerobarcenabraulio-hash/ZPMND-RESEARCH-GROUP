@@ -1,6 +1,12 @@
 """One catalog run for one country: index what is new, fetch raw within budget, reconcile coverage, write everything.
 
-  python -m rg.catalog.run --country mx --out work/catalog --raw work/raw [--budget 3000] [--bundle work/raw-mx.tar]
+  python -m rg.catalog.run --country mx --out work/catalog --raw work/raw [--budget 3000]
+  python -m rg.catalog.publicado --catalog work/catalog/mx --publicar work/raw > raw-mx.tar
+
+The bundle comes only from rg.catalog.publicado: every raw the rows point to that is unpublished, verified by its bytes,
+and recorded in the ledger. Never from the files one process wrote (SECURITY.md T30, the 1,166 rows of 2026-10-19/20).
+Upload it, then `python -m rg.catalog.publicado --catalog work/catalog/mx` (5 = a row points to an unpublished raw) before
+any commit of the catalog.
 
 Exit codes: 0 ok; 3 a coverage reconciliation failed (data is still written, the failure is in the manifest);
 4 some entries fail the catalog_entry schema (they are quarantined: listed in the manifest, never written).
@@ -11,7 +17,6 @@ import json
 import os
 import re
 import sys
-import tarfile
 import threading
 import time
 from collections import defaultdict
@@ -801,7 +806,6 @@ def main(argv=None):
     a.add_argument('--forward-days', type=int, default=30, help='first run: days back from today to index')
     a.add_argument('--index-days', type=int, default=120, help='older days to index per run, toward the floor')
     a.add_argument('--sources', help='comma-separated source ids (default: all active)')
-    a.add_argument('--bundle', help='write a tar of the raw files new in this run')
     a.add_argument('--deadline-minutes', type=float, help='stop sending requests after this many minutes (job time limit)')
     x = a.parse_args(argv)
     today = date.fromisoformat(x.today) if x.today else datetime.now(CDMX).date()
@@ -817,11 +821,6 @@ def main(argv=None):
         manifest['errors'].append(f'run crashed: {crashed}')
         manifest['requests_total'], manifest['raw_new_files'] = run.used, len(run.raw.new_files)
         manifest['finished_at'] = now_iso()
-    if x.bundle and run.raw.new_files:
-        with tarfile.open(x.bundle, 'w') as tar:
-            for rel in sorted(run.raw.new_files):
-                tar.add(Path(x.raw) / rel, arcname=rel)
-        manifest['raw_bundle'] = Path(x.bundle).name
     recategorize(run.catalog.entries.values())
     removed = [0]
     run.catalog.entries = {eid: normalize_strings(e, removed) for eid, e in run.catalog.entries.items()}
