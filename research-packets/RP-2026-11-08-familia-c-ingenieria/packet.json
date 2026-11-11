@@ -1,0 +1,522 @@
+{
+ "research_id": "RP-2026-11-08-familia-c-ingenieria",
+ "request_id": "RR-2026-11-08-familia-c-ingenieria",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T16:51:17Z",
+ "question": "Para cada rama listada en why_needed: ¿qué tres fuentes abiertas u oficiales (manual de organismo público, norma técnica, base de datos de instituto o libro de licencia abierta) cubren sus métodos, ecuaciones, criterios de diseño, propiedades o métodos de prueba, con qué tamaño declarado, licencia y canal de descarga?",
+ "why_zpmnd_needs_it": "Subáreas: C01 Mecánica (Transversal); C02 Estructural (Transversal); C03 Eléctrica (Transversal); C04 Civil e hidráulica (Transversal); C05 Química y procesos (Transversal); C06 Materiales (Transversal); C07 Industrial y manufactura (Transversal); C08 Ambiental (Transversal); C09 Acústica y vibraciones (Transversal); C10 Control y automatización (Transversal); C11 Métodos de prueba (Transversal); C12 Ecuaciones y fórmulas como objetos (Transversal; §26). Siguiente paso: elegir 3 fuentes abiertas y medir su tamaño. ZPMND necesita métodos y fórmulas con unidades, dominio y fuente.",
+ "scope": "Parte 1 de 3. Solo se leyeron dos fuentes sobre el DLMF del NIST: un artículo de Phys Today en PMC (secundaria) y la página del NIST Public Data Repository (primaria, casi vacía). La solicitud pide, por cada rama de ingeniería, tres fuentes abiertas con tamaño, licencia, canal y sha256. El texto de la solicitud no incluye la lista why_needed. Estas fuentes solo tocan marginalmente la rama de funciones matemáticas especiales. / Parte 2 de 3: lectura de HEC-22 4.ª ed. (FHWA-HIF-24-006, feb. 2024), caracteres 0–600000 de 636908 (fuente primaria oficial). Cubre la rama de drenaje urbano/hidráulica de carreteras: método, ecuaciones, criterios, tamaño declarado y términos de distribución. No cubre las demás ramas ni las otras dos fuentes por rama, ni el sha256 ni el canal de descarga. / Parte 3 de 3. Leídos: final de HEC-22 4.ª ed. (cap. 12 bombeo, bibliografía, apéndices B y C), NASA-STD-5001B Cambio 3 completa, página NIST WebBook del agua, portada LibreTexts de Roylance, portada Open Oregon de Manufacturing Processes 4-5 y una página de bloqueo de Springer (Acoustics). No se descargó ningún archivo ni se calculó sha256.",
+ "sources": {
+  "primary": [
+   "SA-ee11ce789c3e1c1112ac03f4",
+   "SA-06fb11aa4c0fca2a66e9d7f0",
+   "SA-f4d15692f1181ee1b9d47f33",
+   "SA-5788530bcaf736d249f5db7c",
+   "SA-425a0f07e5e8e77f15f336b7",
+   "SA-32ed63159c77e21ee19ca1b9"
+  ],
+  "secondary": [
+   "SA-406baf2b5b8d806e2258d2e9",
+   "SA-5d63009772b76b8d754e5d04"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-406baf2b5b8d806e2258d2e9",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7560949/",
+   "retrieved_at": "2026-11-11T16:48:39Z",
+   "sha256": "406baf2b5b8d806e2258d2e980689803ab0cf787661a9fc7e4fcb98ea5c0ea5c",
+   "bytes": 125382,
+   "media_type": "text/html",
+   "source_type": "peer_reviewed",
+   "publisher": "NIST / PMC",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "NIST's Digital Library of Mathematical Functions"
+  },
+  {
+   "artifact_id": "SA-ee11ce789c3e1c1112ac03f4",
+   "url": "https://data.nist.gov/pdr/lps/FDB59097469F5200E043065706813E54167",
+   "retrieved_at": "2026-11-11T16:48:40Z",
+   "sha256": "ee11ce789c3e1c1112ac03f4c4bd504abf47cc18c0f269b165a9575c20b445e5",
+   "bytes": 81913,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "NIST Public Data Repository",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Digital Library of Mathematical Functions - PDR"
+  },
+  {
+   "artifact_id": "SA-06fb11aa4c0fca2a66e9d7f0",
+   "url": "https://www.fhwa.dot.gov/engineering/hydraulics/pubs/hif24006.pdf",
+   "retrieved_at": "2026-11-11T16:48:42Z",
+   "sha256": "06fb11aa4c0fca2a66e9d7f01c592f5b07064be3a32de8b86647d1b4b165a49d",
+   "bytes": 12932642,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "Federal Highway Administration (US DOT)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Urban Drainage Design (HEC-22) 4th edition, FHWA-HIF-24-006"
+  },
+  {
+   "artifact_id": "SA-f4d15692f1181ee1b9d47f33",
+   "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/B-w/CHANGE-3/3/2022-10-24-NASA-STD-5001B-w-Change-3-Approved.pdf",
+   "retrieved_at": "2026-11-11T16:48:44Z",
+   "sha256": "f4d15692f1181ee1b9d47f3394bb2a7f79b707e98cdba6d5bf523e8e4cfb6bb5",
+   "bytes": 558597,
+   "media_type": "application/pdf",
+   "source_type": "standard",
+   "publisher": "NASA",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "NASA-STD-5001B w/Change 3"
+  },
+  {
+   "artifact_id": "SA-5788530bcaf736d249f5db7c",
+   "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185",
+   "retrieved_at": "2026-11-11T16:48:45Z",
+   "sha256": "5788530bcaf736d249f5db7c8e550c24a73ad16d588a0a7261385c86a859ed63",
+   "bytes": 22841,
+   "media_type": "text/html",
+   "source_type": "dataset",
+   "publisher": "NIST (SRD 69)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "NIST Chemistry WebBook – Water"
+  },
+  {
+   "artifact_id": "SA-5d63009772b76b8d754e5d04",
+   "url": "https://eng.libretexts.org/Bookshelves/Mechanical_Engineering/Mechanics_of_Materials_(Roylance)",
+   "retrieved_at": "2026-11-11T16:48:50Z",
+   "sha256": "5d63009772b76b8d754e5d04e5990e789e48d64529984b179c83e8ab481549c7",
+   "bytes": 153945,
+   "media_type": "text/html",
+   "source_type": "other",
+   "publisher": "MIT OCW / LibreTexts",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Mechanics of Materials (Roylance)"
+  },
+  {
+   "artifact_id": "SA-425a0f07e5e8e77f15f336b7",
+   "url": "https://openoregon.pressbooks.pub/manufacturingprocesses45/",
+   "retrieved_at": "2026-11-11T16:48:55Z",
+   "sha256": "425a0f07e5e8e77f15f336b7d9fc08ef0abea94d785a6fdb4fc07999be1e9d7b",
+   "bytes": 73537,
+   "media_type": "text/html",
+   "source_type": "other",
+   "publisher": "Open Oregon Educational Resources",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Manufacturing Processes 4-5"
+  },
+  {
+   "artifact_id": "SA-32ed63159c77e21ee19ca1b9",
+   "url": "https://link.springer.com/book/10.1007/978-3-030-44787-8",
+   "retrieved_at": "2026-11-11T16:48:57Z",
+   "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+   "bytes": 3038,
+   "media_type": "text/html",
+   "source_type": "other",
+   "publisher": "Springer (Open Access, S. L. Garrett)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Understanding Acoustics: An Experimentalist's View of Sound and Vibration"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El manual es la publicación FHWA-HIF-24-006, HEC No. 22 Urban Drainage Design, cuarta edición, de febrero de 2024.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "Publication No. FHWA-HIF-24-006\nFebruary 2024\nHydraulic Engineering Circular No. 22\nUrban Drainage Design\nFourth Edition",
+    "locator": "Portada"
+   },
+   {
+    "claim": "La declaración de distribución es de distribución ilimitada.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "Unlimited distribution",
+    "locator": "Technical Report Documentation Page, campo 18"
+   },
+   {
+    "claim": "El informe figura con las entradas «Unclassified Unclassified 311 n/a».",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "Unclassified Unclassified 311 n/a",
+    "locator": "Technical Report Documentation Page, campos 19-22"
+   },
+   {
+    "claim": "El manual declara que no constituye una norma, especificación ni política.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "This manual does not constitute a standard,\nspecification, or policy.",
+    "locator": "Notice, p. xviii"
+   },
+   {
+    "claim": "El manual declara que su contenido no tiene fuerza de ley.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "The contents of this document do not have the force and effect of law and are not meant to bind\nthe public in any way.",
+    "locator": "Non-Binding Contents, p. xviii"
+   },
+   {
+    "claim": "Los autores han designado por su fuente las imágenes de dominio público utilizadas.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "The authors have designated images used from the\npublic domain by their source.",
+    "locator": "Acknowledgments, p. xvii"
+   },
+   {
+    "claim": "El manual usa unidades inglesas habituales (CU).",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "This manual uses English customary units (CU).",
+    "locator": "1.4 Units in this Manual, p. 3"
+   },
+   {
+    "claim": "Se definen las variables: Q = caudal, ft3/s (m3/s); C = coeficiente de escorrentía adimensional; I = intensidad de lluvia, in/h (mm/h); A = área de drenaje, ac (ha).",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "Q = Flow, ft3/s (m3/s)\nC = Dimensionless runoff coefficient\nI = Rainfall intensity, in/h (mm/h)\nA = Drainage area, ac (ha)",
+    "locator": "4.2.2, ec. 4.1"
+   },
+   {
+    "claim": "HDS-2 recomienda el método racional para áreas de drenaje menores de 200 ac (80 ha).",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "HDS-2 recommends application of the Rational Method to\ndrainage areas smaller than 200 ac (80 ha)",
+    "locator": "4.2.2, p. 25"
+   },
+   {
+    "claim": "Una constante de conversión de unidades Ku vale 1.486 en CU (1.0 en SI).",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "K u = Unit conversion constant, 1.486 in CU (1.0 in SI)",
+    "locator": "6.1.4, ec. 6.5"
+   },
+   {
+    "claim": "Una constante de conversión de unidades Ku vale 0.56 en CU (0.376 en SI).",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "Ku = Unit conversion constant, 0.56 in CU (0.376 in SI)",
+    "locator": "5.3.1, ec. 5.2"
+   },
+   {
+    "claim": "Una constante de conversión de unidades KQ vale 0.46 en CU (0.312 en SI).",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "K Q = Unit conversion constant, 0.46 in CU (0.312 in SI)",
+    "locator": "9.1.3, ec. 9.1-9.2"
+   },
+   {
+    "claim": "El manual da para tubo de hormigón liso valores de 0.010-0.011.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "Concrete Pipe Smooth 0.010-0.011",
+    "locator": "Table 9.1, p. 140"
+   },
+   {
+    "claim": "Para áreas céntricas se da un rango de 0.70-0.95.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "Downtown areas 0.70 - 0.95",
+    "locator": "Table 4.1, p. 26"
+   },
+   {
+    "claim": "Una constante de pico Kp es igual a 484, adimensional.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "K p = Peaking constant equal to 484, dimensionless",
+    "locator": "4.3.1.1, ec. 4.8"
+   },
+   {
+    "claim": "Se puede usar un valor de 0.37 para vertederos rectangulares de cresta delgada cuando no se dispone de más información.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "Designers can use a value of 0.37 for sharp-crested\nrectangular weirs where more information is not available.",
+    "locator": "10.3.3.3.1, p. 209"
+   },
+   {
+    "claim": "Comúnmente se usa un valor de 0.6 para condiciones de entrada de orificio uniformes y de borde recto.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "with a value of 0.6 commonly used, for square-edged, uniform\norifice entrance conditions",
+    "locator": "10.3.3.2, p. 204"
+   },
+   {
+    "claim": "El manual limita su alcance excluyendo alcantarillas, puentes y drenaje subsuperficial.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "The manual covers the design of most types of drainage systems\nassociated with highways except for 1) cross drainage facilities such as culverts and bridges and\n2) subsurface facilities.",
+    "locator": "1.1, p. 1"
+   },
+   {
+    "claim": "Algunas agencias recomiendan usar este coeficiente, pero la FHWA no avala su uso.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "Some agencies recommend use of this\ncoefficient, but FHWA does not endorse its use.",
+    "locator": "4.2.2, p. 24"
+   },
+   {
+    "claim": "El manual indica que la ecuación 7.10 subestima la longitud necesaria para interceptar el 100 % del caudal de cuneta, sobre todo en entradas de 10 ft o más.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "equation\n7.10 underestimates the length to intercept 100 percent of the gutter flow, especially for\nlonger (greater than or equal to 10 ft) inlets",
+    "locator": "7.2.2, recuadro, p. 96"
+   },
+   {
+    "claim": "HEC-22 da la expresión Q/S^0.5 = K = (Ku (Δx) d^5/3) / n.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "Q/S0.5 = K = (Ku (∆x) d5/3) / n",
+    "locator": "Apéndice B, Paso 4"
+   },
+   {
+    "claim": "Según HEC-22, los ingenieros suelen diseñar las estaciones de bombeo que sirven a grandes vías de acceso controlado y calles arteriales para un evento de 0,02 AEP.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "engineers usually design pump stations serving\nmajor controlled-access thoroughfares and arterial streets to accommodate a 0.02 AEP event",
+    "locator": "12.3.2 Hydrology"
+   },
+   {
+    "claim": "HEC-22 indica una velocidad de unos 3 ft/s a tubo lleno para evitar sedimentación en el colector.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "A grade resulting in velocities of around\n3 ft/s in the pipe while flowing full typically avoids siltation problems",
+    "locator": "12.3.3 Collection Systems"
+   },
+   {
+    "claim": "Una constante de conversión de unidades Ku vale 0,840 en CU (0,564 en SI).",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "K u = Unit conversion constant, 0.840 in CU (0.564 in SI)",
+    "locator": "Apéndice C, ecuación C.9"
+   },
+   {
+    "claim": "La bibliografía de HEC-22 4.ª ed. cita HEC-24 (FHWA-NHI-10-007) para el diseño de estaciones de bombeo.",
+    "artifact_ids": [
+     "SA-06fb11aa4c0fca2a66e9d7f0"
+    ],
+    "quote": "Highway Stormwater Pump Station Design, Hydraulic Engineering Circular No. 24\n(HEC-24), FHWA-NHI-10-007.",
+    "locator": "Literature Cited"
+   },
+   {
+    "claim": "NASA-STD-5001B Cambio 3 está aprobada para distribución pública sin límite.",
+    "artifact_ids": [
+     "SA-f4d15692f1181ee1b9d47f33"
+    ],
+    "quote": "APPROVED FOR PUBLIC RELEASE – DISTRIBUTION IS UNLIMITED",
+    "locator": "Encabezado, p. 1"
+   },
+   {
+    "claim": "La norma NASA declara que contiene 61 requisitos.",
+    "artifact_ids": [
+     "SA-f4d15692f1181ee1b9d47f33"
+    ],
+    "quote": "This NASA Technical Standard contains 61 requirements.",
+    "locator": "1.2.4"
+   },
+   {
+    "claim": "Para el enfoque prototipo, la tabla da los valores 1.4, 1.0*, 1.4 y N/A o 1.05**.",
+    "artifact_ids": [
+     "SA-f4d15692f1181ee1b9d47f33"
+    ],
+    "quote": "Prototype\n\n1.4\n\n1.0*  1.4  N/A or 1.05**",
+    "locator": "Tabla 1"
+   },
+   {
+    "claim": "La norma define el margen de seguridad MS con una fórmula.",
+    "artifact_ids": [
+     "SA-f4d15692f1181ee1b9d47f33"
+    ],
+    "quote": "MS = [Allowable Load (Yield or Ultimate)/Limit\nLoad*Factor of Safety (Yield or Ultimate)] - 1.",
+    "locator": "3.2 Definitions"
+   },
+   {
+    "claim": "La norma excluye la determinación de cargas de diseño y el control de fractura.",
+    "artifact_ids": [
+     "SA-f4d15692f1181ee1b9d47f33"
+    ],
+    "quote": "Specifically excluded from this NASA Technical Standard are requirements for design loads\ndetermination and fracture control.",
+    "locator": "1.2.1"
+   },
+   {
+    "claim": "El factor mínimo de vida de servicio para fatiga y fluencia es 4,0.",
+    "artifact_ids": [
+     "SA-f4d15692f1181ee1b9d47f33"
+    ],
+    "quote": "a minimum service life\nfactor of 4.0 shall be applied to the service life for fatigue and creep life assessments.",
+    "locator": "4.4"
+   },
+   {
+    "claim": "El NIST Chemistry WebBook declara que los derechos de autor de NIST Standard Reference Data se rigen por la Standard Reference Data Act.",
+    "artifact_ids": [
+     "SA-5788530bcaf736d249f5db7c"
+    ],
+    "quote": "Copyright for NIST Standard Reference Data is governed by the  Standard Reference Data Act.",
+    "locator": "Pie de página"
+   },
+   {
+    "claim": "NIST no da garantías y no responde por errores u omisiones en la base de datos.",
+    "artifact_ids": [
+     "SA-5788530bcaf736d249f5db7c"
+    ],
+    "quote": "NIST makes no warranties to that effect, and NIST shall not be liable for any damage that may result from errors or omissions in the Database.",
+    "locator": "Notes"
+   },
+   {
+    "claim": "Los sitios de suscripción de NIST requieren cuota anual.",
+    "artifact_ids": [
+     "SA-5788530bcaf736d249f5db7c"
+    ],
+    "quote": "NIST subscription sites provide data under the NIST Standard Reference Data Program, but require an annual fee to access.",
+    "locator": "Página del agua"
+   },
+   {
+    "claim": "Manufacturing Processes 4-5 usa licencia CC BY 4.0.",
+    "artifact_ids": [
+     "SA-425a0f07e5e8e77f15f336b7"
+    ],
+    "quote": "is licensed under a Creative Commons Attribution 4.0 International License, except where otherwise noted.",
+    "locator": "Book Information / License"
+   },
+   {
+    "claim": "El editor archivó el libro el 15 de abril de 2026 y ya no se actualiza.",
+    "artifact_ids": [
+     "SA-425a0f07e5e8e77f15f336b7"
+    ],
+    "quote": "This book was archived by its publisher on April 15, 2026. It is no longer being updated.",
+    "locator": "Encabezado"
+   },
+   {
+    "claim": "El libro ofrece descarga en EPUB, PDF digital, PDF impreso y MOBI.",
+    "artifact_ids": [
+     "SA-425a0f07e5e8e77f15f336b7"
+    ],
+    "quote": "Download this book\n\nEPUB\n\nDigital PDF\n\nPrint PDF\n\nMOBI",
+    "locator": "Encabezado"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Las ramas de why_needed no figuran en la solicitud recibida, por lo que no se pudo asignar fuentes por rama.",
+   "Licencia o términos del DLMF: la página PDR leída (470 caracteres) solo muestra un enlace 'Copyrights' sin texto de licencia; el artículo PMC no cita la licencia del DLMF. Desconocido.",
+   "Tamaño declarado del DLMF con fecha en la fuente primaria: no aparece en el texto leído de la PDR. Desconocido.",
+   "sha256 de lo descargado, URL de descarga y edición exacta desde la fuente primaria: no disponibles en el texto leído.",
+   "C12 (fórmulas con variables y unidades legibles por máquina): el artículo menciona metadatos legibles por humanos y Content MathML como objetivo futuro, pero ninguna fuente primaria lo confirma.",
+   "URL oficial de descarga, sha256 del archivo y canal de descarga: no constan en el texto leído.",
+   "Licencia explícita de reutilización: solo hay avisos de uso y 'Unlimited distribution'; no se halló cláusula de licencia abierta en la parte leída.",
+   "Las tres fuentes por rama y las demás ramas de la solicitud: esta parte solo contiene HEC-22; los capítulos 11 (parte) y 12 no se leyeron completos.",
+   "Fórmulas legibles por máquina (C12): el texto trae las ecuaciones aplastadas por extracción (p. ej. '0.8 u t 0.5 2 K nLt P S'), no en formato estructurado.",
+   "Tamaños declarados (páginas/MB) y sha256 de lo descargado: ninguna fuente de esta parte da sha256; HEC-22 se leyó solo en su tramo final.",
+   "Licencia o términos de HEC-22 y NASA-STD-5001B (más allá de «public release»): no figuran en este texto.",
+   "Acústica (Garrett, Springer): la página devolvió solo un bloqueo de JavaScript; sin título, licencia ni tamaño.",
+   "Roylance: tamaño declarado y canal de descarga formales no aparecen más allá de los botones PDF.",
+   "No hay datos de propiedades del agua en el texto de NIST (solo índice de la página)."
+  ]
+ },
+ "candidate_claims": [
+  "SECUNDARIA: Schneider, Miller y Saunders (Phys Today 2018, PMC7560949) afirman que el DLMF es un recurso en línea de libre acceso iniciado en 1998 y publicado en 2010, con 36 capítulos y sin tablas numéricas.",
+  "SECUNDARIA: según el mismo artículo (PMC7560949), el DLMF ofrece cada fórmula en TeX, MathML e imágenes mediante sus 'info boxes', con permalinks estables como 9.8.E3; los metadatos son legibles por humanos y se exploran ontologías (RDFa) y Content MathML como meta futura. Esto es relevante para C12, pero no está verificado en fuente primaria.",
+  "SECUNDARIA: el artículo (PMC7560949) cita la versión impresa NIST Handbook of Mathematical Functions (Cambridge University Press, 2010) y DLMF Release 1.0.5 de 2012-10-01; la edición vigente en 2026 no está confirmada.",
+  "SECUNDARIA: el artículo (PMC7560949) describe DLMF Tables (dlmftables.uantwerpen.be) como servicio beta de valores de prueba con certificación de error, útil como método de prueba para funciones especiales; es un servicio de la Universidad de Amberes junto con NIST, no una fuente primaria verificada.",
+  "INTERPRETACIÓN: la fuente primaria PDR, tal como llegó, no aporta contenido verificable, así que ninguna afirmación sobre DLMF puede pasar a confirmada en esta parte.",
+  "INTERPRETACIÓN: HEC-22 4.ª ed. es una fuente oficial primaria candidata para la rama de drenaje pluvial urbano de carreteras, con ecuaciones, variables y unidades en texto. Su aviso dice que no es norma ni especificación, así que sus fórmulas son referencia y no requisito normativo.",
+  "INTERPRETACIÓN: Cada ecuación usa una constante de unidades Ku distinta en CU y SI. Una ingesta automática debe guardar Ku junto con el sistema de unidades, o se arriesga a calcular con unidades equivocadas.",
+  "INTERPRETACIÓN: Varios coeficientes (n de Manning, C del método racional, Cw, Co) son valores tabulados citados de otras fuentes (ASCE 1960, FHWA 2002/2005, Brater y King 1976). Su dominio de validez es el de esas fuentes originales.",
+  "SECUNDARIA: Roylance, Mechanics of Materials (LibreTexts/MIT OCW) está bajo CC BY-NC-SA 4.0 según la página de LibreTexts; el NC puede limitar la republicación comercial.",
+  "INTERPRETACIÓN: las fórmulas de HEC-22 llevan variables y unidades en el texto, aptas para C12, pero las ecuaciones C.1–C.9 salen degradadas y requieren verificación contra el PDF.",
+  "INTERPRETACIÓN: NASA-STD-5001B sirve para factores de seguridad en estructuras espaciales; excluye cargas, fractura y equipos rotatorios, por lo que no debe usarse fuera de ese dominio.",
+  "INTERPRETACIÓN: el aviso de copyright de NIST implica verificar los términos antes de redistribuir tablas del WebBook."
+ ],
+ "candidate_methods": [
+  "Para C12: extraer cada ecuación numerada (4.1–4.10, 5.2–5.16, 6.1–6.20, 7.1–7.25, 9.1–9.33, 10.1–10.44) como registro con variables, unidades CU/SI, Ku y capítulo, validando con los ejemplos resueltos del manual."
+ ],
+ "candidate_controls": [
+  "Antes de usar una ecuación de HEC-22, validar la constante Ku contra el sistema de unidades (inglés vs SI).",
+  "No republicar contenido de NIST WebBook ni de LibreTexts (NC) sin verificar sus términos."
+ ],
+ "candidate_tests": [
+  "Reproducir los ejemplos resueltos (p. ej. ej. 5.1: T=9.0 ft; ej. 6.1: Q=55.7 ft3/s; ej. 9.1: D=1.69 ft) con la ecuación implementada y comparar con la tolerancia de redondeo del manual."
+ ],
+ "possible_implications_for_zpmnd": [
+  "No republicar el manual completo sin verificar derechos de imágenes, porque los gráficos de terceros están designados por su fuente. Se puede citar y enlazar la publicación oficial."
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: dlmf.nist.gov y el PDR podrían declarar términos de uso en sus páginas de copyright; habría que descargar esas páginas para citarlos literalmente."
+ ],
+ "limitations": [
+  "Las fuentes se leyeron completas en 3 partes, una llamada por parte; un \"unknown\" de una parte puede estar respondido en otra.",
+  "La fuente primaria PDR contiene solo 470 caracteres de navegación sin metadatos de contenido; no permite confirmar nada.",
+  "El artículo PMC es secundario, de 2018, y todo lo que aporta va a candidate_claims.",
+  "No hay sha256, tamaños declarados ni licencias en el texto recibido.",
+  "La lista de ramas (why_needed) no vino en la solicitud, y las otras dos partes pueden cubrir otras fuentes.",
+  "No se hizo ninguna búsqueda externa: no hay herramientas.",
+  "Se leyeron 600000 de 636908 caracteres; el final del capítulo 12 (almacenamiento, curvas de masa), la literatura citada y los apéndices A–C no se leyeron.",
+  "No se obtuvo URL, sha256 ni canal de descarga. El texto no los incluye.",
+  "Solo hay una fuente en esta parte, así que no se pueden listar tres fuentes por rama.",
+  "El texto extraído de las ecuaciones está degradado, con símbolos y subíndices desordenados, así que la legibilidad por máquina de las fórmulas es limitada.",
+  "Las citas se verificaron contra el texto extraído, no contra el PDF original.",
+  "Esta es la parte 3 de 3; no cubre las ramas tratadas en las otras partes ni el inicio de HEC-22.",
+  "Sin sha256 ni URL verificada de descarga: no se ejecutó ninguna descarga.",
+  "El texto de HEC-22 está degradado en las ecuaciones de los apéndices.",
+  "El texto de Springer era una página de bloqueo, sin contenido útil.",
+  "Las fuentes de LibreTexts y NIST son páginas de portada o índice, no el contenido técnico.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 20 de 37 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 12 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/UniversityPhysicsVolume1-LR.pdf (refused); https://epa.gov/air-emissions-factors-and-quantification/ap-42-compilation-air-emissions-factors-stationary-sources (refused); https://ctms.engin.umich.edu/CTMS/index.php?aux=About_Tutorials (403); https://www.itl.nist.gov/div898/handbook/toolaids/cd.htm (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
