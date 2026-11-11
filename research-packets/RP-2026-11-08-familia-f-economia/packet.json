@@ -1,0 +1,481 @@
+{
+ "research_id": "RP-2026-11-08-familia-f-economia",
+ "request_id": "RR-2026-11-08-familia-f-economia",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T17:02:39Z",
+ "question": "Para cada área de economía listada en why_needed: ¿qué fuente abierta base (libro de licencia abierta, organismo público o índice bibliográfico) la cubre, con qué licencia, en qué formato descargable o API, cuántas obras o capítulos declara, y qué metadatos de papers (RePEc, NBER) se bajan en volumen y con qué términos?",
+ "why_zpmnd_needs_it": "Subáreas: F01 Microeconomía (Transversal); F02 Macroeconomía (Transversal); F03 Econometría y métodos (Transversal); F04 Economía industrial (Transversal); F05 Economía pública (Transversal); F06 Economía conductual (Transversal); F07 Comercio internacional (Transversal); F08 Economía regional y urbana (Transversal); F09 Literatura económica (RePEc, NBER) (Transversal). Su siguiente paso es elegir la fuente abierta base. ZPMND necesita teoría y evidencia económica citable para justificar criterios; los datos van por la familia N.",
+ "scope": "Se leyeron 8 fuentes primarias: OpenStax (detalles, sin contenido útil; preface Macro 3e), Open Textbook Library (listado de economía y ficha de International Economics), CORE Econ (términos), Hanck et al. (Econometría con R), RePEc (getdata, stats) y NBER (metadatos, información para bibliotecas). No se dispone de la lista why_needed, ni sha256, ni robots.txt, ni límites de tasa, ni archivos descargados.",
+ "sources": {
+  "primary": [
+   "SA-122a7b58174184305f56c8c5",
+   "SA-56de9eabaeab83c3d99abd91",
+   "SA-2263fc8f71c072ba15ed5086",
+   "SA-40326ac800f67c2751234d45",
+   "SA-42eb0e3701931bdb048a153f",
+   "SA-2fe45dea12d9fe35babd827c",
+   "SA-cfc9a79d916ffb6cba2c10ab",
+   "SA-a05cf61e9b54e7e4d15c752d",
+   "SA-aabc05fe20d650a873f9cb8d",
+   "SA-3abfb9488c733139adf6be77"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-122a7b58174184305f56c8c5",
+   "url": "https://openstax.org/details/books/principles-economics-3e",
+   "retrieved_at": "2026-11-11T16:56:35Z",
+   "sha256": "122a7b58174184305f56c8c5c86c995abd6060bc1920fae9a3cec195c07fcf18",
+   "bytes": 12343,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenStax / Rice University",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Principles of Economics 3e (OpenStax, detalles)"
+  },
+  {
+   "artifact_id": "SA-56de9eabaeab83c3d99abd91",
+   "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/preface",
+   "retrieved_at": "2026-11-11T16:56:36Z",
+   "sha256": "56de9eabaeab83c3d99abd91c95eff8db6a1d849ae4cd3b3282698570311c460",
+   "bytes": 315706,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenStax",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Preface - Principles of Macroeconomics 3e"
+  },
+  {
+   "artifact_id": "SA-2263fc8f71c072ba15ed5086",
+   "url": "https://open.umn.edu/opentextbooks/subjects/economics",
+   "retrieved_at": "2026-11-11T16:56:42Z",
+   "sha256": "2263fc8f71c072ba15ed508677c334afca2bc514869fd742a392059c732d1dc6",
+   "bytes": 86890,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "University of Minnesota",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Economics Textbooks - Open Textbook Library"
+  },
+  {
+   "artifact_id": "SA-40326ac800f67c2751234d45",
+   "url": "https://open.umn.edu/opentextbooks/textbooks/international-economics-theory-and-policy",
+   "retrieved_at": "2026-11-11T16:58:42Z",
+   "sha256": "40326ac800f67c2751234d45b33b19c52ee6aaa0e96a51c392503fa839ec6fef",
+   "bytes": 80010,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "University of Minnesota",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "International Economics: Theory and Policy - Open Textbook Library"
+  },
+  {
+   "artifact_id": "SA-42eb0e3701931bdb048a153f",
+   "url": "https://www.core-econ.org/terms-of-use/",
+   "retrieved_at": "2026-11-11T17:00:42Z",
+   "sha256": "42eb0e3701931bdb048a153fe81b7aac0ba01da31a4282f93c86bc261bf02e82",
+   "bytes": 155099,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "CORE Economics Education",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Terms of use and copyright - CORE"
+  },
+  {
+   "artifact_id": "SA-2fe45dea12d9fe35babd827c",
+   "url": "https://www.econometrics-with-r.org/",
+   "retrieved_at": "2026-11-11T17:00:44Z",
+   "sha256": "2fe45dea12d9fe35babd827c1e4c70d1e4f7a9907e0061f3a814e9e88d6b1ee5",
+   "bytes": 55467,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Hanck, Arnold, Gerber, Schmelzer (U. Duisburg-Essen)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Introduction to Econometrics with R"
+  },
+  {
+   "artifact_id": "SA-cfc9a79d916ffb6cba2c10ab",
+   "url": "https://ideas.repec.org/getdata.html",
+   "retrieved_at": "2026-11-11T17:00:50Z",
+   "sha256": "cfc9a79d916ffb6cba2c10abc6e4a77c906cffc74b66c5fd5292853ee4f6e4ff",
+   "bytes": 23524,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "RePEc / IDEAS",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "RePEc: getting the metadata"
+  },
+  {
+   "artifact_id": "SA-a05cf61e9b54e7e4d15c752d",
+   "url": "https://ideas.repec.org/stats.html",
+   "retrieved_at": "2026-11-11T17:00:51Z",
+   "sha256": "a05cf61e9b54e7e4d15c752d022a489df9859d2ea31cd07aa6ed201b9e3f8697",
+   "bytes": 19584,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "IDEAS / RePEc",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Economics and Finance Research (estadísticas IDEAS)"
+  },
+  {
+   "artifact_id": "SA-aabc05fe20d650a873f9cb8d",
+   "url": "https://www.nber.org/research/data/nber-working-papers-and-chapters-metadata",
+   "retrieved_at": "2026-11-11T17:00:52Z",
+   "sha256": "aabc05fe20d650a873f9cb8dd5de156f7d9ef87335bcd5f2afff9330eabadb5e",
+   "bytes": 84890,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "NBER",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "NBER Working Papers and Chapters Metadata"
+  },
+  {
+   "artifact_id": "SA-3abfb9488c733139adf6be77",
+   "url": "https://www.nber.org/subscribe/information-libraries",
+   "retrieved_at": "2026-11-11T17:00:53Z",
+   "sha256": "3abfb9488c733139adf6be77a72b351e51fabba4d80f2128bcb3d48cf6d22717",
+   "bytes": 80175,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "NBER",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Information for Libraries"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "Principles of Macroeconomics 3e (OpenStax) se declara bajo CC BY-NC-SA 4.0 en su prefacio.",
+    "artifact_ids": [
+     "SA-56de9eabaeab83c3d99abd91"
+    ],
+    "quote": "Principles of Macroeconomics 3e is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA) license",
+    "locator": "Preface, About OpenStax Resources > Customization"
+   },
+   {
+    "claim": "El prefacio de OpenStax Macro 3e dice que el libro se accede gratis en web o PDF.",
+    "artifact_ids": [
+     "SA-56de9eabaeab83c3d99abd91"
+    ],
+    "quote": "You can access this textbook for free in web view or PDF through OpenStax.org, and for a low cost in print.",
+    "locator": "Preface, Format"
+   },
+   {
+    "claim": "OpenStax Macro 3e prohíbe usar el libro para entrenar LLM sin permiso previo por escrito.",
+    "artifact_ids": [
+     "SA-56de9eabaeab83c3d99abd91"
+    ],
+    "quote": "This book may not be used in the training of large language models or otherwise be ingested into large language models or generative AI offerings without OpenStax's prior written permission.",
+    "locator": "Preface, Citation/Attribution"
+   },
+   {
+    "claim": "OpenStax Macro 3e: fecha de publicación 14 de diciembre de 2022.",
+    "artifact_ids": [
+     "SA-56de9eabaeab83c3d99abd91"
+    ],
+    "quote": "Publication date: Dec 14, 2022",
+    "locator": "Preface, Citation information"
+   },
+   {
+    "claim": "En OpenStax Macro 3e, la parte final del texto es Economía Internacional, capítulos 19 a 21.",
+    "artifact_ids": [
+     "SA-56de9eabaeab83c3d99abd91"
+    ],
+    "quote": "International Economics, Chapters 19 through 21, the final part of the text",
+    "locator": "Preface, Coverage and scope"
+   },
+   {
+    "claim": "OpenStax Macro 3e incluye y referencia datos de FRED (Federal Reserve Economic Data).",
+    "artifact_ids": [
+     "SA-56de9eabaeab83c3d99abd91"
+    ],
+    "quote": "the authors have included and referenced data from the Federal Reserve Economic Data (FRED)",
+    "locator": "Preface, Changes to the third edition"
+   },
+   {
+    "claim": "El Open Textbook Library lista Principles of Macroeconomics - 3e (Greenlaw, Shapiro y Taylor; OpenStax; año de copyright 2017) con licencia CC BY.",
+    "artifact_ids": [
+     "SA-2263fc8f71c072ba15ed5086"
+    ],
+    "quote": "Principles of Macroeconomics - 3e\n\nCopyright Year: 2017\n\nAuthors: Greenlaw, Shapiro, and Taylor\n\nPublisher: OpenStax\n\nLicense: CC BY",
+    "locator": "Listado Economics Textbooks, entrada Principles of Macroeconomics - 3e"
+   },
+   {
+    "claim": "El Open Textbook Library lista International Trade: Theory and Policy (Suranovic, Saylor) como CC BY-NC-SA, 2010.",
+    "artifact_ids": [
+     "SA-2263fc8f71c072ba15ed5086"
+    ],
+    "quote": "International Trade: Theory and Policy\n\nCopyright Year: 2010\n\nAuthor: Suranovic\n\nPublisher: Saylor Foundation\n\nLicense: CC BY-NC-SA",
+    "locator": "Listado Economics Textbooks, primera entrada"
+   },
+   {
+    "claim": "El Open Textbook Library lista Principles of Macroeconomics (U. Minnesota Libraries Publishing, 2016) como CC BY-NC-SA.",
+    "artifact_ids": [
+     "SA-2263fc8f71c072ba15ed5086"
+    ],
+    "quote": "Principles of Macroeconomics\n\nCopyright Year: 2016\n\nPublisher: University of Minnesota Libraries Publishing\n\nLicense: CC BY-NC-SA",
+    "locator": "Listado Economics Textbooks"
+   },
+   {
+    "claim": "La ficha de International Economics: Theory and Policy (Suranovic) indica formatos Online y PDF, y licencia CC BY-NC-SA.",
+    "artifact_ids": [
+     "SA-40326ac800f67c2751234d45"
+    ],
+    "quote": "Formats Available\n\nOnline\n\nPDF\n\nConditions of Use\n\nAttribution-NonCommercial-ShareAlike\nCC BY-NC-SA",
+    "locator": "Ficha, Formats Available / Conditions of Use"
+   },
+   {
+    "claim": "La ficha de International Economics: Theory and Policy incluye el Capítulo 24: Fixed versus Floating Exchange Rates.",
+    "artifact_ids": [
+     "SA-40326ac800f67c2751234d45"
+    ],
+    "quote": "Chapter 24: Fixed versus Floating Exchange Rates",
+    "locator": "Table of Contents"
+   },
+   {
+    "claim": "Según los términos de uso de CORE, el contenido está bajo licencia Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (BY-NC-ND 4.0).",
+    "artifact_ids": [
+     "SA-42eb0e3701931bdb048a153f"
+    ],
+    "quote": "is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (BY-NC-ND 4.0)",
+    "locator": "Terms of use, Copyright and other intellectual property"
+   },
+   {
+    "claim": "Los términos de uso de CORE mencionan traducir los ebooks de CORE Econ sin acuerdo escrito previo de CORE Econ.",
+    "artifact_ids": [
+     "SA-42eb0e3701931bdb048a153f"
+    ],
+    "quote": "translate CORE Econ’s ebooks without prior written agreement from CORE Econ",
+    "locator": "Terms of use, lista 'You may not'"
+   },
+   {
+    "claim": "Introduction to Econometrics with R está bajo CC BY-NC-SA 4.0.",
+    "artifact_ids": [
+     "SA-2fe45dea12d9fe35babd827c"
+    ],
+    "quote": "This book is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
+    "locator": "Preface, Acknowledgement"
+   },
+   {
+    "claim": "Introduction to Econometrics with R indica fecha de última actualización 4 de abril de 2026.",
+    "artifact_ids": [
+     "SA-2fe45dea12d9fe35babd827c"
+    ],
+    "quote": "Last updated on Saturday, April 04, 2026.",
+    "locator": "Preface"
+   },
+   {
+    "claim": "RePEc excluye el uso comercial de sus datos sin contactar antes a RePEc.",
+    "artifact_ids": [
+     "SA-cfc9a79d916ffb6cba2c10ab"
+    ],
+    "quote": "This does not include commercial use. If you want to use RePEc data for commercial use, please first contact RePEc.",
+    "locator": "getdata.html, párrafo introductorio"
+   },
+   {
+    "claim": "RePEc desaconseja fuertemente el scraping de los sitios web.",
+    "artifact_ids": [
+     "SA-cfc9a79d916ffb6cba2c10ab"
+    ],
+    "quote": "We want to discourage you strongly from scraping the data from the websites.",
+    "locator": "getdata.html, párrafo introductorio"
+   },
+   {
+    "claim": "RePEc lista los formatos ReDIF, AMF, OAI/PMH (a veces inestable) y Rsync.",
+    "artifact_ids": [
+     "SA-cfc9a79d916ffb6cba2c10ab"
+    ],
+    "quote": "ReDIF format\nAMF format\nOAI/PMH (sometimes flaky)\nRsync",
+    "locator": "getdata.html, Publisher data"
+   },
+   {
+    "claim": "RePEc indica que una API no sirve para descargar todos los datos, sino porciones específicas a intervalos regulares o llamadas rápidas repetidas para pequeños fragmentos.",
+    "artifact_ids": [
+     "SA-cfc9a79d916ffb6cba2c10ab"
+    ],
+    "quote": "an API is not good to download all the data, but rather specific slices at regular intervals or repeated quick calls for small bits of data",
+    "locator": "getdata.html, API"
+   },
+   {
+    "claim": "RePEc: el formato de metadatos se define por el Protocolo Guilford y ReDIF.",
+    "artifact_ids": [
+     "SA-cfc9a79d916ffb6cba2c10ab"
+    ],
+    "quote": "familiarize oneself with the Guilford Protocol, which defines how the datafiles can be found and are structures, and the ReDIF format",
+    "locator": "getdata.html, Principles"
+   },
+   {
+    "claim": "IDEAS declara 1,335,303 ítems de working papers en 5,937 series.",
+    "artifact_ids": [
+     "SA-a05cf61e9b54e7e4d15c752d"
+    ],
+    "quote": "Working papers\t5,937 \t1,335,303 \t1,129,112",
+    "locator": "stats.html, Current holdings on IDEAS"
+   },
+   {
+    "claim": "IDEAS declara un total de 5,646,279 ítems en 11,814 series/revistas.",
+    "artifact_ids": [
+     "SA-a05cf61e9b54e7e4d15c752d"
+    ],
+    "quote": "Total \t11,814 \t5,646,279 \t5,087,460",
+    "locator": "stats.html, fila Total"
+   },
+   {
+    "claim": "IDEAS declara 336,264 capítulos en 364 series.",
+    "artifact_ids": [
+     "SA-a05cf61e9b54e7e4d15c752d"
+    ],
+    "quote": "Chapters\t364 \t336,264 \t98,113",
+    "locator": "stats.html, fila Chapters (Books: 660 / 74,888)"
+   },
+   {
+    "claim": "NBER ofrece metadatos de working papers y capítulos en csv, dta y tsv, con actualización semanal.",
+    "artifact_ids": [
+     "SA-aabc05fe20d650a873f9cb8d"
+    ],
+    "quote": "Available formats:\n\ncsv\n\ndta\n\ntsv\n\nAll of these files should update automatically each week.",
+    "locator": "Public Use Data Archive, NBER Working Papers and Chapters Metadata"
+   },
+   {
+    "claim": "Los metadatos NBER incluyen títulos, autores, fechas, resúmenes, clasificaciones y publicación final.",
+    "artifact_ids": [
+     "SA-aabc05fe20d650a873f9cb8d"
+    ],
+    "quote": "titles, authors, publication dates, abstracts, subject classifications, and eventual journal publications",
+    "locator": "Public Use Data Archive, párrafo descriptivo"
+   },
+   {
+    "claim": "NBER dice que published.tsv no es exhaustivo.",
+    "artifact_ids": [
+     "SA-aabc05fe20d650a873f9cb8d"
+    ],
+    "quote": "The published.tsv file shows where working papers were eventually published. It is not comprehensive.",
+    "locator": "Public Use Data Archive"
+   },
+   {
+    "claim": "NBER ofrece volcados de su base canónica de seguimiento de working papers y capítulos, con cierta información privada redactada.",
+    "artifact_ids": [
+     "SA-aabc05fe20d650a873f9cb8d"
+    ],
+    "quote": "dumps from our canonical database for tracking working papers and chapters, with some private information redacted",
+    "locator": "Public Use Data Archive, Alternative format"
+   },
+   {
+    "claim": "NBER: los autores, no NBER, tienen los derechos de autor de los working papers.",
+    "artifact_ids": [
+     "SA-3abfb9488c733139adf6be77"
+    ],
+    "quote": "Authors of NBER Working Papers hold respective copyrights, not the NBER.",
+    "locator": "Information for Libraries, Copyright"
+   },
+   {
+    "claim": "NBER prohíbe descargar working papers en masa y republicarlos públicamente.",
+    "artifact_ids": [
+     "SA-3abfb9488c733139adf6be77"
+    ],
+    "quote": "Downloading Working Papers en masse and reposting them to be made publicly available is not permitted.",
+    "locator": "Information for Libraries, Terms of Use"
+   },
+   {
+    "claim": "NBER ofrece su base bibliográfica en formato RePEc en repec.nber.org/RePEc/nbr/.",
+    "artifact_ids": [
+     "SA-3abfb9488c733139adf6be77"
+    ],
+    "quote": "A machine-readable version of our bibliographic database (including the text of abstracts) is available in RePEc format at //repec.nber.org/RePEc/nbr/.",
+    "locator": "Information for Libraries, Cataloging"
+   },
+   {
+    "claim": "NBER ofrece un archivo MARC con todos sus working papers (all_nber_working_papers.marc).",
+    "artifact_ids": [
+     "SA-3abfb9488c733139adf6be77"
+    ],
+    "quote": "http://www.nber.org/wwpinfo/marc/all_nber_working_papers.marc",
+    "locator": "Information for Libraries, MARC"
+   }
+  ],
+  "conflicting": [
+   {
+    "claim": "La ficha del Open Textbook Library indica, para un libro del editor OpenStax, licencia CC BY.",
+    "artifact_ids": [
+     "SA-2263fc8f71c072ba15ed5086",
+     "SA-56de9eabaeab83c3d99abd91"
+    ],
+    "quote": "Publisher: OpenStax\n\nLicense: CC BY",
+    "locator": "OTL listado, entradas OpenStax vs. Preface Macro 3e (Customization)"
+   }
+  ],
+  "unknown": [
+   "Contenido de la página de detalles de Principles of Economics 3e (OpenStax): solo se obtuvo 'You must enable JavaScript'; sin licencia, URL de descarga ni número de capítulos.",
+   "sha256 de cualquier archivo: nada fue descargado.",
+   "robots.txt y límites de tasa de RePEc, NBER, OpenStax y OTL: no consultados.",
+   "Total de obras del Open Textbook Library en economía y fecha de corte: no declarado en el texto leído (paginación 1-6 sin total).",
+   "Términos de licencia de reutilización de los metadatos NBER (página Public Use Data) y de la API de RePEc: no hallados.",
+   "Fecha de corte de las estadísticas de IDEAS: no aparece en el texto leído.",
+   "Cobertura por área (micro, finanzas, desarrollo, historia, etc.): no se dispone de why_needed."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: La discrepancia CC BY (OTL) vs CC BY-NC-SA (prefacio) sugiere que el índice es secundario respecto al texto de la obra; usar la licencia del libro.",
+  "INTERPRETACIÓN: Los términos de OpenStax (NC-SA y prohibición de ingesta en LLM sin permiso) pueden impedir su uso como corpus sin permiso escrito; revisar antes de ingerir.",
+  "INTERPRETACIÓN: Los términos de NBER para papers (sin descarga masiva para repostear) son distintos de los de metadatos; la licencia de los metadatos no está en las páginas leídas.",
+  "INTERPRETACIÓN: CORE Econ es BY-NC-ND; ND es incompatible con derivados/remezclas, riesgo para su uso como base de criterios transformados.",
+  "INTERPRETACIÓN: RePEc excluye uso comercial y sugiere publisher archives/Rsync para volumen; la ruta NBER en formato RePEc enlaza ambos."
+ ],
+ "candidate_controls": [
+  "Registrar para cada fuente la licencia citada literalmente de la obra y no solo de un índice, y marcar discrepancias.",
+  "Calcular y guardar sha256 y fecha de descarga de cada archivo antes de usarlo."
+ ],
+ "candidate_tests": [
+  "Consultar robots.txt y términos de la API de RePEc antes de cualquier bajada y registrar límites de tasa.",
+  "Verificar en la página de la obra OpenStax (con navegador) licencia y número de capítulos para Principles of Economics 3e y Microeconomics 3e."
+ ],
+ "limitations": [
+  "La página de detalles de OpenStax Principles of Economics 3e llegó vacía (requiere JavaScript); no se pudo confirmar su licencia, capítulos ni formatos.",
+  "Solo se leyó el prefacio de Macro 3e; la licencia de Micro y Economics 3e se infiere solo del listado OTL, que discrepa.",
+  "El listado OTL es una página (de 6) y no se conoce el total declarado.",
+  "No se disponía de why_needed, por lo que no se mapeó por área.",
+  "No hay sha256, robots.txt ni límites de tasa: ningún archivo se descargó.",
+  "Las fechas pie de página (p. ej. © Jul 9, 2026) son del texto fuente y no se usaron como fecha de corte.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 14 de 31 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 13 propuestas, 12 aceptadas, 1 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.loc.gov/item/2021387735/ (403); https://repec.org/docs/RePEcDataUse.html (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
