@@ -11,18 +11,32 @@ import shutil
 import subprocess
 import tempfile
 import unittest
+from functools import partial
 from pathlib import Path
 from unittest import mock
 
 from rg import investigar as inv
+from rg import recrudo
 from tests.test_catalog import FakeOpener
 from tests.test_investigar import PAGE, PLAN, ROUTES, RR, answer
+from tests.test_recrudo import metadata_only_packet
 
 ROOT = Path(__file__).resolve().parents[1]
 _spec = importlib.util.spec_from_file_location('packet_gate', ROOT / 'scripts' / 'packet_gate.py')
 pg = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(pg)
 RP = 'RP-2026-10-23-prueba'
+
+
+class OneComunPerHead(unittest.TestCase):
+    def test_every_packet_of_a_head_hands_the_same_comun_to_its_download(self):
+        got = []
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(pg, 'changed', return_value=['RP-1', 'RP-2']), \
+                mock.patch.object(pg, 'tree', return_value=[('100644', 'blob', 'x', 10, 'packet.json')]), \
+                mock.patch.object(pg, 'write_blobs', return_value=Path(tmp)), \
+                mock.patch.object(pg, 'verificar', lambda *a, **k: got.append(k['comun']) or ([], [], {})):
+            pg.gate('b', 'h', tmp)
+        self.assertEqual((len(got), type(got[0]), got[0] is got[1]), (2, recrudo.Comun, True))
 
 
 @unittest.skipUnless(shutil.which('git'), 'needs git')
@@ -100,7 +114,7 @@ class PacketGate(unittest.TestCase):
 
     def test_an_error_is_a_failed_result_and_the_others_still_run(self):
         sha = self.commit('paquete')
-        with mock.patch.object(pg, 'check', side_effect=RuntimeError('un analizador se rompió')):
+        with mock.patch.object(pg, 'verificar', side_effect=RuntimeError('un analizador se rompió')):
             [packet] = self.run_gate(sha)['packets']
         self.assertEqual((packet['status'], packet['problems']), ('failed', ['the gate did not finish: RuntimeError']))
 
@@ -111,15 +125,15 @@ class PacketGate(unittest.TestCase):
 
     def test_bytes_written_before_an_error_still_count_against_the_budget(self):
         sha, size = self.two_packets()
-        real = pg.check
+        real = pg.verificar
         calls = iter([RuntimeError('después de escribir'), None])
 
-        def first_fails(folder):
+        def first_fails(folder, *args, **kw):
             err = next(calls)
             if err:
                 raise err
-            return real(folder)
-        with mock.patch.object(pg, 'MAX_TOTAL', size + size // 2), mock.patch.object(pg, 'check', first_fails):
+            return real(folder, *args, **kw)
+        with mock.patch.object(pg, 'MAX_TOTAL', size + size // 2), mock.patch.object(pg, 'verificar', first_fails):
             first, second = self.run_gate(sha)['packets']
         self.assertEqual(first['problems'], ['the gate did not finish: RuntimeError'])
         self.assertEqual(second['status'], 'failed')
@@ -132,6 +146,15 @@ class PacketGate(unittest.TestCase):
         self.assertNotIn('error', result)
         self.assertEqual([(p['status'], p['problems']) for p in result['packets']],
                          [('failed', ['the gate did not finish: OSError'])] * 2)
+
+    def test_quotes_of_raws_the_packet_does_not_keep_are_read_downloaded_again_and_nothing_downloaded_is_listed(self):
+        shutil.rmtree(self.repo / 'research-packets' / RP)
+        shutil.copytree(metadata_only_packet(self.tmp / 'mo'), self.repo / 'research-packets' / RP)
+        sha, data = self.commit('solo metadatos'), Path(tempfile.mkdtemp(dir=self.tmp))
+        with mock.patch.object(recrudo, 'Fetcher', partial(recrudo.Fetcher, opener=FakeOpener(dict(ROUTES)), sleep=lambda s: None)):
+            [packet] = pg.gate('main', sha, data, self.repo)['packets']
+        self.assertEqual((packet['status'], packet['raws'], packet['stats']['citas']), ('passed', {}, {'verificada': 2}))
+        self.assertEqual(len(list((data / 'recrudos' / RP / 'raw').rglob('*.bin'))), 2)  # never under the packet folder
 
     def test_a_tampered_raw_fails_and_lists_no_raw(self):
         raw = next((self.repo / 'research-packets' / RP / 'raw').rglob('*.html'))

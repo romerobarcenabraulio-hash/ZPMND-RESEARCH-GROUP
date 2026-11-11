@@ -10,6 +10,8 @@ MAX_TOTAL is not written and fails. Every changed folder that still exists gets 
 problem and no warning (--strict). Any error is that folder's failed result, and packets.json is always written: it
 names the head and, for each folder, its result and, only when it passed, the path and sha256 of each raw file.
 audit-gpt reads it as a TRUSTED section: a raw listed there arrives in the diff as one line instead of its bytes.
+Before the check, rg.recrudo downloads again the raws a folder's quotes cite and it does not keep, into <data>/recrudos/
+(never published).
 """
 import argparse
 import hashlib
@@ -17,11 +19,12 @@ import json
 import re
 import subprocess
 import sys
+import time
 from pathlib import Path, PurePosixPath
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # main's rg, from main's checkout
 
-from rg.packets import check  # noqa: E402
+from rg.recrudo import PLAZO, Comun, verificar  # noqa: E402
 
 SHA = re.compile(r'^[0-9a-f]{40}$')
 PACKET = re.compile(r'^RP-[A-Za-z0-9._-]{3,64}$')
@@ -65,7 +68,7 @@ def write_blobs(rows, rp, data, repo='.'):
     return Path(data) / 'research-packets' / rp
 
 
-def one(sha, rp, data, budget, repo='.'):
+def one(sha, rp, data, budget, repo='.', deadline=None, comun=None):
     """(result, bytes reserved) for one changed packet folder; an error is a failed result. The folder's bytes are
     reserved before the first one is written, so an error after that still counts them against the head's budget."""
     reserved = 0
@@ -82,7 +85,7 @@ def one(sha, rp, data, budget, repo='.'):
             return {'packet': rp, 'status': 'failed', 'problems': problems}, 0
         reserved = total
         folder = write_blobs(rows, rp, data, repo)
-        problems, warnings, stats = check(folder)
+        problems, warnings, stats = verificar(folder, Path(data) / 'recrudos' / rp, deadline=deadline, comun=comun)
         ok = not problems and not warnings
         raws = {}
         if ok:
@@ -96,9 +99,9 @@ def one(sha, rp, data, budget, repo='.'):
 
 
 def gate(base, sha, data, repo='.'):
-    results, budget = [], MAX_TOTAL
+    results, budget, deadline, comun = [], MAX_TOTAL, time.monotonic() + PLAZO, Comun()  # one Comun per head (GPT on 6cebbc0)
     for rp in changed(base, sha, repo):
-        result, used = one(sha, rp, data, budget, repo)
+        result, used = one(sha, rp, data, budget, repo, deadline, comun)
         results.append(result)
         budget -= used
     return {'head_sha': sha, 'packets': results}

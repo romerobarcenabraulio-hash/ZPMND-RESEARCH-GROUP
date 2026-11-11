@@ -57,10 +57,10 @@ def _raws(folders):
     return out
 
 
-def _texts(cited):
-    """{path: folded text or None} through rg.text in isolated processes; cited is {path: media_type}."""
-    return {path: (None if t is None else fold(t)) for path, t in
-            ((p, plain_text(p, cited[p], res)) for p, res in extract_all(sorted(cited), workers=2, timeout=120))}
+def _texts(cited, deadline=None):
+    """{path: folded text or None} through rg.text in isolated processes; cited is {path: media_type}; none after `deadline`."""
+    return {**dict.fromkeys(cited), **{path: (None if t is None else fold(t)) for path, t in
+            ((p, plain_text(p, cited[p], res)) for p, res in extract_all(sorted(cited), workers=2, timeout=120, deadline=deadline))}}
 
 
 def _undeclared(folder, packet):
@@ -85,8 +85,9 @@ def _undeclared(folder, packet):
     return out
 
 
-def check(folder, extra=()):
-    """(problems, warnings, stats) for one packet folder."""
+def check(folder, extra=(), citas=None, deadline=None):
+    """(problems, warnings, stats) for one packet folder; `citas` gets each quote's outcome by id; none extracted after `deadline`."""
+    citas = {} if citas is None else citas
     folder = Path(folder)
     packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
     problems = [f'schema: {e}' for e in validate('research_packet', packet)] + _undeclared(folder, packet)
@@ -105,7 +106,7 @@ def check(folder, extra=()):
             problems.append(f"{a['artifact_id']}: raw does not match its sha256 and size")
             continue
         cited[a['artifact_id']] = (f, a['media_type'])
-    texts = _texts({str(f): media for f, media in cited.values()})
+    texts = _texts({str(f): media for f, media in cited.values()}, deadline)
     quotes = verified = 0
     warnings = []
     for group in ('confirmed', 'conflicting'):
@@ -118,14 +119,19 @@ def check(folder, extra=()):
             sources = [texts[str(cited[a][0])] for a in at_hand if texts[str(cited[a][0])] is not None]
             if len(fold(finding['quote'])) < MIN_QUOTE:
                 problems.append(f'{group}[{i}]: the quote has fewer than {MIN_QUOTE} characters once its whitespace is folded')
+                citas[f'{group}[{i}]'] = 'cita_corta'
             elif not at_hand:
                 warnings.append(f'{group}[{i}]: no raw at hand for its artifacts; quote not checked')
+                citas[f'{group}[{i}]'] = 'sin_crudo'
             elif not sources:
                 problems.append(f'{group}[{i}]: no text could be extracted from the raws it cites; quote not verifiable')
+                citas[f'{group}[{i}]'] = 'sin_texto'
             elif any(fold(finding['quote']) in t for t in sources):
                 verified += 1
+                citas[f'{group}[{i}]'] = 'verificada'
             else:
                 problems.append(f'{group}[{i}]: quote not found in the text of the raws it cites')
+                citas[f'{group}[{i}]'] = 'cita_ausente'
     return problems, warnings, {'artifacts': len(packet.get('artifacts', [])), 'raws_kept': len(kept),
                                 'quotes': quotes, 'quotes_verified': verified}
 
