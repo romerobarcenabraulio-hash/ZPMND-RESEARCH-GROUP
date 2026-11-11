@@ -1,0 +1,446 @@
+{
+ "research_id": "RP-2026-11-08-familia-p-conocimiento-practico",
+ "request_id": "RR-2026-11-08-familia-p-conocimiento-practico",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T22:16:00Z",
+ "question": "Para cada fuente listada en why_needed: ¿qué dicen los términos oficiales de la plataforma sobre acceso automatizado, transcripción y reutilización, qué API o volcado ofrece y con qué licencia de contenido, y para P09 y P10 qué métodos o herramientas abiertas pasan video a línea de tiempo y verifican lo práctico contra fuentes primarias?",
+ "why_zpmnd_needs_it": "Subáreas: P01 Videos técnicos (Mundo y México); P02 Charlas de conferencias (Mundo y México); P03 Cursos abiertos (Mundo y México); P04 Preguntas y respuestas (Mundo y México); P05 Foros y comunidades (Mundo y México); P06 Tutoriales y blogs técnicos (Mundo y México); P07 Podcasts y audio (Mundo y México); P08 Demostraciones profesionales (Mundo y México); P09 Video → línea de tiempo (§5) (Mundo y México); P10 Autoridad y verificación de lo práctico (Mundo y México). ZPMND necesita conocimiento tácito con autor, fecha y licencia, que entra con menor autoridad hasta verificarse.",
+ "scope": "Lectura de 9 fuentes entregadas: políticas YouTube (developer policies y captions.download), términos y política de robots de Wikimedia, términos de MIT OCW, páginas secundarias sobre Stack Exchange, Reddit y Podcasting 2.0, README de WhisperX y licencia de PySceneDetect. Se extraen términos de acceso automatizado, reutilización, API/licencia y herramientas para P09/P10. No se descargó nada ni se calcularon sha256.",
+ "sources": {
+  "primary": [
+   "SA-0d9e43b179e4da9cc9939950",
+   "SA-d82c8a4ec238e45d06b76472",
+   "SA-76792c9444e3fad5bec41239",
+   "SA-866a90df10d3ec98565cfce4",
+   "SA-8ef6146bd59303769690626b",
+   "SA-ca3793b47449cea6deb02f8d",
+   "SA-4afb124f093ea5510018d6ec"
+  ],
+  "secondary": [
+   "SA-c9826ff76ac517ba0833f764",
+   "SA-8943f2a99e0eb79ca3125866",
+   "SA-2c823b04266ad4bf3c3d91f2"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-0d9e43b179e4da9cc9939950",
+   "url": "https://developers.google.com/youtube/terms/developer-policies",
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "sha256": "0d9e43b179e4da9cc9939950d6783d2cede2d817ea493e3b9bd65b6bd71316d9",
+   "bytes": 203826,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Google for Developers",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "YouTube API Services - Developer Policies"
+  },
+  {
+   "artifact_id": "SA-d82c8a4ec238e45d06b76472",
+   "url": "https://developers.google.com/youtube/data/reference/rest/v3/captions/download",
+   "retrieved_at": "2026-11-11T22:13:49Z",
+   "sha256": "d82c8a4ec238e45d06b764721871e4f0516eaf81e39a71a251dcf27f10c1208b",
+   "bytes": 146739,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Google for Developers",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Captions: download | YouTube Data API"
+  },
+  {
+   "artifact_id": "SA-76792c9444e3fad5bec41239",
+   "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+   "retrieved_at": "2026-11-11T22:13:51Z",
+   "sha256": "76792c9444e3fad5bec412393889a0a3583a10eb8fdb34cea8fb8169250ace8d",
+   "bytes": 153090,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Wikimedia Foundation",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Wikimedia Foundation Terms of Use"
+  },
+  {
+   "artifact_id": "SA-866a90df10d3ec98565cfce4",
+   "url": "https://wikitech.wikimedia.org/wiki/Robot_policy",
+   "retrieved_at": "2026-11-11T22:13:52Z",
+   "sha256": "866a90df10d3ec98565cfce4262258295f0b7e487a6033080aaa73888d805661",
+   "bytes": 69122,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Wikimedia",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Robot policy - Wikitech"
+  },
+  {
+   "artifact_id": "SA-8ef6146bd59303769690626b",
+   "url": "https://ocw.mit.edu/pages/privacy-and-terms-of-use/",
+   "retrieved_at": "2026-11-11T22:13:53Z",
+   "sha256": "8ef6146bd59303769690626b6a4d53bbb0c16a9196d3aef588681ea175883342",
+   "bytes": 27791,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "MIT OpenCourseWare",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "MIT OpenCourseWare Privacy and Terms of Use"
+  },
+  {
+   "artifact_id": "SA-c9826ff76ac517ba0833f764",
+   "url": "https://wiki.archiveteam.org/index.php/Stack_Exchange",
+   "retrieved_at": "2026-11-11T22:13:54Z",
+   "sha256": "c9826ff76ac517ba0833f764d3311115af68d654a544e8de652a28a5993f5ffa",
+   "bytes": 35195,
+   "media_type": "text/html",
+   "source_type": "other",
+   "publisher": "Archive Team",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Stack Exchange - Archiveteam"
+  },
+  {
+   "artifact_id": "SA-8943f2a99e0eb79ca3125866",
+   "url": "https://techcrunch.com/2024/05/09/reddit-locks-down-its-public-data-in-new-content-policy-says-use-now-requires-a-contract/",
+   "retrieved_at": "2026-11-11T22:13:56Z",
+   "sha256": "8943f2a99e0eb79ca31258666005c0c92a435313a5c8a9129dd1530d2f6dfe27",
+   "bytes": 239229,
+   "media_type": "text/html",
+   "source_type": "news",
+   "publisher": "TechCrunch",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Reddit locks down its public data in new content policy"
+  },
+  {
+   "artifact_id": "SA-2c823b04266ad4bf3c3d91f2",
+   "url": "https://podcasting2.org/docs/guides/how-to-add-transcripts-to-your-podcast",
+   "retrieved_at": "2026-11-11T22:13:58Z",
+   "sha256": "2c823b04266ad4bf3c3d91f2bd12052f592f0c568b890619e264de384618fe23",
+   "bytes": 183807,
+   "media_type": "text/html",
+   "source_type": "other",
+   "publisher": "Podcasting 2.0",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Add Transcripts to Your Podcast"
+  },
+  {
+   "artifact_id": "SA-ca3793b47449cea6deb02f8d",
+   "url": "https://github.com/m-bain/whisperX",
+   "retrieved_at": "2026-11-11T22:14:00Z",
+   "sha256": "ca3793b47449cea6deb02f8d7077b67056a979712b20496d09499405f424afee",
+   "bytes": 360421,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "GitHub",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "WhisperX (m-bain/whisperX)"
+  },
+  {
+   "artifact_id": "SA-4afb124f093ea5510018d6ec",
+   "url": "https://github.com/Breakthrough/PySceneDetect/blob/main/LICENSE",
+   "retrieved_at": "2026-11-11T22:14:01Z",
+   "sha256": "4afb124f093ea5510018d6eca76094a9be5c48b3d1f054a30d0c1dc7272c851d",
+   "bytes": 182989,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "GitHub / Breakthrough",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "PySceneDetect LICENSE (BSD 3-Clause)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "Las políticas de YouTube prohíben raspar (scraping) las aplicaciones de YouTube o Google, o obtener datos raspados.",
+    "artifact_ids": [
+     "SA-0d9e43b179e4da9cc9939950"
+    ],
+    "quote": "must not, and must not encourage, enable, or require others to, directly or indirectly, scrape YouTube Applications or Google Applications, or obtain scraped YouTube data or content.",
+    "locator": "III.E, Scraping"
+   },
+   {
+    "claim": "YouTube prohíbe descargar, importar, respaldar, cachear o almacenar copias del contenido audiovisual sin aprobación previa por escrito.",
+    "artifact_ids": [
+     "SA-0d9e43b179e4da9cc9939950"
+    ],
+    "quote": "download, import, backup, cache, or store copies of YouTube audiovisual content without YouTube's prior written approval,",
+    "locator": "III.E.1, Audiovisual Content"
+   },
+   {
+    "claim": "YouTube prohíbe usar tecnología distinta de sus API Services para acceder a los datos de la API o al contenido audiovisual.",
+    "artifact_ids": [
+     "SA-0d9e43b179e4da9cc9939950"
+    ],
+    "quote": "use any technology other than YouTube API Services to access or retrieve API Data, including to access any portion of any YouTube audiovisual content;",
+    "locator": "III.I, Additional Prohibitions"
+   },
+   {
+    "claim": "YouTube prohíbe usar APIs no documentadas sin permiso expreso.",
+    "artifact_ids": [
+     "SA-0d9e43b179e4da9cc9939950"
+    ],
+    "quote": "You must not use undocumented APIs without express permission.",
+    "locator": "III.D, Undocumented Services"
+   },
+   {
+    "claim": "YouTube prohíbe separar, aislar o modificar los componentes de audio o video de cualquier contenido audiovisual de YouTube.",
+    "artifact_ids": [
+     "SA-0d9e43b179e4da9cc9939950"
+    ],
+    "quote": "separate, isolate, or modify the audio or video components of any YouTube audiovisual content",
+    "locator": "III.I, Additional Prohibitions"
+   },
+   {
+    "claim": "Los clientes de la API pueden almacenar temporalmente cantidades limitadas de datos no autorizados durante el tiempo necesario para sus fines, pero no más de 30 días calendario.",
+    "artifact_ids": [
+     "SA-0d9e43b179e4da9cc9939950"
+    ],
+    "quote": "API Clients may temporarily store limited amounts of Non-Authorized Data for as long as is necessary for the purposes of the API Client but not longer than 30 calendar days.",
+    "locator": "III.E.4, Refreshing, Storing, and Displaying API Data"
+   },
+   {
+    "claim": "El contenido de la página de políticas de YouTube se licencia bajo Creative Commons Attribution 4.0 y las muestras de código bajo Apache 2.0.",
+    "artifact_ids": [
+     "SA-0d9e43b179e4da9cc9939950"
+    ],
+    "quote": "the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License.",
+    "locator": "Pie de página"
+   },
+   {
+    "claim": "El método captions.download de la YouTube Data API descarga una pista de subtítulos, que se devuelve en su formato original salvo que la petición especifique un valor para el parámetro tfmt.",
+    "artifact_ids": [
+     "SA-d82c8a4ec238e45d06b76472"
+    ],
+    "quote": "Downloads a caption track. The caption track is returned in its original format unless the request specifies a value for the tfmt parameter",
+    "locator": "Captions: download, introducción"
+   },
+   {
+    "claim": "captions.download exige que el usuario tenga permiso para editar el video.",
+    "artifact_ids": [
+     "SA-d82c8a4ec238e45d06b76472"
+    ],
+    "quote": "This method requires the user to have permission to edit the video.",
+    "locator": "Captions: download, introducción"
+   },
+   {
+    "claim": "captions.download cuesta 200 unidades de cuota.",
+    "artifact_ids": [
+     "SA-d82c8a4ec238e45d06b76472"
+    ],
+    "quote": "Quota impact: A call to this method has a quota cost of 200 units.",
+    "locator": "Captions: download"
+   },
+   {
+    "claim": "Los términos de Wikimedia prohíben usos automatizados abusivos, disruptivos, o no aprobados por la comunidad.",
+    "artifact_ids": [
+     "SA-76792c9444e3fad5bec41239"
+    ],
+    "quote": "Engaging in automated uses of the Project Websites that are abusive or disruptive of the services, violate acceptable usage policies where available, or have not been approved by the Wikimedia community;",
+    "locator": "Sección 4, Disruptive and Illegal Misuse of Facilities"
+   },
+   {
+    "claim": "Los términos de Wikimedia mencionan la licencia Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).",
+    "artifact_ids": [
+     "SA-76792c9444e3fad5bec41239"
+    ],
+    "quote": "Creative Commons Attribution-ShareAlike 4.0 International License (\"CC BY-SA 4.0\"), and",
+    "locator": "Sección 7, Licensing of Content"
+   },
+   {
+    "claim": "Los términos de Wikimedia dan la bienvenida a la reutilización del contenido alojado, aunque hay excepciones para el contenido aportado bajo \"fair use\" o exenciones similares.",
+    "artifact_ids": [
+     "SA-76792c9444e3fad5bec41239"
+    ],
+    "quote": "Reuse of content that we host is welcome, though exceptions exist for content contributed under \"fair use\" or similar exemptions under applicable copyright law.",
+    "locator": "Sección 7, Re-use"
+   },
+   {
+    "claim": "Al usar las APIs de Wikimedia se aceptan la User-Agent Policy, la Robot Policy y API:Etiquette.",
+    "artifact_ids": [
+     "SA-76792c9444e3fad5bec41239"
+    ],
+    "quote": "By using our APIs, you agree to abide by all applicable policies governing the use of the APIs, which include but are not limited to the User-Agent Policy, the Robot Policy, and the API:Etiquette",
+    "locator": "Sección 12, API Terms"
+   },
+   {
+    "claim": "La política de robots de Wikimedia recomienda considerar los volcados (dumps) antes que las peticiones en vivo.",
+    "artifact_ids": [
+     "SA-866a90df10d3ec98565cfce4"
+    ],
+    "quote": "Check if you can use Wikimedia Dumps or other forms of offline collection of our data instead of making live requests.",
+    "locator": "Generally applicable rules"
+   },
+   {
+    "claim": "La política de robots exige honrar robots.txt y todas sus directivas.",
+    "artifact_ids": [
+     "SA-866a90df10d3ec98565cfce4"
+    ],
+    "quote": "Honor Robots.txt. Honor every directive in our robots.txt file.",
+    "locator": "Generally applicable rules"
+   },
+   {
+    "claim": "Para peticiones sin autenticar, Wikimedia indica concurrencia 1 y menos de 5 peticiones por segundo en total.",
+    "artifact_ids": [
+     "SA-866a90df10d3ec98565cfce4"
+    ],
+    "quote": "If unauthenticated, keep the concurrency of your requests to 1 at a time, and below 5 requests per second overall.",
+    "locator": "Action API rules"
+   },
+   {
+    "claim": "Wikimedia dirige a usuarios externos de alto volumen a Wikimedia Enterprise.",
+    "artifact_ids": [
+     "SA-866a90df10d3ec98565cfce4"
+    ],
+    "quote": "If you are an external entity and you need a higher volume of requests, you should use Wikimedia Enterprise APIs instead.",
+    "locator": "What to do if these limits are too strict for me?"
+   },
+   {
+    "claim": "MIT OCW publica su contenido bajo CC BY-NC-SA 4.0.",
+    "artifact_ids": [
+     "SA-8ef6146bd59303769690626b"
+    ],
+    "quote": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+    "locator": "Sección Creative Commons License"
+   },
+   {
+    "claim": "Salvo que se especifique otra cosa, el contenido de MIT OCW puede usarse para entrenar, desarrollar y mejorar modelos de IA y aprendizaje automático, siempre que ese uso cumpla plenamente las restricciones establecidas.",
+    "artifact_ids": [
+     "SA-8ef6146bd59303769690626b"
+    ],
+    "quote": "Unless otherwise specified, OCW content may be used to train, develop, and improve artificial intelligence and machine learning models, provided that such use complies fully with the restrictions set forth below",
+    "locator": "Permitted Use of AI Training"
+   },
+   {
+    "claim": "MIT OCW indica que los usuarios no pueden vender directamente ni lucrar con los materiales de OCW ni con obras derivadas de ellos.",
+    "artifact_ids": [
+     "SA-8ef6146bd59303769690626b"
+    ],
+    "quote": "Users may not directly sell or profit from OCW materials or from works derived from OCW materials.",
+    "locator": "MIT Interpretation of Non-commercial"
+   },
+   {
+    "claim": "WhisperX ofrece transcripción automática con marcas de tiempo por palabra y diarización de hablantes.",
+    "artifact_ids": [
+     "SA-ca3793b47449cea6deb02f8d"
+    ],
+    "quote": "This repository provides fast automatic speech recognition (70x realtime with large-v2) with word-level timestamps and speaker diarization.",
+    "locator": "README, introducción"
+   },
+   {
+    "claim": "WhisperX está bajo licencia BSD-2-Clause.",
+    "artifact_ids": [
+     "SA-ca3793b47449cea6deb02f8d"
+    ],
+    "quote": "BSD-2-Clause license",
+    "locator": "Barra lateral del repositorio / README"
+   },
+   {
+    "claim": "El README de WhisperX declara que la diarización está lejos de ser perfecta.",
+    "artifact_ids": [
+     "SA-ca3793b47449cea6deb02f8d"
+    ],
+    "quote": "Diarization is far from perfect",
+    "locator": "README, Limitations"
+   },
+   {
+    "claim": "WhisperX indica haber sido aceptado en INTERSPEECH 2023.",
+    "artifact_ids": [
+     "SA-ca3793b47449cea6deb02f8d"
+    ],
+    "quote": "WhisperX accepted at INTERSPEECH 2023",
+    "locator": "README, New"
+   },
+   {
+    "claim": "PySceneDetect usa licencia BSD 3-Clause.",
+    "artifact_ids": [
+     "SA-4afb124f093ea5510018d6ec"
+    ],
+    "quote": "BSD 3-Clause License",
+    "locator": "LICENSE, línea 1"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Términos oficiales de Reddit, Stack Exchange, Podcasting 2.0 y otras plataformas: no se entregó fuente primaria; solo secundarias.",
+   "sha256 de lo descargado: no se calculó ni se recibió ningún hash.",
+   "Volcado/API oficial y licencia de Reddit: no hay fuente primaria entre las leídas.",
+   "Términos de YouTube sobre transcripción de video con ASR propio: solo se leyó la prohibición de descarga/scraping, sin norma específica sobre transcribir.",
+   "Para P09/P10: no se leyó el README de PySceneDetect (solo su LICENSE) ni evidencia publicada de que verifique lo práctico contra fuentes primarias.",
+   "Términos oficiales de Wikimedia sobre el volcado (Dumps) y su licencia: no se leyó la página de volcados."
+  ]
+ },
+ "candidate_claims": [
+  "SECUNDARIA: Archive Team (Stack Exchange) afirma que los volcados de Stack Exchange dejaron de ser públicos en archive.org el 2024-07-12 y que exigen aceptar un texto que excluye el entrenamiento de LLM; requiere verificar en fuente primaria de Stack Exchange.",
+  "SECUNDARIA: Archive Team indica que el contenido de Stack Exchange es CC-BY-SA con versiones cambiantes (2.5, 3.0, 4.0) según la fecha, y que los volcados de 2024 excluyen uso comercial, lo que sería incompatible con CC BY-SA.",
+  "SECUNDARIA: TechCrunch (2024-05-09) informa que la Public Content Policy de Reddit exige contrato para uso comercial de su contenido, incluido entrenamiento de IA, y mantiene acceso a investigación no comercial; no se leyó la política primaria de Reddit.",
+  "SECUNDARIA: Podcasting 2.0 recomienda VTT o SRT para transcripciones, aconseja revisar las transcripciones automáticas y lista Whisper.cpp entre las herramientas; es una guía, no fuente primaria.",
+  "INTERPRETACIÓN: Para YouTube, la vía permitida de transcripción parece limitada a captions.download con permiso de edición (videos propios) o acuerdo escrito; descargar audio para ASR choca con III.E.1 y III.I.",
+  "INTERPRETACIÓN: Wikimedia admite acceso automatizado con User-Agent identificable, robots.txt y límites, y prefiere volcados; el contenido es CC BY-SA, de modo que la reutilización exige atribución y compartir igual.",
+  "INTERPRETACIÓN: MIT OCW es reutilizable con CC BY-NC-SA 4.0; el uso comercial queda excluido, lo que afecta a cualquier derivado de ZPMND con fines comerciales.",
+  "INTERPRETACIÓN: WhisperX (BSD-2-Clause) y PySceneDetect (BSD-3-Clause) son herramientas abiertas candidatas para pasar audio/video a línea de tiempo (palabras con tiempo; cortes de escena), pero no verifican por sí solas lo práctico contra fuentes primarias."
+ ],
+ "candidate_controls": [
+  "Antes de transcribir contenido de una plataforma, registrar la cláusula de términos (cita literal y fecha) y bloquear el procesamiento si la plataforma prohíbe descarga o scraping.",
+  "Registrar sha256 de cada archivo o volcado descargado junto con URL, fecha y licencia."
+ ],
+ "candidate_tests": [
+  "HIPÓTESIS: Ejecutar WhisperX sobre un audio con licencia abierta (p. ej. MIT OCW CC BY-NC-SA) y comparar las marcas de tiempo contra una transcripción de referencia para medir el error de alineación.",
+  "HIPÓTESIS: Combinar PySceneDetect con la salida de WhisperX para generar una línea de tiempo y verificar manualmente una muestra contra la fuente primaria."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Registrar por plataforma una ficha de términos con postura sobre acceso automatizado, transcripción, reutilización y licencia, separando el contenido de la licencia de la documentación (YouTube: la página es CC BY 4.0, pero eso no cubre los videos).",
+  "Tratar los tutoriales y guías (Podcasting 2.0) y la prensa (TechCrunch) como secundarios, nunca como términos de la plataforma."
+ ],
+ "affected_existing_concepts": [
+  "Política de ingesta por plataforma",
+  "Fuente primaria vs. secundaria",
+  "Licencia del contenido vs. licencia de la documentación"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: Las plataformas con licencia abierta y volcado oficial (Wikimedia) son las más seguras para un piloto de línea de tiempo; YouTube y Reddit requieren permiso o contrato."
+ ],
+ "limitations": [
+  "Solo se leyeron los textos entregados; sin acceso a la web ni cálculo de sha256.",
+  "Faltan fuentes primarias para Reddit, Stack Exchange y Podcasting 2.0; sus datos son secundarios y quedan como candidate_claim.",
+  "De PySceneDetect solo se recibió el archivo LICENSE, sin README ni evidencia de funcionamiento.",
+  "La cita de licencia de WhisperX viene de la interfaz de GitHub; el archivo LICENSE no se leyó.",
+  "Las páginas de YouTube y Wikimedia llevan fechas de actualización posteriores a mi conocimiento; no se pudo contrastar con versiones anteriores.",
+  "No se encontró en las fuentes leídas ninguna instrucción dirigida al lector que haya que reportar.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 13 de 26 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 13 propuestas, 12 aceptadas, 1 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.youtube.com/t/terms (refused); https://devclass.com/2024/07/30/stack-exchange-restricts-access-to-dump-of-user-contributed-data-as-critics-complain-license-permits-reuse-for-any-purpose/ (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
