@@ -1,0 +1,369 @@
+{
+ "research_id": "RP-2026-11-08-familia-n-datos-publicos",
+ "request_id": "RR-2026-11-08-familia-n-datos-publicos",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T15:22:23Z",
+ "question": "Para cada fuente de datos públicos listada en why_needed: ¿cuál es su API o descarga oficial, cuántas series, tablas o conjuntos declara la propia fuente a qué fecha, cómo publica sus revisiones y versiones, qué llave o registro exige y qué licencia rige su reutilización?",
+ "why_zpmnd_needs_it": "Subáreas: N01 INEGI BIE: indicadores económicos (México; hoy solo INPC); N02 INEGI BISE: indicadores sociodemográficos (México); N03 INEGI censos y encuestas (microdatos) (México); N04 Marco geoestadístico (México); N06 Transparencia presupuestaria (México); N07 CONEVAL: pobreza y evaluación (México); N08 Clima y agua (México); N09 Población y proyecciones (México); N10 Banco Mundial (WDI y más) (Internacional); N11 FMI (IFS, WEO) (Internacional); N12 OCDE (Internacional); N13 ONU: UNdata, UN Comtrade, UNCTAD (Internacional); N14 FAO y OMS (GHO) (Internacional); N15 Eurostat (Internacional); N16 FRED (Internacional); N17 Clima y observación de la Tierra (Mundo); N18 Geografía abierta (Mundo); N19 Portales nacionales de datos abiertos de otros países (Internacional); N20 Biodiversidad y observación de especies (Mundo); N21 Repositorios de datos de investigación (Mundo); N22 Clasificaciones de países y regiones (Mundo; M49, eje de países). N05 queda fuera: datos.gob.mx está bloqueado. ZPMND necesita series con definición, unidad, periodicidad y fecha de corte (§31, §76) para calcular con datos oficiales.",
+ "scope": "Revisión de 10 fuentes ya descargadas (INEGI API y términos; Banco Mundial términos y documentación API; FRED términos y vintagedates; FMI WEO x2; Eurostat copyright; UNSD M49; UN Comtrade API) sobre API/descarga, totales declarados, revisiones, llave y licencia. No se descargó nada ni se calculó sha256.",
+ "sources": {
+  "primary": [
+   "SA-f1be5c445bdbedd82de1528f",
+   "SA-97e97599169f75f455877e85",
+   "SA-7f7490aeacec1cb5ef146bcd",
+   "SA-3d25b4dea07045cd3770f714",
+   "SA-c31adf4f6b3803b1b78ed9c9",
+   "SA-baeaaea17a64fa195d5a4b45",
+   "SA-5400c26e5132b449e110c6e1",
+   "SA-6496807fbc031da1f29b5c49",
+   "SA-66e5c6bad79bad66ca9fe408",
+   "SA-4d5cabcb10ad9ef184553b5e",
+   "SA-9ab798871eaef48e3bc31f04"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-f1be5c445bdbedd82de1528f",
+   "url": "https://www.inegi.org.mx/servicios/api-indicadores/",
+   "retrieved_at": "2026-11-11T15:20:12Z",
+   "sha256": "f1be5c445bdbedd82de1528f89c71bc92d7f76fb2be15e914961534bf7919be7",
+   "bytes": 153586,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "INEGI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "API del Banco de Indicadores"
+  },
+  {
+   "artifact_id": "SA-97e97599169f75f455877e85",
+   "url": "https://www.inegi.org.mx/inegi/terminos.html",
+   "retrieved_at": "2026-11-11T15:20:14Z",
+   "sha256": "97e97599169f75f455877e85edffcf941d512f56c5c00197ebfec783d802c67a",
+   "bytes": 10442,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "INEGI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Términos de uso (libre uso de la información)"
+  },
+  {
+   "artifact_id": "SA-7f7490aeacec1cb5ef146bcd",
+   "url": "https://data.worldbank.org/summary-terms-of-use",
+   "retrieved_at": "2026-11-11T15:20:15Z",
+   "sha256": "7f7490aeacec1cb5ef146bcd430edcdb7030450ce6b5e42c2d36a15570f68c0a",
+   "bytes": 207426,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Banco Mundial",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Summary Terms of Use"
+  },
+  {
+   "artifact_id": "SA-3d25b4dea07045cd3770f714",
+   "url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation",
+   "retrieved_at": "2026-11-11T15:20:16Z",
+   "sha256": "3d25b4dea07045cd3770f714173f0afc324410ebb917ea1620b2db469275a3ef",
+   "bytes": 224228,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Banco Mundial",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "About the Indicators API Documentation"
+  },
+  {
+   "artifact_id": "SA-c31adf4f6b3803b1b78ed9c9",
+   "url": "https://fred.stlouisfed.org/docs/api/terms_of_use.html",
+   "retrieved_at": "2026-11-11T15:20:17Z",
+   "sha256": "c31adf4f6b3803b1b78ed9c943865f7be47aa792ff63efe22e7c09ad5998a244",
+   "bytes": 49484,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Federal Reserve Bank of St. Louis",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "FRED API Terms of Use"
+  },
+  {
+   "artifact_id": "SA-baeaaea17a64fa195d5a4b45",
+   "url": "https://fred.stlouisfed.org/docs/api/fred/series_vintagedates.html",
+   "retrieved_at": "2026-11-11T15:20:18Z",
+   "sha256": "baeaaea17a64fa195d5a4b4549dddf695ad0fa851d2c8ca46ea0fe40a32bfb8b",
+   "bytes": 46835,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Federal Reserve Bank of St. Louis",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "fred/series/vintagedates"
+  },
+  {
+   "artifact_id": "SA-5400c26e5132b449e110c6e1",
+   "url": "https://data.imf.org/en/datasets/IMF.RES:WEO",
+   "retrieved_at": "2026-11-11T15:20:19Z",
+   "sha256": "5400c26e5132b449e110c6e1cada45b0297b86eabec59dd892eed4fd7945daca",
+   "bytes": 337063,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "FMI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "WEO - IMF Data"
+  },
+  {
+   "artifact_id": "SA-6496807fbc031da1f29b5c49",
+   "url": "https://www.imf.org/en/publications/weo/weo-database/2025/april",
+   "retrieved_at": "2026-11-11T15:20:21Z",
+   "sha256": "6496807fbc031da1f29b5c49a49e4df02e6ff2fc5d87dbb8677172589924c796",
+   "bytes": 7970,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "FMI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "World Economic Outlook Database, April 2025"
+  },
+  {
+   "artifact_id": "SA-66e5c6bad79bad66ca9fe408",
+   "url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+   "retrieved_at": "2026-11-11T15:20:23Z",
+   "sha256": "66e5c6bad79bad66ca9fe408787b0074a5939f3e40205fdb8ae627a717aaaf36",
+   "bytes": 179311,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Eurostat",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Copyright notice and free re-use"
+  },
+  {
+   "artifact_id": "SA-4d5cabcb10ad9ef184553b5e",
+   "url": "https://unstats.un.org/unsd/methodology/m49/",
+   "retrieved_at": "2026-11-11T15:20:25Z",
+   "sha256": "4d5cabcb10ad9ef184553b5e64c0a34ba8deeb20dab2e02cd0be3599b93bb01d",
+   "bytes": 2051368,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "UNSD",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Standard country or area codes for statistical use (M49)"
+  },
+  {
+   "artifact_id": "SA-9ab798871eaef48e3bc31f04",
+   "url": "https://comtradeplus.un.org/en/api-docs",
+   "retrieved_at": "2026-11-11T15:20:29Z",
+   "sha256": "9ab798871eaef48e3bc31f044831dcd580376e7424632508923ef3a83c6e2432",
+   "bytes": 103452,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "ONU",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "UN Comtrade API docs"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "INEGI: la API del Banco de Indicadores exige un token válido, obtenido al registrarse.",
+    "artifact_ids": [
+     "SA-f1be5c445bdbedd82de1528f"
+    ],
+    "quote": "Para utilizar la API es necesario mandarle un token válido, el cual se puede obtener al registrarte aquí.",
+    "locator": "Método Indicadores, Parámetros de entrada, Token"
+   },
+   {
+    "claim": "INEGI permite explotar comercialmente la información, utilizándola como insumo para generar otros productos o servicios.",
+    "artifact_ids": [
+     "SA-97e97599169f75f455877e85"
+    ],
+    "quote": "Puede explotar comercialmente la información, utilizándola como insumo para generar otros productos o servicios.",
+    "locator": "Del libre uso de la información del INEGI"
+   },
+   {
+    "claim": "INEGI no garantiza el suministro continuo de la información.",
+    "artifact_ids": [
+     "SA-97e97599169f75f455877e85"
+    ],
+    "quote": "No garantiza el suministro continuo de la información.",
+    "locator": "Términos de uso, El INEGI"
+   },
+   {
+    "claim": "Banco Mundial: licencia Creative Commons Attribution 4.0 International, con términos adicionales.",
+    "artifact_ids": [
+     "SA-7f7490aeacec1cb5ef146bcd"
+    ],
+    "quote": "under a Creative Commons Attribution 4.0 International License, with the additional terms below.",
+    "locator": "Summary Terms of Use, párrafo 1"
+   },
+   {
+    "claim": "Banco Mundial: algunos datasets son de terceros y pueden tener condiciones adicionales.",
+    "artifact_ids": [
+     "SA-7f7490aeacec1cb5ef146bcd"
+    ],
+    "quote": "Some datasets and indicators are provided by third parties, and may not be redistributed or reused without the consent of the original data provider",
+    "locator": "Summary Terms of Use"
+   },
+   {
+    "claim": "FRED (Federal Reserve Bank of St. Louis) bloquea las solicitudes con una llave inválida.",
+    "artifact_ids": [
+     "SA-c31adf4f6b3803b1b78ed9c9"
+    ],
+    "quote": "the Federal Reserve Bank of St. Louis will block requests with an invalid key.",
+    "locator": "API Key"
+   },
+   {
+    "claim": "FRED: las series con copyright contienen la palabra 'Copyright' en sus notas.",
+    "artifact_ids": [
+     "SA-c31adf4f6b3803b1b78ed9c9"
+    ],
+    "quote": "Copyrighted series contain the word 'Copyright' in their notes.",
+    "locator": "Property Rights"
+   },
+   {
+    "claim": "FRED puede cambiar, suspender o descontinuar cualquier aspecto de la API en cualquier momento.",
+    "artifact_ids": [
+     "SA-c31adf4f6b3803b1b78ed9c9"
+    ],
+    "quote": "may change, suspend, or discontinue any aspect of the FRED® API at any time",
+    "locator": "Changes and Upgrades"
+   },
+   {
+    "claim": "FRED: fred/series/vintagedates da las fechas de revisión o nueva publicación de una serie.",
+    "artifact_ids": [
+     "SA-baeaaea17a64fa195d5a4b45"
+    ],
+    "quote": "Get the dates in history when a series' data values were revised or new data values were released.",
+    "locator": "Description"
+   },
+   {
+    "claim": "FRED: el ejemplo de fred/series/vintagedates declara \"count\": 162.",
+    "artifact_ids": [
+     "SA-baeaaea17a64fa195d5a4b45"
+    ],
+    "quote": "\"count\": 162,",
+    "locator": "Examples, JSON"
+   },
+   {
+    "claim": "FMI WEO: se publica dos veces al año, abril y octubre.",
+    "artifact_ids": [
+     "SA-5400c26e5132b449e110c6e1"
+    ],
+    "quote": "is published twice a year in April and October",
+    "locator": "WEO, descripción"
+   },
+   {
+    "claim": "FMI WEO permite comparar publicaciones actuales e históricas del WEO para seguir revisiones y cambios en el tiempo.",
+    "artifact_ids": [
+     "SA-5400c26e5132b449e110c6e1"
+    ],
+    "quote": "Compare current and historical WEO releases to track revisions and changes over time.",
+    "locator": "WEO Vintages"
+   },
+   {
+    "claim": "FMI WEO: se documentan cambios y correcciones a la base de datos, con el vintage actual destacado y los vintages pasados archivados.",
+    "artifact_ids": [
+     "SA-5400c26e5132b449e110c6e1"
+    ],
+    "quote": "documents changes and corrections to the database (with the current vintage highlighted and past vintages archived for reference)",
+    "locator": "Database Appendix"
+   },
+   {
+    "claim": "Eurostat: está autorizado siempre que se cite la fuente.",
+    "artifact_ids": [
+     "SA-66e5c6bad79bad66ca9fe408"
+    ],
+    "quote": "is authorised provided the source is acknowledged.",
+    "locator": "General principles"
+   },
+   {
+    "claim": "Eurostat: ejemplos son datos de Estados Unidos, Japón o China.",
+    "artifact_ids": [
+     "SA-66e5c6bad79bad66ca9fe408"
+    ],
+    "quote": "Examples are data for the United States of America, Japan or China.",
+    "locator": "Exceptions"
+   },
+   {
+    "claim": "UNSD M49: actualizaciones publicadas de forma continua en el sitio.",
+    "artifact_ids": [
+     "SA-4d5cabcb10ad9ef184553b5e"
+    ],
+    "quote": "Now any updates are published continuously through the website",
+    "locator": "Questions & Answers, revisión"
+   },
+   {
+    "claim": "UN Comtrade: la API pública no requiere llave; las demás sí.",
+    "artifact_ids": [
+     "SA-9ab798871eaef48e3bc31f04"
+    ],
+    "quote": "The public API needs no key. The others need a subscription key, free with any account",
+    "locator": "Get started"
+   },
+   {
+    "claim": "UN Comtrade: la documentación de la API muestra \"totalRecords\": 1210614.",
+    "artifact_ids": [
+     "SA-9ab798871eaef48e3bc31f04"
+    ],
+    "quote": "\"totalRecords\": 1210614,",
+    "locator": "GET /getDA, Example answer"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Banco Mundial (primaria): total de series y fecha; el 'casi 16,000' está solo en documentación de proveedor.",
+   "INEGI: total de indicadores y fecha de corte, política de revisiones; solo hay LASTUPDATE y estatus por observación.",
+   "FMI: total de series declarado y licencia; el texto leído no la incluye.",
+   "UN Comtrade: licencia (enlace no leído).",
+   "UNSD M49: licencia de reutilización no figura.",
+   "sha256 de lo descargado: no disponible."
+  ]
+ },
+ "candidate_claims": [
+  "SECUNDARIA: SA-3d25b4dea07045cd3770f714 (documentación de proveedor del Banco Mundial) indica casi 16,000 series, más de 45 bases, sin llave en API v2 y V1 discontinuada; candidato, no confirmado.",
+  "INTERPRETACIÓN: INEGI marca estatus de observación (Preliminar, Revisada, Definitiva...), por lo que una serie puede revisarse sin versionado explícito.",
+  "INTERPRETACIÓN: Solo FRED (vintagedates) y FMI (Vintages) ofrecen versionado explícito; el riesgo de serie revisada es mayor en INEGI y Banco Mundial."
+ ],
+ "limitations": [
+  "Las fuentes son páginas de documentación y términos; no se verificó ninguna API en vivo.",
+  "Las citas de totales son ejemplos (GNPCA, dataset USA), no totales globales de cobertura.",
+  "La documentación de INEGI tiene inconsistencias internas en los ejemplos.",
+  "La fecha 'October 2026' del FMI proviene de la página, no verificada.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 11 de 18 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 13 propuestas, 12 aceptadas, 1 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html (403)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
