@@ -93,13 +93,16 @@ jobs:
           # One copy only: stream the tar straight into <=1.9 GB parts, then drop the originals (2026-10-21: the run
           # that kept raw files, a tar and its parts at once died while packing, with no log).
           name="raw-mx-$(date -u +%F)-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.tar"  # a re-run gets its own asset name
-          tar -C raw -cf - . | split -b 1900m -d - "$name.part"
+          # SECURITY T30: publicado hashes each member as it writes the tar and adds exactly those to data/mx/raw/publicados.txt
+          python -m rg.catalog.publicado --catalog data/mx --publicar raw | split -b 1900m -d - "$name.part"
           rm -rf raw
           sha256sum "$name".part* > "$name.sha256"
           df -h / | tail -1
           gh release view raw-mx >/dev/null 2>&1 || gh release create raw-mx --target catalog --title "Raw corpus MX" \
             --notes "Content-addressed raw files (sha256/<2>/<sha256>.<ext>) from each catalog run; see catalog/mx/runs."
           gh release upload raw-mx "$name".part* "$name.sha256"
+      - name: Every raw a row points to is published, or nothing is committed
+        run: python -m rg.catalog.publicado --catalog data/mx
       - name: Commit catalog to the data branch
         id: commit
         env: { RC: '${{ steps.catalog.outputs.rc }}', GH_TOKEN: '${{ github.token }}' }
