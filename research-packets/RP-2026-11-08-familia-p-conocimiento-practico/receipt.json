@@ -1,0 +1,395 @@
+{
+ "request_id": "RR-2026-11-08-familia-p-conocimiento-practico",
+ "fetched": [
+  {
+   "url": "https://developers.google.com/youtube/terms/developer-policies",
+   "status": 200,
+   "error": null,
+   "sha256": "0d9e43b179e4da9cc9939950d6783d2cede2d817ea493e3b9bd65b6bd71316d9",
+   "bytes": 203826,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "text_status": "ok",
+   "text_chars": 61203
+  },
+  {
+   "url": "https://www.youtube.com/t/terms",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.youtube.com/t/terms",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T22:13:49Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://developers.google.com/youtube/v3/docs/captions/download",
+   "status": 200,
+   "error": null,
+   "sha256": "d82c8a4ec238e45d06b764721871e4f0516eaf81e39a71a251dcf27f10c1208b",
+   "bytes": 146739,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:49Z",
+   "text_status": "ok",
+   "text_chars": 8604
+  },
+  {
+   "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+   "status": 200,
+   "error": null,
+   "sha256": "76792c9444e3fad5bec412393889a0a3583a10eb8fdb34cea8fb8169250ace8d",
+   "bytes": 153090,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:51Z",
+   "text_status": "ok",
+   "text_chars": 53061
+  },
+  {
+   "url": "https://wikitech.wikimedia.org/wiki/Robot_policy",
+   "status": 200,
+   "error": null,
+   "sha256": "866a90df10d3ec98565cfce4262258295f0b7e487a6033080aaa73888d805661",
+   "bytes": 69122,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:52Z",
+   "text_status": "ok",
+   "text_chars": 8922
+  },
+  {
+   "url": "https://ocw.mit.edu/pages/privacy-and-terms-of-use/",
+   "status": 200,
+   "error": null,
+   "sha256": "8ef6146bd59303769690626b6a4d53bbb0c16a9196d3aef588681ea175883342",
+   "bytes": 27791,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:53Z",
+   "text_status": "ok",
+   "text_chars": 11266
+  },
+  {
+   "url": "https://wiki.archiveteam.org/index.php/Stack_Exchange",
+   "status": 200,
+   "error": null,
+   "sha256": "c9826ff76ac517ba0833f764d3311115af68d654a544e8de652a28a5993f5ffa",
+   "bytes": 35195,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:54Z",
+   "text_status": "ok",
+   "text_chars": 6125
+  },
+  {
+   "url": "https://devclass.com/2024/07/30/stack-exchange-restricts-access-to-dump-of-user-contributed-data-as-critics-complain-license-permits-reuse-for-any-purpose/",
+   "status": "refused",
+   "error": "robots.txt disallows https://devclass.com/2024/07/30/stack-exchange-restricts-access-to-dump-of-user-contributed-data-as-critics-complain-license-permits-reuse-for-any-purpose/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T22:13:56Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://techcrunch.com/2024/05/09/reddit-locks-down-its-public-data-in-new-content-policy-says-use-now-requires-a-contract",
+   "status": 200,
+   "error": null,
+   "sha256": "8943f2a99e0eb79ca31258666005c0c92a435313a5c8a9129dd1530d2f6dfe27",
+   "bytes": 239229,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:56Z",
+   "text_status": "ok",
+   "text_chars": 6999
+  },
+  {
+   "url": "https://podcasting2.org/docs/guides/how-to-add-transcripts-to-your-podcast",
+   "status": 200,
+   "error": null,
+   "sha256": "2c823b04266ad4bf3c3d91f2bd12052f592f0c568b890619e264de384618fe23",
+   "bytes": 183807,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:58Z",
+   "text_status": "ok",
+   "text_chars": 6542
+  },
+  {
+   "url": "https://github.com/m-bain/whisperX",
+   "status": 200,
+   "error": null,
+   "sha256": "ca3793b47449cea6deb02f8d7077b67056a979712b20496d09499405f424afee",
+   "bytes": 360421,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:14:00Z",
+   "text_status": "ok",
+   "text_chars": 15309
+  },
+  {
+   "url": "https://github.com/Breakthrough/PySceneDetect/blob/main/LICENSE",
+   "status": 200,
+   "error": null,
+   "sha256": "4afb124f093ea5510018d6eca76094a9be5c48b3d1f054a30d0c1dc7272c851d",
+   "bytes": 182989,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:14:01Z",
+   "text_status": "ok",
+   "text_chars": 4286
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43109742231",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[4]",
+    "claim": "YouTube prohíbe separar o modificar los componentes de audio o video del contenido audiovisual disponible vía API.",
+    "now": "YouTube prohíbe separar, aislar o modificar los componentes de audio o video de cualquier contenido audiovisual de YouTube.",
+    "cut": "\"disponible vía API\""
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "Los datos de API no autorizados pueden almacenarse solo temporalmente, máximo 30 días calendario, y luego borrarse o refrescarse.",
+    "now": "Los clientes de la API pueden almacenar temporalmente cantidades limitadas de datos no autorizados durante el tiempo necesario para sus fines, pero no más de 30 días calendario.",
+    "cut": "\"y luego borrarse o refrescarse\""
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "El contenido de la página de políticas de YouTube se licencia bajo CC BY 4.0 y las muestras de código bajo Apache 2.0 (licencia de la documentación, no del contenido de videos).",
+    "now": "El contenido de la página de políticas de YouTube se licencia bajo Creative Commons Attribution 4.0 y las muestras de código bajo Apache 2.0.",
+    "cut": "\"(licencia de la documentación, no del contenido de videos)\""
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "El método captions.download de la YouTube Data API descarga una pista de subtítulos, con formato opcional (tfmt) y traducción (tlang).",
+    "now": "El método captions.download de la YouTube Data API descarga una pista de subtítulos, que se devuelve en su formato original salvo que la petición especifique un valor para el parámetro tfmt.",
+    "cut": "La traducción mediante tlang."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "captions.download exige que el usuario tenga permiso para editar el video, lo que limita su uso a videos propios o con permiso.",
+    "now": "captions.download exige que el usuario tenga permiso para editar el video.",
+    "cut": "\"lo que limita su uso a videos propios o con permiso\""
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "Wikimedia exige licenciar el texto aportado bajo CC BY-SA 4.0 y GFDL.",
+    "now": "Los términos de Wikimedia mencionan la licencia Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).",
+    "cut": "Que se exija licenciar el texto aportado, y la GFDL."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "Los términos de Wikimedia dan la bienvenida a la reutilización, que debe cumplir las licencias subyacentes, con excepciones por fair use.",
+    "now": "Los términos de Wikimedia dan la bienvenida a la reutilización del contenido alojado, aunque hay excepciones para el contenido aportado bajo \"fair use\" o exenciones similares.",
+    "cut": "\"que debe cumplir las licencias subyacentes\""
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "La política de robots exige honrar robots.txt e identificar el bot con User-Agent.",
+    "now": "La política de robots exige honrar robots.txt y todas sus directivas.",
+    "cut": "\"e identificar el bot con User-Agent\""
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "Para la API de acción sin autenticar, Wikimedia indica concurrencia 1 y menos de 5 peticiones por segundo.",
+    "now": "Para peticiones sin autenticar, Wikimedia indica concurrencia 1 y menos de 5 peticiones por segundo en total.",
+    "cut": "\"API de acción\""
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "MIT OCW permite entrenar modelos de IA salvo que se especifique otra cosa, con condiciones de atribución, uso no comercial y ShareAlike.",
+    "now": "Salvo que se especifique otra cosa, el contenido de MIT OCW puede usarse para entrenar, desarrollar y mejorar modelos de IA y aprendizaje automático, siempre que ese uso cumpla plenamente las restricciones establecidas.",
+    "cut": "Que las condiciones sean atribución, uso no comercial y ShareAlike."
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "MIT OCW define como no comercial el uso que no vende ni lucra con los materiales.",
+    "now": "MIT OCW indica que los usuarios no pueden vender directamente ni lucrar con los materiales de OCW ni con obras derivadas de ellos.",
+    "cut": "Que esto sea una definición de uso no comercial."
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "El README de WhisperX declara limitaciones: palabras sin caracteres del diccionario de alineación no reciben tiempo, y la diarización es imperfecta.",
+    "now": "El README de WhisperX declara que la diarización está lejos de ser perfecta.",
+    "cut": "La limitación de que las palabras sin caracteres del diccionario de alineación no reciben tiempo."
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "WhisperX indica haber sido aceptado en INTERSPEECH 2023 (evidencia publicada declarada por el propio repositorio).",
+    "now": "WhisperX indica haber sido aceptado en INTERSPEECH 2023.",
+    "cut": "\"(evidencia publicada declarada por el propio repositorio)\""
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Términos oficiales de plataformas (YouTube, Reddit, Stack Exchange, Wikimedia, MIT OCW)",
+   "API/volcados oficiales y licencias de contenido",
+   "Podcasts: estándar Podcasting 2.0 y términos de plataformas",
+   "Herramientas abiertas video→línea de tiempo (Whisper, WhisperX, PySceneDetect)",
+   "Evidencia revisada por pares de desempeño ASR",
+   "Secundario/proveedor (solo candidate_claim)"
+  ],
+  "searches": [
+   {
+    "query": "YouTube API Services Terms of Service developer policies prohibited scraping",
+    "intent": "official"
+   },
+   {
+    "query": "Stack Exchange data dump license CC BY-SA terms of service scraping",
+    "intent": "official"
+   },
+   {
+    "query": "Reddit Data API terms user agreement commercial use research",
+    "intent": "official"
+   },
+   {
+    "query": "MIT OpenCourseWare terms of use Creative Commons BY-NC-SA",
+    "intent": "official"
+   },
+   {
+    "query": "whisper OR WhisperX OR PySceneDetect GitHub video to timeline transcription open source license",
+    "intent": "support"
+   },
+   {
+    "query": "Spotify OR Apple Podcasts RSS podcast terms transcripts Podcasting 2.0 transcript tag",
+    "intent": "official"
+   },
+   {
+    "query": "Wikimedia Foundation Terms of Use API dumps CC BY-SA robot policy",
+    "intent": "official"
+   },
+   {
+    "query": "Stack Exchange Terms of Service stackexchange.com/legal/terms-of-service",
+    "intent": "official"
+   },
+   {
+    "query": "Reddit Data API Terms redditinc.com policies",
+    "intent": "official"
+   },
+   {
+    "query": "PySceneDetect GitHub Breakthrough license",
+    "intent": "official"
+   },
+   {
+    "query": "YouTube Data API captions.download permission owner; YouTube Terms of Service automated means",
+    "intent": "limitations"
+   },
+   {
+    "query": "Whisper paper Robust Speech Recognition via Large-Scale Weak Supervision word error rate evaluation",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "Texto oficial de los Términos de Servicio de Stack Exchange y de su Política de Uso Aceptable: la búsqueda solo devolvió fuentes secundarias.",
+   "Texto oficial de redditinc.com (Data API Terms, User Agreement): no se pudo abrir; solo hay resúmenes de terceros, con fechas contradictorias.",
+   "Cita literal de 300 caracteres o menos por plataforma: solo se tienen resúmenes de búsqueda; hay que extraer la cita de la página oficial.",
+   "sha256 de volcados o archivos: no se descargó nada.",
+   "Términos oficiales de Spotify, Apple Podcasts, Udemy/Coursera/edX, Discourse/foros, GitHub Docs y plataformas de blogs: no se buscaron o no aparecieron.",
+   "Fuentes específicas de México (UNAM, TecNM, canales o comunidades mexicanas): no se buscaron.",
+   "P10: métodos de verificación de lo práctico contra fuentes primarias (por ejemplo ClaimReview, W3C PROV, evaluaciones de procedencia): no se buscaron.",
+   "Herramientas que unan video, línea de tiempo y verificación de extremo a extremo, con evidencia publicada: no se hallaron; solo componentes (Whisper, WhisperX, PySceneDetect)."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 13,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://arxiv.org/abs/2212.04356",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://developers.google.com/youtube/terms/developer-policies",
+    "family": "Términos oficiales de plataformas",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Prohíbe el scraping (III.E.6) y obliga a usar la API; base para P01/P02 (videos y charlas)."
+   },
+   {
+    "url": "https://www.youtube.com/t/terms",
+    "family": "Términos oficiales de plataformas",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Cláusula de 'medios automatizados' (robots, scrapers) con excepciones; licencia del contenido es del autor, no abierta. Extraer cita literal aquí."
+   },
+   {
+    "url": "https://developers.google.com/youtube/v3/docs/captions/download",
+    "family": "API/volcados oficiales",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "La API oficial de subtítulos exige permiso de edición del video; no sirve para transcribir videos ajenos."
+   },
+   {
+    "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+    "family": "Términos oficiales de plataformas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Licencia CC BY-SA 4.0 y obligación de seguir políticas de API/robots; modelo de acceso permitido."
+   },
+   {
+    "url": "https://wikitech.wikimedia.org/wiki/Robot_policy",
+    "family": "API/volcados oficiales",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Pide usar volcados antes que rastreo en vivo y declarar User-Agent. Los datos sobre fin de volcados XML en 2027 vienen de blog y no están verificados."
+   },
+   {
+    "url": "https://ocw.mit.edu/pages/privacy-and-terms-of-use/",
+    "family": "Términos oficiales de plataformas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "P03: licencia CC BY-NC-SA 4.0, atribución, exclusión de contenido de terceros. El resumen secundario sobre uso para IA debe confirmarse en la página."
+   },
+   {
+    "url": "https://wiki.archiveteam.org/index.php/Stack_Exchange",
+    "family": "Secundario/proveedor",
+    "stance": "contradicts",
+    "role": "secondary",
+    "why": "P04: señala que las nuevas condiciones del volcado chocan con CC BY-SA. Solo candidate_claim; falta el texto oficial de los ToS."
+   },
+   {
+    "url": "https://devclass.com/2024/07/30/stack-exchange-restricts-access-to-dump-of-user-contributed-data-as-critics-complain-license-permits-reuse-for-any-purpose/",
+    "family": "Secundario/proveedor",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "P04/P05: cobertura de la restricción del volcado de 2024 y de la postura de la empresa; contexto, no fuente primaria."
+   },
+   {
+    "url": "https://techcrunch.com/2024/05/09/reddit-locks-down-its-public-data-in-new-content-policy-says-use-now-requires-a-contract",
+    "family": "Secundario/proveedor",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "P05: contexto de que Reddit exige contrato para uso de sus datos. No se pudo abrir redditinc.com/policies; candidate_claim."
+   },
+   {
+    "url": "https://podcasting2.org/docs/guides/how-to-add-transcripts-to-your-podcast",
+    "family": "Podcasts",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "P07: etiqueta podcast:transcript (VTT/SRT) como ruta abierta a transcripciones publicadas por el autor. La licencia sigue siendo la de cada programa."
+   },
+   {
+    "url": "https://github.com/m-bain/whisperX",
+    "family": "Herramientas abiertas video→línea de tiempo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "P09: ASR con marcas de tiempo por palabra y diarización; licencia BSD-2-Clause según resumen secundario, verificar en el repositorio. Los modelos pyannote tienen términos propios."
+   },
+   {
+    "url": "https://github.com/Breakthrough/PySceneDetect/blob/main/LICENSE",
+    "family": "Herramientas abiertas video→línea de tiempo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "P09: detección de cortes de escena para segmentar el video; licencia confirmada en el archivo LICENSE."
+   },
+   {
+    "url": "https://arxiv.org/abs/2212.04356",
+    "family": "Evidencia ASR revisada por pares",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "P09/P10: evidencia publicada de desempeño (WER) y de limitaciones en idiomas de pocos recursos, relevante para español de México. La URL abs no apareció en los resultados; sí apareció arxiv.org/pdf/2212.04356."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
