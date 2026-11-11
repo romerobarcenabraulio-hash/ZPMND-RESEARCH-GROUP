@@ -1,0 +1,128 @@
+{
+ "research_id": "RP-2026-11-08-familia-g-contabilidad-fiscal",
+ "request_id": "RR-2026-11-08-familia-g-contabilidad-fiscal",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T16:49:08Z",
+ "question": "Para cada norma o regla contable o fiscal listada en why_needed: ¿quién la emite, cuál es su versión vigente y su historial, dónde se obtiene el texto oficial (DOF, SAT o emisor), con qué licencia o condición de acceso (gratuito, registro o pago), y para G04 qué esquemas XSD y catálogos del CFDI están vigentes y desde qué fecha?",
+ "why_zpmnd_needs_it": "Subáreas: G01 Normas de Información Financiera (NIF) (México); G02 IFRS / NIIF (Internacional); G03 US GAAP (ASC) (Internacional); G04 CFDI y sus especificaciones técnicas (México; Anexo 20 y XSD); G05 Criterios normativos y no vinculativos (México); G06 Leyes fiscales (LISR, LIVA, CFF, LIEPS) (México; cruce con A03); G07 Convenios para evitar la doble tributación (México); G08 Normas de auditoría (NIA/ISA) (Internacional); G09 Contabilidad de costos y administrativa (Transversal); G10 Fiscal internacional: OCDE (BEPS, precios de transferencia) (Internacional). ZPMND necesita la versión vigente de cada regla y su historia.",
+ "scope": "Se leyeron cuatro fuentes primarias: índice de Leyes Federales (Cámara de Diputados), página NIF 2026 del CINIF, términos y condiciones del sitio IFRS Foundation y página de licenciamiento IFRS Accounting. No se leyó ninguna fuente del SAT ni del DOF, así que no se responde lo de CFDI, XSD y catálogos de G04. Tampoco hay sha256 ni robots.txt.",
+ "sources": {
+  "primary": [
+   "SA-ad5a90b98a2a111c4f96dfc2",
+   "SA-38acef7b7d0df2b6a061e916",
+   "SA-94df8c3731aaf0324b98904c",
+   "SA-a9e20b2994381c7743752518",
+   "SA-9f7757949c193c8fc82ba498"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-ad5a90b98a2a111c4f96dfc2",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/index1.htm",
+   "retrieved_at": "2026-11-11T16:48:09Z",
+   "sha256": "ad5a90b98a2a111c4f96dfc2c4113ec4790ee1b2ce4f874d74213f14662e7fc4",
+   "bytes": 588796,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Cámara de Diputados",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Leyes Federales de México (índice)"
+  },
+  {
+   "artifact_id": "SA-38acef7b7d0df2b6a061e916",
+   "url": "https://www.cinif.org.mx/normatividad_NIF2026.php",
+   "retrieved_at": "2026-11-11T16:48:11Z",
+   "sha256": "38acef7b7d0df2b6a061e9162d0255ae542cc77eaab0de4ebc4c9723ae3a90cb",
+   "bytes": 23093,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "CINIF",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Normatividad - NIF 2026"
+  },
+  {
+   "artifact_id": "SA-94df8c3731aaf0324b98904c",
+   "url": "https://www.ifrs.org/legal/terms-and-conditions/",
+   "retrieved_at": "2026-11-11T16:48:12Z",
+   "sha256": "94df8c3731aaf0324b98904c4aafc49155ee27e54bfd943ec84043de188ed2fc",
+   "bytes": 156210,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "IFRS Foundation",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "IFRS Foundation Website Terms and Conditions"
+  },
+  {
+   "artifact_id": "SA-a9e20b2994381c7743752518",
+   "url": "https://www.ifrs.org/products-and-services/ifrs-accounting-licensing/",
+   "retrieved_at": "2026-11-11T16:48:14Z",
+   "sha256": "a9e20b2994381c7743752518ac3a3b01d15627911150346243c4f8065d8ed021",
+   "bytes": 119991,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "IFRS Foundation",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "IFRS Accounting Licensing"
+  },
+  {
+   "artifact_id": "SA-9f7757949c193c8fc82ba498",
+   "url": "https://ifacweb.blob.core.windows.net/publicfiles/2026-09/IAASB-Handbook-2026-Edition-Volume-2.pdf",
+   "retrieved_at": "2026-11-11T16:48:15Z",
+   "sha256": "9f7757949c193c8fc82ba49839670ad658cbe647f423a0a6895eff15447e999d",
+   "bytes": 1647161,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "IAASB / IFAC",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "IAASB Handbook 2026 Edition, Volume 2"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El índice de Leyes Federales de México registra el Código Fiscal de la Federación con las fechas DOF 31/12/1981 y DOF 09/04/2026.",
+    "artifact_ids": [
+     "SA-ad5a90b98a2a111c4f96dfc2"
+    ],
+    "quote": "CÓDIGO Fiscal de la Federación\n\nDOF   31/12/1981\n\nDOF  09/04/2026",
+    "locator": "Índice, No. 006"
+   }
+  ],
+  "conflicting": [],
+  "unknown": []
+ },
+ "limitations": [
+  "Cada hallazgo confirmado debe ir con quote exacta; por falta de espacio y para no arriesgar citas inexactas, solo se incluyó el hallazgo más seguro. Los puntos 'unknown' arriba quedaron vacíos por error de compactación: ver la lista siguiente.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 1 de 1 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 7 aceptadas, 5 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/rmf/RMF_2026-DOF-28122025.pdf (refused); https://sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/compiladas/Compilado_Tercera_Modificacion_a_la-Resolucion_Miscelanea_Fiscal_para_2026.pdf (refused); https://ifacweb.blob.core.windows.net/publicfiles/2026-09/IAASB-Handbook-2026-Edition-Volume-2.pdf (200, sin texto)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
