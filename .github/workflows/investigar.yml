@@ -4,9 +4,10 @@ name: investigar
 # packet folder. The repository and its artifacts are public, so the work folder (bodies and texts) travels sealed
 # (scripts/sobre.sh: AES-256 under a fresh key, the key sealed with RSA-OAEP to keys/rg-artifacts.pub.pem); only the
 # jobs that need it open it, in a step of their own that holds the private key RG_ARTIFACT_KEY and runs before anything
-# is parsed. Four jobs, each with only what it needs:
+# is parsed. The jobs, each with only what it needs:
 # - fetch: no secrets. The plan's https URLs only, through the catalog's Fetcher (robots.txt, the plan's hosts, one
 #   request per second per host, 60 MB per body); texts from rg.text in isolated processes. Seals with the public key.
+# - guardar: the R2 keys only, in one step; uploads the per-raw envelopes, opens nothing, runs no repository code.
 # - analyze: the owner's credentials through scripts/turno.sh, one per call: the heavy calls (the researcher, the model
 #   with every text) his Claude subscription (CLAUDE_CODE_OAUTH_TOKEN) alone, unless the variable RG_ORDEN_INVESTIGAR
 #   is "api"; the light one (the reviewer) his Anthropic API key (ANTHROPIC_API_KEY) first and the subscription if it
@@ -135,6 +136,15 @@ jobs:
           [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || { echo "request_id: RR-..."; exit 2; }
           mkdir -p work && { [ ! -f plan/descubrimiento.json ] || cp plan/descubrimiento.json work/; }  # sealed with the rest
           python -m rg.investigar fetch --request "requests/$RID.json" --plan plan/plan.json --out work
+      - name: Seal each raw on its own for R2, by content address (public key only; SECURITY T31)
+        id: sellar
+        if: ${{ !cancelled() }}  # before the folder is replaced by its envelope
+        continue-on-error: true  # a raw it refuses only leaves R2 without it: the packet still publishes (SECURITY T31)
+        run: bash scripts/sellar_crudos.sh work "$RUNNER_TEMP/sellados" keys/rg-artifacts.pub.pem
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        if: ${{ !cancelled() && steps.sellar.outcome == 'success' }}  # envelopes only, one per raw
+        continue-on-error: true  # nor does this upload: without it only R2 misses them (GPT on d17a027)
+        with: { name: investigar-sellados, path: '${{ runner.temp }}/sellados/', retention-days: 1, if-no-files-found: error }
       - name: Seal the work folder (it may hold bodies that can only be cited; the artifact is public)
         id: seal
         if: ${{ !cancelled() }}  # a failed fetch still leaves its record; the jobs after it do not run
@@ -145,6 +155,43 @@ jobs:
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         if: ${{ !cancelled() && steps.seal.outcome == 'success' }}  # only the envelope, never the folder in clear
         with: { name: investigar-work, path: work/, retention-days: 1, if-no-files-found: error }
+
+  guardar:
+    # R2 keeps each raw sealed (owner 2026-11-08; SECURITY T31): the envelopes the fetch job made with the public key,
+    # uploaded by content address. No checkout, so no repository code runs; it opens and parses nothing; the R2 keys
+    # exist only in its upload step. A packet's gate reads them in its own PR.
+    needs: fetch
+    if: needs.fetch.result == 'success' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions: {}
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with: { name: investigar-sellados, path: sellados }
+      - name: Upload each sealed raw to R2 under its sha256 (the R2 keys live only here)
+        env:
+          AWS_ACCESS_KEY_ID: '${{ secrets.R2_ACCESS_KEY_ID }}'
+          AWS_SECRET_ACCESS_KEY: '${{ secrets.R2_SECRET_ACCESS_KEY }}'
+          R2_ENDPOINT: '${{ secrets.R2_ENDPOINT }}'
+          AWS_DEFAULT_REGION: auto
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required  # R2 takes the S3 API without the newer default checksums
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
+          BUCKET: "${{ vars.RG_R2_BUCKET || 'rg-crudos' }}"
+        run: |
+          set -euo pipefail
+          aws s3api head-bucket --bucket "$BUCKET" --endpoint-url "$R2_ENDPOINT" || { echo "R2: bucket $BUCKET not reachable with these keys"; exit 1; }
+          lines=$(wc -l < sellados/sellados.txt)
+          [ "$lines" -le 40 ] || { echo "R2: $lines raws, more than a plan's 40 sources"; exit 1; }  # what a taken fetch job can store
+          while read -r sha uh; do
+            [[ "$sha" =~ ^[0-9a-f]{64}$ && "$uh" =~ ^[0-9a-f]{64}$ && -f "sellados/$sha.$uh.sobre" ]] || { echo "not a sealed raw: $sha $uh"; exit 1; }
+            [ "$(wc -c < "sellados/$sha.$uh.sobre")" -le 61000000 ] || { echo "R2: $sha larger than a 60 MB body sealed"; exit 1; }
+            key="sealed/sha256/${sha:0:2}/$sha/$uh.sobre"  # one object per body and URL, one conditional PUT: never replaced
+            if ! out=$(aws s3api put-object --bucket "$BUCKET" --key "$key" --body "sellados/$sha.$uh.sobre" --if-none-match '*' \
+                         --endpoint-url "$R2_ENDPOINT" 2>&1 >/dev/null </dev/null); then  # its own stdin: it never eats the list
+              grep -q 'PreconditionFailed' <<< "$out" || { echo "R2: $sha not stored"; exit 1; }  # 412: it is there already
+            fi
+          done < sellados/sellados.txt
+          echo "R2: $lines sealed raws in $BUCKET" >> "$GITHUB_STEP_SUMMARY"
 
   analyze:
     needs: fetch

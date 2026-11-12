@@ -1029,12 +1029,77 @@ class Workflow(unittest.TestCase):
         self.assertEqual(list(self.wf.get('on') or self.wf.get(True)), ['workflow_dispatch'])
         self.assertEqual(self.wf['permissions'], {})
         self.assertEqual({j: v['permissions'] for j, v in self.jobs.items()},
-                         {'plan': {'contents': 'read'}, 'fetch': {'contents': 'read'}, 'analyze': {'contents': 'read'},
+                         {'plan': {'contents': 'read'}, 'fetch': {'contents': 'read'}, 'guardar': {}, 'analyze': {'contents': 'read'},
                           'gate': {'contents': 'read'}, 'publish': {'contents': 'write'}})
         self.assertEqual(self.jobs['fetch']['if'], "github.ref == 'refs/heads/main'")
         self.assertEqual(self.jobs['plan']['if'], "${{ github.ref == 'refs/heads/main' }}")
         with_secrets = [j for j, v in self.jobs.items() if 'secrets.' in json.dumps(v)]
-        self.assertEqual(with_secrets, ['plan', 'analyze', 'gate'])  # fetch, which parses the web, holds none
+        self.assertEqual(with_secrets, ['plan', 'guardar', 'analyze', 'gate'])  # fetch, which parses the web, holds none
+
+    def test_guardar_holds_the_r2_keys_in_one_step_runs_no_repository_code_and_opens_nothing(self):
+        job, fetch = self.jobs['guardar'], self.jobs['fetch']['steps']
+        self.assertEqual((job['needs'], job['if']), ('fetch', "needs.fetch.result == 'success' && github.ref == 'refs/heads/main'"))
+        self.assertFalse([s for s in job['steps'] if 'checkout' in s.get('uses', '')])
+        self.assertNotIn('RG_ARTIFACT_KEY', json.dumps(job))
+        down, up = job['steps']
+        self.assertEqual(down['with'], {'name': 'investigar-sellados', 'path': 'sellados'})
+        self.assertNotIn('secrets.', json.dumps(down))
+        self.assertEqual(sorted(up['env']), ['AWS_ACCESS_KEY_ID', 'AWS_DEFAULT_REGION', 'AWS_REQUEST_CHECKSUM_CALCULATION',
+                                            'AWS_RESPONSE_CHECKSUM_VALIDATION', 'AWS_SECRET_ACCESS_KEY', 'BUCKET', 'R2_ENDPOINT'])
+        for guard in ('|| { echo "R2: bucket $BUCKET not reachable with these keys"; exit 1; }',
+                      '[[ "$sha" =~ ^[0-9a-f]{64}$ && "$uh" =~ ^[0-9a-f]{64}$ && -f "sellados/$sha.$uh.sobre" ]] || { echo "not a sealed raw: $sha $uh"; exit 1; }',
+                      'key="sealed/sha256/${sha:0:2}/$sha/$uh.sobre"', 'done < sellados/sellados.txt'):
+            self.assertIn(guard, up['run'])
+        sellar = next(i for i, s in enumerate(fetch) if 'sellar_crudos.sh' in s.get('run', ''))
+        self.assertEqual(fetch[sellar]['run'], 'bash scripts/sellar_crudos.sh work "$RUNNER_TEMP/sellados" keys/rg-artifacts.pub.pem')
+        self.assertNotIn('env', fetch[sellar])
+        self.assertIs(fetch[sellar]['continue-on-error'], True)  # a raw it refuses never stops the packet (reviewer, 2026-11-11)
+        seal = next(i for i, s in enumerate(fetch) if 'sobre.sh seal' in s.get('run', ''))
+        self.assertEqual(fetch[sellar + 1]['with']['path'], '${{ runner.temp }}/sellados/')
+        self.assertIs(fetch[sellar + 1]['continue-on-error'], True)  # GPT on d17a027: a failed upload never stops fetch
+        work = next(s for s in fetch if s.get('with', {}).get('name') == 'investigar-work')
+        self.assertNotIn('continue-on-error', work)  # the packet's own folder stays required
+        self.assertEqual(self.jobs['analyze']['needs'], 'fetch')
+        self.assertLess(sellar + 1, seal)  # each raw is sealed before the folder becomes one envelope
+        self.assertNotIn('s3 cp', up['run'])  # GPT on dbc8741: one object per raw, never three files copied one by one
+        self.assertNotIn('head-object', up['run'])  # GPT on 6c27000: a HEAD that fails must never lead to a PUT over a copy
+        self.run_guardar(up['run'])
+
+    def run_guardar(self, script):
+        """guardar's upload step, run as written against a fake aws: a key already there is never replaced (one PUT with
+        If-None-Match: R2 answers 412), and any other error stops the step."""
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            (tmp / 'bin').mkdir()
+            (tmp / 'bin' / 'aws').write_text('#!/bin/bash\n[ "$2" = head-bucket ] && exit 0\n[ -z "$COME" ] || cat >/dev/null\n'
+                'while [ $# -gt 0 ]; do case $1 in --key) k=$2;; --body) b=$2;; --if-none-match) c=1;; esac; shift; done\n'
+                '[ "$k" = "$FALLA" ] && { echo "An error occurred (ServiceUnavailable)" >&2; exit 254; }\n'
+                '[ -n "$c" ] && [ -e "$R2/$k" ] && { echo "An error occurred (PreconditionFailed)" >&2; exit 254; }\n'
+                'mkdir -p "$(dirname "$R2/$k")"; cp "$b" "$R2/$k"\n')
+            (tmp / 'bin' / 'aws').chmod(0o755)
+            new, old, u1, u2 = 'a' * 64, 'b' * 64, 'c' * 64, 'd' * 64  # old from u1 is there; the same bytes from u2 are not
+            (tmp / 'sellados').mkdir()
+            for sha, uh in ((new, u1), (old, u1), (old, u2)):
+                (tmp / 'sellados' / f'{sha}.{uh}.sobre').write_text(f'sobre nuevo de {sha} {uh}')
+            (tmp / 'sellados' / 'sellados.txt').write_text(f'{new} {u1}\n{old} {u1}\n{old} {u2}\n')
+            kept = tmp / 'r2' / 'sealed' / 'sha256' / 'bb' / old / f'{u1}.sobre'
+            kept.parent.mkdir(parents=True)
+            kept.write_text('la copia que ya estaba')
+            env = {**os.environ, 'PATH': f"{tmp / 'bin'}:{os.environ['PATH']}", 'R2': str(tmp / 'r2'), 'BUCKET': 'b',
+                   'R2_ENDPOINT': 'https://r2.invalid', 'GITHUB_STEP_SUMMARY': str(tmp / 'summary')}
+            run = lambda **kw: subprocess.run(['bash', '-c', script], cwd=tmp, env={**env, **kw}, capture_output=True, text=True, timeout=60)
+            self.assertEqual(run(COME='1').returncode, 0)  # an aws that reads its stdin never eats the rest of the list
+            self.assertEqual((kept.read_text(), (tmp / 'r2' / 'sealed' / 'sha256' / 'aa' / new / f'{u1}.sobre').read_text(),
+                              (tmp / 'r2' / 'sealed' / 'sha256' / 'bb' / old / f'{u2}.sobre').read_text()),
+                             ('la copia que ya estaba', f'sobre nuevo de {new} {u1}', f'sobre nuevo de {old} {u2}'))
+            self.assertEqual(run(FALLA=f'sealed/sha256/aa/{new}/{u1}.sobre').returncode, 1)  # an outage is a red step, never skipped
+            big = 'e' * 64  # what a fetch job taken by a page can store is capped: one 60 MB body sealed, a plan's 40 sources
+            with open(tmp / 'sellados' / f'{big}.{u1}.sobre', 'wb') as f:
+                f.truncate(61_000_001)
+            (tmp / 'sellados' / 'sellados.txt').write_text(f'{big} {u1}\n')
+            self.assertEqual((run().returncode, (tmp / 'r2' / 'sealed' / 'sha256' / 'ee').exists()), (1, False))
+            (tmp / 'sellados' / 'sellados.txt').write_text(f'{new} {u1}\n' * 41)
+            self.assertEqual(run().returncode, 1)
 
     def test_the_work_folder_travels_sealed_and_is_opened_before_anything_reads_it(self):
         seal = next(s for s in self.jobs['fetch']['steps'] if 'sobre.sh seal' in s.get('run', ''))
@@ -1042,8 +1107,8 @@ class Workflow(unittest.TestCase):
                       'rm -rf work && mv "$RUNNER_TEMP/sobre" work', seal['run'])
         self.assertNotIn('env', seal)
         steps = self.jobs['fetch']['steps']
-        up = next(i for i, s in enumerate(steps) if 'upload-artifact' in s.get('uses', ''))
-        self.assertEqual((steps[up]['with']['name'], steps[up]['with']['path']), ('investigar-work', 'work/'))
+        up = next(i for i, s in enumerate(steps) if s.get('with', {}).get('name') == 'investigar-work')
+        self.assertEqual(steps[up]['with']['path'], 'work/')
         self.assertLess(steps.index(seal), up)  # the folder is replaced by its envelope before the upload
         for job, first_reader in (('analyze', 'python -m rg.investigar prompt'), ('gate', 'python -m rg.investigar assemble')):
             steps = self.jobs[job]['steps']
@@ -1247,7 +1312,7 @@ class Workflow(unittest.TestCase):
     def test_a_failed_fetch_still_uploads_its_record_sealed_and_nothing_after_it_runs(self):
         seal = next(s for s in self.jobs['fetch']['steps'] if 'sobre.sh seal' in s.get('run', ''))
         self.assertEqual((seal['id'], seal['if']), ('seal', '${{ !cancelled() }}'))
-        up = next(s for s in self.jobs['fetch']['steps'] if 'upload-artifact' in s.get('uses', ''))
+        up = next(s for s in self.jobs['fetch']['steps'] if s.get('with', {}).get('name') == 'investigar-work')
         self.assertEqual(up['if'], "${{ !cancelled() && steps.seal.outcome == 'success' }}")  # never the folder in clear
         self.assertEqual(self.jobs['analyze']['needs'], 'fetch')
         self.assertNotIn('if', self.jobs['analyze'])
@@ -1261,7 +1326,7 @@ class Workflow(unittest.TestCase):
     def test_artifacts_live_one_day(self):
         uploads = [s['with'] for j in self.jobs.values() for s in j['steps'] if 'upload-artifact' in s.get('uses', '')]
         self.assertEqual(sorted(u['name'] for u in uploads),
-                         ['investigar-modelo', 'investigar-packet', 'investigar-plan', 'investigar-work'])
+                         ['investigar-modelo', 'investigar-packet', 'investigar-plan', 'investigar-sellados', 'investigar-work'])
         self.assertEqual({u['retention-days'] for u in uploads}, {1})
 
     def test_the_gate_decides_and_publish_parses_nothing_and_pushes_only_the_packet(self):
@@ -1428,6 +1493,87 @@ class RepoPackets(unittest.TestCase):
             self.assertEqual(problems, [], folder.name)
             if (folder / 'raw').exists():
                 self.assertEqual(warnings, [], folder.name)
+
+
+
+@unittest.skipUnless(shutil.which('openssl') and shutil.which('sha256sum'), 'needs openssl and sha256sum')
+class SellarCrudos(unittest.TestCase):
+    """scripts/sellar_crudos.sh (SECURITY T31): each raw sealed on its own, only under the sha256 of its bytes."""
+    setUp, run_ok, sobre = Sobre.setUp, Sobre.run_ok, Sobre.sobre
+
+    def raw(self, body, name=None, folder=None, url=True):
+        sha = hashlib.sha256(body).hexdigest()
+        f = self.src / 'raw' / 'sha256' / (folder or sha[:2]) / (name or f'{sha}.html')
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_bytes(body)
+        rows = json.loads((self.src / 'fuentes.json').read_text()) if (self.src / 'fuentes.json').exists() else []
+        (self.src / 'fuentes.json').write_text(json.dumps(rows + [{'sha256': sha, 'final_url': f'https://a.gob.mx/{sha[:8]}'}] * url))
+        return sha
+
+    def sellar(self):
+        out = self.tmp / 'sellados'
+        r = subprocess.run(['bash', str(ROOT / 'scripts' / 'sellar_crudos.sh'), str(self.src), str(out), str(self.pub)],
+                           capture_output=True, timeout=120)
+        return r.returncode, out
+
+    def test_each_raw_is_its_own_envelope_that_opens_to_exactly_its_bytes(self):
+        shas = sorted([self.raw(CLOSED_BODY), self.raw(b'<p>otra pagina</p>')])
+        uh = {x: hashlib.sha256(f'https://a.gob.mx/{x[:8]}'.encode()).hexdigest() for x in shas}  # each object names its URL too
+        rc, out = self.sellar()
+        self.assertEqual((rc, sorted((out / 'sellados.txt').read_text().splitlines())), (0, sorted(f'{x} {uh[x]}' for x in shas)))
+        self.assertEqual(sorted(p.name for p in out.iterdir()), sorted([f'{x}.{uh[x]}.sobre' for x in shas] + ['sellados.txt']))
+        for sha in shas:
+            self.assertNotIn(b'solo citable', (out / f'{sha}.{uh[sha]}.sobre').read_bytes())
+            env, got = self.tmp / f'sobre-{sha}', self.tmp / f'abierto-{sha}'
+            env.mkdir()
+            self.run_ok('tar', '-C', str(env), '-xf', str(out / f'{sha}.{uh[sha]}.sobre'))
+            self.assertEqual(self.sobre('open', str(env), str(got), key=self.priv.read_text()).returncode, 0)
+            f, u = got / 'sha256' / sha[:2] / f'{sha}.html', got / 'sha256' / sha[:2] / f'{sha}.url'
+            self.assertEqual(sorted(p.name for p in got.rglob('*') if p.is_file()), [f'{sha}.html', f'{sha}.url'])
+            self.assertEqual((hashlib.sha256(f.read_bytes()).hexdigest(), u.read_text()), (sha, f'https://a.gob.mx/{sha[:8]}'))
+        rc, out = (shutil.rmtree(self.src / 'raw'), self.sellar())[1]
+        self.assertEqual((rc, (out / 'sellados.txt').read_text()), (0, ''))  # nothing fetched: an empty list
+
+    def test_bytes_under_another_sha_a_wrong_folder_or_a_link_stop_it(self):
+        sha = hashlib.sha256(b'x').hexdigest()
+        for case in ('bytes', 'folder', 'link', 'linked folder', 'linked raw', 'linked sha256', 'no url', 'odd url', 'odd sha', 'linked work'):
+            with self.subTest(case):
+                raw = self.src / 'raw'
+                raw.unlink() if raw.is_symlink() else shutil.rmtree(raw, ignore_errors=True)
+                if case == 'bytes':  # the name's sha256 has its URL: only the bytes check stops it
+                    self.raw(b'otra cosa', name=f'{sha}.html', folder=sha[:2])
+                    (self.src / 'fuentes.json').write_text(json.dumps([{'sha256': sha, 'final_url': 'https://a.gob.mx/x'}]))
+                elif case == 'folder':
+                    self.raw(b'x', folder='zz' if sha[:2] != 'zz' else 'yy')
+                elif case == 'link':
+                    f = self.src / 'raw' / 'sha256' / sha[:2] / f'{self.raw(b"x")}.html'
+                    f.rename(self.tmp / 'fuera.html')
+                    f.symlink_to(self.tmp / 'fuera.html')
+                elif case == 'linked work':  # GPT on d7a44e5: the work folder itself
+                    self.src.rename(self.tmp / 'work-real')
+                    self.src.symlink_to(self.tmp / 'work-real')
+                    self.raw(b'x')
+                elif case == 'no url':  # bytes kept without where they came from could back any packet's URL
+                    (self.src / 'fuentes.json').unlink(missing_ok=True)
+                    self.raw(b'x', url=False)
+                elif case == 'odd url':  # a URL with a line break could name another raw's URL (reviewer, 2026-11-11)
+                    (self.src / 'fuentes.json').write_text(json.dumps([{'sha256': self.raw(b'x', url=False),
+                                                                         'final_url': 'https://a.gob.mx/x\nhttps://b'}]))
+                elif case == 'odd sha':  # a row's sha256 that is not one, even naming the same file, gives no URL
+                    (self.src / 'fuentes.json').write_text(json.dumps([{'sha256': f'./{self.raw(b"x", url=False)}',
+                                                                         'final_url': 'https://a.gob.mx/x'}]))
+                elif case in ('linked raw', 'linked sha256'):  # GPT on dbc8741: a link higher up the path
+                    self.raw(b'x')
+                    where = self.src / 'raw' / ('sha256' if case == 'linked sha256' else '')
+                    where = where if case == 'linked sha256' else self.src / 'raw'
+                    where.rename(self.tmp / f'otro-{case[7:]}')
+                    where.symlink_to(self.tmp / f'otro-{case[7:]}')
+                else:
+                    self.raw(b'x', folder='afuera')
+                    (self.src / 'raw' / 'sha256' / 'afuera').rename(self.tmp / f'dir-{sha[:2]}')
+                    (self.src / 'raw' / 'sha256' / sha[:2]).symlink_to(self.tmp / f'dir-{sha[:2]}')
+                rc, out = self.sellar()
+                self.assertEqual((rc, (out / 'sellados.txt').read_text()), (3, ''))
 
 
 if __name__ == '__main__':
