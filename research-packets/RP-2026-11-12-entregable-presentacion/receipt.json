@@ -1,0 +1,675 @@
+{
+ "request_id": "RR-2026-11-12-entregable-presentacion",
+ "fetched": [
+  {
+   "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-243/section-243.100",
+   "status": "refused",
+   "error": "host not in allowlist: unblock.federalregister.gov",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:50:06Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.sec.gov/files/rules/final/33-7881.htm",
+   "status": 200,
+   "error": null,
+   "sha256": "45738185ea36989252ca7ac7b84d59087d8f537a5723f43734006ad11b3bacf4",
+   "bytes": 222258,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:07Z",
+   "text_status": "ok",
+   "text_chars": 188090
+  },
+  {
+   "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/proxy-disclosure-enhancements-transition-reg-fd",
+   "status": 200,
+   "error": null,
+   "sha256": "dd3591599147c99ceacca82cb9bff1a80ea4405ed840439bf6abda1fa64320af",
+   "bytes": 83834,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:08Z",
+   "text_status": "ok",
+   "text_chars": 18793
+  },
+  {
+   "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures",
+   "status": 200,
+   "error": null,
+   "sha256": "f93ccaa2999c4c41ae0fa27336ae702a707638532b0d1ad87826019da46e066d",
+   "bytes": 118764,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:09Z",
+   "text_status": "ok",
+   "text_chars": 50415
+  },
+  {
+   "url": "https://www.sec.gov/rules-regulations/2003/03/conditions-use-non-gaap-financial-measures",
+   "status": 200,
+   "error": null,
+   "sha256": "9f82dfbe9d71b8a3baa2ad717ef1ae82e98ad1cfc976ac79b7c669d092b7cdc1",
+   "bytes": 188811,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:10Z",
+   "text_status": "ok",
+   "text_chars": 110041
+  },
+  {
+   "url": "https://www.w3.org/TR/WCAG22/",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.w3.org/TR/WCAG22/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:50:11Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.access-board.gov/ict/",
+   "status": 200,
+   "error": null,
+   "sha256": "b79682785687f0c6b2188fee355cc1d2a464e37befe4d6233b4fa0b67c9e9e08",
+   "bytes": 493062,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:11Z",
+   "text_status": "ok",
+   "text_chars": 397541
+  },
+  {
+   "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "1eee3a1841a94567da8e59f3b19a782ce9ab081c386b6a2a763b8cde13ff5b49",
+   "bytes": 2285361,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T18:50:12Z",
+   "text_status": "ok",
+   "text_chars": 477596
+  },
+  {
+   "url": "https://w3c.github.io/wcag2ict/",
+   "status": 200,
+   "error": null,
+   "sha256": "47c705db14839f2b88174fbf8f1f4291163d69a59895d3575007cc83c08360b2",
+   "bytes": 707087,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:14Z",
+   "text_status": "ok",
+   "text_chars": 313698
+  },
+  {
+   "url": "https://support.microsoft.com/en-us/office/make-your-powerpoint-presentations-accessible-to-people-with-disabilities-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25",
+   "status": 200,
+   "error": null,
+   "sha256": "4b5457e0a7538fded1e083f4e60b311cd5e1668ef9733653c171b5db2aadeeca",
+   "bytes": 260596,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:15Z",
+   "text_status": "ok",
+   "text_chars": 99230
+  },
+  {
+   "url": "https://help.libreoffice.org/latest/he/text/shared/01/ref_pdf_export_universal_accessibility.html",
+   "status": 200,
+   "error": null,
+   "sha256": "3c2dfd75d34ec442acae3da0e35222b0c5ff1ed4e719499a0feb263c5342be40",
+   "bytes": 13938,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:17Z",
+   "text_status": "ok",
+   "text_chars": 2855
+  },
+  {
+   "url": "https://www.ismrm.org/25m/guidelines/",
+   "status": 200,
+   "error": null,
+   "sha256": "e60f922df8a3b53b5a15ff1b3c8c3d7a825efc8b8791a0f9319425db0e81d237",
+   "bytes": 262279,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:18Z",
+   "text_status": "ok",
+   "text_chars": 45333
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43283657348",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "Reg FD exige que, si un emisor divulga información material no pública a las personas enumeradas, la haga pública simultáneamente (si es intencional) o con prontitud (si no lo es).",
+    "now": "Se exige hacer pública la información simultáneamente en caso de divulgación intencional y con prontitud en caso de divulgación no intencional.",
+    "cut": "Referencia a información material no pública, al emisor y a las personas enumeradas."
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "La divulgación pública bajo Reg FD puede hacerse por otro método o combinación de métodos razonablemente diseñados para una distribución amplia y no excluyente; no se impone un método único.",
+    "now": "La información se difunde por otro método (o combinación de métodos) de divulgación razonablemente diseñado para una distribución amplia y no excluyente al público.",
+    "cut": "La afirmación de que no se impone un método único."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "El modelo del SEC para una divulgación planeada (p. ej. resultados) es un ejemplo de buena práctica, no un requisito: comunicado, aviso de la llamada y llamada abierta.",
+    "now": "El SEC cree que los emisores podrían usar un modelo que emplea una combinación de métodos de divulgación para una divulgación planeada de información material, como un comunicado de resultados programado.",
+    "cut": "Que sea buena práctica y no requisito, y los componentes del modelo (comunicado, aviso de la llamada, llamada abierta)."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "Las prácticas de política de divulgación (p. ej. portavoces designados, registros de comunicaciones) fueron solo sugerencias; no obligatorias.",
+    "now": "El SEC no pretendió sugerir que los emisores debieran implementar estas prácticas, sino solo ofrecerlas como sugerencias.",
+    "cut": "Los ejemplos de prácticas (portavoces designados, registros de comunicaciones)."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "Publicar en el sitio web propio, por sí solo, no era suficiente en el momento de la norma; podía formar parte de una combinación de métodos.",
+    "now": "Aunque publicar información en el sitio web del emisor puede no ser, por sí solo, un medio suficiente de divulgación pública en este momento.",
+    "cut": "Que pudiera formar parte de una combinación de métodos."
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "Los road shows en ofertas registradas excluidas no están sujetos a Reg FD; los de ofertas no registradas sí.",
+    "now": "Una divulgación en un road show en una oferta no registrada está sujeta a Reg FD.",
+    "cut": "Lo relativo a los road shows en ofertas registradas excluidas."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "Un discurso en una junta de accionistas abierta al público pero sin webcast ni difusión electrónica no satisface la divulgación pública de Reg FD.",
+    "now": "Una reunión abierta al público pero que no se transmite por webcast ni por ningún medio electrónico no es un método de divulgación.",
+    "cut": "La referencia a la junta de accionistas y a un discurso."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "Información en un documento presentado en EDGAR puede ser divulgación pública, pero no debe enterrarse ni fragmentarse.",
+    "now": "No se debe enterrar la información ni hacer la divulgación de forma fragmentada a lo largo de la presentación.",
+    "cut": "Que la información en un documento presentado en EDGAR pueda ser divulgación pública."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "Reg G exige, al divulgar públicamente una medida no-GAAP, presentar la medida GAAP más directamente comparable y una conciliación.",
+    "now": "Se exige una presentación de la medida financiera más directamente comparable calculada y presentada conforme a GAAP.",
+    "cut": "La conciliación y la referencia a la divulgación pública de una medida no-GAAP."
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "Si la medida no-GAAP se presenta oralmente o por webcast, se cumple Reg G publicando la información en el sitio web y anunciando su ubicación en la misma presentación.",
+    "now": "Se requiere que la ubicación del sitio web se haga pública en la misma presentación en la que se hace pública la medida financiera no-GAAP.",
+    "cut": "La presentación oral o por webcast, la publicación de la información en el sitio web y el cumplimiento de Reg G."
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "En documentos presentados ante la SEC, la medida GAAP comparable debe tener igual o mayor prominencia (Item 10(e)).",
+    "now": "Se debe presentar, con igual o mayor prominencia, la medida o medidas financieras más directamente comparables calculadas y presentadas conforme a GAAP.",
+    "cut": "La referencia a documentos presentados ante la SEC y a Item 10(e)."
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "Item 10(e) prohíbe títulos de medidas no-GAAP iguales o confusamente similares a los de medidas GAAP.",
+    "now": "Se refiere al uso de títulos o descripciones de medidas financieras no-GAAP que sean iguales o confusamente similares a los usados para medidas GAAP.",
+    "cut": "Item 10(e) y la afirmación de que lo prohíbe."
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "Item 10(e) prohíbe presentar medidas no-GAAP en la cara de los estados financieros o en sus notas.",
+    "now": "Se refiere a presentar medidas financieras no-GAAP en la cara de los estados financieros del registrante preparados conforme a GAAP o en las notas que los acompañan.",
+    "cut": "Item 10(e) y la afirmación de que lo prohíbe."
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "Reg G no aplica a registrantes que sean inversionistas registrados bajo la Investment Company Act, ni a ciertas comunicaciones de combinaciones de negocios.",
+    "now": "El texto excluye a cualquier compañía de inversión registrada bajo la Sección 8 de la Investment Company Act de 1940.",
+    "cut": "Las comunicaciones de combinaciones de negocios y la descripción de 'inversionistas registrados'."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "Los comunicados de resultados deben presentarse (furnished) en Form 8-K dentro de 5 días hábiles según el Item 12 adoptado (posteriormente renumerado).",
+    "now": "Un reporte de un evento especificado en el Item 12 debe presentarse (furnished) dentro de 5 días hábiles después de la ocurrencia del evento.",
+    "cut": "Form 8-K, comunicados de resultados y la renumeración posterior."
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "Calificar una medida no-GAAP como 'record performance' sin caracterización igualmente prominente de la GAAP es ejemplo de prominencia indebida; también lo es omitir la GAAP en el titular.",
+    "now": "Describir una medida no-GAAP como, por ejemplo, 'record performance' o 'exceptional' sin al menos una caracterización descriptiva igualmente prominente de la medida GAAP comparable.",
+    "cut": "Que omitir la GAAP en el titular también sea ejemplo de prominencia indebida."
+   },
+   {
+    "id": "confirmed[28]",
+    "claim": "Las medidas no-GAAP deben etiquetarse e identificarse como tales; no usar la misma etiqueta que una partida GAAP (p. ej. 'Gross Profit').",
+    "now": "Es un problema no identificar ni describir una medida como no-GAAP.",
+    "cut": "La prohibición de usar la misma etiqueta que una partida GAAP y el ejemplo 'Gross Profit'."
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "El staff exige que las diapositivas o el audio publicados en el sitio contengan la información financiera previamente no divulgada para acogerse a la exención de Item 2.02.",
+    "now": "Diapositivas o una presentación similar publicadas en el sitio web al momento de la presentación, que contengan la información financiera y estadística material requerida y previamente no divulgada, satisfarían la condición.",
+    "cut": "El audio, Item 2.02 y la idea de que el staff lo 'exige'."
+   },
+   {
+    "id": "confirmed[31]",
+    "claim": "Un FWP (free writing prospectus) no presentado no está sujeto a Item 10(e) salvo que se incluya o incorpore en una presentación.",
+    "now": "El Item 10(e) de Regulation S-K no se aplica a un free writing prospectus presentado (filed), salvo que se incluya o incorpore por referencia en la declaración de registro del emisor o se incluya en una presentación bajo la Exchange Act.",
+    "cut": "Que se trate de un FWP 'no presentado'."
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "La medida 'Adjusted EBITDA' no es EBITDA exento; debe distinguirse del título.",
+    "now": "Las medidas calculadas de forma distinta a las descritas como EBIT y EBITDA en el Exchange Act Release No. 47226 no deben caracterizarse como 'EBIT' o 'EBITDA'.",
+    "cut": "La mención específica de 'Adjusted EBITDA' y de 'exento'."
+   },
+   {
+    "id": "confirmed[36]",
+    "claim": "El material educativo o de capacitación no público, cuando es comunicación oficial, también está cubierto.",
+    "now": "Los materiales educativos o de capacitación aparecen en la enumeración.",
+    "cut": "Que sean no públicos, que sean comunicación oficial y que estén cubiertos."
+   },
+   {
+    "id": "confirmed[41]",
+    "claim": "Las herramientas de autoría deben ofrecer un modo de crear contenido conforme a WCAG 2.0 A/AA y permitir anular la información de accesibilidad.",
+    "now": "Las herramientas de autoría deben permitir a los autores la opción de anular la información requerida para la accesibilidad.",
+    "cut": "Que deban ofrecer un modo de crear contenido conforme a WCAG 2.0 A/AA."
+   },
+   {
+    "id": "confirmed[43]",
+    "claim": "Las herramientas de autoría deben preservar la información de accesibilidad al convertir formatos.",
+    "now": "Debe preservarse la información requerida para la accesibilidad en la medida en que el formato de destino la admita.",
+    "cut": "La referencia a las herramientas de autoría y a la conversión de formatos."
+   },
+   {
+    "id": "confirmed[45]",
+    "claim": "El preámbulo retiró PDF/UA-1 como estándar alterno de conformidad para PDF; WCAG 2.0 es el estándar único, y PDF/UA-1 sigue siendo útil para evaluar.",
+    "now": "Aun sin esta referencia, PDF/UA-1 puede seguir siendo útil para las agencias que evalúan archivos PDF para asegurar la conformidad con WCAG 2.0.",
+    "cut": "Que el preámbulo retirara PDF/UA-1 como estándar alterno y que WCAG 2.0 sea el estándar único."
+   },
+   {
+    "id": "confirmed[46]",
+    "claim": "El preámbulo declara que PDF/UA-1 no cubre el contraste, ni scripting ni video incrustado.",
+    "now": "Con la excepción del requisito de contraste, PDF/UA-1 incluye la mayoría de los requisitos de accesibilidad relevantes para el formato PDF.",
+    "cut": "Que no cubra scripting ni video incrustado."
+   },
+   {
+    "id": "confirmed[47]",
+    "claim": "Safe harbor: ICT existente conforme a la norma anterior y no alterada no necesita modificarse.",
+    "now": "Se refiere a ICT que cumple con una norma anterior emitida conforme a la Sección 508 (republicada en el Apéndice D) y que no ha sido alterada en o después del 18 de enero de 2018.",
+    "cut": "La conclusión de que no necesita modificarse (safe harbor)."
+   },
+   {
+    "id": "confirmed[52]",
+    "claim": "Los criterios de color: el color no debe ser el único medio de transmitir información en hardware.",
+    "now": "La codificación por color no debe usarse como único medio de transmitir información, indicar una acción, solicitar una respuesta o distinguir un elemento visual.",
+    "cut": "La limitación a hardware."
+   },
+   {
+    "id": "confirmed[53]",
+    "claim": "El contenido de video con audio exige subtítulos y audiodescripción en la norma de 2000 (Apéndice D).",
+    "now": "El contenido debe tener subtítulos abiertos o cerrados.",
+    "cut": "La audiodescripción, la referencia a la norma de 2000 y al Apéndice D, y el video con audio."
+   },
+   {
+    "id": "confirmed[54]",
+    "claim": "La norma remite a ANSI/HFES 200.2 y otros estándares incorporados por referencia, siendo estos aplicables en la medida prescrita.",
+    "now": "Las ediciones específicas de los estándares listados en el Capítulo 7 se incorporan por referencia en el Capítulo 2 de 508 (Requisitos de alcance) y en los Capítulos 3 a 6, en la medida prescrita de cada referencia.",
+    "cut": "La mención de ANSI/HFES 200.2."
+   },
+   {
+    "id": "confirmed[56]",
+    "claim": "El preámbulo aclara que sobre WCAG 2.0, de 38 criterios A/AA, 26 se aplican tal cual a no Web, 8 con sustitución y 4 son problemáticos.",
+    "now": "De los 38 criterios de éxito de Nivel A y AA de WCAG 2.0, 26 no incluyen terminología relacionada con la Web.",
+    "cut": "Las cifras de 8 con sustitución y 4 problemáticos."
+   },
+   {
+    "id": "confirmed[57]",
+    "claim": "Las convenciones de orientación o consejos de buenas prácticas se publican como material de asistencia técnica, no como norma.",
+    "now": "La práctica de la Junta es proporcionar orientación consultiva en materiales suplementarios.",
+    "cut": "Referencias a convenciones, buenas prácticas, asistencia técnica y 'no como norma'."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Divulgación a inversionistas (SEC Reg FD, Reg G/no-GAAP, safe harbor PSLRA)",
+   "Accesibilidad normativa (WCAG, Section 508, EN 301 549, EAA)",
+   "Guía W3C para aplicar WCAG a documentos no web (WCAG2ICT)",
+   "Comprobadores y software (Accessibility Checker de Microsoft, LibreOffice, PAC, veraPDF)",
+   "Lineamientos de congresos (guías de ponentes de cada evento)",
+   "Formatos abiertos (ISO/IEC 29500 / ECMA-376, ODF / ISO 26300)"
+  ],
+  "searches": [
+   {
+    "query": "SEC Regulation FD 17 CFR 243.100 general rule selective disclosure",
+    "intent": "official"
+   },
+   {
+    "query": "WCAG 2.2 W3C Recommendation",
+    "intent": "official"
+   },
+   {
+    "query": "Section 508 ICT Revised Standards incorporate WCAG 2.0 presentations E205",
+    "intent": "official"
+   },
+   {
+    "query": "EN 301 549 V3.2.1 accessibility requirements ICT products and services",
+    "intent": "official"
+   },
+   {
+    "query": "Microsoft Accessibility Checker PowerPoint make presentations accessible",
+    "intent": "support"
+   },
+   {
+    "query": "SEC Rule 100(b)(2) Regulation FD investor presentation website webcast Item 7.01 8-K furnished",
+    "intent": "support"
+   },
+   {
+    "query": "SEC Staff Guidance non-GAAP financial measures C&DI Regulation G investor presentations",
+    "intent": "official"
+   },
+   {
+    "query": "PDF/UA ISO 14289-1 veraPDF PAC accessibility checker PDF presentation",
+    "intent": "support"
+   },
+   {
+    "query": "SEC Non-GAAP Financial Measures Compliance and Disclosure Interpretations sec.gov",
+    "intent": "official"
+   },
+   {
+    "query": "ISO/IEC 29500 Office Open XML ECMA-376 ISO/IEC 26300 ODF OASIS",
+    "intent": "official"
+   },
+   {
+    "query": "SEC Rule 101(e) public disclosure Regulation FD broad non-exclusionary distribution",
+    "intent": "official"
+   },
+   {
+    "query": "PSLRA safe harbor forward-looking statements investor presentation cautionary language meaningful",
+    "intent": "limitations"
+   },
+   {
+    "query": "conference oral presentation guidelines slide format requirements official speaker guidelines accessibility",
+    "intent": "other"
+   },
+   {
+    "query": "WCAG2ICT guidance non-web ICT",
+    "intent": "official"
+   },
+   {
+    "query": "European Accessibility Act Directive 2019/882 scope microenterprises documents presentations",
+    "intent": "limitations"
+   },
+   {
+    "query": "LibreOffice Impress export PDF/UA tagged PDF accessibility check",
+    "intent": "support"
+   }
+  ],
+  "not_found": [
+   "No abrí ninguna página ni calculé sha256 de nada: solo vi resultados de búsqueda. Falta la descarga y el hash de cada fuente.",
+   "No encontré cita literal verificada de 300 caracteres o menos: los resúmenes de búsqueda no son texto literal de las fuentes.",
+   "No encontré páginas oficiales de ISO/IEC 29500, ECMA-376 ni ISO/IEC 26300/OASIS ODF más recientes que las citadas por Wikipedia, y no pude confirmar la edición vigente. Ninguna norma exige un formato abierto para presentaciones corporativas privadas.",
+   "No encontré la URL oficial de section508.gov ni de EUR-Lex para la Directiva 2019/882 en resultados; propuse el Access Board y no incluí EUR-Lex.",
+   "No encontré lineamientos universales de universidades ni de congresos: cada evento fija sus propias reglas; solo hallé ejemplos individuales.",
+   "No encontré páginas oficiales de PAC (axes4) ni de veraPDF con versión y licencia verificadas: solo comparativas de terceros.",
+   "No encontré texto oficial del safe harbor PSLRA (15 U.S.C. 78u-5) en una fuente primaria; solo comentarios de despachos.",
+   "No encontré una norma ni regla que exija estructura de diapositivas (agenda, número de láminas, tipografía) para presentaciones corporativas o académicas: probablemente son convenciones o preferencias."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-243/section-243.100",
+    "family": "Divulgación a inversionistas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto vigente de la Reg FD: obliga a divulgación pública al revelar información material no pública a ciertos destinatarios. Aplica a emisores de EE. UU.; no obliga a ningún formato de diapositivas."
+   },
+   {
+    "url": "https://www.sec.gov/files/rules/final/33-7881.htm",
+    "family": "Divulgación a inversionistas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Release de adopción: define divulgación pública (Regla 101(e)): 8-K o método de distribución amplia y no excluyente (webcast/sitio web con aviso)."
+   },
+   {
+    "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/proxy-disclosure-enhancements-transition-reg-fd",
+    "family": "Divulgación a inversionistas",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Interpretaciones del personal (p. ej. 102.05: reunión pública sin transmisión no basta). Son guía del personal, no ley; revalidar fecha."
+   },
+   {
+    "url": "https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures",
+    "family": "Divulgación a inversionistas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Criterios de reconciliación y prominencia para medidas no-GAAP en láminas (Reg G, Reg S-K 10(e)); la fuente primaria para gráficos y tablas en decks de inversionistas."
+   },
+   {
+    "url": "https://www.sec.gov/rules-regulations/2003/03/conditions-use-non-gaap-financial-measures",
+    "family": "Divulgación a inversionistas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Base normativa de Reg G: conciliación con la medida GAAP comparable; permite cumplirla en el sitio web."
+   },
+   {
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "family": "Accesibilidad normativa",
+    "stance": "context",
+    "role": "primary",
+    "why": "Especificación de criterios de éxito. Por sí misma no es ley; exigible solo donde una norma la incorpore. Versión 2.2 (2023, republicada 2024-12-12). URL citada en el resultado de búsqueda, no abierta."
+   },
+   {
+    "url": "https://www.access-board.gov/ict/",
+    "family": "Accesibilidad normativa",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto oficial de Section 508 revisado: E205 exige WCAG 2.0 A/AA para contenido electrónico de agencias federales (incluye documentos no web con excepciones). Aplica a agencias federales de EE. UU. y su contratación, no a presentaciones privadas."
+   },
+   {
+    "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf",
+    "family": "Accesibilidad normativa",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Norma europea: cláusula 10 (documentos no web) y 9 (WCAG 2.1 AA). Se vuelve exigible vía la Directiva 2016/2102 (sector público) o la EAA. PDF largo; consultar solo la cláusula 10."
+   },
+   {
+    "url": "https://w3c.github.io/wcag2ict/",
+    "family": "Guía W3C WCAG2ICT",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Nota informativa (no normativa) para aplicar WCAG a documentos como diapositivas; base de las cláusulas de documentos de EN 301 549 y Section 508."
+   },
+   {
+    "url": "https://support.microsoft.com/en-us/office/make-your-powerpoint-presentations-accessible-to-people-with-disabilities-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25",
+    "family": "Comprobadores y software",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Documentación del proveedor sobre PowerPoint y el Accessibility Checker (errores, advertencias, consejos). Solo candidate_claim; la herramienta no demuestra conformidad WCAG completa."
+   },
+   {
+    "url": "https://help.libreoffice.org/latest/he/text/shared/01/ref_pdf_export_universal_accessibility.html",
+    "family": "Comprobadores y software",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Alternativa de código abierto (Impress): exporta PDF/UA etiquetado y corre una verificación de accesibilidad integrada. Licencia MPL: verificar. Alcance de las comprobaciones limitado."
+   },
+   {
+    "url": "https://www.ismrm.org/25m/guidelines/",
+    "family": "Lineamientos de congresos",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Ejemplo de reglas de un congreso concreto (16:9, divulgación de conflictos de interés). Solo exigible a quien presenta en ese evento; muestra que cada congreso fija sus reglas."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ },
+ "partes": [
+  [
+   [
+    "SA-45738185ea36989252ca7ac7",
+    0,
+    188090
+   ],
+   [
+    "SA-dd3591599147c99ceacca82c",
+    0,
+    18793
+   ],
+   [
+    "SA-f93ccaa2999c4c41ae0fa273",
+    0,
+    50415
+   ],
+   [
+    "SA-9f82dfbe9d71b8a3baa2ad71",
+    0,
+    110041
+   ]
+  ],
+  [
+   [
+    "SA-b79682785687f0c6b2188fee",
+    0,
+    397541
+   ]
+  ],
+  [
+   [
+    "SA-1eee3a1841a94567da8e59f3",
+    0,
+    477596
+   ]
+  ],
+  [
+   [
+    "SA-47c705db14839f2b88174fbf",
+    0,
+    313698
+   ],
+   [
+    "SA-4b5457e0a7538fded1e083f4",
+    0,
+    99230
+   ],
+   [
+    "SA-3c2dfd75d34ec442acae3da0",
+    0,
+    2855
+   ],
+   [
+    "SA-e60f922df8a3b53b5a15ff1b",
+    0,
+    45333
+   ]
+  ]
+ ],
+ "partes_fuera": {
+  "confirmed": [
+   {
+    "claim": "La cláusula 10 aplica a documentos descargables desde páginas web.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "the present clause applies to downloadable documents",
+    "locator": "Cláusula 10.0"
+   },
+   {
+    "claim": "La conformidad exige cumplir los requisitos con «shall»; los «should» son recomendaciones no exigidas.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Those clauses containing the word \"should\" are recommendations and are not required for conformance.",
+    "locator": "Cláusula 14"
+   },
+   {
+    "claim": "Los requisitos son autoalcance: si la precondición es falsa, no aplican.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "When one of the pre-conditions is false the requirement is not applicable.",
+    "locator": "Cláusula 14"
+   },
+   {
+    "claim": "Los documentos deben tener títulos que describan tema o propósito.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Documents have titles that describe topic or purpose.",
+    "locator": "Tabla 10.7 (10.2.4.2)"
+   },
+   {
+    "claim": "El idioma predeterminado del documento debe ser determinable programáticamente.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "The default human language of each document can be programmatically determined.",
+    "locator": "Tabla 10.11 (10.3.1.1)"
+   },
+   {
+    "claim": "Los documentos no web deben cumplir el criterio WCAG 1.4.3 de contraste mínimo.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Where ICT is a non-web document, it shall satisfy the WCAG 2.1 Success Criterion 1.4.3 Contrast (Minimum).",
+    "locator": "Cláusula 10.1.4.3"
+   },
+   {
+    "claim": "Los documentos deben cumplir el criterio de 3 destellos por segundo.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Documents do not contain anything that flashes more than three times in any one second period",
+    "locator": "Tabla 10.6 (10.2.3.1)"
+   },
+   {
+    "claim": "La nota afirma que eludir bloques repetidos en documentos es buena práctica, no requisito.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Although not a requirement, the ability to bypass blocks of content that are repeated within documents is generally considered best practice",
+    "locator": "Cláusula 10.2.4.1, NOTE 2"
+   },
+   {
+    "claim": "Que los subtítulos no oculten información relevante es solo «should».",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "the captions should not obscure relevant information in the synchronized media.",
+    "locator": "Cláusula 10.5"
+   },
+   {
+    "claim": "Los metadatos de accesibilidad con WebSchemas son buena práctica.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "It is best practice to provide meta data on the accessibility of the document",
+    "locator": "Cláusula 10.0, NOTE 8"
+   },
+   {
+    "claim": "Las herramientas de autoría deben ofrecer sugerencias de reparación y al menos una plantilla conforme.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "then the authoring tool shall provide repair suggestion(s).",
+    "locator": "Cláusula 11.8.4"
+   },
+   {
+    "claim": "Anexo C es normativo pero no da metodología de prueba.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Annex C is a normative annex that sets out the means necessary to determine conformance with the individual requirements. It does not provide a testing methodology.",
+    "locator": "Introducción"
+   },
+   {
+    "claim": "La presunción de conformidad con la Directiva depende de la cita en el Diario Oficial UE.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Presumption of conformity stays valid only as long as a reference to the present document is maintained in the list",
+    "locator": "Anexo A"
+   }
+  ]
+ }
+}
