@@ -1,0 +1,20 @@
+{
+ "request_id": "RR-2026-11-12-entregable-presentacion",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-12T16:00:00Z",
+ "question": "¿Qué estructura, contenido y formato hacen correcta una presentación corporativa, académica o para inversionistas, qué exigen las reglas aplicables (accesibilidad, divulgación a inversionistas, lineamientos de congresos) y qué es solo convención o preferencia estética, y con qué software y verificadores se produce y se comprueba?",
+ "why_needed": "Familia de entregable: Presentaciones corporativas, académicas y para inversionistas. ZPMND necesita criterios profesionales citables para producir y verificar este tipo de resultado, sin inventar obligaciones. Cuarto entregable de prueba real. Pistas, no verdades: accesibilidad de presentaciones (WCAG, Section 508, EN 301 549, comprobadores de accesibilidad), reglas de divulgación a inversionistas (Reg FD, avisos de mercado), lineamientos de presentación de congresos y universidades, formato abierto (ISO/IEC 29500, ODF).",
+ "affected_component": "biblioteca de criterios profesionales de outputs: presentaciones corporativas",
+ "desired_evidence": [
+  "por fuente: emisor, documento, versión, fecha de vigencia o de revisión, URL y sha256 de lo bajado",
+  "por requisito: cita literal de 300 caracteres o menos y su clase: obligatorio (norma, ley, especificación, contrato), convención profesional, buena práctica o preferencia; si la fuente no lo exige, nunca obligatorio",
+  "por requisito: a qué aplica (jurisdicción, institución, industria, audiencia, medio de distribución) y sus excepciones",
+  "herramientas existentes que producen o comprueban este entregable: nombre, licencia, versión y qué verifican; preferir las verificables",
+  "criterios de verificación comprobables (candidate_tests) y cuándo revalidar (cambio de versión de la norma, de la herramienta o del medio)",
+  "ejemplo oficial o artefacto de referencia, si el emisor lo publica",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim; de pago, solo metadatos"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Presentar una convención o una preferencia estética como requisito obligatorio, o producir un entregable que no cumple lo que la norma, la ley o el contrato sí exige.",
+ "privacy_class": "PUBLIC"
+}

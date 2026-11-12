@@ -1,0 +1,20 @@
+{
+ "request_id": "RR-2026-11-12-entregable-frontend-html",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-12T16:00:00Z",
+ "question": "¿Qué hace correcto un frontend HTML o una visualización interactiva (semántica, accesibilidad, rendimiento, diseño responsivo, legibilidad de gráficas), qué es obligatorio (estándar, ley de accesibilidad) y qué es buena práctica, y con qué validadores y herramientas se produce y se comprueba?",
+ "why_needed": "Familia de entregable: HTML, sitios web, experiencias interactivas, dashboards y visualización. ZPMND necesita criterios profesionales citables para producir y verificar este tipo de resultado, sin inventar obligaciones. Quinto entregable de prueba real. Pistas, no verdades: HTML Living Standard (WHATWG), WCAG 2.2 y ARIA APG (W3C), EN 301 549, Section 508, leyes de accesibilidad web nacionales, métricas de rendimiento (Core Web Vitals), validadores (Nu HTML Checker, axe-core, Lighthouse, Pa11y), guías de visualización de datos de organismos estadísticos.",
+ "affected_component": "biblioteca de criterios profesionales de outputs: html",
+ "desired_evidence": [
+  "por fuente: emisor, documento, versión, fecha de vigencia o de revisión, URL y sha256 de lo bajado",
+  "por requisito: cita literal de 300 caracteres o menos y su clase: obligatorio (norma, ley, especificación, contrato), convención profesional, buena práctica o preferencia; si la fuente no lo exige, nunca obligatorio",
+  "por requisito: a qué aplica (jurisdicción, institución, industria, audiencia, medio de distribución) y sus excepciones",
+  "herramientas existentes que producen o comprueban este entregable: nombre, licencia, versión y qué verifican; preferir las verificables",
+  "criterios de verificación comprobables (candidate_tests) y cuándo revalidar (cambio de versión de la norma, de la herramienta o del medio)",
+  "ejemplo oficial o artefacto de referencia, si el emisor lo publica",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim; de pago, solo metadatos"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Presentar una convención o una preferencia estética como requisito obligatorio, o producir un entregable que no cumple lo que la norma, la ley o el contrato sí exige.",
+ "privacy_class": "PUBLIC"
+}

@@ -1,0 +1,20 @@
+{
+ "request_id": "RR-2026-11-12-entregable-documento-profesional",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-12T16:00:00Z",
+ "question": "¿Qué es obligatorio y qué es convención al estructurar, citar, dar formato y publicar un informe o documento profesional (ejecutivo, técnico, científico, académico, manual, SOP o política), según jurisdicción, institución, audiencia y medio (impreso, PDF, digital), y con qué software y verificadores se produce y se comprueba?",
+ "why_needed": "Familia de entregable: Informes ejecutivos, técnicos, científicos y académicos, y documentos empresariales (manuales, SOP, políticas). ZPMND necesita criterios profesionales citables para producir y verificar este tipo de resultado, sin inventar obligaciones. Primer entregable de prueba real. Pistas, no verdades: normas de informes técnicos y de citas (ISO, ANSI/NISO, IEEE, APA, Chicago), lenguaje claro (ISO 24495-1), PDF/A y PDF/UA (ISO 19005, ISO 14289), accesibilidad (WCAG, EN 301 549), guías de estilo de gobiernos y universidades.",
+ "affected_component": "biblioteca de criterios profesionales de outputs: informes ejecutivos",
+ "desired_evidence": [
+  "por fuente: emisor, documento, versión, fecha de vigencia o de revisión, URL y sha256 de lo bajado",
+  "por requisito: cita literal de 300 caracteres o menos y su clase: obligatorio (norma, ley, especificación, contrato), convención profesional, buena práctica o preferencia; si la fuente no lo exige, nunca obligatorio",
+  "por requisito: a qué aplica (jurisdicción, institución, industria, audiencia, medio de distribución) y sus excepciones",
+  "herramientas existentes que producen o comprueban este entregable: nombre, licencia, versión y qué verifican; preferir las verificables",
+  "criterios de verificación comprobables (candidate_tests) y cuándo revalidar (cambio de versión de la norma, de la herramienta o del medio)",
+  "ejemplo oficial o artefacto de referencia, si el emisor lo publica",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim; de pago, solo metadatos"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Presentar una convención o una preferencia estética como requisito obligatorio, o producir un entregable que no cumple lo que la norma, la ley o el contrato sí exige.",
+ "privacy_class": "PUBLIC"
+}
