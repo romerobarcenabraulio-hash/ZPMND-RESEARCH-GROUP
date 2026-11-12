@@ -1,0 +1,20 @@
+{
+ "request_id": "RR-2026-11-12-entregable-modificacion-software",
+ "issued_by": "OWNER",
+ "issued_at": "2026-11-12T16:00:00Z",
+ "question": "¿Qué hace correcta y verificable una modificación de software (alcance, pruebas, revisión independiente, seguridad, documentación, compatibilidad, criterios de aceptación, CI/CD), qué es obligatorio por norma o contrato y qué es convención de estilo, y con qué herramientas se produce y se comprueba?",
+ "why_needed": "Familia de entregable: Código fuente, arquitectura y productos de software. ZPMND necesita criterios profesionales citables para producir y verificar este tipo de resultado, sin inventar obligaciones. Sexto entregable de prueba real. No confundir estilo con calidad. Pistas, no verdades: modelo de calidad ISO/IEC 25010, OWASP ASVS y SAMM, NIST SSDF (SP 800-218), SLSA y OpenSSF Scorecard, versionado semántico, guías públicas de revisión de código, pruebas de mutación, SAST y linters.",
+ "affected_component": "biblioteca de criterios profesionales de outputs: código fuente",
+ "desired_evidence": [
+  "por fuente: emisor, documento, versión, fecha de vigencia o de revisión, URL y sha256 de lo bajado",
+  "por requisito: cita literal de 300 caracteres o menos y su clase: obligatorio (norma, ley, especificación, contrato), convención profesional, buena práctica o preferencia; si la fuente no lo exige, nunca obligatorio",
+  "por requisito: a qué aplica (jurisdicción, institución, industria, audiencia, medio de distribución) y sus excepciones",
+  "herramientas existentes que producen o comprueban este entregable: nombre, licencia, versión y qué verifican; preferir las verificables",
+  "criterios de verificación comprobables (candidate_tests) y cuándo revalidar (cambio de versión de la norma, de la herramienta o del medio)",
+  "ejemplo oficial o artefacto de referencia, si el emisor lo publica",
+  "lo no hallado, con sus consultas; lo secundario o de proveedor, solo candidate_claim; de pago, solo metadatos"
+ ],
+ "priority": "P1",
+ "risk_if_wrong": "Presentar una convención o una preferencia estética como requisito obligatorio, o producir un entregable que no cumple lo que la norma, la ley o el contrato sí exige.",
+ "privacy_class": "PUBLIC"
+}
