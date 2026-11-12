@@ -1,0 +1,632 @@
+{
+ "request_id": "RR-2026-11-12-entregable-modelo-financiero",
+ "fetched": [
+  {
+   "url": "https://fast-standard.org/the-fast-standard/",
+   "status": 200,
+   "error": null,
+   "sha256": "0158c328f3951f055dee4c805899105d1436766eafd8e87261d2ebc21a0f0703",
+   "bytes": 44494,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:49:55Z",
+   "text_status": "ok",
+   "text_chars": 3097
+  },
+  {
+   "url": "https://www.icaew.com/technical/technology/excel-community/improve-your-financial-modelling-practice",
+   "status": 200,
+   "error": null,
+   "sha256": "b8e80a84f0400395a5943aa4215e642149778374d101fbdc7e5bf1d2e1437c4e",
+   "bytes": 498295,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:49:57Z",
+   "text_status": "ok",
+   "text_chars": 42724
+  },
+  {
+   "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/financial-modelling-code.ashx",
+   "status": 200,
+   "error": null,
+   "sha256": "a205ce5bbe5fec2aa4dae581b456e548e25602c96244d82fde21af6b1225ed86",
+   "bytes": 773022,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T18:50:00Z",
+   "text_status": "ok",
+   "text_chars": 38711
+  },
+  {
+   "url": "https://www.icaew.com/technical/technology/excel-community/20-principles-for-good-spreadsheet-practice-2024-edition",
+   "status": 200,
+   "error": null,
+   "sha256": "116a4eae5dabbd740eb8771aa17600e8dacaa60e59f9b1c608e382aea9139e28",
+   "bytes": 522685,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:02Z",
+   "text_status": "ok",
+   "text_chars": 54646
+  },
+  {
+   "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/how-to-review-a-spreadsheet-report.ashx",
+   "status": 200,
+   "error": null,
+   "sha256": "a69d53a4b2cde83460cb5346701c30150dd5df6e76239461af2e53359e06b3d3",
+   "bytes": 832919,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T18:50:03Z",
+   "text_status": "ok",
+   "text_chars": 41251
+  },
+  {
+   "url": "https://www.ssrb.org/files/documents/BPM-Standards%20Comparison.pdf",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.ssrb.org/files/documents/BPM-Standards%20Comparison.pdf",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:50:05Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://arxiv.org/pdf/1704.01136",
+   "status": 200,
+   "error": null,
+   "sha256": "9dc8eb7a36636cf13d1d7933a0b504b33df307e86d1072e7f7a3909d5e2c9dfe",
+   "bytes": 566372,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T18:53:05Z",
+   "text_status": "ok",
+   "text_chars": 20305
+  },
+  {
+   "url": "https://eusprig.org/research-info/horror-stories/",
+   "status": 200,
+   "error": null,
+   "sha256": "b4cd691e5552d7f23e943413d67b6139b24ee7878d7b6bf5c3e6eeb16807ef84",
+   "bytes": 188767,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:53:20Z",
+   "text_status": "ok",
+   "text_chars": 102229
+  },
+  {
+   "url": "https://arxiv.org/abs/2609.31815",
+   "status": 200,
+   "error": null,
+   "sha256": "f62c7589d0a177bf259300b95e6739acb1ea488dfe0b305ae1f8dd219f48912a",
+   "bytes": 41747,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:53:22Z",
+   "text_status": "ok",
+   "text_chars": 5199
+  },
+  {
+   "url": "https://arxiv.org/pdf/0802.3457",
+   "status": 200,
+   "error": null,
+   "sha256": "0ba1f982790f7994bed94a12fa78fd4ff9eb9006c98c07ac30174e6732d9ee1d",
+   "bytes": 56840,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T18:53:35Z",
+   "text_status": "ok",
+   "text_chars": 36539
+  },
+  {
+   "url": "https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646",
+   "status": 200,
+   "error": null,
+   "sha256": "3f0d760d5eb34523ba971bb194e70da2b22fe319f385f7d8b0fad73cfc721378",
+   "bytes": 180656,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:53:50Z",
+   "text_status": "ok",
+   "text_chars": 9367
+  },
+  {
+   "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS2201",
+   "status": 403,
+   "error": null,
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:53:51Z",
+   "text_status": null,
+   "text_chars": null
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43283635829",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "El código de ICAEW declara que no es una herramienta de cumplimiento tipo lista de verificación, sino un marco para fijar un estándar organizativo; es decir, no es un requisito obligatorio.",
+    "now": "El Código de ICAEW declara que no pretende ser una herramienta de cumplimiento tipo lista de verificación, sino un marco para quien busque (la cita queda cortada).",
+    "cut": "\"para fijar un estándar organizativo\"; \"es decir, no es un requisito obligatorio\""
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "El Código ICAEW pide que cada valor del modelo tenga claras sus unidades, incluidas moneda (real o nominal) y factores de escala.",
+    "now": "El Código ICAEW pide que, para cada valor del modelo, quede claro qué unidades de medida se usan.",
+    "cut": "\"incluidas moneda (real o nominal) y factores de escala\""
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "El Código ICAEW define el modelo financiero como un conjunto temporal de cálculos que genera un pronóstico a partir de variables de entrada, y plantea el modelo como un motor para escenarios y sensibilidades.",
+    "now": "El Código ICAEW dice que quien construye el modelo debe buscar ofrecer un \"motor\" por el que pasar escenarios y sensibilidades alternativos.",
+    "cut": "\"define el modelo financiero como un conjunto temporal de cálculos que genera un pronóstico a partir de variables de entrada\""
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "El Código ICAEW recomienda incluir verificaciones de igualdad, con tolerancia, y una verificación maestra.",
+    "now": "El Código ICAEW describe una verificación maestra que comprueba si alguna verificación del modelo está incumplida y, si es así, avisa al usuario.",
+    "cut": "\"recomienda incluir verificaciones de igualdad, con tolerancia\""
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "El Código ICAEW define el hardcoding y aconseja que no se use para valores que puedan cambiar durante la vida del modelo.",
+    "now": "El Código ICAEW dice que nunca se debe usar hardcoding para valores que previsiblemente puedan cambiar durante la vida del modelo.",
+    "cut": "\"define el hardcoding\""
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "El Código ICAEW aconseja no ocultar hojas ni filas.",
+    "now": "El Código ICAEW aconseja no usar hojas ocultas.",
+    "cut": "\"ni filas\""
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "El Código ICAEW aconseja desactivar el cálculo iterativo para evitar referencias circulares.",
+    "now": "El Código ICAEW aconseja desactivar el ajuste 'Enable iterative calculations'.",
+    "cut": "\"para evitar referencias circulares\""
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "El Código ICAEW indica que las alternativas a lo listado pueden ser preferibles según el contexto.",
+    "now": "El Código ICAEW indica que ninguna forma de construir un modelo es la correcta para todas las situaciones.",
+    "cut": "\"las alternativas a lo listado pueden ser preferibles según el contexto\""
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "El Código ICAEW recomienda un régimen de revisión y prueba acorde con el riesgo, y revisión por pares si el impacto es significativo.",
+    "now": "El Código ICAEW recomienda un sistema de revisión por pares (p. ej., por un colega o incluso una auditoría profesional) si el impacto del modelo es especialmente significativo.",
+    "cut": "\"un régimen de revisión y prueba acorde con el riesgo\""
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "El Código ICAEW se construyó a partir de siete metodologías y aportes de más de una docena de organizaciones, y se presenta como orientación basada en principios.",
+    "now": "El Código ICAEW se elaboró a partir de una revisión de siete metodologías y de aportes de más de una docena de organizaciones de modelización financiera.",
+    "cut": "\"y se presenta como orientación basada en principios\""
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "El Código ICAEW se publicó en la web el 12 nov 2018 según la página; el PDF visto lleva copyright 2024.",
+    "now": "Según la página, el Código ICAEW se publicó el 12 nov 2018.",
+    "cut": "\"el PDF visto lleva copyright 2024\""
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "FAST se define como un conjunto de reglas con orientación sobre la estructura y el diseño de hojas de cálculo eficientes, con licencia CC BY 4.0.",
+    "now": "FAST se define como un conjunto de reglas que orienta sobre la estructura y el diseño de hojas de cálculo eficientes.",
+    "cut": "\"con licencia CC BY 4.0\""
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "FAST sostiene que los modelos deben evitar la precisión espuria y centrarse en los supuestos clave.",
+    "now": "FAST sostiene que la precisión espuria distrae y roza lo peligroso, sobre todo cuando está desequilibrada.",
+    "cut": "\"los modelos deben evitar\"; \"y centrarse en los supuestos clave\""
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "Los Twenty principles de ICAEW piden estructurar con flujo claro de entradas, procesos y salidas, e introducir cada entrada una sola vez.",
+    "now": "Los Twenty principles dicen que un buen diseño asegura que cada entrada se introduzca una sola vez y, en lo posible, que todas las entradas estén en la misma sección de la hoja.",
+    "cut": "\"estructurar con flujo claro de entradas, procesos y salidas\""
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "Los Twenty principles recomiendan revisión por pares porque la autorrevisión es limitada.",
+    "now": "Los Twenty principles señalan que la autorrevisión detecta un número limitado de errores por el sesgo de revisar el propio trabajo.",
+    "cut": "\"recomiendan revisión por pares\""
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "Los Twenty principles advierten que la protección con contraseña u ocultamiento puede ser vulnerada.",
+    "now": "Los Twenty principles advierten que algo (la cita no dice qué) puede ser vulnerado por un usuario lo bastante competente.",
+    "cut": "\"la protección con contraseña u ocultamiento\""
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "ICAEW menciona ISAE 3000 como norma formal que podría servir de base a un encargo de aseguramiento sobre una hoja de cálculo; la guía en sí describe una revisión informal.",
+    "now": "ICAEW menciona normas formales, como la norma de revisiones no de auditoría ISAE 3000, que podrían servir de base a un encargo de aseguramiento sobre una hoja de cálculo.",
+    "cut": "\"la guía en sí describe una revisión informal\""
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "La guía de revisión describe cinco etapas de revisión: inicial, estructural, de datos, analítica y detallada.",
+    "now": "La guía de revisión se centra en cinco etapas principales de revisión.",
+    "cut": "\"inicial, estructural, de datos, analítica y detallada\""
+   },
+   {
+    "id": "confirmed[28]",
+    "claim": "La guía de revisión describe pruebas de datos: datos de prueba con resultado conocido, entradas en cero, estrés y delta testing.",
+    "now": "La guía de revisión propone crear datos de prueba con un resultado conocido para comprobar que la hoja da la misma respuesta.",
+    "cut": "\"entradas en cero, estrés y delta testing\""
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "La guía de revisión señala que IFERROR puede enmascarar errores.",
+    "now": "La guía de revisión señala que el uso de una función (la cita no dice cuál) puede enmascarar errores más allá de lo previsto.",
+    "cut": "\"IFERROR\""
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "La guía de revisión describe herramientas de Excel: Trace Precedents, Evaluate Formula, Watch Window e Inspect Workbook.",
+    "now": "La guía de revisión describe Trace Precedents, que encuentra las celdas de las que proceden los valores de la celda actual.",
+    "cut": "\"Evaluate Formula, Watch Window e Inspect Workbook\""
+   },
+   {
+    "id": "confirmed[31]",
+    "claim": "La guía de revisión recomienda documentar la revisión en una hoja del propio libro, con metodología aplicada (p. ej. FAST) y evaluación de cumplimiento.",
+    "now": "La guía de revisión menciona si se ha usado un estándar de modelización como Operis, SMART, FAST u otro.",
+    "cut": "\"recomienda documentar la revisión en una hoja del propio libro\"; \"evaluación de cumplimiento\""
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "Panko 2000 concluyó que solo la inspección celda por celda en grupo había demostrado ser efectiva, y captura cerca del 80% de los errores.",
+    "now": "Panko 2000 concluyó que solo un enfoque de reducción de errores había demostrado ser efectivo: la inspección de código.",
+    "cut": "\"celda por celda en grupo\"; \"y captura cerca del 80% de los errores\""
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "Panko 2000 señala que la protección de celdas previene el hardwiring pero se usaba en la mitad o menos de las hojas.",
+    "now": "Panko 2000 señala que los errores de hardwiring son bastante fáciles de prevenir con la protección de celdas.",
+    "cut": "\"pero se usaba en la mitad o menos de las hojas\""
+   },
+   {
+    "id": "confirmed[35]",
+    "claim": "Panko 2000 trata la revisión de razonabilidad como insuficiente (\"whiskey cure\") aunque deba hacerse.",
+    "now": "Panko 2000 dice que algo (la cita no dice qué) no debe considerarse un punto de parada aceptable.",
+    "cut": "\"la revisión de razonabilidad\"; \"(\\\"whiskey cure\\\")\"; \"aunque deba hacerse\""
+   },
+   {
+    "id": "confirmed[36]",
+    "claim": "El archivo de EuSpRIG registra una sanción de la PRA a Standard Chartered por un error en una hoja de cálculo, con falta de control y revisión.",
+    "now": "El archivo de EuSpRIG recoge un error de 8.000 millones de libras por falta de control y revisión en SCB, que acabó en una multa de 47 millones de libras.",
+    "cut": "\"de la PRA\"; \"en una hoja de cálculo\""
+   },
+   {
+    "id": "confirmed[37]",
+    "claim": "El archivo de EuSpRIG recoge que la PRA multó a Metro Bank por fallos de gobernanza y control en reportes regulatorios apoyados en hojas de cálculo.",
+    "now": "El archivo de EuSpRIG recoge que la Prudential Regulatory Authority (PRA) impuso a Metro Bank plc una sanción económica de 5.376.000 libras.",
+    "cut": "\"por fallos de gobernanza y control en reportes regulatorios apoyados en hojas de cálculo\""
+   },
+   {
+    "id": "confirmed[38]",
+    "claim": "El archivo de EuSpRIG recoge una advertencia del Information Commissioner sobre hojas de cálculo originales en respuestas FOI.",
+    "now": "Se insta a las autoridades públicas a dejar de usar hojas de Excel originales de origen.",
+    "cut": "\"El archivo de EuSpRIG\" (el hallazgo no tiene fuente); \"el Information Commissioner\"; \"en respuestas FOI\""
+   },
+   {
+    "id": "confirmed[39]",
+    "claim": "El archivo de EuSpRIG recoge una carta de advertencia de la FDA por datos originales en una hoja no controlada.",
+    "now": "El archivo de EuSpRIG recoge un caso en que se guardaron datos originales en una hoja de cálculo electrónica \"no oficial\" y no controlada, en una unidad de red compartida.",
+    "cut": "\"carta de advertencia de la FDA\""
+   },
+   {
+    "id": "confirmed[40]",
+    "claim": "El archivo de EuSpRIG recoge el caso de límite de filas del XLS que hizo perder casos Covid, con la observación de que hacen falta controles de reconciliación (conteos, hash totals).",
+    "now": "El archivo de EuSpRIG recoge que hacen falta comprobaciones y controles que concilien la salida de cada etapa de transformación con su entrada, como conteos de registros y hash totals.",
+    "cut": "\"el caso de límite de filas del XLS que hizo perder casos Covid\""
+   },
+   {
+    "id": "conflicting[0]",
+    "claim": "Tensión sobre la separación de supuestos y lógica: el Código ICAEW la recomienda, pero Panko 2000 halló en un estudio no publicado casi ninguna diferencia en errores y sugiere que podría dificultar la lectura de la lógica.",
+    "now": "Panko 2000 sugiere que si todos los datos de entrada se colocan en una sección y la lógica en otra, la lógica puede ser más difícil de leer en una inspección de código.",
+    "cut": "\"Tensión... el Código ICAEW la recomienda\"; \"halló en un estudio no publicado casi ninguna diferencia en errores\""
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "id": "confirmed[38]",
+   "claim": "Se insta a las autoridades públicas a dejar de usar hojas de Excel originales de origen.",
+   "quote": "urging public authorities to discontinue the use of original source Excel spreadsheets",
+   "artifact_ids": [
+    "SA-b4cd691e5552d7f23e943413"
+   ]
+  }
+ ],
+ "discovery": {
+  "families": [
+   "Estándares de modelado financiero (FAST, ICAEW FMC, SMART, SSRB)",
+   "Guías profesionales de hojas de cálculo (ICAEW 20 principios, cómo revisar)",
+   "Investigación sobre errores en hojas de cálculo (EuSpRIG, Panko)",
+   "Control interno regulado (SOX 404 / PCAOB AS 2201)",
+   "Normas de presentación financiera (IFRS 18/IAS 1, NIF CINIF)",
+   "Formato de archivo (ECMA-376 / ISO/IEC 29500)",
+   "Herramientas de producción y verificación (openpyxl, LibreOffice, Excel Inquire)"
+  ],
+  "searches": [
+   {
+    "query": "FAST Standard financial modelling standard",
+    "intent": "official"
+   },
+   {
+    "query": "fast-standard.org FAST Standard download PDF",
+    "intent": "official"
+   },
+   {
+    "query": "ICAEW Financial Modelling Code",
+    "intent": "official"
+   },
+   {
+    "query": "ICAEW Twenty Principles for Good Spreadsheet Practice",
+    "intent": "official"
+   },
+   {
+    "query": "SMART financial modelling standard Corality Smart Modelling principles",
+    "intent": "official"
+   },
+   {
+    "query": "FMI Financial Modeling Institute FAST Standard Spreadsheet Standards Review SMART",
+    "intent": "limitations"
+   },
+   {
+    "query": "EuSpRIG spreadsheet errors research horror stories",
+    "intent": "support"
+   },
+   {
+    "query": "Raymond Panko what we know about spreadsheet errors",
+    "intent": "support"
+   },
+   {
+    "query": "Reinhart Rogoff spreadsheet error Herndon Ash Pollin critique",
+    "intent": "contradict"
+   },
+   {
+    "query": "Sarbanes-Oxley spreadsheets end-user computing controls PCAOB AS 2201 SOX spreadsheet",
+    "intent": "official"
+   },
+   {
+    "query": "PCAOB AS 2201 An Audit of Internal Control Over Financial Reporting pcaobus.org",
+    "intent": "official"
+   },
+   {
+    "query": "IFRS Foundation IAS 1 IFRS 18 presentation financial statements units rounding disclosure",
+    "intent": "official"
+   },
+   {
+    "query": "IFRS S1 S2 NIF CINIF Normas de Información Financiera vigentes 2026 NIF A-3",
+    "intent": "official"
+   },
+   {
+    "query": "ECMA-376 Office Open XML spreadsheetML ISO/IEC 29500 standard",
+    "intent": "official"
+   },
+   {
+    "query": "ISO/IEC 29500-1:2016 iso.org SpreadsheetML",
+    "intent": "official"
+   },
+   {
+    "query": "openpyxl documentation formulas data_only cached values not calculated",
+    "intent": "limitations"
+   },
+   {
+    "query": "openpyxl readthedocs simple usage formula warning",
+    "intent": "official"
+   },
+   {
+    "query": "LibreOffice headless convert recalculate formulas documentation MPL license",
+    "intent": "official"
+   },
+   {
+    "query": "Excel Inquire Spreadsheet Compare formula auditing tools Microsoft support",
+    "intent": "official"
+   }
+  ],
+  "not_found": [
+   "No se bajó ningún archivo ni se calculó sha256: la herramienta solo permite búsqueda; los hashes quedan pendientes.",
+   "Versión/fecha exacta vigente del FAST Standard oficial (solo hallada copia Scribd de julio 2019 y la página oficial sin abrir).",
+   "Texto oficial descargable del estándar SMART (solo copias Scribd; propiedad actual dudosa, Corality/Mazars/Navigator).",
+   "Ninguna norma o ley encontrada que exija FAST, ICAEW FMC o SMART; son voluntarias, salvo que un contrato las imponga.",
+   "Requisito explícito de PCAOB/SOX sobre hojas de cálculo: no hallado; solo ICFR general (AS 2201).",
+   "Páginas oficiales de LibreOffice sobre --headless/--convert-to y recálculo al cargar: no halladas.",
+   "Artículos oficiales de Microsoft Support sobre Inquire/Evaluate Formula: citados por terceros, no abiertos.",
+   "Equivalente NIF para unidades/redondeo (NIF A-1/B-1) con cita literal: no hallado; falta texto oficial CINIF (de pago).",
+   "Ejemplo oficial o artefacto de referencia publicado por FAST/ICAEW (ICAEW ofrece plantilla en la página de 20 principios; no verificada).",
+   "Versión/licencia exacta de openpyxl (MIT) y LibreOffice instalada: no verificadas en fuente primaria."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 21,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://arxiv.org/pdf/1111.6887",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ias1.html",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://www.cinif.org.mx/",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://openpyxl.readthedocs.io/en/stable/simple_formulae.html",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://help.libreoffice.org/Calc/Recalculate",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://www.microsoft.com/en-us/download/details.aspx?id=36518",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://fast-standard.org/the-fast-standard/",
+    "family": "Estándares de modelado financiero",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Página oficial y enlace de descarga del estándar FAST (versión vigente por confirmar, sha256 por calcular). Es estándar voluntario, no obligación legal."
+   },
+   {
+    "url": "https://www.icaew.com/technical/technology/excel-community/improve-your-financial-modelling-practice",
+    "family": "Estándares de modelado financiero",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Fuente oficial del Financial Modelling Code; el propio código se presenta como marco de principios, no lista de cumplimiento obligatorio."
+   },
+   {
+    "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/financial-modelling-code.ashx",
+    "family": "Estándares de modelado financiero",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto del código para citas literales (separación de entradas, unidades, signos, controles); verificar edición/fecha."
+   },
+   {
+    "url": "https://www.icaew.com/technical/technology/excel-community/20-principles-for-good-spreadsheet-practice-2024-edition",
+    "family": "Guías profesionales de hojas de cálculo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Principios de separación de entradas/cálculos/salidas, pruebas, versiones y respaldo; edición 2024 con plantilla."
+   },
+   {
+    "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/how-to-review-a-spreadsheet-report.ashx",
+    "family": "Guías profesionales de hojas de cálculo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Metodología de revisión/auditoría de hojas, útil para candidate_tests de verificación."
+   },
+   {
+    "url": "https://www.ssrb.org/files/documents/BPM-Standards%20Comparison.pdf",
+    "family": "Estándares de modelado financiero",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Comparación de estándares hecha por un competidor (SSRB); solo candidate_claim. Útil para ver diferencias y propiedad de SMART."
+   },
+   {
+    "url": "https://arxiv.org/pdf/1704.01136",
+    "family": "Estándares de modelado financiero",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Según la búsqueda, indica que FAST, SMART y SSRB no se han probado con rigor empírico: limita su peso como evidencia."
+   },
+   {
+    "url": "https://eusprig.org/research-info/horror-stories/",
+    "family": "Investigación sobre errores",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Corpus de incidentes reales con errores de hojas de cálculo; motiva controles, pero solo cubre casos públicos."
+   },
+   {
+    "url": "https://arxiv.org/abs/2609.31815",
+    "family": "Investigación sobre errores",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Clasifica 121 incidentes; destaca errores de fórmula/datos e información oculta. Preprint, no revisado por pares."
+   },
+   {
+    "url": "https://arxiv.org/pdf/0802.3457",
+    "family": "Investigación sobre errores",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Tasas de error por celda y detección por inspección; sustenta revisión independiente y pruebas."
+   },
+   {
+    "url": "https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646",
+    "family": "Investigación sobre errores",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Caso célebre; matiza que el error de Excel fue solo parte del problema (ponderación y exclusiones). Evita sobreatribuir."
+   },
+   {
+    "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS2201",
+    "family": "Control interno regulado",
+    "stance": "context",
+    "role": "primary",
+    "why": "Norma obligatoria para auditores de emisores en EE. UU.; no prescribe controles específicos de hojas de cálculo. Aplica a ICFR, vigencia de enmiendas 15-dic-2026."
+   },
+   {
+    "url": "https://arxiv.org/pdf/1111.6887",
+    "family": "Control interno regulado",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Encuesta de 38 empresas sobre controles de hojas bajo SOX: muestra práctica, no obligación."
+   },
+   {
+    "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/",
+    "family": "Normas de presentación financiera",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Obligatorio para entidades que aplican IFRS (vigente 1-ene-2027): moneda de presentación y nivel de redondeo (B11). No exige formato Excel."
+   },
+   {
+    "url": "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ias1.html",
+    "family": "Normas de presentación financiera",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto vigente hasta IFRS 18: presentación en miles/millones permitida si se revela el redondeo."
+   },
+   {
+    "url": "https://www.cinif.org.mx/",
+    "family": "Normas de presentación financiera",
+    "stance": "context",
+    "role": "primary",
+    "why": "Emisor oficial de las NIF mexicanas (edición 2026); confirmar vigencia de NIF B-1/B-3 (2028) en el sitio. Aplica a México."
+   },
+   {
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/",
+    "family": "Formato de archivo",
+    "stance": "context",
+    "role": "primary",
+    "why": "Especificación normativa del formato .xlsx (5.ª edición, dic-2021); define fórmulas y valores en caché (el único requisito técnico exigible del archivo)."
+   },
+   {
+    "url": "https://openpyxl.readthedocs.io/en/stable/simple_formulae.html",
+    "family": "Herramientas",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Documentación oficial: openpyxl nunca evalúa fórmulas; nombres en inglés, comas; data_only devuelve valor en caché. Licencia MIT (verificar)."
+   },
+   {
+    "url": "https://help.libreoffice.org/Calc/Recalculate",
+    "family": "Herramientas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Documentación oficial de recálculo en Calc (MPL-2.0); base para recalcular y verificar valores de un xlsx generado."
+   },
+   {
+    "url": "https://www.microsoft.com/en-us/download/details.aspx?id=36518",
+    "family": "Herramientas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Documento de Microsoft sobre Inquire/Spreadsheet Compare para análisis de libros; disponibilidad depende de la edición de Office."
+   },
+   {
+    "url": "https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md",
+    "family": "Herramientas",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Ejemplo de flujo openpyxl + recálculo LibreOffice + revisión de errores; solo candidate_claim, no norma."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}

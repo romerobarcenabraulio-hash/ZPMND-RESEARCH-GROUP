@@ -1,0 +1,585 @@
+{
+ "research_id": "RP-2026-11-12-entregable-modelo-financiero",
+ "request_id": "RR-2026-11-12-entregable-modelo-financiero",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-12T18:56:36Z",
+ "question": "¿Cómo se construye y audita correctamente una hoja de cálculo o modelo financiero (separación de supuestos, cálculos y resultados, unidades, escenarios, controles, trazabilidad e integridad), qué es obligatorio en un contexto regulado o contractual y qué es estándar profesional, y con qué software y verificadores se produce y se comprueba?",
+ "why_zpmnd_needs_it": "Familia de entregable: Hojas de cálculo, modelos financieros y reportes de datos. ZPMND necesita criterios profesionales citables para producir y verificar este tipo de resultado, sin inventar obligaciones. Tercer entregable de prueba real. Pistas, no verdades: estándares de modelado (FAST Standard, ICAEW Financial Modelling Code, SMART), investigación sobre errores en hojas de cálculo (EuSpRIG), normas de presentación financiera (IFRS, NIF), herramientas de auditoría de fórmulas y bibliotecas (openpyxl, LibreOffice).",
+ "scope": "Se leyeron fuentes sobre buenas prácticas de modelado financiero en hojas de cálculo: estándar FAST (página), Financial Modelling Code de ICAEW (página y PDF 2024), Twenty principles (ICAEW), How to review a spreadsheet (ICAEW), Panko 2000 (EuSpRIG) y el archivo de Horror Stories de EuSpRIG. Las fuentes secundarias (SSMI, arXiv 2026, The Conversation) solo se usan como candidate_claims. No se hallaron normas legales ni contractuales sobre estructura de modelos. Esto pertenece a la parte de lo obligatorio, que queda sin cubrir.",
+ "sources": {
+  "primary": [
+   "SA-0158c328f3951f055dee4c80",
+   "SA-b8e80a84f0400395a5943aa4",
+   "SA-a205ce5bbe5fec2aa4dae581",
+   "SA-116a4eae5dabbd740eb8771a",
+   "SA-a69d53a4b2cde83460cb5346",
+   "SA-b4cd691e5552d7f23e943413",
+   "SA-0ba1f982790f7994bed94a12"
+  ],
+  "secondary": [
+   "SA-9dc8eb7a36636cf13d1d7933",
+   "SA-f62c7589d0a177bf259300b9",
+   "SA-3f0d760d5eb34523ba971bb1"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-0158c328f3951f055dee4c80",
+   "url": "https://fast-standard.org/the-fast-standard/",
+   "retrieved_at": "2026-11-12T18:49:55Z",
+   "sha256": "0158c328f3951f055dee4c805899105d1436766eafd8e87261d2ebc21a0f0703",
+   "bytes": 44494,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "FAST Standards Organisation",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "The FAST Standard"
+  },
+  {
+   "artifact_id": "SA-b8e80a84f0400395a5943aa4",
+   "url": "https://www.icaew.com/technical/technology/excel-community/improve-your-financial-modelling-practice",
+   "retrieved_at": "2026-11-12T18:49:57Z",
+   "sha256": "b8e80a84f0400395a5943aa4215e642149778374d101fbdc7e5bf1d2e1437c4e",
+   "bytes": 498295,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "ICAEW",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Improve your financial modelling practice (Financial Modelling Code)"
+  },
+  {
+   "artifact_id": "SA-a205ce5bbe5fec2aa4dae581",
+   "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/financial-modelling-code.ashx",
+   "retrieved_at": "2026-11-12T18:50:00Z",
+   "sha256": "a205ce5bbe5fec2aa4dae581b456e548e25602c96244d82fde21af6b1225ed86",
+   "bytes": 773022,
+   "media_type": "application/pdf",
+   "source_type": "standard",
+   "publisher": "ICAEW",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Financial Modelling Code (PDF)"
+  },
+  {
+   "artifact_id": "SA-116a4eae5dabbd740eb8771a",
+   "url": "https://www.icaew.com/technical/technology/excel-community/20-principles-for-good-spreadsheet-practice-2024-edition",
+   "retrieved_at": "2026-11-12T18:50:02Z",
+   "sha256": "116a4eae5dabbd740eb8771aa17600e8dacaa60e59f9b1c608e382aea9139e28",
+   "bytes": 522685,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "ICAEW",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Twenty principles for good spreadsheet practice (2024 edition)"
+  },
+  {
+   "artifact_id": "SA-a69d53a4b2cde83460cb5346",
+   "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/how-to-review-a-spreadsheet-report.ashx",
+   "retrieved_at": "2026-11-12T18:50:03Z",
+   "sha256": "a69d53a4b2cde83460cb5346701c30150dd5df6e76239461af2e53359e06b3d3",
+   "bytes": 832919,
+   "media_type": "application/pdf",
+   "source_type": "standard",
+   "publisher": "ICAEW",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "How to review a spreadsheet"
+  },
+  {
+   "artifact_id": "SA-9dc8eb7a36636cf13d1d7933",
+   "url": "https://arxiv.org/pdf/1704.01136",
+   "retrieved_at": "2026-11-12T18:53:05Z",
+   "sha256": "9dc8eb7a36636cf13d1d7933a0b504b33df307e86d1072e7f7a3909d5e2c9dfe",
+   "bytes": 566372,
+   "media_type": "application/pdf",
+   "source_type": "preprint",
+   "publisher": "arXiv / EuSpRIG",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Characteristics of Spreadsheets Developed with the SSMI Methodology"
+  },
+  {
+   "artifact_id": "SA-b4cd691e5552d7f23e943413",
+   "url": "https://eusprig.org/research-info/horror-stories/",
+   "retrieved_at": "2026-11-12T18:53:20Z",
+   "sha256": "b4cd691e5552d7f23e943413d67b6139b24ee7878d7b6bf5c3e6eeb16807ef84",
+   "bytes": 188767,
+   "media_type": "text/html",
+   "source_type": "attack_evidence",
+   "publisher": "EuSpRIG",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Horror Stories"
+  },
+  {
+   "artifact_id": "SA-f62c7589d0a177bf259300b9",
+   "url": "https://arxiv.org/abs/2609.31815",
+   "retrieved_at": "2026-11-12T18:53:22Z",
+   "sha256": "f62c7589d0a177bf259300b95e6739acb1ea488dfe0b305ae1f8dd219f48912a",
+   "bytes": 41747,
+   "media_type": "text/html",
+   "source_type": "preprint",
+   "publisher": "arXiv",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Anatomy of a Spreadsheet Failure: Analysing the EuSpRIG Horror Story Corpus"
+  },
+  {
+   "artifact_id": "SA-0ba1f982790f7994bed94a12",
+   "url": "https://arxiv.org/pdf/0802.3457",
+   "retrieved_at": "2026-11-12T18:53:35Z",
+   "sha256": "0ba1f982790f7994bed94a12fa78fd4ff9eb9006c98c07ac30174e6732d9ee1d",
+   "bytes": 56840,
+   "media_type": "application/pdf",
+   "source_type": "peer_reviewed",
+   "publisher": "Panko / EuSpRIG (arXiv)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Spreadsheet Errors: What We Know. What We Think We Can Do"
+  },
+  {
+   "artifact_id": "SA-3f0d760d5eb34523ba971bb1",
+   "url": "https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646",
+   "retrieved_at": "2026-11-12T18:53:50Z",
+   "sha256": "3f0d760d5eb34523ba971bb194e70da2b22fe319f385f7d8b0fad73cfc721378",
+   "bytes": 180656,
+   "media_type": "text/html",
+   "source_type": "news",
+   "publisher": "The Conversation",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "The Reinhart-Rogoff error"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El Código de ICAEW declara que no pretende ser una herramienta de cumplimiento tipo lista de verificación, sino un marco para quien busque (la cita queda cortada).",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "The Code is not intended to be a tick-box compliance tool; rather it is a framework for anyone looking to",
+    "locator": "Financial Modelling Code PDF, Introduction"
+   },
+   {
+    "claim": "El Código de ICAEW recomienda segregar entradas (supuestos), cálculos y salidas (resultados), en hojas separadas o en secciones delimitadas de una misma hoja.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "Segregate inputs (assumptions), calculations and outputs (results), either by using\nseparate worksheets, or demarcated sections on the same worksheet.",
+    "locator": "Financial Modelling Code PDF, Layout and structure"
+   },
+   {
+    "claim": "El Código ICAEW pide que, para cada valor del modelo, quede claro qué unidades de medida se usan.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "For every value in a model, it should be clear what units of measurement are employed",
+    "locator": "Financial Modelling Code PDF, Use clear units"
+   },
+   {
+    "claim": "El Código ICAEW recomienda una convención de signos clara y explícita.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "The meaning of a positive or negative value sign for each value in a model must be made clear.",
+    "locator": "Financial Modelling Code PDF, Use a clear sign convention"
+   },
+   {
+    "claim": "El Código ICAEW dice que quien construye el modelo debe buscar ofrecer un \"motor\" por el que pasar escenarios y sensibilidades alternativos.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "The aim of the builder should be to provide ‘an\nengine’ through which alternative scenarios and sensitivities can be passed.",
+    "locator": "Financial Modelling Code PDF, Determine the goals of your model"
+   },
+   {
+    "claim": "El Código ICAEW describe una verificación maestra que comprueba si alguna verificación del modelo está incumplida y, si es así, avisa al usuario.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "A master check tests whether any checks in the model are in breach and alerts the user if\nany are.",
+    "locator": "Financial Modelling Code PDF, Include a master check"
+   },
+   {
+    "claim": "El Código ICAEW recomienda incluir una tolerancia en las verificaciones.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "Include a tolerance in checks to allow for very small acceptable variations, such as\nExcel rounding errors.",
+    "locator": "Financial Modelling Code PDF, Include checks"
+   },
+   {
+    "claim": "El Código ICAEW dice que nunca se debe usar hardcoding para valores que previsiblemente puedan cambiar durante la vida del modelo.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "hardcoding should\nnever be used for values that could foreseeably change during the life of the model",
+    "locator": "Financial Modelling Code PDF, Avoid hardcoding"
+   },
+   {
+    "claim": "El Código ICAEW aconseja no usar hojas ocultas.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "Don’t use hidden worksheets.",
+    "locator": "Financial Modelling Code PDF, Don’t hide things"
+   },
+   {
+    "claim": "El Código ICAEW aconseja desactivar el ajuste 'Enable iterative calculations'.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "Disable the ‘Enable iterative calculations’ setting.",
+    "locator": "Financial Modelling Code PDF, Avoid circular references"
+   },
+   {
+    "claim": "El Código ICAEW desaconseja usar el ajuste 'Precision as displayed'.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "Don’t use the ‘Precision as displayed’ setting to round figures automatically to\nmatch their formatted presentation.",
+    "locator": "Financial Modelling Code PDF, Avoid unnecessary rounding"
+   },
+   {
+    "claim": "El Código ICAEW indica que ninguna forma de construir un modelo es la correcta para todas las situaciones.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "No one way of building a model is right for every situation.",
+    "locator": "Financial Modelling Code PDF, Introduction"
+   },
+   {
+    "claim": "El Código ICAEW recomienda usar solo funcionalidad nativa de Excel, no VBA, para los cálculos que afectan resultados.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "Use native Excel functionality, not VBA, to perform all calculations that\naffect results.",
+    "locator": "Financial Modelling Code PDF, Use VBA and macros sparingly"
+   },
+   {
+    "claim": "El Código ICAEW recomienda un sistema de revisión por pares (p. ej., por un colega o incluso una auditoría profesional) si el impacto del modelo es especialmente significativo.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "Operate a system of peer review (eg, by a colleague or even a professional audit)\nif the model’s impact is particularly significant.",
+    "locator": "Financial Modelling Code PDF, Review and test your models"
+   },
+   {
+    "claim": "El Código ICAEW se elaboró a partir de una revisión de siete metodologías y de aportes de más de una docena de organizaciones de modelización financiera.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581"
+    ],
+    "quote": "It was formed from a review of seven\nmethodologies and input from over a dozen financial modelling\norganisations.",
+    "locator": "Financial Modelling Code PDF, Foreword"
+   },
+   {
+    "claim": "Según la página, el Código ICAEW se publicó el 12 nov 2018.",
+    "artifact_ids": [
+     "SA-b8e80a84f0400395a5943aa4"
+    ],
+    "quote": "Published: 12 Nov 2018",
+    "locator": "Página ICAEW Improve your financial modelling practice"
+   },
+   {
+    "claim": "FAST se define como un conjunto de reglas que orienta sobre la estructura y el diseño de hojas de cálculo eficientes.",
+    "artifact_ids": [
+     "SA-0158c328f3951f055dee4c80"
+    ],
+    "quote": "A set of rules providing guidance on the structure and design of efficient spreadsheets",
+    "locator": "Página The FAST Standard"
+   },
+   {
+    "claim": "FAST sostiene que la precisión espuria distrae y roza lo peligroso, sobre todo cuando está desequilibrada.",
+    "artifact_ids": [
+     "SA-0158c328f3951f055dee4c80"
+    ],
+    "quote": "Spurious precision is distracting, verging on dangerous, particularly when it is unbalanced.",
+    "locator": "FAST, sección Appropriate"
+   },
+   {
+    "claim": "FAST declara que los modelos exigen consistencia rigurosa en el diseño y la organización.",
+    "artifact_ids": [
+     "SA-0158c328f3951f055dee4c80"
+    ],
+    "quote": "Rigorous consistency in layout and organisation is essential in retaining the model’s logical integrity over time",
+    "locator": "FAST, sección Structured"
+   },
+   {
+    "claim": "Los Twenty principles dicen que un buen diseño asegura que cada entrada se introduzca una sola vez y, en lo posible, que todas las entradas estén en la misma sección de la hoja.",
+    "artifact_ids": [
+     "SA-116a4eae5dabbd740eb8771a"
+    ],
+    "quote": "Good design ensures that any input is entered only once, and as far as possible all inputs are entered in the same section of the spreadsheet.",
+    "locator": "Twenty principles, Principio 9"
+   },
+   {
+    "claim": "Los Twenty principles piden colocar los valores fijos en celdas separadas, no dentro de fórmulas.",
+    "artifact_ids": [
+     "SA-116a4eae5dabbd740eb8771a"
+    ],
+    "quote": "Place any fixed values into separate cells and reference them within a formula.",
+    "locator": "Twenty principles, Principio 14"
+   },
+   {
+    "claim": "Los Twenty principles piden resumir las verificaciones por hoja y a nivel de libro.",
+    "artifact_ids": [
+     "SA-116a4eae5dabbd740eb8771a"
+    ],
+    "quote": "Checks should be summarised sheet by sheet as well as at whole workbook level",
+    "locator": "Twenty principles, Principio 17"
+   },
+   {
+    "claim": "Los Twenty principles señalan que la autorrevisión detecta un número limitado de errores por el sesgo de revisar el propio trabajo.",
+    "artifact_ids": [
+     "SA-116a4eae5dabbd740eb8771a"
+    ],
+    "quote": "Self-review is limited in how many errors can be identified due to the bias of reviewing one’s own work.",
+    "locator": "Twenty principles, Principio 18"
+   },
+   {
+    "claim": "Los Twenty principles piden copia de seguridad y control de versiones regulares.",
+    "artifact_ids": [
+     "SA-116a4eae5dabbd740eb8771a"
+    ],
+    "quote": "Ensure there is a regular process of backup and version control.",
+    "locator": "Twenty principles, Principio 19"
+   },
+   {
+    "claim": "Los Twenty principles advierten que algo (la cita no dice qué) puede ser vulnerado por un usuario lo bastante competente.",
+    "artifact_ids": [
+     "SA-116a4eae5dabbd740eb8771a"
+    ],
+    "quote": "can be circumvented by a sufficiently competent user",
+    "locator": "Twenty principles, Principio 20"
+   },
+   {
+    "claim": "ICAEW afirma que ninguna revisión de hoja de cálculo puede automatizarse por completo.",
+    "artifact_ids": [
+     "SA-a69d53a4b2cde83460cb5346"
+    ],
+    "quote": "There is no way to fully automate a review to ensure the validity of a spreadsheet.",
+    "locator": "How to review a spreadsheet, Why do spreadsheets need reviewing?"
+   },
+   {
+    "claim": "ICAEW menciona normas formales, como la norma de revisiones no de auditoría ISAE 3000, que podrían servir de base a un encargo de aseguramiento sobre una hoja de cálculo.",
+    "artifact_ids": [
+     "SA-a69d53a4b2cde83460cb5346"
+    ],
+    "quote": "There are formal standards, such as the standard on non-audit reviews, ISAE 3000, that could form\nthe basis for an assurance engagement over a spreadsheet",
+    "locator": "How to review a spreadsheet, What a review consists of"
+   },
+   {
+    "claim": "La guía de revisión se centra en cinco etapas principales de revisión.",
+    "artifact_ids": [
+     "SA-a69d53a4b2cde83460cb5346"
+    ],
+    "quote": "In this guide we will focus on five main review stages:",
+    "locator": "How to review a spreadsheet, What a review consists of"
+   },
+   {
+    "claim": "La guía de revisión propone crear datos de prueba con un resultado conocido para comprobar que la hoja da la misma respuesta.",
+    "artifact_ids": [
+     "SA-a69d53a4b2cde83460cb5346"
+    ],
+    "quote": "Create a set of test data with a known result to ensure that\nthe spreadsheet gives the same response.",
+    "locator": "How to review a spreadsheet, Data review"
+   },
+   {
+    "claim": "La guía de revisión señala que el uso de una función (la cita no dice cuál) puede enmascarar errores más allá de lo previsto.",
+    "artifact_ids": [
+     "SA-a69d53a4b2cde83460cb5346"
+    ],
+    "quote": "the use of this function can mask errors beyond what is intended",
+    "locator": "How to review a spreadsheet, Detailed review, Formulas"
+   },
+   {
+    "claim": "La guía de revisión describe Trace Precedents, que encuentra las celdas de las que proceden los valores de la celda actual.",
+    "artifact_ids": [
+     "SA-a69d53a4b2cde83460cb5346"
+    ],
+    "quote": "Trace Precedents – find the cells that are the source of the values in the current cell",
+    "locator": "How to review a spreadsheet, Useful functionality"
+   },
+   {
+    "claim": "La guía de revisión menciona si se ha usado un estándar de modelización como Operis, SMART, FAST u otro.",
+    "artifact_ids": [
+     "SA-a69d53a4b2cde83460cb5346"
+    ],
+    "quote": "whether a modelling standard such as Operis, SMART, FAST, or another\nstandard",
+    "locator": "How to review a spreadsheet, Post-review activities"
+   },
+   {
+    "claim": "Panko 2000 concluyó que solo un enfoque de reducción de errores había demostrado ser efectivo: la inspección de código.",
+    "artifact_ids": [
+     "SA-0ba1f982790f7994bed94a12"
+    ],
+    "quote": "only one approach to error reduction has been demonstrated to be effective. This is\ncode inspection",
+    "locator": "Panko 2000, Conclusion"
+   },
+   {
+    "claim": "Panko 2000 afirma que las metodologías de buenas prácticas no estaban probadas experimentalmente.",
+    "artifact_ids": [
+     "SA-0ba1f982790f7994bed94a12"
+    ],
+    "quote": "One general problem with these methodologies is that they have not been tested experimentally",
+    "locator": "Panko 2000, Good Development Practices?"
+   },
+   {
+    "claim": "Panko 2000 señala que los errores de hardwiring son bastante fáciles de prevenir con la protección de celdas.",
+    "artifact_ids": [
+     "SA-0ba1f982790f7994bed94a12"
+    ],
+    "quote": "Hardwiring errors are rather easy to prevent using cell protection.",
+    "locator": "Panko 2000, Cell Protection"
+   },
+   {
+    "claim": "Panko 2000 dice que algo (la cita no dice qué) no debe considerarse un punto de parada aceptable.",
+    "artifact_ids": [
+     "SA-0ba1f982790f7994bed94a12"
+    ],
+    "quote": "it must not\nbe considered an acceptable stopping point",
+    "locator": "Panko 2000, Examining Results for Reasonableness"
+   },
+   {
+    "claim": "El archivo de EuSpRIG recoge un error de 8.000 millones de libras por falta de control y revisión en SCB, que acabó en una multa de 47 millones de libras.",
+    "artifact_ids": [
+     "SA-b4cd691e5552d7f23e943413"
+    ],
+    "quote": "All adding up to an £8bn error due to a lack of control and review at SCB, and a £47m fine as a result.",
+    "locator": "Horror Stories, POB2106"
+   },
+   {
+    "claim": "El archivo de EuSpRIG recoge que la Prudential Regulatory Authority (PRA) impuso a Metro Bank plc una sanción económica de 5.376.000 libras.",
+    "artifact_ids": [
+     "SA-b4cd691e5552d7f23e943413"
+    ],
+    "quote": "The Prudential Regulatory Authority (PRA) imposes a financial penalty on Metro Bank plc of £5,376,000",
+    "locator": "Horror Stories, POB2101"
+   },
+   {
+    "claim": "El archivo de EuSpRIG recoge un caso en que se guardaron datos originales en una hoja de cálculo electrónica \"no oficial\" y no controlada, en una unidad de red compartida.",
+    "artifact_ids": [
+     "SA-b4cd691e5552d7f23e943413"
+    ],
+    "quote": "You stored original data in an ‘unofficial’ and uncontrolled electronic spreadsheet on a shared computer network drive",
+    "locator": "Horror Stories, POB1701"
+   },
+   {
+    "claim": "El archivo de EuSpRIG recoge que hacen falta comprobaciones y controles que concilien la salida de cada etapa de transformación con su entrada, como conteos de registros y hash totals.",
+    "artifact_ids": [
+     "SA-b4cd691e5552d7f23e943413"
+    ],
+    "quote": "there must be checks and controls that reconcile the output of a transformation stage to its input, such as record counts and hash totals",
+    "locator": "Horror Stories, POB2001"
+   }
+  ],
+  "conflicting": [
+   {
+    "claim": "Panko 2000 sugiere que si todos los datos de entrada se colocan en una sección y la lógica en otra, la lógica puede ser más difícil de leer en una inspección de código.",
+    "artifact_ids": [
+     "SA-a205ce5bbe5fec2aa4dae581",
+     "SA-0ba1f982790f7994bed94a12"
+    ],
+    "quote": "If all input data are\nplaced in one section and logic in another, the logic may be more difficult to read for code inspection.",
+    "locator": "Panko 2000, Good Development Practices? (frente a ICAEW Code, Layout and structure)"
+   }
+  ],
+  "unknown": [
+   "Ninguna fuente leída establece un requisito legal o contractual específico sobre la estructura de un modelo financiero; los requisitos obligatorios dependen del contrato, regulador o jurisdicción y no se hallaron.",
+   "No se obtuvieron sha256, URL completas ni fechas de vigencia verificadas de los archivos descargados; solo hay fechas visibles en el texto.",
+   "No se hallaron licencias, versiones ni capacidades verificables de herramientas de auditoría de hojas de cálculo (add-ins, diagnóstico); solo las funciones nativas de Excel descritas por ICAEW.",
+   "No se leyeron los estándares SMART, Operis ni FMI, ni la guía de ICAEW Corporate Finance Faculty, ni el texto completo del FAST Standard (solo la página de presentación).",
+   "No se hallaron ejemplos oficiales del emisor, salvo que ICAEW ofrece una plantilla de libro para los 20 principios (no descargada).",
+   "No se examinó la normativa de reguladores (PRA, SEC, FDA, ICO) más allá de referencias en el archivo de historias."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Las fuentes primarias leídas (ICAEW, FAST) son convenciones profesionales voluntarias; ninguna impone estas prácticas como obligatorias. Presentarlas como requisito legal sería un error.",
+  "INTERPRETACIÓN: Lo obligatorio proviene del contexto: contrato, regulador (p. ej. sanciones PRA por controles deficientes) o normas de aseguramiento (ISAE 3000). Debe verificarse cada caso con la fuente específica.",
+  "SECUNDARIA: SA-9dc8eb7a36636cf13d1d7933 (Mireault, EuSpRIG 2016) describe SSMI como metodología con arquitectura de 3 capas (interfaz, aplicación, servicios) y afirma que no ha sido probada empíricamente.",
+  "SECUNDARIA: SA-f62c7589d0a177bf259300b9 (arXiv, Thorne y Collins, 2026) analiza 121 incidentes del archivo EuSpRIG y dice que el daño por datos ocultos o embebidos va en aumento; no se verificó el texto completo.",
+  "SECUNDARIA: SA-3f0d760d5eb34523ba971bb1 (The Conversation, 2013) atribuye el error Reinhart-Rogoff a un promedio que omitió 5 países de 20 y urge a publicar datos y código.",
+  "INTERPRETACIÓN: Los errores del archivo de historias (hardcoding, referencias erróneas, filas ocultas, límites de filas) coinciden con las recomendaciones de ICAEW (celdas de entrada, consistencia, no ocultar, verificaciones), pero esto no prueba que las prácticas reduzcan errores; Panko 2000 indica que no estaban probadas."
+ ],
+ "candidate_methods": [
+  "Flujo entradas → cálculos → salidas, con tiempos en horizontal y cálculos divididos en pasos (ICAEW Code).",
+  "Revisión en cinco etapas: inicial, estructural, de datos, analítica y detallada (ICAEW How to review).",
+  "Cálculo paralelo independiente para modelos críticos (ICAEW How to review).",
+  "Inspección celda por celda en grupo para modelos de alto riesgo, que es lo que Panko 2000 halló efectivo (cerca del 80%)."
+ ],
+ "candidate_controls": [
+  "Verificación maestra visible en todas las hojas, con tolerancia y formato condicional (ICAEW Code).",
+  "Reconciliación de conteos y totales de control en cada transferencia de datos entre sistemas (EuSpRIG POB2001).",
+  "Hoja de registro de revisión dentro del libro: versión, revisor, metodología, riesgo, hallazgos y correcciones (ICAEW How to review).",
+  "Protección de celdas de fórmulas y validación de datos en las celdas de entrada, sin abusar de ella."
+ ],
+ "candidate_tests": [
+  "Consistencia de fórmulas por fila: comparar la fórmula en notación R1C1 o con Ctrl+\\; criterio: sin celdas discrepantes salvo las marcadas.",
+  "Prueba con entradas todo cero: la salida esperada es cero; investigar los valores distintos de cero.",
+  "Delta testing: variar un supuesto en pequeña cantidad y comprobar que el cambio en las salidas es proporcionado.",
+  "Datos de prueba con resultado conocido, comparado con el resultado del modelo.",
+  "Prueba de estrés con valores extremos o inválidos (cantidad negativa, texto en campo numérico).",
+  "Búsqueda de hojas ocultas: comparar =INFO(\"NUMFILE\") con las pestañas visibles; buscar también el formato ;;; y enlaces externos.",
+  "Comprobar que la verificación maestra es cero con todos los controles pasando, y que se activa al forzar un desajuste.",
+  "Comprobar que no hay cálculo manual, iteración habilitada ni 'Precision as displayed'."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Etiquetar cada regla de modelado con su clase (convención profesional, buena práctica) y no marcarla como obligatoria sin cita de la norma, ley o contrato.",
+  "Exigir que el entregable declare qué estándar siguió (ICAEW Code, FAST u otro) y el alcance de la revisión, para evitar que 'revisado' se lea como 'auditado'.",
+  "Registrar el contrato o regulador aplicable como fuente aparte, pues estas fuentes no lo cubren."
+ ],
+ "affected_existing_concepts": [
+  "Separación supuestos/cálculos/resultados",
+  "Controles y verificación maestra",
+  "Trazabilidad y control de versiones",
+  "Clasificación de requisitos obligatorio vs convención"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: Un verificador automático de consistencia de fórmulas, hojas ocultas, enlaces externos y presencia de checks podría cubrir parte de las pruebas candidatas, pero no sustituye la revisión humana.",
+  "HIPÓTESIS: La revalidación debería activarse al cambiar la versión de ICAEW Code o FAST, la versión de Excel y el medio de distribución (por ejemplo PDF o publicación con tablas dinámicas)."
+ ],
+ "limitations": [
+  "Fuentes leídas como texto: sin sha256, URL verificadas ni fecha de vigencia confiable; la página de ICAEW muestra 2018 y el PDF 2024.",
+  "De FAST solo se leyó la página de presentación, no el documento completo de reglas.",
+  "La fuente del Horror Stories es un archivo de noticias con comentarios; no establece causalidad verificada.",
+  "Panko 2000 es antiguo y sus conclusiones sobre efectividad pueden estar superadas.",
+  "La fuente arXiv 2026 se leyó solo en su resumen; las fuentes SSMI y The Conversation son secundarias.",
+  "No se consultó normativa legal ni contratos; la parte regulada queda sin cubrir.",
+  "No hay información de herramientas con licencia y versión, solo funciones nativas de Excel descritas por ICAEW.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 31 de 41 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 21 propuestas, 12 aceptadas, 9 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Se descartaron 1 hallazgos cuya cita no aparece tal cual en el texto de la fuente que citan (detalle en receipt.json): sin su cita no son hechos.",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.ssrb.org/files/documents/BPM-Standards%20Comparison.pdf (refused); https://pcaobus.org/oversight/standards/auditing-standards/details/AS2201 (403)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
