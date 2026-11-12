@@ -1,0 +1,703 @@
+{
+ "research_id": "RP-2026-11-12-entregable-documento-profesional",
+ "request_id": "RR-2026-11-12-entregable-documento-profesional",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-12T18:53:21Z",
+ "question": "¿Qué es obligatorio y qué es convención al estructurar, citar, dar formato y publicar un informe o documento profesional (ejecutivo, técnico, científico, académico, manual, SOP o política), según jurisdicción, institución, audiencia y medio (impreso, PDF, digital), y con qué software y verificadores se produce y se comprueba?",
+ "why_zpmnd_needs_it": "Familia de entregable: Informes ejecutivos, técnicos, científicos y académicos, y documentos empresariales (manuales, SOP, políticas). ZPMND necesita criterios profesionales citables para producir y verificar este tipo de resultado, sin inventar obligaciones. Primer entregable de prueba real. Pistas, no verdades: normas de informes técnicos y de citas (ISO, ANSI/NISO, IEEE, APA, Chicago), lenguaje claro (ISO 24495-1), PDF/A y PDF/UA (ISO 19005, ISO 14289), accesibilidad (WCAG, EN 301 549), guías de estilo de gobiernos y universidades.",
+ "scope": "Parte 1 de 2. Se leyeron completas tres fuentes primarias: (1) noticia de W3C WAI sobre WCAG 2.2 como Recomendación (05-oct-2023); (2) EN 301 549 V3.2.1 (2021-03) de ETSI/CEN/CENELEC, texto completo; (3) página de EUR-Lex de la Directiva (UE) 2019/882, solo metadatos y navegación (sin articulado). Se cubre la accesibilidad de documentos (web y no web, p. ej. PDF) y su verificación. No se cubren estructura, citación, formato editorial, SOP ni políticas. / Parte 2 de 2. Se leyeron: Revised 508 Standards (Access Board, completa), Section508.gov Electronic Documents Overview, README de veraPDF-library (GitHub), FAQ de PAC (secundaria), APA sample papers (solo página de bloqueo Incapsula) y IEEE Editorial Style Manual (2024-07-29). Se cubre el requisito obligatorio para documentos electrónicos federales de EE. UU., la convención editorial IEEE y herramientas de verificación.",
+ "sources": {
+  "primary": [
+   "SA-383ebcd3b47ed0f58d72b966",
+   "SA-1eee3a1841a94567da8e59f3",
+   "SA-75c1bc611f1aa3bb10c3912e",
+   "SA-b79682785687f0c6b2188fee",
+   "SA-2501b15d5916651b3ee1e848",
+   "SA-1e6c65b743847dda3c80ebd8",
+   "SA-7aca2afeba416b6472920f6c",
+   "SA-4891f9e7ae600ddc57628d46"
+  ],
+  "secondary": [
+   "SA-1fda8e7301a38c21db3f248f"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-383ebcd3b47ed0f58d72b966",
+   "url": "https://www.w3.org/WAI/news/2023-10-05/wcag22rec/",
+   "retrieved_at": "2026-11-12T18:49:46Z",
+   "sha256": "383ebcd3b47ed0f58d72b966907a2964c9848a71f2b02764bd0246036c97d8f2",
+   "bytes": 29991,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "W3C WAI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "WCAG 2.2 is a W3C Recommendation"
+  },
+  {
+   "artifact_id": "SA-1eee3a1841a94567da8e59f3",
+   "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf",
+   "retrieved_at": "2026-11-12T18:49:48Z",
+   "sha256": "1eee3a1841a94567da8e59f3b19a782ce9ab081c386b6a2a763b8cde13ff5b49",
+   "bytes": 2285361,
+   "media_type": "application/pdf",
+   "source_type": "standard",
+   "publisher": "ETSI / CEN / CENELEC",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "EN 301 549 V3.2.1 (2021-03) Accessibility requirements for ICT products and services"
+  },
+  {
+   "artifact_id": "SA-75c1bc611f1aa3bb10c3912e",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0882",
+   "retrieved_at": "2026-11-12T18:49:49Z",
+   "sha256": "75c1bc611f1aa3bb10c3912ee1ab2c6890cb8ec1fe4c983ae5751857ffaa3b13",
+   "bytes": 259819,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "EUR-Lex / Unión Europea",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Directive (EU) 2019/882 (European Accessibility Act)"
+  },
+  {
+   "artifact_id": "SA-b79682785687f0c6b2188fee",
+   "url": "https://www.access-board.gov/ict/",
+   "retrieved_at": "2026-11-12T18:50:00Z",
+   "sha256": "b79682785687f0c6b2188fee355cc1d2a464e37befe4d6233b4fa0b67c9e9e08",
+   "bytes": 493062,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "U.S. Access Board",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Revised 508 Standards and 255 Guidelines"
+  },
+  {
+   "artifact_id": "SA-2501b15d5916651b3ee1e848",
+   "url": "https://www.section508.gov/test/documents/",
+   "retrieved_at": "2026-11-12T18:50:01Z",
+   "sha256": "2501b15d5916651b3ee1e8485e88f1f8fa05b9574a153fd7e77c510019c9a713",
+   "bytes": 34321,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "GSA Section508.gov",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Electronic Documents Overview / ICT Testing Baseline for Electronic Documents"
+  },
+  {
+   "artifact_id": "SA-1e6c65b743847dda3c80ebd8",
+   "url": "https://github.com/veraPDF/veraPDF-library",
+   "retrieved_at": "2026-11-12T18:50:03Z",
+   "sha256": "1e6c65b743847dda3c80ebd8f58037dab7a3cca175ac247f0bb84f83f997aeba",
+   "bytes": 265042,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "veraPDF Consortium / Open Preservation Foundation",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "veraPDF-library: validador PDF/A de código abierto"
+  },
+  {
+   "artifact_id": "SA-1fda8e7301a38c21db3f248f",
+   "url": "https://pac.pdf-accessibility.org/en/resources/faq",
+   "retrieved_at": "2026-11-12T18:50:04Z",
+   "sha256": "1fda8e7301a38c21db3f248f2c8c07a4f70f99f0b1b352902fc0d527fc8060f9",
+   "bytes": 24211,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "PDF/UA Foundation (axes4)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "PAC FAQ"
+  },
+  {
+   "artifact_id": "SA-7aca2afeba416b6472920f6c",
+   "url": "https://apastyle.apa.org/style-grammar-guidelines/paper-format/sample-papers",
+   "retrieved_at": "2026-11-12T18:50:06Z",
+   "sha256": "7aca2afeba416b6472920f6cc3061eb25bddaeaa22d05eea1fc934b78518cefa",
+   "bytes": 1036,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "American Psychological Association",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "APA Style sample papers"
+  },
+  {
+   "artifact_id": "SA-4891f9e7ae600ddc57628d46",
+   "url": "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Editorial-Style-Manual-for-Authors.pdf",
+   "retrieved_at": "2026-11-12T18:50:07Z",
+   "sha256": "4891f9e7ae600ddc57628d46b242f5319b8924789841aac33b847001c2bedaba",
+   "bytes": 809723,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "IEEE Publishing Operations",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "IEEE Editorial Style Manual for Authors"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "WCAG 2.2 es ahora un estándar web «Recomendación del W3C».",
+    "artifact_ids": [
+     "SA-383ebcd3b47ed0f58d72b966"
+    ],
+    "quote": "Web Content Accessibility Guidelines (WCAG) 2.2 is now a “W3C Recommendation” web standard.",
+    "locator": "Noticia WAI, 05 October 2023"
+   },
+   {
+    "claim": "WCAG 2.2 añade 9 criterios de éxito respecto a WCAG 2.1.",
+    "artifact_ids": [
+     "SA-383ebcd3b47ed0f58d72b966"
+    ],
+    "quote": "WCAG 2.2 adds 9 requirements (called success criteria) since WCAG 2.1.",
+    "locator": "Noticia WAI, párrafo principal"
+   },
+   {
+    "claim": "La EN 301 549 V3.2.1 especifica los requisitos funcionales de accesibilidad aplicables a productos y servicios TIC.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "specifies the functional accessibility requirements applicable to ICT products and services",
+    "locator": "EN 301 549, cláusula 1 Scope"
+   },
+   {
+    "claim": "Las cláusulas que contienen la palabra 'should' son recomendaciones y no son obligatorias para la conformidad.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Those clauses containing the word \"should\" are recommendations and are not required for conformance.",
+    "locator": "EN 301 549, cláusula 14 Conformance"
+   },
+   {
+    "claim": "Cuando una de las precondiciones es falsa, el requisito no aplica.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "When one of the pre-conditions is false the requirement is not applicable.",
+    "locator": "EN 301 549, cláusula 14"
+   },
+   {
+    "claim": "La presente cláusula se aplica a documentos descargables.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "the present clause applies to downloadable documents",
+    "locator": "EN 301 549, cláusula 10.0"
+   },
+   {
+    "claim": "Los documentos no web deben cumplir el criterio WCAG 2.1 1.4.3 Contraste (mínimo).",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Where ICT is a non-web document, it shall satisfy the WCAG 2.1 Success Criterion 1.4.3 Contrast (Minimum).",
+    "locator": "EN 301 549, cláusula 10.1.4.3"
+   },
+   {
+    "claim": "Los documentos tienen títulos que describen su tema o propósito.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Documents have titles that describe topic or purpose.",
+    "locator": "EN 301 549, Tabla 10.7 (10.2.4.2)"
+   },
+   {
+    "claim": "El idioma humano por defecto de cada documento puede determinarse programáticamente.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "The default human language of each document can be programmatically determined.",
+    "locator": "EN 301 549, Tabla 10.11 (10.3.1.1)"
+   },
+   {
+    "claim": "Los documentos no web deben cumplir el criterio de éxito 1.3.1 Info y relaciones de WCAG 2.1.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Where ICT is a non-web document, it shall satisfy the WCAG 2.1 Success Criterion 1.3.1 Info and Relationships.",
+    "locator": "EN 301 549, cláusula 10.1.3.1"
+   },
+   {
+    "claim": "Es buena práctica mapearlos a un tipo de estructura estándar como solución alternativa para el lector.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "it is best practice to map them to a standard structure type as a fall-back solution for the reader.",
+    "locator": "EN 301 549, nota de 10.1.3.1"
+   },
+   {
+    "claim": "Los requisitos de la cláusula 10 aplican también a documentos protegidos con firma digital, cifrado, contraseña o marca de agua.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Requirements in clause 10 also apply to documents that are protected using mechanisms such as digital signatures, encryption, password protection, and watermarks",
+    "locator": "EN 301 549, cláusula 10.0, NOTE 7"
+   },
+   {
+    "claim": "Se recomienda como buena práctica incluir metadatos de accesibilidad del documento con WebSchemas/Accessibility 2.0.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "It is best practice to provide meta data on the accessibility of the document within or separate to the document using WebSchemas/Accessibility 2.0",
+    "locator": "EN 301 549, cláusula 10.0, NOTE 8"
+   },
+   {
+    "claim": "Aunque no es un requisito, la capacidad de saltar bloques de contenido repetidos dentro de los documentos se considera en general buena práctica.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Although not a requirement, the ability to bypass blocks of content that are repeated within documents is generally considered best practice",
+    "locator": "EN 301 549, cláusula 10.2.4.1, NOTE 2"
+   },
+   {
+    "claim": "La documentación de producto suministrada con las TIC debe ofrecerse en al menos uno de ciertos formatos electrónicos.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Product documentation provided with the ICT shall be made available in at least one of th e following electronic formats:",
+    "locator": "EN 301 549, cláusula 12.1.2"
+   },
+   {
+    "claim": "La EN 301 549 V3.2.1 refleja el contenido de la Recomendación WCAG 2.1 del W3C.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "The present document reflects the content of the W3C WCAG 2.1 Recommendation [5].",
+    "locator": "EN 301 549, Introducción, NOTE 1"
+   },
+   {
+    "claim": "La conformidad con WCAG 2.1 nivel AA es equivalente a algo que la cita no especifica.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Conformance with W3C Web Content Accessibility Guidelines (WCAG 2.1) [5] Level AA is equivalent to",
+    "locator": "EN 301 549, cláusula 9.0"
+   },
+   {
+    "claim": "No se recomienda exigir la conformidad de nivel AAA como política general para sitios completos.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "It is not recommended that Level AAA conformance be required as a general policy for entire sites",
+    "locator": "EN 301 549, cláusula 9.0 NOTE 4 y 9.5"
+   },
+   {
+    "claim": "La presunción de conformidad solo sigue siendo válida mientras se mantenga una referencia al presente documento en la lista.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Presumption of conformity stays valid only as long as a reference to the present document is maintained in the list",
+    "locator": "EN 301 549, Anexo A"
+   },
+   {
+    "claim": "La norma es un medio voluntario de conformidad con la Directiva 2016/2102.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "to provide one voluntary means of conforming to the essential requirements of Directive 2016/2102",
+    "locator": "EN 301 549, Anexo A"
+   },
+   {
+    "claim": "Cada país puede ir más allá de estos requisitos en su legislación nacional, tanto en requisitos como en alcance.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Each country can choose to go beyond these requirements in their national legislation when it comes to both requirements and scope.",
+    "locator": "EN 301 549, Anexo E.5"
+   },
+   {
+    "claim": "La Directiva cubre como mínimo organismos del sector público y algunas organizaciones de propiedad, financiación o dirección estatal.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "The Directive covers, as a minimum, public sector bodies and some government owned, funded or led organizations.",
+    "locator": "EN 301 549, Anexo E.5"
+   },
+   {
+    "claim": "No se aplica a los medios temporales en directo.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "does not apply to live time-based media",
+    "locator": "EN 301 549, Anexo A, NOTE 4"
+   },
+   {
+    "claim": "El Anexo C es un anexo normativo que establece los medios necesarios para determinar la conformidad.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Annex C is a normative annex that sets out the means necessary to determine conformance",
+    "locator": "EN 301 549, Introducción"
+   },
+   {
+    "claim": "El resultado de las pruebas del Anexo C puede ser no aplicable, pasa, falla o (excepcionalmente) no comprobable.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "the result of the tests in\nAnnex C can be: not applicable, pass, fail, or (in exceptional circumstances) not testable",
+    "locator": "EN 301 549, cláusula 14"
+   },
+   {
+    "claim": "Se comprueba que el documento no falla el criterio de éxito 1.1.1 Contenido no textual de WCAG 2.1.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Check that the document does not fail WCAG 2.1 Success Criterion 1.1.1 Non-text content.",
+    "locator": "EN 301 549, C.10.1.1.1"
+   },
+   {
+    "claim": "Las herramientas de autoría deben habilitar y guiar la creación de contenido conforme a las cláusulas 9 (contenido web) o 10.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Authoring tools shall enable and guide the production of content that conforms to clauses 9 (Web content) or 10",
+    "locator": "EN 301 549, cláusula 11.8.2"
+   },
+   {
+    "claim": "La norma no puede recomendar técnicas concretas de muestreo para la evaluación de TIC.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "The present document cannot recommend specific ICT evaluation sampling techniques",
+    "locator": "EN 301 549, cláusula 14, NOTE 2"
+   },
+   {
+    "claim": "La versión que prevalece de un entregable ETSI es la publicada en formato PDF en ETSI Deliverables.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "the prevailing version of an ETSI deliverable is the one made publicly available in PDF format at ETSI Deliverables",
+    "locator": "EN 301 549, Important notice"
+   },
+   {
+    "claim": "La EN 301 549 V3.2.1 fue adoptada el 10 de marzo de 2021.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Date of adoption of this EN: 10 March 2021",
+    "locator": "EN 301 549, National transposition dates"
+   },
+   {
+    "claim": "La Directiva (UE) 2019/882 figura en el DO L 151, 7.6.2019, pp. 70–115.",
+    "artifact_ids": [
+     "SA-75c1bc611f1aa3bb10c3912e"
+    ],
+    "quote": "OJ L 151, 7.6.2019, pp. 70–115",
+    "locator": "Metadatos de EUR-Lex"
+   },
+   {
+    "claim": "El cumplimiento de estas normas es obligatorio para las agencias federales sujetas a la Sección 508 de la Rehabilitation Act de 1973, modificada (29 U.S.C. 794d).",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Compliance with these standards is mandatory for Federal agencies subject to Section 508 of the Rehabilitation Act of 1973, as amended (29 U.S.C. 794d).",
+    "locator": "E101.1 Purpose"
+   },
+   {
+    "claim": "El contenido electrónico debe cumplir WCAG 2.0 niveles A y AA.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Electronic content shall conform to Level A and Level AA Success Criteria and Conformance Requirements in WCAG 2.0 (incorporated by reference, see 702.10.1).",
+    "locator": "E205.4 Accessibility Standard"
+   },
+   {
+    "claim": "Los documentos no Web están exentos de cuatro criterios WCAG 2.0.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Non-Web documents shall not be required to conform to the following four WCAG 2.0 Success Criteria: 2.4.1 Bypass Blocks, 2.4.5 Multiple Ways, 3.2.3 Consistent Navigation, and 3.2.4 Consistent Identification.",
+    "locator": "E205.4 Exception"
+   },
+   {
+    "claim": "El contenido público debe cumplir E205.4.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Electronic content that is public facing shall conform to the accessibility requirements specified in E205.4.",
+    "locator": "E205.2 Public Facing"
+   },
+   {
+    "claim": "El contenido electrónico no público debe cumplir E205.4 cuando constituye asunto oficial.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Electronic content that is not public facing shall conform to the accessibility requirements specified in E205.4 when such content constitutes official business",
+    "locator": "E205.3 Agency Official Communication"
+   },
+   {
+    "claim": "Excepción NARA: registros de NARA no deben cumplir salvo que sean públicos.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Records maintained by the National Archives and Records Administration (NARA) pursuant to Federal recordkeeping statutes shall not be required to conform to the Revised 508 Standards unless public facing.",
+    "locator": "E205.3 EXCEPTION"
+   },
+   {
+    "claim": "Las herramientas de autoría capaces de exportar PDF 1.7 deben poder exportar PDF/UA-1.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Authoring tools capable of exporting PDF files that conform to ISO 32000-1:2008 (PDF 1.7) shall also be capable of exporting PDF files that conform to ANSI/AIIM/ISO 14289-1:2016 (PDF/UA-1)",
+    "locator": "504.2.2 PDF Export"
+   },
+   {
+    "claim": "Como WCAG 2.0 puede usarse como estándar único para la conformidad de PDF y PDF/UA-1 no, el Board considera WCAG 2.0 apropiado como estándar único para archivos PDF.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Because WCAG 2.0 can be used as a sole standard for PDF compliance, and PDF/UA-1 cannot, the Board finds WCAG 2.0 to be appropriate as the sole standard for PDF files.",
+    "locator": "Preámbulo III.C"
+   },
+   {
+    "claim": "La documentación de soporte electrónica debe cumplir WCAG 2.0 A y AA.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Documentation in electronic format, including Web-based self-service support, shall conform to Level A and Level AA Success Criteria and Conformance Requirements in WCAG 2.0",
+    "locator": "602.3"
+   },
+   {
+    "claim": "La documentación de soporte solo en formato no electrónico debe ofrecerse en formatos alternos a pedido.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Where support documentation is only provided in non-electronic formats, alternate formats usable by individuals with disabilities shall be provided upon request.",
+    "locator": "602.4"
+   },
+   {
+    "claim": "Las TIC que no han sido alteradas el 18 de enero de 2018 o después no requieren modificarse para cumplir los Revised 508 Standards.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "that has not been altered on or after January 18, 2018, shall not be required to be modified to conform to the Revised 508 Standards.",
+    "locator": "E202.2 Legacy ICT"
+   },
+   {
+    "claim": "Existe exención de carga indebida, con documentación escrita obligatoria.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "The responsible agency official shall document in writing the basis for determining that conformance to requirements in the Revised 508 Standards constitute an undue burden",
+    "locator": "E202.6.2"
+   },
+   {
+    "claim": "No se exige cumplir las directrices basadas en la sección 255 hasta que las adopte la FCC.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Compliance with the section 255-based guidelines is not required until the guidelines are adopted by the Federal Communications Commission.",
+    "locator": "Preámbulo, DATE"
+   },
+   {
+    "claim": "Las normas 508 del Access Board no se auto-imponen; toman efecto legal cuando las adopta el FAR Council.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "the Access Board's 508 Standards are not self-enforcing; rather, these standards take legal effect when adopted by the FAR Council.",
+    "locator": "Preámbulo I.A.1"
+   },
+   {
+    "claim": "El Access Board rehúsa referenciar EN 301 549 en los Revised 508 Standards o declarar que su conformidad equivale al cumplimiento de la regla final.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "the Access Board declines to reference EN 301 549 in the Revised 508 Standards or otherwise state that conformance with EN 301 549 equates to compliance with the final rule.",
+    "locator": "Preámbulo IV.I"
+   },
+   {
+    "claim": "«Consider» no es lenguaje obligatorio y por eso es más apropiado incluirlo en material de asesoría con orientación sobre buenas prácticas.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "\"consider\" is not mandatory language and therefore is more appropriate for inclusion in advisory material providing guidance on best practices.",
+    "locator": "Preámbulo IV.D, C201.5"
+   },
+   {
+    "claim": "La Sección 508 de la Rehabilitation Act obliga a las agencias federales a garantizar que estos documentos sean accesibles para personas con discapacidad.",
+    "artifact_ids": [
+     "SA-2501b15d5916651b3ee1e848"
+    ],
+    "quote": "Federal agencies are mandated by Section 508 of the Rehabilitation Act to ensure these documents are accessible to individuals with disabilities.",
+    "locator": "Electronic Documents Overview, intro"
+   },
+   {
+    "claim": "Un procedimiento operativo estándar (SOP) del servicio de atención al cliente de una agencia federal en un archivo Word.",
+    "artifact_ids": [
+     "SA-2501b15d5916651b3ee1e848"
+    ],
+    "quote": "A standard operating procedure (SOP) for a federal agency customer service desk in a Word file",
+    "locator": "Examples"
+   },
+   {
+    "claim": "La página fue revisada/actualizada en agosto de 2025.",
+    "artifact_ids": [
+     "SA-2501b15d5916651b3ee1e848"
+    ],
+    "quote": "Reviewed/Updated:  August 2025",
+    "locator": "pie de página"
+   },
+   {
+    "claim": "La biblioteca de validación PDF/A de veraPDF tiene licencia dual.",
+    "artifact_ids": [
+     "SA-1e6c65b743847dda3c80ebd8"
+    ],
+    "quote": "The veraPDF PDF/A Validation Library is dual-licensed, see:",
+    "locator": "README, Licensing"
+   },
+   {
+    "claim": "IEEE: el manual proporciona guías de escritura generales para IEEE Transactions, Journals y Letters.",
+    "artifact_ids": [
+     "SA-4891f9e7ae600ddc57628d46"
+    ],
+    "quote": "This style manual provides general writing guidelines for IEEE Transactions, Journals, and Letters.",
+    "locator": "I.A Purpose of Manual"
+   },
+   {
+    "claim": "IEEE: el resumen debe ser un párrafo de 150 a 250 palabras.",
+    "artifact_ids": [
+     "SA-4891f9e7ae600ddc57628d46"
+    ],
+    "quote": "Abstract, must be one paragraph and between 150 to 250 words.",
+    "locator": "II. Writing Principles, lista de secciones"
+   },
+   {
+    "claim": "IEEE: no se permite usar un número de referencia para designar un grupo de referencias.",
+    "artifact_ids": [
+     "SA-4891f9e7ae600ddc57628d46"
+    ],
+    "quote": "Use of one reference number to designate a group of references is not permitted.",
+    "locator": "II.B References"
+   },
+   {
+    "claim": "IEEE: se exigen para el autor correspondiente para enviar un artículo a revisión por pares.",
+    "artifact_ids": [
+     "SA-4891f9e7ae600ddc57628d46"
+    ],
+    "quote": "are required for the corresponding author in order to submit a paper for peer review",
+    "locator": "II.A ORCID"
+   },
+   {
+    "claim": "IEEE: la numeración de encabezados es deseable pero no obligatoria.",
+    "artifact_ids": [
+     "SA-4891f9e7ae600ddc57628d46"
+    ],
+    "quote": "Enumeration of section headings is desirable, but not required.",
+    "locator": "II.B Text Section Headings"
+   },
+   {
+    "claim": "IEEE: fecha de actualización del manual.",
+    "artifact_ids": [
+     "SA-4891f9e7ae600ddc57628d46"
+    ],
+    "quote": "Updated 29 July 2024",
+    "locator": "portada"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Del texto de la Directiva 2019/882 solo se obtuvo la página de metadatos de EUR-Lex; no se leyó su articulado ni anexos (qué servicios y documentos cubre y excepciones).",
+   "Estructura de informes, citación (APA, ISO 690, etc.), formato editorial, SOP y políticas: no se abordan en estas fuentes.",
+   "Requisitos de PDF/UA (ISO 14289), PDF/A, PAC, veraPDF, Word/LibreOffice y sus licencias y versiones: no aparecen en estas fuentes.",
+   "sha256 de lo descargado y URL por fuente: no se proporcionan en el texto de las fuentes.",
+   "Fecha de vigencia exacta de la cita de la EN 301 549 en el Diario Oficial: no figura en el texto leído.",
+   "Normativa nacional o institucional (p. ej. Section 508, leyes nacionales de transposición): no cubierta.",
+   "APA Style (sample papers): la descarga devolvió solo una página de bloqueo Incapsula; no se obtuvo contenido sobre formato APA.",
+   "sha256 de lo descargado, URL y versión por fuente: no estaban en el texto recibido; no verificable.",
+   "Requisitos de otras jurisdicciones (UE, Directiva 2016/2102/EAA, ADA estatal, Canadá, etc.) y normas ISO de documentos: esta parte solo cita EN 301 549 de forma indirecta vía el preámbulo de 2017.",
+   "Versión vigente actual de la norma 508: el texto es de 2017 y fija WCAG 2.0; el texto de GSA menciona 'WCAG 2.2' en una cita; no se pudo comprobar si hay actualización.",
+   "Requisitos de estructura para informes ejecutivos, manuales, SOP y políticas privadas: no cubiertos por estas fuentes (solo el SOP federal como caso de accesibilidad).",
+   "Ejemplo oficial/artefacto de referencia de documento accesible: no hallado en esta parte."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Para un documento descargable de un organismo público de la UE, la EN 301 549 (cláusula 10 y Anexo A) es la vía de presunción de conformidad; fuera de ese ámbito, sus requisitos 'shall' son contractuales o voluntarios, no obligación legal por sí mismos.",
+  "INTERPRETACIÓN: La norma se basa en WCAG 2.1 mientras W3C ya publicó WCAG 2.2; quien use WCAG 2.2 cumple más criterios que la EN 301 549 V3.2.1 exige, pero ésta sigue siendo la referencia de la presunción mientras no se cite otra versión.",
+  "INTERPRETACIÓN: Dentro de la norma, 'shall' = requisito para conformidad, 'should' y 'best practice' = recomendación; esta distinción puede usarse para clasificar requisitos en obligatorio vs. buena práctica.",
+  "INTERPRETACIÓN: Que la Directiva 2016/2102 sea de armonización mínima implica que el requisito real depende de la jurisdicción nacional.",
+  "SECUNDARIA: ninguna fuente secundaria fue incluida en esta parte.",
+  "INTERPRETACIÓN: Para documentos federales de EE. UU. la accesibilidad (WCAG 2.0 A/AA con excepciones) es obligatoria y todo lo demás de estructura/formato visual es convención del emisor; la obligatoriedad deriva del ámbito (agencia federal, contenido público u oficial), no del tipo de documento.",
+  "INTERPRETACIÓN: El manual IEEE es convención de editor, aplicable al enviar a publicaciones IEEE; solo ciertos puntos (ORCID del autor correspondiente, divulgación de IA) se formulan como requisito de la editorial; no deben presentarse como norma general de documentos técnicos.",
+  "INTERPRETACIÓN: Hay una tensión entre la mención de 'WCAG 2.2' en la cita de GSA y WCAG 2.0 en E205.4; a verificar con la fuente vigente antes de afirmar una versión.",
+  "SECUNDARIA: PAC (PDF/UA Foundation, axes4, FAQ) afirma que es gratuito, no accede a internet, solo corre en Windows, no tiene línea de comandos (usa axesSense), soporta PDF 1.7 completo y PDF 2.0 en 'best-effort', y que un resultado verde solo indica que lo verificable automáticamente se cumple y no es legalmente vinculante.",
+  "SECUNDARIA: veraPDF-library (GitHub, README) se describe como validación PDF/A y PDF/UA con licencia GPLv3+/MPLv2+, requiere Java 8–25 y Maven; versión de producto no determinada en el texto."
+ ],
+ "candidate_methods": [
+  "Para entregables accesibles federales: autoría en software con modo de creación conforme (504), exportar PDF etiquetado, validar con veraPDF (PDF/UA) y PAC, y completar con revisión humana de WCAG 2.0 AA.",
+  "Para publicación IEEE: aplicar el IEEE Editorial Style Manual y la plantilla de la revista correspondiente."
+ ],
+ "candidate_tests": [
+  "Para cada documento descargable: verificar que no falla cada criterio de las cláusulas 10.1 a 10.4 aplicables (título descriptivo, idioma programático, estructura programática, contraste mínimo, reflujo, navegación por teclado) y registrar pasa/falla/no aplicable según Anexo C.",
+  "Verificar que la documentación entregada con un producto TIC esté en un formato conforme a la cláusula 9 o 10 (C.12.1.2).",
+  "Revalidar al cambiar: versión de la EN 301 549, versión de WCAG citada, cita en el Diario Oficial de la UE, o la herramienta de autoría/verificación.",
+  "Test: el documento/PDF público de agencia pasa validación PDF/UA con veraPDF sin fallos y revisión manual de los criterios WCAG 2.0 A/AA aplicables (excluyendo 2.4.1, 2.4.5, 3.2.3, 3.2.4 si es no Web).",
+  "Test: el abstract de un artículo IEEE es un solo párrafo de 150–250 palabras, sin ecuaciones numeradas, citas numeradas ni notas al pie.",
+  "Test: cada referencia IEEE ocupa un número único y no hay una referencia agrupada.",
+  "Revalidar cuando cambie la versión de WCAG incorporada, la norma 508/FAR, el manual IEEE (fecha 2024-07-29) o la versión de las herramientas."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Un entregable accesible puede modelarse con requisitos autoacotados (precondición + 'shall') y resultado pasa/falla/no aplicable, con clase obligatorio solo si la fuente usa 'shall' y el contexto (sector público UE, contrato) lo hace aplicable.",
+  "Clasificar cada requisito con su fuente y alcance: 'obligatorio' solo si la fuente lo exige (E205.4 para agencias federales); las guías de estilo de editor van como 'convención' con su ámbito.",
+  "Mantener un campo de 'jurisdicción/institución' en cada requisito para evitar generalizar 508 o IEEE a otros contextos."
+ ],
+ "affected_existing_concepts": [
+  "Clasificación obligatorio / convención / buena práctica / preferencia en los requisitos del entregable documental.",
+  "Clasificación obligatorio/convención/buena práctica/preferencia de requisitos de documentos",
+  "Accesibilidad de documentos (WCAG, PDF/UA)",
+  "Verificadores de PDF"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: la mayoría de las instituciones no federales referencian WCAG 2.x por contrato o ley local, pero estas fuentes no lo confirman.",
+  "HIPÓTESIS: una combinación de veraPDF y PAC cubre la verificación automática de PDF/UA, pero ambas dejan fuera lo que requiere juicio humano."
+ ],
+ "limitations": [
+  "Las fuentes se leyeron completas en 2 partes, una llamada por parte; un \"unknown\" de una parte puede estar respondido en otra.",
+  "La fuente de WCAG 2.2 es solo una noticia de W3C WAI, no la Recomendación completa; no se leyeron los criterios ni los niveles de WCAG 2.2.",
+  "La página EUR-Lex de la Directiva 2019/882 contiene solo navegación y metadatos; no se pudo confirmar su alcance material.",
+  "No hay sha256 ni URL por fuente en el texto; no se pudo cumplir esa evidencia deseada.",
+  "Esta parte es la 1 de 2; las demás fuentes (estructura, citación, PDF/UA, herramientas) pueden estar en la otra parte.",
+  "Las citas se tomaron del texto extraído; el PDF de la EN 301 549 tiene saltos de línea y espacios irregulares por la extracción.",
+  "La fuente APA no se pudo leer (página de bloqueo), por lo que no hay información sobre formato APA.",
+  "La página de GitHub de veraPDF no indica versión ni qué perfiles PDF/UA verifica con detalle; el README la describe como biblioteca PDF/A y PDF/UA.",
+  "PAC es fuente secundaria (proveedor): solo candidate_claim.",
+  "Las fuentes no traen sha256 ni URLs en el texto; no se registró metadato de descarga.",
+  "El Revised 508 Standards es de 2017 (WCAG 2.0); no se comprobó actualización posterior.",
+  "IEEE Manual: el texto es extracción PDF fragmentada; algunas citas fueron tomadas de líneas continuas y podrían carecer del formato original.",
+  "Esta parte solo cubre EE. UU. (508) e IEEE; no hay evidencia sobre otras jurisdicciones, informes ejecutivos, manuales, políticas internas o medio impreso.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 42 de 60 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 17 propuestas, 12 aceptadas, 5 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Se descartaron 3 hallazgos cuya cita no aparece tal cual en el texto de la fuente que citan (detalle en receipt.json): sin su cita no son hechos.",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://pdfa.org/pdf-standards/ (refused); https://pdfa.org/game-changing-new-free-specification-enables-interoperable-reuse-and-accessibility-for-pdf/ (refused); https://www.iso.org/standard/72642.html (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
