@@ -193,6 +193,23 @@ class Fetch(Base):
                          [('https://a.gob.mx/nota', A_PAGE, None), (mirror['url'], None, 'same bytes as https://a.gob.mx/nota')])
         self.assertEqual((self.work / record[0]['raw']).read_bytes(), PAGE)
 
+    def test_in_a_discovered_plan_the_second_url_with_the_same_bytes_is_one_rejected_source(self):
+        mirror = {**PLAN['sources'][2], 'url': 'https://b.example.org/espejo', 'role': 'secondary'}
+        rows = inv.fetch({**PLAN, 'sources': [PLAN['sources'][0], mirror]}, self.work, opener=self.opener, sleep=lambda s: None,
+                         discovered=True)
+        self.assertEqual([(r['url'], r.get('artifact_id'), r['status'], r.get('error')) for r in rows],
+                         [('https://a.gob.mx/nota', A_PAGE, 200, None), (mirror['url'], None, 'duplicate', 'same bytes as https://a.gob.mx/nota')])
+        (self.work / 'descubrimiento.json').write_text('{}', encoding='utf-8')  # what the command line reads to know it
+        (req := self.tmp / 'rr.json').write_text(json.dumps(RR), encoding='utf-8')
+        found = {**PLAN, 'sources': [{**x, 'license': inv.DISCOVERED_LICENSE} for x in PLAN['sources']]}
+        for plan, record, want in ((found, True, True), (PLAN, True, False), (found, False, False)):  # GPT on 1186abe, 6adaa7e
+            (self.work / 'descubrimiento.json').unlink(missing_ok=True)
+            if record:  # a leftover record never turns a reviewed plan, and marked sources without their record stay strict
+                (self.work / 'descubrimiento.json').write_text('{}', encoding='utf-8')
+            with mock.patch.object(inv, 'fetch', return_value=rows) as f, mock.patch.object(inv, 'load_plan', return_value=plan):
+                inv.main(['fetch', '--request', str(req), '--plan', 'x', '--out', str(self.work)])
+            self.assertIs(f.call_args.kwargs['discovered'], want)
+
     def test_an_error_page_is_never_an_artifact(self):
         rows = self.fetch({**PLAN, 'sources': [{**PLAN['sources'][0], 'url': 'https://a.gob.mx/no-existe'}]})
         self.assertEqual((rows[0]['status'], rows[0].get('artifact_id')), (404, None))

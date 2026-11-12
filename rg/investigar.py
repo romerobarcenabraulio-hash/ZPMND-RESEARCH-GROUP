@@ -203,6 +203,9 @@ def public_host(host):
                                                                      '.arpa', '.test', '.invalid', '.example'))
 
 
+DISCOVERED_LICENSE = 'no verificada: fuente descubierta, solo se cita'  # what marks a source a web search proposed
+
+
 def plan_from_discovery(rr, discovery):
     """(plan, record): the discovered sources load_plan accepts, every one metadata_only, and what happened to each.
     ValueError if the answer does not fit DISCOVERY_SCHEMA or leaves nothing to fetch."""
@@ -229,7 +232,7 @@ def plan_from_discovery(rr, discovery):
         seen.add(url)
         sources.append({'url': url, 'title': d['title'][:300] or url[:300], 'publisher': d['publisher'][:300] or parts.hostname,
                         'source_type': d['source_type'], 'role': d['role'],
-                        'license': 'no verificada: fuente descubierta, solo se cita',
+                        'license': DISCOVERED_LICENSE,
                         'redistribution': 'metadata_only'})  # discovered is never republished without a review
     if not sources:
         raise ValueError('the discovery left no source to fetch')
@@ -244,8 +247,9 @@ def media_type(headers):
     return value if MEDIA.match(value) else 'application/octet-stream'
 
 
-def fetch(plan, out, opener=None, sleep=None, clock=None):
-    """Download the plan's URLs into out/raw (by sha256) and their texts into out/texto; write out/fuentes.json."""
+def fetch(plan, out, opener=None, sleep=None, clock=None, discovered=False):
+    """Download the plan's URLs into out/raw (by sha256) and their texts into out/texto; write out/fuentes.json.
+    discovered: a web search proposed the plan, so a second URL with the same bytes is one rejected source, not a stop."""
     out = Path(out)
     hosts = sorted({urlsplit(s['url']).hostname for s in plan['sources']})
     kw = {k: v for k, v in (('opener', opener), ('sleep', sleep), ('clock', clock)) if v is not None}
@@ -269,6 +273,9 @@ def fetch(plan, out, opener=None, sleep=None, clock=None):
                 sha, media = hashlib.sha256(r.body).hexdigest(), media_type(r.headers)
                 if sha in seen:  # one artifact per body: a second URL with the same bytes would lose a provenance
                     row['error'] = f'same bytes as {seen[sha]}'
+                    if discovered:  # 2026-11-11, familia F (43061687446): two openstax URLs, one body; the run had stopped
+                        row['status'] = 'duplicate'
+                        continue
                     raise ValueError(f"{s['url']} returned the same bytes as {seen[sha]}: the plan must name only one of them")
                 seen[sha] = s['url']
                 path = out / 'raw' / 'sha256' / sha[:2] / f'{sha}.{EXT.get(media, "bin")}'
@@ -825,7 +832,9 @@ def main(argv=None):
         print(json.dumps({'sources': len(plan['sources']), 'discovered': record is not None}, ensure_ascii=False))
         return 0
     if x.cmd == 'fetch':
-        rows = fetch(load_plan(x.plan, rr['request_id']), x.out)
+        plan = load_plan(x.plan, rr['request_id'])  # discovered only when its record is there and every source is marked so
+        found = (Path(x.out) / 'descubrimiento.json').exists() and all(s.get('license') == DISCOVERED_LICENSE for s in plan['sources'])
+        rows = fetch(plan, x.out, discovered=found)
         got = sum(1 for r in rows if r.get('artifact_id'))
         print(json.dumps({'sources': len(rows), 'downloaded': got, 'text_chars': text_chars(rows), 'whole': whole(rows)},
                          ensure_ascii=False))
