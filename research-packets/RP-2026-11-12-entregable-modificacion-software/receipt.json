@@ -1,0 +1,531 @@
+{
+ "request_id": "RR-2026-11-12-entregable-modificacion-software",
+ "fetched": [
+  {
+   "url": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-218.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "617746e553a9e2da49bfbd4eef0dfc3094758a39b869314e4173ac36605cde22",
+   "bytes": 739891,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T18:50:15Z",
+   "text_status": "ok",
+   "text_chars": 105347
+  },
+  {
+   "url": "https://csrc.nist.gov/projects/ssdf",
+   "status": 200,
+   "error": null,
+   "sha256": "d38bb78a4704df711a8201b3f392a2bb9cacbb763720d0f76d1488466a75aaa5",
+   "bytes": 58803,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:16Z",
+   "text_status": "ok",
+   "text_chars": 13300
+  },
+  {
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847",
+   "status": 200,
+   "error": null,
+   "sha256": "e3ecaabddf6e321fa04097d15dfcccc7309d0fe5896240ab7625a27d74ab1b0a",
+   "bytes": 1782351,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T18:50:18Z",
+   "text_status": "ok",
+   "text_chars": 354114
+  },
+  {
+   "url": "https://www.cisa.gov/sites/default/files/2024-04/Self_Attestation_Common_Form_FINAL_508c.pdf",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.cisa.gov/sites/default/files/2024-04/Self_Attestation_Common_Form_FINAL_508c.pdf",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:50:28Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://owasp.org/projects/asvs",
+   "status": 200,
+   "error": null,
+   "sha256": "56160558470db276885ac83316eda853873a848feaa394d93edbaf8893229f0d",
+   "bytes": 64947,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:28Z",
+   "text_status": "ok",
+   "text_chars": 2236
+  },
+  {
+   "url": "https://owaspsamm.org/release-notes-v2/",
+   "status": 200,
+   "error": null,
+   "sha256": "ba6f148d8f889296cdfa1f98d7e1cdcd3d2b4280c65007f141b15c28cd6eee5c",
+   "bytes": 18349,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:30Z",
+   "text_status": "ok",
+   "text_chars": 4417
+  },
+  {
+   "url": "https://slsa.dev/spec/v1.0/levels",
+   "status": 200,
+   "error": null,
+   "sha256": "dab3f054bd9ab048c2283cc8f233970c13a16ceeed62a8eb0c353b2a132a0b21",
+   "bytes": 25626,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:31Z",
+   "text_status": "ok",
+   "text_chars": 7834
+  },
+  {
+   "url": "https://github.com/ossf/scorecard/blob/main/docs/checks.md",
+   "status": 200,
+   "error": null,
+   "sha256": "c73c9409340ef809d3c0bc4a34a426e26dcc3ad9b0751f044808be87f7809637",
+   "bytes": 405014,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:33Z",
+   "text_status": "ok",
+   "text_chars": 42083
+  },
+  {
+   "url": "https://semver.org/spec/v2.0.0.md",
+   "status": 200,
+   "error": null,
+   "sha256": "9c6ec284258702f5b17a72d666c8f76885e5f7cb826ec3b6f492dc663cd3ef30",
+   "bytes": 17471,
+   "media_type": "text/markdown",
+   "retrieved_at": "2026-11-12T18:50:34Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 17467
+  },
+  {
+   "url": "https://github.com/google/eng-practices/blob/master/review/reviewer/standard.md",
+   "status": 200,
+   "error": null,
+   "sha256": "c0bc7ad8cc2f6404c5b45003dbbe64a208dd82e02909ad5fea3bd7222c33a3a1",
+   "bytes": 198861,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:35Z",
+   "text_status": "ok",
+   "text_chars": 8295
+  },
+  {
+   "url": "https://www.iso.org/standard/79428.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.iso.org/standard/79428.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:50:36Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://dl.acm.org/doi/abs/10.1145/2635868.2635929",
+   "status": 403,
+   "error": null,
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:50:36Z",
+   "text_status": null,
+   "text_chars": null
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43283699584",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "El SSDF no prescribe cómo implementar las prácticas; se centra en resultados, no en herramientas.",
+    "now": "El SSDF no prescribe cómo implementar cada práctica.",
+    "cut": "se centra en resultados, no en herramientas"
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "El SSDF (PW.2.1) prevé revisión del diseño por personas no involucradas en él y/o procesos automatizados.",
+    "now": "El SSDF prevé que el diseño del software sea revisado por una o varias personas cualificadas no involucradas en el diseño y/o por procesos automatizados de la cadena de herramientas.",
+    "cut": "PW.2.1"
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "El SSDF (PW.8.2) pide delimitar, diseñar, ejecutar y documentar pruebas y registrar hallazgos.",
+    "now": "El SSDF pide delimitar las pruebas, diseñarlas, ejecutarlas y documentar los resultados.",
+    "cut": "PW.8.2"
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "El SSDF (PO.4.1) pide definir criterios para las comprobaciones de seguridad, p. ej. añadirlos a la Definition of Done.",
+    "now": "El SSDF pide añadir criterios de seguridad del software a las comprobaciones existentes (p. ej., la Definition of Done en metodologías ágiles).",
+    "cut": "PO.4.1; 'definir criterios para las comprobaciones' (la cita habla de añadirlos a comprobaciones existentes)"
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "El SSDF sugiere linters/formateadores para estandarizar estilo, como ejemplo.",
+    "now": "El SSDF sugiere usar herramientas (p. ej., linters, formateadores) para estandarizar el estilo y formato del código fuente.",
+    "cut": "'como ejemplo'"
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "El SSDF recomienda pruebas de regresión de vulnerabilidades previas.",
+    "now": "Se recomienda incorporar a la suite de pruebas del proyecto tests de vulnerabilidades reportadas previamente para asegurar que los errores no se reintroduzcan.",
+    "cut": "'El SSDF' (la fuente está vacía)"
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "El CRA exige que, al comercializar, el fabricante garantice diseño, desarrollo y producción conforme a los requisitos esenciales de la Parte I del Anexo I.",
+    "now": "El CRA exige que los fabricantes garanticen que el producto se ha diseñado, desarrollado y producido conforme a los requisitos esenciales de ciberseguridad de la Parte I del Anexo I.",
+    "cut": "'al comercializar'"
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "La documentación técnica debe elaborarse antes de comercializar y actualizarse durante el soporte.",
+    "now": "Debe elaborarse antes de comercializar el producto con elementos digitales y actualizarse de forma continua, cuando proceda, al menos durante el periodo de soporte.",
+    "cut": "'La documentación técnica' (el sujeto no figura en la cita)"
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "El periodo de soporte debe ser de al menos cinco años, salvo uso esperado menor.",
+    "now": "El periodo de soporte debe ser de al menos cinco años.",
+    "cut": "'salvo uso esperado menor'"
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "El CRA fija plazos de notificación de vulnerabilidades activamente explotadas: alerta temprana en 24 h.",
+    "now": "El CRA fija un plazo de notificación: sin demora indebida y en todo caso en 24 horas desde que el fabricante tiene conocimiento.",
+    "cut": "'vulnerabilidades activamente explotadas'; 'alerta temprana'"
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "El CRA fija fechas de aplicación: general 11 dic. 2027; art. 14 desde 11 sept. 2026; cap. IV desde 11 jun. 2026.",
+    "now": "El CRA se aplica a partir del 11 de diciembre de 2027.",
+    "cut": "art. 14 desde 11 sept. 2026; cap. IV desde 11 jun. 2026"
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "Productos comercializados antes del 11 dic. 2027 quedan sujetos al CRA solo si sufren una modificación sustancial desde esa fecha (salvo art. 14).",
+    "now": "Esos productos quedan sujetos a los requisitos del CRA solo si, a partir de esa fecha, sufren una modificación sustancial.",
+    "cut": "'comercializados antes del 11 dic. 2027'; 'salvo art. 14'"
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "Una actualización de seguridad que no altera el propósito previsto no es modificación sustancial (considerando).",
+    "now": "El CRA indica que, en cierto caso, no se considera una modificación sustancial.",
+    "cut": "'una actualización de seguridad que no altera el propósito previsto'; '(considerando)'"
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "La documentación técnica y la declaración UE deben conservarse al menos 10 años o el periodo de soporte, el mayor.",
+    "now": "Debe conservarse al menos 10 años tras la comercialización del producto o durante el periodo de soporte, el que sea mayor.",
+    "cut": "'La documentación técnica y la declaración UE'"
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "La documentación técnica debe incluir informes de pruebas de conformidad.",
+    "now": "El CRA menciona informes de las pruebas realizadas para verificar la conformidad del producto con elementos digitales.",
+    "cut": "'La documentación técnica debe incluir'"
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "El CRA establece presunción de conformidad con normas armonizadas publicadas en el DOUE.",
+    "now": "El CRA establece presunción de conformidad con los requisitos esenciales de ciberseguridad del Anexo I cubiertos por esas normas o partes de ellas.",
+    "cut": "'armonizadas publicadas en el DOUE'"
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "Los productos de software exceden la exención si el desarrollo es solo para uso propio de una administración (no se considera comercializado).",
+    "now": "Según el CRA, los productos desarrollados o modificados por una entidad de la administración pública exclusivamente para uso propio no deben considerarse comercializados.",
+    "cut": "'exceden la exención'; 'productos de software'"
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "El CRA permite poner a disposición software no terminado para pruebas con señal visible de no conformidad y por tiempo limitado.",
+    "now": "El CRA permite poner productos a disposición solo por un periodo limitado necesario para pruebas, con una señal visible que indique claramente que no cumplen el Reglamento.",
+    "cut": "'software no terminado'"
+   },
+   {
+    "id": "confirmed[28]",
+    "claim": "El CRA fija multas de hasta 15 M EUR o 2,5 % del volumen de negocio por incumplir el Anexo I y los arts. 13 y 14.",
+    "now": "El CRA prevé multas administrativas de hasta 15 000 000 EUR o, si el infractor es una empresa, de hasta el 2,5 %.",
+    "cut": "'del volumen de negocio'; 'por incumplir el Anexo I y los arts. 13 y 14'"
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "SemVer (con palabras RFC 2119) exige no modificar una versión publicada.",
+    "now": "SemVer exige que el contenido de una versión publicada no se modifique.",
+    "cut": "'(con palabras RFC 2119)'"
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "SemVer exige incrementar MAJOR ante cambios incompatibles en la API pública.",
+    "now": "SemVer exige incrementar (la versión) si se introducen cambios incompatibles hacia atrás en la API pública.",
+    "cut": "'MAJOR'"
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "SemVer recomienda tener al menos una versión menor con la deprecación antes de retirar funcionalidad en una mayor.",
+    "now": "SemVer recomienda que haya al menos una versión menor que contenga la deprecación.",
+    "cut": "'antes de retirar funcionalidad en una mayor'"
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "Google: en estilo, la guía de estilo es la autoridad; lo no cubierto es preferencia personal.",
+    "now": "Google: cualquier punto puramente de estilo no recogido en la guía de estilo es cuestión de preferencia personal.",
+    "cut": "'la guía de estilo es la autoridad'"
+   },
+   {
+    "id": "confirmed[37]",
+    "claim": "Scorecard Code-Review determina si el proyecto exige revisión humana antes de fusionar.",
+    "now": "Un check de Scorecard determina si el proyecto exige revisión humana antes de fusionar pull requests.",
+    "cut": "'Code-Review'"
+   },
+   {
+    "id": "confirmed[39]",
+    "claim": "Scorecard advierte que una puntuación baja no indica definitivamente riesgo, pues no detecta todas las implementaciones de CI.",
+    "now": "Scorecard advierte que una puntuación baja no indica definitivamente que el proyecto esté en riesgo.",
+    "cut": "'pues no detecta todas las implementaciones de CI'"
+   },
+   {
+    "id": "confirmed[40]",
+    "claim": "Scorecard Signed-Releases no verifica las firmas.",
+    "now": "Un check de Scorecard no verifica las firmas.",
+    "cut": "'Signed-Releases'"
+   },
+   {
+    "id": "confirmed[41]",
+    "claim": "Scorecard Vulnerabilities usa el servicio OSV.",
+    "now": "Scorecard usa el servicio OSV (Open Source Vulnerabilities).",
+    "cut": "'Vulnerabilities' como nombre del check"
+   },
+   {
+    "id": "confirmed[42]",
+    "claim": "SLSA Build L1 exige que exista procedencia que describa cómo se construyó el artefacto.",
+    "now": "SLSA: existe procedencia que describe cómo se construyó el artefacto, incluida la plataforma de build, el proceso de build y las entradas de primer nivel.",
+    "cut": "'Build L1 exige'"
+   },
+   {
+    "id": "confirmed[43]",
+    "claim": "SLSA Build L3 requiere plataforma de build reforzada que impida que las ejecuciones se influyan entre sí.",
+    "now": "SLSA: impedir que las ejecuciones se influyan entre sí, incluso dentro del mismo proyecto.",
+    "cut": "'Build L3'; 'plataforma de build reforzada'"
+   },
+   {
+    "id": "confirmed[44]",
+    "claim": "La página de SLSA v1.0 indica estado retirado y que la versión actual es la 1.2.",
+    "now": "La página de SLSA indica que la versión actual es la 1.2.",
+    "cut": "'estado retirado'"
+   },
+   {
+    "id": "confirmed[45]",
+    "claim": "SAMM v2 es agnóstico al paradigma de desarrollo y su contenido está en YAML consumible por herramientas.",
+    "now": "En SAMM v2 todo el contenido del modelo se ha convertido a archivos YAML, permitiendo que herramientas u otros consumidores usen el modelo automáticamente.",
+    "cut": "'agnóstico al paradigma de desarrollo'"
+   },
+   {
+    "id": "confirmed[46]",
+    "claim": "La página de OWASP ASVS indica versión estable 5.0.0 y licencia CC BY-SA 4.0.",
+    "now": "La página de OWASP ASVS indica licencia Creative Commons Attribution Share Alike 4.0 International.",
+    "cut": "'versión estable 5.0.0'"
+   },
+   {
+    "id": "confirmed[47]",
+    "claim": "La página CSRC reitera que el SSDF no es una lista de verificación y publica SP 800-218A como perfil comunitario.",
+    "now": "La página CSRC reitera que la intención del SSDF no es crear una lista de verificación.",
+    "cut": "'publica SP 800-218A como perfil comunitario'"
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "id": "confirmed[7]",
+   "claim": "Se recomienda incorporar a la suite de pruebas del proyecto tests de vulnerabilidades reportadas previamente para asegurar que los errores no se reintroduzcan.",
+   "quote": "Incorporate tests for previously reported vulnerabilities into the project's test suite to ensure that errors are not reintroduced.",
+   "artifact_ids": [
+    "SA-617746e553a9e2da49bfbd4e"
+   ]
+  }
+ ],
+ "discovery": {
+  "families": [
+   "Marcos normativos y legales (EU CRA 2024/2847; EO 14028/14306 y atestación CISA/OMB)",
+   "Estándares de procesos y calidad ISO/IEC/IEEE (25010, 29119, 12207)",
+   "Marcos de seguridad de software (NIST SSDF SP 800-218, OWASP ASVS, OWASP SAMM)",
+   "Cadena de suministro y CI/CD (SLSA, OpenSSF Scorecard)",
+   "Especificaciones de convención (SemVer, Conventional Commits)",
+   "Guías públicas de revisión de código (Google eng-practices)",
+   "Herramientas de prueba de mutación (PIT, Stryker) y SAST (Semgrep, CodeQL)",
+   "Literatura revisada por pares sobre eficacia de pruebas/mutación y límites de SAST"
+  ],
+  "searches": [
+   {
+    "query": "NIST SP 800-218 Secure Software Development Framework SSDF version 1.1",
+    "intent": "official"
+   },
+   {
+    "query": "ISO/IEC 25010 product quality model characteristics",
+    "intent": "official"
+   },
+   {
+    "query": "OWASP ASVS 5.0 Application Security Verification Standard",
+    "intent": "official"
+   },
+   {
+    "query": "SLSA specification v1.0 build provenance levels",
+    "intent": "official"
+   },
+   {
+    "query": "Semantic Versioning 2.0.0 specification",
+    "intent": "official"
+   },
+   {
+    "query": "Google engineering practices code review standard of code review",
+    "intent": "official"
+   },
+   {
+    "query": "OpenSSF Scorecard checks documentation",
+    "intent": "official"
+   },
+   {
+    "query": "mutation testing effectiveness empirical study coverage correlation limitations",
+    "intent": "limitations"
+   },
+   {
+    "query": "NIST SP 800-218 Rev 1 SSDF draft 2025 update",
+    "intent": "limitations"
+   },
+   {
+    "query": "OWASP SAMM v2 software assurance maturity model",
+    "intent": "official"
+   },
+   {
+    "query": "Cyber Resilience Act Regulation (EU) 2024/2847 Annex I essential requirements software",
+    "intent": "official"
+   },
+   {
+    "query": "CISA Secure Software Development Attestation Form requirements",
+    "intent": "official"
+   },
+   {
+    "query": "Semgrep CodeQL SAST false negatives benchmark limitations study",
+    "intent": "contradict"
+   },
+   {
+    "query": "Conventional Commits specification vs semantic versioning style convention",
+    "intent": "other"
+   },
+   {
+    "query": "PIT pitest OR Stryker mutator mutation testing tool license documentation",
+    "intent": "other"
+   },
+   {
+    "query": "ISO/IEC/IEEE 29119 OR 12207 software testing standard iso.org",
+    "intent": "official"
+   }
+  ],
+  "not_found": [
+   "sha256 de los documentos: la búsqueda web no permite descargar ni calcular hashes; hay que bajar y hashear cada fuente.",
+   "Texto oficial de ISO/IEC 25010:2023 en iso.org: no apareció URL oficial en los resultados (solo blogs y arc42, secundarios); es de pago, solo metadatos.",
+   "Cita literal ≤300 caracteres con verificación en la fuente: no extraída; los resúmenes de búsqueda no son citas textuales.",
+   "Confirmación primaria (nist.gov) de que SP 800-218 Rev.1 sigue en borrador y de la revocación de la atestación por OMB M-26-05: solo fuentes secundarias.",
+   "Versiones y licencias verificadas de Scorecard, Semgrep, CodeQL, PIT y Stryker: PIT y Stryker aparecen como Apache-2.0 en resumen secundario; sin confirmar en repositorio. Semgrep y CodeQL no se abordaron como fuente primaria.",
+   "Ejemplo oficial o artefacto de referencia (p. ej. SBOM o provenance de muestra): no buscado de forma específica.",
+   "Guía primaria de Conventional Commits y Keep a Changelog: solo resúmenes secundarios y Wikipedia, no propuestos.",
+   "Normas sectoriales (DO-178C, IEC 62304, ISO 26262) y obligaciones contractuales concretas: fuera de alcance buscado; dependen del contrato y de la industria."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-218.pdf",
+    "family": "Marcos de seguridad de software",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto base de prácticas seguras (PO, PS, PW, RV); es marco/recomendación, obligatorio solo si un contrato o EO lo invoca. Aporta mapeo a EO 14028."
+   },
+   {
+    "url": "https://csrc.nist.gov/projects/ssdf",
+    "family": "Marcos de seguridad de software",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Estado vigente: v1.1 final; Rev.1 (v1.2) en borrador según fuentes secundarias. Sirve para fijar cuándo revalidar."
+   },
+   {
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402847",
+    "family": "Marcos normativos y legales",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Único texto realmente obligatorio aquí (Anexo I: requisitos esenciales, SBOM, gestión de vulnerabilidades) para productos con elementos digitales en la UE; aplicación por fases. PDF largo: citar anexos."
+   },
+   {
+    "url": "https://www.cisa.gov/sites/default/files/2024-04/Self_Attestation_Common_Form_FINAL_508c.pdf",
+    "family": "Marcos normativos y legales",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Obligación contractual/federal EE. UU. (M-22-18, M-23-16) basada en SSDF; fuentes secundarias indican cambios por OMB M-26-05 (ene. 2026), verificar vigencia."
+   },
+   {
+    "url": "https://owasp.org/projects/asvs",
+    "family": "Marcos de seguridad de software",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Requisitos verificables por niveles L1-L3 con identificadores citables; estándar de verificación, no ley. No prescribe el nivel a elegir."
+   },
+   {
+    "url": "https://owaspsamm.org/release-notes-v2/",
+    "family": "Marcos de seguridad de software",
+    "stance": "context",
+    "role": "primary",
+    "why": "Modelo de madurez organizativa (15 prácticas, 3 niveles); mide proceso, no corrección de un cambio concreto."
+   },
+   {
+    "url": "https://slsa.dev/spec/v1.0/levels",
+    "family": "Cadena de suministro y CI/CD",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Especificación de procedencia y endurecimiento de build; verifica integridad del artefacto, no corrección funcional. Existe v1.2 con pista Source: revalidar."
+   },
+   {
+    "url": "https://github.com/ossf/scorecard/blob/main/docs/checks.md",
+    "family": "Cadena de suministro y CI/CD",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Herramienta automática (Code-Review, Branch-Protection, CI-Tests, etc.) con criterios y pesos documentados; heurística de riesgo, no norma. Licencia y versión por confirmar en el repositorio."
+   },
+   {
+    "url": "https://semver.org/spec/v2.0.0.md",
+    "family": "Convenciones",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Especificación con MUST/SHOULD para compatibilidad (MAJOR/MINOR/PATCH, API pública declarada, inmutabilidad). Obligatorio solo si se declara usar SemVer; no impone la elección de esquema."
+   },
+   {
+    "url": "https://github.com/google/eng-practices/blob/master/review/reviewer/standard.md",
+    "family": "Guías de revisión de código",
+    "stance": "context",
+    "role": "primary",
+    "why": "Guía pública de revisión: aprobar si mejora la salud del código; distingue guía de estilo (autoridad) de preferencia personal. Convención profesional, no norma."
+   },
+   {
+    "url": "https://www.iso.org/standard/79428.html",
+    "family": "Estándares ISO/IEC/IEEE",
+    "stance": "context",
+    "role": "primary",
+    "why": "Norma de pago (solo metadatos) para proceso de pruebas; las partes 3 y 4 cubren documentación y técnicas. Voluntaria salvo contrato."
+   },
+   {
+    "url": "https://dl.acm.org/doi/abs/10.1145/2635868.2635929",
+    "family": "Literatura revisada por pares",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Evidencia de que la detección de mutantes correlaciona con fallos reales; debe contrastarse con la evidencia de que la cobertura no es suficiente."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
