@@ -1,0 +1,450 @@
+{
+ "request_id": "RR-2026-11-12-entregable-frontend-html",
+ "fetched": [
+  {
+   "url": "https://www.w3.org/news/2023/web-content-accessibility-guidelines-wcag-2-2-is-a-w3c-recommendation",
+   "status": 200,
+   "error": null,
+   "sha256": "871ed708ea3199ae114cf76af077b8659a0b0c6149b3346d20b6d402621d7ee7",
+   "bytes": 24453,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:04Z",
+   "text_status": "ok",
+   "text_chars": 3093
+  },
+  {
+   "url": "https://w3c.github.io/wcag/guidelines/22/",
+   "status": 200,
+   "error": null,
+   "sha256": "9d86a11b0932709057fec8200f0d089b4d34bd9beca3d77d61d4bd1390fd8ca8",
+   "bytes": 510385,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:06Z",
+   "text_status": "ok",
+   "text_chars": 157686
+  },
+  {
+   "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+   "status": 200,
+   "error": null,
+   "sha256": "03d76897dff9851b8ee1d8be24f72d687bf3e863603de76bd9c52c06270f4557",
+   "bytes": 203158,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:07Z",
+   "text_status": "ok",
+   "text_chars": 53262
+  },
+  {
+   "url": "https://github.com/whatwg/html/blob/main/FAQ.md",
+   "status": 200,
+   "error": null,
+   "sha256": "965f11b8f19104ce96cc8af4bc32cd3efc3e29d630edd8601a94712015d287a2",
+   "bytes": 465887,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:07Z",
+   "text_status": "ok",
+   "text_chars": 35340
+  },
+  {
+   "url": "https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/",
+   "status": 200,
+   "error": null,
+   "sha256": "a4cd3dece76b5fc7aaada1677b06f1cf28c04c52bbbf77ccc06f717131ac7f82",
+   "bytes": 38024,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:09Z",
+   "text_status": "ok",
+   "text_chars": 5497
+  },
+  {
+   "url": "https://eur-lex.europa.eu/eli/dir/2016/2102/oj/eng",
+   "status": 200,
+   "error": null,
+   "sha256": "d45eb8b06be0da6fecb9408150fb9e42c53e8bed736c5fc6b079819e81bd8f9e",
+   "bytes": 254582,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:09Z",
+   "text_status": "ok",
+   "text_chars": 7327
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/policies/latest-changes-accessibility-standard",
+   "status": 200,
+   "error": null,
+   "sha256": "9d787972709c01d2d7641b9ce67ae21b0aa00357d1629400bd7334beeb5dc704",
+   "bytes": 150773,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:20Z",
+   "text_status": "ok",
+   "text_chars": 25749
+  },
+  {
+   "url": "https://www.federalregister.gov/documents/2024/04/24/2024-07758/nondiscrimination-on-the-basis-of-disability-accessibility-of-web-information-and-services-of-state",
+   "status": "refused",
+   "error": "host not in allowlist: unblock.federalregister.gov",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:50:21Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://training.section508.gov/508-training/courses/new/page291026.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://training.section508.gov/508-training/courses/new/page291026.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:50:22Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://web.dev/articles/vitals",
+   "status": 200,
+   "error": null,
+   "sha256": "ab613341423ffd2443521ffc801c3dc5d36d99dd7e9b06935f82a117dd79a7ad",
+   "bytes": 145968,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:27Z",
+   "text_status": "ok",
+   "text_chars": 17287
+  },
+  {
+   "url": "https://github.com/validator/validator",
+   "status": 200,
+   "error": null,
+   "sha256": "4c1b8f440a9629ff441d7dfd1a78766423b034fc3664dac0cce6d9eb64070aee",
+   "bytes": 381838,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:29Z",
+   "text_status": "ok",
+   "text_chars": 15471
+  },
+  {
+   "url": "https://github.com/dequelabs/axe-core",
+   "status": 200,
+   "error": null,
+   "sha256": "059f0fdea0a230851069bd8b5064451421d2214d3b6de7f18edf1d21181b09a3",
+   "bytes": 368444,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:50:29Z",
+   "text_status": "ok",
+   "text_chars": 12905
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43283678065",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "WCAG 2.2 se publicó como Recomendación W3C el 5 de octubre de 2023 y añade 9 criterios de éxito respecto de WCAG 2.1.",
+    "now": "WCAG 2.2 añade 9 requisitos (llamados criterios de éxito) respecto de WCAG 2.1.",
+    "cut": "Publicación como Recomendación W3C el 5 de octubre de 2023."
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "El contraste mínimo del texto es 4,5:1 (nivel AA), con excepciones para texto grande, incidental y logotipos.",
+    "now": "La presentación visual de texto e imágenes de texto tiene una relación de contraste de al menos 4,5:1, salvo ciertas excepciones.",
+    "cut": "Nivel AA y la lista de excepciones (texto grande, incidental, logotipos)."
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "El contraste no textual exige 3:1 para componentes de interfaz y para partes de gráficos necesarias para entender el contenido (AA).",
+    "now": "Se incluyen las partes de gráficos necesarias para entender el contenido, excepto cuando una presentación particular de los gráficos es esencial para la información que se transmite.",
+    "cut": "Umbral 3:1, componentes de interfaz y nivel AA."
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "Reflow (AA): sin scroll bidimensional a 320 px CSS de ancho, salvo contenido que requiere layout bidimensional.",
+    "now": "Contenido con desplazamiento vertical a un ancho equivalente a 320 píxeles CSS.",
+    "cut": "Nombre 'Reflow', nivel AA, 'sin scroll bidimensional' y la excepción de contenido que requiere layout bidimensional."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "Las variantes responsivas de una página forman parte de la conformidad: cada variante debe cumplir.",
+    "now": "Una página completa incluye cada variación de la página que esta presenta automáticamente para distintos tamaños de pantalla.",
+    "cut": "Que forman parte de la conformidad y que cada variante debe cumplir."
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "Tamaño mínimo de objetivo (AA, nuevo en 2.2): 24x24 px CSS con excepciones.",
+    "now": "El tamaño del objetivo para entradas de puntero es de al menos 24 por 24 píxeles CSS, con excepciones.",
+    "cut": "Nivel AA y 'nuevo en 2.2'."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "Todo debe ser operable por teclado (Nivel A) salvo funciones dependientes de la trayectoria.",
+    "now": "Toda la funcionalidad del contenido es operable mediante una interfaz de teclado sin requerir tiempos específicos para pulsaciones individuales.",
+    "cut": "Nivel A y la excepción de funciones dependientes de la trayectoria."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "Name, Role, Value (A): nombre y rol determinables programáticamente en todos los componentes; los controles HTML estándar ya lo cumplen.",
+    "now": "Los controles HTML estándar ya cumplen este criterio de éxito cuando se usan según la especificación.",
+    "cut": "Nombre 'Name, Role, Value', nivel A y 'nombre y rol determinables programáticamente en todos los componentes'."
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "Las notas, ejemplos y material no normativo no crean requisitos para la conformidad.",
+    "now": "El material no normativo ofrece información orientativa para interpretar las pautas, pero no crea requisitos que afecten a una declaración de conformidad.",
+    "cut": "Notas y ejemplos."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "La versión leída de WCAG 2.2 es un Editor's Draft; el propio documento dice que no debe citarse sino como trabajo en curso.",
+    "now": "El documento dice que no es apropiado citarlo sino como trabajo en curso.",
+    "cut": "Que la versión leída es un Editor's Draft."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "Los criterios de éxito están pensados para usarse en especificación, compra, regulación y contratos.",
+    "now": "Se proporcionan criterios de éxito comprobables para que WCAG 2.2 pueda usarse donde se necesitan requisitos y pruebas de conformidad.",
+    "cut": "Especificación, compra, regulación y contratos."
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "Para gráficas, si la información está disponible en otra forma (p. ej. tabla), las partes gráficas no son 'requeridas para entender'.",
+    "now": "Para gráficas: la información está disponible en otra forma, como una tabla que sigue a la gráfica.",
+    "cut": "La conclusión de que las partes gráficas no son 'requeridas para entender'."
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "El HTML Standard no tiene instantáneas versionadas estables.",
+    "now": "En la práctica, todas las implementaciones siguen el estándar más reciente, no instantáneas supuestamente 'terminadas'.",
+    "cut": "Que el HTML Standard no tiene instantáneas versionadas estables."
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "EN 301 549 v2.1.2 y v3.2.1 se basan en WCAG 2.1.",
+    "now": "Ambas versiones se basan en gran medida en WCAG 2.1.",
+    "cut": "EN 301 549 y los números de versión v2.1.2 y v3.2.1."
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "La Directiva (UE) 2016/2102 trata de accesibilidad de sitios web y apps móviles de organismos del sector público (solo metadatos de EUR-Lex).",
+    "now": "La Directiva (UE) 2016/2102 del Parlamento Europeo y del Consejo, de 26 de octubre de 2016, trata de la accesibilidad de los sitios web y aplicaciones móviles de los organismos del sector público.",
+    "cut": "La nota '(solo metadatos de EUR-Lex)'."
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "Web Vitals (Google): LCP bueno si ocurre dentro de 2,5 s.",
+    "now": "Web Vitals: para una buena experiencia, el LCP debe ocurrir dentro de 2,5 s desde que la página empieza a cargar.",
+    "cut": "Atribución a Google."
+   },
+   {
+    "id": "confirmed[31]",
+    "claim": "Web Vitals (Google): INP de 200 ms o menos.",
+    "now": "Web Vitals: las páginas deben tener un INP de 200 ms o menos.",
+    "cut": "Atribución a Google."
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "Web Vitals (Google): CLS de 0,1 o menos.",
+    "now": "Web Vitals: las páginas deben mantener un CLS de 0,1 o menos.",
+    "cut": "Atribución a Google."
+   },
+   {
+    "id": "confirmed[38]",
+    "claim": "axe-core declara encontrar en promedio 57% de problemas WCAG automáticamente (cifra del proveedor).",
+    "now": "Con axe-core se puede encontrar en promedio el 57% de los problemas WCAG automáticamente.",
+    "cut": "La caracterización '(cifra del proveedor)'."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Especificaciones técnicas (WHATWG HTML, W3C WCAG 2.2, WAI-ARIA APG)",
+   "Normas armonizadas (EN 301 549, ISO/IEC 40500)",
+   "Leyes y reglamentos de accesibilidad (UE 2016/2102, EAA 2019/882, ADA Título II, Section 508)",
+   "Métricas de rendimiento (Core Web Vitals, web.dev)",
+   "Herramientas de validación (Nu Html Checker, axe-core, Lighthouse, Pa11y)",
+   "Guías de visualización de datos de organismos estadísticos (UK Analysis Function)",
+   "Fuentes secundarias/de proveedor (solo candidate_claim)"
+  ],
+  "searches": [
+   {
+    "query": "WCAG 2.2 W3C Recommendation",
+    "intent": "official"
+   },
+   {
+    "query": "HTML Living Standard WHATWG",
+    "intent": "official"
+   },
+   {
+    "query": "EN 301 549 V3.2.1 accessibility requirements ICT",
+    "intent": "official"
+   },
+   {
+    "query": "Section 508 ICT Revised 508 Standards WCAG 2.0 web content",
+    "intent": "official"
+   },
+   {
+    "query": "European Accessibility Act Directive 2019/882 websites e-commerce microenterprises exemption",
+    "intent": "limitations"
+   },
+   {
+    "query": "Core Web Vitals thresholds LCP INP CLS web.dev",
+    "intent": "official"
+   },
+   {
+    "query": "Nu HTML Checker validator.w3.org/nu license version",
+    "intent": "official"
+   },
+   {
+    "query": "axe-core github Deque MPL-2.0 automated tests percentage WCAG issues found",
+    "intent": "limitations"
+   },
+   {
+    "query": "WAI-ARIA Authoring Practices Guide first rule no ARIA better than bad ARIA",
+    "intent": "support"
+   },
+   {
+    "query": "Government Analysis Function data visualisation charts accessibility guidance",
+    "intent": "official"
+   },
+   {
+    "query": "ADA Title II final rule web accessibility WCAG 2.1 AA compliance dates Federal Register",
+    "intent": "official"
+   },
+   {
+    "query": "Directive (EU) 2016/2102 EUR-Lex accessibility websites mobile applications public sector bodies",
+    "intent": "official"
+   },
+   {
+    "query": "Lighthouse accessibility audit scoring chrome developers docs",
+    "intent": "official"
+   },
+   {
+    "query": "Pa11y github license pa11y-ci htmlcs axe runners",
+    "intent": "official"
+   },
+   {
+    "query": "WCAG 2.2 understanding conformance automated limitations manual testing W3C WAI evaluation tools",
+    "intent": "limitations"
+   },
+   {
+    "query": "WCAG 2.2 Success Criterion 1.4.11 Non-text Contrast graphical objects charts Understanding",
+    "intent": "support"
+   }
+  ],
+  "not_found": [
+   "sha256 de lo descargado: la herramienta solo hace búsquedas, no descarga archivos; no se calculó ningún hash.",
+   "Texto oficial de la Directiva (UE) 2019/882 (EAA) en EUR-Lex: solo aparecieron blogs de cumplimiento; la exención de microempresas (art. 4(5)) queda como candidate_claim.",
+   "Documento ETSI EN 301 549 V3.2.1 (PDF oficial) y su estado actual (V4.1.1): solo hay resúmenes secundarios.",
+   "Texto de 36 CFR 1194 / E207.2 en eCFR: solo apareció material de entrenamiento y blogs.",
+   "Aviso de prórroga ADA Título II de 2026 (91 FR 20902): no abierto, solo citado por secundarias.",
+   "Leyes nacionales (p. ej. BFSG alemana, España RD 1112/2018 y UNE-EN 301 549) no consultadas; hay que elegirlas según la jurisdicción de la solicitud.",
+   "Página oficial W3C WAI sobre herramientas de evaluación y Understanding Conformance, con la declaración de que las herramientas no bastan: la búsqueda solo devolvió secundarias.",
+   "Documentación oficial de Pa11y (LGPL-3.0, solo vía GitHub) y de Lighthouse (developer.chrome.com/docs/lighthouse/accessibility/scoring): vistas en los resultados, pero no incluidas en la lista por el límite de 12 fuentes.",
+   "Ejemplo oficial o artefacto de referencia (p. ej. W3C WAI Before and After Demonstration, ACT Rules): no buscados.",
+   "Evidencia independiente que contradiga o mida la cobertura de las pruebas automáticas (p. ej. estudios revisados por pares, informes WebAIM Million): no localizada."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 13,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist/",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.w3.org/news/2023/web-content-accessibility-guidelines-wcag-2-2-is-a-w3c-recommendation",
+    "family": "Especificaciones técnicas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Anuncio oficial de WCAG 2.2 (5 oct 2023). WCAG no es ley en sí; es la base técnica que leyes y normas citan. Remite a w3.org/TR/WCAG22 para citas literales y versión."
+   },
+   {
+    "url": "https://w3c.github.io/wcag/guidelines/22/",
+    "family": "Especificaciones técnicas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto normativo de los criterios de éxito (A/AA/AAA) para extraer citas ≤300 caracteres y clasificar como obligatorio solo cuando una ley o contrato lo adopte."
+   },
+   {
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+    "family": "Especificaciones técnicas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Aplica contraste 3:1 a objetos gráficos como gráficas (nivel AA); documento informativo, no normativo. Cubre legibilidad de gráficas y sus excepciones."
+   },
+   {
+    "url": "https://github.com/whatwg/html/blob/main/FAQ.md",
+    "family": "Especificaciones técnicas",
+    "stance": "context",
+    "role": "primary",
+    "why": "Fuente del emisor sobre el HTML Living Standard (html.spec.whatwg.org): estándar vivo sin versiones, con Review Drafts; condiciona la revalidación y la definición de HTML válido/semántico."
+   },
+   {
+    "url": "https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/",
+    "family": "Especificaciones técnicas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Orientación del APG: usar HTML nativo y ARIA solo con el comportamiento por teclado. Es guía (buena práctica), no requisito legal."
+   },
+   {
+    "url": "https://eur-lex.europa.eu/eli/dir/2016/2102/oj/eng",
+    "family": "Leyes de accesibilidad",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto legal obligatorio para organismos públicos de la UE (fechas 2019-2021, exclusiones, declaración de accesibilidad). Se transpone en leyes nacionales; revisar la transposición del país."
+   },
+   {
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/latest-changes-accessibility-standard",
+    "family": "Normas armonizadas",
+    "stance": "context",
+    "role": "primary",
+    "why": "Fuente de la Comisión sobre la norma armonizada EN 301 549 y sus actualizaciones; sirve para fijar versión vigente y disparador de revalidación (V3.2.1 con WCAG 2.1 AA; posible V4.1.1)."
+   },
+   {
+    "url": "https://www.federalregister.gov/documents/2024/04/24/2024-07758/nondiscrimination-on-the-basis-of-disability-accessibility-of-web-information-and-services-of-state",
+    "family": "Leyes de accesibilidad",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Obliga a WCAG 2.1 AA a entidades estatales y locales de EE.UU. (28 CFR 35 Subpart H), con excepciones. Las fechas se prorrogaron en 2026 (91 FR 20902, según fuentes secundarias; verificar el aviso)."
+   },
+   {
+    "url": "https://training.section508.gov/508-training/courses/new/page291026.html",
+    "family": "Leyes de accesibilidad",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Material oficial de GSA: Section 508 exige WCAG 2.0 A/AA para agencias federales de EE.UU. (36 CFR 1194). Exige menos que WCAG 2.2, así que mostrar 2.2 como obligatorio sería erróneo. Verificar contra el CFR."
+   },
+   {
+    "url": "https://web.dev/articles/vitals",
+    "family": "Métricas de rendimiento",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Definición oficial de Core Web Vitals (LCP ≤2.5 s, INP ≤200 ms, CLS ≤0.1 en el percentil 75). Son objetivos recomendados de proveedor, no norma ni ley."
+   },
+   {
+    "url": "https://github.com/validator/validator",
+    "family": "Herramientas de validación",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Validador de HTML conforme a la especificación, licencia MIT, versionado por fecha. Verifica conformidad de marcado, no accesibilidad completa."
+   },
+   {
+    "url": "https://github.com/dequelabs/axe-core",
+    "family": "Herramientas de validación",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Motor de pruebas automáticas, MPL-2.0, con reglas WCAG 2.0/2.1/2.2 y mejores prácticas. Deque dice que detecta ~57 % de los problemas, cifra del proveedor; exige revisión manual."
+   },
+   {
+    "url": "https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist/",
+    "family": "Guías de visualización de datos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Guía de un organismo estadístico sobre gráficas accesibles (títulos, alternativa de texto, descarga de datos, color). Es buena práctica para ese ámbito, no obligación general."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}

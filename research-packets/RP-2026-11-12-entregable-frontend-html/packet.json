@@ -1,0 +1,568 @@
+{
+ "research_id": "RP-2026-11-12-entregable-frontend-html",
+ "request_id": "RR-2026-11-12-entregable-frontend-html",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-12T18:53:36Z",
+ "question": "¿Qué hace correcto un frontend HTML o una visualización interactiva (semántica, accesibilidad, rendimiento, diseño responsivo, legibilidad de gráficas), qué es obligatorio (estándar, ley de accesibilidad) y qué es buena práctica, y con qué validadores y herramientas se produce y se comprueba?",
+ "why_zpmnd_needs_it": "Familia de entregable: HTML, sitios web, experiencias interactivas, dashboards y visualización. ZPMND necesita criterios profesionales citables para producir y verificar este tipo de resultado, sin inventar obligaciones. Quinto entregable de prueba real. Pistas, no verdades: HTML Living Standard (WHATWG), WCAG 2.2 y ARIA APG (W3C), EN 301 549, Section 508, leyes de accesibilidad web nacionales, métricas de rendimiento (Core Web Vitals), validadores (Nu HTML Checker, axe-core, Lighthouse, Pa11y), guías de visualización de datos de organismos estadísticos.",
+ "scope": "Requisitos de un frontend HTML / visualización interactiva: WCAG 2.2 (W3C), Understanding 1.4.11, FAQ del estándar HTML (WHATWG), APG/ARIA, Directiva UE 2016/2102 (solo metadatos de EUR-Lex), página de la Comisión sobre EN 301 549, Web Vitals (proveedor) y herramientas vnu y axe-core. Se leyeron los textos entregados; no se calcularon sha256.",
+ "sources": {
+  "primary": [
+   "SA-871ed708ea3199ae114cf76a",
+   "SA-9d86a11b0932709057fec820",
+   "SA-03d76897dff9851b8ee1d8be",
+   "SA-965f11b8f19104ce96cc8af4",
+   "SA-a4cd3dece76b5fc7aaada167",
+   "SA-d45eb8b06be0da6fecb94081",
+   "SA-9d787972709c01d2d7641b9c",
+   "SA-ab613341423ffd2443521ffc",
+   "SA-4c1b8f440a9629ff441d7dfd",
+   "SA-059f0fdea0a230851069bd8b"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-871ed708ea3199ae114cf76a",
+   "url": "https://www.w3.org/news/2023/web-content-accessibility-guidelines-wcag-2-2-is-a-w3c-recommendation/",
+   "retrieved_at": "2026-11-12T18:50:04Z",
+   "sha256": "871ed708ea3199ae114cf76af077b8659a0b0c6149b3346d20b6d402621d7ee7",
+   "bytes": 24453,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "W3C",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "WCAG 2.2 is a W3C Recommendation"
+  },
+  {
+   "artifact_id": "SA-9d86a11b0932709057fec820",
+   "url": "https://w3c.github.io/wcag/guidelines/22/",
+   "retrieved_at": "2026-11-12T18:50:06Z",
+   "sha256": "9d86a11b0932709057fec8200f0d089b4d34bd9beca3d77d61d4bd1390fd8ca8",
+   "bytes": 510385,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "W3C",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Web Content Accessibility Guidelines (WCAG) 2.2"
+  },
+  {
+   "artifact_id": "SA-03d76897dff9851b8ee1d8be",
+   "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+   "retrieved_at": "2026-11-12T18:50:07Z",
+   "sha256": "03d76897dff9851b8ee1d8be24f72d687bf3e863603de76bd9c52c06270f4557",
+   "bytes": 203158,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "W3C WAI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Understanding SC 1.4.11 Non-text Contrast"
+  },
+  {
+   "artifact_id": "SA-965f11b8f19104ce96cc8af4",
+   "url": "https://github.com/whatwg/html/blob/main/FAQ.md",
+   "retrieved_at": "2026-11-12T18:50:07Z",
+   "sha256": "965f11b8f19104ce96cc8af4bc32cd3efc3e29d630edd8601a94712015d287a2",
+   "bytes": 465887,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "WHATWG",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "whatwg/html FAQ"
+  },
+  {
+   "artifact_id": "SA-a4cd3dece76b5fc7aaada167",
+   "url": "https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/",
+   "retrieved_at": "2026-11-12T18:50:09Z",
+   "sha256": "a4cd3dece76b5fc7aaada1677b06f1cf28c04c52bbbf77ccc06f717131ac7f82",
+   "bytes": 38024,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "W3C WAI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "APG Read Me First: No ARIA is better than Bad ARIA"
+  },
+  {
+   "artifact_id": "SA-d45eb8b06be0da6fecb94081",
+   "url": "https://eur-lex.europa.eu/eli/dir/2016/2102/oj/eng",
+   "retrieved_at": "2026-11-12T18:50:09Z",
+   "sha256": "d45eb8b06be0da6fecb9408150fb9e42c53e8bed736c5fc6b079819e81bd8f9e",
+   "bytes": 254582,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Unión Europea (EUR-Lex)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Directive (EU) 2016/2102 on accessibility of websites and mobile apps of public sector bodies"
+  },
+  {
+   "artifact_id": "SA-9d787972709c01d2d7641b9c",
+   "url": "https://digital-strategy.ec.europa.eu/en/policies/latest-changes-accessibility-standard",
+   "retrieved_at": "2026-11-12T18:50:20Z",
+   "sha256": "9d787972709c01d2d7641b9ce67ae21b0aa00357d1629400bd7334beeb5dc704",
+   "bytes": 150773,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Comisión Europea",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Web accessibility standards - latest changes"
+  },
+  {
+   "artifact_id": "SA-ab613341423ffd2443521ffc",
+   "url": "https://web.dev/articles/vitals",
+   "retrieved_at": "2026-11-12T18:50:27Z",
+   "sha256": "ab613341423ffd2443521ffc801c3dc5d36d99dd7e9b06935f82a117dd79a7ad",
+   "bytes": 145968,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Google (web.dev)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Web Vitals"
+  },
+  {
+   "artifact_id": "SA-4c1b8f440a9629ff441d7dfd",
+   "url": "https://github.com/validator/validator",
+   "retrieved_at": "2026-11-12T18:50:29Z",
+   "sha256": "4c1b8f440a9629ff441d7dfd1a78766423b034fc3664dac0cce6d9eb64070aee",
+   "bytes": 381838,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "validator.github.io / W3C",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "The Nu Html Checker (vnu)"
+  },
+  {
+   "artifact_id": "SA-059f0fdea0a230851069bd8b",
+   "url": "https://github.com/dequelabs/axe-core",
+   "retrieved_at": "2026-11-12T18:50:29Z",
+   "sha256": "059f0fdea0a230851069bd8b5064451421d2214d3b6de7f18edf1d21181b09a3",
+   "bytes": 368444,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "Deque Systems",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "axe-core"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "WCAG 2.2 añade 9 requisitos (llamados criterios de éxito) respecto de WCAG 2.1.",
+    "artifact_ids": [
+     "SA-871ed708ea3199ae114cf76a"
+    ],
+    "quote": "WCAG 2.2 adds 9 requirements (called success criteria) since WCAG 2.1.",
+    "locator": "Noticia W3C, 5 octubre 2023"
+   },
+   {
+    "claim": "La presentación visual de texto e imágenes de texto tiene una relación de contraste de al menos 4,5:1, salvo ciertas excepciones.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:",
+    "locator": "WCAG 2.2, SC 1.4.3 (AA)"
+   },
+   {
+    "claim": "Se incluyen las partes de gráficos necesarias para entender el contenido, excepto cuando una presentación particular de los gráficos es esencial para la información que se transmite.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.",
+    "locator": "WCAG 2.2, SC 1.4.11 (AA)"
+   },
+   {
+    "claim": "Contenido con desplazamiento vertical a un ancho equivalente a 320 píxeles CSS.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "Vertical scrolling content at a width equivalent to 320 CSS pixels;",
+    "locator": "WCAG 2.2, SC 1.4.10 (AA)"
+   },
+   {
+    "claim": "Una página completa incluye cada variación de la página que esta presenta automáticamente para distintos tamaños de pantalla.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "A full page includes each variation of the page that is automatically presented by the page for various screen sizes",
+    "locator": "WCAG 2.2, 5.2.2 Nota 3"
+   },
+   {
+    "claim": "El tamaño del objetivo para entradas de puntero es de al menos 24 por 24 píxeles CSS, con excepciones.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "The size of the target for pointer inputs is at least 24 by 24 CSS pixels, except when:",
+    "locator": "WCAG 2.2, SC 2.5.8 (AA)"
+   },
+   {
+    "claim": "Toda la funcionalidad del contenido es operable mediante una interfaz de teclado sin requerir tiempos específicos para pulsaciones individuales.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes",
+    "locator": "WCAG 2.2, SC 2.1.1 (A)"
+   },
+   {
+    "claim": "Los controles HTML estándar ya cumplen este criterio de éxito cuando se usan según la especificación.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "standard HTML controls already meet this success criterion when used according to specification.",
+    "locator": "WCAG 2.2, SC 4.1.2 nota"
+   },
+   {
+    "claim": "El criterio 4.1.1 Parsing fue eliminado en WCAG 2.2.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "WCAG 2.2 has removed one success criterion, 4.1.1 Parsing.",
+    "locator": "WCAG 2.2, Comparison with WCAG 2.1"
+   },
+   {
+    "claim": "Las declaraciones de conformidad son opcionales.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "Conformance claims are not required. Authors can conform to WCAG 2.2 without making a claim.",
+    "locator": "WCAG 2.2, 5.3.1"
+   },
+   {
+    "claim": "El material no normativo ofrece información orientativa para interpretar las pautas, pero no crea requisitos que afecten a una declaración de conformidad.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.",
+    "locator": "WCAG 2.2, 5.1"
+   },
+   {
+    "claim": "W3C desaconseja exigir AAA como política general.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "It is not recommended that Level AAA conformance be required as a general policy for entire sites",
+    "locator": "WCAG 2.2, 5.2.1 Nota 2"
+   },
+   {
+    "claim": "El documento dice que no es apropiado citarlo sino como trabajo en curso.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "It is inappropriate to cite this document as other than a work in progress.",
+    "locator": "WCAG 2.2, Status of This Document"
+   },
+   {
+    "claim": "W3C afirma que WCAG 2.2 no depreca WCAG 2.0 ni 2.1.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "The publication of WCAG 2.2 does not deprecate or supersede WCAG 2.0 or WCAG 2.1.",
+    "locator": "WCAG 2.2, Abstract"
+   },
+   {
+    "claim": "Se proporcionan criterios de éxito comprobables para que WCAG 2.2 pueda usarse donde se necesitan requisitos y pruebas de conformidad.",
+    "artifact_ids": [
+     "SA-9d86a11b0932709057fec820"
+    ],
+    "quote": "testable success criteria are provided to allow WCAG 2.2 to be used where requirements and conformance testing are necessary",
+    "locator": "WCAG 2.2, Introducción, Success Criteria"
+   },
+   {
+    "claim": "La guía Understanding de 1.4.11 es informativa y no requerida para cumplir WCAG.",
+    "artifact_ids": [
+     "SA-03d76897dff9851b8ee1d8be"
+    ],
+    "quote": "Informative explanations, not required to meet WCAG",
+    "locator": "Understanding 1.4.11, cabecera"
+   },
+   {
+    "claim": "Para gráficas: la información está disponible en otra forma, como una tabla que sigue a la gráfica.",
+    "artifact_ids": [
+     "SA-03d76897dff9851b8ee1d8be"
+    ],
+    "quote": "The information is available in another form, such as in a table that follows the graph",
+    "locator": "Understanding 1.4.11, Required for understanding"
+   },
+   {
+    "claim": "El umbral 3:1 no se redondea.",
+    "artifact_ids": [
+     "SA-03d76897dff9851b8ee1d8be"
+    ],
+    "quote": "the computed values should not be rounded (e.g. 2.999:1 would not meet the 3:1 threshold)",
+    "locator": "Understanding 1.4.11, Intent"
+   },
+   {
+    "claim": "HTML Standard: la validez es una herramienta de aseguramiento de calidad.",
+    "artifact_ids": [
+     "SA-965f11b8f19104ce96cc8af4"
+    ],
+    "quote": "Validity (more often referred to as document conformance in the WHATWG) is a quality assurance tool to help authors avoid mistakes.",
+    "locator": "FAQ WHATWG, sección HTML"
+   },
+   {
+    "claim": "UTF-8 es la única codificación conforme.",
+    "artifact_ids": [
+     "SA-965f11b8f19104ce96cc8af4"
+    ],
+    "quote": "UTF-8 is the only conformant character encoding.",
+    "locator": "FAQ WHATWG, How do I specify the character encoding?"
+   },
+   {
+    "claim": "En la práctica, todas las implementaciones siguen el estándar más reciente, no instantáneas supuestamente 'terminadas'.",
+    "artifact_ids": [
+     "SA-965f11b8f19104ce96cc8af4"
+    ],
+    "quote": "In practice, implementations all follow the latest standard anyway, not so-called \"finished\" snapshots.",
+    "locator": "FAQ WHATWG, Why are there no stable snapshots"
+   },
+   {
+    "claim": "Que los navegadores procesen marcado erróneo no lo hace conforme para autores.",
+    "artifact_ids": [
+     "SA-965f11b8f19104ce96cc8af4"
+    ],
+    "quote": "Just because browsers are required to handle erroneous content, it does not make such markup conforming.",
+    "locator": "FAQ WHATWG, tag soup"
+   },
+   {
+    "claim": "Sobre section vs div, el FAQ lo presenta como consejo, no como regla dura.",
+    "artifact_ids": [
+     "SA-965f11b8f19104ce96cc8af4"
+    ],
+    "quote": "It's not a hard-and-fast rule, but if you find yourself in a situation where a heading would be inappropriate, you probably want <div> rather than <section>.",
+    "locator": "FAQ WHATWG, Using HTML"
+   },
+   {
+    "claim": "APG: los roles ARIA no dan comportamiento de teclado.",
+    "artifact_ids": [
+     "SA-a4cd3dece76b5fc7aaada167"
+    ],
+    "quote": "Unlike HTML input elements, ARIA roles do not cause browsers to provide keyboard behaviors or styling.",
+    "locator": "APG Read Me First, Principle 1"
+   },
+   {
+    "claim": "APG: ARIA incorrecto puede perjudicar la experiencia no visual.",
+    "artifact_ids": [
+     "SA-a4cd3dece76b5fc7aaada167"
+    ],
+    "quote": "Incorrect ARIA misrepresents visual experiences, with potentially devastating effects on their corresponding non-visual experiences.",
+    "locator": "APG Read Me First"
+   },
+   {
+    "claim": "APG: es esencial probar interoperabilidad con tecnologías de asistencia antes de producción.",
+    "artifact_ids": [
+     "SA-a4cd3dece76b5fc7aaada167"
+    ],
+    "quote": "Testing assistive technology interoperability is essential before using code from this guide in production.",
+    "locator": "APG Read Me First, Browser and AT Support"
+   },
+   {
+    "claim": "Comisión Europea: nuevas versiones de WCAG o EN 301 549 no cambian automáticamente las obligaciones legales bajo la WAD.",
+    "artifact_ids": [
+     "SA-9d787972709c01d2d7641b9c"
+    ],
+    "quote": "So new versions of the WCAG or of EN 301 549 do not automatically change the legal obligations of the Member States with respect to the WAD.",
+    "locator": "Comisión Europea, Introduction"
+   },
+   {
+    "claim": "Ambas versiones se basan en gran medida en WCAG 2.1.",
+    "artifact_ids": [
+     "SA-9d787972709c01d2d7641b9c"
+    ],
+    "quote": "Both versions build heavily on WCAG 2.1.",
+    "locator": "Comisión Europea, Changes in v3.2.1"
+   },
+   {
+    "claim": "La WAD no se aplica a medios temporales en vivo.",
+    "artifact_ids": [
+     "SA-9d787972709c01d2d7641b9c"
+    ],
+    "quote": "The WAD \"does not apply to live time-based media\".",
+    "locator": "Comisión Europea, Clauses removed in v3.2.1"
+   },
+   {
+    "claim": "La Directiva (UE) 2016/2102 del Parlamento Europeo y del Consejo, de 26 de octubre de 2016, trata de la accesibilidad de los sitios web y aplicaciones móviles de los organismos del sector público.",
+    "artifact_ids": [
+     "SA-d45eb8b06be0da6fecb94081"
+    ],
+    "quote": "Directive (EU) 2016/2102 of the European Parliament and of the Council of 26 October 2016 on the accessibility of the websites and mobile applications of public sector bodies",
+    "locator": "EUR-Lex, ficha del documento"
+   },
+   {
+    "claim": "Web Vitals: para una buena experiencia, el LCP debe ocurrir dentro de 2,5 s desde que la página empieza a cargar.",
+    "artifact_ids": [
+     "SA-ab613341423ffd2443521ffc"
+    ],
+    "quote": "To provide a good user experience, LCP should occur within 2.5 seconds of when the page first starts loading.",
+    "locator": "web.dev Web Vitals"
+   },
+   {
+    "claim": "Web Vitals: las páginas deben tener un INP de 200 ms o menos.",
+    "artifact_ids": [
+     "SA-ab613341423ffd2443521ffc"
+    ],
+    "quote": "pages should have a INP of 200 milliseconds or less.",
+    "locator": "web.dev Web Vitals"
+   },
+   {
+    "claim": "Web Vitals: las páginas deben mantener un CLS de 0,1 o menos.",
+    "artifact_ids": [
+     "SA-ab613341423ffd2443521ffc"
+    ],
+    "quote": "pages should maintain a CLS of 0.1. or less.",
+    "locator": "web.dev Web Vitals"
+   },
+   {
+    "claim": "Lighthouse no puede medir INP.",
+    "artifact_ids": [
+     "SA-ab613341423ffd2443521ffc"
+    ],
+    "quote": "Tools like Lighthouse that load pages in a simulated environment without a user cannot measure INP",
+    "locator": "web.dev Web Vitals, Lab tools"
+   },
+   {
+    "claim": "vnu detecta errores en HTML, CSS y SVG.",
+    "artifact_ids": [
+     "SA-4c1b8f440a9629ff441d7dfd"
+    ],
+    "quote": "catch unintended mistakes in your HTML, CSS, and SVG",
+    "locator": "README validator/validator"
+   },
+   {
+    "claim": "vnu.jar requiere Java 17 o superior.",
+    "artifact_ids": [
+     "SA-4c1b8f440a9629ff441d7dfd"
+    ],
+    "quote": "vnu.jar — a portable version you can use on any system that has Java 17 or above installed",
+    "locator": "README validator/validator, Binaries and packages"
+   },
+   {
+    "claim": "Solo la release 'latest' de vnu es la de producción.",
+    "artifact_ids": [
+     "SA-4c1b8f440a9629ff441d7dfd"
+    ],
+    "quote": "The release named “latest” is “production-ready” and is the only release you want to use.",
+    "locator": "README validator/validator, Releases"
+   },
+   {
+    "claim": "axe-core tiene reglas para WCAG 2.0, 2.1 y 2.2 (A, AA, AAA) y buenas prácticas.",
+    "artifact_ids": [
+     "SA-059f0fdea0a230851069bd8b"
+    ],
+    "quote": "Axe-core has different types of rules, for WCAG 2.0, 2.1, 2.2 on level A, AA and AAA as well as a number of best practices",
+    "locator": "README axe-core, The Accessibility Rules"
+   },
+   {
+    "claim": "Con axe-core se puede encontrar en promedio el 57% de los problemas WCAG automáticamente.",
+    "artifact_ids": [
+     "SA-059f0fdea0a230851069bd8b"
+    ],
+    "quote": "With axe-core, you can find on average 57% of WCAG issues automatically.",
+    "locator": "README axe-core"
+   },
+   {
+    "claim": "axe-core se distribuye bajo MPL 2.0.",
+    "artifact_ids": [
+     "SA-059f0fdea0a230851069bd8b"
+    ],
+    "quote": "Axe-core is distributed under the Mozilla Public License, version 2.0.",
+    "locator": "README axe-core, Licenses"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Texto de la Directiva (UE) 2016/2102 (ámbito, excepciones, plazos): solo se leyó la ficha de EUR-Lex.",
+   "Directiva (UE) 2019/882 (European Accessibility Act) y sector privado: no figura en las fuentes.",
+   "Leyes de otras jurisdicciones (ADA, Sección 508) y contratos concretos: no cubiertos.",
+   "EN 301 549 vigente tras la página de la Comisión (30 jun 2025) y si incorpora WCAG 2.2: no hallado.",
+   "Reglas de semántica HTML detalladas y viewport/CSS responsivo: no se leyó la especificación HTML.",
+   "Guía específica de accesibilidad de visualizaciones interactivas (SVG/ARIA en gráficos): no hallada.",
+   "Versiones concretas de vnu y axe-core, sha256 y ejemplos oficiales de referencia: no figuran en los textos.",
+   "Lighthouse, Pa11y, WAVE y validadores de CSS/enlaces como herramientas documentadas: ausentes salvo mención."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Lo obligatorio proviene de una norma o ley que lo invoque (p. ej. WAD/EN 301 549 para organismos públicos de la UE); WCAG por sí sola no obliga.",
+  "INTERPRETACIÓN: Según la Comisión, la WAD se apoya en EN 301 549 v3.2.1 (basada en WCAG 2.1); los criterios nuevos de WCAG 2.2 no aparecen en su lista, por lo que en ese marco serían buena práctica.",
+  "INTERPRETACIÓN: 4.1.1 Parsing fue retirado de WCAG 2.2 pero la lista de la Comisión de EN 301 549 v3.2.1 lo mantiene (filas 78 y 124); validar HTML con vnu sigue siendo útil.",
+  "SECUNDARIA: web.dev (Google, proveedor) — los umbrales de Web Vitals son buena práctica de rendimiento, no norma ni ley.",
+  "INTERPRETACIÓN: Las recomendaciones 'alentadas' de Understanding (evitar líneas finas, delinear controles) son informativas, no exigibles.",
+  "INTERPRETACIÓN: Para gráficas, presentar valores en texto o tabla puede evitar que los elementos gráficos sean 'requeridos para entender', además de contraste 3:1 en lo esencial.",
+  "INTERPRETACIÓN: Las herramientas automáticas no bastan (axe declara ~57%; APG exige pruebas con tecnologías de asistencia); se requiere revisión manual."
+ ],
+ "candidate_methods": [
+  "Pipeline: vnu para HTML/CSS/SVG, axe-core en cada estado de la UI, Web Vitals en laboratorio y campo, y revisión manual con teclado y lector de pantalla.",
+  "Usar elementos HTML nativos antes que ARIA (APG)."
+ ],
+ "candidate_controls": [
+  "Declarar versión de WCAG y nivel objetivo y la norma jurídica que lo impone, con fecha de revisión.",
+  "Registrar versión y sha256 de vnu y axe-core usados."
+ ],
+ "candidate_tests": [
+  "vnu: `java -jar vnu.jar --skip-non-html <dir>` con 0 errores.",
+  "axe-core: `axe.run()` sin violaciones en cada estado; revisar 'incomplete' a mano.",
+  "Contraste: texto >= 4,5:1 (3:1 grande), controles y gráficos esenciales >= 3:1 sin redondear.",
+  "Reflow a 320 px CSS sin scroll bidimensional salvo excepciones.",
+  "Teclado: operar toda la funcionalidad sin ratón, sin trampas.",
+  "Objetivos de puntero >= 24x24 px CSS o con espaciado equivalente.",
+  "Gráficas: valores en texto/tabla y color no como único canal.",
+  "Rendimiento: LCP <= 2,5 s, INP <= 200 ms, CLS <= 0,1 (p75, campo)."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Clasificar cada requisito: obligatorio solo si una norma/ley aplicable lo exige; el resto, buena práctica o preferencia.",
+  "Revalidar al cambiar WCAG, la EN 301 549 referenciada, versiones de vnu/axe-core o umbrales de Web Vitals."
+ ],
+ "affected_existing_concepts": [
+  "Entregable frontend HTML / visualización interactiva",
+  "Conformidad WCAG vs. obligación legal"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: Una página que cumpla A/AA de WCAG 2.2 y pase vnu y axe sin violaciones cubriría lo automatizable, pero no lo manual."
+ ],
+ "limitations": [
+  "La fuente WCAG 2.2 entregada es un Editor's Draft del 9 nov 2026, no la Recomendación de 2023.",
+  "La Directiva 2016/2102 solo se leyó como ficha de EUR-Lex, sin articulado; no se afirman su ámbito ni excepciones.",
+  "Web Vitals es documentación de proveedor (Google), no normativa.",
+  "No se calcularon sha256 ni se verificaron versiones de herramientas.",
+  "Las afirmaciones de axe-core (57%) son del proveedor y no verificadas.",
+  "Sin fuentes sobre semántica HTML en profundidad, CSS responsivo ni accesibilidad específica de visualizaciones interactivas.",
+  "Las fuentes de GitHub/EUR-Lex contienen mucho ruido de navegación.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 19 de 40 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 13 propuestas, 12 aceptadas, 1 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.federalregister.gov/documents/2024/04/24/2024-07758/nondiscrimination-on-the-basis-of-disability-accessibility-of-web-information-and-services-of-state (refused); https://training.section508.gov/508-training/courses/new/page291026.html (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
