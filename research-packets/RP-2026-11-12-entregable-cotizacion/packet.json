@@ -1,0 +1,302 @@
+{
+ "research_id": "RP-2026-11-12-entregable-cotizacion",
+ "request_id": "RR-2026-11-12-entregable-cotizacion",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-12T18:56:03Z",
+ "question": "¿Qué debe contener una cotización, propuesta comercial o presupuesto para ser válida y profesional (oferta, precio, impuestos, vigencia, condiciones, moneda, firma), qué lo exige la ley o el contrato y qué es convención, en México y en las jurisdicciones principales, y con qué software se produce y se comprueba?",
+ "why_zpmnd_needs_it": "Familia de entregable: Cotizaciones, propuestas comerciales y presupuestos. ZPMND necesita criterios profesionales citables para producir y verificar este tipo de resultado, sin inventar obligaciones. Segundo entregable de prueba real. Pistas, no verdades: oferta y aceptación en códigos civiles y de comercio, protección al consumidor (precio total, impuestos, vigencia), reglas de IVA y de comprobantes, compras públicas (bases de licitación), normas de propuestas (RFP).",
+ "scope": "Requisitos de cotización/presupuesto en México (LFPC, Reglamento LFPC, CFF 29-A, LAASSP), con contraste mínimo UCC §2-205, UNIDROIT 2016 y Directiva UE 2011/83 (solo portada). No se cubren software, hashes, ni otras jurisdicciones en detalle.",
+ "sources": {
+  "primary": [
+   "SA-1ddd1c86ba29e43c292c4db4",
+   "SA-6aa98be220ccfbe18d52213f",
+   "SA-883f6e9c3139d0961de302de",
+   "SA-3b5a45dd21f4306a5489243e",
+   "SA-b7111c00f80dca4f554bc382"
+  ],
+  "secondary": [
+   "SA-2967af28960b885aec71230c",
+   "SA-73f69a1c4e19f34628e05c58"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-1ddd1c86ba29e43c292c4db4",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf_mov/Ley_Federal_de_Proteccion_al_Consumidor.pdf",
+   "retrieved_at": "2026-11-12T18:53:36Z",
+   "sha256": "1ddd1c86ba29e43c292c4db46651d55007372fae566fc02ec2784ffec59acb22",
+   "bytes": 635973,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "Cámara de Diputados",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Ley Federal de Protección al Consumidor (texto vigente)"
+  },
+  {
+   "artifact_id": "SA-6aa98be220ccfbe18d52213f",
+   "url": "https://www.ordenjuridico.gob.mx/Documentos/Federal/pdf/wo120957.pdf",
+   "retrieved_at": "2026-11-12T18:53:38Z",
+   "sha256": "6aa98be220ccfbe18d52213fd813ba9f0acbfdea153cde5f72a2305190aa4bd7",
+   "bytes": 203651,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "Orden Jurídico Nacional (Segob)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Reglamento de la Ley Federal de Protección al Consumidor"
+  },
+  {
+   "artifact_id": "SA-2967af28960b885aec71230c",
+   "url": "https://fisc.mx/ley/cff/articulo-29-a",
+   "retrieved_at": "2026-11-12T18:53:39Z",
+   "sha256": "2967af28960b885aec71230cb2f2601cefca012ba887ee956275c855fb97b06d",
+   "bytes": 88955,
+   "media_type": "text/html",
+   "source_type": "other",
+   "publisher": "fisc.mx (agregador)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Artículo 29-A CFF: requisitos de los CFDI (2026)"
+  },
+  {
+   "artifact_id": "SA-883f6e9c3139d0961de302de",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAASSP.pdf",
+   "retrieved_at": "2026-11-12T18:53:46Z",
+   "sha256": "883f6e9c3139d0961de302de7bddcf3262c69884008bb3b2324d57e5d67009fc",
+   "bytes": 682666,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "Cámara de Diputados",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público (DOF 16-04-2025)"
+  },
+  {
+   "artifact_id": "SA-73f69a1c4e19f34628e05c58",
+   "url": "https://www.law.cornell.edu/ucc/2/2-205",
+   "retrieved_at": "2026-11-12T18:53:46Z",
+   "sha256": "73f69a1c4e19f34628e05c58fd4161803567e2337ef6f4315c33268ecf7f9651",
+   "bytes": 26011,
+   "media_type": "text/html",
+   "source_type": "other",
+   "publisher": "Cornell Legal Information Institute",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "UCC § 2-205 Firm Offers"
+  },
+  {
+   "artifact_id": "SA-3b5a45dd21f4306a5489243e",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02011L0083-20260927",
+   "retrieved_at": "2026-11-12T18:53:57Z",
+   "sha256": "3b5a45dd21f4306a5489243e90b2d700bc079b612890ff60653d9ef5e3dc3095",
+   "bytes": 251017,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "EUR-Lex, Unión Europea",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Directive 2011/83/EU on consumer rights (consolidated)"
+  },
+  {
+   "artifact_id": "SA-b7111c00f80dca4f554bc382",
+   "url": "https://www.unidroit.org/wp-content/uploads/2021/06/Unidroit-Principles-2016-English-bl.pdf",
+   "retrieved_at": "2026-11-12T18:54:08Z",
+   "sha256": "b7111c00f80dca4f554bc382020d3aafde2c058d95301136cee5cb4636b67932",
+   "bytes": 243817,
+   "media_type": "application/pdf",
+   "source_type": "standard",
+   "publisher": "UNIDROIT",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "UNIDROIT Principles of International Commercial Contracts 2016"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "LFPC: antes de la prestación de un servicio, el proveedor deberá presentar presupuesto por escrito.",
+    "artifact_ids": [
+     "SA-1ddd1c86ba29e43c292c4db4"
+    ],
+    "quote": "Antes de la prestación de un servicio, el proveedor deberá presentar presupuesto por escrito.",
+    "locator": "LFPC, Cap. VI, art. 59"
+   },
+   {
+    "claim": "LFPC: el presupuesto deberá describir las características del servicio, el costo de refacciones y mano de obra, así como su vigencia.",
+    "artifact_ids": [
+     "SA-1ddd1c86ba29e43c292c4db4"
+    ],
+    "quote": "el presupuesto deberá describir las características del servicio, el costo de refacciones y mano de obra, así como su vigencia",
+    "locator": "LFPC art. 59"
+   },
+   {
+    "claim": "LFPC: dicho monto deberá incluir impuestos, comisiones, intereses, seguros y cualquier otro costo, cargo, gasto o erogación adicional.",
+    "artifact_ids": [
+     "SA-1ddd1c86ba29e43c292c4db4"
+    ],
+    "quote": "Dicho monto deberá incluir impuestos, comisiones, intereses, seguros y cualquier otro costo, cargo, gasto o erogación adicional",
+    "locator": "LFPC art. 7 BIS"
+   },
+   {
+    "claim": "LFPC: el proveedor está obligado a entregar el bien o suministrar el servicio de acuerdo con los términos y condiciones ofrecidos.",
+    "artifact_ids": [
+     "SA-1ddd1c86ba29e43c292c4db4"
+    ],
+    "quote": "El proveedor está obligado a entregar el bien o suministrar el servicio de acuerdo con los términos y condiciones ofrecidos",
+    "locator": "LFPC art. 42"
+   },
+   {
+    "claim": "La LFPC menciona los servicios profesionales que no sean de carácter mercantil.",
+    "artifact_ids": [
+     "SA-1ddd1c86ba29e43c292c4db4"
+    ],
+    "quote": "los servicios profesionales que no sean de carácter mercantil",
+    "locator": "LFPC art. 5"
+   },
+   {
+    "claim": "LFPC: en los anuncios respectivos deberán indicarse las condiciones, así como el plazo de duración o el volumen de los bienes o servicios ofrecidos.",
+    "artifact_ids": [
+     "SA-1ddd1c86ba29e43c292c4db4"
+    ],
+    "quote": "En los anuncios respectivos deberán indicarse las condiciones, así como el plazo de duración o el volumen de los bienes o servicios ofrecidos",
+    "locator": "LFPC art. 48 fr. I"
+   },
+   {
+    "claim": "LFPC: debe informarse al consumidor el monto total a pagar por el bien, producto o servicio de que se trate.",
+    "artifact_ids": [
+     "SA-1ddd1c86ba29e43c292c4db4"
+    ],
+    "quote": "Informar al consumidor el monto total a pagar por el bien, producto o servicio de que se trate",
+    "locator": "LFPC art. 66 fr. III"
+   },
+   {
+    "claim": "LFPC: para su validez, deberá estar escrito en idioma español y sus caracteres tendrán que ser legibles a simple vista.",
+    "artifact_ids": [
+     "SA-1ddd1c86ba29e43c292c4db4"
+    ],
+    "quote": "para su validez, deberá estar escrito en idioma español y sus caracteres tendrán que ser legibles a simple vista",
+    "locator": "LFPC art. 85"
+   },
+   {
+    "claim": "LFPC: contra su observancia no podrán alegarse costumbres, usos, prácticas, convenios o estipulaciones en contrario.",
+    "artifact_ids": [
+     "SA-1ddd1c86ba29e43c292c4db4"
+    ],
+    "quote": "contra su observancia no podrán alegarse costumbres, usos, prácticas, convenios o estipulaciones en contrario",
+    "locator": "LFPC art. 1"
+   },
+   {
+    "claim": "Reglamento de la LFPC: antes de la contratación correspondiente, el proveedor deberá informar al consumidor el Costo Anual Total aplicable a la operación.",
+    "artifact_ids": [
+     "SA-6aa98be220ccfbe18d52213f"
+    ],
+    "quote": "antes de la contratación correspondiente, el proveedor deberá informar al consumidor el Costo Anual Total aplicable a la operación",
+    "locator": "Reglamento LFPC art. 6, párr. 2"
+   },
+   {
+    "claim": "LAASSP: queda obligado por la misma por un plazo no inferior a veinte días hábiles.",
+    "artifact_ids": [
+     "SA-883f6e9c3139d0961de302de"
+    ],
+    "quote": "obligado por la misma por un plazo no inferior a veinte días hábiles",
+    "locator": "LAASSP art. 57 fr. II"
+   },
+   {
+    "claim": "LAASSP: moneda en que se cotizó y se efectuará el pago respectivo.",
+    "artifact_ids": [
+     "SA-883f6e9c3139d0961de302de"
+    ],
+    "quote": "Moneda en que se cotizó y se efectuará el pago respectivo",
+    "locator": "LAASSP art. 66 fr. XIII"
+   },
+   {
+    "claim": "LAASSP: producirán los mismos efectos que las leyes otorgan a los documentos firmados autógrafamente.",
+    "artifact_ids": [
+     "SA-883f6e9c3139d0961de302de"
+    ],
+    "quote": "producirán los mismos efectos que las leyes otorgan a los documentos firmados autógrafamente",
+    "locator": "LAASSP art. 37"
+   },
+   {
+    "claim": "Principios UNIDROIT: una propuesta para celebrar un contrato constituye una oferta si es suficientemente definida.",
+    "artifact_ids": [
+     "SA-b7111c00f80dca4f554bc382"
+    ],
+    "quote": "A proposal for concluding a contract constitutes an offer if it is sufficiently definite",
+    "locator": "UNIDROIT 2016 art. 2.1.2"
+   },
+   {
+    "claim": "Principios UNIDROIT: nada en estos Principios exige que un contrato, declaración u otro acto se realice.",
+    "artifact_ids": [
+     "SA-b7111c00f80dca4f554bc382"
+    ],
+    "quote": "Nothing in these Principles requires a contract, statement or any other act to be made",
+    "locator": "UNIDROIT 2016 art. 1.2"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Software que produce/comprueba cotizaciones (nombre, licencia, versión): no hay fuente.",
+   "sha256, URL y fechas de descarga por fuente: no proporcionados.",
+   "Texto de la Directiva 2011/83/UE: solo se leyó la portada.",
+   "Normas mexicanas (NOM/NMX) aplicables a comercio electrónico y Código de Comercio/Código Civil sobre oferta y vigencia: no incluidos.",
+   "Requisitos de cotización en EE. UU. más allá de UCC §2-205, Reino Unido y otras jurisdicciones: no hallados.",
+   "Ejemplo oficial publicado de formato de cotización: no hallado."
+  ]
+ },
+ "candidate_claims": [
+  "SECUNDARIA: fisc.mx (agregador) reproduce CFF 29-A y afirma que el CFDI exige RFC, régimen, lugar y fecha, y que sin cumplir requisitos no es deducible; requiere cotejo con DOF/Cámara de Diputados.",
+  "SECUNDARIA: Cornell LII, UCC §2-205: oferta firme de comerciante en escrito firmado que asegura vigencia es irrevocable hasta 3 meses; aplica a venta de bienes en EE. UU.",
+  "INTERPRETACIÓN: una cotización B2C de servicios en México debe llevar descripción, precio total con impuestos en MXN, y vigencia (art. 59, 7 BIS, 34 LFPC); la firma y el desglose de IVA como cotización no están exigidos por esas fuentes (el desglose por tasa es del CFDI).",
+  "INTERPRETACIÓN: la cotización no es CFDI; los requisitos de CFF 29-A aplican a la factura, no a la cotización previa.",
+  "INTERPRETACIÓN: en compras federales la cotización exige firma electrónica y sostenimiento mínimo de 20 días hábiles; fuera de ese ámbito la vigencia es contractual/convención.",
+  "INTERPRETACIÓN: la moneda extranjera en cotización B2B queda a lo pactado (UNIDROIT 6.1.9 supletorio), pero la publicidad al consumidor exige precio en MXN (art. 34 LFPC)."
+ ],
+ "candidate_tests": [
+  "Verificar que la cotización de servicio B2C muestre monto total con impuestos en MXN de forma visible (art. 7 BIS, 34 LFPC).",
+  "Verificar presencia de vigencia explícita (fecha o plazo) y descripción de alcance.",
+  "Para licitación federal: comprobar vigencia de sostenimiento >= 20 días hábiles y firma electrónica.",
+  "Revalidar ante reforma de LFPC, CFF 29-A, LAASSP o publicación de su Reglamento adecuado."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Clasificar vigencia, precio total en MXN con impuestos y descripción como obligatorios solo en el ámbito LFPC (consumidor/mercantil) y compras públicas; en B2B privado, convención.",
+  "No marcar firma autógrafa como obligatoria; solo la electrónica en Plataforma de compras federales."
+ ],
+ "limitations": [
+  "Solo texto de fuentes dadas; sin sha256 ni URL verificables.",
+  "SA-2967af28960b885aec71230c es secundaria (agregador) y no sirve para confirmados; las citas del CFF se anclan a ese texto pero el CFF primario no se leyó.",
+  "SA-3b5a45dd21f4306a5489243e es solo portada/índice de EUR-Lex; no se leyó el contenido de la Directiva.",
+  "LFPC art. 5 excluye servicios profesionales no mercantiles y la LFPC protege consumidores: no todo presupuesto cae en ella.",
+  "Se omitió el Código de Comercio, Código Civil y NOM/NMX; no se respondió la parte de software.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 20 de 20 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 10 aceptadas, 2 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Se descartaron 4 hallazgos cuya cita no aparece tal cual en el texto de la fuente que citan (detalle en receipt.json): sin su cita no son hechos.",
+  "Se descartaron 1 hallazgos confirmados cuya cita no está en una fuente primaria (T2; detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.solon.org/Statutes/Mexico/Spanish/libro4/l4p1t1c1.html (refused); https://wwwmat.sat.gob.mx/aplicacion/80523/verifica-tus-facturas-electronicas (refused); https://www.sat.gob.mx/cs/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1461175754221&ssbinary=true (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}

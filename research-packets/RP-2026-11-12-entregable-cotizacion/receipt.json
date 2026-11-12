@@ -1,0 +1,471 @@
+{
+ "request_id": "RR-2026-11-12-entregable-cotizacion",
+ "fetched": [
+  {
+   "url": "https://www.solon.org/Statutes/Mexico/Spanish/libro4/l4p1t1c1.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.solon.org/Statutes/Mexico/Spanish/libro4/l4p1t1c1.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:50:34Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf_mov/Ley_Federal_de_Proteccion_al_Consumidor.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "1ddd1c86ba29e43c292c4db46651d55007372fae566fc02ec2784ffec59acb22",
+   "bytes": 635973,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T18:53:36Z",
+   "text_status": "ok",
+   "text_chars": 169406
+  },
+  {
+   "url": "https://www.ordenjuridico.gob.mx/Documentos/Federal/pdf/wo120957.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "6aa98be220ccfbe18d52213fd813ba9f0acbfdea153cde5f72a2305190aa4bd7",
+   "bytes": 203651,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T18:53:38Z",
+   "text_status": "ok",
+   "text_chars": 68015
+  },
+  {
+   "url": "https://fisc.mx/ley/cff/articulo-29-a",
+   "status": 200,
+   "error": null,
+   "sha256": "2967af28960b885aec71230cb2f2601cefca012ba887ee956275c855fb97b06d",
+   "bytes": 88955,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:53:39Z",
+   "text_status": "ok",
+   "text_chars": 22833
+  },
+  {
+   "url": "https://wwwmat.sat.gob.mx/aplicacion/80523/verifica-tus-facturas-electronicas",
+   "status": "refused",
+   "error": "robots.txt disallows https://wwwmat.sat.gob.mx/aplicacion/80523/verifica-tus-facturas-electronicas",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:53:40Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.sat.gob.mx/cs/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1461175754221&ssbinary=true",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.sat.gob.mx/cs/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1461175754221&ssbinary=true",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T18:53:45Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAASSP.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "883f6e9c3139d0961de302de7bddcf3262c69884008bb3b2324d57e5d67009fc",
+   "bytes": 682666,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T18:53:46Z",
+   "text_status": "ok",
+   "text_chars": 231854
+  },
+  {
+   "url": "https://www.law.cornell.edu/ucc/2/2-205",
+   "status": 200,
+   "error": null,
+   "sha256": "73f69a1c4e19f34628e05c58fd4161803567e2337ef6f4315c33268ecf7f9651",
+   "bytes": 26011,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:53:46Z",
+   "text_status": "ok",
+   "text_chars": 1652
+  },
+  {
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02011L0083-20260927",
+   "status": 200,
+   "error": null,
+   "sha256": "3b5a45dd21f4306a5489243e90b2d700bc079b612890ff60653d9ef5e3dc3095",
+   "bytes": 251017,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T18:53:57Z",
+   "text_status": "ok",
+   "text_chars": 7623
+  },
+  {
+   "url": "https://www.unidroit.org/wp-content/uploads/2021/06/Unidroit-Principles-2016-English-bl.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "b7111c00f80dca4f554bc382020d3aafde2c058d95301136cee5cb4636b67932",
+   "bytes": 243817,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T18:54:08Z",
+   "text_status": "ok",
+   "text_chars": 85544
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43283612944",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "LFPC art. 59: antes de prestar un servicio el proveedor debe presentar presupuesto por escrito; en reparaciones debe describir el servicio, costo de refacciones y mano de obra y su vigencia.",
+    "now": "LFPC: antes de la prestación de un servicio, el proveedor deberá presentar presupuesto por escrito.",
+    "cut": "art. 59; en reparaciones debe describir el servicio, costo de refacciones y mano de obra y su vigencia"
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "El art. 59 LFPC exige para reparaciones que el presupuesto indique vigencia, aun con mecanismos de variación de rubros.",
+    "now": "LFPC: el presupuesto deberá describir las características del servicio, el costo de refacciones y mano de obra, así como su vigencia.",
+    "cut": "art. 59; para reparaciones; aun con mecanismos de variación de rubros"
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "LFPC art. 7 BIS: el monto total a pagar debe informarse de forma notoria y visible e incluir impuestos y cargos.",
+    "now": "LFPC: dicho monto deberá incluir impuestos, comisiones, intereses, seguros y cualquier otro costo, cargo, gasto o erogación adicional.",
+    "cut": "art. 7 BIS; monto total a pagar; informarse de forma notoria y visible"
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "LFPC art. 34: el precio en publicidad se expresa en moneda nacional y en español, pudiendo añadirse otro idioma.",
+    "now": "Se expresarán en idioma español y su precio en moneda nacional.",
+    "cut": "LFPC art. 34; en publicidad; pudiendo añadirse otro idioma"
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "LFPC art. 42: el proveedor debe cumplir los términos y condiciones ofrecidos en la publicidad o información.",
+    "now": "LFPC: el proveedor está obligado a entregar el bien o suministrar el servicio de acuerdo con los términos y condiciones ofrecidos.",
+    "cut": "art. 42; en la publicidad o información"
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "LFPC art. 5 excluye de la ley los servicios profesionales que no sean de carácter mercantil.",
+    "now": "La LFPC menciona los servicios profesionales que no sean de carácter mercantil.",
+    "cut": "art. 5; excluye de la ley"
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "LFPC art. 48: en ofertas deben indicarse condiciones y plazo o volumen; sin plazo se presumen indefinidas hasta revocación pública.",
+    "now": "LFPC: en los anuncios respectivos deberán indicarse las condiciones, así como el plazo de duración o el volumen de los bienes o servicios ofrecidos.",
+    "cut": "art. 48; en ofertas; sin plazo se presumen indefinidas hasta revocación pública"
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "LFPC art. 66: en operaciones a crédito debe informarse el monto total a pagar desglosado.",
+    "now": "LFPC: debe informarse al consumidor el monto total a pagar por el bien, producto o servicio de que se trate.",
+    "cut": "art. 66; en operaciones a crédito; desglosado"
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "LFPC art. 85: el contrato de adhesión debe estar en español, con letra legible y uniforme para ser válido.",
+    "now": "LFPC: para su validez, deberá estar escrito en idioma español y sus caracteres tendrán que ser legibles a simple vista.",
+    "cut": "art. 85; contrato de adhesión; letra uniforme"
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "LFPC art. 1: la ley es irrenunciable y no admite costumbres o usos en contrario.",
+    "now": "LFPC: contra su observancia no podrán alegarse costumbres, usos, prácticas, convenios o estipulaciones en contrario.",
+    "cut": "art. 1; la ley es irrenunciable"
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "Reglamento LFPC art. 6: define monto total a pagar con impuestos y cargos, y exige Costo Anual Total en créditos.",
+    "now": "Reglamento de la LFPC: antes de la contratación correspondiente, el proveedor deberá informar al consumidor el Costo Anual Total aplicable a la operación.",
+    "cut": "art. 6; define monto total a pagar con impuestos y cargos; en créditos"
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "CFF 29-A fr. VII: el CFDI debe consignar importe total, y desglosar impuestos trasladados por tasa cuando proceda.",
+    "now": "CFF art. 29-A (CFDI): se indicará el importe total de la operación y, cuando así proceda, el monto de los impuestos trasladados desglosados con cada una de las tasas.",
+    "cut": "fr. VII"
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "LAASSP art. 57: en adjudicación directa la solicitud de confirmación de cotización fija el plazo de sostenimiento, y la cotización obliga por no menos de veinte días hábiles.",
+    "now": "LAASSP: queda obligado por la misma por un plazo no inferior a veinte días hábiles.",
+    "cut": "art. 57; en adjudicación directa; la solicitud de confirmación de cotización fija el plazo de sostenimiento; la cotización"
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "LAASSP art. 57 fr. IV: la cotización no obliga a la entidad a contratar.",
+    "now": "No generan obligación para la dependencia o entidad contratante de celebrar contrato con la persona a la que le ha sido solicitada la misma.",
+    "cut": "LAASSP art. 57 fr. IV; la cotización"
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "LAASSP art. 66 fr. XIII: el contrato debe indicar moneda de cotización y pago (pesos o extranjera según convocante).",
+    "now": "LAASSP: moneda en que se cotizó y se efectuará el pago respectivo.",
+    "cut": "art. 66 fr. XIII; el contrato debe indicar; pesos o extranjera según convocante"
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "LAASSP art. 37: las proposiciones en Plataforma se firman con medios electrónicos que equivalen a firma autógrafa.",
+    "now": "LAASSP: producirán los mismos efectos que las leyes otorgan a los documentos firmados autógrafamente.",
+    "cut": "art. 37; proposiciones en Plataforma; se firman con medios electrónicos"
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "UNIDROIT 2.1.2: una propuesta es oferta si es suficientemente definida e indica intención de obligarse.",
+    "now": "Principios UNIDROIT: una propuesta para celebrar un contrato constituye una oferta si es suficientemente definida.",
+    "cut": "2.1.2; e indica intención de obligarse"
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "UNIDROIT 2.1.4(2)(a): una oferta no es revocable si indica plazo fijo o irrevocabilidad.",
+    "now": "Si indica, ya sea fijando un plazo para la aceptación o de otro modo, que es irrevocable.",
+    "cut": "UNIDROIT 2.1.4(2)(a); una oferta no es revocable"
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "UNIDROIT 1.2: no se requiere forma particular para el contrato.",
+    "now": "Principios UNIDROIT: nada en estos Principios exige que un contrato, declaración u otro acto se realice.",
+    "cut": "1.2; forma particular"
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "UNIDROIT 5.1.7: si no se fija precio, se presume el precio generalmente cobrado o uno razonable.",
+    "now": "Al precio generalmente cobrado en el momento de la celebración del contrato.",
+    "cut": "UNIDROIT 5.1.7; si no se fija precio; se presume; o uno razonable"
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "id": "confirmed[3]",
+   "claim": "Se expresarán en idioma español y su precio en moneda nacional.",
+   "quote": "se expresarán en idioma español y su precio en moneda nacional",
+   "artifact_ids": [
+    "SA-1ddd1c86ba29e43c292c4db4"
+   ]
+  },
+  {
+   "id": "confirmed[13]",
+   "claim": "No generan obligación para la dependencia o entidad contratante de celebrar contrato con la persona a la que le ha sido solicitada la misma.",
+   "quote": "no generan obligación para la dependencia o entidad contratante de celebrar contrato con la persona a la que le ha sido solicitada la misma",
+   "artifact_ids": [
+    "SA-883f6e9c3139d0961de302de"
+   ]
+  },
+  {
+   "id": "confirmed[17]",
+   "claim": "Si indica, ya sea fijando un plazo para la aceptación o de otro modo, que es irrevocable.",
+   "quote": "if it indicates, whether by stating a fixed time for acceptance or otherwise, that it is irrevocable",
+   "artifact_ids": [
+    "SA-b7111c00f80dca4f554bc382"
+   ]
+  },
+  {
+   "id": "confirmed[19]",
+   "claim": "Al precio generalmente cobrado en el momento de la celebración del contrato.",
+   "quote": "to the price generally charged at the time of the conclusion of the contract",
+   "artifact_ids": [
+    "SA-b7111c00f80dca4f554bc382"
+   ]
+  },
+  {
+   "id": "confirmed[10]",
+   "claim": "CFF art. 29-A (CFDI): se indicará el importe total de la operación y, cuando así proceda, el monto de los impuestos trasladados desglosados con cada una de las tasas.",
+   "quote": "se indicará el importe total de la operación y, cuando así proceda, el monto de los impuestos trasladados desglosados con cada una de las tasas",
+   "artifact_ids": [
+    "SA-2967af28960b885aec71230c"
+   ],
+   "reason": "solo fuentes secundarias"
+  }
+ ],
+ "discovery": {
+  "families": [
+   "Derecho civil/mercantil mexicano de oferta y aceptación (CCF, Código de Comercio)",
+   "Protección al consumidor México (LFPC y Reglamento)",
+   "Fiscal México: LIVA, CFF 29-A, CFDI Anexo 20, verificador SAT",
+   "Compras públicas México (LAASSP 2025)",
+   "Derecho comparado: UCC 2-205 (EE. UU.), Directiva UE 2011/83",
+   "Soft law internacional: Principios UNIDROIT",
+   "Firma electrónica y mensajes de datos (Código de Comercio)",
+   "Normas y buenas prácticas de propuestas/RFP (APMP, Shipley), solo convención",
+   "Herramientas de producción y verificación (SAT, validadores EN 16931/Peppol)"
+  ],
+  "searches": [
+   {
+    "query": "Código de Comercio artículo 1803 1805 1806 oferta aceptación obligatoriedad oferta plazo",
+    "intent": "official"
+   },
+   {
+    "query": "Ley Federal de Protección al Consumidor artículo 7 Bis 32 precio total impuestos presupuesto vigencia 10 días",
+    "intent": "official"
+   },
+   {
+    "query": "Ley del IVA artículo 32 traslado expreso y por separado impuesto comprobante fiscal",
+    "intent": "official"
+   },
+   {
+    "query": "Ley de Adquisiciones Arrendamientos y Servicios del Sector Público 2025 proposiciones requisitos vigencia precios",
+    "intent": "official"
+   },
+   {
+    "query": "UNIDROIT Principles 2016 Article 2.1.4 revocation of offer fixed time for acceptance",
+    "intent": "support"
+   },
+   {
+    "query": "Código Fiscal de la Federación artículo 29-A requisitos CFDI texto vigente",
+    "intent": "official"
+   },
+   {
+    "query": "UCC 2-205 firm offers merchant signed writing three months",
+    "intent": "support"
+   },
+   {
+    "query": "Consumer Rights Directive 2011/83/EU Article 6 price including taxes pre-contractual information",
+    "intent": "official"
+   },
+   {
+    "query": "SAT validador CFDI verificación de comprobantes herramienta oficial",
+    "intent": "official"
+   },
+   {
+    "query": "Código Civil Federal artículo 2606 2616 presupuesto contrato de obras a precio alzado",
+    "intent": "limitations"
+   },
+   {
+    "query": "LFPC artículo 57 presupuesto servicios reparación vigencia mínimo diez días Profeco",
+    "intent": "contradict"
+   },
+   {
+    "query": "Código de Comercio artículo 89 firma electrónica avanzada mensaje de datos artículo 80 oferta",
+    "intent": "official"
+   },
+   {
+    "query": "Anexo 20 CFDI 4.0 complemento catálogo moneda TipoCambio validación XSD SAT",
+    "intent": "official"
+   },
+   {
+    "query": "Peppol BIS Billing 3.0 EN 16931 validation artefacts open source license",
+    "intent": "other"
+   },
+   {
+    "query": "proposal management best practice standard APMP RFP response compliance matrix",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "Texto oficial vigente del art. 59 LFPC leído directamente: solo hay resumen secundario que dice que no fija vigencia mínima; confirmar en el PDF.",
+   "No se encontró norma mexicana que exija que una cotización privada B2B lleve firma, vigencia mínima o IVA desglosado. El IVA expreso y por separado se exige en el comprobante (CFDI), no en la cotización.",
+   "Anexo 20 CFDI 4.0 vigente a 2026-11 (la URL hallada es antigua) y Resolución Miscelánea Fiscal vigente.",
+   "No hay hashes sha256 ni versiones fijadas: esta búsqueda no descarga archivos; hacerlo en la fase de descarga.",
+   "No se halló estándar ISO ni formato oficial de cotización o propuesta comercial. APMP y Shipley son convención privada (material de proveedor, solo candidate_claim).",
+   "Bases modelo de licitación (ComprasMX) y reglamento de la LAASSP 2025: no examinados.",
+   "Códigos civiles estatales y NOM de presupuestos de servicios específicos (talleres, etc.): no examinados.",
+   "Software de cotizaciones con licencia y versión verificables: solo hay validadores de CFDI y e-factura (SAT; Peppol BIS/EN 16931 con docs.peppol.eu, visto en búsqueda pero no incluido). No hay validador de cotización.",
+   "Otras jurisdicciones (Reino Unido, Canadá, Colombia, España): no buscadas."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 10,
+  "rejected": [
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+    "reason": "not https"
+   },
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/LIVA.pdf",
+    "reason": "not https"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.solon.org/Statutes/Mexico/Spanish/libro4/l4p1t1c1.html",
+    "family": "Derecho civil/mercantil mexicano de oferta y aceptación",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Arts. 1803-1810 CCF: oferta con plazo obliga hasta su vencimiento; sin plazo, 3 días entre ausentes; aceptación que modifica es contraoferta. Aplicable supletoriamente al comercio. Copia no oficial: cotejar con el CCF de Diputados."
+   },
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+    "family": "Firma electrónica y mensajes de datos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Arts. 80 y 89-99: perfeccionamiento de contratos mercantiles, mensaje de datos, equivalencia funcional y firma electrónica avanzada. Sirve para aclarar que la firma no es requisito general de validez de una cotización mercantil, salvo pacto o ley."
+   },
+   {
+    "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf_mov/Ley_Federal_de_Proteccion_al_Consumidor.pdf",
+    "family": "Protección al consumidor México",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Art. 7 Bis (monto total con impuestos y cargos), art. 32 (información veraz) y art. 59 (presupuesto escrito en servicios con vigencia). Solo aplica a proveedor-consumidor, no B2B. Un resumen secundario indica que no fija vigencia mínima: leer el texto."
+   },
+   {
+    "url": "https://www.ordenjuridico.gob.mx/Documentos/Federal/pdf/wo120957.pdf",
+    "family": "Protección al consumidor México",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Art. 6 del Reglamento define precio total (impuestos, comisiones, envío, etc.). Complementa la LFPC con el contenido exigible del precio."
+   },
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/LIVA.pdf",
+    "family": "Fiscal México",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Art. 1 (traslado expreso y por separado), art. 32 fr. III (comprobantes). Obligación fiscal sobre el comprobante, no sobre la cotización: distinguir ambos."
+   },
+   {
+    "url": "https://fisc.mx/ley/cff/articulo-29-a",
+    "family": "Fiscal México",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Muestra requisitos del CFDI (RFC, lugar y fecha, descripción, importe, forma de pago). Texto secundario; las fuentes discrepan sobre la última reforma (DOF 07-11-2025 vs 2021). Cotejar con el CFF oficial. Una cotización no es CFDI."
+   },
+   {
+    "url": "https://wwwmat.sat.gob.mx/aplicacion/80523/verifica-tus-facturas-electronicas",
+    "family": "Herramientas de producción y verificación",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Herramienta oficial gratuita que verifica el estatus de un CFDI. Comprueba solo facturas emitidas, no cotizaciones."
+   },
+   {
+    "url": "https://www.sat.gob.mx/cs/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1461175754221&ssbinary=true",
+    "family": "Fiscal México",
+    "stance": "context",
+    "role": "primary",
+    "why": "Especificación técnica de moneda, TipoCambio (FIX), catálogos y XSD del CFDI. Fuente para criterios comprobables de moneda al facturar. Esta URL es de una guía de entidades federales y es antigua: localizar el Anexo 20 vigente."
+   },
+   {
+    "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAASSP.pdf",
+    "family": "Compras públicas México",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Ley nueva de 2025. Exige que la proposición cumpla lo pedido en la convocatoria, precio fijo y causales de desechamiento. En licitaciones manda la convocatoria: la cotización debe seguirla."
+   },
+   {
+    "url": "https://www.law.cornell.edu/ucc/2/2-205",
+    "family": "Derecho comparado: UCC (EE. UU.) y UE",
+    "stance": "contradicts",
+    "role": "secondary",
+    "why": "En EE. UU., una oferta firme de comerciante exige escrito firmado y tope de tres meses. Contrasta con México, donde el plazo fijado obliga sin firma. Muestra que la firma obligatoria depende de la jurisdicción."
+   },
+   {
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02011L0083-20260927",
+    "family": "Derecho comparado: UCC (EE. UU.) y UE",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Art. 6(1)(e): precio total con impuestos en contratos a distancia y fuera de establecimiento con consumidores. Equivalente UE del art. 7 Bis LFPC. No cubre B2B."
+   },
+   {
+    "url": "https://www.unidroit.org/wp-content/uploads/2021/06/Unidroit-Principles-2016-English-bl.pdf",
+    "family": "Soft law internacional",
+    "stance": "context",
+    "role": "primary",
+    "why": "Arts. 2.1.2-2.1.4: contenido de la oferta, revocación e irrevocabilidad por plazo. Soft law, aplicable solo si las partes lo eligen. PDF largo: leer el capítulo 2."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
