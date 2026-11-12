@@ -24,7 +24,7 @@ from pathlib import Path, PurePosixPath
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # main's rg, from main's checkout
 
-from rg.recrudo import PLAZO, Comun, verificar  # noqa: E402
+from rg.recrudo import MAX_ARTIFACTS, PLAZO, Comun, pedidos, verificar  # noqa: E402
 
 SHA = re.compile(r'^[0-9a-f]{40}$')
 PACKET = re.compile(r'^RP-[A-Za-z0-9._-]{3,64}$')
@@ -98,13 +98,30 @@ def one(sha, rp, data, budget, repo='.', deadline=None, comun=None):
             'stats': stats, 'raws': raws}, reserved
 
 
-def gate(base, sha, data, repo='.'):
+def gate(base, sha, data, repo='.', sellados=None):
     results, budget, deadline, comun = [], MAX_TOTAL, time.monotonic() + PLAZO, Comun()  # one Comun per head (GPT on 6cebbc0)
+    comun.sellados = sellados
     for rp in changed(base, sha, repo):
         result, used = one(sha, rp, data, budget, repo, deadline, comun)
         results.append(result)
         budget -= used
     return {'head_sha': sha, 'packets': results}
+
+
+def pedir(base, sha, repo='.'):
+    """<sha256>.<sha256 of its url> of the raws each changed packet would ask again (rg.recrudo.pedidos, its first
+    MAX_ARTIFACTS: T29's cap), R2's key for each, for the step that opens its sealed copies (scripts/abrir_sellados.sh). Reads only each packet.json, from the
+    head's objects; no network, no secret. A packet that cannot be read asks nothing."""
+    out = set()
+    for rp in changed(base, sha, repo):
+        try:
+            mode, kind, obj, size, _ = next(r for r in tree(sha, rp, repo) if r[4] == f'research-packets/{rp}/packet.json')
+            if mode in REGULAR and kind == 'blob' and 0 <= size <= MAX_BLOB:
+                out |= {f"{a['sha256']}.{hashlib.sha256(a['url'].encode('utf-8')).hexdigest()}"
+                        for a in pedidos(json.loads(git('cat-file', 'blob', obj, repo=repo)))[:MAX_ARTIFACTS]}
+        except Exception:  # noqa: BLE001 - its own gate run gives the reason
+            continue
+    return sorted(out)
 
 
 def main(argv=None):
@@ -114,11 +131,20 @@ def main(argv=None):
     a.add_argument('--data', required=True)
     a.add_argument('--out', required=True)
     a.add_argument('--repo', default='.')
+    a.add_argument('--pedir', action='store_true', help='write to --out only the R2 keys (<sha256>.<url sha256>) of the raws to read sealed')
+    a.add_argument('--sellados', help="the folder abrir_sellados.sh opened R2's sealed copies into")
     x = a.parse_args(argv)
     if not SHA.match(x.sha):
         raise SystemExit('bad head sha')
+    if x.pedir:
+        try:
+            shas = pedir(x.base, x.sha, x.repo)
+        except Exception:  # noqa: BLE001 - a head the gate cannot list asks nothing sealed; the gate step still runs
+            shas = []
+        Path(x.out).write_text(''.join(f'{s}\n' for s in shas), encoding='utf-8')
+        return 0
     try:
-        result = gate(x.base, x.sha, x.data, x.repo)
+        result = gate(x.base, x.sha, x.data, x.repo, x.sellados)
     except Exception as e:  # noqa: BLE001 - no result is written as one: no raw is verified, so audit-gpt reads them whole
         result = {'head_sha': x.sha, 'packets': [], 'error': f'the gate did not run: {type(e).__name__}'}
     Path(x.out).write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')

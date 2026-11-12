@@ -1494,11 +1494,13 @@ class Sobre(unittest.TestCase):
         self.assertNotIn('PRIVATE KEY', seen)
         self.assertEqual((self.tmp / 'abierto' / 'texto' / 'SA-x.txt').read_bytes(), CLOSED_BODY)
 
-    def test_the_repositorys_key_is_public_only(self):
-        pem = (ROOT / 'keys' / 'rg-artifacts.pub.pem').read_text(encoding='utf-8')
-        self.assertTrue(pem.startswith('-----BEGIN PUBLIC KEY-----'))
-        self.assertNotIn('PRIVATE', pem)
-        self.run_ok('openssl', 'pkey', '-pubin', '-in', str(ROOT / 'keys' / 'rg-artifacts.pub.pem'), '-noout')
+    def test_the_repositorys_keys_are_public_only_and_two_pairs(self):
+        pems = [(ROOT / 'keys' / k).read_text(encoding='utf-8') for k in ('rg-artifacts.pub.pem', 'rg-sellados.pub.pem')]
+        for k, pem in zip(('rg-artifacts.pub.pem', 'rg-sellados.pub.pem'), pems):
+            self.assertTrue(pem.startswith('-----BEGIN PUBLIC KEY-----'))
+            self.assertNotIn('PRIVATE', pem)
+            self.run_ok('openssl', 'pkey', '-pubin', '-in', str(ROOT / 'keys' / k), '-noout')
+        self.assertNotEqual(*pems)  # SECURITY T31: what sellados opened is sealed to a pair of its own
 
 
 class RepoPackets(unittest.TestCase):
@@ -1592,6 +1594,72 @@ class SellarCrudos(unittest.TestCase):
                 rc, out = self.sellar()
                 self.assertEqual((rc, (out / 'sellados.txt').read_text()), (3, ''))
 
+
+
+@unittest.skipUnless(shutil.which('openssl') and shutil.which('sha256sum'), 'needs openssl and sha256sum')
+class AbrirSellados(unittest.TestCase):
+    """scripts/abrir_sellados.sh (SECURITY T31): R2's sealed copies opened by sha256, against a fake aws and tar on PATH
+    that fail if a secret reaches them that is not theirs."""
+    setUp, run_ok, sobre, raw = Sobre.setUp, Sobre.run_ok, Sobre.sobre, SellarCrudos.raw
+
+    def abrir(self, shas, key=True, cap=None):
+        r2, bin_ = self.tmp / 'r2', self.tmp / 'bin'
+        bin_.mkdir(exist_ok=True)
+        (bin_ / 'aws').write_text('#!/bin/bash\n[ -z "${RG_ARTIFACT_KEY:-}" ] || exit 9  # the private key never reaches aws\n'
+                                  'while [ $# -gt 1 ]; do [ "$1" = --key ] && k=$2; shift; done; echo "$k" >> "$FAKE_R2.log"\n'
+                                  'cp "$FAKE_R2/$k" "$1"\n')
+        (bin_ / 'tar').write_text('#!/bin/bash\n[ -z "${R2_LECTURA_ACCESS_KEY_ID:-}${R2_LECTURA_SECRET_ACCESS_KEY:-}${R2_ENDPOINT:-}'
+                                  '${RG_ARTIFACT_KEY:-}" ] || exit 9  # tar gets no secret at all\n'
+                                  f'exec {shutil.which("tar")} "$@"\n')
+        for b in ('aws', 'tar'):
+            (bin_ / b).chmod(0o755)
+        (self.tmp / 'shas.txt').write_text(''.join(f'{x}\n' for x in shas))
+        env = {**os.environ, 'PATH': f"{bin_}:{os.environ['PATH']}", 'FAKE_R2': str(r2), 'R2_ENDPOINT': 'https://r2.invalid',
+               **({'R2_LECTURA_ACCESS_KEY_ID': 'a', 'R2_LECTURA_SECRET_ACCESS_KEY': 'b', 'RG_ARTIFACT_KEY': self.priv.read_text()} if key else {}),
+               **({'RG_SELLADOS_MAX_BYTES': str(cap)} if cap is not None else {})}
+        out = self.tmp / 'abiertos'
+        r = subprocess.run(['bash', str(ROOT / 'scripts' / 'abrir_sellados.sh'), str(self.tmp / 'shas.txt'), str(out)],
+                           env=env, capture_output=True, text=True, timeout=300)
+        return r, out
+
+    def put(self, sha, uh, sobre):
+        d = self.tmp / 'r2' / 'sealed' / 'sha256' / sha[:2] / sha
+        d.mkdir(parents=True, exist_ok=True)
+        shutil.copy(sobre, d / f'{uh}.sobre')
+
+    def test_a_sealed_copy_opens_only_to_bytes_of_its_sha256_with_its_url_and_a_missing_one_is_skipped(self):
+        good, other = self.raw(CLOSED_BODY), self.raw(b'<p>otra pagina</p>')
+        uh = lambda sha: hashlib.sha256(f'https://a.gob.mx/{sha[:8]}'.encode()).hexdigest()  # each raw's URL, as raw() wrote it
+        subprocess.run(['bash', str(ROOT / 'scripts' / 'sellar_crudos.sh'), str(self.src), str(self.tmp / 's'), str(self.pub)],
+                       check=True, capture_output=True, timeout=300)
+        forged = self.tmp / 'falso' / 'sha256' / other[:2]  # anyone with the public key can make one: right name, other bytes
+        forged.mkdir(parents=True)
+        (forged / f'{other}.html').write_bytes(b'otros bytes')
+        (forged / f'{other}.url').write_text(f'https://a.gob.mx/{other[:8]}')
+        self.assertEqual(self.sobre('seal', str(self.tmp / 'falso'), str(self.tmp / 'fe'), str(self.pub)).returncode, 0)
+        self.run_ok('tar', '-C', str(self.tmp / 'fe'), '-cf', str(self.tmp / 'falso.sobre'), 'datos.enc', 'datos.mac', 'llave.enc')
+        self.put(good, uh(good), self.tmp / 's' / f'{good}.{uh(good)}.sobre')
+        self.put(other, uh(other), self.tmp / 'falso.sobre')
+        nourl = hashlib.sha256(b'<p>tercera</p>').hexdigest()  # its own bytes, no URL: it could back any packet's url
+        bare = self.tmp / 'sin-url' / 'sha256' / nourl[:2]
+        bare.mkdir(parents=True)
+        (bare / f'{nourl}.html').write_bytes(b'<p>tercera</p>')
+        self.assertEqual(self.sobre('seal', str(self.tmp / 'sin-url'), str(self.tmp / 'se'), str(self.pub)).returncode, 0)
+        self.run_ok('tar', '-C', str(self.tmp / 'se'), '-cf', str(self.tmp / 'sin-url.sobre'), 'datos.enc', 'datos.mac', 'llave.enc')
+        self.put(nourl, uh(nourl), self.tmp / 'sin-url.sobre')
+        moved = 'e' * 64  # good's own envelope under another URL's key: its URL file does not hash to that key
+        self.put(good, moved, self.tmp / 's' / f'{good}.{uh(good)}.sobre')
+        asked = [(good, uh(good)), (other, uh(other)), (nourl, uh(nourl)), (good, moved), ('f' * 64, 'f' * 64)]
+        r, out = self.abrir([f'{x}.{y}' for x, y in asked] + [good, '../no-es-un-sha.' + 'f' * 64])
+        self.assertIn('R2: 1 sealed raws opened', r.stdout)
+        where = f'sha256/{good[:2]}/{good}/{uh(good)}'
+        self.assertEqual(sorted((p.relative_to(out).as_posix(), p.read_bytes()) for p in out.rglob('*') if p.is_file()),
+                         [(f'{where}/{good}.html', CLOSED_BODY), (f'{where}/{good}.url', f'https://a.gob.mx/{good[:8]}'.encode())])
+        self.assertEqual((self.tmp / 'r2.log').read_text().split(), [f'sealed/sha256/{x[:2]}/{x}/{y}.sobre' for x, y in asked])
+        r, out = (shutil.rmtree(out), self.abrir([f'{good}.{uh(good)}'], cap=len(CLOSED_BODY) - 1))[1]  # T29's bytes: past them, nothing more
+        self.assertEqual([p for p in out.rglob('*') if p.is_file()], [])
+        r, out = (shutil.rmtree(out), self.abrir([f'{good}.{uh(good)}'], key=False))[1]
+        self.assertEqual((r.returncode, 'no read key' in r.stdout, [p for p in out.rglob('*') if p.is_file()]), (0, True, []))
 
 if __name__ == '__main__':
     unittest.main()
