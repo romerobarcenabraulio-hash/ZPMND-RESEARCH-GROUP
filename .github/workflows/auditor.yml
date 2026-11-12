@@ -353,14 +353,86 @@ jobs:
           gh api "repos/$REPO/statuses/$SHA" -f state="$state" -f context=auditor -f description="AUDIT VERDICT: $verdict" >/dev/null
           echo "verdict=$verdict" >> "$GITHUB_OUTPUT"  # what was posted, for pass-both
 
+  pedir:
+    # Which raws R2 keeps sealed for the packets the head changes (packet_gate.py --pedir: each packet.json from the
+    # head's objects, no request). No secret here: this job reads the head. Its one output is a list of sha256, checked
+    # again where it is used (SECURITY T31).
+    needs: gate
+    if: needs.gate.outputs.run == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions: { contents: read }
+    outputs: { shas: '${{ steps.pedir.outputs.shas }}' }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { ref: main, persist-credentials: false, fetch-depth: 0 }
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements-dev.txt
+      - name: The head as git objects, and the R2 keys of the raws it would ask again (the token only for the fetch)
+        id: pedir
+        continue-on-error: true  # nothing listed, nothing sealed: the gate downloads again; automerge needs this job green
+        env: { GH_TOKEN: '${{ github.token }}', SHA: "${{ needs.gate.outputs.sha }}" }
+        run: |
+          set -euo pipefail
+          [[ "$SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "bad head"; exit 1; }
+          GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=http.https://github.com/.extraheader \
+            GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" \
+            git fetch --no-tags --quiet origin "$SHA"
+          unset GH_TOKEN
+          python scripts/packet_gate.py --base origin/main --sha "$SHA" --data "$RUNNER_TEMP/pedir" --out "$RUNNER_TEMP/shas.txt" --pedir
+          echo "shas=$(grep -E '^[0-9a-f]{64}\.[0-9a-f]{64}$' "$RUNNER_TEMP/shas.txt" | head -n 400 | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+
+  sellados:
+    # R2's sealed copies of those raws, opened here and nowhere near the head (owner 2026-11-08; SECURITY T31): no head
+    # object, no PR data but pedir's list of sha256, checked again. The read-only R2 key and RG_ARTIFACT_KEY exist only
+    # in the step that opens. What it opened leaves sealed (scripts/sobre.sh) to keys/rg-sellados.pub.pem, a key pair of
+    # its own: the packet gate, which parses the head's raws, holds only that pair's private key, never an R2 key or
+    # RG_ARTIFACT_KEY.
+    needs: [gate, pedir]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions: { contents: read }
+    outputs: { ok: '${{ steps.ok.outputs.ok }}' }  # the only sign packet-gate trusts: an artifact name is taken once per run
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { ref: main, persist-credentials: false }
+      - name: Open R2's sealed copies by sha256 (the R2 read key and RG_ARTIFACT_KEY only here)
+        continue-on-error: true  # every step here: a missing key, an R2 outage or a taken name opens nothing, never a red job
+        env:
+          SHAS: '${{ needs.pedir.outputs.shas }}'
+          R2_LECTURA_ACCESS_KEY_ID: '${{ secrets.R2_LECTURA_ACCESS_KEY_ID }}'
+          R2_LECTURA_SECRET_ACCESS_KEY: '${{ secrets.R2_LECTURA_SECRET_ACCESS_KEY }}'
+          R2_ENDPOINT: '${{ secrets.R2_ENDPOINT }}'
+          RG_ARTIFACT_KEY: '${{ secrets.RG_ARTIFACT_KEY }}'
+          BUCKET: "${{ vars.RG_R2_BUCKET || 'rg-crudos' }}"
+        run: |
+          set -euo pipefail -f  # -f: no glob in what pedir sent
+          printf '%s\n' $SHAS | grep -E '^[0-9a-f]{64}\.[0-9a-f]{64}$' | head -n 400 > "$RUNNER_TEMP/shas.txt" || true
+          bash scripts/abrir_sellados.sh "$RUNNER_TEMP/shas.txt" "$RUNNER_TEMP/sellados"
+      - name: What was opened, sealed to the packet gate's own key pair (public key only; nothing printed)
+        id: sellar
+        continue-on-error: true
+        run: mkdir -p "$RUNNER_TEMP/sellados" && bash scripts/sobre.sh seal "$RUNNER_TEMP/sellados" "$RUNNER_TEMP/sellados-enc" keys/rg-sellados.pub.pem
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        id: subir
+        if: steps.sellar.outcome == 'success'
+        continue-on-error: true  # pedir runs on the head and could take the name first: then this fails and ok stays unset
+        with: { name: sellados, path: '${{ runner.temp }}/sellados-enc/', retention-days: 1, if-no-files-found: error }
+      - id: ok
+        if: steps.subir.outcome == 'success'
+        run: echo "ok=true" >> "$GITHUB_OUTPUT"
+
   packet-gate:
     # Main's rg.packets on the packet folders the head changes, read as data: each blob is written from the head's
     # objects with git cat-file, byte for byte (never git archive, which applies the head's export attributes); no PR
     # code is checked out or run. No secrets; the read-only token exists only in the fetch step, never where the raw
-    # files, hostile input, are parsed (SECURITY T12). A gate problem or error is a result in packets.json, not a job
+    # files, hostile input, are parsed (SECURITY T12). R2's sealed copies arrive from the sellados job sealed to this
+    # job's key pair; its private key RG_SELLADOS_KEY, this job's one secret, opens them in one step before anything
+    # parses (SECURITY T31). A gate problem or error is a result in packets.json, not a job
     # failure, so audit-gpt gets it: there a raw this gate passed arrives as one line instead of its bytes.
-    needs: gate
-    if: needs.gate.outputs.run == 'true'
+    needs: [gate, sellados]
+    if: ${{ !cancelled() && needs.gate.outputs.run == 'true' }}  # without sellados (failed, or no key) it downloads again
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     permissions: { contents: read }
@@ -382,14 +454,23 @@ jobs:
             git fetch --no-tags --quiet origin "$SHA"
       - name: The extractor's own user (it parses hostile raws and owns nothing here; SECURITY T12)
         run: sudo useradd --system --no-create-home --shell /usr/sbin/nologin rgparse
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        if: needs.sellados.outputs.ok == 'true'
+        continue-on-error: true
+        with: { name: sellados, path: '${{ runner.temp }}/sellados-enc' }
+      - name: R2's sealed copies, opened with this job's own private key (its one secret; before anything parses)
+        if: needs.sellados.outputs.ok == 'true'
+        continue-on-error: true  # a bad or missing envelope opens nothing: those raws are downloaded again
+        env: { RG_ARTIFACT_KEY: '${{ secrets.RG_SELLADOS_KEY }}' }
+        run: bash scripts/sobre.sh open "$RUNNER_TEMP/sellados-enc" "$RUNNER_TEMP/packet-gate/sellados"
       - name: Main's packet gate on the head's packets (data only; no token in this step)
         env: { SHA: '${{ needs.gate.outputs.sha }}' }
         run: |
           set -euo pipefail
           [[ "$SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "bad head"; exit 1; }
           d="$RUNNER_TEMP/packet-gate"
-          rm -rf "$d"; mkdir -p "$d/data"
-          python scripts/packet_gate.py --base origin/main --sha "$SHA" --data "$d/data" --out "$d/packets.json"
+          mkdir -p "$d/data" "$d/sellados"
+          python scripts/packet_gate.py --base origin/main --sha "$SHA" --data "$d/data" --out "$d/packets.json" --sellados "$d/sellados"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with: { name: packet-gate, path: '${{ runner.temp }}/packet-gate/packets.json', retention-days: 7, if-no-files-found: error }
 

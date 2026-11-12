@@ -1,6 +1,7 @@
 """Raws a packet cites but does not keep, downloaded again so the gate reads their quotes without republishing them
 (docs/NORTE.md hueco 3); what is asked, through which limits, and kept where is SECURITY T29. One Comun per gate run
 carries the pause per host, Crawl-delay, robots.txt and the hosts of stalled threads across its packets (T10)."""
+import hashlib
 import json
 import threading
 import time
@@ -22,6 +23,7 @@ class Comun:
     """What every download of one gate run shares: the Fetchers' state per host and the threads left behind."""
     def __init__(self):
         self.fetch, self.vivos = {}, []  # vivos: (thread, frozenset of the hosts its Fetcher may reach)
+        self.sellados = None  # the folder abrir_sellados.sh opened R2's sealed copies into, if any (SECURITY T31)
 
     def ocupados(self):
         return set().union(*(h for t, h in self.vivos if t.is_alive()))
@@ -83,14 +85,39 @@ def _one(n, a, work, hosts, comun, deadline, clock, kw):
     return 'sha_coincide', {'bytes': body.bytes}
 
 
+def pedidos(packet):
+    """The artifacts a quote cites that the folder does not keep, of a packet that validates; [] otherwise."""
+    if validate('research_packet', packet):
+        return []
+    quoted = {i for g in ('confirmed', 'conflicting') for f in packet['findings'][g] if 'quote' in f for i in f['artifact_ids']}
+    return [a for a in packet['artifacts'] if a['artifact_id'] in quoted and a['stored_at'] != 'repo']
+
+
+def _sellado(sellados, a, work):
+    """The copy R2 kept sealed (scripts/abrir_sellados.sh opened it into sellados/sha256/<aa>/<sha>/<url hash>/; SECURITY
+    T31) written to work/raw when it was fetched from a's url and its bytes are a's sha256 and size, so nothing is asked
+    of the host; None otherwise (then the raw is downloaded again)."""
+    d = Path(sellados or '.') / 'sha256' / a['sha256'][:2] / a['sha256'] / hashlib.sha256(a['url'].encode('utf-8')).hexdigest()
+    u = d / f"{a['sha256']}.url"
+    if not sellados or not u.is_file() or u.read_text(encoding='utf-8', errors='replace') != a['url']:
+        return None
+    for f in sorted(x for x in d.glob(a['sha256'] + '.*') if x != u):
+        b = f.read_bytes() if f.is_file() else b''
+        if len(b) == a['bytes'] and hashlib.sha256(b).hexdigest() == a['sha256']:
+            dest = Path(work) / 'raw' / 'sha256' / a['sha256'][:2] / f"{a['sha256']}.bin"
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes(b)
+            return dest
+    return None
+
+
 def bajar(folder, work, recibo, deadline, clock=time.monotonic, comun=None, **kw):
     """{artifact_id: sha_coincide | sha_distinto | no_descargable} of the artifacts asked."""
     folder, work = Path(folder), Path(work)
     packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
     if validate('research_packet', packet):
         return {}
-    quoted = {i for g in ('confirmed', 'conflicting') for f in packet['findings'][g] if 'quote' in f for i in f['artifact_ids']}
-    asked = [a for a in packet['artifacts'] if a['artifact_id'] in quoted and a['stored_at'] != 'repo']
+    asked = pedidos(packet)
     hosts = sorted({_host(a['url']) for a in asked} - {''})
     comun, left, out = Comun() if comun is None else comun, MAX_TOTAL, {}
     for n, a in enumerate(asked):
@@ -98,6 +125,9 @@ def bajar(folder, work, recibo, deadline, clock=time.monotonic, comun=None, **kw
             estado, fields = 'no_descargable', {'motivo': 'derechos'}
         elif n >= MAX_ARTIFACTS or a['bytes'] > min(MAX_BYTES, left):
             estado, fields = 'no_descargable', {'motivo': 'tope'}
+        elif _sellado(comun.sellados, a, work):  # the bytes acquired, so a page that changes on every request still verifies
+            left = left - a['bytes']  # within T29's caps, as a download
+            estado, fields = 'sha_coincide', {'bytes': a['bytes'], 'origen': 'sellado'}
         elif clock() >= deadline:
             estado, fields = 'no_descargable', {'motivo': 'plazo'}
         elif set(hosts) & comun.ocupados():

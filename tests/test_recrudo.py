@@ -136,6 +136,27 @@ class Recrudo(unittest.TestCase):
         _, _, stats = self.gate(opener=opener_with(lambda url: url == NOTA and 1 / 0))
         self.assertEqual((self.outcomes()[0], stats['citas']), ((A_PAGE, 'no_descargable', 'error'), {'no_descargable': 1, 'verificada': 1}))
 
+    def test_a_sealed_copy_from_r2_is_read_instead_of_the_host_and_a_wrong_one_is_not(self):
+        uh = hashlib.sha256(NOTA.encode()).hexdigest()  # where abrir_sellados.sh opens R2's copy of this URL's bytes
+        f = self.tmp / 'sellados' / 'sha256' / SHA_PAGE[:2] / SHA_PAGE / uh / f'{SHA_PAGE}.html'
+        f.parent.mkdir(parents=True)
+        f.write_bytes(PAGE)
+        f.with_suffix('.url').write_text('https://otro.example.com/copia')  # fetched elsewhere: never this artifact's bytes
+        comun, changed = recrudo.Comun(), {NOTA: (200, PAGE.replace(b'Norma', b'NORMA'), {'Content-Type': 'text/html'})}
+        comun.sellados = self.tmp / 'sellados'
+        _, _, stats = self.gate(changed, comun=comun)
+        self.assertEqual(stats['citas'], {'sha_distinto': 1, 'verificada': 1})
+        f.with_suffix('.url').write_text(NOTA)
+        _, _, stats = self.gate(changed, comun=comun)  # the host now serves other bytes: only the sealed ones verify
+        self.assertEqual((stats['citas'], self.lines[0]['origen']), ({'verificada': 2}, 'sellado'))
+        self.assertNotIn(NOTA, [u for u, _ in self.opener.calls])
+        with mock.patch.object(recrudo, 'MAX_TOTAL', len(PAGE)):  # a sealed copy spends T29's budget like a download
+            self.gate(changed, comun=comun)
+        self.assertEqual(self.outcomes()[1], (A_CLOSED, 'no_descargable', 'tope'))
+        f.write_bytes(PAGE + b'x')  # a copy that is not the declared bytes is never read: the raw is asked again
+        _, _, stats = self.gate(changed, comun=comun)
+        self.assertEqual((stats['citas'], self.outcomes()[0]), ({'sha_distinto': 1, 'verificada': 1}, (A_PAGE, 'sha_distinto', None)))
+
     def test_kept_raws_unquoted_artifacts_and_an_invalid_packet_are_never_asked(self):
         kept = inv.assemble(RR, inv.fetch(PLAN, self.tmp / 'k', opener=FakeOpener(dict(ROUTES)), sleep=lambda s: None),
                             answer(), self.tmp / 'k', self.tmp / 'kout', 'm', '2026-10-23T00:00:00Z')
