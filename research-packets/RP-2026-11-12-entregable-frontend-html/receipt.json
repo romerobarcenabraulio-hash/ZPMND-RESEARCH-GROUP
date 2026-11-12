@@ -1,0 +1,566 @@
+{
+ "request_id": "RR-2026-11-12-entregable-frontend-html",
+ "fetched": [
+  {
+   "url": "https://www.w3.org/TR/WCAG22/",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.w3.org/TR/WCAG22/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:17:17Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://html.spec.whatwg.org/multipage/sections.html",
+   "status": 200,
+   "error": null,
+   "sha256": "5f0532a0eb46aa750d069cffbbd7b03e5e27e3458a44cd2548b0cc2f8dbe275c",
+   "bytes": 181662,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:17Z",
+   "text_status": "ok",
+   "text_chars": 50420
+  },
+  {
+   "url": "https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/",
+   "status": 200,
+   "error": null,
+   "sha256": "a4cd3dece76b5fc7aaada1677b06f1cf28c04c52bbbf77ccc06f717131ac7f82",
+   "bytes": 38024,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:19Z",
+   "text_status": "ok",
+   "text_chars": 5497
+  },
+  {
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019L0882",
+   "status": 200,
+   "error": null,
+   "sha256": "f4970001ad091d275180460621afc125fd5755283234f15dd1c41f757f77ed84",
+   "bytes": 485315,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:19Z",
+   "text_status": "ok",
+   "text_chars": 166126
+  },
+  {
+   "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "1eee3a1841a94567da8e59f3b19a782ce9ab081c386b6a2a763b8cde13ff5b49",
+   "bytes": 2285361,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:17:30Z",
+   "text_status": "ok",
+   "text_chars": 477596
+  },
+  {
+   "url": "https://www.section508.gov/develop/applicability-conformance/",
+   "status": 200,
+   "error": null,
+   "sha256": "6d75afa30e0c9f7203fcae07d3b06ca2216c095c7097c96da095821d43b5dd89",
+   "bytes": 31339,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:31Z",
+   "text_status": "ok",
+   "text_chars": 5975
+  },
+  {
+   "url": "https://titleii.org/web-accessibility-rule",
+   "status": 200,
+   "error": null,
+   "sha256": "dcbd7b4969282e21baf95faf33f96b4c612199a3cc104b47a6f4b566b71ff9ed",
+   "bytes": 32103,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:32Z",
+   "text_status": "ok",
+   "text_chars": 6231
+  },
+  {
+   "url": "https://web.dev/articles/vitals",
+   "status": 200,
+   "error": null,
+   "sha256": "b4c63d0a0b9a1a8b1378fc8d65e1f9684c6f26b54e693dbddfa5ac94d1c20a14",
+   "bytes": 145964,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:33Z",
+   "text_status": "ok",
+   "text_chars": 17287
+  },
+  {
+   "url": "https://github.com/validator/validator",
+   "status": 200,
+   "error": null,
+   "sha256": "6bffcdd1228ed7ab1dba64b2bb7a7ed41956c6c100a6f61f4f4ef3cabc6cb35d",
+   "bytes": 381611,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:34Z",
+   "text_status": "ok",
+   "text_chars": 15471
+  },
+  {
+   "url": "https://github.com/dequelabs/axe-core",
+   "status": 200,
+   "error": null,
+   "sha256": "85ca85a02194144fbd8deeeafc443398d107c3f7d01c7a54d8d11a57dc4567ba",
+   "bytes": 368217,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:36Z",
+   "text_status": "ok",
+   "text_chars": 12905
+  },
+  {
+   "url": "https://www.deque.com/automated-accessibility-coverage-report/",
+   "status": 200,
+   "error": null,
+   "sha256": "b3a31c91eb34c231e6c1eecb3207dafa8e9facec519e5c849625e4aaf54c4007",
+   "bytes": 411195,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:37Z",
+   "text_status": "ok",
+   "text_chars": 19309
+  },
+  {
+   "url": "https://developer.chrome.com/docs/lighthouse/accessibility/scoring",
+   "status": 200,
+   "error": null,
+   "sha256": "633ba1d0c3b1b685ed3ac249b5d6fbd93fc9f4a5012f0cdcadff1af1720ff1eb",
+   "bytes": 123774,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:38Z",
+   "text_status": "ok",
+   "text_chars": 8214
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43308425146",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[1]",
+    "claim": "El HTML Standard indica que si un documento tiene encabezados, al menos uno debería tener nivel 1 (should, no must; el propio estándar muestra ejemplos conformes pero 'no recomendados').",
+    "now": "El HTML Standard indica que, si un documento tiene uno o más encabezados, al menos un encabezado del esquema debería tener nivel 1.",
+    "cut": "Aclaración de should frente a must y la mención de ejemplos conformes pero 'no recomendados'."
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "El estándar declara que elegir entre encabezados planos o section anidadas es preferencia de estilo del autor, no requisito.",
+    "now": "Cuál es mejor es puramente una cuestión de estilo de autoría preferido.",
+    "cut": "La referencia a encabezados planos frente a section anidadas y a que no sea requisito."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "nav está pensado para bloques de navegación principales y los lectores de pantalla pueden usarlo para omitir u ofrecer navegación.",
+    "now": "No todos los grupos de enlaces de una página necesitan estar en un elemento nav; el elemento está pensado principalmente para secciones que consisten en bloques de navegación principales.",
+    "cut": "Que los lectores de pantalla puedan usarlo para omitir u ofrecer navegación."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "Las imágenes decorativas del estándar usan alt vacío en los ejemplos (alt=\"\"), mientras que las informativas llevan texto alternativo.",
+    "now": "Un ejemplo del estándar usa una imagen con alt vacío (alt=\"\").",
+    "cut": "Que sean imágenes decorativas y que las informativas lleven texto alternativo."
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "La guía APG advierte que un rol ARIA promete comportamiento de teclado que el autor debe implementar.",
+    "now": "A diferencia de los elementos input de HTML, los roles ARIA no hacen que los navegadores proporcionen comportamientos de teclado ni estilos.",
+    "cut": "Que el rol 'prometa' comportamiento y que el autor deba implementarlo."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "APG describe ARIA como capaz de sobrescribir semántica original (riesgo de ARIA incorrecto).",
+    "now": "El ARIA incorrecto representa mal las experiencias visuales, con efectos potencialmente devastadores en las experiencias no visuales correspondientes.",
+    "cut": "Que ARIA sobrescriba la semántica original."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "La Directiva 2019/882 aplica a productos puestos en el mercado y servicios prestados a consumidores después del 28 de junio de 2025.",
+    "now": "La Directiva, sin perjuicio del artículo 32, se aplica a los siguientes servicios prestados a consumidores después del 28 de junio de 2025.",
+    "cut": "Los productos puestos en el mercado."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "Las microempresas que prestan servicios están exentas de los requisitos generales de servicios (Anexo I, sección III).",
+    "now": "Las microempresas que prestan servicios están exentas de cumplir los requisitos de accesibilidad a que se refiere el apartado 3 de este artículo.",
+    "cut": "La mención del Anexo I, sección III y de 'requisitos generales de servicios'."
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "Los productos y servicios conformes con normas armonizadas publicadas en el DOUE se presumen conformes.",
+    "now": "Se presumirá que son conformes con los requisitos de accesibilidad de la Directiva, en la medida en que esas normas o partes de ellas cubran dichos requisitos.",
+    "cut": "Productos y servicios, normas armonizadas y publicación en el DOUE."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "Los requisitos se aplican solo en la medida en que no impongan una carga desproporcionada ni una alteración fundamental.",
+    "now": "Los requisitos se aplican en la medida en que no suponga una carga desproporcionada para los operadores económicos afectados.",
+    "cut": "La alteración fundamental."
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "Si un producto usa color para transmitir información, debe ofrecer una alternativa al color (relevante para gráficas).",
+    "now": "Cuando el producto usa el color para transmitir información, indicar una acción, requerir una respuesta o identificar elementos, debe ofrecer una alternativa al color.",
+    "cut": "La nota 'relevante para gráficas'."
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "Los ejemplos del Anexo II son no vinculantes (incluye teclado, texto alternativo a imágenes).",
+    "now": "El Anexo II contiene ejemplos indicativos no vinculantes de posibles soluciones que contribuyen a cumplir los requisitos de accesibilidad del Anexo I.",
+    "cut": "Que incluya teclado y texto alternativo a imágenes."
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "Anexo II, ejemplo para sitios web: texto alternativo, todo operable por teclado, tiempo suficiente, comportamiento predecible, compatibilidad con tecnologías de asistencia.",
+    "now": "Ejemplos: proporcionar descripción textual de imágenes, hacer toda la funcionalidad disponible desde el teclado, dar a los usuarios tiempo suficiente para leer, hacer que el contenido aparezca y funcione de forma predecible.",
+    "cut": "La compatibilidad con tecnologías de asistencia y la referencia a sitios web."
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "Los prestadores deben renovar la evaluación de carga desproporcionada al menos cada cinco años.",
+    "now": "En cualquier caso, al menos cada cinco años.",
+    "cut": "Que sea la evaluación de carga desproporcionada y que los prestadores deban renovarla."
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "EN 301 549 define la conformidad como cumplir los requisitos aplicables, que son las cláusulas con «shall». Las cláusulas con «should» son recomendaciones y no se exigen para la conformidad.",
+    "now": "Las cláusulas que contienen la palabra «should» son recomendaciones y no se exigen para la conformidad.",
+    "cut": "La definición de conformidad y las cláusulas con «shall»."
+   },
+   {
+    "id": "confirmed[31]",
+    "claim": "Los requisitos de EN 301 549 se autodelimitan con «Where ICT…». Si la precondición es falsa, el requisito no es aplicable.",
+    "now": "Cuando una de las precondiciones es falsa, el requisito no es aplicable.",
+    "cut": "Que los requisitos se autodelimiten con «Where ICT…»."
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "La norma equipara la conformidad con WCAG 2.1 nivel AA a cumplir las cláusulas 9.1 a 9.4 y los requisitos de conformidad de 9.6.",
+    "now": "La conformidad con WCAG 2.1 nivel AA equivale a cumplir todas las cláusulas 9.1 a 9.4.",
+    "cut": "Los requisitos de conformidad de 9.6."
+   },
+   {
+    "id": "confirmed[36]",
+    "claim": "El texto cita al W3C: no se recomienda exigir el nivel AAA como política general para sitios completos.",
+    "now": "No se recomienda exigir la conformidad de nivel AAA como política general.",
+    "cut": "Que cite al W3C y la referencia a sitios completos."
+   },
+   {
+    "id": "confirmed[38]",
+    "claim": "La norma es un medio voluntario de cumplir la Directiva 2016/2102; una vez citada en el DOUE, da presunción de conformidad dentro de su alcance.",
+    "now": "La norma confiere, dentro de los límites de su alcance, una presunción de conformidad con los requisitos esenciales correspondientes de esa Directiva.",
+    "cut": "Que sea medio voluntario, la Directiva 2016/2102 y la cita en el DOUE."
+   },
+   {
+    "id": "confirmed[41]",
+    "claim": "La norma da ejemplos de contenido que requiere diseño bidimensional, entre ellos mapas, diagramas y tablas de datos.",
+    "now": "Ejemplos de contenido que requiere diseño bidimensional son imágenes, mapas, diagramas, vídeo, juegos, etc.",
+    "cut": "Las tablas de datos."
+   },
+   {
+    "id": "confirmed[42]",
+    "claim": "La norma indica que una estructura semántica bien formada permite a usuarios sin visión navegar una interfaz visual.",
+    "now": "Una página web o aplicación con una estructura semántica bien formada puede permitir a los usuarios sin visión...",
+    "cut": "Que les permita navegar una interfaz visual."
+   },
+   {
+    "id": "confirmed[48]",
+    "claim": "Web Vitals: Lighthouse no puede medir INP en laboratorio.",
+    "now": "No se puede medir INP, ya que no hay entrada del usuario.",
+    "cut": "Que sea Lighthouse y la medición en laboratorio."
+   },
+   {
+    "id": "confirmed[49]",
+    "claim": "Web Vitals: la medición de laboratorio no sustituye a la de campo.",
+    "now": "No es un sustituto de la medición de campo.",
+    "cut": "Que se refiera a la medición de laboratorio."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Estándares web (WHATWG HTML, W3C WCAG 2.2, WAI-ARIA APG)",
+   "Leyes y normas de accesibilidad (EAA 2019/882, EN 301 549, Section 508, ADA Título II)",
+   "Métricas de rendimiento (Core Web Vitals, web.dev)",
+   "Validadores y herramientas (Nu HTML Checker, axe-core, Lighthouse, Pa11y)",
+   "Guías de visualización de datos de organismos estadísticos (Analysis Function / ONS)"
+  ],
+  "searches": [
+   {
+    "query": "WCAG 2.2 W3C Recommendation",
+    "intent": "official"
+   },
+   {
+    "query": "HTML Living Standard WHATWG",
+    "intent": "official"
+   },
+   {
+    "query": "European Accessibility Act EN 301 549 harmonised standard web content",
+    "intent": "official"
+   },
+   {
+    "query": "Section 508 ICT Revised Standards WCAG 2.0 section508.gov",
+    "intent": "official"
+   },
+   {
+    "query": "Core Web Vitals thresholds LCP INP CLS web.dev",
+    "intent": "official"
+   },
+   {
+    "query": "Nu HTML Checker validator.w3.org/nu github validator",
+    "intent": "other"
+   },
+   {
+    "query": "axe-core GitHub Deque MPL-2.0 automated accessibility rules coverage",
+    "intent": "limitations"
+   },
+   {
+    "query": "ADA Title II web accessibility final rule WCAG 2.1 AA compliance dates",
+    "intent": "official"
+   },
+   {
+    "query": "ONS Analysis Function guidance data visualisation charts accessibility",
+    "intent": "support"
+   },
+   {
+    "query": "WAI-ARIA Authoring Practices Guide APG first rule of ARIA no ARIA is better than bad ARIA",
+    "intent": "contradict"
+   },
+   {
+    "query": "Directive (EU) 2019/882 European Accessibility Act EUR-Lex microenterprises exemption",
+    "intent": "limitations"
+   },
+   {
+    "query": "Lighthouse accessibility score GitHub GoogleChrome lighthouse Apache-2.0 Chrome developers docs",
+    "intent": "other"
+   },
+   {
+    "query": "Pa11y GitHub pa11y-ci license LGPL htmlcs axe runner",
+    "intent": "other"
+   }
+  ],
+  "not_found": [
+   "No se descargaron los documentos ni se calculó ningún sha256 (solo hay búsqueda web).",
+   "No se halló la fuente primaria de la regla final del DOJ para el Título II (Federal Register, 91 FR 20902) ni ada.gov; solo fuentes secundarias.",
+   "No se confirmó con una fuente primaria la publicación de EN 301 549 v4.1.1 ni su citación en el Diario Oficial (solo resúmenes secundarios).",
+   "No se vio la página primaria de umbrales de Core Web Vitals; solo el artículo web.dev/vitals.",
+   "No se buscó el texto de transposición nacional (p. ej., España RD 193/2023, Francia RGAA, Alemania BFSG).",
+   "No se buscaron Pa11y/axe/Lighthouse en sus páginas de versión (versiones concretas sin verificar).",
+   "Los ejemplos oficiales de artefactos de referencia (p. ej., W3C BAD, demos del APG) no se buscaron.",
+   "Guías de visualización de otros organismos estadísticos (Eurostat, US Census) no consultadas."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 14,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://github.com/pa11y/pa11y",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-charts/",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "family": "Estándares web",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Norma base de accesibilidad (Rec. 5-oct-2023, republicada 12-dic-2024); criterios A/AA/AAA citables; 4.1.1 obsoleto."
+   },
+   {
+    "url": "https://html.spec.whatwg.org/multipage/sections.html",
+    "family": "Estándares web",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Especificación viva de HTML: semántica, elementos de sección y requisitos de conformidad para autores."
+   },
+   {
+    "url": "https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/",
+    "family": "Estándares web",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Guía (no norma) sobre ARIA: preferir HTML nativo; distingue buena práctica de obligación."
+   },
+   {
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019L0882",
+    "family": "Leyes de accesibilidad",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto legal: ámbito, exenciones (microempresas de servicios, art. 4(5)); la transposición nacional puede variar. URL vista como enlace oficial en los resultados."
+   },
+   {
+    "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf",
+    "family": "Leyes de accesibilidad",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Norma armonizada europea; capítulo 9 incorpora WCAG 2.1 A/AA. PDF largo. Hay una v4.1.1 reportada (WCAG 2.2) cuya vigencia debe verificarse."
+   },
+   {
+    "url": "https://www.section508.gov/develop/applicability-conformance/",
+    "family": "Leyes de accesibilidad",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Oficial de EE. UU.: la Sección 508 revisada exige WCAG 2.0 A/AA (no 2.1/2.2) para agencias federales."
+   },
+   {
+    "url": "https://titleii.org/web-accessibility-rule",
+    "family": "Leyes de accesibilidad",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Fuente secundaria: regla DOJ Título II (WCAG 2.1 AA; plazos 26-abr-2027/2028 tras la extensión de 2026). Solo candidate_claim; confirmar en ada.gov / Federal Register."
+   },
+   {
+    "url": "https://web.dev/articles/vitals",
+    "family": "Rendimiento",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Definición oficial de Core Web Vitals (LCP, INP, CLS; percentil 75). Son objetivos de proveedor, no obligación legal."
+   },
+   {
+    "url": "https://github.com/validator/validator",
+    "family": "Validadores y herramientas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Validador de HTML/CSS/SVG de código abierto (MIT) que comprueba conformidad con la especificación; CLI, Docker y API."
+   },
+   {
+    "url": "https://github.com/dequelabs/axe-core",
+    "family": "Validadores y herramientas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Motor de reglas de accesibilidad (MPL-2.0) que cubre WCAG 2.0 a 2.2 y mejores prácticas; devuelve resultados 'incomplete' que requieren revisión manual."
+   },
+   {
+    "url": "https://www.deque.com/automated-accessibility-coverage-report/",
+    "family": "Validadores y herramientas",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Dato de proveedor: las pruebas automáticas detectan ~57% de los problemas; solo candidate_claim sobre los límites de la automatización."
+   },
+   {
+    "url": "https://developer.chrome.com/docs/lighthouse/accessibility/scoring",
+    "family": "Validadores y herramientas",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Explica que la puntuación es una media ponderada basada en axe, de aprobado/fallo; una puntuación de 100 no equivale a conformidad con WCAG."
+   },
+   {
+    "url": "https://github.com/pa11y/pa11y",
+    "family": "Validadores y herramientas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Ejecutor de pruebas de accesibilidad en CLI/CI (LGPL-3.0); usa HTML_CodeSniffer por defecto y admite axe."
+   },
+   {
+    "url": "https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-charts/",
+    "family": "Visualización de datos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Guía de organismo estadístico sobre gráficas accesibles (alternativa de texto, descarga de datos, etiquetas). Es una política interna del Reino Unido, no un estándar general."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ },
+ "partes": [
+  [
+   [
+    "SA-5f0532a0eb46aa750d069cff",
+    0,
+    50420
+   ],
+   [
+    "SA-a4cd3dece76b5fc7aaada167",
+    0,
+    5497
+   ],
+   [
+    "SA-f4970001ad091d2751804606",
+    0,
+    166126
+   ]
+  ],
+  [
+   [
+    "SA-1eee3a1841a94567da8e59f3",
+    0,
+    477596
+   ],
+   [
+    "SA-6d75afa30e0c9f7203fcae07",
+    0,
+    5975
+   ],
+   [
+    "SA-dcbd7b4969282e21baf95faf",
+    0,
+    6231
+   ],
+   [
+    "SA-b4c63d0a0b9a1a8b1378fc8d",
+    0,
+    17287
+   ],
+   [
+    "SA-6bffcdd1228ed7ab1dba64b2",
+    0,
+    15471
+   ],
+   [
+    "SA-85ca85a02194144fbd8deeea",
+    0,
+    12905
+   ],
+   [
+    "SA-b3a31c91eb34c231e6c1eecb",
+    0,
+    19309
+   ],
+   [
+    "SA-633ba1d0c3b1b685ed3ac249",
+    0,
+    8214
+   ]
+  ]
+ ],
+ "partes_fuera": {
+  "confirmed": [
+   {
+    "claim": "Lighthouse: la puntuación de accesibilidad es un promedio ponderado basado en el impacto de axe.",
+    "artifact_ids": [
+     "SA-633ba1d0c3b1b685ed3ac249"
+    ],
+    "quote": "The Lighthouse Accessibility score is a weighted average of all accessibility audits.",
+    "locator": "Texto principal"
+   },
+   {
+    "claim": "Lighthouse: las auditorías manuales y de buenas prácticas no afectan a la puntuación.",
+    "artifact_ids": [
+     "SA-633ba1d0c3b1b685ed3ac249"
+    ],
+    "quote": "Manual audits and low-impact / best-practices audits aren't included in the table because they don't affect your score.",
+    "locator": "Texto principal"
+   },
+   {
+    "claim": "Lighthouse audita que el viewport no impida el zoom.",
+    "artifact_ids": [
+     "SA-633ba1d0c3b1b685ed3ac249"
+    ],
+    "quote": "[user-scalable=\"no\"] is not used in the <meta name=\"viewport\"> element",
+    "locator": "Tabla de pesos"
+   },
+   {
+    "claim": "Lighthouse audita que los elementos de imagen tengan atributo alt.",
+    "artifact_ids": [
+     "SA-633ba1d0c3b1b685ed3ac249"
+    ],
+    "quote": "Image elements have [alt] attributes",
+    "locator": "Tabla de pesos"
+   }
+  ]
+ }
+}
