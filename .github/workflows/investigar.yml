@@ -312,6 +312,29 @@ jobs:
             --system-prompt "$(cat "$GITHUB_WORKSPACE/work/revision-system.txt")" \
             || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/revision-cli.json"; exit $rc; }
           jq -c '{num_turns, duration_ms, total_cost_usd}' "$GITHUB_WORKSPACE/work/revision-cli.json"  # what it cost (no text)
+      - name: Reconcile prompt (the kept claims beside the scope, unknowns and limitations; no quote, no source)
+        run: python -m rg.investigar reconcile-prompt --work work --model-output work/modelo-cli.json --review-output work/revision-cli.json
+      - name: The reconciler (the same CLI, no tools, an empty folder of its own; it can only drop the model's texts)
+        env:
+          RG_SUSCRIPCION: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          RG_API: ${{ secrets.ANTHROPIC_API_KEY }}
+          RG_ORDEN: api  # as the reviewer's: the API first, the subscription if it fails
+          CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
+          DISABLE_AUTOUPDATER: '1'
+        run: |
+          set -euo pipefail
+          diagnose() {  # a failed call says why from the result's structure only, never any of its text (GPT, #53)
+            jq -c '{type, subtype, is_error, num_turns, duration_ms}' "$1" 2>/dev/null \
+              || echo "no JSON result from the CLI"
+          }
+          mkdir -p "$RUNNER_TEMP/vacio-conciliacion" && cd "$RUNNER_TEMP/vacio-conciliacion"
+          . "$GITHUB_WORKSPACE/scripts/turno.sh"
+          turno "$GITHUB_WORKSPACE/work/conciliacion-cli.json" "$GITHUB_WORKSPACE/work/conciliacion-user.txt" \
+            "$RUNNER_TEMP/cc/package/claude" -p --strict-mcp-config --tools "" --max-turns 3 --output-format json \
+            --json-schema "$(cat "$GITHUB_WORKSPACE/work/conciliacion-schema.json")" \
+            --system-prompt "$(cat "$GITHUB_WORKSPACE/work/conciliacion-system.txt")" \
+            || { rc=$?; diagnose "$GITHUB_WORKSPACE/work/conciliacion-cli.json"; exit $rc; }
+          jq -c '{num_turns, duration_ms, total_cost_usd}' "$GITHUB_WORKSPACE/work/conciliacion-cli.json"  # what it cost (no text)
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
           name: investigar-modelo
@@ -319,6 +342,7 @@ jobs:
             work/modelo-cli.json
             work/revision-cli.json
             work/partes-fuera.json
+            work/conciliacion-cli.json
           retention-days: 1
           if-no-files-found: error
 
@@ -353,7 +377,8 @@ jobs:
         run: |
           set -euo pipefail
           [[ "$RID" =~ ^RR-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
-          rp=$(python -m rg.investigar assemble --request "requests/$RID.json" --work work --model-output work/modelo-cli.json --review-output work/revision-cli.json --out out)
+          rp=$(python -m rg.investigar assemble --request "requests/$RID.json" --work work --model-output work/modelo-cli.json \
+            --reconcile-output work/conciliacion-cli.json --review-output work/revision-cli.json --out out)
           [[ "$rp" =~ ^RP-[A-Za-z0-9._-]{3,64}$ ]] || exit 2
           python -m rg.packets "out/research-packets/$rp" --strict --raw work/raw
           echo "rp=$rp" >> "$GITHUB_OUTPUT"
