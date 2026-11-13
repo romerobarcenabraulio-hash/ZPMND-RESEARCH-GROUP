@@ -1,0 +1,295 @@
+{
+ "request_id": "RR-2026-11-08-openclaw-arte-previo",
+ "fetched": [
+  {
+   "url": "https://github.com/openclaw/openclaw",
+   "status": 200,
+   "error": null,
+   "sha256": "640e957db194f86688de8d241020b3a9da8ac59c3610acf26ed01af5456f49ef",
+   "bytes": 958092,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:01:58Z",
+   "text_status": "ok",
+   "text_chars": 12635
+  },
+  {
+   "url": "https://github.com/openclaw/openclaw/releases",
+   "status": 200,
+   "error": null,
+   "sha256": "76dbefa1dc511581cf2f7781a40b7b9e9e84d434c9cf6f5527c6a235bcaff92b",
+   "bytes": 1358522,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:01:59Z",
+   "text_status": "ok",
+   "text_chars": 87649
+  },
+  {
+   "url": "https://www.npmjs.com/package/openclaw?activeTab=versions",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.npmjs.com/package/openclaw?activeTab=versions",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-13T05:02:01Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://github.com/openclaw/openclaw/blob/main/LICENSE",
+   "status": 200,
+   "error": null,
+   "sha256": "b09e44119d832928c8228b80c780f60d3b0d113864cbcc5a58b769a478036091",
+   "bytes": 182845,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:01Z",
+   "text_status": "ok",
+   "text_chars": 3808
+  },
+  {
+   "url": "https://docs.openclaw.ai/gateway/security",
+   "status": 200,
+   "error": null,
+   "sha256": "73ceb0064f711ac76df5bce74545a83de1cbbfd165affabd03b1b5e82485ccad",
+   "bytes": 261907,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:02Z",
+   "text_status": "ok",
+   "text_chars": 33645
+  },
+  {
+   "url": "https://docs.openclaw.ai/gateway/security/trust-model",
+   "status": 200,
+   "error": null,
+   "sha256": "2c96377028d448a5167594fce3d154f06be48e2b4e9a184b139f85ade510733b",
+   "bytes": 252638,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:03Z",
+   "text_status": "ok",
+   "text_chars": 36641
+  },
+  {
+   "url": "https://github.com/openclaw/openclaw/blob/main/SECURITY.md",
+   "status": 200,
+   "error": null,
+   "sha256": "45ca9af4e87cb6b6cb4ff7d4bea8497da44e0e697fe20fae292e2603aec57596",
+   "bytes": 411649,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:04Z",
+   "text_status": "ok",
+   "text_chars": 40895
+  },
+  {
+   "url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/security/index.md",
+   "status": 200,
+   "error": null,
+   "sha256": "cbfff904d5c301ef27b4bb4af71c28e91a0551732fcbf6fcb40fb49fc5df7649",
+   "bytes": 272076,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:05Z",
+   "text_status": "ok",
+   "text_chars": 8654
+  },
+  {
+   "url": "https://github.com/NVIDIA/openshell",
+   "status": 200,
+   "error": null,
+   "sha256": "0d3cee3285e387b4558a4ee415d8c54bb7ef19b84668adc1e77ab76f1a893eb8",
+   "bytes": 397098,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:06Z",
+   "text_status": "ok",
+   "text_chars": 10758
+  },
+  {
+   "url": "https://docs.nvidia.com/openshell/v0.0.116/sandboxes/policies",
+   "status": 200,
+   "error": null,
+   "sha256": "55ba635c974a610d04825d5726c90defcabb74c6ecbc76beedd0a552271b60f9",
+   "bytes": 472739,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:07Z",
+   "text_status": "ok",
+   "text_chars": 55687
+  },
+  {
+   "url": "https://docs.nvidia.com/openshell/about/architecture",
+   "status": 200,
+   "error": null,
+   "sha256": "c6cba439eebcd75b35bd6d6119c408d7fcd2fa6a80bd48f95b4182f3e989ec91",
+   "bytes": 219593,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:08Z",
+   "text_status": "ok",
+   "text_chars": 16005
+  },
+  {
+   "url": "https://docs.nvidia.com/nemoclaw/latest/reference/network-policies.html",
+   "status": 200,
+   "error": null,
+   "sha256": "1babce16cec69adfbe8746da282d4934514ce66806f507508ca3103d0cb3f1ff",
+   "bytes": 270252,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:09Z",
+   "text_status": "ok",
+   "text_chars": 27033
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43369188047",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "taken_out": [
+   {
+    "id": "confirmed[0]",
+    "claim": "El repositorio oficial es github.com/openclaw/openclaw.",
+    "why": "The quote is only a git clone command; it does not say the repository is the official one."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "OpenClaw no es un límite multi-tenant hostil.",
+    "why": "The quote limits this to mutually adversarial users sharing one agent or gateway, but the claim states it generally as 'hostile multi-tenant' without that condition."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "OpenShell: lo no listado en las rutas de archivos es inaccesible.",
+    "why": "The quote says 'any path not listed in either list' (filesystem policy lists), and the claim drops that and says unlisted paths are inaccessible generally, which is close but loses the 'either list' context; the quote is also a fragment."
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "OpenShell aplica filtros seccomp a procesos.",
+    "why": "The quote says the agent runs with seccomp filters blocking dangerous system calls; the claim says filters apply to processes generally, omitting the blocking of dangerous syscalls."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Repositorio oficial GitHub (openclaw/openclaw)",
+   "Releases/npm (versión estable)",
+   "Licencia (LICENSE)",
+   "Documentación de seguridad del gateway",
+   "Documentación OpenShell (NVIDIA)",
+   "Referencia NemoClaw (OpenShell+OpenClaw)",
+   "Enciclopedia/secundarias"
+  ],
+  "searches": [
+   {
+    "query": "OpenClaw github repository official",
+    "intent": "official"
+   },
+   {
+    "query": "OpenClaw gateway security trust boundary tools.elevated docs",
+    "intent": "official"
+   },
+   {
+    "query": "OpenShell NVIDIA sandbox policy filesystem network process credentials OpenClaw",
+    "intent": "official"
+   },
+   {
+    "query": "openclaw/openclaw releases latest stable version",
+    "intent": "official"
+   },
+   {
+    "query": "openclaw LICENSE MIT github openclaw/openclaw",
+    "intent": "official"
+   }
+  ],
+  "not_found": [
+   "sha256 de documentos/releases: no visible en búsqueda; debe calcularse al descargar.",
+   "Texto literal de LICENSE no visible en los resultados (solo resumen MIT); leer el archivo.",
+   "Versión de OpenShell estable más reciente y su licencia: no confirmadas (la doc vista es v0.0.116).",
+   "Página 'Elevated Mode' de OpenClaw no localizada directamente.",
+   "Confirmación independiente de que 2026.11.3 sigue siendo la última a fecha de hoy (13-nov-2026): desconocido."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://github.com/openclaw/openclaw",
+    "family": "Repositorio oficial GitHub (openclaw/openclaw)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Repositorio oficial; README con licencia y gobernanza."
+   },
+   {
+    "url": "https://github.com/openclaw/openclaw/releases",
+    "family": "Releases/npm (versión estable)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Fuente autoritativa de la versión estable (resultado de búsqueda indica 2026.11.3, 10-nov-2026; verificar y calcular sha256)."
+   },
+   {
+    "url": "https://www.npmjs.com/package/openclaw?activeTab=versions",
+    "family": "Releases/npm (versión estable)",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Contrasta versión y fechas; permite integridad/sha del paquete."
+   },
+   {
+    "url": "https://github.com/openclaw/openclaw/blob/main/LICENSE",
+    "family": "Licencia (LICENSE)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto literal de la licencia (MIT, Copyright 2026 OpenClaw Foundation según resultado)."
+   },
+   {
+    "url": "https://docs.openclaw.ai/gateway/security",
+    "family": "Documentación de seguridad del gateway",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Modelo de seguridad del gateway, tools.elevated, auditoría."
+   },
+   {
+    "url": "https://docs.openclaw.ai/gateway/security/trust-model",
+    "family": "Documentación de seguridad del gateway",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Una frontera de confianza por gateway; no es aislamiento multi-inquilino hostil; plugins en la TCB."
+   },
+   {
+    "url": "https://github.com/openclaw/openclaw/blob/main/SECURITY.md",
+    "family": "Documentación de seguridad del gateway",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Política de seguridad y alcance de vulnerabilidades."
+   },
+   {
+    "url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/security/index.md",
+    "family": "Documentación de seguridad del gateway",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Fuente versionada en git del texto de seguridad, apta para hash por commit."
+   },
+   {
+    "url": "https://github.com/NVIDIA/openshell",
+    "family": "Documentación OpenShell (NVIDIA)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Repositorio oficial de OpenShell; licencia y versión a comprobar."
+   },
+   {
+    "url": "https://docs.nvidia.com/openshell/v0.0.116/sandboxes/policies",
+    "family": "Documentación OpenShell (NVIDIA)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Controles de archivos (Landlock), procesos, red y credenciales; estático vs dinámico."
+   },
+   {
+    "url": "https://docs.nvidia.com/openshell/about/architecture",
+    "family": "Documentación OpenShell (NVIDIA)",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Arquitectura: supervisor, proxy, motor de políticas, inyección de credenciales."
+   },
+   {
+    "url": "https://docs.nvidia.com/nemoclaw/latest/reference/network-policies.html",
+    "family": "Referencia NemoClaw (OpenShell+OpenClaw)",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Política de red deny-by-default al combinar OpenShell con OpenClaw."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
