@@ -544,7 +544,7 @@ class Model(Base):
 
 
 def review(*reviews):
-    return {'reviews': [{'id': i, 'fits': f, 'claim': c, 'cut': x} for i, f, c, x in reviews]}
+    return {'reviews': [{'id': i, 'fits': f, 'why': w} for i, f, w in reviews]}
 
 
 class Review(Base):
@@ -564,6 +564,9 @@ class Review(Base):
         self.assertIn('A name, number, date, plan, license, condition or list item absent from the quote makes it false', system)
         # run 40533846468: every module lost its name; GPT, #50: the title only names the document, it adds no fact
         self.assertIn("The only exception is the name of the document the quote is from", system)
+        self.assertIn('into an\n  obligation (must, shall, debe, obligatorio)', system)  # GPT on #154: 'should meet' became 'debe cumplir'
+        self.assertIn('A claim wider than its quote is false too: it drops or weakens a condition', system)  # GPT on #150, #152
+        self.assertIn('The finding is taken out of\n  the packet whole; nothing you write enters it.', system)
         self.assertIn('Nothing else comes from them: no license, version, date, number, plan or condition.', system)
         self.assertEqual(json.loads(user), [
             {'id': 'confirmed[0]', 'claim': self.WIDE, 'quote': QUOTE, 'source': ['Norma de prueba <https://a.gob.mx/nota>']},
@@ -588,29 +591,34 @@ class Review(Base):
         with self.assertRaises(ValueError):
             inv.review_prompt({'findings': {'confirmed': 'x'}})
 
-    def test_a_claim_its_quote_does_not_hold_is_cut_down_and_the_cut_leaves_the_findings(self):
+    def test_a_claim_its_quote_does_not_hold_is_taken_out_whole_and_never_rewritten(self):
+        # GPT on #150, #152, #154 (2026-11-12): a claim cut down to its quote had lost its condition and said more
         rows = self.fetch()
-        rev = review(('confirmed[1]', True, 'texto del revisor que no entra', ''),
-                     ('confirmed[0]', False, self.NARROW, 'desde 2024; firmada por el director'))
+        rev = review(('confirmed[1]', True, ''), ('confirmed[0]', False, 'desde 2024; firmada por el director'))
         folder = inv.assemble(RR, rows, self.wide(), self.work, self.out, 'modelo de prueba', '2026-10-23T00:00:00Z',
                               review=(rev, 'revisor de prueba'))
         packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
-        self.assertEqual([f['claim'] for f in packet['findings']['confirmed']], [self.NARROW, 'El dataset trae una nota.'])
+        self.assertEqual([f['claim'] for f in packet['findings']['confirmed']], ['El dataset trae una nota.'])
         self.assertNotIn('director', json.dumps(packet, ensure_ascii=False))
         self.assertEqual([x for x in packet['limitations'] if 'segunda pasada' in x], [
-            'Una segunda pasada que solo ve cada afirmación junto a su cita recortó 1 de 2 hallazgos confirmados a lo que su '
-            'cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.'])
+            'Una segunda pasada que solo ve cada afirmación junto a su cita quitó 1 de 2 hallazgos confirmados que decían '
+            'más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda en receipt.json, '
+            'fuera de los hallazgos.'])
         self.assertEqual([a['agent'] for a in packet['researcher_agents']], ['rg-investigar', 'rg-investigar-revision'])
         receipt = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))
-        self.assertEqual(receipt['review'], {'model': 'revisor de prueba', 'cuts': [
-            {'id': 'confirmed[0]', 'claim': self.WIDE, 'now': self.NARROW, 'cut': 'desde 2024; firmada por el director'}]})
+        self.assertEqual(receipt['review'], {'model': 'revisor de prueba', 'taken_out': [
+            {'id': 'confirmed[0]', 'claim': self.WIDE, 'why': 'desde 2024; firmada por el director'}]})
         problems, _, _ = packets.check(folder)
         self.assertEqual(problems, [])
+        old = {'reviews': [{'id': 'confirmed[0]', 'fits': False, 'claim': self.NARROW, 'cut': 'x'},
+                           {'id': 'confirmed[1]', 'fits': True, 'claim': '', 'cut': ''}]}
+        with self.assertRaises(ValueError):  # a rewrite has no field to come in through
+            inv.apply_review(self.wide(), old)
 
     def test_a_review_that_skips_repeats_or_invents_a_finding_stops_the_run(self):
         rows = self.fetch()
-        ok0, ok1 = ('confirmed[0]', True, '', ''), ('confirmed[1]', True, '', '')
-        for name, rev in (('skips', review(ok0)), ('repeats', review(ok0, ok0)), ('invents', review(ok0, ok1, ('conflicting[0]', True, '', ''))),
+        ok0, ok1 = ('confirmed[0]', True, ''), ('confirmed[1]', True, '')
+        for name, rev in (('skips', review(ok0)), ('repeats', review(ok0, ok0)), ('invents', review(ok0, ok1, ('conflicting[0]', True, ''))),
                           ('extra field', {'reviews': [dict(r, nota='x') for r in review(ok0, ok1)['reviews']]}),
                           ('not an object', [ok0, ok1])):
             with self.subTest(name), self.assertRaises(ValueError):
@@ -618,40 +626,34 @@ class Review(Base):
         self.assertFalse((self.out / 'research-packets').exists())
         folder = inv.assemble(RR, rows, answer(), self.work, self.out, 'm', review=(review(ok1, ok0), 'r'))  # any order
         limits = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))['limitations']
-        self.assertEqual(sum('recortó 0 de 2' in x for x in limits), 1)
+        self.assertEqual(sum('quitó 0 de 2' in x for x in limits), 1)
 
-    def test_a_conflicting_finding_is_cut_or_dropped_like_a_confirmed_one_and_must_be_reviewed(self):
+    def test_a_conflicting_finding_is_taken_out_like_a_confirmed_one_and_must_be_reviewed(self):
         rows = self.fetch()
         ans = self.wide()
         ans['findings']['conflicting'] = [
             {'claim': 'La norma contradice a otra fuente.', 'artifact_ids': [A_PAGE], 'quote': QUOTE, 'locator': '5.1'},
             {'claim': 'Otra contradicción.', 'artifact_ids': [A_PAGE], 'quote': QUOTE, 'locator': '5.1'}]
-        ok0, ok1 = ('confirmed[0]', True, '', ''), ('confirmed[1]', True, '', '')
+        ok0, ok1 = ('confirmed[0]', True, ''), ('confirmed[1]', True, '')
         with self.assertRaises(ValueError):  # a conflicting finding left out of the review stops the run
             inv.assemble(RR, rows, ans, self.work, self.out / 'x', 'm', review=(review(ok0, ok1), 'r'))
-        rev = review(ok0, ok1, ('conflicting[0]', False, 'La norma obliga a una política escrita.', 'que contradice a otra fuente'),
-                     ('conflicting[1]', False, '', 'todo'))
+        rev = review(ok0, ok1, ('conflicting[0]', False, 'la contradicción no está en su cita'), ('conflicting[1]', True, ''))
         folder = inv.assemble(RR, rows, ans, self.work, self.out, 'm', '2026-10-23T00:00:00Z', review=(rev, 'r'))
         packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
-        self.assertEqual([f['claim'] for f in packet['findings']['conflicting']], ['La norma obliga a una política escrita.'])
-        cuts = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))['review']['cuts']
-        self.assertEqual([(c['id'], c['now']) for c in cuts], [('conflicting[0]', 'La norma obliga a una política escrita.'),
-                                                               ('conflicting[1]', None)])
+        self.assertEqual([f['claim'] for f in packet['findings']['conflicting']], ['Otra contradicción.'])
+        self.assertEqual(len(packet['findings']['confirmed']), 2)
+        self.assertEqual(sum('quitó 0 de 2 hallazgos confirmados y 1 de 2 en conflicto que' in x for x in packet['limitations']), 1)
+        taken = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))['review']['taken_out']
+        self.assertEqual(taken, [{'id': 'conflicting[0]', 'claim': 'La norma contradice a otra fuente.',
+                                  'why': 'la contradicción no está en su cita'}])
 
-    def test_a_review_that_leaves_nothing_drops_its_finding_and_one_without_its_cut_still_stands(self):
-        # run 40548398494: one such review stopped the whole OmniRoute run; it is about one finding
+    def test_a_finding_that_does_not_fit_goes_even_without_its_why(self):
+        # run 40548398494: one review without its text stopped the whole OmniRoute run; it is about one finding
         rows = self.fetch()
-        rev = review(('confirmed[0]', False, ' ', 'todo'), ('confirmed[1]', False, 'El dataset trae una nota abierta.', ''))
-        folder = inv.assemble(RR, rows, self.wide(), self.work, self.out, 'm', '2026-10-23T00:00:00Z', review=(rev, 'r'))
+        folder = inv.assemble(RR, rows, self.wide(), self.work, self.out, 'm', '2026-10-23T00:00:00Z',
+                              review=(review(('confirmed[0]', False, ''), ('confirmed[1]', True, '')), 'r'))
         packet = json.loads((folder / 'packet.json').read_text(encoding='utf-8'))
-        self.assertEqual([f['claim'] for f in packet['findings']['confirmed']], ['El dataset trae una nota abierta.'])
-        self.assertEqual([x for x in packet['limitations'] if 'segunda pasada' in x], [
-            'Una segunda pasada que solo ve cada afirmación junto a su cita recortó 2 de 2 hallazgos confirmados a lo que su '
-            'cita dice (de ellos, 1 se sacaron: su cita no sostiene nada de la afirmación); lo recortado no tiene cita y '
-            'queda en receipt.json, fuera de los hallazgos.'])
-        cuts = json.loads((folder / 'receipt.json').read_text(encoding='utf-8'))['review']['cuts']
-        self.assertEqual(cuts, [{'id': 'confirmed[0]', 'claim': self.WIDE, 'now': None, 'cut': self.WIDE},
-                                {'id': 'confirmed[1]', 'claim': 'El dataset trae una nota.', 'now': 'El dataset trae una nota abierta.', 'cut': ''}])
+        self.assertEqual([f['claim'] for f in packet['findings']['confirmed']], ['El dataset trae una nota.'])
         self.assertEqual(packets.check(folder)[0], [])
 
     def test_the_command_line_writes_the_review_prompt_and_never_assembles_without_a_review(self):
@@ -669,25 +671,25 @@ class Review(Base):
         with mock.patch('sys.stderr'), self.assertRaises(SystemExit):
             inv.main(base + ['--reconcile-output', str(ccli)])  # never without its review (CI mutant m510 on f60e1ed)
         rcli.write_text(json.dumps({'type': 'result', 'is_error': False, 'structured_output': review(
-            ('confirmed[0]', False, self.NARROW, 'desde 2024'), ('confirmed[1]', True, '', ''))}), encoding='utf-8')
+            ('confirmed[0]', False, 'desde 2024'), ('confirmed[1]', True, ''))}), encoding='utf-8')
         self.assertEqual(inv.main(['reconcile-prompt', '--work', str(self.work), '--model-output', str(cli), '--review-output', str(rcli)]), 0)
         self.assertEqual(json.loads((self.work / 'conciliacion-schema.json').read_text(encoding='utf-8')), inv.RECONCILE_SCHEMA)
         kept = inv.apply_review(self.wide(), json.loads(rcli.read_text(encoding='utf-8'))['structured_output'])[0]
         self.assertEqual(((self.work / 'conciliacion-system.txt').read_text(encoding='utf-8'),
                           (self.work / 'conciliacion-user.txt').read_text(encoding='utf-8')), inv.reconcile_prompt(kept))
-        self.assertEqual(json.loads((self.work / 'conciliacion-user.txt').read_text(encoding='utf-8'))[0]['claim'], self.NARROW)
+        self.assertEqual(json.loads((self.work / 'conciliacion-user.txt').read_text(encoding='utf-8'))[0]['claim'], 'El dataset trae una nota.')
         with mock.patch('sys.stderr'), self.assertRaises(SystemExit):
             inv.main(base + ['--review-output', str(rcli)])  # nor without its reconciliation
         self.assertEqual(inv.main(base + ['--review-output', str(rcli), '--reconcile-output', str(ccli)]), 0)
         packet = json.loads((self.out / 'research-packets' / 'RP-2026-10-23-prueba' / 'packet.json').read_text(encoding='utf-8'))
-        self.assertEqual(packet['findings']['confirmed'][0]['claim'], self.NARROW)
+        self.assertEqual([f['claim'] for f in packet['findings']['confirmed']], ['El dataset trae una nota.'])
         self.assertEqual(len(rows), len(json.loads((self.work / 'fuentes.json').read_text(encoding='utf-8'))))
 
 
 class Reconcile(Base):
     """GPT on #127, #128, #130: a call of its own, after the review, drops a scope sentence, unknown or limitation that a
     kept finding contradicts or answers, or that speaks of what the machine records; it drops, it never writes."""
-    OK = review(('confirmed[0]', True, '', ''), ('confirmed[1]', True, '', ''))
+    OK = review(('confirmed[0]', True, ''), ('confirmed[1]', True, ''))
 
     def answer(self):
         return answer(scope='Norma de prueba leída completa / Tampoco hay sha256 ni robots.txt.',
@@ -746,8 +748,8 @@ class Reconcile(Base):
                              reconciliation=({'drop': [{'id': 'limitations[0]', 'por': 'maquina'}]}, 'c'))
         with self.assertRaises(jsonschema.ValidationError):  # nor can the model give it: the CLI's schema refuses it (m523)
             jsonschema.validate({'drop': [{'id': 'limitations[0]', 'por': 'maquina'}]}, inv.RECONCILE_SCHEMA)
-        cut = review(('confirmed[0]', False, 'Obliga a una política.', 'escrita'), ('confirmed[1]', False, '', 'todo'))
-        p, _ = self.make([{'id': 'unknown[1]', 'por': 'confirmed[0]'}], out=self.tmp / 'u', rev=cut)  # its claim as cut
+        cut = review(('confirmed[0]', False, 'escrita'), ('confirmed[1]', True, ''))
+        p, _ = self.make([{'id': 'unknown[1]', 'por': 'confirmed[0]'}], out=self.tmp / 'u', rev=cut)  # ids after the review
         self.assertEqual((p['findings']['unknown'], len(p['findings']['confirmed'])), (['Qué dice la nota.'], 1))
         seen = inv.apply_review(self.answer(), self.OK)[0]
         with self.assertRaises(ValueError):  # the texts it saw must still head the packet's limitations
@@ -926,7 +928,7 @@ class FullCorpus(Base):
         self.assertEqual(joined['structured_output'], inv.reduce(answers))
         self.assertEqual(set(joined['modelUsage']), {'claude-x-0', 'claude-x-1'})
         rcli = self.tmp / 'revision-cli.json'
-        oks = [(f'confirmed[{i}]', True, '', '') for i in range(len(joined['structured_output']['findings']['confirmed']))]
+        oks = [(f'confirmed[{i}]', True, '') for i in range(len(joined['structured_output']['findings']['confirmed']))]
         rcli.write_text(json.dumps({'type': 'result', 'is_error': False, 'structured_output': review(*oks)}), encoding='utf-8')
         ccli = self.tmp / 'conciliacion-cli.json'
         ccli.write_text(json.dumps({'type': 'result', 'is_error': False, 'structured_output': {'drop': []}}), encoding='utf-8')

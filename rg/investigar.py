@@ -19,10 +19,10 @@ The steps run in jobs that hold different powers (docs/INVESTIGAR.md):
   prompt (at most MAX_TEXT_CHARS). It cannot read a file, run a command or open a URL, so it cannot reach the
   credential that runs it; it can only answer, and it answers through MODEL_SCHEMA (--json-schema: the CLI's
   structured output, the only part of its result that is read): findings that cite artifact ids, nothing else.
-- the review: the same CLI, the same way, from an empty folder of its own, sees each confirmed finding's claim beside
-  its quote and nothing else (no source, no request), so it cannot fill a gap from the source; through REVIEW_SCHEMA it
-  cuts a claim down to what its quote says. The cut leaves the findings for receipt.json. A conflicting finding names a
-  disagreement and quotes one side, so it always says more than its quote: it is a signal for the reader, not reviewed.
+- the review: the same CLI, the same way, from an empty folder of its own, sees each confirmed and conflicting
+  finding's claim beside its quote and nothing else (no source, no request), so it cannot fill a gap from the source;
+  through REVIEW_SCHEMA it says whether the claim fits its quote and, if not, why. A claim that does not fit leaves the
+  packet whole and goes to receipt.json: the reviewer never rewrites one, so no text of its own enters the packet.
 - assemble: no model. Artifacts, hashes, sizes, licenses and the request's own text come from fuentes.json and the
   request, never from the model; an answer outside MODEL_SCHEMA, or a finding that cites an artifact that was not
   downloaded, stops the run. The raws of an allowed plan are kept in the packet; a metadata_only plan keeps none.
@@ -81,10 +81,13 @@ MODEL_SCHEMA = {
 }
 # The second pass. Runs 40441646106 and 40441654246 (2026-10-26): with 'one fact per finding' in its prompt the model
 # still wrote claims that say more than their quotes, about one in three. A reviewer that sees only each claim and its
-# quote judges what a reader of the packet can check, and cuts the claim down to it. Confirmed findings only.
-_REVIEW = {'type': 'object', 'additionalProperties': False, 'required': ['id', 'fits', 'claim', 'cut'],
+# quote judges what a reader of the packet can check. It used to cut a claim down to its quote; GPT on #150, #152 and
+# #154 (2026-11-12) found cuts that dropped a condition, an exception or a 'should' and so made the claim wider than its
+# quote. Now a claim that does not fit is taken out whole; the reviewer only says why, and nothing it writes is kept
+# but in receipt.json.
+_REVIEW = {'type': 'object', 'additionalProperties': False, 'required': ['id', 'fits', 'why'],
            'properties': {'id': {'type': 'string', 'pattern': r'^(confirmed|conflicting)\[[0-9]{1,2}\]$'},
-                          'fits': {'type': 'boolean'}, 'claim': _TEXT, 'cut': _TEXT}}
+                          'fits': {'type': 'boolean'}, 'why': _TEXT}}
 REVIEW_SCHEMA = {'type': 'object', 'additionalProperties': False, 'required': ['reviews'],
                  'properties': {'reviews': {'type': 'array', 'maxItems': 90, 'items': _REVIEW}}}  # MODEL_SCHEMA: 60 + 30
 # 2026-11-11 (GPT on #127, #128, #130): scope, unknown and limitations come from each part or from the discovery, and can
@@ -576,24 +579,27 @@ Your answer is one JSON object, given through this JSON Schema (it is enforced):
 {json.dumps(REVIEW_SCHEMA, ensure_ascii=False)}
 
 One review per finding, every id once:
-- fits: true when the claim says nothing its quote does not say (a faithful restatement, translation or part of it).
+- fits: true when the claim says nothing its quote does not say (a faithful restatement or translation of it).
   A name, number, date, plan, license, condition or list item absent from the quote makes it false, even if it is true.
   The only exception is the name of the document the quote is from (a file, a module, a product, a paper), which its
   source's title or address may give. Nothing else comes from them: no license, version, date, number, plan or condition.
-- fits false: claim is the claim rewritten in Spanish to say only what the quote says, adding nothing; cut is what
-  was taken out. fits true: claim and cut are empty.
+- A claim wider than its quote is false too: it drops or weakens a condition, exception, time, place, subject or case
+  the quote is limited to, or a quantifier (some, most, in general); it states as a rule what the quote says of one
+  case; it turns what the quote recommends or permits (should, may, recommended, se recomienda, puede) into an
+  obligation (must, shall, debe, obligatorio); or its quote is a fragment cut off before what would complete or limit it.
+- fits false: why says in one sentence what the claim says that its quote does not hold. The finding is taken out of
+  the packet whole; nothing you write enters it. fits true: why is empty.
 - A conflicting finding states a disagreement and quotes one side: the same rule holds. The disagreement, and whatever
-  it says about the other side, must be in its quote; if not, cut it down to what the quote says.
+  it says about the other side, must be in its quote.
 """
     return system, json.dumps(items, ensure_ascii=False, indent=0)
 
 
 def apply_review(answer, review):
-    """(answer with every claim the reviewer cut replaced by its cut-down version, the cuts). ValueError unless the
-    review fits REVIEW_SCHEMA and holds one review per confirmed finding. A claim that fits stays as the model wrote it: the
-    reviewer's text enters the packet only where it cuts. One review that leaves nothing of its claim, or does not say
-    what it cut, is about one finding and no longer stops the run (run 40548398494): nothing left, the finding goes (a
-    cut with now None); a rewrite without its cut, the rewrite stands."""
+    """(answer without every finding the reviewer said does not fit its quote, what was taken out). ValueError unless the
+    review fits REVIEW_SCHEMA and holds one review per confirmed and conflicting finding. A finding that fits stays as the
+    model wrote it; one that does not is taken out whole, never rewritten (GPT on #150, #152, #154: a cut-down claim had
+    lost its condition and said more than its quote)."""
     try:
         jsonschema.validate(review, REVIEW_SCHEMA)
     except jsonschema.ValidationError as exc:
@@ -604,24 +610,16 @@ def apply_review(answer, review):
     if sorted(got) != sorted(ids):
         raise ValueError(f'the review must cover each finding once: {len(got)} reviews for {len(ids)} findings')
     out = copy.deepcopy(answer)
-    cuts, gone, gone_conflicting = [], set(), set()
+    taken, gone = [], {'confirmed': set(), 'conflicting': set()}
     for r in review['reviews']:
         if r['fits']:
             continue
         group, i = r['id'][:-1].split('[')
-        i = int(i)
-        finding = out['findings'][group][i]
-        if not r['claim'].strip() or not r['cut'].strip():
-            if not r['claim'].strip():
-                cuts.append({'id': r['id'], 'claim': finding['claim'], 'now': None, 'cut': finding['claim']})
-                (gone if group == 'confirmed' else gone_conflicting).add(i)
-                continue
-        cuts.append({'id': r['id'], 'claim': finding['claim'], 'now': r['claim'], 'cut': r['cut']})
-        finding['claim'] = r['claim']
-    out['findings']['confirmed'] = [f for i, f in enumerate(out['findings']['confirmed']) if i not in gone]
-    out['findings']['conflicting'] = [f for i, f in enumerate(out['findings']['conflicting']) if i not in gone_conflicting]
-    return out, cuts
-
+        taken.append({'id': r['id'], 'claim': out['findings'][group][int(i)]['claim'], 'why': r['why']})
+        gone[group].add(int(i))
+    for group, out_of in gone.items():
+        out['findings'][group] = [f for i, f in enumerate(out['findings'][group]) if i not in out_of]
+    return out, taken
 
 def reconcile(answer, seen, rec):
     """(answer without the texts the reconciler dropped, the drops). seen: the answer it was shown (apply_review's);
@@ -755,15 +753,17 @@ def assemble(rr, rows, answer, work, out_root, model_label, produced_at=None, re
     agents = [{'agent': 'rg-investigar', 'model': model_label, 'substrate': 'GitHub Actions: investigar.yml'}]
     seen, drops = copy.deepcopy(answer), []  # seen: what the reconciler was shown, the answer after its review
     if review is not None:
-        reviewed = len(answer['findings']['confirmed'])
-        answer, cuts = apply_review(answer, review[0])
+        reviewed = {g: len(answer['findings'][g]) for g in ('confirmed', 'conflicting')}
+        answer, taken = apply_review(answer, review[0])
         seen = copy.deepcopy(answer)  # reconcile-prompt builds the reconciler's prompt from this same answer
         agents.append({'agent': 'rg-investigar-revision', 'model': review[1], 'substrate': 'GitHub Actions: investigar.yml'})
-        n, out = reviewed, sum(c['now'] is None for c in cuts)
+        out = {g: sum(t['id'].startswith(g) for t in taken) for g in reviewed}
         answer['limitations'] = answer['limitations'] + [  # answer is apply_review's copy
-            f'Una segunda pasada que solo ve cada afirmación junto a su cita recortó {len(cuts)} de {n} hallazgos confirmados a lo que '
-            'su cita dice' + (f' (de ellos, {out} se sacaron: su cita no sostiene nada de la afirmación)' if out else '') +
-            '; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.']
+            'Una segunda pasada que solo ve cada afirmación junto a su cita quitó '
+            f"{out['confirmed']} de {reviewed['confirmed']} hallazgos confirmados"
+            + (f" y {out['conflicting']} de {reviewed['conflicting']} en conflicto" if reviewed['conflicting'] else '')
+            + ' que decían más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda '
+            'en receipt.json, fuera de los hallazgos.']
     found = Path(work) / 'descubrimiento.json'
     discovery = json.loads(found.read_text(encoding='utf-8')) if found.exists() else None
     if discovery is not None:
@@ -825,7 +825,7 @@ def assemble(rr, rows, answer, work, out_root, model_label, produced_at=None, re
                'media_type', 'retrieved_at', 'text_status', 'text_chars')} for r in rows], 'model': model_label,
                'run': os.environ.get('RUN_URL', '')}
     if review is not None:
-        receipt['review'] = {'model': review[1], 'cuts': cuts}
+        receipt['review'] = {'model': review[1], 'taken_out': taken}
     if drops:
         receipt['reconcile'] = {'model': reconciliation[1], 'dropped': drops}
     if dropped:
