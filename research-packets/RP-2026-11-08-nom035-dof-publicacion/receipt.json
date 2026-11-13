@@ -1,0 +1,44 @@
+{
+ "request_id": "RR-2026-11-08-nom035-dof-publicacion",
+ "fetched": [
+  {
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+   "status": 200,
+   "error": null,
+   "sha256": "75b62246f311f4451094bb20eb3b7528ed6c317390530cf4ca8eae62e04548cc",
+   "bytes": 1133731,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:01:28Z",
+   "text_status": "ok",
+   "text_chars": 119139
+  },
+  {
+   "url": "https://sidof.segob.gob.mx/notas/5541828",
+   "status": 200,
+   "error": null,
+   "sha256": "2115af15374e2e7d54eb5be9475e7da5c9aab3be1519c3e621be31b3778d8eab",
+   "bytes": 68181,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:01:32Z",
+   "text_status": "ok",
+   "text_chars": 3223
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43369177119",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "taken_out": [
+   {
+    "id": "confirmed[0]",
+    "claim": "La ficha del DOF indica que la NOM-035-STPS-2018 se publicó el 23-10-2018, en la sección segunda, edición matutina.",
+    "why": "The quote only gives the publication date 23-10-2018; 'sección segunda' and 'edición matutina' are not in it."
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "El texto se firmó en Ciudad de México el 4 de septiembre de 2018, fecha distinta de la de publicación.",
+    "why": "The quote gives the signing place and date, but nothing about the publication date, so the claim that it differs from it is not in the quote."
+   }
+  ]
+ }
+}
