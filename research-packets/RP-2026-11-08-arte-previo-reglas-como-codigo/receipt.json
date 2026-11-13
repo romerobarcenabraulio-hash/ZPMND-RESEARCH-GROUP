@@ -1,0 +1,466 @@
+{
+ "request_id": "RR-2026-11-08-arte-previo-reglas-como-codigo",
+ "fetched": [
+  {
+   "url": "https://openfisca.org/doc/coding-the-legislation/40_legislation_evolutions.html",
+   "status": 200,
+   "error": null,
+   "sha256": "99a6bfebd744820a6fa92ac11acf677c211eb26b27b8d2bc52c76ebd70c0701c",
+   "bytes": 41532,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:44Z",
+   "text_status": "ok",
+   "text_chars": 8933
+  },
+  {
+   "url": "https://openfisca.org/doc/key-concepts/parameters.html",
+   "status": 200,
+   "error": null,
+   "sha256": "ee2f41caf0df37d70854d882d331a941651197da50a428937f674a2a7bee215a",
+   "bytes": 11687,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:45Z",
+   "text_status": "ok",
+   "text_chars": 1579
+  },
+  {
+   "url": "https://openfisca.org/doc/coding-the-legislation/35_periods.html",
+   "status": 200,
+   "error": null,
+   "sha256": "984f6fa02b9d93e005c94543a96c47142c7f6c7b3859d6ba3084283dd0b5356d",
+   "bytes": 41497,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:46Z",
+   "text_status": "ok",
+   "text_chars": 10471
+  },
+  {
+   "url": "https://github.com/openfisca/openfisca-core",
+   "status": 200,
+   "error": null,
+   "sha256": "779c7d023876bff618d2f0b11d41dfa5ed190f18368116276831b96d44beb716",
+   "bytes": 288143,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:47Z",
+   "text_status": "ok",
+   "text_chars": 8055
+  },
+  {
+   "url": "https://pypi.org/project/OpenFisca-Core/",
+   "status": 200,
+   "error": null,
+   "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+   "bytes": 3038,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:49Z",
+   "text_status": "ok",
+   "text_chars": 305
+  },
+  {
+   "url": "https://arxiv.org/pdf/2103.03198",
+   "status": 200,
+   "error": null,
+   "sha256": "256ffc2367e937cbe2bdc20c5fa24f0a93d5e56b7256fcacd7f70123fc460ce1",
+   "bytes": 802999,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-13T05:02:50Z",
+   "text_status": "ok",
+   "text_chars": 100137
+  },
+  {
+   "url": "https://github.com/CatalaLang/catala",
+   "status": 200,
+   "error": null,
+   "sha256": "729d1d266ecf5e57813eebd334e6693539bbfbc2cdd7cf78bb97c732b7b29683",
+   "bytes": 336418,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:03:05Z",
+   "text_status": "ok",
+   "text_chars": 9253
+  },
+  {
+   "url": "https://arxiv.org/pdf/2403.08935",
+   "status": 200,
+   "error": null,
+   "sha256": "33adc86cfbc4e598ee0d7ca19600e1be0413bf88f9c25f3a002c412077e07b5a",
+   "bytes": 417328,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-13T05:03:05Z",
+   "text_status": "ok",
+   "text_chars": 88177
+  },
+  {
+   "url": "https://docs.oasis-open.org/legalruleml/legalruleml-core-spec/v1.0/os/legalruleml-core-spec-v1.0-os.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "f36b12fd7a0676a7d3cd12221deedfa4c462958d6be6a3cfb868b41c16ffda37",
+   "bytes": 1665547,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-13T05:03:20Z",
+   "text_status": "ok",
+   "text_chars": 217047
+  },
+  {
+   "url": "https://arxiv.org/pdf/1711.06128",
+   "status": 200,
+   "error": null,
+   "sha256": "6bd762fc1ea346af1fb6ddc67966bb662b5470326a591246b08344d1e958e3cb",
+   "bytes": 378894,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-13T05:03:21Z",
+   "text_status": "ok",
+   "text_chars": 74870
+  },
+  {
+   "url": "https://arxiv.org/pdf/2511.12276",
+   "status": 200,
+   "error": null,
+   "sha256": "259fdf0e7c254c639a2b4a70398d22165398c32d46a42976c1632fee2e90d845",
+   "bytes": 766637,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-13T05:03:35Z",
+   "text_status": "ok",
+   "text_chars": 160527
+  },
+  {
+   "url": "https://arxiv.org/pdf/2410.10906",
+   "status": 200,
+   "error": null,
+   "sha256": "ebb388e1f964bca2607661a38179b521b0bc2833dad3bdbc839e121b4b323c08",
+   "bytes": 1841892,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-13T05:03:50Z",
+   "text_status": "ok",
+   "text_chars": 208602
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43369184324",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "taken_out": [
+   {
+    "id": "confirmed[0]",
+    "claim": "OpenFisca maneja la vigencia de fórmulas con sufijos de fecha en el nombre: una fórmula sin fecha rige desde 0001-01-01.",
+    "why": "The quote says nothing of date suffixes in names or of the specific date 0001-01-01; it only says a formula with no date is active since the dawn of time."
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "Fuera de vigencia, OpenFisca devuelve el valor por defecto de la variable.",
+    "why": "The quote says only that the default value is returned, with no mention of when; the claim adds 'fuera de vigencia' as context, which the quote fragment does not hold."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "Los parámetros de OpenFisca terminan asignando null en una fecha; consultarlos después genera error.",
+    "why": "The quote does not say that querying parameters after the end date raises an error."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "El repositorio openfisca-core indica 252 estrellas y 5,371 commits.",
+    "why": "The quote gives only 5,371 commits, not 252 stars."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "Catala se publica bajo Apache-2.0 y se declara proyecto de investigación inestable.",
+    "why": "The quote does not mention the Apache-2.0 license."
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "Catala usa lógica por defecto priorizada y las excepciones definen la prelación, de forma estática en la sintaxis.",
+    "why": "The quote does not mention default logic or exceptions defining precedence; it only says priorities are encoded statically in the syntax."
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "En Catala, si dos definiciones aplicables no tienen prioridad entre sí, la ejecución aborta.",
+    "why": "The quote says execution aborts when more than one definition applies, but not specifically that they lack priority between them."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "Catala modela la regla de 2 años de la Sección 121 del IRC y llama a una regla en una fecha previa.",
+    "why": "The quote does not mention the 2-year rule or IRC Section 121 by name; it only mentions executing (2)(A) at a previous date."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "Catala se evaluó con caso francés de prestaciones familiares: cerca de 1,500 líneas, 6 ámbitos, 63 variables de contexto y 83 definiciones y reglas.",
+    "why": "The quote does not hold the roughly 1,500 lines or the French family benefits case."
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "El desarrollo del compilador de Catala se estimó en 5 persona-meses, y la prueba en F* en 1 persona-mes.",
+    "why": "The quote gives only 5 person-months for development, not the F* proof's 1 person-month nor that it was the compiler."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "El formalizar los 6 primeros párrafos de la Sección 121 requirió cuatro sesiones de 2 horas de programación en pareja.",
+    "why": "The quote does not say it covered the first 6 paragraphs of Section 121."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "Catala no pretende que los abogados escriban código solos; la expectativa es que revisen.",
+    "why": "The quote does not say lawyers are expected to review."
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "Catala encontró una discrepancia en la implementación de OpenFisca de prestaciones familiares (art. L755-12), corregida tras notificarla.",
+    "why": "The quote does not mention art. L755-12 or family benefits."
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "El valor por defecto de Catala ante redondeo de fechas ambiguo es lanzar una excepción en ejecución.",
+    "why": "The claim has no source and the quote speaks of date rounding, not 'ambiguous' dates; the source cannot be verified."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "LegalRuleML cita lex specialis, lex superior y lex posterior como principios de resolución de conflictos.",
+    "why": "The quote mentions lex superior and lex posterior but not lex specialis."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "LegalRuleML modela la vigencia con TemporalCharacteristic: estado (p. ej. InForce, Efficacious) con inicio o fin en un momento.",
+    "why": "The quote does not mention TemporalCharacteristic or the InForce/Efficacious states."
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "LegalRuleML ofrece ejemplo publicado de vigencia por tramos: US Code 17 §504, con montos de daños según intervalos de eficacia.",
+    "why": "The quote is only an interval and does not mention US Code 17 §504 or damages amounts."
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "LegalRuleML tiene operadores deónticos de obligación, permiso, prohibición y derecho.",
+    "why": "The quote lists obligation, permission and prohibition but not right."
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "LegalRuleML liga reglas con la fuente textual (isomorfismo) y exige granularidad fina y modificaciones temporales.",
+    "why": "The quote only says fine granularity is required, not isomorphism or temporal modifications."
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "El artículo de Lam et al. indica que un contrato en LegalRuleML no se ejecuta directamente, sino que se transforma a un lenguaje de sistema de reglas.",
+    "why": "The quote does not say the contract is transformed into a rule system language, and the source is not given."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Documentación oficial de OpenFisca (parámetros, periodos, evolución legislativa)",
+   "Repositorio, licencia y versiones de OpenFisca-Core (GitHub/PyPI/catálogo UE)",
+   "Catala: artículo académico (cálculo de defaults, prelación por excepciones)",
+   "Catala: repositorio, licencia y versiones (GitHub/opam)",
+   "Estándar OASIS LegalRuleML 1.0 (Override, vigencia, temporalidad)",
+   "Análisis y limitaciones de LegalRuleML (razonamiento, adopción)",
+   "Lógica deóntica y defeasible aplicada: lex superior/posterior/specialis y vigencia",
+   "Derecho mexicano como fuente (RMF/DOF) y ausencia de uso documentado de estas herramientas"
+  ],
+  "searches": [
+   {
+    "query": "OpenFisca documentation parameters versioning time periods legislation",
+    "intent": "official"
+   },
+   {
+    "query": "Catala programming language default calculus legal prevalence exceptions",
+    "intent": "official"
+   },
+   {
+    "query": "LegalRuleML OASIS specification defeasible superiority temporal",
+    "intent": "official"
+   },
+   {
+    "query": "deontic logic legal norms temporal validity lex superior lex posterior formalization",
+    "intent": "support"
+   },
+   {
+    "query": "Catala OpenFisca México derecho mexicano reglas como código",
+    "intent": "other"
+   },
+   {
+    "query": "OpenFisca-Core GitHub license AGPL releases",
+    "intent": "official"
+   },
+   {
+    "query": "Catala github CatalaLang catala license Apache releases",
+    "intent": "official"
+   },
+   {
+    "query": "Catala legislative amendments time-varying law applicability date arithmetic transitional provisions",
+    "intent": "limitations"
+   },
+   {
+    "query": "openfisca-mexico OR openfisca-mx OR Catala México SAT ISR rules as code",
+    "intent": "contradict"
+   },
+   {
+    "query": "LegalRuleML implementation tools adoption limitations review",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "Uso documentado de OpenFisca, Catala o LegalRuleML en derecho mexicano (ISR, CFF, RMF, DOF): no se encontró ningún proyecto. Se declara desconocido.",
+   "Cómo Catala maneja versiones por enmienda, fecha de aplicabilidad y disposiciones transitorias: no hallé fuente específica; falta revisar la documentación oficial de Catala.",
+   "Modelo de prelación jerárquica entre normas (Constitución > ley > reglamento > RMF) en OpenFisca: no hallé nada; OpenFisca modela fórmulas y parámetros, no conflictos entre normas.",
+   "Ejemplos publicados de transitorios en OpenFisca: no encontrados.",
+   "sha256 de cada documento y fecha de captura: no calculables con búsqueda web; debe hacerlo el harness al descargar.",
+   "Costo medido de adoptar frente a motor propio (horas/personas): no hay estudio; es estimación y queda desconocido.",
+   "Licencia y fecha exactas de la última versión de OpenFisca-Core: los resultados dan versiones contradictorias (44.x, 45.x); verificar en PyPI.",
+   "Contenido de la documentación oficial de Catala (catala-lang.org) y del sitio OASIS LegalRuleML: no leídos directamente."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://openfisca.org/doc/coding-the-legislation/40_legislation_evolutions.html",
+    "family": "Documentación oficial de OpenFisca (parámetros, periodos, evolución legislativa)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Vigencias: fórmulas fechadas (formula_YYYY_MM_DD), atributo end, parámetros que desaparecen. No trata prelación entre normas ni transitorios."
+   },
+   {
+    "url": "https://openfisca.org/doc/key-concepts/parameters.html",
+    "family": "Documentación oficial de OpenFisca (parámetros, periodos, evolución legislativa)",
+    "stance": "context",
+    "role": "primary",
+    "why": "Parámetros con valores por fecha en YAML y campo de referencia; base de la temporalidad como datos."
+   },
+   {
+    "url": "https://openfisca.org/doc/coding-the-legislation/35_periods.html",
+    "family": "Documentación oficial de OpenFisca (parámetros, periodos, evolución legislativa)",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Definición de periodos (mes, año, eternidad); límites de granularidad para modelar fechas de entrada en vigor."
+   },
+   {
+    "url": "https://github.com/openfisca/openfisca-core",
+    "family": "Repositorio, licencia y versiones de OpenFisca-Core (GitHub/PyPI/catálogo UE)",
+    "stance": "context",
+    "role": "primary",
+    "why": "Código, licencia AGPL-3.0 y actividad del proyecto. La licencia copyleft de red es relevante para el costo de adopción."
+   },
+   {
+    "url": "https://pypi.org/project/OpenFisca-Core/",
+    "family": "Repositorio, licencia y versiones de OpenFisca-Core (GitHub/PyPI/catálogo UE)",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Metadatos de licencia AGPL-3.0-or-later e historial de versiones, para madurez y fechas."
+   },
+   {
+    "url": "https://arxiv.org/pdf/2103.03198",
+    "family": "Catala: artículo académico (cálculo de defaults, prelación por excepciones)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Semántica formal de defaults priorizados: regla general y excepciones, con conflicto como error. Menciona la ley cambiante en el tiempo. Pensado para la redacción de EE. UU. y Francia."
+   },
+   {
+    "url": "https://github.com/CatalaLang/catala",
+    "family": "Catala: repositorio, licencia y versiones (GitHub/opam)",
+    "stance": "context",
+    "role": "primary",
+    "why": "Código, licencia Apache-2.0 y versiones hasta 1.x; sirve para medir madurez y costo de integración."
+   },
+   {
+    "url": "https://arxiv.org/pdf/2403.08935",
+    "family": "Catala: artículo académico (cálculo de defaults, prelación por excepciones)",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Trata la aritmética de fechas en Catala, relevante para vigencias; los transitorios requieren otra fuente."
+   },
+   {
+    "url": "https://docs.oasis-open.org/legalruleml/legalruleml-core-spec/v1.0/os/legalruleml-core-spec-v1.0-os.pdf",
+    "family": "Estándar OASIS LegalRuleML 1.0 (Override, vigencia, temporalidad)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto normativo: elemento Override para prelación, estados de vigencia y características temporales. Es un PDF largo; consultar solo esas secciones. Es un formato de intercambio, sin motor."
+   },
+   {
+    "url": "https://arxiv.org/pdf/1711.06128",
+    "family": "Análisis y limitaciones de LegalRuleML (razonamiento, adopción)",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Muestra que el razonamiento exige traducir a un motor de lógica defeasible (SPINdle). LegalRuleML no incluye ejecución."
+   },
+   {
+    "url": "https://arxiv.org/pdf/2511.12276",
+    "family": "Análisis y limitaciones de LegalRuleML (razonamiento, adopción)",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Comparación independiente de lenguajes normativos. Contrapesa la madurez y la adopción de LegalRuleML y de alternativas."
+   },
+   {
+    "url": "https://arxiv.org/pdf/2410.10906",
+    "family": "Lógica deóntica y defeasible aplicada: lex superior/posterior/specialis y vigencia",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Define lex superior/posterior/specialis y halla que pocos estudios consideran el tiempo en las leyes; implica que la lógica deóntica aplicada es madura en teoría pero poco operativa."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ },
+ "partes": [
+  [
+   [
+    "SA-99a6bfebd744820a6fa92ac1",
+    0,
+    8933
+   ],
+   [
+    "SA-ee2f41caf0df37d70854d882",
+    0,
+    1579
+   ],
+   [
+    "SA-984f6fa02b9d93e005c94543",
+    0,
+    10471
+   ],
+   [
+    "SA-779c7d023876bff618d2f0b1",
+    0,
+    8055
+   ],
+   [
+    "SA-32ed63159c77e21ee19ca1b9",
+    0,
+    305
+   ],
+   [
+    "SA-256ffc2367e937cbe2bdc20c",
+    0,
+    100137
+   ],
+   [
+    "SA-729d1d266ecf5e57813eebd3",
+    0,
+    9253
+   ],
+   [
+    "SA-33adc86cfbc4e598ee0d7ca1",
+    0,
+    88177
+   ],
+   [
+    "SA-f36b12fd7a0676a7d3cd1222",
+    0,
+    217047
+   ],
+   [
+    "SA-6bd762fc1ea346af1fb6ddc6",
+    0,
+    74870
+   ]
+  ],
+  [
+   [
+    "SA-259fdf0e7c254c639a2b4a70",
+    0,
+    160527
+   ],
+   [
+    "SA-ebb388e1f964bca2607661a3",
+    0,
+    208602
+   ]
+  ]
+ ],
+ "partes_fuera": {}
+}

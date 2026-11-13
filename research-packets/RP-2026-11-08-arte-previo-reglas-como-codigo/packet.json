@@ -1,0 +1,337 @@
+{
+ "research_id": "RP-2026-11-08-arte-previo-reglas-como-codigo",
+ "request_id": "RR-2026-11-08-arte-previo-reglas-como-codigo",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-13T05:06:01Z",
+ "question": "Para representar jerarquía y temporalidad de normas (qué disposición prevalece y desde cuándo rige) como datos verificables, ¿qué ofrecen OpenFisca, Catala, LegalRuleML y la lógica deóntica aplicada: modelo de prelación, manejo de vigencias y transitorios, licencia, madurez, uso en derecho mexicano y costo de adoptarlo frente a escribir un motor propio?",
+ "why_zpmnd_needs_it": "La regla 16 de REGLAS.md exige este arte previo, con paquete, antes de abrir las funciones de jerarquía y temporalidad del harness. Bloquea la unidad U-133 (jerarquía) del paso 2.",
+ "scope": "Parte 1 de 2. Se leyeron: documentación de OpenFisca (vigencias, parámetros, periodos), el repositorio GitHub de openfisca-core, el repositorio de Catala, el artículo de Catala (ICFP 2021), el artículo de aritmética de fechas en Catala (2024), la especificación LegalRuleML Core 1.0 y un artículo sobre razonamiento con LegalRuleML. No se leyó ninguna fuente de lógica deóntica aplicada fuera de LegalRuleML. La página de PyPI no cargó (solo un desafío de JavaScript). / Parte 2 de 2. Se leyeron completos dos preprints de arXiv, ambos secundarios: la reflexión sobre eFLINT (van Binsbergen et al.) y la revisión sistemática sobre métodos formales en cumplimiento de procesos de negocio (López y Hildebrandt). No hay en esta parte documentación oficial ni licencias de OpenFisca, Catala o LegalRuleML. Tampoco hay ejemplos de derecho mexicano ni costos de adopción frente a un motor propio. Se aportan datos laterales sobre prelación (lex specialis, superior y posterior), vigencias y madurez.",
+ "sources": {
+  "primary": [
+   "SA-99a6bfebd744820a6fa92ac1",
+   "SA-ee2f41caf0df37d70854d882",
+   "SA-779c7d023876bff618d2f0b1",
+   "SA-256ffc2367e937cbe2bdc20c",
+   "SA-729d1d266ecf5e57813eebd3",
+   "SA-f36b12fd7a0676a7d3cd1222"
+  ],
+  "secondary": [
+   "SA-984f6fa02b9d93e005c94543",
+   "SA-32ed63159c77e21ee19ca1b9",
+   "SA-33adc86cfbc4e598ee0d7ca1",
+   "SA-6bd762fc1ea346af1fb6ddc6",
+   "SA-259fdf0e7c254c639a2b4a70",
+   "SA-ebb388e1f964bca2607661a3"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-99a6bfebd744820a6fa92ac1",
+   "url": "https://openfisca.org/doc/coding-the-legislation/40_legislation_evolutions.html",
+   "retrieved_at": "2026-11-13T05:02:44Z",
+   "sha256": "99a6bfebd744820a6fa92ac11acf677c211eb26b27b8d2bc52c76ebd70c0701c",
+   "bytes": 41532,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "OpenFisca",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Legislation evolutions — OpenFisca documentation"
+  },
+  {
+   "artifact_id": "SA-ee2f41caf0df37d70854d882",
+   "url": "https://openfisca.org/doc/key-concepts/parameters.html",
+   "retrieved_at": "2026-11-13T05:02:45Z",
+   "sha256": "ee2f41caf0df37d70854d882d331a941651197da50a428937f674a2a7bee215a",
+   "bytes": 11687,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "OpenFisca",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Parameters — OpenFisca documentation"
+  },
+  {
+   "artifact_id": "SA-984f6fa02b9d93e005c94543",
+   "url": "https://openfisca.org/doc/coding-the-legislation/35_periods.html",
+   "retrieved_at": "2026-11-13T05:02:46Z",
+   "sha256": "984f6fa02b9d93e005c94543a96c47142c7f6c7b3859d6ba3084283dd0b5356d",
+   "bytes": 41497,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "OpenFisca",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Periods — OpenFisca documentation"
+  },
+  {
+   "artifact_id": "SA-779c7d023876bff618d2f0b1",
+   "url": "https://github.com/openfisca/openfisca-core",
+   "retrieved_at": "2026-11-13T05:02:47Z",
+   "sha256": "779c7d023876bff618d2f0b11d41dfa5ed190f18368116276831b96d44beb716",
+   "bytes": 288143,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "OpenFisca",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "openfisca/openfisca-core (GitHub)"
+  },
+  {
+   "artifact_id": "SA-32ed63159c77e21ee19ca1b9",
+   "url": "https://pypi.org/project/OpenFisca-Core/",
+   "retrieved_at": "2026-11-13T05:02:49Z",
+   "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+   "bytes": 3038,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "PyPI / OpenFisca",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "OpenFisca-Core · PyPI"
+  },
+  {
+   "artifact_id": "SA-256ffc2367e937cbe2bdc20c",
+   "url": "https://arxiv.org/pdf/2103.03198",
+   "retrieved_at": "2026-11-13T05:02:50Z",
+   "sha256": "256ffc2367e937cbe2bdc20c5fa24f0a93d5e56b7256fcacd7f70123fc460ce1",
+   "bytes": 802999,
+   "media_type": "application/pdf",
+   "source_type": "peer_reviewed",
+   "publisher": "arXiv / ICFP (Merigoux, Chataing, Protzenko)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Catala: A Programming Language for the Law"
+  },
+  {
+   "artifact_id": "SA-729d1d266ecf5e57813eebd3",
+   "url": "https://github.com/CatalaLang/catala",
+   "retrieved_at": "2026-11-13T05:03:05Z",
+   "sha256": "729d1d266ecf5e57813eebd334e6693539bbfbc2cdd7cf78bb97c732b7b29683",
+   "bytes": 336418,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "Inria / CatalaLang",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "CatalaLang/catala (GitHub)"
+  },
+  {
+   "artifact_id": "SA-33adc86cfbc4e598ee0d7ca1",
+   "url": "https://arxiv.org/pdf/2403.08935",
+   "retrieved_at": "2026-11-13T05:03:05Z",
+   "sha256": "33adc86cfbc4e598ee0d7ca19600e1be0413bf88f9c25f3a002c412077e07b5a",
+   "bytes": 417328,
+   "media_type": "application/pdf",
+   "source_type": "preprint",
+   "publisher": "arXiv",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Formalizing Date Arithmetic and Statically Detecting Ambiguities for the Law"
+  },
+  {
+   "artifact_id": "SA-f36b12fd7a0676a7d3cd1222",
+   "url": "https://docs.oasis-open.org/legalruleml/legalruleml-core-spec/v1.0/os/legalruleml-core-spec-v1.0-os.pdf",
+   "retrieved_at": "2026-11-13T05:03:20Z",
+   "sha256": "f36b12fd7a0676a7d3cd12221deedfa4c462958d6be6a3cfb868b41c16ffda37",
+   "bytes": 1665547,
+   "media_type": "application/pdf",
+   "source_type": "standard",
+   "publisher": "OASIS",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "LegalRuleML Core Specification Version 1.0 (OASIS Standard)"
+  },
+  {
+   "artifact_id": "SA-6bd762fc1ea346af1fb6ddc6",
+   "url": "https://arxiv.org/pdf/1711.06128",
+   "retrieved_at": "2026-11-13T05:03:21Z",
+   "sha256": "6bd762fc1ea346af1fb6ddc67966bb662b5470326a591246b08344d1e958e3cb",
+   "bytes": 378894,
+   "media_type": "application/pdf",
+   "source_type": "preprint",
+   "publisher": "arXiv (Lam, Hashmi, Scofield)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Enabling Reasoning with LegalRuleML"
+  },
+  {
+   "artifact_id": "SA-259fdf0e7c254c639a2b4a70",
+   "url": "https://arxiv.org/pdf/2511.12276",
+   "retrieved_at": "2026-11-13T05:03:35Z",
+   "sha256": "259fdf0e7c254c639a2b4a70398d22165398c32d46a42976c1632fee2e90d845",
+   "bytes": 766637,
+   "media_type": "application/pdf",
+   "source_type": "preprint",
+   "publisher": "arXiv",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Reflections on the design, applications and implementations of the normative specification language eFLINT"
+  },
+  {
+   "artifact_id": "SA-ebb388e1f964bca2607661a3",
+   "url": "https://arxiv.org/pdf/2410.10906",
+   "retrieved_at": "2026-11-13T05:03:50Z",
+   "sha256": "ebb388e1f964bca2607661a38179b521b0bc2833dad3bdbc839e121b4b323c08",
+   "bytes": 1841892,
+   "media_type": "application/pdf",
+   "source_type": "preprint",
+   "publisher": "arXiv",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Three Decades of Formal Methods in Business Process Compliance: A Systematic Literature Review"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "Una fórmula de OpenFisca rige hasta que otra con fecha posterior la reemplaza.",
+    "artifact_ids": [
+     "SA-99a6bfebd744820a6fa92ac1"
+    ],
+    "quote": "A formula is active until another formula, starting later, becomes active and replaces it (or until the variable end date is reached).",
+    "locator": "Legislation evolutions, Formula evolution"
+   },
+   {
+    "claim": "En OpenFisca, el atributo end de una variable es inclusivo (último día de vigencia).",
+    "artifact_ids": [
+     "SA-99a6bfebd744820a6fa92ac1"
+    ],
+    "quote": "The end day is inclusive: it is the last day a variable and its formulas are active",
+    "locator": "Legislation evolutions, Ending a variable at a specific date"
+   },
+   {
+    "claim": "Los valores de parámetros en OpenFisca admiten un campo reference con la fuente.",
+    "artifact_ids": [
+     "SA-99a6bfebd744820a6fa92ac1"
+    ],
+    "quote": "reference: https://www.legislation-source.com/2016",
+    "locator": "Legislation evolutions, How to update a parameter"
+   },
+   {
+    "claim": "openfisca-core se publica bajo licencia AGPL-3.0.",
+    "artifact_ids": [
+     "SA-779c7d023876bff618d2f0b1"
+    ],
+    "quote": "AGPL-3.0 license",
+    "locator": "GitHub openfisca-core, panel About"
+   },
+   {
+    "claim": "LegalRuleML 1.0 es un OASIS Standard del 30 de agosto de 2021.",
+    "artifact_ids": [
+     "SA-f36b12fd7a0676a7d3cd1222"
+    ],
+    "quote": "LegalRuleML Core Specification Version 1.0 OASIS Standard 30 August 2021",
+    "locator": "Portada"
+   },
+   {
+    "claim": "LegalRuleML se publica bajo el modo IPR RF on Limited Terms de OASIS.",
+    "artifact_ids": [
+     "SA-f36b12fd7a0676a7d3cd1222"
+    ],
+    "quote": "This specification is provided under the RF on Limited Terms Mode of the OASIS IPR Policy",
+    "locator": "Status / 1.0 IPR Policy"
+   },
+   {
+    "claim": "LegalRuleML expresa la prelación con el elemento Override, donde un enunciado prevalece sobre otro.",
+    "artifact_ids": [
+     "SA-f36b12fd7a0676a7d3cd1222"
+    ],
+    "quote": "Override +: an indication that a Legal Rule takes precedence over another Legal Rule.",
+    "locator": "Sec. 3.4"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Uso de OpenFisca, Catala, LegalRuleML o lógica deóntica aplicada en derecho mexicano: ninguna fuente de esta parte lo trata.",
+   "Modelo de prelación de OpenFisca entre normas de distinto rango (jerarquía normativa): la documentación leída solo trata evolución temporal, no conflicto entre normas.",
+   "Manejo de transitorios (disposiciones transitorias, ultractividad, retroactividad) en las cuatro opciones: no hay ejemplos publicados en estas fuentes.",
+   "Costo cuantitativo de adopción frente a un motor propio para el caso mexicano: no determinable con estas fuentes.",
+   "Madurez de LegalRuleML en herramientas: solo se leyó un artículo secundario con SPINdle; no hay evidencia de adopción actual.",
+   "Lógica deóntica aplicada como opción independiente: solo se leyó su uso dentro de LegalRuleML.",
+   "Hashes sha256 y fechas de captura por fuente: no los veo; los registra la máquina.",
+   "Ninguna fuente de esta parte está marcada como primaria, por lo que no hay hallazgos confirmados. Todo lo útil va a candidate_claims como SECUNDARIA.",
+   "Licencia, documentación oficial, fecha y sha256 de OpenFisca, Catala y LegalRuleML: no aparecen en estas dos fuentes.",
+   "Uso en derecho mexicano de cualquiera de las opciones: no aparece en estas fuentes.",
+   "Costo de adoptar una opción frente a escribir un motor propio: no se cuantifica en estas fuentes.",
+   "Modelo concreto de prelación y de vigencias o transitorios en OpenFisca y Catala, y ejemplos publicados: no se detallan aquí. Catala solo se menciona de forma tangencial."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: OpenFisca resuelve 'desde cuándo rige' con fechas por fórmula y parámetro, pero la documentación leída no muestra un mecanismo de prelación entre normas de distinto rango.",
+  "INTERPRETACIÓN: Catala codifica la prelación de forma estática en el árbol de excepciones, auditable pero sin jerarquía normativa explícita (constitución, ley, reglamento).",
+  "INTERPRETACIÓN: LegalRuleML es el único de los tres con vocabulario explícito para Override, estado de vigencia (InForce, Efficacious) y jurisdicción/autoridad como datos, pero es un lenguaje de intercambio, no un motor.",
+  "SECUNDARIA: Lam et al. (SA-6bd762fc1ea346af1fb6ddc6) reportan que la transformación de LegalRuleML a lógica defeasible implementada en SPINdle pierde metadatos al re-exportar.",
+  "INTERPRETACIÓN: la licencia AGPL-3.0 de openfisca-core puede imponer obligaciones de código abierto en servicios en red; requiere revisión legal antes de adoptarlo.",
+  "SECUNDARIA (eFLINT, arXiv 2511.12276, sección 7.4): FLINT y eFLINT carecen de un mecanismo explícito de prelación entre normas. La prioridad de prohibiciones sobre permisos y de poderes sobre prohibiciones es implícita, y se deriva de cómo se generan las violaciones y cómo se manifiestan los efectos de las acciones.",
+  "SECUNDARIA (eFLINT, sección 8): Catala y RegelSpraak apuntan a derecho computacional (impuestos, prestaciones). No incorporan conceptos normativos como permiso, obligación o poder. Catala tiene un mecanismo de excepciones que permite complementar definiciones previas. El mismo texto cita trabajo de Catala sobre aritmética de fechas (Monat et al.).",
+  "SECUNDARIA (eFLINT, sección 8): LegalRuleML extiende RuleML para representar e intercambiar reglas legales con base en lógica deóntica y derrotable. Existe una interpretación en lógica derrotable (Lam et al.). Un uso de eFLINT como back-end para ejecutarlo se plantea solo como trabajo futuro.",
+  "SECUNDARIA (eFLINT, sección 8): la lógica deóntica clásica permite expresar conflictos entre permisos y prohibiciones, pero carece de acciones, eventos y razonamiento temporal. Las lógicas de acción deóntica y las derrotables temporales intentan cubrir esa carencia. El texto cita Temporal Defeasible Logic (Governatori y Rotolo) sobre abrogaciones y anulaciones.",
+  "SECUNDARIA (eFLINT, sección 6.4 y 7): eFLINT-clingo se usa en producción en el gobierno holandés (DMI/PDX, con Abykys, aprox. TRL8), con una especificación de 1,543 líneas. Su madurez es parcial: no tiene versionado de normas ni migración de datos ante cambios, y la explicabilidad es limitada. Es un lenguaje para especialistas en software, no para juristas.",
+  "SECUNDARIA (revisión López y Hildebrandt, sección IV-E): solo 13.04% de los 46 estudios considera cambios en las leyes. Cerca del 80% no trata conflictos entre normas: 17.39%, 8.60% y 4.34% abordan respectivamente lex specialis, lex superior y lex posterior. Solo dos estudios consideran el tiempo, y FCL implementa lex posterior con marcas de tiempo en las proposiciones.",
+  "SECUNDARIA (revisión, sección V.I y IV-F): 63.04% de los marcos están en TRL 1-4, y solo 13.4% tiene evidencia en entornos operativos. Los autores dicen que ninguno ofrece análisis de impacto a largo plazo. No hay lenguaje común para formalizar leyes, y se recomienda investigación comparativa de expresividad.",
+  "INTERPRETACIÓN: ninguna de las dos fuentes demuestra un modelo de prelación y vigencia listo para usar. La prelación (lex superior, specialis, posterior) y la vigencia temporal siguen siendo capacidades poco cubiertas. Esto apoya modelarlas explícitamente como datos propios, aunque no sirve para decidir entre adoptar y construir."
+ ],
+ "candidate_tests": [
+  "Antes de adoptar cualquier opción, probar si expresa tres casos: una norma específica que deroga la general (lex specialis), una jerarquía constitucional frente a ley y reglamento (lex superior), y un transitorio con vigencia por fecha (lex posterior).",
+  "Reutilizar los escenarios de la sección 6.3 del paper de eFLINT como referencia de rendimiento."
+ ],
+ "possible_implications_for_zpmnd": [
+  "INTERPRETACIÓN: la literatura revisada sugiere representar prelación y vigencia como relaciones de datos explícitas y verificables (norma A prevalece sobre B bajo criterio X, con intervalo de vigencia), y no depender de semántica implícita de un motor.",
+  "HIPÓTESIS: un motor propio mínimo, solo de prelación y vigencia, puede ser razonable si OpenFisca o Catala no cubren transitorios. Esto debe confirmarse con las fuentes primarias de la otra parte."
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: una solución mínima combinaría fechas de vigencia por norma al estilo OpenFisca con un grafo de Override al estilo LegalRuleML, sin adoptar el motor completo.",
+  "HIPÓTESIS: los transitorios mexicanos podrían representarse como reglas de aplicación por fecha de hecho, pero ninguna fuente leída lo confirma."
+ ],
+ "limitations": [
+  "Las fuentes se leyeron completas en 2 partes, una llamada por parte; un \"unknown\" de una parte puede estar respondido en otra.",
+  "Solo se leyó la parte 1 de 2; la otra parte puede cubrir lógica deónticafuera de LegalRuleML, derecho mexicano y otras fuentes.",
+  "La página de PyPI de OpenFisca no contiene contenido útil (desafío de JavaScript).",
+  "Las páginas de GitHub son capturas de interfaz; los conteos de estrellas y commits son del momento de la captura, no de madurez comprobada.",
+  "Los artículos de Catala y de fechas son de 2021 y 2024; pueden estar desactualizados respecto al estado actual del compilador.",
+  "El artículo de Lam et al. y el de fechas son secundarios; sus afirmaciones no sustentan hallazgos confirmados sin una fuente primaria.",
+  "Ninguna fuente trata derecho mexicano, por lo que la pregunta de aplicabilidad local queda sin respuesta aquí.",
+  "La página de OpenFisca sobre periodos es secundaria y no se usó como hallazgo confirmado.",
+  "Las dos fuentes son preprints secundarios; ninguna es documentación oficial de las herramientas preguntadas.",
+  "La revisión sistemática cubre estudios hasta septiembre de 2017 y no incluye Catala ni la mayoría de las herramientas actuales. Su valor es de contexto.",
+  "Las fuentes se leyeron completas, pero no contienen la información pedida sobre licencias, fechas, sha256 ni derecho mexicano.",
+  "Las cifras de las fuentes (porcentajes, TRL) son autoinformadas por sus autores y no se verificaron de forma independiente.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita quitó 20 de 27 hallazgos confirmados que decían más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 12 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json)."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
