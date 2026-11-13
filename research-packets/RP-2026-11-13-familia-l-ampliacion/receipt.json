@@ -1,0 +1,654 @@
+{
+ "request_id": "RR-2026-11-13-familia-l-ampliacion",
+ "fetched": [
+  {
+   "url": "https://developers.docusign.com/tools/openapi-files/",
+   "status": 200,
+   "error": null,
+   "sha256": "cb15fc673259da3197cec1ae281a0afeb554af3224c5b70df739cb95ef45a763",
+   "bytes": 314542,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:20Z",
+   "text_status": "ok",
+   "text_chars": 3427
+  },
+  {
+   "url": "https://github.com/docusign/OpenAPI-Specifications",
+   "status": 200,
+   "error": null,
+   "sha256": "991ff737bdcbc0d0c70f526592fa41a64f586a68007bb238e2bbb89be1e39094",
+   "bytes": 287640,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:21Z",
+   "text_status": "ok",
+   "text_chars": 6788
+  },
+  {
+   "url": "https://www.mifiel.com/recursos/constancias-de-conservacion-api",
+   "status": "refused",
+   "error": "host not in allowlist: webflow.mifiel.com",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-13T05:02:23Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://guia.mifiel.com/es/constancias-de-conservacion-nom-151-via-api",
+   "status": 200,
+   "error": null,
+   "sha256": "6971cbe0fef37ce81582ad3b0ed7fb72ca7baae50fff24ce371c8085b322ad6c",
+   "bytes": 142611,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:24Z",
+   "text_status": "ok",
+   "text_chars": 5221
+  },
+  {
+   "url": "https://verificamex.com/soluciones/api-nom-151",
+   "status": 200,
+   "error": null,
+   "sha256": "939235b9ab9073e080f67c645e2ac91e0d20fc98be8ed22a9b458a6a60095c68",
+   "bytes": 209812,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:25Z",
+   "text_status": "ok",
+   "text_chars": 16368
+  },
+  {
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5478024&fecha=30%2F03%2F2017",
+   "status": 200,
+   "error": null,
+   "sha256": "465c904802f1647091d06172c04d14928625019025410b62ef2b75766ac0525c",
+   "bytes": 193921,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:27Z",
+   "text_status": "ok",
+   "text_chars": 34170
+  },
+  {
+   "url": "https://www.figma.com/legal/developer-terms/",
+   "status": 200,
+   "error": null,
+   "sha256": "95f1838bc4818ae2a1680f6b16b8398aa37b0c906a6f38e5ab5e28c1dfca1b03",
+   "bytes": 1664100,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:28Z",
+   "text_status": "ok",
+   "text_chars": 13923
+  },
+  {
+   "url": "https://github.com/figma/rest-api-spec",
+   "status": 200,
+   "error": null,
+   "sha256": "6bc27c763332a4a0ea6778c929d8217281c47ca6b4b7aa94ddcfb2c30d7e1bea",
+   "bytes": 217393,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:30Z",
+   "text_status": "ok",
+   "text_chars": 5067
+  },
+  {
+   "url": "https://www.canva.dev/docs/connect/",
+   "status": 200,
+   "error": null,
+   "sha256": "3069e30272fa6ede036c3c193b57e2dd1c1592557040c3f82937a634541d25b4",
+   "bytes": 79890,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:30Z",
+   "text_status": "ok",
+   "text_chars": 3308
+  },
+  {
+   "url": "https://docs.developers.clio.com/clio-manage/api-reference/",
+   "status": 200,
+   "error": null,
+   "sha256": "3a87d9d504ed06b7566b4104cb0f030dd3eba913c1e5aadbc941acad9d08ba03",
+   "bytes": 10661441,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:32Z",
+   "text_status": "ok",
+   "text_chars": 1301347
+  },
+  {
+   "url": "https://wiki.free.law/c/terms/courtlistener/courtlistenercom-terms-of-service-and-policies",
+   "status": 200,
+   "error": null,
+   "sha256": "858c0a601e50c21d224493d1c2e30da2571f6507acb55d517f73468433726c6f",
+   "bytes": 60318,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:34Z",
+   "text_status": "ok",
+   "text_chars": 39887
+  },
+  {
+   "url": "https://www.lexisnexis.com/en-us/products/lexis-api.page",
+   "status": 200,
+   "error": null,
+   "sha256": "0af977907da19f11c937a8ef4c3b3bbd6e5ea6e7e57defa0c6ce5e2dbb4bdda5",
+   "bytes": 40686,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:35Z",
+   "text_status": "ok",
+   "text_chars": 8820
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43369180533",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "taken_out": [
+   {
+    "id": "confirmed[5]",
+    "claim": "El endpoint de Mifiel para generar constancias es /api/v1/psc/nom151 y su parámetro obligatorio es el hash SHA256.",
+    "why": "The quote doesn't give the endpoint path /api/v1/psc/nom151, only the hash parameter."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "Mifiel emite las constancias mediante Advantage Security, PSC acreditado ante la Secretaría de Economía.",
+    "why": "The quote says the constancias are issued by Advantage Security, but not that Mifiel issues them or that the claim holds in general; it also omits Mifiel in the quote subject (the claim attributes it to Mifiel)."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "Mifiel remite a una lista de precios descargable y no la publica en esta página.",
+    "why": "The quote says to download the price list but doesn't say prices are not published on this page."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "Los términos de desarrollador de Figma, vigentes desde el 5 de mayo de 2026, dicen que Figma puede suspender o terminar el acceso a sus recursos de desarrollador en cualquier momento y por cualquier motivo.",
+    "why": "The quote doesn't state the effective date of 5 May 2026."
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "Los términos de Figma exigen que las integraciones permitan el flujo de datos en ambas direcciones.",
+    "why": "The quote is a requirement but the claim is fine; however 'must allow' is in quote... the claim says 'exigen', which matches, but context of the quote is limited to the stated rule only."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "Figma puede cambiar las tarifas de acceso a sus recursos de desarrollador con aviso de treinta días.",
+    "why": "The quote doesn't mention the thirty-day notice."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "Figma publica una especificación OpenAPI 3.1.0 de su REST API, con licencia MIT, y la declara en beta.",
+    "why": "The quote says nothing about the MIT license or beta status."
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "Canva advierte que las APIs en preview pueden tener cambios incompatibles sin aviso.",
+    "why": "The quote doesn't say the warning applies to preview APIs."
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "La API permite crear acciones personalizadas en la interfaz de Clio que abren una URL de la aplicación externa.",
+    "why": "The quote doesn't say the custom actions open a URL of the external application."
+   },
+   {
+    "id": "confirmed[28]",
+    "claim": "La API permite crear documentos y descargar un documento mediante redirección 303.",
+    "why": "The quote covers only downloading via 303, not creating documents."
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "La API incluye reportes que se pueden crear y descargar una vez completados.",
+    "why": "The quote only mentions downloading the completed report, not creating reports."
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "La API permite crear una nueva factura (Bill) como estado de cuenta; el objeto Bill se puede listar, actualizar y borrar o anular, y se puede marcar como enviado.",
+    "why": "The quote only covers marking a bill as sent, not creating, listing, updating or voiding bills."
+   },
+   {
+    "id": "confirmed[33]",
+    "claim": "La API incluye reglas de tribunal, calendario con entradas recurrentes y plazos (dockets).",
+    "why": "The quote covers only matter dockets, not court rules or recurring calendar entries."
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "Contactos admite campos KYC, y la API expone cuentas bancarias, incluida de fideicomiso (trust).",
+    "why": "The quote only gives account type enum values, nothing on KYC fields."
+   },
+   {
+    "id": "confirmed[35]",
+    "claim": "La API de Clio expone el objeto Document Automation que genera documentos a partir de plantillas y una matter.",
+    "why": "The quote doesn't mention generating from a matter."
+   },
+   {
+    "id": "confirmed[39]",
+    "claim": "Existen archivos comprimidos de documentos (DocumentArchive) descargables mediante 303.",
+    "why": "The quote doesn't say DocumentArchives are compressed files of documents."
+   },
+   {
+    "id": "confirmed[41]",
+    "claim": "Court Rules calcula fechas de reglas judiciales a partir de un Trigger y es una función no disponible en todos los planes.",
+    "why": "The quote says nothing about plan availability."
+   },
+   {
+    "id": "confirmed[44]",
+    "claim": "La API expone registros médicos y facturas médicas (con gravámenes) para casos de lesiones personales.",
+    "why": "The quote doesn't mention liens or personal injury cases."
+   },
+   {
+    "id": "confirmed[45]",
+    "claim": "La API expone daños (Damages) por matter con tipos special, general y other.",
+    "why": "The quote gives only enum values, not Damages per matter."
+   },
+   {
+    "id": "confirmed[48]",
+    "claim": "Los servidores de producción existen por región (US, UE, Canadá, Australia).",
+    "why": "The quote shows only the EU server URL, not all four regions."
+   },
+   {
+    "id": "confirmed[49]",
+    "claim": "Las operaciones aceptan un encabezado de versión menor de la API.",
+    "why": "The quote doesn't say it is a header on operations."
+   },
+   {
+    "id": "confirmed[50]",
+    "claim": "El borrado de documentos los envía a la papelera por 30 días.",
+    "why": "The quote says trashed documents are deleted after 30 days, not that deletion sends them to trash."
+   },
+   {
+    "id": "confirmed[51]",
+    "claim": "Los documentos se suben mediante URL firmada y multipart para archivos grandes.",
+    "why": "The quote doesn't mention signed URLs and only recommends considering multipart at 100 MB."
+   },
+   {
+    "id": "confirmed[52]",
+    "claim": "Clio API V4 expone el objeto SafeCustodyRecord con creación vía POST en /safe_custody/records.json (custodia de documentos físicos).",
+    "why": "The quote is only the path; it doesn't say SafeCustodyRecord or physical documents."
+   },
+   {
+    "id": "confirmed[53]",
+    "claim": "Clio API V4 expone paquetes de custodia (SafeCustodyPackets) con listado por GET.",
+    "why": "The quote is only a path; it doesn't name SafeCustodyPackets."
+   },
+   {
+    "id": "confirmed[54]",
+    "claim": "Clio ofrece servidores de producción regionales, incluido el de Canadá.",
+    "why": "The quote shows only the Canada URL, not that servers are regional generally."
+   },
+   {
+    "id": "confirmed[55]",
+    "claim": "Clio expone TrustRequests creables por POST, con tipo cliente o asunto.",
+    "why": "The quote is only a path; it doesn't mention client or matter types."
+   },
+   {
+    "id": "confirmed[56]",
+    "claim": "Clio permite cambiar el estado de custodia de un registro (held, temporarily_removed, removed) con validación; una transición no soportada devuelve 422.",
+    "why": "The quote doesn't list the states held, temporarily_removed, removed."
+   },
+   {
+    "id": "confirmed[57]",
+    "claim": "Clio expone tarifas de ayuda legal (Legal Aid) del Reino Unido como endpoint de lectura.",
+    "why": "The quote is only a path; it doesn't say UK Legal Aid rates."
+   },
+   {
+    "id": "confirmed[58]",
+    "claim": "Los términos de CourtListener cubren la REST API, los webhooks y el servidor MCP como parte de los Servicios.",
+    "why": "The quote doesn't mention the MCP server."
+   }
+  ]
+ },
+ "reconcile": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "dropped": [
+   {
+    "id": "limitations[18]",
+    "text": "No hay versión de API verificable en el texto leído más allá de X-API-VERSION 'latest'.",
+    "por": "confirmed[14]"
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "L14 jurídica Mundo: Clio, CourtListener, LexisNexis/Westlaw/vLex (acceso por solicitud)",
+   "L14 jurídica México: SCJN repositorio de datos abiertos; Tirant/vLex sin API pública hallada",
+   "L15 firma/documentos Mundo: DocuSign",
+   "L15 México: NOM-151 y PSC (Mifiel, Verificamex, PSC World)",
+   "L16 diseño: Figma, Canva",
+   "L17 investigación: Crossref, OpenAlex, Scopus",
+   "L18 BIM: Autodesk Platform Services"
+  ],
+  "searches": [
+   {
+    "query": "DocuSign eSignature REST API reference OpenAPI",
+    "intent": "official"
+   },
+   {
+    "query": "Figma REST API reference developer terms",
+    "intent": "official"
+   },
+   {
+    "query": "Autodesk Platform Services Construction Cloud API reference BIM 360 terms of use",
+    "intent": "official"
+   },
+   {
+    "query": "Crossref REST API OpenAPI documentation terms",
+    "intent": "official"
+   },
+   {
+    "query": "Clio Manage API documentation OpenAPI legal practice management",
+    "intent": "official"
+   },
+   {
+    "query": "API NOM-151-SCFI-2016 constancia de conservación PSC API",
+    "intent": "official"
+   },
+   {
+    "query": "vLex Westlaw LexisNexis API developer documentation",
+    "intent": "limitations"
+   },
+   {
+    "query": "CourtListener API documentation legal data terms",
+    "intent": "support"
+   },
+   {
+    "query": "Canva Connect API documentation OpenAPI developer terms",
+    "intent": "official"
+   },
+   {
+    "query": "Elsevier Scopus API OR OpenAlex API terms pricing",
+    "intent": "limitations"
+   },
+   {
+    "query": "Tirant lo Blanch OR vLex México OR SCJN API jurisprudencia",
+    "intent": "contradict"
+   },
+   {
+    "query": "Mifiel API documentación firma NOM-151",
+    "intent": "official"
+   },
+   {
+    "query": "Google Slides API OR Microsoft Graph PowerPoint export formats",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "No hallé API pública, OpenAPI oficial ni precio de Tirant Prime México ni de vLex México (L14 México); sería modo a pedido.",
+   "No hallé API ni OpenAPI oficial de Westlaw: acceso por solicitud y precio por cotización.",
+   "No hallé referencia API ni términos de plataformas mexicanas de investigación técnica (L17 México) más allá de la SCJN.",
+   "No hallé APIs de BIM ni de simulación de ingeniería hechas en México (L18 México), ni de simulación como ANSYS o COMSOL.",
+   "No hallé OpenAPI oficial de Crossref ni de Scopus: solo catálogos de terceros; términos de Scopus no recuperados.",
+   "No descargué ningún archivo, así que faltan versión y sha256 de todos.",
+   "No verifiqué precios publicados con fecha de ninguna app; no hallé términos de uso literales con cita de 300 caracteres.",
+   "No hallé páginas oficiales de formato de exportación de datos del cliente para Clio, Figma y DocuSign.",
+   "No hallé el texto de los términos de Canva Developer Terms ni de Mifiel API; Slides y Graph PowerPoint solo con fuentes secundarias."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 17,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://bicentenario.scjn.gob.mx/manual-usuario-descarga",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://developers.openalex.org/api-reference/introduction",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://aps.autodesk.com/en/docs/bim360/v1/overview/introduction/",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://www.autodesk.com/company/terms-of-use/en/offering-types-and-benefits",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://developers.docusign.com/tools/openapi-files/",
+    "family": "L15 Mundo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Spec oficial de eSignature y otras APIs en JSON; fuente para versión y sha256 (hay que descargar)."
+   },
+   {
+    "url": "https://github.com/docusign/OpenAPI-Specifications",
+    "family": "L15 Mundo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Archivo esignature.rest.swagger-v2.1.json para hash; actualización mensual."
+   },
+   {
+    "url": "https://www.mifiel.com/recursos/constancias-de-conservacion-api",
+    "family": "L15 México",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Endpoint POST/GET de constancias NOM-151 en México; página comercial, validar contra docs.mifiel.com; no se vio spec OpenAPI."
+   },
+   {
+    "url": "https://guia.mifiel.com/es/constancias-de-conservacion-nom-151-via-api",
+    "family": "L15 México",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Guía de ayuda oficial con operaciones de la API de constancias; precio y términos no confirmados."
+   },
+   {
+    "url": "https://verificamex.com/soluciones/api-nom-151",
+    "family": "L15 México",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "API REST con hash SHA-256 y respuesta JSON; página de venta, no cuenta como evidencia por sí sola."
+   },
+   {
+    "url": "https://dof.gob.mx/nota_detalle.php?codigo=5478024&fecha=30%2F03%2F2017",
+    "family": "L15 México",
+    "stance": "context",
+    "role": "primary",
+    "why": "Norma: constancia en ASN.1 RFC 3161; define el formato y el marco de conservación."
+   },
+   {
+    "url": "https://www.figma.com/legal/developer-terms/",
+    "family": "L16 Mundo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Términos de la API con fecha efectiva (5 may 2026); fuente de cita literal."
+   },
+   {
+    "url": "https://github.com/figma/rest-api-spec",
+    "family": "L16 Mundo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "OpenAPI 3.1.0 oficial de la REST API; para versión y sha256."
+   },
+   {
+    "url": "https://www.canva.dev/docs/connect/",
+    "family": "L16 Mundo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Doc oficial de Connect API; spec en canva.dev/sources/connect/api/latest/api.yml (visto solo en texto de búsqueda); términos en canva.com/policies/canva-developer-terms (no verificados)."
+   },
+   {
+    "url": "https://docs.developers.clio.com/clio-manage/api-reference/",
+    "family": "L14 Mundo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Referencia oficial v4 con OpenAPI descargable: matters, contacts, bills, documents, etc."
+   },
+   {
+    "url": "https://wiki.free.law/c/terms/courtlistener/courtlistenercom-terms-of-service-and-policies",
+    "family": "L14 Mundo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Términos del API (límites, prohibición FCRA); API v4 y datos masivos gratuitos."
+   },
+   {
+    "url": "https://www.lexisnexis.com/en-us/products/lexis-api.page",
+    "family": "L14 Mundo",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Acceso por solicitud y aprobación, sin referencia pública ni precio: caso a pedido/limitación."
+   },
+   {
+    "url": "https://bicentenario.scjn.gob.mx/manual-usuario-descarga",
+    "family": "L14 México",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Única API oficial mexicana jurídica hallada; datos JSON de jurisprudencia."
+   },
+   {
+    "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+    "family": "L17 Mundo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Doc oficial, JSON, metadatos sin costo y sin copyright; la spec OpenAPI oficial no se confirmó."
+   },
+   {
+    "url": "https://developers.openalex.org/api-reference/introduction",
+    "family": "L17 Mundo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Referencia oficial; precio por uso desde feb 2026, datos CC0; hay inconsistencias entre documentos de precio."
+   },
+   {
+    "url": "https://aps.autodesk.com/en/docs/bim360/v1/overview/introduction/",
+    "family": "L18 Mundo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Documentación oficial de APS para BIM/ACC; objetos y operaciones."
+   },
+   {
+    "url": "https://www.autodesk.com/company/terms-of-use/en/offering-types-and-benefits",
+    "family": "L18 Mundo",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Sección APS: uso interno para APIs incluidas; tarifas por tokens en el APS Pricing Schedule."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ },
+ "partes": [
+  [
+   [
+    "SA-cb15fc673259da3197cec1ae",
+    0,
+    3427
+   ],
+   [
+    "SA-991ff737bdcbc0d0c70f5265",
+    0,
+    6788
+   ],
+   [
+    "SA-6971cbe0fef37ce81582ad3b",
+    0,
+    5221
+   ],
+   [
+    "SA-939235b9ab9073e080f67c64",
+    0,
+    16368
+   ],
+   [
+    "SA-465c904802f1647091d06172",
+    0,
+    34170
+   ],
+   [
+    "SA-95f1838bc4818ae2a1680f6b",
+    0,
+    13923
+   ],
+   [
+    "SA-6bc27c763332a4a0ea6778c9",
+    0,
+    5067
+   ],
+   [
+    "SA-3069e30272fa6ede036c3c19",
+    0,
+    3308
+   ]
+  ],
+  [
+   [
+    "SA-3a87d9d504ed06b7566b4104",
+    0,
+    600000
+   ]
+  ],
+  [
+   [
+    "SA-3a87d9d504ed06b7566b4104",
+    599000,
+    1199000
+   ]
+  ],
+  [
+   [
+    "SA-3a87d9d504ed06b7566b4104",
+    1198000,
+    1301347
+   ],
+   [
+    "SA-858c0a601e50c21d224493d1",
+    0,
+    39887
+   ],
+   [
+    "SA-0af977907da19f11c937a8ef",
+    0,
+    8820
+   ]
+  ]
+ ],
+ "partes_fuera": {
+  "confirmed": [
+   {
+    "claim": "CourtListener prohíbe usar varias cuentas o rotación de credenciales para exceder los límites de tasa.",
+    "artifact_ids": [
+     "SA-858c0a601e50c21d224493d1"
+    ],
+    "quote": "Do not use multiple accounts, registered clients, or credential rotation to exceed the rate limits that apply to your access level.",
+    "locator": "Terms of Service, Automated and Agentic Access"
+   },
+   {
+    "claim": "CourtListener prohíbe usar el servicio o su información derivada para fines FCRA (elegibilidad de crédito, empleo, vivienda, etc.).",
+    "artifact_ids": [
+     "SA-858c0a601e50c21d224493d1"
+    ],
+    "quote": "you agree that you will not use Courtlistener.com and any information derived therefrom: (1) as a factor in establishing an individual's eligibility for credit, insurance, employment",
+    "locator": "Terms of Service, Usage Restrictions"
+   },
+   {
+    "claim": "CourtListener declara que puede discontinuar o alterar el servicio sin aviso.",
+    "artifact_ids": [
+     "SA-858c0a601e50c21d224493d1"
+    ],
+    "quote": "we may discontinue or alter any aspect of the Services",
+    "locator": "Terms of Service, The Services may be unreliable"
+   },
+   {
+    "claim": "CourtListener permite solicitar una exportación de los datos de la cuenta; no declara el formato.",
+    "artifact_ids": [
+     "SA-858c0a601e50c21d224493d1"
+    ],
+    "quote": "you can delete your account or request an export of your data at any time.",
+    "locator": "Privacy Policy, Your choices and controls"
+   },
+   {
+    "claim": "CourtListener indica que la membresía otorga límites de API mayores.",
+    "artifact_ids": [
+     "SA-858c0a601e50c21d224493d1"
+    ],
+    "quote": "grant membership benefits (for example, increased API limits)",
+    "locator": "Privacy Policy, How we use collected information"
+   },
+   {
+    "claim": "CourtListener advierte contra enviar material confidencial o privilegiado por un asistente de IA sin revisar las obligaciones propias.",
+    "artifact_ids": [
+     "SA-858c0a601e50c21d224493d1"
+    ],
+    "quote": "Before you send confidential, privileged, or client-identifying material through an AI assistant",
+    "locator": "Privacy Policy, AI assistants, agents"
+   }
+  ]
+ }
+}

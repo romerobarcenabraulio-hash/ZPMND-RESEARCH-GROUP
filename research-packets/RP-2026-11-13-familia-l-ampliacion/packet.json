@@ -1,0 +1,525 @@
+{
+ "research_id": "RP-2026-11-13-familia-l-ampliacion",
+ "request_id": "RR-2026-11-13-familia-l-ampliacion",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-13T05:04:19Z",
+ "question": "Para cada categoría nueva listada en why_needed, con la misma forma de RR-2026-11-08-familia-l-apps-saas: ¿qué apps relevantes en el mundo y en México publican referencia de API u OpenAPI oficial, qué objetos y operaciones exponen, en qué formato exportan los datos del cliente, qué precio publican y con qué fecha, y qué términos de uso de la API declaran? Páginas de venta no cuentan como evidencia.",
+ "why_zpmnd_needs_it": "Subáreas nuevas de la familia L: L14 plataformas jurídicas y de investigación legal (Mundo y México); L15 documentos, firma electrónica y conservación de mensajes de datos (Mundo y México); L16 diseño y presentaciones (Mundo y México); L17 investigación especializada: bases académicas, técnicas y de datos (Mundo y México); L18 BIM y simulación de ingeniería (Mundo y México). El mapa de cobertura de la arquitectura cooperativa de ZPMND (2026-11-12, build/evidencia/arquitectura-cooperativa-2026-11-12/cobertura.md, hallazgo H2) midió que la regla de usar primero una app no tiene datos para estas categorías: sin ellos, el trabajo jurídico, documental o de diseño iría a un LLM generalista en vez de a la herramienta especializada.",
+ "scope": "Parte 1 de 4: Docusign (OpenAPI y repo GitHub), Mifiel (API NOM-151), Verificamex (secundaria), NOM-151-SCFI-2016 (DOF), Figma (términos de desarrollador y repo rest-api-spec) y Canva (REST API). Solo se lee lo que estas páginas dicen; no cubre las demás categorías de why_needed, que no se listan en la solicitud recibida. / Parte 2 de 4. Se leyó solo la fuente primaria SA-3a87d9d504ed06b7566b4104 (documentación oficial Clio API V4, Redocly), caracteres 0 a 600000 de 1301347. Solo cubre Clio Manage (gestión de despachos jurídicos): objetos y operaciones de la API, regiones y términos de webhooks. No cubre otras apps ni categorías, ni precios, ni formato de exportación, ni términos de uso. / Parte 3 de 4 de la referencia oficial de la API V4 de Clio (caracteres 599000-1199000 de 1301347): Notes, Court Rules, Custom Fields, Documents, Folders, Document Archives, Document Automations, Templates, Matters, Medical Records, Damages, Allocations, Reports, Report Presets, Tasks. Solo se cubre Clio, categorías de práctica jurídica; no hay datos de otras apps, México, precios ni términos de uso en esta parte. / Parte 4 de 4. Se leyeron: la cola de la referencia Clio API V4 (trust_line_items, trust_requests, users, groups, grants, tarifas Legal Aid, expense_categories, safe_custody), los términos de servicio de CourtListener y la página comercial de Lexis APIs (secundaria). Cubre solo parte de las apps/categorías pedidas (Clio: gestión de despacho; CourtListener: jurisprudencia; Lexis: referencia secundaria).",
+ "sources": {
+  "primary": [
+   "SA-cb15fc673259da3197cec1ae",
+   "SA-991ff737bdcbc0d0c70f5265",
+   "SA-6971cbe0fef37ce81582ad3b",
+   "SA-465c904802f1647091d06172",
+   "SA-95f1838bc4818ae2a1680f6b",
+   "SA-6bc27c763332a4a0ea6778c9",
+   "SA-3069e30272fa6ede036c3c19",
+   "SA-3a87d9d504ed06b7566b4104",
+   "SA-858c0a601e50c21d224493d1"
+  ],
+  "secondary": [
+   "SA-939235b9ab9073e080f67c64",
+   "SA-0af977907da19f11c937a8ef"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-cb15fc673259da3197cec1ae",
+   "url": "https://developers.docusign.com/tools/openapi-files/",
+   "retrieved_at": "2026-11-13T05:02:20Z",
+   "sha256": "cb15fc673259da3197cec1ae281a0afeb554af3224c5b70df739cb95ef45a763",
+   "bytes": 314542,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Docusign",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "OpenAPI (Swagger) files"
+  },
+  {
+   "artifact_id": "SA-991ff737bdcbc0d0c70f5265",
+   "url": "https://github.com/docusign/OpenAPI-Specifications",
+   "retrieved_at": "2026-11-13T05:02:21Z",
+   "sha256": "991ff737bdcbc0d0c70f526592fa41a64f586a68007bb238e2bbb89be1e39094",
+   "bytes": 287640,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "Docusign (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "docusign/OpenAPI-Specifications"
+  },
+  {
+   "artifact_id": "SA-6971cbe0fef37ce81582ad3b",
+   "url": "https://guia.mifiel.com/es/constancias-de-conservacion-nom-151-via-api",
+   "retrieved_at": "2026-11-13T05:02:24Z",
+   "sha256": "6971cbe0fef37ce81582ad3b0ed7fb72ca7baae50fff24ce371c8085b322ad6c",
+   "bytes": 142611,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Mifiel",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Constancias de Conservación NOM-151 vía API (guía)"
+  },
+  {
+   "artifact_id": "SA-939235b9ab9073e080f67c64",
+   "url": "https://verificamex.com/soluciones/api-nom-151",
+   "retrieved_at": "2026-11-13T05:02:25Z",
+   "sha256": "939235b9ab9073e080f67c645e2ac91e0d20fc98be8ed22a9b458a6a60095c68",
+   "bytes": 209812,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Verificamex",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "API NOM-151: Constancias de Conservación"
+  },
+  {
+   "artifact_id": "SA-465c904802f1647091d06172",
+   "url": "https://dof.gob.mx/nota_detalle.php?codigo=5478024&fecha=30%2F03%2F2017",
+   "retrieved_at": "2026-11-13T05:02:27Z",
+   "sha256": "465c904802f1647091d06172c04d14928625019025410b62ef2b75766ac0525c",
+   "bytes": 193921,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "DOF",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "NOM-151-SCFI-2016"
+  },
+  {
+   "artifact_id": "SA-95f1838bc4818ae2a1680f6b",
+   "url": "https://www.figma.com/legal/developer-terms/",
+   "retrieved_at": "2026-11-13T05:02:28Z",
+   "sha256": "95f1838bc4818ae2a1680f6b16b8398aa37b0c906a6f38e5ab5e28c1dfca1b03",
+   "bytes": 1664100,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Figma",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Figma Developer Terms"
+  },
+  {
+   "artifact_id": "SA-6bc27c763332a4a0ea6778c9",
+   "url": "https://github.com/figma/rest-api-spec",
+   "retrieved_at": "2026-11-13T05:02:30Z",
+   "sha256": "6bc27c763332a4a0ea6778c929d8217281c47ca6b4b7aa94ddcfb2c30d7e1bea",
+   "bytes": 217393,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "Figma (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "figma/rest-api-spec"
+  },
+  {
+   "artifact_id": "SA-3069e30272fa6ede036c3c19",
+   "url": "https://www.canva.dev/docs/apps/rest-apis/",
+   "retrieved_at": "2026-11-13T05:02:30Z",
+   "sha256": "3069e30272fa6ede036c3c193b57e2dd1c1592557040c3f82937a634541d25b4",
+   "bytes": 79890,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Canva",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "About Canva's REST APIs"
+  },
+  {
+   "artifact_id": "SA-3a87d9d504ed06b7566b4104",
+   "url": "https://docs.developers.clio.com/clio-manage/api-reference/",
+   "retrieved_at": "2026-11-13T05:02:32Z",
+   "sha256": "3a87d9d504ed06b7566b4104cb0f030dd3eba913c1e5aadbc941acad9d08ba03",
+   "bytes": 10661441,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Clio",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Clio API V4 Documentation"
+  },
+  {
+   "artifact_id": "SA-858c0a601e50c21d224493d1",
+   "url": "https://wiki.free.law/c/terms/courtlistener/courtlistenercom-terms-of-service-and-policies",
+   "retrieved_at": "2026-11-13T05:02:34Z",
+   "sha256": "858c0a601e50c21d224493d1c2e30da2571f6507acb55d517f73468433726c6f",
+   "bytes": 60318,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Free Law Project",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "CourtListener Terms of Service and Policies"
+  },
+  {
+   "artifact_id": "SA-0af977907da19f11c937a8ef",
+   "url": "https://www.lexisnexis.com/en-us/products/lexis-api.page",
+   "retrieved_at": "2026-11-13T05:02:35Z",
+   "sha256": "0af977907da19f11c937a8ef4c3b3bbd6e5ea6e7e57defa0c6ce5e2dbb4bdda5",
+   "bytes": 40686,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "LexisNexis",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Lexis APIs"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "Docusign publica archivos OpenAPI en formato JSON, disponibles en GitHub.",
+    "artifact_ids": [
+     "SA-cb15fc673259da3197cec1ae"
+    ],
+    "quote": "The files are in JSON format and are available on GitHub.",
+    "locator": "Documentación Docusign, OpenAPI (Swagger) files, párrafo introductorio"
+   },
+   {
+    "claim": "El repositorio de Docusign se describe como las especificaciones Swagger oficiales de sus APIs REST.",
+    "artifact_ids": [
+     "SA-991ff737bdcbc0d0c70f5265"
+    ],
+    "quote": "The official Docusign REST APIs Swagger Specifications",
+    "locator": "GitHub docusign/OpenAPI-Specifications, About"
+   },
+   {
+    "claim": "Docusign actualiza la especificación de eSignature cada mes.",
+    "artifact_ids": [
+     "SA-991ff737bdcbc0d0c70f5265"
+    ],
+    "quote": "The DocuSign eSignature REST API is updated monthly. The Swagger file in this repository is also updated monthly.",
+    "locator": "README, Releases"
+   },
+   {
+    "claim": "El repositorio de Docusign tiene un archivo OpenAPI de eSignature v2.1.",
+    "artifact_ids": [
+     "SA-991ff737bdcbc0d0c70f5265"
+    ],
+    "quote": "esignature.rest.swagger-v2.1.json - the full swagger file for Docusign's eSignature REST API v2.1",
+    "locator": "README, The Swagger file"
+   },
+   {
+    "claim": "Mifiel ofrece por API dos endpoints NOM-151: uno para generar constancias y otro para recuperarlas.",
+    "artifact_ids": [
+     "SA-6971cbe0fef37ce81582ad3b"
+    ],
+    "quote": "Las API de NOM 151 de Mifiel cuenta con dos endpoints, uno para generar constancias y otro para recuperar constancias generadas anteriormente",
+    "locator": "Sección Cómo obtener las Constancias vía API"
+   },
+   {
+    "claim": "La constancia de Mifiel se devuelve como cadena Base64 en el campo nom151.",
+    "artifact_ids": [
+     "SA-6971cbe0fef37ce81582ad3b"
+    ],
+    "quote": "nom151: Cadena en Base64 de la constancia generada.",
+    "locator": "Respuesta incluye"
+   },
+   {
+    "claim": "La NOM-151 establece que el PSC solo recibe la huella digital del mensaje de datos.",
+    "artifact_ids": [
+     "SA-465c904802f1647091d06172"
+    ],
+    "quote": "el Prestador de Servicios de Certificación únicamente recibirá la huella digital electrónica del mensaje de datos.",
+    "locator": "Apéndice A, A.2.4"
+   },
+   {
+    "claim": "La NOM-151 fija la vigencia mínima de la constancia en diez años desde su emisión.",
+    "artifact_ids": [
+     "SA-465c904802f1647091d06172"
+    ],
+    "quote": "La vigencia de la constancia de conservación de mensajes de datos será de por lo menos diez años a partir de su emisión",
+    "locator": "Apéndice A, A.8.4.1"
+   },
+   {
+    "claim": "La constancia sigue el formato ASN.1 del RFC 3161.",
+    "artifact_ids": [
+     "SA-465c904802f1647091d06172"
+    ],
+    "quote": "El Prestador de Servicios de Certificación formará una constancia siguiendo el formato ASN.1 del RFC 3161",
+    "locator": "Apéndice A, A.4.1"
+   },
+   {
+    "claim": "Canva publica una descripción OpenAPI de sus REST APIs en una URL pública.",
+    "artifact_ids": [
+     "SA-3069e30272fa6ede036c3c19"
+    ],
+    "quote": "The OpenAPI description is publicly available at https://www.canva.dev/sources/connect/api/latest/api.yml",
+    "locator": "Sección OpenAPI description"
+   },
+   {
+    "claim": "Canva describe como caso de uso exportar los diseños terminados de vuelta al sistema del cliente.",
+    "artifact_ids": [
+     "SA-3069e30272fa6ede036c3c19"
+    ],
+    "quote": "programmatically create designs for your users to edit, and then export the finished designs back to your system.",
+    "locator": "Introducción"
+   },
+   {
+    "claim": "La documentación oficial de la API v4 de Clio ofrece descarga de la especificación OpenAPI y un correo de soporte para la API.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "Clio API Documentation (v4)\n\nDownload OpenAPI specification:Download\n\nClio API Support: api@clio.com",
+    "locator": "Encabezado de la página"
+   },
+   {
+    "claim": "La API está disponible en cuatro regiones de datos: Australia, Canadá, UE y EE. UU.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "The API is available in four distinct data regions: Australia (au.app.clio.com), Canada (ca.app.clio.com), EU (eu.app.clio.com) and US (app.clio.com).",
+    "locator": "Getting Started"
+   },
+   {
+    "claim": "La API soporta varias versiones menores con la forma 4.X.Y, que se piden con el encabezado X-API-VERSION.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "Versions are of the form '4.X.Y'. To request a specific version, you can use an X-API-VERSION header in your request",
+    "locator": "Minor Versions"
+   },
+   {
+    "claim": "La versión por defecto indicada en la documentación es la 4.0.13.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "4.0.13\n\nThis is the default version",
+    "locator": "Minor Versions"
+   },
+   {
+    "claim": "Los webhooks de Clio permiten recibir eventos sin sondeo.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "Webhooks are a way of detecting events in Clio without the need for polling.",
+    "locator": "Webhooks"
+   },
+   {
+    "claim": "Un webhook expira a los 3 días si no se da expires_at.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "If no expires_at parameter is provided, the webhook will expire after 3 days.",
+    "locator": "Webhooks"
+   },
+   {
+    "claim": "Los webhooks exigen HTTPS.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "all webhooks MUST be using a url with the https scheme.",
+    "locator": "Webhooks > HTTPS"
+   },
+   {
+    "claim": "Clio firma las peticiones de webhook con HMAC-SHA256 en el encabezado X-Hook-Signature.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "Clio will compute an HMAC-SHA256 signature based on the shared secret and the request body. That signature will then be placed in a X-Hook-Signature header.",
+    "locator": "Webhooks > Webhook Security"
+   },
+   {
+    "claim": "Las entradas de actividad aceptan códigos UTBMS (LEDES), obligatorios en ciertos casos.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "a billable entry on a Matter whose require_utbms_codes is true must carry UTBMS codes",
+    "locator": "Activities > Create a new Activity"
+   },
+   {
+    "claim": "Los objetos de actividad cubren entradas de tiempo, gastos y tarifa fija.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "Activities (Time Entries, Expense Entries and Fixed Fees) track work done at a firm.",
+    "locator": "Activities"
+   },
+   {
+    "claim": "Las plantillas de documento aceptan formatos doc, docx, ppt, pptx, xls, xlsx, pdf y xml.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "The supported formats are doc, docx, ppt, pptx, xls, xlsx, pdf and xml.",
+    "locator": "Sección Document Templates"
+   },
+   {
+    "claim": "Los reportes se pueden generar en varios formatos de exportación.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "Enum: \"csv\" \"html\" \"json\" \"pdf\" \"xlsx\" \"zip\"",
+    "locator": "POST /reports.json, campo format"
+   },
+   {
+    "claim": "Los documentos se pueden descargar vía redirección 303 a una URL de descarga.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "Download the Document. Will return a 303 See Other redirecting to the download URL for the Document",
+    "locator": "GET /documents/{id}/download.json"
+   },
+   {
+    "claim": "Los documentos en integraciones de terceros (Google Drive, Office365) no son accesibles por la API.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "Files uploaded to Clio’s document integrations (e.g. Google Drive and Office365) are inaccessible through the API.",
+    "locator": "Sección Documents"
+   },
+   {
+    "claim": "Las jurisdicciones de Court Rules cubren cortes de Estados Unidos.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "These jurisdictions contain state, federal, appellate, and bankruptcy courts from across the United States.",
+    "locator": "Sección Jurisdictions"
+   },
+   {
+    "claim": "Hay un endpoint de vista previa de fechas de calendario de un docket sin guardar.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "Calculates the calendar entries a matter docket would create for the given jurisdiction, trigger and start date, without saving anything.",
+    "locator": "GET /court_rules/matter_dockets/preview.json"
+   },
+   {
+    "claim": "Las tareas se pueden asignar hasta a 10 usuarios o a un contacto.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "A Task can be assigned to up to 10 firm users, or to one Contact, but never both.",
+    "locator": "Sección Tasks"
+   },
+   {
+    "claim": "Las plantillas de listas de tareas se pueden asignar a una matter al crearla o actualizarla.",
+    "artifact_ids": [
+     "SA-3a87d9d504ed06b7566b4104"
+    ],
+    "quote": "Clio supports assigning task template lists to a matter from with the same request that creates or updates a matter.",
+    "locator": "Sección Matters, Task Template Lists"
+   },
+   {
+    "claim": "CourtListener prohíbe compartir, revender o transferir credenciales y tokens de API.",
+    "artifact_ids": [
+     "SA-858c0a601e50c21d224493d1"
+    ],
+    "quote": "Do not share, resell, pool, or transfer your account credentials, API tokens, or OAuth access tokens.",
+    "locator": "Terms of Service, Automated and Agentic Access"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Versión y sha256 de los archivos OpenAPI: estas páginas solo los describen, no se descargaron los JSON o YAML.",
+   "Precio publicado con fecha para Docusign, Figma, Canva y Mifiel: no aparece en lo leído; Mifiel solo remite a una lista descargable.",
+   "Términos de uso de la API de Docusign y de Canva: solo se vio un enlace a «Terms», no el texto.",
+   "Formato de exportación de los datos del cliente para Docusign, Figma y Mifiel: no aparece en estas páginas.",
+   "Objetos y operaciones expuestos por cada API: requieren leer las especificaciones, no se leyeron.",
+   "Campo «modo» (nativo o a pedido) por categoría y la lista de categorías nuevas de why_needed: no vienen en la solicitud.",
+   "Precio publicado y fecha para Clio u otras apps: la parte leída no trae páginas de precios.",
+   "Términos de uso de la API de Clio (cita literal): no aparecen en el tramo leído.",
+   "Formato de exportación de datos del cliente de Clio y su página oficial: no aparece en el tramo leído (solo descarga individual de documentos y reportes).",
+   "Sha256 y versión de lo descargado: no consta en el texto.",
+   "Apps de otras categorías nuevas, en el mundo y en México, y el campo modo por categoría: esta parte solo contiene Clio.",
+   "Tramo no leído de la fuente (caracteres 600000 a 1301347): endpoints de Notes en adelante, Matters, Tasks, Trust, Users, etc.",
+   "Versión de la API y sha256 de lo bajado: no se ven en el texto de esta parte.",
+   "Precio publicado y fecha de Clio: no aparece en esta parte.",
+   "Términos de uso de la API de Clio con cita literal: no aparecen en esta parte.",
+   "Apps distintas de Clio (mundo y México) y su referencia de API/OpenAPI: no cubiertas por esta fuente.",
+   "Campo modo (nativo o a pedido) por categoría: la fuente no lo define; se decide fuera.",
+   "Precio publicado de Clio y de CourtListener, con fecha: no aparece en estas partes.",
+   "Formato de exportación de datos del cliente de Clio: no aparece en esta parte (solo la referencia de API).",
+   "Términos de uso de la API de Clio: no aparecen en la parte leída (1198000–1301347).",
+   "Versión y sha256 de lo descargado: no verificables desde el texto.",
+   "Referencia de API u OpenAPI oficial de Lexis: la fuente leída es una página comercial secundaria, sin objetos ni operaciones.",
+   "Cobertura en México de Clio, CourtListener y Lexis: no aparece en estas fuentes.",
+   "Campo modo (nativo o a pedido) por categoría: no determinable con estas fuentes."
+  ]
+ },
+ "candidate_claims": [
+  "SECUNDARIA: Verificamex (página comercial de producto) afirma ofrecer API REST NOM-151 con respuesta JSON, constancia RFC 3161 en Base64 y 100 tokens de prueba gratis; no hay precio fechado y es una página de venta, así que no cuenta como evidencia.",
+  "INTERPRETACIÓN: Mifiel expone la NOM-151 por API (POST y GET) con el hash SHA256; es una operación acotada, no gestión documental completa.",
+  "INTERPRETACIÓN: Docusign, Figma y Canva publican OpenAPI oficial, por lo que serían de modo «nativo» para integración, pendiente de verificar versión y sha256.",
+  "INTERPRETACIÓN: los términos de Figma permiten suspender el acceso sin causa y exigen escritura de vuelta; eso es un riesgo para integraciones que solo lean datos.",
+  "INTERPRETACIÓN: Clio Manage expone en su API oficial objetos jurídicos (asuntos, contactos, documentos, calendarios, plazos y reglas de tribunal, facturación, fideicomiso), por lo que sería candidato a modo 'nativo' para operaciones sobre esos objetos; falta verificar términos de uso y exportación.",
+  "INTERPRETACIÓN: Clio opera regiones AU, CA, UE y EE. UU. y no hay región México en la parte leída; para México habría que usar alguna de las regiones existentes.",
+  "INTERPRETACIÓN: Clio cubre nativamente gestión de expedientes, documentos, plazos judiciales (solo jurisdicciones de EE. UU.), tareas, notas, reportes y registros médicos/daños; no cubre jurisdicciones mexicanas según lo leído.",
+  "INTERPRETACIÓN: Para cómputo de plazos procesales en México Court Rules de Clio no serviría, dado que sus jurisdicciones declaradas son de EE. UU.",
+  "SECUNDARIA: LexisNexis (página Lexis APIs) dice que ofrece APIs REST de CourtLink, Lex Machina, State Net y un Protégé API, con acceso por solicitud y portal de desarrolladores.",
+  "SECUNDARIA: LexisNexis (Lexis APIs) dice que el precio de las APIs depende de productos y volúmenes y no publica precio.",
+  "INTERPRETACIÓN: Clio expone en su API custodia documental (paquetes y registros con tipos de documento como will, deed, power_of_attorney), lo que respalda una categoría de custodia/archivo físico jurídico con modo nativo, sujeto a verificar términos.",
+  "INTERPRETACIÓN: CourtListener es jurisprudencia de EE. UU.; sus términos permiten uso de API con restricciones, pero no hay evidencia aquí de cobertura mexicana."
+ ],
+ "candidate_tests": [
+  "Descargar los OpenAPI de Docusign, Figma y Canva, calcular sha256 y registrar versión y fecha de descarga.",
+  "Leer los términos de API de Docusign y de Canva y citar el texto literal.",
+  "Descargar la especificación OpenAPI de Clio, registrar versión y sha256, y contrastar los endpoints listados con lo observado en esta parte.",
+  "Descargar la referencia OpenAPI de Clio y de CourtListener, calcular sha256 y registrar versión y URL.",
+  "Buscar en la sección de términos de API de Clio la cita literal de uso permitido y límites."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Clio sería candidato de modo 'nativo' para tareas, documentos, plantillas y reportes en exportación csv/xlsx/pdf/json, pendiente de verificar términos y precio."
+ ],
+ "limitations": [
+  "Las fuentes se leyeron completas en 4 partes, una llamada por parte; un \"unknown\" de una parte puede estar respondido en otra.",
+  "Al unir las partes no cupo en el esquema: 6 confirmed; está completo en receipt.json (partes_fuera).",
+  "Parte 1 de 4: solo se leyeron Docusign, Mifiel, Verificamex, NOM-151, Figma y Canva; las demás apps y categorías están en otras partes.",
+  "La fuente de Verificamex es secundaria y comercial, por lo que no sostiene hallazgos confirmados.",
+  "Las páginas de Docusign y GitHub son índices y no incluyen el contenido de las especificaciones.",
+  "La solicitud no lista las categorías nuevas de why_needed, así que no se pudo asignar cada app a una categoría ni fijar su modo.",
+  "La NOM-151 es una norma, no una API de ninguna app.",
+  "Fuente RECORTADA: se leyó solo de 0 a 600000 de 1301347 caracteres; lo no leído (Notas en adelante, Asuntos, Tareas, Trust, Usuarios, Legal Aid, Safe Custody) puede contener más objetos y operaciones.",
+  "Es una sola app (Clio Manage) con documentación de referencia; no responde por categorías ni por México.",
+  "Los ejemplos de respuesta son esquemas con valores de relleno, no datos reales.",
+  "Las citas de algunos hallazgos son parciales de enunciados más largos.",
+  "Una cita en el hallazgo de Bills se refiere a marcar como enviado; que el objeto se lista, actualiza y borra se deduce de las rutas del índice.",
+  "Solo se leyó la parte 3 de 4 de un solo documento (Clio); el resto de la referencia y las demás apps están en otras partes.",
+  "La fuente termina cortada en Trust Line Items; Bills, Contacts, Time Entries, Calendar y términos pueden estar en otras partes.",
+  "No se vieron precios, términos de uso ni formato oficial de exportación de datos del cliente fuera de reportes y descargas.",
+  "El documento es una referencia técnica; no se evaluó México.",
+  "Parte 4 de 4: Clio solo desde el carácter 1198000; no se vieron el inicio ni los términos de API de Clio.",
+  "Esta parte no contiene precios, formatos de exportación de Clio ni cobertura México.",
+  "La fuente de Lexis es secundaria (página comercial); no cuenta como evidencia de API.",
+  "Los términos de CourtListener son del sitio, no un documento específico de términos de API; la cobertura de la API es por inclusión en 'Services'.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita quitó 30 de 60 hallazgos confirmados que decían más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 17 propuestas, 12 aceptadas, 5 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Una tercera pasada quitó 1 frases de alcance, desconocidos o limitaciones que los hallazgos que quedan contradicen o responden; quedan en receipt.json.",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.mifiel.com/recursos/constancias-de-conservacion-api (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
