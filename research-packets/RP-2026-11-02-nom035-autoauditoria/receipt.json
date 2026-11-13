@@ -1,0 +1,124 @@
+{
+ "request_id": "RR-2026-11-02-nom035-autoauditoria",
+ "fetched": [
+  {
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+   "status": 200,
+   "error": null,
+   "sha256": "75b62246f311f4451094bb20eb3b7528ed6c317390530cf4ca8eae62e04548cc",
+   "bytes": 1133731,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:01:24Z",
+   "text_status": "ok",
+   "text_chars": 119139
+  },
+  {
+   "url": "https://sidof.segob.gob.mx/notas/5541828",
+   "status": 200,
+   "error": null,
+   "sha256": "ae0196387448e88d048f7413fbeebb4292a3a87503865cdd5021350a0c49296b",
+   "bytes": 67610,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:01:28Z",
+   "text_status": "ok",
+   "text_chars": 3223
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43369173725",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "taken_out": [
+   {
+    "id": "confirmed[0]",
+    "claim": "La ficha del DOF registra la publicación de la NOM-035-STPS-2018 el 23-10-2018, sección segunda, edición matutina.",
+    "why": "La cita solo da la fecha 23-10-2018; 'sección segunda' y 'edición matutina' no aparecen en ella."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "Los centros con certificado NMX-R-025-SCFI-2015 vigente se dan por cumplidos en ciertos numerales.",
+    "why": "La cita no menciona el certificado NMX-R-025-SCFI-2015 ni su vigencia; solo lista numerales dados por cumplidos."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "Obligación 5.2: identificar y analizar factores de riesgo en centros de 16 a 50 trabajadores.",
+    "why": "La cita solo dice 'centros con entre 16 y 50 trabajadores', sin indicar que 5.2 sea identificar y analizar factores de riesgo."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "Obligación 5.4: adoptar medidas de prevención y control conforme al Capítulo 8.",
+    "why": "La cita está cortada y no menciona el Capítulo 8 ni 'prevención y control conforme' a él."
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "Obligación 5.6: exámenes médicos y evaluaciones psicológicas condicionados a signos, síntomas, resultado o quejas.",
+    "why": "La cita solo menciona signos o síntomas; 'resultado o quejas' no aparece en ella y está cortada."
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "Evidencia de 5.1: evidencia documental de política establecida, implantada, mantenida y difundida.",
+    "why": "La cita no dice qué se evidencia; la política establecida, implantada, mantenida y difundida no está en ella."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "El apartado de evaluación de 5.2/7.x aplica solo a centros de 16 a 50 trabajadores.",
+    "why": "La cita no menciona 5.2/7.x; solo dice que ese apartado aplica a centros de 16 a 50 trabajadores."
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "Usar el método de la Guía III da cumplimiento a 7.1 b), 7.2, 7.3, 7.4 y 7.5.",
+    "why": "La cita no dice que sea el método de la Guía III."
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "Los resultados de identificación y análisis deben constar en un informe.",
+    "why": "La cita no dice qué resultados constan en el informe; 'identificación y análisis' no aparece en ella."
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "Periodicidad de la identificación y evaluación: al menos cada dos años.",
+    "why": "La cita no dice qué debe realizarse cada dos años; 'identificación y evaluación' no aparece en ella."
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "El programa de atención (8.3-8.5) solo aplica a centros con más de 15 trabajadores cuando los resultados lo determinen.",
+    "why": "La cita está cortada antes de completar la condición, y no menciona el programa de atención ni 8.3-8.5."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "Evidencia de 5.5: identificar y canalizar, con evidencia documental.",
+    "why": "La cita solo habla de canalizar; 'identificar' y 'evidencia documental' no aparecen en ella."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "Los registros 5.8 solo aplican a centros con más de 15 trabajadores.",
+    "why": "La cita no menciona los registros ni el numeral 5.8."
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "Las evidencias documentales pueden ser impresas o electrónicas y se conservan al menos un año desde su elaboración.",
+    "why": "La cita no dice 'las evidencias documentales' como sujeto, pero sí lo esencial; sin embargo el sujeto no aparece en ella."
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "Las guías de referencia no son de cumplimiento obligatorio.",
+    "why": "La cita habla de 'esta guía' sin decir que sean todas las guías de referencia."
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "La Guía II es utilizable por centros de hasta 50 trabajadores.",
+    "why": "La cita no menciona la Guía II."
+   },
+   {
+    "id": "confirmed[28]",
+    "claim": "La Guía III es utilizable por centros de más de 50 trabajadores.",
+    "why": "La cita no menciona la Guía III."
+   },
+   {
+    "id": "conflicting[0]",
+    "claim": "Tensión interna: el campo de aplicación asigna 5.6 y 5.8 a centros de 16 o más trabajadores, mientras la columna de observaciones de 10.2 dice que 5.8 aplica a más de 15 trabajadores; y 5.6 en el campo de aplicación no figura para ≤15.",
+    "why": "La cita no contiene la tensión entre campo de aplicación y observaciones ni lo dicho sobre 5.6 y el otro lado."
+   }
+  ]
+ }
+}

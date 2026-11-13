@@ -1,0 +1,184 @@
+{
+ "research_id": "RP-2026-11-02-nom035-autoauditoria",
+ "request_id": "RR-2026-11-02-nom035-autoauditoria",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-13T05:03:23Z",
+ "question": "Para un centro de trabajo en México, ¿cuál es el conjunto completo de obligaciones del patrón bajo la NOM-035-STPS-2018 (numerales 5 a 10 y guías de referencia), a qué tramo de trabajadores aplica cada una, qué documento o registro demuestra su cumplimiento según el propio texto, y qué dicen literalmente los transitorios sobre su entrada en vigor por fases? Cada obligación con su cita literal en tramos de 300 caracteres o menos.",
+ "why_zpmnd_needs_it": "Primera unidad de autoauditoría de ZPPMND: una lista de obligaciones tipadas, con evidencia exigible y vigencia, que una empresa pueda contestar sola. Hoy solo están curados el numeral 2 y parte de 5 a 8 (RR-2026-10-21-nom035-obligaciones). Es el consumidor del primer VerdictEvent.",
+ "scope": "Lectura del texto completo de la NOM-035-STPS-2018 (DOF 23/10/2018) y de la ficha DOF nota 5541828. Se extraen obligaciones del patrón (5.1 a 5.8), su aplicación por tramo de trabajadores (campo de aplicación), la evidencia del numeral 10.2 y los transitorios. No se consultaron fuentes sobre aclaraciones o modificaciones posteriores.",
+ "sources": {
+  "primary": [
+   "SA-75b62246f311f4451094bb20",
+   "SA-ae0196387448e88d048f7413"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-75b62246f311f4451094bb20",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+   "retrieved_at": "2026-11-13T05:01:24Z",
+   "sha256": "75b62246f311f4451094bb20eb3b7528ed6c317390530cf4ca8eae62e04548cc",
+   "bytes": 1133731,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Secretaría del Trabajo y Previsión Social)",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "NOM-035-STPS-2018, Factores de riesgo psicosocial en el trabajo-Identificación, análisis y prevención (DOF 23/10/2018), texto completo"
+  },
+  {
+   "artifact_id": "SA-ae0196387448e88d048f7413",
+   "url": "https://sidof.segob.gob.mx/notas/5541828",
+   "retrieved_at": "2026-11-13T05:01:28Z",
+   "sha256": "ae0196387448e88d048f7413fbeebb4292a3a87503865cdd5021350a0c49296b",
+   "bytes": 67610,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Nota 5541828 del DOF: NOM-035-STPS-2018, ficha de publicación (fecha de la edición)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "Centros de trabajo de hasta quince trabajadores: numerales aplicables.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "a) Para centros de trabajo en los que laboren hasta quince trabajadores deberán cumplir con lo dispuesto por los numerales 5.1, 5.4, 5.5, 5.7, 8.1 y 8.2 de la presente Norma;",
+    "locator": "Numeral 2, inciso a)"
+   },
+   {
+    "claim": "Centros de trabajo de dieciséis a cincuenta trabajadores: numerales aplicables.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "b) Para centros de trabajo en los que laboren entre dieciséis y cincuenta trabajadores deberán cumplir con los numerales 5.1, 5.2, del 5.4 al 5.8, 7.1, inciso a), 7.2, del 7.4 al 7.9, y el Capítulo 8",
+    "locator": "Numeral 2, inciso b)"
+   },
+   {
+    "claim": "Centros de trabajo con más de 50 trabajadores: numerales aplicables.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "c) Para centros de trabajo en los que laboren más de 50 trabajadores deberán cumplir con los numerales 5.1, del 5.3 al 5.8, 7.1, inciso b), del 7.2 al 7.9 y el Capítulo 8",
+    "locator": "Numeral 2, inciso c)"
+   },
+   {
+    "claim": "Obligación 5.1: política de prevención por escrito.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "5.1 Establecer por escrito, implantar, mantener y difundir en el centro de trabajo una política de prevención de riesgos psicosociales que contemple:",
+    "locator": "Numeral 5.1"
+   },
+   {
+    "claim": "Obligación 5.3: identificar y analizar factores y evaluar el entorno en centros de más de 50 trabajadores.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "5.3 Identificar y analizar los factores de riesgo psicosocial y evaluar el entorno organizacional, de conformidad con lo señalado en los numerales 7.1, inciso b), 7.2 y 7.3",
+    "locator": "Numeral 5.3"
+   },
+   {
+    "claim": "Obligación 5.5: identificar y canalizar a trabajadores sujetos a acontecimientos traumáticos severos.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "5.5 Identificar a los trabajadores que fueron sujetos a acontecimientos traumáticos severos durante o con motivo del trabajo y, canalizarlos para su atención",
+    "locator": "Numeral 5.5"
+   },
+   {
+    "claim": "Obligación 5.7: difundir y proporcionar información a los trabajadores.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "5.7 Difundir y proporcionar información a los trabajadores sobre:",
+    "locator": "Numeral 5.7"
+   },
+   {
+    "claim": "Obligación 5.8: llevar registros.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "5.8 Llevar los registros sobre:",
+    "locator": "Numeral 5.8"
+   },
+   {
+    "claim": "La difusión de la política (5.1) puede evidenciarse con folletos, boletines o carteles.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "La evidencia para dar cumplimiento con la difusión  de la política  de prevención  de riesgos psicosociales puede ser a través de folletos, boletines, y/o carteles.",
+    "locator": "Numeral 10.2, fila 5.1"
+   },
+   {
+    "claim": "Usar el método de la Guía II da cumplimiento a 7.1 a), 7.2, 7.4 y 7.5.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "utilizando el método señalado en la Guía de referencia II de la presente Norma, darán cumplimiento a los numerales 7.1 a), 7.2; 7.4 y 7.5.",
+    "locator": "Numeral 10.2, fila 5.2"
+   },
+   {
+    "claim": "Transitorio PRIMERO.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "PRIMERO. La presente Norma Oficial Mexicana entrará en vigor al año siguiente de su publicación en el Diario Oficial de la Federación.",
+    "locator": "Transitorios"
+   },
+   {
+    "claim": "Transitorio SEGUNDO: fase de dos años.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "SEGUNDO. Lo dispuesto por los numerales 5.2, 5.3, 5.6, 5.8, 8.3, 8.4, 8.5, y Capítulo 7, entrará en vigor a los dos años siguientes a su publicación en el Diario Oficial de la Federación.",
+    "locator": "Transitorios"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "No se leyó ninguna fuente sobre aclaraciones, modificaciones o acuerdos posteriores publicados en el DOF; el linaje NOM-035-STPS queda sin verificar.",
+   "El sha256 del texto no consta en el material leído.",
+   "El texto no precisa cómo contar trabajadores (plantilla, outsourcing, varios centros) ni fija sanciones.",
+   "Las fechas calendario exactas de las fases no se indican en el texto; solo 'al año' y 'a los dos años siguientes'."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Con publicación el 23-10-2018, la entrada en vigor general (un año) y los numerales 5.2, 5.3, 5.6, 5.8, 8.3-8.5 y Capítulo 7 (dos años) darían, por cómputo, fechas en octubre de 2019 y octubre de 2020; ninguna fecha calendario está en el texto.",
+  "INTERPRETACIÓN: El campo de aplicación no incluye 5.6 para ≤15 trabajadores, pero 10.2 y 8.3-8.5 mencionan 'más de 15'; esto contrasta con el tramo '16 a 50' del campo de aplicación; revisar con criterio de la STPS.",
+  "INTERPRETACIÓN: Las filas 5.7 y 5.1 en 10.2 declaran entrada en vigor al año; 5.2, 5.3, 5.6, 5.8 y 8.3-8.5 a los dos años, coherente con los transitorios.",
+  "SECUNDARIA: no se usó ninguna fuente secundaria."
+ ],
+ "limitations": [
+  "Solo dos fuentes primarias: el texto de la norma y la ficha del DOF; no se verificó linaje posterior ni hash.",
+  "La ficha DOF muestra una fecha de cita (12-11-2026) generada por el sitio; no aporta contenido normativo.",
+  "El texto convertido tiene tablas aplanadas (10.2) y fórmulas ausentes (Ecuación 1 de Guía III), por lo que la atribución de observaciones a filas es inferida por el orden y puede ser imprecisa.",
+  "Las Guías I, II y III contienen referencias numéricas inconsistentes (p. ej. cita al numeral 8.1 inciso a) en vez de 7.1); no se resolvieron.",
+  "No se agotaron los 30+ detalles de 7.2, 8.1 y 8.2; se citaron los principales.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita quitó 17 de 29 hallazgos confirmados y 1 de 1 en conflicto que decían más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda en receipt.json, fuera de los hallazgos."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
