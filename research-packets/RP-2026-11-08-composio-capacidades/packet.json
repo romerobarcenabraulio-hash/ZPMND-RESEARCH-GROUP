@@ -1,0 +1,436 @@
+{
+ "research_id": "RP-2026-11-08-composio-capacidades",
+ "request_id": "RR-2026-11-08-composio-capacidades",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-13T05:04:47Z",
+ "question": "¿Composio sirve como capa de conexión de ZPMND con las apps del cliente sin que ZPMND almacene datos? Concretamente: qué datos y credenciales (tokens OAuth) guarda Composio y dónde, por cuánto tiempo y con qué registros; si existe opción autoalojada; licencia; precio por llamada o por cuenta; cómo delega el consentimiento del usuario; y qué apps de lectura cubre (Google Drive en particular).",
+ "why_zpmnd_needs_it": "El dueño (2026-11-08) la propone como capacidad a futuro del producto híbrido (LLM más harness). Entra por el paso 3, una app por lectura, y por el registro de recursos (reusar antes de construir), pero choca con la decisión de no almacenar datos de clientes si Composio retiene datos o tokens.",
+ "scope": "Evaluación de Composio como capa de conexión para ZPMND: custodia de tokens, retención de datos, autoalojamiento, licencia, precio, consentimiento y cobertura de Google Drive, a partir de 11 fuentes (documentación oficial, DPA, términos, licencia del repositorio y dos blogs de competidores).",
+ "sources": {
+  "primary": [
+   "SA-9c46ba1fbfb9a491177c73da",
+   "SA-0e3d60039e1ca77bd5e0bd25",
+   "SA-df56ad3803d052c90c2ea43b",
+   "SA-6cd7fd4ad3f09eb62e591fab",
+   "SA-b4b962543c77cd1484bc9fc8",
+   "SA-de4347bbfe4b841157fd46f2",
+   "SA-797a8e93b8b6b39e179a2d1e",
+   "SA-c30ef204930b820a5c39874a",
+   "SA-067d290ec88e3bc1f11dc345"
+  ],
+  "secondary": [
+   "SA-efe0d2f4445751730a73da2f",
+   "SA-47a687e04a0c70c75b99ff5c",
+   "SA-81d1b1fbea1c131af4c48937"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-9c46ba1fbfb9a491177c73da",
+   "url": "https://docs.composio.dev/docs/security/token-custody",
+   "retrieved_at": "2026-11-13T05:02:20Z",
+   "sha256": "9c46ba1fbfb9a491177c73da2fa4b02c1b28662cc0059eb3f56087662bf3f9f3",
+   "bytes": 175853,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Composio",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Token custody architecture"
+  },
+  {
+   "artifact_id": "SA-0e3d60039e1ca77bd5e0bd25",
+   "url": "https://docs.composio.dev/docs/security/zero-data-retention",
+   "retrieved_at": "2026-11-13T05:02:21Z",
+   "sha256": "0e3d60039e1ca77bd5e0bd25153093fb65fdc58241c7274cc72bdc5fafab60ad",
+   "bytes": 187647,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Composio",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Zero Data Retention"
+  },
+  {
+   "artifact_id": "SA-df56ad3803d052c90c2ea43b",
+   "url": "https://docs.composio.dev/docs/security/data-retention",
+   "retrieved_at": "2026-11-13T05:02:22Z",
+   "sha256": "df56ad3803d052c90c2ea43b1d7e5b20df2a68b35a1f8cdba7ad1ca2759b0966",
+   "bytes": 147024,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Composio",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Data retention (Composio docs)"
+  },
+  {
+   "artifact_id": "SA-efe0d2f4445751730a73da2f",
+   "url": "https://composio.dev/blog/two-questions-every-security-review-asks-us",
+   "retrieved_at": "2026-11-13T05:02:23Z",
+   "sha256": "efe0d2f4445751730a73da2f0a2f709235d46a5504e746c58f47fefac4de406a",
+   "bytes": 256452,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Composio",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Two questions every security review asks us"
+  },
+  {
+   "artifact_id": "SA-6cd7fd4ad3f09eb62e591fab",
+   "url": "https://docs.composio.dev/kb/guide/platform-compliance-data-handling",
+   "retrieved_at": "2026-11-13T05:02:24Z",
+   "sha256": "6cd7fd4ad3f09eb62e591fab08062e207525a7d0bebc221a13efd1119ae62eb5",
+   "bytes": 120333,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Composio",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Compliance, Data Retention, and Model Training"
+  },
+  {
+   "artifact_id": "SA-b4b962543c77cd1484bc9fc8",
+   "url": "https://composio.dev/legal/dpa",
+   "retrieved_at": "2026-11-13T05:02:25Z",
+   "sha256": "b4b962543c77cd1484bc9fc8e931eabb189d87c7339cd43d571a52e862e614c8",
+   "bytes": 246072,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Composio",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Data Processing Addendum (DPA)"
+  },
+  {
+   "artifact_id": "SA-de4347bbfe4b841157fd46f2",
+   "url": "https://composio.dev/terms",
+   "retrieved_at": "2026-11-13T05:02:25Z",
+   "sha256": "de4347bbfe4b841157fd46f2a0724dea23bfa3fca121762c8b277a26dbac68b1",
+   "bytes": 203447,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Composio (Sampark Inc)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Terms of Service"
+  },
+  {
+   "artifact_id": "SA-797a8e93b8b6b39e179a2d1e",
+   "url": "https://github.com/ComposioHQ/composio/blob/next/LICENSE",
+   "retrieved_at": "2026-11-13T05:02:26Z",
+   "sha256": "797a8e93b8b6b39e179a2d1e50f4e70411e53d455a12afefe3538adc39a0e04e",
+   "bytes": 179923,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "ComposioHQ",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "composio LICENSE (MIT)"
+  },
+  {
+   "artifact_id": "SA-c30ef204930b820a5c39874a",
+   "url": "https://composio.dev/enterprise",
+   "retrieved_at": "2026-11-13T05:02:29Z",
+   "sha256": "c30ef204930b820a5c39874a7bcfaa543a9489ef7a03befaa1c68255fd7ccf35",
+   "bytes": 337592,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Composio",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Composio Enterprise"
+  },
+  {
+   "artifact_id": "SA-47a687e04a0c70c75b99ff5c",
+   "url": "https://www.scalekit.com/blog/composio-pricing-change",
+   "retrieved_at": "2026-11-13T05:02:29Z",
+   "sha256": "47a687e04a0c70c75b99ff5c64b68b500c2a061cffa1adbf474074655bd8bfa3",
+   "bytes": 108731,
+   "media_type": "text/html",
+   "source_type": "blog",
+   "publisher": "Scalekit (competidor)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Composio Pricing Change 2026: What Actually Changed"
+  },
+  {
+   "artifact_id": "SA-81d1b1fbea1c131af4c48937",
+   "url": "https://nango.dev/blog/best-self-hosted-api-integration-platforms-for-ai-agents/",
+   "retrieved_at": "2026-11-13T05:02:30Z",
+   "sha256": "81d1b1fbea1c131af4c48937f243c5275c2f88ad2c7dbfc7a5f89212db07a7d3",
+   "bytes": 175111,
+   "media_type": "text/html",
+   "source_type": "blog",
+   "publisher": "Nango (competidor)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Best self-hosted API integration platforms for AI agents"
+  },
+  {
+   "artifact_id": "SA-067d290ec88e3bc1f11dc345",
+   "url": "https://docs.composio.dev/kb/guide/toolkits-googledrive",
+   "retrieved_at": "2026-11-13T05:02:31Z",
+   "sha256": "067d290ec88e3bc1f11dc3458e5d65b3ee0f526451da56d3285c4420f308894b",
+   "bytes": 125792,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Composio",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Google Drive toolkit (Composio docs)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "En el despliegue por defecto (Composio Cloud), Composio tiene la custodia de las credenciales del proveedor.",
+    "artifact_ids": [
+     "SA-9c46ba1fbfb9a491177c73da"
+    ],
+    "quote": "In the default Composio Cloud deployment, Composio has custody of those credentials.",
+    "locator": "Token custody architecture, introducción"
+   },
+   {
+    "claim": "Composio documenta cifrado AES-256-GCM en reposo y TLS en tránsito.",
+    "artifact_ids": [
+     "SA-9c46ba1fbfb9a491177c73da"
+    ],
+    "quote": "The security overview documents AES-256-GCM encryption at rest and TLS in transit.",
+    "locator": "Token custody architecture, Token boundaries in Composio Cloud"
+   },
+   {
+    "claim": "Tener una app OAuth propia no traslada el almacén de tokens a la infraestructura del cliente.",
+    "artifact_ids": [
+     "SA-9c46ba1fbfb9a491177c73da"
+    ],
+    "quote": "Owning the OAuth app does not move the token store into your infrastructure or change default API redaction.",
+    "locator": "Token custody architecture, OAuth app ownership and token custody"
+   },
+   {
+    "claim": "Los argumentos y resultados de las herramientas se guardan en logs de ejecución por defecto.",
+    "artifact_ids": [
+     "SA-9c46ba1fbfb9a491177c73da"
+    ],
+    "quote": "Tool arguments and results are stored in execution logs by default.",
+    "locator": "Token custody architecture, Application authorization and retained data"
+   },
+   {
+    "claim": "La opción de claves gestionadas por el cliente pone un proxy en la nube del cliente con claves en su KMS; Composio conserva el plano de control sin el material para descifrar.",
+    "artifact_ids": [
+     "SA-9c46ba1fbfb9a491177c73da"
+    ],
+    "quote": "A proxy in your cloud handles credential plaintext under keys in your KMS. Composio retains the control plane without the key material needed to decrypt those credentials.",
+    "locator": "Token custody architecture, Deployment options"
+   },
+   {
+    "claim": "El despliegue autoalojado es un arreglo Enterprise con soporte Helm.",
+    "artifact_ids": [
+     "SA-9c46ba1fbfb9a491177c73da"
+    ],
+    "quote": "Enterprise arrangement, with Helm deployment support.",
+    "locator": "Token custody architecture, tabla Deployment options (Self-hosted)"
+   },
+   {
+    "claim": "ZDR está disponible en planes de pago con precio por uso e incluido en Enterprise.",
+    "artifact_ids": [
+     "SA-0e3d60039e1ca77bd5e0bd25"
+    ],
+    "quote": "ZDR is available on paid plans for a usage-based price and included on Enterprise.",
+    "locator": "Zero Data Retention, introducción"
+   },
+   {
+    "claim": "ZDR cubre apps gestionadas por Composio (su propia app OAuth) solo en Enterprise.",
+    "artifact_ids": [
+     "SA-0e3d60039e1ca77bd5e0bd25"
+    ],
+    "quote": "ZDR covers calls through Composio Managed apps only on the Enterprise plan.",
+    "locator": "Zero Data Retention, What ZDR covers"
+   },
+   {
+    "claim": "ZDR no cubre triggers: Composio sigue guardando los eventos para procesarlos y entregarlos.",
+    "artifact_ids": [
+     "SA-0e3d60039e1ca77bd5e0bd25"
+    ],
+    "quote": "With ZDR on, trigger logs leave out event payloads, but Composio still stores the events to process and deliver them.",
+    "locator": "Zero Data Retention, What ZDR does not cover (Triggers)"
+   },
+   {
+    "claim": "Los logs de auditoría y la telemetría se guardan siempre, en todos los planes.",
+    "artifact_ids": [
+     "SA-0e3d60039e1ca77bd5e0bd25"
+    ],
+    "quote": "Composio stores audit logs and telemetry on every plan, and ZDR does not change them.",
+    "locator": "Zero Data Retention, Always stored"
+   },
+   {
+    "claim": "ZDR no está disponible en el plan Hobby.",
+    "artifact_ids": [
+     "SA-0e3d60039e1ca77bd5e0bd25"
+    ],
+    "quote": "ZDR is not available on the Hobby plan.",
+    "locator": "Zero Data Retention, Hobby plan"
+   },
+   {
+    "claim": "Los logs de ejecución y de triggers se retienen hasta un año y luego se borran automáticamente.",
+    "artifact_ids": [
+     "SA-df56ad3803d052c90c2ea43b"
+    ],
+    "quote": "Tool execution logs and trigger event logs are retained for up to one year, after which they are automatically deleted.",
+    "locator": "Data retention and handling, How long logs are retained"
+   },
+   {
+    "claim": "Composio declara no usar argumentos, respuestas ni payloads de triggers para entrenar modelos, en ningún plan.",
+    "artifact_ids": [
+     "SA-df56ad3803d052c90c2ea43b"
+    ],
+    "quote": "Composio does not use request arguments, response data, or trigger payloads to train or improve AI or machine learning models, on any plan.",
+    "locator": "Data retention and handling, Model training"
+   },
+   {
+    "claim": "ZDR controla qué almacena Composio, no si los datos se procesan durante la ejecución.",
+    "artifact_ids": [
+     "SA-df56ad3803d052c90c2ea43b"
+    ],
+    "quote": "ZDR controls what Composio stores, not whether data is processed during execution.",
+    "locator": "Data retention and handling, Where your data goes"
+   },
+   {
+    "claim": "El DPA lista entre las categorías de datos personales los tokens OAuth y claves API de las apps conectadas, cifrados en reposo.",
+    "artifact_ids": [
+     "SA-b4b962543c77cd1484bc9fc8"
+    ],
+    "quote": "Authentication data: OAuth tokens, API keys and similar credentials for Connected Apps, encrypted at rest.",
+    "locator": "DPA, Attachment 2, Categories of Personal Data (b)"
+   },
+   {
+    "claim": "Los Términos establecen que Composio no usará Payload Data para entrenar modelos de IA.",
+    "artifact_ids": [
+     "SA-de4347bbfe4b841157fd46f2"
+    ],
+    "quote": "Composio will not use Payload Data to develop, train, or improve artificial intelligence or machine learning models.",
+    "locator": "Terms of Service, sección 9"
+   },
+   {
+    "claim": "Los Términos dicen que Composio accederá, usará, almacenará y transferirá datos de usuario de Google solo según sea necesario para prestar y mejorar los servicios.",
+    "artifact_ids": [
+     "SA-de4347bbfe4b841157fd46f2"
+    ],
+    "quote": "Composio will access, use, store, and transfer Google user data only as necessary to provide and improve the services you request.",
+    "locator": "Terms of Service, sección 5"
+   },
+   {
+    "claim": "El repositorio ComposioHQ/composio tiene licencia MIT con copyright de Sampark Inc.",
+    "artifact_ids": [
+     "SA-797a8e93b8b6b39e179a2d1e"
+    ],
+    "quote": "MIT License\n\nCopyright (c) 2025 Sampark Inc.",
+    "locator": "LICENSE, rama next"
+   },
+   {
+    "claim": "La página Enterprise indica que en Cloud Composio almacena las credenciales y puede descifrarlas.",
+    "artifact_ids": [
+     "SA-c30ef204930b820a5c39874a"
+    ],
+    "quote": "The default hosted deployment. Composio stores credentials and can decrypt them to authenticate provider requests.",
+    "locator": "Composio Enterprise, Deployment options"
+   },
+   {
+    "claim": "La página Enterprise ofrece autoalojamiento solo en el nivel Enterprise.",
+    "artifact_ids": [
+     "SA-c30ef204930b820a5c39874a"
+    ],
+    "quote": "Self-hosting is available at the Enterprise tier",
+    "locator": "Composio Enterprise, Security posture"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Precio oficial publicado por Composio (pricing page): no se aportó fuente primaria; solo hay un blog de competidor (secundaria). Tampoco se conoce el precio por llamada o por cuenta conectada en fuente primaria.",
+   "Precio del complemento ZDR: la documentación dice solo 'usage-based price'; el importe no figura.",
+   "Retención de los tokens OAuth: ninguna fuente dice por cuánto tiempo se guardan ni cuándo se borran al desconectar (solo hay una mención secundaria de revoke_on_delete).",
+   "Región/ubicación exacta de almacenamiento de credenciales: las fuentes primarias leídas no la dan (la mención a EE. UU. está solo en blog).",
+   "Cómo se delega exactamente el consentimiento del usuario final (pantalla, flujo Connect Link): solo se dice que el navegador participa en el consentimiento; no hay detalle primario.",
+   "Lista completa de herramientas de lectura de Google Drive y de otras apps de lectura: no se aportó el listado de toolkits.",
+   "Hash sha256 y fecha de captura de los documentos: no visibles en el texto.",
+   "Texto de Privacy Policy y página de seguridad (security overview) no incluidos."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Composio Cloud guarda tokens OAuth del cliente final y, salvo ZDR, payloads hasta un año; no cumple 'ZPMND no almacena datos ni credenciales' sin ZDR y sin un acuerdo adicional.",
+  "INTERPRETACIÓN: Incluso con ZDR persisten metadatos, logs de auditoría, telemetría, archivos 24 h y eventos de triggers; la frontera de datos no es cero almacenamiento.",
+  "INTERPRETACIÓN: Para que ZDR cubra apps con la OAuth gestionada de Composio hace falta Enterprise; en otros planes habría que usar la app OAuth propia (ZDR sí cubre ese caso según la doc).",
+  "INTERPRETACIÓN: Solo la opción de claves gestionadas por el cliente (KMS) o el autoalojamiento Enterprise mueve la custodia de credenciales fuera de Composio; ambos requieren contrato con Composio.",
+  "INTERPRETACIÓN: El SDK es MIT pero el runtime que guarda credenciales no es el repositorio MIT; la licencia MIT no implica autoalojamiento libre.",
+  "SECUNDARIA: Scalekit (competidor, 12 ago 2026) afirma que desde el 15 de agosto el plan de $29/mes incluye 50K llamadas, el sobreuso cuesta $4 por 1.000 llamadas ($3 vía Sessions), el plan $599/mes es el nivel Business, el DPA cuesta $500/mes como complemento y ZDR solo en Enterprise. Esto contradice la doc oficial de ZDR, que lo ofrece en planes de pago; verificar en composio.dev/pricing.",
+  "SECUNDARIA: Nango (competidor, 14 sep 2026) afirma que el runtime de Composio es código cerrado, que los charts Helm descargan imágenes cerradas ligadas a licencia Enterprise y que el autoalojamiento solo existe en Enterprise.",
+  "INTERPRETACIÓN: Los dos blogs son de competidores directos y sus datos de precio deben tratarse como no verificados."
+ ],
+ "candidate_controls": [
+  "Exigir ZDR por proyecto, deshabilitar sandbox, evitar triggers y herramientas de subida/descarga de archivos para datos sensibles.",
+  "Usar IDs de usuario opacos, ya que Composio los almacena.",
+  "Usar OAuth propio con scopes mínimos (drive.file o lectura) y verificación de Google.",
+  "Mantener la API key de Composio solo en backend, con permisos mínimos (Proxy Execute separado)."
+ ],
+ "candidate_tests": [
+  "Tras activar ZDR, ejecutar una lectura de Drive y comprobar en los logs que no hay payload; verificar que los logs previos siguen existiendo.",
+  "Conectar y desconectar una cuenta y verificar si el token queda revocado en Google y borrado en Composio.",
+  "Pedir a Composio por escrito la región, el tiempo de retención de tokens y el precio ZDR."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Composio no es neutro respecto a datos: sería un subprocesador que custodia tokens del cliente. Solo encaja si la frontera de ZPMND admite ese subprocesador con ZDR y DPA, o con KMS del cliente/autoalojamiento (Enterprise)."
+ ],
+ "affected_existing_concepts": [
+  "Frontera de datos de ZPMND",
+  "Custodia de credenciales OAuth",
+  "Subprocesadores"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: El camino más viable para ZPMND es Enterprise con claves gestionadas por el cliente y ZDR; en planes bajos no hay forma de evitar la custodia por Composio."
+ ],
+ "limitations": [
+  "No se aportó la página oficial de precios ni la de seguridad; el precio solo procede de un blog de un competidor (secundaria), con posible sesgo.",
+  "Las fechas de las fuentes son las que aparecen en el texto; no veo hash ni captura.",
+  "El blog de Nango también es competidor; sus afirmaciones sobre código cerrado no se confirman con fuente primaria.",
+  "La doc de Drive no enumera todas las herramientas; no se puede afirmar la cobertura completa de lectura.",
+  "Las páginas web de Composio contienen textos dirigidos a agentes de IA (instrucciones de registro); se trataron como datos y no se siguieron.",
+  "La doc de Token custody indica que los detalles contractuales de VPC/autoalojamiento deben acordarse con Composio; no hay términos literales sobre ello.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita quitó 14 de 34 hallazgos confirmados que decían más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 13 propuestas, 12 aceptadas, 1 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json)."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
