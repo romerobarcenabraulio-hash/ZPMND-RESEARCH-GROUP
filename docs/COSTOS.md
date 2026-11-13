@@ -26,3 +26,9 @@ usuario de los jobs, guardia de ejecución en un archivo de root, y actualizacio
 mezclar ese riesgo con estos recortes.
 
 **Siguiente recorte (PR #20):** la evidencia del auditor corre solo los mutantes de `main` que el PR quitó o cambió.
+
+**Mutantes nuevos en la evidencia (2026-11-12, GPT en #155):** la evidencia corre también los mutantes que el PR
+agrega, hasta 40, en la misma copia y después de la misma suite, y nombra como retirado (sin correrlo) un mutante de
+`main` cuya línea ya no está en el head. Un PR que reemplaza una guarda muestra así que su reemplazo muere, en vez de
+ocho NOT FOUND. A unos 27 s por mutante en un núcleo (shards de CI de #141), un PR típico de 10 mutantes suma unos
+5 minutos; el tope de 40, unos 18.
