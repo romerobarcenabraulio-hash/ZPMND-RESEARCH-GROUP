@@ -2,18 +2,18 @@
 
 País → ámbito → estado → municipio → poder → dependencia → tipo. Conteos de los registros; "(sin dato en la fuente)" marca un nivel que la fuente no publica (nunca se infiere).
 
-- país: MX — 967817
-  - ámbito: federal — 931146
-    - poder: CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO — 334246
-      - dependencia: AVISOS — 334157
-        - tipo: CONVOCATORIA DE ADQUISICIONES — 334157
+- país: MX — 968075
+  - ámbito: federal — 931404
+    - poder: CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO — 334314
+      - dependencia: AVISOS — 334225
+        - tipo: CONVOCATORIA DE ADQUISICIONES — 334225
       - dependencia: (sin dato en la fuente) — 87
         - tipo: CONVOCATORIA DE ADQUISICIONES — 87
       - dependencia: NULLS — 2
         - tipo: CONVOCATORIA DE ADQUISICIONES — 2
-    - poder: AVISOS JUDICIALES Y GENERALES — 260460
-      - dependencia: AVISOS — 237306
-        - tipo: AVISO — 237306
+    - poder: AVISOS JUDICIALES Y GENERALES — 260579
+      - dependencia: AVISOS — 237425
+        - tipo: AVISO — 237425
       - dependencia: AVISOS JUDICIALES Y GENERALES — 23084
         - tipo: OTRO — 22167
         - tipo: AVISO — 871
@@ -27,7 +27,7 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: OTRO — 2
       - dependencia: NULLS — 4
         - tipo: AVISO — 4
-    - poder: PODER EJECUTIVO — 165859
+    - poder: PODER EJECUTIVO — 165882
       - dependencia: SECRETARIA DE LA REFORMA AGRARIA — 23480
         - tipo: AVISO — 11677
         - tipo: DECRETO — 4402
@@ -44,9 +44,9 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: MANUAL — 13
         - tipo: ESTATUTO — 2
         - tipo: PROGRAMA — 2
-      - dependencia: SECRETARIA DE HACIENDA Y CREDITO PUBLICO — 21909
-        - tipo: ACUERDO — 6255
-        - tipo: OTRO — 5154
+      - dependencia: SECRETARIA DE HACIENDA Y CREDITO PUBLICO — 21912
+        - tipo: ACUERDO — 6257
+        - tipo: OTRO — 5155
         - tipo: OFICIO — 2676
         - tipo: RESOLUCION — 2544
         - tipo: CIRCULAR — 1636
@@ -96,12 +96,12 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: RESPUESTA A COMENTARIOS — 2
         - tipo: SENTENCIA — 2
         - tipo: ESTATUTO — 1
-      - dependencia: SECRETARIA DE SALUD — 13906
+      - dependencia: SECRETARIA DE SALUD — 13908
         - tipo: CONVENIO — 8494
         - tipo: OTRO — 2284
-        - tipo: ACUERDO — 1212
+        - tipo: ACUERDO — 1213
         - tipo: PROYECTO DE NORMA OFICIAL MEXICANA — 379
-        - tipo: AVISO — 359
+        - tipo: AVISO — 360
         - tipo: NORMA OFICIAL MEXICANA — 359
         - tipo: RESPUESTA A COMENTARIOS — 267
         - tipo: DECRETO — 256
@@ -118,7 +118,7 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: CODIGO — 4
         - tipo: LEY — 4
         - tipo: EDICTO — 3
-      - dependencia: SECRETARIA DE ECONOMIA — 13435
+      - dependencia: SECRETARIA DE ECONOMIA — 13436
         - tipo: ACUERDO — 2585
         - tipo: DECLARATORIA — 2417
         - tipo: AVISO — 2236
@@ -127,7 +127,7 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: CONVENIO — 869
         - tipo: DECRETO — 484
         - tipo: ACLARACION — 218
-        - tipo: CONVOCATORIA — 212
+        - tipo: CONVOCATORIA — 213
         - tipo: PROYECTO DE NORMA OFICIAL MEXICANA — 190
         - tipo: NORMA OFICIAL MEXICANA — 159
         - tipo: RESPUESTA A COMENTARIOS — 131
@@ -159,8 +159,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAS — 2
         - tipo: CODIGO — 1
         - tipo: CONVOCATORIA — 1
-      - dependencia: SECRETARIA DE DESARROLLO AGRARIO, TERRITORIAL Y URBANO — 8851
-        - tipo: AVISO — 4987
+      - dependencia: SECRETARIA DE DESARROLLO AGRARIO, TERRITORIAL Y URBANO — 8852
+        - tipo: AVISO — 4988
         - tipo: CONVENIO — 1633
         - tipo: ACUERDO — 952
         - tipo: DECRETO — 555
@@ -542,9 +542,9 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: OFICIO — 5
         - tipo: LEY — 2
         - tipo: SENTENCIA — 1
-      - dependencia: SECRETARIA DE MARINA — 693
+      - dependencia: SECRETARIA DE MARINA — 695
         - tipo: AVISO — 211
-        - tipo: ACUERDO — 170
+        - tipo: ACUERDO — 171
         - tipo: DECRETO — 110
         - tipo: OTRO — 80
         - tipo: REGLAMENTO — 38
@@ -552,7 +552,7 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: ACLARACION — 13
         - tipo: PROGRAMA — 9
         - tipo: MANUAL — 8
-        - tipo: RESOLUCION — 7
+        - tipo: RESOLUCION — 8
         - tipo: CONVENIO — 6
         - tipo: NORMA OFICIAL MEXICANA — 6
         - tipo: LEY — 5
@@ -561,6 +561,16 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: CODIGO — 1
         - tipo: OFICIO — 1
         - tipo: RESPUESTA A COMENTARIOS — 1
+      - dependencia: PRESIDENCIA DE LA REPUBLICA — 646
+        - tipo: DECRETO — 491
+        - tipo: PROGRAMA — 52
+        - tipo: ACUERDO — 49
+        - tipo: OTRO — 30
+        - tipo: AVISO — 9
+        - tipo: ACLARACION — 8
+        - tipo: REGLAMENTO — 5
+        - tipo: ESTATUTO — 1
+        - tipo: PRESUPUESTO — 1
       - dependencia: SECRETARIA DE SEGURIDAD PUBLICA — 640
         - tipo: CONVENIO — 429
         - tipo: ACUERDO — 112
@@ -576,16 +586,6 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: NORMA OFICIAL MEXICANA — 1
         - tipo: PROYECTO DE NORMA OFICIAL MEXICANA — 1
         - tipo: RESPUESTA A COMENTARIOS — 1
-      - dependencia: PRESIDENCIA DE LA REPUBLICA — 637
-        - tipo: DECRETO — 482
-        - tipo: PROGRAMA — 52
-        - tipo: ACUERDO — 49
-        - tipo: OTRO — 30
-        - tipo: AVISO — 9
-        - tipo: ACLARACION — 8
-        - tipo: REGLAMENTO — 5
-        - tipo: ESTATUTO — 1
-        - tipo: PRESUPUESTO — 1
       - dependencia: SECRETARIA DE ENERGIA, MINAS E INDUSTRIA PARAESTATAL — 546
         - tipo: OTRO — 302
         - tipo: ACUERDO — 199
@@ -601,8 +601,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: OFICIO — 1
         - tipo: RESOLUCION — 1
         - tipo: RESPUESTA A COMENTARIOS — 1
-      - dependencia: SECRETARIA DE INFRAESTRUCTURA, COMUNICACIONES Y TRANSPORTES — 489
-        - tipo: ACUERDO — 100
+      - dependencia: SECRETARIA DE INFRAESTRUCTURA, COMUNICACIONES Y TRANSPORTES — 490
+        - tipo: ACUERDO — 101
         - tipo: CONVENIO — 93
         - tipo: OTRO — 69
         - tipo: AVISO — 53
@@ -637,8 +637,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: OTRO — 2
         - tipo: DECRETO — 1
         - tipo: REGLAS — 1
-      - dependencia: SECRETARIA ANTICORRUPCION Y BUEN GOBIERNO — 390
-        - tipo: CIRCULAR — 334
+      - dependencia: SECRETARIA ANTICORRUPCION Y BUEN GOBIERNO — 393
+        - tipo: CIRCULAR — 337
         - tipo: ACUERDO — 41
         - tipo: OFICIO — 8
         - tipo: AVISO — 2
@@ -686,15 +686,15 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: ACLARACION — 4
         - tipo: DECLARATORIA — 2
         - tipo: LEY — 2
-      - dependencia: SECRETARIA DE BIENESTAR — 225
+      - dependencia: SECRETARIA DE BIENESTAR — 226
         - tipo: ACUERDO — 139
         - tipo: CONVENIO — 19
         - tipo: DECRETO — 18
         - tipo: OTRO — 14
         - tipo: AVISO — 13
+        - tipo: PROGRAMA — 6
         - tipo: CONVOCATORIA — 5
         - tipo: LINEAMIENTOS — 5
-        - tipo: PROGRAMA — 5
         - tipo: MANUAL — 3
         - tipo: ACLARACION — 1
         - tipo: CODIGO — 1
@@ -843,12 +843,12 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAMENTO — 1
       - dependencia: TRIBUNAL SUPERIOR AGRARIO — 1
         - tipo: SENTENCIA — 1
-    - poder: (sin dato en la fuente) — 85890
+    - poder: (sin dato en la fuente) — 85902
       - dependencia: Tribunales Colegiados de Circuito — 33971
         - tipo: TESIS AISLADA — 30995
         - tipo: JURISPRUDENCIA — 2976
-      - dependencia: Banco de México — 33539
-        - tipo: INDICADOR ECONOMICO — 33539
+      - dependencia: Banco de México — 33551
+        - tipo: INDICADOR ECONOMICO — 33551
       - dependencia: Primera Sala — 6980
         - tipo: TESIS AISLADA — 4130
         - tipo: JURISPRUDENCIA — 2850
@@ -875,11 +875,11 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: ORDENANZA — 1
         - tipo: OTRO — 1
         - tipo: PRESUPUESTO — 1
-    - poder: ORGANISMOS AUTONOMOS — 44927
-      - dependencia: BANCO DE MEXICO — 26710
-        - tipo: INDICADOR ECONOMICO — 22958
-        - tipo: OTRO — 3216
-        - tipo: CIRCULAR — 327
+    - poder: ORGANISMOS AUTONOMOS — 44942
+      - dependencia: BANCO DE MEXICO — 26722
+        - tipo: INDICADOR ECONOMICO — 22967
+        - tipo: OTRO — 3217
+        - tipo: CIRCULAR — 329
         - tipo: CONVOCATORIA — 58
         - tipo: RESOLUCION — 42
         - tipo: ACLARACION — 37
@@ -910,8 +910,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAMENTO — 2
         - tipo: DECLARATORIA — 1
         - tipo: EXTRACTO — 1
-      - dependencia: INSTITUTO NACIONAL ELECTORAL — 3557
-        - tipo: ACUERDO — 1969
+      - dependencia: INSTITUTO NACIONAL ELECTORAL — 3559
+        - tipo: ACUERDO — 1971
         - tipo: OTRO — 917
         - tipo: EXTRACTO — 300
         - tipo: RESOLUCION — 299
@@ -1013,7 +1013,7 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: CONVOCATORIA — 1
         - tipo: DISPOSICIONES — 1
         - tipo: ESTATUTO — 1
-      - dependencia: FISCALIA GENERAL DE LA REPUBLICA — 208
+      - dependencia: FISCALIA GENERAL DE LA REPUBLICA — 209
         - tipo: ACUERDO — 92
         - tipo: OTRO — 34
         - tipo: CIRCULAR — 25
@@ -1022,7 +1022,7 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: EXTRACTO — 11
         - tipo: MANUAL — 6
         - tipo: ACLARACION — 4
-        - tipo: OFICIO — 3
+        - tipo: OFICIO — 4
         - tipo: CONVENIO — 1
         - tipo: ESTATUTO — 1
         - tipo: REGLAS — 1
@@ -1113,14 +1113,14 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: ACUERDO — 1
       - dependencia: JUNTA FEDERAL DE CONCILIACION Y ARBITRAJE — 1
         - tipo: OTRO — 1
-    - poder: CONVOCATORIAS PARA CONCURSOS DE PLAZAS VACANTES DEL SERVICIO PROFESIONAL DE CARRERA EN LA ADMINISTRACION PUBLICA FEDERAL — 19832
-      - dependencia: AVISOS — 19828
-        - tipo: CONVOCATORIA DE PLAZAS — 19828
+    - poder: CONVOCATORIAS PARA CONCURSOS DE PLAZAS VACANTES DEL SERVICIO PROFESIONAL DE CARRERA EN LA ADMINISTRACION PUBLICA FEDERAL — 19846
+      - dependencia: AVISOS — 19842
+        - tipo: CONVOCATORIA DE PLAZAS — 19842
       - dependencia: (sin dato en la fuente) — 3
         - tipo: CONVOCATORIA DE PLAZAS — 3
       - dependencia: NULLS — 1
         - tipo: CONVOCATORIA DE PLAZAS — 1
-    - poder: ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS — 9914
+    - poder: ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS — 9918
       - dependencia: COMISION NACIONAL PARA EL DESARROLLO DE LOS PUEBLOS INDIGENAS — 1641
         - tipo: ACUERDO — 1292
         - tipo: CONVENIO — 188
@@ -1135,8 +1135,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: CIRCULAR — 1
         - tipo: DISPOSICIONES — 1
         - tipo: OFICIO — 1
-      - dependencia: INSTITUTO MEXICANO DEL SEGURO SOCIAL — 1004
-        - tipo: AVISO — 397
+      - dependencia: INSTITUTO MEXICANO DEL SEGURO SOCIAL — 1005
+        - tipo: AVISO — 398
         - tipo: ACUERDO — 360
         - tipo: OTRO — 86
         - tipo: CONVOCATORIA — 53
@@ -1149,8 +1149,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: ESTATUTO — 1
         - tipo: LEY — 1
         - tipo: REGLAS — 1
-      - dependencia: INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO — 682
-        - tipo: ACUERDO — 562
+      - dependencia: INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO — 684
+        - tipo: ACUERDO — 564
         - tipo: OTRO — 41
         - tipo: AVISO — 24
         - tipo: ACLARACION — 14
@@ -1183,8 +1183,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: OTRO — 3
         - tipo: PROGRAMA — 2
         - tipo: REGLAMENTO — 1
-      - dependencia: INSTITUTO MEXICANO DE LA PROPIEDAD INDUSTRIAL — 450
-        - tipo: ACUERDO — 218
+      - dependencia: INSTITUTO MEXICANO DE LA PROPIEDAD INDUSTRIAL — 451
+        - tipo: ACUERDO — 219
         - tipo: OTRO — 122
         - tipo: AVISO — 53
         - tipo: EXTRACTO — 26
@@ -1775,7 +1775,7 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: AVISO — 1
       - dependencia: SERVICIO GEOLOGICO MEXICANO — 1
         - tipo: OTRO — 1
-    - poder: PODER JUDICIAL — 7991
+    - poder: PODER JUDICIAL — 7994
       - dependencia: CONSEJO DE LA JUDICATURA FEDERAL — 4356
         - tipo: ACUERDO — 2681
         - tipo: AVISO — 662
@@ -1792,8 +1792,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAS — 3
         - tipo: DISPOSICIONES — 2
         - tipo: CODIGO — 1
-      - dependencia: SUPREMA CORTE DE JUSTICIA DE LA NACION — 2790
-        - tipo: SENTENCIA — 1667
+      - dependencia: SUPREMA CORTE DE JUSTICIA DE LA NACION — 2792
+        - tipo: SENTENCIA — 1669
         - tipo: ACUERDO — 564
         - tipo: OTRO — 431
         - tipo: AVISO — 48
@@ -1819,8 +1819,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAMENTO — 3
         - tipo: CONVOCATORIA — 2
         - tipo: EXTRACTO — 1
-      - dependencia: ORGANO DE ADMINISTRACION JUDICIAL — 97
-        - tipo: ACUERDO — 68
+      - dependencia: ORGANO DE ADMINISTRACION JUDICIAL — 98
+        - tipo: ACUERDO — 69
         - tipo: OTRO — 20
         - tipo: AVISO — 7
         - tipo: ACLARACION — 1
