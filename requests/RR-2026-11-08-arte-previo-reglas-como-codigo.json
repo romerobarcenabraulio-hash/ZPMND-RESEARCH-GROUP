@@ -1,0 +1,16 @@
+{
+  "request_id": "RR-2026-11-08-arte-previo-reglas-como-codigo",
+  "issued_by": "ZPMND",
+  "issued_at": "2026-11-08T08:00:00Z",
+  "question": "Para representar jerarquía y temporalidad de normas (qué disposición prevalece y desde cuándo rige) como datos verificables, ¿qué ofrecen OpenFisca, Catala, LegalRuleML y la lógica deóntica aplicada: modelo de prelación, manejo de vigencias y transitorios, licencia, madurez, uso en derecho mexicano y costo de adoptarlo frente a escribir un motor propio?",
+  "why_needed": "La regla 16 de REGLAS.md exige este arte previo, con paquete, antes de abrir las funciones de jerarquía y temporalidad del harness. Bloquea la unidad U-133 (jerarquía) del paso 2.",
+  "affected_component": "paso 2: funciones jerarquía y vigencia del harness (U-133, U-132)",
+  "desired_evidence": [
+    "documentación oficial y licencia de cada opción, con fecha y sha256",
+    "ejemplos publicados de prelación o vigencias",
+    "lo no determinable, como desconocido"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Construir un motor de reglas propio peor que lo existente, o adoptar uno que no expresa prelación ni transitorios.",
+  "privacy_class": "PUBLIC"
+}

@@ -1,0 +1,17 @@
+{
+  "request_id": "RR-2026-11-08-composio-capacidades",
+  "issued_by": "ZPMND",
+  "issued_at": "2026-11-08T07:00:00Z",
+  "question": "¿Composio sirve como capa de conexión de ZPMND con las apps del cliente sin que ZPMND almacene datos? Concretamente: qué datos y credenciales (tokens OAuth) guarda Composio y dónde, por cuánto tiempo y con qué registros; si existe opción autoalojada; licencia; precio por llamada o por cuenta; cómo delega el consentimiento del usuario; y qué apps de lectura cubre (Google Drive en particular).",
+  "why_needed": "El dueño (2026-11-08) la propone como capacidad a futuro del producto híbrido (LLM más harness). Entra por el paso 3, una app por lectura, y por el registro de recursos (reusar antes de construir), pero choca con la decisión de no almacenar datos de clientes si Composio retiene datos o tokens.",
+  "affected_component": "registro de capacidades (orden 14) y paso 3: incorporar y adaptar capacidad",
+  "desired_evidence": [
+    "documentación oficial de seguridad y retención, con fecha y sha256",
+    "licencia y términos literales sobre datos del usuario final",
+    "precio publicado",
+    "lo no determinable, como desconocido"
+  ],
+  "priority": "P2",
+  "risk_if_wrong": "Meter un intermediario que guarde datos o credenciales del cliente y rompa la frontera de datos de ZPMND.",
+  "privacy_class": "PUBLIC"
+}

@@ -1,0 +1,17 @@
+{
+  "request_id": "RR-2026-11-08-openclaw-arte-previo",
+  "issued_by": "ZPMND",
+  "issued_at": "2026-11-08T06:00:00Z",
+  "question": "Para OpenClaw (el agente externo candidato del paso 1), ¿cuál es el repositorio oficial, la versión estable más reciente, su licencia, el modelo de aislamiento por gateway (frontera de confianza, tools.elevated) y qué controles documenta OpenShell para archivos, red, procesos y credenciales?",
+  "why_needed": "El paso 3 pone al agente externo en SHADOW bajo el contrato de 14 dimensiones; ORDENES y ESTADO piden fijar repositorio, versión y aislamiento antes de incorporarlo (decisión del dueño 2026-11-08: OpenClaw).",
+  "affected_component": "paso 3: incorporar y adaptar capacidad (agente externo)",
+  "desired_evidence": [
+    "documentación oficial con versión y fecha, con sha256",
+    "licencia literal",
+    "el texto de seguridad del gateway y de OpenShell",
+    "lo no determinable, como desconocido"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Incorporar un agente sin aislamiento demostrado o con una licencia incompatible.",
+  "privacy_class": "PUBLIC"
+}
