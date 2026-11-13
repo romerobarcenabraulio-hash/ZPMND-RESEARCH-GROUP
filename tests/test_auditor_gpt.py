@@ -46,6 +46,7 @@ def make_inputs(root, **over):
         'trusted/diff.patch': 'diff --git a/x.py b/x.py\n+hola = 1\n',
         'evidence/tests.txt': 'Ran 3 tests\nOK\nexit=0\n',
         'evidence/mutation-main.txt': 'skipped: identical\n',
+        'evidence/mutation-new.txt': 'skipped: the PR adds no mutant\n',
     }
     files.update(over)
     for rel, text in files.items():
