@@ -1,0 +1,24 @@
+{
+  "request_id": "RR-2026-11-02-nom035-autoauditoria",
+  "note": "Plan de fuentes para investigar.yml (E1 de la COLA). La NOM-035-STPS-2018 en el DOF, nota 5541828: el texto completo (numerales 5 a 10, guías de referencia y transitorios) y su ficha de publicación, que da la fecha de la edición. Es la misma fuente del paquete RP-2026-10-21-nom035-obligaciones, que se bajó con estado 200; robots.txt de sidof.segob.gob.mx no la excluye (leído el 2026-11-13).",
+  "sources": [
+    {
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+      "title": "NOM-035-STPS-2018, Factores de riesgo psicosocial en el trabajo-Identificación, análisis y prevención (DOF 23/10/2018), texto completo",
+      "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Secretaría del Trabajo y Previsión Social)",
+      "source_type": "primary_official",
+      "license": "LFDA art. 14 fr. VIII (official texts)",
+      "redistribution": "allowed",
+      "role": "primary"
+    },
+    {
+      "url": "https://sidof.segob.gob.mx/notas/5541828",
+      "title": "Nota 5541828 del DOF: NOM-035-STPS-2018, ficha de publicación (fecha de la edición)",
+      "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación",
+      "source_type": "primary_official",
+      "license": "LFDA art. 14 fr. VIII (official texts)",
+      "redistribution": "allowed",
+      "role": "primary"
+    }
+  ]
+}

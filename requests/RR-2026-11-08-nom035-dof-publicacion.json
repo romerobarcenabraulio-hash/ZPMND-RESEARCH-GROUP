@@ -1,0 +1,16 @@
+{
+  "request_id": "RR-2026-11-08-nom035-dof-publicacion",
+  "issued_by": "ZPMND",
+  "issued_at": "2026-11-08T06:00:00Z",
+  "question": "¿En qué fecha se publicó en el DOF la NOM-035-STPS-2018 y en qué fechas entraron en vigor sus disposiciones (Transitorios PRIMERO y SEGUNDO), según el texto publicado en el DOF?",
+  "why_needed": "El caso dorado G12 (vigencia) se abstiene porque el crudo del paquete RP-2026-10-21-nom035-obligaciones no trae la fecha de publicación; con ella la función vigencia puede contestar fechas de calendario.",
+  "affected_component": "función vigencia del harness (paso 2), gold G12",
+  "desired_evidence": [
+    "el texto del DOF con la fecha de publicación, con sha256",
+    "la cita literal de los transitorios con su fecha",
+    "lo no determinable, como desconocido"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Dar por vigente una obligación antes de su fecha o abstenerse cuando la fuente sí decide.",
+  "privacy_class": "PUBLIC"
+}

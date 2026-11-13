@@ -1,0 +1,18 @@
+{
+  "request_id": "RR-2026-11-13-familia-l-ampliacion",
+  "issued_by": "ZPMND",
+  "issued_at": "2026-11-13T01:00:00Z",
+  "question": "Para cada categoría nueva listada en why_needed, con la misma forma de RR-2026-11-08-familia-l-apps-saas: ¿qué apps relevantes en el mundo y en México publican referencia de API u OpenAPI oficial, qué objetos y operaciones exponen, en qué formato exportan los datos del cliente, qué precio publican y con qué fecha, y qué términos de uso de la API declaran? Páginas de venta no cuentan como evidencia.",
+  "why_needed": "Subáreas nuevas de la familia L: L14 plataformas jurídicas y de investigación legal (Mundo y México); L15 documentos, firma electrónica y conservación de mensajes de datos (Mundo y México); L16 diseño y presentaciones (Mundo y México); L17 investigación especializada: bases académicas, técnicas y de datos (Mundo y México); L18 BIM y simulación de ingeniería (Mundo y México). El mapa de cobertura de la arquitectura cooperativa de ZPMND (2026-11-12, build/evidencia/arquitectura-cooperativa-2026-11-12/cobertura.md, hallazgo H2) midió que la regla de usar primero una app no tiene datos para estas categorías: sin ellos, el trabajo jurídico, documental o de diseño iría a un LLM generalista en vez de a la herramienta especializada.",
+  "affected_component": "catálogo de capacidades de apps (U-140) y regla de apps primero del corredor (U-141), familia L",
+  "desired_evidence": [
+    "por app: referencia de API u OpenAPI oficial, URL, versión y sha256 de lo bajado",
+    "términos de uso de la API con cita literal de 300 caracteres o menos",
+    "formato de exportación de los datos del cliente, con la página oficial que lo dice",
+    "precio publicado con su fecha, o 'sin precio publicado'",
+    "por categoría, el campo modo (nativo o a pedido) como en los paquetes de RG desde el 2026-11-10"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "ZPMND enviaría trabajo jurídico, documental o de ingeniería a una herramienta que no existe, que no expone esa operación o cuyos términos lo prohíben; o lo resolvería con un LLM generalista cuando hay una herramienta especializada.",
+  "privacy_class": "PUBLIC"
+}
