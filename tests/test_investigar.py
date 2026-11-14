@@ -7,11 +7,13 @@ is the point, since the gate must hold whatever the model says.
 import contextlib
 import copy
 import hashlib
+import importlib.util
 import io
 import json
 import os
 import shutil
 import subprocess
+import tarfile
 import tempfile
 import unittest
 from pathlib import Path
@@ -1547,14 +1549,191 @@ class Sobre(unittest.TestCase):
             env['RG_ARTIFACT_KEY'] = key
         return subprocess.run(['bash', self.script, *args], env=env, capture_output=True, timeout=120)
 
+    def test_an_envelope_that_holds_a_link_or_a_fifo_opens_nothing(self):  # GPT on #139: anyone can seal one
+        for k, make in enumerate((lambda d: (d / 'enlace').symlink_to('/etc/hostname'), lambda d: os.mkfifo(d / 'fifo'))):
+            make(self.src)
+            env, out = self.tmp / f'sobre{k}', self.tmp / f'abierto{k}'
+            self.assertEqual(self.sobre('seal', str(self.src), str(env), str(self.pub)).returncode, 0)
+            self.assertEqual((self.sobre('open', str(env), str(out), key=self.priv.read_text()).returncode, out.exists()), (3, False))
+            next(p for p in self.src.iterdir() if p.name in ('enlace', 'fifo')).unlink()
+        env, out = self.tmp / 'sobre-enlace', self.tmp / 'abierto-enlace'  # the envelope's own file a link: refused unread
+        self.assertEqual(self.sobre('seal', str(self.src), str(env), str(self.pub)).returncode, 0)
+        (env / 'datos.enc').rename(self.tmp / 'datos-real.enc')
+        (env / 'datos.enc').symlink_to(self.tmp / 'datos-real.enc')
+        r = self.sobre('open', str(env), str(out), key=self.priv.read_text())
+        self.assertEqual((r.returncode, b'not an envelope: datos.enc' in r.stdout, out.exists()), (3, True, False))
+
+    def test_an_envelope_tar_is_checked_before_anything_of_it_is_written(self):  # GPT on #139 1a8b369
+        spec = importlib.util.spec_from_file_location('sobre_partes', ROOT / 'scripts' / 'sobre_partes.py')
+        sp = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sp)
+        def tar(name, members, sparse=False, fmt='gnu'):
+            d = self.tmp / f'{name}-d'
+            d.mkdir()
+            for m in members:
+                (d / m).write_bytes(b'x' * 8)
+            if sparse:  # all hole: GNU tar stores it as a sparse member that reads as 50000 bytes
+                os.truncate(d / 'datos.enc', 0)
+                os.truncate(d / 'datos.enc', 50000)
+            subprocess.run(['tar', f'--format={fmt}'] + ['--sparse'] * sparse + ['-C', str(d), '-cf', str(self.tmp / f'{name}.tar')]
+                           + members, check=True, capture_output=True)
+            return self.tmp / f'{name}.tar'
+        parts = ['datos.enc', 'datos.mac', 'llave.enc']
+        good, fifo = tar('bueno', parts), self.tmp / 'fifo.tar'
+        sp.externo(good, self.tmp / 'ok', 100)
+        self.assertEqual(sorted(p.name for p in (self.tmp / 'ok').iterdir()), parts)
+        with tarfile.open(good) as a, tarfile.open(fifo, 'w') as b:
+            for m in a.getmembers():
+                if m.name == 'datos.enc':
+                    m.type, m.size = tarfile.FIFOTYPE, 0
+                b.addfile(m, None if m.type == tarfile.FIFOTYPE else a.extractfile(m))
+        sparse, pax = tar('hueco', parts, sparse=True), tar('pax', parts, sparse=True, fmt='pax')
+        with tarfile.open(sparse) as a, tarfile.open(pax) as b:  # GNU 'S' and PAX: a REGTYPE with sparse headers (GPT, #141)
+            self.assertEqual((a.getmember('datos.enc').issparse(), b.getmember('datos.enc').issparse(),
+                              b.getmember('datos.enc').type), (True, True, tarfile.REGTYPE))
+        for k, (bad, cap) in enumerate(((fifo, 100), (tar('extra', parts + ['otro']), 100), (good, 7), (sparse, 10**6), (pax, 10**6))):
+            with self.subTest(k), self.assertRaises(ValueError):
+                sp.externo(bad, self.tmp / f'no{k}', cap)
+            self.assertFalse((self.tmp / f'no{k}').exists())  # refused before a byte of it is written
+        for k, (name, kind) in enumerate((('a/../../x', tarfile.REGTYPE), ('/x', tarfile.REGTYPE), ('l', tarfile.SYMTYPE),
+                                          ('h', tarfile.LNKTYPE), ('f', tarfile.FIFOTYPE), ('sha256/aa/x', tarfile.REGTYPE))):
+            with tarfile.open(self.tmp / f'i{k}.tar', 'w') as b:
+                i = tarfile.TarInfo(name)
+                i.type = kind
+                b.addfile(i)
+            if name == 'sha256/aa/x':
+                sp.interno(self.tmp / f'i{k}.tar', 10)  # a plain file under a plain name passes
+                continue
+            with self.subTest(name), self.assertRaises(ValueError):
+                sp.interno(self.tmp / f'i{k}.tar', 10)
+        for k, nombres in enumerate((['datos.enc', 'datos.mac', '../fuera'], ['datos.enc', 'datos.mac', f'{self.tmp}/fuera-abs'],
+                                     ['datos.enc', 'datos.mac', 'otro'])):  # three files, one of them not its name (auditor on bf722cd)
+            with tarfile.open(self.tmp / f'nombres{k}.tar', 'w') as b:
+                for n in nombres:
+                    i = tarfile.TarInfo(n)
+                    i.size = 8
+                    b.addfile(i, io.BytesIO(b'x' * 8))
+            with self.subTest(nombres), self.assertRaises(ValueError):
+                sp.externo(self.tmp / f'nombres{k}.tar', self.tmp / f'nd{k}', 100)
+            self.assertFalse((self.tmp / f'nd{k}').exists() or (self.tmp / 'fuera').exists() or (self.tmp / 'fuera-abs').exists())
+        for bad, cap in ((pax, 10**6), (good, 23)):  # a PAX sparse file inside, and three 8-byte files over 23 bytes in all
+            with self.subTest(cap), self.assertRaises(ValueError):
+                sp.interno(bad, cap)
+        sp.interno(good, 24)
+
+    def test_the_envelope_reader_takes_only_what_rg_writes_and_writes_only_what_it_checked(self):  # GPT on #141
+        spec = importlib.util.spec_from_file_location('sobre_partes', ROOT / 'scripts' / 'sobre_partes.py')
+        sp = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sp)
+
+        def hecho(name, members, fmt=tarfile.GNU_FORMAT, pax=None):
+            path = self.tmp / f'{name}.tar'
+            with tarfile.open(path, 'w', format=fmt, pax_headers=pax or {}) as b:
+                for n, data in members:
+                    i = tarfile.TarInfo(n)
+                    i.size = len(data)
+                    b.addfile(i, io.BytesIO(data))
+            return path
+
+        def a_mano(name, members):  # headers written one by one: tarfile writes a GNU size of -16 as asked
+            path, out = self.tmp / f'{name}.tar', b''
+            for n, kind, size, data in members:
+                i = tarfile.TarInfo(n)
+                i.type, i.size = kind, size
+                out += i.tobuf(tarfile.GNU_FORMAT, 'utf-8', 'surrogateescape') + data + b'\0' * (-len(data) % 512)
+            path.write_bytes(out + b'\0' * 1024)
+            return path
+
+        def rechaza(path, **kw):
+            with self.subTest(path.name), self.assertRaises(sp.Cota):
+                sp.interno(path, 10 ** 6, self.tmp / f'{path.stem}-fuera', **kw)
+            self.assertFalse((self.tmp / f'{path.stem}-fuera').exists())  # refused before a byte is written
+
+        vacios = hecho('vacios', [(f'v{i}', b'') for i in range(4)])  # four empty members: a size sum of 0
+        with mock.patch.object(sp, 'MAX_CABECERAS', 3):  # 08df0d7: empty members cost nothing to a size sum
+            rechaza(vacios)
+            self.assertRaises(sp.Cota, sp.cabeceras, vacios)  # by the header count alone, before plan() (m13 on 23d4e30)
+        with mock.patch.object(sp, 'MAX_CABECERAS', 4):
+            sp.interno(vacios, 10)
+        largo = hecho('largo', [('d/' * 60 + 'x', b'')])  # a GNU long name of 122 bytes
+        with mock.patch.object(sp, 'MAX_NOMBRE', 100):
+            rechaza(largo)
+        sp.interno(largo, 10, self.tmp / 'largo-dentro')
+        self.assertTrue((self.tmp / 'largo-dentro' / ('d/' * 60 + 'x')).is_file())
+        dos = a_mano('dos-largos', [('././@LongLink', tarfile.GNUTYPE_LONGNAME, 4, b'abc\0'),  # ee03595: a chain of them
+                                    ('././@LongLink', tarfile.GNUTYPE_LONGNAME, 4, b'def\0'), ('f', tarfile.REGTYPE, 0, b'')])
+        rechaza(dos)
+        for k, pax in enumerate(({'comment': 'c'}, {'size': '-16'})):  # ee03595: a PAX size applied after any guard
+            rechaza(hecho(f'pax{k}', [('d', b'')], fmt=tarfile.PAX_FORMAT, pax=pax))
+        d = self.tmp / 'ralo'
+        d.mkdir()
+        (d / 'r').write_bytes(b'')
+        os.truncate(d / 'r', 50000)  # all hole
+        for v in ('gnu', '1.0'):  # GNU 'S' and PAX sparse: refused by type
+            t = self.tmp / f'ralo-{v}.tar'
+            fmt = ['--format=gnu'] if v == 'gnu' else ['--format=pax', f'--sparse-version={v}']
+            subprocess.run(['tar', *fmt, '--sparse', '-C', str(d), '-cf', str(t), 'r'], check=True, capture_output=True)
+            rechaza(t)
+        rechaza(a_mano('negativo', [('d', tarfile.DIRTYPE, -16, b''), ('f', tarfile.REGTYPE, 24, b'z' * 24)]))  # 7b0f972
+        for k, kind in enumerate((tarfile.GNUTYPE_LONGNAME, tarfile.XHDTYPE)):  # ac456b3: an extended header of -512
+            rechaza(a_mano(f'ext-neg{k}', [('././@LongLink', kind, -512, b''), ('f', tarfile.REGTYPE, 8, b'z' * 8)]))
+        rechaza(a_mano('carpeta-llena', [('d', tarfile.DIRTYPE, 8, b'q' * 8), ('f', tarfile.REGTYPE, 0, b'')]))
+        with self.assertRaises(ValueError):  # a folder where the envelope has a file
+            sp.externo(a_mano('sobre-carpeta', [('datos.enc', tarfile.DIRTYPE, 0, b''), ('datos.mac', tarfile.REGTYPE, 0, b''),
+                                                ('llave.enc', tarfile.REGTYPE, 0, b'')]), self.tmp / 'sobre-carpeta-fuera', 100)
+        self.assertFalse((self.tmp / 'sobre-carpeta-fuera').exists())
+        roto = hecho('roto', [('a', b'x' * 8), ('b', b'y' * 8)])
+        raw = bytearray(roto.read_bytes())
+        raw[1024 + 148] ^= 0x01  # the second header's checksum: tarfile stopped there, GNU tar read on
+        roto.write_bytes(bytes(raw))
+        rechaza(roto)
+        # the adversarial review before this push: names that passed the check and failed while writing, too deep a name
+        for k, members in enumerate(([('f', b''), ('./f', b'')], [('f', b'x'), ('f/g', b'y')], [('.', b'')],
+                                     [('x' * 300, b'')], [('a/' * 65 + 'x', b'')])):
+            rechaza(hecho(f'plan{k}', members))
+        rechaza(a_mano('archivo-y-carpeta', [('f', tarfile.REGTYPE, 0, b''), ('f', tarfile.DIRTYPE, 0, b'')]))
+        rechaza(a_mano('sin-nombre', [('', tarfile.REGTYPE, 0, b'')]))
+        with mock.patch.object(sp, 'MAX_CABECERAS', 5):  # one header, five parent folders no header lists
+            rechaza(hecho('hondo', [('a/b/c/d/e/f', b'')]))
+        grande = b'g' * (5 * 2 ** 19)  # 2.5 MiB: copied in pieces, every byte
+        sp.interno(hecho('grande', [('g', grande)]), 10 ** 7, self.tmp / 'grande-dentro')
+        self.assertEqual((self.tmp / 'grande-dentro' / 'g').read_bytes(), grande)
+        ext = hecho('ext', [(n, b'x') for n in sp.PARTES])
+        antes = sorted(self.tmp.iterdir())
+        with mock.patch.object(sp, '_copiar', side_effect=[None, OSError('disco')]), self.assertRaises(OSError):
+            sp.interno(vacios, 10, self.tmp / 'a-medias')  # a write that fails: nothing left, dst or beside it
+        self.assertEqual(sorted(self.tmp.iterdir()), antes)
+        with mock.patch.object(sp, '_copiar', side_effect=[None, OSError('disco')]), self.assertRaises(OSError):
+            sp.externo(ext, self.tmp / 'ext-a-medias', 100)  # externo too (the second adversarial review)
+        self.assertEqual(sorted(self.tmp.iterdir()), antes)
+        tope = (((f'f{i}',), 'archivo', 0, 0) if i < 5 else 1 / 0 for i in range(6))  # counted as added: none past the cap
+        with mock.patch.object(sp, 'MAX_CABECERAS', 3), self.assertRaises(sp.Cota):
+            sp.plan(tope)
+        sp.interno(vacios, 10, self.tmp / 'dentro')  # writes exactly what it checked
+        self.assertEqual(sorted(p.name for p in (self.tmp / 'dentro').iterdir()), ['v0', 'v1', 'v2', 'v3'])
+        (self.tmp / 'lleno').mkdir()
+        (self.tmp / 'lleno' / 'x').write_bytes(b'')
+        (self.tmp / 'enlace').symlink_to(self.tmp / 'vacia-real')
+        (self.tmp / 'vacia-real').mkdir()
+        for k, dst in enumerate((self.tmp / 'lleno', self.tmp / 'enlace', f"{self.tmp / 'enlace'}/")):  # with things, a link
+            with self.subTest(str(dst)), self.assertRaises(ValueError):
+                sp.interno(vacios, 10, dst)
+        self.assertEqual(list((self.tmp / 'vacia-real').iterdir()), [])
+        texto = Path(self.script).read_text(encoding='utf-8')
+        self.assertNotIn('-xf "$tmp/datos.tar"', texto)  # sobre.sh no longer runs tar on it
+        self.assertIn('interno "$tmp/datos.tar" "${RG_SOBRE_MAX_INTERNO:-4000000000}" "$3" || exit 3', texto)
+
     def test_what_is_sealed_opens_whole_only_with_the_private_key(self):
         env = self.tmp / 'sobre'
         self.assertEqual(self.sobre('seal', str(self.src), str(env), str(self.pub)).returncode, 0)
         self.assertEqual(sorted(p.name for p in env.iterdir()), ['datos.enc', 'datos.mac', 'llave.enc'])
         self.assertNotIn(b'solo citable', (env / 'datos.enc').read_bytes())  # nothing readable travels
         out = self.tmp / 'abierto'
+        for d in ('.sobre-abierto-x', '.sobre-otro-x'):  # what a reader killed mid-write leaves, and another open's (GPT on 23d4e30)
+            (self.tmp / d).mkdir()
         self.assertEqual(self.sobre('open', str(env), str(out), key=self.priv.read_text()).returncode, 0)
         self.assertEqual((out / 'texto' / 'SA-x.txt').read_bytes(), CLOSED_BODY)
+        self.assertEqual([(self.tmp / d).exists() for d in ('.sobre-abierto-x', '.sobre-otro-x')], [False, True])
 
     def test_without_the_key_or_with_another_nothing_opens(self):
         env = self.tmp / 'sobre'
@@ -1585,13 +1764,15 @@ class Sobre(unittest.TestCase):
         self.sobre('seal', str(self.src), str(env), str(self.pub))
         spy = self.tmp / 'bin'
         spy.mkdir()
-        (spy / 'tar').write_text('#!/bin/bash\nenv > "$SPY_OUT"\nexec /usr/bin/env -u SPY_OUT "$REAL_TAR" "$@"\n', encoding='utf-8')
-        (spy / 'tar').chmod(0o755)
-        out_env = self.tmp / 'tar-env.txt'
+        # the program that unpacks is python3 (sobre_partes.py interno checks and extracts: GPT on #141 08df0d7)
+        (spy / 'python3').write_text('#!/bin/bash\nenv > "$SPY_OUT"\nexec /usr/bin/env -u SPY_OUT "$REAL_PY" "$@"\n',
+                                     encoding='utf-8')
+        (spy / 'python3').chmod(0o755)
+        out_env = self.tmp / 'py-env.txt'
         base = {k: v for k, v in os.environ.items() if k != 'RG_ARTIFACT_KEY'}
         r = subprocess.run(['bash', self.script, 'open', str(env), str(self.tmp / 'abierto')], capture_output=True, timeout=120,
                            env={**base, 'PATH': f'{spy}:{base["PATH"]}', 'SPY_OUT': str(out_env),
-                                'REAL_TAR': shutil.which('tar'), 'RG_ARTIFACT_KEY': self.priv.read_text()})
+                                'REAL_PY': shutil.which('python3'), 'RG_ARTIFACT_KEY': self.priv.read_text()})
         self.assertEqual(r.returncode, 0, r.stderr)
         seen = out_env.read_text(encoding='utf-8')
         self.assertNotIn('RG_ARTIFACT_KEY', seen)
