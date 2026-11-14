@@ -1,0 +1,268 @@
+{
+ "research_id": "RP-2026-11-08-familia-a-derecho-regulacion",
+ "request_id": "RR-2026-11-08-familia-a-derecho-regulacion",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T15:22:23Z",
+ "question": "Para cada subárea listada en why_needed: ¿cuál es su fuente primaria oficial (diario oficial, legislatura, tribunal u organismo emisor), por qué canal se adquiere (API, volcado, XML, SPARQL o web), cuántos documentos declara la fuente a qué fecha, y qué licencia o términos de reutilización publica?",
+ "why_zpmnd_needs_it": "Subáreas: A05 Normas Oficiales Mexicanas: linajes (México · federal); A06 Tratados internacionales (México · federal); A08 Semanario Judicial de la Federación (fuente primaria) (México · federal); A10 Reglamentos municipales (México · municipal); A11 Periódicos oficiales de los 32 estados (México · estatal); A12 Congresos locales (México · estatal); A13 CONAMER: catálogo nacional de regulaciones y trámites (México · federal y estatal); A14 Disposiciones fiscales del SAT (México · federal); A15 Disposiciones financieras (México · federal); A16 Regulación de energía, salud, telecom y ambiente (México · federal); A17 Tribunales federales distintos de la SCJN (México · federal); A18 Poderes judiciales estatales (México · estatal); A19 Estados Unidos: código federal (Internacional · EE. UU.); A20 Estados Unidos: regulación federal (Internacional · EE. UU.); A21 Unión Europea (Internacional · UE); A22 España (Internacional · España); A23 Latinoamérica: Chile, Colombia, Argentina, Perú y Brasil (Internacional · LATAM); A24 Canadá y Reino Unido (Internacional); A25 Tratados multilaterales (Internacional); A26 Normas de organismos internacionales (Internacional); A27 Inventario mundial de diarios oficiales (Mundo · 193 países). Su siguiente paso es sondeo o inventario de fuente. ZPMND necesita normas y su linaje con procedencia oficial. A02 queda fuera: es extracción del crudo ya guardado.",
+ "scope": "Lectura de 7 fuentes entregadas (no se recibió why_needed con la lista de subáreas). Cubre México (Cámara de Diputados, SRE, copia IMCO del DOF), España (BOE aviso legal y FAQ de la API de legislación consolidada), UE (Cellar) y Reino Unido (legislation.gov.uk). Ley Chile no cargó. No se descargó nada: no hay sha256, robots.txt ni límites de tasa.",
+ "sources": {
+  "primary": [
+   "SA-e79a79438275e5b379a03a2b",
+   "SA-a23aa11556c3e0202192213d",
+   "SA-744fcb66dc62e4d438e4b406",
+   "SA-24d3e2f0a4b0a8115bf22725",
+   "SA-4a177436ca4bdf1ee2b31803",
+   "SA-4ff75cdc3dade5550d6eee84",
+   "SA-da02a4fec1de8ed635245057"
+  ],
+  "secondary": [
+   "SA-b66d416fa6e8186ce2e34d79"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-b66d416fa6e8186ce2e34d79",
+   "url": "https://github.com/imco/dof-api",
+   "retrieved_at": "2026-11-11T15:20:20Z",
+   "sha256": "b66d416fa6e8186ce2e34d790dd7d609a9339c7267a551b3db55fd8e82a0d36f",
+   "bytes": 278030,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "IMCO (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "imco/dof-api: API del IMCO para acceder al DOF"
+  },
+  {
+   "artifact_id": "SA-e79a79438275e5b379a03a2b",
+   "url": "https://cja.sre.gob.mx/tratadosmexico/info",
+   "retrieved_at": "2026-11-11T15:20:23Z",
+   "sha256": "e79a79438275e5b379a03a2be7ecf2fb176e744f072aab5eb4e5a73a2e0d636a",
+   "bytes": 96304,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Relaciones Exteriores (Consultoría Jurídica)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Biblioteca Virtual de tratados internacionales"
+  },
+  {
+   "artifact_id": "SA-a23aa11556c3e0202192213d",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/index.htm",
+   "retrieved_at": "2026-11-11T15:20:31Z",
+   "sha256": "a23aa11556c3e0202192213df2dd1a5355d3522406f43b43a35817eb4a587bca",
+   "bytes": 629398,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Cámara de Diputados",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Leyes Federales de México"
+  },
+  {
+   "artifact_id": "SA-744fcb66dc62e4d438e4b406",
+   "url": "https://www.boe.es/informacion/aviso_legal/index.php",
+   "retrieved_at": "2026-11-11T15:20:33Z",
+   "sha256": "744fcb66dc62e4d438e4b406d3e2efd829f74b855f8a685d1f6bf90e31429989",
+   "bytes": 36293,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Agencia Estatal Boletín Oficial del Estado",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "BOE.es - Aviso legal"
+  },
+  {
+   "artifact_id": "SA-24d3e2f0a4b0a8115bf22725",
+   "url": "https://www.boe.es/datosabiertos/faq/consolidada.php",
+   "retrieved_at": "2026-11-11T15:20:35Z",
+   "sha256": "24d3e2f0a4b0a8115bf227251e3f0ec82628d2d8b4edaca18ce5ea72165f5453",
+   "bytes": 22990,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Agencia Estatal BOE",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "BOE Datos abiertos: FAQ Consolidada"
+  },
+  {
+   "artifact_id": "SA-4a177436ca4bdf1ee2b31803",
+   "url": "https://op.europa.eu/en/web/cellar/cellar-data",
+   "retrieved_at": "2026-11-11T15:20:35Z",
+   "sha256": "4a177436ca4bdf1ee2b31803aed20a748fc1c44f23453c9dd7781b4dc006a88e",
+   "bytes": 336900,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Oficina de Publicaciones de la UE",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Cellar data"
+  },
+  {
+   "artifact_id": "SA-4ff75cdc3dade5550d6eee84",
+   "url": "https://www.bcn.cl/leychile/api/condiciones-de-uso",
+   "retrieved_at": "2026-11-11T15:20:38Z",
+   "sha256": "4ff75cdc3dade5550d6eee84a015e513a646a920e50ffce12cdea8cf379e9131",
+   "bytes": 9602,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Biblioteca del Congreso Nacional de Chile",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Ley Chile API: condiciones de uso"
+  },
+  {
+   "artifact_id": "SA-da02a4fec1de8ed635245057",
+   "url": "https://legislation.github.io/data-documentation/reuse-licence.html",
+   "retrieved_at": "2026-11-11T15:20:40Z",
+   "sha256": "da02a4fec1de8ed635245057a3560d07a64803a2cc9c77292e2900101cfa4658",
+   "bytes": 12245,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "The National Archives (legislation.gov.uk)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Licensing and copyright: re-using data"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "BOE: las condiciones de reutilización permiten reutilizar los documentos sometidos a ellas para fines comerciales y no comerciales.",
+    "artifact_ids": [
+     "SA-744fcb66dc62e4d438e4b406"
+    ],
+    "quote": "Las presentes condiciones permiten la reutilización de los documentos sometidos a ellas para fines comerciales y no comerciales",
+    "locator": "Aviso legal, Condiciones de reutilización, Tercera"
+   },
+   {
+    "claim": "BOE: fórmula de cita de la fuente: \"Fuente de los datos: Agencia Estatal Boletín Oficial del Estado\".",
+    "artifact_ids": [
+     "SA-744fcb66dc62e4d438e4b406"
+    ],
+    "quote": "\"Fuente de los datos: Agencia Estatal Boletín Oficial del Estado\"",
+    "locator": "Aviso legal, Cuarta"
+   },
+   {
+    "claim": "BOE: únicamente tienen la consideración de oficiales y auténticos los textos publicados en la edición electrónica de los diarios oficiales.",
+    "artifact_ids": [
+     "SA-744fcb66dc62e4d438e4b406"
+    ],
+    "quote": "Únicamente tienen la consideración de oficiales y auténticos los textos publicados en la edición electrónica de los diarios oficiales",
+    "locator": "Aviso legal, Quinta"
+   },
+   {
+    "claim": "BOE: ofrece API REST para descargar y reutilizar la legislación consolidada.",
+    "artifact_ids": [
+     "SA-24d3e2f0a4b0a8115bf22725"
+    ],
+    "quote": "ha puesto a disposición de los reutilizadores una serie de API REST que permiten la descarga, uso y reutilización de las normas consolidadas.",
+    "locator": "FAQ Consolidada, ¿Cómo se puede reutilizar?"
+   },
+   {
+    "claim": "BOE: los textos consolidados son informativos; para fines jurídicos se consulta la publicación oficial.",
+    "artifact_ids": [
+     "SA-24d3e2f0a4b0a8115bf22725"
+    ],
+    "quote": "Los textos consolidados y el análisis jurídico tienen carácter meramente informativo. Para fines jurídicos debe consultarse la publicación oficial.",
+    "locator": "FAQ Consolidada, ¿Qué es la legislación consolidada?"
+   },
+   {
+    "claim": "Cellar (UE): ofrece acceso por REST, SPARQL y RSS/Atom.",
+    "artifact_ids": [
+     "SA-4a177436ca4bdf1ee2b31803"
+    ],
+    "quote": "Accessible: multiple standardized communications protocol (REST, SPARQL, RSS/Atom).",
+    "locator": "Cellar data, principios FAIR"
+   },
+   {
+    "claim": "legislation.gov.uk: todo el contenido del sitio y de su GitHub está bajo la Open Government Licence v3.0.",
+    "artifact_ids": [
+     "SA-da02a4fec1de8ed635245057"
+    ],
+    "quote": "All content on legislation.gov.uk, and on our Github page, is available under the Open Government Licence v3.0.",
+    "locator": "Licensing and copyright, Open Government Licence"
+   },
+   {
+    "claim": "legislation.gov.uk: los metadatos de EUR-Lex están dedicados al dominio público con CC0 1.0.",
+    "artifact_ids": [
+     "SA-da02a4fec1de8ed635245057"
+    ],
+    "quote": "EUR-Lex metadata is dedicated to the public domain in accordance with the Creative Commons CC0 1.0 Universal Public Domain Dedication deed.",
+    "locator": "EUR-Lex Copyright notice"
+   },
+   {
+    "claim": "Cámara de Diputados: la compilación es solo informativa.",
+    "artifact_ids": [
+     "SA-a23aa11556c3e0202192213d"
+    ],
+    "quote": "es sólo de carácter informativo y con el propósito de facilitar la consulta de sus textos vigentes",
+    "locator": "Leyes Federales de México, nota final"
+   },
+   {
+    "claim": "SRE: la colección contiene solo tratados bilaterales y multilaterales vigentes, de 1836 a la fecha.",
+    "artifact_ids": [
+     "SA-e79a79438275e5b379a03a2b"
+    ],
+    "quote": "Esta colección incorpora, exclusivamente, información relativa a los tratados bilaterales y multilaterales celebrados por México y que actualmente se encuentran vigentes, abarcando el periodo de 1836 a la fecha.",
+    "locator": "Biblioteca Virtual de tratados, párrafo 2"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Ley Chile (BCN): la fuente solo devolvió un mensaje de carga; no se leyó canal, total ni licencia.",
+   "Total de documentos declarado y fecha de corte: ninguna fuente lo declara.",
+   "Licencia o términos de la Cámara de Diputados y de la SRE: no figuran en el texto leído.",
+   "Canal de adquisición (API, volcado) de la Cámara de Diputados y de la SRE: no descrito.",
+   "Licencia de Cellar: la página leída no la declara.",
+   "Límites de tasa, robots.txt, registro y sha256: no estaban en las fuentes y nada se descargó.",
+   "DOF oficial (dof.gob.mx): no hay fuente primaria; solo la copia secundaria del IMCO.",
+   "Subáreas de why_needed: la solicitud no las incluye."
+  ]
+ },
+ "candidate_claims": [
+  "SECUNDARIA: imco/dof-api (GitHub) describe nodos del DOF (WS_getDiarioFecha.php, BB_DetalleEdicion.php) y una licencia MIT sobre su código; es un cliente/copia de tercero, no prueba la licencia ni la procedencia del DOF.",
+  "SECUNDARIA: imco/dof-api advierte que un nodo del DOF devuelve codificación incorrecta y que hay notas en un nodo ausentes en el otro; riesgo de completitud.",
+  "INTERPRETACIÓN: la licencia MIT del repositorio del IMCO cubre su software, no los textos del DOF.",
+  "INTERPRETACIÓN: el BOE consolidado es informativo y no oficial, así que la procedencia oficial se cita desde el BOE publicado."
+ ],
+ "candidate_controls": [
+  "Registrar por subárea: editor, URL, formato, fecha de descarga y sha256 al adquirir, ya que las fuentes no los dan.",
+  "Marcar como no hecha toda subárea cuyo origen sea una copia secundaria (p. ej., IMCO) o con licencia no leída."
+ ],
+ "limitations": [
+  "La fuente de Ley Chile no cargó; no se pudo leer nada de ella.",
+  "Las fuentes son páginas web; no se verificó ninguna descarga ni hash.",
+  "No hay documentación técnica de la API de BOE ni de Cellar, solo páginas descriptivas; los límites de tasa no se conocen.",
+  "No se recibió el campo why_needed, así que la cobertura por subárea es inferida de las fuentes dadas.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 3 de 10 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 13 propuestas, 12 aceptadas, 1 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://catalogomexicanodenormas.economia.gob.mx/ (refused); https://bicentenario.scjn.gob.mx/manual-usuario-descarga (refused); https://sjf2.scjn.gob.mx/ (refused); https://conamer.gob.mx/transparencia/Default.aspx?id=17 (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
