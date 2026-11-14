@@ -21,7 +21,19 @@ corrida y escribe lo que ese país ya reunió (GPT en 698a5b7). Ningún archivo 
 
 **Verificación** (`python -m rg.descubrir verificar`, sin llave). Los dos primeros candidatos de cada capa se piden una
 vez con el `Fetcher` del catálogo: https, solo su host y su gemelo `www`, robots.txt, direcciones públicas, tope de
-tamaño. Se guarda el estado HTTP, los bytes y el sha256 (`accesible` con un 200), nunca el contenido. Que una página
+tamaño. Se guarda el estado HTTP, los bytes y el sha256 (`accesible` con un 200), nunca el contenido. Se piden de uno
+en uno, cada uno en un proceso hijo que el padre mata, con su petición, a los 5 minutos o al plazo de 80 de la
+corrida: el plazo del `Fetcher` solo frena peticiones nuevas, no la que está en curso, la pausa de un Crawl-delay ni
+una resolución DNS, y la corrida 41483944219 pasó sus 90 minutos en KOR sin guardar nada. Una respuesta cuenta solo
+si llega antes de su plazo; el candidato que muere a los 5 minutos queda como error y el que corta el plazo de la
+corrida queda pendiente para la siguiente. Ningún hijo sobrevive a su candidato; contesta con una línea de JSON y el
+cuerpo (6 MB a lo más), nunca con pickle, en un archivo propio que aparece entero o no aparece (se escribe al
+lado y se renombra). El padre lo lee solo después de esperar y solo si el reloj, leído después de la espera, sigue
+antes del plazo: ninguna lectura espera al hijo (GPT en aa24603: una tubería con medio mensaje no tenía tope para
+leer el resto). Un hijo que termina sin respuesta entera queda como `EOFError`, nunca con un cuerpo cortado. La pausa por host se mantiene de un hijo al siguiente, y también el Crawl-delay que leyó un hijo: lo escribe en un
+archivo propio (entero o nada) en cuanto lee cada robots.txt, el padre lo lee tras cada hijo aunque lo haya matado, y lo espera (600 s a lo más) antes de que el siguiente hijo de ese host pida nada, su robots.txt
+incluido; si esa espera pasa el plazo del candidato, el candidato queda como error sin esperar (robots.txt se lee de
+nuevo en cada candidato) y el país se guarda después de cada candidato. Que una página
 conteste no dice qué contiene: un candidato entra al registro (`sources/registro/`) por PR, con su vía y su licencia
 leídas de la fuente, y una celda solo cuenta como cubierta cuando sus fuentes están cargadas y cuadradas con evidencia.
 
