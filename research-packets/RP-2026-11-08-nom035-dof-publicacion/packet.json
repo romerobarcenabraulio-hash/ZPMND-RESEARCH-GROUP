@@ -1,0 +1,107 @@
+{
+ "research_id": "RP-2026-11-08-nom035-dof-publicacion",
+ "request_id": "RR-2026-11-08-nom035-dof-publicacion",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-14T03:29:01Z",
+ "question": "¿En qué fecha se publicó en el DOF la NOM-035-STPS-2018 y en qué fechas entraron en vigor sus disposiciones (Transitorios PRIMERO y SEGUNDO), según el texto publicado en el DOF?",
+ "why_zpmnd_needs_it": "El caso dorado G12 (vigencia) se abstiene porque el crudo del paquete RP-2026-10-21-nom035-obligaciones no trae la fecha de publicación; con ella la función vigencia puede contestar fechas de calendario.",
+ "scope": "Fecha de publicación en el DOF de la NOM-035-STPS-2018 y fechas de entrada en vigor según los Transitorios PRIMERO y SEGUNDO, a partir del texto del DOF y de la ficha de publicación del DOF (nota 5541828).",
+ "sources": {
+  "primary": [
+   "SA-75b62246f311f4451094bb20",
+   "SA-64cee5e7c0c2d7e37fd26e02"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-75b62246f311f4451094bb20",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+   "retrieved_at": "2026-11-14T03:27:58Z",
+   "sha256": "75b62246f311f4451094bb20eb3b7528ed6c317390530cf4ca8eae62e04548cc",
+   "bytes": 1133731,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Secretaría del Trabajo y Previsión Social)",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "NOM-035-STPS-2018, Factores de riesgo psicosocial en el trabajo-Identificación, análisis y prevención (DOF 23/10/2018), texto completo"
+  },
+  {
+   "artifact_id": "SA-64cee5e7c0c2d7e37fd26e02",
+   "url": "https://sidof.segob.gob.mx/notas/5541828",
+   "retrieved_at": "2026-11-14T03:28:02Z",
+   "sha256": "64cee5e7c0c2d7e37fd26e020206acf76e8afee97b4b60c44920ae29ab46b5e5",
+   "bytes": 68181,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Nota 5541828 del DOF: NOM-035-STPS-2018, ficha de publicación (fecha de la edición)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "La cita electrónica del DOF fija la fecha de publicación como 23 de octubre de 2018.",
+    "artifact_ids": [
+     "SA-64cee5e7c0c2d7e37fd26e02"
+    ],
+    "quote": "Estados Unidos Mexicanos; DOF, 23 de octubre 2018",
+    "locator": "Ficha DOF nota 5541828, Cita Electrónica"
+   },
+   {
+    "claim": "El Transitorio PRIMERO dispone que la Norma entra en vigor al año siguiente de su publicación en el DOF.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "PRIMERO. La presente Norma Oficial Mexicana entrará en vigor al año siguiente de su publicación en el Diario Oficial de la Federación.",
+    "locator": "TRANSITORIOS, PRIMERO"
+   },
+   {
+    "claim": "El Transitorio SEGUNDO dispone que los numerales 5.2, 5.3, 5.6, 5.8, 8.3, 8.4, 8.5 y el Capítulo 7 entran en vigor a los dos años siguientes a la publicación en el DOF.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "SEGUNDO. Lo dispuesto por los numerales 5.2, 5.3, 5.6, 5.8, 8.3, 8.4, 8.5, y Capítulo 7, entrará en vigor a los dos años siguientes a su publicación en el Diario Oficial de la Federación.",
+    "locator": "TRANSITORIOS, SEGUNDO"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "El sha256 del texto no es visible para mí; lo registra la máquina.",
+   "Los transitorios no dan fechas calendario, solo plazos; las fechas exactas son una deducción."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Con publicación el 23-10-2018, el Transitorio PRIMERO llevaría la entrada en vigor general al 23-10-2019 (aprox., según el cómputo de 'al año siguiente').",
+  "INTERPRETACIÓN: Con la misma base, el Transitorio SEGUNDO llevaría los numerales 5.2, 5.3, 5.6, 5.8, 8.3, 8.4, 8.5 y Capítulo 7 al 23-10-2020.",
+  "INTERPRETACIÓN: El procedimiento de evaluación (cap. 10) repite los plazos de un año y dos años por numeral, coherente con los transitorios."
+ ],
+ "limitations": [
+  "Las fechas calendario de vigencia son deducidas, no están escritas en el texto; el cómputo exacto del plazo (día de inicio) no se define en las fuentes.",
+  "Solo se leyeron las dos fuentes dadas; no se cotejó con reformas o prórrogas posteriores.",
+  "La ficha del DOF es HTML y advierte que puede no reflejar fielmente el documento; la referencia es la imagen o PDF.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita quitó 2 de 5 hallazgos confirmados que decían más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda en receipt.json, fuera de los hallazgos."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
