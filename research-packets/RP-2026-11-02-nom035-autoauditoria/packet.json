@@ -1,0 +1,155 @@
+{
+ "research_id": "RP-2026-11-02-nom035-autoauditoria",
+ "request_id": "RR-2026-11-02-nom035-autoauditoria",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-14T03:30:00Z",
+ "question": "Para un centro de trabajo en México, ¿cuál es el conjunto completo de obligaciones del patrón bajo la NOM-035-STPS-2018 (numerales 5 a 10 y guías de referencia), a qué tramo de trabajadores aplica cada una, qué documento o registro demuestra su cumplimiento según el propio texto, y qué dicen literalmente los transitorios sobre su entrada en vigor por fases? Cada obligación con su cita literal en tramos de 300 caracteres o menos.",
+ "why_zpmnd_needs_it": "Primera unidad de autoauditoría de ZPPMND: una lista de obligaciones tipadas, con evidencia exigible y vigencia, que una empresa pueda contestar sola. Hoy solo están curados el numeral 2 y parte de 5 a 8 (RR-2026-10-21-nom035-obligaciones). Es el consumidor del primer VerdictEvent.",
+ "scope": "Obligaciones del patrón de la NOM-035-STPS-2018 (numerales 5 a 10, transitorios y guías de referencia) según el texto del DOF del 23-10-2018 y la ficha de publicación del DOF (nota 5541828). Se leyeron solo estas dos fuentes primarias. No se consultaron modificaciones, aclaraciones ni otras fuentes.",
+ "sources": {
+  "primary": [
+   "SA-75b62246f311f4451094bb20",
+   "SA-fced72a1d49d5cf0fa3b4675"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-75b62246f311f4451094bb20",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+   "retrieved_at": "2026-11-14T03:27:55Z",
+   "sha256": "75b62246f311f4451094bb20eb3b7528ed6c317390530cf4ca8eae62e04548cc",
+   "bytes": 1133731,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Secretaría del Trabajo y Previsión Social)",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "NOM-035-STPS-2018, Factores de riesgo psicosocial en el trabajo-Identificación, análisis y prevención (DOF 23/10/2018), texto completo"
+  },
+  {
+   "artifact_id": "SA-fced72a1d49d5cf0fa3b4675",
+   "url": "https://sidof.segob.gob.mx/notas/5541828",
+   "retrieved_at": "2026-11-14T03:27:58Z",
+   "sha256": "fced72a1d49d5cf0fa3b4675a45e8e4cc29d98ed84b47a59d306a504eb45ecf3",
+   "bytes": 67610,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Nota 5541828 del DOF: NOM-035-STPS-2018, ficha de publicación (fecha de la edición)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "Campo de aplicación para centros de trabajo con hasta quince trabajadores: numerales 5.1, 5.4, 5.5, 5.7, 8.1 y 8.2.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Para centros de trabajo en los que laboren hasta quince trabajadores deberán cumplir con lo dispuesto por los numerales 5.1, 5.4, 5.5, 5.7, 8.1 y 8.2 de la presente Norma;",
+    "locator": "Numeral 2, inciso a)"
+   },
+   {
+    "claim": "Obligación 5.5: identificar y canalizar a trabajadores sujetos a acontecimientos traumáticos severos.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Identificar a los trabajadores que fueron sujetos a acontecimientos traumáticos severos durante o con motivo del trabajo y, canalizarlos para su atención",
+    "locator": "Numeral 5.5"
+   },
+   {
+    "claim": "La contratación de una unidad de verificación es opcional.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "El patrón tendrá la opción de contratar una unidad de verificación acreditada y aprobada",
+    "locator": "Numeral 9.1"
+   },
+   {
+    "claim": "La vigencia del dictamen es de dos años mientras no cambien las condiciones.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "La vigencia de los dictámenes emitidos por las unidades de verificación será de dos años, siempre y cuando no sean modificadas las condiciones que sirvieron para su emisión.",
+    "locator": "Numeral 9.4"
+   },
+   {
+    "claim": "La evidencia de difusión de la política puede ser mediante folletos, boletines o carteles.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "La evidencia para dar cumplimiento con la difusión  de la política de prevención  de riesgos psicosociales puede ser a través de folletos, boletines, y/o carteles.",
+    "locator": "Numeral 10.2, fila 5.1"
+   },
+   {
+    "claim": "Usar el método de la Guía II da cumplimiento a 7.1 a), 7.2, 7.4 y 7.5.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "utilizando el método señalado en la Guía de referencia II de la presente Norma, darán cumplimiento a los numerales 7.1 a), 7.2; 7.4 y 7.5.",
+    "locator": "Numeral 10.2, fila 5.2"
+   },
+   {
+    "claim": "Usar el método de la Guía III da cumplimiento a 7.1 b), 7.2, 7.3, 7.4 y 7.5.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "utilizando el método señalado en la Guía de referencia III  de esta Norma, darán cumplimiento a los numerales 7.1 b), 7.2; 7.3; 7.4 y 7.5.",
+    "locator": "Numeral 10.2, fila 5.3"
+   },
+   {
+    "claim": "Transitorio primero: entrada en vigor general al año de su publicación.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "PRIMERO. La presente Norma Oficial Mexicana entrará en vigor al año siguiente de su publicación en el Diario Oficial de la Federación.",
+    "locator": "Transitorios, Primero"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Aclaraciones, modificaciones o fe de erratas posteriores publicadas en el DOF: no se encontraron en estas dos fuentes y no se consultó ninguna otra.",
+   "El sha256 del texto no es visible para mí; la solicitud lo pide.",
+   "El texto no define cómo se cuenta el número de trabajadores (plantilla, por centro de trabajo, subcontratados).",
+   "La norma no fija plazo para la canalización del 5.5 ni para implantar el Programa tras el resultado.",
+   "Las Guías I a V citan en parte numerales de otra numeración (8.1 a) y 8.1 b) en lugar de 7.1); el texto no resuelve esa discrepancia."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Por tramo, con hasta 15 trabajadores aplican 5.1, 5.4, 5.5, 5.7, 8.1 y 8.2 según el numeral 2; con 16 a 50 se suman 5.2, 5.6, 5.8 y 7; con más de 50 aplica 5.3 en lugar de 5.2.",
+  "INTERPRETACIÓN: Los transitorios y las notas de 10.2 dan dos fases. Desde el año siguiente a la publicación (2019) entran 5.1, 5.4, 5.5, 5.7, 8.1 y 8.2. Desde los dos años (2020) entran 5.2, 5.3, 5.6, 5.8, 8.3 a 8.5 y el Capítulo 7. Ese cálculo parte de la fecha de publicación del 23-10-2018.",
+  "INTERPRETACIÓN: El numeral 7.1 a) y la fila 5.2 de 10.2 dicen que en centros de 16 a 50 trabajadores se cubre a todos los trabajadores. El numeral 7.1 b) permite muestra en centros de más de 50.",
+  "INTERPRETACIÓN: La Guía de Referencia II remite al \"numeral 8.1, inciso a)\" y la III al \"8.1, inciso b)\" en su texto. Parece un error de referencia cruzada, porque el contenido corresponde al numeral 7.1.",
+  "INTERPRETACIÓN: El dictamen de la unidad de verificación no es obligatorio (9.1). La evidencia documental que el texto exige se conserva al menos un año (10.4)."
+ ],
+ "limitations": [
+  "Solo se leyeron dos fuentes primarias: el texto del DOF y la ficha de publicación. No se verificaron modificaciones, aclaraciones ni la existencia de otras ediciones.",
+  "Las citas de la tabla 10.2 provienen de una conversión a texto, y las columnas y observaciones pueden estar desordenadas. Algunas notas de vigencia quedan mezcladas entre filas.",
+  "El texto fuente contiene errores de conversión como «¡Error! Marcador no definido». Las fórmulas e imágenes de la Guía III (Ecuación 1) no se reproducen en el texto.",
+  "Solo se citaron algunos incisos representativos de 5.7, 7.2, 7.3, 8.2 y de los contenidos del informe y del dictamen. Cada inciso necesita su propia cita si se quiere exhaustividad.",
+  "La ficha del DOF muestra una cita electrónica con fecha de consulta 13-11-2026, generada por el sitio. No es fecha de publicación.",
+  "Cualquier conclusión sobre cumplimiento legal o aplicabilidad real es candidata y requiere revisión jurídica.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita quitó 34 de 42 hallazgos confirmados y 1 de 1 en conflicto que decían más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda en receipt.json, fuera de los hallazgos."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
