@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "…\nEn esta página hemos reunido todas las modificaciones que los 136 artículos que la componen han tenido desde su publicación en 1917.\n...\nAdemás, podrás visualizar una versión digitalizada o electrónica del *Diario Oficial de la Federación*, tanto del texto original como de las reformas a cada artí",
      "title": "La Constitución Política de los Estados Unidos Mexicanos ...",
-     "url": "https://www.scjn.gob.mx/constitucion-politica-de-los-estados-unidos-mexicanos"
+     "url": "https://www.scjn.gob.mx/constitucion-politica-de-los-estados-unidos-mexicanos",
+     "verificacion": {
+      "bytes": 50586,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:21:37Z",
+      "http": 200,
+      "sha256": "4c2aef518dcc88201acc410ca257c5e555210ad60dad060319fc92dcb0dd49fa"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "**LEYES FEDERALES VIGENTES**\n...\n|--|--|--|\n|001|** CONSTITUCIÓN Política de los Estados Unidos Mexicanos** DOF 05/02/1917** Nueva reforma**|DOF 07/10/2026|\n...\n…",
      "title": "LEYES Federales de México - Camara de Diputados",
-     "url": "https://www.diputados.gob.mx/LeyesBiblio/index1.htm"
+     "url": "https://www.diputados.gob.mx/LeyesBiblio/index1.htm",
+     "verificacion": {
+      "bytes": 596842,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:21:39Z",
+      "http": 200,
+      "sha256": "3d93af8d96ceb9d37a228cbd71ebe622f618a5d6289082f2ac05543bd1a89744"
+     }
     },
     {
      "date": "",
@@ -56,7 +70,14 @@
      "rank": 1,
      "snippet": "y 5o.\nde la Ley del Diario Oficial de\n...\nOrgánica de la Administración Pública Federal; y 3o.\ndel Código Civil\nFederal, el órgano de publicación con carácter oficial de la leyes,\nreglamentos y decretos federales, es el Diario Oficial de la Federación.",
      "title": "Reglamentos De Leyes Vigentes",
-     "url": "https://www.diputados.gob.mx/LeyesBiblio/regla.htm"
+     "url": "https://www.diputados.gob.mx/LeyesBiblio/regla.htm",
+     "verificacion": {
+      "bytes": 424660,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:21:41Z",
+      "http": 200,
+      "sha256": "40c9e8a4cc7c2b0225b5c6733f1bb177950f64bc8432cdaa5109ae84a9207156"
+     }
     },
     {
      "date": "",
@@ -64,7 +85,14 @@
      "rank": 2,
      "snippet": "|**REGLAMENTO** Interno del Registro Federal de las Organizaciones de la Sociedad Civil.|15/07/2005|WORD|\n|**REGLAMENTO** Interno del Sistema Nacional de Certificación de Establecimientos de Atención Médica.|19/05/2009|WORD|",
      "title": "Reglamentos Federales Vigentes",
-     "url": "https://www.diputados.gob.mx/LeyesBiblio/norma/reglamento.htm"
+     "url": "https://www.diputados.gob.mx/LeyesBiblio/norma/reglamento.htm",
+     "verificacion": {
+      "bytes": 630945,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:21:44Z",
+      "http": 200,
+      "sha256": "469a6a2a6860ce395986c8a119a6ef5fbc7fb6f8a89ddae861824eac7925cba1"
+     }
     },
     {
      "date": "",
@@ -98,7 +126,12 @@
      "rank": 1,
      "snippet": "DOF - Diario Oficial de la Federación\n…\n...\nTel. (55) 5093-3200, donde podrá acceder a nuestro menú de servicios\nDirección electrónica: dof.gob.mx",
      "title": "DOF",
-     "url": "https://diariooficial.gob.mx/"
+     "url": "https://diariooficial.gob.mx/",
+     "verificacion": {
+      "error": "robots.txt disallows https://diariooficial.gob.mx/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:21:46Z"
+     }
     },
     {
      "date": "2026-10-28",
@@ -106,7 +139,14 @@
      "rank": 2,
      "snippet": "Que para dar cumplimiento a las disposiciones señaladas con antelación, he tenido a bien expedir el siguiente:\n…",
      "title": "ACUERDO por el que la Secretaría de Energía emite los Lineamientos para la aprobación, actualización y vigilancia de los Organismos de Evaluación de la Conformidad que evalúan la conformidad de las No",
-     "url": "https://dof.gob.mx/nota_detalle.php?codigo=5802362&fecha=28/10/2026"
+     "url": "https://dof.gob.mx/nota_detalle.php?codigo=5802362&fecha=28/10/2026",
+     "verificacion": {
+      "bytes": 568826,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:21:48Z",
+      "http": 200,
+      "sha256": "8075b3cd140c9b67b57f472b841a1d3a89a25b89fd4153b036c5fcd61ad0bcf6"
+     }
     },
     {
      "date": "",
@@ -148,7 +188,12 @@
      "rank": 1,
      "snippet": "Este formulario le permite consultar todos los asuntos de la **Suprema Corte de Justicia de la Nación** a partir de la **Novena Época** agrupándolos por tema, y en su caso leer el texto completo del engrose de los asuntos resueltos en sesión.",
      "title": "Sentencias y Datos de Expedientes",
-     "url": "https://www2.scjn.gob.mx/ConsultaTematica/PaginasPub/DetallePub.aspx?AsuntoID=23274"
+     "url": "https://www2.scjn.gob.mx/ConsultaTematica/PaginasPub/DetallePub.aspx?AsuntoID=23274",
+     "verificacion": {
+      "error": "robots.txt disallows https://www2.scjn.gob.mx/ConsultaTematica/PaginasPub/DetallePub.aspx?AsuntoID=23274",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:21:49Z"
+     }
     },
     {
      "date": "",
@@ -156,7 +201,14 @@
      "rank": 2,
      "snippet": "En esta sección podrás conocer las resoluciones de la Suprema Corte de Justicia de la Nación que tienen un impacto relevante en la vida cotidiana de las personas, así como en las decisiones públicas, a través de búsquedas por distintos criterios: tema, año, instancia, tipo de asunto, expediente.",
      "title": "Resoluciones relevantes de la SCJN - Suprema Corte de ...",
-     "url": "https://www.scjn.gob.mx/transparencia/transparencia-ciudadana/Resoluciones-relevantes-de-la-SCJN"
+     "url": "https://www.scjn.gob.mx/transparencia/transparencia-ciudadana/Resoluciones-relevantes-de-la-SCJN",
+     "verificacion": {
+      "bytes": 62747,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:21:50Z",
+      "http": 200,
+      "sha256": "a093579e5f05d265d7494863438fba375185871d16e0e96ef292f9131d55745c"
+     }
     },
     {
      "date": "",
@@ -198,7 +250,12 @@
      "rank": 1,
      "snippet": "## Leyes Vigentes\nEn este apartado podrás consultar las leyes vigentes aprobadas por el Poder Legislativo, promulgadas y publicadas por el Poder Ejecutivo aplicables en el Estado de México.",
      "title": "Leyes Vigentes | Periódico Oficial Gaceta del Gobierno y LEGISTEL",
-     "url": "https://legislacion.edomex.gob.mx/leyes/vigentes"
+     "url": "https://legislacion.edomex.gob.mx/leyes/vigentes",
+     "verificacion": {
+      "error": "robots.txt disallows https://legislacion.edomex.gob.mx/leyes/vigentes",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:23:23Z"
+     }
     },
     {
      "date": "",
@@ -206,7 +263,14 @@
      "rank": 2,
      "snippet": "de los\n...\n|--|--|--|--|--|\n|06| |Chihuahua|Leyes del Estado Sitio del Congreso|Periódico Oficial|\n...\n|08| |Coahuila|Leyes del Estado Sitio del Congreso|Periódico Oficial Sitio del Gobierno|",
      "title": "Estados",
-     "url": "https://www.diputados.gob.mx/LeyesBiblio/gobiernos.htm"
+     "url": "https://www.diputados.gob.mx/LeyesBiblio/gobiernos.htm",
+     "verificacion": {
+      "bytes": 131658,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:23:24Z",
+      "http": 200,
+      "sha256": "8dae23487cd066293bc1e7bf5aa3488e78559b9d8f710afacc1707a71bfaa7b0"
+     }
     },
     {
      "date": "",
@@ -248,7 +312,14 @@
      "rank": 1,
      "snippet": "|274|REGLAMENTO DEL CONSEJO MUNICIPAL DE FOMENTO A LA CULTURA DEL MUNICIPIO DE OTHÓN P.\nBLANCO|2025-03-19|Más info|\n...\n|281|Manual de Organiz",
      "title": "www.opb.gob.mx › portal › gaceta-municipalOrdenamientos - opb.gob.mx",
-     "url": "https://www.opb.gob.mx/portal/gaceta-municipal/administracion/pages/ordenamientos/"
+     "url": "https://www.opb.gob.mx/portal/gaceta-municipal/administracion/pages/ordenamientos/",
+     "verificacion": {
+      "bytes": 104810,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:23:26Z",
+      "http": 200,
+      "sha256": "066b7d2bed17dde8c847a382756e992a4f77116598f1c988f23e6735d9b49a89"
+     }
     },
     {
      "date": "",
@@ -256,7 +327,14 @@
      "rank": 2,
      "snippet": "Explora la colección completa de regulaciones y políticas que guían la operación del municipio.\nEste compendio incluye reglamentos municipales, procedimientos de emergencia y más, asegurando transparencia y acceso fácil para todos los ciudadanos.\n12 documentos\n...\nVer documento\n#### REGLAMENTO MUNIC",
      "title": "Normatividad | H. Ayuntamiento de Chapultepec",
-     "url": "https://chapultepec.gob.mx/normatividad/"
+     "url": "https://chapultepec.gob.mx/normatividad/",
+     "verificacion": {
+      "bytes": 3800,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:23:27Z",
+      "http": 200,
+      "sha256": "07269cf0e6b3306d855e4dbc4cbc7fe368b536ff3d91a48d02a159f2aa384c32"
+     }
     },
     {
      "date": "",
@@ -298,7 +376,12 @@
      "rank": 1,
      "snippet": "The issuance of the LNETB did not alter the transparency provisions of the National Quality Infrastructure Law, which governs the development of NOMs through which Mexico adopts most mandatory technical and SPS regulations.",
      "title": "Mexico - United States Department of State",
-     "url": "https://www.state.gov/reports/2026-investment-climate-statements/mexico/"
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/mexico/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/mexico/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:23:27Z"
+     }
     },
     {
      "date": "",
@@ -306,7 +389,14 @@
      "rank": 2,
      "snippet": "y 5o.\nde la Ley del Diario Oficial de\n...\nOrgánica de la Administración Pública Federal; y 3o.\ndel Código Civil\nFederal, el órgano de publicación con carácter oficial de la leyes,\nreglamentos y decretos federales, es el Diario Oficial de la Federación.",
      "title": "Reglamentos De Leyes Vigentes",
-     "url": "https://www.diputados.gob.mx/LeyesBiblio/regla.htm"
+     "url": "https://www.diputados.gob.mx/LeyesBiblio/regla.htm",
+     "verificacion": {
+      "bytes": 424660,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:23:29Z",
+      "http": 200,
+      "sha256": "40c9e8a4cc7c2b0225b5c6733f1bb177950f64bc8432cdaa5109ae84a9207156"
+     }
     },
     {
      "date": "2019-12-20",
@@ -348,7 +438,14 @@
      "rank": 1,
      "snippet": "# Catálogo Mexicano de Estándares\nEncuentra el listado de los Estándares vigentes y los datos e información relevantes de cada uno de estos introduciendo en el buscador la clave del mismo, o bien, la palabra o frase relacionada con el bien, producto, servicio o proceso que este regula.",
      "title": "Catálogo Mexicano de Estándares - Estandarización",
-     "url": "https://platiica.economia.gob.mx/estandarizacion/catalogo-mexicano-de-estandares/"
+     "url": "https://platiica.economia.gob.mx/estandarizacion/catalogo-mexicano-de-estandares/",
+     "verificacion": {
+      "bytes": 162080,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:23:31Z",
+      "http": 200,
+      "sha256": "0663de41e5beb8169389a26e3559ca13c378522041099a3cd788fd07d5cc3d84"
+     }
     },
     {
      "date": "",
@@ -356,7 +453,14 @@
      "rank": 2,
      "snippet": "Encuentra el listado de las Normas Oficiales Mexicanas y Normas Mexicanas con los datos e información relevante de cada una de estas, introduciendo en el buscador la clave de la Norma, o bien, la palabra o frase relacionada con el bien, producto, proceso o servicio.",
      "title": "Catálogo Mexicano de Normas – Normalización",
-     "url": "https://platiica.economia.gob.mx/normalizacion/catalogo-mexicano-de-normaswd_asp-id29/"
+     "url": "https://platiica.economia.gob.mx/normalizacion/catalogo-mexicano-de-normaswd_asp-id29/",
+     "verificacion": {
+      "bytes": 158655,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:23:34Z",
+      "http": 200,
+      "sha256": "fa0d1ad8b8c42f73dbabb76fba3ad8a638a7cfada42bafa1d44fb7a0b93f51e0"
+     }
     },
     {
      "date": "",
@@ -398,7 +502,14 @@
      "rank": 1,
      "snippet": "|IFT-004-2016|21/01/2016|Vigente a partir del 20 enero de 2016|\n|IFT-005-2016|21/01/2016|Vigente a partir del 20 enero de 2016|",
      "title": "Normas Oficiales Mexicanas y Disposiciones Técnicas ...",
-     "url": "https://www.ift.org.mx/industria/normas-oficiales-mexicanas-y-disposiciones-tecnicas-correspondientes-la-homologacion"
+     "url": "https://www.ift.org.mx/industria/normas-oficiales-mexicanas-y-disposiciones-tecnicas-correspondientes-la-homologacion",
+     "verificacion": {
+      "bytes": 127734,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:23:45Z",
+      "http": 200,
+      "sha256": "3a1c7970dc8e28d4534571141d5a429552300cdd3d35a7b47db184c8e5c987fc"
+     }
     },
     {
      "date": "",
@@ -406,7 +517,14 @@
      "rank": 2,
      "snippet": "Encuentra Normas Oficiales Mexicanas (NOM) ingresando en el buscador su clave o palabras relacionadas con los bienes, productos, servicios o procesos que esta regula; por ejemplo: “NOM-131-SSAL-2012” o “alimentos para lactantes”.",
      "title": "Normas Oficiales Mexicanas – Normalización",
-     "url": "https://platiica.economia.gob.mx/normalizacion/normas-oficiales-mexicanas/"
+     "url": "https://platiica.economia.gob.mx/normalizacion/normas-oficiales-mexicanas/",
+     "verificacion": {
+      "bytes": 165471,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:23:47Z",
+      "http": 200,
+      "sha256": "41837db31685bf7ded2178980347112b01ba5d7bc68bc54fe7372a985ff62419"
+     }
     },
     {
      "date": "",
@@ -448,7 +566,14 @@
      "rank": 1,
      "snippet": "Instituto Nacional de Estadística y Geografía (INEGI)\n# Instituto Nacional de Estadística y Geografía (INEGI)\n## Consulta de indicadores sociodemográficos y económicos por área geográfica\n...\n**Consulta los indicadores de tu área geográfica** Nacional, entidad federativa, municipio y localidad",
      "title": "Instituto Nacional de Estadística y Geografía (INEGI)",
-     "url": "https://www.inegi.org.mx/"
+     "url": "https://www.inegi.org.mx/",
+     "verificacion": {
+      "bytes": 153815,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:23:49Z",
+      "http": 200,
+      "sha256": "f542285cd5cd6402b3c52f9b1bb29a40b6458c9b8fcd9b010b60794eee26589a"
+     }
     },
     {
      "date": "",
@@ -456,7 +581,14 @@
      "rank": 2,
      "snippet": "# Censos Económicos (CE) 2024\n1. Inicio\n2. Programas de información\n3. Censos Económicos (CE) 2024\n...\nCensos Económicos\n…\n...\nHerramientas de Censos Económicos (CE) 2024",
      "title": "www.inegi.org.mx › programas › ceCensos Económicos (CE) 2024 - INEGI",
-     "url": "https://www.inegi.org.mx/programas/ce/2024/default.html"
+     "url": "https://www.inegi.org.mx/programas/ce/2024/default.html",
+     "verificacion": {
+      "bytes": 5333,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:23:51Z",
+      "http": 200,
+      "sha256": "576c538e4519ed6b06c17b5fce207d2152b51ec9bf19e0a72b8733bbb3a40831"
+     }
     },
     {
      "date": "",
@@ -498,7 +630,12 @@
      "rank": 1,
      "snippet": "Agregados monetarios y actividad financiera, crédito, Banco de México\n# Agregados monetarios y actividad financiera\n...\n# Agregados monetarios y actividad financiera\nSe publica el último día hábil bancario de cada mes a las 9:00 horas.",
      "title": "Agregados monetarios y actividad financiera",
-     "url": "https://www.banxico.org.mx/publicaciones-y-prensa/agregados-monetarios-y-actividad-financiera/agregados-monetarios-activida.html"
+     "url": "https://www.banxico.org.mx/publicaciones-y-prensa/agregados-monetarios-y-actividad-financiera/agregados-monetarios-activida.html",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.banxico.org.mx/publicaciones-y-prensa/agregados-monetarios-y-actividad-financiera/agregados-monetarios-activida.html",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:23:51Z"
+     }
     },
     {
      "date": "",
@@ -506,7 +643,12 @@
      "rank": 2,
      "snippet": "# Economic Information System (SIE)\nsie@banxico.org.mx\n...\n2. Banco de México\n...\nInformation on Banco de Mexico´s International Assets - (CF169)\nPeriod: Jan 1996 - Sep 2026,\nMonthly,\nMillions of U.S. Dollar,\n...\nMonthly",
      "title": "Economic Information System (SIE)",
-     "url": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=4&idCuadro=CF169&accion=consultarCuadro&locale=en"
+     "url": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=4&idCuadro=CF169&accion=consultarCuadro&locale=en",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=4&idCuadro=CF169&accion=consultarCuadro&locale=en",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:23:53Z"
+     }
     },
     {
      "date": "",
@@ -548,7 +690,14 @@
      "rank": 1,
      "snippet": "DataMéxico | Data México\nEXPLORA, VISUALIZA, COMPARA, Y DESCARGA DATOS MEXICANOS\n...\nDataMéxico permite la integración, visualización y análisis de datos públicos para fomentar la innovación, inclusión y diversificación de la economía mexicana.",
      "title": "DataMéxico | Data México - Secretaría de Economía | Gobierno",
-     "url": "https://www.economia.gob.mx/datamexico/"
+     "url": "https://www.economia.gob.mx/datamexico/",
+     "verificacion": {
+      "bytes": 69613,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:23:54Z",
+      "http": 200,
+      "sha256": "827cfce886d8c4611f2f5923ae9d0dfd7eaaa4e426fbbbf1b6135ce3f7659b03"
+     }
     },
     {
      "date": "",
@@ -556,7 +705,12 @@
      "rank": 2,
      "snippet": "Plataforma Nacional de Datos Abiertos - datos.gob.mx\nPlataforma Nacional de Datos Abiertos\n2448",
      "title": "Plataforma Nacional de Datos Abiertos",
-     "url": "https://www.datos.gob.mx/"
+     "url": "https://www.datos.gob.mx/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.datos.gob.mx/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:23:54Z"
+     }
     },
     {
      "date": "",

@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "# Journal officiel du Grand-Duché de Luxembourg\n...\nL-2338 LUXEMBOURG\n- E-mailinfo@legilux.public.lu\nEnregistrer et organiser vos actes préférés, enregistrer vos recherches, soyez alerté en cas de modification sur un document qui vous intéresse.",
      "title": "Journal officiel du Grand-Duché de Luxembourg - Legilux",
-     "url": "https://legilux.public.lu/"
+     "url": "https://legilux.public.lu/",
+     "verificacion": {
+      "bytes": 2495,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:04Z",
+      "http": 200,
+      "sha256": "ebbe630e63357ee7141fd329209af641ea297f5bb26da9e62f092c1695cd9a67"
+     }
     },
     {
      "date": "2024-08-02",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "The Constitution is the supreme legal rule of the state.\n...\nA law is a legal provision which is adopted by the legislative power and is imposed on all citizens after enactment by the Grand Duke and publication in the Official Journal of the Grand Duchy of Luxembourg.\n...\nA law may only be modified ",
      "title": "Political system - The Luxembourg Government - Gouvernement.lu",
-     "url": "https://gouvernement.lu/en/systeme-politique.html"
+     "url": "https://gouvernement.lu/en/systeme-politique.html",
+     "verificacion": {
+      "bytes": 100068,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:07Z",
+      "http": 200,
+      "sha256": "246d832112c3dda7b2d5f08a9927726d6bec3d912359e801fd988593458ab157"
+     }
     },
     {
      "date": "2025-02-05",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "Journal officiel du Grand-Duché de Luxembourg - Legilux\n…\n...\n**Découvrez dès maintenant la jurisprudence administrative sur Legilux !** Cette mise à disposition constitue une première étape.\n...\n- Service central de législation\n5, rue Plaetis\nL-2338 LUXEMBOURG",
      "title": "Legilux",
-     "url": "https://legilux.public.lu/index.html"
+     "url": "https://legilux.public.lu/index.html",
+     "verificacion": {
+      "bytes": 2500,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:08Z",
+      "http": 200,
+      "sha256": "5dabd8b73ad6c8d7df7fdffdead3f76f7c84db2aa0682c126431381b18ed3eae"
+     }
     },
     {
      "date": "",
@@ -72,7 +93,14 @@
      "rank": 2,
      "snippet": "# Regulations of the Banque centrale du Luxembourg\n...\nRegulations of the Banque centrale du Luxembourg are published in the Official Gazette and on this website.\nConsolidated versions of certain BCL regulations are only available on this webpage.\n...\n|Year 2021|\n|--|",
      "title": "Regulations of the Banque centrale du Luxembourg",
-     "url": "https://www.bcl.lu/en/Legal-Framework/documents_national/regulations/index.html"
+     "url": "https://www.bcl.lu/en/Legal-Framework/documents_national/regulations/index.html",
+     "verificacion": {
+      "bytes": 131018,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:10Z",
+      "http": 200,
+      "sha256": "e9ce50c59f078eb5cc62c256141a373bdcfa7b33adedc32199f6375cdcfba839"
+     }
     },
     {
      "date": "2025-10-15",
@@ -114,7 +142,14 @@
      "rank": 1,
      "snippet": "Journal officiel du Grand-Duché de Luxembourg - Legilux\n# Journal officiel du Grand-Duché de Luxembourg\nJournal officiel du Grand-Duché de Luxembourg\n...\n- Service central de législation\n...\nL-2338 LUXEMBOURG\n- E-mailinfo@legilux.public.lu",
      "title": "Legilux",
-     "url": "https://legilux.public.lu/index.html"
+     "url": "https://legilux.public.lu/index.html",
+     "verificacion": {
+      "bytes": 2501,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:12Z",
+      "http": 200,
+      "sha256": "3391a32fa1997b8624039f9042ea1115fbe9469051ebb18a63dad89f6af8eb7a"
+     }
     },
     {
      "date": "",
@@ -122,7 +157,12 @@
      "rank": 2,
      "snippet": "MEMORIAL\nJournal Officiel\ndu Grand-Duché de\nLuxembourg\nMEMORIAL\nAmtsblatt\ndes Großherzogtums\nLuxemburg\n...\nC — N° 3438\n23 décembre 2015\n…\n...\n“Company”).",
      "title": "[PDF] C-N° 3438 / 23 décembre 2015",
-     "url": "https://memorialc.public.lu/memorial/2015/C/Pdf/c343823C.pdf"
+     "url": "https://memorialc.public.lu/memorial/2015/C/Pdf/c343823C.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://memorialc.public.lu/memorial/2015/C/Pdf/c343823C.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:08:13Z"
+     }
     },
     {
      "date": "",
@@ -164,7 +204,14 @@
      "rank": 1,
      "snippet": "La présente page permet de consulter des décisions de justice rendues par :\n- la Cour constitutionnelle\n- la Cour de cassation\n- les juridictions judiciaires\n- les juridictions administratives\n- le Conseil supérieur de la sécurité sociale\n...\n…\n## Décisions intégrales des juridictions judiciaires",
      "title": "Jurisprudence - La Justice - Luxembourg",
-     "url": "https://justice.public.lu/fr/jurisprudence.html"
+     "url": "https://justice.public.lu/fr/jurisprudence.html",
+     "verificacion": {
+      "bytes": 73534,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:15Z",
+      "http": 200,
+      "sha256": "82e1d05e68564cae96eb42630107e0a16f1f34eefec10a28feb5c9e843778604"
+     }
     },
     {
      "date": "2026-10-29",
@@ -172,7 +219,14 @@
      "rank": 2,
      "snippet": "Décisions intégrales des juridictions judiciaires -\nLa Justice - Luxembourg\n# Décisions intégrales des juridictions judiciaires\nJuridiction\n...\n- CSJ (17324)\n- CSJ Chambre du Conseil (271)\n...\n51988 résultat(s) trouvé(s)",
      "title": "Décisions intégrales des juridictions judiciaires - La ...",
-     "url": "https://justice.public.lu/content/justice/fr/jurisprudence/juridictions-judiciaires.html"
+     "url": "https://justice.public.lu/content/justice/fr/jurisprudence/juridictions-judiciaires.html",
+     "verificacion": {
+      "bytes": 127278,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:18Z",
+      "http": 200,
+      "sha256": "f602783a84bb907564406c914bdfaaa3d3c36e2a5fcca26b0b9fabf50195c023"
+     }
     },
     {
      "date": "2023-12-05",
@@ -214,7 +268,14 @@
      "rank": 1,
      "snippet": "Journal officiel du Grand-Duché de Luxembourg - Legilux\n…\n...\n- Service central de législation\n5, rue Plaetis\nL-2338 LUXEMBOURG\n- E-mailinfo@legilux.public.lu",
      "title": "Legilux",
-     "url": "https://legilux.public.lu/index.html"
+     "url": "https://legilux.public.lu/index.html",
+     "verificacion": {
+      "bytes": 2501,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:19Z",
+      "http": 200,
+      "sha256": "660b77f8ed2573d52dd8fac9be5e00685f7bab4770ad3359ab3464f3b2a88b04"
+     }
     },
     {
      "date": "",
@@ -222,7 +283,14 @@
      "rank": 2,
      "snippet": "Afin d’accéder rapidement aux Codes et Recueils luxembourgeois, il vous suffit de taper le nom du code dans la barre de recherche et de\n...\n5, rue Plaetis\nL-2338 LUXEMBOURG\n- E-mailinfo@legilux.public.lu\n…",
      "title": "Communiqués",
-     "url": "https://legilux.public.lu/communications"
+     "url": "https://legilux.public.lu/communications",
+     "verificacion": {
+      "bytes": 2502,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:22Z",
+      "http": 200,
+      "sha256": "ba1c0523d706a280d2b45aaa1e18a37fa32d1331540706d3072256290129dc1b"
+     }
     },
     {
      "date": "",
@@ -264,7 +332,14 @@
      "rank": 1,
      "snippet": "Règlements communaux votés par le conseil communal | Ville de Luxembourg\nHôtel de Ville\n...\nTél. +352 4796-1\n...\n- ### Réglementations\nRéglements sur les bâtisses, conditions spéciales du secteur protégé et des ensembles sensibles et réglementations connexes.",
      "title": "Règlements communaux votés par le conseil communal",
-     "url": "https://www.vdl.lu/fr/la-ville/vie-politique/conseil-communal/reglements-communaux/reglements-communaux-votes-par-le-conseil-communal"
+     "url": "https://www.vdl.lu/fr/la-ville/vie-politique/conseil-communal/reglements-communaux/reglements-communaux-votes-par-le-conseil-communal",
+     "verificacion": {
+      "bytes": 238958,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:25Z",
+      "http": 200,
+      "sha256": "f2a8cc7680fa409747fd8f0c7985c6d423eb1b6accdb59d3d2c04a9bef114a01"
+     }
     },
     {
      "date": "2026-10-29",
@@ -272,7 +347,14 @@
      "rank": 2,
      "snippet": "Hôtel de Ville\nL-2090 Luxembourg\nTel. +352 4796-1\n...\n- Sitzungen des Gemeinderats\n- Règlements communaux\n- Vertretung der Stadt bei Verbänden und öffentlichen Einrichtungen\n- - Kommunale Bestimmungen\n- Sanctions administratives communales",
      "title": "Kommunale Bestimmungen | Ville de Luxembourg - VDL",
-     "url": "https://www.vdl.lu/de/die-stadt/politisches-leben/gemeinderat/kommunale-bestimmungen"
+     "url": "https://www.vdl.lu/de/die-stadt/politisches-leben/gemeinderat/kommunale-bestimmungen",
+     "verificacion": {
+      "bytes": 235996,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:30Z",
+      "http": 200,
+      "sha256": "1df5f34284a8cfb28621ccc811c608d818b28805e4668bf731e3c4d97d0be145"
+     }
     },
     {
      "date": "2026-11-01",
@@ -314,7 +396,14 @@
      "rank": 1,
      "snippet": "# Regulatory framework\nThis section includes the regulatory framework reflecting the main international, European and national rules adopted and/or implemented by the CSSF as part of its missions and powers.\nThese rules are presented in a descending order of authority.\n...\n## 1502 Result(s)\n### Circ",
      "title": "Regulatory framework",
-     "url": "https://www.cssf.lu/en/Regulatory-framework/"
+     "url": "https://www.cssf.lu/en/Regulatory-framework/",
+     "verificacion": {
+      "bytes": 291399,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:32Z",
+      "http": 200,
+      "sha256": "f13bf3e6f64a871837ab2bd903f21208b7eaffdf07591e86c925dfbf7eeee9cb"
+     }
     },
     {
      "date": "",
@@ -322,7 +411,14 @@
      "rank": 2,
      "snippet": "# Journal officiel du Grand-Duché de Luxembourg\n## Les dernières publications des Actes du Mémorial A\n...\n## Notifications\n- Service central de législation\n5, rue Plaetis\nL-2338 LUXEMBOURG\n- E-mailinfo@legilux.public.lu",
      "title": "Journal officiel du Grand-Duché de Luxembourg - Legilux",
-     "url": "https://legilux.public.lu/"
+     "url": "https://legilux.public.lu/",
+     "verificacion": {
+      "bytes": 2494,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:33Z",
+      "http": 200,
+      "sha256": "8250163b4ca5abca8985648cf96a81b6150c2ea2ed1e4f0389bb881664931372"
+     }
     },
     {
      "date": "2026-07-29",
@@ -364,7 +460,14 @@
      "rank": 1,
      "snippet": "ILNAS offers you the possibility to search and purchase National, European and International Standards, prepared and adopted by the Standardization Organizations such as ILNAS, DIN, CEN, CENELEC, ETSI, ISO and IEC.\n...\nA read-only access to standards is offered",
      "title": "Comment on a Draft Standard in Public Enquiry",
-     "url": "https://ilnas.services-publics.lu/ecnor/simpleSearch.action?published=false&enquiry=true"
+     "url": "https://ilnas.services-publics.lu/ecnor/simpleSearch.action?published=false&enquiry=true",
+     "verificacion": {
+      "bytes": 57803,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:46Z",
+      "http": 200,
+      "sha256": "fe71762aa461b69a5147c1eea634cb309b47b38836dae82eb23c7aef21e689f9"
+     }
     },
     {
      "date": "2025-07-17",
@@ -372,7 +475,14 @@
      "rank": 2,
      "snippet": "### Purchasing standards\nTo support education, innovation and research, ILNAS offers discounts on its standards catalogue (except for DIN standards) to the national stakeholders concerned:\n- 80% discount for public educational institutions;\n- 50% discount for public research institutions;\n- 50% disc",
      "title": "Searching for applicable standards and technical specifications, and ...",
-     "url": "https://guichet.public.lu/en/entreprises/import-export/intra-ue/produits-eee/certifier-produit.html"
+     "url": "https://guichet.public.lu/en/entreprises/import-export/intra-ue/produits-eee/certifier-produit.html",
+     "verificacion": {
+      "bytes": 221754,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:49Z",
+      "http": 200,
+      "sha256": "fcdc7b54144cd2654785e4048923cc0b15bc0e0adc1e2a96ce6f9ad899b8d827"
+     }
     },
     {
      "date": "",
@@ -414,7 +524,14 @@
      "rank": 1,
      "snippet": "- Ascenseurs - 2014/33/UE (Pdf - 392 Ko)\n- Appareils et systèmes de protection destinés à être utilisés en atmosphères explosibles (ATEX) - 2014/34/UE (Pdf - 606 Ko)\n...\n…\n...\n## P",
      "title": "Par directives / règlements",
-     "url": "https://portail-qualite.public.lu/fr/surveillance-du-marche/fiches-informations-produits/directives-reglements.html"
+     "url": "https://portail-qualite.public.lu/fr/surveillance-du-marche/fiches-informations-produits/directives-reglements.html",
+     "verificacion": {
+      "bytes": 53322,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:54Z",
+      "http": 200,
+      "sha256": "80c1f13a76e3ba08202fdc8835635eef97d6abf491a5331a7c4e30471d0e45fe"
+     }
     },
     {
      "date": "2026-03-02",
@@ -422,7 +539,14 @@
      "rank": 2,
      "snippet": "# Législation nationale\n## Règlements grand-ducaux\n...\n- Règlement grand-ducal du 30 juillet 2013 relatif à la limitation de l'utilisation de certaines substances dangereuses dans les équipements électriques et électroniques (**RoHS**)",
      "title": "Législation nationale - Législation ILNAS - Portail Qualité ...",
-     "url": "https://portail-qualite.public.lu/fr/legislation/securite-sante/legislation-nationale.html"
+     "url": "https://portail-qualite.public.lu/fr/legislation/securite-sante/legislation-nationale.html",
+     "verificacion": {
+      "bytes": 47506,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:57Z",
+      "http": 200,
+      "sha256": "b654fb2a3f992d3c3454b6dc7b304e2ab8ca618cd08244fe58e80466f0a36bcf"
+     }
     },
     {
      "date": "2024-06-25",
@@ -464,7 +588,14 @@
      "rank": 1,
      "snippet": "Statistiques - Luxembourg\n# Nous comptons car vous comptez !",
      "title": "Statistiques - Luxembourg",
-     "url": "https://statistiques.public.lu/"
+     "url": "https://statistiques.public.lu/",
+     "verificacion": {
+      "bytes": 122457,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:08:59Z",
+      "http": 200,
+      "sha256": "72c8a758f8d3751b7d257dab75a71c9bb1ca88ed7590df2131155c1b9cc6c779"
+     }
     },
     {
      "date": "2026-10-27",
@@ -472,7 +603,14 @@
      "rank": 2,
      "snippet": "Understanding our data - Statistics Portal - Luxembourg\n# Understanding our data\n## Understanding our data\nSTATEC's mission is to provide high-quality statistical information.\n...\nThe data is made accessible to the public via a single platform: the statistics portal.",
      "title": "Understanding our data - Statistics Portal - Luxembourg",
-     "url": "https://statistiques.public.lu/en/donnees/nos-donnees.html"
+     "url": "https://statistiques.public.lu/en/donnees/nos-donnees.html",
+     "verificacion": {
+      "bytes": 77576,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:09:02Z",
+      "http": 200,
+      "sha256": "0694492422fd910cb1b35958379b9ecfd76c42e99f2a8d70d55a4ae93f721239"
+     }
     },
     {
      "date": "2026-10-28",
@@ -514,7 +652,14 @@
      "rank": 1,
      "snippet": "Banque centrale du Luxembourg - Statistics\n# Statistics\nCe contenu est également disponible en français\nThe published statistics on pages «Statistics» are either directly compiled by the BCL, or by other national and international institutions.\nDetailed methodological notes are available for the sta",
      "title": "Statistics",
-     "url": "https://www.bcl.lu/en/statistics/"
+     "url": "https://www.bcl.lu/en/statistics/",
+     "verificacion": {
+      "bytes": 100678,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:09:04Z",
+      "http": 200,
+      "sha256": "e37ad6070e11fdb4b558109c34e156812a666479995d972c07a68591f2bb1667"
+     }
     },
     {
      "date": "",
@@ -522,7 +667,14 @@
      "rank": 2,
      "snippet": "Banque centrale du Luxembourg - Statistics\n# Statistics\n...\nThe BCL collects statistics, either from competent national administrations or directly from economic agents.\nThe BCL also collects information on the evolution of markets from the financial centre’s counterparties and cooperates closely wi",
      "title": "Statistics - Banque centrale du Luxembourg",
-     "url": "https://www.bcl.lu/en/About/missions_bcl/statistiques/index.html"
+     "url": "https://www.bcl.lu/en/About/missions_bcl/statistiques/index.html",
+     "verificacion": {
+      "bytes": 102998,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:09:07Z",
+      "http": 200,
+      "sha256": "48b74abd2f5a24c31b75cbeff9d0388ec82949e86fb454eb25ee9c79a4b13ead"
+     }
     },
     {
      "date": "",
@@ -564,7 +716,14 @@
      "rank": 1,
      "snippet": "# The luxembourgish open data platform\nThis is a degraded experience of Portail Open Data.\nPlease enable JavaScript and use an up to date browser.\n...\n### data.public .lu is\n3,210 Datasets\n35,569 Files\n241 Reuses\n...\ninfo@data.public.lu",
      "title": "Home - Portail Open Data",
-     "url": "https://data.public.lu/en/"
+     "url": "https://data.public.lu/en/",
+     "verificacion": {
+      "bytes": 177223,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:09:09Z",
+      "http": 200,
+      "sha256": "4b795d43fd36376509269022a71151f2b137ab7dc3ac876e151950a604bf2aad"
+     }
     },
     {
      "date": "",
@@ -572,7 +731,14 @@
      "rank": 2,
      "snippet": "Gouvernement et secteur public - Portail Open Data\n# La plateforme de données ouvertes luxembourgeoise\n...\n2. Gouvernement et secteur public\n# Gouvernement et secteur public\nLes jeux de données et réutilisations en relation avec le gouvernement ou secteur public.\n...\nPar\nAdministration des transport",
      "title": "Gouvernement et secteur public - Portail Open Data",
-     "url": "https://data.public.lu/fr/pages/topics/gouvernement-et-secteur-public/"
+     "url": "https://data.public.lu/fr/pages/topics/gouvernement-et-secteur-public/",
+     "verificacion": {
+      "bytes": 184805,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:09:12Z",
+      "http": 200,
+      "sha256": "c99156939530b89373a080714c61c5c7bc82d629e9706773e585461a68fd7fd9"
+     }
     },
     {
      "date": "",

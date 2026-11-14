@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "Constitution_1959.pdf (61.84 Ko)\n...\nConstitution du 20 juillet 1991.pdf (76.39 Ko)\n- Document\nLoi constitutionnelle N° 014-2006 du 12 juillet 2006_FR.pdf (176.34 Ko)\n- Document",
      "title": "Textes fondateurs | Présidence",
-     "url": "https://www.presidence.mr/index.php/fr/node/503"
+     "url": "https://www.presidence.mr/index.php/fr/node/503",
+     "verificacion": {
+      "bytes": 68035,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:06:33Z",
+      "http": 200,
+      "sha256": "13b1ac07f5b8162dd520e4a8362a5d66c6fc6d96f676b6d8dd8e726602400500"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "قوانين | Primature\n# قوانين\nfichiers\nدستور الجمهورية الإسلامية الموريتانية\nقانون دستوري يتعلق بمراجعة دستور 20 يوليو\nقانون نظامي يتعلق بإنشاء الجنة الوطنية المستقلة للانتخابات",
      "title": "قوانين",
-     "url": "https://www.primature.gov.mr/index.php/t_lois"
+     "url": "https://www.primature.gov.mr/index.php/t_lois",
+     "verificacion": {
+      "bytes": 19305,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:06:35Z",
+      "http": 200,
+      "sha256": "bb9b6e35e5b87fabbe20a0ad03c70c762dd6ebb79a48b78c3954de01feb10655"
+     }
     },
     {
      "date": "",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "# Décrets\n...\n…\n...\n**Zakat FR.pdf**\n...\nDécret n°2020-051/PM/MF du 06 avril 2020 portant création d'un fonds spécial de solidarité sociale et de lutte contre le coronavirus.\n**Décret d'application du 051-2020.pdf**",
      "title": "Décrets | Ministère des Finances",
-     "url": "https://finances.gov.mr/fr/Decrets"
+     "url": "https://finances.gov.mr/fr/Decrets",
+     "verificacion": {
+      "bytes": 164235,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:06:38Z",
+      "http": 200,
+      "sha256": "284cd5e388913dbdb7f4d2d85e477eab190ed5146644926b6a975c5abdeb861c"
+     }
     },
     {
      "date": "",
@@ -72,7 +93,14 @@
      "rank": 2,
      "snippet": "مراسيم | Primature\n# مراسيم\nfichiers\n...\nمرسوم رقم 2022-084 يتضمن تنظيم وسير عمل اللجنة الوطنية لرقابة الصفقات العمومية\nمرسوم رقم 2022-085 يتضمن تنظيم وسير عمل سلطة تنظيم الصفقات العمومية",
      "title": "مراسيم",
-     "url": "https://primature.gov.mr/index.php/t-decrets"
+     "url": "https://primature.gov.mr/index.php/t-decrets",
+     "verificacion": {
+      "bytes": 18347,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:06:40Z",
+      "http": 200,
+      "sha256": "620be24e70e7534841dcd95b6908d1b07fb2dcf75cfd126d7966564bfe1d8b03"
+     }
     },
     {
      "date": "",
@@ -106,7 +134,12 @@
      "rank": 1,
      "snippet": "JOURNAL OFFICIEL \nDE  LA \nREPUBLIQUE ISLAMIQUE \nDE MAURITANIE \nBIMENSUEL \nParaissant les 15 et 30 \nde chaque mois\n15 Mars 2022 \n64ème année \n...\n171",
      "title": "Journal Officiel de la République Islamique de Mauritanie",
-     "url": "https://www.msgg.gov.mr/sites/default/files/2022-04/J.O.%201505F%20DU%2015.03.2022%20(1).pdf"
+     "url": "https://www.msgg.gov.mr/sites/default/files/2022-04/J.O.%201505F%20DU%2015.03.2022%20(1).pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.msgg.gov.mr/sites/default/files/2022-04/J.O.%201505F%20DU%2015.03.2022%20(1).pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T15:06:42Z"
+     }
     },
     {
      "date": "",
@@ -114,7 +147,12 @@
      "rank": 2,
      "snippet": "BIMENSUEL \nParaissant les 15 et 30 \nde chaque mois\n...\nLes annonces sont \n...\nPOUR LES ABONNEMENTS \nET ACHATS AU NUMERO \nS’adresser à la Direction de l’Edition du Journal Officiel jo@primature.gov.mr",
      "title": "JOURNAL OFFICIEL DE LA REPUBLIQUE ISLAMIQUE DE MAURITANIE",
-     "url": "https://msgg.gov.mr/sites/default/files/2025-07/J.O.1584F_30.06.2025.pdf"
+     "url": "https://msgg.gov.mr/sites/default/files/2025-07/J.O.1584F_30.06.2025.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://msgg.gov.mr/sites/default/files/2025-07/J.O.1584F_30.06.2025.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T15:06:44Z"
+     }
     },
     {
      "date": "",

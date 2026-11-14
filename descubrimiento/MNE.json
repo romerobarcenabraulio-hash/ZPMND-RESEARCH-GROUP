@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "**ON THE PROMULGATION OF THE CONSTITUTION OF THE REPUBLIC OF MONTENEGRO**\nThe Constitution of the Republic of Montenegro having been adopted by the Assembly of the Republic of Montenegro at its session held on October 12, 1992 is hereby promulgated.",
      "title": "https://wapi.gov.me/download/d7f0c262-dfa2-448b-a2...",
-     "url": "https://wapi.gov.me/download/d7f0c262-dfa2-448b-a2c3-1e5ba628f2bb?version=1.0"
+     "url": "https://wapi.gov.me/download/d7f0c262-dfa2-448b-a2c3-1e5ba628f2bb?version=1.0",
+     "verificacion": {
+      "error": "robots.txt disallows https://wapi.gov.me/download/d7f0c262-dfa2-448b-a2c3-1e5ba628f2bb?version=1.0",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:47:20Z"
+     }
     },
     {
      "date": "",
@@ -22,7 +27,14 @@
      "rank": 2,
      "snippet": "Constitution of Montenegro - CBCG\nHome About us Legislation Constitution of Montenegro\n# Constitution of Montenegro\nConstitution of Montenegro\n*(OGM no. 1/07)*\nAmendments I to XVI to the Constitution of Montenegro\n*(OGM no. 38/13)*",
      "title": "Constitution of Montenegro - CBCG",
-     "url": "https://www.cbcg.me/en/about-us/legislation/constitution-of-montenegro"
+     "url": "https://www.cbcg.me/en/about-us/legislation/constitution-of-montenegro",
+     "verificacion": {
+      "bytes": 87763,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:47:23Z",
+      "http": 200,
+      "sha256": "c52d729a950b79d3b71633844425a40151f5a67d2b1df1c58e4eedcfbee3004a"
+     }
     },
     {
      "date": "",
@@ -64,7 +76,12 @@
      "rank": 1,
      "snippet": "# Legislation\nThis webpage is updated in coordination with the line ministries that are obliged to submit the regulations within their jurisdiction.\nIn addition, here you can download the regulations published in the Official Gazette of Montenegro.",
      "title": "Legislation - Government of Montenegro",
-     "url": "https://www.gov.me/en/article/legislation"
+     "url": "https://www.gov.me/en/article/legislation",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.me/en/article/legislation",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:48:53Z"
+     }
     },
     {
      "date": "2021-03-05",
@@ -72,7 +89,12 @@
      "rank": 2,
      "snippet": "GOV.ME Document Library\n...\n318 results\n...\n### Law on Personal Income Tax - OGMN 160-2025 ENG\n...\nVersion 1.0 •Published on: Sep 16, 2026 •Updated at: Oct 26, 2026\ndocx • 84 KB",
      "title": "GOV.ME Document Library",
-     "url": "https://www.gov.me/en/document-library?dt=1&page=1&sort=published_at"
+     "url": "https://www.gov.me/en/document-library?dt=1&page=1&sort=published_at",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.me/en/document-library?dt=1&page=1&sort=published_at",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:50:24Z"
+     }
     },
     {
      "date": "2026-10-29",
@@ -114,7 +136,12 @@
      "rank": 1,
      "snippet": "**Decree on Visa Regime**\nThe Decree was published in the \"Official Gazette of Montenegro\", no. 33/19, 67/20, 8/23, 56/23, 127/24, 13/25, 119/25 and 126/25",
      "title": "[DOC] https://wapi.gov.me/download/8de8a84c-1a73-49b8-80...",
-     "url": "https://wapi.gov.me/download/8de8a84c-1a73-49b8-8094-dbd49b1bf01d?version=1.0"
+     "url": "https://wapi.gov.me/download/8de8a84c-1a73-49b8-8094-dbd49b1bf01d?version=1.0",
+     "verificacion": {
+      "error": "robots.txt disallows https://wapi.gov.me/download/8de8a84c-1a73-49b8-8094-dbd49b1bf01d?version=1.0",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:51:54Z"
+     }
     },
     {
      "date": "",
@@ -122,7 +149,14 @@
      "rank": 2,
      "snippet": "DECREE  \n...\n(“Official Gazette of Montenegro” No. 160/25 of 30.12.2025)\n...\n  This Law shall enter into force on the day of its publication in the Official Gazette of \nMontenegro, and shall be applied from 1 January 2026.",
      "title": "Catalogue of Legal Acts 2025 2172. DECREE PROMULGATING THE ...",
-     "url": "https://www.monstat.org/uploads/files/klasifikacije/kd2025/Law%20on%20Classification%20of%20Activities_Official%20Gazette%20of%20Montenegro%20No%20160_25.pdf"
+     "url": "https://www.monstat.org/uploads/files/klasifikacije/kd2025/Law%20on%20Classification%20of%20Activities_Official%20Gazette%20of%20Montenegro%20No%20160_25.pdf",
+     "verificacion": {
+      "bytes": 112928,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:51:56Z",
+      "http": 200,
+      "sha256": "34e4126e3ee3b2b614916838a752be554a37f1ca9e501fc493607c082314a944"
+     }
     },
     {
      "date": "",
@@ -164,7 +198,14 @@
      "rank": 1,
      "snippet": "**Vrhovni sud Crne Gore (Supreme Court of Montenegro)**\n...\n**Website :**\nhttp://en.sudovi.me/vrhs/ (English)\n**Link to the national database of their case law**:\nhttp://sudovi.me/vrhs/odluke/",
      "title": "Montenegro | Network of the Presidents of the Supreme ...",
-     "url": "https://network-presidents.eu/page/montenegro"
+     "url": "https://network-presidents.eu/page/montenegro",
+     "verificacion": {
+      "bytes": 58686,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:51:58Z",
+      "http": 200,
+      "sha256": "cda05ed3849b34e0e59d0a7c07bdb934abf70ae8ddbf0f704901938baacbb165"
+     }
     },
     {
      "date": "",
@@ -172,7 +213,14 @@
      "rank": 2,
      "snippet": "Yes all judgements\nCase-law database available in open data\nYes all judgements\nIn Montenegro, there is a centralised national database of court decisions in which all judgments for all instances are collected, with anonymised data.\nThis case-law database is available for free online and in open data",
      "title": "Strasbourg,",
-     "url": "https://rm.coe.int/montenegro-20210708-deliverable-2-rev/1680a5fdf1"
+     "url": "https://rm.coe.int/montenegro-20210708-deliverable-2-rev/1680a5fdf1",
+     "verificacion": {
+      "bytes": 1025736,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:52:01Z",
+      "http": 200,
+      "sha256": "8f7092de447f69b8b8a9620545fcd493d7500991b1d053557e8c63d92c3e6186"
+     }
     },
     {
      "date": "",
@@ -214,7 +262,12 @@
      "rank": 1,
      "snippet": "Government of Montenegro - GOV.ME\n# GOV.ME portal\nOfficial website of the Government of Montenegro.\nQuick and easy access to government services and information.",
      "title": "Government of Montenegro - GOV.ME",
-     "url": "https://www.gov.me/en/"
+     "url": "https://www.gov.me/en/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.me/en/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:53:31Z"
+     }
     },
     {
      "date": "2022-03-04",
@@ -222,7 +275,12 @@
      "rank": 2,
      "snippet": "# Legislation\n...\n- The part **Montenegrin legislation** contains the legal and sub-legal acts that Montenegro applies in the area of trade in goods, services and trade aspects of intellectual property.\n...\nIn addition, here you can download the regulations published in the Official Gazette of Monte",
      "title": "Legislation - Government of Montenegro",
-     "url": "https://www.gov.me/en/article/legislation"
+     "url": "https://www.gov.me/en/article/legislation",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.me/en/article/legislation",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:55:02Z"
+     }
     },
     {
      "date": "",
@@ -264,7 +322,12 @@
      "rank": 1,
      "snippet": "Zakon o lokalnoj samoupravi\n- Zakon o lokalnoj samoupravi\n# Zakon o lokalnoj samoupravi\nPublished on: Oct 15, 2025 • 8:25 AM\nAuthor:\nMinistry of Public Administration\npdf•176 KB",
      "title": "Zakon o lokalnoj samoupravi",
-     "url": "https://www.gov.me/en/documents/2aa93081-cf05-4500-bf20-e67acceab00a"
+     "url": "https://www.gov.me/en/documents/2aa93081-cf05-4500-bf20-e67acceab00a",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.me/en/documents/2aa93081-cf05-4500-bf20-e67acceab00a",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:56:34Z"
+     }
     },
     {
      "date": "2017-03-07",
@@ -272,7 +335,12 @@
      "rank": 2,
      "snippet": "Zakon o komunalnim djelatnostima\n- Zakon o komunalnim djelatnostima\n# Zakon o komunalnim djelatnostima\n...\nDescription:\nAuthor:\nMinistry of Spatial Planning, Urbanism and State Property\npdf•451 KB",
      "title": "Zakon o komunalnim djelatnostima",
-     "url": "https://www.gov.me/en/documents/f9c6a77a-4b4d-4e5c-a3cc-500e88a13eaf"
+     "url": "https://www.gov.me/en/documents/f9c6a77a-4b4d-4e5c-a3cc-500e88a13eaf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.me/en/documents/f9c6a77a-4b4d-4e5c-a3cc-500e88a13eaf",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:58:05Z"
+     }
     },
     {
      "date": "",
@@ -314,7 +382,12 @@
      "rank": 1,
      "snippet": "Its main tasks include approving pricing, developing a model for determining allowable business costs for energy sector entities, issuing operating licenses for energy companies and for construction in the energy sector, and monitoring public tenders.",
      "title": "Montenegro - United States Department of State",
-     "url": "https://www.state.gov/reports/2025-investment-climate-statements/montenegro/"
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/montenegro/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2025-investment-climate-statements/montenegro/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:58:05Z"
+     }
     },
     {
      "date": "",
@@ -322,7 +395,12 @@
      "rank": 2,
      "snippet": "In 2004, the Parliament established an Energy Regulatory Agency, which maintains authority over the electricity, gas, oil, and heating energy sectors.\n...\nThe Montenegro State Audit Institution (SAI) is an independent supreme audit institution for verification of the entire government’s financial st",
      "title": "2025 Montenegro Investment Climate Statement",
-     "url": "https://www.state.gov/wp-content/uploads/2026/02/638720_2025-Montenegro-Investment-Climate-Statement.pdf"
+     "url": "https://www.state.gov/wp-content/uploads/2026/02/638720_2025-Montenegro-Investment-Climate-Statement.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/wp-content/uploads/2026/02/638720_2025-Montenegro-Investment-Climate-Statement.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:58:06Z"
+     }
     },
     {
      "date": "",
@@ -364,7 +442,14 @@
      "rank": 1,
      "snippet": "MEST CENffR 18076:2025 (en) \nMEST CENffS 18044:2025 (en) \nMEST EN 16976:2025 (en) \n...\nMEST ISO 15202-2:2025 (en)",
      "title": "[PDF] INSTITUT ZA STANDARDIZACIJU CRNE GORE",
-     "url": "https://isme.me/en/download/page-section/document/6066"
+     "url": "https://isme.me/en/download/page-section/document/6066",
+     "verificacion": {
+      "bytes": 4909,
+      "estado": "http",
+      "fecha": "2026-11-14T14:58:08Z",
+      "http": 403,
+      "sha256": "268977817ab2e43fd852c8c5b90f26bc76436b29adcedc928e5c356316432816"
+     }
     },
     {
      "date": "2023-01-01",
@@ -372,7 +457,14 @@
      "rank": 2,
      "snippet": "Vazduhoplovstvo – Cijevni priključak 8°30' od legure titanijuma – Spojevi, pregrađeni, sa dugim zavarenim krajem, za popravku\n60.60\n...\n60.60\n...\n60.60",
      "title": "Projekti",
-     "url": "https://isme.me/sr_ME/project/list/802?status[0]=PUBLISHED&operatorCommittee=3&operatorStdType=3&listMode=DEFAULT"
+     "url": "https://isme.me/sr_ME/project/list/802?status[0]=PUBLISHED&operatorCommittee=3&operatorStdType=3&listMode=DEFAULT",
+     "verificacion": {
+      "bytes": 4909,
+      "estado": "http",
+      "fecha": "2026-11-14T14:58:10Z",
+      "http": 403,
+      "sha256": "f15ebed3823c185260249b07b17aa7fa30c27505d4f8d96e394c5532499d1247"
+     }
     },
     {
      "date": "",
@@ -414,7 +506,14 @@
      "rank": 1,
      "snippet": "# Disclaimer\n<iframe style=\"height: 100%; border:none; width: 100%;min-height: 400px;\" src=\"https://montenegro.eregulations.org/menu/48?l=en&embed=true&includeSearch=true\"></iframe>",
      "title": "eRegulations Montenegro",
-     "url": "https://montenegro.eregulations.org/menu/48?l=en"
+     "url": "https://montenegro.eregulations.org/menu/48?l=en",
+     "verificacion": {
+      "bytes": 54803,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:58:12Z",
+      "http": 200,
+      "sha256": "4cb8ceec39c2b5b98ae6c199ec29e5d98b015b70cf7696ef64b45c663df806fc"
+     }
     },
     {
      "date": "",
@@ -422,7 +521,14 @@
      "rank": 2,
      "snippet": "|--|--|--|--|\n|Montenegro|G/TBT/N/MNE/16 ** Rulebook on metrological requirements for measuring instruments for testing safety measures in electrical engineering Notified document (1)|12/06/2020|Measuring instruments for testing safety measures in electrical engineering|",
      "title": "Montenegro - ePingalert.org",
-     "url": "https://www.epingalert.org/en/MemberProfiles/Profile?countryId=C893"
+     "url": "https://www.epingalert.org/en/MemberProfiles/Profile?countryId=C893",
+     "verificacion": {
+      "bytes": 154817,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:58:13Z",
+      "http": 200,
+      "sha256": "500de76f0f620e5223b8a7c0aa311958395ddf7e03b88cfb6b30ca537751c386"
+     }
     },
     {
      "date": "",
@@ -464,7 +570,14 @@
      "rank": 1,
      "snippet": "Statistical Office is the main holder and disseminator of statistical data, as well as responsible professional authority, organizer, and coordinator of official statistics system, and represents the official statistics of Montenegro in the international statistical system.\n#### Contact\n...\n81000 Po",
      "title": "UPRAVA ZA STATISTKU",
-     "url": "https://monstat.org/eng/index.php?month=1&year=2026&action=show"
+     "url": "https://monstat.org/eng/index.php?month=1&year=2026&action=show",
+     "verificacion": {
+      "bytes": 83480,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:58:15Z",
+      "http": 200,
+      "sha256": "f593b848dd274a7620df0332a0e6a6b5e423c4ee6d92a92060d2784ca8993715"
+     }
     },
     {
      "date": "",
@@ -472,7 +585,14 @@
      "rank": 2,
      "snippet": "## Free access to information\n#### About us\n...\n#### Contact\nIV Proleterske 2,\n81000 Podgorica,Crna Gora\n+382 20/230-811\ncontact@monstat.org",
      "title": "Statistical Office",
-     "url": "https://www.monstat.org/eng/"
+     "url": "https://www.monstat.org/eng/",
+     "verificacion": {
+      "bytes": 75210,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:58:18Z",
+      "http": 200,
+      "sha256": "59d0e13cb0d35a80ba3680166b07b47efb553c9a725b319d5d229b1b2dce57bc"
+     }
     },
     {
      "date": "",
@@ -498,7 +618,14 @@
      "rank": 1,
      "snippet": "In accordance with the Law on Official Statistics and the System of Official Statistics (“Official Gazette of Montenegro”, No. 18/12, 47/19, 23/25), the Central Bank of Montenegro is the producer of official monetary and financial statistics.",
      "title": "Other Financial Institutions",
-     "url": "https://www.cbcg.me/en/statistics/statistical-data/monetary-and-financial-statistics/other-financial-institutions"
+     "url": "https://www.cbcg.me/en/statistics/statistical-data/monetary-and-financial-statistics/other-financial-institutions",
+     "verificacion": {
+      "bytes": 76678,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:58:21Z",
+      "http": 200,
+      "sha256": "d55f8a673fbd5260f272203e198655ee2330fce85f77b3ee501451d02009e403"
+     }
     },
     {
      "date": "2026-10-31",
@@ -506,7 +633,14 @@
      "rank": 2,
      "snippet": "## Statistical data\n|Annual CPI Inflation|September 2026|5.2%|\n...\n|Default Interest Rate|1 July - 31 December 2026|10.40%|\n|Weighted average effective interest rate on total loans|September 2026|6.14%|",
      "title": "Central Bank of Montenegro",
-     "url": "https://www.cbcg.me/en"
+     "url": "https://www.cbcg.me/en",
+     "verificacion": {
+      "bytes": 121609,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:58:25Z",
+      "http": 200,
+      "sha256": "82774cf098c6cb406e60b77fb5b0875f93c50f7e932d64fabaa983f8625f4f70"
+     }
     },
     {
      "date": "",
@@ -548,7 +682,12 @@
      "rank": 1,
      "snippet": "Since then, no new datasets can be uploaded.\nIn July 2023, the government decided to create a new Open Data portal,7 which is not yet complete.\n...\n### Notes\n← 7.\nMontenegro’s new Open Data portal: https://data.gov.me.",
      "title": "Digital society: Western Balkans Competitiveness Outlook 2024: Montenegro",
-     "url": "https://oecd.org/en/publications/western-balkans-competitiveness-outlook-2024-montenegro_ead1588e-en/full-report/component-15.html"
+     "url": "https://oecd.org/en/publications/western-balkans-competitiveness-outlook-2024-montenegro_ead1588e-en/full-report/component-15.html",
+     "verificacion": {
+      "error": "robots.txt disallows https://oecd.org/en/publications/western-balkans-competitiveness-outlook-2024-montenegro_ead1588e-en/full-report/component-15.html",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:58:31Z"
+     }
     },
     {
      "date": "",
@@ -556,7 +695,14 @@
      "rank": 2,
      "snippet": "Launch of the new Open Data Portal (data.gov.me)\n...\n…\nFor Explanation:\n...\nAfter the cyber attack, the process of recovering the data on the portal as well as its original functionalities was started, and we cannot specify the time for which it will be completed.",
      "title": "[XLS] Policy - European data",
-     "url": "https://data.europa.eu/sites/default/files/2025-12/2025_odm_questionnaire_montenegro.xlsx"
+     "url": "https://data.europa.eu/sites/default/files/2025-12/2025_odm_questionnaire_montenegro.xlsx",
+     "verificacion": {
+      "bytes": 55569,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:58:32Z",
+      "http": 200,
+      "sha256": "893726b85babda696c5708d74f2c3e1f46a50fa78262c0af84ff553caf0ca473"
+     }
     },
     {
      "date": "",

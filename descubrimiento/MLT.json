@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "In Malta, the Constitution is the supreme law of the land and so supercedes any Maltese law which is in conflict with it.\nIt provides the basic source of national law and stipulates that laws are passed by Parliament in the form of Acts of Parliament.\n...\nThe system also displays partial judgements.",
      "title": "The Judiciary in Malta - gov.mt",
-     "url": "https://www.gov.mt/en/Life%20Events/Pages/Services%20and%20Information%20Pages/Justice/Judiciary-in-Malta.aspx"
+     "url": "https://www.gov.mt/en/Life%20Events/Pages/Services%20and%20Information%20Pages/Justice/Judiciary-in-Malta.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.mt/en/Life%20Events/Pages/Services%20and%20Information%20Pages/Justice/Judiciary-in-Malta.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:27:24Z"
+     }
     },
     {
      "date": "2026-10-30",
@@ -22,7 +27,12 @@
      "rank": 2,
      "snippet": "# gov . mt Legislation\n# Laws and Regulations\nMain Content\nBelow you can find a collection of all the Laws of Malta, including the Constitution, the Statute Law Revision Act, 1980 and subsidiary legislation.\nLaws of Malta\n...\nLegal Publications\nActs\nBills\nLegal Notices",
      "title": "Laws and Regulations - gov.mt",
-     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/legislation/Pages/Laws-and-Regulations.aspx"
+     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/legislation/Pages/Laws-and-Regulations.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.mt/en/Government/DOI/Government%20Gazette/legislation/Pages/Laws-and-Regulations.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:27:25Z"
+     }
     },
     {
      "date": "2020-01-08",
@@ -64,7 +74,14 @@
      "rank": 1,
      "snippet": "https://legislation.mt/\nhttps://legislation.mt/eli/ln/2026/303\n303 tal-2026 – Regolamenti tal-2026 li jemendaw ir-Regolamenti dwar il-Mikromobilità Gazzetta tal-Gvern ta’ Malta Nru.",
      "title": "eli-update-feed.atom",
-     "url": "https://legislation.mt/eli/eli-update-feed.atom"
+     "url": "https://legislation.mt/eli/eli-update-feed.atom",
+     "verificacion": {
+      "bytes": 94752,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:27:27Z",
+      "http": 200,
+      "sha256": "acdeb129bea832248ef524305fa04ee328e36f39985da150ec56d1af4a033c8b"
+     }
     },
     {
      "date": "",
@@ -72,7 +89,12 @@
      "rank": 2,
      "snippet": "No. 312\nMALTA ENTERPRISE\nExplanatory Notes1\n1. Introduction\n...\nExplanatory Notes1\n1. Introduction\nThe title of these regulations is Research and Development (2024) Regulations, 2024, hereinafter referred to as the \n“regulations”.",
      "title": "[PDF] The Malta Government Gazette - Gazzetta tal-Gvern ta' Malta",
-     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/Documents/2024/03/Government%20Gazette%20-%205th%20March.pdf"
+     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/Documents/2024/03/Government%20Gazette%20-%205th%20March.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.mt/en/Government/DOI/Government%20Gazette/Documents/2024/03/Government%20Gazette%20-%205th%20March.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:27:27Z"
+     }
     },
     {
      "date": "2026-10-30",
@@ -114,7 +136,12 @@
      "rank": 1,
      "snippet": "Government Gazette\n...\n|--|--|--|--|\n...\n- **Malta** **Government Gazette**  **in PDF Format**\n- **Malta Government Gazette Indexes**\n...\nDepartment of Information\n3, Castille Place, Valletta VLT 1062[email protected]",
      "title": "Government Gazette",
-     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/Pages/default.aspx"
+     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/Pages/default.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.mt/en/Government/DOI/Government%20Gazette/Pages/default.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:27:28Z"
+     }
     },
     {
      "date": "",
@@ -122,7 +149,14 @@
      "rank": 2,
      "snippet": "LEĠIŻLAZZJONI MALTA\n- Liġijiet Segwiti\n...\n…\nLEĠIŻLAZZJONI MALTA\nKapitoli tal-Liġijiet ta' Malta\nPubblikazzjonijiet Legali",
      "title": ".",
-     "url": "https://legislation.mt/"
+     "url": "https://legislation.mt/",
+     "verificacion": {
+      "bytes": 31377,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:27:30Z",
+      "http": 200,
+      "sha256": "32bb7a7a065330a391427063be60edfdff4b034988e4e42f1fc272ec04ec4047"
+     }
     },
     {
      "date": "2024-01-23",
@@ -164,7 +198,12 @@
      "rank": 1,
      "snippet": "Search Judgements – eCourts.gov.mt\n1. Home\n2. Search Judgements\n# Search Judgements\nJudgement Date\nin the past 15 days only ?\nin the past 12 months only ?\n...\nArt(1)\nArt(2)\nArt(3)",
      "title": "Search Judgements – eCourts.gov.mt",
-     "url": "https://ecourts.gov.mt/onlineservices/Judgements"
+     "url": "https://ecourts.gov.mt/onlineservices/Judgements",
+     "verificacion": {
+      "error": "robots.txt disallows https://ecourts.gov.mt/onlineservices/Judgements",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:27:30Z"
+     }
     },
     {
      "date": "",
@@ -172,7 +211,12 @@
      "rank": 2,
      "snippet": "eCourts\nKawżi Ċivili\nSentenzi",
      "title": "Żball",
-     "url": "https://ecourts.gov.mt/onlineservices/Judgements/Search"
+     "url": "https://ecourts.gov.mt/onlineservices/Judgements/Search",
+     "verificacion": {
+      "error": "robots.txt disallows https://ecourts.gov.mt/onlineservices/Judgements/Search",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:27:31Z"
+     }
     },
     {
      "date": "",
@@ -214,7 +258,14 @@
      "rank": 1,
      "snippet": "Sat, 31 Oct 2026 08:25:30 GMT\nLegislation.mt is Malta’s official online portal for accessing national legislation, maintained by the Office of the State Advocate to provide the public with authoritative and up-to-date legal information.",
      "title": "Legislation Unit RSS Feed",
-     "url": "https://legislation.mt/rss"
+     "url": "https://legislation.mt/rss",
+     "verificacion": {
+      "bytes": 20558,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:27:36Z",
+      "http": 200,
+      "sha256": "699537a0017dd0fdbb8e47870580753f6c453bd8d94153f3984a0fe8e8a968f2"
+     }
     },
     {
      "date": "",
@@ -222,7 +273,14 @@
      "rank": 2,
      "snippet": "Followed Laws\nSign in to view your followed laws!\n...\nRegolamenti dwar Companies Act (Register of Beneficial Owners)\n...\nShort Title\n: Malta Enterprise Act\nTitolu\nMalta Enterprise Act\nLink tal-ELI\neli/cap/463\nPoint in Time:",
      "title": "chapter 463 malta enterprise act",
-     "url": "https://legislation.mt/eli/cap/463/eng/pdf"
+     "url": "https://legislation.mt/eli/cap/463/eng/pdf",
+     "verificacion": {
+      "bytes": 223632,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:27:41Z",
+      "http": 200,
+      "sha256": "8be7ac5b448ea1a8363331be2fe4c0b2a01b5272119e9ddfee64141fa11f2907"
+     }
     },
     {
      "date": "",
@@ -264,7 +322,12 @@
      "rank": 1,
      "snippet": "Legislation\n# gov . mt Legislation\n# Laws and Regulations\n...\nBelow you can find a collection of all the Laws of Malta, including the Constitution, the Statute Law Revision Act, 1980 and subsidiary legislation.\n...\nLegislation\nLegal Publications\nActs\nBills\nLegal Notices\nBye-Laws",
      "title": "Laws and Regulations - gov.mt",
-     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/legislation/Pages/Laws-and-Regulations.aspx"
+     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/legislation/Pages/Laws-and-Regulations.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.mt/en/Government/DOI/Government%20Gazette/legislation/Pages/Laws-and-Regulations.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:27:41Z"
+     }
     },
     {
      "date": "2025-03-26",
@@ -272,7 +335,12 @@
      "rank": 2,
      "snippet": "Government Gazette\nYou may be trying to access this site from a secured browser on the server.\n...\nGovernment Gazette Repository",
      "title": "Government Gazette Repository",
-     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/Pages/Government-Gazzette-Repository.aspx"
+     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/Pages/Government-Gazzette-Repository.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.mt/en/Government/DOI/Government%20Gazette/Pages/Government-Gazzette-Repository.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:27:42Z"
+     }
     },
     {
      "date": "2024-10-01",
@@ -314,7 +382,14 @@
      "rank": 1,
      "snippet": "Electronic Communications (Regulation) Act (Chapter 399 of the Laws of Malta) - English Version / Verżjoni bil-Malti\n...\n**Malta Communications Authority**\nValletta Waterfront, Pinto Wharf,\nFloriana, FRN1913, Malta\n+356 2133 6840",
      "title": "Legislation - MCA",
-     "url": "https://www.mca.org.mt/regulatory/legislation"
+     "url": "https://www.mca.org.mt/regulatory/legislation",
+     "verificacion": {
+      "bytes": 52989,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:27:43Z",
+      "http": 200,
+      "sha256": "3fb0dcb43e33b67526bc9665e66ecc404164236b7c01d12aa08fb7dedb230b69"
+     }
     },
     {
      "date": "2026-05-22",
@@ -322,7 +397,14 @@
      "rank": 2,
      "snippet": "**New Regulations in the Official Journal of the EU**\n...\nOn 11 February 2026, the Authority published a revised version of Banking Rule BR/01 on application procedures and requirements of licenses for banking activities, and amendments to Banking Rule BR/24 on internal governance.",
      "title": "Legislative and Regulatory Updates - MFSA",
-     "url": "https://www.mfsa.mt/publication/legislative-and-regulatory-updates-q1-2026/"
+     "url": "https://www.mfsa.mt/publication/legislative-and-regulatory-updates-q1-2026/",
+     "verificacion": {
+      "bytes": 5726,
+      "estado": "http",
+      "fecha": "2026-11-14T14:28:14Z",
+      "http": 403,
+      "sha256": "cea31129aed0654294e3b1fd0afec3207b5ab77778092043fa10074fa7e6e885"
+     }
     },
     {
      "date": "",
@@ -364,7 +446,14 @@
      "rank": 1,
      "snippet": "This catalogue give list of European Standards adopted by MCCAA.\nFor a list of adopted CEN and CENELEC standards:\nClick Here\n...\nAbstract/Scope\n...\nClick Here\n...\nETSI Standards\n...\nE-mail: standards@mccaa.org.mt\nTel. : +356 2395 2000",
      "title": "CATALOGUE OF PUBLISHED EUROPEAN STANDARDS - mccaa.org.mt",
-     "url": "https://mccaa.org.mt/wp-content/uploads/2026/05/CATALOGUE-OF-PUBLISHED-EUROPEAN-STANDARDS.xlsx-INDEX.pdf"
+     "url": "https://mccaa.org.mt/wp-content/uploads/2026/05/CATALOGUE-OF-PUBLISHED-EUROPEAN-STANDARDS.xlsx-INDEX.pdf",
+     "verificacion": {
+      "bytes": 39638,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:28:16Z",
+      "http": 200,
+      "sha256": "db8a33bbad3d9e8217e2a3627c9ad236fdae18243d81d7f54274833952321d92"
+     }
     },
     {
      "date": "",
@@ -372,7 +461,12 @@
      "rank": 2,
      "snippet": "Details of these standards can be obtained from:\n(standards@mccaa.org.mt)\nThese standards are available from the Malta Competition and Consumer Affairs \nAuthority, Triq Nazzjonali, Blata l-Bajda, Ħamrun, Malta.\n...\nNational Standard\nNational Standard\n...\n…",
      "title": "L-14 ta’ Marzu, 2025",
-     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/Notices/Documents/MCCAA%20lists%20Gaz%2014.3.pdf"
+     "url": "https://www.gov.mt/en/Government/DOI/Government%20Gazette/Notices/Documents/MCCAA%20lists%20Gaz%2014.3.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.mt/en/Government/DOI/Government%20Gazette/Notices/Documents/MCCAA%20lists%20Gaz%2014.3.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:28:16Z"
+     }
     },
     {
      "date": "2021-05-14",
@@ -414,7 +508,14 @@
      "rank": 1,
      "snippet": "Restriction of Use of Hazardous Substances in Electrical and Electronic Equipment Regulations – MCCAA\n...\nThe current ten hazardous substances that are being restricted, are:\n- 4 heavy metals: lead, mercury, cadmium and hexavalent chromium;\n...\nThe obligations of manufacturers of electrical and elec",
      "title": "Restriction of Use of Hazardous Substances in Electrical ... - MCCAA",
-     "url": "https://mccaa.org.mt/technical-regulation/restriction-of-use-of-hazardous-substances-in-electrical-and-electronic-equipment-regulations/"
+     "url": "https://mccaa.org.mt/technical-regulation/restriction-of-use-of-hazardous-substances-in-electrical-and-electronic-equipment-regulations/",
+     "verificacion": {
+      "bytes": 163148,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:28:20Z",
+      "http": 200,
+      "sha256": "0c68fc404c820259750d65a47e3a230ce063858b745e390dfeb5533187af5cc6"
+     }
     },
     {
      "date": "",
@@ -422,7 +523,14 @@
      "rank": 2,
      "snippet": "Energy Labelling Regulations – MCCAA\n# Energy Labelling Regulations\n...\n- Energy Labelling Regulations\n**Latest Energy Labels: Are you a retailer of white goods, electronic displays or light sources?**",
      "title": "Energy Labelling Regulations – MCCAA",
-     "url": "https://mccaa.org.mt/technical-regulation/energy-labelling-regulations/"
+     "url": "https://mccaa.org.mt/technical-regulation/energy-labelling-regulations/",
+     "verificacion": {
+      "bytes": 168492,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:28:25Z",
+      "http": 200,
+      "sha256": "15ddfd9efe41dcd885c1b5ff6c47d9a815393cf46315b13405a496c393dca6c4"
+     }
     },
     {
      "date": "2026-10-30",
@@ -464,7 +572,12 @@
      "rank": 1,
      "snippet": "NSO Malta | News Releases - NSO Malta News Releases - NSO Malta\n# News Releases\nHome / News Releases",
      "title": "News Releases",
-     "url": "https://nso.gov.mt/news-releases/"
+     "url": "https://nso.gov.mt/news-releases/",
+     "verificacion": {
+      "error": "robots.txt disallows https://nso.gov.mt/news-releases/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:28:25Z"
+     }
     },
     {
      "date": "2026-10-29",
@@ -472,7 +585,12 @@
      "rank": 2,
      "snippet": "NSO Malta – Your gateway to Malta's official statistics.\nNSO Malta | Your gateway to Malta's Official Statistics\n# Your gateway to Malta's official statistics\n...\nLascaris\nValletta VLT 2000\nMalta\n+356 25997000",
      "title": "NSO Malta – Your gateway to Malta's official statistics.",
-     "url": "https://nso.gov.mt/"
+     "url": "https://nso.gov.mt/",
+     "verificacion": {
+      "error": "robots.txt disallows https://nso.gov.mt/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:28:26Z"
+     }
     },
     {
      "date": "",
@@ -514,7 +632,12 @@
      "rank": 1,
      "snippet": "Communications Department \n...\nE-mail: publicrelations@centralbankmalta.org \nWebsite: www.centralbankmalta.org\n...\nFurther economic and monetary information can be obtained from the website of the Central Bank of Malta www.centralbankmalta.org",
      "title": "Release 08-2013 (EN",
-     "url": "https://www.centralbankmalta.org/site/Publications/Statistical-Release-8-2013.pdf?revcount=3991"
+     "url": "https://www.centralbankmalta.org/site/Publications/Statistical-Release-8-2013.pdf?revcount=3991",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.centralbankmalta.org/site/Publications/Statistical-Release-8-2013.pdf?revcount=3991",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:28:27Z"
+     }
     },
     {
      "date": "",
@@ -522,7 +645,12 @@
      "rank": 2,
      "snippet": "© Central Bank of Malta, 2024\nAddress\nPjazza Kastilja\nValletta VLT 1060\nMalta\n...\n(+356) 2550 0000\nFax\n(+356) 2550 2500\nWebsite \nwww.centralbankmalta.org",
      "title": "2025:1",
-     "url": "https://www.centralbankmalta.org/site/Publications/Outlook-2025-1.pdf"
+     "url": "https://www.centralbankmalta.org/site/Publications/Outlook-2025-1.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.centralbankmalta.org/site/Publications/Outlook-2025-1.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:28:28Z"
+     }
     },
     {
      "date": "",
@@ -564,7 +692,14 @@
      "rank": 1,
      "snippet": "…\n,2.1 Portal features,,,,,\n...\nFor Explanation:\n* If yes, please provide the URL of the national portal.\",yes,open.data.gov.mt,Confirm,,\nPT2,\"For Explanation:\n...\n…\nUsers need to be authenticated to access, create and enrich datasets.",
      "title": "Policy - The European Data Portal",
-     "url": "https://data.europa.eu/sites/default/files/2025-12/2025_odm_questionnaire_malta.xlsx"
+     "url": "https://data.europa.eu/sites/default/files/2025-12/2025_odm_questionnaire_malta.xlsx",
+     "verificacion": {
+      "bytes": 55680,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:28:29Z",
+      "http": 200,
+      "sha256": "8b986c8ead7b805a474b8882b5f4b65c077341605cd8ea0849b96ec6c4260700"
+     }
     },
     {
      "date": "2026-10-29",
@@ -572,7 +707,12 @@
      "rank": 2,
      "snippet": "NSO Malta – Your gateway to Malta's official statistics.\nNSO Malta | Your gateway to Malta's Official Statistics\n# Your gateway to Malta's official statistics\n...\n### Stay Informed\nLascaris\nValletta VLT 2000\nMalta\n+356 25997000",
      "title": "NSO Malta – Your gateway to Malta's official statistics.",
-     "url": "https://nso.gov.mt/"
+     "url": "https://nso.gov.mt/",
+     "verificacion": {
+      "error": "robots.txt disallows https://nso.gov.mt/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:28:29Z"
+     }
     },
     {
      "date": "2026-03-16",

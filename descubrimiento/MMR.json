@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "#### အခွန်အယူခံခုံအဖွဲ့၏ ညွှန်ကြားချက်အမှတ် (၂/၂၀၂၅)\nPublisher: အခွန်အယူခံခုံအဖွဲ့\nPublication Date:August 25, 2025\nPage:8",
      "title": "Document - Myanmar National Portal",
-     "url": "https://myanmar.gov.mm/law-justice/document"
+     "url": "https://myanmar.gov.mm/law-justice/document",
+     "verificacion": {
+      "error": "robots.txt disallows https://myanmar.gov.mm/law-justice/document",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:30:01Z"
+     }
     },
     {
      "date": "",
@@ -22,7 +27,12 @@
      "rank": 2,
      "snippet": "- ပြည်ထောင်စုလွှတ်တော်၊ ပြည်သူ့လွှတ်တော်၊ အမျိုးသားလွှတ်တော်တို့က ဖွဲ့စည်းသည့် ကော်မတီ၊ ကော်မရှင်နှင့် အဖွဲ့\n…",
      "title": "မြန်မာဥပဒေသတင်းအချက်အလက်စနစ်",
-     "url": "https://www.mlis.gov.mm/"
+     "url": "https://www.mlis.gov.mm/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mlis.gov.mm/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:31:31Z"
+     }
     },
     {
      "date": "",
@@ -64,7 +74,14 @@
      "rank": 1,
      "snippet": "### ဥပဒေ စာရွက်စာတမ်းများ\nDisplaying 436 - 450 of 452 results\n…\n...\n|--|--|--|--|--|--|",
      "title": "ဥပဒေ စာရွက်စာတမ်းများ - Myanmar National Trade Portal",
-     "url": "https://www.myanmartradeportal.gov.mm/my/legals?page=30"
+     "url": "https://www.myanmartradeportal.gov.mm/my/legals?page=30",
+     "verificacion": {
+      "bytes": 16,
+      "estado": "http",
+      "fecha": "2026-11-14T14:31:33Z",
+      "http": 404,
+      "sha256": "8a482f2271a42c5f54c96e816a84340a6f2357a5b81f927d07d00788f5140a41"
+     }
     },
     {
      "date": "",
@@ -72,7 +89,12 @@
      "rank": 2,
      "snippet": "#### Document - 463 items\n#### ဗဟိုမိုဘိုင်းစက်ပစ္စည်းသက်သေခံမှတ်ပုံတင်စနစ် (Central Equipment Identity Register -CEIR) အကြောင်း သိကောင်းစရာများ\nPublisher: Ministry of Finance and Revenue",
      "title": "Documents - Myanmar National Portal",
-     "url": "https://myanmar.gov.mm/documents"
+     "url": "https://myanmar.gov.mm/documents",
+     "verificacion": {
+      "error": "robots.txt disallows https://myanmar.gov.mm/documents",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:33:04Z"
+     }
     },
     {
      "date": "",
@@ -114,7 +136,12 @@
      "rank": 1,
      "snippet": "# Myanmar Gazette\nAn error occurred while processing the template.\n...\n`8 journalArticle = journalArticleLocalService.getArticle(20143,articleId) `",
      "title": "Myanmar Gazette",
-     "url": "https://myanmar.gov.mm/news-media/announcements/-/asset_publisher/idasset291/content/myanmar-gazette"
+     "url": "https://myanmar.gov.mm/news-media/announcements/-/asset_publisher/idasset291/content/myanmar-gazette",
+     "verificacion": {
+      "error": "robots.txt disallows https://myanmar.gov.mm/news-media/announcements/-/asset_publisher/idasset291/content/myanmar-gazette",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:34:36Z"
+     }
     },
     {
      "date": "2015-07-08",
@@ -122,7 +149,14 @@
      "rank": 2,
      "snippet": "The ***Gazette of the Republic of the Union of Myanmar** * (Burmese: ပြည်ထောင်စုသမ္မတမြန်မာနိုင်ငံတော်ပြန်တမ်း; formerly ***The Burma Gazette** *) is the official government gazette of Burma.\n...\n|Country|Myanmar|",
      "title": "Burma Gazette - Wikipedia",
-     "url": "https://en.wikipedia.org/wiki/Burma_Gazette"
+     "url": "https://en.wikipedia.org/wiki/Burma_Gazette",
+     "verificacion": {
+      "bytes": 131832,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:34:38Z",
+      "http": 200,
+      "sha256": "f94976eef8b454df70210ea3dac33355b26444865f9be7f9ce61075f327fc9f8"
+     }
     },
     {
      "date": "",
@@ -164,7 +198,14 @@
      "rank": 1,
      "snippet": "Union Supreme Court - စီရင်ထုံး\n...\nThe Supreme Court of the Union\nNo. 54, Thiri Mandine Street, Othara Thiri Township, Nay Pyi Taw\nWebsite: www.unionsupremecourt.gov.mm",
      "title": "စီရင်ထုံး - Union Supreme Court",
-     "url": "https://www.unionsupremecourt.gov.mm/ruling"
+     "url": "https://www.unionsupremecourt.gov.mm/ruling",
+     "verificacion": {
+      "bytes": 48278,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:34:41Z",
+      "http": 200,
+      "sha256": "a51f5a4a200c679423da8ba33b3bc856596028bb12a376ee126de8c0d4b7f952"
+     }
     },
     {
      "date": "",
@@ -172,7 +213,12 @@
      "rank": 2,
      "snippet": "- တိုင်းဒေသကြီးနှင့် ပြည်နယ်လွှတ်တော်များက ပြဋ္ဌာန်းထားသည့်ဥပဒေများနှင့်ပတ်သက်၍ ဖြေကြားခြင်း(Answer)၁၁.၁၂.၂၀၁၉",
      "title": "မြန်မာဥပဒေသတင်းအချက်အလက်စနစ်",
-     "url": "https://www.mlis.gov.mm/"
+     "url": "https://www.mlis.gov.mm/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.mlis.gov.mm/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:36:12Z"
+     }
     },
     {
      "date": "2026-10-30",
@@ -198,7 +244,12 @@
      "rank": 1,
      "snippet": "MYANMAR\nNATIONAL PORTAL\nNAY PYI TAW, MM\n...\nရှာဖွေရန်\nState & Regional Hluttaws\nHome\nNation\nHluttaws\nState & Regional Hluttaws\n…\nBago Region Hluttaw\n...\nMon State Hluttaw",
      "title": "State & Regional Hluttaws",
-     "url": "https://myanmar.gov.mm/state-regional-hluttaws"
+     "url": "https://myanmar.gov.mm/state-regional-hluttaws",
+     "verificacion": {
+      "error": "robots.txt disallows https://myanmar.gov.mm/state-regional-hluttaws",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:37:43Z"
+     }
     },
     {
      "date": "2026-06-10",
@@ -206,7 +257,12 @@
      "rank": 2,
      "snippet": "## Yangon-Mandalay Highway Police Station\nNaypyitaw Development Committee\nClosing Date: : June 08, 2026",
      "title": "Myanmar National Portal",
-     "url": "https://myanmar.gov.mm/"
+     "url": "https://myanmar.gov.mm/",
+     "verificacion": {
+      "error": "robots.txt disallows https://myanmar.gov.mm/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:39:14Z"
+     }
     },
     {
      "date": "",
@@ -248,7 +304,12 @@
      "rank": 1,
      "snippet": "ထုတ်ဝေသူ: Ministry of Construction\nထုတ်ဝေသည့်နေ့ :\nစာမျက်နှာ:277\nဘာသာစကား:English\n...\nထုတ်ဝေသူ: Ministry of Construction\nထုတ်ဝေသည့်နေ့ :\nစာမျက်နှာ:205",
      "title": "အချက်အလက်များ",
-     "url": "https://myanmar.gov.mm/my/documents"
+     "url": "https://myanmar.gov.mm/my/documents",
+     "verificacion": {
+      "error": "robots.txt disallows https://myanmar.gov.mm/my/documents",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:40:47Z"
+     }
     },
     {
      "date": "2026-06-10",
@@ -256,7 +317,12 @@
      "rank": 2,
      "snippet": "…\nYangon City Development Committee...\nYangon City Development Committee...Yangon City Development Committee...",
      "title": "Myanmar National Portal",
-     "url": "https://myanmar.gov.mm/"
+     "url": "https://myanmar.gov.mm/",
+     "verificacion": {
+      "error": "robots.txt disallows https://myanmar.gov.mm/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:42:19Z"
+     }
     },
     {
      "date": "",
@@ -298,7 +364,14 @@
      "rank": 1,
      "snippet": "### Legal Documents\n...\n|Title|Type|Responsible Agency|Issuing Agency|EN|MM|\n...\n|Directive no. 1/2019 (Procedures for Using of Sodium Cyanide and Mercury)|Instruction|Central Supervisory Board|Ministry of Industry|*picture_as_pdf*| |",
      "title": "Legal Documents - Myanmar National Trade Portal",
-     "url": "https://myanmartradeportal.gov.mm/index.php/legals?page=20"
+     "url": "https://myanmartradeportal.gov.mm/index.php/legals?page=20",
+     "verificacion": {
+      "bytes": 16,
+      "estado": "http",
+      "fecha": "2026-11-14T14:42:21Z",
+      "http": 404,
+      "sha256": "8a482f2271a42c5f54c96e816a84340a6f2357a5b81f927d07d00788f5140a41"
+     }
     },
     {
      "date": "2026-11-02",
@@ -306,7 +379,14 @@
      "rank": 2,
      "snippet": "### MYANMAR EXPORT / IMPORT RULES AND REGULATIONS\n...\nThe authority to issue export / import licences and permits is delegated to Directorate of Trade and Department of Border Trade under the Ministry of Commerce.\nDirectorate of Trade is authorised to issue export / import licences and permits for e",
      "title": "Myanmar Trade Rules – Ministry of Foreign Affairs",
-     "url": "https://www.mofa.gov.mm/commercial/myanmar-trade-rules/"
+     "url": "https://www.mofa.gov.mm/commercial/myanmar-trade-rules/",
+     "verificacion": {
+      "bytes": 121768,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:42:28Z",
+      "http": 200,
+      "sha256": "7671c8ce231d7f41d864ae19f3b462eaf4261f49da6b6aac2797ff4b55e54388"
+     }
     },
     {
      "date": "",
@@ -348,7 +428,12 @@
      "rank": 1,
      "snippet": "# Endorsement of Myanmar Standards Adoption\n...\nIN accordance with duties and function of Section 5, Article b and vested mandate of Section 33 Article (b) of the Law on Standardization, National Standards Council endorses the following 259 standards to adopt as Myanmar Standards.\nNo. Myanmar Standa",
      "title": "Endorsement of Myanmar Standards Adoption",
-     "url": "https://myanmar.gov.mm/web/guest/news-media/news/latest-news/-/asset_publisher/idasset354/content/endorsement-of-myanmar-standards-adoption"
+     "url": "https://myanmar.gov.mm/web/guest/news-media/news/latest-news/-/asset_publisher/idasset354/content/endorsement-of-myanmar-standards-adoption",
+     "verificacion": {
+      "error": "robots.txt disallows https://myanmar.gov.mm/web/guest/news-media/news/latest-news/-/asset_publisher/idasset354/content/endorsement-of-myanmar-standards-adoption",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:43:58Z"
+     }
     },
     {
      "date": "2019-12-09",
@@ -356,7 +441,14 @@
      "rank": 2,
      "snippet": "### Notification No. 149/2019 (Standards of Myanmar)\nBy exercising the power of the authorization in accordance with the Article 33 (b) of the Law on Standardization, National Standards Council of Myanmar issued the 82 standards in this\n...\n|Issuing Agency|National Standards Council|",
      "title": "Notification No. 149/2019 (Standards of Myanmar) - Legal Documents - Myanmar National Trade Portal",
-     "url": "https://www.myanmartradeportal.gov.mm/legal/270"
+     "url": "https://www.myanmartradeportal.gov.mm/legal/270",
+     "verificacion": {
+      "bytes": 16,
+      "estado": "http",
+      "fecha": "2026-11-14T14:44:00Z",
+      "http": 404,
+      "sha256": "8a482f2271a42c5f54c96e816a84340a6f2357a5b81f927d07d00788f5140a41"
+     }
     },
     {
      "date": "",
@@ -398,7 +490,14 @@
      "rank": 1,
      "snippet": "##### ကုန်စည်များ\nThis measure applies to the following commodities.\n|HS Code|အကြောင်းအရာ|\n...\n|2801100000|- Chlorine|\n...\n|2802000000|Sulphur, sublimed or precipitated; colloidal sulphur.|",
      "title": "တင်သွင်းပိုးသတ်ဆေးများ သယ်ယူပို့ဆောင်ခြင်းနှင့် သိုလှောင်ခြင်းတို့အပေါ် TBT စည်းမျဉ်းသတ်မှတ်ချက် - စည်းမျည်းများ - Myanmar National Trade Portal",
-     "url": "https://myanmartradeportal.gov.mm/index.php/my/measure/86"
+     "url": "https://myanmartradeportal.gov.mm/index.php/my/measure/86",
+     "verificacion": {
+      "bytes": 16,
+      "estado": "http",
+      "fecha": "2026-11-14T14:44:02Z",
+      "http": 404,
+      "sha256": "8a482f2271a42c5f54c96e816a84340a6f2357a5b81f927d07d00788f5140a41"
+     }
     },
     {
      "date": "",
@@ -406,7 +505,14 @@
      "rank": 2,
      "snippet": "====================\n...\nTechnical Regulations or Mandatory Standards on Building and Construction Materials in ASEAN,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9",
      "title": "Myanmar-Phase-1_AMS-Technical-Regulations-MRA-BCM-as-25Oct24.xlsx",
-     "url": "https://asean.org/wp-content/uploads/2025/01/Myanmar-Phase-1_AMS-Technical-Regulations-MRA-BCM-as-25Oct24.xlsx"
+     "url": "https://asean.org/wp-content/uploads/2025/01/Myanmar-Phase-1_AMS-Technical-Regulations-MRA-BCM-as-25Oct24.xlsx",
+     "verificacion": {
+      "bytes": 14901,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:44:07Z",
+      "http": 200,
+      "sha256": "ab7a9ae60c7decef21d17fd8e29565dbfa3beadcd4a22657557fd478f42c841a"
+     }
     },
     {
      "date": "",
@@ -448,7 +554,14 @@
      "rank": 1,
      "snippet": "Central Statistical Organization\nTHE REPUBLIC OF THE UNION OF MYANMAR\nCentral Statistical Organization\n…\n...\n### Contacts\n**Call us :**\n095-067-406328 **Email us :**\n[email protected] **Address :**\nOffice(32), Nay Pyi Taw, Myanmar",
      "title": "Central Statistical Organization",
-     "url": "https://www.csostat.gov.mm/"
+     "url": "https://www.csostat.gov.mm/",
+     "verificacion": {
+      "bytes": 105105,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:44:09Z",
+      "http": 200,
+      "sha256": "eef1a2ba277539c5655ac30408f067486d4dc08a6f0e5949767584735f643a00"
+     }
     },
     {
      "date": "",
@@ -456,7 +569,14 @@
      "rank": 2,
      "snippet": "© CSO မှမူပိုင်ခွင့်များရယူပြီး။\nရုံး (၃၂), နေပြည်တော်, မြန်မာ\n...\nအီးမေးလိပ်စာ: [email protected]",
      "title": "ဗဟိုစာရင်းအင်းအဖွဲ့",
-     "url": "https://csostat.gov.mm/Home/IndexMyanmar?page=37"
+     "url": "https://csostat.gov.mm/Home/IndexMyanmar?page=37",
+     "verificacion": {
+      "bytes": 109288,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:44:13Z",
+      "http": 200,
+      "sha256": "2195cd4666366b5b1b1bdbe684f7a5a96e05089c87e6b54672334503c5a6a509"
+     }
     },
     {
      "date": "",
@@ -498,7 +618,12 @@
      "rank": 1,
      "snippet": "|GDP Growth Rate 2019-2020 FY|3.20 %|\n|--|--|\n|Annual Rate of Inflation (February 2021)|2.61 %|\n|Year on Year Inflation (February 2021)|1.51 %|\n...\n|--|--|",
      "title": "Central Bank of Myanmar",
-     "url": "https://www.cbm.gov.mm/"
+     "url": "https://www.cbm.gov.mm/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.cbm.gov.mm/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:44:16Z"
+     }
     },
     {
      "date": "2026-05-20",
@@ -506,7 +631,14 @@
      "rank": 2,
      "snippet": "Central Bank of Myanmar - Wikidata\n...\nMyanmar\n...\n0 references\nofficial website\nhttps://www.cbm.gov.mm/\n0 references",
      "title": "Central Bank of Myanmar",
-     "url": "https://www.wikidata.org/wiki/Q1944374"
+     "url": "https://www.wikidata.org/wiki/Q1944374",
+     "verificacion": {
+      "bytes": 106531,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:44:17Z",
+      "http": 200,
+      "sha256": "30f85f2fd7f595b7a53f8e652e58ce865f711a7b8cfa74f0579e62071a8c87c4"
+     }
     },
     {
      "date": "",
@@ -548,7 +680,12 @@
      "rank": 1,
      "snippet": "Ministry Of Electricity And Energy\n...\nနေပြည်တော်စည်ပင်သာယာရေးကော်မတီ၊ အင်ဂျင်နီယာဌာန(လမ်း/တံတား)မှ အိတ်ဖွင့်တင်ဒါခေါ်ယူခြင်း",
      "title": "Myanmar National Portal",
-     "url": "https://myanmar.gov.mm/"
+     "url": "https://myanmar.gov.mm/",
+     "verificacion": {
+      "error": "robots.txt disallows https://myanmar.gov.mm/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T14:45:48Z"
+     }
     },
     {
      "date": "2026-06-09",
@@ -556,7 +693,14 @@
      "rank": 2,
      "snippet": "- ⬛ Portals of open data and datasets in various directions\n- **Myanmar Open Data Portal** – Government platform hosting statistical datasets on economy, population, and public administration.\n- **Central Statistical Organization** – Official source of national statistics, economic indicators, and p",
      "title": "OSINT_in_Myanmar/README.md at main · OSINT-for-countries/OSINT_in_Myanmar",
-     "url": "https://github.com/OSINT-for-countries/OSINT_in_Myanmar/blob/main/README.md"
+     "url": "https://github.com/OSINT-for-countries/OSINT_in_Myanmar/blob/main/README.md",
+     "verificacion": {
+      "bytes": 429164,
+      "estado": "accesible",
+      "fecha": "2026-11-14T14:45:50Z",
+      "http": 200,
+      "sha256": "708bd68b548697cb0213f503ef50e705949a94f41161ad41ce064f3ccdb745ff"
+     }
     },
     {
      "date": "",

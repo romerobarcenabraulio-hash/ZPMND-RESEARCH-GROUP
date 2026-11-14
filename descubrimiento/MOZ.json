@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "Leis – Tribunal Supremo da República de Moçambique\n...\n17/2024 de 3 de Setembro, Lei da Revisão Pontual do Estatuto dos Magistrados Judiciais\n- Lei n.º 11/2024, de 7 de Junho, Lei Orgânica do Conselho Constitucional",
      "title": "Leis – Tribunal Supremo da República de Moçambique",
-     "url": "https://www.ts.gov.mz/leis/"
+     "url": "https://www.ts.gov.mz/leis/",
+     "verificacion": {
+      "bytes": 165614,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:00:15Z",
+      "http": 200,
+      "sha256": "589a11b6dc5fb70852d43f7c421a08e1b922236987b74262a6af893e8f57ba22"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "Constituição da República de Moçambique\n...\nDecreto 66/2014 de 29 de Outubro – Regulamento da Lei 14/2013 de 12 de Agosto\nDescarregar482 Downloads\n...\nLei 05/2018 – Lei de Combate ao Terrorrismo",
      "title": "Legislação – MINEC",
-     "url": "https://minec.gov.mz/legislacao/"
+     "url": "https://minec.gov.mz/legislacao/",
+     "verificacion": {
+      "bytes": 90873,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:00:25Z",
+      "http": 200,
+      "sha256": "7c892b8121d6fd109007ed57740e7d252ee3c8a1d879186e3d1799c6e210b6ac"
+     }
     },
     {
      "date": "",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "Arquivo de Legislação - MIREME\n- geral@mireme.gov.mz\n- +258 21 314843\n...\n### Decreto 62-2023 de 23 de Novembro Regulamento de Distribuicao e Comercializacao de Gas Natural BR_225_I_SERIE_2023\n…",
      "title": "Arquivo de Legislação - MIREME",
-     "url": "https://mireme.gov.mz/documentos/legislacao/"
+     "url": "https://mireme.gov.mz/documentos/legislacao/",
+     "verificacion": {
+      "bytes": 347075,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:00:29Z",
+      "http": 200,
+      "sha256": "c8f40e076ae0d2605e44566a5b0e676e0bbe9ae12a16edac742b6d07178820e6"
+     }
     },
     {
      "date": "2014-06-17",
@@ -72,7 +93,12 @@
      "rank": 2,
      "snippet": "Formato: 2025\n...\nDecreto n.º 44/2015:\n...\nDecreto n.º 76/2016:\nAprova os termos e condições do Contrato de GNL do Governo para o Projecto Inicial de GNL da Área 1, no Bloco de Rovuma.",
      "title": "Produtos",
-     "url": "https://www.inm.gov.mz/pt-br/produtos?page=196"
+     "url": "https://www.inm.gov.mz/pt-br/produtos?page=196",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.inm.gov.mz/pt-br/produtos?page=196",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T15:00:32Z"
+     }
     },
     {
      "date": "2026-10-27",
@@ -114,7 +140,12 @@
      "rank": 1,
      "snippet": "BR Nº 26 de 10.02.26, Boletim da República - I Serie\n...\nO serviço de Boletim da República representa o mecanismo competente em matéria de publicação e divulgação das leis, disposições e outros actos de publicação obrigatória em Moçambique.",
      "title": "Boletim da República",
-     "url": "https://www.inm.gov.mz/pt-br/bulletin"
+     "url": "https://www.inm.gov.mz/pt-br/bulletin",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.inm.gov.mz/pt-br/bulletin",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T15:00:37Z"
+     }
     },
     {
      "date": "2021-10-19",
@@ -122,7 +153,14 @@
      "rank": 2,
      "snippet": "## Publication of Technical Regulations\nThe Boletim da República serves as Mozambique’s official gazette for the publication and dissemination of laws, regulations, and other official acts.\n...\nWhen changes to laws or regulations are enacted, they are published in the national gazette.",
      "title": "Mozambique - Trade Standards",
-     "url": "https://www.trade.gov/country-commercial-guides/mozambique-trade-standards"
+     "url": "https://www.trade.gov/country-commercial-guides/mozambique-trade-standards",
+     "verificacion": {
+      "bytes": 271637,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:00:38Z",
+      "http": 200,
+      "sha256": "c5c32cda576c5a79ba037ada1a4a7334a35fbc3ad2172ec9f7705d2cceab5cc4"
+     }
     },
     {
      "date": "2008-12-30",
@@ -164,7 +202,12 @@
      "rank": 1,
      "snippet": "Tabela de Julgamentos – Tribunal Supremo da República de Moçambique\n# Tabelas de Julgamento\nVisualizações: 4.214\n## Sessão do dia 16 de Julho de 2024\n...\nO Tribunal Supremo disponibiliza informação de valor de forma fácil e dinâmica",
      "title": "Tabelas de Julgamento",
-     "url": "https://www.ts.gov.mz/tabela-de-julgamento/"
+     "url": "https://www.ts.gov.mz/tabela-de-julgamento/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ts.gov.mz/tabela-de-julgamento/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T15:02:11Z"
+     }
     },
     {
      "date": "2023-06-20",
@@ -172,7 +215,12 @@
      "rank": 2,
      "snippet": "# Relatórios Anuais dos Tribunais Judiciais\nVisualizações: 6.937\n- ## Relatório Anual dos Tribunais Judiciais de 2025 vol 1\n- ## Relatório Anual dos Tribunais Judiciais de 2023",
      "title": "Relatórios – Tribunal Supremo da República de Moçambique",
-     "url": "https://www.ts.gov.mz/relatorios/"
+     "url": "https://www.ts.gov.mz/relatorios/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ts.gov.mz/relatorios/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T15:03:46Z"
+     }
     },
     {
      "date": "2026-10-20",
@@ -214,7 +262,12 @@
      "rank": 1,
      "snippet": "Leis – Tribunal Supremo da República de Moçambique\n...\n17/2024 de 3 de Setembro, Lei da Revisão Pontual do Estatuto dos Magistrados Judiciais\n...\n- Lei n°.\n19/91, de 16 de Agosto – Aprova a Lei contra a Segurança do Estado",
      "title": "Leis – Tribunal Supremo da República de Moçambique",
-     "url": "https://www.ts.gov.mz/leis/"
+     "url": "https://www.ts.gov.mz/leis/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ts.gov.mz/leis/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T15:05:18Z"
+     }
     },
     {
      "date": "2024-08-13",
@@ -222,7 +275,14 @@
      "rank": 2,
      "snippet": "Arquivo de Legislação - MIREME\n- geral@mireme.gov.mz\n- +258 21 314843\n...\n# Legislação\n...\n### Lei do Conteúdo Local – 2026\n### Lei do Petroleo- 2026\n### Lei de Minas – 2026",
      "title": "Arquivo de Legislação - MIREME",
-     "url": "https://mireme.gov.mz/documentos/legislacao/"
+     "url": "https://mireme.gov.mz/documentos/legislacao/",
+     "verificacion": {
+      "bytes": 347075,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:05:21Z",
+      "http": 200,
+      "sha256": "c8f40e076ae0d2605e44566a5b0e676e0bbe9ae12a16edac742b6d07178820e6"
+     }
     },
     {
      "date": "2014-06-17",
@@ -264,7 +324,14 @@
      "rank": 1,
      "snippet": "4. [Decreto no. 23/2008: Regulamento da Lei de Ordenamento Territorial](https://sibmoz.gov.mz/reports-and-publications/decreto-no-23-2008-regulamento-da-lei-de-ordenamento-territorial/)",
      "title": "[DOC] Links-QR-code_revNS.docx",
-     "url": "https://sibmoz.gov.mz/content/uploads/2025/11/Links-QR-code_revNS.docx"
+     "url": "https://sibmoz.gov.mz/content/uploads/2025/11/Links-QR-code_revNS.docx",
+     "verificacion": {
+      "bytes": 30959,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:05:23Z",
+      "http": 200,
+      "sha256": "d89dae3f8a25e3c3f2f47c35e600d44d9ba1c4dd1f228bcea4392be82d2c6c4b"
+     }
     },
     {
      "date": "2014-06-17",
@@ -272,7 +339,12 @@
      "rank": 2,
      "snippet": "BR Nº 26 de 10.02.26, Boletim da República - I Serie\n...\nO serviço de Boletim da República representa o mecanismo competente em matéria de publicação e divulgação das leis, disposições e outros actos de publicação obrigatória em Moçambique.",
      "title": "Boletim da República",
-     "url": "https://www.inm.gov.mz/pt-br/bulletin"
+     "url": "https://www.inm.gov.mz/pt-br/bulletin",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.inm.gov.mz/pt-br/bulletin",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T15:05:27Z"
+     }
     },
     {
      "date": "",
@@ -314,7 +386,14 @@
      "rank": 1,
      "snippet": "Regulations - Banco de Moçambique\n...\n10 of 324 results\n...\nAVISO N.º 3/GBM/2026, DE 2 DE JUNHO – REGRAS RELATIVAS À QUALIFICAÇÃO DOS INVESTIDORES NO MERCADO DE VALORES MOBILIÁRIOS",
      "title": "www.bancomoc.mz › en › the-bankRegulations - - Banco de Moçambique",
-     "url": "https://www.bancomoc.mz/en/the-bank/normatives/?page=2"
+     "url": "https://www.bancomoc.mz/en/the-bank/normatives/?page=2",
+     "verificacion": {
+      "bytes": 63390,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:05:32Z",
+      "http": 200,
+      "sha256": "12c5b291a8cca51e909e3591a4dee003618bd4e830b55ca66cbf82d508dbbcdd"
+     }
     },
     {
      "date": "2025-11-24",
@@ -322,7 +401,14 @@
      "rank": 2,
      "snippet": "Regulamento de Licenciamento de Telecomunicações e de Recursos Escassos – Decreto n.º 36/2026, de 16 de Julho\nO presente Regulamento tem por objecto estabelecer os procedimentos para atribuição de licenças de telecomunicações e de recursos escassos.",
      "title": "Legislação Telecomunicações - INCM",
-     "url": "https://www.incm.gov.mz/legislacao-telecomunicacoes/"
+     "url": "https://www.incm.gov.mz/legislacao-telecomunicacoes/",
+     "verificacion": {
+      "bytes": 384367,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:05:42Z",
+      "http": 200,
+      "sha256": "196fcb295b4ac1f70c479e0957b2bf18be2f78ca2fd9b8573566b5887310be46"
+     }
     },
     {
      "date": "2026-10-16",
@@ -364,7 +450,14 @@
      "rank": 1,
      "snippet": "Catálogos diversos de Normas;\nLista das Normas Moçambicanas e;\n...\n## NM 247: 2010 Ed. 1 08p. NM ISO 6107-7:\n...\nBovinos de consumo – Terminologia NM ISO/IEC 14050:",
      "title": "Catálogo+de+Normas+Moçambicanas.pdf",
-     "url": "https://pt.scribd.com/document/400178625/Catalogo-de-Normas-Mocambicanas-pdf"
+     "url": "https://pt.scribd.com/document/400178625/Catalogo-de-Normas-Mocambicanas-pdf",
+     "verificacion": {
+      "bytes": 3038,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:05:43Z",
+      "http": 200,
+      "sha256": "4965d403ea8006362b7b9527e254092d06a584fa5335eddaca51255af1efe08e"
+     }
     },
     {
      "date": "2026-10-11",
@@ -372,7 +465,14 @@
      "rank": 2,
      "snippet": "automáticos de braços iguais\n...\n…\n...\nNM 251: 2013 – Turismo.\nCategorização de Restaurantes.\nRequisitos\nNM 284: 2010 – Norma da Soja.\nNM285: 2010 – Sementes de gergelim – Especificações",
      "title": "Legislação de Higiene Alimentar em Moçambique",
-     "url": "https://pt.scribd.com/document/628983380/1-Food-Safety-Legislation"
+     "url": "https://pt.scribd.com/document/628983380/1-Food-Safety-Legislation",
+     "verificacion": {
+      "bytes": 3038,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:05:45Z",
+      "http": 200,
+      "sha256": "4965d403ea8006362b7b9527e254092d06a584fa5335eddaca51255af1efe08e"
+     }
     },
     {
      "date": "2025-07-16",
@@ -414,7 +514,14 @@
      "rank": 1,
      "snippet": "Regulamento de Controlo de Tráfego de Telecomunicações Decreto 33/2023\n...\nBR 158 I SÉRIE 2023 / Resolução nrº 4 BR INCM 2023: Normas Técnicas de Funcionamento da Central de Risco\n…\n...\n…",
      "title": "Documentos de Telecomunicações",
-     "url": "https://www.incm.gov.mz/documentos-de-telecomunicacoes/page/2/"
+     "url": "https://www.incm.gov.mz/documentos-de-telecomunicacoes/page/2/",
+     "verificacion": {
+      "bytes": 377217,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:05:56Z",
+      "http": 200,
+      "sha256": "747c844fc01fe84ece9ccb3d40ce8ad85c0ec97ab2c2a45be17aec4b23c35d6f"
+     }
     },
     {
      "date": "2025-10-28",
@@ -422,7 +529,14 @@
      "rank": 2,
      "snippet": "Regulamento de Homologação de Equipamento de Telecomunicações e Radiocomunicações - INCM\n# Regulamento de Homologação de Equipamento de Telecomunicações e Radiocomunicações\n...\nDecreto n.ᵒ 66/2018, de 9 de Novembro",
      "title": "Regulamento de Homologação de Equipamento de ... - INCM",
-     "url": "https://www.incm.gov.mz/sdm_downloads/regulamento-de-homologacao-de-equipamento-de-telecomunicacoes-e-radiocomunicacoes/"
+     "url": "https://www.incm.gov.mz/sdm_downloads/regulamento-de-homologacao-de-equipamento-de-telecomunicacoes-e-radiocomunicacoes/",
+     "verificacion": {
+      "bytes": 366676,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:06:08Z",
+      "http": 200,
+      "sha256": "45eec8ce6aa29d571a264a725fa82a2b03aeae2481cf79eb2adc8beb8d68b112"
+     }
     },
     {
      "date": "2025-11-24",
@@ -464,7 +578,12 @@
      "rank": 1,
      "snippet": "## Instituto Nacional de Estatistica - INE\n# Destaques\n...\nExplore e aceda aos conjuntos de microdados das nossas pesquisas no ANDA.\n...\nINSTITUTO NACIONAL DE ESTATÍSTICA - Moçambique.\n1996-2023 Powered by: Infopel RDSambo",
      "title": "Instituto Nacional de Estatistica - INE - INE",
-     "url": "https://ine.gov.mz/"
+     "url": "https://ine.gov.mz/",
+     "verificacion": {
+      "error": "robots.txt disallows https://ine.gov.mz/",
+      "estado": "rechazado",
+      "fecha": "2026-11-14T15:06:11Z"
+     }
     },
     {
      "date": "",
@@ -472,7 +591,14 @@
      "rank": 2,
      "snippet": "#### National Statistical Offices\n|Country|NSO|Web address|\n|--|--|--|\n|Maroc|Direction de la Statistique|http://www.hcp.ma/|\n|Mozambique|National Statistical Institute|http://www.ine.gov.mz/|",
      "title": "National Statistical Offices",
-     "url": "https://ecastats.uneca.org/data/national-statistical-offices"
+     "url": "https://ecastats.uneca.org/data/national-statistical-offices",
+     "verificacion": {
+      "bytes": 1031,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:06:13Z",
+      "http": 200,
+      "sha256": "5095906ea187330478a6c09b14692ae5c8e8719a48ac4b08668d7858635a8b9d"
+     }
     },
     {
      "date": "",
@@ -514,7 +640,14 @@
      "rank": 1,
      "snippet": "No âmbito da lei orgânica e no quadro das suas competências, o Banco de Moçambique recolhe, compila e divulga estatísticas monetárias e financeiras, cambiais, do sector externo, do sistema nacional de pagamentos, da central de balanços, de títulos e estatísticas de inclusão financeira.",
      "title": "Estatisticas - Banco de Moçambique",
-     "url": "https://www.bancomoc.mz/pt/areas-de-actuacao/estatisticas/estatisticas/"
+     "url": "https://www.bancomoc.mz/pt/areas-de-actuacao/estatisticas/estatisticas/",
+     "verificacion": {
+      "bytes": 52027,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:06:16Z",
+      "http": 200,
+      "sha256": "1529ff560ed5fd7f03c077323626b130c9486e329b2ace35d715db9bd0123d31"
+     }
     },
     {
      "date": "",
@@ -522,7 +655,14 @@
      "rank": 2,
      "snippet": "Domínios e Indicadores Estatísticos - Banco de Moçambique\n...\n…\n...\n**Indicadores:**\n...\n**Indicadores:**\nEstatísticas de Circulação Monetária-Setembro 2026\n...\n**Indicadores:**\nEstatística de Emissão Monetária-Setembro 2026",
      "title": "Domínios e Indicadores Estatísticos",
-     "url": "https://www.bancomoc.mz/pt/areas-de-actuacao/estatisticas/dominios-e-indicadores-estatisticos/"
+     "url": "https://www.bancomoc.mz/pt/areas-de-actuacao/estatisticas/dominios-e-indicadores-estatisticos/",
+     "verificacion": {
+      "bytes": 89835,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:06:20Z",
+      "http": 200,
+      "sha256": "6333624d7e28b6778b01440dded2df009da6698aeec84019e2cbe4808529fbe9"
+     }
     },
     {
      "date": "",
@@ -564,7 +704,14 @@
      "rank": 1,
      "snippet": "Data Portal Moçambique - Dados Abertos e Geoespaciais\n● Dados oficiais · Actualizados continuamente\n...\nO que é o Portal de Dados?\nÉ a plataforma pública da Data4Moz para consultar e reutilizar dados oficiais de Moçambique.\n...\nToda a lista de serviços está em Serviços.",
      "title": "Data Portal Moçambique - Dados Abertos e Geoespaciais",
-     "url": "https://dataportal.co.mz/"
+     "url": "https://dataportal.co.mz/",
+     "verificacion": {
+      "bytes": 324171,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:06:22Z",
+      "http": 200,
+      "sha256": "71a6cd5fd65024e7275af3873971201ba87381266fd8e2e8ea9828442c2787ec"
+     }
     },
     {
      "date": "",
@@ -572,7 +719,14 @@
      "rank": 2,
      "snippet": "# Arquivo Nacional de Dados\nSearch in **79** datasets\n...\nInstituto Nacional de Estatistica",
      "title": "Arquivo Nacional de Dados - INE",
-     "url": "https://mozdata.ine.gov.mz/index.php/home"
+     "url": "https://mozdata.ine.gov.mz/index.php/home",
+     "verificacion": {
+      "bytes": 36034,
+      "estado": "accesible",
+      "fecha": "2026-11-14T15:06:30Z",
+      "http": 200,
+      "sha256": "201bf81a9f6a98154edd487b88807b871b74d42c022a83c00eb8f2c723c8cbf7"
+     }
     },
     {
      "date": "",
