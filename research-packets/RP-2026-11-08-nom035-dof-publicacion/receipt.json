@@ -1,0 +1,44 @@
+{
+ "request_id": "RR-2026-11-08-nom035-dof-publicacion",
+ "fetched": [
+  {
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+   "status": 200,
+   "error": null,
+   "sha256": "75b62246f311f4451094bb20eb3b7528ed6c317390530cf4ca8eae62e04548cc",
+   "bytes": 1133731,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-14T03:27:58Z",
+   "text_status": "ok",
+   "text_chars": 119139
+  },
+  {
+   "url": "https://sidof.segob.gob.mx/notas/5541828",
+   "status": 200,
+   "error": null,
+   "sha256": "64cee5e7c0c2d7e37fd26e020206acf76e8afee97b4b60c44920ae29ab46b5e5",
+   "bytes": 68181,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-14T03:28:02Z",
+   "text_status": "ok",
+   "text_chars": 3223
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43551738055",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "taken_out": [
+   {
+    "id": "confirmed[0]",
+    "claim": "La ficha del DOF indica que la norma se publicó el 23-10-2018, en la sección segunda, edición matutina.",
+    "why": "The claim adds 'sección segunda' and 'edición matutina', which the quote (only the date 23-10-2018) does not contain."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "El texto indica que la Norma se expidió en Ciudad de México el cuatro de septiembre de 2018 (fecha de firma, distinta de la publicación).",
+    "why": "The claim says the Norma was 'expedida' and that this is a signing date distinct from publication, which the quote (only place and date) does not state."
+   }
+  ]
+ }
+}
