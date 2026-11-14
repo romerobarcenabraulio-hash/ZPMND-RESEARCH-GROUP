@@ -69,7 +69,7 @@ jobs:
             --max-busquedas "$BUSQUEDAS" --tipo "$TIPO"
       - name: Ask each candidate once, without the key
         if: always() && steps.buscar.outcome != 'skipped'  # countries found before a stop are still checked
-        timeout-minutes: 90
+        timeout-minutes: 90  # the run stops itself at 80 (rg/descubrir.py PLAZO_VERIFICAR), whatever a site drips
         run: python -m rg.descubrir verificar --carpeta "$RUNNER_TEMP/datos/descubrimiento" --por-capa 2
       - name: Commit the result to the data branch
         if: always() && steps.buscar.outcome != 'skipped'  # what was paid for is never lost

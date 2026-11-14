@@ -4,6 +4,7 @@ candidate is asked once with the catalog's Fetcher, without the key."""
 import copy
 import http.client
 import json
+import multiprocessing
 import os
 import subprocess
 import time
@@ -13,11 +14,12 @@ import unittest
 import urllib.error
 from pathlib import Path
 from unittest import mock
+from urllib.parse import urlsplit
 
 import yaml
 
 from rg import descubrir as d
-from rg.catalog.fetch import FetchRefused, Response, _NoRedirect, _PublicHTTPS
+from rg.catalog.fetch import Fetcher, FetchRefused, Response, _NoRedirect, _PublicHTTPS
 
 ROOT = Path(__file__).resolve().parents[1]
 COB = d.cargar_cobertura(ROOT / 'sources' / 'cobertura.json')
@@ -422,6 +424,222 @@ class Verificacion(unittest.TestCase):
         self.assertEqual(out['datos/estadistica'], {'buscados': 0, 'con_candidato_accesible': 0})
 
 
+class Resp:
+    def __init__(self, body): self.status, self.headers, self.body = 200, {}, body
+    def __enter__(self): return self
+    def __exit__(self, *a): return False
+    def read(self, n=-1): return self.body
+
+
+class Transporte:
+    """A simulated network for the real Fetcher: robots.txt answers 404, a page of hang.org takes 10 s; every request is
+    logged (monotonic time and URL) to a file, since it runs in the candidate's child process."""
+    def __init__(self, log): self.log = log
+    def open(self, req, timeout):
+        with open(self.log, 'a') as fh:
+            fh.write(f'{time.monotonic()} {req.full_url}\n')
+        if req.full_url.endswith('/robots.txt'):
+            raise urllib.error.HTTPError(req.full_url, 404, 'no', {}, None)
+        if 'hang.org' in req.full_url:
+            time.sleep(10)
+        return Resp(b'ok')
+
+
+class ConPausa(Transporte):
+    """The same network, but x.org's robots.txt asks for a Crawl-delay."""
+    def __init__(self, log, pausa): super().__init__(log); self.pausa = pausa
+    def open(self, req, timeout):
+        if req.full_url == 'https://x.org/robots.txt':
+            with open(self.log, 'a') as fh:
+                fh.write(f'{time.monotonic()} {req.full_url}\n')
+            return Resp(f'User-agent: *\nCrawl-delay: {self.pausa}\n'.encode())
+        return super().open(req, timeout)
+
+
+class Plazos(unittest.TestCase):
+    """Run 41483944219 (2026-11-02) spent its 90 minutes on KOR and saved nothing of it: the Fetcher's deadline stops
+    only new requests. Each candidate now runs, one at a time, in a child process the parent kills at its 5 minutes or
+    at the run's deadline, and its country is saved after every candidate."""
+    def setUp(self):
+        t = tempfile.TemporaryDirectory()
+        self.addCleanup(t.cleanup)
+        self.c = Path(t.name)
+        self.addCleanup(lambda: self.assertEqual(multiprocessing.active_children(), []))  # no child outlives a test
+
+    def pais(self, *hosts):
+        res = [dict(HIT, rank=i + 1, host=h, url=f'https://{h}/{i}') for i, h in enumerate(hosts)]
+        doc = {'capas': [{'eje': 'ley', 'capa': 'diario', 'consulta': 'Kenya official gazette', 'estado': 'ok',
+                          'resultados': res}]}
+        (self.c / 'KEN.json').write_text(json.dumps(doc), encoding='utf-8')
+
+    def ver(self):
+        return [r.get('verificacion') for r in json.loads((self.c / 'KEN.json').read_text())['capas'][0]['resultados']]
+
+    def test_a_candidate_that_hangs_past_the_deadline_never_holds_the_step_and_stays_pending(self):
+        # the real Fetcher on a simulated network
+        self.pais('ok.org', 'hang.org')
+        fin = time.monotonic() + 1.0
+        tr = Transporte(self.c / 'red.log')
+        nuevo = lambda h: Fetcher(h, budget=6, min_interval=0, opener=tr, deadline=fin, retries=1)  # noqa: E731
+        t0 = time.monotonic()
+        self.assertEqual(d.verificar(self.c, 2, nuevo, AHORA, plazo=1.0), 1)
+        self.assertLess(time.monotonic() - t0, 3)  # main's code waited for the answer: 10 s here, 90 minutes on KOR
+        v = self.ver()
+        self.assertEqual(v[0]['estado'], 'accesible')
+        self.assertIsNone(v[1])  # cut by the run's deadline: the next run asks it, nothing marks it
+
+    def test_a_candidate_past_its_own_deadline_is_killed_and_an_error(self):
+        pid = self.c / 'pid'
+
+        def get(url):
+            if 'hang' in url:
+                pid.write_text(str(os.getpid()))
+                time.sleep(10)
+            return Response(200, b'ok', url)
+        t0 = time.monotonic()
+        self.pais('hang.org', 'ok.org')
+        with mock.patch.object(d, '_escribir', wraps=d._escribir) as w:
+            n = d.verificar(self.c, 2, lambda h: mock.Mock(get=get), AHORA, plazo=8, por_candidato=0.3)
+        self.assertLess(time.monotonic() - t0, 3)
+        self.assertEqual(n, 2)
+        v = self.ver()
+        self.assertEqual((v[0]['estado'], v[0]['error']), ('error', 'TimeoutError'))
+        self.assertEqual(v[1]['estado'], 'accesible')  # the next one goes on
+        self.assertEqual(w.call_count, 2)  # saved after every candidate
+        with self.assertRaises(ProcessLookupError):  # killed, not left behind: its request died with it
+            os.kill(int(pid.read_text()), 0)
+
+    def test_a_candidate_cut_by_the_runs_deadline_stays_pending(self):
+        self.pais('a.org')
+        t0 = time.monotonic()
+        self.assertEqual(d.verificar(self.c, 1, lambda h: mock.Mock(get=lambda u: time.sleep(10)), AHORA, plazo=0.5), 0)
+        self.assertLess(time.monotonic() - t0, 3)
+        self.assertIsNone(self.ver()[0])
+
+    def test_an_answer_in_after_its_own_deadline_is_an_error_never_accesible(self):
+        # GPT on 963eb17: an answer that ends past its 5 minutes, before the parent looks, is never accesible
+        self.pais('a.org')
+        marca = self.c / 'hecho'
+
+        def get(url):
+            marca.touch()  # the parent's clock reads past this candidate's deadline from here on, the run's still far
+            return Response(200, b'ok', url)
+        reloj = lambda: d.PLAZO_CANDIDATO + 1.0 if marca.exists() else 0.0  # noqa: E731
+        self.assertEqual(d.verificar(self.c, 1, lambda h: mock.Mock(get=get), AHORA, reloj=reloj), 1)
+        self.assertEqual((self.ver()[0]['estado'], self.ver()[0]['error']), ('error', 'TimeoutError'))
+
+    def test_a_child_error_keeps_its_kind_and_an_answer_over_the_cap_is_refused(self):
+        self.pais('a.org', 'b.org')
+        respuestas = {'a.org': ConnectionResetError(), 'b.org': Response(200, b'x' * (d.MAX_HIJO + 1), 'u')}
+
+        def get(url):
+            a = respuestas[urlsplit(url).hostname]
+            if isinstance(a, Exception):
+                raise a
+            return a
+        d.verificar(self.c, 2, lambda h: mock.Mock(get=get), AHORA)
+        self.assertEqual([v['error'] for v in self.ver()], ['ConnectionResetError', 'OSError'])  # never read whole
+
+    def test_a_half_written_answer_that_stalls_past_the_deadline_is_never_read_and_never_holds_the_step(self):
+        # GPT on aa24603: a pipe readable with half a message made the parent wait for the rest with no bound
+        self.pais('a.org', 'ok.org')
+
+        def a_medias(destino, datos):
+            destino.write_bytes(datos[:len(datos) // 2])  # half of it, where the parent would look
+            if b'https://a.org/' in datos:
+                time.sleep(10)  # and it stalls past its deadline
+            destino.write_bytes(datos)
+        t0 = time.monotonic()
+        with mock.patch.object(d, '_entregar', a_medias):
+            d.verificar(self.c, 2, lambda h: mock.Mock(get=lambda u: Response(200, b'ok', u)), AHORA, plazo=8,
+                        por_candidato=0.3)
+        self.assertLess(time.monotonic() - t0, 3)
+        v = self.ver()
+        self.assertEqual((v[0]['estado'], v[0]['error']), ('error', 'TimeoutError'))
+        self.assertEqual(v[1]['estado'], 'accesible')
+
+    def test_a_child_cut_before_its_answer_is_whole_leaves_no_answer_never_a_cut_body(self):
+        self.pais('a.org')
+        padre, renombrar = os.getpid(), os.replace
+
+        def cortado(*a):  # the child dies before the rename; the parent's own saves (_escribir) still rename
+            if os.getpid() != padre:
+                os._exit(1)
+            renombrar(*a)
+        with mock.patch.object(d.os, 'replace', cortado):
+            d.verificar(self.c, 1, lambda h: mock.Mock(get=lambda u: Response(200, b'cuerpo entero', u)), AHORA)
+        self.assertEqual((self.ver()[0]['estado'], self.ver()[0]['error']), ('error', 'EOFError'))
+
+    def tiempos(self, pausa, **kw):
+        self.pais('x.org', 'x.org')
+        log = self.c / 'red.log'
+        t0 = time.monotonic()
+        with mock.patch('urllib.request.build_opener', return_value=ConPausa(log, pausa)):
+            d.verificar(self.c, 2, ahora=AHORA, **kw)
+        pedidas = [(float(t), u) for t, u in (line.split(' ', 1) for line in log.read_text().splitlines())]
+        return pedidas, time.monotonic() - t0
+
+    def test_a_crawl_delay_one_child_read_holds_for_the_next_childs_first_request(self):
+        # GPT on 5731a83: each child is a copy, so the Crawl-delay it read died with it and the next one asked robots.txt
+        # again after the default second only
+        pedidas, _ = self.tiempos(2)
+        self.assertEqual([u for _, u in pedidas], ['https://x.org/robots.txt', 'https://x.org/0', 'https://x.org/robots.txt',
+                                                   'https://x.org/1'])
+        self.assertGreaterEqual(pedidas[2][0] - pedidas[1][0], 1.9)  # its own robots.txt waits the 2 s, not 1
+        self.assertEqual([v['estado'] for v in self.ver()], ['accesible', 'accesible'])
+
+    def test_the_crawl_delay_a_child_hands_back_is_kept_at_most_max_espera_answer_or_not(self):
+        class Robots:  # what the child's Fetcher read: a Crawl-delay of 30 s for x.org
+            def crawl_delay(self, agente): return 30
+
+        class Leido:  # reads x.org's robots.txt, then answers or hangs past its deadline (GPT on a9e0c63)
+            def __init__(self, cuelga): self.cuelga = cuelga
+            def _robots_for(self, parts): ritmo.setdefault('robots', {})['https://x.org'] = Robots()
+            def get(self, url):
+                self._robots_for(urlsplit(url))
+                time.sleep(10 * self.cuelga)
+                return Response(200, b'ok', url)
+        for cuelga in (False, True):
+            ritmo, now = {}, time.monotonic()
+            aislado = d._Aislado(Leido(cuelga), ['x.org'], now + 1, now + 60, time.monotonic, ritmo)
+            with self.subTest(cuelga=cuelga), mock.patch.object(d, 'MAX_ESPERA', 1):
+                if cuelga:
+                    self.assertRaises(TimeoutError, aislado.get, 'https://x.org/0')
+                else:
+                    self.assertEqual(aislado.get('https://x.org/0').status, 200)
+                self.assertEqual(ritmo['espera'], {'x.org': 1})  # 30 s asked, 1 s kept, killed or not
+
+    def test_a_crawl_delay_read_by_a_child_killed_before_its_answer_holds_for_the_next_candidate(self):
+        # GPT on a9e0c63: robots.txt asks 3 s; the first child, waiting them before its page, is killed at its 2 s.
+        # The second candidate knows the 3 s do not fit in its own 2 s: an error at once, with no request
+        pedidas, _ = self.tiempos(3, por_candidato=2)
+        self.assertEqual([u for _, u in pedidas], ['https://x.org/robots.txt'])
+        self.assertEqual([(v['estado'], v['error']) for v in self.ver()], [('error', 'TimeoutError')] * 2)
+
+    def test_a_known_crawl_delay_past_the_candidates_deadline_is_an_error_at_once(self):
+        now = time.monotonic()
+        ritmo = {'last': {'x.org': now}, 'espera': {'x.org': 5}}
+        aislado = d._Aislado(mock.Mock(get=lambda u: Response(200, b'ok', u)), ['x.org'], now + 1.5, now + 60, time.monotonic,
+                             ritmo)
+        with self.assertRaises(TimeoutError):
+            aislado.get('https://x.org/0')
+        self.assertLess(time.monotonic() - now, 1)  # no sleep of 5 s: its deadline comes first
+        ritmo['last']['x.org'] = time.monotonic()
+        with self.assertRaises(d._Corte):  # the run's own deadline: pending, as any candidate it cuts
+            d._Aislado(mock.Mock(), ['x.org'], now + 1.5, now + 1.5, time.monotonic, ritmo).get('https://x.org/0')
+
+    def test_the_pause_per_host_holds_from_one_child_to_the_next(self):
+        # the default Fetcher (1 s between two requests to a host) on a simulated network: x.org, then its www twin
+        self.pais('x.org', 'www.x.org')
+        log = self.c / 'red.log'
+        with mock.patch('urllib.request.build_opener', return_value=Transporte(log)):
+            self.assertEqual(d.verificar(self.c, 2, ahora=AHORA), 2)
+        pedidas = [(float(t), u) for t, u in (line.split(' ', 1) for line in log.read_text().splitlines())]
+        self.assertEqual([u for _, u in pedidas], ['https://x.org/robots.txt', 'https://x.org/0',
+                                                   'https://www.x.org/robots.txt', 'https://www.x.org/1'])
+        self.assertGreaterEqual(pedidas[2][0] - pedidas[1][0], 0.9)
+
+
 class Main(unittest.TestCase):
     def test_no_key_or_a_budget_out_of_range_stops_before_anything_is_asked(self):
         with tempfile.TemporaryDirectory() as t, mock.patch.object(d, 'buscar') as b:
@@ -504,3 +722,7 @@ class Workflow(unittest.TestCase):
         ver = [s for s in self.job['steps'] if 'rg.descubrir verificar' in s.get('run', '')]
         self.assertEqual(len(ver), 1)
         self.assertNotIn('env', ver[0])  # the step that asks candidate sites holds no credential at all
+
+    def test_the_step_that_asks_candidates_outlasts_the_runs_own_deadline(self):
+        ver = next(s for s in self.job['steps'] if 'rg.descubrir verificar' in s.get('run', ''))
+        self.assertGreaterEqual(ver['timeout-minutes'] * 60, d.PLAZO_VERIFICAR + 5 * 60)  # it stops itself, then saves

@@ -15,6 +15,8 @@ Two commands, two steps of .github/workflows/descubrir.yml:
   verificar  no key. Each candidate (the first `por_capa` of each layer) is asked once with the catalog's Fetcher:
              https, its own host and its www twin only, robots.txt, public addresses, a size cap. Only the HTTP status,
              the size and the sha256 are kept (accesible on a 200): a page that answers says nothing of what it holds.
+             One at a time, each in a child process the parent kills, its request with it, at 5 minutes or at the
+             run's 80: what the run's deadline cuts stays pending, and a country is saved after every candidate.
 
 A result is kept only when its URL is https on a host name (no address, port, user or password), its text visible
 (rg.catalog.categorize.clean_text) and cut to a fixed length; everything else is counted in `descartados`.
@@ -24,9 +26,11 @@ import hashlib
 import http.client
 import ipaddress
 import json
+import multiprocessing
 import os
 import re
 import sys
+import tempfile
 import threading
 import time
 import urllib.error
@@ -36,7 +40,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from rg.catalog.categorize import clean_text
-from rg.catalog.fetch import Fetcher, FetchRefused, _NoRedirect, _PublicHTTPS
+from rg.catalog.fetch import USER_AGENT, Fetcher, FetchRefused, Response, _NoRedirect, _PublicHTTPS
 from rg.sondeo import HOST
 
 API = 'https://api.perplexity.ai/search'
@@ -47,6 +51,9 @@ MAX_BUSQUEDAS = 2400  # one run: every cell of the per-country axes (2316) fits;
 PAUSA = 1.0  # seconds between two searches
 PLAZO_BUSCAR = 100 * 60  # the step allows 110 minutes
 PLAZO_VERIFICAR = 80 * 60  # the step allows 90
+PLAZO_CANDIDATO = 5 * 60  # one candidate whole (robots.txt, retries, redirects): its process is killed past it
+MAX_ESPERA = 600  # seconds: a Crawl-delay over 10 minutes counts as 10 (a candidate's own deadline is 5)
+MAX_HIJO = 6_000_000  # bytes of a child's answer: a line of JSON and the body (the Fetcher's cap is 5 MB)
 ALTO = (401, 402, 403, 429)  # the key or the account says no: asking again only spends
 ISO2, ISO3 = re.compile(r'[A-Z]{2}'), re.compile(r'[A-Z]{3}')
 CAPA_ID = re.compile(r'[a-z_]{2,20}')
@@ -296,22 +303,132 @@ def correr_busqueda(cob, carpeta, key, max_busquedas, tipo, ahora=None, buscar=b
     return {'busquedas': usadas[0], 'paises': hechos, 'pendientes': len(pendientes(cob, carpeta))}
 
 
-def verificar(carpeta, por_capa, nuevo_fetcher=None, ahora=None, reloj=time.monotonic, plazo=PLAZO_VERIFICAR):
-    """Asks each unverified candidate once; saves every country as soon as its candidates are asked."""
+_HIJOS = multiprocessing.get_context('fork')  # the child is a copy of the parent: its fetcher is never pickled; the
+# verifying process runs no thread of its own (buscar, with _abrir's threads, is another step), so fork is safe here
+
+
+class _Corte(BaseException):
+    """The run's deadline cut a candidate: it stays pending. Not an Exception, so _ver never records it."""
+
+
+class _Fallo(Exception):
+    """What a child raised, by its kind only."""
+    def __init__(self, tipo):
+        super().__init__(tipo)
+        self.tipo = tipo
+
+
+def _entregar(destino, datos):
+    """The child's answer appears whole or not at all: written beside it, then renamed (a child cut mid-write leaves
+    only the .parte file, which the parent never reads)."""
+    parte = destino.with_name(destino.name + '.parte')
+    parte.write_bytes(datos)
+    os.replace(parte, destino)
+
+
+def _esperas(ritmo):
+    """{host: Crawl-delay} of every robots.txt this child read, so the parent keeps it for that host's next child: the
+    child is a copy and what it learned dies with it (GPT on 5731a83)."""
+    return {urlsplit(o).hostname: float(rp.crawl_delay(USER_AGENT) or 0) for o, rp in ritmo.get('robots', {}).items()}
+
+
+def _hijo(fetcher, url, destino, ritmo):
+    """In the child: the request, then its answer, a line of JSON and the body, into its own file. Nothing is pickled.
+    Each robots.txt its Fetcher reads puts every Crawl-delay it knows into a file of their own at once, so a child
+    killed before its answer still hands them on (GPT on a9e0c63: they came only with the answer)."""
+    leer = fetcher._robots_for
+
+    def robots_for(parts):
+        rp = leer(parts)
+        _entregar(destino.with_name('esperas'), json.dumps(_esperas(ritmo)).encode())
+        return rp
+    fetcher._robots_for = robots_for
+    try:
+        resp = fetcher.get(url)
+        cabeza, cuerpo = {'status': resp.status, 'url': resp.url}, resp.body
+    except FetchRefused as e:
+        cabeza, cuerpo = {'rechazo': str(e)[:200]}, b''
+    except BaseException as e:  # noqa: BLE001 - its kind is the candidate's result
+        cabeza, cuerpo = {'error': type(e).__name__}, b''
+    _entregar(destino, json.dumps(cabeza).encode() + b'\n' + cuerpo)
+
+
+class _Aislado:
+    """A fetcher whose get runs in a child process the parent kills at `tope`, its request with it: the Fetcher checks
+    its deadline only before a request, a socket timeout bounds one wait, and a Crawl-delay or a lookup has no bound
+    (run 41483944219 spent its 90 minutes on KOR and saved nothing). One candidate at a time: two GPT REVISEs of a pool
+    of threads (963eb17, 403ef17) found races in it. An answer counts only when it is in before `tope`; past it the
+    candidate is an error, or pending when `tope` is the run's deadline."""
+    def __init__(self, fetcher, hosts, tope, fin, reloj, ritmo):
+        self.fetcher, self.hosts, self.tope, self.fin, self.reloj, self.ritmo = fetcher, hosts, tope, fin, reloj, ritmo
+        self.ultimo, self.espera = ritmo.setdefault('last', {}), ritmo.setdefault('espera', {})
+
+    def _vencido(self):
+        if self.tope < self.fin:
+            raise TimeoutError()
+        raise _Corte()
+
+    def get(self, url):
+        # GPT on aa24603: a pipe that is readable may hold half a message, and reading the rest had no bound. The child
+        # now writes a file the parent opens only after its wait, read whole from disk, never from the child.
+        falta = max([self.ultimo.get(h, float('-inf')) + self.espera.get(h, 0) - self.reloj() for h in self.hosts] + [0])
+        if falta > 0:  # the Crawl-delay a former child read holds before this one's first request, robots.txt included
+            if self.reloj() + falta >= self.tope:
+                self._vencido()
+            time.sleep(falta)
+        with tempfile.TemporaryDirectory() as carpeta:
+            destino = Path(carpeta) / 'respuesta'
+            hijo = _HIJOS.Process(target=_hijo, args=(self.fetcher, url, destino, self.ritmo), daemon=True)
+            hijo.start()
+            cabeza = None
+            try:
+                hijo.join(max(0.0, self.tope - self.reloj()))
+                if self.reloj() < self.tope:  # read after the wait: an answer counts only when it was in before tope
+                    if not destino.is_file():
+                        raise EOFError()  # the child ended with no answer (its kind, as a closed pipe said it)
+                    if destino.stat().st_size > MAX_HIJO:
+                        raise OSError('the answer is over the cap')  # never read whole
+                    cabeza, _, cuerpo = destino.read_bytes().partition(b'\n')
+            finally:
+                hijo.kill()
+                hijo.join(5)  # a SIGKILL ends it at once; no wait in this run is without a bound
+                for h in self.hosts:  # its requests ended with it: the pause per host holds for the next candidate
+                    self.ultimo[h] = self.reloj()
+                esperas = destino.with_name('esperas')  # a host and a number per robots.txt of its own few hosts
+                for h, s in (json.loads(esperas.read_bytes()) if esperas.is_file() else {}).items():
+                    self.espera[h] = min(float(s), MAX_ESPERA)  # what its robots.txt asked, killed or not
+        if cabeza is None:
+            self._vencido()
+        out = json.loads(cabeza)
+        if 'rechazo' in out:
+            raise FetchRefused(str(out['rechazo']))
+        if 'error' in out:
+            raise _Fallo(str(out['error'])[:60])
+        return Response(int(out['status']), cuerpo, str(out['url']))
+
+
+def verificar(carpeta, por_capa, nuevo_fetcher=None, ahora=None, reloj=time.monotonic, plazo=PLAZO_VERIFICAR,
+              por_candidato=PLAZO_CANDIDATO):
+    """Asks each unverified candidate once, one at a time, each in a child process killed at `por_candidato` seconds or
+    at the run's deadline (_Aislado); its country is saved after every candidate. Returns how many got a result."""
     ahora = ahora or (lambda: datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
     fin, ritmo, n = reloj() + plazo, {}, 0
     nuevo_fetcher = nuevo_fetcher or (lambda hosts: Fetcher(hosts, budget=6, max_bytes=5_000_000, timeout=45, retries=1,
                                                             clock=reloj, deadline=fin, compartido=ritmo))
     for path in sorted(carpeta.glob('[A-Z][A-Z][A-Z].json')):
-        doc, cambio = _leer(path), False
+        doc = _leer(path)
         for capa in (doc or {}).get('capas', []):
             for r in capa.get('resultados', [])[:por_capa]:
                 if 'verificacion' in r or reloj() >= fin:
                     continue
-                r['verificacion'] = _ver(r, nuevo_fetcher, ahora)
-                cambio, n = True, n + 1
-        if cambio:
-            _escribir(path, doc)
+                tope = min(fin, reloj() + por_candidato)
+                aislado = lambda hosts: _Aislado(nuevo_fetcher(hosts), hosts, tope, fin, reloj, ritmo)  # noqa: E731
+                try:
+                    r['verificacion'] = _ver(r, aislado, ahora)
+                except _Corte:
+                    return n  # the run's deadline: this candidate and the rest stay pending
+                n += 1
+                _escribir(path, doc)
     return n
 
 
@@ -326,7 +443,7 @@ def _ver(r, nuevo_fetcher, ahora):
     except FetchRefused as e:
         return {'estado': 'rechazado', 'error': str(e)[:200], 'fecha': ahora()}
     except Exception as e:  # noqa: BLE001 - one candidate's failure is its own result
-        return {'estado': 'error', 'error': type(e).__name__, 'fecha': ahora()}
+        return {'estado': 'error', 'error': getattr(e, 'tipo', None) or type(e).__name__, 'fecha': ahora()}
     return {'estado': 'accesible' if resp.status == 200 else 'http', 'http': resp.status, 'bytes': len(resp.body),
             'sha256': hashlib.sha256(resp.body).hexdigest(), 'fecha': ahora()}
 
