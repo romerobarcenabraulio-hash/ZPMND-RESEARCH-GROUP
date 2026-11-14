@@ -1,0 +1,500 @@
+{
+ "request_id": "RR-2026-11-02-arte-previo-ocr-ojn",
+ "fetched": [
+  {
+   "url": "https://github.com/tesseract-ocr/tesseract/blob/main/LICENSE",
+   "status": 200,
+   "error": null,
+   "sha256": "af76c2f1ddb71514e2779f27da7bf561539ff3b5149c46693ac02b4c48d8d3ef",
+   "bytes": 260579,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:34Z",
+   "text_status": "ok",
+   "text_chars": 13954
+  },
+  {
+   "url": "https://tesseract-ocr.github.io/tessdoc/Data-Files.html",
+   "status": 200,
+   "error": null,
+   "sha256": "1f377afaf683305c41d49ae28f9351b5e8e8506777678f0c8bbb522247e1545b",
+   "bytes": 39202,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:36Z",
+   "text_status": "ok",
+   "text_chars": 9959
+  },
+  {
+   "url": "https://github.com/tesseract-ocr/tessdata_best",
+   "status": 200,
+   "error": null,
+   "sha256": "1ba36ec533db5b4ff9344405110fab0f1239ece3dc54e03a2d46a81edc75a802",
+   "bytes": 440279,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:37Z",
+   "text_status": "ok",
+   "text_chars": 6915
+  },
+  {
+   "url": "https://tesseract-ocr.github.io/tessdoc/",
+   "status": 200,
+   "error": null,
+   "sha256": "e41c23b35d409560b96813cded260055f6f9b55bed8f666fbd444bae2fb775f9",
+   "bytes": 16189,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:38Z",
+   "text_status": "ok",
+   "text_chars": 5404
+  },
+  {
+   "url": "https://github.com/ocrmypdf/ocrmypdf",
+   "status": 200,
+   "error": null,
+   "sha256": "613d5c889be4d412462ae439912ad3e99b31c7b118e07988c6a9d3ca3de2557d",
+   "bytes": 311922,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:38Z",
+   "text_status": "ok",
+   "text_chars": 11190
+  },
+  {
+   "url": "https://github.com/PaddlePaddle/PaddleOCR/blob/main/LICENSE",
+   "status": 200,
+   "error": null,
+   "sha256": "5a2b5d9188ae66746e7f71b8d06baa43a3f3560d89d202459f5110b871b9554b",
+   "bytes": 260968,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:39Z",
+   "text_status": "ok",
+   "text_chars": 13966
+  },
+  {
+   "url": "https://github.com/mindee/doctr/blob/main/LICENSE",
+   "status": 200,
+   "error": null,
+   "sha256": "a4ce10024512a89932191631a195df13b437dc579e14d9b880049b9f0dbfbe26",
+   "bytes": 260068,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:39Z",
+   "text_status": "ok",
+   "text_chars": 13896
+  },
+  {
+   "url": "https://github.com/docling-project/docling/blob/main/LICENSE",
+   "status": 200,
+   "error": null,
+   "sha256": "74090b473ae77108ece3e1a62070b42fde6964583370d0f0d4b780c7bcd63d62",
+   "bytes": 179731,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:41Z",
+   "text_status": "ok",
+   "text_chars": 3820
+  },
+  {
+   "url": "https://docling-project.github.io/docling/getting_started/installation/",
+   "status": 200,
+   "error": null,
+   "sha256": "be37511c242c7490ac97d7f8fa5742139ba65b93a0dd67dc01fddee42b6b6cce",
+   "bytes": 99300,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:41Z",
+   "text_status": "ok",
+   "text_chars": 11308
+  },
+  {
+   "url": "https://huggingface.co/nvidia/Nemotron-3.5-Parse",
+   "status": 200,
+   "error": null,
+   "sha256": "f13fc661d5f78da9bc98e9c29465900ffbfef8ae7564608fce6f5a22e2e7882c",
+   "bytes": 340588,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:43Z",
+   "text_status": "ok",
+   "text_chars": 33271
+  },
+  {
+   "url": "https://docs.nvidia.com/nim/ingestion/parse/latest/support-matrix.html",
+   "status": 200,
+   "error": null,
+   "sha256": "c6f7802c165a281f6634dadbb4943a38298525214bc7b79e2656b8a07caa2de6",
+   "bytes": 24299,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:44Z",
+   "text_status": "ok",
+   "text_chars": 2391
+  },
+  {
+   "url": "https://github.com/datalab-to/surya",
+   "status": 200,
+   "error": null,
+   "sha256": "c65338a40ec65ca91e60d750abc5e3f6fd94cde226f2ed27638b5759bf85feb5",
+   "bytes": 446503,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-08T00:02:45Z",
+   "text_status": "ok",
+   "text_chars": 29686
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/42427818625",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "El texto de licencia de Tesseract en main es Apache License 2.0.",
+    "now": "El texto de licencia de Tesseract es Apache License, Version 2.0.",
+    "cut": "en main"
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "La licencia Apache 2.0 de Tesseract concede licencia de derechos de autor sin cargo y sin regalías, incluida la distribución.",
+    "now": "La licencia de Tesseract concede un derecho mundial, no exclusivo, sin cargo, sin regalías e irrevocable.",
+    "cut": "Apache 2.0; licencia de derechos de autor; incluida la distribución"
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "Los modelos de tessdata_best y tessdata_fast solo admiten el motor LSTM.",
+    "now": "Solo se admite el nuevo motor OCR basado en LSTM (--oem 1).",
+    "cut": "Los modelos de tessdata_best y tessdata_fast"
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "Existe el modelo spa (español) en el listado de traineddata 4.0 de Tesseract.",
+    "now": "Existe el modelo spa (español; castellano), archivo spa.traineddata, en el listado de traineddata de Tesseract.",
+    "cut": "4.0"
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "OCRmyPDF se licencia bajo MPL-2.0, que permite integración comercial y cerrada pero pide publicar modificaciones al código de OCRmyPDF.",
+    "now": "La licencia de OCRmyPDF permite integrarlo con otro código, incluido comercial y cerrado, pero pide publicar las modificaciones a nivel de código fuente hechas a OCRmyPDF.",
+    "cut": "MPL-2.0"
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "Docling publica su LICENSE como MIT.",
+    "now": "La LICENSE de Docling concede permiso, sin cargo, a cualquier persona que obtenga una copia.",
+    "cut": "MIT"
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "Nemotron OCR en Docling requiere Linux x86_64, Python 3.12 y CUDA 13.x.",
+    "now": "Según la documentación de instalación de Docling, cierto componente solo es compatible con Linux x86_64, Python 3.12 y CUDA 13.x.",
+    "cut": "Nemotron OCR"
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "En Docling, la selección automática de OCR nunca elige Tesseract; hay que seleccionarlo explícitamente.",
+    "now": "En Docling, la selección automática por defecto de OCR (OcrAutoOptions) nunca elige Tesseract.",
+    "cut": "hay que seleccionarlo explícitamente"
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "La salida de Nemotron 3.5 Parse codifica texto, clases semánticas y cajas normalizadas; no se menciona confianza en el texto leído.",
+    "now": "Nemotron 3.5 Parse devuelve una cadena que codifica el texto del documento, clases semánticas de elementos y cajas delimitadoras normalizadas al contenido.",
+    "cut": "no se menciona confianza en el texto leído"
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "Nemotron advierte que su prueba MOSCAR no garantiza calidad en escaneos complejos o degradados.",
+    "now": "Nemotron advierte que la cobertura de un idioma/escritura no garantiza calidad equivalente en escaneos complejos, manuscritos o documentos degradados.",
+    "cut": "su prueba MOSCAR"
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "Los pesos de Surya tienen licencia AI Pubs Open Rail-M modificada, gratuita solo para investigación, uso personal y startups bajo 5M USD.",
+    "now": "Los pesos de Surya tienen licencia AI Pubs Open Rail-M modificada, gratuita para investigación, uso personal y startups con menos de 5M USD de financiación/ingresos.",
+    "cut": "solo"
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "Surya 2.5 (bf16) alcanza 0.190 páginas/s en Apple M4 Max con llama.cpp a 96 DPI.",
+    "now": "Surya 2.5 (bf16) muestra un valor de 0.190 en una tabla de Surya.",
+    "cut": "páginas/s; Apple M4 Max; llama.cpp; 96 DPI"
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "Surya reporta 93.7% para español en su benchmark interno de 91 idiomas (Surya 2.5).",
+    "now": "Surya reporta 92.2% y 93.7% para español.",
+    "cut": "benchmark interno de 91 idiomas; Surya 2.5; asignación de 93.7% a Surya 2.5"
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "Surya 2.5 reporta 44.3 en la categoría OldScan de olmOCR-bench.",
+    "now": "Surya 2.5 reporta, entre otros, un valor de 44.3 en una tabla de Surya.",
+    "cut": "categoría OldScan; olmOCR-bench"
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "id": "confirmed[2]",
+   "claim": "La documentación oficial indica que Tesseract se puede usar en proyectos propios bajo Apache 2.0.",
+   "quote": "Tesseract can be used in your own project, under the terms of the Apache License 2.0.",
+   "artifact_ids": [
+    "SA-e41c23b35d409560b96813cd"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[7]",
+   "claim": "La licencia de OCRmyPDF permite integrarlo con otro código, incluido comercial y cerrado, pero pide publicar las modificaciones a nivel de código fuente hechas a OCRmyPDF.",
+   "quote": "This license permits integration of OCRmyPDF with other code, included commercial and closed source, but asks you to publish source-level modifications you make to OCRmyPDF.",
+   "artifact_ids": [
+    "SA-613d5c889be4d412462ae439"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[11]",
+   "claim": "Según la documentación de instalación de Docling, cierto componente solo es compatible con Linux x86_64, Python 3.12 y CUDA 13.x.",
+   "quote": "Supported only on Linux x86_64 with Python 3.12 and CUDA 13.x.",
+   "artifact_ids": [
+    "SA-be37511c242c7490ac97d7f8"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[12]",
+   "claim": "Docling permite instalación solo CPU de PyTorch.",
+   "quote": "pip install docling --extra-index-url https://download.pytorch.org/whl/cpu",
+   "artifact_ids": [
+    "SA-be37511c242c7490ac97d7f8"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[13]",
+   "claim": "En Docling, la selección automática por defecto de OCR (OcrAutoOptions) nunca elige Tesseract.",
+   "quote": "The default automatic selection (OcrAutoOptions) never selects Tesseract",
+   "artifact_ids": [
+    "SA-be37511c242c7490ac97d7f8"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[19]",
+   "claim": "Los pesos de Surya tienen licencia AI Pubs Open Rail-M modificada, gratuita para investigación, uso personal y startups con menos de 5M USD de financiación/ingresos.",
+   "quote": "The model weights use a modified AI Pubs Open Rail-M license (free for research, personal use, and startups under $5M funding/revenue).",
+   "artifact_ids": [
+    "SA-c65338a40ec65ca91e60d750"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[20]",
+   "claim": "Surya reporta confianza por bloque (media de probabilidad por token, 0-1) en OCR.",
+   "quote": "confidence - mean per-token probability across the block's decode (0-1)",
+   "artifact_ids": [
+    "SA-c65338a40ec65ca91e60d750"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[21]",
+   "claim": "Surya necesita un backend de inferencia: vllm para GPU NVIDIA o llama.cpp para CPU/Apple Silicon.",
+   "quote": "you need vllm (NVIDIA GPU) or llama.cpp (CPU / Apple Silicon)",
+   "artifact_ids": [
+    "SA-c65338a40ec65ca91e60d750"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[22]",
+   "claim": "Surya reporta 4.5 páginas/s en una H100 a 192 DPI.",
+   "quote": "throughput of 4.5 pages/s on one H100 at 192 DPI",
+   "artifact_ids": [
+    "SA-c65338a40ec65ca91e60d750"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[23]",
+   "claim": "Surya 2.5 (bf16) muestra un valor de 0.190 en una tabla de Surya.",
+   "quote": "Surya 2.5 (bf16) \t0.190 \t270 \t38.9 \t55.7 \t1,424 \t4,764 MB",
+   "artifact_ids": [
+    "SA-c65338a40ec65ca91e60d750"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[24]",
+   "claim": "Surya reporta 92.2% y 93.7% para español.",
+   "quote": "es \tSpanish \t92.2% \t93.7%",
+   "artifact_ids": [
+    "SA-c65338a40ec65ca91e60d750"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[25]",
+   "claim": "Surya 2.5 reporta, entre otros, un valor de 44.3 en una tabla de Surya.",
+   "quote": "Surya 2.5 \t87.0 \t99.9 \t90.9 \t94.8 \t83.3 \t44.3 \t78.6 \t90.9",
+   "artifact_ids": [
+    "SA-c65338a40ec65ca91e60d750"
+   ],
+   "reason": "solo fuentes secundarias"
+  }
+ ],
+ "discovery": {
+  "families": [
+   "Motores OCR clásicos open source (Tesseract + datos entrenados spa)",
+   "Envoltorios/pipelines (OCRmyPDF, Docling)",
+   "OCR neuronal local en CPU (PaddleOCR, docTR, RapidOCR)",
+   "Modelos VLM/parse que requieren GPU (nemotron-parse, olmOCR, Surya)",
+   "Conversión .doc (LibreOffice headless)",
+   "Comparativas de precisión publicadas (no específicas de OJN)",
+   "Fuente OJN (formato de documentos)"
+  ],
+  "searches": [
+   {
+    "query": "Tesseract OCR LICENSE Apache 2.0 hOCR confidence",
+    "intent": "official"
+   },
+   {
+    "query": "OCRmyPDF license MPL-2.0 hOCR Tesseract",
+    "intent": "official"
+   },
+   {
+    "query": "PaddleOCR license Apache 2.0 PP-OCRv5 Spanish confidence",
+    "intent": "official"
+   },
+   {
+    "query": "docTR mindee license Apache 2.0 confidence",
+    "intent": "official"
+   },
+   {
+    "query": "nemotron-parse model card license hardware requirements",
+    "intent": "official"
+   },
+   {
+    "query": "OCR benchmark Spanish scanned legal documents Tesseract vs PaddleOCR vs EasyOCR",
+    "intent": "contradict"
+   },
+   {
+    "query": "Orden Jurídico Nacional OCR documentos escaneados legislación estatal municipal",
+    "intent": "other"
+   },
+   {
+    "query": "Docling license MIT OCR engines RapidOCR Tesseract CPU",
+    "intent": "official"
+   },
+   {
+    "query": "LibreOffice headless convert .doc to pdf",
+    "intent": "official"
+   },
+   {
+    "query": "Surya OCR license; olmOCR license GPU requirements",
+    "intent": "limitations"
+   },
+   {
+    "query": "tessdata_best license Apache spa traineddata",
+    "intent": "official"
+   },
+   {
+    "query": "Docling GitHub LICENSE MIT",
+    "intent": "official"
+   }
+  ],
+  "not_found": [
+   "Ninguna medición publicada de precisión o costo por página sobre documentos reales del Orden Jurídico Nacional (ordenjuridico.gob.mx).",
+   "Ninguna comparativa publicada de Tesseract/PaddleOCR/docTR en legislación mexicana escaneada; las comparativas halladas son en inglés o de otros dominios y se contradicen (blogs, no revisadas por pares).",
+   "sha256 de los documentos de licencia: no calculado (la herramienta solo busca); debe obtenerse descargando los archivos.",
+   "Confianza de nemotron-parse por página o bloque: no confirmada.",
+   "Soporte documentado de GPU de consumo para nemotron-parse: no hallado.",
+   "Licencia y sitio oficial de LibreOffice (MPL-2.0) no confirmados con fuente oficial; solo conocimiento general. LibreOffice convierte .doc a PDF o texto, no hace OCR.",
+   "Precisión en español de PaddleOCR PP-OCRv5 (modelo latino) sin cifras oficiales halladas; costo por página publicado por proveedor: ninguno, todo es HIPÓTESIS.",
+   "No encontré EasyOCR, RapidOCR, Kraken ni Calamari; tampoco confirmé a OJN como fuente de .doc antiguos."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://github.com/tesseract-ocr/tesseract/blob/main/LICENSE",
+    "family": "Motores OCR clásicos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto de licencia Apache 2.0 de Tesseract; permite calcular sha256 y citar literal. Salida hOCR/TSV con confianza por palabra; versión fijable (5.x)."
+   },
+   {
+    "url": "https://tesseract-ocr.github.io/tessdoc/Data-Files.html",
+    "family": "Motores OCR clásicos",
+    "stance": "context",
+    "role": "primary",
+    "why": "Lista spa y spa_old y variantes best/fast; necesario para fijar el modelo de idioma."
+   },
+   {
+    "url": "https://github.com/tesseract-ocr/tessdata_best",
+    "family": "Motores OCR clásicos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "README declara los datos bajo Apache-2.0; los modelos best solo funcionan con LSTM (--oem 1)."
+   },
+   {
+    "url": "https://tesseract-ocr.github.io/tessdoc/",
+    "family": "Motores OCR clásicos",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Documentación oficial de formatos de salida (hOCR, TSV, ALTO) y ejecución en CPU."
+   },
+   {
+    "url": "https://github.com/ocrmypdf/ocrmypdf",
+    "family": "Envoltorios/pipelines",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Añade capa de texto a PDF escaneados usando Tesseract; licencia MPL-2.0 (docs CC-BY-SA); requiere Ghostscript."
+   },
+   {
+    "url": "https://github.com/PaddlePaddle/PaddleOCR/blob/main/LICENSE",
+    "family": "OCR neuronal local",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Apache 2.0; PP-OCRv5 multilingüe con puntaje por línea. Precisión en español no publicada en lo hallado."
+   },
+   {
+    "url": "https://github.com/mindee/doctr/blob/main/LICENSE",
+    "family": "OCR neuronal local",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Apache 2.0; detección+reconocimiento con confianza por palabra; modelos principalmente en inglés/latino, por verificar para español."
+   },
+   {
+    "url": "https://github.com/docling-project/docling/blob/main/LICENSE",
+    "family": "Envoltorios/pipelines",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Código MIT; las licencias de los modelos y motores OCR son aparte; usa RapidOCR por defecto, Tesseract opcional, CPU."
+   },
+   {
+    "url": "https://docling-project.github.io/docling/getting_started/installation/",
+    "family": "Envoltorios/pipelines",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Documenta motores OCR soportados y ejecución local sin GPU."
+   },
+   {
+    "url": "https://huggingface.co/nvidia/Nemotron-3.5-Parse",
+    "family": "Modelos que requieren GPU",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Licencia OpenMDW 1.1 (las versiones previas usan otras licencias NVIDIA); hardware de referencia de centro de datos; relevante para la comparación de #93."
+   },
+   {
+    "url": "https://docs.nvidia.com/nim/ingestion/parse/latest/support-matrix.html",
+    "family": "Modelos que requieren GPU",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "GPUs soportadas (A100, A10G, L40S, H100...), no de consumo; indica que una GPU de consumo no está documentada."
+   },
+   {
+    "url": "https://github.com/datalab-to/surya",
+    "family": "Modelos que requieren GPU",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Código Apache 2.0 pero pesos con OpenRAIL-M modificada y límite de ingresos; riesgo de licencia para producción."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
