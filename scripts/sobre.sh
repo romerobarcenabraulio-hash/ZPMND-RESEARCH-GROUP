@@ -39,16 +39,21 @@ case "${1:-}" in
     [ -n "${RG_ARTIFACT_KEY:-}" ] || { echo "RG_ARTIFACT_KEY is not set"; exit 2; }
     pem=$RG_ARTIFACT_KEY
     unset RG_ARTIFACT_KEY  # from here on no program inherits the private key
+    for f in llave.enc datos.mac datos.enc; do  # the envelope's three files, each regular and none a link (auditor on #141)
+      [ -f "$2/$f" ] && [ ! -L "$2/$f" ] || { echo "not an envelope: $f"; exit 3; }
+    done
     keys=$(openssl pkeyutl -decrypt -inkey <(printf '%s\n' "$pem") -pkeyopt rsa_padding_mode:oaep -in "$2/llave.enc")
     unset pem
     k=${keys%% *}
     m=${keys##* }
     [ "$(hmac "$m" "$2/datos.enc")" = "$(cat "$2/datos.mac")" ] || { echo "the envelope does not authenticate"; exit 3; }
     tmp=$(mktemp -d)
-    trap 'rm -rf "$tmp"' EXIT
+    padre=$(dirname "$3") nombre=$(basename "$3")
+    trap 'rm -rf "$tmp" "$padre/.sobre-$nombre-"*' EXIT  # what this open's reader leaves beside its folder if killed, never another's
     K="$k" openssl enc -d -aes-256-cbc -pbkdf2 -iter "$ITER" -pass env:K -in "$2/datos.enc" -out "$tmp/datos.tar"
-    mkdir -p "$3"
-    tar -C "$3" -xf "$tmp/datos.tar" --no-same-owner
+    # anyone can seal one: plain files only, checked and extracted by one parser (GPT on #141: a tar that reads on past
+    # a header Python stops at would write what nobody checked)
+    python3 -I "$(dirname "$0")/sobre_partes.py" interno "$tmp/datos.tar" "${RG_SOBRE_MAX_INTERNO:-4000000000}" "$3" || exit 3
     ;;
   *)
     echo "usage: sobre.sh seal|open ..."; exit 2
