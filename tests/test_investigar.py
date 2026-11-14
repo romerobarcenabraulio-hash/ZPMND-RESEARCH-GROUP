@@ -598,6 +598,25 @@ class Review(Base):
         with self.assertRaises(ValueError):
             inv.review_prompt({'findings': {'confirmed': 'x'}})
 
+    def test_each_limit_is_checked_in_both_copies_and_one_the_claim_drops_takes_it_out(self):
+        # GPT on #165: the reviewer kept 5.5 without "durante o con motivo del trabajo"; the machine checks the copies now
+        self.assertIn('Both copies are checked: a limit not in the quote, or that no words of the\n  claim keep', inv.review_prompt(answer())[0])
+        a, lim = answer(), 'durante o con motivo del trabajo'
+        a['findings']['confirmed'][0].update(quote=f'Identificar a los trabajadores sujetos a acontecimientos traumáticos severos {lim}',
+                                             claim='Obligación 5.5: identificar a quienes sufren acontecimientos traumáticos severos.')
+        rev = lambda *ls: {'reviews': [{'id': 'confirmed[0]', 'limits': list(ls), 'fits': True, 'why': ''},
+                                       {'id': 'confirmed[1]', 'limits': [], 'fits': True, 'why': ''}]}
+        for k, x in enumerate(({'quote': lim, 'claim': ''}, {'quote': lim, 'claim': 'durante el trabajo'},
+                               {'quote': 'solo en centros de más de 50', 'claim': 'identificar'})):  # dropped, not in it, made up
+            with self.subTest(k):
+                out, taken = inv.apply_review(a, rev(x))
+                self.assertEqual([f['claim'] for f in out['findings']['confirmed']], ['El dataset trae una nota.'])
+                self.assertEqual(taken[0]['why'], f"a limit of its quote the claim does not keep: {x['quote']}")
+        a['findings']['confirmed'][0]['claim'] += ' DURANTE  o con motivo del trabajo'  # kept: case and spacing aside
+        self.assertEqual(inv.apply_review(a, rev({'quote': 'Durante o con  motivo del trabajo', 'claim': lim}))[1], [])
+        with self.assertRaises(ValueError):  # a limit with no words of the claim given is refused
+            inv.apply_review(a, rev({'quote': lim}))
+
     def test_a_claim_its_quote_does_not_hold_is_taken_out_whole_and_never_rewritten(self):
         # GPT on #150, #152, #154 (2026-11-12): a claim cut down to its quote had lost its condition and said more
         rows = self.fetch()

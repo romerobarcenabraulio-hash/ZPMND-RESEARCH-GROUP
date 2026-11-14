@@ -87,9 +87,13 @@ MODEL_SCHEMA = {
 # but in receipt.json.
 # 2026-11-13 (GPT on #158, #161, #163): the reviewer still let claims lose a condition of their quote; it now copies
 # the quote's limits first (limits), so what a claim leaves out is in front of it when it decides.
+# 2026-11-14 (GPT on #165: 5.5 lost "durante o con motivo del trabajo" again): each limit comes with the words of the
+# claim that keep it, and the machine checks both copies (apply_review); the model no longer decides that alone.
+_LIMIT = {'type': 'object', 'additionalProperties': False, 'required': ['quote', 'claim'],
+          'properties': {'quote': _TEXT, 'claim': _TEXT}}
 _REVIEW = {'type': 'object', 'additionalProperties': False, 'required': ['id', 'limits', 'fits', 'why'],
            'properties': {'id': {'type': 'string', 'pattern': r'^(confirmed|conflicting)\[[0-9]{1,2}\]$'},
-                          'limits': {'type': 'array', 'maxItems': 12, 'items': _TEXT},
+                          'limits': {'type': 'array', 'maxItems': 12, 'items': _LIMIT},
                           'fits': {'type': 'boolean'}, 'why': _TEXT}}
 REVIEW_SCHEMA = {'type': 'object', 'additionalProperties': False, 'required': ['reviews'],
                  'properties': {'reviews': {'type': 'array', 'maxItems': 90, 'items': _REVIEW}}}  # MODEL_SCHEMA: 60 + 30
@@ -590,6 +594,9 @@ One review per finding, every id once:
 - limits first: copy from the quote, in its own words, each condition, exception, time, place, subject, case or
   quantifier it is limited to, and its modality (should, may, must, se recomienda, puede, debe); [] when it has none.
   A claim that leaves out any of its limits does not fit.
+  Give each as quote (those words, copied from the quote) and claim (the words of the claim that keep it, copied from
+  the claim; "" when it leaves it out). Both copies are checked: a limit not in the quote, or that no words of the
+  claim keep, takes the claim out whatever fits says.
 - fits: true when the claim says nothing its quote does not say (a faithful restatement or translation of it).
   A name, number, date, plan, license, condition or list item absent from the quote makes it false, even if it is true.
   The only exception is the name of the document the quote is from (a file, a module, a product, a paper), which its
@@ -606,10 +613,15 @@ One review per finding, every id once:
     return system, json.dumps(items, ensure_ascii=False, indent=0)
 
 
+def _en(parte, texto):
+    """True when parte, as the reviewer copied it (case and spacing aside), is in texto; never for nothing."""
+    return bool(parte.strip()) and ' '.join(parte.split()).casefold() in ' '.join(texto.split()).casefold()
+
+
 def apply_review(answer, review):
     """(answer without every finding the reviewer said does not fit its quote, what was taken out). ValueError unless the
-    review fits REVIEW_SCHEMA and holds one review per confirmed and conflicting finding. A finding that fits stays as the
-    model wrote it; one that does not is taken out whole, never rewritten (GPT on #150, #152, #154: a cut-down claim had
+    review fits REVIEW_SCHEMA and holds one review per confirmed and conflicting finding. A finding that fits, every limit
+    it lists in its quote and kept by words of its claim, stays as the model wrote it; one that does not is taken out whole, never rewritten (GPT on #150, #152, #154: a cut-down claim had
     lost its condition and said more than its quote)."""
     try:
         jsonschema.validate(review, REVIEW_SCHEMA)
@@ -623,10 +635,13 @@ def apply_review(answer, review):
     out = copy.deepcopy(answer)
     taken, gone = [], {'confirmed': set(), 'conflicting': set()}
     for r in review['reviews']:
-        if r['fits']:
-            continue
         group, i = r['id'][:-1].split('[')
-        taken.append({'id': r['id'], 'claim': out['findings'][group][int(i)]['claim'], 'why': r['why']})
+        f = out['findings'][group][int(i)]
+        falta = next((x['quote'] for x in r['limits'] if not (_en(x['quote'], f['quote']) and _en(x['claim'], f['claim']))), None)
+        if r['fits'] and falta is None:
+            continue
+        why = r['why'] if not r['fits'] else f'a limit of its quote the claim does not keep: {falta[:200]}'
+        taken.append({'id': r['id'], 'claim': f['claim'], 'why': why})
         gone[group].add(int(i))
     for group, out_of in gone.items():
         out['findings'][group] = [f for i, f in enumerate(out['findings'][group]) if i not in out_of]
