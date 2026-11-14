@@ -1,0 +1,258 @@
+{
+ "request_id": "RR-2026-10-29-prueba-estres-norte",
+ "fetched": [
+  {
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "12f09393a1951a91c3f57f579bf611b034edf1a5f78cdbfb828e23ff3a9acbf7",
+   "bytes": 4225835,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-10-31T19:43:52Z",
+   "text_status": "ok",
+   "text_chars": 1368763
+  },
+  {
+   "url": "https://www.iso.org/standard/27001",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.iso.org/standard/27001",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-10-31T19:43:54Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://arxiv.org/abs/1706.03762",
+   "status": 200,
+   "error": null,
+   "sha256": "af8c8702f1c65b70972fefe2118fa8cc09a609999b1d612be5e02986162e6326",
+   "bytes": 43071,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-31T19:43:54Z",
+   "text_status": "ok",
+   "text_chars": 4968
+  },
+  {
+   "url": "https://api.worldbank.org/v2/country/MEX/indicator/NY.GDP.MKTP.CD?format=json&per_page=100",
+   "status": 200,
+   "error": null,
+   "sha256": "350cdd655f06994f50df718c6b2ea7e013c86831eb97c0739a27fe2371a06de5",
+   "bytes": 13603,
+   "media_type": "application/json",
+   "retrieved_at": "2026-10-31T19:44:09Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 13603
+  },
+  {
+   "url": "https://docs.github.com/en/rest/repos/repos",
+   "status": 200,
+   "error": null,
+   "sha256": "cb84b1cfb3daeaa5f67b2f8bab86c5fcb443c551fc80b943a87fc8862ab4c760",
+   "bytes": 1410241,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-31T19:44:10Z",
+   "text_status": "ok",
+   "text_chars": 240096
+  },
+  {
+   "url": "https://github.com/pypa/pip",
+   "status": 200,
+   "error": null,
+   "sha256": "5ef20d32b2c359489ee1083e398491389ec06d1cd4437d73c8c9af5c785e8e00",
+   "bytes": 273287,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-31T19:44:12Z",
+   "text_status": "ok",
+   "text_chars": 4936
+  },
+  {
+   "url": "https://www.ti.com/lit/ds/symlink/lm317.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "1646fb2e4f8cf8c2cbd93aaf22edad368571619ad062476deca8ee29f95c65d3",
+   "bytes": 2578150,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-10-31T19:44:13Z",
+   "text_status": "ok",
+   "text_chars": 54553
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
+   "status": 200,
+   "error": null,
+   "sha256": "20c42d19ec9359bb5d69c3017c86710738d8b7fb310b58f5724f69743f277425",
+   "bytes": 1715306,
+   "media_type": "text/html",
+   "retrieved_at": "2026-10-31T19:44:15Z",
+   "text_status": "ok",
+   "text_chars": 164
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/41235552368",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "El documento imprime como editor/emisor a la Cámara de Diputados del H. Congreso de la Unión, Secretaría General, Secretaría de Servicios Parlamentarios.",
+    "now": "El documento imprime: Cámara de Diputados del H. Congreso de la Unión, Secretaría General, Secretaría de Servicios Parlamentarios.",
+    "cut": "Que figure «como editor/emisor»: la cita solo imprime los nombres, sin indicar su función."
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "Las reformas se anotan por artículo con la fecha del DOF, lo que da relaciones de versión (historial) dentro del propio texto.",
+    "now": "El texto anota un párrafo como reformado con fecha del DOF 15-01-2026.",
+    "cut": "Que las reformas se anoten «por artículo» y que esto dé «relaciones de versión (historial)»: la cita muestra una sola anotación de párrafo."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "El texto remite a normas oficiales mexicanas (NOM) y cita códigos CIE-11 en la tabla de enfermedades.",
+    "now": "El texto cita un código CIE-11 (1F68).",
+    "cut": "La remisión a normas oficiales mexicanas (NOM) y la mención de la «tabla de enfermedades», que no están en la cita."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "El texto imprime en cada página su publicador: la Cámara de Diputados del H. Congreso de la Unión, Secretaría General, Secretaría de Servicios Parlamentarios, y el nombre de la ley.",
+    "now": "El texto imprime: Cámara de Diputados del H. Congreso de la Unión, Secretaría General, Secretaría de Servicios Parlamentarios, y la última reforma DOF 14-05-2026.",
+    "cut": "«En cada página», el papel de «publicador» y «el nombre de la ley», que no están en la cita."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "El texto remite a la Constitución (art. 123) como norma de la que deriva.",
+    "now": "El texto remite al párrafo quinto de la fracción XX del artículo 123, apartado A, de la Constitución Política de los Estados Unidos Mexicanos.",
+    "cut": "Que sea la «norma de la que deriva»: la cita no lo dice."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "El texto cita una norma externa de codificación: los códigos CIE-11 en la tabla de enfermedades de trabajo.",
+    "now": "El texto cita el código CIE-11 EJ7Z para la dermatosis por radiación ionizante, sin especificación.",
+    "cut": "La mención de la «tabla de enfermedades de trabajo» y su calificación como «norma externa de codificación», que no están en la cita."
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "El texto contiene tablas con valores numéricos y fórmulas (por ejemplo MELD) que un extractor de texto lineal aplana.",
+    "now": "El texto contiene la fórmula MELD Score = 9,57 Ln (Creat) + 3,78 Ln (Bili) + 11,2 Ln (INR) + 6,43.",
+    "cut": "Las «tablas con valores numéricos» y que un extractor de texto lineal las aplane: nada de eso está en la cita."
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "El texto remite a documentos externos que no forman parte de él (Catálogo de Cédulas).",
+    "now": "El texto nombra el «Catálogo de las Cédulas para la Valuación de las Enfermedades de Trabajo».",
+    "cut": "Que sea un documento externo «que no forma parte de él»: la cita no lo dice."
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "La LFT nombra a la Cámara de Diputados del H. Congreso de la Unión como publicadora del texto.",
+    "now": "La LFT imprime «Cámara de Diputados del H. Congreso de la Unión».",
+    "cut": "Que sea la «publicadora del texto»: la cita solo imprime el nombre."
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "La LFT registra reformas por decreto con fecha de publicación en el DOF, por ejemplo la del 14 de mayo de 2026.",
+    "now": "La LFT indica algo «Publicado en el Diario Oficial de la Federación el 14 de mayo de 2026».",
+    "cut": "Que registre «reformas por decreto»: la cita no dice qué se publicó."
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "La página de arXiv ofrece un enlace 'view license' pero el texto no imprime el nombre de la licencia.",
+    "now": "La página de arXiv ofrece un enlace «view license» junto a «TeX Source».",
+    "cut": "Que el texto no imprima el nombre de la licencia: la cita no lo muestra."
+   },
+   {
+    "id": "confirmed[40]",
+    "claim": "La hoja de datos no concede licencia sobre propiedad intelectual de TI.",
+    "now": "La hoja de datos dice que no se concede licencia sobre ningún otro derecho de propiedad intelectual de TI.",
+    "cut": "Faltaba «otro»: la cita no niega toda licencia sobre la propiedad intelectual de TI, solo sobre los demás derechos."
+   },
+   {
+    "id": "confirmed[44]",
+    "claim": "El texto extraído de la página de YouTube solo contiene el pie genérico de la plataforma.",
+    "now": "El texto extraído de la página de YouTube contiene «© 2026 Google LLC».",
+    "cut": "Que «solo» contenga el pie genérico de la plataforma: la cita no muestra el resto del contenido."
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "id": "confirmed[11]",
+   "claim": "El texto nombra relaciones con otras normas, por ejemplo la Ley General de Protección de Datos Personales y la Ley General de Transparencia.",
+   "quote": "estará sujeto a la Ley General de\nProtección de Datos Personales en Posesión de Sujetos Obligados y a la Ley General de Transparencia\ny Acceso a la Información Pública.",
+   "artifact_ids": [
+    "SA-12f09393a1951a91c3f57f57"
+   ]
+  },
+  {
+   "id": "confirmed[12]",
+   "claim": "El texto nombra relaciones con la Ley Federal de Entidades Paraestatales.",
+   "quote": "salvo aquellas facultades a que se contrae el\nartículo 58 de la Ley Federal de Entidades Paraestatales",
+   "artifact_ids": [
+    "SA-12f09393a1951a91c3f57f57"
+   ]
+  },
+  {
+   "id": "confirmed[14]",
+   "claim": "El texto remite al párrafo quinto de la fracción XX del artículo 123, apartado A, de la Constitución Política de los Estados Unidos Mexicanos.",
+   "quote": "conforme lo establece el párrafo quinto de la\nfracción XX del artículo 123, apartado A, de la Constitución Política de los Estados Unidos Mexicanos.",
+   "artifact_ids": [
+    "SA-12f09393a1951a91c3f57f57"
+   ]
+  }
+ ],
+ "partes": [
+  [
+   [
+    "SA-12f09393a1951a91c3f57f57",
+    0,
+    600000
+   ]
+  ],
+  [
+   [
+    "SA-12f09393a1951a91c3f57f57",
+    599000,
+    1199000
+   ]
+  ],
+  [
+   [
+    "SA-12f09393a1951a91c3f57f57",
+    1198000,
+    1368763
+   ],
+   [
+    "SA-af8c8702f1c65b70972fefe2",
+    0,
+    4968
+   ],
+   [
+    "SA-350cdd655f06994f50df718c",
+    0,
+    13603
+   ],
+   [
+    "SA-cb84b1cfb3daeaa5f67b2f8b",
+    0,
+    240096
+   ],
+   [
+    "SA-5ef20d32b2c359489ee1083e",
+    0,
+    4936
+   ],
+   [
+    "SA-1646fb2e4f8cf8c2cbd93aaf",
+    0,
+    54553
+   ],
+   [
+    "SA-20c42d19ec9359bb5d69c301",
+    0,
+    164
+   ]
+  ]
+ ],
+ "partes_fuera": {}
+}
