@@ -1,0 +1,209 @@
+{
+ "request_id": "RR-2026-11-02-nom035-autoauditoria",
+ "fetched": [
+  {
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+   "status": 200,
+   "error": null,
+   "sha256": "75b62246f311f4451094bb20eb3b7528ed6c317390530cf4ca8eae62e04548cc",
+   "bytes": 1133731,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-14T03:27:55Z",
+   "text_status": "ok",
+   "text_chars": 119139
+  },
+  {
+   "url": "https://sidof.segob.gob.mx/notas/5541828",
+   "status": 200,
+   "error": null,
+   "sha256": "fced72a1d49d5cf0fa3b4675a45e8e4cc29d98ed84b47a59d306a504eb45ecf3",
+   "bytes": 67610,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-14T03:27:58Z",
+   "text_status": "ok",
+   "text_chars": 3223
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43551719600",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "taken_out": [
+   {
+    "id": "confirmed[1]",
+    "claim": "Campo de aplicación para centros de trabajo de entre dieciséis y cincuenta trabajadores.",
+    "why": "The claim does not list the numerals the quote requires, so it is only a vague restatement that drops the specific obligations."
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "Campo de aplicación para centros de trabajo con más de 50 trabajadores.",
+    "why": "The claim omits the specific numerals the quote lists as mandatory."
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "Quien cuente con el certificado NMX-R-025-SCFI-2015 vigente da por cumplidas ciertas obligaciones.",
+    "why": "The quote does not name the certificate NMX-R-025-SCFI-2015 or say it is vigente; it only lists obligations deemed met."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "Obligación 5.1: política de prevención de riesgos psicosociales por escrito.",
+    "why": "The claim drops implantar, mantener and difundir, and the quote is cut off before the list of what the policy must contemplate."
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "Obligación 5.2: identificar y analizar factores de riesgo psicosocial en centros de 16 a 50 trabajadores.",
+    "why": "The quote only gives the scope; the identification and analysis obligation is not in it."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "Obligación 5.3: identificar y analizar factores y evaluar el entorno organizacional en centros de más de 50 trabajadores.",
+    "why": "The claim says centros de más de 50 trabajadores, but the quote does not state that scope."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "Obligación 5.4: adoptar medidas de prevención y control conforme al Capítulo 8.",
+    "why": "The quote does not mention Capítulo 8 and is cut off."
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "Obligación 5.6: exámenes médicos y evaluaciones psicológicas, condicionadas a signos o síntomas, resultado del análisis o quejas.",
+    "why": "The claim adds conditions (resultado del análisis, quejas) that the cut-off quote does not contain."
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "Obligación 5.7: difundir y proporcionar información a los trabajadores.",
+    "why": "The quote is cut off before the list of topics, so the claim is incomplete."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "Obligación 5.8: llevar registros; el de evaluación del entorno aplica a centros de más de 50 trabajadores.",
+    "why": "The quote does not say that 5.8 is about records (llevar registros) at all."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "Los registros del 5.8 incluyen las medidas de control adoptadas.",
+    "why": "The claim drops the condition that control measures are recorded only when the results indicate them."
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "Los registros del 5.8 incluyen los nombres de los trabajadores a los que se practicaron exámenes o evaluaciones clínicas.",
+    "why": "The quote does not say these names belong to the records of 5.8."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "En centros de 16 a 50 trabajadores solo se identifican y analizan los factores, incluyendo a todos los trabajadores.",
+    "why": "The quote does not state the 16 to 50 workers scope."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "En centros de más de 50 trabajadores se puede usar muestra representativa.",
+    "why": "The quote does not state the scope of more than 50 workers, and the claim omits the Guía III, III.1 condition."
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "Los cuestionarios propios deben estar validados si no se usan las Guías II y III.",
+    "why": "The claim refers to cuestionarios propios, which the quote does not mention, and the quote is cut off before the validation criteria."
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "El resultado debe constar en un informe.",
+    "why": "The quote does not say what the result is, and it is cut off before the contents of the report."
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "El resultado debe estar disponible para consulta de los trabajadores.",
+    "why": "The quote does not say what the result is, so the subject is missing."
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "Periodicidad de la identificación y análisis y de la evaluación.",
+    "why": "The quote does not name the identification and analysis or the evaluation as the subject of the periodicity."
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "Debe integrarse al diagnóstico de seguridad y salud en el trabajo de la NOM-030-STPS-2009.",
+    "why": "The quote does not say what must be integrated, so the claim leaves out the subject."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "Obligación 8.1 b): mecanismos seguros y confidenciales para quejas y denuncias.",
+    "why": "The claim adds denuncias and 8.1 b), and the quote is cut off before the full text."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "El Programa de 8.3 se requiere cuando el resultado de las evaluaciones determine la necesidad de acciones de control.",
+    "why": "The quote says the Programa must meet numeral 8.4, and it does not mention 8.3 or the evaluations."
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "Contenido del Programa: áreas o trabajadores sujetos.",
+    "why": "The claim says áreas o trabajadores, but the quote does not say it is a content item of the Programa."
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "Contenido del Programa: responsable de su ejecución.",
+    "why": "The quote does not identify the Programa as the subject."
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "Evidencia exigida para 5.1: documental sobre política y difusión.",
+    "why": "The quote is cut off before what the evidence must show, and it does not mention 5.1 or the política."
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "El apartado de evaluación de la conformidad de 5.2 aplica solo a centros de 16 a 50 trabajadores.",
+    "why": "The quote does not name numeral 5.2 as the apartado."
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "El Programa (5.4, 8.3 a 8.5) aplica solo a centros con más de 15 trabajadores y cuando los resultados lo determinen; la evidencia es documental.",
+    "why": "The quote does not name 5.4 or 8.3 to 8.5 or say the evidence is documental."
+   },
+   {
+    "id": "confirmed[33]",
+    "claim": "Evidencia exigida para 5.5: identificar y canalizar.",
+    "why": "The quote covers only the canalization and does not mention identifying workers."
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "Los registros 5.8 aplican solo a centros con más de 15 trabajadores.",
+    "why": "The quote does not name the registros of 5.8 as the subject."
+   },
+   {
+    "id": "confirmed[35]",
+    "claim": "Las evidencias documentales y registros pueden ser impresos o electrónicos y se conservan al menos un año desde su elaboración.",
+    "why": "The quote does not say which evidence and registros it covers."
+   },
+   {
+    "id": "confirmed[37]",
+    "claim": "Transitorio segundo: segunda fase a los dos años.",
+    "why": "The claim does not list the numerals the quote names, so it is a vague restatement."
+   },
+   {
+    "id": "confirmed[38]",
+    "claim": "El DOF registra la publicación el 23-10-2018, sección segunda, edición matutina.",
+    "why": "The quote gives only the date, not sección segunda or edición matutina."
+   },
+   {
+    "id": "confirmed[39]",
+    "claim": "Las guías de referencia no son de cumplimiento obligatorio (ejemplo: Guía IV).",
+    "why": "The quote speaks of one guide (esta guía), but the claim extends it to all the guías de referencia."
+   },
+   {
+    "id": "confirmed[40]",
+    "claim": "La Guía II puede ser usada por centros de hasta 50 trabajadores.",
+    "why": "The quote does not say the guide is Guía II."
+   },
+   {
+    "id": "confirmed[41]",
+    "claim": "La Guía III puede ser usada por centros de más de 50 trabajadores.",
+    "why": "The quote does not say the guide is Guía III."
+   },
+   {
+    "id": "conflicting[0]",
+    "claim": "Tensión interna: el numeral 2 b) ordena a los centros de 16 a 50 cumplir 5.6 y 5.8, mientras 10.2 limita 5.8 a centros con más de 15 trabajadores. Además, el campo de aplicación (a) lista 5.5 y 5.7 pero no 5.6 ni 5.8 para hasta 15 trabajadores.",
+    "why": "The quote does not hold the claimed disagreement with numeral 2 b), the numeral 10.2 reference, or the campo de aplicación lists."
+   }
+  ]
+ }
+}
