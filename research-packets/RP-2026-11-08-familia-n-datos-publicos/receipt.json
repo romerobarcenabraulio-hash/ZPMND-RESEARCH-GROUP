@@ -1,0 +1,386 @@
+{
+ "request_id": "RR-2026-11-08-familia-n-datos-publicos",
+ "fetched": [
+  {
+   "url": "https://www.inegi.org.mx/servicios/api-indicadores/",
+   "status": 200,
+   "error": null,
+   "sha256": "f1be5c445bdbedd82de1528f89c71bc92d7f76fb2be15e914961534bf7919be7",
+   "bytes": 153586,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:12Z",
+   "text_status": "ok",
+   "text_chars": 26031
+  },
+  {
+   "url": "https://www.inegi.org.mx/inegi/terminos.html",
+   "status": 200,
+   "error": null,
+   "sha256": "97e97599169f75f455877e85edffcf941d512f56c5c00197ebfec783d802c67a",
+   "bytes": 10442,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:14Z",
+   "text_status": "ok",
+   "text_chars": 5974
+  },
+  {
+   "url": "https://data.worldbank.org/summary-terms-of-use",
+   "status": 200,
+   "error": null,
+   "sha256": "7f7490aeacec1cb5ef146bcd430edcdb7030450ce6b5e42c2d36a15570f68c0a",
+   "bytes": 207426,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:15Z",
+   "text_status": "ok",
+   "text_chars": 5011
+  },
+  {
+   "url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation",
+   "status": 200,
+   "error": null,
+   "sha256": "3d25b4dea07045cd3770f714173f0afc324410ebb917ea1620b2db469275a3ef",
+   "bytes": 224228,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:16Z",
+   "text_status": "ok",
+   "text_chars": 10088
+  },
+  {
+   "url": "https://fred.stlouisfed.org/docs/api/terms_of_use.html",
+   "status": 200,
+   "error": null,
+   "sha256": "c31adf4f6b3803b1b78ed9c943865f7be47aa792ff63efe22e7c09ad5998a244",
+   "bytes": 49484,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:17Z",
+   "text_status": "ok",
+   "text_chars": 19714
+  },
+  {
+   "url": "https://fred.stlouisfed.org/docs/api/fred/series_vintagedates.html",
+   "status": 200,
+   "error": null,
+   "sha256": "baeaaea17a64fa195d5a4b4549dddf695ad0fa851d2c8ca46ea0fe40a32bfb8b",
+   "bytes": 46835,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:18Z",
+   "text_status": "ok",
+   "text_chars": 12478
+  },
+  {
+   "url": "https://data.imf.org/en/datasets/IMF.RES:WEO",
+   "status": 200,
+   "error": null,
+   "sha256": "5400c26e5132b449e110c6e1cada45b0297b86eabec59dd892eed4fd7945daca",
+   "bytes": 337063,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:19Z",
+   "text_status": "ok",
+   "text_chars": 4244
+  },
+  {
+   "url": "https://www.imf.org/en/publications/weo/weo-database/2025/april",
+   "status": 200,
+   "error": null,
+   "sha256": "6496807fbc031da1f29b5c49a49e4df02e6ff2fc5d87dbb8677172589924c796",
+   "bytes": 7970,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:21Z",
+   "text_status": "ok",
+   "text_chars": 2331
+  },
+  {
+   "url": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html",
+   "status": 403,
+   "error": null,
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T15:20:22Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+   "status": 200,
+   "error": null,
+   "sha256": "66e5c6bad79bad66ca9fe408787b0074a5939f3e40205fdb8ae627a717aaaf36",
+   "bytes": 179311,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:23Z",
+   "text_status": "ok",
+   "text_chars": 9748
+  },
+  {
+   "url": "https://unstats.un.org/unsd/methodology/m49/",
+   "status": 200,
+   "error": null,
+   "sha256": "4d5cabcb10ad9ef184553b5e64c0a34ba8deeb20dab2e02cd0be3599b93bb01d",
+   "bytes": 2051368,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:25Z",
+   "text_status": "ok",
+   "text_chars": 123365
+  },
+  {
+   "url": "https://comtradeplus.un.org/ApiDocs",
+   "status": 200,
+   "error": null,
+   "sha256": "9ab798871eaef48e3bc31f044831dcd580376e7424632508923ef3a83c6e2432",
+   "bytes": 103452,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:29Z",
+   "text_status": "ok",
+   "text_chars": 17705
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43047108123",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[1]",
+    "claim": "INEGI permite explotar comercialmente la información, con crédito al INEGI.",
+    "now": "INEGI permite explotar comercialmente la información, utilizándola como insumo para generar otros productos o servicios.",
+    "cut": "con crédito al INEGI"
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "Banco Mundial: licencia CC BY 4.0 con términos adicionales, salvo indicación en los metadatos.",
+    "now": "Banco Mundial: licencia Creative Commons Attribution 4.0 International, con términos adicionales.",
+    "cut": "salvo indicación en los metadatos"
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "FRED exige registrar una llave API y bloquea llaves inválidas.",
+    "now": "FRED (Federal Reserve Bank of St. Louis) bloquea las solicitudes con una llave inválida.",
+    "cut": "exige registrar una llave API"
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "FRED: algunas series pertenecen a terceros con copyright; se marcan con 'Copyright' en sus notas.",
+    "now": "FRED: las series con copyright contienen la palabra 'Copyright' en sus notas.",
+    "cut": "pertenecen a terceros"
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "FRED puede cambiar o descontinuar la API y exigir la versión más reciente.",
+    "now": "FRED puede cambiar, suspender o descontinuar cualquier aspecto de la API en cualquier momento.",
+    "cut": "exigir la versión más reciente"
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "FRED: el ejemplo GNPCA declara 162 fechas de vintage.",
+    "now": "FRED: el ejemplo de fred/series/vintagedates declara \"count\": 162.",
+    "cut": "GNPCA"
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "FMI WEO ofrece una página de vintages para comparar revisiones.",
+    "now": "FMI WEO permite comparar publicaciones actuales e históricas del WEO para seguir revisiones y cambios en el tiempo.",
+    "cut": "una página de vintages"
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "FMI: el apéndice documenta cambios y correcciones, con vintages pasados archivados.",
+    "now": "FMI WEO: se documentan cambios y correcciones a la base de datos, con el vintage actual destacado y los vintages pasados archivados.",
+    "cut": "el apéndice"
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "Eurostat: reutilización de datos comercial o no comercial autorizada citando la fuente.",
+    "now": "Eurostat: está autorizado siempre que se cite la fuente.",
+    "cut": "reutilización de datos comercial o no comercial"
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "Eurostat: datos de países distintos a UE/EFTA/candidatos no son reutilizables comercialmente.",
+    "now": "Eurostat: ejemplos son datos de Estados Unidos, Japón o China.",
+    "cut": "datos de países distintos a UE/EFTA/candidatos no son reutilizables comercialmente"
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "UN Comtrade: getDA declara totalRecords por dataset.",
+    "now": "UN Comtrade: la documentación de la API muestra \"totalRecords\": 1210614.",
+    "cut": "getDA; por dataset"
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "INEGI (API Indicadores BIE/BISE, términos de libre uso)",
+   "Banco Mundial (API Indicadores, términos)",
+   "FRED/ALFRED (API, términos, vintages)",
+   "FMI (data.imf.org, SDMX, WEO)",
+   "OCDE (API SDMX, términos)",
+   "Eurostat (copyright, API)",
+   "ONU: M49 y UN Comtrade",
+   "OMS GHO OData",
+   "GBIF (biodiversidad)",
+   "CONEVAL/pobreza (sin enlace directo a 2024)"
+  ],
+  "searches": [
+   {
+    "query": "INEGI API Indicadores BIE BISE token registro términos de libre uso",
+    "intent": "official"
+   },
+   {
+    "query": "INEGI términos de libre uso de la información",
+    "intent": "official"
+   },
+   {
+    "query": "World Bank Indicators API documentation WDI CC BY 4.0 terms of use",
+    "intent": "official"
+   },
+   {
+    "query": "FRED API key terms of use series vintages ALFRED",
+    "intent": "official"
+   },
+   {
+    "query": "UN M49 standard country or area codes statistics division methodology",
+    "intent": "official"
+   },
+   {
+    "query": "Eurostat API SDMX dissemination data licence reuse policy",
+    "intent": "official"
+   },
+   {
+    "query": "IMF data API SDMX terms of use WEO release dates",
+    "intent": "official"
+   },
+   {
+    "query": "OECD Data Explorer API SDMX terms and conditions",
+    "intent": "official"
+   },
+   {
+    "query": "GBIF API occurrence download terms CC0 CC BY data user agreement",
+    "intent": "official"
+   },
+   {
+    "query": "WHO GHO OData API Global Health Observatory",
+    "intent": "official"
+   },
+   {
+    "query": "UN Comtrade API subscription key data availability terms of use",
+    "intent": "limitations"
+   },
+   {
+    "query": "CONEVAL medición de pobreza 2024 bases de datos descarga datos abiertos",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "Citas literales de ≤300 caracteres y sha256: no se descargó nada, solo hay resultados de búsqueda.",
+   "Totales declarados con fecha de corte: no confirmados en páginas oficiales (BIE/BISE, Eurostat ~8,150 dataflows, GHO >2000 indicadores solo por secundarias).",
+   "OMS GHO: URL oficial https://www.who.int/data/gho/info/gho-odata-api solo mencionada en resumen; licencia CC BY-NC-SA 3.0 IGO sin verificar.",
+   "N03 microdatos INEGI, N04 Marco Geoestadístico, N06 Transparencia presupuestaria, N08 CONEVAL/CONAGUA/SMN, N09 CONAPO, FAO, N17 NASA/Copernicus, N18 OSM/Natural Earth, N19, N21: sin consulta realizada o sin resultado.",
+   "CONEVAL 2024: la medición 2024 la publicó INEGI; no se halló enlace directo a las bases 2024 de CONEVAL.",
+   "FMI: términos oficiales (imf.org/external/terms.htm) no vistos directamente; conflicto sobre llave en SDMX 3.0.",
+   "Política de revisiones de INEGI BIE/BISE, Banco Mundial y OCDE: no hallada."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 13,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://www.gbif.org/terms",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.inegi.org.mx/servicios/api-indicadores/",
+    "family": "INEGI",
+    "stance": "supports",
+    "role": "primary",
+    "why": "URL oficial de la API BIE/BISE; exige token por registro; formato de consulta con fuente BIE o BISE."
+   },
+   {
+    "url": "https://www.inegi.org.mx/inegi/terminos.html",
+    "family": "INEGI",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Licencia de reutilización de INEGI: copiar, adaptar, citar fuente; prohíbe sugerir aval. Citar literal al descargar."
+   },
+   {
+    "url": "https://data.worldbank.org/summary-terms-of-use",
+    "family": "Banco Mundial",
+    "stance": "supports",
+    "role": "primary",
+    "why": "CC BY 4.0 con atribución; advierte de datos de terceros con términos propios."
+   },
+   {
+    "url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation",
+    "family": "Banco Mundial",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Documentación oficial de la API sin llave; los totales (1,400 en WDI; ~16,000 en API) vienen de un resumen secundario, verificar aquí."
+   },
+   {
+    "url": "https://fred.stlouisfed.org/docs/api/terms_of_use.html",
+    "family": "FRED",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Exige llave; series de terceros con derechos propios."
+   },
+   {
+    "url": "https://fred.stlouisfed.org/docs/api/fred/series_vintagedates.html",
+    "family": "FRED",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Mecanismo oficial de revisiones/vintages (ALFRED) por serie."
+   },
+   {
+    "url": "https://data.imf.org/en/datasets/IMF.RES:WEO",
+    "family": "FMI",
+    "stance": "context",
+    "role": "primary",
+    "why": "Dataflow oficial WEO en SDMX; ediciones abril/octubre; verificar llave y archivo previo a abril 2025."
+   },
+   {
+    "url": "https://www.imf.org/en/publications/weo/weo-database/2025/april",
+    "family": "FMI",
+    "stance": "context",
+    "role": "primary",
+    "why": "Página de edición con política de versiones por edición semestral."
+   },
+   {
+    "url": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html",
+    "family": "OCDE",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Documentación oficial de la API SDMX; sin llave; límites de uso a verificar (60/h según secundarias)."
+   },
+   {
+    "url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+    "family": "Eurostat",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Licencia (CC BY 4.0 con excepciones no comerciales para datos de terceros/países no UE)."
+   },
+   {
+    "url": "https://unstats.un.org/unsd/methodology/m49/",
+    "family": "ONU M49",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Fuente oficial del eje de países M49; mantenida en línea, última edición impresa 1999."
+   },
+   {
+    "url": "https://comtradeplus.un.org/ApiDocs",
+    "family": "ONU Comtrade",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Llave requerida; vista previa limitada a 500 registros; licencia de uso interno: limita la reutilización."
+   },
+   {
+    "url": "https://www.gbif.org/terms",
+    "family": "GBIF",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Licencias CC0, CC BY, CC BY-NC por conjunto; acuerdo de usuario."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
