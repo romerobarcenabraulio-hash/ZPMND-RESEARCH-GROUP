@@ -85,8 +85,11 @@ MODEL_SCHEMA = {
 # #154 (2026-11-12) found cuts that dropped a condition, an exception or a 'should' and so made the claim wider than its
 # quote. Now a claim that does not fit is taken out whole; the reviewer only says why, and nothing it writes is kept
 # but in receipt.json.
-_REVIEW = {'type': 'object', 'additionalProperties': False, 'required': ['id', 'fits', 'why'],
+# 2026-11-13 (GPT on #158, #161, #163): the reviewer still let claims lose a condition of their quote; it now copies
+# the quote's limits first (limits), so what a claim leaves out is in front of it when it decides.
+_REVIEW = {'type': 'object', 'additionalProperties': False, 'required': ['id', 'limits', 'fits', 'why'],
            'properties': {'id': {'type': 'string', 'pattern': r'^(confirmed|conflicting)\[[0-9]{1,2}\]$'},
+                          'limits': {'type': 'array', 'maxItems': 12, 'items': _TEXT},
                           'fits': {'type': 'boolean'}, 'why': _TEXT}}
 REVIEW_SCHEMA = {'type': 'object', 'additionalProperties': False, 'required': ['reviews'],
                  'properties': {'reviews': {'type': 'array', 'maxItems': 90, 'items': _REVIEW}}}  # MODEL_SCHEMA: 60 + 30
@@ -493,6 +496,11 @@ Write it in Spanish:
   a list goes into a claim only if it is in that claim's own quote; a list needs a quote that holds the whole list,
   or one finding per item. The machine checks that the quote exists, not that it supports the claim, so this is on
   you. What you connect or deduce across quotes goes to candidate_claims, starting with "INTERPRETACIÓN:".
+- Keep what limits the quote: its conditions, exceptions, time, place, subject or case, and its modality ('should'
+  stays 'debería', 'may' stays 'puede'). One fact means nothing beside it: no section, edition, date or detail that is
+  not the fact itself; a second fact is a second finding with its own quote. A second pass takes out whole any finding
+  wider than its quote, so a detail added to a fact costs the fact (GPT on #159: a publication date went out with the
+  edition it carried).
 - Every confirmed finding cites at least one source the request lists as primary (its header says primary); what only
   a secondary source states goes to candidate_claims, starting with "SECUNDARIA:" and naming that source.
 - findings.conflicting: where sources disagree, only when the quote itself shows the disagreement (one source saying
@@ -579,6 +587,9 @@ Your answer is one JSON object, given through this JSON Schema (it is enforced):
 {json.dumps(REVIEW_SCHEMA, ensure_ascii=False)}
 
 One review per finding, every id once:
+- limits first: copy from the quote, in its own words, each condition, exception, time, place, subject, case or
+  quantifier it is limited to, and its modality (should, may, must, se recomienda, puede, debe); [] when it has none.
+  A claim that leaves out any of its limits does not fit.
 - fits: true when the claim says nothing its quote does not say (a faithful restatement or translation of it).
   A name, number, date, plan, license, condition or list item absent from the quote makes it false, even if it is true.
   The only exception is the name of the document the quote is from (a file, a module, a product, a paper), which its

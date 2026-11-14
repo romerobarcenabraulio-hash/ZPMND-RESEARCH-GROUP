@@ -469,6 +469,8 @@ class Model(Base):
         system, user = inv.prompt(RR, rows, self.work)
         self.assertIn(json.dumps(inv.MODEL_SCHEMA, ensure_ascii=False), system)
         self.assertIn('The claim says nothing its quote does not say: one fact per finding.', system)  # GPT #29, #39
+        self.assertIn("- Keep what limits the quote: its conditions, exceptions, time, place, subject or case, and its modality", system)
+        self.assertIn('One fact means nothing beside it', system)  # GPT on #159
         self.assertIn('candidate_claims, starting with "INTERPRETACIÓN:"', system)
         self.assertNotIn(QUOTE, system)
         self.assertIn(f'===== FUENTE {A_PAGE}', user)
@@ -544,7 +546,7 @@ class Model(Base):
 
 
 def review(*reviews):
-    return {'reviews': [{'id': i, 'fits': f, 'why': w} for i, f, w in reviews]}
+    return {'reviews': [{'id': i, 'limits': [], 'fits': f, 'why': w} for i, f, w in reviews]}
 
 
 class Review(Base):
@@ -564,6 +566,11 @@ class Review(Base):
         self.assertIn('A name, number, date, plan, license, condition or list item absent from the quote makes it false', system)
         # run 40533846468: every module lost its name; GPT, #50: the title only names the document, it adds no fact
         self.assertIn("The only exception is the name of the document the quote is from", system)
+        self.assertIn('- limits first: copy from the quote, in its own words, each condition, exception', system)  # #158, #161, #163
+        self.assertIn('A claim that leaves out any of its limits does not fit.', system)
+        with self.assertRaises(ValueError):  # a review that did not list the quote's limits first is refused
+            inv.apply_review(self.wide(), {'reviews': [{'id': 'confirmed[0]', 'fits': True, 'why': ''},
+                                                       {'id': 'confirmed[1]', 'fits': True, 'why': ''}]})
         self.assertIn('into an\n  obligation (must, shall, debe, obligatorio)', system)  # GPT on #154: 'should meet' became 'debe cumplir'
         self.assertIn('A claim wider than its quote is false too: it drops or weakens a condition', system)  # GPT on #150, #152
         self.assertIn('The finding is taken out of\n  the packet whole; nothing you write enters it.', system)
