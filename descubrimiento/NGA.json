@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "# Welcome to Nigeria Legal Information Institute\nNigeriaLII publishes the law of Nigeria for free access to all.\n...\nLegislation\nGazettes\n## My NigeriaLII\nYour personal research space — save documents, add notes, and get updates when the law changes.",
      "title": "Welcome to Nigeria Legal Information Institute",
-     "url": "https://nigerialii.org/"
+     "url": "https://nigerialii.org/",
+     "verificacion": {
+      "bytes": 27969,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:09Z",
+      "http": 200,
+      "sha256": "1dda5e0e0203096d324f9def6863ddd08d306892940486cffa50078eb1a305c0"
+     }
     },
     {
      "date": "2026-08-04",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "# National Assembly of the Federal Republic of Nigeria Open, Transparent and Accountable Legislature\nFollow plenary proceedings, track legislation, access parliamentary documents, and engage with the work of the 10th National Assembly.\n...\n### NALTF\nNational Assembly Library Trust Fund – Legislative",
      "title": "nass.gov.ng · document · constitutionNational Assembly of Nigeria | People's Parliament",
-     "url": "https://nass.gov.ng/document/constitution"
+     "url": "https://nass.gov.ng/document/constitution",
+     "verificacion": {
+      "bytes": 185364,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:12Z",
+      "http": 200,
+      "sha256": "2ea98d58d11dc76242758c32592b2f55668f6f422493f0212a346bd8a99b238c"
+     }
     },
     {
      "date": "",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "Companies Act Regulations 2015 (Sections 3, 4, 5, 7)\nCAC Companies Regulation 2012\n...\nFood, Drugs and Chemical Substances (Food Hygiene) Regulations, 1978\n...\n10 OF 1996 ACT CAP.\nP25 L.F.N. 2004",
      "title": "Laws 23 - Nigeria Trade Information Portal - FMITI",
-     "url": "https://nigeriainfotrade.fmiti.gov.ng/Laws?l=en"
+     "url": "https://nigeriainfotrade.fmiti.gov.ng/Laws?l=en",
+     "verificacion": {
+      "bytes": 203206,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:14Z",
+      "http": 200,
+      "sha256": "c34be1f5776901d22509831bc8470efa8e321229f38b723db0b0a155806f752e"
+     }
     },
     {
      "date": "",
@@ -72,7 +93,14 @@
      "rank": 2,
      "snippet": "B 545\nNATIONAL AGENCY FOR FOOD AND DRUG\nADMINISTRATION AND CONTROL ACT (CAP. N1, LFN) 2004\nPRE-PACKAGED FOOD (LABELLING) REGULATIONS, 2022\n...\nS. I. No. 27 of 2023",
      "title": "Pre-Packaged Food (Labelling) Regulations 2022",
-     "url": "https://www.nafdac.gov.ng/wp-content/uploads/Files/Resources/Regulations/FOOD_REGULATIONS/Pre-Packaged-Food-Labelling-Regulations-2022.pdf"
+     "url": "https://www.nafdac.gov.ng/wp-content/uploads/Files/Resources/Regulations/FOOD_REGULATIONS/Pre-Packaged-Food-Labelling-Regulations-2022.pdf",
+     "verificacion": {
+      "bytes": 4795879,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:20Z",
+      "http": 200,
+      "sha256": "da1152419f2fcec5407654cd26ca0f6b080c4b4f712a0c0449ef4295c71030e7"
+     }
     },
     {
      "date": "",
@@ -114,7 +142,12 @@
      "rank": 1,
      "snippet": "Federal Republic of Nigeria \nOfficial Gazette\nNo. 4__________________ Lagos - 4th January, 2021________________ Vol. 108\nGovernment Notice No. 1\nThe following is published as supplement to this Gazette:\nAct No. \nShort Title \nPage\n...\nLagos.",
      "title": "Federal Republic of Nigeria Official Gazette",
-     "url": "https://nipc.gov.ng/assets/resources/finance-act-2020/finance-act-2020-gazette.pdf"
+     "url": "https://nipc.gov.ng/assets/resources/finance-act-2020/finance-act-2020-gazette.pdf",
+     "verificacion": {
+      "error": "response larger than 5000000 bytes: https://nipc.gov.ng/assets/resources/finance-act-2020/finance-act-2020-gazette.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:34:22Z"
+     }
     },
     {
      "date": "",
@@ -122,7 +155,14 @@
      "rank": 2,
      "snippet": "Extraordinary\nFederal Republic of Nigeria\nOfficial Gazette\nNo. 126                                      Lagos - 2nd August, 2021                                      Vol. 108\nGovernment Notice No. 153\nThe following is published as supplement to this Gazette :\n...\n61        Controlled Medicines Regul",
      "title": "Federal Republic of Nigeria Official Gazette",
-     "url": "https://www.nafdac.gov.ng/wp-content/uploads/Files/Resources/Regulations/REGULATIONS_2021/CONTROLLED-MEDICINES-REGULATIONS-2021.pdf"
+     "url": "https://www.nafdac.gov.ng/wp-content/uploads/Files/Resources/Regulations/REGULATIONS_2021/CONTROLLED-MEDICINES-REGULATIONS-2021.pdf",
+     "verificacion": {
+      "bytes": 3029124,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:27Z",
+      "http": 200,
+      "sha256": "559ad5b20d52e688ee12ae3edd459dc1364221a5298916687b870713f6ba546f"
+     }
     },
     {
      "date": "",
@@ -164,7 +204,14 @@
      "rank": 1,
      "snippet": "Supreme Court of Nigeria\ninfo@supremecourt.gov.ng\n...\n###### Judgments\n###### Daily Cause List\n...\nWelcome to the official website of the Supreme Court of Nigeria, the apex judicial institution of our great nation.\n...\n…\n###### Case Calendar\nCivilCriminalRuling / Judgment\n…",
      "title": "Supreme Court of Nigeria",
-     "url": "https://www.supremecourt.gov.ng/"
+     "url": "https://www.supremecourt.gov.ng/",
+     "verificacion": {
+      "bytes": 1834,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:34Z",
+      "http": 200,
+      "sha256": "603a72a58fac0ac180deaa97feb139df88c952c65ff124180e2dc8edf5fdb489"
+     }
     },
     {
      "date": "",
@@ -172,7 +219,14 @@
      "rank": 2,
      "snippet": "#### Search for Judgment\nAppeal No.\n###### SC/CV/499/2026\nSOCIAL DEMOCRATIC ...\nVS\nINDEPENDENT NATION...YOUTH PARTY\nVS\n...\n###### SC/588/2015\nOKECHUKWU JOE\nVS\nTHE STATE\n...\nVS",
      "title": "Judgments",
-     "url": "https://www.supremecourt.gov.ng/judgment"
+     "url": "https://www.supremecourt.gov.ng/judgment",
+     "verificacion": {
+      "bytes": 147,
+      "estado": "http",
+      "fecha": "2026-11-15T14:34:42Z",
+      "http": 404,
+      "sha256": "a22f12ed906bc591af075b94fc7e96f034866f67d3894fb29d6409208f9b9596"
+     }
     },
     {
      "date": "",
@@ -214,7 +268,14 @@
      "rank": 1,
      "snippet": "## Laws of Lagos State Portal\nAccess, search, and download official Lagos State laws, compiled 2015 revisions, and supplementary legislation.\nOfficial Portal\n### Download Laws of Lagos Online\nVisit the official online repository of Lagos State laws to access digitized statutes, gazettes, and legal e",
      "title": "Lagos State Law Reform",
-     "url": "https://lawrecom.lg.gov.ng/"
+     "url": "https://lawrecom.lg.gov.ng/",
+     "verificacion": {
+      "bytes": 65254,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:43Z",
+      "http": 200,
+      "sha256": "6ec53aed2bd4e2477d0469168ec758184d63124259b6baa87db8b98893e91f4e"
+     }
     },
     {
      "date": "",
@@ -222,7 +283,14 @@
      "rank": 2,
      "snippet": "Laws of Lagos State - LRC\nLagos State Law Reform Commission\nLaw Reform Commission\n# Laws of Lagos State\nAccess the complete digital repository of state laws, regulations, and legislative instruments governing Lagos State.\n...\n### Land Development (Provision for Roads) Law, Ch. L75",
      "title": "Laws of Lagos State - LRC",
-     "url": "https://www.lawrecom.lg.gov.ng/laws.php"
+     "url": "https://www.lawrecom.lg.gov.ng/laws.php",
+     "verificacion": {
+      "bytes": 54331,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:45Z",
+      "http": 200,
+      "sha256": "fd703a7d50d38fc663b8fe0a3c84fee007a777f09c38176b42ba1707e1d8847a"
+     }
     },
     {
      "date": "",
@@ -264,7 +332,14 @@
      "rank": 1,
      "snippet": "Official Lagos State Website | The best place to find government services and information",
      "title": "Official Lagos State Website | The ...",
-     "url": "https://lagosstate.gov.ng/news/License,%20Permits%20&%20Applications/view/681b981a5e4c9d6ceca2069f"
+     "url": "https://lagosstate.gov.ng/news/License,%20Permits%20&%20Applications/view/681b981a5e4c9d6ceca2069f",
+     "verificacion": {
+      "bytes": 2944,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:47Z",
+      "http": 200,
+      "sha256": "a8373a01fcba053c73c41c6df80d15d15caae6ca84d743b362cac6c304cd9012"
+     }
     },
     {
      "date": "2026-03-15",
@@ -272,7 +347,14 @@
      "rank": 2,
      "snippet": "Access everything you need from payments and permits to registrations and public services on a unified digital platform designed to be faster, simpler, and secure.\n...\n### Find and Manage Safety & Emergency Services\nLaws & Safety Guide\nKnow more about the Lagos State Laws, Read / Download the Lagos ",
      "title": "Lagos, good afternoon 🌤️",
-     "url": "https://www.lagosstate.gov.ng/"
+     "url": "https://www.lagosstate.gov.ng/",
+     "verificacion": {
+      "bytes": 2944,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:49Z",
+      "http": 200,
+      "sha256": "a8373a01fcba053c73c41c6df80d15d15caae6ca84d743b362cac6c304cd9012"
+     }
     },
     {
      "date": "",
@@ -306,7 +388,14 @@
      "rank": 1,
      "snippet": "Gazetted NAFDAC Regulations – NAFDAC\n...\nThe Governing Council of the National Agency for Food and Drug Administration and Control (NAFDAC) with the approval of the Honorable Minister of Health hereby makes the following Regulations.\nThese regulations are officially gazetted by the Federal Republic ",
      "title": "Gazetted NAFDAC Regulations",
-     "url": "https://nafdac.gov.ng/regulatory-resources/nafdac-regulations/"
+     "url": "https://nafdac.gov.ng/regulatory-resources/nafdac-regulations/",
+     "verificacion": {
+      "bytes": 169155,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:54Z",
+      "http": 200,
+      "sha256": "2d581fbdd419c8297beff2bee80316e682669576ed58925c600030ff0c4c14b3"
+     }
     },
     {
      "date": "2025-10-16",
@@ -314,7 +403,14 @@
      "rank": 2,
      "snippet": "These guidelines are to enable applicants obtain detailed provisions of how to undertake their requested service from NAFDAC.\nThe guidance documents are categorized based on product type and do provide detailed information on: Application, Facility Inspection, Documentation, Labelling, Tariff (Fees)",
      "title": "Guidelines",
-     "url": "https://nafdac.gov.ng/regulatory-resources/guidelines/"
+     "url": "https://nafdac.gov.ng/regulatory-resources/guidelines/",
+     "verificacion": {
+      "bytes": 257838,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:34:58Z",
+      "http": 200,
+      "sha256": "c006bd9aa72a3708d3aedb123766504607896b944d930e25b28cc01d21cbeb67"
+     }
     },
     {
      "date": "2026-10-09",
@@ -356,7 +452,14 @@
      "rank": 1,
      "snippet": "The bibliographic database (catalogue) consists of three main sections, which include:\n1. International Classification for Standard (ICS) subject structure\n2. Alpha-numeric listing of all national standards or Codes\n3. Key Word in Context (KWIC) alphabetical index\n...\nTotal collection: 98 items",
      "title": "SONLibrary",
-     "url": "https://son.gov.ng/library/index.php?t=catalogue-opac"
+     "url": "https://son.gov.ng/library/index.php?t=catalogue-opac",
+     "verificacion": {
+      "bytes": 25416,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:35:02Z",
+      "http": 200,
+      "sha256": "174fa6c6c4bde2061b814b2bf034764902b74164c4759954c3bf20d5818489f8"
+     }
     },
     {
      "date": "2015-05-24",
@@ -364,7 +467,14 @@
      "rank": 2,
      "snippet": "SON Library OPAC\n- contact.library@son.gov.ng\n...\n## Publishing\nNigerian Industrial Standards catalogued by SON Library and made available for public use.\n...\n9. NIS ISO 6707-1: 2012, Title: *Standard for building and civil engineering vocabulary*",
      "title": "SON Library OPAC",
-     "url": "https://son.gov.ng/library/?t=stand-dev-sdd"
+     "url": "https://son.gov.ng/library/?t=stand-dev-sdd",
+     "verificacion": {
+      "bytes": 49505,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:35:08Z",
+      "http": 200,
+      "sha256": "cc0d16a5a50fe4a7eb8050dff2a1c25c0d03af774dbbdf37b8fa5b0fcef8abad"
+     }
     },
     {
      "date": "",
@@ -406,7 +516,14 @@
      "rank": 1,
      "snippet": "Standard NumberETSI EN 301 489-26\nStandard Title\n...\nEmphasis\n...\n## Approved Equipment\nThe following table contains a comprehensive list of all telecommunications equipment that have been tested and found to meet the applicable Type Approval standards required to allow them to be brought into and o",
      "title": "Type Approval",
-     "url": "https://www.ncc.gov.ng/industry/numbering-type-approval/type-approval"
+     "url": "https://www.ncc.gov.ng/industry/numbering-type-approval/type-approval",
+     "verificacion": {
+      "bytes": 4515970,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:35:11Z",
+      "http": 200,
+      "sha256": "0a55c30d4ede662f7a6c33a6c7b54bd278327197a5037bb583eb0e7ac595c47f"
+     }
     },
     {
      "date": "2025-12-05",
@@ -414,7 +531,14 @@
      "rank": 2,
      "snippet": "Standard NumberEN 50361 / CENELEC 50361\n...\nStandard NumberETSI EN 301 489-1\nStandard Title\nElectromagnetic compatibility and Radio spectrum Matters (ERM); ElectroMagnetic Compatibility (EMC) standard for radio equipment and services; Part 1: Common technical requirements",
      "title": "Equipment - | NCC",
-     "url": "https://ncc.gov.ng/node?page=22"
+     "url": "https://ncc.gov.ng/node?page=22",
+     "verificacion": {
+      "bytes": 256867,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:35:15Z",
+      "http": 200,
+      "sha256": "ff909521dff28aa99677233281ed0987980b77a0c3faeba9614ea30785dd905f"
+     }
     },
     {
      "date": "2025-11-05",
@@ -456,7 +580,14 @@
      "rank": 1,
      "snippet": "Home | National Bureau of Statistics\nNATIONAL BUREAU OF STATISTICS\n…\n...\n- Vision\n...\nThe NBS website is set to undergo scheduled maintenance and will be temporarily unavailable from:.\n- December 4th, 12:00 AM - December 5th, 11:59 PM.",
      "title": "Home | National Bureau of Statistics",
-     "url": "https://nigerianstat.gov.ng/"
+     "url": "https://nigerianstat.gov.ng/",
+     "verificacion": {
+      "bytes": 160843,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:35:18Z",
+      "http": 200,
+      "sha256": "83e668406e751ca8307b29b55916d6b5bbb05459088677262ee0091b4e222069"
+     }
     },
     {
      "date": "2026-09-28",
@@ -464,7 +595,14 @@
      "rank": 2,
      "snippet": "### For recent statistical releases, please check our NADA portal\nAccess, filter, visualise and download aggregated data.\n...\nGo through our E-library to find old reports for download.\n...\nNational Bureau of Statistics.\n...\nThe NBS website is set to undergo scheduled maintenance and will be temporar",
      "title": "Elibrary - National Bureau of Statistics",
-     "url": "https://www.nigerianstat.gov.ng/index.php/elibrary"
+     "url": "https://www.nigerianstat.gov.ng/index.php/elibrary",
+     "verificacion": {
+      "bytes": 0,
+      "estado": "http",
+      "fecha": "2026-11-15T14:35:23Z",
+      "http": 500,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+     }
     },
     {
      "date": "2026-10-29",
@@ -506,7 +644,14 @@
      "rank": 1,
      "snippet": "Home | Central Bank of Nigeria\nMonetary Policy Rate\nExchange Rate (USD)\n91-Day NTBs\n*To be a trusted and respected Central Bank promoting confidence in the economy.*\n...\n### News\n### Publications\n### Speeches\n### Press Releases\n...\n### Monetary Policy\n### Circulars",
      "title": "Press Briefing of the 307th Monetary Policy Committee (MPC)",
-     "url": "https://www.cbn.gov.ng/"
+     "url": "https://www.cbn.gov.ng/",
+     "verificacion": {
+      "bytes": 35630,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:35:25Z",
+      "http": 200,
+      "sha256": "2246fb2c8141114dba33e209b68be49ad25b4d19daf099339d74bd0ae0acc4a5"
+     }
     },
     {
      "date": "",
@@ -514,7 +659,14 @@
      "rank": 2,
      "snippet": "Macro Economic Indicators| Central Bank of Nigeria\n...\n|Economic Indicators|Value|As at:|\n...\n|Average Inter-bank Call Rate| | |\n|Monetary Policy Rate| | |\n...\n|3-Month Tenor Deposit Rate of Banks| | |\n|Monthly Average Prime Lending Rate| | |",
      "title": "Macro Economic Indicators - Central Bank of Nigeria",
-     "url": "https://www.cbn.gov.ng/rates/MacroIndicators.html"
+     "url": "https://www.cbn.gov.ng/rates/MacroIndicators.html",
+     "verificacion": {
+      "bytes": 12428,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:35:27Z",
+      "http": 200,
+      "sha256": "d85e4ba21a9d15d9fd2226c49e56ab2b57f049d6f372de36c0afefe0cac26fa8"
+     }
     },
     {
      "date": "",
@@ -556,7 +708,14 @@
      "rank": 1,
      "snippet": "National Data Archive (NADA)\nBrowse, compare and download research data and metadata.\nOpen Data Portal (ODP)\nAccess, filter, visualise and download aggregated data.\n...\nThe NBS website is set to undergo scheduled maintenance and will be temporarily unavailable from:.",
      "title": "Home | National Bureau of Statistics",
-     "url": "https://nigerianstat.gov.ng/"
+     "url": "https://nigerianstat.gov.ng/",
+     "verificacion": {
+      "bytes": 160843,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:35:29Z",
+      "http": 200,
+      "sha256": "83e668406e751ca8307b29b55916d6b5bbb05459088677262ee0091b4e222069"
+     }
     },
     {
      "date": "2023-11-18",
@@ -564,7 +723,14 @@
      "rank": 2,
      "snippet": "## E-Government Initiative\n1. **Open Data Portal**: This is An online platform (data.gov.ng) where non-sensitive data sets from government MDAs are routinely made available to the public.",
      "title": "E-Government Initiative",
-     "url": "https://fmcide.gov.ng/initiative/e-government-initiative/"
+     "url": "https://fmcide.gov.ng/initiative/e-government-initiative/",
+     "verificacion": {
+      "bytes": 110411,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:35:35Z",
+      "http": 200,
+      "sha256": "e3723f664b03d3bb9a1117c8066d31aa73d7ba5fb9fac4ab9618255b097cd58d"
+     }
     },
     {
      "date": "",

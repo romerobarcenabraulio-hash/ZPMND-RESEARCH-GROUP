@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "# Constitution\n...\nOn June 8, 2004, the Permanent Constitution of the State of Qatar was promulgated, containing the fundamental principles guiding state policy, organizing its authorities and system of government, establishing the basic pillars of society, and guaranteeing the rights and freedoms o",
      "title": "Constitution",
-     "url": "https://www.cm.gov.qa/en/Pages/Constitution.aspx"
+     "url": "https://www.cm.gov.qa/en/Pages/Constitution.aspx",
+     "verificacion": {
+      "bytes": 5598,
+      "estado": "http",
+      "fecha": "2026-11-15T15:18:53Z",
+      "http": 403,
+      "sha256": "72de15f7b5e091c395bb2cc046854811169b1e067ddd5d7e1607259cebbf980c"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "2007\n…\n##### الدستور الدائم لدولة قطر\n2004\n…\n...\n- التشريعات 9247\n- المواد 70 ألف\n- الإتفاقيات 716\n- الأحكام 1462\n- الفتاوى 625",
      "title": "Al Meezan - Qatar Legal Portal",
-     "url": "https://almeezan.qa/"
+     "url": "https://almeezan.qa/",
+     "verificacion": {
+      "bytes": 6587,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:18:55Z",
+      "http": 200,
+      "sha256": "ae6350e478fd850bd1e683a5b3d32ba9d3096b2909ff654cbff08c24cc708a8e"
+     }
     },
     {
      "date": "",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "…\n- التشريعات : عرض التشريعات التي صدرت في دولة قطر منذ عام 1961مع إمكانية البحث والبحث المتقدم فيها.\n- الاتفاقيات : عرض الاتفاقيات حسب تاريخ صدورها وإمكانية البحث فيها.\n...\nبعض البيانات تحتوي على إمكانية تحميل الوثيقة.",
      "title": "منصة حكومي|البوابة القانونية القطرية (الميزان)",
-     "url": "https://hukoomi.gov.qa/categories/legal-affairs-and-justice/qatar-legal-portal-almeezan"
+     "url": "https://hukoomi.gov.qa/categories/legal-affairs-and-justice/qatar-legal-portal-almeezan",
+     "verificacion": {
+      "bytes": 5777,
+      "estado": "http",
+      "fecha": "2026-11-15T15:18:57Z",
+      "http": 403,
+      "sha256": "b697f5e6b47ce9c19a873e30ba4082ae48ae2a994dbe9241fbd05d0e4660bc80"
+     }
     },
     {
      "date": "",
@@ -72,7 +93,12 @@
      "rank": 2,
      "snippet": "موسوعة التشريعات القطرية | المجلس الأعلى للقضاء\n...\n|<table><tr><td>\n# موسوعة التشريعات القطرية | المجلس الأعلى للقضاء </td><td> أحدث القوانين و التشريعات المضافةآخر تحديث : أكتوبر 2026",
      "title": "موسوعة التشريعات القطرية | المجلس الأعلى للقضاء",
-     "url": "https://encyclop.sjc.gov.qa/Portal3/menu.aspx?gcc=0"
+     "url": "https://encyclop.sjc.gov.qa/Portal3/menu.aspx?gcc=0",
+     "verificacion": {
+      "error": "robots.txt disallows https://encyclop.sjc.gov.qa/Portal3/menu.aspx?gcc=0",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:19:00Z"
+     }
     },
     {
      "date": "",
@@ -106,7 +132,14 @@
      "rank": 1,
      "snippet": "Official Gazette\n...\n/ Official Gazette\n...\nSearch In Official Gazette\nYear of Issuance\n2014\n2013\n2012\n...\n2010\n...\nContact us\nPhone: +974 44069994\nFax: +974 44069998\nE-mail\ncontactcenter@almeezan.qa",
      "title": "Official Gazette - Al Meezan - Qatary Legal Portal |",
-     "url": "https://almeezan.qa/OfficialJournalPage.aspx?language=en"
+     "url": "https://almeezan.qa/OfficialJournalPage.aspx?language=en",
+     "verificacion": {
+      "bytes": 6587,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:02Z",
+      "http": 200,
+      "sha256": "ae6350e478fd850bd1e683a5b3d32ba9d3096b2909ff654cbff08c24cc708a8e"
+     }
     },
     {
      "date": "",
@@ -114,7 +147,14 @@
      "rank": 2,
      "snippet": "Al Meezan - Qatar Legal Portal\n...\n- المواد 70 ألف\n- الإتفاقيات 716\n...\n## آخر المستجدات\n- تحديثات الخدمات الإلكترونية\n- النماذج والإجراءات\n- القوانين واللوائح\n- الأحكام والقرارات القضائية\n...\nمجلة 1",
      "title": "Al Meezan - Qatar Legal Portal",
-     "url": "https://www.almeezan.qa/"
+     "url": "https://www.almeezan.qa/",
+     "verificacion": {
+      "bytes": 6587,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:08Z",
+      "http": 200,
+      "sha256": "ae6350e478fd850bd1e683a5b3d32ba9d3096b2909ff654cbff08c24cc708a8e"
+     }
     },
     {
      "date": "2026-10-11",
@@ -156,7 +196,14 @@
      "rank": 1,
      "snippet": "Qatar Legal Portal (Al-Meezan) is a comprehensive site that includes valid, amended and canceled legislation since 1961 as well as judicial decisions issued by Court of Cassation which are classified, indexed and includes principles extracted by the technical office in the Supreme Justice Council.",
      "title": "Qatar Legal Portal (Al-Meezan)|Hukoomi",
-     "url": "https://hukoomi.gov.qa/en/categories/legal-affairs-and-justice/qatar-legal-portal-almeezan"
+     "url": "https://hukoomi.gov.qa/en/categories/legal-affairs-and-justice/qatar-legal-portal-almeezan",
+     "verificacion": {
+      "bytes": 5786,
+      "estado": "http",
+      "fecha": "2026-11-15T15:19:09Z",
+      "http": 403,
+      "sha256": "04100c92e2005cfe2e05a9a92be781810a7c90bf0df4ba6281549f7edb22f90f"
+     }
     },
     {
      "date": "",
@@ -164,7 +211,12 @@
      "rank": 2,
      "snippet": "موسوعة الأحكام والمبادئ القضائية القطرية والأجنبية | المجلس الأعلى للقضاء",
      "title": "موسوعة الأحكام والمبادئ القضائية القطرية والأجنبية",
-     "url": "https://encyclop.sjc.gov.qa/Portal2/menu.aspx?gcc=1"
+     "url": "https://encyclop.sjc.gov.qa/Portal2/menu.aspx?gcc=1",
+     "verificacion": {
+      "error": "robots.txt disallows https://encyclop.sjc.gov.qa/Portal2/menu.aspx?gcc=1",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:19:12Z"
+     }
     },
     {
      "date": "2012-01-01",
@@ -206,7 +258,14 @@
      "rank": 1,
      "snippet": "##### قانون رقم (6) لسنة 2014 بتنظيم التطوير العقاري\n...\n##### الدستور الدائم لدولة قطر\n...\n##### قانون رقم (15) لسنة 2016 بإصدار قانون الموارد البشرية المدنية\n...\n- التشريعات 9247\n- المواد 70 ألف",
      "title": "Al Meezan - Qatar Legal Portal",
-     "url": "https://almeezan.qa/"
+     "url": "https://almeezan.qa/",
+     "verificacion": {
+      "bytes": 6587,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:14Z",
+      "http": 200,
+      "sha256": "ae6350e478fd850bd1e683a5b3d32ba9d3096b2909ff654cbff08c24cc708a8e"
+     }
     },
     {
      "date": "",
@@ -214,7 +273,14 @@
      "rank": 2,
      "snippet": "Al-Mezaan portal includes several features:\n- Legislations : Displays legislations enacted in the State of Qatar since 1961 with the ability to search and use advanced search.\n...\n- Latest legislations : contains legislations, investment legislations and provisions published online are available.",
      "title": "Qatar Legal Portal (Al-Meezan)|Hukoomi",
-     "url": "https://hukoomi.gov.qa/en/categories/legal-affairs-and-justice/qatar-legal-portal-almeezan"
+     "url": "https://hukoomi.gov.qa/en/categories/legal-affairs-and-justice/qatar-legal-portal-almeezan",
+     "verificacion": {
+      "bytes": 5786,
+      "estado": "http",
+      "fecha": "2026-11-15T15:19:15Z",
+      "http": 403,
+      "sha256": "c1a8102bc4a86da8a7d7fefb29295459440da20dbc590111af2f403caccd7c0f"
+     }
     },
     {
      "date": "",
@@ -256,7 +322,14 @@
      "rank": 1,
      "snippet": "Al Meezan - Qatar Legal Portal\nفشل في تحميل التعديلات\n- التشريعات 9247\n- المواد 70 ألف\n- الإتفاقيات 716\n- الأحكام 1462\n- الفتاوى 625\n...\n- القوانين واللوائح",
      "title": "Al Meezan - Qatar Legal Portal",
-     "url": "https://www.almeezan.qa/"
+     "url": "https://www.almeezan.qa/",
+     "verificacion": {
+      "bytes": 6587,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:22Z",
+      "http": 200,
+      "sha256": "ae6350e478fd850bd1e683a5b3d32ba9d3096b2909ff654cbff08c24cc708a8e"
+     }
     },
     {
      "date": "",
@@ -264,7 +337,14 @@
      "rank": 2,
      "snippet": "Al Meezan - Qatar Legal Portal\nنحو معرفة قانونية رقمية موثوقة\n...\n- التشريعات 9247\n- المواد 70 ألف\n- الإتفاقيات 716\n- الأحكام 1462\n- الفتاوى 625\nجاري التحميل...",
      "title": "Resolution No. 37 of 2011 by the Minister of Municipality and Urban ...",
-     "url": "https://www.almeezan.qa/LawPage.aspx?id=3738&language=en"
+     "url": "https://www.almeezan.qa/LawPage.aspx?id=3738&language=en",
+     "verificacion": {
+      "bytes": 6587,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:28Z",
+      "http": 200,
+      "sha256": "ae6350e478fd850bd1e683a5b3d32ba9d3096b2909ff654cbff08c24cc708a8e"
+     }
     },
     {
      "date": "",
@@ -306,7 +386,14 @@
      "rank": 1,
      "snippet": "#### Relevant Regulations\n...\n- Law No. 8 of 2020 on the Regulation of the Auditing Profession.\n...\n- Implementing Regulation of Law on Combating Money Laundering (ML) and Financing of Terrorism (FT) Promulgated by Law No. (20) of 2019.",
      "title": "Relevant Regulations",
-     "url": "https://www.qfma.org.qa/English/Legislation/RelatedRegulations/Pages/default.aspx"
+     "url": "https://www.qfma.org.qa/English/Legislation/RelatedRegulations/Pages/default.aspx",
+     "verificacion": {
+      "bytes": 90710,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:30Z",
+      "http": 200,
+      "sha256": "a80b7c1605afd26417bddef44734b55dde67f35435b8e747e5b7a9319eb4291d"
+     }
     },
     {
      "date": "",
@@ -314,7 +401,14 @@
      "rank": 2,
      "snippet": "Regulations | Ministry of Commerce and Industry\n##### Daem Portal\nGovernment services portal\n...\n# Regulations\nLegal Regulation Legal Regulation\n### Requirement Requirement\n### Penalty Penalty\n### Law Description Law Description",
      "title": "Regulations",
-     "url": "https://www.moci.gov.qa/en/regulations"
+     "url": "https://www.moci.gov.qa/en/regulations",
+     "verificacion": {
+      "bytes": 41014,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:33Z",
+      "http": 200,
+      "sha256": "cf0e549e700e9a9f82556d9d9a24c5d32b977ebe7ea8ba8d8781bb52285d62aa"
+     }
     },
     {
      "date": "2026-10-20",
@@ -356,7 +450,14 @@
      "rank": 1,
      "snippet": "The only standards organization in Qatar is the General Organization for Standardization.\n...\nThe General Organization for Standards and Metrology has developed a website that lists all Qatari standards and allows for governments and the private sector to make comments on draft legislation for 60 da",
      "title": "Qatar - Standards for Trade",
-     "url": "https://www.trade.gov/country-commercial-guides/qatar-standards-trade"
+     "url": "https://www.trade.gov/country-commercial-guides/qatar-standards-trade",
+     "verificacion": {
+      "bytes": 269763,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:34Z",
+      "http": 200,
+      "sha256": "b2dd1e48a913e4f422edc60e28392705ce000216089cd92f1dbed2e305785287"
+     }
     },
     {
      "date": "2010-01-01",
@@ -364,7 +465,14 @@
      "rank": 2,
      "snippet": "…\n...\nQS GSO BS 546:2010\nمواصفات القابسات المصنعة من مادة مرنة\nSpecification for plugs made of resilient material\n...\nQS GSO BS 870:2010\nالمواصفة الفنية للميكرومترات الخارجية\n...\nQS GSO BS 907:2010",
      "title": "جدول (2) المواصفات القياسية - Al Meezan - Qatary Legal Portal |",
-     "url": "https://www.almeezan.qa/ClarificationsNoteDetails.aspx?id=12305&language=en"
+     "url": "https://www.almeezan.qa/ClarificationsNoteDetails.aspx?id=12305&language=en",
+     "verificacion": {
+      "bytes": 6587,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:40Z",
+      "http": 200,
+      "sha256": "ae6350e478fd850bd1e683a5b3d32ba9d3096b2909ff654cbff08c24cc708a8e"
+     }
     },
     {
      "date": "",
@@ -406,7 +514,14 @@
      "rank": 1,
      "snippet": "اللوائح | وزارة التجارة والصناعة\n...\n# اللوائح\n** اللوائح القانونية اللوائح القانونية\n### المتطلبات المتطلبات\n...\n### نص القانون نص القانون",
      "title": "اللوائح",
-     "url": "https://www.moci.gov.qa/regulations"
+     "url": "https://www.moci.gov.qa/regulations",
+     "verificacion": {
+      "bytes": 42184,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:42Z",
+      "http": 200,
+      "sha256": "809989feda88d70c9926745cae0c19f21333315b048bf426d478c9b0bd71cc46"
+     }
     },
     {
      "date": "2026-09-10",
@@ -414,7 +529,12 @@
      "rank": 2,
      "snippet": "موسوعة التشريعات القطرية\nنوع التشريع:قرار وزاري الحالة:مطبق تاريخ النشر:10/09/2026\n...\n## قرار وزير التجارة والصناعة رقم (95) لسنة 2026\nمــــادة (1)",
      "title": "encyclop.sjc.gov.qa · Portal3 · ahkamقرار وزير التجارة والصناعة رقم (95) لسنة 2026 باعتماد مواصفات قيا...",
-     "url": "https://encyclop.sjc.gov.qa/Portal3/ahkam/OpenWordFile.aspx?id=11361&gcc=1"
+     "url": "https://encyclop.sjc.gov.qa/Portal3/ahkam/OpenWordFile.aspx?id=11361&gcc=1",
+     "verificacion": {
+      "error": "robots.txt disallows https://encyclop.sjc.gov.qa/Portal3/ahkam/OpenWordFile.aspx?id=11361&gcc=1",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:19:46Z"
+     }
     },
     {
      "date": "",
@@ -456,7 +576,14 @@
      "rank": 1,
      "snippet": "12 \n...\n13 \nOman \nNational Centre for Statistics and \nInformation \nhttps://www.ncsi.gov.om/Pages/NCSI.aspx \n14 \nQatar \nPlanning and Statistics Authority https://www.psa.gov.qa/en/Pages/default.aspx\n15 \n...\n17",
      "title": "Annex",
-     "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S2632324922000244/resource/name/S2632324922000244sup001.pdf"
+     "url": "https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S2632324922000244/resource/name/S2632324922000244sup001.pdf",
+     "verificacion": {
+      "bytes": 385063,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:47Z",
+      "http": 200,
+      "sha256": "f23fb4a6d38602c43471481d4d40b811c5de70951c1f5c940f475ada22e05994"
+     }
     },
     {
      "date": "2026-10-25",
@@ -464,7 +591,14 @@
      "rank": 2,
      "snippet": "يهدف مركز الإحصاء الوطني إلى إقامة نظام إحصائي شامل للدولة، بصفته المصدر الرسمي للإحصاءات الرسمية للدولة، كما يقود المركز عملية جمع وتحليل ونشر البيانات الإحصائية الوطنية لدعم التخطيط وصنع السياسات المستندة إلى الأدلة.",
      "title": "مركز الإحصاء الوطني",
-     "url": "https://beta.npc.qa/AR/statistics/Pages/default.aspx"
+     "url": "https://beta.npc.qa/AR/statistics/Pages/default.aspx",
+     "verificacion": {
+      "bytes": 257934,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:19:50Z",
+      "http": 200,
+      "sha256": "24f4c66d4b820c62fe81928a2c7a3fc66d4a49196712d1c6c34dd3dbbbde6a66"
+     }
     },
     {
      "date": "",
@@ -498,7 +632,12 @@
      "rank": 1,
      "snippet": "أسعار الفائدة الخاصة بسياسة مصرف قطر المركزي\n...\nالأصول في القطاع المصرفي – ديسمبر 2023\nالائتمان - ديسمبر 2023\nالودائع - ديسمبر 2023\n...\nالمؤشرات الاقتصادية الرئيسية\n...\n…\n...\nالتضخم في شهر ديسمبر 2023\nالتضخم",
      "title": "Qatar Central Bank",
-     "url": "https://www.qcb.gov.qa/"
+     "url": "https://www.qcb.gov.qa/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.qcb.gov.qa/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:19:53Z"
+     }
     },
     {
      "date": "2026-04-26",
@@ -506,7 +645,12 @@
      "rank": 2,
      "snippet": "الأصول في القطاع المصرفي – ديسمبر 2023\nالائتمان - ديسمبر 2023\nالودائع - ديسمبر 2023\n...\n4.62\n...\n127.14\n...\n66.10\nالتضخم في شهر ديسمبر 2023\nالتضخم\n1.7%",
      "title": "default.aspx",
-     "url": "https://www.qcb.gov.qa/en/Pages/default.aspx"
+     "url": "https://www.qcb.gov.qa/en/Pages/default.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.qcb.gov.qa/en/Pages/default.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:19:57Z"
+     }
     },
     {
      "date": "",
@@ -548,7 +692,14 @@
      "rank": 1,
      "snippet": "وعلى هذا الأساس قامت وزارة الداخلية بالمشاركة بهذه المبادرة من خلال توفيرها للبيانات الخاصة فيها.\nوايمانا من وزارة الداخلية بمبدأ الشفافية في التعامل مع الجمهور فقد تم إنشاء هذه الصفحة لتتيح للجمهور التعامل مع البيانات والمعلومات المنشورة فيها دون قيود وبشكل مجاني",
      "title": "البيانات المفتوحة - وزارة الداخلية",
-     "url": "https://portal.moi.gov.qa/wps/portal/ar/MOIInternet/opendata"
+     "url": "https://portal.moi.gov.qa/wps/portal/ar/MOIInternet/opendata",
+     "verificacion": {
+      "bytes": 67330,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:20:00Z",
+      "http": 200,
+      "sha256": "a4ca20b9e487b389ee328ac2b10d1dce18d60440c5127e916130190317fdc062"
+     }
     },
     {
      "date": "",
@@ -556,7 +707,14 @@
      "rank": 2,
      "snippet": "Explore — State of Qatar Open Data\n# datasets\n...\n- 160 Transport and Infrastructure\n- 186 Trade and Industry\n...\n- 363 SDG Indicators\n...\n# Download catalog\nThis catalog is available as:\n- XLSX\n- CSV\n- RDF/XML (DCAT)\n- RSS feed",
      "title": "1999 datasets",
-     "url": "https://www.data.gov.qa/explore/"
+     "url": "https://www.data.gov.qa/explore/",
+     "verificacion": {
+      "bytes": 71486,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:20:02Z",
+      "http": 200,
+      "sha256": "9e431779744110881f4936220e058e465da0d5a0a197af63aa237169356e25da"
+     }
     },
     {
      "date": "",

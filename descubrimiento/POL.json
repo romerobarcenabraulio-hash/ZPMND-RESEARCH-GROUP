@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "Baza ISAP zawiera opisy bibliograficzne i teksty aktów prawnych\nopublikowanych na podstawie\nustawy z dnia 20 lipca 2000 r. o ogłaszaniu aktów normatywnych\n...\n2019 poz.",
      "title": "ISAP",
-     "url": "https://isap.sejm.gov.pl/"
+     "url": "https://isap.sejm.gov.pl/",
+     "verificacion": {
+      "error": "robots.txt disallows https://isap.sejm.gov.pl/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:03:47Z"
+     }
     },
     {
      "date": "",
@@ -22,7 +27,12 @@
      "rank": 2,
      "snippet": "> 1.\nThe Constitution shall be the supreme law of the Republic of Poland.\n...\n> 1.\nThe sources of universally binding law of the Republic of Poland shall be: the Constitution, statutes, ratified international agreements, and regulations.",
      "title": "The Constitution of the Republic of Poland",
-     "url": "https://sejm.gov.pl/prawo/konst/angielski/konse.htm"
+     "url": "https://sejm.gov.pl/prawo/konst/angielski/konse.htm",
+     "verificacion": {
+      "error": "robots.txt disallows https://sejm.gov.pl/prawo/konst/angielski/konse.htm",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:03:48Z"
+     }
     },
     {
      "date": "",
@@ -64,7 +74,12 @@
      "rank": 1,
      "snippet": "|Typ aktu|Tytuł|Pliki|\n...\n|Rozporządzenie|Rozporządzenie Ministra Infrastruktury z dnia 17 lipca 2026 r. w sprawie utworzenia Urzędu Morskiego w Słupsku| |",
      "title": "Wyszukiwanie aktów prawnych - Dziennik Ustaw",
-     "url": "https://dziennikustaw.gov.pl/szukaj?pNumber=17&pSize=50&title="
+     "url": "https://dziennikustaw.gov.pl/szukaj?pNumber=17&pSize=50&title=",
+     "verificacion": {
+      "error": "robots.txt disallows https://dziennikustaw.gov.pl/szukaj?pNumber=17&pSize=50&title=",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:05:19Z"
+     }
     },
     {
      "date": "",
@@ -72,7 +87,12 @@
      "rank": 2,
      "snippet": "4. rozporządzenia wydane przez Prezydenta Rzeczypospolitej Polskiej, Radę Ministrów,\nPrezesa Rady Ministrów, ministrów kierujących działami administracji rządowej, przewodniczących\n...\nDzienniku Ustaw;",
      "title": "Strona główna",
-     "url": "https://dziennikustaw.gov.pl/DU"
+     "url": "https://dziennikustaw.gov.pl/DU",
+     "verificacion": {
+      "error": "robots.txt disallows https://dziennikustaw.gov.pl/DU",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:06:50Z"
+     }
     },
     {
      "date": "",
@@ -114,7 +134,12 @@
      "rank": 1,
      "snippet": "aktów prawnych (Dz. U. z 2019r., poz. 1461),\nDziennik Ustaw Rzeczypospolitej Polskiej (Dziennik Ustaw)\nwydaje Prezes Rady Ministrów przy pomocy Rządowego Centrum Legislacji.",
      "title": "Dziennik Ustaw",
-     "url": "https://dziennikustaw.gov.pl/"
+     "url": "https://dziennikustaw.gov.pl/",
+     "verificacion": {
+      "error": "robots.txt disallows https://dziennikustaw.gov.pl/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:08:21Z"
+     }
     },
     {
      "date": "",
@@ -122,7 +147,12 @@
      "rank": 2,
      "snippet": "|--|--|--|\n|Komunikat|Komunikat Ministra Finansów i Gospodarki z dnia 30 czerwca 2026 r. o wydanej decyzji w sprawie pozbawienia przedsiębiorcy statusu centrum badawczo-rozwojowego| |",
      "title": "Wyszukiwanie aktów prawnych",
-     "url": "https://dziennikustaw.gov.pl/szukaj?pNumber=20&pSize=50&title="
+     "url": "https://dziennikustaw.gov.pl/szukaj?pNumber=20&pSize=50&title=",
+     "verificacion": {
+      "error": "robots.txt disallows https://dziennikustaw.gov.pl/szukaj?pNumber=20&pSize=50&title=",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:09:53Z"
+     }
     },
     {
      "date": "2025-01-01",
@@ -164,7 +194,12 @@
      "rank": 1,
      "snippet": "# Baza orzeczeń\n|**Udostępniony:** 29 września 2025|**Poprawiono:** 03 marca 2026|\n|--|--|\n|**Opublikował: ** Administrator|**Udostępnił: ** Administrator|",
      "title": "Baza orzeczeń - Sąd Najwyższy",
-     "url": "https://www.sn.pl/pl/wyszukiwarka-orzeczen"
+     "url": "https://www.sn.pl/pl/wyszukiwarka-orzeczen",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.sn.pl/pl/wyszukiwarka-orzeczen",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:09:53Z"
+     }
     },
     {
      "date": "2026-09-14",
@@ -172,7 +207,12 @@
      "rank": 2,
      "snippet": "## Judicial decisions\n29 September 2026\nI NSP 389/26\n...\nSupreme Court\nPlac Krasińskich 2/4/6 , 00-951 Warsaw\nsn@sn.pl\n...\nOpen 9:00 a.m. – 2:30 p.m.",
      "title": "www.sn.pl › enHome - Sąd Najwyższy - SN",
-     "url": "https://www.sn.pl/en"
+     "url": "https://www.sn.pl/en",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.sn.pl/en",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:09:54Z"
+     }
     },
     {
      "date": "2026-09-17",
@@ -214,7 +254,12 @@
      "rank": 1,
      "snippet": "Internetowy System Aktów Prawnych (ISAP) to system informacji prawnej\nredagowany przez zespół specjalistów w Ośrodku Informatyki\nKancelarii Sejmu.\nISAP jest częścią Systemu Informacyjnego Sejmu.",
      "title": "ISAP",
-     "url": "https://isap.sejm.gov.pl/"
+     "url": "https://isap.sejm.gov.pl/",
+     "verificacion": {
+      "error": "robots.txt disallows https://isap.sejm.gov.pl/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:10:00Z"
+     }
     },
     {
      "date": "",
@@ -222,7 +267,12 @@
      "rank": 2,
      "snippet": "Baza Internetowy System Aktów Prawnych - ISAP zawiera opisy\nbibliograficzne i\nteksty aktów prawnych opublikowanych\nw wydawnictwach\nurzędowych: Dzienniku Ustaw oraz Monitorze Polskim,\nwydawanych przez",
      "title": "Polskie Normy",
-     "url": "https://isap.sejm.gov.pl/isap.nsf/ByKeyword.xsp?key=Polskie%20Normy"
+     "url": "https://isap.sejm.gov.pl/isap.nsf/ByKeyword.xsp?key=Polskie%20Normy",
+     "verificacion": {
+      "error": "robots.txt disallows https://isap.sejm.gov.pl/isap.nsf/ByKeyword.xsp?key=Polskie%20Normy",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:10:06Z"
+     }
     },
     {
      "date": "",
@@ -264,7 +314,14 @@
      "rank": 1,
      "snippet": "Rejestr i zbiór aktów prawa miejscowego - Biuletyn Informacji Publicznej Urzędu Miejskiego w Pasłęku\n…\n...\nRejestr aktów prawa miejscowego 2023 rok\n...\nURZĄD MIEJSKI W PASŁĘKU",
      "title": "Rejestr i zbiór aktów prawa miejscowego",
-     "url": "https://bip.paslek.pl/rejestr_zbior_aktow_prawa_miejscowego.html"
+     "url": "https://bip.paslek.pl/rejestr_zbior_aktow_prawa_miejscowego.html",
+     "verificacion": {
+      "bytes": 295251,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:10:09Z",
+      "http": 200,
+      "sha256": "3424885f0974436eac7d38b2ceb3dbfb29ac5f9e961f4f1fb53027f125fef3df"
+     }
     },
     {
      "date": "2026-10-24",
@@ -272,7 +329,14 @@
      "rank": 2,
      "snippet": "Urząd Miasta Katowice\n40-098 Katowice\nul. Młyńska 4\nTel. (+48 32) 2593-909,\nFax (+48 32) 7054-914\nUrzad_Miasta@katowice.eu",
      "title": "NGO AKTY PRAWA MIEJSCOWEGO (UCHWAŁY) I ZARZĄDZENIA WYKONAWCZE",
-     "url": "https://katowice.eu/ngo/podstawy-prawne/akty-prawa-miejscowego-uchwaly-i-zarzadzenia-wykonawcze"
+     "url": "https://katowice.eu/ngo/podstawy-prawne/akty-prawa-miejscowego-uchwaly-i-zarzadzenia-wykonawcze",
+     "verificacion": {
+      "bytes": 377737,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:10:20Z",
+      "http": 200,
+      "sha256": "824cfe053af6edb6f11524fa0175a3e8d1d7e7c194546c69e9f62b09ffb8a79f"
+     }
     },
     {
      "date": "",
@@ -314,7 +378,12 @@
      "rank": 1,
      "snippet": "- Polish Investment and Trade Agency\n- Polish Financial Supervision Authority and\n- Office of Competition and Consumer Protection\nBiznes.gov.pl simplifies the formalities of setting up and running a business , providing current regulations and procedures in Poland and the EU.",
      "title": "Poland - United States Department of State",
-     "url": "https://www.state.gov/reports/2026-investment-climate-statements/poland/"
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/poland/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/poland/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:10:20Z"
+     }
     },
     {
      "date": "2026-10-05",
@@ -322,7 +391,12 @@
      "rank": 2,
      "snippet": "## Public authorities involved in regulating working life\n...\nThe National Labour Inspectorate (Państwowa Inspekcja Pracy, PIP) is a central administration body (headed by the Chief Labour Inspector, appointed by the parliament) responsible for monitoring the observance of and enforcing the labour l",
      "title": "Actors and institutions in Poland | Eurofound - European Union",
-     "url": "https://www.eurofound.europa.eu/en/countries/poland/actors-and-institutions"
+     "url": "https://www.eurofound.europa.eu/en/countries/poland/actors-and-institutions",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.eurofound.europa.eu/en/countries/poland/actors-and-institutions",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:10:20Z"
+     }
     },
     {
      "date": "",
@@ -364,7 +438,14 @@
      "rank": 1,
      "snippet": "# Normy Europejskie\n|EN 18218-1:2026|Food authenticity - Non-targeted testing methods - Part 1: General considerations and definitions|2026-09-16|KT 235 ds. Analizy Żywności|",
      "title": "Normy Europejskie - Polski Komitet Normalizacyjny",
-     "url": "https://www.pkn.pl/o-pkn/wspolpraca-miedzynarodowa/nowe-enisoiec/normy-europejskie"
+     "url": "https://www.pkn.pl/o-pkn/wspolpraca-miedzynarodowa/nowe-enisoiec/normy-europejskie",
+     "verificacion": {
+      "bytes": 140670,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:10:23Z",
+      "http": 200,
+      "sha256": "4fdb05f1fdb6f54816f0e91c0fde5a49ae7deecaeacc058143531c19e1d455a0"
+     }
     },
     {
      "date": "",
@@ -372,7 +453,14 @@
      "rank": 2,
      "snippet": "# Wyszukiwarka nowych i wycofanych PN\nądzania|PN-EN ISO 9001:2026-10 - wersja angielska|\n...\n|PN-ISO 8217:2019-06 - wersja polska|Przetwory naftowe",
      "title": "Wyszukiwarka nowych i wycofanych PN | Polski Komitet ...",
-     "url": "https://www.pkn.pl/wyszukiwarka-pn"
+     "url": "https://www.pkn.pl/wyszukiwarka-pn",
+     "verificacion": {
+      "bytes": 371905,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:10:26Z",
+      "http": 200,
+      "sha256": "7339cd4592f4a7055b12ea887876eedb73b57aae49d6c3292dc3147353ab229b"
+     }
     },
     {
      "date": "",
@@ -414,7 +502,12 @@
      "rank": 1,
      "snippet": "1225| |obowiązujący|Rozporządzenie Ministra Infrastruktury z dnia 17 września 2026 r. w sprawie warunków technicznych, jakim powinny odpowiadać budowle kolejowe i ich usytuowanie|",
      "title": "Polskie Normy",
-     "url": "https://isap.sejm.gov.pl/isap.nsf/ByKeyword.xsp?key=Polskie%20Normy"
+     "url": "https://isap.sejm.gov.pl/isap.nsf/ByKeyword.xsp?key=Polskie%20Normy",
+     "verificacion": {
+      "error": "robots.txt disallows https://isap.sejm.gov.pl/isap.nsf/ByKeyword.xsp?key=Polskie%20Normy",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:10:31Z"
+     }
     },
     {
      "date": "2026-10-27",
@@ -422,7 +515,14 @@
      "rank": 2,
      "snippet": "#### DYREKTYWA 2014/33/UE DŹWIGI I ELEMENTY BEZPIECZEŃSTWA DO DŹWIGÓW\n...\n#### ZAŁĄCZNIK Nr 4 DYREKTYWA 2006/42/WE MASZYNY",
      "title": "Wykaz norm zharmonizowanych - M.P.2026.297 - OpenLEX - ustawy",
-     "url": "https://sip.lex.pl/akty-prawne/mp-monitor-polski/wykaz-norm-zharmonizowanych-22247593"
+     "url": "https://sip.lex.pl/akty-prawne/mp-monitor-polski/wykaz-norm-zharmonizowanych-22247593",
+     "verificacion": {
+      "bytes": 44101,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:10:33Z",
+      "http": 200,
+      "sha256": "817aaffd90650bcabb8ecb13fc923f90056214963ea09971113a5499c0676a44"
+     }
     },
     {
      "date": "2026-07-02",
@@ -464,7 +564,14 @@
      "rank": 1,
      "snippet": "## News\n### Summary of the Polish Presidency of the Council Working Party on Statistics (CWPS)\n...\n### Statistical Bulletin No 7/2026",
      "title": "Statistics Poland",
-     "url": "https://stat.gov.pl/en/"
+     "url": "https://stat.gov.pl/en/",
+     "verificacion": {
+      "bytes": 74023,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:10:36Z",
+      "http": 200,
+      "sha256": "e0c8833e568bc84b5e8302348055768c886301aa0ec5bd864e22ea6804a26087"
+     }
     },
     {
      "date": "2026-10-27",
@@ -472,7 +579,14 @@
      "rank": 2,
      "snippet": "Statistics Poland | GUS - Portal Informacyjny\n# Statistics Poland | GUS - Portal Informacyjny\n...\n**Statistics Poland**\nAl.\nNiepodległości 208,\n00-925 Warsaw\n...\n**Contact**\n...\n**E-mail:** kancelariaogolnaGUS@stat.gov.pl",
      "title": "Statistics Poland | GUS - Portal Informacyjny - new.stat.gov.pl",
-     "url": "https://new.stat.gov.pl/en"
+     "url": "https://new.stat.gov.pl/en",
+     "verificacion": {
+      "bytes": 139771,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:10:39Z",
+      "http": 200,
+      "sha256": "890e0e1350bae1729bb9d8c2dfa7cb2ba07df5bcde32bacdd66deb936d231a4f"
+     }
     },
     {
      "date": "2026-09-15",
@@ -514,7 +628,14 @@
      "rank": 1,
      "snippet": "- Dane finansowe sektora bankowego\n- Adekwatność kapitałowa banków\n- Statystyka stóp procentowych\n- Statystyka funduszy inwestycyjnych\n- Rachunki finansowe\n...\n**Narodowy Bank Polski**\n...\n00-919 Warszawa**",
      "title": "Statystyka monetarna i finansowa",
-     "url": "https://nbp.pl/statystyka-i-sprawozdawczosc/statystyka-monetarna-i-finansowa/"
+     "url": "https://nbp.pl/statystyka-i-sprawozdawczosc/statystyka-monetarna-i-finansowa/",
+     "verificacion": {
+      "bytes": 853,
+      "estado": "http",
+      "fecha": "2026-11-15T15:10:41Z",
+      "http": 403,
+      "sha256": "0083864cb177d8f85f76dadaa8a614515506c91677de8f9d60aac679532f6297"
+     }
     },
     {
      "date": "2023-02-18",
@@ -522,7 +643,14 @@
      "rank": 2,
      "snippet": "Statistics | NBP\n...\n- Statistics\n# Statistics\nNarodowy Bank Polski is one of Poland’s key institutions that conduct statistical research\n...\nNarodowy Bank Polski is one of Poland’s key institutions that conduct statistical research.\n...\nNarodowy Bank Polski publishes a broad range of statistical da",
      "title": "Statistics | NBP - Narodowy Bank Polski",
-     "url": "https://nbp.pl/en/statistic-and-financial-reporting/"
+     "url": "https://nbp.pl/en/statistic-and-financial-reporting/",
+     "verificacion": {
+      "bytes": 843,
+      "estado": "http",
+      "fecha": "2026-11-15T15:10:43Z",
+      "http": 403,
+      "sha256": "7d1d1d918228a5b9300df22dc04c373fd3914add0fe107f14612d1033c02f1aa"
+     }
     },
     {
      "date": "2017-05-26",
@@ -564,7 +692,12 @@
      "rank": 1,
      "snippet": "W jednym miejscu znajdziesz dane z różnych kategorii, np. zdrowie, gospodarka i finanse, środowisko, ludność i społeczeństwo.\n...\nDane z portalu możesz ponownie wykorzystywać bez konieczności składania wniosku.",
      "title": "Portal danych (Dane.gov.pl) - Ministerstwo Cyfryzacji",
-     "url": "https://www.gov.pl/web/cyfryzacja/portal-danych-danegovpl"
+     "url": "https://www.gov.pl/web/cyfryzacja/portal-danych-danegovpl",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.pl/web/cyfryzacja/portal-danych-danegovpl",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:12:14Z"
+     }
     },
     {
      "date": "",
@@ -572,7 +705,14 @@
      "rank": 2,
      "snippet": "Dane.gov.pl \nDane.gov.pl is an open data portal that offers access to public data in various categories, such as education, culture and sport, environment, economy and finance,",
      "title": "Digital Public",
-     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/DPA_Factsheets_2021_Poland_vFinal.pdf"
+     "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/DPA_Factsheets_2021_Poland_vFinal.pdf",
+     "verificacion": {
+      "bytes": 3903176,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:12:16Z",
+      "http": 200,
+      "sha256": "0daca404da5aa7a8dbbbb56de7cddae1592082b947e443df45b880393e1bbc09"
+     }
     },
     {
      "date": "2023-05-10",

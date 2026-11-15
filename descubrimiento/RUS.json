@@ -23,7 +23,14 @@
      "rank": 1,
      "snippet": "Банк данных \"Нормативно-правовые акты, зарегистрированные в Министерстве юстиции Российской Федерации\"\n...\nВсего документов: **60850**\nСписок документов последнего обновления (28.10.2026)\nДокументов: 13",
      "title": "Банк данных\"Нормативно-правовые акты, зарегистрированные в Министерстве юстиции Российской Федерации\"",
-     "url": "https://minjust.consultant.ru/"
+     "url": "https://minjust.consultant.ru/",
+     "verificacion": {
+      "bytes": 48304,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:25:22Z",
+      "http": 200,
+      "sha256": "2b4471190856cc088ff372faa52390d3b09d87537bff2a2458873e9b3e33c697"
+     }
     }
    ]
   },
@@ -41,7 +48,14 @@
      "rank": 1,
      "snippet": "# Russia (Federation): legislation: official gazette\n...\n1 title containing the official gazette for the Russian Federation from 1992 to 2004 (1992/1994 on microfiche).\nIt is an official publication and the text is in Russian.\nNew material is no longer added.",
      "title": "Digital Resources",
-     "url": "https://resources.ials.sas.ac.uk/flag/russia-federation-legislatrussia11-40"
+     "url": "https://resources.ials.sas.ac.uk/flag/russia-federation-legislatrussia11-40",
+     "verificacion": {
+      "bytes": 13680,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:25:23Z",
+      "http": 200,
+      "sha256": "02cc70a90baf4174a941d370cfb2d021d2a306044d4859b0bd0da13fd21ce193"
+     }
     },
     {
      "date": "",
@@ -49,7 +63,14 @@
      "rank": 2,
      "snippet": "# Russia (Federation): legislation: official gazette\nDescription:\n1 title containing the official gazette for the Russian Federation from 1957 onwards (incomplete).\nIt is an official publication and the text is in Russian.\nNew material is still added (SN.A.33/6).",
      "title": "Russia (Federation): legislation: official gazette",
-     "url": "https://resources.ials.sas.ac.uk/flag/russia-federation-legislatogr805sna336sna332-40"
+     "url": "https://resources.ials.sas.ac.uk/flag/russia-federation-legislatogr805sna336sna332-40",
+     "verificacion": {
+      "bytes": 13798,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:25:26Z",
+      "http": 200,
+      "sha256": "00eeb77eb8aa00391674f1ecf66d261ba9ee063d2f23c5a4d87c61306e9107f3"
+     }
     }
    ]
   },
@@ -67,7 +88,12 @@
      "rank": 1,
      "snippet": "Тексты судебных актов\n...\nТексты судебных актов, принятые Верховным Судом Российской Федерации, размещаются на официальном сайте Верховного Суда Российской Федерации в сети Интернет в соответствии с требованиями статьи 15 Федерального закона от 22 декабря 2008 г.",
      "title": "www.vsrf.ru · lk · practiceЭлектронная справочная",
-     "url": "https://www.vsrf.ru/lk/practice/acts"
+     "url": "https://www.vsrf.ru/lk/practice/acts",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.vsrf.ru/lk/practice/acts",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:26:57Z"
+     }
     },
     {
      "date": "2026-10-09",
@@ -75,7 +101,12 @@
      "rank": 2,
      "snippet": "### ВЕРХОВНЫЙ СУД РОССИЙСКОЙ ФЕДЕРАЦИИ",
      "title": "Верховный Суд Российской Федерации",
-     "url": "https://www.vsrf.ru/"
+     "url": "https://www.vsrf.ru/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.vsrf.ru/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:28:28Z"
+     }
     },
     {
      "date": "",
@@ -126,7 +157,12 @@
      "rank": 1,
      "snippet": "На Портале размещены нормативные правовые акты федерального, регионального и муниципального уровней.\nПоиск вышеназванных актов граждане и организации могут самостоятельно осуществлять на Портале по адресу http://pravo-minjust.ru.\n...\n…",
      "title": "Что такое портал Минюста России «Нормативные правовые акты в ...",
-     "url": "https://www.minjust.gov.ru/ru/appeals/faq/605/"
+     "url": "https://www.minjust.gov.ru/ru/appeals/faq/605/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.minjust.gov.ru/ru/appeals/faq/605/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:30:02Z"
+     }
     }
    ]
   },
@@ -144,7 +180,12 @@
      "rank": 1,
      "snippet": "25.05.26, 14:35\nНормативные правовые акты:",
      "title": "ФАС России",
-     "url": "https://fas.gov.ru/"
+     "url": "https://fas.gov.ru/",
+     "verificacion": {
+      "error": "robots.txt disallows https://fas.gov.ru/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:31:33Z"
+     }
     }
    ]
   },
@@ -162,7 +203,14 @@
      "rank": 1,
      "snippet": "Стандартизация — Российский институт стандартизации\n...\n- понедельник-четверг с 9-00 до 18-00, пятница с 9-00 до 16-45\n- 8 800 101-92-72\n- info@gostinfo.ru",
      "title": "Каталог стандартов - Российский институт стандартизации",
-     "url": "https://new.gostinfo.ru/standardization"
+     "url": "https://new.gostinfo.ru/standardization",
+     "verificacion": {
+      "bytes": 208096,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:31:35Z",
+      "http": 200,
+      "sha256": "22a77a2ef369b82ddfe1681dd3349fe655cecd758c8b889ed1c4280cfac7ad8b"
+     }
     },
     {
      "date": "",
@@ -170,7 +218,14 @@
      "rank": 2,
      "snippet": "…\n### Справка\nНефтяная и газовая промышленность.\nСистемы подводной добычи.\nКонтроль выноса песка и эрозии.\nМетодические указания\n44 стр.\nПоказано **54421**–**54440** из **54994**",
      "title": "Стандарты ГОСТ",
-     "url": "https://protect.gost.ru/gost?year=0&month=0&search=&page=2722"
+     "url": "https://protect.gost.ru/gost?year=0&month=0&search=&page=2722",
+     "verificacion": {
+      "bytes": 176623,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:31:39Z",
+      "http": 200,
+      "sha256": "6165f3967517557cc2cb95163b7bb928706b8e8e0b7d08562aa51ae62ad1bd43"
+     }
     },
     {
      "date": "2026-07-21",
@@ -212,7 +267,14 @@
      "rank": 1,
      "snippet": "## Перечни стандартов к техническим регламентам\nЗакон от 22.07.2008 № 123\nТехнический регламент о требованиях пожарной безопасности\n...\n#### Росстандарт\nФедеральное агентство по техническому регулированию и метрологии",
      "title": "Перечни Технических регламентов — Росстандарт",
-     "url": "https://protect.gost.ru/TrList/"
+     "url": "https://protect.gost.ru/TrList/",
+     "verificacion": {
+      "bytes": 378674,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:31:42Z",
+      "http": 200,
+      "sha256": "591320e6de65e45c3a4fd8bbef44c0baa9ac429f8c7a976aba7f3c3b1161f516"
+     }
     },
     {
      "date": "",
@@ -220,7 +282,14 @@
      "rank": 2,
      "snippet": "Стр.\n...\n|№|Обозначение|Наименование|Стр.|Статус|\n|--|--|--|--|--|\n|41|ТР ТС 017/2011|О безопасности продукции легкой промышленности|43|✓ действует|",
      "title": "Стандарты ТР — Росстандарт",
-     "url": "https://protect.gost.ru/tr?year=0&month=0&search=&page=3"
+     "url": "https://protect.gost.ru/tr?year=0&month=0&search=&page=3",
+     "verificacion": {
+      "bytes": 154501,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:31:45Z",
+      "http": 200,
+      "sha256": "943ce293dc322f0afb97350350bfcbfd1f7f2f14ec54c311f20759ca583adb4b"
+     }
     },
     {
      "date": "",
@@ -262,7 +331,12 @@
      "rank": 1,
      "snippet": "Оперативные показатели\n...\nДанные\n...\nДополнительные ресурсы",
      "title": "Федеральная служба государственной статистики",
-     "url": "https://rosstat.gov.ru/"
+     "url": "https://rosstat.gov.ru/",
+     "verificacion": {
+      "error": "robots.txt disallows https://rosstat.gov.ru/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:31:48Z"
+     }
     },
     {
      "date": "2025-10-20",
@@ -270,7 +344,12 @@
      "rank": 2,
      "snippet": "Indicators\n...\nPopulation (01.01.2025) resident population estimate",
      "title": "Federal State Statistics Service",
-     "url": "https://eng.rosstat.gov.ru/"
+     "url": "https://eng.rosstat.gov.ru/",
+     "verificacion": {
+      "error": "robots.txt disallows https://eng.rosstat.gov.ru/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:33:20Z"
+     }
     },
     {
      "date": "2026-02-28",
@@ -304,7 +383,12 @@
      "rank": 1,
      "snippet": "Статистика | Банк России\n- 107016, Москва, ул. Неглинная, д.\n12, к. В, Банк России\n- 8 800 300-30-00\n- www.cbr.ru",
      "title": "Статистика | Банк России",
-     "url": "https://cbr.ru/banking_sector/statistics/"
+     "url": "https://cbr.ru/banking_sector/statistics/",
+     "verificacion": {
+      "error": "robots.txt disallows https://cbr.ru/banking_sector/statistics/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:33:21Z"
+     }
     },
     {
      "date": "2026-11-01",
@@ -312,7 +396,12 @@
      "rank": 2,
      "snippet": "Статистика | Банк России\n- 107016, Москва, ул. Неглинная, д.\n12, к. В, Банк России\n- 8 800 300-30-00\n- www.cbr.ru",
      "title": "Статистика",
-     "url": "https://cbr.ru/statistics/"
+     "url": "https://cbr.ru/statistics/",
+     "verificacion": {
+      "error": "robots.txt disallows https://cbr.ru/statistics/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:33:24Z"
+     }
     },
     {
      "date": "2026-10-29",
@@ -354,7 +443,14 @@
      "rank": 1,
      "snippet": "Портал открытых данных\nРоссийской Федерации\nПортал открытых данных Российской Федерации – комплексная государственная система, которая обеспечивает открытость информации о деятельности органов государственной власти и предоставление централизованного доступа к открытым государственным информационным",
      "title": "Экономика",
-     "url": "https://data.gov.ru/datasets/43dca7e5-ae71-44dd-a75b-af2681039b70"
+     "url": "https://data.gov.ru/datasets/43dca7e5-ae71-44dd-a75b-af2681039b70",
+     "verificacion": {
+      "bytes": 671,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:33:34Z",
+      "http": 200,
+      "sha256": "5ee211e897824c6907c0dde906c0a6f06b3124b9101e0036becf4b4abb61f742"
+     }
     },
     {
      "date": "",
@@ -362,7 +458,14 @@
      "rank": 2,
      "snippet": "Open Government website (http://opendata.open.gov.ru).\n...\nBy law, all the federal executive bodies, including ministries, federal services,\n…\nernment data in Russia is the Russian Open Data Portal (data.gov.ru) launched in 2014 and maintained by the Russian Ministry of Economic Development.",
      "title": "https://helda.helsinki.fi",
-     "url": "https://helda.helsinki.fi/server/api/core/bitstreams/b05e31cf-d4b9-422b-91e5-a99fa1744753/content"
+     "url": "https://helda.helsinki.fi/server/api/core/bitstreams/b05e31cf-d4b9-422b-91e5-a99fa1744753/content",
+     "verificacion": {
+      "bytes": 305539,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:33:36Z",
+      "http": 200,
+      "sha256": "a8126347c5e3ac8c0c8ca87389544801a16d9d7bd0860a2ec7d8bbb0ea1d252e"
+     }
     },
     {
      "date": "",

@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "#### Search Federal Laws\n...\n- For Gazette notifications of federal laws, visit the Document Retrieval System NEW\n...\n…\n## The Laws of Pakistan Cell\n...\nOur mission is to make the Federal Laws accessible to the general public, judges, prosecution, lawyers, law students and researchers, anywhere, any",
      "title": "Pakistan Code",
-     "url": "https://pakistancode.gov.pk/english/"
+     "url": "https://pakistancode.gov.pk/english/",
+     "verificacion": {
+      "error": "robots.txt disallows https://pakistancode.gov.pk/english/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:52:32Z"
+     }
     },
     {
      "date": "",
@@ -22,7 +27,12 @@
      "rank": 2,
      "snippet": "# National Assembly of Pakistan\n|\n...\n…",
      "title": "Downloads - National Assembly of Pakistan",
-     "url": "https://www.na.gov.pk/en/downloads.php"
+     "url": "https://www.na.gov.pk/en/downloads.php",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.na.gov.pk/en/downloads.php",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:52:35Z"
+     }
     },
     {
      "date": "",
@@ -56,7 +66,12 @@
      "rank": 1,
      "snippet": "Pakistan Code\nThe Pakistan Code\nMinistry of Law and Justice\n…\nPakistan Land Port Authority Act, 2025\nGeneral Laws | XXV of 2025 | Promulgation Date: August 29 2025.\n| Archive 0 | Under Review\n...\n…\n...\nNo Records Found.",
      "title": "Laws in Alphabetical Order",
-     "url": "https://pakistancode.gov.pk/english/LGu0xAD?action=null&alp=P&page=1"
+     "url": "https://pakistancode.gov.pk/english/LGu0xAD?action=null&alp=P&page=1",
+     "verificacion": {
+      "error": "robots.txt disallows https://pakistancode.gov.pk/english/LGu0xAD?action=null&alp=P&page=1",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:52:38Z"
+     }
     },
     {
      "date": "",
@@ -64,7 +79,14 @@
      "rank": 2,
      "snippet": "EPADS v2.0\nEPADS v2.0\n...\nRegulations for National Standard Procurement Documents (S.R.O.370(I)/2022).\n...\nPPRA ADDRESS\n...\n+92-51-111-137-237\nepadshelp@ppra.gov.pk (For EPADS Related Queries)",
      "title": "Regulations | PPRA :: Public Procurement Regulatory Authority",
-     "url": "https://ppra.gov.pk/regulations"
+     "url": "https://ppra.gov.pk/regulations",
+     "verificacion": {
+      "bytes": 73005,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:52:40Z",
+      "http": 200,
+      "sha256": "8a7d581c78b1d27df47f1c9188ad83469c06e264377fac0742e406b583d31957"
+     }
     },
     {
      "date": "",
@@ -98,7 +120,14 @@
      "rank": 1,
      "snippet": "No. F. 22(18)/2024-Legis—The following Act of Majlis-e-Shoora \n(Parliament) received the assent of the President on the 29th June, 2024 is hereby published for general information:—\nACT NO.\n...\nACT",
      "title": "part i] the gazette of pakistan, extra., june 30, 2024 223",
-     "url": "https://download1.fbr.gov.pk/Docs/2024630146346801FinanceAct-2024.pdf"
+     "url": "https://download1.fbr.gov.pk/Docs/2024630146346801FinanceAct-2024.pdf",
+     "verificacion": {
+      "bytes": 1312430,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:52:43Z",
+      "http": 200,
+      "sha256": "6b12faf0b1e936b3a1810809ed2d21af375419f1fbbae55334a6546131db6ef2"
+     }
     },
     {
      "date": "",
@@ -106,7 +135,12 @@
      "rank": 2,
      "snippet": "Islamabad, the 29th January, 2025 \n...\n…\n...\n[94(2025)/Ex. Gaz.].\n…\n32  \nTHE GAZETTE OF PAKISTAN, EXTRA., JAN.\n29, 2025 \n[PART I",
      "title": "[PDF] ISLAMABAD, WEDNESDAY, JANUARY 29, 2025 PART I Acts ...",
-     "url": "https://www.na.gov.pk/uploads/documents/679b243193585_457.pdf"
+     "url": "https://www.na.gov.pk/uploads/documents/679b243193585_457.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.na.gov.pk/uploads/documents/679b243193585_457.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:52:46Z"
+     }
     },
     {
      "date": "",
@@ -140,7 +174,14 @@
      "rank": 1,
      "snippet": "Supreme Court of Pakistan\nHome\n...\nCause List Search\nJudgments Search\nLatest Judgments\n...\nOnline Case Information\nView case details and status\nCause List Search\nSearch daily cause lists by date/bench\nLatest Judgments\nView recently announced judgments\nJudgment Search\nSearch judgments by case or keyw",
      "title": "Public Facilitation Portal - Supreme Court",
-     "url": "https://scp.gov.pk/pfc"
+     "url": "https://scp.gov.pk/pfc",
+     "verificacion": {
+      "bytes": 4544,
+      "estado": "http",
+      "fecha": "2026-11-15T14:52:47Z",
+      "http": 403,
+      "sha256": "bb9703227a3c5a24974d55319d6435196985d537685440b3113bd32ab9132bb9"
+     }
     },
     {
      "date": "2026-01-01",
@@ -148,7 +189,14 @@
      "rank": 2,
      "snippet": "Case Title/Parties Name\n...\nPetition/Appeal Digital Copy\nJudgment Available",
      "title": "Online Case Information - Supreme Court of Pakistan",
-     "url": "https://scp.gov.pk/OnlineCaseInformation.aspx"
+     "url": "https://scp.gov.pk/OnlineCaseInformation.aspx",
+     "verificacion": {
+      "bytes": 4544,
+      "estado": "http",
+      "fecha": "2026-11-15T14:52:49Z",
+      "http": 403,
+      "sha256": "b21a442acca5ce629fb1be12fd68bfeeeb252a04a760bdb3facb08df0cd15099"
+     }
     },
     {
      "date": "2019-03-11",
@@ -190,7 +238,14 @@
      "rank": 1,
      "snippet": "# PROVINCIAL ASSEMBLY\n# Acts\n...\n|1|The Khyber Pakhtunkhwa Act No. XX of 2026|The Khyber Pakhtunkhwa Promotion of Digital Payments Act, 2026|21 Aug 2026|2026-08-31|",
      "title": "Acts",
-     "url": "https://www.pakp.gov.pk/act/"
+     "url": "https://www.pakp.gov.pk/act/",
+     "verificacion": {
+      "bytes": 97955,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:52:54Z",
+      "http": 200,
+      "sha256": "aea167f973076a76e30911b399212333ef0ac618ff5d156332dfdbe1d843f54b"
+     }
     },
     {
      "date": "",
@@ -198,7 +253,12 @@
      "rank": 2,
      "snippet": "Welcome to the First Online Database of Laws in Pakistan!\nThe database contains all the Laws of Punjab from 1860 to date.\nThe database will be updated regularly as soon as the new Laws are passed or the previous ones are amended.\n...\nFor searching use the menus on the left of this page.",
      "title": "Welcome to Punjab Laws Online",
-     "url": "https://www.punjablaws.gov.pk/"
+     "url": "https://www.punjablaws.gov.pk/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.punjablaws.gov.pk/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:54:26Z"
+     }
     },
     {
      "date": "",
@@ -240,7 +300,14 @@
      "rank": 1,
      "snippet": "Act 2020\n...\nRegulation 2022\n#### Draft Khyber Pakhtunkhwa Building Regulations, 2022\n...\ninfo@lgkp.gov.pk\nOfficial dynamic portal of the Local Government, Elections and Rural Development Department (LGE&RDD), Government of Khyber Pakhtunkhwa.",
      "title": "LOCAL GOVERNMENT KP",
-     "url": "https://lgkp.gov.pk/"
+     "url": "https://lgkp.gov.pk/",
+     "verificacion": {
+      "bytes": 285777,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:54:29Z",
+      "http": 200,
+      "sha256": "dcb95941ffcde09dec338b81c3084308a2c1bb95f980325f57b58beb18616508"
+     }
     },
     {
      "date": "",
@@ -248,7 +315,14 @@
      "rank": 2,
      "snippet": "# Official Acts, Rules & Regulations\nOfficial statutory repository of gazette-notified Acts, Rules of Business, Building Control Regulations, ADR frameworks, and Model Bye-laws of Khyber Pakhtunkhwa.\nAll Acts & Rules Acts & Legislation Rules of Business Building Regulations Model Bye-Laws Ordinances",
      "title": "Official Acts, Rules & Regulations",
-     "url": "https://www.lgkp.gov.pk/acts-rules"
+     "url": "https://www.lgkp.gov.pk/acts-rules",
+     "verificacion": {
+      "bytes": 230631,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:54:33Z",
+      "http": 200,
+      "sha256": "6f4bcf3560e9a5e86c873425f162ad55fa35171482ac6db07ca5bd90a4c123aa"
+     }
     },
     {
      "date": "",
@@ -290,7 +364,14 @@
      "rank": 1,
      "snippet": "Drugs (Labelling and Packing Rules, 1986 (updated upto September, 2026) The Drugs (Licensing, Registering And Advertising) Rules, 1976\nDrug Research Rules:\n...\nThe Medical Device Rules, 2017 (as on January 16, 2018)",
      "title": "Rules - Drug Regulatory Authority of Pakistan",
-     "url": "https://www.dra.gov.pk/about-us/legislation/rules/"
+     "url": "https://www.dra.gov.pk/about-us/legislation/rules/",
+     "verificacion": {
+      "bytes": 114360,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:54:42Z",
+      "http": 200,
+      "sha256": "780c716b03fb54786dc5519ca57103364369426341222d4fac796aec1c09d3bf"
+     }
     },
     {
      "date": "2016-03-31",
@@ -298,7 +379,14 @@
      "rank": 2,
      "snippet": "Regulations | SECP\nSecurities and Exchange Commission of Pakistan\n### Laws\n#### 20/10/2026\nSRO 1863(I)/2026 Notification- Draft amendments in the Securities Brokers (Licensing and Operations) Regulations, 2016\n...\n### Section 42 Companies\n### Orders",
      "title": "Regulations - SECP",
-     "url": "https://www.secp.gov.pk/laws/regulations/"
+     "url": "https://www.secp.gov.pk/laws/regulations/",
+     "verificacion": {
+      "bytes": 5573,
+      "estado": "http",
+      "fecha": "2026-11-15T14:54:43Z",
+      "http": 403,
+      "sha256": "8c5bb3baec1c2258b9557463f5373fbc8f47db368db33ad3655fe01a59c796cd"
+     }
     },
     {
      "date": "2026-10-29",
@@ -340,7 +428,14 @@
      "rank": 1,
      "snippet": "Pakistan Digital Authority\n...\n- +92 51 920 5027\n...\n### Digital Nation Pakistan Standards\nThe official register of standards for sovereign digital infrastructure published and maintained by the PDA.\n...\n4th Floor,\n5-A Constitution Avenue,\nSector F-5/1,\n...\ninfo@pda.gov.pk",
      "title": "Pakistan Digital Authority",
-     "url": "https://pda.gov.pk/"
+     "url": "https://pda.gov.pk/",
+     "verificacion": {
+      "bytes": 88216,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:54:46Z",
+      "http": 200,
+      "sha256": "a5b9a3ecb356b604b77ffb0f8891ad6ca46e392988060ad0f5fc05a6a8ec0cc9"
+     }
     },
     {
      "date": "",
@@ -348,7 +443,12 @@
      "rank": 2,
      "snippet": "The standards are published by Digital Nation Pakistan (DNP), the country’s national movement to build a digitally empowered Pakistan.\n...\nDNP-D.002 RA\n...\n#### Nomenclature, Series Structure, and Issuance Framework\n...\nCatalogues every external standard, specification, and framework referenced by D",
      "title": "Digital Nation Pakistan Standards",
-     "url": "https://standards.dnp.gov.pk/"
+     "url": "https://standards.dnp.gov.pk/",
+     "verificacion": {
+      "error": "robots.txt disallows https://standards.dnp.gov.pk/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:54:49Z"
+     }
     },
     {
      "date": "",
@@ -390,7 +490,12 @@
      "rank": 1,
      "snippet": "Show All Approved Draft\n|Title|Type|Status|Notification No.|Publish Date|Download|\n...\n|GPRS/EDGE Service Quality of Service Standards Regulations, 2010|Regulation|Approved|SRO.NO.1191(I)/2010|31 December, 2010| |",
      "title": "Ministry of InformationTechnology & Telecommunication",
-     "url": "https://www.moitt.gov.pk/Legislations"
+     "url": "https://www.moitt.gov.pk/Legislations",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.moitt.gov.pk/Legislations",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:54:52Z"
+     }
     },
     {
      "date": "2023-05-30",
@@ -398,7 +503,12 @@
      "rank": 2,
      "snippet": "# Regulations\n### Regulations\n|3.\nFixed Broadband Quality of Service (QoS) Regulations, 2022|\n|a.|Fixed Broadband Quality of Service (QoS) Regulations, 2022|Download|\n…\n|c.|Type Approval Technical Standards (Amendment) Regulations,2025|Download|",
      "title": "Regulations",
-     "url": "https://www.pta.gov.pk/category/regulations-1674158059-2023-05-30"
+     "url": "https://www.pta.gov.pk/category/regulations-1674158059-2023-05-30",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.pta.gov.pk/category/regulations-1674158059-2023-05-30",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:56:22Z"
+     }
     },
     {
      "date": "",
@@ -440,7 +550,14 @@
      "rank": 1,
      "snippet": "PBS Pakistan Bureau of Statistics\n- ## Contact Info\n- +92-51-9106556\n- pbs@www.pbs.gov.pk\n## Text 1\n- List Item #1\n- List Item #2\n...\nEmail: pbs@www.pbs.gov.pk",
      "title": "PBS Pakistan Bureau of Statistics",
-     "url": "https://www.pbs.gov.pk/"
+     "url": "https://www.pbs.gov.pk/",
+     "verificacion": {
+      "bytes": 401456,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:56:25Z",
+      "http": 200,
+      "sha256": "0a636b894628844b1c0a48a6428a948826d53bef7d94aa67a954a4db3d4ab29e"
+     }
     },
     {
      "date": "",
@@ -448,7 +565,14 @@
      "rank": 2,
      "snippet": "__EX-PRINCIPAL TRAINING WING, PBS__\n__Pakistan Bureau of Statistics__\n[Image: Picture 4]\n[Image: Picture 10]\n__www.pbs.gov.pk__\n...\nPakistan Bureau of Statistics\nwww.pbs.gov.pk",
      "title": "D1S2W1-Mr.-Muhammad-Younis.pptx",
-     "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/D1S2W1-Mr.-Muhammad-Younis.pptx"
+     "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/D1S2W1-Mr.-Muhammad-Younis.pptx",
+     "verificacion": {
+      "bytes": 1182269,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:56:30Z",
+      "http": 200,
+      "sha256": "04ad7acebf45a6aa076558cf3b78e89c5e68048d5e6b795ee2f6ea713ee00832"
+     }
     },
     {
      "date": "2026-06-08",
@@ -490,7 +614,12 @@
      "rank": 1,
      "snippet": "## Economic Data\nA snapshot of Pakistan’s key financial and economic indicators\n#### SBP Policy Rate & Interest Rate Corridor Facilities\nSBP Policy Rate\n...\nWeighted - average overnight repo\nrate\nAs on 29-Jun-26\n11.23%\n...\n#### EasyData\nA portal for seamless data access",
      "title": "State Bank of Pakistan",
-     "url": "https://www.sbp.org.pk/"
+     "url": "https://www.sbp.org.pk/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.sbp.org.pk/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:56:31Z"
+     }
     },
     {
      "date": "2013-12-04",
@@ -498,7 +627,12 @@
      "rank": 2,
      "snippet": "…\n##### Monetary Statistics\n|###### Broad Money (M2) Weekly May 25, 2026|\n...\n|###### Monetary Aggregates (M3) - Monthly Profile Monthly May 22, 2026|\n|###### Reserve Money (RM) Weekly May 25, 2026|",
      "title": "Economic Data",
-     "url": "https://www.sbp.org.pk/economic-data"
+     "url": "https://www.sbp.org.pk/economic-data",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.sbp.org.pk/economic-data",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:56:32Z"
+     }
     },
     {
      "date": "2024-11-01",
@@ -540,7 +674,14 @@
      "rank": 1,
      "snippet": "National Open Data Portal\n...\nThe National Open Data Portal (NODP) is an initiative of Pakistan Institute of Education (PIE), designed to provide open access to reliable and up-to-date datasets.\n...\n#### Phone Number\n+92 51 9260674\n#### Fax\n...\n#### Email\n[email protected]",
      "title": "National Open Data Portal",
-     "url": "https://nodp.gov.pk/"
+     "url": "https://nodp.gov.pk/",
+     "verificacion": {
+      "bytes": 26553,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:56:37Z",
+      "http": 200,
+      "sha256": "84ad507f6ebffebc759e31282a3a4756bed92c6617c256e6022a995aae6d4f1f"
+     }
     },
     {
      "date": "2023-08-16",
@@ -548,7 +689,14 @@
      "rank": 2,
      "snippet": "Government of Pakistan\n##### Services\n16 Aug, 2023 |\n#### Open Data\nOpen Data Pakistan | Khyber Pakhtunkhwa Open Data Portal",
      "title": "Government of Pakistan",
-     "url": "https://pakistan.gov.pk/open-data"
+     "url": "https://pakistan.gov.pk/open-data",
+     "verificacion": {
+      "bytes": 42125,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:56:40Z",
+      "http": 200,
+      "sha256": "e031ebd52e9976be5ed91ed2bb9dc5197861235ef8962dc8ebdfa8a909932e7b"
+     }
     },
     {
      "date": "",

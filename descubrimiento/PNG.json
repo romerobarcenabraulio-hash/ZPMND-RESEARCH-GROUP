@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "Constitution of the Independent State of Papua New Guinea.\n...\nPART II – THE NATIONAL LEGAL SYSTEM.\nDivision 1 – The Laws of Papua New Guinea.\n9. \nThe laws.\n...\nConstruction of written laws.\nDivision 2 – Constitutional Laws.\nSubdivision A – Supreme Law.",
      "title": "Constitution - PNG",
-     "url": "https://parliament.gov.pg/wp-content/uploads/2026/04/PNG-CONSTITUTION.pdf"
+     "url": "https://parliament.gov.pg/wp-content/uploads/2026/04/PNG-CONSTITUTION.pdf",
+     "verificacion": {
+      "bytes": 943324,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:02:05Z",
+      "http": 200,
+      "sha256": "a5586577b223be4c42469581ce2a2bf104cebfd9a27f5dcb48e8f115345d211d"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "Office of Legislative Counsel :: Papua New Guinea\n|\n...\n> This page contains links to all of the PNG Legislation held in that library > Clicking on a link will open a new Browser window with the full text of the Legislation.\n> > ### Legislation beginning with ...\n…\n...\n…",
      "title": "Office of Legislative Counsel :: Papua New Guinea",
-     "url": "https://pnglaw.gov.pg/paclii.php"
+     "url": "https://pnglaw.gov.pg/paclii.php",
+     "verificacion": {
+      "bytes": 120618,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:02:06Z",
+      "http": 200,
+      "sha256": "0d4a7e9e42ba6949c419a44328629975ff9df6894fc7ae8fc86c2890e6385136"
+     }
     },
     {
      "date": "",
@@ -64,7 +78,12 @@
      "rank": 1,
      "snippet": "“The Regulatory category provides a central repository for the legal and technical instruments governing the ICT sector.\nThis includes the latest Acts, Gazetted Regulations, and formal Determinations that shape the digital landscape and ensure a fair, competitive market.”\n...\n- ## PNG Table of Radio",
      "title": "Regulatory Archives | NICTA PNG",
-     "url": "https://www.nicta.gov.pg/category/public-register/regulatory/"
+     "url": "https://www.nicta.gov.pg/category/public-register/regulatory/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.nicta.gov.pg/category/public-register/regulatory/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:02:08Z"
+     }
     },
     {
      "date": "",
@@ -72,7 +91,14 @@
      "rank": 2,
      "snippet": "# Associations Incorporation Act 2023\nThe legislation\nAssociations Incorporation Act 2023\nThe full text of the Act.\nRead the Act (PDF)\nAssociations Incorporation Regulation\n...\nRe-registration is completed online through the IPA registry at www.ipa.gov.pg.",
      "title": "Associations Incorporation Act 2023",
-     "url": "https://www.ipa.gov.pg/public/help.aspx?cn=NewAssociationsAct"
+     "url": "https://www.ipa.gov.pg/public/help.aspx?cn=NewAssociationsAct",
+     "verificacion": {
+      "bytes": 73093,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:02:11Z",
+      "http": 200,
+      "sha256": "81268f7ffcd4162932029fbe65758d1dc23229737190bcf0b44abf426aa006c1"
+     }
     },
     {
      "date": "",
@@ -114,7 +140,14 @@
      "rank": 1,
      "snippet": "# Papua New Guinea: legislation: official gazette\nDescription:\n1 title containing the official gazette for Papua New Guinea from 1888 to 1979 (incomplete).\nIt is an official publication and the text is in English.\nNew material is no longer added.\n...\nPapua New Guinea",
      "title": "Digital Resources",
-     "url": "https://resources.ials.sas.ac.uk/flag/papua-new-guinea-legislationogp55-43"
+     "url": "https://resources.ials.sas.ac.uk/flag/papua-new-guinea-legislationogp55-43",
+     "verificacion": {
+      "bytes": 13702,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:02:12Z",
+      "http": 200,
+      "sha256": "d3f42b1f1d1f941022c9374cb59390f6a0e9b0818a6847ee93d6a9f2b87766a5"
+     }
     },
     {
      "date": "",
@@ -122,7 +155,14 @@
      "rank": 2,
      "snippet": "The Papua New Guinea National Gazette is published sectionally in accordance with the following arrangements set out below.\nTHE PUBLIC SERVICES ISSUE.\n...\nvacancies, transfers and promotions within the National Public \nService.\n...\nRules); Tenders etc.\nThese issues are published weekly at 11.30 a.m.",
      "title": "1 National Gazette PUBLISHED BY AUTHORITY (Registered ...",
-     "url": "https://d3lq1zn75pp42n.cloudfront.net/NG2020_G266_G338a/NG2020_G266_G338a.pdf"
+     "url": "https://d3lq1zn75pp42n.cloudfront.net/NG2020_G266_G338a/NG2020_G266_G338a.pdf",
+     "verificacion": {
+      "bytes": 175651,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:02:14Z",
+      "http": 200,
+      "sha256": "f667738eec8c68be3028eb97858e584a0394f05a5578b89750bc9ebca69fecda"
+     }
     }
    ]
   },
@@ -140,7 +180,14 @@
      "rank": 1,
      "snippet": "This database contains decisions from the Papua New Guinea Supreme Court.\n**\nPacLII:\n...\nURL:\n*http://www.paclii.org/pg/cases/PGSC *",
      "title": "Supreme Court of Papua New Guinea",
-     "url": "https://www.paclii.org/pg/cases/PGSC/"
+     "url": "https://www.paclii.org/pg/cases/PGSC/",
+     "verificacion": {
+      "bytes": 5542,
+      "estado": "http",
+      "fecha": "2026-11-15T15:02:15Z",
+      "http": 403,
+      "sha256": "e4d2444612fd0e35312eb54ea5b9f1af712a2377fc700e565c586d0afe409541"
+     }
     },
     {
      "date": "",
@@ -148,7 +195,14 @@
      "rank": 2,
      "snippet": "Curated case notes preserve key legal developments and support continuing learning across the judiciary and legal profession.\n...\nCase notes help judicial officers, lawyers, researchers and students follow important decisions of the Supreme Court and National Court.\nThey make key points of law easie",
      "title": "Case Notes – PNG CJE",
-     "url": "https://pngcje.gov.pg/case-notes/"
+     "url": "https://pngcje.gov.pg/case-notes/",
+     "verificacion": {
+      "bytes": 55063,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:02:20Z",
+      "http": 200,
+      "sha256": "15ab4cf2e7556347f720721f423f52d9ad80ab25494bd7dff7c3695f22415db4"
+     }
     },
     {
      "date": "",
@@ -190,7 +244,14 @@
      "rank": 1,
      "snippet": "#### Acts and Legislations\nBelow are Acts and legislations related to our department’s roles and responsibilities.\n- Organic Law on Provincial and Local-level Government Affairs\n- Provincial Government Administration Act\n- Local-level Government Administration Act\n- District Development Authority Ac",
      "title": "Document - Department of Provincial and Local Government Affairs",
-     "url": "https://www.dplga.gov.pg/document/"
+     "url": "https://www.dplga.gov.pg/document/",
+     "verificacion": {
+      "bytes": 85192,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:02:38Z",
+      "http": 200,
+      "sha256": "9c1bc1b46975e5b62e4b7429d6bf6d6eadf0be7680a747bac57f55f331abbb6a"
+     }
     },
     {
      "date": "",
@@ -198,7 +259,14 @@
      "rank": 2,
      "snippet": "Data Governance and Data Protection Bill 2026 | DICT I PNG\nA .gov.pg website belongs to an official Papua New Guinea Government organisation.\n...\nDepartment of ICT\nPO Box 784\nVision City,\nNational Capital District\nPapua New Guinea\n#### info@ict.gov.pg",
      "title": "Data Governance and Data Protection Bill 2026 | DICT I PNG",
-     "url": "https://www.ict.gov.pg/data-governance-and-data-protection-bill-2026/"
+     "url": "https://www.ict.gov.pg/data-governance-and-data-protection-bill-2026/",
+     "verificacion": {
+      "bytes": 186830,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:02:41Z",
+      "http": 200,
+      "sha256": "c420dcba752118fc33dc91cf2fdae06240ee8f42ce72d90293381196a4538f39"
+     }
     },
     {
      "date": "",
@@ -240,7 +308,14 @@
      "rank": 1,
      "snippet": "###### Mon-Fri: 7.45am To 4.06pm\n###### Mon-Fri: 7.45am To 4.06pm\n- Home\n- Department of Provincial and Local Government Affairs",
      "title": "Department of Provincial and Local Government Affairs ...",
-     "url": "https://www.dplga.gov.pg/"
+     "url": "https://www.dplga.gov.pg/",
+     "verificacion": {
+      "bytes": 105764,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:02:59Z",
+      "http": 200,
+      "sha256": "050337517943b77c188e505c1d8df2d6cb0dfdbda0f51117c27780f9c7950558"
+     }
     },
     {
      "date": "2023-09-07",
@@ -248,7 +323,14 @@
      "rank": 2,
      "snippet": "# Document\n#### Acts and Legislations\nBelow are Acts and legislations related to our department’s roles and responsibilities.\n- Organic Law on Provincial and Local-level Government Affairs\n- Provincial Government Administration Act\n- Local-level Government Administration Act\n- District Development A",
      "title": "Document - Department of Provincial and Local Government Affairs",
-     "url": "https://www.dplga.gov.pg/document/"
+     "url": "https://www.dplga.gov.pg/document/",
+     "verificacion": {
+      "bytes": 85192,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:03:17Z",
+      "http": 200,
+      "sha256": "5bd3d57ab5a22c9a40fa7c6868c3b8abc8f2a323219cf3566e0799f27fb44197"
+     }
     },
     {
      "date": "2026-03-26",
@@ -290,7 +372,14 @@
      "rank": 1,
      "snippet": "# Who We are!\nThe Independent Consumer and Competition Commission (ICCC) is an independent regulator established under the Independent Consumer and Competition Commission Act 2002 (the Act).\nThe ICCC is responsible for protecting consumers’ interests, promoting and safeguarding competition, and regu",
      "title": "Independent Consumer & Competition Commission",
-     "url": "https://iccc.gov.pg/"
+     "url": "https://iccc.gov.pg/",
+     "verificacion": {
+      "bytes": 643093,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:03:20Z",
+      "http": 200,
+      "sha256": "d03938ad5c223384587e083af0a0c389d36554abbaf381f5dfa30a659e7f0e21"
+     }
     },
     {
      "date": "",
@@ -298,7 +387,12 @@
      "rank": 2,
      "snippet": "The Investment Promotion Authority (IPA), through the Companies Office, is responsible for administering PNG’s businesses utilizing the:\n• Companies Act, \n...\nThe Independent Consumer and Competition Commission (ICCC) oversees competition in PNG focusing on regulating monopolies.\n...\n…\nConservation ",
      "title": "2025 Papua New Guinea Investment Climate Statement",
-     "url": "https://www.state.gov/wp-content/uploads/2025/09/638719_2025-Papua-New-Guinea-Investment-Climate-Statement.pdf"
+     "url": "https://www.state.gov/wp-content/uploads/2025/09/638719_2025-Papua-New-Guinea-Investment-Climate-Statement.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/wp-content/uploads/2025/09/638719_2025-Papua-New-Guinea-Investment-Climate-Statement.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:03:20Z"
+     }
     },
     {
      "date": "",
@@ -340,7 +434,14 @@
      "rank": 1,
      "snippet": "The cybersecurity standards include Critical Infrastructure Standards, Security Solutions Standards, and Security Policies Standards, which identify common security requirements that all public bodies should be aware of.\n...\nDownload: Cybersecurity Standards and Guidelines\n#### Domain Name Standards",
      "title": "Digital Standards | DICT I PNG - Department of ICT",
-     "url": "https://www.ict.gov.pg/standards/"
+     "url": "https://www.ict.gov.pg/standards/",
+     "verificacion": {
+      "bytes": 188691,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:03:23Z",
+      "http": 200,
+      "sha256": "aa5f2c2446fa8f391a348d8897e00046a9450a7365b582bd6a5bc321349f6d0e"
+     }
     },
     {
      "date": "",
@@ -348,7 +449,14 @@
      "rank": 2,
      "snippet": "3.87.\nPNG maintains, develops, and publishes its own standards, Papua New Guinea Standards \n(PNGS).\n...\nA list of approximately 90 standards has been issued during the 7-year review period, some of which are technical regulations (Table A3.2).\n...\nGreen Coffee\n2",
      "title": "RESTRICTED WT/TPR/S/483 Trade Policy Review Body TRADE POLICY ...",
-     "url": "https://www.wto.org/english/news_e/news_docs/S483_e.pdf"
+     "url": "https://www.wto.org/english/news_e/news_docs/S483_e.pdf",
+     "verificacion": {
+      "bytes": 1186818,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:03:26Z",
+      "http": 200,
+      "sha256": "22a6347b90991cdc8b2abfdfd99b83c61486d07ae8f89200191c34fa32ac01d8"
+     }
     },
     {
      "date": "",
@@ -390,7 +498,12 @@
      "rank": 1,
      "snippet": "Published:\n22 March 2023\n**Categories:** Gazettes, Regulatory\nICT Equipment Type Approval Rule, 2022 & Telecommunication Quality of Service Rule, 2022\n- ## ICT Equipment Type Approval Rule 2022\nPublished:\n22 March 2023",
      "title": "Regulatory Archives | Page 2 of 4",
-     "url": "https://www.nicta.gov.pg/category/regulatory/page/2/"
+     "url": "https://www.nicta.gov.pg/category/regulatory/page/2/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.nicta.gov.pg/category/regulatory/page/2/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:03:28Z"
+     }
     },
     {
      "date": "2025-10-01",
@@ -398,7 +511,12 @@
      "rank": 2,
      "snippet": "- ## Standard and Special Conditions of Individual Licences Rule 2025\n...\n1 October 2025\n...\n- ## Telecommunications Quality of Service (QoS) Rule 2022\nPublished:\n22 March 2023\n...\n- ## ICT Equipment Type Approval Rule 2022\n...\n22 March 2023",
      "title": "Rules Archives | NICTA PNG",
-     "url": "https://www.nicta.gov.pg/category/regulatory/rules/"
+     "url": "https://www.nicta.gov.pg/category/regulatory/rules/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.nicta.gov.pg/category/regulatory/rules/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:03:29Z"
+     }
     },
     {
      "date": "",
@@ -440,7 +558,14 @@
      "rank": 1,
      "snippet": "World Statistics Day | National Statistical Office | Papua New Guinea National Statistical Office of Papua New Guinea\n...\n### Message from the National Statistician\n#### Alfred Mokae | National Statistician | NSO",
      "title": "World Statistics Day",
-     "url": "https://www.nso.gov.pg/2020/10/20/world-statistics-day/"
+     "url": "https://www.nso.gov.pg/2020/10/20/world-statistics-day/",
+     "verificacion": {
+      "bytes": 217111,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:03:32Z",
+      "http": 200,
+      "sha256": "8cbc1161a9b863f070904ccb49cd397db572a50726d02b2471a454d4ca272b62"
+     }
     },
     {
      "date": "2026-10-26",
@@ -448,7 +573,14 @@
      "rank": 2,
      "snippet": "National Statistical Office | Papua New Guinea – Become smarter and strategic with statistics National Statistical Office of Papua New Guinea",
      "title": "National Statistical Office | Papua New Guinea – Become ...",
-     "url": "https://www.nso.gov.pg/"
+     "url": "https://www.nso.gov.pg/",
+     "verificacion": {
+      "bytes": 306670,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:03:37Z",
+      "http": 200,
+      "sha256": "5b4a64c4a49e691c9a7add3d657af0e44b1504de86158e1092f4c1414cc8b675"
+     }
     },
     {
      "date": "",
@@ -490,7 +622,14 @@
      "rank": 1,
      "snippet": "Bank of Papua New Guinea \n...\nTel: +675 322 7200 Email: info@bankpng.gov.pg Web: www.bankpng.gov.pg  \n...\nCopies of the Economic Outlook can be obtained from the Bank’s Economics Department and is available on the Bank’s website: www.bankpng.gov.pg",
      "title": "1",
-     "url": "https://www.bankpng.gov.pg/sites/default/files/2025-09/Economic%20Outlook%20September%202025.pdf"
+     "url": "https://www.bankpng.gov.pg/sites/default/files/2025-09/Economic%20Outlook%20September%202025.pdf",
+     "verificacion": {
+      "bytes": 5860,
+      "estado": "http",
+      "fecha": "2026-11-15T15:03:38Z",
+      "http": 403,
+      "sha256": "cedd657d7ca7745cb956cf3e0ba12438f3b52de7e5bd9191210981e2da3d3de6"
+     }
     },
     {
      "date": "",
@@ -498,7 +637,14 @@
      "rank": 2,
      "snippet": "Bank of Papua New Guinea \n+675 322 7200 \ninfo@bankpng.gov.pg \nwww.bankpng.gov.pg \nToRobert Haus, Douglas Street, \nPort Moresby NCD \nPO Box 121 Port Moresby NCD",
      "title": "Monetary Policy Committee Bank of Papua New Guinea",
-     "url": "https://www.bankpng.gov.pg/sites/default/files/2026-09/Monetary%20Policy%20Statement%20-%20September%202026.pdf"
+     "url": "https://www.bankpng.gov.pg/sites/default/files/2026-09/Monetary%20Policy%20Statement%20-%20September%202026.pdf",
+     "verificacion": {
+      "bytes": 5927,
+      "estado": "http",
+      "fecha": "2026-11-15T15:03:40Z",
+      "http": 403,
+      "sha256": "d7c56d1c718242ab385ec9549a5d89e619341f731542b4f81ae07be913809844"
+     }
     },
     {
      "date": "",
@@ -532,7 +678,12 @@
      "rank": 1,
      "snippet": "• make available open data so that other services can be created; and\n...\nDevelopment of e-Government Portal\nThe e-Government Portal is a website that will offer citizens and businesses access to all public services from a single point.\nIt will also allow users easy accessi to the open data portal.",
      "title": "1",
-     "url": "https://www.ict.gov.pg/Digital%20Govt%20Plan%202023-2027/Digital%20Government%20Plan%202023-2027%20-%20Final%20Version.pdf"
+     "url": "https://www.ict.gov.pg/Digital%20Govt%20Plan%202023-2027/Digital%20Government%20Plan%202023-2027%20-%20Final%20Version.pdf",
+     "verificacion": {
+      "error": "response larger than 5000000 bytes: https://www.ict.gov.pg/Digital%20Govt%20Plan%202023-2027/Digital%20Government%20Plan%202023-2027%20-%20Final%20Version.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T15:03:43Z"
+     }
     },
     {
      "date": "2025-12-09",
@@ -540,7 +691,14 @@
      "rank": 2,
      "snippet": "In a decisive step toward evidence-based planning, the Government of Papua New Guinea (PNG) has simultaneously launched its second Voluntary National Review (VNR) and a groundbreaking national SDG data portal.\n...\n**Visit the Papua New Guinea SDG Data Portal**: https://png-sdg.github.io/site",
      "title": "Papua New Guinea's VNR and Data Portal Set ...",
-     "url": "https://www.jointsdgfund.org/article/transparency-action-papua-new-guineas-vnr-and-data-portal-set-new-regional-benchmark"
+     "url": "https://www.jointsdgfund.org/article/transparency-action-papua-new-guineas-vnr-and-data-portal-set-new-regional-benchmark",
+     "verificacion": {
+      "bytes": 80588,
+      "estado": "accesible",
+      "fecha": "2026-11-15T15:03:46Z",
+      "http": 200,
+      "sha256": "8370d39838ecd4c6d64e5bbefad81dae3879423bfb1412fe958fbdb6c2b65d4e"
+     }
     },
     {
      "date": "",

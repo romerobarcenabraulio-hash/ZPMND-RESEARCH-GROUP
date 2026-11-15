@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "# Forsiden, Lovdata\n...\n## Utforsk rettskildene\n- Lover\n- Sentrale forskrifter mv.\n...\n- Norges traktater\n...\n- Husleietvistutvalget\n...\n- Statens Personalhåndbok\n- Translated acts\n- Translated regulations\n- Translated decisions",
      "title": "Forsiden - Lovdata",
-     "url": "https://lovdata.no/"
+     "url": "https://lovdata.no/",
+     "verificacion": {
+      "error": "robots.txt disallows https://lovdata.no/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:41:48Z"
+     }
     },
     {
      "date": "2026-06-16",
@@ -22,7 +27,14 @@
      "rank": 2,
      "snippet": "Her finner du informasjon om Norges grunnlov, både om den nåværende, tidligere versjoner og historikken til Grunnloven.\n...\nGrunnloven er den høyeste rettskilden i Norge.\nDersom andre lover er i strid med den, må de vike.",
      "title": "Grunnloven",
-     "url": "https://www.stortinget.no/no/stortinget-og-demokratiet/grunnloven/norges-grunnlov/"
+     "url": "https://www.stortinget.no/no/stortinget-og-demokratiet/grunnloven/norges-grunnlov/",
+     "verificacion": {
+      "bytes": 75803,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:41:50Z",
+      "http": 200,
+      "sha256": "d44c68e7ac204c103e4ea3afab211c01099772282321ba0c71e7475fb6378768"
+     }
     },
     {
      "date": "2026-10-30",
@@ -64,7 +76,12 @@
      "rank": 1,
      "snippet": "### Forskrift om endring i forskrift om kjøre- og hviletid og fartsskriver for vegtransport i EØS\nFOR-2026-10-02-1991 Samferdselsdepartementet\nViser 1 - 20 av 5051 treff",
      "title": "Sentrale forskrifter mv",
-     "url": "https://lovdata.no/register/forskrifter"
+     "url": "https://lovdata.no/register/forskrifter",
+     "verificacion": {
+      "error": "robots.txt disallows https://lovdata.no/register/forskrifter",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:41:50Z"
+     }
     },
     {
      "date": "2006-06-15",
@@ -72,7 +89,12 @@
      "rank": 2,
      "snippet": "# Reglement\nInformasjon om regler og bestemmelser som kommer fra departementene.\nViser 1-20 av 319 treff.\n...\n05.01.2026 Reglement Forsvarsdepartementet\n...\n17.12.2025 Reglement Finansdepartementet",
      "title": "Reglement - Regjeringen.no",
-     "url": "https://www.regjeringen.no/no/dokument/lover_regler/reglement/id1761/"
+     "url": "https://www.regjeringen.no/no/dokument/lover_regler/reglement/id1761/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.regjeringen.no/no/dokument/lover_regler/reglement/id1761/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:41:50Z"
+     }
     },
     {
      "date": "",
@@ -114,7 +136,12 @@
      "rank": 1,
      "snippet": "# Norway Kingdom of Norway / Kongeriket Norge\n## Legislative\n- OFFICIAL GAZETTE: Legal Gazette, Part I (external link) and Part II (external link)\n- PARLIAMENT: Stortinget (external link) - Lagting and Odelsting",
      "title": "Guide to Law Online: Norway | Law Library of Congress",
-     "url": "https://wwws.loc.gov/law/help/guide/nations/norway.php"
+     "url": "https://wwws.loc.gov/law/help/guide/nations/norway.php",
+     "verificacion": {
+      "error": "robots.txt disallows https://wwws.loc.gov/law/help/guide/nations/norway.php",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:41:51Z"
+     }
     },
     {
      "date": "",
@@ -122,7 +149,12 @@
      "rank": 2,
      "snippet": "# Norsk Lovtidend\n...\nLovtidend inneholder offisielle kunngjøringer av grunnlovsbestemmelser, lover, forskrifter, ikrafttredelses- og delegeringsvedtak, skatte-, avgifts- og tollvedtak m.m.",
      "title": "Norsk Lovtidend",
-     "url": "https://lovdata.no/register/lovtidend"
+     "url": "https://lovdata.no/register/lovtidend",
+     "verificacion": {
+      "error": "robots.txt disallows https://lovdata.no/register/lovtidend",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:41:52Z"
+     }
     },
     {
      "date": "2026-10-30",
@@ -164,7 +196,14 @@
      "rank": 1,
      "snippet": "# Rulings\nSummaries of all the Supreme Court's rulings by a division, a grand chamber and the plenary are found in English translation, dating back to 2000.\nThe Supreme Court also provides full-text translation of selected rulings.",
      "title": "Rulings",
-     "url": "https://www.domstol.no/en/supremecourt/rulings"
+     "url": "https://www.domstol.no/en/supremecourt/rulings",
+     "verificacion": {
+      "bytes": 34524,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:41:56Z",
+      "http": 200,
+      "sha256": "0d44b50c35876b0568e66948b74b0c6564a651961bfe003b46ec4b9bfee4159a"
+     }
     },
     {
      "date": "2022-03-30",
@@ -172,7 +211,14 @@
      "rank": 2,
      "snippet": "Finn avgjørelse\n# Finn avgjørelse\nVelg år eller søk etter avgjørelse.\n...\n- Referansen i Norsk Retstidende (Rt.)\n...\nDet kan søkes i Rt.-referansen på formatet «Rt-2008-1764».",
      "title": "Finn avgjørelse - domstol",
-     "url": "https://www.domstol.no/no/hoyesterett/VERKTOY/finn-avgjorelse/"
+     "url": "https://www.domstol.no/no/hoyesterett/VERKTOY/finn-avgjorelse/",
+     "verificacion": {
+      "bytes": 23124,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:41:58Z",
+      "http": 200,
+      "sha256": "7827c438386a2015664221fc24ce7b1973257142483ffee907abc4f48349a93a"
+     }
     },
     {
      "date": "2026-01-15",
@@ -214,7 +260,12 @@
      "rank": 1,
      "snippet": "Lovdata kan dessverre ikke svare på spørsmål angående juridiske problemer.\n...\nSend en e-post til support@lovdata.no",
      "title": "Forskrift om opning for bruk av restlysforsterkande og termiske siktemiddel ved jakt på hjort, Bremanger kommune, Vestland",
-     "url": "https://lovdata.no/dokument/LTII/forskrift/2026-10-22-2133"
+     "url": "https://lovdata.no/dokument/LTII/forskrift/2026-10-22-2133",
+     "verificacion": {
+      "error": "robots.txt disallows https://lovdata.no/dokument/LTII/forskrift/2026-10-22-2133",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:41:59Z"
+     }
     },
     {
      "date": "",
@@ -222,7 +273,12 @@
      "rank": 2,
      "snippet": "# ¶ Lover\n## Om rettskilden\nStortinget vedtar, endrer og opphever Norges lover.\n...\nDersom du ønsker å se lovene slik de lød da de ble vedtatt og uten senere endringer, kan du lese dem i Norsk Lovtidend.",
      "title": "Lover - Lovdata",
-     "url": "https://lovdata.no/register/lover?letter=B&dir=desc"
+     "url": "https://lovdata.no/register/lover?letter=B&dir=desc",
+     "verificacion": {
+      "error": "robots.txt disallows https://lovdata.no/register/lover?letter=B&dir=desc",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:42:00Z"
+     }
     },
     {
      "date": "",
@@ -264,7 +320,12 @@
      "rank": 1,
      "snippet": "…\n...\nLokale forskrifter bestemmer private personer eller virksomheters rettigheter og plikter innenfor et bestemt område, for eksempel en kommune, et fylke eller en region.\nDe lokale forskriftene gis som regel av kommunestyret, fylkesmannen eller fylkestinget.",
      "title": "Lokale forskrifter",
-     "url": "https://lovdata.no/register/lokaleForskrifter"
+     "url": "https://lovdata.no/register/lokaleForskrifter",
+     "verificacion": {
+      "error": "robots.txt disallows https://lovdata.no/register/lokaleForskrifter",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:42:01Z"
+     }
     },
     {
      "date": "2025-06-12",
@@ -272,7 +333,12 @@
      "rank": 2,
      "snippet": "Her finner du snarveier til kommuneloven, offentlighetsloven, forvaltningsloven, inndelingsloven, forsøksloven og lov om interkommunale selskaper.\n...\n- Kommuneloven av 1992\n- Forskrifter til kommuneloven av 1992",
      "title": "Kommunalrett: Lover og forskrifter",
-     "url": "https://www.regjeringen.no/no/tema/kommuner-og-regioner/kommunalrett-og-kommunal-inndeling/kommunalrett/regelverk-lover-og-forskrifter/id551987/"
+     "url": "https://www.regjeringen.no/no/tema/kommuner-og-regioner/kommunalrett-og-kommunal-inndeling/kommunalrett/regelverk-lover-og-forskrifter/id551987/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.regjeringen.no/no/tema/kommuner-og-regioner/kommunalrett-og-kommunal-inndeling/kommunalrett/regelverk-lover-og-forskrifter/id551987/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:42:02Z"
+     }
     },
     {
      "date": "2026-10-30",
@@ -314,7 +380,14 @@
      "rank": 1,
      "snippet": "Forskrift om restriksjonssone for ILA i Kvitsøy og Randaberg kommuner, oppheves 29. Oktober 2026\n...\ndesember 2022, etter utbrudd av ILA på lokalitet 14136 Hestholmen Ø i Kvitsøy kommune.",
      "title": "Forskrift om restriksjonssone for ILA i Kvitsøy og Randaberg kommuner, oppheves 29. Oktober 2026",
-     "url": "https://mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/infeksios-lakseanemi-ila/forskrift-om-restriksjonssone-for-ila-i-kvitsoy-og-randaberg-kommuner-oppheves-29.oktober-2026"
+     "url": "https://mattilsynet.no/fisk-og-akvakultur/fiskesykdommer/infeksios-lakseanemi-ila/forskrift-om-restriksjonssone-for-ila-i-kvitsoy-og-randaberg-kommuner-oppheves-29.oktober-2026",
+     "verificacion": {
+      "bytes": 73033,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:42:03Z",
+      "http": 200,
+      "sha256": "cd490970338ba5535f6c3eaeb26671558040a4493332899c27296061fab7133b"
+     }
     },
     {
      "date": "2018-10-10",
@@ -322,7 +395,12 @@
      "rank": 2,
      "snippet": "Now under the responsibility of the Ministry of Finance, these Instructions establish whole-of-government procedures regarding the requirements and guidance on preparing regulatory proposals, RIA, stakeholder engagement and *ex post* evaluations.\n...\nIt also provides guidance and training on these t",
      "title": "Norway",
-     "url": "https://oecd.org/en/publications/oecd-regulatory-policy-outlook-2018_9789264303072-en/full-report/component-41.html"
+     "url": "https://oecd.org/en/publications/oecd-regulatory-policy-outlook-2018_9789264303072-en/full-report/component-41.html",
+     "verificacion": {
+      "error": "robots.txt disallows https://oecd.org/en/publications/oecd-regulatory-policy-outlook-2018_9789264303072-en/full-report/component-41.html",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:42:08Z"
+     }
     },
     {
      "date": "",
@@ -364,7 +442,14 @@
      "rank": 1,
      "snippet": "Du kan få tilgang til standarder via bedriftstilgang for flere brukere eller som enkeltkjøp\n...\n- Beskrivelsessystem bygg og anlegg – NS 3420\n...\n- Kvalitetsledelse – ISO 9000\n...\n- Miljøledelse – ISO 14000",
      "title": "Standard Norge",
-     "url": "https://standard.no/"
+     "url": "https://standard.no/",
+     "verificacion": {
+      "bytes": 79744,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:42:10Z",
+      "http": 200,
+      "sha256": "28dd0013d60cc266451a5a2550cd01cbd299b423803d497bb223e98f0523d072"
+     }
     },
     {
      "date": "",
@@ -372,7 +457,14 @@
      "rank": 2,
      "snippet": "Du kan kjøpe standarder via abonnement eller som enkeltkjøp.\n...\nVet du hvilken standard du skal ha, bruk søkefeltet og søk etter standardens prefiks og nummer (f.eks. NS 1234), evt.\nkun nummeret og filtrer søkeresultatet.",
      "title": "Finn og kjøp en standard - Standard Norge",
-     "url": "https://standard.no/standarder/"
+     "url": "https://standard.no/standarder/",
+     "verificacion": {
+      "bytes": 74162,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:42:13Z",
+      "http": 200,
+      "sha256": "1a02186510c648696ca4f0e2dcd372cc7e76134055b1fc6ca81ba7f086eecc9c"
+     }
     },
     {
      "date": "",
@@ -414,7 +506,12 @@
      "rank": 1,
      "snippet": "- Law on Control of Products and Consumer Services (Produktkontrolloven)\n- Duty to prevent fires and explosions: The Fire Prevention Regulations\n- Supervision of electrical installations and electrical equipment: The Electrical Supervision Act\n...\n…\n...\n- Regulation 1 December 2000 No 1333 on plant ",
      "title": "Norwegian Product Regulations - Regjeringen.no",
-     "url": "https://www.regjeringen.no/en/topics/business-and-industry/trade-policy/nfd---innsiktsartikler/handel-i-eos/norwegian-product-regulations/id737466/"
+     "url": "https://www.regjeringen.no/en/topics/business-and-industry/trade-policy/nfd---innsiktsartikler/handel-i-eos/norwegian-product-regulations/id737466/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.regjeringen.no/en/topics/business-and-industry/trade-policy/nfd---innsiktsartikler/handel-i-eos/norwegian-product-regulations/id737466/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:42:13Z"
+     }
     },
     {
      "date": "",
@@ -422,7 +519,12 @@
      "rank": 2,
      "snippet": "Forskrift om miljøvennlig utforming av energirelaterte produkter (økodesignforskriften) - Lovdata\n...\n|Dato|FOR-2011-02-23-190|\n|--|--|\n...\n|Gjelder for|Norge|",
      "title": "Forskrift om miljøvennlig utforming av energirelaterte ...",
-     "url": "https://lovdata.no/nav/forskrift/2011-02-23-190"
+     "url": "https://lovdata.no/nav/forskrift/2011-02-23-190",
+     "verificacion": {
+      "error": "robots.txt disallows https://lovdata.no/nav/forskrift/2011-02-23-190",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:42:14Z"
+     }
     },
     {
      "date": "2021-02-01",
@@ -464,7 +566,14 @@
      "rank": 1,
      "snippet": "Statistisk sentralbyrå\n751090a3-60e3-4a6d-8956-dff920c735af\n...\n## Forside banner, Rad A\n# Offisiell statistikk siden 1876\n...\nStatistikkbanken - alle tallene våre samlet på ett sted",
      "title": "Statistisk sentralbyrå",
-     "url": "https://www.ssb.no/"
+     "url": "https://www.ssb.no/",
+     "verificacion": {
+      "bytes": 200698,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:42:15Z",
+      "http": 200,
+      "sha256": "825dc67ed671d63a849e369d9086c8c24a3944d27b48dde6d2cd8f9a8a13d494"
+     }
     },
     {
      "date": "2026-10-28",
@@ -472,7 +581,14 @@
      "rank": 2,
      "snippet": "# Detaljhandelen ned i september\nKilde: Varehandelsindeksen, Statistisk sentralbyrå",
      "title": "Detaljhandelen ned i september",
-     "url": "https://www.ssb.no/varehandel-og-tjenesteyting/varehandel/statistikk/varehandelsindeksen/artikler/detaljhandelen-ned-i-september"
+     "url": "https://www.ssb.no/varehandel-og-tjenesteyting/varehandel/statistikk/varehandelsindeksen/artikler/detaljhandelen-ned-i-september",
+     "verificacion": {
+      "bytes": 293219,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:42:19Z",
+      "http": 200,
+      "sha256": "010e7210142398b153609df80552f8481f53fa9124683ee0933188997bf4b138"
+     }
     },
     {
      "date": "",
@@ -514,7 +630,14 @@
      "rank": 1,
      "snippet": "Statistikk\n# Norges Bank\n...\n# Statistikk\n## Norges Bank publiserer statistikk i tilknytning til en rekke av bankens fagområder. Det publiseres også statistikk i flere av publikasjonene som banken utgir.\n...\n## Norges Banks datatorg",
      "title": "Statistikk - Norges Bank",
-     "url": "https://www.norges-bank.no/tema/Statistikk/"
+     "url": "https://www.norges-bank.no/tema/Statistikk/",
+     "verificacion": {
+      "bytes": 31059,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:42:25Z",
+      "http": 200,
+      "sha256": "82e1e58f665eb3175a6c1fd4a3c69dff1b487c89703f7e531fec9474b11a8393"
+     }
     },
     {
      "date": "",
@@ -522,7 +645,14 @@
      "rank": 2,
      "snippet": "Norges Bank\n# Norges Bank\nThe central bank of Norway's aim is price stability and financial stability, and to generate added value through investment management.\n## Policy rate\n4.5%\n...\n- Current inflation rate\n...\nMonetary policy shall maintain monetary stability by keeping inflation low and stable",
      "title": "Norges Bank - The central bank of Norway",
-     "url": "https://www.norges-bank.no/en"
+     "url": "https://www.norges-bank.no/en",
+     "verificacion": {
+      "bytes": 43361,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:42:35Z",
+      "http": 200,
+      "sha256": "6981cf8aecc2044435024498791a8f282658ba7ad09aca901084cf26cdfa7bf4"
+     }
     },
     {
      "date": "",
@@ -564,7 +694,14 @@
      "rank": 1,
      "snippet": "Der Norge deler data - data.norge.no\n# Der Norge deler data",
      "title": "Der Norge deler data",
-     "url": "https://data.norge.no/nb"
+     "url": "https://data.norge.no/nb",
+     "verificacion": {
+      "bytes": 56577,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:42:36Z",
+      "http": 200,
+      "sha256": "99e3dc176f70b077bd26cb55e4b93eb32a1e42b42c92b73d62f3a7ac17bde703"
+     }
     },
     {
      "date": "",
@@ -572,7 +709,14 @@
      "rank": 2,
      "snippet": "Datasett - data.norge.no\n...\nAllmenn tilgang (8690)\n...\n- Åpne data",
      "title": "Datasett - data.norge.no",
-     "url": "https://data.norge.no/datasets?accessrights=PUBLIC"
+     "url": "https://data.norge.no/datasets?accessrights=PUBLIC",
+     "verificacion": {
+      "bytes": 3118,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:42:38Z",
+      "http": 200,
+      "sha256": "ee9dbe44dd400d61a2c3db7438281143519209f377f15c57edf142098e2da753"
+     }
     },
     {
      "date": "",

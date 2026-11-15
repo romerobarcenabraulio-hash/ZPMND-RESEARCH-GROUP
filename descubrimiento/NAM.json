@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "|Description|File|Size|\n...\n|Constitution of the Republic of Namibia Act No 1 of 1990|471.44 KB|\n...\n|Public Service Commission Act No 2 of 1990|471.44 KB|\n...\n|State Finance Act|388.81 KB|",
      "title": "Acts - NAN - Portal Ariel - National Archives of Namibia",
-     "url": "https://nan.gov.na/acts"
+     "url": "https://nan.gov.na/acts",
+     "verificacion": {
+      "error": "robots.txt disallows https://nan.gov.na/acts",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:28:22Z"
+     }
     },
     {
      "date": "",
@@ -22,7 +27,14 @@
      "rank": 2,
      "snippet": "# Welcome to the Namibia Legal Information Institute\nNamibLII publishes the law of Namibia for free access to all.\n...\nRead, use, and share the law freely.\n...\nNamibLII is the embodiment of this mandate making annotated statutes, judgments, and gazettes available in a user-friendly format.",
      "title": "NamibLII",
-     "url": "https://namiblii.org/en/"
+     "url": "https://namiblii.org/en/",
+     "verificacion": {
+      "bytes": 57539,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:28:23Z",
+      "http": 200,
+      "sha256": "9ad31920595f4c69d1d04954cca3dc0069d4667d1aa47702887c8756a32b9e81"
+     }
     },
     {
      "date": "",
@@ -64,7 +76,14 @@
      "rank": 1,
      "snippet": "Legislation\n– NamibLII\n# Legislation\n- ## Filters\n...\n479 documents found.\n479 documents\n| |Title Sort by Title ascending| |\n...\nNamibLII is the embodiment of this mandate making annotated statutes, judgments, and gazettes available in a user-friendly format.",
      "title": "Legislation – NamibLII",
-     "url": "https://namiblii.org/en/legislation/subsidiary"
+     "url": "https://namiblii.org/en/legislation/subsidiary",
+     "verificacion": {
+      "bytes": 134024,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:28:26Z",
+      "http": 200,
+      "sha256": "f194345192dc42d4c178030d9de834f2c7408239d0718dd1a442d61337a5b29f"
+     }
     },
     {
      "date": "2013-01-01",
@@ -72,7 +91,12 @@
      "rank": 2,
      "snippet": "Page Content\nHigh Court > Legislation & Directives > Regulations\nName\n...\n…\n...\nView in Web Browser\n/High Court/LegislationAndDirectives/_layouts/VisioWebAccess/VisioWebAccess.aspx?listguid={ListId}&itemid={ItemId}&DefaultItemOpen=1",
      "title": "High Court > Legislation & Directives > Regulations",
-     "url": "https://ejustice.jud.na/High%20Court/LegislationAndDirectives/Pages/Regulations.aspx"
+     "url": "https://ejustice.jud.na/High%20Court/LegislationAndDirectives/Pages/Regulations.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://ejustice.jud.na/High%20Court/LegislationAndDirectives/Pages/Regulations.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:28:29Z"
+     }
     },
     {
      "date": "",
@@ -114,7 +138,14 @@
      "rank": 1,
      "snippet": "No. 9020\nGOVERNMENT GAZETTE\nOF THE \nREPUBLIC OF NAMIBIA\nCONTENTS\nPage\nGENERAL NOTICES\nNo. 714 Communications Regulatory Authority of Namibia: Notice in terms of Regulations regarding Licensing \n...\n…",
      "title": "N$12.00",
-     "url": "https://www.cran.na/wp-content/uploads/2026/09/9020-Gen-N714-715-08-Sep-2026.pdf"
+     "url": "https://www.cran.na/wp-content/uploads/2026/09/9020-Gen-N714-715-08-Sep-2026.pdf",
+     "verificacion": {
+      "bytes": 205487,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:28:32Z",
+      "http": 200,
+      "sha256": "3497b77e31c932df174b431f50e4b2e4b9edb69ca8c6fa5e896812886faa6f27"
+     }
     },
     {
      "date": "",
@@ -122,7 +153,14 @@
      "rank": 2,
      "snippet": "WINDHOEK - 19 April 2021 \nNo. 7510\nGOVERNMENT GAZETTE\nOF THE \nREPUBLIC OF NAMIBIA\nCONTENTS\nPage\nGENERAL NOTICES\nNo. 147 \n...\n…\n2 \n...\n7510",
      "title": "[PDF] GOVERNMENT GAZETTE REPUBLIC OF NAMIBIA - CRAN",
-     "url": "https://cran.na/wp-content/uploads/2024/12/GG-7510-dated-19-April-2021.pdf"
+     "url": "https://cran.na/wp-content/uploads/2024/12/GG-7510-dated-19-April-2021.pdf",
+     "verificacion": {
+      "bytes": 200472,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:28:37Z",
+      "http": 200,
+      "sha256": "750f1f737fe7d06653f8ea0e9a0ba0e10e62458c07b07a593ac36c7a1cb6a269"
+     }
     },
     {
      "date": "",
@@ -164,7 +202,12 @@
      "rank": 1,
      "snippet": "2025 November 21 Court Roll with Case Summary\n...\n2020 June - July Term Roll with Case Summaries\n...\n/Supreme Court/CourtRolls/_layouts/VisioWebAccess/VisioWebAccess.aspx?listguid={ListId}&itemid={ItemId}&DefaultItemOpen=1",
      "title": "Supreme Court Rolls",
-     "url": "https://ejustice.jud.na/Supreme%20Court/CourtRolls/Pages/default.aspx"
+     "url": "https://ejustice.jud.na/Supreme%20Court/CourtRolls/Pages/default.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://ejustice.jud.na/Supreme%20Court/CourtRolls/Pages/default.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:28:40Z"
+     }
     },
     {
      "date": "2013-01-01",
@@ -172,7 +215,12 @@
      "rank": 2,
      "snippet": "HOME\nSupreme Court\nJudgments\nSign In\n...\nView in Web Browser\n/Supreme Court/Judgments/_layouts/VisioWebAccess/VisioWebAccess.aspx?listguid={ListId}&itemid={ItemId}&DefaultItemOpen=1\n0x0\n0x1",
      "title": "Supreme Court > Judgments",
-     "url": "https://ejustice.jud.na/Supreme%20Court/Judgments/Pages/default.aspx"
+     "url": "https://ejustice.jud.na/Supreme%20Court/Judgments/Pages/default.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://ejustice.jud.na/Supreme%20Court/Judgments/Pages/default.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:28:44Z"
+     }
     },
     {
      "date": "2025-07-04",
@@ -214,7 +262,12 @@
      "rank": 1,
      "snippet": "|Education Act 16 of 2001|119.21 KB|\n...\n|Regional Councils Act No 12 of 2002|653.22 KB|\n...\n|Social Security Act 34 of 1994|2.34 MB|\n|State Finance Act|388.81 KB|",
      "title": "Acts - NAN - Portal Ariel - National Archives of Namibia",
-     "url": "https://nan.gov.na/acts"
+     "url": "https://nan.gov.na/acts",
+     "verificacion": {
+      "error": "robots.txt disallows https://nan.gov.na/acts",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:30:02Z"
+     }
     },
     {
      "date": "",
@@ -222,7 +275,14 @@
      "rank": 2,
      "snippet": "# Legislation\n...\nNamibLII is a project of the Law Reform and Development Commission managed by the Directorate: Law Reform of the Ministry of Justice of the Republic of Namibia.\n...\nNamibLII is the embodiment of this mandate making annotated statutes, judgments, and gazettes available in a user-fri",
      "title": "Legislation – NamibLII",
-     "url": "https://namiblii.org/en/legislation/?page=5"
+     "url": "https://namiblii.org/en/legislation/?page=5",
+     "verificacion": {
+      "bytes": 239366,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:30:04Z",
+      "http": 200,
+      "sha256": "e3de402dda53a6c812eed50b41de8872a3a01dfcf75f9c57cfa7ff9c57775dab"
+     }
     },
     {
      "date": "",
@@ -264,7 +324,14 @@
      "rank": 1,
      "snippet": "Legislation\n– NamibLII\n# Legislation\n...\n| |Model Regulations for Control of Dogs in Local Authority Area, 2008|Government Notice 166 of 2008|\n| |Model Sewerage and Drainage Regulations, 1996|Government Notice 99 of 1996|",
      "title": "Legislation – NamibLII",
-     "url": "https://namiblii.org/en/legislation/?page=5"
+     "url": "https://namiblii.org/en/legislation/?page=5",
+     "verificacion": {
+      "bytes": 239366,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:30:06Z",
+      "http": 200,
+      "sha256": "5c1ceeb265768c25ab4e380b88990b91abe33718123c407162342ece50d49933"
+     }
     },
     {
      "date": "2021-11-01",
@@ -272,7 +339,12 @@
      "rank": 2,
      "snippet": "[…]\nRead More… from Local Authorities Act 23 of 1992",
      "title": "OMA: Ministry of Urban and Rural Development",
-     "url": "https://www.npc.gov.na/act_policy_omas/murd/"
+     "url": "https://www.npc.gov.na/act_policy_omas/murd/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.npc.gov.na/act_policy_omas/murd/",
+      "estado": "rechazado",
+      "fecha": "2026-11-15T14:30:14Z"
+     }
     },
     {
      "date": "",
@@ -314,7 +386,14 @@
      "rank": 1,
      "snippet": "##### Regulations\nThese are the regulations and Acts that we administer as the Bank of Namibia.\n##### Bank of Namibia Act 1 of 2020\n...\n##### Banking Institutions Act 2023 (as amended)\n##### Bylaws issued under the Banking Institutions Act (as amended)\n##### Payment System Management Act 2003",
      "title": "Regulations",
-     "url": "https://www.bon.com.na/Regulations.aspx"
+     "url": "https://www.bon.com.na/Regulations.aspx",
+     "verificacion": {
+      "bytes": 132005,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:30:19Z",
+      "http": 200,
+      "sha256": "9500ae79b5f52763671444abdb1bd073e88d09d80979d19af2b3a09b0b33b98f"
+     }
     },
     {
      "date": "",
@@ -322,7 +401,14 @@
      "rank": 2,
      "snippet": "Legislation\n...\n54 documents found.\n...\n| |Regulations for the Accreditation of Persons, Institutions or Organisations, 2006|Government Notice 124 of 2006|\n| |Regulations setting-up the National Qualifications Framework for Namibia, 2006|Government Notice 125 of 2006|",
      "title": "Legislation",
-     "url": "https://namiblii.org/en/legislation/?alphabet=n&q=&sort=title"
+     "url": "https://namiblii.org/en/legislation/?alphabet=n&q=&sort=title",
+     "verificacion": {
+      "bytes": 158161,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:30:21Z",
+      "http": 200,
+      "sha256": "d66971e4cdd4afeec53fe1f82ab57618d73bc15271e5d06ff885f3a6d094f491"
+     }
     },
     {
      "date": "2025-11-21",
@@ -364,7 +450,14 @@
      "rank": 1,
      "snippet": "NSI NAMIBIAN STANDARDS CATALOGUE 2026                                                                                                   Page 0 of 23\n...\n1. A list of Namibian Standards Institution’s (NSI) Published Standards \n...\n0001:2016 \n(1ST Ed) \n...\n01/12/2016",
      "title": "NSI NAMIBIAN STANDARDS CATALOGUE 2026 Page 0 ...",
-     "url": "https://nsi.com.na/wp-content/uploads/2026/07/Standards-Developed-Catalogue.pdf"
+     "url": "https://nsi.com.na/wp-content/uploads/2026/07/Standards-Developed-Catalogue.pdf",
+     "verificacion": {
+      "bytes": 860055,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:30:53Z",
+      "http": 200,
+      "sha256": "8069d7351f6b7feaf8446c07a82881da442d74bad42a5b3a893414a4b22ea13d"
+     }
     },
     {
      "date": "2026-06-02",
@@ -372,7 +465,14 @@
      "rank": 2,
      "snippet": "# Standards\n## Standards Catalogue\n...\n- NAMS 3091:2025 Ed.\n1 SANS 3091:2022 Ed.\n1 Chilled finfish, marine molluscs and crustaceans, and products derived therefrom",
      "title": "Benefit Of Standards",
-     "url": "https://nsi.com.na/standards/"
+     "url": "https://nsi.com.na/standards/",
+     "verificacion": {
+      "bytes": 276033,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:32:26Z",
+      "http": 200,
+      "sha256": "ca6d0859073d2f33fcfba16d264f1cd7e41b1b0323a19fddbf3e040a5261566b"
+     }
     },
     {
      "date": "",
@@ -414,7 +514,14 @@
      "rank": 1,
      "snippet": "2015\n...\n### Regulations in respect of Type Approval and Technical Standards for Telecommunications Equipment | 5659 | 22 | 30 January 2015\n...\n### Regulations setting out Minimum Technical Standards for Set-Top Box Decoders | 5357 | 475 | 6 December 2013\n...\n2012",
      "title": "Final Regulations - CRAN",
-     "url": "https://www.cran.na/final-regulations/"
+     "url": "https://www.cran.na/final-regulations/",
+     "verificacion": {
+      "bytes": 440142,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:32:31Z",
+      "http": 200,
+      "sha256": "55630573d4fc4495d38ca46c0d8cdfbfd238b8a6d0180125d774f1b2eddbd88f"
+     }
     },
     {
      "date": "2026-06-08",
@@ -422,7 +529,14 @@
      "rank": 2,
      "snippet": "egulations in respect of Telecommunications Equipment Requiring Type Approval GN 495 of 2023 GG 8180- 21 August 2023 - CRAN\n# egulations in respect of Telecommunications Equipment Requiring Type Approval GN 495 of 2023 GG 8180- 21 August 2023",
      "title": "egulations in respect of Telecommunications Equipment ...",
-     "url": "https://www.cran.na/download/egulations-in-respect-of-telecommunications-equipment-requiring-type-approval-gn-495-of-2023-gg-8180-21-august-2023/"
+     "url": "https://www.cran.na/download/egulations-in-respect-of-telecommunications-equipment-requiring-type-approval-gn-495-of-2023-gg-8180-21-august-2023/",
+     "verificacion": {
+      "bytes": 298864,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:32:36Z",
+      "http": 200,
+      "sha256": "4a981bf7837ba93102412950a8124ef74f86b798e8aeccb2eab9027f82d92803"
+     }
     },
     {
      "date": "",
@@ -464,7 +578,14 @@
      "rank": 1,
      "snippet": "Home - Namibia Statistics Agency\n...\n#### +264 61 431 3200\n#### info@nsa.org.na\n#### Address\nNamibia Statistics Agency, PO Box 2133,\nWindhoek, Mutual Platz Building, 6958 Post Street Mall",
      "title": "Namibia Statistics Agency: Home",
-     "url": "https://nsa.org.na/"
+     "url": "https://nsa.org.na/",
+     "verificacion": {
+      "bytes": 170083,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:32:39Z",
+      "http": 200,
+      "sha256": "7bfb630a93279ec9ed3c9013a44c3d136067286da22e0dab4ffe91f47106ae08"
+     }
     },
     {
      "date": "",
@@ -472,7 +593,14 @@
      "rank": 2,
      "snippet": "For more information and updates on this and other reports from the \nCensus Data, please visit our official website at www.nsa.org.na or contact our office at \n061 431 3200 or email info@nsa.org.na  \n...\nFind us at www.nsa.org.na",
      "title": "MEDIA RELEASE - nsa.org.na",
-     "url": "https://nsa.org.na/wp-content/uploads/2026/10/Media-Statement-2023-Population-and-Housing-Census-Thematic-report-and-Population-projection-30-September-2026.pdf"
+     "url": "https://nsa.org.na/wp-content/uploads/2026/10/Media-Statement-2023-Population-and-Housing-Census-Thematic-report-and-Population-projection-30-September-2026.pdf",
+     "verificacion": {
+      "bytes": 439035,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:32:43Z",
+      "http": 200,
+      "sha256": "cac8f49b1ce15f323089cce6d8fd05335e73341f87ebcf68059144b1964d4eef"
+     }
     },
     {
      "date": "",
@@ -514,7 +642,14 @@
      "rank": 1,
      "snippet": "Bank of Namibia - Home\n...\n## Welcome to the Bank of Namibia\n##### Today’s Rates\n##### Inflation Rates\n|NCPI| | |\n|--|--|--|\n...\n- Central Bank of Namibia\n- 71 Robert Mugabe Avenue, Windhoek\n- PO Box 2882 Namibia",
      "title": "Bank of Namibia - Home",
-     "url": "https://www.bon.com.na/Default.aspx"
+     "url": "https://www.bon.com.na/Default.aspx",
+     "verificacion": {
+      "bytes": 193421,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:32:49Z",
+      "http": 200,
+      "sha256": "43fad80bd5ef72cd0b80253ff1a2bd3aa0c4586001ff07dab58c91a59dd65042"
+     }
     },
     {
      "date": "",
@@ -522,7 +657,14 @@
      "rank": 2,
      "snippet": "Bank of Namibia - Statistical Information\n...\n##### Monetary and Financial Statistics\n...\n- Central Bank of Namibia\n- 71 Robert Mugabe Avenue, Windhoek\n- PO Box 2882 Namibia\nTel: +264 61 283 5111\nFax: +264 61 283 5067",
      "title": "Statistical Information - Bank of Namibia",
-     "url": "https://www.bon.com.na/economic-information/statistical-information.aspx"
+     "url": "https://www.bon.com.na/economic-information/statistical-information.aspx",
+     "verificacion": {
+      "bytes": 129836,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:32:54Z",
+      "http": 200,
+      "sha256": "a5a6b424cf10262354724c32449ab82aa69dc7e7c91f530b3d988cd5a26da0f2"
+     }
     },
     {
      "date": "",
@@ -564,7 +706,14 @@
      "rank": 1,
      "snippet": "Cirrus Data\n# Data Portal Search Results\n235 Results Found\n- Macroeconomic Data\n- Balance Of Payments\n- Balance Of Payments - Aggregates\n- Current Account\n- Goods and Services\n- Goods\n...\n- Re-Exports\n- National Accounts\n...\n- Expenditure on GDP (Real)",
      "title": "Data Portal Search Results",
-     "url": "https://cirrus.com.na/dataportal/data-portal?search=Re-Exports&from=&to="
+     "url": "https://cirrus.com.na/dataportal/data-portal?search=Re-Exports&from=&to=",
+     "verificacion": {
+      "bytes": 79793,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:33:03Z",
+      "http": 200,
+      "sha256": "1494b4df7f5bb1acf4d89b5c024c2b9127ec5365bc2f332236c391b4ce5bc924"
+     }
     },
     {
      "date": "2026-11-01",
@@ -572,7 +721,14 @@
      "rank": 2,
      "snippet": "…\n# Status report i\n## Data\n### Open data\nPublication, where it happens, is manual and unstandardised.",
      "title": "Namibia: status report — Data Landscapers",
-     "url": "https://corpus.data-landscapers.io/reports/NAM/NAM-status.html"
+     "url": "https://corpus.data-landscapers.io/reports/NAM/NAM-status.html",
+     "verificacion": {
+      "bytes": 148686,
+      "estado": "accesible",
+      "fecha": "2026-11-15T14:33:04Z",
+      "http": 200,
+      "sha256": "ef5f3aa05b9a43d048120cc4b739bdb9de42eb6db45f2e6322eb28f8dad06f9e"
+     }
     },
     {
      "date": "",
