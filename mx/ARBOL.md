@@ -2,8 +2,8 @@
 
 País → ámbito → estado → municipio → poder → dependencia → tipo. Conteos de los registros; "(sin dato en la fuente)" marca un nivel que la fuente no publica (nunca se infiere).
 
-- país: MX — 968075
-  - ámbito: federal — 931404
+- país: MX — 968087
+  - ámbito: federal — 931416
     - poder: CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO — 334314
       - dependencia: AVISOS — 334225
         - tipo: CONVOCATORIA DE ADQUISICIONES — 334225
@@ -27,7 +27,7 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: OTRO — 2
       - dependencia: NULLS — 4
         - tipo: AVISO — 4
-    - poder: PODER EJECUTIVO — 165882
+    - poder: PODER EJECUTIVO — 165887
       - dependencia: SECRETARIA DE LA REFORMA AGRARIA — 23480
         - tipo: AVISO — 11677
         - tipo: DECRETO — 4402
@@ -44,8 +44,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: MANUAL — 13
         - tipo: ESTATUTO — 2
         - tipo: PROGRAMA — 2
-      - dependencia: SECRETARIA DE HACIENDA Y CREDITO PUBLICO — 21912
-        - tipo: ACUERDO — 6257
+      - dependencia: SECRETARIA DE HACIENDA Y CREDITO PUBLICO — 21915
+        - tipo: ACUERDO — 6260
         - tipo: OTRO — 5155
         - tipo: OFICIO — 2676
         - tipo: RESOLUCION — 2544
@@ -561,8 +561,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: CODIGO — 1
         - tipo: OFICIO — 1
         - tipo: RESPUESTA A COMENTARIOS — 1
-      - dependencia: PRESIDENCIA DE LA REPUBLICA — 646
-        - tipo: DECRETO — 491
+      - dependencia: PRESIDENCIA DE LA REPUBLICA — 648
+        - tipo: DECRETO — 493
         - tipo: PROGRAMA — 52
         - tipo: ACUERDO — 49
         - tipo: OTRO — 30
@@ -843,12 +843,12 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: REGLAMENTO — 1
       - dependencia: TRIBUNAL SUPERIOR AGRARIO — 1
         - tipo: SENTENCIA — 1
-    - poder: (sin dato en la fuente) — 85902
+    - poder: (sin dato en la fuente) — 85909
       - dependencia: Tribunales Colegiados de Circuito — 33971
         - tipo: TESIS AISLADA — 30995
         - tipo: JURISPRUDENCIA — 2976
-      - dependencia: Banco de México — 33551
-        - tipo: INDICADOR ECONOMICO — 33551
+      - dependencia: Banco de México — 33555
+        - tipo: INDICADOR ECONOMICO — 33555
       - dependencia: Primera Sala — 6980
         - tipo: TESIS AISLADA — 4130
         - tipo: JURISPRUDENCIA — 2850
@@ -866,8 +866,8 @@ País → ámbito → estado → municipio → poder → dependencia → tipo. C
         - tipo: TESIS AISLADA — 92
       - dependencia: Instituto Nacional de Estadística y Geografía (INEGI) — 694
         - tipo: INDICADOR ECONOMICO — 694
-      - dependencia: (sin dato en la fuente) — 468
-        - tipo: LEY — 301
+      - dependencia: (sin dato en la fuente) — 471
+        - tipo: LEY — 304
         - tipo: REGLAMENTO — 153
         - tipo: CODIGO — 9
         - tipo: CONSTITUCION — 1

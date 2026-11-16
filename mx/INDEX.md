@@ -1,18 +1,18 @@
 # Catálogo MX
 
-Total de registros: **968075**. Conteos calculados de los registros; nada resumido ni interpretado.
+Total de registros: **968087**. Conteos calculados de los registros; nada resumido ni interpretado.
 
 ## Por fuente
 
 | categoría | registros |
 |---|---:|
-| mx.dof | 845502 |
+| mx.dof | 845507 |
 | mx.hf-tesis-scjn | 51189 |
-| mx.banxico-sie | 33551 |
+| mx.banxico-sie | 33555 |
 | mx.ojn-estatal | 29984 |
 | mx.ojn-municipal | 6687 |
 | mx.inegi-bie | 694 |
-| mx.leyes-federales | 318 |
+| mx.leyes-federales | 321 |
 | mx.reglamentos-federales | 150 |
 
 ## Por tipo de documento (tabla fija sobre el título oficial)
@@ -22,13 +22,13 @@ Total de registros: **968075**. Conteos calculados de los registros; nada resumi
 | mx.dof | CONVOCATORIA DE ADQUISICIONES | 334314 |
 | mx.dof | AVISO | 264804 |
 | mx.dof | OTRO | 50528 |
-| mx.dof | ACUERDO | 42222 |
+| mx.dof | ACUERDO | 42225 |
 | mx.hf-tesis-scjn | TESIS AISLADA | 37947 |
-| mx.banxico-sie | INDICADOR ECONOMICO | 33551 |
+| mx.banxico-sie | INDICADOR ECONOMICO | 33555 |
 | mx.dof | CONVENIO | 24536 |
 | mx.dof | INDICADOR ECONOMICO | 24343 |
 | mx.dof | CONVOCATORIA DE PLAZAS | 19846 |
-| mx.dof | DECRETO | 16384 |
+| mx.dof | DECRETO | 16386 |
 | mx.hf-tesis-scjn | JURISPRUDENCIA | 13242 |
 | mx.dof | RESOLUCION | 11806 |
 | mx.dof | CIRCULAR | 11490 |
@@ -68,7 +68,7 @@ Total de registros: **968075**. Conteos calculados de los registros; nada resumi
 | mx.ojn-municipal | DECRETO | 352 |
 | mx.ojn-estatal | CODIGO | 341 |
 | mx.ojn-estatal | DISPOSICIONES DIVERSAS | 317 |
-| mx.leyes-federales | LEY | 301 |
+| mx.leyes-federales | LEY | 304 |
 | mx.dof | ESTATUTO | 277 |
 | mx.dof | INDICE | 267 |
 | mx.ojn-estatal | FE DE ERRATAS | 263 |
@@ -189,7 +189,7 @@ Total de registros: **968075**. Conteos calculados de los registros; nada resumi
 |---|---:|
 | mx.ojn-estatal | VIGENTE | 29908 |
 | mx.ojn-municipal | VIGENTE | 6684 |
-| mx.leyes-federales | VIGENTE | 315 |
+| mx.leyes-federales | VIGENTE | 318 |
 | mx.reglamentos-federales | VIGENTE | 138 |
 | mx.ojn-estatal | ABROGADO | 71 |
 | mx.reglamentos-federales | ABROGADO | 12 |
@@ -201,16 +201,16 @@ Total de registros: **968075**. Conteos calculados de los registros; nada resumi
 
 | categoría | registros |
 |---|---:|
-| mx.dof | pending | 506307 |
+| mx.dof | pending | 505020 |
 | mx.dof | metadata_only | 260579 |
-| mx.dof | stored | 78412 |
+| mx.dof | stored | 79701 |
 | mx.hf-tesis-scjn | stored | 51189 |
-| mx.banxico-sie | stored | 33551 |
+| mx.banxico-sie | stored | 33555 |
 | mx.ojn-estatal | stored | 29858 |
 | mx.ojn-municipal | stored | 6649 |
 | mx.inegi-bie | stored | 694 |
-| mx.leyes-federales | stored | 318 |
-| mx.dof | failed | 204 |
+| mx.leyes-federales | stored | 321 |
+| mx.dof | failed | 207 |
 | mx.reglamentos-federales | stored | 150 |
 | mx.ojn-estatal | failed | 105 |
 | mx.ojn-municipal | failed | 38 |
@@ -225,7 +225,7 @@ Total de registros: **968075**. Conteos calculados de los registros; nada resumi
 | mx.dof | 2013 | 34472 |
 | mx.dof | 2011 | 34234 |
 | mx.dof | 2015 | 33983 |
-| mx.banxico-sie | ???? | 33551 |
+| mx.banxico-sie | ???? | 33555 |
 | mx.dof | 2016 | 32633 |
 | mx.dof | 2017 | 31104 |
 | mx.dof | 2008 | 30731 |
@@ -248,7 +248,7 @@ Total de registros: **968075**. Conteos calculados de los registros; nada resumi
 | mx.dof | 2003 | 23735 |
 | mx.dof | 2021 | 23406 |
 | mx.dof | 2024 | 23403 |
-| mx.dof | 2026 | 19967 |
+| mx.dof | 2026 | 19972 |
 | mx.dof | 2020 | 19889 |
 | mx.dof | 1996 | 13754 |
 | mx.dof | 1998 | 12921 |
@@ -370,6 +370,7 @@ Total de registros: **968075**. Conteos calculados de los registros; nada resumi
 | mx.leyes-federales | 2003 | 6 |
 | mx.leyes-federales | 2013 | 6 |
 | mx.leyes-federales | 2020 | 6 |
+| mx.leyes-federales | 2026 | 6 |
 | mx.ojn-estatal | 1918 | 6 |
 | mx.ojn-estatal | 1941 | 6 |
 | mx.ojn-estatal | 1944 | 6 |
@@ -418,7 +419,6 @@ Total de registros: **968075**. Conteos calculados de los registros; nada resumi
 | mx.leyes-federales | 1982 | 3 |
 | mx.leyes-federales | 1985 | 3 |
 | mx.leyes-federales | 2024 | 3 |
-| mx.leyes-federales | 2026 | 3 |
 | mx.ojn-estatal | 1919 | 3 |
 | mx.ojn-estatal | 1930 | 3 |
 | mx.ojn-estatal | 1939 | 3 |
@@ -510,11 +510,11 @@ Total de registros: **968075**. Conteos calculados de los registros; nada resumi
 | CONVOCATORIAS PARA CONCURSOS DE ADQUISICIONES, ARRENDAMIENTOS, OBRAS Y SERVICIOS DEL SECTOR PUBLICO | AVISOS | 334225 |
 | AVISOS JUDICIALES Y GENERALES | AVISOS | 237425 |
 | - | Tribunales Colegiados de Circuito | 33971 |
-| - | Banco de México | 33551 |
+| - | Banco de México | 33555 |
 | ORGANISMOS AUTONOMOS | BANCO DE MEXICO | 26722 |
 | PODER EJECUTIVO | SECRETARIA DE LA REFORMA AGRARIA | 23480 |
 | AVISOS JUDICIALES Y GENERALES | AVISOS JUDICIALES Y GENERALES | 23084 |
-| PODER EJECUTIVO | SECRETARIA DE HACIENDA Y CREDITO PUBLICO | 21912 |
+| PODER EJECUTIVO | SECRETARIA DE HACIENDA Y CREDITO PUBLICO | 21915 |
 | CONVOCATORIAS PARA CONCURSOS DE PLAZAS VACANTES DEL SERVICIO PROFESIONAL DE CARRERA EN LA ADMINISTRACION PUBLICA FEDERAL | AVISOS | 19842 |
 | PODER EJECUTIVO | - | 17593 |
 | PODER EJECUTIVO | SECRETARIA DE GOBERNACION | 16831 |
@@ -524,7 +524,7 @@ Total de registros: **968075**. Conteos calculados de los registros; nada resumi
 | PODER LEGISLATIVO | - | 9388 |
 | PODER EJECUTIVO | SECRETARIA DE DESARROLLO AGRARIO, TERRITORIAL Y URBANO | 8852 |
 | PODER EJECUTIVO | SECRETARIA DE RELACIONES EXTERIORES | 7196 |
-| - | - | 7155 |
+| - | - | 7158 |
 | - | Primera Sala | 6980 |
 | PODER EJECUTIVO | SECRETARIA DE COMUNICACIONES Y TRANSPORTES | 6292 |
 | - | Segunda Sala | 5586 |
@@ -564,7 +564,7 @@ Total de registros: **968075**. Conteos calculados de los registros; nada resumi
 | - | Instituto Nacional de Estadística y Geografía (INEGI) | 694 |
 | ORGANISMOS AUTONOMOS | INSTITUTO FEDERAL DE TELECOMUNICACIONES | 691 |
 | ORGANISMOS DESCONCENTRADOS O DESCENTRALIZADOS | INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO | 684 |
-| PODER EJECUTIVO | PRESIDENCIA DE LA REPUBLICA | 646 |
+| PODER EJECUTIVO | PRESIDENCIA DE LA REPUBLICA | 648 |
 | PODER JUDICIAL | TRIBUNAL ELECTORAL DEL PODER JUDICIAL DE LA FEDERACION | 643 |
 | PODER EJECUTIVO | SECRETARIA DE SEGURIDAD PUBLICA | 640 |
 | PODER EJECUTIVO | SECRETARIA DE ENERGIA, MINAS E INDUSTRIA PARAESTATAL | 546 |
