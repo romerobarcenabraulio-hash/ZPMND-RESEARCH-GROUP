@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "# Benvenuti in GOV.SM\n...\nQuesta sezione attua gli obblighi di pubblicazione (Reg. n.16/2015) per la Pubblica Amministrazione\n...\nCircolari e Ordinanze\nCircolari e Ordinanze emesse da Organi ed Uffici Pubblici",
      "title": "Benvenuti in GOV.SM",
-     "url": "https://www.gov.sm/"
+     "url": "https://www.gov.sm/",
+     "verificacion": {
+      "bytes": 25080,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:26Z",
+      "http": 200,
+      "sha256": "6aa57051f2aef6a38cfa23e496e0739c787ec5f7856e139fe63f477f89bd48a0"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "…\n## (80 texts)\n### Framework Laws (1 text)\n|Version|Dates|Title|Subject Matter|\n|--|--|--|--|\n|2002|Adopted : July 8, 1974|Declaration on the Citizens’ Rights and Fundamental Principles of San Marino Constitutional Order.",
      "title": "WIPO Lex, Member Profile, San Marino",
-     "url": "https://www.wipo.int/wipolex/en/treaties/members/profile/SM"
+     "url": "https://www.wipo.int/wipolex/en/treaties/members/profile/SM",
+     "verificacion": {
+      "bytes": 192731,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:29Z",
+      "http": 200,
+      "sha256": "cd016056c365acd877634f14a42487fd821b27f05a63e1f3f9aed9da21c138e6"
+     }
     },
     {
      "date": "",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "# Benvenuti in GOV.SM\n...\nQuesta sezione attua gli obblighi di pubblicazione (Reg. n.16/2015) per la Pubblica Amministrazione\n...\nCircolari e Ordinanze\nCircolari e Ordinanze emesse da Organi ed Uffici Pubblici",
      "title": "Benvenuti in GOV.SM",
-     "url": "https://www.gov.sm/"
+     "url": "https://www.gov.sm/",
+     "verificacion": {
+      "bytes": 25080,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:37Z",
+      "http": 200,
+      "sha256": "6aa57051f2aef6a38cfa23e496e0739c787ec5f7856e139fe63f477f89bd48a0"
+     }
     },
     {
      "date": "",
@@ -72,7 +93,14 @@
      "rank": 2,
      "snippet": "Atti di carattere normativo ed amministrativo generale\n1. Home - Portale della Repubblica di San Marino>\n2. Amministrazione Trasparente>\n3. Atti di carattere normativo ed amministrativo generale\n# Atti di carattere normativo ed amministrativo generale",
      "title": "Atti di carattere normativo ed amministrativo generale",
-     "url": "https://www.gov.sm/pub1/GovSM/Amministrazione-Trasparente/Atti-di-carattere-normativo-ed-amministrativo-generale.html"
+     "url": "https://www.gov.sm/pub1/GovSM/Amministrazione-Trasparente/Atti-di-carattere-normativo-ed-amministrativo-generale.html",
+     "verificacion": {
+      "bytes": 16867,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:43Z",
+      "http": 200,
+      "sha256": "ea478f06d6204bc23716420a54d14e51d671ac9ccf715452285ae2c51e54bf9d"
+     }
     },
     {
      "date": "",
@@ -114,7 +142,12 @@
      "rank": 1,
      "snippet": "## Benvenuti\nBenvenuti nel portale del Bollettino Ufficiale della Repubblica di San Marino, istituito con la Legge Qualificata n. 2/2010.",
      "title": "Home - Bollettino Ufficiale - Repubblica di San Marino",
-     "url": "https://www.bollettinoufficiale.sm/"
+     "url": "https://www.bollettinoufficiale.sm/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.bollettinoufficiale.sm/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:39:44Z"
+     }
     },
     {
      "date": "",
@@ -122,7 +155,14 @@
      "rank": 2,
      "snippet": "# Digital Resources\n# San Marino: legislation: official gazette\nDescription:\n1 title containing the official gazette for San Marino from 1966 onwards.\nIt is an official publication and the text is in Italian.\nNew material is still added.\n...\nSan Marino",
      "title": "Digital Resources",
-     "url": "https://resources.ials.sas.ac.uk/flag/san-marino-legislation-offiogs80-43"
+     "url": "https://resources.ials.sas.ac.uk/flag/san-marino-legislation-offiogs80-43",
+     "verificacion": {
+      "bytes": 13642,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:45Z",
+      "http": 200,
+      "sha256": "152f32046d56252b5ae628ce852ff9f321fe8921bed3ca3546611cddc0603e83"
+     }
     },
     {
      "date": "",
@@ -164,7 +204,14 @@
      "rank": 1,
      "snippet": "The Portal, which collects indexed and magnified San Marino jurisprudence, represents an indispensable modern work tool for legal practitioners, scholars and researchers and anyone who has an interest in consulting it.\n...\nallows you to consult all the contents of: maxims, digital library and provis",
      "title": "San Marino Law Portal | San Marino Legal Institute",
-     "url": "https://www.unirsm.sm/en/istituto-giuridico-sammarinese/portale-giurisprudenza-sammarinese/"
+     "url": "https://www.unirsm.sm/en/istituto-giuridico-sammarinese/portale-giurisprudenza-sammarinese/",
+     "verificacion": {
+      "bytes": 67385,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:48Z",
+      "http": 200,
+      "sha256": "cd4379975b41cec8154aefee45dcf30be9cd51910bf9c261da01c7592629e4e2"
+     }
     },
     {
      "date": "2022-02-20",
@@ -172,7 +219,12 @@
      "rank": 2,
      "snippet": "# Guide to Law Online: San Marino\n...\n# Introduction\nThis Guide to Law Online research guide focuses on the country of San Marino.\nIn compiling this research guide, emphasis has been placed on sites offering the full texts of laws, regulations, and court decisions, along with commentary from lawyers",
      "title": "Introduction - Guide to Law Online: San Marino",
-     "url": "https://guides.loc.gov/law-san-marino"
+     "url": "https://guides.loc.gov/law-san-marino",
+     "verificacion": {
+      "error": "robots.txt disallows https://guides.loc.gov/law-san-marino",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:39:48Z"
+     }
     },
     {
      "date": "2019-12-19",
@@ -214,7 +266,14 @@
      "rank": 1,
      "snippet": "Home\n...\nQuesta sezione attua gli obblighi di pubblicazione (Reg. n.16/2015) per la Pubblica Amministrazione\nPortale dei Servizi PA per i cittadini e le attività economiche, prenotazione certificati online, altri servizi e informazioni utili\n…",
      "title": "Benvenuti in GOV.SM",
-     "url": "https://www.gov.sm/"
+     "url": "https://www.gov.sm/",
+     "verificacion": {
+      "bytes": 25080,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:50Z",
+      "http": 200,
+      "sha256": "6aa57051f2aef6a38cfa23e496e0739c787ec5f7856e139fe63f477f89bd48a0"
+     }
     },
     {
      "date": "",
@@ -222,7 +281,14 @@
      "rank": 2,
      "snippet": "Home\n...\nQuesta sezione attua gli obblighi di pubblicazione (Reg. n.16/2015) per la Pubblica Amministrazione\nPortale dei Servizi PA per i cittadini e le attività economiche, prenotazione certificati online, altri servizi e informazioni utili",
      "title": "Benvenuti in GOV.SM - Repubblica di San Marino, portale ufficiale",
-     "url": "https://www.gov.sm/pub1/GovSM/"
+     "url": "https://www.gov.sm/pub1/GovSM/",
+     "verificacion": {
+      "bytes": 25081,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:54Z",
+      "http": 200,
+      "sha256": "999a7c02f5f4f17d58ccf6080ad519c7378eca01e5db1a1a86b7545f369ebf09"
+     }
     },
     {
      "date": "",
@@ -264,7 +330,12 @@
      "rank": 1,
      "snippet": "## Planning Division\n...\n- Tree Preservation Ordinance -\n**Ordinance No. 20-1369**\n- Accessory Dwelling Units (ADU) Provisions -\n**Ordinance No. 24-1411**\n...\n**Ordinance No. 21-1386**",
      "title": "Planning Division",
-     "url": "https://sanmarinoca.gov/government/departments/community_development/planning.php"
+     "url": "https://sanmarinoca.gov/government/departments/community_development/planning.php",
+     "verificacion": {
+      "error": "robots.txt disallows https://sanmarinoca.gov/government/departments/community_development/planning.php",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:39:54Z"
+     }
     },
     {
      "date": "",
@@ -272,7 +343,12 @@
      "rank": 2,
      "snippet": "## Welcome to San MarinoA Message from the Mayor\nI extend a warm welcome to you on behalf of the City Council to our beloved city, San Marino.\nYour visit to our website is greatly appreciated, and we're delighted to provide this gateway to information about the city's services, events, regulations, ",
      "title": "Home Page",
-     "url": "https://sanmarinoca.gov/"
+     "url": "https://sanmarinoca.gov/",
+     "verificacion": {
+      "error": "robots.txt disallows https://sanmarinoca.gov/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:39:55Z"
+     }
     },
     {
      "date": "",
@@ -314,7 +390,14 @@
      "rank": 1,
      "snippet": "Regulations - BCSM\n...\n**Regulation No. 2026-02** — Update regulation on procedures for feeding and maintaining the debtors' registry Text in effect from 02/27/2026\n...\nText in effect from 01/29/2026\n…\n...\nRepublic of San Marino",
      "title": "Regulations - BCSM",
-     "url": "https://www.bcsm.sm/en/laws-and-regulations/cbsm-provisions/regulations"
+     "url": "https://www.bcsm.sm/en/laws-and-regulations/cbsm-provisions/regulations",
+     "verificacion": {
+      "bytes": 200600,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:56Z",
+      "http": 200,
+      "sha256": "4d378c73f62f8bd8e33ac834876f0d9100463d7c42155c92fd5a263b0336aad7"
+     }
     },
     {
      "date": "",
@@ -322,7 +405,14 @@
      "rank": 2,
      "snippet": "Questa sezione attua gli obblighi di pubblicazione (Reg. n.16/2015) per la Pubblica Amministrazione\n...\n…\nCircolari e Ordinanze\nCircolari e Ordinanze emesse da Organi ed Uffici Pubblici\nProtezione Civile",
      "title": "Benvenuti in GOV.SM",
-     "url": "https://www.gov.sm/"
+     "url": "https://www.gov.sm/",
+     "verificacion": {
+      "bytes": 25080,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:59Z",
+      "http": 200,
+      "sha256": "6aa57051f2aef6a38cfa23e496e0739c787ec5f7856e139fe63f477f89bd48a0"
+     }
     },
     {
      "date": "",
@@ -364,7 +454,14 @@
      "rank": 1,
      "snippet": "UNI 10845: Impianti a gas per uso domestico – sistemi per l’evacuazione dei prodotti della combustione asserviti ad apparecchi alimentati a gas – Criteri di verifica, risanamento, ristrutturazione ed intubamento.",
      "title": "repubblica di san marino",
-     "url": "https://www.gov.sm/pub2/GovSM/dam/jcr:75524c3d-bf24-4856-9219-07a0abb18633/DecretoDelegato_114-2008.pdf"
+     "url": "https://www.gov.sm/pub2/GovSM/dam/jcr:75524c3d-bf24-4856-9219-07a0abb18633/DecretoDelegato_114-2008.pdf",
+     "verificacion": {
+      "bytes": 4915060,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:40:04Z",
+      "http": 200,
+      "sha256": "9168c1290d0be0235e28f58fc91296108ce8ebca8555ef8ae71c204d42ab66e4"
+     }
     },
     {
      "date": "",
@@ -372,7 +469,14 @@
      "rank": 2,
      "snippet": "NORME PER LA VENTILAZIONE \n...\n- UNI EN ISO 7345 Isolamento termico – Grandezze fisiche e definizioni \n...\n- UNI EN 303-5 Caldaie per riscaldamento - Caldaie per combustibili solidi, con alimentazione",
      "title": "Bozza di Legge “Modifica Composizione Commissioni Lavoro, Cooperazione, Prezzi, P",
-     "url": "https://www.gov.sm/pub1/upav/dam/jcr:2c7a7808-5bdc-4deb-a044-203e0bdf3ea3/Legge%203%20aprile%202014%20n.%2048.pdf"
+     "url": "https://www.gov.sm/pub1/upav/dam/jcr:2c7a7808-5bdc-4deb-a044-203e0bdf3ea3/Legge%203%20aprile%202014%20n.%2048.pdf",
+     "verificacion": {
+      "bytes": 1040613,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:40:09Z",
+      "http": 200,
+      "sha256": "2eb2fe231795b55847cfd61ebe66bc3ccff0812bf6610c09bc1cafeb613229b8"
+     }
     },
     {
      "date": "",
@@ -414,7 +518,14 @@
      "rank": 1,
      "snippet": "REV 00\n...\n|### Minimum Requirements for Authorised Surveyors|##### SMPL – 2021-TEC-004 REV 02 Date: 09 November 2022|\n...\n|### Electronic Certification|##### SMPL – 2022-TEC-011 Date: 09 November 2022|",
      "title": "San Marino Policy Letters",
-     "url": "https://www.smsr.sm/san-marino-policy-letters/"
+     "url": "https://www.smsr.sm/san-marino-policy-letters/",
+     "verificacion": {
+      "bytes": 287498,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:40:14Z",
+      "http": 200,
+      "sha256": "546073359078d58c80a53c2deda2a11e1098180fdd5629d58f7138d76e365974"
+     }
     },
     {
      "date": "",
@@ -422,7 +533,14 @@
      "rank": 2,
      "snippet": "32021 R 0340: regolamento delegato (UE) 2021/340 della Commissione\n...\n32011 R 0363: regolamento (UE) n. 363/2011 della Commissione del 13 aprile 2011",
      "title": "EU/AD/SM/SMP/Allegato II/it",
-     "url": "https://www.gov.sm/pub1/EsteriSM/dam/jcr:fcfcbef4-1317-4ad6-98bc-9c3fdef3a05e/Allegato%20II%20IT.pdf"
+     "url": "https://www.gov.sm/pub1/EsteriSM/dam/jcr:fcfcbef4-1317-4ad6-98bc-9c3fdef3a05e/Allegato%20II%20IT.pdf",
+     "verificacion": {
+      "bytes": 1736898,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:40:18Z",
+      "http": 200,
+      "sha256": "4ae31725d6afdd3a350b80ada1a0b788dad61380c2caed69254344302082ddc9"
+     }
     },
     {
      "date": "",
@@ -464,7 +582,14 @@
      "rank": 1,
      "snippet": "## Ufficio Nazionale di Statistica\n#### Repubblica di San Marino\n...\nUfficio Nazionale di Statistica\nVia XXVIII Luglio, 192 - 47893 Borgo Maggiore\n(+378) 0549 885301 (Segreteria)\nstatistica@pa.sm",
      "title": "Ufficio Nazionale di Statistica",
-     "url": "https://statistica.sm/"
+     "url": "https://statistica.sm/",
+     "verificacion": {
+      "bytes": 49425,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:40:21Z",
+      "http": 200,
+      "sha256": "33f10a3a080f4b2d48ee768e79228faf147b3b9aca56e261ef3a1283efcdf640"
+     }
     },
     {
      "date": "",
@@ -472,7 +597,14 @@
      "rank": 2,
      "snippet": "# Ufficio Nazionale di Statistica\n**Sede:** Centro Uffici, via 28 Luglio, 192 - 3° Piano - 47893 Borgo Maggiore\n**Telefono:** 0549 885301\n**E-mail:** statistica@pa.sm",
      "title": "Ufficio Nazionale di Statistica - GOV.SM",
-     "url": "https://www.gov.sm/pub2/GovSM/Dipartimenti/Dipartimento-Funzione-Pubblica/Ufficio-Nazionale-di-Statistica.html"
+     "url": "https://www.gov.sm/pub2/GovSM/Dipartimenti/Dipartimento-Funzione-Pubblica/Ufficio-Nazionale-di-Statistica.html",
+     "verificacion": {
+      "bytes": 21336,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:40:23Z",
+      "http": 200,
+      "sha256": "f0886c3aa171736af7b2c3fd7eb007da7aaa1dfc1b5ba602aaa66fd6e4462588"
+     }
     },
     {
      "date": "",
@@ -514,7 +646,14 @@
      "rank": 1,
      "snippet": "I dati definitivi, in ogni caso, sono pubblicati nella ''Relazione consuntiva sull’attivita' svolta e sull’andamento del sistema finanziario''.\n...\nBanca Centrale della Repubblica di San Marino\nVia del Voltone, 120 - 47890 - San Marino",
      "title": "Sistema finanziario e dati statistici - BCSM",
-     "url": "https://www.bcsm.sm/pubblicazioni-e-statistiche/sistema-finanziario-e-dati-statistici"
+     "url": "https://www.bcsm.sm/pubblicazioni-e-statistiche/sistema-finanziario-e-dati-statistici",
+     "verificacion": {
+      "bytes": 259753,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:40:24Z",
+      "http": 200,
+      "sha256": "8cfae3cb87fd9c132a9870b8b9a49f27a4c8ba4df131979e8b4d37a4c77bed99"
+     }
     },
     {
      "date": "",
@@ -522,7 +661,14 @@
      "rank": 2,
      "snippet": "This section presents key performance data, including market structure, the dynamics of intermediated volumes, credit quality, capital, and profitability.\n...\n### Quarterly statistical data\nThis section provides information on the performance of the main asset and liability aggregates of the banking",
      "title": "Financial system and statistical data - BCSM",
-     "url": "https://www.bcsm.sm/en/publications-and-statistics/financial-system-and-banking-statistics"
+     "url": "https://www.bcsm.sm/en/publications-and-statistics/financial-system-and-banking-statistics",
+     "verificacion": {
+      "bytes": 260938,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:40:27Z",
+      "http": 200,
+      "sha256": "a213a39fb4f912f45b10b2630c1a571e2777680b64e9cc66300360b0458ee8a4"
+     }
     },
     {
      "date": "",
@@ -564,7 +710,14 @@
      "rank": 1,
      "snippet": "Home\n...\nQuesta sezione attua gli obblighi di pubblicazione (Reg. n.16/2015) per la Pubblica Amministrazione\nPortale dei Servizi PA per i cittadini e le attività economiche, prenotazione certificati online, altri servizi e informazioni utili",
      "title": "Home",
-     "url": "https://gov.sm/"
+     "url": "https://gov.sm/",
+     "verificacion": {
+      "bytes": 25080,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:40:30Z",
+      "http": 200,
+      "sha256": "6aa57051f2aef6a38cfa23e496e0739c787ec5f7856e139fe63f477f89bd48a0"
+     }
     },
     {
      "date": "",
@@ -572,7 +725,14 @@
      "rank": 2,
      "snippet": "Amministrazione Trasparente\n1. Home - Portale della Repubblica di San Marino>\n2. Amministrazione Trasparente\n…\n...\n12) indagini di monitoraggio pubblico e di consultazione pubblica.\nLa pubblicazione è effettuata in formato di tipo aperto.",
      "title": "Amministrazione Trasparente - GOV.SM",
-     "url": "https://www.gov.sm/pub1/GovSM/Amministrazione-Trasparente.html"
+     "url": "https://www.gov.sm/pub1/GovSM/Amministrazione-Trasparente.html",
+     "verificacion": {
+      "bytes": 22072,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:40:35Z",
+      "http": 200,
+      "sha256": "934af6786940f3b2b491164708220daa53f44744ff1f2c850394aee66c2f591f"
+     }
     },
     {
      "date": "",

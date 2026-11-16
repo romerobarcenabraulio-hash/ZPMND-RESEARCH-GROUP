@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "Constitution (extrait) – DGE\n...\nLoi n° 2001- 03 du 22 janvier 2001 portant Constitution de la République du Sénégal, (Journal officiel n° 5963 du 22 janvier 2001 p. 27 & ss.), modifiée (Extrait)",
      "title": "Constitution (extrait)",
-     "url": "https://dge.sn/constitution-extrait/"
+     "url": "https://dge.sn/constitution-extrait/",
+     "verificacion": {
+      "bytes": 92063,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:33:12Z",
+      "http": 200,
+      "sha256": "7d0f078cb872bfb9f926f81b317fee25275bdca282c1844a89a1266572e97cd0"
+     }
     },
     {
      "date": "2024-11-15",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "##### Constitution du Sénégal\nLa constitution de la République du Sénégal en téléchargement.\n##### Codes\nLes derniers codes en ligne\n##### Lois et Décrets\nLes derniers lois et décrets en ligne.\n...\nLes derniers Conventions Minières en ligne\n...\n##### Arrêtés\nArrêtés",
      "title": "Lois et Règlements - Gouvernement du Sénégal",
-     "url": "https://primature.sn/publications/lois-et-reglements"
+     "url": "https://primature.sn/publications/lois-et-reglements",
+     "verificacion": {
+      "bytes": 53974,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:33:16Z",
+      "http": 200,
+      "sha256": "a192bfddeee5d570c5e8c35c02330181a52401e9174acd01b30e6cb62052fbc0"
+     }
     },
     {
      "date": "2020-06-06",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "Lois et Décrets | Gouvernement du Sénégal\n1. Accueil\n2. Publications\n3. Lois Et Règlements\n4. Lois et Décrets\n# Lois et Décrets\nLes derniers lois et décrets en ligne.",
      "title": "Lois et Décrets",
-     "url": "https://primature.sn/publications/lois-et-reglements/lois-et-decrets"
+     "url": "https://primature.sn/publications/lois-et-reglements/lois-et-decrets",
+     "verificacion": {
+      "bytes": 53477,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:33:20Z",
+      "http": 200,
+      "sha256": "9cf610ae50f7b0805ba4f90465d907b7e649693f015917b813ba14b6d3735cbd"
+     }
     },
     {
      "date": "2026-06-11",
@@ -72,7 +93,14 @@
      "rank": 2,
      "snippet": "# Décrets du Sénégal\nDécrets présidentiels et actes réglementaires du gouvernement sénégalais.\n...\nDécret n° 2025-1837 du 18 novembre 2025 fixant les règles d'organisation et de fonctionnement de la Commission nationale d'Accès à l'Information (CONAI)",
      "title": "Décrets du Sénégal : actes réglementaires officiels | Legi.sn ...",
-     "url": "https://legi.sn/legislation/decrees"
+     "url": "https://legi.sn/legislation/decrees",
+     "verificacion": {
+      "bytes": 5529,
+      "estado": "http",
+      "fecha": "2026-11-16T16:33:21Z",
+      "http": 403,
+      "sha256": "19fae2574e63e33a587eb93f5d189ae1623b582f3b0f8fcfd0d5522c3faacdf8"
+     }
     },
     {
      "date": "",
@@ -114,7 +142,14 @@
      "rank": 1,
      "snippet": "…\n### Journal Officiel N° 7921 du 25 juillet 2026 - République du Sénégal\n...\nPortail de recherche de documents publics officiels de la République du Sénégal.\nAccédez aux documents du budget, journaux officiels, conseils des ministres et rapports d'audit.",
      "title": "Journal officiel du Sénégal | Archives.sn | Archives ...",
-     "url": "https://www.archives.sn/docs/journal-officiel"
+     "url": "https://www.archives.sn/docs/journal-officiel",
+     "verificacion": {
+      "bytes": 57028,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:33:23Z",
+      "http": 200,
+      "sha256": "c9a176462da7b74ef3864ceac449b357abbb83c57effd7d756e46a28d8351a17"
+     }
     },
     {
      "date": "2026-10-09",
@@ -122,7 +157,12 @@
      "rank": 2,
      "snippet": "Regulatory actions, once adopted, are published in the *Journal Officiel de la R* *é* *publique du S* *éné* *gal* . Although Senegalese law requires proposed legislation to be published in advance in the government’s official gazette, the government does not consistently update its website.",
      "title": "2026 Investment Climate Statements: Senegal - State Department",
-     "url": "https://www.state.gov/reports/2026-investment-climate-statements/senegal"
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/senegal",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/senegal",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:33:24Z"
+     }
     },
     {
      "date": "2026-09-29",
@@ -164,7 +204,14 @@
      "rank": 1,
      "snippet": "contact@coursupreme.sn\n...\n## Mahamadou Mansour MBAYE Premier président de la Cour suprême\nEn effet, l'information du public sur la justice est une véritable liberté publique.\nElle s'inscrit dans le cadre des garanties fondamentales accordées à tout justiciable.",
      "title": "Cour Supreme",
-     "url": "https://www.coursupreme.gouv.sn/"
+     "url": "https://www.coursupreme.gouv.sn/",
+     "verificacion": {
+      "bytes": 13118,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:33:27Z",
+      "http": 200,
+      "sha256": "5431d23d664f4926b5a03bcc105c40d592d56e177fc41073ad6e58d255bb9962"
+     }
     },
     {
      "date": "2026-09-29",
@@ -172,7 +219,14 @@
      "rank": 2,
      "snippet": "Jurisprudences – DGE\n...\nDécision 2/C/2024 sur la demande d’avis du Président de la République du 5 juillet 2024\nDécision 60/E/2024 sur la demande d’avis du Président de la République du 5 mars 2024",
      "title": "Jurisprudences – DGE",
-     "url": "https://dge.sn/jurisprudences/"
+     "url": "https://dge.sn/jurisprudences/",
+     "verificacion": {
+      "bytes": 95436,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:33:28Z",
+      "http": 200,
+      "sha256": "ea6b894c1e21d81da2a91daed2f98d01c4f9965b44ddc9d4cca524855c580837"
+     }
     },
     {
      "date": "",
@@ -214,7 +268,14 @@
      "rank": 1,
      "snippet": "Lois et Décrets | Gouvernement du Sénégal\n1. Accueil\n2. Publications\n3. Lois Et Règlements\n4. Lois et Décrets\n# Lois et Décrets\nLes derniers lois et décrets en ligne.",
      "title": "Lois et Décrets",
-     "url": "https://primature.sn/publications/lois-et-reglements/lois-et-decrets"
+     "url": "https://primature.sn/publications/lois-et-reglements/lois-et-decrets",
+     "verificacion": {
+      "bytes": 53477,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:33:31Z",
+      "http": 200,
+      "sha256": "bee32b38ef3d5d502f7343a9621cbfa362f183433a4f57a2cc13a4ed7a90fe37"
+     }
     },
     {
      "date": "",
@@ -222,7 +283,14 @@
      "rank": 2,
      "snippet": "Codes | Gouvernement du Sénégal\n1. Accueil\n2. Publications\n3. Lois Et Règlements\n4. Codes\n# Codes\nLes derniers codes en ligne\n#### CODE ELECTORAL\n...\n#### CODE GÉNÉRAL DES COLLECTIVITÉS LOCALES",
      "title": "Codes | Gouvernement du Sénégal",
-     "url": "https://www.primature.sn/publications/lois-et-reglements/codes"
+     "url": "https://www.primature.sn/publications/lois-et-reglements/codes",
+     "verificacion": {
+      "bytes": 51527,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:33:37Z",
+      "http": 200,
+      "sha256": "88ba96631c8d7292ecb7316094a4ad3e89ddd2a56069a18063f0a2a2ccb693f3"
+     }
     },
     {
      "date": "2004-02-01",
@@ -264,7 +332,14 @@
      "rank": 1,
      "snippet": "# CODE GÉNÉRAL DES COLLECTIVITÉS LOCALES\n**Loi n° 2013-10 du 28 décembre 2013 portant Code général des Collectivités locales**\n...\n- Titre II : du Département ;\n- Titre III : de la Commune ;",
      "title": "CODE GÉNÉRAL DES COLLECTIVITÉS LOCALES",
-     "url": "https://primature.sn/publications/lois-et-reglements/code-general-des-collectivites-locales"
+     "url": "https://primature.sn/publications/lois-et-reglements/code-general-des-collectivites-locales",
+     "verificacion": {
+      "bytes": 70734,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:33:41Z",
+      "http": 200,
+      "sha256": "f20ea6b0842f30c64e6088181708e7b1457a27344441a568af047905da4bd7ac"
+     }
     },
     {
      "date": "",
@@ -272,7 +347,14 @@
      "rank": 2,
      "snippet": "Ce dispositif se présente sous la forme d’un \"Code des collectivités locales\" partie législative qui sera complétée par ses textes réglementaires d’application afin que soit rassemblé en un document unique à l’usage des élus l’ensemble des règles qui organisent la démocratie locale.",
      "title": "CODE DES COLLECTIVITÉS LOCALES",
-     "url": "https://primature.sn/publications/lois-et-reglements/code-des-collectivites-locales"
+     "url": "https://primature.sn/publications/lois-et-reglements/code-des-collectivites-locales",
+     "verificacion": {
+      "bytes": 70918,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:33:45Z",
+      "http": 200,
+      "sha256": "ad6c781b96f697fa6d01ace0dbb314debcfc02e0d11185dd20937cf76da6856c"
+     }
     },
     {
      "date": "2014-04-03",
@@ -314,7 +396,12 @@
      "rank": 1,
      "snippet": "Authority to make and enforce rules rests with the relevant government ministry unless there is a separate regulatory authority.\n...\nThe Public Procurement Regulatory Authority (ARMP) is the Senegalese agency responsible for overseeing and regulating public procurement processes to ensure transparen",
      "title": "2026 Investment Climate Statements: Senegal - State Department",
-     "url": "https://www.state.gov/reports/2026-investment-climate-statements/senegal"
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/senegal",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/senegal",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:33:46Z"
+     }
     },
     {
      "date": "",
@@ -322,7 +409,14 @@
      "rank": 2,
      "snippet": "Lois et règlements techniques | ASN\n...\n2026\n...\n- ## Arrêté n° 009450 du 24 avril 2020 rendant obligatoire la certification de conformité des masques barrières à la marque nationale de conformité « NS-Qualité Sénégal ».\nDomaine:\nSanté - NS",
      "title": "Lois et règlements techniques",
-     "url": "https://www.asn.sn/fr/lois-reglements"
+     "url": "https://www.asn.sn/fr/lois-reglements",
+     "verificacion": {
+      "bytes": 242430,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:33:57Z",
+      "http": 200,
+      "sha256": "8ec78c955c23d56a8608ba3f9eae8f63fd16c7b6f9b935ffb04518ccebbfe865"
+     }
     },
     {
      "date": "2026-10-26",
@@ -364,7 +458,14 @@
      "rank": 1,
      "snippet": "Catalogue des normes Sénégalaises 2026 | ASN\nLiberté 6 extension (221) 33 829 58 25/asn@asn.sn\n1. Accueil\n2. Catalogue des normes Sénégalaises 2026\n...\nTéléphone: +221 33 829 58 25",
      "title": "Catalogue des normes Sénégalaises 2026 - Dakar",
-     "url": "https://www.asn.sn/fr/content/catalogue-des-normes-s%C3%A9n%C3%A9galaises-2026"
+     "url": "https://www.asn.sn/fr/content/catalogue-des-normes-s%C3%A9n%C3%A9galaises-2026",
+     "verificacion": {
+      "bytes": 45119,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:34:18Z",
+      "http": 200,
+      "sha256": "f0d7df76beb31e201f9d05f196343371b224a2ea7300593f657b122794f38715"
+     }
     },
     {
      "date": "",
@@ -372,7 +473,12 @@
      "rank": 2,
      "snippet": "**\n...\n…\n...\nSpécifications.- 1996.-12p\n...\n…\n...\nMéthode Pensky – Martens en vase clos.-2005.- 16p\n...\nDétermination des caractéristiques antidétonantes.\nMéthode « recherche ».-2005.- 63p",
      "title": "Original : français",
-     "url": "https://senegalcommerce.sec.gouv.sn/Documents/ASN/Proc%C3%A9dures/Catalogue%20des%20normes%20S%C3%A9n%C3%A9galaises.DOC"
+     "url": "https://senegalcommerce.sec.gouv.sn/Documents/ASN/Proc%C3%A9dures/Catalogue%20des%20normes%20S%C3%A9n%C3%A9galaises.DOC",
+     "verificacion": {
+      "error": "robots.txt disallows https://senegalcommerce.sec.gouv.sn/Documents/ASN/Proc%C3%A9dures/Catalogue%20des%20normes%20S%C3%A9n%C3%A9galaises.DOC",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:34:21Z"
+     }
     },
     {
      "date": "",
@@ -414,7 +520,14 @@
      "rank": 1,
      "snippet": "- ## Arrêté n° 009450 du 24 avril 2020 rendant obligatoire la certification de conformité des masques barrières à la marque nationale de conformité « NS-Qualité Sénégal ».\n...\nDomaine:\nElectrotechnique - NS\n...\nLoi N°2021-31",
      "title": "Lois et règlements techniques",
-     "url": "https://www.asn.sn/fr/lois-reglements"
+     "url": "https://www.asn.sn/fr/lois-reglements",
+     "verificacion": {
+      "bytes": 242430,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:34:39Z",
+      "http": 200,
+      "sha256": "e73948e463ffc25c0dbe958b1da99a6ad6e2e2873e75a02cb7d5545596af1119"
+     }
     },
     {
      "date": "",
@@ -422,7 +535,14 @@
      "rank": 2,
      "snippet": "Catalogue des normes Sénégalaises 2026 | ASN\nLiberté 6 extension (221) 33 829 58 25/asn@asn.sn\n1. Accueil\n2. Catalogue des normes Sénégalaises 2026",
      "title": "Catalogue des normes Sénégalaises 2026 - Dakar",
-     "url": "https://www.asn.sn/fr/content/catalogue-des-normes-s%C3%A9n%C3%A9galaises-2026"
+     "url": "https://www.asn.sn/fr/content/catalogue-des-normes-s%C3%A9n%C3%A9galaises-2026",
+     "verificacion": {
+      "bytes": 45119,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:35:00Z",
+      "http": 200,
+      "sha256": "a33357e2929e4c0df47be174cbe8f345f5e2e45d6af1c2eaf9f9afec91ca4316"
+     }
     },
     {
      "date": "",
@@ -464,7 +584,12 @@
      "rank": 1,
      "snippet": "# STATISTIQUES PAR THÈMES\n- Vous cherchez des données sur la Croissance économique et le PIB, la Production industrielle, les Prix\nà la consommation, le Commerce extérieur, aux statistiques d’entreprises, etc.",
      "title": "Agence Nationale de la Statistique et de la Démographie ...",
-     "url": "https://www.ansd.sn/"
+     "url": "https://www.ansd.sn/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ansd.sn/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:35:03Z"
+     }
     },
     {
      "date": "2023-07-01",
@@ -472,7 +597,12 @@
      "rank": 2,
      "snippet": "décrire les mécanismes de participation des acteurs du SSN dans le cadre du dispositif organisationnel existant.",
      "title": "Système Statistique National du Sénégal",
-     "url": "https://www.statsenegal.sn/"
+     "url": "https://www.statsenegal.sn/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.statsenegal.sn/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:35:06Z"
+     }
     },
     {
      "date": "",
@@ -514,7 +644,14 @@
      "rank": 1,
      "snippet": "# La Base des Données Economiques et Financières\n...\nCette base de données comporte environ 15.300 séries, couvrant plusieurs domaines, dont le secteur réel, le secteur monétaire et financier, les finances publiques, le secteur extérieur et le secteur social.",
      "title": "La Base des Données Economiques et Financières",
-     "url": "https://www.bceao.int/fr/content/la-base-des-donnees-economiques-et-financieres"
+     "url": "https://www.bceao.int/fr/content/la-base-des-donnees-economiques-et-financieres",
+     "verificacion": {
+      "bytes": 121590,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:35:08Z",
+      "http": 200,
+      "sha256": "59fa22a217ee7a8ded7dbcedfa4867c7b04e12349d35fa68420960e45419f8ec"
+     }
     },
     {
      "date": "2025-12-23",
@@ -522,7 +659,12 @@
      "rank": 2,
      "snippet": "## Dernière information\nL’année 2024 a été marquée par une relance de l’activité économique au Sénégal avec un taux de croissance estimé à 6,9%1 en 2024 contre 4,3% en 2023 et 3,9% en 2022.",
      "title": "Banque de Données Economiques et Financières (BDEF)",
-     "url": "https://www.ansd.sn/Indicateur/banque-de-donnees-economiques-et-financieres-bdef"
+     "url": "https://www.ansd.sn/Indicateur/banque-de-donnees-economiques-et-financieres-bdef",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ansd.sn/Indicateur/banque-de-donnees-economiques-et-financieres-bdef",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:35:10Z"
+     }
     },
     {
      "date": "",
@@ -564,7 +706,12 @@
      "rank": 1,
      "snippet": "##### Plateforme Open Data\n...\n##### Plateforme de données sur l'agriculture\nLe constat alarmant de l'insuffisance de données agricoles au Sénégal a conduit à la création de la plateforme analytique Agridata par l'**IPAR, l'ANSD et la DAPSA**.",
      "title": "Toutes les bases de donnees | Agence Nationale de ... - ANSD",
-     "url": "https://www.ansd.sn/bases-de-donnees"
+     "url": "https://www.ansd.sn/bases-de-donnees",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.ansd.sn/bases-de-donnees",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:35:14Z"
+     }
     },
     {
      "date": "2026-06-19",
@@ -572,7 +719,14 @@
      "rank": 2,
      "snippet": "- Senegal Open Data Portal – National platform publishing government datasets across sectors; supports structured data searches and API access.\n...\n- **Portail National des Données Ouvertes** – Central open data platform hosting government datasets on economy, demographics and public services.",
      "title": "OSINT-for-countries/OSINT_in_Senegal - GitHub",
-     "url": "https://github.com/OSINT-for-countries/OSINT_in_Senegal"
+     "url": "https://github.com/OSINT-for-countries/OSINT_in_Senegal",
+     "verificacion": {
+      "bytes": 224935,
+      "estado": "http",
+      "fecha": "2026-11-16T16:35:15Z",
+      "http": 404,
+      "sha256": "162ca3b590e336638069f385d0ef5b1d451be9b64effd0927e614c26b99384e7"
+     }
     },
     {
      "date": "",

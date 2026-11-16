@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "## Welkom op de officiële website van de overheid van Suriname\n...\n## Nieuws\n### GBB reikt 900 grondbeschikkingen uit: rechtszekerheid en rechtvaardigheid voor burgers centraal",
      "title": "GOV.SR",
-     "url": "https://gov.sr/"
+     "url": "https://gov.sr/",
+     "verificacion": {
+      "bytes": 474944,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:46:17Z",
+      "http": 200,
+      "sha256": "8cd580824eecc422454aa3306f01530299ceb55371fea273fc634dda59b44311"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "GRONDWET VAN DE REPUBLIEK SURINAME (S.B. 1987 no.116), gelijk zij luidt na de daarin aangebrachte wijziging bij S.B. 1992 no.38.\n...\nDe Nationale Assemblée is het hoogste orgaan van de Staat.",
      "title": "RESOLUTIE van 18 december 1987 no",
-     "url": "https://gov.sr/wp-content/uploads/2023/09/grondwet_suriname-1.pdf"
+     "url": "https://gov.sr/wp-content/uploads/2023/09/grondwet_suriname-1.pdf",
+     "verificacion": {
+      "bytes": 294278,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:48:18Z",
+      "http": 200,
+      "sha256": "fcae8247bfae51f082185c4d6a73fcf09c5d8f4fb57f8acdf8f7bbcf408737e9"
+     }
     },
     {
      "date": "2018-07-06",
@@ -64,7 +78,14 @@
      "rank": 1,
      "snippet": "## Welkom op de officiële website van de overheid van Suriname\n...\n## BESCHIKKING Minister van Justitie en Veiligheid 16 oktober 2026, wijziging Beschikking Vaststelling Reglement KPA\n- October 29, 2026\n- October 28, 2026",
      "title": "Home",
-     "url": "https://www.gov.sr/"
+     "url": "https://www.gov.sr/",
+     "verificacion": {
+      "bytes": 474888,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:50:22Z",
+      "http": 200,
+      "sha256": "f41cfb3b4f2720ee1bfd9b3ac3a6e14d31795ed798bd733df6fe3fdf77b3e3f0"
+     }
     },
     {
      "date": "",
@@ -72,7 +93,14 @@
      "rank": 2,
      "snippet": "## In behandeling\n...\nRep. Sur.\n...\nVSA inzake bestrijding illegale drugshandel'\n...\n- Wet wijz Reglement Industriele Eigendom Suriname 1912\n...\n- Ontwerpwet wijziging van de Wet Brandweer Suriname 1993 (2026)\n...\nArbeidsadviescollege",
      "title": "De Nationale Assemblee",
-     "url": "https://www.dna.sr/"
+     "url": "https://www.dna.sr/",
+     "verificacion": {
+      "bytes": 73531,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:50:23Z",
+      "http": 200,
+      "sha256": "cc3d587919a78d156b253804be7bfc7868d3b9fac5939800bd0ba0df456dccb8"
+     }
     },
     {
      "date": "",
@@ -114,7 +142,12 @@
      "rank": 1,
      "snippet": "# Periodical Legal Gazette of the Republic of Suriname; 2018, No. 97\n...\n### Title\n- Legal Gazette of the Republic of Suriname; 2018, No. 97\n### Other Title\n...\n### Created / Published\n- Suriname, November 5, 2018",
      "title": "Legal Gazette of the Republic of Suriname; 2018, No. 97",
-     "url": "https://www.loc.gov/resource/llflg.77640966_20181105_02/?st=gallery"
+     "url": "https://www.loc.gov/resource/llflg.77640966_20181105_02/?st=gallery",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.loc.gov/resource/llflg.77640966_20181105_02/?st=gallery",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:50:23Z"
+     }
     },
     {
      "date": "2020-10-23",
@@ -122,7 +155,12 @@
      "rank": 2,
      "snippet": "# Legal Guides\n- Staatsblad van de Republiek Suriname by Suriname\nCall Number: KHS16 .A24\nPublished/Created: 1975-\n- Advertentieblad van de Republiek Suriname by Suriname\nCall Number: Microfilm (o) 2002/10010 LL",
      "title": "Research Guides: Guide to Law Online: Suriname: Legal Guides",
-     "url": "https://guides.loc.gov/law-suriname/legal-guides"
+     "url": "https://guides.loc.gov/law-suriname/legal-guides",
+     "verificacion": {
+      "error": "robots.txt disallows https://guides.loc.gov/law-suriname/legal-guides",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:50:24Z"
+     }
     },
     {
      "date": "2016-08-12",
@@ -164,7 +202,14 @@
      "rank": 1,
      "snippet": "SRU-HvJ-2021-109 - Hof van Justitie\n- Uitsprakendatabank\n- Uitgebreid zoeken\n- Uitspraak\n### SRU-HvJ-2021-109\n- **Instantie** Hof van Justitie",
      "title": "SRU-HvJ-2021-109 - Hof van Justitie",
-     "url": "https://rechtspraak.sr/sru-hvj-2021-109/"
+     "url": "https://rechtspraak.sr/sru-hvj-2021-109/",
+     "verificacion": {
+      "bytes": 77746,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:50:25Z",
+      "http": 200,
+      "sha256": "98ee7c5da889f08d0250c7b5ecbd62192a361f0e9acb561225b8bb2142991b32"
+     }
     },
     {
      "date": "2026-09-11",
@@ -172,7 +217,14 @@
      "rank": 2,
      "snippet": "**HET HOF VAN JUSTITIE VAN SURINAME**\n...\n## SRU-HvJ-2025-16",
      "title": "SRU-HvJ-2024-11",
-     "url": "https://rechtspraak.sr/category/uncategorized/page/3/"
+     "url": "https://rechtspraak.sr/category/uncategorized/page/3/",
+     "verificacion": {
+      "bytes": 146834,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:50:28Z",
+      "http": 200,
+      "sha256": "b988d3c176ea6fd365a2d37c33bcb77f98334e088075377ad8ad547998120b8e"
+     }
     },
     {
      "date": "2021-03-04",
@@ -214,7 +266,14 @@
      "rank": 1,
      "snippet": "Surinaamse wetten\n...\nHome\nWetgeving\nOverzicht goedgekeurde en gepubliceerde wetten 2010 - 2025\n…",
      "title": "Overzicht goedgekeurde en gepubliceerde wetten 2010 - 2025",
-     "url": "https://www.dna.sr/wetgeving/overzicht-goedgekeurde-en-gepubliceerde-wetten-2010-2025/"
+     "url": "https://www.dna.sr/wetgeving/overzicht-goedgekeurde-en-gepubliceerde-wetten-2010-2025/",
+     "verificacion": {
+      "bytes": 33880,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:50:29Z",
+      "http": 200,
+      "sha256": "08a9b27b90b202b2cab6336ad09f3df0dbae6402bd175d5f132c9e6d51a094da"
+     }
     },
     {
      "date": "",
@@ -222,7 +281,14 @@
      "rank": 2,
      "snippet": "De Nationale Assemblee\n...\n- Ontwerpwet houdende goedkeuring \"Protocol tussen Rep. Suriname en de Franse Rep. regeling grens\n...\n- Ontwerpwet Toezicht Virtuele Activa Dienstverleners\n- Wet wijz Reglement Industriele Eigendom Suriname 1912",
      "title": "De Nationale Assemblee",
-     "url": "https://www.dna.sr/"
+     "url": "https://www.dna.sr/",
+     "verificacion": {
+      "bytes": 73531,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:50:32Z",
+      "http": 200,
+      "sha256": "745342d00a280aa2646eb18dbab27d1ea1c3511229269679fb837b2cf3007e98"
+     }
     },
     {
      "date": "2025-11-03",
@@ -264,7 +330,14 @@
      "rank": 1,
      "snippet": "wetten.sr\n...\n###### Alle wetten, verdragen en andere regelingen van Suriname op een centrale plek\n...\nOp deze website tref je straks nagenoeg alle wet- en regelgeving aan die van toepassing is in Suriname.\nMet onze zoekfunctie vind je snel de informatie waar je naar op zoek bent.",
      "title": "wetten.sr",
-     "url": "https://wetten.sr/"
+     "url": "https://wetten.sr/",
+     "verificacion": {
+      "bytes": 66623,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:50:35Z",
+      "http": 200,
+      "sha256": "e8bb591bb5c87770977c91c7ad3f5c9d5114be0561aedcf58aebbf97bdd43edb"
+     }
     },
     {
      "date": "2025-11-03",
@@ -272,7 +345,14 @@
      "rank": 2,
      "snippet": "## Welkom op de officiële website van de overheid van Suriname\n...\n## One Stop Window Openbare Werken\n## Categorie: Openbare Werken\nHandleidingen, Formulieren en Status m.b.t. vergunning aanvragen",
      "title": "Home",
-     "url": "https://www.gov.sr/"
+     "url": "https://www.gov.sr/",
+     "verificacion": {
+      "bytes": 474889,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:52:27Z",
+      "http": 200,
+      "sha256": "88aee41cf5a26fe77e34c0262af80f0911c135eb4f05dc294c70a13afac9a3fc"
+     }
     },
     {
      "date": "2022-08-20",
@@ -314,7 +394,12 @@
      "rank": 1,
      "snippet": "Rule-making and regulatory authority exist within relevant ministries at the national level and dedicated regulatory authorities such as the Telecommunications Authority Suriname (TAS), Maritime Authority Suriname (MAS), and the Energy Authority Suriname (EAS).\n...\nThe regulatory enforcement mechani",
      "title": "2026 Investment Climate Statements: Suriname - State Department",
-     "url": "https://www.state.gov/reports/2026-investment-climate-statements/suriname"
+     "url": "https://www.state.gov/reports/2026-investment-climate-statements/suriname",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2026-investment-climate-statements/suriname",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:52:27Z"
+     }
     },
     {
      "date": "2025-01-04",
@@ -322,7 +407,12 @@
      "rank": 2,
      "snippet": "## EXECUTIVE SUMMARY\nSuriname uses national and international standards.\n...\nDraft regulations may be reviewed by involved stakeholders and they may be given the opportunity to comment.\nSince October 2019, individuals have also had the option to comment on draft legislation via email at feedbackwetg",
      "title": "2020 Investment Climate Statements: Suriname - State Department",
-     "url": "https://www.state.gov/reports/2020-investment-climate-statements/suriname"
+     "url": "https://www.state.gov/reports/2020-investment-climate-statements/suriname",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2020-investment-climate-statements/suriname",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:52:29Z"
+     }
     },
     {
      "date": "2025-11-03",
@@ -364,7 +454,14 @@
      "rank": 1,
      "snippet": "SSB 001:2012 \n...\nAgriculture \n2012\n...\nSURINAME STANDARDS BUREAU \nStandards Catalogue \nPage | 26  \n*Note: Any national customer wishing to acquire an IEC adopted standard can purchase the identical IEC International Standard from the IEC",
      "title": "[PDF] SURINAME STANDARDS BUREAU Standards Catalogue",
-     "url": "https://www.ssb.sr/media/1225/ssb-standards-catalogue-updated-june-2021.pdf"
+     "url": "https://www.ssb.sr/media/1225/ssb-standards-catalogue-updated-june-2021.pdf",
+     "verificacion": {
+      "bytes": 576014,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:52:31Z",
+      "http": 200,
+      "sha256": "c891cb5ba51af32f37570a4791b494e5aa27d8ce87639aa888ce718887e54afc"
+     }
     },
     {
      "date": "2026-10-29",
@@ -372,7 +469,14 @@
      "rank": 2,
      "snippet": "# Standards Catalogue\n...\nOur organization offers a comprehensive range of standards, meticulously crafted to enhance efficiency, safety, and reliability across various sectors.\n...\nEach standard, available in a convenient soft copy format, is meticulously researched and updated to reflect the lates",
      "title": "Standards Catalogue",
-     "url": "https://www.ssb.sr/standards-catalogue/"
+     "url": "https://www.ssb.sr/standards-catalogue/",
+     "verificacion": {
+      "bytes": 24606,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:52:33Z",
+      "http": 200,
+      "sha256": "5f25693c74bc587299c0075f9724b049f1f9949933aef3f25e9df4aaf50db32d"
+     }
     },
     {
      "date": "",
@@ -414,7 +518,14 @@
      "rank": 1,
      "snippet": "- Beschikking houdende vaststelling van de Standaard “Toeristengidsen in Suriname” (SSB 011:2019) tot een technisch voorschrift ten behoeve van alle Tourgidsen in Suriname (S.B. 2026 no. 3).",
      "title": "Administratief Recht",
-     "url": "https://www.sris.sr/administratief-recht/"
+     "url": "https://www.sris.sr/administratief-recht/",
+     "verificacion": {
+      "bytes": 2282505,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:52:35Z",
+      "http": 200,
+      "sha256": "4ea26ce9ec820a5102c5637ddf06bebbca65ae9e2a63d265b50e16481ec105f5"
+     }
     },
     {
      "date": "2026-09-30",
@@ -422,7 +533,14 @@
      "rank": 2,
      "snippet": "Voor de invoer van planten en plantaardige producten is een keuring door het Surinaamse ministerie van Landbouw, Veeteelt en Visserij (LVV) verplicht.\nOok moet een certificaat zijn bijgevoegd dat is afgegeven door een bevoegde instantie in het land van herkomst.",
      "title": "Exportregels en producteisen Suriname | RVO.nl",
-     "url": "https://www.rvo.nl/onderwerpen/landen-en-gebieden/suriname/exportregels-en-producteisen"
+     "url": "https://www.rvo.nl/onderwerpen/landen-en-gebieden/suriname/exportregels-en-producteisen",
+     "verificacion": {
+      "bytes": 126067,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:52:39Z",
+      "http": 200,
+      "sha256": "4e5b741d3a6d281b7666a772810ed9d5038a914201c02d2efaccfd6b7fd01854"
+     }
     },
     {
      "date": "",
@@ -464,7 +582,14 @@
      "rank": 1,
      "snippet": "Home nl - Algemeen Bureau voor de Statistiek in Suriname\nWelkom op de officiële website van\nhet Algemeen Bureau voor de Statistiek Bekijk Statistieken\nWilt u meer weten over census 9 in suriname?\nKlik hier.",
      "title": "Algemeen Bureau voor de Statistiek in Suriname: Home nl",
-     "url": "https://statistics-suriname.org/"
+     "url": "https://statistics-suriname.org/",
+     "verificacion": {
+      "bytes": 332912,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:53:09Z",
+      "http": 200,
+      "sha256": "39f1a7d3ff95fe3bd63a495f30405af26c71ecb33ab9be966717d0c44d7c3625"
+     }
     },
     {
      "date": "2026-06-10",
@@ -472,7 +597,14 @@
      "rank": 2,
      "snippet": "Archief - Algemeen Bureau voor de Statistiek in Suriname\n# Archief\n- Home **\n...\n#### Over ons\n© 2003 - 2024 Algemeen Bureau voor de Statistiek in Suriname.\nGeneral Bureau of Statistics.",
      "title": "Archief",
-     "url": "https://statistics-suriname.org/archief/page/3/"
+     "url": "https://statistics-suriname.org/archief/page/3/",
+     "verificacion": {
+      "bytes": 161730,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:54:09Z",
+      "http": 200,
+      "sha256": "b61790fbf9682c53b05256cba8d196d74ec3c8242976531feab028dcac63ba33"
+     }
     },
     {
      "date": "",
@@ -514,7 +646,12 @@
      "rank": 1,
      "snippet": "Home - Centrale Bank van Suriname\n- - NASP 2022 - 2025\nSNEPS/Betalingssysteem\n...\n|--|--|--|--|--|\n|AWG|20,903|21,313|20,797|21,209|",
      "title": "CBVS - Home - Centrale Bank van Suriname",
-     "url": "https://www.cbvs.sr/"
+     "url": "https://www.cbvs.sr/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.cbvs.sr/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:54:09Z"
+     }
     },
     {
      "date": "",
@@ -522,7 +659,14 @@
      "rank": 2,
      "snippet": "#### Quick Links\nNone.\n...\nData are disseminated in the Annual report of the CBvS.\n- **Electronic - On-line bulletin or data**\nThe CBvS disseminates comprehensive data on the operations of the depository corporations on its website on a monthly basis (http://www.cbvs.sr/).",
      "title": "Dissemination Standards Bulletin Board (DSBB)",
-     "url": "https://dsbb.imf.org/e-gdds/dqaf-base/country/SUR/category/AAB00"
+     "url": "https://dsbb.imf.org/e-gdds/dqaf-base/country/SUR/category/AAB00",
+     "verificacion": {
+      "bytes": 44059,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:54:11Z",
+      "http": 200,
+      "sha256": "af27f94f94a5680a1c938fce1d23f3c6085492e5c1bb620214b85450d1f171f5"
+     }
     },
     {
      "date": "",
@@ -564,7 +708,14 @@
      "rank": 1,
      "snippet": "## Welkom op de officiële website van de overheid van Suriname\nSuriname is het enige Nederlandstalige land op het Zuid-Amerikaanse continent en staat bekend om zijn culturele diversiteit en prachtig tropisch regenwoud, dat vaak wordt aangeduid als het hart van de Amazone.",
      "title": "Home",
-     "url": "https://www.gov.sr/"
+     "url": "https://www.gov.sr/",
+     "verificacion": {
+      "bytes": 475209,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:55:14Z",
+      "http": 200,
+      "sha256": "a0eeb7e80842e62e4eb3f08c96f1b43f0e1e4fe41dcde7a837a300b32e2d34c2"
+     }
     },
     {
      "date": "2021-01-06",
@@ -572,7 +723,14 @@
      "rank": 2,
      "snippet": "## Heeft u iets te vragen of te melden? Dat kan via onze Burgermeldpunt.",
      "title": "Openbare veiling",
-     "url": "https://gov.sr/openbare-veiling/"
+     "url": "https://gov.sr/openbare-veiling/",
+     "verificacion": {
+      "bytes": 251845,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:16Z",
+      "http": 200,
+      "sha256": "2c5e79ded3ce2871ae150bb46210ae279597a9af67ded4116dc525d4c5804e90"
+     }
     },
     {
      "date": "2023-12-04",

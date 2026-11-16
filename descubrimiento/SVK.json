@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "# Právne predpisy\n**Platné právne predpisy – SLOV-LEX**",
      "title": "Právne predpisy - Ministerstvo spravodlivosti SR",
-     "url": "https://www.justice.gov.sk/pravne-predpisy/"
+     "url": "https://www.justice.gov.sk/pravne-predpisy/",
+     "verificacion": {
+      "bytes": 150741,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:20Z",
+      "http": 200,
+      "sha256": "40fc60548c279c0cc1cd7ca480cf7782fb10b6141f7b2e3429ba6d9603138ff3"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "Constitution of the Slovak Republic, Slovakia, WIPO Lex\n# Constitution of the Slovak Republic, Slovakia\n...\nLatest Version in WIPO Lex\n...\nDates\nAmended up to: July 1, 2023\nPromulgated: October 1, 1992\n...\nType of Text Framework Laws",
      "title": "Constitution of the Slovak Republic, Slovakia, WIPO Lex",
-     "url": "https://www.wipo.int/wipolex/en/legislation/details/22742"
+     "url": "https://www.wipo.int/wipolex/en/legislation/details/22742",
+     "verificacion": {
+      "bytes": 189645,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:22Z",
+      "http": 200,
+      "sha256": "e3e900232c3a142edde7c4d44a8c56ad46ad68df8f4cf5101460bc6b8e92c9e7"
+     }
     },
     {
      "date": "2026-09-22",
@@ -56,7 +70,14 @@
      "rank": 1,
      "snippet": "Slov-Lex\n...\n## Slov-Lex\n### právny a informačný portál\nVyhľadávanie v sekciách Slov-Lex\n...\n- Zbierka zákonov SR\n- Vyhľadávanie legislatívneho procesu\n- Súdne rozhodnutia\n...\n…",
      "title": "Slov-Lex",
-     "url": "https://www.slov-lex.sk/"
+     "url": "https://www.slov-lex.sk/",
+     "verificacion": {
+      "bytes": 1354,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:24Z",
+      "http": 200,
+      "sha256": "93203c34666e6af9593b88bc42ca81f808f721a90d60c010bb9a812d7e980ed2"
+     }
     },
     {
      "date": "",
@@ -64,7 +85,14 @@
      "rank": 2,
      "snippet": "**Platné právne predpisy – SLOV-LEX**\n...\n…\n...\nInterné riadiace akty ministerstva vydávané na základe jeho zákonom ustanovenej riadiacej, metodickej, kontrolnej a dohľadovej pôsobnosti.",
      "title": "Právne predpisy - Ministerstvo spravodlivosti SR",
-     "url": "https://www.justice.gov.sk/pravne-predpisy/"
+     "url": "https://www.justice.gov.sk/pravne-predpisy/",
+     "verificacion": {
+      "bytes": 150741,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:27Z",
+      "http": 200,
+      "sha256": "40fc60548c279c0cc1cd7ca480cf7782fb10b6141f7b2e3429ba6d9603138ff3"
+     }
     },
     {
      "date": "",
@@ -106,7 +134,14 @@
      "rank": 1,
      "snippet": "Slov-Lex\n- Sekcia edičných činností\nRačianska 71, 813 11 Bratislava\n...\nPrevádzkovateľom služby je Ministerstvo spravodlivosti Slovenskej republiky.\n…\nZobraziť všetky predpisy\n…",
      "title": "Slov-Lex",
-     "url": "https://www.slov-lex.sk/"
+     "url": "https://www.slov-lex.sk/",
+     "verificacion": {
+      "bytes": 1354,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:28Z",
+      "http": 200,
+      "sha256": "93203c34666e6af9593b88bc42ca81f808f721a90d60c010bb9a812d7e980ed2"
+     }
     },
     {
      "date": "",
@@ -114,7 +149,14 @@
      "rank": 2,
      "snippet": "## Publication schedule of the official gazette\n|Year Edition 2026|Year Edition 2026|\n|--|--|\n|Issue number/year|Publication date|\n|#### 1/2026|#### 14.1.2026|",
      "title": "Publication schedule of the official gazette",
-     "url": "https://www.indprop.gov.sk/en/products-and-services/official-gazette/publication-schedule-of-the-official-gazette"
+     "url": "https://www.indprop.gov.sk/en/products-and-services/official-gazette/publication-schedule-of-the-official-gazette",
+     "verificacion": {
+      "bytes": 75684,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:31Z",
+      "http": 200,
+      "sha256": "3a2afa5e5f036d2c20a576d6f8a7c616b1f92efe6f288b633be3a53e781f4ecc"
+     }
     },
     {
      "date": "",
@@ -156,7 +198,12 @@
      "rank": 1,
      "snippet": "Rozhodnutia | Najvyšší súd Slovenskej republiky\n# Rozhodnutia\nCelkový počet rozhodnutí v databáze: 106449\n...\nDátum\nSpisová značka\nKolégium\nMerito veci",
      "title": "Rozhodnutia | Najvyšší súd Slovenskej republiky - nsud.sk",
-     "url": "https://www.nsud.sk/rozhodnutia/"
+     "url": "https://www.nsud.sk/rozhodnutia/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.nsud.sk/rozhodnutia/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:57:33Z"
+     }
     },
     {
      "date": "2026-03-01",
@@ -164,7 +211,12 @@
      "rank": 2,
      "snippet": "Zbierka stanovísk a rozhodnutí | Najvyšší súd Slovenskej republiky\n...\n- Stanoviská a rozhodnutia 6/2026 - vo veciach občianskoprávnych(.pdf, 1.23 MB) R 29-43/2026",
      "title": "Zbierka stanovísk a rozhodnutí",
-     "url": "https://www.nsud.sk/zbierka-stanovisk-a-rozhodnuti/"
+     "url": "https://www.nsud.sk/zbierka-stanovisk-a-rozhodnuti/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.nsud.sk/zbierka-stanovisk-a-rozhodnuti/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:57:37Z"
+     }
     },
     {
      "date": "",
@@ -206,7 +258,14 @@
      "rank": 1,
      "snippet": "Slov-Lex\n...\n…\n...\n…\nKompletný materiál sa nachádza na portáli Slov-Lex, pričom vyjadrenia k nemu možno zasielať do 4.\ndecembra 2026 prostredníctvom portálu Slov-Lex.",
      "title": "Slov-Lex",
-     "url": "https://www.slov-lex.sk/"
+     "url": "https://www.slov-lex.sk/",
+     "verificacion": {
+      "bytes": 1354,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:38Z",
+      "http": 200,
+      "sha256": "93203c34666e6af9593b88bc42ca81f808f721a90d60c010bb9a812d7e980ed2"
+     }
     },
     {
      "date": "",
@@ -214,7 +273,14 @@
      "rank": 2,
      "snippet": "# Právne predpisy\n**Platné právne predpisy – SLOV-LEX**",
      "title": "Právne predpisy - Ministerstvo spravodlivosti SR",
-     "url": "https://www.justice.gov.sk/pravne-predpisy/"
+     "url": "https://www.justice.gov.sk/pravne-predpisy/",
+     "verificacion": {
+      "bytes": 150741,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:41Z",
+      "http": 200,
+      "sha256": "40fc60548c279c0cc1cd7ca480cf7782fb10b6141f7b2e3429ba6d9603138ff3"
+     }
     },
     {
      "date": "2026-09-22",
@@ -256,7 +322,14 @@
      "rank": 1,
      "snippet": "Slov-Lex\n...\n…\n...\n…\nKompletný materiál sa nachádza na portáli Slov-Lex, pričom vyjadrenia k nemu možno zasielať do 4.\ndecembra 2026 prostredníctvom portálu Slov-Lex.",
      "title": "Slov-Lex",
-     "url": "https://www.slov-lex.sk/"
+     "url": "https://www.slov-lex.sk/",
+     "verificacion": {
+      "bytes": 1354,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:43Z",
+      "http": 200,
+      "sha256": "93203c34666e6af9593b88bc42ca81f808f721a90d60c010bb9a812d7e980ed2"
+     }
     },
     {
      "date": "2026-10-16",
@@ -264,7 +337,14 @@
      "rank": 2,
      "snippet": "# Zákony, ktorými sa mesto riadi a podľa ktorých rozhoduje\n## Na tejto stránke\n## Zákony\n...\nhttps://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1961/135/vyhlasene_znenie.html",
      "title": "Zákony, ktorými sa mesto riadi a podľa ktorých rozhoduje",
-     "url": "https://bratislava.sk/mesto-bratislava/sprava-mesta/legislativa-mesta/zakony"
+     "url": "https://bratislava.sk/mesto-bratislava/sprava-mesta/legislativa-mesta/zakony",
+     "verificacion": {
+      "bytes": 445879,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:46Z",
+      "http": 200,
+      "sha256": "bf3c1ea903523df73c3270099834017f3b558e1d66c22ec01ae54ec38106666f"
+     }
     },
     {
      "date": "2026-09-11",
@@ -306,7 +386,14 @@
      "rank": 1,
      "snippet": "Slov-Lex\n...\nRačianska 71, 813 11 Bratislava\n...\n02 888 91 8790905 338 044\n...\nhelpdesk@slov-lex.sk\nPrevádzkovateľom služby je Ministerstvo spravodlivosti Slovenskej republiky.",
      "title": "Slov-Lex",
-     "url": "https://www.slov-lex.sk/"
+     "url": "https://www.slov-lex.sk/",
+     "verificacion": {
+      "bytes": 1354,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:48Z",
+      "http": 200,
+      "sha256": "93203c34666e6af9593b88bc42ca81f808f721a90d60c010bb9a812d7e980ed2"
+     }
     },
     {
      "date": "",
@@ -314,7 +401,14 @@
      "rank": 2,
      "snippet": "Regulations - Ministry of Finance of the Slovak republic\nMinistry of Finance of the Slovak republic, Štefanovičova 5, 817 82 Bratislava, IČO: 00151742.\nwww.mfsr.sk\n...\n# Regulations\n...\n…",
      "title": "Regulations - Ministry of Finance of the Slovak republic",
-     "url": "https://www.mfsr.sk/en/taxes-customs-accounting/accounting/regulations/?forceBrowserDetector=blind"
+     "url": "https://www.mfsr.sk/en/taxes-customs-accounting/accounting/regulations/?forceBrowserDetector=blind",
+     "verificacion": {
+      "bytes": 74282,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:50Z",
+      "http": 200,
+      "sha256": "10df56533b15e1b84c9a22ce774160d195fff75820c6a7b46841e4d5e56c49f8"
+     }
     },
     {
      "date": "2026-10-05",
@@ -356,7 +450,14 @@
      "rank": 1,
      "snippet": "ICS 91.010.01\nSLOVENSKA� TECHNICKA� NORMA\nJanuár 2026\n141625\nÚrad pre normalizáciu, metrológiu a skúšobníctvo Slovenskej republiky, 2026",
      "title": "[PDF] STN EN ISO 16757-5 Dátové štruktúry pre elektronické katalógy ...",
-     "url": "https://normy.normoff.gov.sk/norma/141625/nahlad/"
+     "url": "https://normy.normoff.gov.sk/norma/141625/nahlad/",
+     "verificacion": {
+      "bytes": 1196158,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:54Z",
+      "http": 200,
+      "sha256": "54e606d9ccdcfa09414010b689bbd5c4cfcf23078b8b51b45e4ce51fd355c0bf"
+     }
     },
     {
      "date": "",
@@ -364,7 +465,14 @@
      "rank": 2,
      "snippet": "Toto je oficiálna webová stránka orgánu verejnej moci Slovenskej republiky.\n...\n…\nTriedy noriem\nVyhľadávanie STN podľa tried\nICS kódy\nVyhľadávanie STN podľa ICS kódov",
      "title": "Cookies na UNMS.sk",
-     "url": "https://normy.normoff.gov.sk/"
+     "url": "https://normy.normoff.gov.sk/",
+     "verificacion": {
+      "bytes": 44741,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:57Z",
+      "http": 200,
+      "sha256": "ece4fa1eb932e96e1dc2a7e579edc7754a3c718c9e9cca3358c83879d35fba7d"
+     }
     },
     {
      "date": "",
@@ -406,7 +514,12 @@
      "rank": 1,
      "snippet": "Konsolidovaný TEXT: 32024R2215 — SK — 26.10.2026\n- normatívna časť - článok 1 - Predmet úpravy\n...\n02024R2215 — SK — 26.10.2026 — 001.001",
      "title": "Konsolidovaný TEXT: 32024R2215 — SK",
-     "url": "https://eur-lex.europa.eu/legal-content/SK/TXT/HTML/?uri=CELEX:02024R2215-20261026"
+     "url": "https://eur-lex.europa.eu/legal-content/SK/TXT/HTML/?uri=CELEX:02024R2215-20261026",
+     "verificacion": {
+      "error": "robots.txt disallows https://eur-lex.europa.eu/legal-content/SK/TXT/HTML/?uri=CELEX:02024R2215-20261026",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:57:57Z"
+     }
     },
     {
      "date": "",
@@ -414,7 +527,14 @@
      "rank": 2,
      "snippet": "# 151/2026 Z. z.\n#### Časová verzia predpisu účinná od 01.07.2026\n...\nTáto vyhláška nadobúda účinnosť 1.\njúla 2026.",
      "title": "151/2026 Z. z.",
-     "url": "https://static.slov-lex.sk/static/SK/ZZ/2026/151/20260701.html"
+     "url": "https://static.slov-lex.sk/static/SK/ZZ/2026/151/20260701.html",
+     "verificacion": {
+      "bytes": 17518,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:57:59Z",
+      "http": 200,
+      "sha256": "17d29593effd0beae2de75979a828c3bf41a26829cfb03b347211e909fe97ed1"
+     }
     },
     {
      "date": "",
@@ -456,7 +576,14 @@
      "rank": 1,
      "snippet": "Official Page of the Statistical Office of the SR Official Page of the SO SR\n### Domain statistics.sk\nThis is the website of the public authority of the Slovak Republic – Statistical Office of the Slovak Republic.\nAll public authorities' websites can be found at this link.",
      "title": "All data",
-     "url": "https://statdata.statistics.sk/public/ui/dc/domov/data-view/a6be3ef8-ee18-4a13-8912-5c3c0c902eb5?lang=en"
+     "url": "https://statdata.statistics.sk/public/ui/dc/domov/data-view/a6be3ef8-ee18-4a13-8912-5c3c0c902eb5?lang=en",
+     "verificacion": {
+      "bytes": 3711,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:58:01Z",
+      "http": 200,
+      "sha256": "355c95eaf4476be0e516619fcedbad4ae309f8d871834b941220d957f8703f9f"
+     }
     },
     {
      "date": "",
@@ -464,7 +591,14 @@
      "rank": 2,
      "snippet": "Statistical Office of the Slovak Republic \nAcronym:  \nSO SR \n...\nInternet Website \nhttp://www.statistics.sk/\nManagement:   \nStatistical Office is a budgetary organization, with its incomes and expenditures being a part of the state budget of the Slovak Republic",
      "title": "annual report 2006",
-     "url": "https://slovak.statistics.sk/wps/wcm/connect/abf03516-1a8d-4e80-8677-d5d3d7dc7505/Annual_Report_2006.pdf?MOD=AJPERES&CVID=jUijvma&CVID=jUijvma&CVID=jUijvma"
+     "url": "https://slovak.statistics.sk/wps/wcm/connect/abf03516-1a8d-4e80-8677-d5d3d7dc7505/Annual_Report_2006.pdf?MOD=AJPERES&CVID=jUijvma&CVID=jUijvma&CVID=jUijvma",
+     "verificacion": {
+      "bytes": 844046,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:58:06Z",
+      "http": 200,
+      "sha256": "1c6090dd53ff85cbd51729e9812371c4fe9d5b9e52f9e9f63c48a8740b9c9ba9"
+     }
     },
     {
      "date": "",
@@ -506,7 +640,14 @@
      "rank": 1,
      "snippet": "Štatistika - Národná banka Slovenska\n...\nUžívateľom je umožnené sledovať vybrané štatistiky z pohľadu národného detailu, ale aj z pohľadu eurozóny ako celku.\n...\n813 25 Bratislava",
      "title": "Štatistika",
-     "url": "https://nbs.sk/statisticke-udaje/"
+     "url": "https://nbs.sk/statisticke-udaje/",
+     "verificacion": {
+      "bytes": 183546,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:58:09Z",
+      "http": 200,
+      "sha256": "7a30bfa459de8f587bfa849941b4114a6c673d0158e3ede8c4bd32abb00f27ef"
+     }
     },
     {
      "date": "2026-10-07",
@@ -514,7 +655,14 @@
      "rank": 2,
      "snippet": "Collection, compilation and publication of different types of statistics is one of the main tasks of the National Bank of Slovakia.\n...\nHere you can find the statistical data on the financial sector, broken down by types of financial institutions and financial markets.\n...\nImricha Karvaša 1\n813 25 B",
      "title": "Statistics",
-     "url": "https://nbs.sk/en/statistics/"
+     "url": "https://nbs.sk/en/statistics/",
+     "verificacion": {
+      "bytes": 168431,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:58:12Z",
+      "http": 200,
+      "sha256": "93a767060233fa152ed5f5e08fe2fff18893a150d6dae2847e496d97e077d446"
+     }
     },
     {
      "date": "2026-10-27",
@@ -556,7 +704,14 @@
      "rank": 1,
      "snippet": "Národný katalóg otvorených dát\n## data.slovensko.sk\n## Vitajte na stránke Národného katalógu otvorených dát\n...\nPrevádzkovateľom služby je Ministerstvo investícií, regionálneho rozvoja a informatizácie SR.",
      "title": "Národný katalóg otvorených dát",
-     "url": "https://data.slovensko.sk/"
+     "url": "https://data.slovensko.sk/",
+     "verificacion": {
+      "bytes": 524,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:58:14Z",
+      "http": 200,
+      "sha256": "bda2973ca1c259e5716d828c63e52eb1c323978b1a92c475cb7c9b92f8ae4c88"
+     }
     },
     {
      "date": "",
@@ -564,7 +719,14 @@
      "rank": 2,
      "snippet": "…\nPortál data.slovensko.sk je centrálny katalóg otvorených údajov, ktorý obsahuje rôzne údaje a dáta verejnej správy, najmä ich obsah, metaúdaje, podmienky na použitie a obmedzenia použitia.\n...\n…",
      "title": "Open Data – otvorené dáta",
-     "url": "https://www.slovensko.sk/sk/zivotne-situacie/zivotna-situacia/_open-data-otvorene-data/"
+     "url": "https://www.slovensko.sk/sk/zivotne-situacie/zivotna-situacia/_open-data-otvorene-data/",
+     "verificacion": {
+      "bytes": 39460,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:58:20Z",
+      "http": 200,
+      "sha256": "276e26de43b9f49c829244c327cb02c0502601c35ab9ca90873ee8fc6cd91b5a"
+     }
     },
     {
      "date": "",

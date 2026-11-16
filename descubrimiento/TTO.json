@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "Digital Legislative Library\n...\n**Constitutional Instruments**\n1. 1. The Constitution of the Republic of Trinidad and Tobago\n2. 1976 Constitution\n3. 1962 Constitution\n...\n1. Trinidad and Tobago Act 1887\n2.\n...\n9. Trinidad and Tobago Republic Act 1976",
      "title": "The Constitution of the Republic of Trinidad and Tobago",
-     "url": "https://laws.gov.tt/ttdll-web/revision/byconsitution"
+     "url": "https://laws.gov.tt/ttdll-web/revision/byconsitution",
+     "verificacion": {
+      "bytes": 15592,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:39:50Z",
+      "http": 200,
+      "sha256": "66d3cb5254bf33adb55b1362e13163c030886387c84345b9e98ef828e5ae0dfb"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "#### Constitution of the Republic of Trinidad and Tobago Chap. 1:01\n...\n- ** Year - 1976\n...\n|--|--|\n|**Act**|**No. 6 of 2025**|\n|**Act**|**No. 14 of 2024**|",
      "title": "Revised Laws of Trinidad and Tobago ...",
-     "url": "https://laws.gov.tt/ttdll-web/revision/list?offset=100&q=&currentid=530"
+     "url": "https://laws.gov.tt/ttdll-web/revision/list?offset=100&q=&currentid=530",
+     "verificacion": {
+      "bytes": 230272,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:39:53Z",
+      "http": 200,
+      "sha256": "7d561d53dd00b8280cfbfe02a377649b58bf1aa385738ebc077cb06a9c35c1b0"
+     }
     }
    ]
   },
@@ -40,7 +54,14 @@
      "rank": 1,
      "snippet": "Regulations – Ministry of Finance\nGovernment of the Republic of Trinidad and Tobago\n- Home\n...\n- Regulations\n...\n# The Financial Obligations Regulations, 2010\n...\n# The Bankruptcy and Insolvency Regulations, 2014\n...\n# Financial Obligations (Financing of Terrorism) Regulations, 2011",
      "title": "Regulations",
-     "url": "https://www.finance.gov.tt/category/legislation/regulations/"
+     "url": "https://www.finance.gov.tt/category/legislation/regulations/",
+     "verificacion": {
+      "bytes": 220117,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:39:57Z",
+      "http": 200,
+      "sha256": "3b109a3d1d43fdf8e62deda4a298e363b60c2ad6b7ab6801f5710c5a06cef8da"
+     }
     },
     {
      "date": "",
@@ -48,7 +69,14 @@
      "rank": 2,
      "snippet": "Regulations – Ministry of Finance\nGovernment of the Republic of Trinidad and Tobago\n...\n## MINISTRY OF FINANCE\n# Regulations\nFinancial Obligations (Financing of Terrorism) Regulations, 2011\nThe Bankruptcy and Insolvency Regulations, 2014\nThe Financial Obligations Regulations, 2010",
      "title": "Regulations - Ministry of Finance",
-     "url": "https://www.finance.gov.tt/regulations/"
+     "url": "https://www.finance.gov.tt/regulations/",
+     "verificacion": {
+      "bytes": 164390,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:40:01Z",
+      "http": 200,
+      "sha256": "05cb58bae4e5d7a3c83c390bb0d61a9ae10543f06d56905234c4ab2e4c9cdead"
+     }
     },
     {
      "date": "2026-07-08",
@@ -74,7 +102,12 @@
      "rank": 1,
      "snippet": "1675\n...\n728\nPRINTED  AND  PUBLISHED  BY  THE  GOVERNMENT  PRINTER,  CARONI,  REPUBLIC  OF  TRINIDAD  AND  TOBAGO–2026\nThis Gazette is also available online at printery.gov.tt/e-gazette",
      "title": "Gazette No. 81 Vol. 65 Monday 11th May 2026",
-     "url": "https://www.printery.gov.tt/e-gazette/2026/Gazette/Gazette_No._81_of_2026.pdf"
+     "url": "https://www.printery.gov.tt/e-gazette/2026/Gazette/Gazette_No._81_of_2026.pdf",
+     "verificacion": {
+      "error": "response larger than 5000000 bytes: https://www.printery.gov.tt/e-gazette/2026/Gazette/Gazette_No._81_of_2026.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:40:06Z"
+     }
     },
     {
      "date": "",
@@ -82,7 +115,14 @@
      "rank": 2,
      "snippet": "NO.\n150\n(EXTRAORDINARY)\nTHE FOLLOWING HAVE BEEN ISSUED: \n...\n1289 \nSUPPLEMENT  TO  THIS  ISSUE \nTHE DOCUMENTS detailed hereunder have been issued and are published as a Supplement to this issue of the Trinidad and Tobago Gazette:",
      "title": "Gazette No. 150 Vol. 65 Friday 11th September, 2026",
-     "url": "https://www.printery.gov.tt/e-gazette/2026/Gazette/Gazette_No._150_of_2026.pdf"
+     "url": "https://www.printery.gov.tt/e-gazette/2026/Gazette/Gazette_No._150_of_2026.pdf",
+     "verificacion": {
+      "bytes": 3768519,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:40:10Z",
+      "http": 200,
+      "sha256": "10b0f13e79c062dc6cf4d7389c018b4bf8d939e37552992e7e3221cf69e341e0"
+     }
     },
     {
      "date": "",
@@ -124,7 +164,14 @@
      "rank": 1,
      "snippet": "|## About the Court Library Databases\nThis Court Library Services Unit has several databases.\nSearching the Catalogue will give you access to: - Books acquired from 2001.\nRetrospective cataloguing is ongoing so that, eventually, the catalogue will reflect all of the Unit's collections.",
      "title": "The Judiciary of Trinidad and Tobago - webopac.ttlawcourts.org",
-     "url": "https://webopac.ttlawcourts.org/scripts/minisa.dll/144/M2LDIRECT6?LOGONFORM"
+     "url": "https://webopac.ttlawcourts.org/scripts/minisa.dll/144/M2LDIRECT6?LOGONFORM",
+     "verificacion": {
+      "bytes": 6837,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:40:12Z",
+      "http": 200,
+      "sha256": "c35b1e06fa6b0043a140e94b8ebcc22ca18e211e0ad37697a57e0e63eacd02e4"
+     }
     },
     {
      "date": "",
@@ -132,7 +179,14 @@
      "rank": 2,
      "snippet": "|## About the Court Library Databases\nThis Court Library Services Unit has several databases.\nSearching the Catalogue will give you access to: - Books acquired from 2001.\nRetrospective cataloguing is ongoing so that, eventually, the catalogue will reflect all of the Unit's collections.",
      "title": "Advanced Search Database",
-     "url": "https://webopac.ttlawcourts.org/scripts/minisa.dll/143234593?ADVANCEFORM"
+     "url": "https://webopac.ttlawcourts.org/scripts/minisa.dll/143234593?ADVANCEFORM",
+     "verificacion": {
+      "bytes": 248,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:40:15Z",
+      "http": 200,
+      "sha256": "48078ae3b3e7cece45e53d509a920f89b667bd3d95496673bc896acd5549cd89"
+     }
     },
     {
      "date": "",
@@ -174,7 +228,14 @@
      "rank": 1,
      "snippet": "Digital Law Library | Web Application\nDigital Legislative Library\n...\n### Chronological List from 1838-2014\n...\nAccess Acts/Ordinances chronologically from 1838-2014.\nActs/Ordinances without the pdf icon are not avialable at this time\n...\n|--|--|",
      "title": "Digital Law Library | Web Application",
-     "url": "https://laws.gov.tt/ttdll-web2/revision/byyear"
+     "url": "https://laws.gov.tt/ttdll-web2/revision/byyear",
+     "verificacion": {
+      "bytes": 30443,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:40:16Z",
+      "http": 200,
+      "sha256": "b8eff9d5282f68b08d20067166f4bd7be313739d7fec2ae85b3abe95633290b8"
+     }
     },
     {
      "date": "2026-10-30",
@@ -182,7 +243,14 @@
      "rank": 2,
      "snippet": "Parliament – Parliament of the Republic of Trinidad and Tobago\nParliament of the Republic of Trinidad and Tobago\n...\nParliamentary Complex\nCabildo Building\nSt. Vincent Street Port of Spain\nRepublic of Trinidad and Tobago\n...\nFax: (868) 625-4672\nwebmaster@ttparliament.org",
      "title": "HOUSE",
-     "url": "https://www.ttparliament.org/"
+     "url": "https://www.ttparliament.org/",
+     "verificacion": {
+      "bytes": 237142,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:40:26Z",
+      "http": 200,
+      "sha256": "7aff19b937cea900af80ab87543e2e71225e50c6a70bf01c01c730ee32098c36"
+     }
     },
     {
      "date": "",
@@ -216,7 +284,14 @@
      "rank": 1,
      "snippet": "Municipal Corporations Act Chapter\nMunicipal-Corporations-Act-Chapter-25_04\nDownload\n...\nLegislation",
      "title": "Municipal Corporations Act Chapter",
-     "url": "https://rdlg.gov.tt/municipal-corporations-act-chapter/"
+     "url": "https://rdlg.gov.tt/municipal-corporations-act-chapter/",
+     "verificacion": {
+      "bytes": 505513,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:40:29Z",
+      "http": 200,
+      "sha256": "3283bab572549c534579bb920999648233e5afd4de750df262fce4db5f4e77e8"
+     }
     },
     {
      "date": "2025-12-12",
@@ -224,7 +299,14 @@
      "rank": 2,
      "snippet": "## The online construction permitting system of Trinidad & Tobago\n...\n…\n###### For complete details, visit the DevelopTT platform via https://www.developtt.gov.tt/ttacps_appl/mvvmc/eservices/acpsPublicService.login\n...\n###### DevelopTT is the site for planning and construction approvals.",
      "title": "www.planning.gov.tt › newsite › developttDevelopTT - Ministry of Planning, Economic Affairs & Development",
-     "url": "https://www.planning.gov.tt/newsite/developtt/"
+     "url": "https://www.planning.gov.tt/newsite/developtt/",
+     "verificacion": {
+      "bytes": 253102,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:40:41Z",
+      "http": 200,
+      "sha256": "9bc36818b4ee5e4024c11a00013e4029ecbacb5ccef7dc69f241f82ba8da95ec"
+     }
     },
     {
      "date": "",
@@ -258,7 +340,14 @@
      "rank": 1,
      "snippet": "The Central Bank of Trinidad and Tobago (“Central Bank”) has observed with concern an increasing\n...\nIt is an offence under Section 6(1) of Exchange Control Act, Chap.\n79.50, for persons to buy, sell, borrow and lend foreign exchange without the required authorisation of the Central Bank.",
      "title": "Central Bank of Trinidad and Tobago",
-     "url": "https://www.central-bank.org.tt/"
+     "url": "https://www.central-bank.org.tt/",
+     "verificacion": {
+      "bytes": 586342,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:42:49Z",
+      "http": 200,
+      "sha256": "ce66460f1275c7603b69cb530fb336b18b45d5e25c7da9d23c9acc4cdbeb0e8b"
+     }
     },
     {
      "date": "2023-09-25",
@@ -266,7 +355,14 @@
      "rank": 2,
      "snippet": "Trinidad and Tobago Fair Trading Commission.\n...\nThe Trinidad and Tobago Fair Trading Commission (TTFTC) is an independent Statutory Agency established pursuant to the Fair Trading Act 2006.\n...\nTrading Merger Guidelines specifically pertain to the rules and regulations governing mergers and acquisi",
      "title": "Trinidad and Tobago Fair Trading Commission.",
-     "url": "https://tandtftc.org/"
+     "url": "https://tandtftc.org/",
+     "verificacion": {
+      "bytes": 190537,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:42:54Z",
+      "http": 200,
+      "sha256": "cf60ce338432b10ed616f394d872cad5fc7d96f1ef5c8fac4a7fd4f031925983"
+     }
     },
     {
      "date": "2021-09-25",
@@ -308,7 +404,14 @@
      "rank": 1,
      "snippet": "# T&T Standards\nTrinidad & Tobago National Standards\nShowing 1–16 of 117 resultsSorted by popularity\n...\n- ## TTCS 24:2023, ELECTRICAL APPLIANCES – COMPULSORY REQUIREMENTS\n...\n1-2 Century Drive,\n...\nMacoya, Tunapuna,",
      "title": "T&T Standards",
-     "url": "https://gottbs.com/product-category/tt-standards/"
+     "url": "https://gottbs.com/product-category/tt-standards/",
+     "verificacion": {
+      "bytes": 133029,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:42:55Z",
+      "http": 200,
+      "sha256": "d9cdbf5fdd1bdcdd88549710c062fc141d47b8bba73c8376399bf67de9be9874"
+     }
     },
     {
      "date": "",
@@ -316,7 +419,14 @@
      "rank": 2,
      "snippet": "#### DATABASE\nThe SIC maintains a database of all Trinidad and Tobago Standards.\nThe database contains bibliographic information on over eight hundred voluntary and compulsory local standards.\nThese standards have either been developed by TTBS and/or adopted.\n...\n## Contact Us\n1-2 Century Drive,\n...",
      "title": "Standards Information Centre",
-     "url": "https://gottbs.com/standards-information-centre/"
+     "url": "https://gottbs.com/standards-information-centre/",
+     "verificacion": {
+      "bytes": 109979,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:42:57Z",
+      "http": 200,
+      "sha256": "870e101a19083bfcebdae645c9589ec1b8580e2afacfd2c42c5a92507b1c888f"
+     }
     },
     {
      "date": "2021-09-25",

@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "บริการข้อมูลกฎหมาย\nร่างกฎหมาย\n117 เอกสาร\nพระราชบัญญัติ\n21 เอกสาร\nกฎกระทรวง\n44 เอกสาร\nระเบียบ\n75 เอกสาร\n...\n…\n...\nสืบค้นข้อมูลกฎหมาย\n...\nสืบค้นข้อมูลกฎหมาย",
      "title": "สืบค้นข้อมูลกฎหมาย",
-     "url": "https://legal.dlt.go.th/gen2/search"
+     "url": "https://legal.dlt.go.th/gen2/search",
+     "verificacion": {
+      "error": "robots.txt disallows https://legal.dlt.go.th/gen2/search",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:20:33Z"
+     }
     },
     {
      "date": "",
@@ -22,7 +27,12 @@
      "rank": 2,
      "snippet": "# Thai Code Annotated\n- กษัตริย์ (12)\n- การเงิน การคลัง และวิธีการงบประมาณ (146)\n- การเมืองการปกครอง (269)\n...\n- คณะกรรมการกฤษฏีกา (2)",
      "title": "ห้องสมุดกฎหมาย Thai Code Annotated",
-     "url": "https://krisdika.ocs.go.th/thai-code-annotated"
+     "url": "https://krisdika.ocs.go.th/thai-code-annotated",
+     "verificacion": {
+      "error": "robots.txt disallows https://krisdika.ocs.go.th/thai-code-annotated",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:20:36Z"
+     }
     },
     {
      "date": "",
@@ -64,7 +74,12 @@
      "rank": 1,
      "snippet": "๒๕๖๘\n๑. สามารถค้นได้จากข้อมูลราชกิจจานุเบกษาทุกประเภท\n...\n● ประเภท ง และ ง พิเศษ (ประกาศ คำสั่งหรืออื่นๆ ที่มีฐานะเป็นกฎหมาย ข้อมูลเรื่องล้มละลาย",
      "title": "ราชกิจจานุเบกษา",
-     "url": "https://ratchakitcha.soc.go.th/"
+     "url": "https://ratchakitcha.soc.go.th/",
+     "verificacion": {
+      "error": "robots.txt disallows https://ratchakitcha.soc.go.th/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:20:36Z"
+     }
     },
     {
      "date": "",
@@ -72,7 +87,12 @@
      "rank": 2,
      "snippet": "บริการข้อมูลกฎหมาย\n...\n117 เอกสาร\nพระราชบัญญัติ\n21 เอกสาร\nกฎกระทรวง\n44 เอกสาร\nระเบียบ\n75 เอกสาร\nประกาศ\n...\nสืบค้นข้อมูลกฎหมาย\n...\nสืบค้นข้อมูลกฎหมาย\nค้นหา",
      "title": "สืบค้นข้อมูลกฎหมาย",
-     "url": "https://legal.dlt.go.th/gen2/search"
+     "url": "https://legal.dlt.go.th/gen2/search",
+     "verificacion": {
+      "error": "robots.txt disallows https://legal.dlt.go.th/gen2/search",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:20:39Z"
+     }
     },
     {
      "date": "",
@@ -114,7 +134,14 @@
      "rank": 1,
      "snippet": "The ***Royal Gazette*** ^[4]^^[5]^^[6]^^[7]^ (Thai: ราชกิจจานุเบกษา; RTGS: *Ratchakitchanubeksa*) is the official journal of Thailand (formerly Siam).^[2]^",
      "title": "Royal Gazette (Thailand) - Wikipedia",
-     "url": "https://en.wikipedia.org/wiki/Royal_Gazette_(Thailand)"
+     "url": "https://en.wikipedia.org/wiki/Royal_Gazette_(Thailand)",
+     "verificacion": {
+      "bytes": 213440,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:20:40Z",
+      "http": 200,
+      "sha256": "c9eb5820503f8eda7e88ce34d75ce29f051887b737e82bd29292e060b44d0cc1"
+     }
     },
     {
      "date": "",
@@ -122,7 +149,14 @@
      "rank": 2,
      "snippet": "the Royal Thai Government Gazette        30 March B.E. 2566 (2023) \n...\non the Exchange of Information  \n...\n…\nVol. 140 Part 24 A   \n           the Royal Thai Government Gazette        30 March B.E. 2566 (2023)",
      "title": "Emergency Decree on the Exchange of Information under ...",
-     "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/Emergency_Decree_on_the_Exchange_of_Information_under_International_Agreement_on_Taxation_B.E._2566__2023_.pdf"
+     "url": "https://www.rd.go.th/fileadmin/user_upload/kormor/newlaw/Emergency_Decree_on_the_Exchange_of_Information_under_International_Agreement_on_Taxation_B.E._2566__2023_.pdf",
+     "verificacion": {
+      "bytes": 94061,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:20:43Z",
+      "http": 200,
+      "sha256": "aa5c189ced966579d5f71f051a102366d5f69987c9102b4a0f2d520908b15505"
+     }
     },
     {
      "date": "2019-10-17",
@@ -164,7 +198,12 @@
      "rank": 1,
      "snippet": "# คำพิพากษา คำสั่ง คำแถลงการณ์ศาลปกครองสูงสุด และศาลปกครองชั้นต้นที่ถึงที่สุด\n...\n|URL|https://www.admincourt.go.th/search/search-case-type|\n|Data Language|ไทย|",
      "title": "https://gdcatalog.go.th/en/dataset/gdpublish-judgement",
-     "url": "https://gdcatalog.go.th/en/dataset/gdpublish-judgement"
+     "url": "https://gdcatalog.go.th/en/dataset/gdpublish-judgement",
+     "verificacion": {
+      "error": "robots.txt disallows https://gdcatalog.go.th/en/dataset/gdpublish-judgement",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:20:44Z"
+     }
     },
     {
      "date": "2022-10-03",
@@ -172,7 +211,12 @@
      "rank": 2,
      "snippet": "## \"e-Searching\"\nThe public may search for decisions and orders of the Constitutional Court through the “Intelligent Constitutional Court Database and Services System (i-Hub)” available on the Office of the Constitutional Court’s website, or via the Decision and Order Search System (e-Searching) pro",
      "title": "Home | Constitutional Court of the Kingdom of Thailand",
-     "url": "https://constitutionalcourt.or.th/en/Home"
+     "url": "https://constitutionalcourt.or.th/en/Home",
+     "verificacion": {
+      "error": "robots.txt disallows https://constitutionalcourt.or.th/en/Home",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:20:47Z"
+     }
     },
     {
      "date": "",
@@ -206,7 +250,12 @@
      "rank": 1,
      "snippet": "๑. สามารถค้นได้จากข้อมูลราชกิจจานุเบกษาทุกประเภท\n● ประเภท ก เช่น กฎหมาย คำวินิจฉัย คำพิพากษา\n...\n● ประเภท ค เช่น ทะเบียนการค้า (เกี่ยวกับนิติบุคคล)",
      "title": "ราชกิจจานุเบกษา",
-     "url": "https://ratchakitcha.soc.go.th/"
+     "url": "https://ratchakitcha.soc.go.th/",
+     "verificacion": {
+      "error": "robots.txt disallows https://ratchakitcha.soc.go.th/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:20:47Z"
+     }
     },
     {
      "date": "",
@@ -214,7 +263,14 @@
      "rank": 2,
      "snippet": "ดูพระราชบัญญัติทั้งหมด\nhttps://www.ocsc.go.th/laws/laws-order/act/\nพระราชกฤษฎีกา\nดูพระราชกฤษฎีกาทั้งหมด\nhttps://www.ocsc.go.th/laws/laws-order/decree/\n...\nทั้งหมด\n...\nทั้งหมด",
      "title": "หมวดหมู่ตามศักดิ์ของกฎหมาย | สำนักงาน ก.พ. (OCSC)",
-     "url": "https://www.ocsc.go.th/laws/laws-order/"
+     "url": "https://www.ocsc.go.th/laws/laws-order/",
+     "verificacion": {
+      "bytes": 5569,
+      "estado": "http",
+      "fecha": "2026-11-16T17:20:48Z",
+      "http": 403,
+      "sha256": "5bfb58583cf005cfa8adb99c2d3b3f9680462c5066230742d5c5ae98c0b4f8ff"
+     }
     },
     {
      "date": "2001-01-01",
@@ -256,7 +312,14 @@
      "rank": 1,
      "snippet": "## ข้อบัญญัติงบประมาณรายจ่ายประจำปี 2570\n...\n…\n## ข้อบัญญัติการบังคับใช้ผังเมืองรวม 2568\n30 August 2026\nข้อบัญญัติการบังคับใช้ผังเมืองรวม 2568",
      "title": "Plans and documents | Samut Prakan Provincial ...",
-     "url": "https://samutprakan-pao.go.th/en/documents?search=&category=law2"
+     "url": "https://samutprakan-pao.go.th/en/documents?search=&category=law2",
+     "verificacion": {
+      "bytes": 513,
+      "estado": "http",
+      "fecha": "2026-11-16T17:20:50Z",
+      "http": 403,
+      "sha256": "0fff46a9a8248f2be839c9367ca42a65e5e3e26b6719ee8feedec837ecca23e8"
+     }
     },
     {
      "date": "2023-10-04",
@@ -264,7 +327,12 @@
      "rank": 2,
      "snippet": "กฎกระทรวง\nเทศบัญญัติ\nประกาศเทศบาลฯ\n...\nประกาศ\nพระราชกฤษฎีกา\nกฎกระทรวง\nเทศบัญญัติ\nประกาศเทศบาลฯ\nระเบียบ\nระเบียบเทศบาลฯ\nคำสั่งเทศบาลฯ",
      "title": "ระเบียบกฎหมายเพื่อประชาชน",
-     "url": "https://www.suratcity.go.th/web/index.php/th/menu-01-service-of-people-th-3/sub-menu-law-of-people-th-2"
+     "url": "https://www.suratcity.go.th/web/index.php/th/menu-01-service-of-people-th-3/sub-menu-law-of-people-th-2",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.suratcity.go.th/web/index.php/th/menu-01-service-of-people-th-3/sub-menu-law-of-people-th-2",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:22:21Z"
+     }
     },
     {
      "date": "",
@@ -306,7 +374,12 @@
      "rank": 1,
      "snippet": "In 2017, the Thai government launched a “regulatory guillotine” initiative to cut down on red tape, licenses, and permits.\nThe initiative focused on reducing and amending outdated regulations in order to improve Thailand’s ranking on the World Bank “Ease of Doing Business” report.",
      "title": "2025 Investment Climate Statements: Thailand",
-     "url": "https://www.state.gov/reports/2025-investment-climate-statements/thailand"
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/thailand",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2025-investment-climate-statements/thailand",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:22:21Z"
+     }
     },
     {
      "date": "",
@@ -314,7 +387,14 @@
      "rank": 2,
      "snippet": "REGULATORY BODY \nThailand \nThai Industrial Standards Institute (TISI) under the Ministry of Industry.\n...\nHS Code \n27 \nHousehold refrigerator and refrigerator-freezer\nTIS 2214-2561 \n(2018) \n...\n+ Amd1:2012",
      "title": "THAILAND - ASEAN",
-     "url": "https://asean.org/wp-content/uploads/2026/03/TH_Updated-Regulatory-Regime_September-2025.pdf"
+     "url": "https://asean.org/wp-content/uploads/2026/03/TH_Updated-Regulatory-Regime_September-2025.pdf",
+     "verificacion": {
+      "bytes": 477727,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:22:26Z",
+      "http": 200,
+      "sha256": "cfed9a8005af4eae7984f1b60c368e2cf73f45c3aef4e27772051c82b6c51abf"
+     }
     },
     {
      "date": "2025-04-24",
@@ -356,7 +436,14 @@
      "rank": 1,
      "snippet": "- ค้นหารายชื่อมาตรฐานผลิตภัณฑ์อุตสาหกรรม (คู่มือผู้ซื้อ)\n- รายชื่อมาตรฐานผลิตภัณฑ์อุตสาหกรรมที่ประกาศใหม่ (รายไตรมาส)",
      "title": "สำนักงานมาตรฐานผลิตภัณฑ์อุตสาหกรรม",
-     "url": "https://www.tisi.go.th/website/standardlist/list_measures"
+     "url": "https://www.tisi.go.th/website/standardlist/list_measures",
+     "verificacion": {
+      "bytes": 953,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:22:30Z",
+      "http": 200,
+      "sha256": "cef214fa409c951af8aa18e002d149c1d4d75a1508ab65baad1227a306a7587d"
+     }
     },
     {
      "date": "",
@@ -364,7 +451,14 @@
      "rank": 2,
      "snippet": "====================\nSheet: Sheet1\n====================\n...\n…\n...\n…",
      "title": "Sheet1",
-     "url": "https://www.tisi.go.th/data/standard/site-link/IBLab/data_std/std_name.xlsx"
+     "url": "https://www.tisi.go.th/data/standard/site-link/IBLab/data_std/std_name.xlsx",
+     "verificacion": {
+      "bytes": 954,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:22:33Z",
+      "http": 200,
+      "sha256": "0d1333f7ac712e820c591df5d368377b25b3e3ff039986b393afb9ef8a4eb300"
+     }
     },
     {
      "date": "2022-06-08",
@@ -398,7 +492,14 @@
      "rank": 1,
      "snippet": "IV.\nMANDATORY STANDARDS \nREVISED MATRIX ON MANDATORY STANDARDS FOR THAILAND (AS OF April, 2025) \nNo. \nProduct type or grouping \nSTANDARDS \n...\nEffective date: Oct \n1, 2025",
      "title": "THAILAND - ASEAN",
-     "url": "https://asean.org/wp-content/uploads/2026/03/TH_Updated-Regulatory-Regime_September-2025.pdf"
+     "url": "https://asean.org/wp-content/uploads/2026/03/TH_Updated-Regulatory-Regime_September-2025.pdf",
+     "verificacion": {
+      "bytes": 477727,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:22:35Z",
+      "http": 200,
+      "sha256": "cfed9a8005af4eae7984f1b60c368e2cf73f45c3aef4e27772051c82b6c51abf"
+     }
     },
     {
      "date": "",
@@ -406,7 +507,14 @@
      "rank": 2,
      "snippet": "# กฎระเบียบ\nโลจิสติกส์|กำหนดคุณลักษณะ สี ขนาด จำนวน และตำแหน่งการติดตั้งรวมทั้งประเภทและลักษณะของรถที่ต้องมีอุปกรณ์หรือแผ่นสะท้อนแสง พ.ศ.",
      "title": "DSS-Sciinfo",
-     "url": "https://sciinfo.dss.go.th/rules"
+     "url": "https://sciinfo.dss.go.th/rules",
+     "verificacion": {
+      "bytes": 1344619,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:22:38Z",
+      "http": 200,
+      "sha256": "f07b64405b71202438a67bba359594bd591a67ffadd7e72fe2699e50c5916b8d"
+     }
     },
     {
      "date": "",
@@ -448,7 +556,12 @@
      "rank": 1,
      "snippet": "สำนักงานสถิติแห่งชาติ (NSO) | เว็บไซต์สำนักงานสถิติแห่งชาติ\n...\nเปิด Application สำหรับการเข้าเว็บบราวเซอร์ เช่น Chrome หรือ Safari** **2.\nเข้าสู่หน้าเว็บไซต์สำนักงานสถิติแห่งชาติ โดยใช้ URL = https://www.nso.go.th** **3.",
      "title": "Important statistics and indicators",
-     "url": "https://www.nso.go.th/nsoweb/index?set_lang"
+     "url": "https://www.nso.go.th/nsoweb/index?set_lang",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.nso.go.th/nsoweb/index?set_lang",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:22:38Z"
+     }
     },
     {
      "date": "",
@@ -456,7 +569,12 @@
      "rank": 2,
      "snippet": "Previous\n...\nเข้าสู่เว็บไซต์\nEnter website\nลงนามถวายพระพร",
      "title": "สำนักงานสถิติแห่งชาติ : National Statistical Office",
-     "url": "https://www.nso.go.th/"
+     "url": "https://www.nso.go.th/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.nso.go.th/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:22:40Z"
+     }
     },
     {
      "date": "2025-06-26",
@@ -498,7 +616,14 @@
      "rank": 1,
      "snippet": "…\n...\n- ### Statistics and Dissemination\nEconomic, monetary, public finance and financial statistics that are essential to the BOT's informed policy decisions, with guidelines on the BOT's data utilisation and data management as well as disseminated data to international organizations\n...\n### Financ",
      "title": "Statistics",
-     "url": "https://www.bot.or.th/en/statistics.html"
+     "url": "https://www.bot.or.th/en/statistics.html",
+     "verificacion": {
+      "bytes": 106139,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:22:42Z",
+      "http": 200,
+      "sha256": "b92aa702c6cfa55dd54868e514667fc449665a425fd30adff9fd8e2830c2a8a3"
+     }
     },
     {
      "date": "",
@@ -506,7 +631,14 @@
      "rank": 2,
      "snippet": "- ### สถิติและข้อมูลเผยแพร่\nแหล่งข้อมูลสถิติด้านเศรษฐกิจและการเงินที่สำคัญ ที่สามารถนำไปใช้ประโยชน์ในการวิเคราะห์และจัดทำนโยบายทางเศรษฐกิจและการเงินต่อไป",
      "title": "ธนาคารแห่งประเทศไทย | Bank of Thailand",
-     "url": "https://www.bot.or.th/"
+     "url": "https://www.bot.or.th/",
+     "verificacion": {
+      "bytes": 209246,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:22:44Z",
+      "http": 200,
+      "sha256": "79d7b5022205c4190829b9cad1f3731de6cb4b1666c75181e3d656cede9b4e6e"
+     }
     },
     {
      "date": "",
@@ -548,7 +680,12 @@
      "rank": 1,
      "snippet": "ศูนย์กลางข้อมูลเปิดภาครัฐ (Open Government Data) ภายใต้ชื่อ “data.go.th” ที่สำนักงานพัฒนารัฐบาลดิจิทัล (องค์การมหาชน)\nหรือ สพร.\n...\nข้อมูลได้อีกด้วย\n…",
      "title": "ยินดีต้อนรับ",
-     "url": "https://data.go.th/"
+     "url": "https://data.go.th/",
+     "verificacion": {
+      "error": "robots.txt disallows https://data.go.th/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:22:45Z"
+     }
     },
     {
      "date": "",
@@ -556,7 +693,12 @@
      "rank": 2,
      "snippet": "เข้าสู่ระบบ\nเข้าสู่ระบบเพื่อใช้บริการศูนย์ข้อมูลเปิดภาครัฐ\nเข้าสู่ระบบด้วย Digital ID",
      "title": "ศูนย์กลางข้อมูลเปิดภาครัฐ",
-     "url": "https://data.go.th/opend"
+     "url": "https://data.go.th/opend",
+     "verificacion": {
+      "error": "robots.txt disallows https://data.go.th/opend",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:22:46Z"
+     }
     },
     {
      "date": "2000-01-01",

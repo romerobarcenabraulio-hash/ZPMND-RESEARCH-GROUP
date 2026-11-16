@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "…\n# База Законодательства Республики Таджикистан\n|Классификатор|Номер|Наименование|Организация|Дата|Статус|Вложение|\n|--|--|--|--|--|--|--|",
      "title": "База Законодательства Республики Таджикистан | Национальный ...",
-     "url": "https://ncz.tj/legislation"
+     "url": "https://ncz.tj/legislation",
+     "verificacion": {
+      "error": "robots.txt disallows https://ncz.tj/legislation",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:24:17Z"
+     }
     },
     {
      "date": "2026-06-16",
@@ -22,7 +27,12 @@
      "rank": 2,
      "snippet": "**ЗАМИМА ДАР ФОРМАТҲОИ WORD, PDF ва ZIP (ДАР ҶАДВАЛИ САНАДҲО)**\n...\n## Вход на сайт\n...\n…\n## Президент\nИсточник: Сайт Президента Республики Таджикистан",
      "title": "База Законодательства Республики Таджикистан",
-     "url": "https://ncz.tj/legislation/base"
+     "url": "https://ncz.tj/legislation/base",
+     "verificacion": {
+      "error": "robots.txt disallows https://ncz.tj/legislation/base",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:25:49Z"
+     }
     },
     {
      "date": "",
@@ -56,7 +66,12 @@
      "rank": 1,
      "snippet": "…\n# База Законодательства Республики Таджикистан\n|Классификатор|Номер|Наименование|Организация|Дата|Статус|Вложение|\n|--|--|--|--|--|--|--|",
      "title": "База Законодательства Республики Таджикистан | Национальный ...",
-     "url": "https://ncz.tj/legislation"
+     "url": "https://ncz.tj/legislation",
+     "verificacion": {
+      "error": "robots.txt disallows https://ncz.tj/legislation",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:27:21Z"
+     }
     },
     {
      "date": "",
@@ -64,7 +79,12 @@
      "rank": 2,
      "snippet": "- Codes\n...\n- Regulations\n...\n### ADLIA\nThis version of the Centralized Data Bank of Legal Information “Adlia” was developed within the framework of cooperation between the Ministry of Justice of the Republic of Tatarstan and the Representative Office of the Eurasia Foundation Inc.\n...\nternational D",
      "title": "ADLIA - mmih.tj",
-     "url": "https://mmih.tj/SEARCH"
+     "url": "https://mmih.tj/SEARCH",
+     "verificacion": {
+      "error": "robots.txt disallows https://mmih.tj/SEARCH",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:28:52Z"
+     }
     },
     {
      "date": "2026-06-16",
@@ -106,7 +126,14 @@
      "rank": 1,
      "snippet": "|Law on Competition Protection|Law on Competition Protection|\n...\n|Country|Tajikistan|\n...\n|Language|Tajik|\n|Source|Official Gazette|\n|Source|Official Gazette|\n...\n|Law on Government of Tajikistan|Law on Government of Tajikistan|",
      "title": "Library - Results from #150",
-     "url": "https://eira.energycharter.org/library.html?tmpl=response&start=150"
+     "url": "https://eira.energycharter.org/library.html?tmpl=response&start=150",
+     "verificacion": {
+      "bytes": 8315,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:28:54Z",
+      "http": 200,
+      "sha256": "100fa180f9b9c975e010656d0ee71ec5293d2d85bf7e7d98e6f4e3c3e23bc150"
+     }
     },
     {
      "date": "",
@@ -114,7 +141,14 @@
      "rank": 2,
      "snippet": "## Tajikistan\n|How are the laws that are in force accessed?|On a unified website managed by the government Printed in an official gazette / journal or other publication|www.adlia.tj; www.mmk.tj; www.parlament.tj Narodnaya Gazeta|",
      "title": "Tajikistan - Economy Data - World Bank",
-     "url": "https://rulemaking.worldbank.org/en/data/explorecountries/tajikistan"
+     "url": "https://rulemaking.worldbank.org/en/data/explorecountries/tajikistan",
+     "verificacion": {
+      "bytes": 140100,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:28:55Z",
+      "http": 200,
+      "sha256": "7a0463753aba12655b80221a750d5ae39fa0e301f1937bfac223ecb4067e6538"
+     }
     },
     {
      "date": "",
@@ -156,7 +190,14 @@
      "rank": 1,
      "snippet": "## Government and Semi-Official Online Services in Tajikistan\n- ⬛ Services for court decisions and trial results\n- **Supreme Court of the Republic of Tajikistan** – Official judicial portal containing case dockets, hearing schedules and selected decisions from courts of general jurisdiction and econ",
      "title": "OSINT in Tajikistan: Legal Information Search and Open ...",
-     "url": "https://github.com/OSINT-for-countries/OSINT_in_Tajikistan"
+     "url": "https://github.com/OSINT-for-countries/OSINT_in_Tajikistan",
+     "verificacion": {
+      "bytes": 224975,
+      "estado": "http",
+      "fecha": "2026-11-16T17:28:57Z",
+      "http": 404,
+      "sha256": "98adfef49d5fdc311b31b04d64f94ad3a35f7c08dd27587bb2f44b592f28fb16"
+     }
     },
     {
      "date": "2022-07-21",
@@ -164,7 +205,14 @@
      "rank": 2,
      "snippet": "# Judicial\nThe following links to government websites provide access to free online legal resources related to the judicial branch of Tajikistan's government.\n...\n- Supreme Court of Tajikistan ** External ** This link opens in a new window",
      "title": "Research Guides: Guide to Law Online: Tajikistan: Judicial",
-     "url": "https://guides.loc.gov/law-tajikistan/judicial"
+     "url": "https://guides.loc.gov/law-tajikistan/judicial",
+     "verificacion": {
+      "bytes": 33151,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:29:07Z",
+      "http": 200,
+      "sha256": "16e6a7d26ae0aa1d77f3088c8f5fda1bcf9dbdc2d570d3c041216cc04209727b"
+     }
     },
     {
      "date": "",
@@ -198,7 +246,12 @@
      "rank": 1,
      "snippet": "## РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ\n...\n**КАК РАБОТАТЬ С ОФИЦИАЛЬНЫМ САЙТОМ - РЕГИСТРАЦИЯ И ВХОД**",
      "title": "База Законодательства Республики Таджикистан | Национальный ...",
-     "url": "https://ncz.tj/legislation"
+     "url": "https://ncz.tj/legislation",
+     "verificacion": {
+      "error": "robots.txt disallows https://ncz.tj/legislation",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:30:38Z"
+     }
     },
     {
      "date": "2026-06-16",
@@ -206,7 +259,12 @@
      "rank": 2,
      "snippet": "## РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ\n...\n-\n**КАК РАБОТАТЬ С БАЗОЙ ЗАКОНОДАТЕЛЬСТВА РЕСПУБЛИКИ ТАДЖИКИСТАН**",
      "title": "Базы Законодательства Республики Таджикистан»",
-     "url": "https://ncz.tj/lv-legislation"
+     "url": "https://ncz.tj/lv-legislation",
+     "verificacion": {
+      "error": "robots.txt disallows https://ncz.tj/lv-legislation",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:32:10Z"
+     }
     },
     {
      "date": "",
@@ -248,7 +306,12 @@
      "rank": 1,
      "snippet": "## РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ",
      "title": "База Законодательства Республики Таджикистан",
-     "url": "https://ncz.tj/legislation/base"
+     "url": "https://ncz.tj/legislation/base",
+     "verificacion": {
+      "error": "robots.txt disallows https://ncz.tj/legislation/base",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:33:42Z"
+     }
     },
     {
      "date": "2025-07-19",
@@ -256,7 +319,12 @@
      "rank": 2,
      "snippet": "## РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ\n...\n## База Законодательства Республики Таджикистан",
      "title": "Законодательство",
-     "url": "https://ncz.tj/main-menu/%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE"
+     "url": "https://ncz.tj/main-menu/%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE",
+     "verificacion": {
+      "error": "robots.txt disallows https://ncz.tj/main-menu/%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:35:14Z"
+     }
     },
     {
      "date": "2026-06-16",
@@ -290,7 +358,14 @@
      "rank": 1,
      "snippet": "Tajikistan’s Agency on Standardization, Metrology, Certification, and Trade Inspection (TajikStandard – *English, Russian, and Tajik options*) carries out mandatory certification duties.\n...\nTechnical regulations are available in the TajikStandard library upon official request but are not generally ",
      "title": "Tajikistan - Standards for Trade",
-     "url": "https://www.trade.gov/country-commercial-guides/tajikistan-standards-trade"
+     "url": "https://www.trade.gov/country-commercial-guides/tajikistan-standards-trade",
+     "verificacion": {
+      "bytes": 277821,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:35:16Z",
+      "http": 200,
+      "sha256": "0c18087e09d0004a0adc34f8e543cb989f5b87111001cadaee020944f9e8a7bc"
+     }
     },
     {
      "date": "2025-01-04",
@@ -298,7 +373,12 @@
      "rank": 2,
      "snippet": "### Business Facilitation\nThe Tax Committee is the primary agency responsible for business registration ( www.andoz.tj ).\n...\n### Transparency of the Regulatory System\nTajikStandard, the government agency responsible for certifying goods and services and supervising compliance with state standards, ",
      "title": "Tajikistan - United States Department of State",
-     "url": "https://www.state.gov/reports/2024-investment-climate-statements/tajikistan"
+     "url": "https://www.state.gov/reports/2024-investment-climate-statements/tajikistan",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2024-investment-climate-statements/tajikistan",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:35:17Z"
+     }
     },
     {
      "date": "",
@@ -340,7 +420,14 @@
      "rank": 1,
      "snippet": "|Tajikistan|G/TBT/N/TJK/23 ** Technical Regulations “Requirements for nicotine-containing products” Notified document (1)|12/05/2022|HS Code 24049200|\n...\n|Name/Agency **|Contact information **|\n|--|--|",
      "title": "Member profile",
-     "url": "https://www.epingalert.org/en/MemberProfiles/Profile?countryId=C762"
+     "url": "https://www.epingalert.org/en/MemberProfiles/Profile?countryId=C762",
+     "verificacion": {
+      "bytes": 154817,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:35:19Z",
+      "http": 200,
+      "sha256": "86e2ea4e906ee1d1c66e0c5ba5baf42fc03f7c17d042e2489e0ae3417c23dc4b"
+     }
     },
     {
      "date": "2025-07-03",
@@ -348,7 +435,14 @@
      "rank": 2,
      "snippet": "Издание и описание с поддержкой ИИ\n(ТАДЖИКСТАНДАРТ)\nКАТАЛОГтехнических регламентов и государственных стандартов Республики Таджикистан (по состоянию на 1 января 2016 года)\nИздание официальное\n...\n…",
      "title": "file_48",
-     "url": "https://ru.scribd.com/document/455973512/file-48"
+     "url": "https://ru.scribd.com/document/455973512/file-48",
+     "verificacion": {
+      "bytes": 3038,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:35:20Z",
+      "http": 200,
+      "sha256": "4965d403ea8006362b7b9527e254092d06a584fa5335eddaca51255af1efe08e"
+     }
     },
     {
      "date": "",
@@ -382,7 +476,14 @@
      "rank": 1,
      "snippet": "№189 List of low-voltage equipment subject to mandatory compliance confirmation by issuing a certificate of conformity\n№189 Technical Regulations on the Safety of Low Voltage Equipment\n№189-f About implementation of electronic declaration\n№190 Technical Regulations on Food Safety, Safety of Milk and",
      "title": "Tajikistan Trade Portal",
-     "url": "https://tajtrade.tj/Laws?page=2&l=en"
+     "url": "https://tajtrade.tj/Laws?page=2&l=en",
+     "verificacion": {
+      "bytes": 341710,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:35:23Z",
+      "http": 200,
+      "sha256": "c3fdd6d347f32417a240f2c484c59c2ff80311ef3a91524f8eb8719ea28b4f50"
+     }
     },
     {
      "date": "2026-02-13",
@@ -390,7 +491,14 @@
      "rank": 2,
      "snippet": "Агентство по стандартизации, метрологии, сертификации и торговой инспекции при Правительстве Республики Таджикистан\n...\nДушанбе ул. Н. Карабаева 42/2\nТел: (+992 37) 233-68-69",
      "title": "Агентство по стандартизации, метрологии, сертификации и ...",
-     "url": "https://egov.tj/site/standard-tjk"
+     "url": "https://egov.tj/site/standard-tjk",
+     "verificacion": {
+      "bytes": 23669,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:35:25Z",
+      "http": 200,
+      "sha256": "bc06a4ae349fd1dae2964c9032db62834cac4aa64541fc6c11b850df7f39b751"
+     }
     },
     {
      "date": "2016-04-30",
@@ -432,7 +540,14 @@
      "rank": 1,
      "snippet": "OIC Statistical Commission\n|\n...\n|--|",
      "title": "Tajikistan",
-     "url": "https://www.oicstatcom.org/databases-nso-detail.php?c_code=51"
+     "url": "https://www.oicstatcom.org/databases-nso-detail.php?c_code=51",
+     "verificacion": {
+      "bytes": 17206,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:35:28Z",
+      "http": 200,
+      "sha256": "491d1ff08d3a38b1d42c7a29a6d1c835782ff6a0f7d88095c4390483ddb16979"
+     }
     },
     {
      "date": "2025-05-11",
@@ -440,7 +555,14 @@
      "rank": 2,
      "snippet": "District news - Agency on statistics under the President of the Republic of Tajikistan\nAgency on statistics under the President of the Republic of Tajikistan\n...\nAgency on statistics under the President of the Republic of Tajikistan\n...\nWhen using materials published on this site, a link to www.stat",
      "title": "District news - Agency on statistics under the President of the Republic of Tajikistan",
-     "url": "https://www.stat.tj/en/category/habari-nohiya-en/page/2/"
+     "url": "https://www.stat.tj/en/category/habari-nohiya-en/page/2/",
+     "verificacion": {
+      "bytes": 91046,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:35:34Z",
+      "http": 200,
+      "sha256": "80d38b8f7d488f1d1f5d7e924fca65314981825743c51aebe02699a77fa4dab0"
+     }
     },
     {
      "date": "2024-05-15",
@@ -482,7 +604,14 @@
      "rank": 1,
      "snippet": "##### Banking statistics bulletin\nIssue of 2026, August №8 (373)\nLast issue of 2023\nLast issue of 2022\nLast issue of 2021\n...\nLast issue of 2013\nLast issue of 2012\nLast issue of 2011",
      "title": "Banking statistics bulletin",
-     "url": "https://www.nbt.tj/en/statistics/statistical_bulletin.php"
+     "url": "https://www.nbt.tj/en/statistics/statistical_bulletin.php",
+     "verificacion": {
+      "bytes": 88915,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:35:36Z",
+      "http": 200,
+      "sha256": "82830655ae06f189fb3eefaedfe5aecd521b6135dc26a2a2a37ce2c1d8071424"
+     }
     },
     {
      "date": "2026-11-01",
@@ -490,7 +619,14 @@
      "rank": 2,
      "snippet": "###### Monetary Survey of the National Bank of Tajikistan\n2001-2007 2008-2026\n###### Depository Corporations Survey\n2001-2007 2008-2026\n...\n###### Monetary aggregates\n2001-2007 2008-2026\n###### Reserve requirement calendar",
      "title": "Monetary sector",
-     "url": "https://www.nbt.tj/en/statistics/monetary_sector.php"
+     "url": "https://www.nbt.tj/en/statistics/monetary_sector.php",
+     "verificacion": {
+      "bytes": 88095,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:35:40Z",
+      "http": 200,
+      "sha256": "df0c9f7d7809978c1261697a88913d5665d117326bacb0726211fcb4359d011a"
+     }
     },
     {
      "date": "2026-11-02",
@@ -532,7 +668,14 @@
      "rank": 1,
      "snippet": "Open data portal of the Agency on Statistics under the President of the Republic of Tajikistan.\n...\n### General\n|Link|http://data.stat.tj|\n...\n|Owner name|Agency on Statistics under the President of the Republic of Tajikistan|\n...\n|Owner link|http://stat.tj|",
      "title": "Dateno Registry and Dataset Search Engine",
-     "url": "https://dateno.io/registry/catalog/cdi00013524/"
+     "url": "https://dateno.io/registry/catalog/cdi00013524/",
+     "verificacion": {
+      "bytes": 17883,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:35:41Z",
+      "http": 200,
+      "sha256": "eba95837b1cbb5caeef3f43979cbb7258dda291692564326e012fbac915444a7"
+     }
     },
     {
      "date": "2026-06-23",
@@ -540,7 +683,14 @@
      "rank": 2,
      "snippet": "## Government and Semi-Official Online Services in Tajikistan\n- ⬛ Portals of open data and datasets in various directions\n- **Open Data Portal of the Republic of Tajikistan** – National CKAN-based repository of government datasets covering economy, demographics and public administration.",
      "title": "OSINT in Tajikistan: Legal Information Search and Open ...",
-     "url": "https://github.com/OSINT-for-countries/OSINT_in_Tajikistan"
+     "url": "https://github.com/OSINT-for-countries/OSINT_in_Tajikistan",
+     "verificacion": {
+      "bytes": 224975,
+      "estado": "http",
+      "fecha": "2026-11-16T17:35:43Z",
+      "http": 404,
+      "sha256": "f4fa80505aa5d09b51e3d4cae51d52a8461f1e711de0c37568cd3c138793fc26"
+     }
     },
     {
      "date": "",

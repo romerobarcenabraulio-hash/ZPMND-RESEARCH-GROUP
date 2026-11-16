@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "# CONSTITUCIÓN DE LA REPÚBLICA DE EL SALVADOR.\n...\n|Fecha de Emisión:|15/12/1983|Materia:|Asamblea Constituyente|\n...\n|--|--|--|\n|234|281|16/12/1983|",
      "title": "Constitución de la republica de El Salvador - Asamblea Legislativa",
-     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/view/3959"
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/view/3959",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.asamblea.gob.sv/leyes-y-decretos/view/3959",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:38:33Z"
+     }
     },
     {
      "date": "2025-12-01",
@@ -22,7 +27,12 @@
      "rank": 2,
      "snippet": "José Damián Villacorta, sirvió de fundamento a las deliberaciones del Congreso, que el 12 de junio de 1824, decretó la primera Constitución Política de El Salvador, sancionada por el prócer Don José Manuel Rodríguez, en su carácter de Jefe de Estado.",
      "title": "Constitución de la República | Asamblea Legislativa de El ...",
-     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/constitucion"
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/constitucion",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.asamblea.gob.sv/leyes-y-decretos/constitucion",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:38:37Z"
+     }
     },
     {
      "date": "2004-02-01",
@@ -64,7 +74,12 @@
      "rank": 1,
      "snippet": "Leyes y Decretos\n...\nBuscador de Leyes y Decretos\n...\nÚltimos Decretos Aprobados\nPendiente de Publicación Material en el Diario Oficial y de Entrada en Vigencia.\nAquí se muestran los Documentos Legislativos emitidos en cada Sesión Plenaria.",
      "title": "Últimos Decretos Aprobados",
-     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/ultimos-aprobados"
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/ultimos-aprobados",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.asamblea.gob.sv/leyes-y-decretos/ultimos-aprobados",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:38:41Z"
+     }
     },
     {
      "date": "2004-02-01",
@@ -72,7 +87,12 @@
      "rank": 2,
      "snippet": "Reglamento Interior de la Asamblea Legislativa\nGrupos Parlamentarios\nLeyes y Decretos\nConstitución de la República\nBuscador de Leyes y Decretos\nAcuerdos de Reforma a la Constitución\nLeyes y Decretos por Año",
      "title": "Decretos por Año - Asamblea Legislativa de El Salvador",
-     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/decretos-por-anios"
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/decretos-por-anios",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.asamblea.gob.sv/leyes-y-decretos/decretos-por-anios",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:38:44Z"
+     }
     },
     {
      "date": "2004-02-01",
@@ -114,7 +134,14 @@
      "rank": 1,
      "snippet": "Reformado 2022.\nREPUBLICA DE EL SALVADOR EN LA AMERICA CENTRAL.\n1\nDIARIO OFICIAL\n...\nTOMO Nº 435  SAN SALVADOR, VIERNES 10 DE JUNIO DE 2022  NUMERO 110\n…",
      "title": "diario oficial",
-     "url": "https://www.transparencia.gob.sv/descarga_archivo.php?id=NjI1ODQx"
+     "url": "https://www.transparencia.gob.sv/descarga_archivo.php?id=NjI1ODQx",
+     "verificacion": {
+      "bytes": 1277534,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:38:46Z",
+      "http": 200,
+      "sha256": "a6987f30935aacdc536af909f1bbe6b758f8e93d02e8a4db1efeab451181469d"
+     }
     },
     {
      "date": "2021-04-28",
@@ -122,7 +149,14 @@
      "rank": 2,
      "snippet": "# El Salvador Republic of El Salvador / República de El Salvador\n...\n## Legislative\n- OFFICIAL GAZETTE: Diario Oficial\n- PARLIAMENT: Asamblea Legislativa (external link)",
      "title": "Guide to Law Online: El Salvador | Law Library of Congress",
-     "url": "https://wwws.loc.gov/law/help/guide/nations/elsalvador.php"
+     "url": "https://wwws.loc.gov/law/help/guide/nations/elsalvador.php",
+     "verificacion": {
+      "bytes": 17,
+      "estado": "http",
+      "fecha": "2026-11-16T16:38:48Z",
+      "http": 429,
+      "sha256": "e395ad55dd18b1bf23944d00b156714accfae4ec834df208053575542dfae602"
+     }
     },
     {
      "date": "1997-05-16",
@@ -164,7 +198,14 @@
      "rank": 1,
      "snippet": "Departamento de Documentación Judicial\n## DEPARTAMENTO DE DOCUMENTACIÓN JUDICIAL\n## Corte Suprema de Justicia de El Salvador\n...\n## Boletines de jurisprudencia\n# 🔗 Enlaces de Interés 🔗\n## Videotutoriales de búsqueda\n**JURISPRUDENCIA**",
      "title": "Publicaciones recientes",
-     "url": "https://jurisprudencia.gob.sv/ddj/"
+     "url": "https://jurisprudencia.gob.sv/ddj/",
+     "verificacion": {
+      "bytes": 205528,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:38:50Z",
+      "http": 200,
+      "sha256": "e7e7816ef693da27ccc006c6a2c7d484e5ca974da22052168b7513bcff231587"
+     }
     },
     {
      "date": "",
@@ -172,7 +213,14 @@
      "rank": 2,
      "snippet": "Corte Suprema de Justicia de El Salvador\n...\n## 66 ACTA CORTE PLENA 01.09.26\n1 septiembre, 2026\n27 agosto, 2026",
      "title": "Brindan atención visual gratuita a niñez y adolescencia",
-     "url": "https://www.csj.gob.sv/"
+     "url": "https://www.csj.gob.sv/",
+     "verificacion": {
+      "bytes": 5500,
+      "estado": "http",
+      "fecha": "2026-11-16T16:38:51Z",
+      "http": 403,
+      "sha256": "d30f88fce280af341e4596b3f254b322cb9f2bcaf1287cceed88fa9da65f7db3"
+     }
     },
     {
      "date": "",
@@ -206,7 +254,12 @@
      "rank": 1,
      "snippet": "# Búsqueda de Leyes y Decretos",
      "title": "Búsqueda de Leyes y Decretos",
-     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/busqueda-decretos"
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/busqueda-decretos",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.asamblea.gob.sv/leyes-y-decretos/busqueda-decretos",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:38:53Z"
+     }
     },
     {
      "date": "2004-02-01",
@@ -214,7 +267,12 @@
      "rank": 2,
      "snippet": "Historia\nReglamento Interior de la Asamblea Legislativa\nGrupos Parlamentarios\nLeyes y Decretos\nConstitución de la República\nBuscador de Leyes y Decretos\nAcuerdos de Reforma a la Constitución\nLeyes y Decretos por Año\nAnuarios Legislativo",
      "title": "Decretos por Año - Asamblea Legislativa de El Salvador",
-     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/decretos-por-anios"
+     "url": "https://www.asamblea.gob.sv/leyes-y-decretos/decretos-por-anios",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.asamblea.gob.sv/leyes-y-decretos/decretos-por-anios",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:38:57Z"
+     }
     },
     {
      "date": "2026-10-01",
@@ -256,7 +314,14 @@
      "rank": 1,
      "snippet": "# Municipalidades\n...\n- Leyes\n- Normas\n- Reglamentos\n- Instructivos\n- Circulares\n...\n- Código Municipal\nEste código tiene por objeto desarrollar los principios constitucionales referentes a la organización, funcionamiento y ejercicio de las facultades autónomas de los municipios.\n...\nMinisterio de H",
      "title": "Municipalidades - Ministerio de Hacienda de la República de ...",
-     "url": "https://transparencia.mh.gob.sv/laip/es/Temas/Ley_de_Acceso_a_la_Informacion_Publica/Marco_Normativo/Municipalidades.html"
+     "url": "https://transparencia.mh.gob.sv/laip/es/Temas/Ley_de_Acceso_a_la_Informacion_Publica/Marco_Normativo/Municipalidades.html",
+     "verificacion": {
+      "bytes": 54191,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:00Z",
+      "http": 200,
+      "sha256": "029feb6b824cce9d858e5b65a660cea1fc4fd7248a657b23c31458d8739bbbdf"
+     }
     },
     {
      "date": "",
@@ -264,7 +329,14 @@
      "rank": 2,
      "snippet": "REFORMAS: \n(1) Decreto Municipal No. 7 de fecha 14 de marzo de 2025, publicado en el Diario Oficial No. 57, Tomo 446 de fecha 21 de marzo de 2025.\n(DEROGATORIA)",
      "title": "El Concejo Municipal de San Salvador Centro ...",
-     "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/2020-2029/2024/11/1068E9.PDF"
+     "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/2020-2029/2024/11/1068E9.PDF",
+     "verificacion": {
+      "bytes": 149085,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:02Z",
+      "http": 200,
+      "sha256": "c0469a63caecaef51d064624c4d39abf6d0d677a964fd9f57748572fe4f637ae"
+     }
     },
     {
      "date": "",
@@ -306,7 +378,14 @@
      "rank": 1,
      "snippet": "De conformidad a lo establecido en\nla Constitución de la República de\nEl Salvador, es atribución y\nobligación del Presidente de la\nRepública, decretar los reglamentos\nque fueren necesarios para facilitar\ny asegurar la aplicación de las leyes\ncuya ejecución le corresponde.",
      "title": "https://www.bcr.gob.sv/regulaciones/complementaria...",
-     "url": "https://www.bcr.gob.sv/regulaciones/complementarias.php"
+     "url": "https://www.bcr.gob.sv/regulaciones/complementarias.php",
+     "verificacion": {
+      "bytes": 94407,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:06Z",
+      "http": 200,
+      "sha256": "098b00a5a1c10f31e2fdc4c64851d489a02073f43162cda204e836b887885adb"
+     }
     },
     {
      "date": "2021-11-05",
@@ -314,7 +393,14 @@
      "rank": 2,
      "snippet": "There are two types of standards in Salvadoran legislation: Mandatory Salvadoran Standards (NSO), also known as Technical Regulations, and Recommended Salvadoran Standards (NSR), also known as Technical Standards.\n...\nEdificio CNC (Consejo Nacional de Calidad)\n...\nTel. +503 2590-5300",
      "title": "El Salvador - Standards for Trade",
-     "url": "https://www.trade.gov/country-commercial-guides/el-salvador-standards-trade"
+     "url": "https://www.trade.gov/country-commercial-guides/el-salvador-standards-trade",
+     "verificacion": {
+      "bytes": 280074,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:08Z",
+      "http": 200,
+      "sha256": "8ffa0f607d28d1426a238c9cb4ef4b25fed2460926a29f7deab064a3b659fdba"
+     }
     },
     {
      "date": "",
@@ -356,7 +442,14 @@
      "rank": 1,
      "snippet": "# Reglamentación Técnica y Normativas Obligatorias\nEn esta sección podrá encontrar las Normas Obligarorias y Reglamentos Técnicos Cetroamericanos y Salvadoreños aplicables al sector de productos alimenticios, asi como tambien el Codigo de Buenas Practicas de Servicios Financieros.",
      "title": "Defensoria del Consumidor",
-     "url": "https://www.defensoria.gob.sv/servicios/reglamentacion-tecnica-y-normativas-obligatorias/"
+     "url": "https://www.defensoria.gob.sv/servicios/reglamentacion-tecnica-y-normativas-obligatorias/",
+     "verificacion": {
+      "bytes": 222849,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:09Z",
+      "http": 200,
+      "sha256": "2154bd21a66384adaa47a3e7b5abfaddf3cee7b48001677b3ecb79697c519d79"
+     }
     },
     {
      "date": "2024-10-15",
@@ -364,7 +457,14 @@
      "rank": 2,
      "snippet": "# CNC Consejo Nacional de CalidadRegresar al listado Vista en PDF\n## Catálogo de Normas Técnicas Salvadoreñas e Internacionales\nVenta de Normas Técnicas Salvadoreñas y Normas Internacionales (ISO, IEC, ASTM, etc)\n...\nIlopango San Salvador.",
      "title": "Portal de Transparencia - El Salvador",
-     "url": "https://www.transparencia.gob.sv/institutions/75/services/5137"
+     "url": "https://www.transparencia.gob.sv/institutions/75/services/5137",
+     "verificacion": {
+      "bytes": 8909,
+      "estado": "http",
+      "fecha": "2026-11-16T16:39:11Z",
+      "http": 404,
+      "sha256": "b641d4be072eabd9929d2a61373a5fdfd368c1930a44e57b7864c329d98ea944"
+     }
     },
     {
      "date": "",
@@ -406,7 +506,14 @@
      "rank": 1,
      "snippet": "# Reglamentación Técnica y Normativas Obligatorias\nEn esta sección podrá encontrar las Normas Obligarorias y Reglamentos Técnicos Cetroamericanos y Salvadoreños aplicables al sector de productos alimenticios, asi como tambien el Codigo de Buenas Practicas de Servicios Financieros.",
      "title": "Defensoria del Consumidor",
-     "url": "https://www.defensoria.gob.sv/servicios/reglamentacion-tecnica-y-normativas-obligatorias/"
+     "url": "https://www.defensoria.gob.sv/servicios/reglamentacion-tecnica-y-normativas-obligatorias/",
+     "verificacion": {
+      "bytes": 222849,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:12Z",
+      "http": 200,
+      "sha256": "2678d0d44ff74c8c414f1d9c3b2cc425c5e78a8405bd0f8bae47dc4a869079fe"
+     }
     },
     {
      "date": "",
@@ -414,7 +521,12 @@
      "rank": 2,
      "snippet": ">10/12/2019</td><td>Unidad de Atención a la Niñez</td></tr><tr><td> 5a.\nAdenda al Listado Institucional de Medicamentos Esenciales (LIME) 1a.\n...\n…",
      "title": "Centro Virtual de Documentación Regulatoria - Ministerio de",
-     "url": "https://asp.salud.gob.sv/regulacion/buscar1.asp"
+     "url": "https://asp.salud.gob.sv/regulacion/buscar1.asp",
+     "verificacion": {
+      "error": "robots.txt disallows https://asp.salud.gob.sv/regulacion/buscar1.asp",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:39:12Z"
+     }
     },
     {
      "date": "",
@@ -456,7 +568,14 @@
      "rank": 1,
      "snippet": "Oficina Nacional de Estadística y Censos\n...\n#### Servicios Destacados\n###### Oficina Nacional de Estadística y Censos 7a Avenida Norte, entre 1a Calle Pte y Calle Arce, San Salvador\n###### 2281-8000\n###### info@bcr.gob.sv",
      "title": "Oficina Nacional de Estadística y Censos",
-     "url": "https://onec.bcr.gob.sv/"
+     "url": "https://onec.bcr.gob.sv/",
+     "verificacion": {
+      "bytes": 133683,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:18Z",
+      "http": 200,
+      "sha256": "2e4473d1f4036bf0b47320d4f1dfd4488be6deed992575aba76d8bc2e885292f"
+     }
     },
     {
      "date": "",
@@ -464,7 +583,14 @@
      "rank": 2,
      "snippet": "Country Profile of El Salvador\nMain statistical agency\nMain statistical agency name\nDireccion General de Estadistica y Censos\nWeb address\nhttp://www.digestyc.gob.sv/",
      "title": "Country Profile of El Salvador - UNSD Document",
-     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=573"
+     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=573",
+     "verificacion": {
+      "bytes": 1935,
+      "estado": "http",
+      "fecha": "2026-11-16T16:39:19Z",
+      "http": 404,
+      "sha256": "2ccb0a374240bbac53fe934c7bf48d38383c4fffedc1210b7d31f2ea73186f09"
+     }
     },
     {
      "date": "2024-01-01",
@@ -506,7 +632,12 @@
      "rank": 1,
      "snippet": "Estadísticas Macroeconómicas - Banco Central de Reserva de El Salvador\nPanorama de las sociedades de depósito\nMillones de US$\nDatos actualizados hasta: Septiembre 2026\n...\nDescargar datos en Excel/CSV\n- Formato Excel\n- Formato CSV\n...\nBanco Central De Reserva",
      "title": "Panorama de las sociedades de depósito",
-     "url": "https://estadisticas.bcr.gob.sv/serie/panorama-de-las-sociedades-de-depositos"
+     "url": "https://estadisticas.bcr.gob.sv/serie/panorama-de-las-sociedades-de-depositos",
+     "verificacion": {
+      "error": "robots.txt disallows https://estadisticas.bcr.gob.sv/serie/panorama-de-las-sociedades-de-depositos",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:39:20Z"
+     }
     },
     {
      "date": "",
@@ -514,7 +645,12 @@
      "rank": 2,
      "snippet": "Estadísticas Macroeconómicas - Banco Central de Reserva de El Salvador\nGobierno Central Consolidado\n...\nDatos actualizados hasta: Septiembre 2026\n...\nBanco Central De Reserva\nAlameda Juan Pablo II, entre 15 y 17 Av. Norte.\n...\ninfo@bcr.gob.sv",
      "title": "Gobierno Central Consolidado",
-     "url": "https://estadisticas.bcr.gob.sv/serie/gobierno-central-consolidado-mensual"
+     "url": "https://estadisticas.bcr.gob.sv/serie/gobierno-central-consolidado-mensual",
+     "verificacion": {
+      "error": "robots.txt disallows https://estadisticas.bcr.gob.sv/serie/gobierno-central-consolidado-mensual",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:39:21Z"
+     }
     },
     {
      "date": "",
@@ -556,7 +692,12 @@
      "rank": 1,
      "snippet": "Portal de Transparencia Fiscal de El Salvador:DATOS ABIERTOS\n...\n- Cierres Contables 44 Municipalidades\n2025 2024\n...\nSeleccione\n...\n- Aduanas - Catálogos (en proceso de actualización)\n...\n- Gobiernos Locales - Catálogos\nDescargar .CSV",
      "title": "Portal de Transparencia Fiscal de El Salvador:DATOS ...",
-     "url": "https://www.transparenciafiscal.gob.sv/ptf/es/PTF2-Datos_Abiertos.html"
+     "url": "https://www.transparenciafiscal.gob.sv/ptf/es/PTF2-Datos_Abiertos.html",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.transparenciafiscal.gob.sv/ptf/es/PTF2-Datos_Abiertos.html",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T16:39:21Z"
+     }
     },
     {
      "date": "",
@@ -564,7 +705,14 @@
      "rank": 2,
      "snippet": "Transparencia\nInstituto de Acceso a la Información Pública\n# Portal de Transparencia\nConsulta la información oficiosa que publican las instituciones del Estado salvadoreño: documentos, funcionarios, contrataciones, viajes y más.\n...\nElige una categoría para ver sus instituciones y su información púb",
      "title": "Portal de Transparencia - IAIP",
-     "url": "https://www.transparencia.gob.sv/"
+     "url": "https://www.transparencia.gob.sv/",
+     "verificacion": {
+      "bytes": 29230,
+      "estado": "accesible",
+      "fecha": "2026-11-16T16:39:23Z",
+      "http": 200,
+      "sha256": "39748c4379425040bc298d7391024941ff0997bde48526e24ec7eb8eea9a4e56"
+     }
     },
     {
      "date": "2020-09-24",

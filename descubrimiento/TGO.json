@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "# Lois\nRésultat de votre recherche : 970 résultat(s) trouvé(s).\n...\nClimatiques.\n...\nmodifiant et complétant la loi n° 2012-016\n...\nLoi 2024-005 06/05/2024\nPortant Constitution de la République Togolaise",
      "title": "Lois | JOURNAL OFFICIEL DE LA REPUBLIQUE TOGOLAISE - Gouv",
-     "url": "https://jo.gouv.tg/Lois"
+     "url": "https://jo.gouv.tg/Lois",
+     "verificacion": {
+      "error": "robots.txt disallows https://jo.gouv.tg/Lois",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:16:59Z"
+     }
     },
     {
      "date": "",
@@ -22,7 +27,14 @@
      "rank": 2,
      "snippet": "|#|Title|Poids|Télécharger|\n...\n| |Togo Constitution du 06 mai 2024|118.81 ko|Télécharger Preview|\n...\n| |Loi de Finance, Gestion 2019|2.15 mo|Télécharger Preview|",
      "title": "Documents officiels - République Togolaise - Togo Officiel",
-     "url": "https://www.republiquetogolaise.tg/documents-officiels/listes"
+     "url": "https://www.republiquetogolaise.tg/documents-officiels/listes",
+     "verificacion": {
+      "bytes": 141064,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:17:00Z",
+      "http": 200,
+      "sha256": "828017d9abfa42979933399e463dc81389d5306ee844f165129b19d5c9835e59"
+     }
     },
     {
      "date": "2024-09-21",
@@ -48,7 +60,12 @@
      "rank": 1,
      "snippet": "Actes du Gouvernement | JOURNAL OFFICIEL DE LA REPUBLIQUE TOGOLAISE : LOIS ET REGLEMENTS\n…\n...\nRésultat de votre recherche : 10662 résultat(s) trouvé(s).\nDécret 2025-022/PC 08/10/2025",
      "title": "Actes du Gouvernement | JOURNAL OFFICIEL DE LA REPUBLIQUE TOGOLAISE ...",
-     "url": "https://jo.gouv.tg/acte_du_gouvernement"
+     "url": "https://jo.gouv.tg/acte_du_gouvernement",
+     "verificacion": {
+      "error": "robots.txt disallows https://jo.gouv.tg/acte_du_gouvernement",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:17:00Z"
+     }
     },
     {
      "date": "2025-10-08",
@@ -56,7 +73,12 @@
      "rank": 2,
      "snippet": "Décret n° 2025-022/PC du 08/10/2025\nPrésidence du Conseil\n...\nDécret n° 2025-019 bis/PC du 18/09/2025\n...\nfonctionnement de l’Agence Nationale du Domaine\net du Foncier\n...\n…",
      "title": "JOURNAL OFFICIEL DE LA REPUBLIQUE TOGOLAISE : LOIS ET REGLEMENTS",
-     "url": "https://jo.gouv.tg/"
+     "url": "https://jo.gouv.tg/",
+     "verificacion": {
+      "error": "robots.txt disallows https://jo.gouv.tg/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:17:01Z"
+     }
     },
     {
      "date": "2021-08-03",
@@ -98,7 +120,14 @@
      "rank": 1,
      "snippet": "# JOURNAL OFFICIEL DE LA REPUBLIQUE TOGOLAISE : LOIS ET REGLEMENTS\n...\nVous y trouverez la version intégrale des journaux officiels parus au Togo de 1920 à nos jours ainsi que les textes officiels qui y sont publiés.",
      "title": "BIENVENUE SUR LE SITE DU JOURNAL OFFICIEL",
-     "url": "https://www.jo.gouv.tg/"
+     "url": "https://www.jo.gouv.tg/",
+     "verificacion": {
+      "bytes": 16,
+      "estado": "http",
+      "fecha": "2026-11-16T17:17:33Z",
+      "http": 526,
+      "sha256": "4c543fe8a4d739c6f622b04303ac9e9d9fafbf00da950fc916ad826da2c0cdac"
+     }
     },
     {
      "date": "",
@@ -106,7 +135,12 @@
      "rank": 2,
      "snippet": "DE  LA  REPUBLIQUE  TOGOLAISE\nPARAISSANT  LE  1er  ET  LE  16  DE  CHAQUE  MOIS  A  LOME\n...\n: 22  21  27  01  -  LOME",
      "title": "JOURNAL OFFICIEL - gouvernement Togolais",
-     "url": "https://jo.gouv.tg/sites/default/files/JO/JOS_07_10_2022%20-%2067%20E%20ANNEE%20N%C2%B041%20BIS.pdf"
+     "url": "https://jo.gouv.tg/sites/default/files/JO/JOS_07_10_2022%20-%2067%20E%20ANNEE%20N%C2%B041%20BIS.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://jo.gouv.tg/sites/default/files/JO/JOS_07_10_2022%20-%2067%20E%20ANNEE%20N%C2%B041%20BIS.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:17:43Z"
+     }
     },
     {
      "date": "",
@@ -148,7 +182,14 @@
      "rank": 1,
      "snippet": "2024\n...\nPARTIE OFFICIELLE\nACTES  DU  GOUVERNEMENT  DE  LA  REPUBLIQUE\nTOGOLAISE\nLOIS,  ORDONNANCES,  DECRETS,\nARRETES  ET DECISIONS\nDECISIONS",
      "title": "[PDF] JOURNAL OFFICIEL",
-     "url": "https://www.jo.gouv.tg/sites/default/files/JO/JOS_12_09_2024%20-%2069E%20ANNEE%20N%C2%B0%2092%20BIS.pdf"
+     "url": "https://www.jo.gouv.tg/sites/default/files/JO/JOS_12_09_2024%20-%2069E%20ANNEE%20N%C2%B0%2092%20BIS.pdf",
+     "verificacion": {
+      "bytes": 16,
+      "estado": "http",
+      "fecha": "2026-11-16T17:18:24Z",
+      "http": 526,
+      "sha256": "4c543fe8a4d739c6f622b04303ac9e9d9fafbf00da950fc916ad826da2c0cdac"
+     }
     },
     {
      "date": "2025-10-08",
@@ -156,7 +197,12 @@
      "rank": 2,
      "snippet": "Recherches Avancées | JOURNAL OFFICIEL DE LA REPUBLIQUE TOGOLAISE : LOIS ET REGLEMENTS\n...\n## RECHERCHE AVANCEE\n...\nDécision ES-003/25 Du 24/02/2025COUR CONSTITUTIONNELLE",
      "title": "Recherches Avancées | JOURNAL OFFICIEL DE LA REPUBLIQUE ... - gouv",
-     "url": "https://jo.gouv.tg/recherche"
+     "url": "https://jo.gouv.tg/recherche",
+     "verificacion": {
+      "error": "robots.txt disallows https://jo.gouv.tg/recherche",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:18:34Z"
+     }
     }
    ]
   },
@@ -174,7 +220,12 @@
      "rank": 1,
      "snippet": "# Lois\nRésultat de votre recherche : 970 résultat(s) trouvé(s).\n...\nLoi organique 2024 - 002 31/01/2024\n...\nLoi 2023-017 27/12/2023\nportant loi de finances, exercice 2024",
      "title": "Lois | JOURNAL OFFICIEL DE LA REPUBLIQUE TOGOLAISE - Gouv",
-     "url": "https://jo.gouv.tg/Lois"
+     "url": "https://jo.gouv.tg/Lois",
+     "verificacion": {
+      "error": "robots.txt disallows https://jo.gouv.tg/Lois",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:18:44Z"
+     }
     },
     {
      "date": "",
@@ -182,7 +233,14 @@
      "rank": 2,
      "snippet": "Documents officiels - République Togolaise - Togo Officiel\n**PORTAIL OFFICIEL DE LA RÉPUBLIQUE TOGOLAISE**\nDocuments\n- Documents officiels\n...\n| |Loi sur les communications électroniques|4.67 mo|Télécharger Preview|",
      "title": "Documents officiels - République Togolaise - Togo Officiel",
-     "url": "https://www.republiquetogolaise.tg/documents-officiels/listes"
+     "url": "https://www.republiquetogolaise.tg/documents-officiels/listes",
+     "verificacion": {
+      "bytes": 141064,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:18:45Z",
+      "http": 200,
+      "sha256": "a8661098480726460021f58dc554c8cd0fbb57709d57f5cc4c1e151a7e9bb7f6"
+     }
     },
     {
      "date": "2023-03-02",
@@ -216,7 +274,12 @@
      "rank": 1,
      "snippet": "# JOURNAL OFFICIEL DE LA REPUBLIQUE TOGOLAISE : LOIS ET REGLEMENTS\n...\nVous y trouverez la version intégrale des journaux officiels parus au Togo de 1920 à nos jours ainsi que les textes officiels qui y sont publiés.",
      "title": "JOURNAL OFFICIEL DE LA REPUBLIQUE TOGOLAISE : LOIS ET REGLEMENTS",
-     "url": "https://jo.gouv.tg/"
+     "url": "https://jo.gouv.tg/",
+     "verificacion": {
+      "error": "robots.txt disallows https://jo.gouv.tg/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:18:54Z"
+     }
     },
     {
      "date": "2025-04-14",
@@ -224,7 +287,12 @@
      "rank": 2,
      "snippet": "Lois | JOURNAL OFFICIEL DE LA REPUBLIQUE TOGOLAISE : LOIS ET REGLEMENTS\n…\n...\n# Lois\nRésultat de votre recherche : 970 résultat(s) trouvé(s).",
      "title": "Lois | JOURNAL OFFICIEL DE LA REPUBLIQUE TOGOLAISE - Gouv",
-     "url": "https://jo.gouv.tg/Lois"
+     "url": "https://jo.gouv.tg/Lois",
+     "verificacion": {
+      "error": "robots.txt disallows https://jo.gouv.tg/Lois",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:19:04Z"
+     }
     },
     {
      "date": "",
@@ -258,7 +326,14 @@
      "rank": 1,
      "snippet": "…\n# Décret N°2022-100/PR du 07 octobre 2022 modifiant le décret N°2015-091/PR du 27 novembre 2015 portant organisation et fonctionnement de l’Autorité de régulation des communications électroniques et des postes (ARCEP)",
      "title": "Réglementation - Autorité de Régulation des Communications ...",
-     "url": "https://arcep.tg/regulation/reglementation/"
+     "url": "https://arcep.tg/regulation/reglementation/",
+     "verificacion": {
+      "bytes": 1068735,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:19:11Z",
+      "http": 200,
+      "sha256": "72364e1c65dbc9c3696c47cb44988e4313017e2e38b5c9713be5d5fec81e7630"
+     }
     },
     {
      "date": "",
@@ -266,7 +341,14 @@
      "rank": 2,
      "snippet": "Archives des Décrets - Autorité de Régulation des Communications Electroniques et des Postes\n…\n## Décret n°2026-037/PC du 11 mars 2026 portant approbation du Plan national d’attribution des bandes de Fréquences radioélectriques PNAF",
      "title": "Archives des Décrets - Autorité de Régulation des ...",
-     "url": "https://arcep.tg/type_de_texte/decrets/"
+     "url": "https://arcep.tg/type_de_texte/decrets/",
+     "verificacion": {
+      "bytes": 194261,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:19:15Z",
+      "http": 200,
+      "sha256": "cbd7f72106d8b5a724cfa4efdca24fdecfbb0f9d734b7c957b0f996b2199d2c5"
+     }
     },
     {
      "date": "2026-10-09",
@@ -300,7 +382,14 @@
      "rank": 1,
      "snippet": "Togo - Standards for Trade\nDescribes the country’s standards, identifies national standards and accreditation bodies, and lists main national testing and conformity assessment bodies.",
      "title": "Togo - Trade Barriers",
-     "url": "https://www.trade.gov/country-commercial-guides/togo-trade-barriers?navcard=50146"
+     "url": "https://www.trade.gov/country-commercial-guides/togo-trade-barriers?navcard=50146",
+     "verificacion": {
+      "bytes": 274459,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:19:17Z",
+      "http": 200,
+      "sha256": "1de0b8569115446089e6313a19eb6f630b0aef72f693379462c42d6a83948d59"
+     }
     },
     {
      "date": "2025-11-15",
@@ -308,7 +397,14 @@
      "rank": 2,
      "snippet": "Catalogue Des Normes Togolaises Avril 2019\n...\n3 TGN ARS 466 Produits de mouture à base de maïs - Spécification 2013 2019\n...\n…\n134 TGN ISO 8440 Emplacement des codes dans les documents commerciaux 2019\n...\n…",
      "title": "Catalogue Des Normes Togolaises Avril 2019 | PDF - Scribd",
-     "url": "https://www.scribd.com/document/582439037/catalogue-des-normes-Togolaises-Avril-2019"
+     "url": "https://www.scribd.com/document/582439037/catalogue-des-normes-Togolaises-Avril-2019",
+     "verificacion": {
+      "bytes": 3038,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:19:18Z",
+      "http": 200,
+      "sha256": "4965d403ea8006362b7b9527e254092d06a584fa5335eddaca51255af1efe08e"
+     }
     },
     {
      "date": "2026-09-22",
@@ -350,7 +446,14 @@
      "rank": 1,
      "snippet": "# Avertissement\n`\n<iframe style=\"height: 100%; border:none; width: 100%;min-height: 400px;\" src=\"https://togotrade.gouv.tg/Requirements?embed=true&includeSearch=true\"></iframe>",
      "title": "Togo Trade Portal",
-     "url": "https://togotrade.gouv.tg/Requirements"
+     "url": "https://togotrade.gouv.tg/Requirements",
+     "verificacion": {
+      "bytes": 181609,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:19:21Z",
+      "http": 200,
+      "sha256": "f75fbe4fde1b1333aa797c863fb19c9f34bcf609dd17d38265c8b51c1b27f465"
+     }
     },
     {
      "date": "2021-03-12",
@@ -358,7 +461,14 @@
      "rank": 2,
      "snippet": "1. Réglementation>\n...\n## Date de publication : 02/10/2026\n# Décision n°152/ARCEP/DG/26 du 23 septembre 2026 relative à l’homologation des équipements de communications électroniques et à l’agrément des installateurs\n...\n…",
      "title": "Communication électronique - Autorité de Régulation des ...",
-     "url": "https://arcep.tg/regulation/reglementation/communication-electronique/"
+     "url": "https://arcep.tg/regulation/reglementation/communication-electronique/",
+     "verificacion": {
+      "bytes": 661208,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:19:24Z",
+      "http": 200,
+      "sha256": "5a29fe89156a05c042f3c2006ec51aa63a941ed1f00a7ba47703611af215c5d9"
+     }
     },
     {
      "date": "",
@@ -400,7 +510,14 @@
      "rank": 1,
      "snippet": "Main statistical agency name\nDirection Generale de al Statistique et de la Comptabilite Nationale (DGSCN)\nWeb address\nwww.stat-togo.org/\n...\nThe statistical service is part of the Ministère de l' Economie, des Finances et des Privatisations (MEFP)",
      "title": "UNSD Document",
-     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=670"
+     "url": "https://unstats.un.org/unsd/dnss/docViewer.aspx?docID=670",
+     "verificacion": {
+      "bytes": 1935,
+      "estado": "http",
+      "fecha": "2026-11-16T17:19:26Z",
+      "http": 404,
+      "sha256": "2ccb0a374240bbac53fe934c7bf48d38383c4fffedc1210b7d31f2ea73186f09"
+     }
     },
     {
      "date": "2026-07-10",
@@ -408,7 +525,14 @@
      "rank": 2,
      "snippet": "### PROJECTION DEMOGRAPHIQUE (1950 - 2100)",
      "title": "INSEED – Institut National de la Statistique et des Etudes ...",
-     "url": "https://inseed.tg/"
+     "url": "https://inseed.tg/",
+     "verificacion": {
+      "bytes": 356103,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:19:34Z",
+      "http": 200,
+      "sha256": "794afac5a1fdbe286a1ebe93e504af6c9f5d3158bfd0a968b2d5c26e00968744"
+     }
     },
     {
      "date": "",
@@ -450,7 +574,14 @@
      "rank": 1,
      "snippet": "# Comptes nationaux\n### Publications\n|--|--|--|\n| |Comptes Nationaux Trimestriels - 1er trimestre de 2026 Téléchargé : (2522)fois|Voir tous les Comptes nationaux|",
      "title": "Comptes nationaux - INSEED",
-     "url": "https://inseed.tg/category/comptes-nationaux/"
+     "url": "https://inseed.tg/category/comptes-nationaux/",
+     "verificacion": {
+      "bytes": 164343,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:20:25Z",
+      "http": 200,
+      "sha256": "c879e211bb5d8bebd80ed15cb37268ed8a828c0f7c6d2aa878a958d2ebad3ab2"
+     }
     },
     {
      "date": "2026-01-25",
@@ -458,7 +589,14 @@
      "rank": 2,
      "snippet": "Cash\nEquipment\n...\nCombined\n...\nTOGO\n...\nP.O. Box: No. 120\n...\nFax: (228) 22 21 76 02 and 22 23 50 50\nEmail: courrier.TDN@bceao.int\nWebsite: http://www.bceao.int",
      "title": "MONTHLY STATISTICAL BULLETIN JANUARY 2026",
-     "url": "https://www.bceao.int/sites/default/files/2026-04/Monthy%20Statistical%20Bulletin%20-%20January%202026.pdf"
+     "url": "https://www.bceao.int/sites/default/files/2026-04/Monthy%20Statistical%20Bulletin%20-%20January%202026.pdf",
+     "verificacion": {
+      "bytes": 658138,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:20:27Z",
+      "http": 200,
+      "sha256": "3a8ec848e35191463e86a95bfb034377d2dcf773ba001ccec739f21b5aa7c1dd"
+     }
     },
     {
      "date": "2026-07-10",
@@ -500,7 +638,14 @@
      "rank": 1,
      "snippet": "# La donnée spatiale du gouvernement à l’accès du grand public\n...\nCréez vos propres cartes en combinant des données de divers thèmes.\n...\n## Bienvenue\nLe gouvernement de la République Togolaise met à la disposition du grand public les données géospatiales sur les infrastructures sociales et économi",
      "title": "Géodata | Accueil",
-     "url": "https://geodata.gouv.tg/"
+     "url": "https://geodata.gouv.tg/",
+     "verificacion": {
+      "bytes": 2245,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:20:29Z",
+      "http": 200,
+      "sha256": "e32fa8b5cc602d398ac33eaa710e07d82cb026adfd73b66fe91e47852175e7b3"
+     }
     },
     {
      "date": "2024-12-20",
@@ -508,7 +653,14 @@
      "rank": 2,
      "snippet": "## Togo : deux plateformes Open Data pour démocratiser l'accès aux données publiques\n...\n…\nDans le détail, le Géoportail Open Data (accessible via geodata.gouv.tg) regroupe des données géospatiales couvrant l'ensemble du territoire togolais.",
      "title": "Togo : deux plateformes Open Data pour démocratiser l ...",
-     "url": "https://www.togofirst.com/fr/tic/2012-15430-togo-deux-plateformes-open-data-pour-democratiser-lacces-aux-donnees-publiques"
+     "url": "https://www.togofirst.com/fr/tic/2012-15430-togo-deux-plateformes-open-data-pour-democratiser-lacces-aux-donnees-publiques",
+     "verificacion": {
+      "bytes": 116470,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:20:30Z",
+      "http": 200,
+      "sha256": "3d98ef75c0c7c1c8372ea3c57779cea00bf67647812695ed46437158919d6f2b"
+     }
     },
     {
      "date": "2025-01-08",

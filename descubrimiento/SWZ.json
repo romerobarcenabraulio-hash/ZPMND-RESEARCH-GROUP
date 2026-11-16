@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "Free access to the law of eSwatini.\n...\nESwatiniLII is a free access to law website by the Judiciary of eSwatini.\neSwatiniLII exists to provide free access to the law for everyone, as a fundamental right of every citizen to know the law that governs them.",
      "title": "EswatiniLII",
-     "url": "https://eswatinilii.org/"
+     "url": "https://eswatinilii.org/",
+     "verificacion": {
+      "bytes": 42131,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:01:02Z",
+      "http": 200,
+      "sha256": "04c65207096adcbaa93f555fca39f9a9f6e1158d3cbf8602a11090d083e12557"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "Legislation\n...\nResults.\n359 documents found.\n...\nESwatiniLII is a free access to law website by the Judiciary of eSwatini.\neSwatiniLII exists to provide free access to the law for everyone, as a fundamental right of every citizen to know the law that governs them.",
      "title": "Legislation – EswatiniLII",
-     "url": "https://eswatinilii.org/legislation/all?page=3"
+     "url": "https://eswatinilii.org/legislation/all?page=3",
+     "verificacion": {
+      "bytes": 204181,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:01:05Z",
+      "http": 200,
+      "sha256": "69e754184fc9bf9367060860770f93e21a020c6f9084006d0b7a4b404d7dca6d"
+     }
     },
     {
      "date": "2023-12-01",
@@ -48,7 +62,14 @@
      "rank": 1,
      "snippet": "Legislation\n– EswatiniLII\n...\nESwatiniLII is a free access to law website by the Judiciary of eSwatini.\neSwatiniLII exists to provide free access to the law for everyone, as a fundamental right of every citizen to know the law that governs them.",
      "title": "Legislation – EswatiniLII",
-     "url": "https://eswatinilii.org/legislation/all?page=3"
+     "url": "https://eswatinilii.org/legislation/all?page=3",
+     "verificacion": {
+      "bytes": 204181,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:01:08Z",
+      "http": 200,
+      "sha256": "ebccaca2257c6cee07a0000886d0ab04ebf7b2d08427561294bb1f1d40b7b9f1"
+     }
     },
     {
      "date": "",
@@ -56,7 +77,12 @@
      "rank": 2,
      "snippet": "- Climate Change 2016 Policy\n- Wetlands Policy 2024\n- The Lotterries Act\n- The Casino Act\n- The Tourism Authority Act, 2001\n...\n- Eswatini NDC 2021 Siswati\n- NDC Eswatini 2021",
      "title": "Documents - Eswatini Government",
-     "url": "https://www.gov.sz/index.php/policies"
+     "url": "https://www.gov.sz/index.php/policies",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.sz/index.php/policies",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:02:38Z"
+     }
     },
     {
      "date": "2026-08-06",
@@ -98,7 +124,12 @@
      "rank": 1,
      "snippet": "ESWATINI\nGOVERNMENT  GAZETTE\nCONTENTS\nNo.                                                            \n...\nVOL.\nLVII]\n[No. 95\nMBABANE,  Friday,  AUGUST  09th,  2019\nE.G.G. NO.\n...\nNOTICE",
      "title": "ESWATINI GOVERNMENT GAZETTE",
-     "url": "https://gov.sz/images/justice/GAZETTES/SEPTEMBER/Gazette-No.-95-2019.pdf"
+     "url": "https://gov.sz/images/justice/GAZETTES/SEPTEMBER/Gazette-No.-95-2019.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://gov.sz/images/justice/GAZETTES/SEPTEMBER/Gazette-No.-95-2019.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:04:10Z"
+     }
     },
     {
      "date": "",
@@ -106,7 +137,12 @@
      "rank": 2,
      "snippet": "**AUGUST 2019 **\nExtra-Ord-No-84.pdf\n...\n…\nGazette-No.-100-Alternate-Members---Industrial-Court.pdf\nGazette-No.-116-Police-Service-Act.pdf\nGazette-No.-117-PS--Scholaship-Board.pdf",
      "title": "AUGUST 2019 - Gov",
-     "url": "https://gov.sz/index.php/resources/gazettes"
+     "url": "https://gov.sz/index.php/resources/gazettes",
+     "verificacion": {
+      "error": "robots.txt disallows https://gov.sz/index.php/resources/gazettes",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:05:42Z"
+     }
     },
     {
      "date": "",
@@ -148,7 +184,14 @@
      "rank": 1,
      "snippet": "Free access to the law of eSwatini.\n...\n## Recent Judgments\nResults.\n...\n|Shongwe V Masango and Others (2655/2026) [2026] SZHC 273 (29 October 2026)|29 October 2026|\n|--|--|",
      "title": "EswatiniLII",
-     "url": "https://eswatinilii.org/"
+     "url": "https://eswatinilii.org/",
+     "verificacion": {
+      "bytes": 42131,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:05:43Z",
+      "http": 200,
+      "sha256": "4484767069b38350013ebfea738bd4004514ed296ad8bea5a7e4d7e061a2d0c9"
+     }
     },
     {
      "date": "",
@@ -156,7 +199,14 @@
      "rank": 2,
      "snippet": "# Judgments\n8,364\njudgments\n...\nAdvanced search\n#### All courts\nExplore judgments from all courts.\nExplore all courts →\n...\n#### Supreme Court\n- Supreme Court of eSwatini\n...\n#### Recent judgments\nResults.\n8,364 judgments found.\n...\n|--|--|",
      "title": "Judgments - EswatiniLII",
-     "url": "https://eswatinilii.org/judgments/"
+     "url": "https://eswatinilii.org/judgments/",
+     "verificacion": {
+      "bytes": 5531,
+      "estado": "http",
+      "fecha": "2026-11-16T17:05:46Z",
+      "http": 403,
+      "sha256": "cd792866c1c769792679b7bec4ada93ff41fff022d647f331a00f911bff4cf3f"
+     }
     },
     {
      "date": "",
@@ -190,7 +240,12 @@
      "rank": 1,
      "snippet": "# State Opening 2026\n### Parliamentary business\n##### Latest Speeches\n- THE GOVERNMENT OF THE KINGDOM OF ESWATINI ESTIMATES FOR THE YEARS FROM 1ST APRIL 2026 TO 31ST MARCH 2029 — Click here to download",
      "title": "Parliament of the Kingdom of Eswatini",
-     "url": "https://parliament.gov.sz/"
+     "url": "https://parliament.gov.sz/",
+     "verificacion": {
+      "error": "robots.txt disallows https://parliament.gov.sz/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:07:17Z"
+     }
     },
     {
      "date": "",
@@ -198,7 +253,14 @@
      "rank": 2,
      "snippet": "EswatiniLII\n# Welcome to eSwatini Legal Information Institute\nFree access to the law of eSwatini.\n...\nLegislation\nGazettes\nESwatiniLII is a free access to law website by the Judiciary of eSwatini.",
      "title": "EswatiniLII",
-     "url": "https://eswatinilii.org/"
+     "url": "https://eswatinilii.org/",
+     "verificacion": {
+      "bytes": 42131,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:07:18Z",
+      "http": 200,
+      "sha256": "144d22408ecbc9974cd3a0abf377af2765cce4e5e7eb51fd50d7e00050af883c"
+     }
     },
     {
      "date": "",
@@ -232,7 +294,14 @@
      "rank": 1,
      "snippet": "# Bye-Laws\n|Name|File Size|Uploaded|Action|\n|--|--|--|--|\n...\n|Ezulwini Municipal Council Waste Management Bye-laws 21 February 2025|128.02 KB|2025-03-19 15:55:05|Download|",
      "title": "Bye-Laws",
-     "url": "https://ezulwini.co.sz/bye-laws.php"
+     "url": "https://ezulwini.co.sz/bye-laws.php",
+     "verificacion": {
+      "bytes": 20685,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:07:21Z",
+      "http": 200,
+      "sha256": "756597943f1977edb3fcb37e4f15889be71d164e980a7f4add6be30070a8e4b5"
+     }
     },
     {
      "date": "",
@@ -240,7 +309,12 @@
      "rank": 2,
      "snippet": "### GOVERNMENT DOCUMENTS\n...\n### JUSTICE/ LAW DOCUMENTS\nMY E-GOVERNMENT PORTAL",
      "title": "Home-Page",
-     "url": "https://www.gov.sz/"
+     "url": "https://www.gov.sz/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.sz/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:08:52Z"
+     }
     },
     {
      "date": "2023-12-01",
@@ -282,7 +356,14 @@
      "rank": 1,
      "snippet": "### Downloads\n|**Regulations Documents**|**Download Document**|\n|--|--|\n|Consumer Protection|Click to Download ‣|\n...\n|Electronic Communications 2016|Click to Download ‣|\n...\n|Importation, Type Approval and Distribution of Communications Equipment|Click to Download ‣|",
      "title": "Documents - ESCCOM",
-     "url": "https://esccom.org.sz/documents/"
+     "url": "https://esccom.org.sz/documents/",
+     "verificacion": {
+      "bytes": 207458,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:08:57Z",
+      "http": 200,
+      "sha256": "9c64aa6bbec7331764c47a3c8f24d6c62997ac7809526369c8db7b83140f8db9"
+     }
     },
     {
      "date": "",
@@ -290,7 +371,12 @@
      "rank": 2,
      "snippet": "Eswatini’s rule-making and regulatory authority lies with the central government and may be delegated by the relevant line ministry to a department, parastatal, or board.\n...\nAll laws, regulations, and policies are applied at a national level.\n...\nLegal and expert drafters within ministries develop ",
      "title": "2025 Investment Climate Statements: Eswatini",
-     "url": "https://www.state.gov/reports/2025-investment-climate-statements/eswatini"
+     "url": "https://www.state.gov/reports/2025-investment-climate-statements/eswatini",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.state.gov/reports/2025-investment-climate-statements/eswatini",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:08:57Z"
+     }
     },
     {
      "date": "",
@@ -332,7 +418,14 @@
      "rank": 1,
      "snippet": "The latest 2019 standards catalogue\n...\nEswatini Standards Authority (ESWASA) was formed by the Government of Eswatini through the Quality and Standards Act (10) 2003, and is a parastatal under the auspices of the Ministry of Commerce, Industry and Trade.\nFind Us",
      "title": "Standards Catalogue - SWASA Online Store",
-     "url": "https://estore.swasa.co.sz/product/catalogue/"
+     "url": "https://estore.swasa.co.sz/product/catalogue/",
+     "verificacion": {
+      "bytes": 65783,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:09:01Z",
+      "http": 200,
+      "sha256": "164ddf8e1a4e70153c8c8b4b34f1b77a4271538889531d92caf436ef666b044c"
+     }
     },
     {
      "date": "",
@@ -340,7 +433,14 @@
      "rank": 2,
      "snippet": "|--|--|\n|SZNS 015:2013|Fortified wheat flour|\n|SZNS 021: 2014|Transportation of food in bulk and semi-packed food- Hygiene requirements|\n|SZNS 025: 2014|Poultry processing- Hygiene requirements|",
      "title": "Standards",
-     "url": "https://www.swasa.co.sz/standards.php"
+     "url": "https://www.swasa.co.sz/standards.php",
+     "verificacion": {
+      "bytes": 74995,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:09:03Z",
+      "http": 200,
+      "sha256": "98e1fd2fd4cb16fb6fb31d55a08565ee07442e37dc41e9d75496fa038357ff97"
+     }
     },
     {
      "date": "",
@@ -382,7 +482,14 @@
      "rank": 1,
      "snippet": "Technical Standards for Equipment Authorization  \n...\nCommunications Equipment meant for the Eswatini market must conform to these standards.\n...\nETSI EN 301 908-6 \nBase Stations (BS), Repeaters and User Equipment (UE) for IMT-\n...\nETSI EN 300 220-1",
      "title": "Notice 11/2026: Draft ESCCOM Regulated",
-     "url": "https://esccom.org.sz/wp-content/uploads/2026/10/Notice-11-ESCCOM-REGULATED-TECHNICAL-STANDARDS-2026-GUIDELINES.pdf"
+     "url": "https://esccom.org.sz/wp-content/uploads/2026/10/Notice-11-ESCCOM-REGULATED-TECHNICAL-STANDARDS-2026-GUIDELINES.pdf",
+     "verificacion": {
+      "bytes": 389039,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:09:05Z",
+      "http": 200,
+      "sha256": "ddd4c5d4f52e8e1666ce039b6cee6a05d836ca42c1ddd32b0352a89578ad25f1"
+     }
     },
     {
      "date": "",
@@ -390,7 +497,14 @@
      "rank": 2,
      "snippet": "# Trade Policy Review\nThe titles of all technical regulations falling under BOBS' remit are listed in an annex to the Standards (Import Inspection) Regulations.[70] The Compulsory Standards Unit within BOBS' Department of Regulatory Compliance is responsible for enforcing the technical regulations f",
      "title": "Members - ePing SPS&TBT platform",
-     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C748"
+     "url": "https://eping.wto.org/en/MemberProfiles/Profile?countryId=C748",
+     "verificacion": {
+      "bytes": 156286,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:09:07Z",
+      "http": 200,
+      "sha256": "3538816f33d136bb3f2dd4d3bdb382d7bef4f9d82d5b9dcf6289c519b99b494f"
+     }
     },
     {
      "date": "",
@@ -432,7 +546,14 @@
      "rank": 1,
      "snippet": "Organizations\nCentral Statistical Office (Swaziland)\nAlternative name\nCentral Statistical Organization\nCity\nMbabane\nWebsite\nhttp://www.swazistats.org.sz/\nDataset Records for Central Statistical Office (Swaziland)",
      "title": "Central Statistical Office (Swaziland)",
-     "url": "https://ghdx.healthdata.org/organizations/central-statistical-office-swaziland"
+     "url": "https://ghdx.healthdata.org/organizations/central-statistical-office-swaziland",
+     "verificacion": {
+      "bytes": 55057,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:09:17Z",
+      "http": 200,
+      "sha256": "e7344216dc315f290beb3fddaa838e2c2b2e55cb3d22bb77d35d35e4e47125d9"
+     }
     },
     {
      "date": "",
@@ -440,7 +561,12 @@
      "rank": 2,
      "snippet": "***Ministerial* ** *** Office Building* ** ***, off Mhlambanyatsi Road, Mbabane\n...\nThe Central Statistical Office (CSO) is empowered by the Statistics Act of 1967 to collect and analyse statistics.\n...\n**CLICK HERE!\nFor Statistical Products and Information**",
      "title": "Central Statistics Office - Gov",
-     "url": "https://www.gov.sz/index.php?option=com_content&id=687:central-statistics-office"
+     "url": "https://www.gov.sz/index.php?option=com_content&id=687:central-statistics-office",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.gov.sz/index.php?option=com_content&id=687:central-statistics-office",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:10:48Z"
+     }
     },
     {
      "date": "",
@@ -482,7 +608,14 @@
      "rank": 1,
      "snippet": "Central Bank – Umntsholi wemaswati\n...\nCENTRAL BANK OF ESWATINI\nResearch\nand Statistics\n...\n#### Research & Statistics\nConducting research on monetary, financial and economic matters to support monetary policy formulation.\n...\n- #### Central Bank of Eswatini\n...\n- info@centralbank.org.sz",
      "title": "Central Bank of Eswatini",
-     "url": "https://www.centralbank.org.sz/"
+     "url": "https://www.centralbank.org.sz/",
+     "verificacion": {
+      "bytes": 358426,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:10:52Z",
+      "http": 200,
+      "sha256": "1b2a3a1d7e95bae97a76a83b17c31961ef6d703729cb914e5f446ab259129ac7"
+     }
     },
     {
      "date": "2026-07-10",
@@ -490,7 +623,14 @@
      "rank": 2,
      "snippet": "Recent Economic Development May – June 2026 – Central Bank\n# Recent Economic Development May – June 2026\n- Home\n- News\n...\n###### Monthly Statistical Release: May -June 2026\nJuly 10, 2026\n...\n#### Monthly Statistical Release: August Sept -2026\n#### Contact",
      "title": "Recent Economic Development May – June 2026",
-     "url": "https://www.centralbank.org.sz/recent-economic-development-may-june-2026/"
+     "url": "https://www.centralbank.org.sz/recent-economic-development-may-june-2026/",
+     "verificacion": {
+      "bytes": 210800,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:10:56Z",
+      "http": 200,
+      "sha256": "53fadaed8dcfc85fab9006ca48587659d91ee7ae11a04f6f7e455ac26f6d359e"
+     }
     },
     {
      "date": "2025-04-02",
@@ -532,7 +672,12 @@
      "rank": 1,
      "snippet": "QUICK LINKS\n### GOVERNMENT DOCUMENTS\n### EDUCATION IN ESWATINI\n### FINANCE DOCUMENTS\n...\n### JUSTICE/ LAW DOCUMENTS\nMY E-GOVERNMENT PORTAL",
      "title": "ufaprobet เว็บตรง เว็บหลัก เว็บแม่ ปลอดภัย ถอนได้ 100%",
-     "url": "https://gov.sz/home/"
+     "url": "https://gov.sz/home/",
+     "verificacion": {
+      "error": "robots.txt disallows https://gov.sz/home/",
+      "estado": "rechazado",
+      "fecha": "2026-11-16T17:12:27Z"
+     }
     },
     {
      "date": "",
@@ -540,7 +685,14 @@
      "rank": 2,
      "snippet": "…\n...\nNor is there bulk publication instead: the country has no national open data portal, putting it 191st of 195 countries on the\nOpen Data Inventory, last in Southern Africa in the 2024 digital readiness assessment.\n...\nAn established data governance body exists but sits inside",
      "title": "Eswatini: status report — Data Landscapers",
-     "url": "https://corpus.data-landscapers.io/reports/SWZ/SWZ-status-2026-10-01.pdf"
+     "url": "https://corpus.data-landscapers.io/reports/SWZ/SWZ-status-2026-10-01.pdf",
+     "verificacion": {
+      "bytes": 346352,
+      "estado": "accesible",
+      "fecha": "2026-11-16T17:12:29Z",
+      "http": 200,
+      "sha256": "7b81e403716d490b18fb2a7e9d467eebf3289a3394f6e4039a7266bba46cf8f7"
+     }
     },
     {
      "date": "",
