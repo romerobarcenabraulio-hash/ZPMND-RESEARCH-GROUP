@@ -27,7 +27,7 @@ RUNS = [{'id': 20, 'path': AUDITOR, 'event': 'pull_request_target', 'head_sha': 
         {'id': 21, 'path': CI, 'event': 'pull_request', 'head_sha': SHA, 'status': 'completed', 'conclusion': 'success',
          'pull_requests': [{'number': 7}]}]
 JOBS = {20: [{'name': n, 'conclusion': 'success'} for n in ('gate', 'evidence', 'packet-gate', 'audit', 'audit-gpt', 'post',
-                                                            'post-gpt', 'pass-both')],
+                                                            'post-gpt', 'pass-both')] + [{'name': 'tope', 'conclusion': 'skipped'}],
         21: [{'name': n, 'conclusion': 'success'} for n in ('checks', 'mutation (0)', 'mutation (1)')]}
 PR = {'number': 7, 'state': 'open', 'draft': False, 'title': 'Paquete RP-2026-10-27-x', 'changed_files': 3,
       'base': {'ref': 'main'}, 'head': {'sha': SHA, 'ref': 'investigar/RP-2026-10-27-x', 'repo': {'full_name': REPO}}}
@@ -173,6 +173,10 @@ class Decide(unittest.TestCase):
                 with self.subTest(missing=name):
                     self.assertIn(name, decide(jobs=jobs(rid, name, drop=True)))
         self.assertIsNotNone(decide(jobs=jobs(21, 'mutation (2)', 'skipped')))  # an extra job counts too
+        for conclusion in ('success', 'failure', None):  # tope ran: the head waits for the owner (#166: skipped is the rule)
+            with self.subTest(tope=conclusion):
+                self.assertIn('tope', decide(jobs=jobs(20, 'tope', conclusion)))
+        self.assertIsNone(decide(jobs=jobs(20, 'tope', drop=True)))  # a run with no tope at all (main before d8349c3)
 
     def test_a_skipped_second_opinion_or_a_revise_leaves_pass_both_skipped_so_nothing_merges(self):
         wf = yaml.safe_load((ROOT / '.github' / 'workflows' / 'auditor.yml').read_text(encoding='utf-8'))
