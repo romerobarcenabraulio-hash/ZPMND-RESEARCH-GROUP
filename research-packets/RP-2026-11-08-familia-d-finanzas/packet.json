@@ -1,0 +1,696 @@
+{
+ "research_id": "RP-2026-11-08-familia-d-finanzas",
+ "request_id": "RR-2026-11-08-familia-d-finanzas",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T16:51:35Z",
+ "question": "Para cada tema de finanzas listado en why_needed: ¿qué fuente primaria publica el método o el dato de referencia (autor académico, banco de desarrollo, hacienda pública, o calificadora para su propia metodología), con qué licencia o términos, en qué formato descargable, con qué fecha de actualización y qué supuestos declara?",
+ "why_zpmnd_needs_it": "Subáreas: D01 Valuación (DCF, múltiplos) (Transversal); D02 VPN, TIR, TCO y presupuesto de capital (Transversal); D03 Estructura de capital y costo de capital (Transversal); D04 Riesgo y portafolio (Transversal); D05 Análisis de crédito (Transversal); D06 Project finance (Transversal); D07 Capital de trabajo y tesorería (Transversal); D08 Finanzas públicas de México (México). Todas esperan el sondeo de su primera fuente. ZPMND necesita métodos tipados (§27) con datos de referencia fechados para decir de dónde sale cada número.",
+ "scope": "Parte 1 de 3. Se leyeron completas 7 fuentes primarias: Damodaran (página de datos, WACC EE. UU., primas de riesgo país, blog de riesgo país julio 2026), Kenneth French (Data Library), FRED (términos de uso), Fed H.15 y el directorio de Moody's (solo el texto \"Ratings.Moodys.com\"). Se extraen editor, formato, fecha, licencia/términos y supuestos declarados. No hay sha256 ni descargas en estos textos. / Parte 2 de 3 de la Guía de Referencia de APP v3 (Banco Mundial y otros, 2017), caracteres 0-600000 de 922722. Se leyó para extraer lo relevante a finanzas: términos de reutilización, método de valor por dinero/comparador del sector público, supuestos de tasa de descuento, pasivos contingentes, límites fiscales. No se obtuvo sha256 ni fecha de descarga; las otras partes y otras fuentes no se leyeron. / Parte 3 de 3: final de la PPP Reference Guide v3 (módulo 3.3 a 3.7 y referencias; caracteres 599000-922722) y los Términos de Uso de Datasets del Banco Mundial (completo). Se extrae licencia de datasets del BM y metadatos de PFRAM/ADB/Irwin. No se descargó nada ni se calculó sha256.",
+ "sources": {
+  "primary": [
+   "SA-a8214c92d0c562b548b5293e",
+   "SA-04a4dd2188cbc9081d232b14",
+   "SA-ea30d57fc0858072c520930e",
+   "SA-f86d006b8866e931e56395d0",
+   "SA-dd48316327898aea2e3ad3dd",
+   "SA-288256da35f4b0a3fba01347",
+   "SA-9af45b563982bcda00378694",
+   "SA-3bbf771bd4ca7433dae9678c",
+   "SA-a05d6cdc7075942e50516ae9",
+   "SA-bf7646ed7077968b0652c8ab"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-a8214c92d0c562b548b5293e",
+   "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html",
+   "retrieved_at": "2026-11-11T16:48:25Z",
+   "sha256": "a8214c92d0c562b548b5293e571de23e4ad8c95fa3760f2625c2a2eca45a29a1",
+   "bytes": 59212,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Aswath Damodaran, NYU Stern",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Data for current year"
+  },
+  {
+   "artifact_id": "SA-04a4dd2188cbc9081d232b14",
+   "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/wacc.html",
+   "retrieved_at": "2026-11-11T16:48:27Z",
+   "sha256": "04a4dd2188cbc9081d232b14599c299487ca67d54fb8e7e397bc4b8a2246d8e8",
+   "bytes": 405334,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Aswath Damodaran, NYU Stern",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Cost of Equity and Capital (US)"
+  },
+  {
+   "artifact_id": "SA-ea30d57fc0858072c520930e",
+   "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
+   "retrieved_at": "2026-11-11T16:48:28Z",
+   "sha256": "ea30d57fc0858072c520930e2e5b8a5e5affdce81f7f2e1f9054efab79959dbc",
+   "bytes": 277049,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Aswath Damodaran, NYU Stern",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Country Default Spreads and Risk Premiums"
+  },
+  {
+   "artifact_id": "SA-f86d006b8866e931e56395d0",
+   "url": "https://aswathdamodaran.blogspot.com/2026/07/country-risk-drivers-measures-and.html",
+   "retrieved_at": "2026-11-11T16:48:29Z",
+   "sha256": "f86d006b8866e931e56395d089e815b85fa263e4f48a769898f9e84c76b97842",
+   "bytes": 180782,
+   "media_type": "text/html",
+   "source_type": "blog",
+   "publisher": "Aswath Damodaran (Musings on Markets)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Country Risk: Drivers, Measures and Investment Implications - 2026 Edition"
+  },
+  {
+   "artifact_id": "SA-dd48316327898aea2e3ad3dd",
+   "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+   "retrieved_at": "2026-11-11T16:48:30Z",
+   "sha256": "dd48316327898aea2e3ad3dd070b34c3325ce3b25ced7f719245efd5ad36146a",
+   "bytes": 245761,
+   "media_type": "text/html",
+   "source_type": "dataset",
+   "publisher": "Tuck School of Business, Dartmouth",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Kenneth R. French - Data Library"
+  },
+  {
+   "artifact_id": "SA-288256da35f4b0a3fba01347",
+   "url": "https://fred.stlouisfed.org/legal",
+   "retrieved_at": "2026-11-11T16:48:31Z",
+   "sha256": "288256da35f4b0a3fba01347af39bf3a266f3b40c31013473cdc5b08a4693503",
+   "bytes": 132253,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "FRED, Federal Reserve Bank of St. Louis",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Legal Notices, Information and Disclaimers"
+  },
+  {
+   "artifact_id": "SA-9af45b563982bcda00378694",
+   "url": "https://www.federalreserve.gov/releases/h15/",
+   "retrieved_at": "2026-11-11T16:48:33Z",
+   "sha256": "9af45b563982bcda00378694cee0a7d28808f63f4eaed026a7eaee0f684ab756",
+   "bytes": 106124,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Board of Governors of the Federal Reserve System",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Federal Reserve Board - H.15 Selected Interest Rates"
+  },
+  {
+   "artifact_id": "SA-3bbf771bd4ca7433dae9678c",
+   "url": "https://ratings.moodys.com/rating-methodologies",
+   "retrieved_at": "2026-11-11T16:48:34Z",
+   "sha256": "3bbf771bd4ca7433dae9678c7c986bd96fe08836fb4bb3a0bf897870224d20a2",
+   "bytes": 34818,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Moody's Ratings",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Moody's Rating Methodologies (directorio, citado en documentos)"
+  },
+  {
+   "artifact_id": "SA-a05d6cdc7075942e50516ae9",
+   "url": "https://ppp.worldbank.org/sites/default/files/2024-08/PPP%20Reference%20Guide%20Version%203.pdf",
+   "retrieved_at": "2026-11-11T16:48:35Z",
+   "sha256": "a05d6cdc7075942e50516ae9974e8ab9e4733881870686d00786eaa2553d003d",
+   "bytes": 14409316,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "World Bank Group / ADB / EBRD / IDB et al.",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "PPP Reference Guide Version 3"
+  },
+  {
+   "artifact_id": "SA-bf7646ed7077968b0652c8ab",
+   "url": "https://www.worldbank.org/ext/en/legal/terms-conditions/datasets",
+   "retrieved_at": "2026-11-11T16:48:37Z",
+   "sha256": "bf7646ed7077968b0652c8ab2a7b91893275ab282dc9a2b769bd85d21b6ce828",
+   "bytes": 30580,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "World Bank",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Terms of Use for Datasets"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "La última actualización completa de los datos fue el 9 de enero de 2026 y las primas de riesgo país se actualizaron por última vez el 5 de enero de 2026.",
+    "artifact_ids": [
+     "SA-a8214c92d0c562b548b5293e"
+    ],
+    "quote": "Data of last full update: January 9, 2026; Country risk premiums last updates: January 5, 2026",
+    "locator": "Página 'Data for current year', encabezado"
+   },
+   {
+    "claim": "Al inicio de cada año, los datos reflejan los últimos 12 meses móviles hasta el tercer trimestre del año anterior.",
+    "artifact_ids": [
+     "SA-a8214c92d0c562b548b5293e"
+    ],
+    "quote": "which at the start of each year, will reflect trailing 12-month data through the third quarter of the prior year",
+    "locator": "Página 'Data for current year', párrafo inicial"
+   },
+   {
+    "claim": "Los datos de este archivo provienen de la encuesta de KPMG sobre tasas del impuesto corporativo por país (hasta 2021), y se pide dar crédito completo a KPMG al usar cualquier información del archivo.",
+    "artifact_ids": [
+     "SA-a8214c92d0c562b548b5293e"
+    ],
+    "quote": "From the KPMG survey of corporate tax rates by country (until 2021). Please give them full credit when you use any of the information from this file.",
+    "locator": "Sección Discount Rate Estimation, Marginal tax rate by country"
+   },
+   {
+    "claim": "Desde agosto de 2021, Google Chrome parece tener problemas para descargar archivos (hojas de cálculo, datos, etc.) del sitio de Damodaran.",
+    "artifact_ids": [
+     "SA-a8214c92d0c562b548b5293e"
+    ],
+    "quote": "Starting in August 2021, Google Chrome seems to be having trouble downloading files (spreadsheets, data etc.) from my site.",
+    "locator": "Página 'Data for current year', Browser warning"
+   },
+   {
+    "claim": "Estas primas de riesgo se estiman con un modelo simple de descuento de dividendos aumentado de dos etapas.",
+    "artifact_ids": [
+     "SA-a8214c92d0c562b548b5293e"
+    ],
+    "quote": "These risk premiums are estimated based upon a simple 2-stage Augmented Dividend discount model",
+    "locator": "Implied Equity Risk Premiums - United States"
+   },
+   {
+    "claim": "El archivo contiene las clases de calificación de bonos de S&P, con diferenciales de default sobre la tasa del bono del Tesoro y ratios típicos de cobertura de intereses.",
+    "artifact_ids": [
+     "SA-a8214c92d0c562b548b5293e"
+    ],
+    "quote": "S&P bond ratings classes, with default spreads over the treasury bond rate and typical interest coverage ratios.",
+    "locator": "Capital Structure, Ratings, Spreads and Interest Coverage Ratios"
+   },
+   {
+    "claim": "En la tabla de costo de capital, la fila Total Market muestra: 5994, 0.91, 8.02%, 73.98%, 48.07%, 5.29%, 8.30%, 3.97%, 26.02% y 6.96%.",
+    "artifact_ids": [
+     "SA-04a4dd2188cbc9081d232b14"
+    ],
+    "quote": "Total Market \t5994 \t0.91 \t8.02% \t73.98% \t48.07% \t5.29% \t8.30% \t3.97% \t26.02% \t6.96%",
+    "locator": "Tabla Cost of Capital, fila Total Market"
+   },
+   {
+    "claim": "La tabla de costo de capital ofrece descargarla como archivo Excel en https://www.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls.",
+    "artifact_ids": [
+     "SA-04a4dd2188cbc9081d232b14"
+    ],
+    "quote": "Download as an excel file instead: https://www.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls",
+    "locator": "Encabezado de la tabla de costo de capital"
+   },
+   {
+    "claim": "Damodaran define el tipo libre de riesgo en dólares como el rendimiento del bono del Tesoro de EE. UU. menos el diferencial de default de EE. UU.",
+    "artifact_ids": [
+     "SA-ea30d57fc0858072c520930e"
+    ],
+    "quote": "Riskfree rate in US dollars = US treasury bond rate minus Default spread for the US",
+    "locator": "Country Default Spreads and Risk Premiums, párrafo de método"
+   },
+   {
+    "claim": "Para obtener los diferenciales de default por calificación soberana, Damodaran usa los diferenciales de CDS y calcula el diferencial de CDS promedio por calificación.",
+    "artifact_ids": [
+     "SA-ea30d57fc0858072c520930e"
+    ],
+    "quote": "To get the default spreads by sovereign rating, I use the CDS spreads and compute the average CDS spread by rating.",
+    "locator": "Country Default Spreads and Risk Premiums, método"
+   },
+   {
+    "claim": "Damodaran aproxima la volatilidad relativa del mercado accionario estimando las desviaciones estándar de dos índices: el índice accionario de mercados emergentes de S&P (para acciones) y un ETF de iShares de bonos soberanos de mercados emergentes.",
+    "artifact_ids": [
+     "SA-ea30d57fc0858072c520930e"
+    ],
+    "quote": "I approximate the relative equity market volatility by estimating the standard deviations in two indices, the S&P emerging market equity index (for equities) and an iShares emerging market government bond ETF",
+    "locator": "Country Default Spreads and Risk Premiums, método"
+   },
+   {
+    "claim": "Los datos completos de primas de riesgo país se publican en un archivo Excel (ctryprem.xlsx).",
+    "artifact_ids": [
+     "SA-ea30d57fc0858072c520930e"
+    ],
+    "quote": "Excel file with full country risk premium data: https://www.stern.nyu.edu/~adamodar/pc/datasets/ctryprem.xlsx",
+    "locator": "Country Default Spreads and Risk Premiums"
+   },
+   {
+    "claim": "Damodaran indica que estos números pueden usarse como estimaciones aproximadas de las primas de riesgo país, aunque tal vez convenga modificarlas para reflejar el riesgo adicional de los mercados accionarios.",
+    "artifact_ids": [
+     "SA-ea30d57fc0858072c520930e"
+    ],
+    "quote": "you can use these numbers as rough estimates of country risk premiums, you may want to modify the premia to reflect the additonal risk of equity markets",
+    "locator": "Country Default Spreads and Risk Premiums, párrafo introductorio"
+   },
+   {
+    "claim": "En la tabla, la fila United States muestra: Aa1, 0.23%, 0.23%, 4.46%, 25.00%, 0.30% y 4.69%.",
+    "artifact_ids": [
+     "SA-ea30d57fc0858072c520930e"
+    ],
+    "quote": "United States \tAa1 \t0.23% \t0.23% \t4.46% \t25.00% \t0.30% \t4.69%",
+    "locator": "Tabla por país, fila United States"
+   },
+   {
+    "claim": "La prima de riesgo de acciones implícita para EE. UU. es 4.42%, y al restarle el diferencial de default de 0.22% correspondiente a la calificación Aa1 se obtiene una prima de mercado maduro de 4.20%.",
+    "artifact_ids": [
+     "SA-f86d006b8866e931e56395d0"
+    ],
+    "quote": "the implied equity risk premium for the United States is 4.42%, and netting out the default spread of 0.22% for the Aa1 rating yields a mature market premium of 4.20%",
+    "locator": "Blog, sección Country Composite Risk"
+   },
+   {
+    "claim": "El riesgo de default se escala con la medida de riesgo relativo (1.55 en julio de 2026) para obtener las primas de riesgo país.",
+    "artifact_ids": [
+     "SA-f86d006b8866e931e56395d0"
+    ],
+    "quote": "scale the default risk up with this relative risk measure (1.55 in July 2026) to get country risk premiums",
+    "locator": "Blog, sección Country Composite Risk"
+   },
+   {
+    "claim": "Damodaran admite que los números que reportó reflejaban una actualización incompleta de los diferenciales de default soberanos, y que la tabla y los datos de su página ahora reflejan los diferenciales corregidos (y más bajos).",
+    "artifact_ids": [
+     "SA-f86d006b8866e931e56395d0"
+    ],
+    "quote": "the numbers that I reported reflected in incomplete update of sovereign default spreads, and this table (and the data on my webpage) now reflect the corrected (and lower) spreads",
+    "locator": "Blog, tras la tabla de ERP por país"
+   },
+   {
+    "claim": "Damodaran confiesa que hizo supuestos simplistas y tomó atajos al estimar las primas de riesgo de acciones por país.",
+    "artifact_ids": [
+     "SA-f86d006b8866e931e56395d0"
+    ],
+    "quote": "I confess that I have made simplistic assumptions and cut corners in my attempt to estimate equity risk premiums, by country",
+    "locator": "Blog, Conclusion"
+   },
+   {
+    "claim": "Para estos países, Damodaran usó puntajes de riesgo político y luego buscó países con calificación que tuvieran puntajes similares.",
+    "artifact_ids": [
+     "SA-f86d006b8866e931e56395d0"
+    ],
+    "quote": "I used political risk scores for these countries, and then looked for rated countries with similar scores",
+    "locator": "Blog, sección Country Composite Risk"
+   },
+   {
+    "claim": "El blog declara que la tasa libre de riesgo en otras monedas puede derivarse de la tasa en USD y el diferencial de inflación esperada.",
+    "artifact_ids": [
+     "SA-f86d006b8866e931e56395d0"
+    ],
+    "quote": "the riskfree rate in any currency can be computed from a base currency (dollar or Euro) riskfree rate and the difference in expected inflation",
+    "locator": "Blog, sección Currency Questions"
+   },
+   {
+    "claim": "Los diferenciales de CDS soberanos solo están disponibles para 84 países.",
+    "artifact_ids": [
+     "SA-f86d006b8866e931e56395d0"
+    ],
+    "quote": "sovereign CDS spreads are available for only 84 countries",
+    "locator": "Blog, sección Country Default Risk"
+   },
+   {
+    "claim": "La Data Library de French lleva el aviso: Copyright Eugene F. Fama and Kenneth R. French.",
+    "artifact_ids": [
+     "SA-dd48316327898aea2e3ad3dd"
+    ],
+    "quote": "Copyright  Eugene F. Fama and Kenneth R. French",
+    "locator": "Pie de la página Data Library"
+   },
+   {
+    "claim": "Desde la publicación de datos de enero de 2025, se usan los nuevos archivos Stock and Indexes Flat File Format 2.0 (CIZ) para generar los retornos de investigación de EE. UU.",
+    "artifact_ids": [
+     "SA-dd48316327898aea2e3ad3dd"
+    ],
+    "quote": "Beginning with the January 2025 data release, we use the new Stock and Indexes Flat File Format 2.0 (CIZ) files to generate US research returns.",
+    "locator": "Sección Current Research Returns"
+   },
+   {
+    "claim": "French declara que reconstruye todo el historial de retornos cada mes al actualizar las carteras, y que los retornos históricos pueden cambiar, por ejemplo, si CRSP revisa su base de datos.",
+    "artifact_ids": [
+     "SA-dd48316327898aea2e3ad3dd"
+    ],
+    "quote": "We reconstruct the full history of returns each month when we update the portfolios. (Historical returns can change, for example, if CRSP revises its database.)",
+    "locator": "Nota tras Industry Portfolios"
+   },
+   {
+    "claim": "French declara que los puntos de corte usan solo empresas NYSE y que los datos faltantes se marcan como -99.99 o -999.",
+    "artifact_ids": [
+     "SA-dd48316327898aea2e3ad3dd"
+    ],
+    "quote": "the breakpoints use only NYSE firms. Missing data are indicated by -99.99 or -999.",
+    "locator": "Nota tras Industry Portfolios"
+   },
+   {
+    "claim": "La página incluye los 'Fama/French 3 Research Factors'.",
+    "artifact_ids": [
+     "SA-dd48316327898aea2e3ad3dd"
+    ],
+    "quote": "Fama/French 3 Research Factors",
+    "locator": "Encabezado, tabla September 2026"
+   },
+   {
+    "claim": "Los datos internacionales de French provienen de MSCI (1975-2006) y Bloomberg (2007 en adelante).",
+    "artifact_ids": [
+     "SA-dd48316327898aea2e3ad3dd"
+    ],
+    "quote": "The raw data are from Morgan Stanley Capital International for 1975 to 2006 and from Bloomberg for 2007 to present.",
+    "locator": "International Research Returns Data"
+   },
+   {
+    "claim": "FRED pide mencionarlo como el servicio del que se obtuvieron los datos y conservar los avisos de copyright que acompañan a los datos.",
+    "artifact_ids": [
+     "SA-288256da35f4b0a3fba01347"
+    ],
+    "quote": "Just be sure to mention FRED as the service from which you retrieved the data and keep any copyright notices that appear with the data on FRED.",
+    "locator": "FAQ 1) What can I do with FRED data?"
+   },
+   {
+    "claim": "Los términos de FRED prohíben usar los servicios o el contenido de FRED en relación con el desarrollo o entrenamiento de cualquier programa o sistema de software o de aprendizaje automático.",
+    "artifact_ids": [
+     "SA-288256da35f4b0a3fba01347"
+    ],
+    "quote": "Use the FRED® Services or FRED® Content in connection with the development or training of any software program or system or machine learning",
+    "locator": "Full Terms, II. Prohibited Use"
+   },
+   {
+    "claim": "Los términos de FRED prohíben almacenar, cachear o archivar cualquier parte de los servicios o del contenido de FRED.",
+    "artifact_ids": [
+     "SA-288256da35f4b0a3fba01347"
+    ],
+    "quote": "Store, cache, or archive any portion of the FRED® Services or FRED® Content",
+    "locator": "Prohibitions for FRED Services, (p)"
+   },
+   {
+    "claim": "FRED indica que, antes de usar series de datos propiedad de terceros para algo distinto del uso personal, hay que contactar al dueño de los datos para obtener permiso.",
+    "artifact_ids": [
+     "SA-288256da35f4b0a3fba01347"
+    ],
+    "quote": "BEFORE USING DATA SERIES OWNED BY THIRD PARTIES FOR ANYTHING OTHER THAN YOUR OWN PERSONAL USE, YOU MUST CONTACT THE DATA OWNER TO OBTAIN PERMISSION.",
+    "locator": "Property Rights and Licenses"
+   },
+   {
+    "claim": "Según FRED, este contenido puede usarse para usos comerciales internos y mostrarse en libros de texto, boletines o informes a clientes, siempre que se dé la atribución adecuada.",
+    "artifact_ids": [
+     "SA-288256da35f4b0a3fba01347"
+    ],
+    "quote": "may be used for internal commercial uses and may be displayed in textbooks, newsletters, or reports to clients provided that appropriate attribution is given",
+    "locator": "III/IV. Commercial Use"
+   },
+   {
+    "claim": "La publicación H.15 se publica diariamente de lunes a viernes a las 4:15 pm.",
+    "artifact_ids": [
+     "SA-9af45b563982bcda00378694"
+    ],
+    "quote": "The release is posted daily Monday through Friday at 4:15pm.",
+    "locator": "H.15, encabezado"
+   },
+   {
+    "claim": "En H.15, la fila 10-year muestra los valores 4.95, 4.90, 4.84, 4.86 y 4.88.",
+    "artifact_ids": [
+     "SA-9af45b563982bcda00378694"
+    ],
+    "quote": "10-year \t 4.95  \t 4.90  \t 4.84  \t 4.86  \t 4.88",
+    "locator": "H.15, Treasury constant maturities Nominal"
+   },
+   {
+    "claim": "H.15 describe que los rendimientos de los valores nominales del Tesoro a 'vencimiento constante' los interpola el Tesoro de EE. UU. a partir de la curva de rendimientos diaria.",
+    "artifact_ids": [
+     "SA-9af45b563982bcda00378694"
+    ],
+    "quote": "Yields on Treasury nominal securities at “constant maturity” are interpolated by the U.S. Treasury from the daily yield curve",
+    "locator": "Description of the Treasury Nominal and Inflation-Indexed Constant Maturity Series"
+   },
+   {
+    "claim": "La Fed anuncia que durante la semana del 9 de noviembre se retirará la función 'Build Your Package' del Data Download Program (DDP).",
+    "artifact_ids": [
+     "SA-9af45b563982bcda00378694"
+    ],
+    "quote": "During the week of November 9, the “Build Your Package” feature in the Data Download Program (DDP) will be removed",
+    "locator": "H.15, aviso del encabezado"
+   },
+   {
+    "claim": "H.15 ofrece datos actuales e históricos mediante el Data Download Program.",
+    "artifact_ids": [
+     "SA-9af45b563982bcda00378694"
+    ],
+    "quote": "Current and historical H.15 data, along with weekly, monthly, and annual averages, are available on the Board's Data Download Program (DDP)",
+    "locator": "H.15, Note"
+   },
+   {
+    "claim": "La guía declara que la obra puede reproducirse, total o parcialmente, solo para fines no comerciales y con atribución completa (términos de reutilización).",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "this work may be reproduced, in whole or in part, for noncommercial purposes as long as full attribution to this work is given.",
+    "locator": "Página de derechos y permisos (Rights and Permissions), © 2017 IBRD/Banco Mundial"
+   },
+   {
+    "claim": "El Banco Mundial declara que no garantiza la exactitud de los datos incluidos en la obra.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "The World Bank does not guarantee the accuracy of the data included in this work.",
+    "locator": "Página de derechos y permisos"
+   },
+   {
+    "claim": "Se puede descargar la última versión del libro en PDF, que incluye hipervínculos a todas las referencias.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "download the latest version of the book in PDF format which includes hyperlinks to all references.",
+    "locator": "Introduction, 'Using references'"
+   },
+   {
+    "claim": "La guía define el valor por dinero como la combinación óptima de beneficios y costos.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "Value for money means achieving the optimal combination of benefits and costs in delivering services users want.",
+    "locator": "Sección 3.2.4"
+   },
+   {
+    "claim": "La guía indica que hay que definir la tasa de descuento adecuada para aplicar a los flujos futuros tanto en el modelo APP como en el PSC.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "This requires defining the appropriate discount rate to apply to future cash flows in both the PPP and PSC models.",
+    "locator": "Box 3.5, Sección 3.2.4"
+   },
+   {
+    "claim": "La guía plantea cuál es la tasa de descuento adecuada para calcular valores presentes y cómo debe considerarse el costo del riesgo.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "which is the appropriate discount rate to use when calculating present values, and how the cost of risk should be considered.",
+    "locator": "Box 3.5, 'Methodological differences and challenges'"
+   },
+   {
+    "claim": "El Tesoro del Reino Unido retiró su guía cuantitativa del PSC en 2013.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "The Treasury of the United Kingdom’s detailed guidance  for quantitative PSC assessment was recalled in 2013",
+    "locator": "Box 3.5"
+   },
+   {
+    "claim": "Ninguno de estos países ha aplicado la metodología completa en la práctica.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "none of these countries have implemented the full methodology in practice.",
+    "locator": "Box 3.5"
+   },
+   {
+    "claim": "En la práctica, la mayoría de los gobiernos usa, si acaso, el análisis de escenarios para evaluar el posible costo de los pasivos contingentes.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "In practice, most governments use scenario analysis, if anything, to assess the possible cost of contingent liabilities.",
+    "locator": "Sección 3.2.5"
+   },
+   {
+    "claim": "La guía señala que producir resultados útiles requiere mucha información sobre las variables de riesgo subyacentes.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "However, producing useful results requires a lot of information on the underlying risk variables.",
+    "locator": "Sección 3.2.5"
+   },
+   {
+    "claim": "La guía menciona un límite que no debe superar el 12 % del PIB.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "shall not exceed 12 percent of GDP",
+    "locator": "Sección 2.4.2"
+   },
+   {
+    "claim": "En 2009 la Ley 12024 elevó este límite al tres por ciento, y en 2012 la Ley 12766 lo elevó de nuevo al cinco por ciento.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "in 2009 Law 12024 raised this limit to three percent, and in 2012 Law 12766 raised it again to five percent.",
+    "locator": "Sección 2.4.2"
+   },
+   {
+    "claim": "La guía lista una herramienta que evalúa el impacto fiscal de las APP y permite identificar y evaluar sus riesgos fiscales y la estrategia de mitigación correspondiente.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "Evaluates the fiscal impact of PPPs and allows users to identify and assess their fiscal risks, and corresponding mitigation strategy.",
+    "locator": "Tabla de referencias clave, Sección 2.4"
+   },
+   {
+    "claim": "La guía reporta que en Chile, desde 2007, Hacienda publica un informe anual de pasivos contingentes.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "Since 2007, Chile’s Budget Directorate of the Ministry of Finance has published an annual contingent liabilities report",
+    "locator": "Sección 2.4.4"
+   },
+   {
+    "claim": "En muchos casos, esta proporción va del 70 al 95 % del financiamiento total.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "In many cases, it ranges from 70 to 95 percent of total finance.",
+    "locator": "Sección 1.3.1"
+   },
+   {
+    "claim": "Se describe un reparto 50:50 de cualquier ganancia de refinanciación entre los inversionistas y el gobierno.",
+    "artifact_ids": [
+     "SA-a05d6cdc7075942e50516ae9"
+    ],
+    "quote": "a 50:50 split of any refinancing gain between the investors and the government",
+    "locator": "Sección 1.3.2, Refinanciación"
+   },
+   {
+    "claim": "Salvo etiqueta específica en contrario, los datasets del Banco Mundial se ofrecen bajo licencia CC BY 4.0, con los términos adicionales que siguen.",
+    "artifact_ids": [
+     "SA-bf7646ed7077968b0652c8ab"
+    ],
+    "quote": "Unless specifically labeled otherwise, these Datasets are provided to you under a Creative Commons Attribution 4.0 International License (CC BY 4.0), with the additional terms below.",
+    "locator": "Sección Licenses"
+   },
+   {
+    "claim": "Se permite extraer, descargar, copiar y compartir los datos con terceros según los términos.",
+    "artifact_ids": [
+     "SA-bf7646ed7077968b0652c8ab"
+    ],
+    "quote": "You may extract, download, and make copies of the data contained in the Datasets, and you may share that data with third parties according to these terms of use.",
+    "locator": "Sección Licenses"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Metodología de calificación de Moody's: el texto solo contiene 'Ratings.Moodys.com'; no hay metodología, licencia ni fecha.",
+   "Licencia o términos explícitos de reutilización de los datos de Damodaran: la página tiene un apartado 'Usage rules' en el menú, pero su contenido no está en el texto leído.",
+   "Términos de uso explícitos de la Data Library de French más allá del aviso de copyright; no aparece licencia.",
+   "Licencia/términos del sitio de la Fed para H.15 (la página muestra 'Website Policies' pero no su texto).",
+   "sha256 de cualquier archivo descargado: ninguna fuente aportó hashes.",
+   "Temas de finanzas de why_needed (no incluidos en la solicitud): Banco Mundial/BID, hacienda pública (p. ej. tasas de impuestos o IRS), S&P/Fitch no están cubiertos en esta parte.",
+   "Sha256 de lo descargado y fecha exacta de actualización de la versión en línea: este texto no las trae (solo 'Version 3', © 2017).",
+   "Licencia formal reutilizable (p. ej., Creative Commons) de la guía: solo se halló la cláusula de uso no comercial con atribución; la licencia del Knowledge Lab en línea no se vio.",
+   "Métodos y datos de referencia de otros temas de finanzas del request (tasas libres de riesgo, calificadoras, bancos de desarrollo con series descargables): esta parte no los contiene; es una guía de APP, no un conjunto de datos.",
+   "Valores numéricos concretos de tasas de descuento recomendadas: la guía no fija ninguna en las partes leídas.",
+   "Contenido de los caracteres 600000-922722 (módulo 3 restante y referencias): no leído en esta llamada.",
+   "URL de descarga, formato, fecha de actualización y sha256 de cada insumo: no están en estas fuentes y no se descargó nada.",
+   "Licencia de la PPP Reference Guide v3: no figura en la parte leída (comienzo y créditos en otras partes).",
+   "Metodología, licencia y supuestos de calificadoras, hacienda pública y tasas de descuento: no tratados en esta parte.",
+   "Licencia de PFRAM, ADB 2002 e Irwin 2007: solo se citan como referencias."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Damodaran es fuente primaria de método y datos para ERP, riesgo país, betas, WACC por industria; sus datos son de actualización anual (enero) con refresco semestral/trimestral de riesgo país, por lo que hay que fechar el dato usado.",
+  "INTERPRETACIÓN: Hay una discrepancia de fechas: la tabla de riesgo país dice 'Last updated: January 2026' (ERP US 4.46%), mientras el blog de julio 2026 da ERP implícita de 4.42% y premio maduro de 4.20%; son vintages distintos, no contradicción.",
+  "INTERPRETACIÓN: FRED prohíbe almacenar/archivar y entrenar IA, lo que choca con replicar series FRED en un repositorio propio; la Fed H.15 es la fuente primaria de las tasas Treasury y evita esa restricción, pero sus términos no se leyeron.",
+  "INTERPRETACIÓN: El diferencial de default de EE. UU. (Aa1) obliga a restar este diferencial del Treasury para obtener la tasa libre de riesgo, lo que cambia el cálculo estándar de costo de capital en USD.",
+  "INTERPRETACIÓN: El factor de volatilidad relativa (1.55 en julio 2026) y la ERP país dependen de ratings Moody's y CDS Bloomberg, datos de terceros potencialmente restringidos.",
+  "INTERPRETACIÓN: La guía es un documento de síntesis y bibliografía; sirve como puntero a fuentes primarias (Irwin 2007, Cebotari 2008, PFRAM, informes de pasivos contingentes de Chile), pero no publica por sí misma datos descargables ni tasas.",
+  "INTERPRETACIÓN: La advertencia de que la tasa de descuento del PSC es un punto metodológico disputado implica que un cálculo de valor por dinero debe declarar y fechar su tasa con fuente propia.",
+  "INTERPRETACIÓN: La cláusula de uso no comercial con atribución puede ser restrictiva para reutilizar texto en un producto comercial; requiere verificación jurídica.",
+  "INTERPRETACIÓN: Los datasets del Banco Mundial son reutilizables con atribución (CC BY 4.0) salvo datos de terceros; cada indicador requiere revisar sus metadatos.",
+  "SECUNDARIA: La PPP Reference Guide v3 es un compendio que remite a PFRAM, ADB 2002, Irwin 2007 y otros; sirve de índice, no como fuente del método.",
+  "INTERPRETACIÓN: Los términos de datasets datan de 2018-03-23; verificar vigencia a 2026."
+ ],
+ "candidate_controls": [
+  "Registrar para cada dataset del BM la cita de atribución exigida y revisar los metadatos por excepción de terceros."
+ ],
+ "candidate_tests": [
+  "Verificar sha256 y fecha de cada Excel de Damodaran (ctryprem.xlsx, wacc.xls, ERPJuly26.xlsx) al descargarlo y comparar con la fecha declarada en la página.",
+  "Verificar en el PPP Knowledge Lab la fecha de actualización y los términos de licencia de la versión en línea, y registrar el sha256 del PDF descargado."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Para cálculos de APP/valor por dinero, ZPMND debería exigir tasa de descuento y supuestos de riesgo con fuente primaria fechada, pues la guía admite que no hay consenso."
+ ],
+ "affected_existing_concepts": [
+  "Comparador del sector público (PSC)",
+  "Pasivos contingentes",
+  "Tasa de descuento en APP"
+ ],
+ "limitations": [
+  "Las fuentes se leyeron completas en 3 partes, una llamada por parte; un \"unknown\" de una parte puede estar respondido en otra.",
+  "Al unir las partes no cupo en el esquema: 9 confirmed; está completo en receipt.json (partes_fuera).",
+  "Los textos son páginas web convertidas a texto: no hay hashes, cabeceras HTTP ni archivos Excel/CSV reales; no se pudo comprobar el formato descargable más allá de lo que menciona la página.",
+  "La solicitud no incluye la lista why_needed; se cubrieron solo los temas que estas fuentes permiten (ERP, riesgo país, betas/WACC, factores de French, tasas Treasury, términos FRED).",
+  "El texto de Damodaran no incluye la página 'Usage rules', así que la licencia queda desconocida.",
+  "La fuente de Moody's contiene solo 18 caracteres, sin contenido útil.",
+  "Quedan para las otras partes (2 y 3) fuentes de bancos de desarrollo, hacienda pública y otras calificadoras que esta parte no leyó.",
+  "El bloque del blog muestra fechas posteriores a mediados de 2026; se tomaron tal cual como vienen en la fuente.",
+  "Solo se leyó la parte 2 de 3 (caracteres 0-600000 de 922722); lo posterior (resto del módulo 3 y referencias) puede contener contenido relevante no leído.",
+  "La guía es una fuente primaria institucional del Banco Mundial y otros bancos, pero solo para APP; no cubre calificadoras ni series de datos de referencia.",
+  "No se cuenta con sha256, URL de descarga verificada ni fecha de actualización posterior a 2017.",
+  "Las citas de la guía sobre normas externas (IPSAS, FMI, Eurostat) son descripciones de segunda mano; no son la fuente primaria de esas normas.",
+  "Los datos numéricos citados (límites de Perú, Brasil, etc.) corresponden a 2017 y pueden haber cambiado.",
+  "Solo parte 3 de 3; la guía es secundaria como índice de métodos, y las fuentes primarias de cada método no se leyeron.",
+  "El texto del PDF tiene errores de extracción (espacios en 'T reasury').",
+  "La página de términos contiene texto de maquetación y un Lorem ipsum; no afecta a las cláusulas citadas.",
+  "No se obtuvo sha256 ni se verificó la descarga.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 50 de 60 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 18 propuestas, 12 aceptadas, 6 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Se descartaron 5 hallazgos cuya cita no aparece tal cual en el texto de la fuente que citan (detalle en receipt.json): sin su cita no son hechos.",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4629613 (refused); https://www.spglobal.com/ratings/en/credit-ratings/about/understanding-credit-ratings (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
