@@ -6,6 +6,9 @@ classifies and packages **candidate** knowledge for ZPMND. It never decides what
 Source: Braulio's dual-repository handoff (October 2026), sections 12–46. This contract is the RESEARCH GROUP side of
 it; ZPMND keeps its own canon and decides what it does with anything we send.
 
+Since 2026-11-17, ZPMND in this contract is `romerobarcenabraulio-hash/ZPMND-FINAL`; `ZPPMND` is a read-only historical
+source. The exchange is unchanged: requests and packets stay candidates, with no authority to promote or execute.
+
 ## 1. Authority
 
 | May | May not |
@@ -87,3 +90,18 @@ and asks its own questions (authority of the source, currency, relation to canon
 
 Research infrastructure is not product architecture. No CompanyTwin, Agent Factory, Digital Physics or other ZPMND
 system is rebuilt here; RESEARCH GROUP has only the governance it needs to research safely.
+
+## 7. Contract version
+
+`rg-contrato-1` (2026-11-17). A consumer pins it by the sha256 of each schema it validates against. A change to any of
+these files is a new version, with its row updated in the same PR; `tests/test_contrato.py` fails otherwise.
+
+| Schema | sha256 |
+|---|---|
+| `schemas/research_request.schema.json` | `629fa4ab918ef16091636a1e91dfb8d7d866bb894144520ce7f67df42383a5ae` |
+| `schemas/research_packet.schema.json` | `252ef395278de005f44690df5d6884deff4e2b8c3e27f256931509899294c5d2` |
+| `schemas/common.schema.json` | `642d7f60f61862cce3f3e70f4651005b1f9308f37e90f95bbf1bdf38b97bbf53` |
+| `schemas/source_artifact.schema.json` | `110100983f5d99cee188a03f3924a7afca896e31ad8b295f8f6354bee94041b4` |
+
+`schemas/verdict_event.schema.json` is not part of this version: it accepts only ZPPMND's signing workflow, so a
+verdict from ZPMND-FINAL fails closed until a version names its workflow.
