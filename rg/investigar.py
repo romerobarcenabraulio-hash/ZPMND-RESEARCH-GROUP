@@ -87,6 +87,9 @@ MODEL_SCHEMA = {
 # but in receipt.json.
 # 2026-11-13 (GPT on #158, #161, #163): the reviewer still let claims lose a condition of their quote; it now copies
 # the quote's limits first (limits), so what a claim leaves out is in front of it when it decides.
+# 2026-11-14 (GPT on #165: 5.5 lost "durante o con motivo del trabajo" again; on #167: words of the claim the model
+# points to need not keep the limit): the machine checks that each limit is in the quote and in the claim, word for word
+# (apply_review); the model no longer decides that alone.
 _REVIEW = {'type': 'object', 'additionalProperties': False, 'required': ['id', 'limits', 'fits', 'why'],
            'properties': {'id': {'type': 'string', 'pattern': r'^(confirmed|conflicting)\[[0-9]{1,2}\]$'},
                           'limits': {'type': 'array', 'maxItems': 12, 'items': _TEXT},
@@ -497,10 +500,11 @@ Write it in Spanish:
   or one finding per item. The machine checks that the quote exists, not that it supports the claim, so this is on
   you. What you connect or deduce across quotes goes to candidate_claims, starting with "INTERPRETACIÓN:".
 - Keep what limits the quote: its conditions, exceptions, time, place, subject or case, and its modality ('should'
-  stays 'debería', 'may' stays 'puede'). One fact means nothing beside it: no section, edition, date or detail that is
+  stays 'debería («should»)', 'may' stays 'puede («may»)'). One fact means nothing beside it: no section, edition, date or detail that is
   not the fact itself; a second fact is a second finding with its own quote. A second pass takes out whole any finding
   wider than its quote, so a detail added to a fact costs the fact (GPT on #159: a publication date went out with the
-  edition it carried).
+  edition it carried). It checks each limit word for word: keep it in the quote's own words, and one in another
+  language in quotation marks beside its translation, or the claim goes out.
 - Every confirmed finding cites at least one source the request lists as primary (its header says primary); what only
   a secondary source states goes to candidate_claims, starting with "SECUNDARIA:" and naming that source.
 - findings.conflicting: where sources disagree, only when the quote itself shows the disagreement (one source saying
@@ -590,6 +594,8 @@ One review per finding, every id once:
 - limits first: copy from the quote, in its own words, each condition, exception, time, place, subject, case or
   quantifier it is limited to, and its modality (should, may, must, se recomienda, puede, debe); [] when it has none.
   A claim that leaves out any of its limits does not fit.
+  The machine checks each limit: one not in the quote word for word, or that the claim does not say in those same
+  words (case and spacing aside), takes the claim out whatever fits says.
 - fits: true when the claim says nothing its quote does not say (a faithful restatement or translation of it).
   A name, number, date, plan, license, condition or list item absent from the quote makes it false, even if it is true.
   The only exception is the name of the document the quote is from (a file, a module, a product, a paper), which its
@@ -606,10 +612,17 @@ One review per finding, every id once:
     return system, json.dumps(items, ensure_ascii=False, indent=0)
 
 
+def _en(parte, texto):
+    """True when parte, as the reviewer copied it (case and spacing aside), is in texto as whole words, never inside
+    another word ('debe' is not in 'debería': GPT on 3d635bd); never for nothing."""
+    p = ' '.join(parte.split()).casefold()
+    return bool(p) and re.search(r'(?<!\w)' + re.escape(p) + r'(?!\w)', ' '.join(texto.split()).casefold()) is not None
+
+
 def apply_review(answer, review):
     """(answer without every finding the reviewer said does not fit its quote, what was taken out). ValueError unless the
-    review fits REVIEW_SCHEMA and holds one review per confirmed and conflicting finding. A finding that fits stays as the
-    model wrote it; one that does not is taken out whole, never rewritten (GPT on #150, #152, #154: a cut-down claim had
+    review fits REVIEW_SCHEMA and holds one review per confirmed and conflicting finding. A finding that fits, every limit
+    it lists in its quote and in its claim word for word, stays as the model wrote it; one that does not is taken out whole, never rewritten (GPT on #150, #152, #154: a cut-down claim had
     lost its condition and said more than its quote)."""
     try:
         jsonschema.validate(review, REVIEW_SCHEMA)
@@ -623,10 +636,13 @@ def apply_review(answer, review):
     out = copy.deepcopy(answer)
     taken, gone = [], {'confirmed': set(), 'conflicting': set()}
     for r in review['reviews']:
-        if r['fits']:
-            continue
         group, i = r['id'][:-1].split('[')
-        taken.append({'id': r['id'], 'claim': out['findings'][group][int(i)]['claim'], 'why': r['why']})
+        f = out['findings'][group][int(i)]
+        falta = next((x for x in r['limits'] if not (_en(x, f['quote']) and _en(x, f['claim']))), None)
+        if r['fits'] and falta is None:
+            continue
+        why = r['why'] if not r['fits'] else f'a limit of its quote the claim does not say in its words: {falta[:200]}'
+        taken.append({'id': r['id'], 'claim': f['claim'], 'why': why})
         gone[group].add(int(i))
     for group, out_of in gone.items():
         out['findings'][group] = [f for i, f in enumerate(out['findings'][group]) if i not in out_of]
