@@ -1,0 +1,685 @@
+{
+ "request_id": "RR-2026-11-12-entregable-documento-profesional",
+ "fetched": [
+  {
+   "url": "https://www.iso.org/standard/78907.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.iso.org/standard/78907.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:16:43Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.iso.org/standard/72642.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.iso.org/standard/72642.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:16:43Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Editorial-Style-Manual-for-Authors.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "4891f9e7ae600ddc57628d46b242f5319b8924789841aac33b847001c2bedaba",
+   "bytes": 809723,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:16:43Z",
+   "text_status": "ok",
+   "text_chars": 153663
+  },
+  {
+   "url": "https://apastyle.apa.org/style-grammar-guidelines/paper-format/sample-papers",
+   "status": 200,
+   "error": null,
+   "sha256": "97610d3d39715e22008ab3dd0117c3eb211f1acaa6159bd4fbee3d0ecf247fa2",
+   "bytes": 1035,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:16:45Z",
+   "text_status": "ok",
+   "text_chars": 83
+  },
+  {
+   "url": "https://apastyle.apa.org/instructional-aids/whats-new-7e-guide.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "aa8f7948d8079308271c5599fdda6d0cce2e8f2155b31e6621bae98462befa15",
+   "bytes": 1042,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:16:46Z",
+   "text_status": "ok",
+   "text_chars": 84
+  },
+  {
+   "url": "https://owl.purdue.edu/owl/research_and_citation/chicago_manual_18th_edition/documents/chicagonb-20250807.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "459a03fc1c2a0f5aeee5942e710e73bb0e028b3281f1af697bbbb0c4451f9012",
+   "bytes": 1390703,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:16:47Z",
+   "text_status": "ok",
+   "text_chars": 10752
+  },
+  {
+   "url": "https://cdi.mecon.gob.ar/bases/docelec/niso/z3918.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "a463ed78ffbb221e70aede1a7a25cbb24e41bc30a21c3be10162e30c647c9ae0",
+   "bytes": 962662,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:16:48Z",
+   "text_status": "ok",
+   "text_chars": 228799
+  },
+  {
+   "url": "https://www.w3.org/TR/WCAG22/",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.w3.org/TR/WCAG22/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:16:51Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "1eee3a1841a94567da8e59f3b19a782ce9ab081c386b6a2a763b8cde13ff5b49",
+   "bytes": 2285361,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:16:51Z",
+   "text_status": "ok",
+   "text_chars": 477596
+  },
+  {
+   "url": "https://www.access-board.gov/ict/",
+   "status": 200,
+   "error": null,
+   "sha256": "b79682785687f0c6b2188fee355cc1d2a464e37befe4d6233b4fa0b67c9e9e08",
+   "bytes": 493062,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:16:52Z",
+   "text_status": "ok",
+   "text_chars": 397541
+  },
+  {
+   "url": "https://pdfa.org/pdf-standards/",
+   "status": "refused",
+   "error": "robots.txt disallows https://pdfa.org/pdf-standards/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:16:53Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://verapdf.org/home/",
+   "status": "refused",
+   "error": "robots.txt disallows https://verapdf.org/home/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:16:54Z",
+   "text_status": null,
+   "text_chars": null
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43308340945",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[3]",
+    "claim": "IEEE exige divulgar el contenido generado por IA en la sección de agradecimientos de todo artículo enviado a una publicación IEEE.",
+    "now": "Debe divulgarse en la sección de agradecimientos de todo artículo enviado a una publicación IEEE.",
+    "cut": "Que lo que se divulga sea contenido generado por IA."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "IEEE exige un ORCID para el autor de correspondencia para enviar a revisión por pares.",
+    "now": "Se exige para el autor de correspondencia, para poder enviar un artículo a revisión por pares.",
+    "cut": "La mención de ORCID."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "IEEE: un número de referencia por fuente; no se permite un número para un grupo de referencias.",
+    "now": "IEEE: no se permite usar un número de referencia para designar un grupo de referencias.",
+    "cut": "Que se use un número de referencia por fuente."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "IEEE remite a The Chicago Manual of Style para gramática y uso no cubiertos.",
+    "now": "IEEE indica consultar The Chicago Manual of Style, publicado por University of Chicago Press.",
+    "cut": "Que sea para gramática y uso no cubiertos."
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "IEEE define las fechas con formato internacional y mes escrito completo (excepto en referencias).",
+    "now": "IEEE indica usar el formato internacional de fecha para todas las fechas del artículo y escribir el mes completo.",
+    "cut": "La excepción de las referencias."
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "Z39.18 redacta en indicativo, no con «shall»/«must», como es típico en estándares.",
+    "now": "El lenguaje de la norma se redacta en indicativo y no en modo subjuntivo («es», no «shall» ni «must»).",
+    "cut": "Que eso sea lo típico en estándares."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "Z39.18 declara que la Tabla 1 marca componentes requeridos, opcionales y condicionales.",
+    "now": "Z39.18 declara que la tabla indica qué componentes son requeridos, cuáles opcionales y cuáles condicionales.",
+    "cut": "Que sea la Tabla 1."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "Z39.18 recomienda fuente serif de 10 o 12 puntos para texto y 8 puntos como mínimo para no texto.",
+    "now": "Z39.18 indica que una fuente serif de 10 o 12 puntos es la más cómoda para los lectores.",
+    "cut": "El mínimo de 8 puntos para no texto y la recomendación para el texto como tal."
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "Z39.18 pide papel libre de ácido de tamaño estándar EE. UU. para copias en papel.",
+    "now": "Z39.18 indica usar papel libre de ácido de tamaño estándar de EE. UU. (8-1/2 por 11 pulgadas).",
+    "cut": "Que sea para copias en papel."
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "Z39.18 remite a Section 508 para accesibilidad: obliga a agencias federales de EE. UU.; a otros productores se les sugiere seguirlo.",
+    "now": "Section 508 requiere que las agencias federales de EE. UU. hagan accesibles a personas con discapacidad sus tecnologías electrónicas y de información.",
+    "cut": "Que Z39.18 remita a ella, y que se sugiera a otros productores seguirla."
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "Z39.18 recomienda un DTD XML para estructura y validación automática de informes digitales.",
+    "now": "Dos ventajas principales de este enfoque son su validación automática y su flexibilidad de representación.",
+    "cut": "La recomendación de un DTD XML y su aplicación a informes digitales."
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "La cláusula 10 aplica a documentos que no son páginas web, incluidos los documentos descargables desde páginas web.",
+    "now": "La cláusula se aplica a los documentos descargables.",
+    "cut": "Que sea para documentos que no son páginas web."
+   },
+   {
+    "id": "confirmed[31]",
+    "claim": "Los documentos deben tener títulos que describan tema o propósito; el nombre del documento basta si lo describe.",
+    "now": "Los documentos tienen títulos que describen su tema o propósito.",
+    "cut": "Que el nombre del documento baste si lo describe."
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "Reflow en documentos: sin scroll en dos dimensiones a 320 px CSS de ancho (vertical) y 256 px de alto (horizontal), salvo contenido que requiera disposición bidimensional.",
+    "now": "Reflow: contenido de desplazamiento vertical con un ancho equivalente a 320 píxeles CSS.",
+    "cut": "El alto de 256 px, la ausencia de scroll en dos dimensiones y la excepción de disposición bidimensional."
+   },
+   {
+    "id": "confirmed[40]",
+    "claim": "Usar solo fuentes escalables sin pérdida de calidad (en especial incrustadas) es buena práctica.",
+    "now": "Es buena práctica usar solo fuentes que permitan escalar sin pérdida de calidad.",
+    "cut": "El énfasis en fuentes incrustadas."
+   },
+   {
+    "id": "confirmed[41]",
+    "claim": "La documentación de producto en formato electrónico debe ofrecerse en al menos un formato web conforme a cláusula 9 o no web conforme a cláusula 10.",
+    "now": "La documentación de producto entregada con la TIC debe estar disponible en al menos uno de los siguientes formatos electrónicos.",
+    "cut": "Los formatos web (cláusula 9) y no web (cláusula 10)."
+   },
+   {
+    "id": "confirmed[42]",
+    "claim": "La norma es un medio voluntario de cumplir la Directiva 2016/2102; la presunción de conformidad exige que se cite en el Diario Oficial.",
+    "now": "Una vez citado el documento en el Diario Oficial de la Unión Europea bajo esa Directiva, la conformidad con las cláusulas normativas de las Tablas A.1 y A.2 confiere presunción de conformidad.",
+    "cut": "El número 2016/2102 y el carácter voluntario."
+   },
+   {
+    "id": "confirmed[45]",
+    "claim": "La Directiva cubre al menos organismos del sector público e incluye intranets y extranets; el vídeo en directo queda fuera.",
+    "now": "La Directiva también cubre intranets y extranets, que deben cumplir la cláusula 9 para contenido web y la cláusula 10 para documentos.",
+    "cut": "Organismos del sector público y la exclusión del vídeo en directo."
+   },
+   {
+    "id": "confirmed[48]",
+    "claim": "Las herramientas de autoría deben guiar la producción de contenido conforme a cláusulas 9 o 10, y ofrecer sugerencias de reparación.",
+    "now": "Las herramientas de autoría deben permitir y guiar la producción de contenido conforme a las cláusulas 9 (web) o 10 (no web), según corresponda.",
+    "cut": "Ofrecer sugerencias de reparación."
+   },
+   {
+    "id": "confirmed[49]",
+    "claim": "Si una herramienta de autoría ofrece plantillas, al menos una debe soportar contenido conforme y estar identificada como tal.",
+    "now": "Debe haber al menos una plantilla que soporte la creación de contenido conforme.",
+    "cut": "Que sea si la herramienta ofrece plantillas y que esté identificada como tal."
+   },
+   {
+    "id": "confirmed[50]",
+    "claim": "Las herramientas de autoría deben preservar la información de accesibilidad en transformaciones (p. ej. conversión de formato).",
+    "now": "La información de accesibilidad debe preservarse en la salida si existen mecanismos equivalentes en la tecnología de contenido de la salida.",
+    "cut": "El ejemplo de conversión de formato y la referencia a transformaciones."
+   },
+   {
+    "id": "confirmed[51]",
+    "claim": "El criterio de prueba de un documento es 'no falla' el criterio WCAG correspondiente, con resultado pass/fail/no aplicable.",
+    "now": "Se comprueba que el documento no falla el criterio de éxito WCAG 2.1 1.3.1 Info and Relationships.",
+    "cut": "Los resultados pass/fail/no aplicable."
+   },
+   {
+    "id": "confirmed[53]",
+    "claim": "La norma advierte que el muestreo es frecuente en TIC complejas y que no recomienda técnicas de muestreo específicas.",
+    "now": "El documento no puede recomendar técnicas específicas de muestreo para evaluar TIC, por depender del contexto.",
+    "cut": "Que el muestreo sea frecuente en TIC complejas."
+   },
+   {
+    "id": "confirmed[54]",
+    "claim": "La norma reproduce WCAG 2.1 y WCAG 2.0 equivale a ISO/IEC 40500:2012.",
+    "now": "WCAG 2.0 es idéntico a ISO/IEC 40500:2012.",
+    "cut": "Que la norma reproduzca WCAG 2.1."
+   },
+   {
+    "id": "confirmed[55]",
+    "claim": "Información de versión y vigencia: fecha de adopción 10 de marzo de 2021 y publicación de marzo de 2021 (V3.2.1).",
+    "now": "Fecha de adopción de esta EN: 10 de marzo de 2021.",
+    "cut": "La publicación de marzo de 2021 (V3.2.1)."
+   },
+   {
+    "id": "confirmed[56]",
+    "claim": "Los criterios WCAG AAA son sugerencias, no requisitos de la norma.",
+    "now": "Algo puede proporcionar acceso más allá de lo requerido en el documento.",
+    "cut": "Que se trate de los criterios WCAG AAA y que sean sugerencias."
+   }
+  ]
+ },
+ "reconcile": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "dropped": [
+   {
+    "id": "unknown[2]",
+    "text": "Jurisdicciones fuera de EE. UU. y requisitos legales de accesibilidad en la UE o Latinoamérica: no cubiertos.",
+    "por": "confirmed[45]"
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "id": "confirmed[3]",
+   "claim": "Debe divulgarse en la sección de agradecimientos de todo artículo enviado a una publicación IEEE.",
+   "quote": "shall be disclosed in the acknowledgments section of any article submitted to an IEEE publication",
+   "artifact_ids": [
+    "SA-4891f9e7ae600ddc57628d46"
+   ]
+  },
+  {
+   "id": "confirmed[5]",
+   "claim": "IEEE no acepta artículos con la imagen «Lena».",
+   "quote": "IEEE will no longer accept submitted papers which include the “Lena image.”",
+   "artifact_ids": [
+    "SA-4891f9e7ae600ddc57628d46"
+   ]
+  }
+ ],
+ "discovery": {
+  "families": [
+   "Normas de lenguaje claro (ISO 24495-1, Plain Writing Act, OMB M-11-15)",
+   "Normas de citas y referencias (ISO 690, APA, Chicago, IEEE)",
+   "Normas de informes técnicos (ANSI/NISO Z39.18, ISO 5966 retirada)",
+   "Formatos PDF (PDF/A, PDF/UA, Matterhorn)",
+   "Accesibilidad (WCAG 2.2, EN 301 549, Sección 508)",
+   "Verificadores y software (veraPDF, PAC)",
+   "Documentos empresariales y control documental (ISO 9001 7.5)"
+  ],
+  "searches": [
+   {
+    "query": "ISO 24495-1:2023 plain language governing principles and guidelines",
+    "intent": "official"
+   },
+   {
+    "query": "PDF/UA ISO 14289-2 PDF Association Matterhorn Protocol veraPDF",
+    "intent": "official"
+   },
+   {
+    "query": "veraPDF validator PDF/A ISO 19005 open source license",
+    "intent": "official"
+   },
+   {
+    "query": "W3C WCAG 2.2 Recommendation",
+    "intent": "official"
+   },
+   {
+    "query": "EN 301 549 V3.2.1 accessibility requirements ICT products and services ETSI",
+    "intent": "official"
+   },
+   {
+    "query": "APA Style 7th edition student paper requirements instructor may differ",
+    "intent": "limitations"
+   },
+   {
+    "query": "ISO 690:2021 guidelines for bibliographic references",
+    "intent": "official"
+   },
+   {
+    "query": "IEEE Editorial Style Manual for Authors references",
+    "intent": "official"
+   },
+   {
+    "query": "ISO 7144 or ISO 5966 ANSI/NISO Z39.18 scientific and technical reports",
+    "intent": "official"
+   },
+   {
+    "query": "PDF/A-4 ISO 19005-4 PDF Association archival standard",
+    "intent": "official"
+   },
+   {
+    "query": "Section 508 PDF accessibility requirements WCAG 2.0 ICT Refresh",
+    "intent": "contradict"
+   },
+   {
+    "query": "Chicago Manual of Style 18th edition notes-bibliography author-date",
+    "intent": "official"
+   },
+   {
+    "query": "PAC PDF Accessibility Checker axes4 PDF/UA",
+    "intent": "support"
+   },
+   {
+    "query": "Plain Writing Act of 2010 federal plain language guidelines",
+    "intent": "official"
+   },
+   {
+    "query": "ISO 9001:2015 documented information 7.5 SOP",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "Texto oficial gratuito de ISO 19005, ISO 14289 e ISO 9001: de pago, solo metadatos; no abrí las páginas ISO de estas normas.",
+   "ISO 7144 (tesis): no encontrada; solo ISO 5966, retirada en 2000.",
+   "Sin sha256 ni cita literal de 300 caracteres o menos: no descargué los documentos, solo vi resultados de búsqueda.",
+   "Manual de Chicago 18 oficial (de pago) y IEEE Reference Guide: no confirmados.",
+   "Guías de estilo gubernamentales fuera de EE. UU. (UE, Reino Unido, España) y manuales universitarios de tesis: no buscados.",
+   "Herramientas de producción (Pandoc, LaTeX, Word, LibreOffice, Zotero/CSL): no buscadas.",
+   "Ejemplos oficiales de SOP, políticas o manuales (FDA, ISO/IEC 82079-1): no buscados.",
+   "Matterhorn Protocol 1.1 en la fuente oficial, PAC y OMB M-11-15: solo vi resúmenes secundarios o URL de resultados; no incluidos como fuentes por el tope de 12."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://www.iso.org/standard/78907.html",
+    "family": "Lenguaje claro",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Norma de principios (guía, no requisitos auditables); URL citada en un resultado de búsqueda, no abierta. De pago: solo metadatos."
+   },
+   {
+    "url": "https://www.iso.org/standard/72642.html",
+    "family": "Citas",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Define elementos y métodos (numérico, nombre-fecha) sin un diseño único; excluye citas legales. De pago: metadatos."
+   },
+   {
+    "url": "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Editorial-Style-Manual-for-Authors.pdf",
+    "family": "Citas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Obligatorio solo para publicaciones IEEE (convención institucional); reglas de referencias numéricas. Verificar edición vigente."
+   },
+   {
+    "url": "https://apastyle.apa.org/style-grammar-guidelines/paper-format/sample-papers",
+    "family": "Citas",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Ejemplos oficiales; APA no exige fuente ni tipografía concreta y prevalecen las instrucciones del docente o la institución."
+   },
+   {
+    "url": "https://apastyle.apa.org/instructional-aids/whats-new-7e-guide.pdf",
+    "family": "Citas",
+    "stance": "context",
+    "role": "primary",
+    "why": "Fuente oficial de cambios y diferencias entre trabajo estudiantil y profesional en APA 7."
+   },
+   {
+    "url": "https://owl.purdue.edu/owl/research_and_citation/chicago_manual_18th_edition/documents/chicagonb-20250807.pdf",
+    "family": "Citas",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Resumen universitario de Chicago 18 (sistemas NB y autor-fecha); solo candidate_claim, el manual oficial es de pago."
+   },
+   {
+    "url": "https://cdi.mecon.gob.ar/bases/docelec/niso/z3918.pdf",
+    "family": "Informes técnicos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Norma de estructura de informes técnicos (impreso y digital); la copia no es del emisor, verificar contra niso.org y la reafirmación R2010."
+   },
+   {
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "family": "Accesibilidad",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Recomendación W3C vigente con criterios comprobables; base de EN 301 549 y de leyes de accesibilidad (la obligatoriedad depende de la jurisdicción)."
+   },
+   {
+    "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf",
+    "family": "Accesibilidad",
+    "stance": "supports",
+    "role": "primary",
+    "why": "La cláusula 10 cubre documentos no web (PDF); exigible vía las Directivas UE 2016/2102 y 2019/882 según el sujeto obligado. Comprobar si hay versión más nueva."
+   },
+   {
+    "url": "https://www.access-board.gov/ict/",
+    "family": "Accesibilidad",
+    "stance": "contradicts",
+    "role": "primary",
+    "why": "En EE. UU. la norma legal para PDF federal es WCAG 2.0 A/AA; PDF/UA no es obligatorio. Contradice suponer PDF/UA como requisito universal."
+   },
+   {
+    "url": "https://pdfa.org/pdf-standards/",
+    "family": "Formatos PDF",
+    "stance": "context",
+    "role": "primary",
+    "why": "Estado de ISO 19005 (PDF/A), 14289 (PDF/UA) y revisiones en curso; sirve para fijar cuándo revalidar."
+   },
+   {
+    "url": "https://verapdf.org/home/",
+    "family": "Verificadores",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Validador de código abierto (GPLv3+/MPLv2+) de PDF/A y PDF/UA; verificable; no sustituye la revisión manual."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ },
+ "partes": [
+  [
+   [
+    "SA-4891f9e7ae600ddc57628d46",
+    0,
+    153663
+   ],
+   [
+    "SA-97610d3d39715e22008ab3dd",
+    0,
+    83
+   ],
+   [
+    "SA-aa8f7948d8079308271c5599",
+    0,
+    84
+   ],
+   [
+    "SA-459a03fc1c2a0f5aeee5942e",
+    0,
+    10752
+   ],
+   [
+    "SA-a463ed78ffbb221e70aede1a",
+    0,
+    228799
+   ]
+  ],
+  [
+   [
+    "SA-1eee3a1841a94567da8e59f3",
+    0,
+    477596
+   ]
+  ],
+  [
+   [
+    "SA-b79682785687f0c6b2188fee",
+    0,
+    397541
+   ]
+  ]
+ ],
+ "partes_fuera": {
+  "confirmed": [
+   {
+    "claim": "Los documentos no Web quedan exceptuados de cuatro criterios de éxito de WCAG 2.0.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Non-Web documents shall not be required to conform to the following four WCAG 2.0 Success Criteria: 2.4.1 Bypass Blocks, 2.4.5 Multiple Ways, 3.2.3 Consistent Navigation, and 3.2.4 Consistent Identification.",
+    "locator": "E205.4 Exception"
+   },
+   {
+    "claim": "Al aplicar WCAG a documentos no Web se sustituye 'Web page' o 'page' por 'document'.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "the term “document” shall be substituted for the terms “Web page” and “page”",
+    "locator": "E205.4.1"
+   },
+   {
+    "claim": "El contenido no público es alcanzado cuando es asunto oficial comunicado por la agencia en categorías listadas (p. ej., plantillas o formularios, materiales educativos).",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Electronic content that is not public facing shall conform to the accessibility requirements specified in E205.4 when such content constitutes official business",
+    "locator": "E205.3"
+   },
+   {
+    "claim": "Los registros de NARA no necesitan cumplir salvo que sean de cara al público.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Records maintained by the National Archives and Records Administration (NARA) pursuant to Federal recordkeeping statutes shall not be required to conform to the Revised 508 Standards unless public facing.",
+    "locator": "E205.3 Exception"
+   },
+   {
+    "claim": "Safe harbor: el ICT existente conforme a la norma anterior y no alterado no debe modificarse.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "that has not been altered on or after January 18, 2018, shall not be required to be modified to conform to the Revised 508 Standards.",
+    "locator": "E202.2 Legacy ICT"
+   },
+   {
+    "claim": "Las herramientas de autoría que exportan PDF 1.7 deben poder exportar PDF/UA-1.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Authoring tools capable of exporting PDF files that conform to ISO 32000-1:2008 (PDF 1.7) shall also be capable of exporting PDF files that conform to ANSI/AIIM/ISO 14289-1:2016 (PDF/UA-1)",
+    "locator": "504.2.2 PDF Export"
+   },
+   {
+    "claim": "La regla final retiró PDF/UA-1 como estándar alterno de conformidad para archivos PDF; WCAG 2.0 es el único estándar para PDF.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Because WCAG 2.0 can be used as a sole standard for PDF compliance, and PDF/UA-1 cannot, the Board finds WCAG 2.0 to be appropriate as the sole standard for PDF files.",
+    "locator": "Preámbulo III.C"
+   },
+   {
+    "claim": "La documentación de soporte electrónica debe cumplir WCAG 2.0 A y AA.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Documentation in electronic format, including Web-based self-service support, shall conform to Level A and Level AA Success Criteria and Conformance Requirements in WCAG 2.0",
+    "locator": "602.3"
+   },
+   {
+    "claim": "La documentación de soporte solo impresa debe ofrecerse en formatos alternos a solicitud.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Where support documentation is only provided in non-electronic formats, alternate formats usable by individuals with disabilities shall be provided upon request.",
+    "locator": "602.4"
+   },
+   {
+    "claim": "Las herramientas de autoría deben ofrecer un modo de creación conforme a WCAG, con opción de anular información de accesibilidad.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Authoring tools shall permit authors the option of overriding information required for accessibility.",
+    "locator": "504.2"
+   },
+   {
+    "claim": "Las herramientas de autoría deben preservar la información de accesibilidad al convertir formatos.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "preserve the information required for accessibility to the extent that the information is supported by the destination format.",
+    "locator": "504.2.1"
+   },
+   {
+    "claim": "La agencia debe documentar por escrito la carga indebida.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "The responsible agency official shall document in writing the basis for determining that conformance to requirements in the Revised 508 Standards constitute an undue burden",
+    "locator": "E202.6.2"
+   },
+   {
+    "claim": "Las Normas 255 son obligatorias solo cuando la FCC las adopta; las normas 508 no se hacen cumplir solas en adquisiciones hasta que la FAR las adopta.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Compliance with the section 255-based guidelines is not required until the guidelines are adopted by the Federal Communications Commission.",
+    "locator": "Preámbulo, DATE"
+   },
+   {
+    "claim": "EN 301 549 es voluntario por sus propios términos, a diferencia de la 508.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Unlike the 508 Standards, however, EN 301 549—by its own terms— establishes only non-binding, voluntary accessibility requirements for public ICT procurements.",
+    "locator": "Preámbulo II.F.1"
+   },
+   {
+    "claim": "Los estándares incorporados por referencia son, salvo TIA-1083-B, accesibles en línea gratis.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "nine of the ten standards incorporated by reference into the final rule will be available online free of charge",
+    "locator": "Preámbulo IV.I"
+   },
+   {
+    "claim": "El Board dejó fuera de la regla material consultivo; las mejores prácticas van en asistencia técnica.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "consider\" is not mandatory language and therefore is more appropriate for inclusion in advisory material providing guidance on best practices.",
+    "locator": "Preámbulo IV.D, C201.5"
+   },
+   {
+    "claim": "WCAG 2.0 fue publicado como Recomendación W3C el 11 de diciembre de 2008.",
+    "artifact_ids": [
+     "SA-b79682785687f0c6b2188fee"
+    ],
+    "quote": "Web Content Accessibility Guidelines (WCAG) 2.0, W3C Recommendation, December 11, 2008.",
+    "locator": "702.10.1"
+   }
+  ]
+ }
+}
