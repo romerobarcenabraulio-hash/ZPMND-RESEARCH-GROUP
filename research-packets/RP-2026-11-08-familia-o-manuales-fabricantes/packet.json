@@ -1,0 +1,293 @@
+{
+ "research_id": "RP-2026-11-08-familia-o-manuales-fabricantes",
+ "request_id": "RR-2026-11-08-familia-o-manuales-fabricantes",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T22:15:18Z",
+ "question": "Para cada categoría listada en why_needed: ¿qué dos fabricantes publican un índice público de documentos técnicos (hoja de datos, manual, boletín, SDS o tabla de compatibilidad), cuántos documentos declara ese índice, qué campos trae (modelo, revisión, fecha), qué términos rigen bajarlos y redistribuirlos y qué prohíbe su robots.txt?",
+ "why_zpmnd_needs_it": "Subáreas: O01 Semiconductores: hojas de datos (Mundo); O02 Motores, variadores y equipo eléctrico (Mundo); O03 HVAC y refrigeración (Mundo); O04 Maquinaria pesada (Mundo); O05 Instrumentación y medición (Mundo); O06 Automatización industrial (PLC) (Mundo); O07 Hojas de seguridad de químicos (SDS) (Mundo; incluye PubChem); O08 Boletines técnicos y avisos (Mundo); O09 Tablas de compatibilidad (Mundo); O10 Manuales de instalación y mantenimiento (Mundo). Siguiente paso: elegir 2 fabricantes y medir su índice. ZPMND necesita la revisión exacta del documento del fabricante.",
+ "scope": "Se leyeron los términos de uso de TI y de Siemens (incluidos los de myDocumentation), el robots.txt de PubChem, una página de PubChem bloqueada por reCAPTCHA y un blog de un revendedor. La solicitud pedía, por categoría, índices públicos de documentos de dos fabricantes, el número de documentos que declaran, sus campos, el sha256 de lo bajado y el robots.txt de cada fabricante. De todo eso, estas fuentes solo cubren los términos de TI y de Siemens. El resto queda sin responder.",
+ "sources": {
+  "primary": [
+   "SA-a92ea35dd55fed275aa0fd40",
+   "SA-08db29d1581ec813b3b61746",
+   "SA-6e1684e027f611d65513171f",
+   "SA-a2f68f68308a51253e9d3e70",
+   "SA-aa0eab16790454ca5458d43c",
+   "SA-3a8321502c59632eba0b5037",
+   "SA-ff61c68413797738a7c5288f"
+  ],
+  "secondary": [
+   "SA-8917044584a5587ce6479f34"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-a92ea35dd55fed275aa0fd40",
+   "url": "https://www.ti.com/en-us/legal/terms-conditions/terms-of-use",
+   "retrieved_at": "2026-11-11T22:13:38Z",
+   "sha256": "a92ea35dd55fed275aa0fd40fa53312f6eff140591883978a94055b24214ce2d",
+   "bytes": 789993,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Texas Instruments",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "TI Terms of Use"
+  },
+  {
+   "artifact_id": "SA-08db29d1581ec813b3b61746",
+   "url": "https://www.ti.com/en-us/legal/terms-conditions/copyright",
+   "retrieved_at": "2026-11-11T22:13:40Z",
+   "sha256": "08db29d1581ec813b3b61746866f07326887335d20cae19067d063f595b3e5e0",
+   "bytes": 715020,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Texas Instruments",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "TI Copyright notice"
+  },
+  {
+   "artifact_id": "SA-6e1684e027f611d65513171f",
+   "url": "https://www.siemens.com/en-us/terms-of-use/",
+   "retrieved_at": "2026-11-11T22:13:42Z",
+   "sha256": "6e1684e027f611d65513171fe58565c9aff29a43a8424a912393ef0ca401a386",
+   "bytes": 171763,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Siemens",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Siemens Terms of Use"
+  },
+  {
+   "artifact_id": "SA-a2f68f68308a51253e9d3e70",
+   "url": "https://cache.industry.siemens.com/dl/files/005/78391005/att_66061/v1/General_Terms_of_Use.pdf?download=true",
+   "retrieved_at": "2026-11-11T22:13:43Z",
+   "sha256": "a2f68f68308a51253e9d3e70a1fec773cee5cbd0efb41c9c92124e0e60feefbc",
+   "bytes": 46863,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "Siemens",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Siemens General Terms of Use (Industry Online Support)"
+  },
+  {
+   "artifact_id": "SA-aa0eab16790454ca5458d43c",
+   "url": "https://support.industry.siemens.com/dokumentation/ExtendedAGB.aspx?guiLanguage=en",
+   "retrieved_at": "2026-11-11T22:13:45Z",
+   "sha256": "aa0eab16790454ca5458d43c02286e2246874c697807fbcbf1edbd4a20aa2cc5",
+   "bytes": 7903,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Siemens",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "My Documentation Manager - Extended AGB"
+  },
+  {
+   "artifact_id": "SA-3a8321502c59632eba0b5037",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/robots.txt",
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "sha256": "3a8321502c59632eba0b50372ac491ee61e882045dfb2e63efc896d18845830c",
+   "bytes": 7254,
+   "media_type": "text/plain",
+   "source_type": "primary_official",
+   "publisher": "NCBI/NLM",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "PubChem robots.txt"
+  },
+  {
+   "artifact_id": "SA-ff61c68413797738a7c5288f",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/sources/",
+   "retrieved_at": "2026-11-11T22:13:52Z",
+   "sha256": "ff61c68413797738a7c5288fdfb69c08dea51fd28aad56796181ef2006d0f764",
+   "bytes": 21388,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "NCBI/NLM",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "PubChem Data Sources"
+  },
+  {
+   "artifact_id": "SA-8917044584a5587ce6479f34",
+   "url": "https://industrialmonitordirect.com/blogs/knowledgebase/siemens-plc-and-scada-software-manual-resources",
+   "retrieved_at": "2026-11-11T22:13:57Z",
+   "sha256": "8917044584a5587ce6479f34998bd549555b37fd84864593833e69748a24b478",
+   "bytes": 401962,
+   "media_type": "text/html",
+   "source_type": "blog",
+   "publisher": "Industrial Monitor Direct (revendedor)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Siemens PLC & SCADA Documentation resources"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "Los términos de uso de TI prohíben reproducir, duplicar, replicar (mirror), distribuir o revender cualquier servicio de TI o cualquier parte de él.",
+    "artifact_ids": [
+     "SA-a92ea35dd55fed275aa0fd40"
+    ],
+    "quote": "no TI Service, nor any part of any TI Service, may be reproduced, duplicated, mirrored, modified, displayed, distributed, copied, sold, resold, visited, or otherwise exploited",
+    "locator": "TI Terms of Use, §4"
+   },
+   {
+    "claim": "Los términos de TI prohíben usar minería de datos, robots o métodos similares de extracción (scraping) en relación con los servicios de TI.",
+    "artifact_ids": [
+     "SA-a92ea35dd55fed275aa0fd40"
+    ],
+    "quote": "use any data mining, robots, or similar data scraping or extraction methods in connection with TI Services",
+    "locator": "TI Terms of Use, §4"
+   },
+   {
+    "claim": "TI permite descargar, reproducir, mostrar y distribuir los servicios de TI solo para uso no comercial o personal, siempre que no se modifiquen.",
+    "artifact_ids": [
+     "SA-a92ea35dd55fed275aa0fd40"
+    ],
+    "quote": "TI grants you permission to download, reproduce, display, and distribute TI Services solely for non-commercial or personal use, provided that you do not modify such TI Services",
+    "locator": "TI Terms of Use, §4"
+   },
+   {
+    "claim": "El aviso de copyright de TI prohíbe hacer mirror de la información en un servidor propio o reutilizarla en otro sistema sin permiso.",
+    "artifact_ids": [
+     "SA-08db29d1581ec813b3b61746"
+    ],
+    "quote": "you may not, without our permission, \"mirror\" this information on your own server, or modify or re-use this information on another system.",
+    "locator": "TI Copyrights, párrafo 1"
+   },
+   {
+    "claim": "El aviso de copyright de TI prohíbe seguir mostrando, reproduciendo o distribuyendo esta información sin permiso de Texas Instruments.",
+    "artifact_ids": [
+     "SA-08db29d1581ec813b3b61746"
+    ],
+    "quote": "you may not further display, reproduce, or distribute this information without permission from Texas Instruments",
+    "locator": "TI Copyrights, párrafo 1"
+   },
+   {
+    "claim": "Siemens prohíbe que el usuario distribuya en ningún momento a terceros la información, el software y la documentación.",
+    "artifact_ids": [
+     "SA-6e1684e027f611d65513171f"
+    ],
+    "quote": "Information, software and documentation may not be distributed by the User to any third party at any time",
+    "locator": "Siemens Terms of Use, A.4.5"
+   },
+   {
+    "claim": "Siemens prohíbe el text and data mining, incluido cualquier scraping, reproducción o extracción automatizada de contenido.",
+    "artifact_ids": [
+     "SA-6e1684e027f611d65513171f"
+    ],
+    "quote": "Engage in text or data mining. This includes, but is not limited to, any automated scraping, reproduction, or extraction of content",
+    "locator": "Siemens Terms of Use, A.6.2"
+   },
+   {
+    "claim": "La licencia de Siemens es no exclusiva e intransferible, sin sublicencia y solo para fines de negocio propios.",
+    "artifact_ids": [
+     "SA-6e1684e027f611d65513171f"
+    ],
+    "quote": "non-exclusive and non-transferable license, which shall not be sublicensed, to use solely for its own business purposes",
+    "locator": "Siemens Terms of Use, A.4.3"
+   },
+   {
+    "claim": "Las condiciones generales de uso de Siemens (Industry Online Support) prohíben publicar la información, total o parcialmente, en sitios de internet de terceros.",
+    "artifact_ids": [
+     "SA-a2f68f68308a51253e9d3e70"
+    ],
+    "quote": "Information shall not be published in whole or in part on the internet sites of any third party.",
+    "locator": "General Terms of Use, §3.1"
+   },
+   {
+    "claim": "Los términos de myDocumentation solo permiten transferir documentación de producto con Documentos, o que contenga Documentos, junto con la documentación y/o los manuales completos de Siemens.",
+    "artifact_ids": [
+     "SA-aa0eab16790454ca5458d43c"
+    ],
+    "quote": "only transfer Product Documentation with Documents or Product Documentation containing Documents together with the complete Siemens documentation and/or manuals",
+    "locator": "myDocumentation Terms, §2"
+   },
+   {
+    "claim": "Los términos de myDocumentation prohíben, salvo permiso explícito, usar, reproducir, pasar a terceros o comercializar los documentos o su contenido.",
+    "artifact_ids": [
+     "SA-aa0eab16790454ca5458d43c"
+    ],
+    "quote": "Unless explicitly allowed, Documents or their contents may not be used, exploited, reproduced, passed on or marketed in any form.",
+    "locator": "myDocumentation Terms, §2"
+   },
+   {
+    "claim": "Siemens declara que los cambios que puedan ser necesarios están en las versiones actualizadas.",
+    "artifact_ids": [
+     "SA-aa0eab16790454ca5458d43c"
+    ],
+    "quote": "Any changes which may be necessary are contained in the updated versions.",
+    "locator": "myDocumentation Terms, §4"
+   },
+   {
+    "claim": "No existe derecho legal al servicio de actualización de myDocumentation, que Siemens presta de forma voluntaria y puede terminar en cualquier momento.",
+    "artifact_ids": [
+     "SA-aa0eab16790454ca5458d43c"
+    ],
+    "quote": "No legal entitlement exists to the Updating Service which is provided by Siemens voluntarily and can be terminated by Siemens at any time",
+    "locator": "myDocumentation Terms, §1"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "URL del índice público de documentos de cada fabricante, número de documentos que declara y fecha de ese número: no aparecen en ninguna fuente primaria leída.",
+   "Campos del índice (modelo, revisión, fecha): no verificados en ningún índice real.",
+   "sha256 de lo bajado: no se bajó ningún índice ni documento.",
+   "robots.txt de TI y de Siemens: no se leyó. El único robots.txt es el de PubChem, que no es fabricante de equipo.",
+   "Las categorías de why_needed no vienen en la solicitud, así que no se pudo asignar fabricantes por categoría.",
+   "Hojas de seguridad (SDS) y tablas de compatibilidad: sin cobertura.",
+   "PubChem Data Sources devolvió solo una página reCAPTCHA, sin contenido."
+  ]
+ },
+ "candidate_claims": [
+  "SECUNDARIA: Industrial Monitor Direct (revendedor) afirma que la mayoría de los manuales de Siemens exige una cuenta gratuita de Industry Online Support y que algunas hojas de datos son públicas. Es un blog de proveedor, sin verificar.",
+  "SECUNDARIA: Industrial Monitor Direct da como catálogo de manuales de Siemens https://support.industry.siemens.com/cs/products?search=TIA+Portal&dt=Manual. No se verificó.",
+  "SECUNDARIA: Industrial Monitor Direct indica el ID de publicación 6ES7298-8GM20-8BA0 para el manual del S7-1200, con baja fiabilidad. No debe usarse como dato de revisión.",
+  "INTERPRETACIÓN: TI y Siemens no autorizan redistribuir ni hacer mirror de sus documentos. Un repositorio propio que los copie incumpliría sus términos. Solo cabe indexar enlaces o metadatos, y eso también requeriría revisión legal.",
+  "INTERPRETACIÓN: Los dos fabricantes prohíben el scraping y el data mining en sus términos. Un robots.txt permisivo no anularía esa prohibición, porque el robots.txt no es un permiso contractual.",
+  "INTERPRETACIÓN: Las condiciones de Siemens que se leyeron no coinciden entre sí. La versión de Industry Online Support (con marcas DM) es antigua. Los términos de siemens.com (con fecha 'Last updated: 29 October 2026', posterior a la fecha de la solicitud) son más estrictos. Habría que confirmar cuáles rigen para support.industry.siemens.com."
+ ],
+ "candidate_tests": [
+  "Descargar el robots.txt y el índice o sitemap de ti.com y de support.industry.siemens.com. Registrar fecha, sha256, recuento declarado y campos, y comparar con una muestra de hojas de datos reales."
+ ],
+ "limitations": [
+  "No se obtuvo ningún índice de documentos, robots.txt de fabricante de equipo, recuento de documentos ni sha256. Solo se cubren los términos de dos fabricantes (TI y Siemens), y no por categoría.",
+  "El robots.txt de PubChem es primario, pero PubChem no es fabricante. No se usa para responder la pregunta.",
+  "La página de Siemens tiene 'Last updated: 29 October 2026', posterior o próxima a la fecha de la consulta. Se tomó tal cual, sin verificar la fecha.",
+  "El blog del revendedor es secundario. Solo se usa como candidate_claim.",
+  "Las citas de TI corresponden a la versión de los términos con fecha efectiva del 27 de marzo de 2025.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 9 de 13 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 11 propuestas, 11 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.rockwellautomation.com/en-us/company/about-us/legal-notices/terms-and-conditions-of-access.html (refused); https://www.rockwellautomation.com/en-us/support/documentation/literature-library.html (refused); https://www.rockwellautomation.com/en-us/support/documentation/overview/publication-types.html (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}

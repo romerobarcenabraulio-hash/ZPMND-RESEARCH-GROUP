@@ -1,0 +1,319 @@
+{
+ "request_id": "RR-2026-11-08-familia-o-manuales-fabricantes",
+ "fetched": [
+  {
+   "url": "https://www.ti.com/legal/terms-conditions/terms-of-use.html",
+   "status": 200,
+   "error": null,
+   "sha256": "a92ea35dd55fed275aa0fd40fa53312f6eff140591883978a94055b24214ce2d",
+   "bytes": 789993,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:38Z",
+   "text_status": "ok",
+   "text_chars": 26735
+  },
+  {
+   "url": "https://www.ti.com/legal/terms-conditions/copyright.html",
+   "status": 200,
+   "error": null,
+   "sha256": "08db29d1581ec813b3b61746866f07326887335d20cae19067d063f595b3e5e0",
+   "bytes": 715020,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:40Z",
+   "text_status": "ok",
+   "text_chars": 3357
+  },
+  {
+   "url": "https://www.siemens.com/en-us/terms-of-use/",
+   "status": 200,
+   "error": null,
+   "sha256": "6e1684e027f611d65513171fe58565c9aff29a43a8424a912393ef0ca401a386",
+   "bytes": 171763,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:42Z",
+   "text_status": "ok",
+   "text_chars": 39410
+  },
+  {
+   "url": "https://cache.industry.siemens.com/dl/files/005/78391005/att_66061/v1/General_Terms_of_Use.pdf?download=true",
+   "status": 200,
+   "error": null,
+   "sha256": "a2f68f68308a51253e9d3e70a1fec773cee5cbd0efb41c9c92124e0e60feefbc",
+   "bytes": 46863,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-11T22:13:43Z",
+   "text_status": "ok",
+   "text_chars": 12282
+  },
+  {
+   "url": "https://support.industry.siemens.com/dokumentation/ExtendedAGB.aspx?guiLanguage=en",
+   "status": 200,
+   "error": null,
+   "sha256": "aa0eab16790454ca5458d43c02286e2246874c697807fbcbf1edbd4a20aa2cc5",
+   "bytes": 7903,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:45Z",
+   "text_status": "ok",
+   "text_chars": 5364
+  },
+  {
+   "url": "https://www.rockwellautomation.com/en-us/company/about-us/legal-notices/terms-and-conditions-of-access.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.rockwellautomation.com/en-us/company/about-us/legal-notices/terms-and-conditions-of-access.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.rockwellautomation.com/en-us/support/documentation/literature-library.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.rockwellautomation.com/en-us/support/documentation/literature-library.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.rockwellautomation.com/en-us/support/documentation/overview/publication-types.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.rockwellautomation.com/en-us/support/documentation/overview/publication-types.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://pubchem.ncbi.nlm.nih.gov/robots.txt",
+   "status": 200,
+   "error": null,
+   "sha256": "3a8321502c59632eba0b50372ac491ee61e882045dfb2e63efc896d18845830c",
+   "bytes": 7254,
+   "media_type": "text/plain",
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "text_status": "formato_no_soportado",
+   "text_chars": 7254
+  },
+  {
+   "url": "https://pubchem.ncbi.nlm.nih.gov/sources/",
+   "status": 200,
+   "error": null,
+   "sha256": "ff61c68413797738a7c5288fdfb69c08dea51fd28aad56796181ef2006d0f764",
+   "bytes": 21388,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:52Z",
+   "text_status": "ok",
+   "text_chars": 171
+  },
+  {
+   "url": "https://industrialmonitordirect.com/blogs/knowledgebase/siemens-plc-and-scada-software-manual-resources",
+   "status": 200,
+   "error": null,
+   "sha256": "8917044584a5587ce6479f34998bd549555b37fd84864593833e69748a24b478",
+   "bytes": 401962,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:57Z",
+   "text_status": "ok",
+   "text_chars": 21988
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43109734522",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "Los términos de uso de TI prohíben reproducir, duplicar, replicar (mirror), distribuir o revender cualquier servicio de TI sin consentimiento escrito previo, salvo lo que los propios términos permiten.",
+    "now": "Los términos de uso de TI prohíben reproducir, duplicar, replicar (mirror), distribuir o revender cualquier servicio de TI o cualquier parte de él.",
+    "cut": "sin consentimiento escrito previo, salvo lo que los propios términos permiten"
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "TI permite descargar, reproducir y distribuir solo para uso no comercial o personal, sin modificar y conservando los avisos de copyright.",
+    "now": "TI permite descargar, reproducir, mostrar y distribuir los servicios de TI solo para uso no comercial o personal, siempre que no se modifiquen.",
+    "cut": "conservando los avisos de copyright"
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "El aviso de copyright de TI limita la descarga a uso personal y no comercial, y exige permiso para mostrar, reproducir o distribuir.",
+    "now": "El aviso de copyright de TI prohíbe seguir mostrando, reproduciendo o distribuyendo esta información sin permiso de Texas Instruments.",
+    "cut": "limita la descarga a uso personal y no comercial"
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "Siemens prohíbe distribuir a terceros la información, el software y la documentación obtenidos de sus servicios digitales.",
+    "now": "Siemens prohíbe que el usuario distribuya en ningún momento a terceros la información, el software y la documentación.",
+    "cut": "obtenidos de sus servicios digitales"
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "Siemens prohíbe el text and data mining, incluido el scraping automatizado, de sus servicios digitales.",
+    "now": "Siemens prohíbe el text and data mining, incluido cualquier scraping, reproducción o extracción automatizada de contenido.",
+    "cut": "de sus servicios digitales"
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "Las condiciones generales de Siemens (versión antigua, Industry Online Support) prohíben publicar la información en sitios de terceros.",
+    "now": "Las condiciones generales de uso de Siemens (Industry Online Support) prohíben publicar la información, total o parcialmente, en sitios de internet de terceros.",
+    "cut": "versión antigua"
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "Los términos de myDocumentation permiten a quien integra productos Siemens en sus propias máquinas transferir a terceros documentación de producto, pero solo con la documentación completa de Siemens.",
+    "now": "Los términos de myDocumentation solo permiten transferir documentación de producto con Documentos, o que contenga Documentos, junto con la documentación y/o los manuales completos de Siemens.",
+    "cut": "a quien integra productos Siemens en sus propias máquinas; a terceros"
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "Siemens declara que la documentación puede contener desviaciones o errores, y que los cambios necesarios están en las versiones actualizadas. Esto importa para el riesgo de revisión obsoleta.",
+    "now": "Siemens declara que los cambios que puedan ser necesarios están en las versiones actualizadas.",
+    "cut": "la documentación puede contener desviaciones o errores; Esto importa para el riesgo de revisión obsoleta."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "El servicio de aviso de actualizaciones de myDocumentation es voluntario y Siemens puede terminarlo sin avisar.",
+    "now": "No existe derecho legal al servicio de actualización de myDocumentation, que Siemens presta de forma voluntaria y puede terminar en cualquier momento.",
+    "cut": "sin avisar"
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Términos de uso y copyright del fabricante (TI, Siemens, Rockwell)",
+   "Portales/índices públicos de documentación del fabricante",
+   "robots.txt de los dominios",
+   "Fuente SDS agregada (PubChem)",
+   "Guías de terceros (solo candidate_claim)"
+  ],
+  "searches": [
+   {
+    "query": "Texas Instruments terms of use datasheets download redistribution",
+    "intent": "official"
+   },
+   {
+    "query": "Siemens Industry Support manuals documentation index PLC terms of use download",
+    "intent": "official"
+   },
+   {
+    "query": "Rockwell Automation Literature Library publications terms of use",
+    "intent": "official"
+   },
+   {
+    "query": "PubChem safety data sheets data usage policy robots.txt",
+    "intent": "limitations"
+   },
+   {
+    "query": "Rockwell Automation terms of use website content copyright",
+    "intent": "official"
+   },
+   {
+    "query": "Siemens general terms of use siemens.com/terms_of_use",
+    "intent": "official"
+   },
+   {
+    "query": "ti.com robots.txt",
+    "intent": "official"
+   }
+  ],
+  "not_found": [
+   "Contenido literal de ti.com/robots.txt, siemens.com y rockwellautomation.com robots.txt: la búsqueda solo devolvió explicaciones genéricas.",
+   "Cantidad de documentos que declara el índice de cada fabricante (TI, Siemens, Rockwell): no se halló ningún contador.",
+   "sha256 de lo descargado: la herramienta solo hace búsqueda, no puede descargar ni calcular hashes.",
+   "Campos exactos (modelo, revisión, fecha) de cada índice: no verificados en la página del índice.",
+   "Segundo fabricante para HVAC, maquinaria pesada, instrumentación, motores y tablas de compatibilidad: no se buscaron.",
+   "Términos específicos de la Siemens Industry Online Support sobre redistribución de manuales: solo en resumen de búsqueda.",
+   "Términos de redistribución de SDS de PubChem por fuente: no se halló una política única."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 11,
+  "accepted": 11,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://www.ti.com/legal/terms-conditions/terms-of-use.html",
+    "family": "Términos de uso y copyright del fabricante (TI, Siemens, Rockwell)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Términos de descarga/uso no comercial de TI; de aquí sale la cita literal sobre descarga y distribución."
+   },
+   {
+    "url": "https://www.ti.com/legal/terms-conditions/copyright.html",
+    "family": "Términos de uso y copyright del fabricante (TI, Siemens, Rockwell)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Prohíbe distribuir y hacer «mirror» sin consentimiento escrito; límite a la redistribución."
+   },
+   {
+    "url": "https://www.siemens.com/en-us/terms-of-use/",
+    "family": "Términos de uso y copyright del fabricante (TI, Siemens, Rockwell)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Términos generales de Siemens; confirmar si limitan la puesta a disposición de documentación a terceros."
+   },
+   {
+    "url": "https://cache.industry.siemens.com/dl/files/005/78391005/att_66061/v1/General_Terms_of_Use.pdf?download=true",
+    "family": "Términos de uso y copyright del fabricante (TI, Siemens, Rockwell)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Términos del portal de soporte industrial, donde están manuales y hojas de datos de PLC."
+   },
+   {
+    "url": "https://support.industry.siemens.com/dokumentation/ExtendedAGB.aspx?guiLanguage=en",
+    "family": "Términos de uso y copyright del fabricante (TI, Siemens, Rockwell)",
+    "stance": "context",
+    "role": "primary",
+    "why": "Derecho de reproducir documentos para documentar máquinas propias; excepción a la prohibición general."
+   },
+   {
+    "url": "https://www.rockwellautomation.com/en-us/company/about-us/legal-notices/terms-and-conditions-of-access.html",
+    "family": "Términos de uso y copyright del fabricante (TI, Siemens, Rockwell)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Prohíbe el «mirror» sin permiso escrito; términos de acceso y copyright de Rockwell."
+   },
+   {
+    "url": "https://www.rockwellautomation.com/en-us/support/documentation/literature-library.html",
+    "family": "Portales/índices públicos de documentación del fabricante",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Índice público de publicaciones filtrable por tipo. Falta verificar si declara un total y qué campos trae (en la búsqueda salió la variante en-in/en-ca)."
+   },
+   {
+    "url": "https://www.rockwellautomation.com/en-us/support/documentation/overview/publication-types.html",
+    "family": "Portales/índices públicos de documentación del fabricante",
+    "stance": "context",
+    "role": "primary",
+    "why": "Define los tipos de publicación, útil para saber qué campos y categorías ofrece el índice."
+   },
+   {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/robots.txt",
+    "family": "robots.txt de los dominios",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "robots.txt de PubChem (O07): reglas literales a leer. Lo visto en la búsqueda estaba truncado."
+   },
+   {
+    "url": "https://pubchem.ncbi.nlm.nih.gov/sources/",
+    "family": "Fuente SDS agregada (PubChem)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Cada fuente tiene sus propios términos; esto condiciona la redistribución de SDS."
+   },
+   {
+    "url": "https://industrialmonitordirect.com/blogs/knowledgebase/siemens-plc-and-scada-software-manual-resources",
+    "family": "Guías de terceros (solo candidate_claim)",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Afirma que los manuales de Siemens exigen login; es una afirmación de proveedor, solo candidate_claim."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
