@@ -1,0 +1,455 @@
+{
+ "request_id": "RR-2026-11-08-familia-i-ciencia-academia",
+ "fetched": [
+  {
+   "url": "https://help.openalex.org/access/sync/",
+   "status": 200,
+   "error": null,
+   "sha256": "e0a2cc4257d3edbb82dba08655357116eac3215eea3dc1b822aefa685ebab908",
+   "bytes": 53453,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:37Z",
+   "text_status": "ok",
+   "text_chars": 18713
+  },
+  {
+   "url": "https://developers.openalex.org/download/snapshot-format",
+   "status": 200,
+   "error": null,
+   "sha256": "a113abeff8586e8373faebe065e46ffe104ea7d9df0dc67e9be799bd238e8269",
+   "bytes": 51982,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:38Z",
+   "text_status": "ok",
+   "text_chars": 12901
+  },
+  {
+   "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/",
+   "status": 200,
+   "error": null,
+   "sha256": "f90569d6f8f7d8c22a75c080157cde41a423ddfe8c60abe9c3a3152a4a3857d7",
+   "bytes": 68765,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:41Z",
+   "text_status": "ok",
+   "text_chars": 12642
+  },
+  {
+   "url": "https://pubmed.ncbi.nlm.nih.gov/download/",
+   "status": 200,
+   "error": null,
+   "sha256": "d2f0a0d686fb6e4616dc3823ecfda2122c7e2f958c5ae2985801170c742c3dd3",
+   "bytes": 38286,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:42Z",
+   "text_status": "ok",
+   "text_chars": 4381
+  },
+  {
+   "url": "https://info.arxiv.org/help/bulk_data.html",
+   "status": 200,
+   "error": null,
+   "sha256": "60238900883de438085753afd08759c4b3b49bf62b6107fb5b0078d8f72eadad",
+   "bytes": 84497,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:44Z",
+   "text_status": "ok",
+   "text_chars": 6601
+  },
+  {
+   "url": "https://semanticscholar.org/product/api/license",
+   "status": "refused",
+   "error": "robots.txt disallows https://semanticscholar.org/product/api/license",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T22:13:45Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://api.core.ac.uk/docs/v3",
+   "status": 200,
+   "error": null,
+   "sha256": "715e79c41ea9dbbe3fe109fac8c98fabc5b1ffbeaa78d75c6ca9ba41fee5434c",
+   "bytes": 148261,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:45Z",
+   "text_status": "ok",
+   "text_chars": 22
+  },
+  {
+   "url": "https://oai.base-search.net/",
+   "status": 200,
+   "error": null,
+   "sha256": "4710c877bfa22b24b9bcad71b859c1810f9b266939f0c73fc3a072be23443ec5",
+   "bytes": 65566,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:46Z",
+   "text_status": "ok",
+   "text_chars": 21311
+  },
+  {
+   "url": "https://doaj.org/docs/oai-pmh/",
+   "status": 200,
+   "error": null,
+   "sha256": "a9041e598e99c1474d3efd6586b4b9f91066f8d2406423573d6a449866e7c0ca",
+   "bytes": 80171,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:49Z",
+   "text_status": "ok",
+   "text_chars": 19775
+  },
+  {
+   "url": "https://support.datacite.org/docs/datacite-public-data-file",
+   "status": 200,
+   "error": null,
+   "sha256": "fb57cdc00420469e7ebad540b5dc637d8bd9bf8800cf6bab781a8964ffd6f403",
+   "bytes": 358487,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:50Z",
+   "text_status": "ok",
+   "text_chars": 17304
+  },
+  {
+   "url": "https://doabooks.org/en/librarians/doab-metadata",
+   "status": 200,
+   "error": null,
+   "sha256": "880e0b1515613046715fa083cc16224aa0845e0bd55ba056cb43c13222acafc7",
+   "bytes": 44051,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:52Z",
+   "text_status": "ok",
+   "text_chars": 7483
+  },
+  {
+   "url": "https://repositorionacionalcti.mx/directory",
+   "status": "refused",
+   "error": "robots.txt disallows https://repositorionacionalcti.mx/directory",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T22:13:54Z",
+   "text_status": null,
+   "text_chars": null
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43109699979",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "OpenAlex: el snapshot público gratuito se publica cada trimestre, el segundo miércoles de enero, abril, julio y octubre (UTC).",
+    "now": "OpenAlex: el snapshot se publica cada trimestre, el segundo miércoles de enero, abril, julio y octubre (UTC).",
+    "cut": "público gratuito"
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "OpenAlex: el snapshot se ofrece en dos formatos, JSON Lines y Parquet.",
+    "now": "OpenAlex: el snapshot se publica en dos formatos, cada uno copia completa de los mismos datos.",
+    "cut": "JSON Lines y Parquet"
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "OpenAlex: las actualizaciones (snapshot diario y filtros de sync) son de pago. Sin plan, la API responde 429.",
+    "now": "OpenAlex: sin plan, la API responde 429 con \"Plan upgrade required\".",
+    "cut": "las actualizaciones (snapshot diario y filtros de sync) son de pago"
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "OpenAlex: el bucket público solo conserva la versión vigente, por lo que hay que citar la fecha del manifiesto.",
+    "now": "OpenAlex: el bucket público solo conserva la versión vigente; al publicarse una nueva, el estado anterior desaparece.",
+    "cut": "por lo que hay que citar la fecha del manifiesto"
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "OpenAlex: el acceso anónimo al bucket público se hace con --no-sign-request.",
+    "now": "OpenAlex: el comando de ejemplo para descargar el bucket (aws s3 sync de s3://openalex/data/jsonl) usa --no-sign-request.",
+    "cut": "acceso anónimo"
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "Crossref: la API REST es accesible sin registro y tiene tres niveles de acceso: público, educado (polite) y Metadata Plus.",
+    "now": "Crossref: cualquiera puede acceder a la API REST, sin alta ni registro.",
+    "cut": "tres niveles de acceso: público, educado (polite) y Metadata Plus"
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "Crossref: se identifica al usuario 'polite' con su correo en el parámetro mailto o en una cabecera.",
+    "now": "Crossref: se incluye la dirección de correo en el parámetro mailto o en la cabecera agent.",
+    "cut": "se identifica al usuario 'polite'"
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "Crossref: el contenido del sitio de documentación está bajo CC BY 4.0 (esto no es la licencia de los metadatos).",
+    "now": "Crossref: el contenido del sitio de documentación está bajo CC BY 4.0.",
+    "cut": "(esto no es la licencia de los metadatos)"
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "PubMed: ofrece una línea base anual en XML, descrita como instantánea completa.",
+    "now": "PubMed: el archivo de línea base es una instantánea completa de los datos de PubMed.",
+    "cut": "anual en XML"
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "PubMed: los términos y condiciones están en el README.txt incluido con los archivos, y descargar implica aceptarlos. El texto de la licencia no figura en esta página.",
+    "now": "PubMed: descargar datos de sus servidores FTP implica aceptar los términos y condiciones.",
+    "cut": "están en el README.txt incluido con los archivos; el texto de la licencia no figura en esta página"
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "arXiv: OAI-PMH es la vía preferida para descargar los metadatos en bloque, actualizada a diario.",
+    "now": "arXiv: es la vía preferida para descargar en bloque o mantener una copia actualizada de los metadatos de arXiv.",
+    "cut": "OAI-PMH; actualizada a diario"
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "arXiv: el texto completo no puede redistribuirse, porque la mayoría de los artículos usa la licencia por defecto de arXiv. Hay que enlazar a arXiv para las descargas.",
+    "now": "arXiv: no puede conceder a otros el derecho a distribuir artículos de arXiv.",
+    "cut": "porque la mayoría usa la licencia por defecto de arXiv; hay que enlazar a arXiv para las descargas"
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "arXiv: el texto completo masivo se ofrece en Amazon S3 y en Kaggle.",
+    "now": "arXiv: para todos los artículos disponibles, el PDF procesado y los archivos fuente están en Amazon S3.",
+    "cut": "y en Kaggle"
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "arXiv: se pide recolectar en export.arxiv.org, a ráfagas de 4 peticiones por segundo con 1 s de pausa.",
+    "now": "arXiv: se considera razonable recolectar a ráfagas de 4 peticiones por segundo con 1 s de pausa por ráfaga.",
+    "cut": "en export.arxiv.org"
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "BASE: el ejemplo de resumptionToken muestra completeListSize=41398100. Es un ejemplo de la documentación, sin fecha de corte.",
+    "now": "BASE: un resumptionToken muestra completeListSize=41398100.",
+    "cut": "Es un ejemplo de la documentación, sin fecha de corte."
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "BASE: el datestamp es la fecha de recolección en BASE, no la de publicación.",
+    "now": "BASE: el datestamp de la cabecera del registro contiene la fecha de recolección en BASE.",
+    "cut": "no la de publicación"
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "BASE: normaliza la información de licencia de cada registro en el campo rightsnorm.",
+    "now": "BASE: asigna los valores que reconoce a una lista de códigos de licencia.",
+    "cut": "normaliza la información de licencia de cada registro en el campo rightsnorm"
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "DOAJ: el feed OAI-PMH público tiene hasta 30 días de retraso y no exige login.",
+    "now": "DOAJ: el feed OAI-PMH está actualizado con un margen de hasta 30 días respecto a los datos del sistema.",
+    "cut": "público; no exige login"
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "DOAJ: el feed Premium se actualiza de inmediato y exige api_key.",
+    "now": "DOAJ: un feed se actualiza de inmediato al añadirse o retirarse registros.",
+    "cut": "Premium; exige api_key"
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "DOAJ: el OAI de artículos en oai_dc incluye la URL de texto completo en dc:relation. Solo son enlaces.",
+    "now": "DOAJ: el OAI de artículos incluye enlaces a recursos relacionados: la URL del texto completo.",
+    "cut": "en oai_dc; en dc:relation; Solo son enlaces."
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "DataCite: el archivo de 2025 contiene los DOI Findable registrados hasta fin de 2025 y se generó el 6 de enero de 2026.",
+    "now": "DataCite: el archivo se generó el 6 de enero de 2026.",
+    "cut": "el archivo de 2025 contiene los DOI Findable registrados hasta fin de 2025"
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "DataCite: las novedades posteriores al archivo se obtienen con la API REST, filtrando por fecha de actualización.",
+    "now": "DataCite: para DOI nuevos y actualizaciones de metadatos se puede usar la API REST para obtener una lista de DOI.",
+    "cut": "filtrando por fecha de actualización"
+   },
+   {
+    "id": "confirmed[35]",
+    "claim": "DOAB: todos los metadatos están bajo CC0 en varios formatos (MARCXML, KBART, ONIX, JSON, CSV).",
+    "now": "DOAB: todos los metadatos están disponibles bajo licencia CC0 en varios formatos.",
+    "cut": "(MARCXML, KBART, ONIX, JSON, CSV)"
+   },
+   {
+    "id": "confirmed[38]",
+    "claim": "DOAB: el CSV de revisión por pares PRISM se actualiza a diario. Es el único archivo con cadencia explícita.",
+    "now": "DOAB: un archivo se actualiza a diario e incluye metadatos de libros de DOAB junto con campos de revisión por pares PRISM.",
+    "cut": "CSV; Es el único archivo con cadencia explícita."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Documentación oficial de canales masivos (OpenAlex, Crossref, NLM/NCBI, arXiv, DataCite, DOAJ, DOAB/OAPEN)",
+   "Términos de uso y licencia de API (Semantic Scholar, CORE, Zenodo)",
+   "Interfaces OAI-PMH (BASE, Repositorio Nacional MX, Redalyc)",
+   "Patentes (PatentsView, Google Patents, EPO OPS)",
+   "Agregadores iberoamericanos (La Referencia, Redalyc, SciELO)"
+  ],
+  "searches": [
+   {
+    "query": "OpenAlex data snapshot documentation S3 CC0 update frequency",
+    "intent": "official"
+   },
+   {
+    "query": "Crossref public data file annual snapshot metadata license rate limits polite pool",
+    "intent": "official"
+   },
+   {
+    "query": "PubMed baseline FTP annual download; PMC Open Access Subset bulk download licenses",
+    "intent": "official"
+   },
+   {
+    "query": "arXiv bulk data access OAI-PMH metadata CC0 Kaggle S3 requester pays",
+    "intent": "official"
+   },
+   {
+    "query": "arXiv bulk data access info.arxiv.org help bulk_data",
+    "intent": "official"
+   },
+   {
+    "query": "Semantic Scholar Academic Graph datasets API license API key rate limit",
+    "intent": "limitations"
+   },
+   {
+    "query": "CORE data dump API registration rate limits; BASE OAI-PMH interface",
+    "intent": "limitations"
+   },
+   {
+    "query": "DOAJ public data dump OAI-PMH API CC0 metadata",
+    "intent": "official"
+   },
+   {
+    "query": "DataCite public data file 2025 CC0 metadata; Zenodo OAI-PMH rate limits",
+    "intent": "official"
+   },
+   {
+    "query": "DOAB OAPEN OAI-PMH API metadata CC0 open access books",
+    "intent": "official"
+   },
+   {
+    "query": "Repositorio Nacional México CONAHCYT SECIHTI OAI-PMH La Referencia harvesting tesis",
+    "intent": "official"
+   },
+   {
+    "query": "PatentsView bulk data download license; EPO OPS; Google Patents Public Data BigQuery license",
+    "intent": "contradict"
+   },
+   {
+    "query": "SciELO Redalyc OAI-PMH metadata license bulk Latin America",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "No se descargó nada: sin sha256 de archivos.",
+   "Citas literales de licencia (≤300 caracteres) y totales con fecha de corte: no obtenidos; solo paráfrasis de resultados de búsqueda.",
+   "Total de obras y fecha de corte de OpenAlex, Crossref, Semantic Scholar, CORE, BASE y DOAJ: no hallados.",
+   "Semantic Scholar: licencia de metadatos y límite del Datasets API sin confirmar; las fuentes discrepan.",
+   "CORE: términos vigentes del data dump no hallados; en 2025 anunció revisión de licencias.",
+   "DOAJ: discrepancia CC0 vs CC BY-SA para metadatos de revistas; revisar la página de términos.",
+   "I09 revisiones sistemáticas (Cochrane, Epistemonikos, PROSPERO): no buscado.",
+   "I12 tesis de México: solo el agregador del Repositorio Nacional; licencia por obra no hallada.",
+   "I13 patentes de México (IMPI): no hallado. PatentsView, Google Patents y EPO OPS: licencias discrepantes entre mirrors.",
+   "SciELO: endpoint OAI-PMH y licencia de metadatos no hallados. Redalyc: solo manuales con licencia propia.",
+   "Zenodo: límites OAI-PMH de documentación antigua; volcado masivo no confirmado."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://help.openalex.org/access/sync/",
+    "family": "OpenAlex",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Cadencia trimestral del snapshot S3 (CC0); contradice 'mensual' de páginas antiguas. Falta total y fecha de corte."
+   },
+   {
+    "url": "https://developers.openalex.org/download/snapshot-format",
+    "family": "OpenAlex",
+    "stance": "context",
+    "role": "primary",
+    "why": "Formato y estructura del snapshot, IDs nativos por entidad."
+   },
+   {
+    "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/",
+    "family": "Crossref",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Pools public/polite/Plus y límites de tasa; el archivo público anual está por verificar."
+   },
+   {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/download/",
+    "family": "PubMed/PMC",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Baseline anual (diciembre) y archivos diarios; términos en README del FTP."
+   },
+   {
+    "url": "https://info.arxiv.org/help/bulk_data.html",
+    "family": "arXiv",
+    "stance": "supports",
+    "role": "primary",
+    "why": "OAI-PMH diario para metadatos; S3 requester-pays para texto. Metadatos CC0, textos con licencia por artículo."
+   },
+   {
+    "url": "https://semanticscholar.org/product/api/license",
+    "family": "Semantic Scholar",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Términos de API, clave y atribución; límites de tasa discrepantes entre fuentes secundarias."
+   },
+   {
+    "url": "https://api.core.ac.uk/docs/v3",
+    "family": "CORE/BASE",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Registro y cuotas por token; términos del data dump por confirmar."
+   },
+   {
+    "url": "https://oai.base-search.net/",
+    "family": "CORE/BASE",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "OAI-PMH de BASE, con acceso restringido por IP."
+   },
+   {
+    "url": "https://doaj.org/docs/oai-pmh/",
+    "family": "DOAJ",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Formatos del feed; desde 2026 los feeds abiertos llevan un mes de retraso y el premium usa api_key."
+   },
+   {
+    "url": "https://support.datacite.org/docs/datacite-public-data-file",
+    "family": "DataCite/Zenodo",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Archivo 2025: CC0, unos 108 millones de DOI, generado el 6-ene-2026 (por verificar en la fuente)."
+   },
+   {
+    "url": "https://doabooks.org/en/librarians/doab-metadata",
+    "family": "Libros abiertos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "OAI-PMH, CSV y KBART bajo CC0; los derechos de los libros varían."
+   },
+   {
+    "url": "https://repositorionacionalcti.mx/directory",
+    "family": "México",
+    "stance": "context",
+    "role": "primary",
+    "why": "Endpoints OAI-PMH por institución (tesis) y fecha de última cosecha."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
