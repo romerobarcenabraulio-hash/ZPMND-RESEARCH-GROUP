@@ -28,9 +28,9 @@ cerrado: #105, `c1fc920`, 2026-11-03. E1 a E4 pasan a histórico, diferido o sus
 
 ## Transición a ZPMND-FINAL (2026-11-17)
 
-- **Consumidor.** `romerobarcenabraulio-hash/ZPMND-FINAL` es el consumidor principal; el 2026-11-17 estaba vacío, creado
-  a las 22:28 UTC y sin commits. `ZPPMND` queda como fuente histórica de solo lectura. RG no lee el repositorio del
-  consumidor (`RESEARCH_CONTRACT.md` §2): la compatibilidad se comprueba con los esquemas por su sha256 (§7).
+- **Consumidor.** `romerobarcenabraulio-hash/ZPMND-FINAL` es el consumidor principal, según la directiva del dueño;
+  `ZPPMND` queda como fuente histórica de solo lectura. RG no lee el repositorio del consumidor
+  (`RESEARCH_CONTRACT.md` §2): la compatibilidad se comprueba con los esquemas por su sha256 (§7).
 - **Fiscalidad, SAT, CFDI y NOM-035** dejan de ser el foco activo. Sus pedidos, paquetes y pruebas se quedan como
   históricos. Lo genérico se conserva: citas, vigencia, versiones, contradicciones, extracción y trazabilidad.
 - **PR abiertos al 2026-11-17.** Hay 40:
