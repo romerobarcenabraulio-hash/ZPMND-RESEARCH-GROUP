@@ -1,0 +1,573 @@
+{
+ "research_id": "RP-2026-11-12-entregable-modificacion-software",
+ "request_id": "RR-2026-11-12-entregable-modificacion-software",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-12T21:19:25Z",
+ "question": "¿Qué hace correcta y verificable una modificación de software (alcance, pruebas, revisión independiente, seguridad, documentación, compatibilidad, criterios de aceptación, CI/CD), qué es obligatorio por norma o contrato y qué es convención de estilo, y con qué herramientas se produce y se comprueba?",
+ "why_zpmnd_needs_it": "Familia de entregable: Código fuente, arquitectura y productos de software. ZPMND necesita criterios profesionales citables para producir y verificar este tipo de resultado, sin inventar obligaciones. Sexto entregable de prueba real. No confundir estilo con calidad. Pistas, no verdades: modelo de calidad ISO/IEC 25010, OWASP ASVS y SAMM, NIST SSDF (SP 800-218), SLSA y OpenSSF Scorecard, versionado semántico, guías públicas de revisión de código, pruebas de mutación, SAST y linters.",
+ "scope": "Lectura de 10 fuentes sobre modificación de software verificable: NIST SP 800-218 (SSDF 1.1), página CSRC del SSDF, OWASP ASVS (sitio y repositorio), OWASP SAMM, SLSA v1.2 Build y v1.0 niveles, OpenSSF Scorecard checks, SemVer 2.0.0, guía de revisión de código de Google y la página de EUR-Lex del Reglamento (UE) 2024/2847. Se separa lo obligatorio por texto normativo (SLSA con RFC 2119, SemVer) de lo orientativo (SSDF, ASVS, Scorecard, Google). Del CRA solo se leyó la página envoltorio, sin el articulado.",
+ "sources": {
+  "primary": [
+   "SA-617746e553a9e2da49bfbd4e",
+   "SA-47af8a63b622878d9b84d936",
+   "SA-e80c874c3a4275272fa1467f",
+   "SA-d6ec1ba426ad973464cbc299",
+   "SA-75583c999f70f7dddb4c9ad9",
+   "SA-1d282f7eb59a4e4d0199f304",
+   "SA-5946a2fa713dbafed9a2846e",
+   "SA-a6f9869b2f2311177dbf5747"
+  ],
+  "secondary": [
+   "SA-bc08cedeb9ec2a482f28fbef",
+   "SA-0a6ed20895637f65a540c3be",
+   "SA-dab3f054bd9ab048c2283cc8"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-617746e553a9e2da49bfbd4e",
+   "url": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-218.pdf",
+   "retrieved_at": "2026-11-12T21:17:09Z",
+   "sha256": "617746e553a9e2da49bfbd4eef0dfc3094758a39b869314e4173ac36605cde22",
+   "bytes": 739891,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "NIST",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "NIST SP 800-218 SSDF v1.1"
+  },
+  {
+   "artifact_id": "SA-bc08cedeb9ec2a482f28fbef",
+   "url": "https://csrc.nist.gov/projects/ssdf",
+   "retrieved_at": "2026-11-12T21:17:11Z",
+   "sha256": "bc08cedeb9ec2a482f28fbef9eb9accbf2df4ed3ad0939c3ff2a3f77d2ca7f80",
+   "bytes": 58803,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "NIST CSRC",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Secure Software Development Framework (SSDF) – proyecto"
+  },
+  {
+   "artifact_id": "SA-47af8a63b622878d9b84d936",
+   "url": "https://asvs.owasp.org/",
+   "retrieved_at": "2026-11-12T21:17:12Z",
+   "sha256": "47af8a63b622878d9b84d9366c0123cc41d06b48445130f2e535c4cfd56dee76",
+   "bytes": 25827,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "OWASP",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "OWASP ASVS"
+  },
+  {
+   "artifact_id": "SA-0a6ed20895637f65a540c3be",
+   "url": "https://github.com/OWASP/ASVS",
+   "retrieved_at": "2026-11-12T21:17:14Z",
+   "sha256": "0a6ed20895637f65a540c3be1bff2be4727ac38791274559a804bd44da897896",
+   "bytes": 289333,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "OWASP",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "OWASP/ASVS repositorio"
+  },
+  {
+   "artifact_id": "SA-e80c874c3a4275272fa1467f",
+   "url": "https://owasp.github.io/www-project-samm/",
+   "retrieved_at": "2026-11-12T21:17:15Z",
+   "sha256": "e80c874c3a4275272fa1467f9cc4e393e07ebe884ccdb5fd716b2421d0a871cf",
+   "bytes": 42017,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "OWASP",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "OWASP SAMM"
+  },
+  {
+   "artifact_id": "SA-d6ec1ba426ad973464cbc299",
+   "url": "https://slsa.dev/spec/v1.2/build-requirements",
+   "retrieved_at": "2026-11-12T21:17:16Z",
+   "sha256": "d6ec1ba426ad973464cbc29962d1f9b523a661ab04865a26c7a6b47c3566f476",
+   "bytes": 32953,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "OpenSSF / SLSA",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "SLSA v1.2 Build requirements"
+  },
+  {
+   "artifact_id": "SA-dab3f054bd9ab048c2283cc8",
+   "url": "https://slsa.dev/spec/v1.0/levels",
+   "retrieved_at": "2026-11-12T21:17:18Z",
+   "sha256": "dab3f054bd9ab048c2283cc8f233970c13a16ceeed62a8eb0c353b2a132a0b21",
+   "bytes": 25626,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "OpenSSF / SLSA",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "SLSA v1.0 Security levels"
+  },
+  {
+   "artifact_id": "SA-75583c999f70f7dddb4c9ad9",
+   "url": "https://github.com/ossf/scorecard/blob/main/docs/checks.md",
+   "retrieved_at": "2026-11-12T21:17:19Z",
+   "sha256": "75583c999f70f7dddb4c9ad9154b952bcac9bfcac46ca7a3762caa3f25cca9f4",
+   "bytes": 404809,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "OpenSSF",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "OpenSSF Scorecard – checks"
+  },
+  {
+   "artifact_id": "SA-1d282f7eb59a4e4d0199f304",
+   "url": "https://semver.org/",
+   "retrieved_at": "2026-11-12T21:17:19Z",
+   "sha256": "1d282f7eb59a4e4d0199f30431e333d43181149cac41f77a0b46ab7229089c25",
+   "bytes": 31102,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "semver.org",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Semantic Versioning 2.0.0"
+  },
+  {
+   "artifact_id": "SA-5946a2fa713dbafed9a2846e",
+   "url": "https://google.github.io/eng-practices/review/reviewer/looking-for.html",
+   "retrieved_at": "2026-11-12T21:17:20Z",
+   "sha256": "5946a2fa713dbafed9a2846e187be7705e3f3240c2b925f13d45530791c0e4af",
+   "bytes": 15075,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Google Engineering Practices",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "What to look for in a code review"
+  },
+  {
+   "artifact_id": "SA-a6f9869b2f2311177dbf5747",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02024R2847-20241120",
+   "retrieved_at": "2026-11-12T21:17:21Z",
+   "sha256": "a6f9869b2f2311177dbf5747e8501c71be3d27a6ffdcd84817ad4574d4113e6b",
+   "bytes": 251732,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "EUR-Lex / UE",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Reglamento (UE) 2024/2847 (Cyber Resilience Act), versión consolidada"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El SSDF no prescribe cómo implementar cada práctica.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "The SSDF does not prescribe how to implement each practice.",
+    "locator": "Executive Summary"
+   },
+   {
+    "claim": "El SSDF dice que no pretende ser una lista de verificación (checklist).",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "The intention of the SSDF is not to create a checklist to follow",
+    "locator": "1 Introduction"
+   },
+   {
+    "claim": "Los ejemplos de implementación del SSDF no son obligatorios.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "No examples or combination of examples are required, and the stated examples are not the only feasible options.",
+    "locator": "2, elementos de cada práctica"
+   },
+   {
+    "claim": "El SSDF pide revisión del diseño por persona calificada no involucrada en el diseño y/o procesos automatizados.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "Have 1) a qualified person (or people) who were not involved with the design and/or 2) automated processes instantiated in the toolchain review the",
+    "locator": "Tabla 1, PW.2.1"
+   },
+   {
+    "claim": "El SSDF indica que algo debe complementar (no sustituir) la revisión de código realizada por otras personas o herramientas.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "to complement (not replace) code review performed by other people or tools",
+    "locator": "Tabla 1, PW.5.1 Ejemplo 9"
+   },
+   {
+    "claim": "El SSDF plantea definir el alcance de las pruebas, diseñarlas, realizarlas y documentar los resultados.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "Scope the testing, design the tests, perform the testing, and document the results",
+    "locator": "Tabla 1, PW.8.2"
+   },
+   {
+    "claim": "El SSDF incluye como ejemplo incorporar pruebas de vulnerabilidades ya reportadas para evitar su reintroducción.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "Incorporate tests for previously reported vulnerabilities into the project’s test suite to ensure that errors are not reintroduced.",
+    "locator": "Tabla 1, PW.8.2 Ejemplo 3"
+   },
+   {
+    "claim": "El SSDF sugiere añadir criterios de seguridad a la Definition of Done.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "Add software security criteria to existing checks (e.g., the Definition of Done in agile SDLC methodologies).",
+    "locator": "Tabla 1, PO.4.1 Ejemplo 3"
+   },
+   {
+    "claim": "El SSDF pide poner a disposición de los adquirentes de software información de verificación de integridad del software.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "Make software integrity verification information available to software acquirers.",
+    "locator": "Tabla 1, PS.2.1"
+   },
+   {
+    "claim": "El SSDF recomienda recopilar y compartir datos de procedencia, por ejemplo en un SBOM.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "Collect, safeguard, maintain, and share provenance data for all components of each software release (e.g., in a software bill of materials [SBOM]).",
+    "locator": "Tabla 1, PS.3.2"
+   },
+   {
+    "claim": "El SSDF sugiere que el dueño del código revise y apruebe todos los cambios hechos al código por otros.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "Have the code owner review and approve all changes made to the code by others.",
+    "locator": "Tabla 1, PS.1.1 Ejemplo 4"
+   },
+   {
+    "claim": "El SSDF da como ejemplo usar herramientas (p. ej., linters, formateadores) para estandarizar el estilo y formato del código fuente.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "Use tools (e.g., linters, formatters) to standardize the style and formatting of the source code.",
+    "locator": "Tabla 1, PW.5.1 Ejemplo 7"
+   },
+   {
+    "claim": "Esta publicación puede ser usada por organizaciones no gubernamentales de forma voluntaria.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "This publication may be used by nongovernmental organizations on a voluntary basis",
+    "locator": "Authority (p. ii)"
+   },
+   {
+    "claim": "El SSDF permite elegir prácticas con enfoque basado en riesgo; no todas aplican a todos los casos.",
+    "artifact_ids": [
+     "SA-617746e553a9e2da49bfbd4e"
+    ],
+    "quote": "Not all practices are applicable to all use cases; organizations should adopt a risk-based approach",
+    "locator": "Executive Summary"
+   },
+   {
+    "claim": "SLSA exige que el proceso de build genere procedencia que identifique el paquete por digest criptográfico (MUST).",
+    "artifact_ids": [
+     "SA-d6ec1ba426ad973464cbc299"
+    ],
+    "quote": "The build process MUST generate provenance that unambiguously identifies the output package by cryptographic digest",
+    "locator": "SLSA v1.2 Build, Provenance Exists"
+   },
+   {
+    "claim": "Las palabras clave se interpretan como se describe en RFC 2119.",
+    "artifact_ids": [
+     "SA-d6ec1ba426ad973464cbc299"
+    ],
+    "quote": "are to be interpreted as described in RFC 2119.",
+    "locator": "SLSA v1.2 Build, introducción"
+   },
+   {
+    "claim": "SLSA exige que el productor distribuya la procedencia a los consumidores.",
+    "artifact_ids": [
+     "SA-d6ec1ba426ad973464cbc299"
+    ],
+    "quote": "The producer MUST distribute provenance to artifact consumers.",
+    "locator": "SLSA v1.2 Build, Distribute provenance"
+   },
+   {
+    "claim": "Se DEBE aprovisionar un entorno de build efímero para cada build.",
+    "artifact_ids": [
+     "SA-d6ec1ba426ad973464cbc299"
+    ],
+    "quote": "an ephemeral build environment MUST be provisioned for each build",
+    "locator": "SLSA v1.2 Build, Isolated"
+   },
+   {
+    "claim": "SLSA recomienda el formato SLSA Provenance (RECOMMENDED).",
+    "artifact_ids": [
+     "SA-d6ec1ba426ad973464cbc299"
+    ],
+    "quote": "It is RECOMMENDED to use the SLSA Provenance format",
+    "locator": "SLSA v1.2 Build, Provenance Exists"
+   },
+   {
+    "claim": "SemVer exige declarar una API pública.",
+    "artifact_ids": [
+     "SA-1d282f7eb59a4e4d0199f304"
+    ],
+    "quote": "Software using Semantic Versioning MUST declare a public API.",
+    "locator": "SemVer 2.0.0, Specification 1"
+   },
+   {
+    "claim": "SemVer prohíbe modificar una versión ya publicada.",
+    "artifact_ids": [
+     "SA-1d282f7eb59a4e4d0199f304"
+    ],
+    "quote": "Once a versioned package has been released, the contents of that version MUST NOT be modified.",
+    "locator": "SemVer 2.0.0, Specification 3"
+   },
+   {
+    "claim": "SemVer exige incrementar MAJOR ante cambios incompatibles en la API pública.",
+    "artifact_ids": [
+     "SA-1d282f7eb59a4e4d0199f304"
+    ],
+    "quote": "Major version X (X.y.z | X > 0) MUST be incremented if any backward incompatible changes are introduced to the public API.",
+    "locator": "SemVer 2.0.0, Specification 8"
+   },
+   {
+    "claim": "SemVer exige incrementar MINOR si se marca como obsoleta alguna funcionalidad de la API pública.",
+    "artifact_ids": [
+     "SA-1d282f7eb59a4e4d0199f304"
+    ],
+    "quote": "It MUST be incremented if any public API functionality is marked as deprecated.",
+    "locator": "SemVer 2.0.0, Specification 7"
+   },
+   {
+    "claim": "SemVer aclara que \"v1.2.3\" no es una versión semántica.",
+    "artifact_ids": [
+     "SA-1d282f7eb59a4e4d0199f304"
+    ],
+    "quote": "No, “v1.2.3” is not a semantic version.",
+    "locator": "SemVer 2.0.0, FAQ"
+   },
+   {
+    "claim": "SemVer plantea la pregunta de si existe una expresión regular sugerida para comprobar una cadena SemVer.",
+    "artifact_ids": [
+     "SA-1d282f7eb59a4e4d0199f304"
+    ],
+    "quote": "Is there a suggested regular expression (RegEx) to check a SemVer string?",
+    "locator": "SemVer 2.0.0, FAQ"
+   },
+   {
+    "claim": "La guía de Google dice que no se debe bloquear el envío de un CL basándose solo en preferencias personales de estilo.",
+    "artifact_ids": [
+     "SA-5946a2fa713dbafed9a2846e"
+    ],
+    "quote": "Don’t block CLs from being submitted based only on personal style preferences.",
+    "locator": "Google eng-practices, Style"
+   },
+   {
+    "claim": "La guía de Google pide tests en el mismo CL que el código de producción, salvo emergencia.",
+    "artifact_ids": [
+     "SA-5946a2fa713dbafed9a2846e"
+    ],
+    "quote": "tests should be added in the same CL as the production code unless the CL is handling an emergency.",
+    "locator": "Google eng-practices, Tests"
+   },
+   {
+    "claim": "La guía de Google pide comprobar que se actualice la documentación asociada si un CL cambia cómo los usuarios construyen, prueban, interactúan con o liberan el código.",
+    "artifact_ids": [
+     "SA-5946a2fa713dbafed9a2846e"
+    ],
+    "quote": "If a CL changes how users build, test, interact with, or release code, check to see that it also updates associated documentation",
+    "locator": "Google eng-practices, Documentation"
+   },
+   {
+    "claim": "La guía de Google indica que si algo lo exige la guía de estilo, el CL debe seguirla.",
+    "artifact_ids": [
+     "SA-5946a2fa713dbafed9a2846e"
+    ],
+    "quote": "if something is required by the style guide, the CL should follow the guidelines.",
+    "locator": "Google eng-practices, Consistency"
+   },
+   {
+    "claim": "Scorecard: las revisiones hechas por bots, incluidos los basados en IA/ML, no cuentan como revisión de código.",
+    "artifact_ids": [
+     "SA-75583c999f70f7dddb4c9ad9"
+    ],
+    "quote": "Review by bots, including bots powered by artificial intelligence / machine learning (AI/ML), do not count as code review.",
+    "locator": "Scorecard checks.md, Code-Review"
+   },
+   {
+    "claim": "Scorecard indica que una puntuación baja no es una indicación definitiva de que el proyecto esté en riesgo.",
+    "artifact_ids": [
+     "SA-75583c999f70f7dddb4c9ad9"
+    ],
+    "quote": "A low score is therefore not a definitive indication that the project is at risk.",
+    "locator": "Scorecard checks.md, CI-Tests"
+   },
+   {
+    "claim": "Scorecard señala que el check no verifica las firmas.",
+    "artifact_ids": [
+     "SA-75583c999f70f7dddb4c9ad9"
+    ],
+    "quote": "Note: The check does not verify the signatures.",
+    "locator": "Scorecard checks.md, Signed-Releases"
+   },
+   {
+    "claim": "Scorecard menciona permisos establecidos como solo lectura a nivel superior y permisos de escritura necesarios declarados a nivel de ejecución.",
+    "artifact_ids": [
+     "SA-75583c999f70f7dddb4c9ad9"
+    ],
+    "quote": "set as read-only at the top level and the required write permissions are declared at the run-level",
+    "locator": "Scorecard checks.md, Token-Permissions"
+   },
+   {
+    "claim": "Scorecard usa el servicio OSV (Open Source Vulnerabilities).",
+    "artifact_ids": [
+     "SA-75583c999f70f7dddb4c9ad9"
+    ],
+    "quote": "using the OSV (Open Source Vulnerabilities) service",
+    "locator": "Scorecard checks.md, Vulnerabilities"
+   },
+   {
+    "claim": "Se publicó el 30 de mayo de 2025.",
+    "artifact_ids": [
+     "SA-47af8a63b622878d9b84d936"
+    ],
+    "quote": "Published 30 May 2025",
+    "locator": "OWASP ASVS, página principal"
+   },
+   {
+    "claim": "ASVS indica que sirve para especificar requisitos de verificación en contratos.",
+    "artifact_ids": [
+     "SA-47af8a63b622878d9b84d936"
+    ],
+    "quote": "Provide a basis for specifying application security verification requirements in contracts.",
+    "locator": "OWASP ASVS, More Details"
+   },
+   {
+    "claim": "ASVS muestra el formato v<version>-<chapter>.<section>.<requirement>.",
+    "artifact_ids": [
+     "SA-47af8a63b622878d9b84d936"
+    ],
+    "quote": "v<version>-<chapter>.<section>.<requirement>",
+    "locator": "OWASP ASVS, How To Reference"
+   },
+   {
+    "claim": "SAMM da soporte al ciclo de vida completo del software y es agnóstico de tecnología y proceso.",
+    "artifact_ids": [
+     "SA-e80c874c3a4275272fa1467f"
+    ],
+    "quote": "SAMM supports the complete software lifecycle and is technology and process agnostic.",
+    "locator": "OWASP SAMM, página principal"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Texto del articulado del Reglamento (UE) 2024/2847 (CRA): solo se leyó la página envoltorio de EUR-Lex; no se pudieron citar obligaciones concretas, fechas de aplicación ni excepciones.",
+   "Hashes sha256, licencias y versiones de herramientas de verificación concretas (linters, SAST, slsa-verifier, etc.): no figuran en las fuentes leídas, salvo la licencia CC-BY-SA-4.0 de ASVS.",
+   "Requisitos contractuales concretos de una institución o cliente: ninguna fuente los contiene.",
+   "Normas de pago (IEC 62443-4-1, ISO/IEC 27034, 29147, 30111) solo aparecen como referencias en el SSDF; su contenido no se leyó.",
+   "Ejemplo oficial de entregable de modificación (p. ej. plantilla de PR o changelog): no hallado en las fuentes."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: El SSDF es guía voluntaria basada en riesgo; solo se vuelve obligatorio vía contrato o requisito de adquisición (p. ej. EO 14028 para agencias federales de EE. UU.), no por sí mismo.",
+  "INTERPRETACIÓN: SLSA y SemVer usan lenguaje RFC 2119, pero sus MUST aplican solo a quien declara conformidad (SLSA nivel X, o uso de SemVer); no son obligatorios universalmente.",
+  "INTERPRETACIÓN: La guía de Google separa lo exigido por la guía de estilo de lo opcional ('Nit:'); es convención profesional de una organización, no norma.",
+  "INTERPRETACIÓN: Scorecard es un detector heurístico; su puntuación es indicador de buenas prácticas, no cumplimiento normativo.",
+  "SECUNDARIA: la página CSRC del SSDF (rol secundario) indica que SP 800-218A es un perfil de comunidad para IA generativa y modelos de uso dual.",
+  "SECUNDARIA: el repositorio OWASP/ASVS indica licencia CC-BY-SA-4.0 y versión estable 5.0.0 de mayo de 2025.",
+  "INTERPRETACIÓN: Una modificación verificable podría combinar: SemVer para compatibilidad, revisión independiente (PW.2.1/PW.7.2), pruebas con regresión (PW.8.2), CI con protección de rama y procedencia (SLSA)."
+ ],
+ "candidate_methods": [
+  "Mapear cada requisito del entregable a una práctica SSDF y a un requisito ASVS con identificador versionado (v5.0.0-X.Y.Z).",
+  "Clasificar cada requisito como obligatorio (norma/contrato), convención o buena práctica según el texto fuente."
+ ],
+ "candidate_controls": [
+  "Protección de rama con revisión obligatoria y checks de estado requeridos.",
+  "Revisión independiente del diseño por persona no involucrada (PW.2.1).",
+  "Registro de hallazgos y excepciones aprobadas en el sistema de seguimiento (PW.1.2, PW.7.2).",
+  "Firma de commits y de releases con publicación de hashes."
+ ],
+ "candidate_tests": [
+  "Validar la cadena de versión con la expresión regular oficial de SemVer.",
+  "Comprobar que un cambio incompatible en la API pública incrementa MAJOR y que una versión publicada no se modifica.",
+  "Verificar que la rama por defecto exige revisión de al menos un revisor humano distinto del autor y checks de CI (Scorecard Branch-Protection / Code-Review).",
+  "Verificar que cada corrección de vulnerabilidad añade un test de regresión (PW.8.2 Ej. 3).",
+  "Verificar que existe procedencia firmada del artefacto con digest y que el consumidor puede validarla (SLSA L2+).",
+  "Verificar que la documentación afectada (README, referencias) se actualiza en el mismo cambio.",
+  "Ejecutar Scorecard y revisar Pinned-Dependencies, Token-Permissions, Vulnerabilities, SAST y SBOM como indicadores."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Para ZPMND: marcar como 'obligatorio' solo lo respaldado por contrato o por norma con MUST/shall aplicable; el resto como convención o buena práctica.",
+  "Revalidar al cambiar de versión de SSDF, ASVS (5.0.x), SLSA (1.2), SemVer o de Scorecard."
+ ],
+ "affected_existing_concepts": [
+  "Clasificación de requisitos (obligatorio vs convención vs buena práctica)",
+  "Criterios de aceptación y Definition of Done",
+  "Revisión independiente de código y diseño",
+  "Procedencia y SBOM"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: Si ZPMND distribuye software en la UE, el CRA podría imponer obligaciones de manejo de vulnerabilidades; requiere leer el articulado."
+ ],
+ "limitations": [
+  "El Reglamento (UE) 2024/2847 se leyó solo como página envoltorio de EUR-Lex, sin articulado: no se puede afirmar nada sobre sus obligaciones concretas.",
+  "La página CSRC y el repositorio de ASVS son secundarios; lo que aportan va solo a candidate_claims.",
+  "Varias fuentes son páginas web con navegación; la versión y fecha de vigencia puntuales de Scorecard, SAMM y Google eng-practices no constan en el texto.",
+  "Las citas de SemVer, SLSA y SSDF son de los textos originales; su aplicabilidad depende de que el proyecto declare conformidad o la imponga un contrato.",
+  "No se evaluaron herramientas concretas más allá de lo que describe Scorecard; falta información de licencias y versiones.",
+  "Hay fechas posteriores al conocimiento del modelo (p. ej. página CSRC 'Updated October 06, 2026'); se tomaron tal cual aparecen.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 22 de 39 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 13 propuestas, 12 aceptadas, 1 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Se descartaron 1 hallazgos confirmados cuya cita no está en una fuente primaria (T2; detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.iso.org/standard/90219.html (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
