@@ -1,0 +1,478 @@
+{
+ "request_id": "RR-2026-11-08-familia-c-ingenieria",
+ "fetched": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7560949/",
+   "status": 200,
+   "error": null,
+   "sha256": "406baf2b5b8d806e2258d2e980689803ab0cf787661a9fc7e4fcb98ea5c0ea5c",
+   "bytes": 125382,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:39Z",
+   "text_status": "ok",
+   "text_chars": 28982
+  },
+  {
+   "url": "https://data.nist.gov/pdr/lps/FDB59097469F5200E043065706813E54167",
+   "status": 200,
+   "error": null,
+   "sha256": "ee11ce789c3e1c1112ac03f4c4bd504abf47cc18c0f269b165a9575c20b445e5",
+   "bytes": 81913,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:40Z",
+   "text_status": "ok",
+   "text_chars": 470
+  },
+  {
+   "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/UniversityPhysicsVolume1-LR.pdf",
+   "status": "refused",
+   "error": "robots.txt disallows https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/UniversityPhysicsVolume1-LR.pdf",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:42Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.fhwa.dot.gov/engineering/hydraulics/pubs/hif24006.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "06fb11aa4c0fca2a66e9d7f01c592f5b07064be3a32de8b86647d1b4b165a49d",
+   "bytes": 12932642,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-11T16:48:42Z",
+   "text_status": "ok",
+   "text_chars": 636908
+  },
+  {
+   "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/B-w/CHANGE-3/3/2022-10-24-NASA-STD-5001B-w-Change-3-Approved.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "f4d15692f1181ee1b9d47f3394bb2a7f79b707e98cdba6d5bf523e8e4cfb6bb5",
+   "bytes": 558597,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-11T16:48:44Z",
+   "text_status": "ok",
+   "text_chars": 73241
+  },
+  {
+   "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185",
+   "status": 200,
+   "error": null,
+   "sha256": "5788530bcaf736d249f5db7c8e550c24a73ad16d588a0a7261385c86a859ed63",
+   "bytes": 22841,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:45Z",
+   "text_status": "ok",
+   "text_chars": 3806
+  },
+  {
+   "url": "https://eng.libretexts.org/Bookshelves/Mechanical_Engineering/Mechanics_of_Materials_(Roylance)",
+   "status": 200,
+   "error": null,
+   "sha256": "5d63009772b76b8d754e5d04e5990e789e48d64529984b179c83e8ab481549c7",
+   "bytes": 153945,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:50Z",
+   "text_status": "ok",
+   "text_chars": 15989
+  },
+  {
+   "url": "https://openoregon.pressbooks.pub/manufacturingprocesses45/",
+   "status": 200,
+   "error": null,
+   "sha256": "425a0f07e5e8e77f15f336b7d9fc08ef0abea94d785a6fdb4fc07999be1e9d7b",
+   "bytes": 73537,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:55Z",
+   "text_status": "ok",
+   "text_chars": 3666
+  },
+  {
+   "url": "https://epa.gov/air-emissions-factors-and-quantification/ap-42-compilation-air-emissions-factors-stationary-sources",
+   "status": "refused",
+   "error": "robots.txt disallows https://epa.gov/air-emissions-factors-and-quantification/ap-42-compilation-air-emissions-factors-stationary-sources",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:57Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://link.springer.com/book/10.1007/978-3-030-44787-8",
+   "status": 200,
+   "error": null,
+   "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+   "bytes": 3038,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:57Z",
+   "text_status": "ok",
+   "text_chars": 305
+  },
+  {
+   "url": "https://ctms.engin.umich.edu/CTMS/index.php?aux=About_Tutorials",
+   "status": 403,
+   "error": null,
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:58Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.itl.nist.gov/div898/handbook/toolaids/cd.htm",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.itl.nist.gov/div898/handbook/toolaids/cd.htm",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:59Z",
+   "text_status": null,
+   "text_chars": null
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43061667165",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[2]",
+    "claim": "El tamaño declarado del informe es de 311 páginas, sin precio (n/a).",
+    "now": "El informe figura con las entradas «Unclassified Unclassified 311 n/a».",
+    "cut": "La interpretación de 311 como número de páginas y de n/a como precio."
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "El aviso legal establece que el manual no constituye norma, especificación ni política y que el Gobierno de EE. UU. no asume responsabilidad por su uso.",
+    "now": "El manual declara que no constituye una norma, especificación ni política.",
+    "cut": "Que el Gobierno de EE. UU. no asume responsabilidad por su uso."
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "Las fotografías y gráficos son de los autores con permiso de uso, y las imágenes de dominio público están designadas por su fuente. No hay una licencia de reutilización explícita en la parte leída.",
+    "now": "Los autores han designado por su fuente las imágenes de dominio público utilizadas.",
+    "cut": "Que las fotografías y gráficos son de los autores con permiso de uso; que no hay licencia de reutilización explícita en la parte leída."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "El manual usa unidades inglesas habituales, con SI en casos limitados, y el Apéndice A resume conversiones.",
+    "now": "El manual usa unidades inglesas habituales (CU).",
+    "cut": "Uso de SI en casos limitados; que el Apéndice A resume conversiones."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "Ecuación 4.1 (método racional): Q = C·I·A/Ku, con variables y unidades definidas (ft3/s, in/h, ac; Ku 1.0 CU, 360 SI).",
+    "now": "Se definen las variables: Q = caudal, ft3/s (m3/s); C = coeficiente de escorrentía adimensional; I = intensidad de lluvia, in/h (mm/h); A = área de drenaje, ac (ha).",
+    "cut": "«Ecuación 4.1», «método racional», la fórmula Q = C·I·A/Ku y los valores de Ku (1.0 CU, 360 SI)."
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "La ecuación de Manning se da con constante de conversión Ku=1.486 (CU) o 1.0 (SI) y variables con unidades.",
+    "now": "Una constante de conversión de unidades Ku vale 1.486 en CU (1.0 en SI).",
+    "cut": "Que se trata de la ecuación de Manning; que se dan variables con unidades."
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "La ecuación de Izzard modificada para flujo en cunetas usa Ku=0.56 (CU) o 0.376 (SI).",
+    "now": "Una constante de conversión de unidades Ku vale 0.56 en CU (0.376 en SI).",
+    "cut": "Que es la ecuación de Izzard modificada para flujo en cunetas."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "Para tuberías circulares a sección llena, Manning usa KQ=0.46 y KV=0.59 (CU).",
+    "now": "Una constante de conversión de unidades KQ vale 0.46 en CU (0.312 en SI).",
+    "cut": "Manning para tuberías circulares a sección llena; KV=0.59."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "El manual publica la tabla de n de Manning para conductos de drenaje pluvial (p. ej. tubo de hormigón liso 0.010-0.011).",
+    "now": "El manual da para tubo de hormigón liso valores de 0.010-0.011.",
+    "cut": "Que es la tabla de n de Manning para conductos de drenaje pluvial."
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "La tabla 4.1 da coeficientes de escorrentía C por uso del suelo, citando ASCE 1960 (p. ej. áreas céntricas 0.70-0.95).",
+    "now": "Para áreas céntricas se da un rango de 0.70-0.95.",
+    "cut": "Tabla 4.1, coeficientes de escorrentía C por uso del suelo, cita a ASCE 1960."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "Los hidrogramas unitarios NRCS usan una constante de pico Kp de 484 (adimensional).",
+    "now": "Una constante de pico Kp es igual a 484, adimensional.",
+    "cut": "Que la usan los hidrogramas unitarios NRCS."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "Ecuación del vertedero para detención con Cw típico 0.37 para vertederos rectangulares de cresta delgada.",
+    "now": "Se puede usar un valor de 0.37 para vertederos rectangulares de cresta delgada cuando no se dispone de más información.",
+    "cut": "«Ecuación del vertedero para detención», el símbolo Cw y «típico»."
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "La ecuación de orificio usa un coeficiente de descarga Co comúnmente 0.6 para orificios de borde recto.",
+    "now": "Comúnmente se usa un valor de 0.6 para condiciones de entrada de orificio uniformes y de borde recto.",
+    "cut": "«Ecuación de orificio», «coeficiente de descarga Co»."
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "La FHWA indica que el Rational Method no se debe ajustar con factor de frecuencia: no lo avala.",
+    "now": "Algunas agencias recomiendan usar este coeficiente, pero la FHWA no avala su uso.",
+    "cut": "Que se trata del Rational Method y de un factor de frecuencia."
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "El manual advierte que la ec. 7.10 de longitud de abertura de bordillo subestima la longitud requerida, sobre todo para entradas de 10 ft o más.",
+    "now": "El manual indica que la ecuación 7.10 subestima la longitud necesaria para interceptar el 100 % del caudal de cuneta, sobre todo en entradas de 10 ft o más.",
+    "cut": "Que es la ecuación de longitud de abertura de bordillo."
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "HEC-22 (FHWA) proporciona la ecuación de Manning con conveyancia K y constante de unidades Ku = 1,49 en unidades inglesas, para el flujo en secciones parabólicas de calle.",
+    "now": "HEC-22 da la expresión Q/S^0.5 = K = (Ku (Δx) d^5/3) / n.",
+    "cut": "Que es la ecuación de Manning; Ku = 1,49 en unidades inglesas; secciones parabólicas de calle."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "HEC-22 diseña estaciones de bombeo de vías principales para el evento de 0,02 AEP (AASHTO 2014).",
+    "now": "Según HEC-22, los ingenieros suelen diseñar las estaciones de bombeo que sirven a grandes vías de acceso controlado y calles arteriales para un evento de 0,02 AEP.",
+    "cut": "La cita AASHTO 2014 y la generalización de que HEC-22 las diseña así."
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "HEC-22 da la velocidad media en cuneta triangular con Ku = 0,840 en unidades inglesas (0,564 SI).",
+    "now": "Una constante de conversión de unidades Ku vale 0,840 en CU (0,564 en SI).",
+    "cut": "Que es para la velocidad media en cuneta triangular."
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "NASA-STD-5001B fija factor de diseño último 1,4 para estructuras metálicas con enfoque prototipo.",
+    "now": "Para el enfoque prototipo, la tabla da los valores 1.4, 1.0*, 1.4 y N/A o 1.05**.",
+    "cut": "Que 1,4 es el factor de diseño último para estructuras metálicas."
+   },
+   {
+    "id": "confirmed[31]",
+    "claim": "El NIST Chemistry WebBook (SRD 69) declara derechos de autor regidos por la Standard Reference Data Act.",
+    "now": "El NIST Chemistry WebBook declara que los derechos de autor de NIST Standard Reference Data se rigen por la Standard Reference Data Act.",
+    "cut": "«SRD 69»."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Manuales de organismos públicos de EE. UU. (FHWA, EPA, NIOSH, NASA): métodos y criterios de diseño",
+   "Normas técnicas públicas (NASA-STD-5001B) y su límite: las normas ASTM/ISO/IEC y MMPDS son de pago",
+   "Bases de datos de institutos (NIST WebBook SRD 69, DLMF, e-Handbook 151, Materials Project)",
+   "Libros de licencia abierta (OpenStax, Springer OA, LibreTexts, Open Oregon, CTMS)",
+   "Material secundario o de proveedor (espejos, listados, resúmenes de bibliotecas): solo candidate_claim"
+  ],
+  "searches": [
+   {
+    "query": "NIST Digital Library of Mathematical Functions license formulas download",
+    "intent": "official"
+   },
+   {
+    "query": "OpenStax University Physics Volume 1 CC BY download PDF",
+    "intent": "official"
+   },
+   {
+    "query": "NIST Chemistry WebBook SRD 69 thermophysical properties download terms of use",
+    "intent": "limitations"
+   },
+   {
+    "query": "FHWA Hydraulic Engineering Circular HEC-22 urban drainage design manual pdf",
+    "intent": "official"
+   },
+   {
+    "query": "NASA Handbook MIL-HDBK-5 MMPDS metallic materials properties open alternative; NASA-STD-5001 structural",
+    "intent": "contradict"
+   },
+   {
+    "query": "Control Systems Engineering open textbook CC BY; Control Tutorials for MATLAB and Simulink license",
+    "intent": "support"
+   },
+   {
+    "query": "NIST/SEMATECH e-Handbook of Statistical Methods download",
+    "intent": "official"
+   },
+   {
+    "query": "US EPA AP-42 compilation of air pollutant emission factors download; EPA Methods test methods",
+    "intent": "official"
+   },
+   {
+    "query": "open textbook CC BY electric circuits All About Circuits Fundamentals of Electric Circuits LibreTexts license",
+    "intent": "limitations"
+   },
+   {
+    "query": "NIST Materials Data Repository OR NIST Standard Reference Data materials properties open; Materials Project CC BY 4.0",
+    "intent": "support"
+   },
+   {
+    "query": "open textbook CC BY acoustics vibration free download; NIOSH noise measurement manual",
+    "intent": "support"
+   },
+   {
+    "query": "open textbook manufacturing processes CC BY; Machinery's Handbook; NIST manufacturing handbook; Mechanics of Materials CC BY",
+    "intent": "contradict"
+   }
+  ],
+  "not_found": [
+   "Ningún sha256: solo hice búsquedas y no bajé archivos.",
+   "C03 Eléctrica: no hallé un libro abierto con licencia clara (Kuphaldt: Design Science License o GFDL; Don Johnson con licencias contradictorias). Faltan fuente oficial y licencia verificada.",
+   "C02/C06: MMPDS (de pago) y MIL-HDBK-5J (cancelado) sin equivalente abierto vigente; Materials Project y NIST Materials Data Repository son candidatas sin licencia verificada.",
+   "C11: textos de ASTM, ISO e IEC son de pago; solo hay métodos abiertos de EPA, NIST y NIOSH. No se confirmó un manual de medición de ruido de NIOSH como tal.",
+   "C12: no hallé fórmulas con variables y unidades legibles por máquina más allá de LaTeX/MathML del DLMF, que no trae unidades. Falta explorar QUDT y NIST SI.",
+   "Tamaños y fechas declarados: solo parciales (HEC-22 feb. 2024; e-Handbook 101 MB; AP-42 74 MB; OpenStax v5.2 97,25 MB en espejo).",
+   "Citas literales de licencia de 300 caracteres o menos: no obtenidas; quedan como 'desconocido'.",
+   "Faltan terceras fuentes para varias ramas (C01, C05, C07, C08) y no busqué manuales públicos de NASA o DOE ni Machinery's Handbook."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7560949/",
+    "family": "C12 Ecuaciones y fórmulas como objetos",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Describe el DLMF: cada fórmula tiene enlace permanente y se puede bajar en LaTeX y MathML (legible por máquina). Falta confirmar licencia exacta y tamaño. No trae unidades sistemáticas."
+   },
+   {
+    "url": "https://data.nist.gov/pdr/lps/FDB59097469F5200E043065706813E54167",
+    "family": "C12 Ecuaciones y fórmulas como objetos",
+    "stance": "context",
+    "role": "primary",
+    "why": "Registro oficial del DLMF con licencia declarada (NIST open license), DOI 10.18434/M3167 y fechas. Sirve para citar licencia y canal de descarga."
+   },
+   {
+    "url": "https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/UniversityPhysicsVolume1-LR.pdf",
+    "family": "C01 Mecánica",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Libro abierto con ecuaciones y unidades SI de mecánica. CC BY 4.0 con atribución obligatoria. Un espejo da v5.2 de 97,25 MB (secundario). Falta medir tamaño y sha256."
+   },
+   {
+    "url": "https://www.fhwa.dot.gov/engineering/hydraulics/pubs/hif24006.pdf",
+    "family": "C04 Civil e hidráulica",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Manual público con métodos de diseño de drenaje. Edición vigente (feb. 2024). Licencia explícita desconocida hasta leer el aviso."
+   },
+   {
+    "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/B-w/CHANGE-3/3/2022-10-24-NASA-STD-5001B-w-Change-3-Approved.pdf",
+    "family": "C02 Estructural",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Norma pública con criterios y factores de seguridad. No da propiedades de materiales. MMPDS es de pago, sin equivalente abierto."
+   },
+   {
+    "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185",
+    "family": "C05 Química y procesos",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Base de propiedades termofísicas. La licencia SRD es propia y no queda claro si se permite descarga masiva; declarar 'desconocido' hasta citar el texto."
+   },
+   {
+    "url": "https://eng.libretexts.org/Bookshelves/Mechanical_Engineering/Mechanics_of_Materials_(Roylance)",
+    "family": "C06 Materiales",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Libro abierto de materiales y resistencia, pero CC BY-NC-SA, que limita la republicación comercial."
+   },
+   {
+    "url": "https://openoregon.pressbooks.pub/manufacturingprocesses45/",
+    "family": "C07 Industrial y manufactura",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Libro CC BY (2019) de procesos de manufactura. Algunas partes son CC BY-SA 3.0. Nivel básico, pocas fórmulas."
+   },
+   {
+    "url": "https://epa.gov/air-emissions-factors-and-quantification/ap-42-compilation-air-emissions-factors-stationary-sources",
+    "family": "C08 Ambiental",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Manual oficial de factores de emisión, por capítulo. Quinta ed. vol. I (1995): unas 1998 páginas y 74 MB (dato de resumen, por verificar)."
+   },
+   {
+    "url": "https://link.springer.com/book/10.1007/978-3-030-44787-8",
+    "family": "C09 Acústica y vibraciones",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Libro de acceso abierto CC BY 4.0 con ecuaciones y unidades. Nivel de posgrado. NIOSH 75-183 es la alternativa oficial."
+   },
+   {
+    "url": "https://ctms.engin.umich.edu/CTMS/index.php?aux=About_Tutorials",
+    "family": "C10 Control y automatización",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Licencia CC BY-SA 4.0 (ShareAlike). Ejemplos orientados a MATLAB, de proveedor."
+   },
+   {
+    "url": "https://www.itl.nist.gov/div898/handbook/toolaids/cd.htm",
+    "family": "C11 Métodos de prueba",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Manual oficial de métodos estadísticos y de ensayo; zip de unos 101 MB declarado en una página que parece antigua. DOI 10.18434/M32189. Licencia por confirmar."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ },
+ "partes": [
+  [
+   [
+    "SA-406baf2b5b8d806e2258d2e9",
+    0,
+    28982
+   ],
+   [
+    "SA-ee11ce789c3e1c1112ac03f4",
+    0,
+    470
+   ]
+  ],
+  [
+   [
+    "SA-06fb11aa4c0fca2a66e9d7f0",
+    0,
+    600000
+   ]
+  ],
+  [
+   [
+    "SA-06fb11aa4c0fca2a66e9d7f0",
+    599000,
+    636908
+   ],
+   [
+    "SA-f4d15692f1181ee1b9d47f33",
+    0,
+    73241
+   ],
+   [
+    "SA-5788530bcaf736d249f5db7c",
+    0,
+    3806
+   ],
+   [
+    "SA-5d63009772b76b8d754e5d04",
+    0,
+    15989
+   ],
+   [
+    "SA-425a0f07e5e8e77f15f336b7",
+    0,
+    3666
+   ],
+   [
+    "SA-32ed63159c77e21ee19ca1b9",
+    0,
+    305
+   ]
+  ]
+ ],
+ "partes_fuera": {}
+}
