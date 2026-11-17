@@ -1,0 +1,435 @@
+{
+ "request_id": "RR-2026-11-08-familia-e-banca",
+ "fetched": [
+  {
+   "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/doc/catalogoSeries",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.banxico.org.mx/SieAPIRest/service/v1/doc/catalogoSeries",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:47Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/token",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.banxico.org.mx/SieAPIRest/service/v1/token",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:47Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/doc/limiteConsultas",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.banxico.org.mx/SieAPIRest/service/v1/doc/limiteConsultas",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:47Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.banxico.org.mx/SieInternet/",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.banxico.org.mx/SieInternet/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:47Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.banxico.org.mx/marco-normativo/normativa-agrupada-por-ano-cr.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.banxico.org.mx/marco-normativo/normativa-agrupada-por-ano-cr.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:47Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.banxico.org.mx/marco-normativo/normativa-emitida-por-el-banco-de-mexico/circular-3-2012/%7B00CCCF12-909C-D2F7-D9A6-80162EAAAD19%7D.pdf",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.banxico.org.mx/marco-normativo/normativa-emitida-por-el-banco-de-mexico/circular-3-2012/%7B00CCCF12-909C-D2F7-D9A6-80162EAAAD19%7D.pdf",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:47Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.cnbv.gob.mx/paginas/normatividad.aspx",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.cnbv.gob.mx/paginas/normatividad.aspx",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:47Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://portafolioinfo.cnbv.gob.mx/Paginas/Inicio.aspx",
+   "status": "refused",
+   "error": "robots.txt disallows https://portafolioinfo.cnbv.gob.mx/Paginas/Inicio.aspx",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:52Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.cnbv.gob.mx/SECTORES-SUPERVISADOS/BANCA-MULTIPLE/Paginas/Informaci%C3%B3n-Estad%C3%ADstica.aspx",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.cnbv.gob.mx/SECTORES-SUPERVISADOS/BANCA-MULTIPLE/Paginas/Informaci%C3%B3n-Estad%C3%ADstica.aspx",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:57Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.gob.mx/cnbv/es/articulos/consulta-y-usa-los-datos-abiertos-de-la-cnbv",
+   "status": 200,
+   "error": null,
+   "sha256": "6e58c13af899c99aae366e2a37df40fcb6397900062ed4f3c4b7a74be47512c4",
+   "bytes": 54663,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:57Z",
+   "text_status": "ok",
+   "text_chars": 3726
+  },
+  {
+   "url": "https://registros.condusef.gob.mx/reca/",
+   "status": "refused",
+   "error": "robots.txt disallows https://registros.condusef.gob.mx/reca/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:59Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.condusef.gob.mx/?p=tasas-interes",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.condusef.gob.mx/?p=tasas-interes",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:49:04Z",
+   "text_status": null,
+   "text_chars": null
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43061680573",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "La CNBV declara que sus datos abiertos son información pública, de acceso gratuito, que cualquier persona puede usar y compartir.",
+    "now": "Los datos abiertos son información pública, disponible de manera gratuita, a la que cualquier persona puede acceder, usar y compartir.",
+    "cut": "La atribución de que la CNBV lo declara sobre sus propios datos abiertos; la cita es una definición general de datos abiertos."
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "La página remite a un acortador (bit.ly) para los Datos Abiertos de la CNBV; no da una URL oficial directa de API ni de descarga.",
+    "now": "La página indica que los Datos Abiertos están disponibles en https://bit.ly/DatosAbiertosCNBV.",
+    "cut": "La afirmación de que no ofrece una URL oficial directa de API ni de descarga."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Banxico SIE (API REST, catálogo, token, límites)",
+   "Banxico marco normativo (circulares, DOF)",
+   "CNBV normatividad (CUB, resoluciones modificatorias, DOF)",
+   "CONDUSEF (RECA, Buró de Entidades, comisiones/tasas/CAT)",
+   "Banxico sistemas de pago (SPEI/CoDi/DiMo, informes IMF, SIE CF620)",
+   "CNBV Portafolio de Información y datos abiertos (datos.gob.mx, Libre Uso MX)",
+   "BIS/BCBS Basel Framework y términos de uso",
+   "EE. UU.: Federal Register API, eCFR API, FDIC BankFind, Fed SR letters",
+   "Open banking México (Ley Fintech art. 76, CNBV DCG APIs, Banxico)"
+  ],
+  "searches": [
+   {
+    "query": "Banxico SIE API servicios web series económicas token consulta",
+    "intent": "official"
+   },
+   {
+    "query": "Banxico SIE catálogo de series cuántas series sistema de información económica",
+    "intent": "official"
+   },
+   {
+    "query": "Banxico SieAPIRest límites de consulta por minuto por día",
+    "intent": "limitations"
+   },
+   {
+    "query": "Banxico circulares vigentes normatividad disposiciones",
+    "intent": "official"
+   },
+   {
+    "query": "CNBV portal de estadísticas banca múltiple datos abiertos",
+    "intent": "official"
+   },
+   {
+    "query": "CONDUSEF Registro de Contratos de Adhesión RECA consulta",
+    "intent": "official"
+   },
+   {
+    "query": "BCBS Basel Framework bis.org standards terms of use",
+    "intent": "official"
+   },
+   {
+    "query": "BIS terms of use copyright reproduction permitted bis.org",
+    "intent": "limitations"
+   },
+   {
+    "query": "FDIC BankFind Suite API documentation terms of use",
+    "intent": "official"
+   },
+   {
+    "query": "Banxico SPEI CoDi DiMo estadísticas sistema de pagos cifras",
+    "intent": "support"
+   },
+   {
+    "query": "Ley Fintech Banxico CNBV APIs abiertas open banking disposiciones",
+    "intent": "support"
+   },
+   {
+    "query": "CONDUSEF comisiones tasas CAT por producto Buró de Entidades Financieras datos abiertos API",
+    "intent": "official"
+   },
+   {
+    "query": "CNBV disposiciones CUB instituciones de crédito marco normativo",
+    "intent": "official"
+   },
+   {
+    "query": "Federal Register API OCC FDIC Federal Reserve rules eCFR API terms",
+    "intent": "official"
+   },
+   {
+    "query": "Banxico términos de uso derechos de autor robots.txt",
+    "intent": "limitations"
+   },
+   {
+    "query": "datos.gob.mx CNBV licencia Libre Uso MX",
+    "intent": "limitations"
+   },
+   {
+    "query": "Federal Reserve SR letters data download terms",
+    "intent": "other"
+   },
+   {
+    "query": "CNBV open finance DOF 2020 API estandarizadas estado actual datos agregados transaccionales",
+    "intent": "contradict"
+   }
+  ],
+  "not_found": [
+   "Total declarado de series del catálogo SIE con fecha de corte: no hallado en búsqueda; hay que bajar el catálogo y contar.",
+   "sha256 de archivos: no calculable con solo búsqueda web.",
+   "robots.txt de banxico.org.mx, cnbv.gob.mx, condusef.gob.mx: no obtenidos.",
+   "Términos de uso generales de banxico.org.mx, CNBV y CONDUSEF: no hallados (solo subsitios de Banxico: Educa, CMCM).",
+   "Documentación de API/datos abiertos del Buró de Entidades/CONDUSEF: no hallada; total de productos reciente no hallado (cifras antiguas 2016).",
+   "Total de contratos RECA declarado: no hallado.",
+   "Términos de uso de Fed y OCC y sus páginas oficiales de reglas: no hallados (solo SR letters del Fed).",
+   "Estado vigente de open banking datos agregados/transaccionales: solo blogs; sin fuente oficial confirmatoria.",
+   "Circular 2/2020 de Banxico sobre APIs: solo mencionada en fuente secundaria.",
+   "Cifras SPEI/CoDi/DiMo de medios y proveedores: solo candidate_claim."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 20,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://www.bis.org/committees/bcbs/basel-framework",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://bis.org/terms_conditions.htm#Copyright_and_Permissions",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://api.fdic.gov/banks/docs/",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://catalog.data.gov/dataset/fdic-bankfind-suite-api",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://www.ecfr.gov/reader-aids/ecfr-developer-resources/rest-api-interactive-documentation",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=21&idCuadro=CF620&accion=consultarCuadro&locale=es",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://www.cnbv.gob.mx/Normatividad/Disposiciones%20de%20car%C3%A1cter%20general%20relativas%20a%20las%20interfaces%20de%20programaci%C3%B3n%20de%20aplicaciones%20inform%C3%A1ticas%20estandarizadas%20a%20que%20hace%20referencia%20la%20Ley%20para%20Regular%20las%20Instituciones%20de%20Tecnolog%C3%ADa%20Financiera.pdf",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/doc/catalogoSeries",
+    "family": "Banxico SIE",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E01: catálogo completo de series del SIE (descarga/API); de aquí se cuenta el total y se calcula sha256. La búsqueda no mostró una cifra total declarada."
+   },
+   {
+    "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/token",
+    "family": "Banxico SIE",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Acceso: gratuito con registro de token de 64 caracteres (header Bmx-Token); condiciona la adquisición automática."
+   },
+   {
+    "url": "https://www.banxico.org.mx/SieAPIRest/service/v1/doc/limiteConsultas",
+    "family": "Banxico SIE",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Límites de tasa por token: oportunas 80/min y 40,000/día; históricas 200/5 min y 10,000/día; 20 series por consulta histórica. Resuelve el conflicto con la cifra de 80 series de paquetes de terceros."
+   },
+   {
+    "url": "https://www.banxico.org.mx/SieInternet/",
+    "family": "Banxico SIE",
+    "stance": "context",
+    "role": "primary",
+    "why": "Portal del SIE; declara estructuras de información por sector (p. ej. 264 en financiamiento), no total de series; útil para cifra y fecha de corte."
+   },
+   {
+    "url": "https://www.banxico.org.mx/marco-normativo/normativa-agrupada-por-ano-cr.html",
+    "family": "Banxico circulares",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E02: índice oficial de circulares por año (2026: 1/2026 a 12/2026); canal de adquisición junto con DOF; permite verificar vigencia/modificaciones."
+   },
+   {
+    "url": "https://www.banxico.org.mx/marco-normativo/normativa-emitida-por-el-banco-de-mexico/circular-3-2012/%7B00CCCF12-909C-D2F7-D9A6-80162EAAAD19%7D.pdf",
+    "family": "Banxico circulares",
+    "stance": "context",
+    "role": "primary",
+    "why": "Ejemplo de regla reciente con plazo al 14-dic-2026 para instituciones de crédito; muestra el riesgo de citar texto previo a reformas."
+   },
+   {
+    "url": "https://www.cnbv.gob.mx/paginas/normatividad.aspx",
+    "family": "CNBV normatividad",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E03: página oficial de disposiciones y resoluciones modificatorias de la CUB (más de 160); verificar contra DOF para derogaciones."
+   },
+   {
+    "url": "https://portafolioinfo.cnbv.gob.mx/Paginas/Inicio.aspx",
+    "family": "CNBV estadísticas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E07: estadísticas de banca múltiple (cifras a agosto 2026 según búsqueda), serie histórica en Excel/CSV; libre. Sin términos de uso hallados."
+   },
+   {
+    "url": "https://www.cnbv.gob.mx/SECTORES-SUPERVISADOS/BANCA-MULTIPLE/Paginas/Informaci%C3%B3n-Estad%C3%ADstica.aspx",
+    "family": "CNBV estadísticas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E07: serie dic-2000 a la fecha, actualización mensual, descargas xlsm/zip."
+   },
+   {
+    "url": "https://www.gob.mx/cnbv/es/articulos/consulta-y-usa-los-datos-abiertos-de-la-cnbv",
+    "family": "CNBV datos abiertos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Canal datos.gob.mx/CNBV y términos Libre Uso MX (atribución); revisar licencia por conjunto."
+   },
+   {
+    "url": "https://registros.condusef.gob.mx/reca/",
+    "family": "CONDUSEF",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E05: consulta gratuita de contratos de adhesión vigentes e históricos; sin API ni total declarado hallados; registro no implica revisión."
+   },
+   {
+    "url": "https://www.condusef.gob.mx/?p=tasas-interes",
+    "family": "CONDUSEF",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E04: tasas, comisiones y CAT por producto (Buró de Entidades Financieras); fechas de corte y datos abiertos por verificar."
+   },
+   {
+    "url": "https://www.bis.org/committees/bcbs/basel-framework",
+    "family": "BIS Basilea",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E08: texto oficial con estado de vigencia y fechas por capítulo; PDF completo disponible."
+   },
+   {
+    "url": "https://bis.org/terms_conditions.htm#Copyright_and_Permissions",
+    "family": "BIS Basilea",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Licencia: extracto limitado reproducible citando al BIS; el resto requiere permiso escrito."
+   },
+   {
+    "url": "https://api.fdic.gov/banks/docs/",
+    "family": "EE. UU.",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E09: API sin clave, JSON/CSV, paginación hasta 10,000; datos de instituciones, fallas, finanzas."
+   },
+   {
+    "url": "https://catalog.data.gov/dataset/fdic-bankfind-suite-api",
+    "family": "EE. UU.",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Licencia: etiqueta de dominio público de USA.gov."
+   },
+   {
+    "url": "https://www.federalregister.gov/developers/documentation/api/v1",
+    "family": "EE. UU.",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E09: API sin clave para reglas de Fed, FDIC y OCC con fecha de publicación."
+   },
+   {
+    "url": "https://www.ecfr.gov/reader-aids/ecfr-developer-resources/rest-api-interactive-documentation",
+    "family": "EE. UU.",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E09: texto vigente del 12 CFR (partes 3, 217, 324) por API sin clave."
+   },
+   {
+    "url": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=21&idCuadro=CF620&accion=consultarCuadro&locale=es",
+    "family": "Banxico pagos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E06: serie mensual SPEI ene-2010 a ago-2026 vía SIE."
+   },
+   {
+    "url": "https://www.cnbv.gob.mx/Normatividad/Disposiciones%20de%20car%C3%A1cter%20general%20relativas%20a%20las%20interfaces%20de%20programaci%C3%B3n%20de%20aplicaciones%20inform%C3%A1ticas%20estandarizadas%20a%20que%20hace%20referencia%20la%20Ley%20para%20Regular%20las%20Instituciones%20de%20Tecnolog%C3%ADa%20Financiera.pdf",
+    "family": "Open banking MX",
+    "stance": "supports",
+    "role": "primary",
+    "why": "E10: texto oficial (DOF 4-jun-2020); fase 1 datos abiertos; fuentes secundarias dicen que lo demás sigue pendiente (contradictorio entre blogs)."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
