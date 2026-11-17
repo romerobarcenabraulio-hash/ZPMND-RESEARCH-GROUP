@@ -125,3 +125,23 @@ Al escribirla ya se habían visto las respuestas del brazo A en los dos casos y 
    con solo los espacios plegados, distinguiendo mayúsculas. La descripción de arriba («mayúsculas, espacios y marcas
    de formato aparte») no era esa. M1 se informa con el comparador de la compuerta en los tres brazos; el laxo va
    aparte, como dato secundario.
+
+## Adenda 2 · 2026-11-18 (GPT en #172 sobre 7bf7f34)
+
+Al escribirla ya se habían visto, además de lo de la adenda 1, los M1 del brazo A con el comparador de la compuerta
+(caso A: 7 de 19; caso B: 4 de 12). No se había visto ningún juicio ni nada de RG.
+
+1. **La regla es total.** Cada métrica es un cociente con su denominador escrito arriba. Si el denominador es 0, la
+   métrica es NO_EVALUABLE. Toda condición que use una métrica NO_EVALUABLE, y todo caso que este protocolo no prevea,
+   da EVIDENCIA INSUFICIENTE para esa función: nunca un éxito.
+   - Ejemplo: si V quita todas las afirmaciones de A, M1 y M3 de A+V son NO_EVALUABLE y la capa V queda en EVIDENCIA
+     INSUFICIENTE para ese caso.
+2. **Qué medición decide M1.**
+   - En RG decide la medición contra los bytes que RG guardó al bajar, que son los que la compuerta verificó. La bajada
+     del día es secundaria y se informa aparte; si una página cambió, se dice «cambió» y no altera la decisión.
+   - En A y A+V decide la bajada del día que hace V.
+   - Una URL que no se pudo bajar cuenta como cita no válida y se lista.
+3. **Cómo se mide M5.**
+   - M5(A+V) = M5(A) + el costo de V. V no llama a ningún modelo: su costo es 0 USD, y su tiempo se informa en M4.
+   - La decisión usa en los tres brazos el costo equivalente de API en USD; el marginal con suscripción se informa
+     aparte.
