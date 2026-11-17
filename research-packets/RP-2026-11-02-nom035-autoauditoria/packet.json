@@ -1,0 +1,91 @@
+{
+ "research_id": "RP-2026-11-02-nom035-autoauditoria",
+ "request_id": "RR-2026-11-02-nom035-autoauditoria",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-17T22:24:32Z",
+ "question": "Para un centro de trabajo en México, ¿cuál es el conjunto completo de obligaciones del patrón bajo la NOM-035-STPS-2018 (numerales 5 a 10 y guías de referencia), a qué tramo de trabajadores aplica cada una, qué documento o registro demuestra su cumplimiento según el propio texto, y qué dicen literalmente los transitorios sobre su entrada en vigor por fases? Cada obligación con su cita literal en tramos de 300 caracteres o menos.",
+ "why_zpmnd_needs_it": "Primera unidad de autoauditoría de ZPPMND: una lista de obligaciones tipadas, con evidencia exigible y vigencia, que una empresa pueda contestar sola. Hoy solo están curados el numeral 2 y parte de 5 a 8 (RR-2026-10-21-nom035-obligaciones). Es el consumidor del primer VerdictEvent.",
+ "scope": "Lectura del texto completo de la NOM-035-STPS-2018 (DOF 23/10/2018, SA-75b62246f311f4451094bb20) y de la ficha DOF nota 5541828 (SA-a098da62f4974e821611545a). Se extraen tramos (num. 2), obligaciones del patrón (num. 5), evidencia (10.2) y transitorios. No se consultó ninguna modificación posterior.",
+ "sources": {
+  "primary": [
+   "SA-75b62246f311f4451094bb20",
+   "SA-a098da62f4974e821611545a"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-75b62246f311f4451094bb20",
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+   "retrieved_at": "2026-11-17T22:22:52Z",
+   "sha256": "75b62246f311f4451094bb20eb3b7528ed6c317390530cf4ca8eae62e04548cc",
+   "bytes": 1133731,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación (emisor: Secretaría del Trabajo y Previsión Social)",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "NOM-035-STPS-2018, Factores de riesgo psicosocial en el trabajo-Identificación, análisis y prevención (DOF 23/10/2018), texto completo"
+  },
+  {
+   "artifact_id": "SA-a098da62f4974e821611545a",
+   "url": "https://sidof.segob.gob.mx/notas/5541828",
+   "retrieved_at": "2026-11-17T22:22:57Z",
+   "sha256": "a098da62f4974e821611545a4807fae1a45338a883b927e7f7f10f5e06124827",
+   "bytes": 68181,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Gobernación - Diario Oficial de la Federación",
+   "license": "LFDA art. 14 fr. VIII (official texts)",
+   "redistribution": "allowed",
+   "stored_at": "repo",
+   "title": "Nota 5541828 del DOF: NOM-035-STPS-2018, ficha de publicación (fecha de la edición)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El numeral 5.1 obliga al patrón a establecer por escrito, implantar, mantener y difundir una política de prevención de riesgos psicosociales.",
+    "artifact_ids": [
+     "SA-75b62246f311f4451094bb20"
+    ],
+    "quote": "Establecer por escrito, implantar, mantener y difundir en el centro de trabajo una política de prevención de riesgos psicosociales que contemple:",
+    "locator": "Numeral 5.1"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "No se leyó ninguna aclaración o modificación posterior publicada en el DOF ni el linaje NOM-035-STPS.",
+   "No se dispone del sha256 del texto."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: En 10.2 las observaciones de vigencia (5.2/5.3/5.6/5.8 a dos años; 5.1, 5.4 y 8.1-8.2, 5.5, 5.7 a un año) coinciden con los transitorios, pero el texto convertido los desordena.",
+  "INTERPRETACIÓN: Las guías de referencia I a V declaran no ser de cumplimiento obligatorio; solo sirven de método o ejemplo."
+ ],
+ "limitations": [
+  "Solo se leyeron dos fuentes; no se consultó ninguna publicación posterior del DOF.",
+  "Informe parcial: no se listan todas las obligaciones una por una con su cita; se priorizaron tramos, 5.1 a 5.3, 10.4 y transitorios.",
+  "El texto convertido pierde tablas y desordena las observaciones de 10.2.",
+  "No se verificó el sha256.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita quitó 8 de 9 hallazgos confirmados que decían más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda en receipt.json, fuera de los hallazgos."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
