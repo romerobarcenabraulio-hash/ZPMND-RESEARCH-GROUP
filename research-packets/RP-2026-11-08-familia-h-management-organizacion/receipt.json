@@ -1,0 +1,594 @@
+{
+ "request_id": "RR-2026-11-08-familia-h-management-organizacion",
+ "fetched": [
+  {
+   "url": "https://esco.ec.europa.eu/en/use-esco/download",
+   "status": 200,
+   "error": null,
+   "sha256": "24c4d43ec95a824da68def2ec250aeafb45e58fa5597265159189d058d21b1d1",
+   "bytes": 75604,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:17Z",
+   "text_status": "ok",
+   "text_chars": 8449
+  },
+  {
+   "url": "https://esco.ec.europa.eu/en/about-esco/escopedia/escopedia/esco-v121",
+   "status": 200,
+   "error": null,
+   "sha256": "9e947ca069e588940a5f576a2bbea8fdfdc5f9c94adef5c7cb7a9130ce98116e",
+   "bytes": 86720,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:18Z",
+   "text_status": "ok",
+   "text_chars": 8772
+  },
+  {
+   "url": "https://esco.ec.europa.eu/en/about-esco/escopedia/escopedia/esco-v12",
+   "status": 429,
+   "error": null,
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:19Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://esco.ec.europa.eu/en/about-esco/faq",
+   "status": 200,
+   "error": null,
+   "sha256": "3c36c3a363aeb6be78cbb86d3e2a36795b6ff1b1247cfb3e2dfa4afe1b8352eb",
+   "bytes": 144114,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:20Z",
+   "text_status": "ok",
+   "text_chars": 40702
+  },
+  {
+   "url": "https://esco.ec.europa.eu/en/about-esco/data-science-and-esco/crosswalk-between-esco-and-onet",
+   "status": 200,
+   "error": null,
+   "sha256": "54193b7b07cca0aded3832497d1ac824eaa071c7b3f03a2106b2fe68a26a4ea4",
+   "bytes": 59629,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:21Z",
+   "text_status": "ok",
+   "text_chars": 10331
+  },
+  {
+   "url": "https://www.onetcenter.org/database.html",
+   "status": 200,
+   "error": null,
+   "sha256": "4b3d73ed9648d8f4edac65f3ebb636226169f35c326c084ab62e9d115ad0ce57",
+   "bytes": 424509,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:22Z",
+   "text_status": "ok",
+   "text_chars": 25303
+  },
+  {
+   "url": "https://www.onetcenter.org/license_db.html",
+   "status": 200,
+   "error": null,
+   "sha256": "c5713b54238da9640d7cad86b08ce00aa6e32b78596a40543af35878a10810b3",
+   "bytes": 40673,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:23Z",
+   "text_status": "ok",
+   "text_chars": 5839
+  },
+  {
+   "url": "https://www.ilo.org/resource/isco-08-structure",
+   "status": 200,
+   "error": null,
+   "sha256": "ecc4c9a66932832efc9c8cdb186d4c9ffe04b93cbe5b862b879318d57a2d3140",
+   "bytes": 40848,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:48:24Z",
+   "text_status": "ok",
+   "text_chars": 1272
+  },
+  {
+   "url": "https://www.ilo.org/media/42051/download",
+   "status": 200,
+   "error": null,
+   "sha256": "6521594e9c321c84e08312a4195d20456c7ae89f624cd9e79df7bbdedd94d081",
+   "bytes": 46617,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-11T16:48:26Z",
+   "text_status": "ok",
+   "text_chars": 57481
+  },
+  {
+   "url": "https://ilostat.ilo.org/methods/concepts-and-definitions/classification-occupation/",
+   "status": "refused",
+   "error": "robots.txt disallows https://ilostat.ilo.org/methods/concepts-and-definitions/classification-occupation/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:48:27Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.inegi.org.mx/contenido/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825198411.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "6a8a80d6e193ecb466d2b3d85478b62c310476dc84d6b6a15b1af2530176f5f6",
+   "bytes": 5895824,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-11T16:48:27Z",
+   "text_status": "ok",
+   "text_chars": 1196905
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43061700616",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "ESCO se puede descargar gratis en sus 28 idiomas y en varios formatos.",
+    "now": "El conjunto de datos de ESCO se puede descargar gratis en los 28 idiomas de ESCO.",
+    "cut": "y en varios formatos"
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "La descarga de ESCO requiere aceptar la declaración de privacidad e indicar un correo; el enlace llega por email (acceso con registro).",
+    "now": "Para descargar ESCO hay que leer y aceptar la declaración y después indicar una dirección de correo electrónico.",
+    "cut": "que la declaración es de privacidad; que el enlace llega por email; acceso con registro"
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "La licencia de ESCO es la Decisión 2011/833/UE de reutilización: libre y gratuita para cualquier fin.",
+    "now": "Cualquier interesado puede descargar, usar, reproducir y reutilizar gratis la clasificación ESCO para cualquier fin.",
+    "cut": "Decisión 2011/833/UE; que esto es la licencia"
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "ESCO exige reconocimiento de uso y que toda versión modificada se indique como tal.",
+    "now": "Toda versión modificada o adaptada de ESCO debe indicarse claramente como tal.",
+    "cut": "exige reconocimiento de uso"
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "La v1.0 de ESCO (julio de 2017) describía 2942 ocupaciones; es una cifra histórica, no la de v1.2.1.",
+    "now": "ESCO ofrece descripciones de 2942 ocupaciones y 13.485 capacidades, traducidas a 27 idiomas.",
+    "cut": "v1.0 (julio de 2017); que es una cifra histórica y no la de v1.2.1"
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "ESCO v1.2.1 es una versión menor de diciembre de 2025 que no añade ni elimina contenido.",
+    "now": "ESCO v1.2.1 no añade ni elimina contenido de la base de datos.",
+    "cut": "versión menor; diciembre de 2025"
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "El cruce ESCO–O*NET se publica en dos versiones; la segunda añade coincidencias 'related' sin validar, de menor calidad.",
+    "now": "Ciertos datos del cruce ESCO–O*NET deben considerarse de menor calidad.",
+    "cut": "que se publica en dos versiones; que la segunda añade coincidencias 'related' sin validar"
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "O*NET 31.0 exige atribución, enlace a la licencia e indicación de cambios.",
+    "now": "Hay que indicar dónde se hicieron cambios respecto al original.",
+    "cut": "O*NET 31.0; exige atribución; enlace a la licencia"
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "El archivo Occupation Data de O*NET 31.0 tiene 1,016 filas con código O*NET-SOC, título y descripción.",
+    "now": "Un archivo de la base de datos O*NET tiene 1,016 filas y contiene cada código O*NET-SOC, el título de la ocupación y su definición/descripción.",
+    "cut": "el nombre de archivo Occupation Data; la versión 31.0"
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "O*NET 31.0 se descarga en Excel, CSV y JSON, además de SQL y RDF; el registro como desarrollador es opcional.",
+    "now": "En O*NET Database se pide completar un formulario de registro opcional.",
+    "cut": "O*NET 31.0; formatos Excel, CSV, JSON, SQL y RDF; registro como desarrollador"
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "La taxonomía de ocupaciones O*NET-SOC vigente es la 2019.",
+    "now": "Un archivo de O*NET contiene la taxonomía de ocupaciones O*NET-SOC 2019.",
+    "cut": "que sea la vigente"
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "La OIT publica la ficha 'ISCO 08 Structure' (PDF de 29.12 KB), fechada el 13 de septiembre de 2014.",
+    "now": "La ficha 'ISCO 08 Structure' tiene fecha de publicación 13 de septiembre de 2014 y un PDF descargable de 29.12 KB.",
+    "cut": "que la publica la OIT"
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "La tabla de correspondencia ISCO-08 a ISCO-88 tiene columnas de códigos, parte ('p') y comentarios.",
+    "now": "La tabla de correspondencia ISCO-08 a ISCO-88 tiene columnas de título y código ISCO-08, código ISCO-88, parte ISCO-88, título ISCO-88 y comentarios.",
+    "cut": "el valor 'p'"
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "El documento es el SINCO 2019 publicado por INEGI en 2020, con 403 páginas (viii + 403) según la catalogación en la fuente.",
+    "now": "El documento es el Sistema Nacional de Clasificación de Ocupaciones 2019 (SINCO) del Instituto Nacional de Estadística y Geografía, México: INEGI, c2020.",
+    "cut": "403 páginas (viii + 403)"
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "El SINCO 2019 tiene 9 divisiones, 52 grupos principales, 163 subgrupos y 490 grupos unitarios, frente a 9, 53, 156 y 468 en 2011.",
+    "now": "La tabla del SINCO 2019 da como totales 9, 53, 156 y 468, y 9, 52, 163 y 490.",
+    "cut": "los nombres de los niveles (divisiones, grupos principales, subgrupos, grupos unitarios) y qué cifras son de 2019 y cuáles de 2011"
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "La publicación incluye una tabla de equivalencia SINCO 2011-2019 como anexo (correspondencia entre versiones).",
+    "now": "En el anexo se incluye una tabla comparativa entre el SINCO 2011 y el SINCO 2019.",
+    "cut": "tabla de equivalencia; correspondencia entre versiones"
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "El SINCO tiene como referente la CIUO de la OIT y las clasificaciones nacionales de Canadá y EE. UU.",
+    "now": "La clasificación actual sigue teniendo como referente la Clasificación Internacional Uniforme de Ocupaciones (CIUO) de la OIT.",
+    "cut": "las clasificaciones nacionales de Canadá y EE. UU."
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "Un acuerdo publicado en el DOF el 16 de abril de 2012 estableció el SINCO y sus actualizaciones como clasificador obligatorio para las Unidades del Estado en estadísticas de ocupación y empleo.",
+    "now": "Se estableció como clasificador obligatorio para las Unidades del Estado que realicen Actividades Estadísticas y Geográficas para el Sistema Nacional de Información Estadística y Geográfica.",
+    "cut": "acuerdo publicado en el DOF el 16 de abril de 2012; SINCO y sus actualizaciones; estadísticas de ocupación y empleo"
+   },
+   {
+    "id": "confirmed[28]",
+    "claim": "INEGI mantiene desde 2012 un sistema de consulta del SINCO en su página de internet.",
+    "now": "El Instituto mantiene desde 2012 un sistema de consulta sobre esta clasificación en su página de internet.",
+    "cut": "el nombre INEGI"
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "El SINCO 2019 declara una correspondencia por lo general biunívoca con la versión 2011.",
+    "now": "Los cambios no rompieron las series, porque por lo general existe una correspondencia biunívoca en sus distintos niveles.",
+    "cut": "SINCO 2019; versión 2011"
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "La actualización de 2019 cambió el título de 76 claves respecto a 2011.",
+    "now": "El SINCO 2019 presenta cambios en el título de 76 claves en distintos niveles de desagregación.",
+    "cut": "respecto a 2011"
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "El SINCO deberá revisarse al menos una vez al año para altas de ocupaciones, y a largo plazo (cinco o diez años) para cambios de estructura.",
+    "now": "Se prevé una actualización al menos una vez al año para dar de alta nuevas ocupaciones, y otra a largo plazo (cinco o diez años).",
+    "cut": "para cambios de estructura"
+   },
+   {
+    "id": "confirmed[33]",
+    "claim": "Cada página del texto lleva la cita institucional: INEGI, Sistema Nacional de Clasificación de Ocupaciones 2019, SINCO, 2020 (editor y año de la publicación).",
+    "now": "El texto lleva la cita: INEGI. Sistema Nacional de Clasificación de Ocupaciones 2019. SINCO. 2020.",
+    "cut": "en cada página; que es la cita institucional del editor y del año"
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "El anexo incluye una tabla de equivalencia SINCO 2011–SINCO 2019, es decir, una correspondencia oficial entre las dos versiones.",
+    "now": "Hay una tabla de equivalencia SINCO 2011 - 2019.",
+    "cut": "en el anexo; correspondencia oficial entre las dos versiones"
+   },
+   {
+    "id": "confirmed[35]",
+    "claim": "La fe de erratas indica que la publicación inicial omitió la página 230 y que se integró el 1 de abril de 2024, por lo que existen versiones corregidas posteriores.",
+    "now": "Se integró la página 230 porque no se incluyó en la publicación inicial.",
+    "cut": "fe de erratas; 1 de abril de 2024; que existen versiones corregidas posteriores"
+   },
+   {
+    "id": "confirmed[36]",
+    "claim": "La fe de erratas del 2 de septiembre de 2025 cambia los ejemplos del grupo unitario 5115 Cantineros.",
+    "now": "Se cambiaron los ejemplos del grupo unitario 5115 Cantineros.",
+    "cut": "fe de erratas del 2 de septiembre de 2025"
+   },
+   {
+    "id": "confirmed[37]",
+    "claim": "La fe de erratas corrige la clave en el Excluye de 9111, de 6128 a 6117.",
+    "now": "El texto remite a 'Trabajadores en el beneficio de productos agrícolas' con la clave 6117 Trabajadores en actividades de beneficio de productos agrícolas.",
+    "cut": "fe de erratas; Excluye de 9111; clave anterior 6128"
+   },
+   {
+    "id": "confirmed[38]",
+    "claim": "El glosario define nivel de competencias con referencia a la CIUO-08 y a la CINE-97, lo que vincula el SINCO con esos marcos.",
+    "now": "Se hace referencia a lo definido para cada nivel de competencias de la CIUO-08.",
+    "cut": "glosario; CINE-97; que vincula el SINCO con esos marcos"
+   },
+   {
+    "id": "confirmed[39]",
+    "claim": "La bibliografía cita las clasificaciones CIUO-88 y CIUO de 1958 de la OIT y la National Occupational Classification de Canadá como fuentes.",
+    "now": "El SINCO 2019 cita la Clasificación Internacional Uniforme de Ocupaciones CIUO-88.",
+    "cut": "bibliografía; CIUO de 1958; National Occupational Classification de Canadá"
+   },
+   {
+    "id": "confirmed[40]",
+    "claim": "La bibliografía lista como sitio web consultado el SOC 2018 del Bureau of Labor Statistics de EE. UU.",
+    "now": "Se cita la Standard Occupational Classification, consultada el 6 de septiembre de 2018.",
+    "cut": "bibliografía; sitio web; SOC 2018; Bureau of Labor Statistics de EE. UU."
+   },
+   {
+    "id": "confirmed[41]",
+    "claim": "La división 3 del SINCO 2019 incluye en el grupo 39 un código residual 3999 para ocupaciones no clasificadas.",
+    "now": "El SINCO 2019 incluye la clave 3999 Otros trabajadores auxiliares en actividades administrativas, no clasificados anteriormente.",
+    "cut": "división 3; grupo 39"
+   },
+   {
+    "id": "confirmed[42]",
+    "claim": "El SINCO 2019 tiene un código especial 9999 para ocupaciones no especificadas.",
+    "now": "El SINCO 2019 menciona algo que constituye una clave especial.",
+    "cut": "código 9999; ocupaciones no especificadas"
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "id": "confirmed[25]",
+   "claim": "La clasificación actual sigue teniendo como referente la Clasificación Internacional Uniforme de Ocupaciones (CIUO) de la OIT.",
+   "quote": "La actual clasificación sigue teniendo como referente la Clasi -ficación Internacional Uniforme de Ocupaciones (CIUO) de la OIT",
+   "artifact_ids": [
+    "SA-6a8a80d6e193ecb466d2b3d8"
+   ]
+  },
+  {
+   "id": "confirmed[27]",
+   "claim": "Se estableció como clasificador obligatorio para las Unidades del Estado que realicen Actividades Estadísticas y Geográficas para el Sistema Nacional de Información Estadística y Geográfica.",
+   "quote": "como clasificador obligatorio para las Unidades del Estado que realicen Actividades Estadís-ticas y Geográficas para el Sistema Nacional de Información Estadística y Geográfica",
+   "artifact_ids": [
+    "SA-6a8a80d6e193ecb466d2b3d8"
+   ]
+  },
+  {
+   "id": "confirmed[29]",
+   "claim": "Los cambios no rompieron las series, porque por lo general existe una correspondencia biunívoca en sus distintos niveles.",
+   "quote": "estos cambios no llevaron a una ruptura en las series, pues existe por lo general una correspon -dencia biunívoca en sus diferentes niveles",
+   "artifact_ids": [
+    "SA-6a8a80d6e193ecb466d2b3d8"
+   ]
+  },
+  {
+   "id": "confirmed[30]",
+   "claim": "El SINCO 2019 presenta cambios en el título de 76 claves en distintos niveles de desagregación.",
+   "quote": "el SINCO 2019 presente cambios en el título de 76 claves en diferen-tes niveles de desagregación",
+   "artifact_ids": [
+    "SA-6a8a80d6e193ecb466d2b3d8"
+   ]
+  },
+  {
+   "id": "confirmed[38]",
+   "claim": "Se hace referencia a lo definido para cada nivel de competencias de la CIUO-08.",
+   "quote": "definidos para cada nivel de com-petencias de la CIUO-08",
+   "artifact_ids": [
+    "SA-6a8a80d6e193ecb466d2b3d8"
+   ]
+  },
+  {
+   "id": "confirmed[40]",
+   "claim": "Se cita la Standard Occupational Classification, consultada el 6 de septiembre de 2018.",
+   "quote": "Standard Occupational Classification, consultado el 6 de septiembre de 2018",
+   "artifact_ids": [
+    "SA-6a8a80d6e193ecb466d2b3d8"
+   ]
+  }
+ ],
+ "discovery": {
+  "families": [
+   "H11 CIUO/ISCO-08 (OIT, emisor)",
+   "H11 ESCO (Comisión Europea)",
+   "H11 O*NET (DOL/NCOD, CC BY 4.0)",
+   "H11 SINCO (INEGI, DOF)",
+   "H11 correspondencias (ESCO-O*NET, SOC-ISCO BLS, ISCO-88/08)",
+   "H08 OCDE gobierno corporativo (texto abierto con términos OCDE)",
+   "H06 ISO 21500/21502 y PMBOK (de pago; solo metadatos)",
+   "H01-H10 marcos de pago (ISO 9001, ITIL, COBIT): solo metadatos"
+  ],
+  "searches": [
+   {
+    "query": "ESCO classification download occupations skills v1.2 CSV number of occupations",
+    "intent": "official"
+   },
+   {
+    "query": "O*NET database download latest release occupations license CC BY 4.0",
+    "intent": "official"
+   },
+   {
+    "query": "ILO ISCO-08 structure and correspondence tables ISCO-88 download",
+    "intent": "official"
+   },
+   {
+    "query": "INEGI SINCO 2011 Sistema Nacional de Clasificación de Ocupaciones descarga",
+    "intent": "official"
+   },
+   {
+    "query": "PMBOK Guide PMI ISO 21500 ISO 9001 ITIL COBIT paid framework; open alternatives OECD",
+    "intent": "limitations"
+   },
+   {
+    "query": "ISCO-08 ESCO O*NET SOC crosswalk correspondence table",
+    "intent": "support"
+   },
+   {
+    "query": "OECD Principles of Corporate Governance G20/OECD 2023 terms and conditions licence",
+    "intent": "official"
+   },
+   {
+    "query": "ESCO terms of use licence European Union reuse download ESCO dataset",
+    "intent": "official"
+   },
+   {
+    "query": "inegi.org.mx SINCO 2011 clasificación ocupaciones página oficial correlación CMO CIUO-08",
+    "intent": "official"
+   },
+   {
+    "query": "ILO ISCO-08 terms of use ILOSTAT classification copyright reuse CIUO-08",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "sha256 de ningún archivo: la búsqueda web no permite descargar ni calcular hashes; hay que hacerlo al bajar.",
+   "Cita literal de licencia ≤300 caracteres: no se vio el texto completo de ESCO, OIT, INEGI ni OCDE (términos en oecd.org/termsandconditions, no abierto).",
+   "Volcado estructurado (CSV/XLSX) oficial del SINCO 2011/2019 con cuenta de ocupaciones y tabla SINCO–CIUO-08: solo se hallaron PDF y el portal; la tabla de correlación no apareció.",
+   "CIUO-08 en español en formato tabular oficial con licencia clara: no confirmado.",
+   "Cuenta de ocupaciones de O*NET-SOC 31.0 exacta (solo 'más de 900') y fecha de corte exacta.",
+   "robots.txt y límites de tasa de ESCO, O*NET, OIT e INEGI: no consultados.",
+   "Fuentes primarias para H01-H05, H07, H09, H10 (ISO 9001, ITIL, COBIT, etc.): no se buscaron a fondo; son marcos de pago, solo metadatos pendientes.",
+   "PMBOK/ISO 21500: solo fuentes secundarias (ResearchGate, Wikipedia); sin página del emisor."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 11,
+  "rejected": [
+   {
+    "url": "http://www3.inegi.org.mx/sistemas/clasificaciones/sinco/contenedor.aspx?proyecto=11",
+    "reason": "not https"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://esco.ec.europa.eu/en/use-esco/download",
+    "family": "H11 ESCO",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Canal oficial de descarga libre (CSV, RDF, etc., 28 idiomas); permite elegir v1.2.0 o v1.2.1. Aquí se obtiene el archivo y su sha256."
+   },
+   {
+    "url": "https://esco.ec.europa.eu/en/about-esco/escopedia/escopedia/esco-v121",
+    "family": "H11 ESCO",
+    "stance": "context",
+    "role": "primary",
+    "why": "Versión vigente (dic. 2025) y cambios; hay que confirmar la cuenta de ocupaciones contra el CSV bajado."
+   },
+   {
+    "url": "https://esco.ec.europa.eu/en/about-esco/escopedia/escopedia/esco-v12",
+    "family": "H11 ESCO",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Versión v1.2 (mayo 2024); el resumen de búsqueda indica 3039 ocupaciones, por verificar."
+   },
+   {
+    "url": "https://esco.ec.europa.eu/en/about-esco/faq",
+    "family": "H11 ESCO",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Licencia/reutilización: Decisión 2011/833/UE, gratis y con atribución; no se vio una licencia con nombre propio, a confirmar."
+   },
+   {
+    "url": "https://esco.ec.europa.eu/en/about-esco/data-science-and-esco/crosswalk-between-esco-and-onet",
+    "family": "H11 correspondencias",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Correspondencia oficial ESCO–O*NET (exact/narrow/broad/close y versión con related, sin validar por el DOL)."
+   },
+   {
+    "url": "https://www.onetcenter.org/database.html",
+    "family": "H11 O*NET",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Descarga libre, versión 31.0 según la búsqueda, más de 900 perfiles; verificar fecha de corte y cuenta en el archivo."
+   },
+   {
+    "url": "https://www.onetcenter.org/license_db.html",
+    "family": "H11 O*NET",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Licencia CC BY 4.0 con atribución; fuente de la cita literal."
+   },
+   {
+    "url": "https://www.ilo.org/resource/isco-08-structure",
+    "family": "H11 CIUO/ISCO-08",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Estructura oficial: 43 subgrupos principales, 130 subgrupos, 436 grupos primarios."
+   },
+   {
+    "url": "https://www.ilo.org/media/42051/download",
+    "family": "H11 correspondencias",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Correspondencia oficial entre versiones, con marcas de coincidencia parcial."
+   },
+   {
+    "url": "https://ilostat.ilo.org/methods/concepts-and-definitions/classification-occupation/",
+    "family": "H11 CIUO/ISCO-08",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Canal oficial y estado de la revisión de ISCO; licencia a confirmar, pues ESCO cita permiso en la edición de 2012."
+   },
+   {
+    "url": "http://www3.inegi.org.mx/sistemas/clasificaciones/sinco/contenedor.aspx?proyecto=11",
+    "family": "H11 SINCO",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Portal oficial del SINCO 2011 (9 divisiones, 53 grupos principales, 156 subgrupos, 468 grupos unitarios, según resultados secundarios); falta confirmar tablas de correlación."
+   },
+   {
+    "url": "https://www.inegi.org.mx/contenido/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825198411.pdf",
+    "family": "H11 SINCO",
+    "stance": "contradicts",
+    "role": "primary",
+    "why": "Hay una versión más reciente que la 2011; evita medir con la versión equivocada. La licencia y los totales deben tomarse del PDF."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ },
+ "partes": [
+  [
+   [
+    "SA-24c4d43ec95a824da68def2e",
+    0,
+    8449
+   ],
+   [
+    "SA-9e947ca069e588940a5f576a",
+    0,
+    8772
+   ],
+   [
+    "SA-3c36c3a363aeb6be78cbb86d",
+    0,
+    40702
+   ],
+   [
+    "SA-54193b7b07cca0aded383249",
+    0,
+    10331
+   ],
+   [
+    "SA-4b3d73ed9648d8f4edac65f3",
+    0,
+    25303
+   ],
+   [
+    "SA-c5713b54238da9640d7cad86",
+    0,
+    5839
+   ],
+   [
+    "SA-ecc4c9a66932832efc9c8cdb",
+    0,
+    1272
+   ],
+   [
+    "SA-6521594e9c321c84e08312a4",
+    0,
+    57481
+   ]
+  ],
+  [
+   [
+    "SA-6a8a80d6e193ecb466d2b3d8",
+    0,
+    600000
+   ]
+  ],
+  [
+   [
+    "SA-6a8a80d6e193ecb466d2b3d8",
+    599000,
+    1196905
+   ]
+  ]
+ ],
+ "partes_fuera": {}
+}
