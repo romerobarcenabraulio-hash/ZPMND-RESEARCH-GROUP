@@ -1,0 +1,527 @@
+{
+ "research_id": "RP-2026-11-08-familia-k-ecosistema-ia",
+ "request_id": "RR-2026-11-08-familia-k-ecosistema-ia",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T22:16:36Z",
+ "question": "Para cada subárea listada en why_needed: ¿qué fuente oficial la publica (API del Hub, registro oficial, repositorio o changelog del proveedor), por qué canal se consulta, cuántos elementos declara a qué fecha, qué feed permite vigilarla cada semana y con qué licencia o términos? Leaderboards solo si publican su método.",
+ "why_zpmnd_needs_it": "Subáreas: K01 Modelos y sus fichas (Mundo); K02 Datasets de IA (Mundo); K03 Agentes y frameworks de agentes (Mundo); K04 Servidores MCP (Mundo); K05 Skills y plugins (Mundo); K06 Evals y benchmarks (Mundo); K07 Sistemas de inferencia y orquestación (Mundo); K08 Proveedores: precios, límites y cambios (Mundo); K09 Métodos de entrenamiento y de contexto (Mundo); K10 Vigía de práctica de IA (§39) (Mundo). K11 queda fuera: paquetes ya hechos, por mergear. ZPMND necesita qué existe, con qué evidencia y desde cuándo.",
+ "scope": "Lectura de 11 fuentes primarias descargadas (Hub API y límites de Hugging Face, registro MCP oficial y su documentación de API, agentskills, GitHub de Anthropic, changelog y límites de OpenAI, notas de versión y límites de Claude Platform, vLLM, datos de Epoch AI). No se pudo obtener sha256 ni robots.txt. No se conoce la lista exacta de subáreas de why_needed; se respondió con lo que cubren estas fuentes.",
+ "sources": {
+  "primary": [
+   "SA-6bc16ece9ba3750d098b3a05",
+   "SA-3ad070cdd5c217f76656c5c9",
+   "SA-9f6a5a7c0d127684bbb3451f",
+   "SA-e5ed395ae6ce5deaef5c2152",
+   "SA-cfdf8511140c16ccfb161761",
+   "SA-cdbbfe390c52f952f7c89fe7",
+   "SA-58c623d1e90e70ed81699461",
+   "SA-e7174cb4e4f9627df2ff5334",
+   "SA-18a4b8ef4c62f3a709500c99",
+   "SA-2767a44e33263262c6694d82",
+   "SA-c7dbb724a371f6c549a53cd4",
+   "SA-3c727ec347713d2298eae5b1"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-6bc16ece9ba3750d098b3a05",
+   "url": "https://huggingface.co/docs/hub/en/api",
+   "retrieved_at": "2026-11-11T22:13:45Z",
+   "sha256": "6bc16ece9ba3750d098b3a056f4c3f2250e9bbed1117328d7d51fca913fc5a68",
+   "bytes": 188360,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Hugging Face",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Hub API Endpoints"
+  },
+  {
+   "artifact_id": "SA-3ad070cdd5c217f76656c5c9",
+   "url": "https://huggingface.co/docs/hub/en/rate-limits",
+   "retrieved_at": "2026-11-11T22:13:46Z",
+   "sha256": "3ad070cdd5c217f76656c5c90216754af1b3c6a18d9756e0490e21fc6a6b8afb",
+   "bytes": 204886,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Hugging Face",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Hub Rate limits"
+  },
+  {
+   "artifact_id": "SA-9f6a5a7c0d127684bbb3451f",
+   "url": "https://registry.modelcontextprotocol.io/",
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "sha256": "9f6a5a7c0d127684bbb3451fa24e463821c7d1b8f8c19149d609880c7df86dfb",
+   "bytes": 29626,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Model Context Protocol project",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Official MCP Registry"
+  },
+  {
+   "artifact_id": "SA-e5ed395ae6ce5deaef5c2152",
+   "url": "https://github.com/modelcontextprotocol/registry/blob/main/docs/reference/api/official-registry-api.md",
+   "retrieved_at": "2026-11-11T22:13:48Z",
+   "sha256": "e5ed395ae6ce5deaef5c2152037ea6fdbd5587f3c982c7220fb7bc54ad089327",
+   "bytes": 253459,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "modelcontextprotocol/registry (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Official Registry API (docs)"
+  },
+  {
+   "artifact_id": "SA-cfdf8511140c16ccfb161761",
+   "url": "https://github.com/agentskills/agentskills",
+   "retrieved_at": "2026-11-11T22:13:50Z",
+   "sha256": "cfdf8511140c16ccfb1617616119fe1ebe8606da978593819274e132d4f68487",
+   "bytes": 248831,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "agentskills (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Agent Skills specification and documentation"
+  },
+  {
+   "artifact_id": "SA-cdbbfe390c52f952f7c89fe7",
+   "url": "https://github.com/anthropics",
+   "retrieved_at": "2026-11-11T22:13:51Z",
+   "sha256": "cdbbfe390c52f952f7c89fe7231f3b156406a7909caa49a3f83c2cb44c1c7f78",
+   "bytes": 266037,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Anthropic",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Anthropic · GitHub"
+  },
+  {
+   "artifact_id": "SA-58c623d1e90e70ed81699461",
+   "url": "https://developers.openai.com/api/docs/changelog",
+   "retrieved_at": "2026-11-11T22:13:52Z",
+   "sha256": "58c623d1e90e70ed81699461ba6fa219a6f70aa11a2f1759505624b4465e830b",
+   "bytes": 582933,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenAI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Changelog (OpenAI API)"
+  },
+  {
+   "artifact_id": "SA-e7174cb4e4f9627df2ff5334",
+   "url": "https://developers.openai.com/api/docs/guides/rate-limits",
+   "retrieved_at": "2026-11-11T22:13:53Z",
+   "sha256": "e7174cb4e4f9627df2ff533415f22edfcddc0a85d2dd2fe0cad6d10f124a30ba",
+   "bytes": 509695,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenAI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Rate limits (OpenAI)"
+  },
+  {
+   "artifact_id": "SA-18a4b8ef4c62f3a709500c99",
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "retrieved_at": "2026-11-11T22:13:54Z",
+   "sha256": "18a4b8ef4c62f3a709500c997bc75cbdabe7b2211d1c3f13624561576ae7a530",
+   "bytes": 1657220,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Anthropic",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Claude Platform release notes"
+  },
+  {
+   "artifact_id": "SA-2767a44e33263262c6694d82",
+   "url": "https://platform.claude.com/docs/en/api/rate-limits",
+   "retrieved_at": "2026-11-11T22:13:55Z",
+   "sha256": "2767a44e33263262c6694d82ecb27081d6c59423eeac8664bd8c4cac9404c0cf",
+   "bytes": 599281,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Anthropic",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Rate limits - Claude Platform Docs"
+  },
+  {
+   "artifact_id": "SA-c7dbb724a371f6c549a53cd4",
+   "url": "https://github.com/vllm-project/vllm",
+   "retrieved_at": "2026-11-11T22:13:56Z",
+   "sha256": "c7dbb724a371f6c549a53cd4e6401fd9361ae5b2826e607251fc9a7acb6b872a",
+   "bytes": 318109,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "vLLM project",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "vllm-project/vllm"
+  },
+  {
+   "artifact_id": "SA-3c727ec347713d2298eae5b1",
+   "url": "https://epoch.ai/benchmarks/use-this-data",
+   "retrieved_at": "2026-11-11T22:13:57Z",
+   "sha256": "3c727ec347713d2298eae5b1689e9fdd9e5d3fa101056ac5ea9505a4dcb0df68",
+   "bytes": 81903,
+   "media_type": "text/html",
+   "source_type": "dataset",
+   "publisher": "Epoch AI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Data (Epoch AI Benchmarking Hub)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "La especificación OpenAPI de la API del Hub de Hugging Face puede consultarse directamente en https://huggingface.co/.well-known/openapi.json.",
+    "artifact_ids": [
+     "SA-6bc16ece9ba3750d098b3a05"
+    ],
+    "quote": "You can also access the OpenAPI specification directly at https://huggingface.co/.well-known/openapi.json",
+    "locator": "Hub API Endpoints, párrafo principal"
+   },
+   {
+    "claim": "Todas las llamadas a la API del Hub están sujetas a los límites de tasa generales de HF.",
+    "artifact_ids": [
+     "SA-6bc16ece9ba3750d098b3a05"
+    ],
+    "quote": "All API calls are subject to the HF-wide Rate limits.",
+    "locator": "Hub API Endpoints"
+   },
+   {
+    "claim": "El Hub ofrece webhooks para recibir información incremental en tiempo real sobre repositorios.",
+    "artifact_ids": [
+     "SA-6bc16ece9ba3750d098b3a05"
+    ],
+    "quote": "We also provide webhooks to receive real-time incremental info about repos.",
+    "locator": "Hub API Endpoints, párrafo principal"
+   },
+   {
+    "claim": "En la tabla de límites del Hub, el usuario anónimo (por dirección IP) figura con los valores 500, 3.000 y 100, todos marcados con asterisco.",
+    "artifact_ids": [
+     "SA-3ad070cdd5c217f76656c5c9"
+    ],
+    "quote": "Anonymous user (per IP address)\t500 *\t3,000 *\t100 *",
+    "locator": "Hub Rate limits, Rate limit Tiers (datos de septiembre 2025)"
+   },
+   {
+    "claim": "Los límites de HF se calculan en ventanas fijas de 5 minutos.",
+    "artifact_ids": [
+     "SA-3ad070cdd5c217f76656c5c9"
+    ],
+    "quote": "All quotas are calculated over 5-minute fixed windows.",
+    "locator": "Hub Rate limits, Rate limit Tiers"
+   },
+   {
+    "claim": "HF implementa el mecanismo descrito en el borrador IETF (versión 9).",
+    "artifact_ids": [
+     "SA-3ad070cdd5c217f76656c5c9"
+    ],
+    "quote": "We implement the mechanism described in the IETF draft (Version 9)",
+    "locator": "Hub Rate limits, HTTP Headers"
+   },
+   {
+    "claim": "El registro MCP oficial tiene URL base de producción registry.modelcontextprotocol.io.",
+    "artifact_ids": [
+     "SA-e5ed395ae6ce5deaef5c2152"
+    ],
+    "quote": "Production: https://registry.modelcontextprotocol.io",
+    "locator": "Official MCP Registry API, Base URLs"
+   },
+   {
+    "claim": "El listado de servidores del registro MCP admite el filtro updated_since, que filtra los servidores actualizados después de una marca de tiempo RFC3339.",
+    "artifact_ids": [
+     "SA-e5ed395ae6ce5deaef5c2152"
+    ],
+    "quote": "updated_since - Filter servers updated after RFC3339 timestamp",
+    "locator": "Official MCP Registry API, Server List Filtering"
+   },
+   {
+    "claim": "Los listados del registro MCP contienen un registro por versión de servidor.",
+    "artifact_ids": [
+     "SA-e5ed395ae6ce5deaef5c2152"
+    ],
+    "quote": "Listings contain one record per server version.",
+    "locator": "Official MCP Registry API, Server List Filtering"
+   },
+   {
+    "claim": "El registro MCP publica una especificación OpenAPI legible por máquina.",
+    "artifact_ids": [
+     "SA-e5ed395ae6ce5deaef5c2152"
+    ],
+    "quote": "OpenAPI Spec - Complete machine-readable specification",
+    "locator": "Official MCP Registry API, Interactive Documentation"
+   },
+   {
+    "claim": "El repositorio agentskills tiene licencia Apache 2.0 para el código y CC-BY-4.0 para la documentación.",
+    "artifact_ids": [
+     "SA-cfdf8511140c16ccfb161761"
+    ],
+    "quote": "Code in this repository is licensed under Apache 2.0. Documentation is licensed under CC-BY-4.0.",
+    "locator": "README, sección License"
+   },
+   {
+    "claim": "El formato Agent Skills fue desarrollado originalmente por Anthropic y liberado como estándar abierto.",
+    "artifact_ids": [
+     "SA-cfdf8511140c16ccfb161761"
+    ],
+    "quote": "The Agent Skills format was originally developed by Anthropic, released as an open standard",
+    "locator": "README, Open development"
+   },
+   {
+    "claim": "La organización GitHub de Anthropic muestra 117 repositorios a la fecha de la captura.",
+    "artifact_ids": [
+     "SA-cdbbfe390c52f952f7c89fe7"
+    ],
+    "quote": "Showing 10 of 117 repositories",
+    "locator": "github.com/anthropics, lista de repositorios"
+   },
+   {
+    "claim": "La organización GitHub de Anthropic muestra un repositorio público para Agent Skills.",
+    "artifact_ids": [
+     "SA-cdbbfe390c52f952f7c89fe7"
+    ],
+    "quote": "Public repository for Agent Skills",
+    "locator": "github.com/anthropics, Popular repositories"
+   },
+   {
+    "claim": "El changelog de OpenAI registra para GPT-6 Sol un precio de 2 USD de entrada, 0,20 USD de entrada en caché y 10 USD de salida.",
+    "artifact_ids": [
+     "SA-58c623d1e90e70ed81699461"
+    ],
+    "quote": "GPT-6 Sol: $2 input, $0.20 cached input, and $10 output.",
+    "locator": "Changelog (OpenAI API), Sep 22"
+   },
+   {
+    "claim": "El changelog de OpenAI declara que el precio promocional de GPT-5.6 Sol está disponible al menos hasta el 21 de noviembre de 2026.",
+    "artifact_ids": [
+     "SA-58c623d1e90e70ed81699461"
+    ],
+    "quote": "GPT-5.6 Sol’s promotional pricing is available at least through November 21, 2026.",
+    "locator": "Changelog (OpenAI API), Aug 21"
+   },
+   {
+    "claim": "El changelog de OpenAI indica que ciertos modelos se cerrarán el 26 de febrero de 2027.",
+    "artifact_ids": [
+     "SA-58c623d1e90e70ed81699461"
+    ],
+    "quote": "These models will shut down on February 26, 2027.",
+    "locator": "Changelog (OpenAI API), Aug 26"
+   },
+   {
+    "claim": "Los límites de OpenAI se definen a nivel de organización y de proyecto, no a nivel de usuario.",
+    "artifact_ids": [
+     "SA-e7174cb4e4f9627df2ff5334"
+    ],
+    "quote": "Rate limits are defined at the organization level and at the project level, not user level.",
+    "locator": "OpenAI Rate limits, How do these rate limits work"
+   },
+   {
+    "claim": "OpenAI define tres niveles de pago (Build, Launch, Grow).",
+    "artifact_ids": [
+     "SA-e7174cb4e4f9627df2ff5334"
+    ],
+    "quote": "The three paid usage tiers are Build, Launch, and Grow.",
+    "locator": "OpenAI Rate limits, Usage tiers"
+   },
+   {
+    "claim": "OpenAI expone el encabezado x-ratelimit-limit-requests.",
+    "artifact_ids": [
+     "SA-e7174cb4e4f9627df2ff5334"
+    ],
+    "quote": "x-ratelimit-limit-requests",
+    "locator": "OpenAI Rate limits, Rate limits in headers"
+   },
+   {
+    "claim": "Las notas de versión de Claude Platform listan los cambios de la API, los SDK y la Consola, con lo más nuevo primero.",
+    "artifact_ids": [
+     "SA-18a4b8ef4c62f3a709500c99"
+    ],
+    "quote": "The Claude Platform release notes list changes to the Claude API, the client SDKs, and the Claude Console, newest first.",
+    "locator": "Claude Platform release notes, introducción"
+   },
+   {
+    "claim": "Las notas de versión de Claude Platform indican un costo de 8 USD por MTok de entrada y 40 USD por MTok de salida.",
+    "artifact_ids": [
+     "SA-18a4b8ef4c62f3a709500c99"
+    ],
+    "quote": "They cost $8 USD per MTok of input and $40 USD per MTok of output",
+    "locator": "Claude Platform release notes, November 9, 2026"
+   },
+   {
+    "claim": "Anthropic deprecó el modo rápido de Claude Opus 4.8 y fija su retiro el 30 de noviembre de 2026.",
+    "artifact_ids": [
+     "SA-18a4b8ef4c62f3a709500c99"
+    ],
+    "quote": "We’ve deprecated fast mode for Claude Opus 4.8, with removal on November 30, 2026.",
+    "locator": "Claude Platform release notes, October 30, 2026"
+   },
+   {
+    "claim": "Las notas de versión de Claude Platform anuncian un retiro en la API de Claude programado para el 30 de noviembre de 2026.",
+    "artifact_ids": [
+     "SA-18a4b8ef4c62f3a709500c99"
+    ],
+    "quote": "with retirement on the Claude API scheduled for November 30, 2026",
+    "locator": "Claude Platform release notes, September 30, 2026"
+   },
+   {
+    "claim": "Las notas de versión de Claude Platform indican que pasan a tener licencia Apache 2.0 en lugar de la licencia MIT.",
+    "artifact_ids": [
+     "SA-18a4b8ef4c62f3a709500c99"
+    ],
+    "quote": "they are licensed under Apache 2.0 instead of the MIT License",
+    "locator": "Claude Platform release notes, October 21, 2026"
+   },
+   {
+    "claim": "Los límites de la API de Claude se fijan a nivel de organización.",
+    "artifact_ids": [
+     "SA-2767a44e33263262c6694d82"
+    ],
+    "quote": "Limits are set at the organization level.",
+    "locator": "Claude Rate limits, About rate limits"
+   },
+   {
+    "claim": "En la documentación de límites de Claude, el nivel Scale figura con 200.000 USD.",
+    "artifact_ids": [
+     "SA-2767a44e33263262c6694d82"
+    ],
+    "quote": "Scale\t$200,000 USD",
+    "locator": "Claude Rate limits, Spend limits"
+   },
+   {
+    "claim": "La tabla de límites de Claude lista Claude Fable 5.2 con los valores 4.000, 500.000 y 100.000.",
+    "artifact_ids": [
+     "SA-2767a44e33263262c6694d82"
+    ],
+    "quote": "Claude Fable 5.2\t4,000\t500,000\t100,000",
+    "locator": "Claude Rate limits, Start tier"
+   },
+   {
+    "claim": "Anthropic usa un algoritmo de token bucket para limitar la tasa.",
+    "artifact_ids": [
+     "SA-2767a44e33263262c6694d82"
+    ],
+    "quote": "The API uses the token bucket algorithm to do rate limiting.",
+    "locator": "Claude Rate limits, About rate limits"
+   },
+   {
+    "claim": "El repositorio vLLM tiene licencia Apache-2.0.",
+    "artifact_ids": [
+     "SA-c7dbb724a371f6c549a53cd4"
+    ],
+    "quote": "Apache-2.0 license",
+    "locator": "github.com/vllm-project/vllm, README y panel lateral"
+   },
+   {
+    "claim": "vLLM declara soportar más de 200 arquitecturas de modelos de Hugging Face.",
+    "artifact_ids": [
+     "SA-c7dbb724a371f6c549a53cd4"
+    ],
+    "quote": "vLLM seamlessly supports 200+ model architectures on Hugging Face",
+    "locator": "README, About"
+   },
+   {
+    "claim": "Epoch AI permite descargar los datos de benchmarks en CSV.",
+    "artifact_ids": [
+     "SA-3c727ec347713d2298eae5b1"
+    ],
+    "quote": "You can download the data in CSV format",
+    "locator": "Epoch AI, Use this data"
+   },
+   {
+    "claim": "El archivo ZIP de datos de benchmarks de LLM de Epoch figura actualizado el 11 de noviembre de 2026.",
+    "artifact_ids": [
+     "SA-3c727ec347713d2298eae5b1"
+    ],
+    "quote": "LLM benchmark data\nZIP, Updated Nov. 11, 2026",
+    "locator": "Epoch AI, Downloads"
+   },
+   {
+    "claim": "Los datos de Epoch AI son de uso libre con atribución bajo licencia Creative Commons Attribution.",
+    "artifact_ids": [
+     "SA-3c727ec347713d2298eae5b1"
+    ],
+    "quote": "Epoch AI’s data is free to use, distribute, and reproduce provided the source and authors are credited under the Creative Commons Attribution license.",
+    "locator": "Epoch AI, Licensing"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Sha256 de lo descargado: ninguna fuente lo da; debe calcularlo el pipeline de captura.",
+   "robots.txt de cada sitio: no estaba entre las fuentes leídas.",
+   "Total de modelos, datasets y Spaces del Hub con fecha de corte: la página leída solo remite al OpenAPI y no declara conteos.",
+   "Total de servidores del registro MCP con fecha de corte: la página del registro solo mostraba 'Loading servers...' y la documentación de la API no da cifras.",
+   "Número de skills en anthropics/skills u otro registro de skills: las fuentes no lo declaran.",
+   "Licencia o términos de uso de los datos del Hub y del contenido del registro MCP: no hallados en estas fuentes.",
+   "Feed RSS/Atom explícito para los changelogs de OpenAI y Claude Platform: las notas de Claude ofrecen 'Subscribe' sin URL; falta verificar la URL del feed.",
+   "Método de los leaderboards: solo se leyó Epoch (datos y licencia); su metodología no estaba en el texto leído.",
+   "Acceso libre, con registro o de pago al registro MCP y al changelog: no se declara; solo se sabe que publicar exige autenticación por espacio de nombres."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Los canales vigilables cada semana con evidencia directa son: filtro updated_since del registro MCP, webhooks y OpenAPI del Hub, y los changelogs fechados de OpenAI y Claude Platform.",
+  "INTERPRETACIÓN: El conteo de servidores MCP no puede tomarse de un listado simple, porque hay un registro por versión; hace falta version=latest y paginar con cursor.",
+  "INTERPRETACIÓN: Hay precios y límites con vencimiento cercano: promoción de GPT-5.6 Sol hasta al menos el 21/11/2026, modo rápido de Opus 4.8 y Sonnet 4.5 el 30/11/2026. Conviene guardar la fecha de captura (2026-11-11).",
+  "INTERPRETACIÓN: Los límites del Hub para anónimos y gratuitos están marcados como cambiantes y la tabla es de septiembre 2025; no deben tratarse como vigentes sin recomprobarlos.",
+  "INTERPRETACIÓN: Los 'totales' que aparecen (117 repos de Anthropic, 200+ arquitecturas de vLLM) son conteos de página o de marketing, no inventarios oficiales por API.",
+  "INTERPRETACIÓN: El texto leído de Epoch no incluye metodología, así que por la regla de leaderboards queda pendiente."
+ ],
+ "candidate_methods": [
+  "Para cada subárea, registrar editor, URL, formato, sha256 y fecha de captura. Para el Hub, bajar openapi.json y sondear con huggingface_hub, que reintenta usando el encabezado RateLimit.",
+  "Vigilancia semanal del registro MCP: GET /v0.1/servers?updated_since=<última corrida>&version=latest con paginación por cursor, e include_deleted para detectar bajas."
+ ],
+ "candidate_tests": [
+  "Contar servidores MCP con version=latest, recorrer todas las páginas y comparar con una segunda ejecución del mismo día para comprobar estabilidad.",
+  "Confirmar robots.txt y términos de uso de cada host antes de rastrear, ya que no se leyeron."
+ ],
+ "limitations": [
+  "Solo se leyeron las páginas dadas, convertidas a texto. No se consultó ningún endpoint ni se calculó sha256.",
+  "Las páginas de GitHub y del registro MCP son capturas de interfaz; la del registro carga el listado con JavaScript y no muestra datos.",
+  "Las notas de Claude Platform y el changelog de OpenAI son muy largos; se citaron solo entradas relevantes y puede haber más precios o límites vigentes sin revisar.",
+  "Las fechas de los changelogs (2026) provienen de las páginas tal como se descargaron, sin verificación externa.",
+  "No se conoce la lista de subáreas de why_needed; faltan posibles subáreas (otros registros, leaderboards, runtimes locales) de las que no hubo fuente.",
+  "Epoch AI figura como 'dataset', no como fuente oficial de proveedor, y su metodología no se leyó.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 18 de 34 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 12 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json)."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
