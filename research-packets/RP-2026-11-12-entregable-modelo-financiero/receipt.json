@@ -1,0 +1,497 @@
+{
+ "request_id": "RR-2026-11-12-entregable-modelo-financiero",
+ "fetched": [
+  {
+   "url": "https://fast-standard.org/the-fast-standard/",
+   "status": 200,
+   "error": null,
+   "sha256": "0158c328f3951f055dee4c805899105d1436766eafd8e87261d2ebc21a0f0703",
+   "bytes": 44494,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:35Z",
+   "text_status": "ok",
+   "text_chars": 3097
+  },
+  {
+   "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/financial-modelling-code.ashx",
+   "status": 200,
+   "error": null,
+   "sha256": "a205ce5bbe5fec2aa4dae581b456e548e25602c96244d82fde21af6b1225ed86",
+   "bytes": 773022,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:17:37Z",
+   "text_status": "ok",
+   "text_chars": 38711
+  },
+  {
+   "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/twenty-principles-for-good-spreadsheet-practice.ashx",
+   "status": 200,
+   "error": null,
+   "sha256": "7848e97cde2171f89a7edc8fb547d13febedd0829945d6d78e0461db7cac7c19",
+   "bytes": 104275,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:17:39Z",
+   "text_status": "ok",
+   "text_chars": 1729
+  },
+  {
+   "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/how-to-review-a-spreadsheet-report.ashx",
+   "status": 200,
+   "error": null,
+   "sha256": "a69d53a4b2cde83460cb5346701c30150dd5df6e76239461af2e53359e06b3d3",
+   "bytes": 832919,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:17:40Z",
+   "text_status": "ok",
+   "text_chars": 41251
+  },
+  {
+   "url": "https://www.ssrb.org/files/documents/BPM-Standards%20Comparison.pdf",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.ssrb.org/files/documents/BPM-Standards%20Comparison.pdf",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:17:41Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://eusprig.org/research-info/research-and-best-practice/",
+   "status": 200,
+   "error": null,
+   "sha256": "c6ce032dee12ac2acb695cd8fa72a40ae347214f5c241ffb92b7e530706f1777",
+   "bytes": 58083,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:20:42Z",
+   "text_status": "ok",
+   "text_chars": 11512
+  },
+  {
+   "url": "https://arxiv.org/pdf/0804.0797",
+   "status": 200,
+   "error": null,
+   "sha256": "ccfcfb304d6db286e085843f4cd19a6aed901e67320b5a1be938b70a19c86721",
+   "bytes": 803191,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:20:43Z",
+   "text_status": "ok",
+   "text_chars": 107326
+  },
+  {
+   "url": "https://pcaobus.org/standards/auditing/documents/auditing_standards_audits_fybeginning_on_or_after_december_15_2024.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "22a5984180458a7cfd26a0c7e92f313c603106347e73cef74592d0b95e36a7ce",
+   "bytes": 3377399,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:20:58Z",
+   "text_status": "ok",
+   "text_chars": 1805776
+  },
+  {
+   "url": "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2023/ss123.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "6165a8ba699e9c7ffb6a693711f6a07b555021aa823e1a79582d9bc2e8052de7",
+   "bytes": 1096596,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:20:59Z",
+   "text_status": "ok",
+   "text_chars": 67854
+  },
+  {
+   "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/",
+   "status": 200,
+   "error": null,
+   "sha256": "a3455770f48f60aaa0f219ce43e3ae6bfbed3ff2d1f74b38f2be6a0364c8372c",
+   "bytes": 124080,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:21:00Z",
+   "text_status": "ok",
+   "text_chars": 16502
+  },
+  {
+   "url": "https://www.cinif.org.mx/uploads/Mejoras_NIF_2026_PROYECTO_AUSCULTACION.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "e034ccb8967fadff84e5197976562166885c2845ab65689ad9c18594a49009c9",
+   "bytes": 496059,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:21:02Z",
+   "text_status": "ok",
+   "text_chars": 31449
+  },
+  {
+   "url": "https://openpyxl.readthedocs.io/en/3.1/api/openpyxl.reader.excel.html",
+   "status": 200,
+   "error": null,
+   "sha256": "0e3e4a1a0422f27b679447e6bce6353d5cafdb995af6dfc9ac86f6e57357c412",
+   "bytes": 19784,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:21:03Z",
+   "text_status": "ok",
+   "text_chars": 2448
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43308384293",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "El Financial Modelling Code de ICAEW recomienda segregar supuestos, cálculos y resultados, en hojas separadas o secciones delimitadas. Es guía de buena práctica, no norma obligatoria.",
+    "now": "El Financial Modelling Code de ICAEW recomienda segregar supuestos, cálculos y resultados, en hojas separadas o secciones delimitadas.",
+    "cut": "Se quitó la afirmación de que es guía de buena práctica y no norma obligatoria."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "ICAEW recomienda deshabilitar los cálculos iterativos para evitar referencias circulares.",
+    "now": "ICAEW recomienda deshabilitar el ajuste 'Enable iterative calculations'.",
+    "cut": "Se quitó que sea para evitar referencias circulares."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "ICAEW pide que los cálculos que afectan resultados se hagan con funcionalidad nativa de Excel y no con VBA.",
+    "now": "ICAEW pide usar funcionalidad nativa de Excel, no VBA, para realizar todos los cálculos que...",
+    "cut": "Se quitó que los cálculos sean los que afectan resultados; la cita se corta antes."
+   },
+   {
+    "id": "confirmed[16]",
+    "claim": "ICAEW afirma que el modelo es un 'motor' por el que pasan escenarios y sensibilidades alternativos.",
+    "now": "ICAEW dice que los modelos proporcionan 'un motor' por el que pueden pasar escenarios y sensibilidades alternativos.",
+    "cut": "Se quitó que afirme que el modelo es ese motor sin matiz."
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "El estándar FAST establece los cuatro atributos Flexible, Appropriate, Structured y Transparent; se publica como conjunto de reglas de guía bajo licencia CC BY 4.0.",
+    "now": "El estándar FAST está licenciado bajo Creative Commons Attribution 4.0 International.",
+    "cut": "Se quitaron los cuatro atributos Flexible, Appropriate, Structured y Transparent y la descripción como conjunto de reglas de guía."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "La guía de revisión de ICAEW distingue una revisión genérica informal de normas formales como ISAE 3000.",
+    "now": "La guía de revisión de ICAEW menciona normas formales, como ISAE 3000, sobre revisiones que no son de auditoría.",
+    "cut": "Se quitó la distinción con una revisión genérica informal."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "La guía de revisión describe el delta testing (comparar escenarios).",
+    "now": "La guía de revisión menciona almacenar los resultados de un escenario y compararlos.",
+    "cut": "Se quitó el nombre delta testing."
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "La guía de revisión describe la computación paralela independiente para hojas de alto riesgo.",
+    "now": "La guía de revisión describe un proceso en el que dos personas desarrollan una solución de forma independiente.",
+    "cut": "Se quitaron el nombre computación paralela y la referencia a hojas de alto riesgo."
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "La guía de revisión menciona herramientas de auditoría de fórmulas de Excel, como Trace Precedents.",
+    "now": "La guía de revisión menciona Trace Precedents para encontrar las celdas que son origen de los valores.",
+    "cut": "Se quitó la referencia general a herramientas de auditoría de fórmulas."
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "La guía de revisión recomienda registrar la revisión en una hoja dentro del propio libro.",
+    "now": "La guía de revisión indica que este registro debe completarse en una hoja aparte dentro del libro probado.",
+    "cut": "Se quitó que se recomiende registrar la revisión, más allá de lo citado."
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "Los 20 principios de ICAEW incluyen respaldo y control de versiones regulares.",
+    "now": "Los principios de ICAEW piden un proceso regular de respaldo (backup) y...",
+    "cut": "Se quitó el control de versiones, y que sean 20 principios."
+   },
+   {
+    "id": "confirmed[31]",
+    "claim": "EuSpRIG cita la postura de Grossman de que las buenas prácticas dependen de la situación.",
+    "now": "EuSpRIG indica que las mejores prácticas de hojas de cálculo son 'dependientes de la situación'.",
+    "cut": "Se quitó la atribución a Grossman."
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "La PRA define modelo como método cuantitativo que procesa datos de entrada en salida.",
+    "now": "Un modelo es un método, sistema o enfoque cuantitativo que aplica técnicas estadísticas,...",
+    "cut": "Se quitó la atribución a la PRA y que procese datos de entrada en salida."
+   },
+   {
+    "id": "confirmed[33]",
+    "claim": "SS1/23 aplica a bancos, sociedades hipotecarias (building societies) y empresas de inversión designadas por la PRA con aprobación de modelo interno.",
+    "now": "SS1/23 es relevante para todos los bancos, sociedades hipotecarias y empresas de inversión designadas por la PRA con aprobación de modelo interno, constituidos en el Reino Unido y regulados.",
+    "cut": "Nada relevante."
+   },
+   {
+    "id": "confirmed[35]",
+    "claim": "SS1/23 excluye de su alcance a aseguradoras y reaseguradoras.",
+    "now": "Las cooperativas de crédito, aseguradoras y reaseguradoras no están en el alcance de las expectativas de MRM.",
+    "cut": "Se quitó que SS1/23 las excluya sin mencionar cooperativas de crédito."
+   },
+   {
+    "id": "confirmed[37]",
+    "claim": "SS1/23 espera que la documentación permita a un tercero independiente replicar los resultados.",
+    "now": "SS1/23 menciona replicar la estimación de parámetros.",
+    "cut": "Se quitó que la documentación permita a un tercero independiente replicar los resultados."
+   },
+   {
+    "id": "confirmed[38]",
+    "claim": "SS1/23 espera análisis de sensibilidad para determinar los límites operativos del modelo.",
+    "now": "SS1/23 indica que esto debería incluir análisis de sensibilidad.",
+    "cut": "Se quitó que sea para determinar los límites operativos del modelo."
+   },
+   {
+    "id": "confirmed[39]",
+    "claim": "SS1/23 espera revisión independiente que cubra entradas, cálculos y salidas.",
+    "now": "SS1/23 espera que la revisión cubra todos los componentes del modelo, incluidos entradas, cálculos y reportes.",
+    "cut": "Se quitó que sea revisión independiente y que cubra salidas."
+   },
+   {
+    "id": "confirmed[40]",
+    "claim": "SS1/23 espera que los sistemas de soporte estén sujetos a control de calidad y de cambios.",
+    "now": "SS1/23 dice que los sistemas deberían estar sujetos a rigurosos...",
+    "cut": "Se quitó control de calidad y de cambios, y que sean sistemas de soporte."
+   },
+   {
+    "id": "confirmed[42]",
+    "claim": "SS1/23 incluye en su alcance las herramientas de usuario final (EUC) como métodos cuantitativos.",
+    "now": "SS1/23 menciona aplicaciones y calculadoras de computación de usuario final (EUC).",
+    "cut": "Se quitó que las incluya en su alcance como métodos cuantitativos."
+   },
+   {
+    "id": "confirmed[44]",
+    "claim": "AS 1215 exige que la documentación demuestre quién hizo el trabajo, quién lo revisó y cuándo.",
+    "now": "AS 1215 se refiere a quién realizó el trabajo, quién lo revisó y la fecha de la revisión.",
+    "cut": "Se quitó que exija que la documentación lo demuestre."
+   },
+   {
+    "id": "confirmed[45]",
+    "claim": "AS 1105 exige probar exactitud y completitud de la información producida por la empresa usada como evidencia.",
+    "now": "AS 1105 indica probar la exactitud y completitud de la información, o los controles sobre ella.",
+    "cut": "Se quitó que sea información producida por la empresa usada como evidencia."
+   },
+   {
+    "id": "confirmed[47]",
+    "claim": "AS 1215 prohíbe eliminar documentación tras la fecha de cierre, aunque permite añadir.",
+    "now": "AS 1215 indica que la documentación de auditoría no debe eliminarse ni descartarse después de la fecha de finalización de la documentación.",
+    "cut": "Se quitó que permita añadir."
+   },
+   {
+    "id": "confirmed[48]",
+    "claim": "IFRS 18 es efectiva para periodos anuales que inicien el 1 de enero de 2027 o después, con aplicación anticipada permitida.",
+    "now": "IFRS 18 es efectiva para periodos anuales que comiencen el 1 de enero de 2027 o después.",
+    "cut": "Se quitó la aplicación anticipada permitida."
+   },
+   {
+    "id": "conflicting[0]",
+    "claim": "Tensión sobre la separación entrada/proceso/salida: ICAEW la recomienda; Panko y Ordway (secundaria) afirman que no tiene respaldo en investigación y puede perjudicar la legibilidad.",
+    "now": "Se afirma que no hay ninguna investigación que respalde este enfoque.",
+    "cut": "Se quitaron la recomendación de ICAEW, la atribución a Panko y Ordway, el carácter de fuente secundaria y que pueda perjudicar la legibilidad."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Estándares de modelado (FAST, ICAEW Financial Modelling Code, 20 Principles, SSRB/SMART)",
+   "Investigación sobre errores en hojas de cálculo (EuSpRIG, Panko)",
+   "Normas de presentación financiera (IFRS 18, NIF/CINIF)",
+   "Control interno/regulación (PCAOB AS 2201/AS 1105, SOX 404, PRA SS1/23)",
+   "Formato de archivo (ECMA-376/ISO 29500)",
+   "Herramientas y bibliotecas (openpyxl, LibreOffice headless)",
+   "Casos de error documentados (Reinhart-Rogoff, London Whale)"
+  ],
+  "searches": [
+   {
+    "query": "FAST Standard financial modelling standard",
+    "intent": "official"
+   },
+   {
+    "query": "ICAEW Financial Modelling Code",
+    "intent": "official"
+   },
+   {
+    "query": "EuSpRIG spreadsheet errors research best practice",
+    "intent": "support"
+   },
+   {
+    "query": "openpyxl documentation formulas data_only cached values",
+    "intent": "limitations"
+   },
+   {
+    "query": "Sarbanes-Oxley spreadsheets end-user computing controls PCAOB AS 2201 spreadsheets",
+    "intent": "official"
+   },
+   {
+    "query": "fast-standard.org FAST Standard download latest version",
+    "intent": "official"
+   },
+   {
+    "query": "Financial Modelling Code ICAEW 2024 Twenty Principles for Good Spreadsheet Practice",
+    "intent": "official"
+   },
+   {
+    "query": "IFRS 18 presentation and disclosure effective 2027",
+    "intent": "official"
+   },
+   {
+    "query": "LibreOffice headless convert recalculate xlsx command line documentation",
+    "intent": "other"
+   },
+   {
+    "query": "ECMA-376 Office Open XML spreadsheetML formula calc chain ISO/IEC 29500",
+    "intent": "official"
+   },
+   {
+    "query": "Boletín NIF CINIF NIF A-3 NIF B-6 vigencia 2026",
+    "intent": "official"
+   },
+   {
+    "query": "PCAOB AS 2201 information produced by the entity spreadsheets",
+    "intent": "official"
+   },
+   {
+    "query": "Bank of England SS1/23 model risk management",
+    "intent": "official"
+   },
+   {
+    "query": "Reinhart Rogoff spreadsheet error London Whale",
+    "intent": "support"
+   },
+   {
+    "query": "Spreadsheet Standards Review Board SMART financial modelling standard",
+    "intent": "other"
+   }
+  ],
+  "not_found": [
+   "Versión y fecha de vigencia exactas del FAST Standard y del ICAEW Code: las páginas no mostraron número de versión; sha256 no calculado (no hay descarga).",
+   "Texto final de NIF 2026 y la NIF A-3: solo un proyecto de auscultación; el CINIF es de pago, solo metadatos.",
+   "Documentación oficial de LibreOffice sobre parámetros de línea de comandos y recálculo: solo hallé tutoriales y scripts de terceros.",
+   "Documentación oficial de Excel Inquire / Spreadsheet Compare: no consultada.",
+   "Especificación oficial de SMART (Mazars/Corality): no hallada de forma primaria.",
+   "Ejemplo oficial o artefacto de referencia publicado por un emisor: no hallado.",
+   "Exigencia legal específica sobre cómo construir hojas de cálculo: no hallada; los estándares de modelado son convención profesional, no obligación, salvo contrato."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 14,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://learn.microsoft.com/en-us/office/open-xml/spreadsheet/working-with-the-calculation-chain",
+    "reason": "over 12 sources"
+   },
+   {
+    "url": "https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://fast-standard.org/the-fast-standard/",
+    "family": "Estándares de modelado",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Página oficial de descarga del FAST Standard (abierto, no obligatorio por ley). Verificar versión y fecha en el PDF; sha256 pendiente."
+   },
+   {
+    "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/financial-modelling-code.ashx",
+    "family": "Estándares de modelado",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Código de alto nivel (unidades, signos, entradas únicas, revisión proporcional). Se declara no un checklist de cumplimiento: es buena práctica, no obligación."
+   },
+   {
+    "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/twenty-principles-for-good-spreadsheet-practice.ashx",
+    "family": "Estándares de modelado",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Principios de entorno, diseño y controles (versionado, copias, revisión por pares) citables como convención profesional."
+   },
+   {
+    "url": "https://www.icaew.com/-/media/corporate/files/technical/technology/excel/how-to-review-a-spreadsheet-report.ashx",
+    "family": "Estándares de modelado",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Guía de revisión/auditoría de hojas de cálculo; base para candidate_tests de verificación."
+   },
+   {
+    "url": "https://www.ssrb.org/files/documents/BPM-Standards%20Comparison.pdf",
+    "family": "Estándares de modelado",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Compara estándares y muestra qué reglas coinciden (separar entradas/cálculos/salidas, unidades); la autoría de SMART se describe de forma discrepante."
+   },
+   {
+    "url": "https://eusprig.org/research-info/research-and-best-practice/",
+    "family": "Investigación EuSpRIG",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Reúne evidencia de tasas de error y sostiene que las mejores prácticas dependen de la situación: matiza que no hay un código único."
+   },
+   {
+    "url": "https://arxiv.org/pdf/0804.0797",
+    "family": "Control interno/regulación",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Explica que SOX 404/COSO no dan guía específica sobre hojas de cálculo; las pruebas son el control clave. Evita inventar obligaciones."
+   },
+   {
+    "url": "https://pcaobus.org/standards/auditing/documents/auditing_standards_audits_fybeginning_on_or_after_december_15_2024.pdf",
+    "family": "Control interno/regulación",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto obligatorio para auditores de emisores de EE. UU.: exactitud y completitud de información producida por la entidad (AS 1105). PDF largo; citar párrafos."
+   },
+   {
+    "url": "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2023/ss123.pdf",
+    "family": "Control interno/regulación",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Expectativa supervisora (vigente desde 17-may-2024) con inventario, validación independiente y gobernanza; aplica a bancos del Reino Unido, no es general."
+   },
+   {
+    "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-18-presentation-and-disclosure-in-financial-statements/",
+    "family": "Normas de presentación financiera",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Norma que reemplaza a IAS 1 desde 1-ene-2027: determina la presentación obligatoria de los estados, no la construcción de la hoja. Sujeta a adopción local."
+   },
+   {
+    "url": "https://www.cinif.org.mx/uploads/Mejoras_NIF_2026_PROYECTO_AUSCULTACION.pdf",
+    "family": "Normas de presentación financiera",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Documento oficial CINIF, pero es un proyecto; falta el texto final de NIF 2026. NIF B-1 y B-3 nuevas vigentes desde 2028 según un resumen."
+   },
+   {
+    "url": "https://openpyxl.readthedocs.io/en/3.1/api/openpyxl.reader.excel.html",
+    "family": "Herramientas",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Documentación oficial: data_only devuelve valores en caché; openpyxl no calcula fórmulas, así que no verifica resultados por sí solo."
+   },
+   {
+    "url": "https://learn.microsoft.com/en-us/office/open-xml/spreadsheet/working-with-the-calculation-chain",
+    "family": "Formato de archivo",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Cita ISO/IEC 29500 sobre la cadena de cálculo; explica cómo se almacenan fórmulas y orden de cálculo para comprobar integridad del archivo."
+   },
+   {
+    "url": "https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646",
+    "family": "Casos de error",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Caso documentado de error de rango en Excel (15 de 20 países); solo contexto de riesgo."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ },
+ "cut": [
+  {
+   "artifact_id": "SA-22a5984180458a7cfd26a0c7",
+   "read": 278121,
+   "of": 1805776
+  }
+ ]
+}
