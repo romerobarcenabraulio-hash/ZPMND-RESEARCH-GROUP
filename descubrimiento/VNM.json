@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "Văn bản trung ương | CSDL quốc gia về pháp luật\n# Cơ sở dữ liệu quốc gia về pháp luật\n1. Trang chủ\n2. >\n3. Văn bản quy phạm pháp luật Trung ương\n...\nChọn loại văn bản\nChọn cơ quan ban hành",
      "title": "Văn bản trung ương | CSDL quốc gia về pháp luật",
-     "url": "https://vbpl.vn/van-ban/trung-uong"
+     "url": "https://vbpl.vn/van-ban/trung-uong",
+     "verificacion": {
+      "error": "robots.txt disallows https://vbpl.vn/van-ban/trung-uong",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:10:17Z"
+     }
     },
     {
      "date": "2025-03-22",
@@ -22,7 +27,14 @@
      "rank": 2,
      "snippet": "Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 2013\nNgày ban hành: 08/12/2013\nNgày có hiệu lực: 01/01/2014\n...\nLuật Tổ chức chính quyền địa phương số 65/2025/QH15\n...\n…",
      "title": "Cơ sở dữ liệu Luật Việt Nam",
-     "url": "https://vietlaw.quochoi.vn/Pages/home.aspx"
+     "url": "https://vietlaw.quochoi.vn/Pages/home.aspx",
+     "verificacion": {
+      "bytes": 177,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:10:19Z",
+      "http": 200,
+      "sha256": "82b78515e2b015f44e6e3cf024c628a9320721ab1f716758c8f2863ebafb2aeb"
+     }
     },
     {
      "date": "2022-07-30",
@@ -64,7 +76,14 @@
      "rank": 1,
      "snippet": "### Công báo số 567 ngày 30/10/2026\n...\n…\nQuyết định số 2018/QĐ-TTg phê duyệt điều chỉnh Quy hoạch lâm nghiệp thời kỳ 2021 - 2030, tầm nhìn đến năm 2050\n…",
      "title": "Danh mục văn bản đăng Công báo 04 tháng 01 năm 2024",
-     "url": "https://congbao.chinhphu.vn/"
+     "url": "https://congbao.chinhphu.vn/",
+     "verificacion": {
+      "bytes": 215472,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:10:26Z",
+      "http": 200,
+      "sha256": "de8c5a2fb3e5aae0a373112305acf7ee819746be6f0d3565943fcae889319b9c"
+     }
     },
     {
      "date": "2026-06-03",
@@ -72,7 +91,12 @@
      "rank": 2,
      "snippet": "Promulgator\nThe National Assembly\nThe Standing Committee of National Assembly\nThe Government\nPrime Minister",
      "title": "Bộ Quốc phòng",
-     "url": "https://vbpl.moj.gov.vn/boquocphong/Pages/vbpqen.aspx"
+     "url": "https://vbpl.moj.gov.vn/boquocphong/Pages/vbpqen.aspx",
+     "verificacion": {
+      "error": "robots.txt disallows https://vbpl.moj.gov.vn/boquocphong/Pages/vbpqen.aspx",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:10:29Z"
+     }
     },
     {
      "date": "2026-10-29",
@@ -106,7 +130,14 @@
      "rank": 1,
      "snippet": "### Công báo số 567 ngày 30/10/2026\n...\n88\nVăn phòng chính phủ xuất bản\nĐịa chỉ: Số 1, Hoàng Hoa Thám - Ba Đình - Hà Nội.\n...\nWebsite: http://congbao.chinhphu.vn",
      "title": "Công báo điện tử Nước CHXHCN Việt Nam",
-     "url": "https://congbao.chinhphu.vn/cong-bao.htm"
+     "url": "https://congbao.chinhphu.vn/cong-bao.htm",
+     "verificacion": {
+      "bytes": 222477,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:10:35Z",
+      "http": 200,
+      "sha256": "025ef01305fb1c12464e5ae8765d2db818b6d881effed41108c7a48349a17592"
+     }
     },
     {
      "date": "2026-10-30",
@@ -114,7 +145,14 @@
      "rank": 2,
      "snippet": "Hệ thống văn bản\n...\n## © Cục Thông tin và Truyền thông Chính phủ",
      "title": "Chinhphu.vn - Hệ thống văn bản",
-     "url": "https://vanban.chinhphu.vn/default.aspx"
+     "url": "https://vanban.chinhphu.vn/default.aspx",
+     "verificacion": {
+      "bytes": 264031,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:10:43Z",
+      "http": 200,
+      "sha256": "073c16058eefb1006c5314117bf500e2ee0b7ef7ce029d08d70b83c5cfd4a950"
+     }
     },
     {
      "date": "2025-02-26",
@@ -156,7 +194,12 @@
      "rank": 1,
      "snippet": "Tổng số bản án, quyết định đã được công bố (1.963.784)\n...\nBản án, quyết định mới cập nhật",
      "title": "Tổng số bản án, quyết định đã được công bố (1.963.784)",
-     "url": "https://congbobanan.toaan.gov.vn/"
+     "url": "https://congbobanan.toaan.gov.vn/",
+     "verificacion": {
+      "error": "robots.txt disallows https://congbobanan.toaan.gov.vn/",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:10:46Z"
+     }
     },
     {
      "date": "2022-07-30",
@@ -164,7 +207,12 @@
      "rank": 2,
      "snippet": "Từ khoá: **Số Hiệu, Tiêu đề** hoặc **Nội dung ngắn gọn** của bản án...1. Tra cứu và xem trực tiếp hơn 437.000 Văn bản luật, Công văn, hơn 200.000 Bản án Online;",
      "title": "THƯ VIỆN PHÁP LUẬT _ Tra cứu, Nắm bắt Pháp Luật Việt Nam",
-     "url": "https://thuvienphapluat.vn/"
+     "url": "https://thuvienphapluat.vn/",
+     "verificacion": {
+      "error": "robots.txt disallows https://thuvienphapluat.vn/",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:10:47Z"
+     }
     },
     {
      "date": "2026-11-02",
@@ -206,7 +254,14 @@
      "rank": 1,
      "snippet": "Hệ thống văn bản\n...\n## © Cục Thông tin và Truyền thông Chính phủ",
      "title": "Chinhphu.vn - Hệ thống văn bản",
-     "url": "https://vanban.chinhphu.vn/default.aspx"
+     "url": "https://vanban.chinhphu.vn/default.aspx",
+     "verificacion": {
+      "bytes": 264031,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:10:51Z",
+      "http": 200,
+      "sha256": "073c16058eefb1006c5314117bf500e2ee0b7ef7ce029d08d70b83c5cfd4a950"
+     }
     },
     {
      "date": "2026-10-20",
@@ -214,7 +269,14 @@
      "rank": 2,
      "snippet": "Trong số Công báo này gồm: Nghị định số 393/2026/NĐ-CP quy định về người lao động nước ngoài làm việc tại Việt Nam;\n...\n### Văn bản quy phạm pháp luật Trang\nCHÍNH PHỦ\n...\nWebsite: http://congbao.chinhphu.vn",
      "title": "Danh mục văn bản đăng Công báo 04 tháng 01 năm 2024",
-     "url": "https://congbao.chinhphu.vn/"
+     "url": "https://congbao.chinhphu.vn/",
+     "verificacion": {
+      "bytes": 215321,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:10:54Z",
+      "http": 200,
+      "sha256": "149ca3700b974b4d3f471bebbb10d97d07096471f8c70400cbd390e059af250e"
+     }
     },
     {
      "date": "2026-10-20",
@@ -248,7 +310,12 @@
      "rank": 1,
      "snippet": "Văn bản quy phạm pháp luật Địa phương\nTìm kiếm\nTìm kiếm nâng cao\n...\nChọn tình trạng hiệu lực\nTỉnh/Thành phố\nChọn Tỉnh/Thành phố\nXã/Phường\nChọn Xã/Phường\nNgày có hiệu lực",
      "title": "Văn bản địa phương | CSDL quốc gia về pháp luật",
-     "url": "https://vbpl.vn/van-ban/dia-phuong"
+     "url": "https://vbpl.vn/van-ban/dia-phuong",
+     "verificacion": {
+      "error": "robots.txt disallows https://vbpl.vn/van-ban/dia-phuong",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:10:55Z"
+     }
     },
     {
      "date": "",
@@ -256,7 +323,12 @@
      "rank": 2,
      "snippet": "|CSDL Văn bản pháp luật:|\n...\nGiới thiệu chung:\n•Là CSDL chứa tất cả các văn bản quy phạm pháp luật do HĐND, UBND cấp tỉnh, thành phố ban hành và phối hợp ban hành theo đúng trình tự, thủ tục pháp luật.",
      "title": "CSDL VBPL Địa phương",
-     "url": "https://vbpl.vn/huongdan/csdlvbpldiaphuong.htm"
+     "url": "https://vbpl.vn/huongdan/csdlvbpldiaphuong.htm",
+     "verificacion": {
+      "error": "robots.txt disallows https://vbpl.vn/huongdan/csdlvbpldiaphuong.htm",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:10:57Z"
+     }
     },
     {
      "date": "2025-11-18",
@@ -290,7 +362,14 @@
      "rank": 1,
      "snippet": "###### Quyết định số 2778/QĐ-BKHCN ngày 14/6/2026 của Bộ trưởng Bộ Khoa học và Công nghệ ban hành Danh mục tiêu chuẩn và Hướng dẫn khung phục vụ sản phẩm CNCL\n14:33 02-07-2026",
      "title": "Viện Tiêu chuẩn chất lượng Việt Nam!",
-     "url": "https://tieuchuan.vsqi.gov.vn/"
+     "url": "https://tieuchuan.vsqi.gov.vn/",
+     "verificacion": {
+      "bytes": 30553,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:02Z",
+      "http": 200,
+      "sha256": "278fadc74ad477d893b7edf4a97d443c507355d0c971069242bfc6b62de32d30"
+     }
     },
     {
      "date": "2026-10-20",
@@ -298,7 +377,14 @@
      "rank": 2,
      "snippet": "Quyết định số 2018/QĐ-TTg phê duyệt điều chỉnh Quy hoạch lâm nghiệp thời kỳ 2021 - 2030, tầm nhìn đến năm 2050",
      "title": "Công báo điện tử Nước CHXHCN Việt Nam",
-     "url": "https://congbao.chinhphu.vn/cong-bao.htm"
+     "url": "https://congbao.chinhphu.vn/cong-bao.htm",
+     "verificacion": {
+      "bytes": 222312,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:10Z",
+      "http": 200,
+      "sha256": "3a5e5add83c97d51e3783424b7e80a5934a580666d9235cf863f1c02071d2144"
+     }
     },
     {
      "date": "2026-10-20",
@@ -340,7 +426,14 @@
      "rank": 1,
      "snippet": "Đã có 3.030 tiêu chuẩn, trong đó có 1.150 tiêu chuẩn quốc gia (TCVN) và 1.880 tiêu chuẩn quốc tế, tiêu chuẩn khu vực, tiêu chuẩn nước ngoài được rà soát phục vụ phát triển công nghệ chiến lược Việt Nam.",
      "title": "Viện Tiêu chuẩn chất lượng Việt Nam!",
-     "url": "https://tieuchuan.vsqi.gov.vn/"
+     "url": "https://tieuchuan.vsqi.gov.vn/",
+     "verificacion": {
+      "bytes": 30553,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:14Z",
+      "http": 200,
+      "sha256": "79dae589e7d772fb3758b4727249ce552d58f2df4aec00edccdc474f4bc0d14a"
+     }
     },
     {
      "date": "",
@@ -348,7 +441,14 @@
      "rank": 2,
      "snippet": "**VIỆN TIÊU CHUẨN CHẤT LƯỢNG VIỆT NAM (VSQI)**\nSố 8 Hoàng Quốc Việt, Phường Nghĩa Đô, TP.\nHà nội\n...\nFax: (024)38 361 771",
      "title": "Tra cứu Quy chuẩn",
-     "url": "https://tieuchuan.vsqi.gov.vn/tra-cuu-quy-chuan"
+     "url": "https://tieuchuan.vsqi.gov.vn/tra-cuu-quy-chuan",
+     "verificacion": {
+      "bytes": 30045,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:20Z",
+      "http": 200,
+      "sha256": "4ac5884932f5513468fb511547e456e70db85dca64c1d2adfcb179ff6cc6516c"
+     }
     },
     {
      "date": "2025-09-13",
@@ -390,7 +490,14 @@
      "rank": 1,
      "snippet": "…\n- TCVN 7317: 2003 (CISPR 24:1997) – Thiết bị công nghệ thông tin - Đặc tính miễn nhiễm - Giới hạn và phương pháp đo\n...\n…",
      "title": "Danh mục các Tiêu chuẩn, Quy chuẩn kỹ thuật tham gia MRA",
-     "url": "https://mst.gov.vn/danh-muc-cac-tieu-chuan-quy-chuan-ky-thuat-tham-gia-mra-197138625.htm"
+     "url": "https://mst.gov.vn/danh-muc-cac-tieu-chuan-quy-chuan-ky-thuat-tham-gia-mra-197138625.htm",
+     "verificacion": {
+      "bytes": 175008,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:24Z",
+      "http": 200,
+      "sha256": "08f250618bd780259eda5ea2c4691fb4075afa3d647bd312c9b4b091163b29f6"
+     }
     },
     {
      "date": "2024-06-21",
@@ -398,7 +505,14 @@
      "rank": 2,
      "snippet": "# Danh mục Quy chuẩn kỹ thuật quốc gia do Bộ TT&TT ban hành\n...\n|1|Quy chuẩn kỹ thuật quốc gia về chất lượng dịch vụ bưu chính công ích, dịch vụ công ích trong hoạt động phát hành báo chí|QCVN 01:2015/BTTTT|",
      "title": "Danh mục Quy chuẩn kỹ thuật quốc gia do Bộ TT&TT ban hành",
-     "url": "https://mst.gov.vn/quy-chuan-ky-thuat-quoc-gia-do-bo-tttt-ban-hanh-197240417160723563.htm"
+     "url": "https://mst.gov.vn/quy-chuan-ky-thuat-quoc-gia-do-bo-tttt-ban-hanh-197240417160723563.htm",
+     "verificacion": {
+      "bytes": 229317,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:28Z",
+      "http": 200,
+      "sha256": "5a2ac308af098d0021be9395489b79f2a9233148c4e551854f5b20229c47727b"
+     }
     },
     {
      "date": "2023-03-30",
@@ -440,7 +554,14 @@
      "rank": 1,
      "snippet": "General Statistics Office of Vietnam\n...\n#### Chuyên mục phòng chống tham nhũng\nGhi rõ nguồn trang Thông tin điện tử Cục Thống kê (www.nso.gov.vn) khi trích lại thông tin từ địa chỉ này\nOnline: 4",
      "title": "GSO",
-     "url": "https://www.nso.gov.vn/"
+     "url": "https://www.nso.gov.vn/",
+     "verificacion": {
+      "bytes": 117822,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:35Z",
+      "http": 200,
+      "sha256": "4617a74562fe4e5180b6757d25fc277c6ab728ccba907c54ab248f924e62ba45"
+     }
     },
     {
      "date": "2026-09-16",
@@ -448,7 +569,14 @@
      "rank": 2,
      "snippet": "# Employment\n## Feedback\nNATIONAL STATISTICS OFFICE’S WEBSITE\n...\nClearly state the source of the National Statistics Office’s website (www.nso.gov.vn) when citing information from this address",
      "title": "Publication – National Statistics Office of Vietnam",
-     "url": "https://www.nso.gov.vn/en/employment/publication/"
+     "url": "https://www.nso.gov.vn/en/employment/publication/",
+     "verificacion": {
+      "bytes": 82950,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:40Z",
+      "http": 200,
+      "sha256": "0865e3288c977ba58b5f4ebbc45d4711fe1b0f7bd1d4cc8afa4c963dc36ec5be"
+     }
     },
     {
      "date": "2026-09-16",
@@ -490,7 +618,14 @@
      "rank": 1,
      "snippet": "Báo cáo World Payments Report (WPR) 2026 của Capgemini cho thấy lĩnh vực thanh toán toàn cầu đang bước vào một giai đoạn chuyển đổi sâu rộng chưa từng có.",
      "title": "Trang Chủ - Ngân hàng Nhà nước Việt Nam",
-     "url": "https://sbv.gov.vn/vi/"
+     "url": "https://sbv.gov.vn/vi/",
+     "verificacion": {
+      "bytes": 420383,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:47Z",
+      "http": 200,
+      "sha256": "cb9ab846e35012dee28156e3aca93a48d0d62cf3475d288fd5daff876ea3009b"
+     }
     },
     {
      "date": "2026-10-29",
@@ -498,7 +633,14 @@
      "rank": 2,
      "snippet": "Nguồn: ssc.gov.vn\nTỷ giá hạch toán/Tỷ giá ngoại tệ",
      "title": "Bộ Tài Chính",
-     "url": "https://mof.gov.vn/"
+     "url": "https://mof.gov.vn/",
+     "verificacion": {
+      "bytes": 2003,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:49Z",
+      "http": 200,
+      "sha256": "f8d1a8587b182b8ccecb634ae033b52aeb3fa64fc34c703cbd9cdf820e6b0075"
+     }
     },
     {
      "date": "2026-11-01",
@@ -540,7 +682,14 @@
      "rank": 1,
      "snippet": "Viet Nam\nViet Nam launched its open government data portal in 2020 at data.gov.vn following the passing of \nResolution No. 17 (on key tasks, solutions to e-Government development), which specifically prioritizes six databases to be linked through a common data exchange platform.",
      "title": "Facilitating Access to Open Government Data",
-     "url": "https://mddb.apec.org/Documents/2022/CTI/WKSP5/22_cti_wksp5_002.pdf"
+     "url": "https://mddb.apec.org/Documents/2022/CTI/WKSP5/22_cti_wksp5_002.pdf",
+     "verificacion": {
+      "bytes": 3900874,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:53Z",
+      "http": 200,
+      "sha256": "bfb07b70adaf4492bc509489092180af1651fab75a0b45dd60be3d4afd347cce"
+     }
     },
     {
      "date": "",
@@ -548,7 +697,14 @@
      "rank": 2,
      "snippet": "# Vietnam open data portal\nVietnamese government open data catalog\nNot indexed\n### General\n...\n|--|--|\n|Link|https://open.data.gov.vn|\n|Status|active|\n|Catalog type|Open data portal|\n|Owner name|Vietnam ministry of information and communication|",
      "title": "Vietnam open data portal",
-     "url": "https://dateno.io/registry/catalog/cdi00001954/"
+     "url": "https://dateno.io/registry/catalog/cdi00001954/",
+     "verificacion": {
+      "bytes": 17926,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:54Z",
+      "http": 200,
+      "sha256": "9f547d080c60a3789ebf035b513d9366f9ba8ad9cde2e1751d5d8017790a8a2b"
+     }
     },
     {
      "date": "2020-09-03",

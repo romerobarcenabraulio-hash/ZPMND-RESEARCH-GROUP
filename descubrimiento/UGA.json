@@ -14,7 +14,12 @@
      "rank": 1,
      "snippet": "# Constitution\n...\n- Constitution of Republic of Uganda (PDF, 458 KB)\n- Constitution of the Republic of Uganda.pdf (PDF, 439 KB)\n## Assented-to Acts 2023\n- The Anti-Homosexuality Act, 2023\n...\n- The Markets Act, 2023",
      "title": "Constitution | Parliament of Uganda",
-     "url": "https://www.parliament.go.ug/page/constitution"
+     "url": "https://www.parliament.go.ug/page/constitution",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.parliament.go.ug/page/constitution",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T16:40:02Z"
+     }
     },
     {
      "date": "",
@@ -22,7 +27,14 @@
      "rank": 2,
      "snippet": "ULII\n# Welcome to the Uganda Legal Information Institute\nULII is a free legal information service provided by the Law Reporting Unit of the Uganda Judiciary and a member of the global Free Access to Law community.\nNational Legislation\nGazettes",
      "title": "Welcome to the Uganda Legal Information Institute",
-     "url": "https://ulii.org/en/"
+     "url": "https://ulii.org/en/",
+     "verificacion": {
+      "bytes": 64812,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:40:04Z",
+      "http": 200,
+      "sha256": "73c8c7b514baf5c5ebdb3fa9362e7c6b80d3e215dfd7684ac407339f072596cc"
+     }
     },
     {
      "date": "",
@@ -64,7 +76,14 @@
      "rank": 1,
      "snippet": "ULII\n...\nULII is a free legal information service provided by the Law Reporting Unit of the Uganda Judiciary and a member of the global Free Access to Law community.\nNational Legislation\nGazettes\nULII is part of the Library, Research, Law Reporting Committee of the Judiciary of Uganda.\n...\n…",
      "title": "Welcome to the Uganda Legal Information Institute",
-     "url": "https://ulii.org/en/"
+     "url": "https://ulii.org/en/",
+     "verificacion": {
+      "bytes": 64812,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:40:06Z",
+      "http": 200,
+      "sha256": "ca9ae60b0ec7dac8d69ef82437071182873f59cfd03ae6971547925d573cb063"
+     }
     },
     {
      "date": "",
@@ -72,7 +91,14 @@
      "rank": 2,
      "snippet": "Environment impact regulations\n...\n…\n...\nThe Uganda Trade Portal is managed by the Ministry of Trade, Industry & Cooperatives under the auspices of the National Trade Facilitation Committee (NTFC).\nPowered by eRegulations ©, a content management system developed by\nUNCTAD's Business Facilitation Pro",
      "title": "Uganda Trade Portal",
-     "url": "https://ugandatrades.go.ug/Laws?l=en"
+     "url": "https://ugandatrades.go.ug/Laws?l=en",
+     "verificacion": {
+      "bytes": 132762,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:40:08Z",
+      "http": 200,
+      "sha256": "b6c4753c95fcf4d9af3e5fe968630ce32804d889e841c99d79a415a02a84b5ac"
+     }
     },
     {
      "date": "2026-08-05",
@@ -114,7 +140,14 @@
      "rank": 1,
      "snippet": "## Browse the Uganda Gazette\nThe Uganda Gazette is Uganda's official publication of record — carrying government notices and declarations, Bills, Statutes, Statutory Instruments, supplements and other legal notices.\nPublished weekly and open to the public, every issue is available here as a free ele",
      "title": "EGazettes | Uganda Printing and Publishing Corporation (UPPC)",
-     "url": "https://uppc.go.ug/egazettes"
+     "url": "https://uppc.go.ug/egazettes",
+     "verificacion": {
+      "bytes": 108237,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:40:11Z",
+      "http": 200,
+      "sha256": "f52be1d339039d9f2ea33e321aed091a7180daf769b1b6aaea467471b424a901"
+     }
     },
     {
      "date": "",
@@ -122,7 +155,14 @@
      "rank": 2,
      "snippet": "The Uganda Gazette is an Official Government publication that contains Notices, Government declarations and supplements, Bills, Statutes, Statutory Instruments and Legal Notices.\nIt is a weekly publication that is open and accessible to the general public.\n...\n- HEAD OFFICE\n...\nEntebbe\n- info@uppc.g",
      "title": "Main navigation",
-     "url": "https://www.uppc.go.ug/index.php/uganda-gazette"
+     "url": "https://www.uppc.go.ug/index.php/uganda-gazette",
+     "verificacion": {
+      "bytes": 126233,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:40:16Z",
+      "http": 200,
+      "sha256": "b2cb0f4307f4a08a5289d7a351812a7b6e98506cd50bf4fa3e9b08bec13573d4"
+     }
     },
     {
      "date": "",
@@ -164,7 +204,14 @@
      "rank": 1,
      "snippet": "# Welcome to the Uganda Legal Information Institute\nULII is a free legal information service provided by the Law Reporting Unit of the Uganda Judiciary and a member of the global Free Access to Law community.\n...\n- Supreme Court of Uganda\n...\nULII is also an end user interface for the Electronic Cou",
      "title": "Welcome to the Uganda Legal Information Institute",
-     "url": "https://ulii.org/en/"
+     "url": "https://ulii.org/en/",
+     "verificacion": {
+      "bytes": 64812,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:40:17Z",
+      "http": 200,
+      "sha256": "674a435383373d8fcb8bb404496c24020d0cc610ff2409f18a13cf993d4ed0ca"
+     }
     },
     {
      "date": "",
@@ -172,7 +219,14 @@
      "rank": 2,
      "snippet": "Judiciary: The Republic of Uganda\n...\n…\n...\n…\n|--|--|",
      "title": "Judiciary: The Republic of Uganda",
-     "url": "https://judiciary.go.ug/data/publications/"
+     "url": "https://judiciary.go.ug/data/publications/",
+     "verificacion": {
+      "bytes": 49514,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:40:19Z",
+      "http": 200,
+      "sha256": "9368a7e4a59daf3664d90f278b9787c7e3a8c6d23eedb8c371aa13ccab7c59f9"
+     }
     },
     {
      "date": "",
@@ -206,7 +260,12 @@
      "rank": 1,
      "snippet": "Acts 2022 | Parliament of Uganda\n# Acts 2022\n...\n3. Acts 2022\n...\n…\n...\n- Electricity (Amendment) Act, 2022.pdf (PDF, 945 KB)\n- Fisheries and Aquaculture Act, 2022.pdf (PDF, 2 MB)",
      "title": "Acts 2022 | Parliament of Uganda",
-     "url": "https://www.parliament.go.ug/acts/acts-2022"
+     "url": "https://www.parliament.go.ug/acts/acts-2022",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.parliament.go.ug/acts/acts-2022",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T16:40:22Z"
+     }
     },
     {
      "date": "",
@@ -214,7 +273,12 @@
      "rank": 2,
      "snippet": "Acts | Parliament of Uganda\n# Acts\n1. Home\n2. Parliament Business\n...\n## Contact Us\nParliament of the Republic of Uganda",
      "title": "Acts | Parliament of Uganda",
-     "url": "https://www.parliament.go.ug/acts"
+     "url": "https://www.parliament.go.ug/acts",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.parliament.go.ug/acts",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T16:40:26Z"
+     }
     },
     {
      "date": "",
@@ -256,7 +320,14 @@
      "rank": 1,
      "snippet": "Policies - Ministry of Local Government\nRepublic of Uganda\nMinistry Of Local Government\n...\n##### Local Governments Act cap 138. Revised version\n##### Local-Government-Technical-and-Legal-Requirements-Regulations-2007 (1)\n##### Standard Rules of Procedure (SROP) Booklet\n...\nCentral Division",
      "title": "Policies - Ministry of Local Government - MoLG",
-     "url": "https://molg.go.ug/policies/"
+     "url": "https://molg.go.ug/policies/",
+     "verificacion": {
+      "bytes": 62146,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:40:37Z",
+      "http": 200,
+      "sha256": "d522e2800538f0171e42f018d156a324e5b1fe6b0a7da748ea26fdfd7c5856dc"
+     }
     },
     {
      "date": "2025-09-04",
@@ -264,7 +335,14 @@
      "rank": 2,
      "snippet": "Home - Ministry of Local Government\nRepublic of Uganda\nMinistry Of Local Government\nTell: +256 414 233 513 | Email: [email protected]\nAddress: Workers House, Pilkington Avenue Central Division\n...\n- [email protected]\n- +256 414 233 513",
      "title": "Home - Ministry of Local Government",
-     "url": "https://molg.go.ug/"
+     "url": "https://molg.go.ug/",
+     "verificacion": {
+      "bytes": 372921,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:40:42Z",
+      "http": 200,
+      "sha256": "50a0f013ee58c5226712cb02e9d64ed78f875a7c907e05a2f7079f078bb75dd1"
+     }
     },
     {
      "date": "2026-10-17",
@@ -298,7 +376,14 @@
      "rank": 1,
      "snippet": "THE MICROFINANCE DEPOSIT-TAKING INSTITUTIONS\n...\nThese Regulations may be cited as the Microfinance Deposit-Taking \nInstitutions (Agent Banking) Regulations, 2025.\n2.  Application\nThese Regulations apply to microfinance deposit-taking institutions in \nUganda and their agents.",
      "title": "STATUTORY INSTRUMENTS 2025 No. 8 - bou.or.ug",
-     "url": "https://www.bou.or.ug/uploads/THE_MICROFINANCE_DEPOSIT_TAKING_INSTITUTIONS_AGENT_BANKING_REGULATIONS_2025_final_1_666b48e0e0.pdf"
+     "url": "https://www.bou.or.ug/uploads/THE_MICROFINANCE_DEPOSIT_TAKING_INSTITUTIONS_AGENT_BANKING_REGULATIONS_2025_final_1_666b48e0e0.pdf",
+     "verificacion": {
+      "bytes": 381186,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:40:45Z",
+      "http": 200,
+      "sha256": "c305451dc5d10ae70db8dc5e152376ac3b3302cd5c3df23ed173ee54e5593a2d"
+     }
     },
     {
      "date": "2025-12-03",
@@ -306,7 +391,14 @@
      "rank": 2,
      "snippet": "The Insurance (Takaful and Retakaful) Regulations, 2025 - The Insurance Regulatory Authority of Uganda\n...\n- Insurance Towers Plot 6, Lumumba Avenue P.O Box 22855 Kampala Uganda\n- Tel: +256 417-425500\n- Email: ira@ira.go.ug",
      "title": "The Insurance (Takaful and Retakaful) Regulations, 2025",
-     "url": "https://ira.go.ug/download/the-insurance-takafu-and-retakaful-regulations-2025/"
+     "url": "https://ira.go.ug/download/the-insurance-takafu-and-retakaful-regulations-2025/",
+     "verificacion": {
+      "bytes": 156098,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:40:46Z",
+      "http": 200,
+      "sha256": "ffa85b7f27fb2f18a185663b2d9a805b4061301b4143e26506bf3ce20c7020ef"
+     }
     },
     {
      "date": "",
@@ -348,7 +440,12 @@
      "rank": 1,
      "snippet": "UGANDA STANDARDS CATALOGUE  \nAS OF 31 DECEMBER  2025  \nUganda National Bureau of Standards \n...\nUganda Standards may be procured online at https://webstore.unbs.go.ug/ or from the Information Resource Centre at UNBS HQ.",
      "title": "UGANDA NATIONAL BUREAU OF STANDARDS - unbs.go.ug",
-     "url": "https://www.unbs.go.ug/attachments/menus/27/Uganda%20Standards%20Catalogue%20-%2031%20December%202025.pdf"
+     "url": "https://www.unbs.go.ug/attachments/menus/27/Uganda%20Standards%20Catalogue%20-%2031%20December%202025.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.unbs.go.ug/attachments/menus/27/Uganda%20Standards%20Catalogue%20-%2031%20December%202025.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T16:40:47Z"
+     }
     },
     {
      "date": "",
@@ -356,7 +453,12 @@
      "rank": 2,
      "snippet": "SCHEDULE OF COMPULSORY UGANDA STANDARDS as of 30 APRIL 2026 \n282 | P a g e  \nS/N \nDivision \n...\nENGINEERING & \nCONSTRUCTION \nSTANDARDS \nUS ISO 7240-12:2006",
      "title": "SCHEDULE OF COMPULSORY UGANDA STANDARDS AS OF 30 APRIL 2026",
-     "url": "https://www.unbs.go.ug/attachments/menus/27/SCHEDULE%20OF%20COMPULSORY%20UGANDA%20STANDARDS%20AS%20OF%2030%20April%20%202026.pdf"
+     "url": "https://www.unbs.go.ug/attachments/menus/27/SCHEDULE%20OF%20COMPULSORY%20UGANDA%20STANDARDS%20AS%20OF%2030%20April%20%202026.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.unbs.go.ug/attachments/menus/27/SCHEDULE%20OF%20COMPULSORY%20UGANDA%20STANDARDS%20AS%20OF%2030%20April%20%202026.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T16:40:49Z"
+     }
     },
     {
      "date": "",
@@ -398,7 +500,12 @@
      "rank": 1,
      "snippet": "US 533:2006  \n...\nSCHEDULE OF COMPULSORY UGANDA STANDARDS as of 30 APRIL 2026 \n297 | P a g e  \nS/N \nDivision \nStandard Number \nStandard Title \nScope \n1129.",
      "title": "SCHEDULE OF COMPULSORY UGANDA STANDARDS AS OF 30 APRIL 2026",
-     "url": "https://www.unbs.go.ug/attachments/menus/27/SCHEDULE%20OF%20COMPULSORY%20UGANDA%20STANDARDS%20AS%20OF%2030%20April%20%202026.pdf"
+     "url": "https://www.unbs.go.ug/attachments/menus/27/SCHEDULE%20OF%20COMPULSORY%20UGANDA%20STANDARDS%20AS%20OF%2030%20April%20%202026.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.unbs.go.ug/attachments/menus/27/SCHEDULE%20OF%20COMPULSORY%20UGANDA%20STANDARDS%20AS%20OF%2030%20April%20%202026.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T16:40:51Z"
+     }
     },
     {
      "date": "2026-08-05",
@@ -406,7 +513,14 @@
      "rank": 2,
      "snippet": "|1|The National Climate Change (Climate Change Mechanisms) Regulations, 2025| |\n|2|National Environment Management of Hazardous Chemicals and Products Containing Hazardous Chemicals Regulations, 2024| |\n...\n|4|National Environment (Audit) Regulation, 2020| |",
      "title": "Regulations - NEMA",
-     "url": "https://www.nema.go.ug/en/regulations/"
+     "url": "https://www.nema.go.ug/en/regulations/",
+     "verificacion": {
+      "bytes": 640200,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:41:03Z",
+      "http": 200,
+      "sha256": "cdabe0b529cb1832c10a0b4794715b44e97585f0cf9428a089921f5a684ddf7d"
+     }
     },
     {
      "date": "2023-03-01",
@@ -448,7 +562,14 @@
      "rank": 1,
      "snippet": "# KEY STATISTICS\nThis page displays links for time series data and statistical publications in pdfs and Microsoft excel format.\n# MICRODATA\nAccess this page to view the surveys and Censuses that have Microdata that can be downloaded\n...\nFor Data Requests or other inquiries , visit our contact us pag",
      "title": "Uganda Bureau of Statistics: Home",
-     "url": "https://www.ubos.org/"
+     "url": "https://www.ubos.org/",
+     "verificacion": {
+      "bytes": 257732,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:41:07Z",
+      "http": 200,
+      "sha256": "a79a36efa8fee1194230b62b3cb0fc72f1edf1c2535e9a58c04caa548511f7f3"
+     }
     },
     {
      "date": "",
@@ -456,7 +577,14 @@
      "rank": 2,
      "snippet": "Uganda Bureau of Statistics <> Plot 9 Colville Street , Kampala, Uganda<> Website: www.ubos.org\n...\n----------\n...\nManaged and coordinated by the Uganda Bureau of Statistics (UBOS) – (Uganda’s National Statistical Office)\nThe major players are government ministries, departments and agencies (MDAs)",
      "title": "DATABASE DEVELOPMENT PROCEDURES",
-     "url": "https://unstats.un.org/unsd/Dissemination/workshops/Dissemination_Philippines_w1/Module%203/uganda/Uganda%20-%20Regional%20workshop%20on%20data%20dissemination%20and%20communication.pptx"
+     "url": "https://unstats.un.org/unsd/Dissemination/workshops/Dissemination_Philippines_w1/Module%203/uganda/Uganda%20-%20Regional%20workshop%20on%20data%20dissemination%20and%20communication.pptx",
+     "verificacion": {
+      "bytes": 103051,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:41:09Z",
+      "http": 200,
+      "sha256": "cc800e50d7b3565a45d8c7067b0c88365cd090251acdfdb5f5a164c8a819c68a"
+     }
     },
     {
      "date": "",
@@ -498,7 +626,14 @@
      "rank": 1,
      "snippet": "This page contains time series of statistics categorized according to the four macroeconomic accounts:  external sector, monetary and financial sector, fiscal sector, and real sector.\n...\n1. Inflation Rates\n2. Gross Domestic Product Summary\n...\n1. Bank of Uganda Statistics Release Calendar\n2. Revisi",
      "title": "Bank of Uganda| Index",
-     "url": "https://www.bouganda.com/bouwebsite/Statistics/index.html"
+     "url": "https://www.bouganda.com/bouwebsite/Statistics/index.html",
+     "verificacion": {
+      "bytes": 23127,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:41:10Z",
+      "http": 200,
+      "sha256": "6c3f91b3246d886d8e5c6ac9fc314865a4e25a032c3190d10376741ed0783b87"
+     }
     },
     {
      "date": "",
@@ -506,7 +641,14 @@
      "rank": 2,
      "snippet": "Additional reports are accessible via the **Bank of Uganda Publications** and **open data platforms**.\nFor assistance, please use the Data Help section or contact **statistics_disseminate@bou.or.ug**.\n...\nInterest Rates\nExchange Rates\n...\nCredit by Sector\nFinancial Soundness Indicators\nFinancial Mar",
      "title": "Bank of Uganda Data Portal",
-     "url": "https://bou.or.ug/statistical_portal"
+     "url": "https://bou.or.ug/statistical_portal",
+     "verificacion": {
+      "bytes": 7578,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:41:12Z",
+      "http": 200,
+      "sha256": "aad8de04890be04a7963039fac935c160ad07858f9ee52c8cd1f1488cb74daa5"
+     }
     },
     {
      "date": "2023-01-01",
@@ -548,7 +690,14 @@
      "rank": 1,
      "snippet": "Uganda Macro Data Portal\n...\nThe Macro Data Portal was built within the Macroeconomic Policy Department (MEPD) of the Ministry of Finance, Planning and Economic Development (MoFPED) of Uganda.\n...\nSince all the data is published elsewhere, it it free for access by the general public.",
      "title": "Uganda Macro Data Portal - MEPD | MoFPED",
-     "url": "https://mepd.finance.go.ug/apps/macro-data-portal/"
+     "url": "https://mepd.finance.go.ug/apps/macro-data-portal/",
+     "verificacion": {
+      "bytes": 69314,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:41:19Z",
+      "http": 200,
+      "sha256": "05100e4d4d55d2a2af93ca3377ebc649b20e551e1e1b0873c8a077bc4cb55f5a"
+     }
     },
     {
      "date": "2025-08-11",
@@ -556,7 +705,14 @@
      "rank": 2,
      "snippet": "# Uganda’s SDG Open Data Portal: Advancing Transparency and Sustainable Development",
      "title": "blog – Page 2 – GOU - SDG - Office of the Prime Minister",
-     "url": "https://sdgs.opm.go.ug/category/blog/page/2/"
+     "url": "https://sdgs.opm.go.ug/category/blog/page/2/",
+     "verificacion": {
+      "bytes": 75807,
+      "estado": "accesible",
+      "fecha": "2026-11-17T16:41:23Z",
+      "http": 200,
+      "sha256": "3586d6b3c945a89f85139d3a7f1ec513c84b99e3d65da4cb7891341f2e57adc6"
+     }
     },
     {
      "date": "2025-06-16",

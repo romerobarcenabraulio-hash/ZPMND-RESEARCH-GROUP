@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "|Nombre|Nº Gaceta|Fecha|Descargar PDF|\n...\n|DECRETO Nº 4.078 DE LA GACETA OFICIAL 41.\n786 RPBV VIERNES 20 12 2019|41.786|16/09/2025| |",
      "title": "Leyes Venezolanas | Ministerio del Poder Popular para Relaciones...",
-     "url": "https://www.mpprijp.gob.ve/biblioteca/leyes"
+     "url": "https://www.mpprijp.gob.ve/biblioteca/leyes",
+     "verificacion": {
+      "bytes": 82987,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:00:50Z",
+      "http": 200,
+      "sha256": "3fa89efebbf8021d637f4c4d3c5901750016190934d0c97cf9d16a13a21e1c05"
+     }
     },
     {
      "date": "2024-01-11",
@@ -22,7 +29,12 @@
      "rank": 2,
      "snippet": "#### Gaceta Oficial No 36.860 del 30 de diciembre de 1999\n...\n#### Ley De Registros Y Notarías De La República Bolivariana De Venezuela\n#### Gaceta Oficial Extraordinaria N° 6.668 de fecha 16 de Diciembre de 2021",
      "title": "Marco Legal",
-     "url": "https://www.saren.gob.ve/marco-legal/"
+     "url": "https://www.saren.gob.ve/marco-legal/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.saren.gob.ve/marco-legal/",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:00:52Z"
+     }
     },
     {
      "date": "2023-02-23",
@@ -64,7 +76,14 @@
      "rank": 1,
      "snippet": "### Ley de Infogobierno.\n...\npublicado en la G.O.N°38095 de fecha 28/12/2004.\n...\n**Vigencia**\n17/08/2014",
      "title": "Ley de Infogobierno. - Asamblea Nacional",
-     "url": "https://www.asambleanacional.gob.ve/leyes/sancionadas/ley-de-infogobierno"
+     "url": "https://www.asambleanacional.gob.ve/leyes/sancionadas/ley-de-infogobierno",
+     "verificacion": {
+      "bytes": 47823,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:00:59Z",
+      "http": 200,
+      "sha256": "e1d7868791b671f56849176b9d20eacf161837ce36b06f5c220371fb8abafb98"
+     }
     },
     {
      "date": "",
@@ -72,7 +91,14 @@
      "rank": 2,
      "snippet": "|Nombre|Nº Gaceta|Fecha|Descargar PDF|\n...\n|DECRETO Nº 4.078 DE LA GACETA OFICIAL 41.\n786 RPBV VIERNES 20 12 2019|41.786|16/09/2025| |",
      "title": "Leyes Venezolanas | Ministerio del Poder Popular para Relaciones...",
-     "url": "https://www.mpprijp.gob.ve/biblioteca/leyes"
+     "url": "https://www.mpprijp.gob.ve/biblioteca/leyes",
+     "verificacion": {
+      "bytes": 82987,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:01:47Z",
+      "http": 200,
+      "sha256": "3fa89efebbf8021d637f4c4d3c5901750016190934d0c97cf9d16a13a21e1c05"
+     }
     },
     {
      "date": "",
@@ -114,7 +140,12 @@
      "rank": 1,
      "snippet": "Gaceta Oficial - Tribunal Supremo de Justicia\nVenezuela.\nDomingo, 01 de noviembre de 2026 G20000030-9\n...\n- Gaceta Ordinaria\n- Gaceta Extraordinaria\n...\n## SUMARIO\nNúmero de gaceta no existe o no está registrado.",
      "title": "Gaceta Oficial - Tribunal Supremo de Justicia",
-     "url": "https://www.tsj.gob.ve/gaceta-oficial"
+     "url": "https://www.tsj.gob.ve/gaceta-oficial",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.tsj.gob.ve/gaceta-oficial",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:03:17Z"
+     }
     },
     {
      "date": "2010-10-21",
@@ -122,7 +153,14 @@
      "rank": 2,
      "snippet": "# Periodical Official Gazette of the Bolivarian Republic of Venezuela; Año 134, Número 38.737 Official title: Gaceta oficial de la República Bolivariana de Venezuela\n...\n### Created / Published\n- Venezuela, August 1, 2007\n...\n### Online Format\n- image",
      "title": "Official Gazette of the Bolivarian Republic of Venezuela; Año 134, Número 38.737",
-     "url": "https://www.loc.gov/item/75643527_ve20070801"
+     "url": "https://www.loc.gov/item/75643527_ve20070801",
+     "verificacion": {
+      "bytes": 5633,
+      "estado": "http",
+      "fecha": "2026-11-17T17:03:22Z",
+      "http": 403,
+      "sha256": "1edff78238b7c43a7eb4062bb12f1e7396f7d67f131db45315e03e9b3c8b8492"
+     }
     },
     {
      "date": "2010-10-29",
@@ -156,7 +194,12 @@
      "rank": 1,
      "snippet": "|Ítem|Fecha|Expediente|Número|Sala / Juzgado|Ponente|Partes|Procedimiento|Decisión|Documento|Extracto|\n|--|--|--|--|--|--|--|--|--|--|--|",
      "title": "Buscador TSJ",
-     "url": "https://historico.tsj.gob.ve/sr/default.aspx?QueryText=Consultar%20sentencias%20judiciales"
+     "url": "https://historico.tsj.gob.ve/sr/default.aspx?QueryText=Consultar%20sentencias%20judiciales",
+     "verificacion": {
+      "error": "robots.txt disallows https://historico.tsj.gob.ve/sr/default.aspx?QueryText=Consultar%20sentencias%20judiciales",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:04:53Z"
+     }
     },
     {
      "date": "",
@@ -164,7 +207,12 @@
      "rank": 2,
      "snippet": "Decisiones - Tribunal Supremo de Justicia\nVenezuela.\nDomingo, 01 de noviembre de 2026 G20000030-9\nDecisiones\nSelecione un Año:\n**Años**\nFicha de Sentencias Listado de Sentencias\n**BUSCAR**",
      "title": "Decisiones - Tribunal Supremo de Justicia - tsj.gob.ve",
-     "url": "https://www.tsj.gob.ve/decisiones"
+     "url": "https://www.tsj.gob.ve/decisiones",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.tsj.gob.ve/decisiones",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:06:24Z"
+     }
     },
     {
      "date": "",
@@ -206,7 +254,14 @@
      "rank": 1,
      "snippet": "|Nombre|Nº Gaceta|Fecha|Descargar PDF|\n...\n|DECRETO Nº 4.078 DE LA GACETA OFICIAL 41.\n786 RPBV VIERNES 20 12 2019|41.786|16/09/2025| |",
      "title": "Leyes Venezolanas | Ministerio del Poder Popular para Relaciones...",
-     "url": "https://www.mpprijp.gob.ve/biblioteca/leyes"
+     "url": "https://www.mpprijp.gob.ve/biblioteca/leyes",
+     "verificacion": {
+      "bytes": 82987,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:07:11Z",
+      "http": 200,
+      "sha256": "3fa89efebbf8021d637f4c4d3c5901750016190934d0c97cf9d16a13a21e1c05"
+     }
     },
     {
      "date": "",
@@ -214,7 +269,12 @@
      "rank": 2,
      "snippet": "Leyes - Tribunal Supremo de Justicia\n...\nVenezuela.\n...\n## Orgánicas\nLey Orgánica de Reforma de la Ley Orgánica del Tribunal Supremo de Justicia.\nGaceta Oficial N°6.684 Extraordinario de fecha 19 de enero de 2022.\nGaceta Oficial",
      "title": "Leyes - Tribunal Supremo de Justicia",
-     "url": "https://www.tsj.gob.ve/leyes"
+     "url": "https://www.tsj.gob.ve/leyes",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.tsj.gob.ve/leyes",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:08:42Z"
+     }
     },
     {
      "date": "",
@@ -248,7 +308,14 @@
      "rank": 1,
      "snippet": "LEY ORGÁNICA DEL PODER PÚBLICO MUNICIPAL \n...\nLas ordenanzas recibirán por lo menos dos discusiones y en días diferentes, deberán ser promulgadas por el alcalde o alcaldesa y ser publicadas en la Gaceta Municipal o Distrital, según el caso, y",
      "title": "SANC-REFOR-ORGA-PODER-PUBLICO-MUNIC-21-12-10",
-     "url": "https://www.cgr.gob.ve/base-normativa/descargar/pdf:leyes:GE_6015_LEY_ORGANICA_DEL_PODER_PUBLICO_MUNICIPAL.pdf"
+     "url": "https://www.cgr.gob.ve/base-normativa/descargar/pdf:leyes:GE_6015_LEY_ORGANICA_DEL_PODER_PUBLICO_MUNICIPAL.pdf",
+     "verificacion": {
+      "bytes": 442129,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:08:45Z",
+      "http": 200,
+      "sha256": "b346f6a21bde08123a469a74fa4d343d251a17e64aee379a84c978aa8fec281c"
+     }
     },
     {
      "date": "",
@@ -256,7 +323,14 @@
      "rank": 2,
      "snippet": "Contraloría General de la República Bolivariana de Venezuela\n## Participación Ciudadana Base Normativa\n|Descripción|Gaceta|Fecha|Archivo|",
      "title": "Contraloría General de la República Bolivariana de Venezuela",
-     "url": "https://www.cgr.gob.ve/pc/base-normativa"
+     "url": "https://www.cgr.gob.ve/pc/base-normativa",
+     "verificacion": {
+      "bytes": 25322,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:08:48Z",
+      "http": 200,
+      "sha256": "b00847dcacbcbe1e85aa361cfa39f81217954559802b39832e9163b583cf3b2a"
+     }
     },
     {
      "date": "2026-10-02",
@@ -282,7 +356,14 @@
      "rank": 1,
      "snippet": "Ley del Sistema Venezolano para la Calidad\nEstablece que el Ministerio de Industrias y Comercio Nacional, a través de SENCAMER, es el órgano rector del Sistema Venezolano para la Calidad.\nSistema Venezolano para la Calidad\n...\nInfraestructura de la Calidad",
      "title": "Inicio - SENCAMER",
-     "url": "https://www.sencamer.gob.ve/"
+     "url": "https://www.sencamer.gob.ve/",
+     "verificacion": {
+      "bytes": 271219,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:08:52Z",
+      "http": 200,
+      "sha256": "3d23357cc206a945dad3983fdf0959c2f7272277952e7c7179342d321dd2329d"
+     }
     },
     {
      "date": "",
@@ -290,7 +371,12 @@
      "rank": 2,
      "snippet": "- Ley Orgánica del Ambiente (Gaceta Oficial Nº 5.833 Extraordinario del 22 de diciembre de 2006) (1131 descargas )\n...\n- 0800-AMBIENT (0800-262-4368)\n- 0800-AMBIENT (online)",
      "title": "Marco Jurídico – MINEC",
-     "url": "https://www.minec.gob.ve/minec/marco-juridico/"
+     "url": "https://www.minec.gob.ve/minec/marco-juridico/",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.minec.gob.ve/minec/marco-juridico/",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:09:46Z"
+     }
     },
     {
      "date": "",
@@ -332,7 +418,14 @@
      "rank": 1,
      "snippet": "##### 1 Catálogo de Normas Venezolanas COVENIN\nA continuación, se presenta el enlace para la descarga del Catálogo de Normas Venezolanas COVENIN, el cual compila las normativas y estándares establecidos en el ámbito técnico, industrial y comercial en Venezuela.\n...\n…",
      "title": "Dirección de Normalización",
-     "url": "https://www.sencamer.gob.ve/?page_id=2219"
+     "url": "https://www.sencamer.gob.ve/?page_id=2219",
+     "verificacion": {
+      "bytes": 159162,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:09:48Z",
+      "http": 200,
+      "sha256": "921cb2454c41234e9e7f1b09b2fe6db4f01fdc2a8df96ed233eb91d33652dd05"
+     }
     },
     {
      "date": "",
@@ -340,7 +433,14 @@
      "rank": 2,
      "snippet": "### NTF 1040-2006 Extintores portátiles. Generalidades\n634 KB\n...\n### NVC 3603-2000 (ISO 4210:1996) Bicicletas. Requisitos de seguridad para bicicletas\n...\n2 MB\n...\nOficina de Sistemas y Tecnología de la Información",
      "title": "Biblioteca",
-     "url": "https://www.intt.gob.ve/biblioteca/"
+     "url": "https://www.intt.gob.ve/biblioteca/",
+     "verificacion": {
+      "bytes": 291917,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:09:50Z",
+      "http": 200,
+      "sha256": "8a4d9d4ddcbaab2bd20d9ce18a1e3d6122d8cc400b9610bded6b93c3e0dffb46"
+     }
     },
     {
      "date": "",
@@ -366,7 +466,14 @@
      "rank": 1,
      "snippet": "Normas\n...\n|1|Normas para la Clasificación y Manejo de Desechos en Establecimientos de Salud.\nDecreto N° 2218.\n...\n|5|Normas Complementarias al reglamento general de Alimentos.|NACIONAL|35921|1996-03-15|",
      "title": "inhrr.gob.veLEGISLACION REGULATORIA – Instituto Nacional de Higiene \"Rafael...",
-     "url": "https://inhrr.gob.ve/?page_id=5685"
+     "url": "https://inhrr.gob.ve/?page_id=5685",
+     "verificacion": {
+      "bytes": 118409,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:09:52Z",
+      "http": 200,
+      "sha256": "862922ff2bcfc616faf9b072a444dd2c8f18990e7194bffc78b750a61724ae93"
+     }
     },
     {
      "date": "2025-12-09",
@@ -374,7 +481,14 @@
      "rank": 2,
      "snippet": "•            Resolución mediante la cual se declara como Norma Venezolana COVENIN de carácter Nacional; la Norma 798:2025 LECHE PASTEURIZADA.\nREQUISITOS.\n...\nREQUISITOS.\n(2da. Revisión).",
      "title": "Publicadas en Gaceta Oficial Nº 43.261 cinco Normas Venezolanas ...",
-     "url": "https://www.sencamer.gob.ve/?p=23440"
+     "url": "https://www.sencamer.gob.ve/?p=23440",
+     "verificacion": {
+      "bytes": 130959,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:09:56Z",
+      "http": 200,
+      "sha256": "a387b287bfe354a9d5f4934af407bf56a396be11f363f621ddcd1cd49cdbabb0"
+     }
     },
     {
      "date": "",
@@ -408,7 +522,14 @@
      "rank": 1,
      "snippet": "# ¿Quiénes somos?\nEl Instituto Nacional de Estadística (INE) es el principal **órgano público de Estadística de Venezuela** siendo el **ente central del Sistema Estadístico Nacional** (SEN), adscrito al Ministerio del Poder Popular de Planificación.",
      "title": "QUIÉNES SOMOS",
-     "url": "https://ine.gob.ve/ine/"
+     "url": "https://ine.gob.ve/ine/",
+     "verificacion": {
+      "bytes": 578261,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:10:01Z",
+      "http": 200,
+      "sha256": "cfedb14ad711916346bb8a0ca3db5b819bf3ba2a334ee1042530327dd9c734fd"
+     }
     },
     {
      "date": "",
@@ -416,7 +537,14 @@
      "rank": 2,
      "snippet": "### Sistema Estadístico y Geográfico Nacional\n...\nAv. José Félix Sosa, entre Av. Sur de Altamira y Av. del Avila, Torre Británica, Mezzanina 2, Altamira.\nCaracas - Venezuela",
      "title": "INE – Instituto Nacional de Estadística",
-     "url": "https://ine.gob.ve/"
+     "url": "https://ine.gob.ve/",
+     "verificacion": {
+      "bytes": 611249,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:10:06Z",
+      "http": 200,
+      "sha256": "632bc8e87bb44193868d15cef147f059bcaed57949b65e089737fdf9e7433a2a"
+     }
     },
     {
      "date": "",
@@ -458,7 +586,12 @@
      "rank": 1,
      "snippet": "|Balance General al 31/01/2026|\n|--|\n|Balance General al 31/12/2025|\n|Balance General al 30/11/2025|\n|Balance General al 31/10/2025|",
      "title": "Estados Financieros",
-     "url": "https://www.bcv.org.ve/bcv/estados-financieros"
+     "url": "https://www.bcv.org.ve/bcv/estados-financieros",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.bcv.org.ve/bcv/estados-financieros",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:10:08Z"
+     }
     },
     {
      "date": "2026-02-25",
@@ -466,7 +599,12 @@
      "rank": 2,
      "snippet": "Precios\nConsumidor\nÍndice Nacional de Precios al Consumidor (INPC)\nDiario\nMensual\nAnual\nÍndices y variaciones\nINPC por agrupaciones\nDiario\nMensual\nAnual\n...\nVariaciones\nÍndices y variaciones promedios",
      "title": "Consumidor",
-     "url": "https://www.bcv.org.ve/estadisticas/consumidor"
+     "url": "https://www.bcv.org.ve/estadisticas/consumidor",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.bcv.org.ve/estadisticas/consumidor",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:10:11Z"
+     }
     },
     {
      "date": "2026-02-24",
@@ -508,7 +646,12 @@
      "rank": 1,
      "snippet": "121\nVenezuela\nhttp://datos.gob.ve/\n13\n...\nDesde noviembre de 2018, el Gobierno de Venezuela cuenta con un sitio oficial de datos abiertos (http://datos.gob.ve), gestionado por el CNTI, que tiene herramientas de filtro de información por categoría (educación, cien-",
      "title": "Datos abiertos:",
-     "url": "https://dialnet.unirioja.es/descarga/articulo/7208697.pdf"
+     "url": "https://dialnet.unirioja.es/descarga/articulo/7208697.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://dialnet.unirioja.es/descarga/articulo/7208697.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:10:14Z"
+     }
     },
     {
      "date": "",
@@ -516,7 +659,14 @@
      "rank": 2,
      "snippet": "(http://datos.gob.ve) en el año 2018, Venezuela da un paso más allá del gobierno abierto.\nEl \n...\nDesde 2018, Venezuela cuenta con un sitio oficial de datos abiertos (http://datos.gob.ve), gestionado por el CNTI, que tiene",
      "title": "DATOS ABIERTOS EN VENEZUELA",
-     "url": "https://iace.uv.cl/index.php/rgp/article/download/3399/3258/13398"
+     "url": "https://iace.uv.cl/index.php/rgp/article/download/3399/3258/13398",
+     "verificacion": {
+      "bytes": 452621,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:10:16Z",
+      "http": 200,
+      "sha256": "44b226c382282f67a6701d88e4bce1c3a06437b5139eed3c50ae6309ba4f630b"
+     }
     },
     {
      "date": "",

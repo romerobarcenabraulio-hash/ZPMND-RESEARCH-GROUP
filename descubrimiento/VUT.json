@@ -14,7 +14,14 @@
      "rank": 1,
      "snippet": "**Email** **:** info@parliament.gov.vu**\nTelephone** **:** (+678) 22229, **P.M.B.:** 9052\n...\n**Access the Bills for the First Extraordinary Session of Parliament 2026**\n...\n**Email** **:** info@parliament.gov.vu",
      "title": "Atajmen lo Lidaship Trening - Australia 2025",
-     "url": "https://parliament.gov.vu/index.php?view=article&id=16:legislation&catid=8"
+     "url": "https://parliament.gov.vu/index.php?view=article&id=16:legislation&catid=8",
+     "verificacion": {
+      "bytes": 61229,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:56Z",
+      "http": 200,
+      "sha256": "68cd0438f5a0bb37f5879f4abcf2c996fc6ba56fed32b9769d4770af310b54e3"
+     }
     },
     {
      "date": "",
@@ -22,7 +29,14 @@
      "rank": 2,
      "snippet": "Government of Vanuatu\n...\n## E-GOVERNMENT SERVICES\nThe Judiciary of the Republic of Vanuatu's website has a dedicated page showing cases that are listed for hearings that is periodically updated subject to case managment.",
      "title": "Government of Vanuatu",
-     "url": "https://www.gov.vu/"
+     "url": "https://www.gov.vu/",
+     "verificacion": {
+      "bytes": 50131,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:11:59Z",
+      "http": 200,
+      "sha256": "265ad97475791da6e8879db6b26559da31daed4109d6a05b0fdefdae39da016e"
+     }
     },
     {
      "date": "",
@@ -64,7 +78,12 @@
      "rank": 1,
      "snippet": "| | | | | |\n...\n| |Official Gazette MoET Amendment to Regulation Order_No. 44 of 2019.pdf|2024-01-15 22:19|7.1M| |\n...\nAlways check the domain carefully as official Vanuatu Government sites end with .gov.vu.",
      "title": "Index of /docs/acts",
-     "url": "https://education.gov.vu/docs/acts/"
+     "url": "https://education.gov.vu/docs/acts/",
+     "verificacion": {
+      "error": "robots.txt disallows https://education.gov.vu/docs/acts/",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:13:29Z"
+     }
     },
     {
      "date": "",
@@ -72,7 +91,14 @@
      "rank": 2,
      "snippet": "…\n...\n| |ORDER_PUBLIC_HOLIDAY.pdf|2025-01-13 13:53|304K| |\n...\nX⚠️ Beware of fake websites pretending to be official.\nAlways check the domain carefully as official Vanuatu Government sites end with .gov.vu.",
      "title": "Index of /images/publications - Government of Vanuatu",
-     "url": "https://www.gov.vu/images/publications/"
+     "url": "https://www.gov.vu/images/publications/",
+     "verificacion": {
+      "bytes": 6089,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:13:30Z",
+      "http": 200,
+      "sha256": "1750604d60b760c3d3644e9a2079ccaba65fc6e1cf93ab46b8824bff786706ba"
+     }
     },
     {
      "date": "",
@@ -114,7 +140,14 @@
      "rank": 1,
      "snippet": "DISASTER RECOVERY AND RESILIENCE  \nACT NO.\n...\nORDER NO.\n...\nREPUBLIC \nOF \nVANUATU \n         OFFICIAL GAZETTE \nREPUBLIQUE \nDE \nVANUATU \n     JOURNAL OFFICIEL",
      "title": "REPUBLIQUE REPUBLIC DE OF VANUATU - pmo.gov.vu",
-     "url": "https://pmo.gov.vu/images/ROC/COM%20Decision/Official%20Gazette%20No.%2096%20of%202024%20dated%2027%20December%202024.pdf"
+     "url": "https://pmo.gov.vu/images/ROC/COM%20Decision/Official%20Gazette%20No.%2096%20of%202024%20dated%2027%20December%202024.pdf",
+     "verificacion": {
+      "bytes": 824294,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:13:33Z",
+      "http": 200,
+      "sha256": "db43e42594f69918094b02d0f7b41ee524194195b4e0b3af6f6ba8e5ed100671"
+     }
     },
     {
      "date": "",
@@ -122,7 +155,12 @@
      "rank": 2,
      "snippet": "NO.\n95          \n                    24 DECEMBER 2024 \n...\nORDER NO.\n...\nOF \nVANUATU \n         OFFICIAL GAZETTE \nREPUBLIQUE \nDE \nVANUATU \n     JOURNAL OFFICIEL",
      "title": "REPUBLIQUE DE VANUATU JOURNAL OFFICIEL",
-     "url": "https://www.gov.vu/images/publications/Official_Gazette_No_95_of_2024.pdf"
+     "url": "https://www.gov.vu/images/publications/Official_Gazette_No_95_of_2024.pdf",
+     "verificacion": {
+      "error": "response larger than 5000000 bytes: https://www.gov.vu/images/publications/Official_Gazette_No_95_of_2024.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:13:36Z"
+     }
     },
     {
      "date": "",
@@ -156,7 +194,14 @@
      "rank": 1,
      "snippet": "Downloads\n# Downloads\n### Supreme Court\n*(in folders according to Decision date)*\n...\nPowered by Phoca Download\n...\nAlways check the domain carefully as official Vanuatu Government sites end with .gov.vu.",
      "title": "Downloads - judiciary.gov.vu",
-     "url": "https://judiciary.gov.vu/services/downloads/1-judgments/8-supreme-court"
+     "url": "https://judiciary.gov.vu/services/downloads/1-judgments/8-supreme-court",
+     "verificacion": {
+      "bytes": 18918,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:13:38Z",
+      "http": 200,
+      "sha256": "60289757ad2df21db154e47327760aef52d5d1975feab78439509c33000ea8c5"
+     }
     },
     {
      "date": "",
@@ -164,7 +209,14 @@
      "rank": 2,
      "snippet": "Judgments\n## Judgements\nJudgments since 2017 (in reverse order of Decision date):\n|Jurisdiction|Case type|Case number|Case name|Judge|Hearing Date|Decision Date|\n|--|--|--|--|--|--|--|",
      "title": "Judgments",
-     "url": "https://courts.gov.vu/court-activity/judgments?start=475"
+     "url": "https://courts.gov.vu/court-activity/judgments?start=475",
+     "verificacion": {
+      "bytes": 107460,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:13:41Z",
+      "http": 200,
+      "sha256": "56de89d03e73380c6135809260a960d09ca5153e83b2cf72d5c1c88d9758cd51"
+     }
     },
     {
      "date": "2023-03-28",
@@ -206,7 +258,14 @@
      "rank": 1,
      "snippet": "**Email** **:** info@parliament.gov.vu**\n...\n### Contact\n...\n**Email** **:** info@parliament.gov.vu\n...\nX⚠️ Beware of fake websites pretending to be official.\nAlways check the domain carefully as official Vanuatu Government sites end with .gov.vu.",
      "title": "BILLS - The Parliament of Vanuatu",
-     "url": "https://parliament.gov.vu/index.php/parliamentary-business/bills"
+     "url": "https://parliament.gov.vu/index.php/parliamentary-business/bills",
+     "verificacion": {
+      "bytes": 115951,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:13:44Z",
+      "http": 200,
+      "sha256": "1f08de2eb08afd9f8503ec836bac6f8e40e309ed2418a42a34f6e84554ab1264"
+     }
     },
     {
      "date": "",
@@ -214,7 +273,14 @@
      "rank": 2,
      "snippet": "**Email** **:** info@parliament.gov.vu**\nTelephone** **:** (+678) 22229, **P.M.B.:** 9052\nAll the links below are redirected link.\nEach act is a link redirected to PACLII\n...\n- **Office location:** Vanuatu Parliament",
      "title": "ACTS - The Parliament of Vanuatu",
-     "url": "https://parliament.gov.vu/index.php/parliamentary-business/acts-of-parliament/acts"
+     "url": "https://parliament.gov.vu/index.php/parliamentary-business/acts-of-parliament/acts",
+     "verificacion": {
+      "bytes": 40703,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:13:47Z",
+      "http": 200,
+      "sha256": "33810fc0805b6d62b916d2bd0d5c54bc4286bc87d9b5737f13939603304de3eb"
+     }
     },
     {
      "date": "",
@@ -256,7 +322,12 @@
      "rank": 1,
      "snippet": "Vanuatu Trade Portal\n...\n`\n<iframe style=\"height: 100%; border:none; width: 100%;min-height: 400px;\" src=\"https://tradeportal.gov.vu/Regulations/Details?lawId=25&l=en&embed=true&includeSearch=true\"></iframe>",
      "title": "Agricultural Fees Regulation (Amendment) Order, 2013",
-     "url": "https://tradeportal.gov.vu/Regulations/Details?lawId=25&l=en"
+     "url": "https://tradeportal.gov.vu/Regulations/Details?lawId=25&l=en",
+     "verificacion": {
+      "error": "robots.txt disallows https://tradeportal.gov.vu/Regulations/Details?lawId=25&l=en",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:13:49Z"
+     }
     },
     {
      "date": "",
@@ -264,7 +335,14 @@
      "rank": 2,
      "snippet": "The Department of Urban Affairs and Planning (DUAP) administers three Acts being:\n...\nThe power rest upon the Council to create and endorse by-laws in order to control and manage developments and also it is a revenue initiative to sustain the council and its operation.\n...\nVarious orders and acts ca",
      "title": "Legislation - Department of Urban Affairs & Planning",
-     "url": "https://duap.gov.vu/index.php/energy-security/legislation"
+     "url": "https://duap.gov.vu/index.php/energy-security/legislation",
+     "verificacion": {
+      "bytes": 36495,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:13:51Z",
+      "http": 200,
+      "sha256": "31059c4380fc85822641b007a6fb963d226cd316aad1b0c41b3520bf55196d6f"
+     }
     },
     {
      "date": "",
@@ -306,7 +384,14 @@
      "rank": 1,
      "snippet": "## MIPU Regulators\n...\nThe office of the Maritime Regulator to operate as “Vanuatu Maritime Regulator” or VMR came into existence on the 1st of July 2017 under the provisions of its enabling legislation; the maritime sector regulatory Act No. 26 of 2016.",
      "title": "Regulators - Ministry of Infrastructure & Public Utilities",
-     "url": "https://mipu.gov.vu/index.php/regulators"
+     "url": "https://mipu.gov.vu/index.php/regulators",
+     "verificacion": {
+      "bytes": 26266,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:13:53Z",
+      "http": 200,
+      "sha256": "3607b77d2e6d141a361546a896ab4c22d7e8f5684bd70baae69bbb024cd00f91"
+     }
     },
     {
      "date": "",
@@ -314,7 +399,12 @@
      "rank": 2,
      "snippet": "The Trade Portal is a trade facilitation platform implemented by the government of Vanuatu, in the context of the PACER Plus agreement, with technical assistance from UNCTAD and funding from Australia and New Zealand.\nThis platform publishes all requirements for trade in goods, investment and immigr",
      "title": "Law and norms - Vanuatu Trade Portal",
-     "url": "https://tradeportal.gov.vu/Laws?l=en&page=7&letter=t"
+     "url": "https://tradeportal.gov.vu/Laws?l=en&page=7&letter=t",
+     "verificacion": {
+      "error": "robots.txt disallows https://tradeportal.gov.vu/Laws?l=en&page=7&letter=t",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:13:56Z"
+     }
     },
     {
      "date": "",
@@ -356,7 +446,14 @@
      "rank": 1,
      "snippet": "Z1 Building, Rue de Bougainville, George Pompidou, PORT VILA\n+678 25978\n...\nThe National Standards Catalogue is a database indicating all or part of the available National and International Standards Used and/or adopted in Vanuatu.\nThe Catalogue System is regularly updated and maintained.",
      "title": "National Standards Catalogue System",
-     "url": "https://vbs.gov.vu/index.php/pages/standards-and-certification/national-standards-catalogue-system"
+     "url": "https://vbs.gov.vu/index.php/pages/standards-and-certification/national-standards-catalogue-system",
+     "verificacion": {
+      "bytes": 116747,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:13:59Z",
+      "http": 200,
+      "sha256": "b33137c378caf3f23a70edb6ee16f514e2b8926bfb31dff3598c5894ebbeea13"
+     }
     },
     {
      "date": "2016-08-15",
@@ -364,7 +461,14 @@
      "rank": 2,
      "snippet": "Vanuatu National Standards Catalogue\n# National Standards Catalogue\n#### You can search for a variety of international and national standards for Vanuatu in the catalogue below.\n...\n- Standards Document: AS 2159-2009\n...\nVanuatu Bureau of Standards,\nPO Box 6532, Port Vila, Vanuatu",
      "title": "National Standards Catalogue",
-     "url": "https://vbs.gov.vu/national-standards/"
+     "url": "https://vbs.gov.vu/national-standards/",
+     "verificacion": {
+      "bytes": 69665,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:14:03Z",
+      "http": 200,
+      "sha256": "d6302f71859b42938b2b52fb103c901099fc41a6c40df0246ebdd4d4c4e84dd2"
+     }
     },
     {
      "date": "",
@@ -406,7 +510,12 @@
      "rank": 1,
      "snippet": "# Disclaimer\n#### Want to embed this page on your website ?\nommunications or broadcasting equipment which may be prescribed by Regulations (not specified).",
      "title": "Vanuatu Trade Portal - Gov",
-     "url": "https://tradeportal.gov.vu/Regulations/Index"
+     "url": "https://tradeportal.gov.vu/Regulations/Index",
+     "verificacion": {
+      "error": "robots.txt disallows https://tradeportal.gov.vu/Regulations/Index",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:14:06Z"
+     }
     },
     {
      "date": "2014-03-10",
@@ -414,7 +523,12 @@
      "rank": 2,
      "snippet": "# Disclaimer\n#### Want to embed this page on your website ?\nServices: Radio communication an\n…\nimmigration in Vanuatu.",
      "title": "Legislation - Vanuatu Trade Portal",
-     "url": "https://tradeportal.gov.vu/regulations"
+     "url": "https://tradeportal.gov.vu/regulations",
+     "verificacion": {
+      "error": "robots.txt disallows https://tradeportal.gov.vu/regulations",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:14:10Z"
+     }
     },
     {
      "date": "",
@@ -456,7 +570,14 @@
      "rank": 1,
      "snippet": "Vanuatu National Statistics Office \n...\nWebsite: www.vnso.gov.vu\n...\nINTERNET \nwww.vnso.gov.vu  the Vanuatu National Statistics Office website is the best place to access the summary data from our \nquarterly publications, or Email stats@vanuatu.gov.vu",
      "title": "NATIONAL STATISTICS OFFICE",
-     "url": "https://vnso.gov.vu/sites/default/files/Q3_September_2021.pdf"
+     "url": "https://vnso.gov.vu/sites/default/files/Q3_September_2021.pdf",
+     "verificacion": {
+      "bytes": 1,
+      "estado": "http",
+      "fecha": "2026-11-17T17:14:12Z",
+      "http": 404,
+      "sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068"
+     }
     },
     {
      "date": "2025-07-15",
@@ -464,7 +585,14 @@
      "rank": 2,
      "snippet": "Vanuatu Bureau of Statistics\n#### Government of Vanuatu\n## Vanuatu Bureau of Statistics\n+678 33040 stats@vbos.gov.vu Mon–Fri: 8:00am–5:00pm Contact Us\n...\n### Contact Us\nVanuatu National Statistics Office (VNSO)",
      "title": "Vanuatu Bureau of Statistics - Gov",
-     "url": "https://vnso.gov.vu/index.php/en/"
+     "url": "https://vnso.gov.vu/index.php/en/",
+     "verificacion": {
+      "bytes": 99231,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:14:15Z",
+      "http": 200,
+      "sha256": "04524f6ce92e012202a86e4c7e16f2b45462a60ada170370e344ee498b5fa5e6"
+     }
     },
     {
      "date": "2025-03-12",
@@ -506,7 +634,12 @@
      "rank": 1,
      "snippet": "E-mail: rbvinfo@rbv.gov.vu \nWebsite:http://www.rbv.gov.vu\n...\nQUARTERLY ECONOMIC REVIEW                                                                                                                                                                                       MARCH 2025 \n36 \n(Millions of V",
      "title": "March 2025 Quarterly Economic Review",
-     "url": "https://www.rbv.gov.vu/images/Quarterly-Economic-Reviews/2025/March%202025%20QER_08%20Dec%202025%20without%20BOP.pdf"
+     "url": "https://www.rbv.gov.vu/images/Quarterly-Economic-Reviews/2025/March%202025%20QER_08%20Dec%202025%20without%20BOP.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.rbv.gov.vu/images/Quarterly-Economic-Reviews/2025/March%202025%20QER_08%20Dec%202025%20without%20BOP.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:14:18Z"
+     }
     },
     {
      "date": "",
@@ -514,7 +647,12 @@
      "rank": 2,
      "snippet": "Issued by the Research& Statistics Department \nReserve Bank of Vanuatu \nPrivate Mail Bag 9062 \nPierre Brunet Street \nPort Vila \nVanuatu \nSouth West Pacific \n...\nSwift: RBVA VUVU \n...\nWebsite:http://www.rbv.gov.vu",
      "title": "DECEMBER 2017",
-     "url": "https://www.rbv.gov.vu/images/Quarterly-Economic-Reviews/2017/December_2017_QER1.pdf"
+     "url": "https://www.rbv.gov.vu/images/Quarterly-Economic-Reviews/2017/December_2017_QER1.pdf",
+     "verificacion": {
+      "error": "robots.txt disallows https://www.rbv.gov.vu/images/Quarterly-Economic-Reviews/2017/December_2017_QER1.pdf",
+      "estado": "rechazado",
+      "fecha": "2026-11-17T17:14:22Z"
+     }
     },
     {
      "date": "",
@@ -556,7 +694,14 @@
      "rank": 1,
      "snippet": "Government of Vanuatu\n...\n## E-GOVERNMENT SERVICES\nThe CTB coordinates and manages the Vanuatu Government's tender process for higher value procurement with a value of purchase **exceeding VUV 10,000,000\n**\nView Actual Tenders\n...\nSingle Window Portal\n...\nView Court Listings",
      "title": "Government of Vanuatu",
-     "url": "https://www.gov.vu/"
+     "url": "https://www.gov.vu/",
+     "verificacion": {
+      "bytes": 50131,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:14:24Z",
+      "http": 200,
+      "sha256": "b3e6fd6aa0a509d7b4ec4e4fc8db6b54222b81c9c2a343654dca3ef6726a105f"
+     }
     },
     {
      "date": "2025-03-12",
@@ -564,7 +709,14 @@
      "rank": 2,
      "snippet": "###### Official NSDP Indicators\nAccess all indicators linked to the 15 NSDP policy objectives across the three national pillars — Society, Environment, and Economy.\n…\n###### Indicator Metadata\n...\nClick below to expore the full set of NSDP indicators:\n**https://nsdp.vnso.gov.vu**",
      "title": "NSDP Data Portal",
-     "url": "https://vnso.gov.vu/index.php/en/data-publications/nsdp-data-portal"
+     "url": "https://vnso.gov.vu/index.php/en/data-publications/nsdp-data-portal",
+     "verificacion": {
+      "bytes": 77970,
+      "estado": "accesible",
+      "fecha": "2026-11-17T17:14:26Z",
+      "http": 200,
+      "sha256": "08c0637a1e355655e0b4657e7d8153252b9ec95a27d7bba0f8cc9a8682d380f3"
+     }
     },
     {
      "date": "2025-07-15",
