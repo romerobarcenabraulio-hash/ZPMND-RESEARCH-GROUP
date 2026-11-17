@@ -1,0 +1,450 @@
+{
+ "research_id": "RP-2026-11-12-entregable-cotizacion",
+ "request_id": "RR-2026-11-12-entregable-cotizacion",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-12T21:19:49Z",
+ "question": "¿Qué debe contener una cotización, propuesta comercial o presupuesto para ser válida y profesional (oferta, precio, impuestos, vigencia, condiciones, moneda, firma), qué lo exige la ley o el contrato y qué es convención, en México y en las jurisdicciones principales, y con qué software se produce y se comprueba?",
+ "why_zpmnd_needs_it": "Familia de entregable: Cotizaciones, propuestas comerciales y presupuestos. ZPMND necesita criterios profesionales citables para producir y verificar este tipo de resultado, sin inventar obligaciones. Segundo entregable de prueba real. Pistas, no verdades: oferta y aceptación en códigos civiles y de comercio, protección al consumidor (precio total, impuestos, vigencia), reglas de IVA y de comprobantes, compras públicas (bases de licitación), normas de propuestas (RFP).",
+ "scope": "Parte 1 de 2. Se leyó el Código Civil Federal (Cámara de Diputados, texto vigente, última reforma DOF 14-11-2025), caracteres 0 a 600000 de 857628. Incluye los arts. 1792-1860 sobre oferta, consentimiento, forma, firma, cláusula penal y oferta al público, y el art. 2248 sobre compraventa. Cubre solo la capa civil federal mexicana sobre la oferta y la formación del contrato. No cubre impuestos, otras jurisdicciones ni software. / Parte 2 de 2: segunda parte del Código Civil Federal (compraventa, arrendamiento, servicios profesionales, obra a precio alzado), Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público (DOF 16-04-2025), Directiva 98/6/CE (solo portada EUR-Lex), Consumer Rights Act 2015 s.50 y UCC 2-205 (secundaria). Se buscan requisitos de cotización: precio, vigencia, moneda, firma, impuestos.",
+ "sources": {
+  "primary": [
+   "SA-989ee88c4aa1ccb56dcc3e92",
+   "SA-883f6e9c3139d0961de302de",
+   "SA-0431de1fd0d38fc09682d045",
+   "SA-5805604640f92d33513710f6"
+  ],
+  "secondary": [
+   "SA-73f69a1c4e19f34628e05c58"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-989ee88c4aa1ccb56dcc3e92",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf_mov/Codigo_Civil_Federal.pdf",
+   "retrieved_at": "2026-11-12T21:17:03Z",
+   "sha256": "989ee88c4aa1ccb56dcc3e92defde7fc7d121dda9242bf9e88ac298dd196d7c9",
+   "bytes": 3168256,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "Cámara de Diputados",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Código Civil Federal (arts. 1804-1808)"
+  },
+  {
+   "artifact_id": "SA-883f6e9c3139d0961de302de",
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAASSP.pdf",
+   "retrieved_at": "2026-11-12T21:17:10Z",
+   "sha256": "883f6e9c3139d0961de302de7bddcf3262c69884008bb3b2324d57e5d67009fc",
+   "bytes": 682666,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "Cámara de Diputados",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público (2025)"
+  },
+  {
+   "artifact_id": "SA-0431de1fd0d38fc09682d045",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A31998L0006",
+   "retrieved_at": "2026-11-12T21:17:10Z",
+   "sha256": "0431de1fd0d38fc09682d045a27b50703128e29ef24e69d0ccb665609424b8fa",
+   "bytes": 251397,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "EUR-Lex",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Directive 98/6/EC Price Indication"
+  },
+  {
+   "artifact_id": "SA-5805604640f92d33513710f6",
+   "url": "https://www.legislation.gov.uk/ukpga/2015/15/section/50/enacted",
+   "retrieved_at": "2026-11-12T21:17:21Z",
+   "sha256": "5805604640f92d33513710f6e0cd2438df1aa43b7b78698dd26e6f0c4d1053fa",
+   "bytes": 34084,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "legislation.gov.uk",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Consumer Rights Act 2015, s.50"
+  },
+  {
+   "artifact_id": "SA-73f69a1c4e19f34628e05c58",
+   "url": "https://www.law.cornell.edu/ucc/2/2-205",
+   "retrieved_at": "2026-11-12T21:17:27Z",
+   "sha256": "73f69a1c4e19f34628e05c58fd4161803567e2337ef6f4315c33268ecf7f9651",
+   "bytes": 26011,
+   "media_type": "text/html",
+   "source_type": "other",
+   "publisher": "Cornell LII",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "UCC § 2-205 Firm offers"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "Toda persona que propone a otra la celebración de un contrato, fijándole un plazo para aceptar, queda ligada por su oferta hasta la expiración del plazo.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "Toda persona que propone a otra la celebración de un contrato, fijándole un plazo para aceptar, queda ligada por su oferta hasta la expiración del plazo.",
+    "locator": "CCF art. 1804"
+   },
+   {
+    "claim": "El autor de la oferta queda desligado si la aceptación no se hace inmediatamente.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "el autor de la oferta queda desligado si la aceptación no se hace inmediatamente.",
+    "locator": "CCF art. 1805"
+   },
+   {
+    "claim": "El autor de la oferta queda ligado durante tres días, además del tiempo necesario para la ida y vuelta regular del correo público.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "el autor de la oferta quedará ligado durante tres días, además del tiempo necesario para la ida y vuelta regular del correo público",
+    "locator": "CCF art. 1806"
+   },
+   {
+    "claim": "El contrato se forma cuando el proponente recibe la aceptación.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "El contrato se forma en el momento en que el proponente reciba la aceptación",
+    "locator": "CCF art. 1807"
+   },
+   {
+    "claim": "La oferta se tiene por no hecha si la retractación llega al destinatario antes que la oferta.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "La oferta se considerará como no hecha si la retira su autor y el destinatario recibe la retractación antes que la oferta.",
+    "locator": "CCF art. 1808"
+   },
+   {
+    "claim": "La respuesta se considerará como nueva proposición.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "la respuesta se considerará como nueva proposición",
+    "locator": "CCF art. 1810"
+   },
+   {
+    "claim": "No se requiere estipulación previa entre los contratantes para que produzca efectos.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "no se requerirá de estipulación previa entre los contratantes para que produzca efectos.",
+    "locator": "CCF art. 1811 párr. 2"
+   },
+   {
+    "claim": "Para la existencia del contrato se requiere lo que enumera la norma (la lista no está en la cita).",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "Para la existencia del contrato se requiere:",
+    "locator": "CCF art. 1794"
+   },
+   {
+    "claim": "Para la validez del contrato no se requieren formalidades determinadas, fuera de los casos expresamente designados por la ley.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "sin que para la validez del contrato se requieran formalidades determinadas, fuera de los casos expresamente designados por la ley.",
+    "locator": "CCF art. 1832"
+   },
+   {
+    "claim": "Los documentos relativos deben ser firmados por todas las personas a las cuales se imponga esa obligación.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "los documentos relativos deben ser firmados por todas las personas a las cuales se imponga esa obligación.",
+    "locator": "CCF art. 1834"
+   },
+   {
+    "claim": "La información generada o comunicada en forma íntegra a través de dichos medios debe ser atribuible a las personas obligadas y accesible para su ulterior consulta.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "siempre que la información generada o comunicada en forma íntegra, a través de dichos medios sea atribuible a las personas obligadas y accesible para su ulterior consulta.",
+    "locator": "CCF art. 1834 bis"
+   },
+   {
+    "claim": "La venta es perfecta y obligatoria para las partes cuando se han convenido sobre la cosa y su precio.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "la venta es perfecta y obligatoria para las partes cuando se han convenido sobre la cosa y su precio",
+    "locator": "CCF art. 2249"
+   },
+   {
+    "claim": "La compraventa exige un precio cierto y en dinero.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "pagar por ellos un precio cierto y en dinero.",
+    "locator": "CCF art. 2248"
+   },
+   {
+    "claim": "La cláusula penal no puede exceder ni en valor ni en cuantía a la obligación principal.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "La cláusula penal no puede exceder ni en valor ni en cuantía a la obligación principal.",
+    "locator": "CCF art. 1843"
+   },
+   {
+    "claim": "La promesa de contratar debe constar por escrito, contener los elementos del contrato definitivo y limitarse a cierto tiempo.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "debe constar por escrito, contener los elementos característicos del contrato definitivo y limitarse a cierto tiempo.",
+    "locator": "CCF art. 2246"
+   },
+   {
+    "claim": "El error de cálculo sólo da lugar a que se rectifique.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "El error de cálculo sólo da lugar a que se rectifique.",
+    "locator": "CCF art. 1814"
+   },
+   {
+    "claim": "El uso o la costumbre del país se toman en cuenta para interpretar las ambigüedades de un contrato.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "El uso o la costumbre del país se tendrán en cuenta para interpretar las ambigüedades de los contratos.",
+    "locator": "CCF art. 1856"
+   },
+   {
+    "claim": "El cotizante queda obligado por su cotización por un plazo no inferior a veinte días hábiles, contados a partir del día siguiente al de la recepción de la confirmación de la cotización.",
+    "artifact_ids": [
+     "SA-883f6e9c3139d0961de302de"
+    ],
+    "quote": "se encontrará obligado por la misma por un plazo no inferior a veinte días hábiles, contados a partir del día siguiente al de la recepción de la confirmación de la cotización",
+    "locator": "LAASSP 2025, art. 57, fracc. II"
+   },
+   {
+    "claim": "La confirmación de cotización se valida con la firma electrónica del cotizante a través de la Plataforma.",
+    "artifact_ids": [
+     "SA-883f6e9c3139d0961de302de"
+    ],
+    "quote": "validarse con la firma electrónica del cotizante a través de la Plataforma",
+    "locator": "LAASSP 2025, art. 57, fracc. I"
+   },
+   {
+    "claim": "La solicitud de confirmación de cotización debe fijar el plazo de respuesta y el plazo por el que el cotizante sostiene su cotización.",
+    "artifact_ids": [
+     "SA-883f6e9c3139d0961de302de"
+    ],
+    "quote": "se deberá establecer el plazo que tendrá el cotizante para proporcionar la respuesta correspondiente, así como el plazo por el que debe sostener su cotización",
+    "locator": "LAASSP 2025, art. 57, párrafo 3"
+   },
+   {
+    "claim": "Deberán solicitarse al menos tres cotizaciones con las mismas condiciones, a través de la Plataforma, y para efectos de la adjudicación deberá contarse mínimo con una cotización.",
+    "artifact_ids": [
+     "SA-883f6e9c3139d0961de302de"
+    ],
+    "quote": "deberán solicitar al menos tres cotizaciones con las mismas condiciones, a través de la Plataforma, y para efectos de la adjudicación, deberá contarse mínimo con una cotización",
+    "locator": "LAASSP 2025, art. 58"
+   },
+   {
+    "claim": "Moneda en que se cotizó y se efectuará el pago, que podrá ser en pesos mexicanos o moneda extranjera de acuerdo a la determinación de la convocante.",
+    "artifact_ids": [
+     "SA-883f6e9c3139d0961de302de"
+    ],
+    "quote": "Moneda en que se cotizó y se efectuará el pago respectivo, el cual podrá ser en pesos mexicanos o moneda extranjera de acuerdo a la determinación de la convocante",
+    "locator": "LAASSP 2025, art. 66, fracc. XIII"
+   },
+   {
+    "claim": "El precio unitario y el importe total a pagar por los bienes, arrendamientos o servicios, o bien, la forma en que se determinará el importe total.",
+    "artifact_ids": [
+     "SA-883f6e9c3139d0961de302de"
+    ],
+    "quote": "El precio unitario y el importe total a pagar por los bienes, arrendamientos o servicios, o bien, la forma en que se determinará el importe total",
+    "locator": "LAASSP 2025, art. 66, fracc. VI"
+   },
+   {
+    "claim": "Deberá pactarse la condición de precio fijo.",
+    "artifact_ids": [
+     "SA-883f6e9c3139d0961de302de"
+    ],
+    "quote": "deberá pactarse la condición de precio fijo",
+    "locator": "LAASSP 2025, art. 65"
+   },
+   {
+    "claim": "Los documentos mencionados producirán los mismos efectos que las leyes otorgan a los documentos firmados autógrafamente.",
+    "artifact_ids": [
+     "SA-883f6e9c3139d0961de302de"
+    ],
+    "quote": "producirán los mismos efectos que las leyes otorgan a los documentos firmados autógrafamente",
+    "locator": "LAASSP 2025, art. 37"
+   },
+   {
+    "claim": "Se otorgará el contrato por escrito, incluyéndose en él una descripción pormenorizada y, en los casos que lo requieran, un plano, diseño o presupuesto de la obra.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "se otorgará el contrato por escrito, incluyéndose en él una descripción pormenorizada, y en los casos que lo requieran, un plano, diseño o presupuesto de la obra",
+    "locator": "CCF art. 2618"
+   },
+   {
+    "claim": "El perito que forme el plano, diseño o presupuesto de una obra, y la ejecute, no puede cobrarlo fuera del honorario de la obra.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "El perito que forme el plano, diseño o presupuesto de una obra, y la ejecute, no puede cobrar el plano, diseño o presupuesto fuera del honorario de la obra",
+    "locator": "CCF art. 2620"
+   },
+   {
+    "claim": "Ninguno puede cobrar honorarios, salvo convenio expreso.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "ninguno puede cobrar honorarios, salvo convenio expreso",
+    "locator": "CCF art. 2621"
+   },
+   {
+    "claim": "Los cambios se admiten a no ser que sean autorizados por escrito por el dueño y con expresa designación del precio.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "a no ser que sean autorizados por escrito por el dueño y con expresa designación del precio",
+    "locator": "CCF art. 2627 (con art. 2626)"
+   },
+   {
+    "claim": "La compraventa requiere formalidad especial solo si recae sobre inmueble.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "no requiere para su validez formalidad alguna especial, sino cuando recae sobre un inmueble",
+    "locator": "CCF art. 2316"
+   },
+   {
+    "claim": "El CCF prohíbe dejar el señalamiento del precio al arbitrio de una de las partes.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "El señalamiento del precio no puede dejarse al arbitrio de uno de los contratantes",
+    "locator": "CCF art. 2254"
+   },
+   {
+    "claim": "La renta deberá estipularse en moneda nacional.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "la renta deberá estipularse en moneda nacional",
+    "locator": "CCF art. 2448 D"
+   },
+   {
+    "claim": "Los honorarios se regularán atendiendo juntamente a la costumbre del lugar.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "los honorarios se regularán atendiendo juntamente a las costumbre del lugar",
+    "locator": "CCF art. 2607"
+   },
+   {
+    "claim": "El interés legal es nueve por ciento anual.",
+    "artifact_ids": [
+     "SA-989ee88c4aa1ccb56dcc3e92"
+    ],
+    "quote": "El interés legal es el nueve por ciento anual.",
+    "locator": "CCF art. 2395"
+   },
+   {
+    "claim": "Se menciona cualquier cosa que se diga o escriba al consumidor, por o en nombre del comerciante, sobre el comerciante o el servicio.",
+    "artifact_ids": [
+     "SA-5805604640f92d33513710f6"
+    ],
+    "quote": "anything that is said or written to the consumer, by or on behalf of the trader, about the trader or the service",
+    "locator": "CRA 2015 s.50(1)"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Contenido fiscal obligatorio (IVA, CFDI, CFF), que no está en esta fuente.",
+   "Requisitos en otras jurisdicciones (UCC, UNIDROIT, CISG, UE), que no están en esta fuente.",
+   "Requisitos de moneda (Ley Monetaria) y de la Ley Federal de Protección al Consumidor.",
+   "Software que produce o comprueba cotizaciones, con licencia y versión.",
+   "Ejemplos oficiales de cotización.",
+   "Obra a precio alzado, prestación de servicios y mandato, que están en la segunda mitad del Código, no leída.",
+   "Impuestos (IVA/CFDI) en cotizaciones: las fuentes leídas en esta parte no los tratan.",
+   "Contenido de la Directiva 98/6/CE: solo se leyó la portada de EUR-Lex, sin el articulado.",
+   "Software que produce o comprueba cotizaciones, licencias y versiones: no cubierto.",
+   "Ejemplo oficial o artefacto de referencia de una cotización: no hallado en esta parte.",
+   "Requisitos de cotización en jurisdicciones fuera de México/UK/EU/US: no cubiertos."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Una cotización con plazo de vigencia explícito obliga al oferente hasta que el plazo expire (art. 1804). Sin plazo, la obligación se limita a la aceptación inmediata o a tres días más el tiempo del correo (arts. 1805-1806). Por eso conviene fijar la vigencia por escrito.",
+  "INTERPRETACIÓN: El CCF no enumera los campos de una cotización. Los exigidos por el CCF son consentimiento, objeto, precio cierto y en dinero (para la venta) y firma cuando se exija forma escrita. El resto (logotipo, numeración, condiciones, términos de pago) sería convención o buena práctica, salvo que otra norma lo exija.",
+  "INTERPRETACIÓN: Una contraoferta que altera la cotización la convierte en nueva propuesta (art. 1810). Esto justifica incluir cláusulas de aceptación 'lisa y llana'.",
+  "INTERPRETACIÓN: La firma electrónica o el aceptar por medios electrónicos son válidos si el contenido es íntegro, atribuible y accesible (art. 1834 bis). El CCF no exige una tecnología específica en esta fuente.",
+  "INTERPRETACIÓN: Para el sector público federal mexicano, una cotización válida debe incluir precio (unitario y total), moneda, plazo de sostenimiento (mínimo 20 días hábiles) y firma electrónica avanzada vía Plataforma; fuera de ese ámbito son convención, no obligación legal.",
+  "INTERPRETACIÓN: En el ámbito privado mexicano el CCF no exige formato de cotización; la obligatoriedad surge del contrato (p. ej. art. 2618 en obra, 2448 F en arrendamiento habitacional).",
+  "SECUNDARIA: UCC § 2-205 (Cornell LII) indica que una oferta firme de comerciante, firmada y con garantía de mantenerla, es irrevocable hasta tres meses; aplica solo a venta de bienes en EE. UU."
+ ],
+ "candidate_tests": [
+  "Verificar que la cotización tenga plazo de vigencia con fecha explícita (art. 1804).",
+  "Verificar que el precio sea cierto y expresado en dinero, con moneda indicada (art. 2248).",
+  "Verificar que haya forma de aceptación inequívoca y que cualquier modificación se trate como nueva oferta (art. 1810).",
+  "Si se firma electrónicamente, verificar integridad, atribuibilidad y accesibilidad posterior (art. 1834 bis).",
+  "Revalidar ante cada reforma del CCF posterior al DOF 14-11-2025.",
+  "Verificar que toda cotización a dependencia federal contenga precio unitario, importe total, moneda, plazo de sostenimiento ≥20 días hábiles y firma electrónica.",
+  "Verificar que presupuestos de obra por ajuste cerrado incluyan descripción pormenorizada y cláusula de cambios autorizados por escrito con precio."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Clasificar como 'obligatorio' solo lo que el CCF dice. El resto de los campos de una cotización quedan como convención o buena práctica hasta tener fuente primaria.",
+  "Clasificar los campos de una cotización por ámbito: obligatorio solo en contratación pública federal (LAASSP) o por contrato; el resto, convención profesional."
+ ],
+ "limitations": [
+  "Las fuentes se leyeron completas en 2 partes, una llamada por parte; un \"unknown\" de una parte puede estar respondido en otra.",
+  "El CCF es una sola fuente primaria. No hay evidencia aquí sobre fiscal, consumidor, comercio, otras jurisdicciones ni software.",
+  "Los artículos citados aplican como derecho civil federal. Los códigos civiles estatales pueden diferir, y el texto de este Código no lo dice expresamente para cotizaciones.",
+  "El CCF no regula específicamente 'cotización', 'propuesta comercial' o 'presupuesto'. La aplicación de los arts. 1804-1810 a ellas es interpretación.",
+  "No se vieron ni sha256 ni URL; el texto trae el encabezado de la Cámara de Diputados y la fecha de última reforma, DOF 14-11-2025.",
+  "Directiva 98/6/CE: solo se leyó la portada de EUR-Lex sin texto normativo; no se confirma ningún requisito de ella.",
+  "UCC 2-205 es fuente secundaria; sólo aporta candidate_claim.",
+  "No se leyó el Reglamento de la LAASSP ni normativa fiscal (CFDI/IVA), ni software.",
+  "Los artículos del CCF citados regulan contratos específicos; no imponen un formato general de cotización.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 27 de 38 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 6 aceptadas, 6 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Se descartaron 3 hallazgos cuya cita no aparece tal cual en el texto de la fuente que citan (detalle en receipt.json): sin su cita no son hechos.",
+  "Una tercera pasada quitó 2 frases de alcance, desconocidos o limitaciones que los hallazgos que quedan contradicen o responden; quedan en receipt.json.",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://wwwmatnp.sat.gob.mx/articulo/99662/articulo-29-a (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}

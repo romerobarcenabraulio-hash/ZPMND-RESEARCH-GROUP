@@ -1,0 +1,509 @@
+{
+ "request_id": "RR-2026-11-12-entregable-cotizacion",
+ "fetched": [
+  {
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf_mov/Codigo_Civil_Federal.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "989ee88c4aa1ccb56dcc3e92defde7fc7d121dda9242bf9e88ac298dd196d7c9",
+   "bytes": 3168256,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:17:03Z",
+   "text_status": "ok",
+   "text_chars": 857628
+  },
+  {
+   "url": "https://wwwmatnp.sat.gob.mx/articulo/99662/articulo-29-a",
+   "status": "refused",
+   "error": "robots.txt disallows https://wwwmatnp.sat.gob.mx/articulo/99662/articulo-29-a",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:17:05Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAASSP.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "883f6e9c3139d0961de302de7bddcf3262c69884008bb3b2324d57e5d67009fc",
+   "bytes": 682666,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:17:10Z",
+   "text_status": "ok",
+   "text_chars": 231854
+  },
+  {
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A31998L0006",
+   "status": 200,
+   "error": null,
+   "sha256": "0431de1fd0d38fc09682d045a27b50703128e29ef24e69d0ccb665609424b8fa",
+   "bytes": 251397,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:10Z",
+   "text_status": "ok",
+   "text_chars": 8273
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2015/15/section/50/enacted",
+   "status": 200,
+   "error": null,
+   "sha256": "5805604640f92d33513710f6e0cd2438df1aa43b7b78698dd26e6f0c4d1053fa",
+   "bytes": 34084,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:21Z",
+   "text_status": "ok",
+   "text_chars": 8945
+  },
+  {
+   "url": "https://www.law.cornell.edu/ucc/2/2-205",
+   "status": 200,
+   "error": null,
+   "sha256": "73f69a1c4e19f34628e05c58fd4161803567e2337ef6f4315c33268ecf7f9651",
+   "bytes": 26011,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:27Z",
+   "text_status": "ok",
+   "text_chars": 1652
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43308368312",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "Quien propone un contrato y fija un plazo para aceptar queda ligado por su oferta hasta que el plazo expire. Esto es obligatorio según el Código Civil Federal y aplica a la vigencia de la cotización.",
+    "now": "Toda persona que propone a otra la celebración de un contrato, fijándole un plazo para aceptar, queda ligada por su oferta hasta la expiración del plazo.",
+    "cut": "Que sea obligatorio según el Código Civil Federal y que aplique a la vigencia de la cotización."
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "Una oferta hecha a persona presente sin plazo queda sin efecto si no se acepta de inmediato. La misma regla vale para ofertas por teléfono o por medios electrónicos.",
+    "now": "El autor de la oferta queda desligado si la aceptación no se hace inmediatamente.",
+    "cut": "Que se trate de persona presente sin plazo y que la regla valga para teléfono o medios electrónicos."
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "Una oferta sin plazo hecha a persona no presente obliga al oferente durante tres días, más el tiempo necesario para el correo.",
+    "now": "El autor de la oferta queda ligado durante tres días, además del tiempo necesario para la ida y vuelta regular del correo público.",
+    "cut": "Que la oferta sea sin plazo y hecha a persona no presente."
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "Una respuesta que modifica la oferta no es aceptación. Libera al proponente y cuenta como una nueva propuesta.",
+    "now": "La respuesta se considerará como nueva proposición.",
+    "cut": "Que la respuesta modifique la oferta, que no sea aceptación y que libere al proponente."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "El consentimiento puede manifestarse por escrito o por medios electrónicos. Es tácito cuando resulta de hechos que lo presupongan, salvo que la ley o el convenio exijan que sea expreso.",
+    "now": "El consentimiento es expreso cuando la voluntad se manifiesta verbalmente, por escrito, por medios electrónicos, ópticos o por cualquier otra tecnología.",
+    "cut": "La regla del consentimiento tácito y la salvedad de que la ley o el convenio exijan que sea expreso."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "La propuesta y la aceptación por medios electrónicos producen efectos sin necesidad de estipulación previa entre las partes.",
+    "now": "No se requiere estipulación previa entre los contratantes para que produzca efectos.",
+    "cut": "Que se refiera a la propuesta y la aceptación por medios electrónicos."
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "Para que el contrato exista se requieren consentimiento y un objeto que pueda ser materia del contrato.",
+    "now": "Para la existencia del contrato se requiere lo que enumera la norma (la lista no está en la cita).",
+    "cut": "Que los requisitos sean el consentimiento y un objeto que pueda ser materia del contrato."
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "En los contratos civiles no se exigen formalidades determinadas, salvo los casos que la ley designe expresamente. Por tanto, una cotización no requiere una forma específica por regla general.",
+    "now": "Para la validez del contrato no se requieren formalidades determinadas, fuera de los casos expresamente designados por la ley.",
+    "cut": "Que se trate de contratos civiles y la conclusión sobre que una cotización no requiere forma específica."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "Cuando la ley exige forma escrita, los documentos deben ir firmados por todas las personas obligadas.",
+    "now": "Los documentos relativos deben ser firmados por todas las personas a las cuales se imponga esa obligación.",
+    "cut": "La condición de que la ley exija forma escrita."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "La forma escrita y la firma pueden cumplirse por medios electrónicos si la información es íntegra, atribuible a los obligados y accesible para consulta posterior.",
+    "now": "La información generada o comunicada en forma íntegra a través de dichos medios debe ser atribuible a las personas obligadas y accesible para su ulterior consulta.",
+    "cut": "Que se trate de cumplir la forma escrita y la firma por medios electrónicos."
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "La compraventa es perfecta cuando las partes convienen en la cosa y en su precio. El precio debe ser cierto y en dinero.",
+    "now": "La venta es perfecta y obligatoria para las partes cuando se han convenido sobre la cosa y su precio.",
+    "cut": "Que el precio deba ser cierto y en dinero."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "Las partes pueden estipular una pena por incumplimiento, pero la cláusula penal no puede exceder la obligación principal.",
+    "now": "La cláusula penal no puede exceder ni en valor ni en cuantía a la obligación principal.",
+    "cut": "Que las partes puedan estipular una pena por incumplimiento."
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "El error de cálculo solo da lugar a que se rectifique, y no invalida el contrato.",
+    "now": "El error de cálculo sólo da lugar a que se rectifique.",
+    "cut": "Que no invalida el contrato."
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "En contratación pública federal mexicana, la confirmación de cotización en adjudicación directa debe sostenerse por un plazo no inferior a veinte días hábiles desde el día siguiente a su recepción.",
+    "now": "El cotizante queda obligado por su cotización por un plazo no inferior a veinte días hábiles, contados a partir del día siguiente al de la recepción de la confirmación de la cotización.",
+    "cut": "Que sea contratación pública federal mexicana y adjudicación directa."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "La solicitud o confirmación de cotización no obliga a la dependencia a contratar ni da derecho al cotizante a contrato o contraprestación.",
+    "now": "La solicitud o confirmación de cotización no genera obligación para la dependencia o entidad contratante de celebrar contrato con la persona a la que le ha sido solicitada.",
+    "cut": "Que no dé derecho al cotizante a contrato o contraprestación."
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "En adjudicaciones directas por monto bajo (art. 55) con monto igual o superior a 300 UMA, se deben solicitar al menos tres cotizaciones con las mismas condiciones.",
+    "now": "Deberán solicitarse al menos tres cotizaciones con las mismas condiciones, a través de la Plataforma, y para efectos de la adjudicación deberá contarse mínimo con una cotización.",
+    "cut": "La referencia al art. 55, al monto bajo y al umbral de 300 UMA."
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "El contrato o pedido público debe indicar la moneda de cotización y pago (pesos o moneda extranjera según la convocante).",
+    "now": "Moneda en que se cotizó y se efectuará el pago, que podrá ser en pesos mexicanos o moneda extranjera de acuerdo a la determinación de la convocante.",
+    "cut": "Que el contrato o pedido público deba indicarlo."
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "El contrato público debe indicar precio unitario e importe total o la forma de determinarlo.",
+    "now": "El precio unitario y el importe total a pagar por los bienes, arrendamientos o servicios, o bien, la forma en que se determinará el importe total.",
+    "cut": "Que el contrato público deba indicarlo."
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "En contratación pública debe pactarse precio fijo, con ajustes solo en casos justificados según fórmula previa.",
+    "now": "Deberá pactarse la condición de precio fijo.",
+    "cut": "Que sea en contratación pública y los ajustes solo en casos justificados según fórmula previa."
+   },
+   {
+    "id": "confirmed[27]",
+    "claim": "Las proposiciones en la Plataforma deben firmarse con medios de identificación electrónica, con el mismo valor que la firma autógrafa.",
+    "now": "Los documentos mencionados producirán los mismos efectos que las leyes otorgan a los documentos firmados autógrafamente.",
+    "cut": "Que sean las proposiciones en la Plataforma firmadas con medios de identificación electrónica."
+   },
+   {
+    "id": "confirmed[28]",
+    "claim": "El Código Civil Federal establece que el contrato de obra a precio alzado sobre inmueble de más de cien pesos debe ser por escrito, con descripción pormenorizada y, en su caso, plano, diseño o presupuesto.",
+    "now": "Se otorgará el contrato por escrito, incluyéndose en él una descripción pormenorizada y, en los casos que lo requieran, un plano, diseño o presupuesto de la obra.",
+    "cut": "Que sea obra a precio alzado sobre inmueble de más de cien pesos."
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "El CCF regula el cobro del presupuesto de obra: quien lo elabora y ejecuta la obra no lo cobra aparte salvo que la obra no se ejecute por causa del dueño.",
+    "now": "El perito que forme el plano, diseño o presupuesto de una obra, y la ejecute, no puede cobrarlo fuera del honorario de la obra.",
+    "cut": "La excepción de que la obra no se ejecute por causa del dueño."
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "Si varios peritos son invitados a presupuestar para elegir, ninguno cobra honorarios salvo convenio expreso.",
+    "now": "Ninguno puede cobrar honorarios, salvo convenio expreso.",
+    "cut": "Que se trate de varios peritos invitados a presupuestar para elegir."
+   },
+   {
+    "id": "confirmed[31]",
+    "claim": "En precio determinado por obra, el empresario no puede exigir aumento por alza de materiales o jornales; los cambios al plano requieren autorización escrita del dueño con precio expreso.",
+    "now": "Los cambios se admiten a no ser que sean autorizados por escrito por el dueño y con expresa designación del precio.",
+    "cut": "Que el empresario no pueda exigir aumento por alza de materiales o jornales, y el contexto del plano."
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "En arrendamiento de fincas urbanas habitacionales la renta debe estipularse en moneda nacional.",
+    "now": "La renta deberá estipularse en moneda nacional.",
+    "cut": "Que se trate de arrendamiento de fincas urbanas habitacionales."
+   },
+   {
+    "id": "confirmed[35]",
+    "claim": "En servicios profesionales, sin convenio, los honorarios se regulan por costumbre del lugar, importancia del trabajo, medios del cliente y reputación.",
+    "now": "Los honorarios se regularán atendiendo juntamente a la costumbre del lugar.",
+    "cut": "Los demás factores (importancia del trabajo, medios del cliente, reputación) y la condición de que no haya convenio."
+   },
+   {
+    "id": "confirmed[37]",
+    "claim": "Con la Consumer Rights Act 2015 s.50, lo dicho o escrito al consumidor sobre el comerciante o el servicio, si es tomado en cuenta, se trata como término del contrato de servicio.",
+    "now": "Se menciona cualquier cosa que se diga o escriba al consumidor, por o en nombre del comerciante, sobre el comerciante o el servicio.",
+    "cut": "Que, si es tomado en cuenta, se trate como término del contrato de servicio."
+   }
+  ]
+ },
+ "reconcile": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "dropped": [
+   {
+    "id": "limitations[0]",
+    "text": "Fuente RECORTADA: solo se leyó hasta el art. 2255 (compraventa). Lo que la solicitud necesita sobre prestación de servicios, obra a precio alzado, mandato y otras partes del Código queda sin leer, en la segunda mitad.",
+    "por": "confirmed[28]"
+   },
+   {
+    "id": "limitations[9]",
+    "text": "Se citó el texto del Código Civil Federal, que es de parte 2 (caracteres 599000 en adelante); la parte previa (arts. 1804-1808, oferta y aceptación) no fue leída aquí.",
+    "por": "confirmed[0]"
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "id": "confirmed[6]",
+   "claim": "El consentimiento es expreso cuando la voluntad se manifiesta verbalmente, por escrito, por medios electrónicos, ópticos o por cualquier otra tecnología.",
+   "quote": "Será expreso cuando la voluntad se manifiesta verbalmente, por escrito, por medios electrónicos, ópticos o por cualquier otra tecnología",
+   "artifact_ids": [
+    "SA-989ee88c4aa1ccb56dcc3e92"
+   ]
+  },
+  {
+   "id": "confirmed[8]",
+   "claim": "Ofrecer al público objetos a un precio determinado obliga al dueño a sostener la oferta.",
+   "quote": "El hecho de ofrecer al público objetos en determinado precio, obliga al dueño a sostener su ofrecimiento.",
+   "artifact_ids": [
+    "SA-989ee88c4aa1ccb56dcc3e92"
+   ]
+  },
+  {
+   "id": "confirmed[22]",
+   "claim": "La solicitud o confirmación de cotización no genera obligación para la dependencia o entidad contratante de celebrar contrato con la persona a la que le ha sido solicitada.",
+   "quote": "no generan obligación para la dependencia o entidad contratante de celebrar contrato con la persona a la que le ha sido solicitada la misma",
+   "artifact_ids": [
+    "SA-883f6e9c3139d0961de302de"
+   ]
+  }
+ ],
+ "discovery": {
+  "families": [
+   "Derecho civil y mercantil mexicano (oferta, plazo, perfeccionamiento)",
+   "Protección al consumidor México (LFPC: precio total, presupuesto)",
+   "Fiscal México (CFF 29/29-A, LIVA traslado, Anexo 20 CFDI)",
+   "Compras públicas México (LAASSP 2025 y reglamento)",
+   "Derecho comparado: UE (precios), Reino Unido (CRA), EE.UU. (UCC), CISG",
+   "Herramientas de verificación (verificador SAT, validadores CFDI)",
+   "Normas/convenciones de propuestas RFP (no hallado como norma)"
+  ],
+  "searches": [
+   {
+    "query": "Código de Comercio oferta aceptación art. 80 81",
+    "intent": "official"
+   },
+   {
+    "query": "LFPC artículo 7 bis monto total a pagar",
+    "intent": "official"
+   },
+   {
+    "query": "CFF 29 29-A requisitos CFDI",
+    "intent": "official"
+   },
+   {
+    "query": "LAASSP proposiciones firma vigencia",
+    "intent": "official"
+   },
+   {
+    "query": "Directive 98/6/EC UCPD price; UK CRA quote estimate",
+    "intent": "support"
+   },
+   {
+    "query": "Código Civil Federal 1804-1807 oferta plazo",
+    "intent": "official"
+   },
+   {
+    "query": "LIVA art. 1 traslado expreso y por separado",
+    "intent": "official"
+   },
+   {
+    "query": "CRA 2015 section 50 binding information",
+    "intent": "official"
+   },
+   {
+    "query": "verificador CFDI SAT validadores",
+    "intent": "other"
+   },
+   {
+    "query": "UCC 2-205 firm offer CISG 14-16",
+    "intent": "support"
+   },
+   {
+    "query": "Código Civil Federal texto vigente",
+    "intent": "official"
+   },
+   {
+    "query": "LFPC art. 59 presupuesto vigencia",
+    "intent": "limitations"
+   },
+   {
+    "query": "nueva LAASSP 2025 firma electrónica proposiciones",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "No hallé ninguna norma mexicana que defina el contenido obligatorio de una «cotización» B2B; lo exigible depende del contrato, las bases y el consumidor. El resto es convención.",
+   "No hallé una norma RFP oficial (APMP, PMI, ISO) accesible; no se buscó a fondo y quedaría como convención o de pago.",
+   "No hallé el texto vigente literal de LIVA art. 32 fr. III ni de LAASSP sobre vigencia de proposiciones. Hay que leer los PDF y sacar su sha256.",
+   "No calculé sha256 ni fechas de revisión: solo tengo búsqueda web, sin descarga.",
+   "No hallé una herramienta oficial del SAT para validar la estructura de un CFDI antes de timbrar. El verificador del SAT consulta el estado, y los validadores de terceros son secundarios.",
+   "No hallé ejemplo oficial de cotización publicado por un emisor.",
+   "No hallé normativa de otros países principales (Canadá, Brasil, China, India) ni IVA en la UE y GST.",
+   "El PDF de la LFPC puede estar desactualizado frente a la reforma vigente; verificar arts. 7 Bis y 59."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 6,
+  "rejected": [
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+    "reason": "not https"
+   },
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/LFPC.pdf",
+    "reason": "not https"
+   },
+   {
+    "url": "http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/Anexo_20_Guia_de_llenado_CFDI.pdf",
+    "reason": "not https"
+   },
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/LIVA.pdf",
+    "reason": "not https"
+   },
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LAASSP.pdf",
+    "reason": "not https"
+   },
+   {
+    "url": "http://www.cisg.law.pace.edu/cisg/text/anno-art-16.html",
+    "reason": "not https"
+   }
+  ],
+  "sources": [
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf",
+    "family": "Derecho civil y mercantil mexicano",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Perfeccionamiento de contratos mercantiles por aceptación de la propuesta, también por medios electrónicos; no fija contenido de la cotización."
+   },
+   {
+    "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf_mov/Codigo_Civil_Federal.pdf",
+    "family": "Derecho civil y mercantil mexicano",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Oferta con plazo obliga hasta su vencimiento; sin plazo, 3 días a ausentes. Base legal de la vigencia. Verificar texto en este PDF."
+   },
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/LFPC.pdf",
+    "family": "Protección al consumidor México",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Obliga a informar monto total con impuestos y cargos, y a dar presupuesto escrito con vigencia en servicios de reparación; aplica solo a relaciones proveedor-consumidor."
+   },
+   {
+    "url": "https://wwwmatnp.sat.gob.mx/articulo/99662/articulo-29-a",
+    "family": "Fiscal México",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Requisitos del CFDI; aclara que obligan al comprobante fiscal (factura), no a la cotización."
+   },
+   {
+    "url": "http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/Anexo_20_Guia_de_llenado_CFDI.pdf",
+    "family": "Fiscal México",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Especificación técnica del CFDI; la copia indexada puede ser antigua, revalidar versión vigente (CFDI 4.0)."
+   },
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/pdf/LIVA.pdf",
+    "family": "Fiscal México",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Traslado del IVA expreso y por separado; excepción de precios al público con leyenda «IVA incluido»."
+   },
+   {
+    "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAASSP.pdf",
+    "family": "Compras públicas México",
+    "stance": "context",
+    "role": "primary",
+    "why": "Proposiciones firmadas electrónicamente en la plataforma; en compras públicas mandan la convocatoria y las bases, no una convención."
+   },
+   {
+    "url": "http://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LAASSP.pdf",
+    "family": "Compras públicas México",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Reglas de firma y vigencia de proposiciones; la versión indexada puede ser la anterior al reglamento de dic-2025, verificar."
+   },
+   {
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A31998L0006",
+    "family": "Derecho comparado",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Precio de venta final con IVA e impuestos al consumidor en la UE."
+   },
+   {
+    "url": "https://www.legislation.gov.uk/ukpga/2015/15/section/50/enacted",
+    "family": "Derecho comparado",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Lo dicho o escrito en una cotización de servicios puede ser término contractual en Reino Unido. Es la versión original, no la consolidada."
+   },
+   {
+    "url": "https://www.law.cornell.edu/ucc/2/2-205",
+    "family": "Derecho comparado",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Oferta firme de comerciante: escrito firmado, máximo 3 meses en EE.UU. Es un texto secundario, no oficial del estado."
+   },
+   {
+    "url": "http://www.cisg.law.pace.edu/cisg/text/anno-art-16.html",
+    "family": "Derecho comparado",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Revocabilidad de la oferta en compraventa internacional (arts. 14-16); aplica a contratos internacionales de mercaderías."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ },
+ "partes": [
+  [
+   [
+    "SA-989ee88c4aa1ccb56dcc3e92",
+    0,
+    600000
+   ]
+  ],
+  [
+   [
+    "SA-989ee88c4aa1ccb56dcc3e92",
+    599000,
+    857628
+   ],
+   [
+    "SA-883f6e9c3139d0961de302de",
+    0,
+    231854
+   ],
+   [
+    "SA-0431de1fd0d38fc09682d045",
+    0,
+    8273
+   ],
+   [
+    "SA-5805604640f92d33513710f6",
+    0,
+    8945
+   ],
+   [
+    "SA-73f69a1c4e19f34628e05c58",
+    0,
+    1652
+   ]
+  ]
+ ],
+ "partes_fuera": {}
+}
