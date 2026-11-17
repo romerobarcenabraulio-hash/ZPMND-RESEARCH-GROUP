@@ -15,8 +15,9 @@ commit is merged, pinned to it, only when all of this holds; anything else leave
   in the PR leaves it with the owner;
 - the trusted runs on that commit for that PR passed (TRUSTED): the newest run of .github/workflows/auditor.yml for
   pull_request_target (whose file always comes from main) and of .github/workflows/ci.yml for pull_request (the PR's
-  copy, which a data-only PR cannot change) both finished success, and every job in them succeeded, none skipped, among
-  them the ones each must have; in the auditor's, pass-both, which runs only when the Claude verdict and the GPT review
+  copy, which a data-only PR cannot change) both finished success, and every job in them succeeded, none skipped but
+  auditor.yml's tope, which must be (it runs only on a head that waits for the owner's "otra ronda"), among them the
+  ones each must have; in the auditor's, pass-both, which runs only when the Claude verdict and the GPT review
   it posted for that head are both PASS.
 Statuses and comments are never read: any workflow of a branch here runs with this repository's token and could imitate
 them (GPT, REVISE of #48). A run's file path and event are GitHub's, not the branch's. SECURITY.md T15.
@@ -37,6 +38,9 @@ TRUSTED = {  # workflow file -> (the event of its trusted run, jobs that run mus
                                                               'post', 'post-gpt', 'pass-both'}),
     '.github/workflows/ci.yml': ('pull_request', {'checks'}),
 }
+# a job each trusted run must have skipped: tope runs only when a head waits for the owner after two REVISEs (order 4)
+# and is skipped on every other; from d8349c3 (2026-11-09) on, "none skipped" kept every data PR out (#166, 2026-11-14)
+SALTADO = {'.github/workflows/auditor.yml': {'tope'}}
 DOCS = re.compile(r'^docs/[A-Za-z0-9._-]+\.md$')
 # the owner's rules, decisions and contracts (REGLAS is also a criteria file); DOCS admits no '/', so no '..' either
 GOBIERNO = {'docs/REGLAS.md', 'docs/NORTE.md', 'docs/CIERRE-HUECOS.md', 'docs/OUTBOX.md', 'docs/SOLICITUDES.md'}
@@ -74,7 +78,8 @@ def newest(runs, path, event, sha, n):
 
 def verified(runs, jobs_of, sha, n):
     """None when each TRUSTED workflow's newest run on the commit for PR n finished success with every job succeeded
-    (none skipped) and its required jobs among them; else why not. jobs_of(run id) lists that run's jobs."""
+    (none skipped but those in SALTADO, which must be) and its required jobs among them; else why not. jobs_of(run id)
+    lists that run's jobs."""
     for path, (event, required) in TRUSTED.items():
         run = newest(runs, path, event, sha, n)
         if run is None:
@@ -86,7 +91,7 @@ def verified(runs, jobs_of, sha, n):
         if missing:
             return f'{path}: did not run {", ".join(sorted(missing))}'
         for j in jobs:
-            if j.get('conclusion') != 'success':
+            if j.get('conclusion') != ('skipped' if j.get('name') in SALTADO.get(path, ()) else 'success'):
                 return f"{path}: {j.get('name')} {j.get('conclusion')}"
     return None
 
