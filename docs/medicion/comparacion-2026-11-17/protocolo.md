@@ -105,3 +105,23 @@ el dueño autoriza su llave; si no, queda como limitación. M1 y el cálculo no 
 
 Qué promueve ZPMND-FINAL ni si un paquete es verdad: pasar los validadores lo hace bien formado, no cierto
 (`RESEARCH_CONTRACT.md` §3).
+
+## Adenda · 2026-11-18 (GPT en #172 sobre e5d255b)
+
+Al escribirla ya se habían visto las respuestas del brazo A en los dos casos y su M1 medido con un comparador anterior
+(laxo, en la Mac). No se había visto ningún juicio, ni M2 ni M3, y nada de RG.
+
+1. **Una reducción relativa de errores solo cuenta si la referencia tiene errores.** «M3(X) ≤ M3(ref) / 2» se lee
+   «M3(ref) > 0 y M3(X) ≤ M3(ref) / 2». Con M3(ref) = 0 vale solo la otra mejora: M1 para V, M2 para RG.
+
+   | Situación | V vale | RG vale |
+   |---|---|---|
+   | A, A+V y RG idénticos, sin errores y con el mismo costo | no | no |
+   | M3(A) = 0.20, M3(A+V) = 0.08, M1 igual | sí | se decide por M2 y M3 de RG |
+   | M2(RG) = 0.80, M2(A+V) = 0.60, M1(RG) = 0.95, M1(A+V) = 0.97, M5(RG) = 3 × M5(A+V) | — | sí |
+   | M3(A+V) = 0, M3(RG) = 0, M2(RG) = M2(A+V) + 0.05 | — | no |
+
+2. **El comparador de M1 es el de la compuerta.** La compuerta extrae el texto con `rg.packets._texts` y busca la cita
+   con solo los espacios plegados, distinguiendo mayúsculas. La descripción de arriba («mayúsculas, espacios y marcas
+   de formato aparte») no era esa. M1 se informa con el comparador de la compuerta en los tres brazos; el laxo va
+   aparte, como dato secundario.
