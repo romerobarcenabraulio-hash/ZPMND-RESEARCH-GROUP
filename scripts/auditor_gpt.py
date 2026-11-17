@@ -33,10 +33,11 @@ MAX_OUTPUT_TOKENS = 12_000  # reasoning tokens count here too; a cut answer is i
 TIMEOUT_S = 600  # the whole call; also one wait on the socket: the API sends nothing until its answer is done
 MAX_RESPUESTA = 2_000_000  # bytes of the API's answer (the output is capped at MAX_OUTPUT_TOKENS)
 PREFIX = 'GPT REVIEW: '  # never contains "AUDIT VERDICT": no search for the Claude verdict, anchored or not, matches it
-CRITERIA_CAP = 45_000  # per criteria file. SECURITY.md reached 17k on 2026-10-29 (#60, #67) and every review read it
+CRITERIA_CAP = 50_000  # per criteria file. SECURITY.md reached 17k on 2026-10-29 (#60, #67) and every review read it
 # cut, so every one was REVISE and no data PR could merge by itself; tests/test_auditor_gpt.py now fails a tree whose
 # criteria file does not fit, before the reviewer ever reads it cut. 30k -> 45k on 2026-11-02: main's SECURITY.md was
 # 23,591 and the rows of six open PRs (T19, T24-T28) add about 10k, so the last of them to merge would not fit.
+# 45k -> 50k on 2026-11-16: main's SECURITY.md is 42,281 and #141 with #139 (T31's own reader of R2) take it to 45,901.
 # (path, character cap, keep the end?) in reading order. The caps are fixed; their sum is the budget for diff +
 # evidence. The evidence keeps its end, where the test summary and "exit=" are.
 SECTIONS = (
