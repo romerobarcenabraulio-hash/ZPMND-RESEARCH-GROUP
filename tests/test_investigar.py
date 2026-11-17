@@ -598,6 +598,28 @@ class Review(Base):
         with self.assertRaises(ValueError):
             inv.review_prompt({'findings': {'confirmed': 'x'}})
 
+    def test_each_limit_must_be_in_its_quote_and_in_its_claim_word_for_word_or_the_claim_goes_out(self):
+        # GPT on #165: the reviewer kept 5.5 without "durante o con motivo del trabajo"; on #167: words the model points to
+        # in the claim need not keep the limit. The limit itself must be in both, case and spacing aside
+        self.assertIn('or that the claim does not say in those same\n  words', inv.review_prompt(answer())[0])
+        a, lim = answer(), 'durante o con motivo del trabajo'
+        a['findings']['confirmed'][0].update(quote=f'Identificar a los trabajadores sujetos a acontecimientos traumáticos severos {lim}.',
+                                             claim='Obligación 5.5: identificar a quienes sufren acontecimientos traumáticos severos.')
+        rev = lambda *ls: {'reviews': [{'id': 'confirmed[0]', 'limits': list(ls), 'fits': True, 'why': ''},
+                                       {'id': 'confirmed[1]', 'limits': [], 'fits': True, 'why': ''}]}
+        for x in (lim, 'acontecimientos traumáticos severos ' + lim, '', '   ', 'solo en centros de más de 50'):  # dropped, empty, made up
+            with self.subTest(x):
+                out, taken = inv.apply_review(a, rev(x))
+                self.assertEqual([f['claim'] for f in out['findings']['confirmed']], ['El dataset trae una nota.'])
+                self.assertEqual(taken[0]['why'], f'a limit of its quote the claim does not say in its words: {x}')
+        a['findings']['confirmed'][0]['claim'] += ' DURANTE  o con motivo del trabajo'  # kept: case and spacing aside
+        self.assertEqual(inv.apply_review(a, rev('Durante o con  motivo del trabajo'))[1], [])
+        a['findings']['confirmed'][0]['claim'] += ', solo en centros de más de 50'  # in the claim, not in the quote
+        self.assertEqual(len(inv.apply_review(a, rev('solo en centros de más de 50'))[1]), 1)
+        a['findings']['confirmed'][0].update(quote='El empleador debe identificar los riesgos.',  # GPT on 3d635bd: whole words
+                                             claim='El empleador debería identificar los riesgos.')
+        self.assertEqual(len(inv.apply_review(a, rev('debe'))[1]), 1)  # an obligation made a recommendation goes out
+
     def test_a_claim_its_quote_does_not_hold_is_taken_out_whole_and_never_rewritten(self):
         # GPT on #150, #152, #154 (2026-11-12): a claim cut down to its quote had lost its condition and said more
         rows = self.fetch()
