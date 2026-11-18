@@ -1,5 +1,9 @@
 # ÓRDENES · RESEARCH GROUP · semana del 2026-11-02
 
+> **Histórico (2026-11-17).** Estas órdenes eran para la semana del 2026-11-02 y para ZPPMND. Ya no gobiernan
+> trabajo nuevo: manda la directiva de transición del dueño del 2026-11-17. El activo, T1, está en `COLA.md`; el
+> consumidor, ZPMND-FINAL, en `docs/ESTADO.md`. El P0 de NOM-035 (§6) queda diferido.
+
 Emitido por OWNER. Una sesión nueva lee esto, `docs/REGLAS.md` y `ESTADO.md`, y opera sin preguntar. Lo que no está
 aquí no se hace esta semana. Repo: `romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP`. Repo del consumidor:
 `romerobarcenabraulio-hash/ZPPMND` (es el que nombra `verdict_event.schema.json`).
