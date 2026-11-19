@@ -1,0 +1,367 @@
+{
+ "request_id": "RR-2026-11-08-composio-capacidades",
+ "fetched": [
+  {
+   "url": "https://docs.composio.dev/docs/security/token-custody",
+   "status": 200,
+   "error": null,
+   "sha256": "9c46ba1fbfb9a491177c73da2fa4b02c1b28662cc0059eb3f56087662bf3f9f3",
+   "bytes": 175853,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:20Z",
+   "text_status": "ok",
+   "text_chars": 9073
+  },
+  {
+   "url": "https://docs.composio.dev/docs/security/zero-data-retention",
+   "status": 200,
+   "error": null,
+   "sha256": "0e3d60039e1ca77bd5e0bd25153093fb65fdc58241c7274cc72bdc5fafab60ad",
+   "bytes": 187647,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:21Z",
+   "text_status": "ok",
+   "text_chars": 7352
+  },
+  {
+   "url": "https://docs.composio.dev/docs/security/data-retention",
+   "status": 200,
+   "error": null,
+   "sha256": "df56ad3803d052c90c2ea43b1d7e5b20df2a68b35a1f8cdba7ad1ca2759b0966",
+   "bytes": 147024,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:22Z",
+   "text_status": "ok",
+   "text_chars": 6341
+  },
+  {
+   "url": "https://composio.dev/blog/two-questions-every-security-review-asks-us",
+   "status": 200,
+   "error": null,
+   "sha256": "efe0d2f4445751730a73da2f0a2f709235d46a5504e746c58f47fefac4de406a",
+   "bytes": 256452,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:23Z",
+   "text_status": "ok",
+   "text_chars": 18725
+  },
+  {
+   "url": "https://docs.composio.dev/kb/guide/platform-compliance-data-handling",
+   "status": 200,
+   "error": null,
+   "sha256": "6cd7fd4ad3f09eb62e591fab08062e207525a7d0bebc221a13efd1119ae62eb5",
+   "bytes": 120333,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:24Z",
+   "text_status": "ok",
+   "text_chars": 2521
+  },
+  {
+   "url": "https://composio.dev/legal/dpa",
+   "status": 200,
+   "error": null,
+   "sha256": "b4b962543c77cd1484bc9fc8e931eabb189d87c7339cd43d571a52e862e614c8",
+   "bytes": 246072,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:25Z",
+   "text_status": "ok",
+   "text_chars": 33488
+  },
+  {
+   "url": "https://composio.dev/terms",
+   "status": 200,
+   "error": null,
+   "sha256": "de4347bbfe4b841157fd46f2a0724dea23bfa3fca121762c8b277a26dbac68b1",
+   "bytes": 203447,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:25Z",
+   "text_status": "ok",
+   "text_chars": 16685
+  },
+  {
+   "url": "https://github.com/ComposioHQ/composio/blob/master/LICENSE",
+   "status": 200,
+   "error": null,
+   "sha256": "797a8e93b8b6b39e179a2d1e50f4e70411e53d455a12afefe3538adc39a0e04e",
+   "bytes": 179923,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:26Z",
+   "text_status": "ok",
+   "text_chars": 3824
+  },
+  {
+   "url": "https://composio.dev/enterprise",
+   "status": 200,
+   "error": null,
+   "sha256": "c30ef204930b820a5c39874a7bcfaa543a9489ef7a03befaa1c68255fd7ccf35",
+   "bytes": 337592,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:29Z",
+   "text_status": "ok",
+   "text_chars": 14088
+  },
+  {
+   "url": "https://www.scalekit.com/blog/composio-pricing-change",
+   "status": 200,
+   "error": null,
+   "sha256": "47a687e04a0c70c75b99ff5c64b68b500c2a061cffa1adbf474074655bd8bfa3",
+   "bytes": 108731,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:29Z",
+   "text_status": "ok",
+   "text_chars": 14209
+  },
+  {
+   "url": "https://nango.dev/blog/best-self-hosted-api-integration-platforms-for-ai-agents/",
+   "status": 200,
+   "error": null,
+   "sha256": "81d1b1fbea1c131af4c48937f243c5275c2f88ad2c7dbfc7a5f89212db07a7d3",
+   "bytes": 175111,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:30Z",
+   "text_status": "ok",
+   "text_chars": 22440
+  },
+  {
+   "url": "https://docs.composio.dev/kb/guide/toolkits-googledrive",
+   "status": 200,
+   "error": null,
+   "sha256": "067d290ec88e3bc1f11dc3458e5d65b3ee0f526451da56d3285c4420f308894b",
+   "bytes": 125792,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-13T05:02:31Z",
+   "text_status": "ok",
+   "text_chars": 5691
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43369192015",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "taken_out": [
+   {
+    "id": "confirmed[6]",
+    "claim": "Con ZDR activo, Composio no guarda argumentos, datos de respuesta ni texto de error de las llamadas cubiertas; solo metadatos.",
+    "why": "The quote only says logs keep metadata only; it does not say Composio stores no arguments, response data or error text for covered calls, nor mention 'covered calls'."
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "Los archivos que preparan las herramientas no están cubiertos por ZDR y se limpian tras 24 horas.",
+    "why": "The quote says files are staged and cleaned up after 24 hours but does not say they are not covered by ZDR."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "ZDR solo se aplica a llamadas nuevas; los logs previos conservan payloads hasta un año.",
+    "why": "The quote says only that earlier logs keep payloads up to one year; it does not say ZDR applies only to new calls."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "Al borrar una organización, Composio borra sus logs de ejecución, incluidos payloads, en 30 días.",
+    "why": "The quote does not contain the condition that this applies upon deleting an organization."
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "Los datos de contenido leídos de apps conectadas (p. ej. archivos) forman parte del Payload Data según el DPA.",
+    "why": "The quote does not name Payload Data or the DPA definition; it is a fragment of 'including any content read...' and does not state that it is part of Payload Data."
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "Excepto llamadas con ZDR, el DPA fija la retención de payloads y metadatos en hasta un año.",
+    "why": "The quote does not contain the exception for ZDR calls; it is cut off before any limits."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "El DPA obliga a borrar o devolver los datos personales en 30 días tras el fin del servicio o borrado de la organización.",
+    "why": "The quote mentions only 30 days after the end of Services; it does not mention organization deletion, and it is cut off before completing the obligation's conditions."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "El DPA solo vincula tras su aceptación en el panel y Composio no negocia DPAs ni los personaliza.",
+    "why": "The quote says nothing about the DPA binding only after acceptance in the dashboard; it only covers not negotiating or customizing."
+   },
+   {
+    "id": "confirmed[23]",
+    "claim": "El DPA prohíbe a Composio vender o compartir datos personales (CCPA).",
+    "why": "The quote does not mention CCPA, and it is a fragment of a list of prohibitions."
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "Los Términos conceden a Composio una licencia amplia sobre el User Content enviado, sujeta a la sección 9.",
+    "why": "The quote does not mention being subject to section 9."
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "La documentación de Drive recomienda credenciales OAuth propias del cliente con scopes verificados.",
+    "why": "The quote says to use customer-owned credentials but doesn't say the docs 'recommend' it vs. a directive; also the quote is an imperative, acceptable, yet the claim is fine except it adds nothing—treated as a mismatch because the quote's context is unspecified."
+   },
+   {
+    "id": "confirmed[31]",
+    "claim": "El scope drive.file da acceso solo a archivos creados por la app o concedidos explícitamente por el usuario.",
+    "why": "The quote says 'files the app creates or that the user explicitly grants', but the claim's 'solo' (only) is not in the quote."
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "Los archivos descargados de Drive se preparan en almacenamiento temporal y se borran tras unas 24 horas.",
+    "why": "The quote does not mention files downloaded from Drive or temporary storage specifically beyond 'staged files'; 'downloaded' is not stated."
+   },
+   {
+    "id": "confirmed[33]",
+    "claim": "Hay una herramienta de Drive para buscar archivos (GOOGLEDRIVE_FIND_FILE) y otra para identificar la cuenta (GOOGLEDRIVE_GET_ABOUT).",
+    "why": "The quote mentions only GOOGLEDRIVE_FIND_FILE as an example; GOOGLEDRIVE_GET_ABOUT and its purpose are absent."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Documentación oficial de seguridad Composio (custodia de tokens, retención, ZDR)",
+   "Términos legales oficiales (ToS, DPA, subprocesadores)",
+   "Licencia y código (GitHub MIT; plataforma propietaria)",
+   "Precios publicados y análisis de terceros",
+   "Autoalojamiento / enterprise",
+   "Toolkit Google Drive y scopes",
+   "Alternativas autoalojables (Nango, etc.)"
+  ],
+  "searches": [
+   {
+    "query": "Composio security data retention OAuth tokens storage docs",
+    "intent": "official"
+   },
+   {
+    "query": "Composio self-hosting on-premise enterprise",
+    "intent": "limitations"
+   },
+   {
+    "query": "Composio pricing tool calls per month",
+    "intent": "official"
+   },
+   {
+    "query": "Composio github license ComposioHQ composio LICENSE",
+    "intent": "official"
+   },
+   {
+    "query": "docs.composio.dev security data retention zero data retention logs retention days",
+    "intent": "official"
+   },
+   {
+    "query": "Composio Google Drive toolkit scopes read-only tools",
+    "intent": "support"
+   },
+   {
+    "query": "Composio terms of service customer data end user data privacy policy subprocessors",
+    "intent": "official"
+   }
+  ],
+  "not_found": [
+   "No obtuve el contenido de docs.composio.dev/docs/security/data-retention ni de composio.dev/pricing en vivo. Solo vi resúmenes y fuentes de terceros.",
+   "No tengo sha256 ni fecha de captura de ninguna página. Hay que descargar y calcular el hash.",
+   "La región de alojamiento y la lista de subprocesadores (trust.composio.dev) no están verificadas.",
+   "Precio por cuenta conectada frente a precio por llamada: las fuentes discrepan (plan de $29 con $0.0003 por llamada, o tarifas antiguas, o el cambio de agosto de 2026). Desconocido hasta confirmar la página oficial.",
+   "La licencia de la plataforma alojada (el servicio, no el SDK) y los términos de autoalojamiento Enterprise no se publican. Desconocido.",
+   "No encontré una opción autoalojada gratuita o de autoservicio verificable de forma oficial.",
+   "No encontré documentación sobre cómo delega Composio el consentimiento del usuario más allá del flujo OAuth y la revocación en la cuenta de Google. Falta confirmarlo."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 13,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://docs.composio.dev/kb/guide/platform-session-tool-policies",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://docs.composio.dev/docs/security/token-custody",
+    "family": "Documentación oficial de seguridad Composio (custodia de tokens, retención, ZDR)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Dice que en Cloud Composio custodia los tokens OAuth cifrados (AES-256-GCM) y los refresca. Esto choca con la frontera de datos de ZPMND."
+   },
+   {
+    "url": "https://docs.composio.dev/docs/security/zero-data-retention",
+    "family": "Documentación oficial de seguridad Composio (custodia de tokens, retención, ZDR)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Por defecto guarda payloads hasta 1 año. El ZDR no cubre triggers, sandbox ni archivos, y los metadatos de auditoría se guardan siempre. Hay que registrar fecha y sha256 al capturarla."
+   },
+   {
+    "url": "https://docs.composio.dev/docs/security/data-retention",
+    "family": "Documentación oficial de seguridad Composio (custodia de tokens, retención, ZDR)",
+    "stance": "context",
+    "role": "primary",
+    "why": "Página de retención citada por el Trust Center. La búsqueda no devolvió su contenido, así que hay que leerla directamente para ver los plazos."
+   },
+   {
+    "url": "https://composio.dev/blog/two-questions-every-security-review-asks-us",
+    "family": "Documentación oficial de seguridad Composio (custodia de tokens, retención, ZDR)",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Explica el cifrado por sobre (envelope) con KMS y la custodia de credenciales según la posición del vendedor."
+   },
+   {
+    "url": "https://docs.composio.dev/kb/guide/platform-compliance-data-handling",
+    "family": "Documentación oficial de seguridad Composio (custodia de tokens, retención, ZDR)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Los planes estándar no garantizan ZDR ni no-entrenamiento de extremo a extremo. Hay subprocesadores, y las garantías contractuales van por Enterprise."
+   },
+   {
+    "url": "https://composio.dev/legal/dpa",
+    "family": "Términos legales oficiales (ToS, DPA, subprocesadores)",
+    "stance": "context",
+    "role": "primary",
+    "why": "Texto literal sobre subprocesadores, borrado y devolución de datos, y la definición de Connected Apps."
+   },
+   {
+    "url": "https://composio.dev/terms",
+    "family": "Términos legales oficiales (ToS, DPA, subprocesadores)",
+    "stance": "context",
+    "role": "primary",
+    "why": "Términos literales sobre datos del usuario final y datos de Google Workspace (sección 5)."
+   },
+   {
+    "url": "https://github.com/ComposioHQ/composio/blob/master/LICENSE",
+    "family": "Licencia y código (GitHub MIT; plataforma propietaria)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "El SDK es MIT. Según análisis de terceros, la plataforma de ejecución y el OAuth gestionado son propietarios y no están bajo esa licencia."
+   },
+   {
+    "url": "https://composio.dev/enterprise",
+    "family": "Autoalojamiento / enterprise",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Declara las opciones Cloud, VPC privada y autoalojada con Helm. Las dos últimas son Enterprise y van por ventas, con claves gestionadas por el cliente."
+   },
+   {
+    "url": "https://www.scalekit.com/blog/composio-pricing-change",
+    "family": "Precios publicados y análisis de terceros",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Analiza los cambios de precio de 2026. Las fuentes discrepan y hay que confirmar en composio.dev/pricing. El autor es competidor."
+   },
+   {
+    "url": "https://nango.dev/blog/best-self-hosted-api-integration-platforms-for-ai-agents/",
+    "family": "Alternativas autoalojables (Nango, etc.)",
+    "stance": "contradicts",
+    "role": "secondary",
+    "why": "Afirma que las imágenes de la plataforma son cerradas y que no hay autoalojamiento autoservicio. Ofrece alternativas autoalojables, pero con sesgo comercial."
+   },
+   {
+    "url": "https://docs.composio.dev/kb/guide/toolkits-googledrive",
+    "family": "Toolkit Google Drive y scopes",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Cubre Drive (unas 92 herramientas). El OAuth gestionado puede ser bloqueado por Google con scopes restringidos, por lo que hace falta una app OAuth propia."
+   },
+   {
+    "url": "https://docs.composio.dev/kb/guide/platform-session-tool-policies",
+    "family": "Toolkit Google Drive y scopes",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Muestra cómo limitar a solo lectura con scopes OAuth y filtros de herramientas (readOnlyHint, listas permitidas)."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
