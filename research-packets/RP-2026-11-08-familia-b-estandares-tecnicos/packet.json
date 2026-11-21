@@ -1,0 +1,349 @@
+{
+ "research_id": "RP-2026-11-08-familia-b-estandares-tecnicos",
+ "request_id": "RR-2026-11-08-familia-b-estandares-tecnicos",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T16:50:38Z",
+ "question": "Para cada organismo o catálogo listado en why_needed: ¿qué metadatos de sus estándares expone sin pago (clave, título, edición, estado, fecha, sustitución, alcance), por qué canal (índice, API o volcado), cuántos registros declara a qué fecha, y qué términos rigen reutilizarlos? El texto de pago no se baja (NORTE §29).",
+ "why_zpmnd_needs_it": "Subáreas: B01 Catálogo oficial de NOM y NMX (México; cierra A05); B02 ISO: metadatos de estándares (Internacional); B03 IEC: metadatos de estándares (Internacional); B04 IEEE: metadatos de estándares (Internacional); B05 ASTM: metadatos de estándares (Internacional); B06 NFPA: metadatos de estándares (Internacional); B07 ASME: metadatos de estándares (Internacional); B08 API (petróleo): metadatos de estándares (Internacional); B09 CEN/EN, DIN y BS: metadatos de estándares (Internacional); B10 ANSI: metadatos de estándares (Internacional); B11 SAE: metadatos de estándares (Internacional); B12 UL: metadatos de estándares (Internacional); B13 IETF RFC (Internacional); B14 W3C, ITU-T y OASIS (Internacional); B15 Sustitución y retiro de estándares (Transversal; de los mismos catálogos). ZPMND necesita la edición y el estado vigentes de cada estándar y saber cuándo comprarlo (§30).",
+ "scope": "Metadatos sin pago de estándares en las fuentes entregadas: RFC Editor (rfc-index.xml, recortado), ITU-T (página X.509), IEEE Xplore (campos de API, documentación de proveedor), IEC Webstore (términos), SE México NMX (glosario), W3C (Process Document), ISO Open Data (solo vía importador secundario) y browser-specs (secundaria). No se calcularon sha256. No se descargó texto de pago.",
+ "sources": {
+  "primary": [
+   "SA-5fd0ecb0903bad4e2be68266",
+   "SA-4c921e6d1f24ee5d226de6cd",
+   "SA-f9aed05872f8669701c73f1b",
+   "SA-f17b68d2965c3a76fa6c447b",
+   "SA-76c9f10b6ce7ddfcd275ae1e",
+   "SA-de03aa311ec54a261cb6c60a"
+  ],
+  "secondary": [
+   "SA-263f3cae04c404c68309a67e",
+   "SA-dcdf39e9793dddfde84001e7"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-263f3cae04c404c68309a67e",
+   "url": "https://github.com/metanorma/iso-data-importer",
+   "retrieved_at": "2026-11-11T16:48:19Z",
+   "sha256": "263f3cae04c404c68309a67e15e6302218d633b3e347cfe11a28b94fc3a4fe38",
+   "bytes": 360561,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "Metanorma (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "metanorma/iso-data-importer"
+  },
+  {
+   "artifact_id": "SA-5fd0ecb0903bad4e2be68266",
+   "url": "https://platiica.economia.gob.mx/normas-mexicanas-nmx/",
+   "retrieved_at": "2026-11-11T16:48:27Z",
+   "sha256": "5fd0ecb0903bad4e2be682661952fbba407a5d9f6a6057443ea965b764dda70a",
+   "bytes": 91792,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Secretaría de Economía",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Normas Mexicanas (NMX) - PLATIICA"
+  },
+  {
+   "artifact_id": "SA-4c921e6d1f24ee5d226de6cd",
+   "url": "https://www.rfc-editor.org/rfc-index.xml",
+   "retrieved_at": "2026-11-11T16:48:35Z",
+   "sha256": "4c921e6d1f24ee5d226de6cd71d208d794ed8fd39ecbe2f198ceb9e312b47aea",
+   "bytes": 13750210,
+   "media_type": "application/xml",
+   "source_type": "primary_official",
+   "publisher": "RFC Editor",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "rfc-index.xml"
+  },
+  {
+   "artifact_id": "SA-f9aed05872f8669701c73f1b",
+   "url": "https://www.w3.org/policies/process/",
+   "retrieved_at": "2026-11-11T16:48:36Z",
+   "sha256": "f9aed05872f8669701c73f1b5dae32afc88ccc1a57b06a444506a3af35befb23",
+   "bytes": 674015,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "W3C",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "W3C Process Document"
+  },
+  {
+   "artifact_id": "SA-dcdf39e9793dddfde84001e7",
+   "url": "https://w3c.github.io/browser-specs/",
+   "retrieved_at": "2026-11-11T16:48:37Z",
+   "sha256": "dcdf39e9793dddfde84001e71b90728e0a417765e7d193050dace8e474ddf9f2",
+   "bytes": 61640,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "W3C WebPlatform/GitHub",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Web specifications (browser-specs)"
+  },
+  {
+   "artifact_id": "SA-f17b68d2965c3a76fa6c447b",
+   "url": "https://www.itu.int/itu-t/recommendations/rec.aspx?rec=X.509",
+   "retrieved_at": "2026-11-11T16:48:38Z",
+   "sha256": "f17b68d2965c3a76fa6c447baaaa8804076002e94f092bedf7945fbbb7526ac9",
+   "bytes": 160446,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "ITU",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "ITU-T Recommendation database X.509"
+  },
+  {
+   "artifact_id": "SA-76c9f10b6ce7ddfcd275ae1e",
+   "url": "https://webstore.iec.ch/en/terms-conditions",
+   "retrieved_at": "2026-11-11T16:48:41Z",
+   "sha256": "76c9f10b6ce7ddfcd275ae1e758650ae102a72174b1e6d95da50ea53e6c53b41",
+   "bytes": 364343,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "IEC",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "IEC Webstore Terms & conditions"
+  },
+  {
+   "artifact_id": "SA-de03aa311ec54a261cb6c60a",
+   "url": "https://developer.ieee.org/docs/read/Metadata_API_responses",
+   "retrieved_at": "2026-11-11T16:48:42Z",
+   "sha256": "de03aa311ec54a261cb6c60ab860bc641ec2666e2a49eb4d83fbc885905c12a8",
+   "bytes": 24495,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "IEEE",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "IEEE Xplore - Data Fields Returned"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El índice del RFC Editor (rfc-index.xml) registra relaciones de sustitución (obsoleted-by), p. ej. con RFC10.",
+    "artifact_ids": [
+     "SA-4c921e6d1f24ee5d226de6cd"
+    ],
+    "quote": "<obsoleted-by>\n      <doc-id>RFC10</doc-id>\n    </obsoleted-by>",
+    "locator": "rfc-index.xml, rfc-entry RFC3"
+   },
+   {
+    "claim": "El índice RFC declara un estado actual por entrada, p. ej. Internet Standard.",
+    "artifact_ids": [
+     "SA-4c921e6d1f24ee5d226de6cd"
+    ],
+    "quote": "<current-status>INTERNET STANDARD</current-status>",
+    "locator": "rfc-index.xml, rfc-entry RFC20"
+   },
+   {
+    "claim": "El índice RFC registra números no emitidos con un tipo de entrada propio.",
+    "artifact_ids": [
+     "SA-4c921e6d1f24ee5d226de6cd"
+    ],
+    "quote": "<rfc-not-issued-entry>\n    <doc-id>RFC14</doc-id>\n  </rfc-not-issued-entry>",
+    "locator": "rfc-index.xml, RFC14"
+   },
+   {
+    "claim": "ITU-T expone para X.509 la fecha de aprobación.",
+    "artifact_ids": [
+     "SA-f17b68d2965c3a76fa6c447b"
+    ],
+    "quote": "Approval date: \t 2019-10-14",
+    "locator": "Ficha ITU-T X.509 (10/2019)"
+   },
+   {
+    "claim": "ITU-T marca la edición 8 de X.509 (10/2016) como Superseded.",
+    "artifact_ids": [
+     "SA-f17b68d2965c3a76fa6c447b"
+    ],
+    "quote": "8  \t X.509 (10/2016)  \t Superseded",
+    "locator": "Tabla de ediciones"
+   },
+   {
+    "claim": "ITU-T lista correcciones por edición con su estado.",
+    "artifact_ids": [
+     "SA-f17b68d2965c3a76fa6c447b"
+    ],
+    "quote": "9.4  \t X.509 (2019) Cor. 3 (07/2026)  \t In force",
+    "locator": "Tabla de ediciones"
+   },
+   {
+    "claim": "La página ITU-T anuncia su desactivación próxima.",
+    "artifact_ids": [
+     "SA-f17b68d2965c3a76fa6c447b"
+    ],
+    "quote": "This page will soon be deactivated",
+    "locator": "Cabecera"
+   },
+   {
+    "claim": "Los términos de IEC establecen que no se debe copiar, transferir, vender, licenciar, arrendar, dar, modificar, publicar, ceder, transmitir ni reproducir de otro modo.",
+    "artifact_ids": [
+     "SA-76c9f10b6ce7ddfcd275ae1e"
+    ],
+    "quote": "You shall not copy, transfer, sell, license, lease, give, modify, publish, assign, transmit or otherwise reproduce",
+    "locator": "IEC Webstore T&C, §2"
+   },
+   {
+    "claim": "Los términos de IEC mencionan el uso de robots, scripts u otros mecanismos manuales o automáticos para extraer datos (data mine o scrape) de los productos IEC.",
+    "artifact_ids": [
+     "SA-76c9f10b6ce7ddfcd275ae1e"
+    ],
+    "quote": "use of robots, scripts, or any other manual or automatic mechanism to data mine or scrape IEC Products",
+    "locator": "IEC Webstore T&C, §3"
+   },
+   {
+    "claim": "IEC Webstore registra todo acceso.",
+    "artifact_ids": [
+     "SA-76c9f10b6ce7ddfcd275ae1e"
+    ],
+    "quote": "IEC monitors and records all access to IEC Webstore",
+    "locator": "IEC Webstore T&C, §4"
+   },
+   {
+    "claim": "La API de IEEE Xplore expone el estado del estándar.",
+    "artifact_ids": [
+     "SA-de03aa311ec54a261cb6c60a"
+    ],
+    "quote": "Status of standard (e.g. Active, Draft, etc.); applies only to Standards.",
+    "locator": "Data Fields Returned, standard_status"
+   },
+   {
+    "claim": "IEEE Xplore marca como Locked el contenido que requiere suscripción.",
+    "artifact_ids": [
+     "SA-de03aa311ec54a261cb6c60a"
+    ],
+    "quote": "'Locked'- Sign in or learn about subscription options.",
+    "locator": "Data Fields Returned, accessType"
+   },
+   {
+    "claim": "La API IEEE limita a 200 los resultados por consulta.",
+    "artifact_ids": [
+     "SA-de03aa311ec54a261cb6c60a"
+    ],
+    "quote": "The number of maximum results is 200.",
+    "locator": "Data Fields Returned, start-record"
+   },
+   {
+    "claim": "La API IEEE devuelve el total de documentos coincidentes.",
+    "artifact_ids": [
+     "SA-de03aa311ec54a261cb6c60a"
+    ],
+    "quote": "Total number of documents found that match the query criteria.",
+    "locator": "Data Fields Returned, totalfound"
+   },
+   {
+    "claim": "PLATIICA indica que el cumplimiento de las NMX es de carácter voluntario.",
+    "artifact_ids": [
+     "SA-5fd0ecb0903bad4e2be68266"
+    ],
+    "quote": "Su cumplimiento es de carácter voluntario.",
+    "locator": "Entrada de glosario NMX"
+   },
+   {
+    "claim": "El W3C define Superseded Recommendation.",
+    "artifact_ids": [
+     "SA-f9aed05872f8669701c73f1b"
+    ],
+    "quote": "A Superseded Recommendation is a specification that has been replaced by a newer version that W3C recommends for new adoption.",
+    "locator": "§6.3.1"
+   },
+   {
+    "claim": "El W3C define Rescinded Recommendation.",
+    "artifact_ids": [
+     "SA-f9aed05872f8669701c73f1b"
+    ],
+    "quote": "A Rescinded Recommendation is an entire Recommendation that W3C no longer endorses",
+    "locator": "§6.3.1"
+   },
+   {
+    "claim": "El W3C declara gratuitos sus informes técnicos publicados.",
+    "artifact_ids": [
+     "SA-f9aed05872f8669701c73f1b"
+    ],
+    "quote": "W3C technical reports (and software) are available free of charge to the general public.",
+    "locator": "§7.1"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "ISO: sin fuente primaria; total, fecha de corte y términos oficiales de ISO Open Data no verificados.",
+   "RFC Editor: total declarado, fecha de corte y términos de reutilización no vistos (archivo recortado).",
+   "NMX/PLATIICA: campos, canal, total y términos del Catálogo Mexicano de Normas no expuestos en lo entregado.",
+   "ITU-T: términos de reutilización de metadatos, total y canal API/volcado no mostrados.",
+   "IEEE: términos de uso de metadatos y condiciones de la llave no incluidos.",
+   "IEC: ningún índice ni API de metadatos en lo entregado.",
+   "W3C: API/índice TR y sus términos de datos no leídos.",
+   "sha256 de lo descargado: no calculable aquí; no hubo consultas de búsqueda."
+  ]
+ },
+ "candidate_claims": [
+  "SECUNDARIA: metanorma/iso-data-importer afirma que los datos de ISO Open Data (iso_deliverables_metadata, iso_technical_committees, iso_ics) están bajo ODC-By v1.0 y exponen reference, edition, publicationDate, currentStage, replaces y replacedBy; falta verificar en ISO.",
+  "SECUNDARIA: browser-specs afirma que sus datos ISO vienen de ISO Open Data bajo ODC Attribution License y que los textos ISO no tienen URL pública.",
+  "INTERPRETACIÓN: RFC Editor, ITU-T y W3C exponen estado y sustitución explícitos; IEEE expone estado sin campo de sustitución en la lista; IEC no expone metadatos utilizables en lo entregado."
+ ],
+ "candidate_methods": [
+  "Descargar el rfc-index.xml completo, calcular sha256 y extraer total y fecha de corte."
+ ],
+ "candidate_controls": [
+  "Bloquear ingesta de texto completo de IEC, IEEE e ISO; conservar solo metadatos con cita de términos."
+ ],
+ "candidate_tests": [
+  "Verificar que ninguna edición Superseded u obsoleted-by se marque como vigente."
+ ],
+ "possible_implications_for_zpmnd": [
+  "No exigir como vigente una edición sin leer su estado por edición (ITU Superseded, RFC obsoleted-by, W3C Superseded/Obsolete/Rescinded).",
+  "No extraer ni republicar contenido IEC: copia, scraping e IA están prohibidos.",
+  "Los current-status UNKNOWN del índice RFC no deben leerse como vigente."
+ ],
+ "affected_existing_concepts": [
+  "NORTE §29 (no bajar texto de pago)"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: el catálogo NMX probablemente ofrece solo consulta web sin volcado; no confirmado."
+ ],
+ "limitations": [
+  "rfc-index.xml fue leído solo desde su inicio (BCP, FYI y RFC 1 a ~515); totales, fecha de corte y RFC modernos pueden estar en la parte no leída.",
+  "El importador de ISO y browser-specs son secundarios y no sustentan hallazgos confirmados.",
+  "La página ITU-T muestra fechas posteriores (Cor. 3 07/2026); se reportan tal cual.",
+  "IEEE Xplore es documentación de proveedor, no términos legales.",
+  "No se calcularon hashes ni se descargó nada.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 5 de 18 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 12 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Por el tope de texto de una corrida (600000 caracteres), 1 fuentes se leyeron solo desde su inicio (detalle en receipt.json, cut).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.iso.org/open-data.html (refused); https://catalogomexicanodenormas.economia.gob.mx/ (refused); https://www.sinec.gob.mx/SINEC/ (refused); https://standards.cencenelec.eu/dyn/www/f?p=205%3A105%3A0%3A%3A%3A%3A%3A (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
