@@ -18,7 +18,9 @@ from unittest import mock
 from rg import investigar as inv
 from rg import recrudo
 from tests.test_catalog import FakeOpener
-from tests.test_investigar import PAGE, PLAN, ROUTES, RR, answer
+from tests.test_investigar import CLOSED_BODY, PAGE, PLAN, ROUTES, RR, answer
+
+PAGE_SHA = hashlib.sha256(PAGE).hexdigest()
 from tests.test_recrudo import metadata_only_packet
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -155,6 +157,23 @@ class PacketGate(unittest.TestCase):
             [packet] = pg.gate('main', sha, data, self.repo)['packets']
         self.assertEqual((packet['status'], packet['raws'], packet['stats']['citas']), ('passed', {}, {'verificada': 2}))
         self.assertEqual(len(list((data / 'recrudos' / RP / 'raw').rglob('*.bin'))), 2)  # never under the packet folder
+        out = self.tmp / 'shas.txt'  # --pedir: what R2's sealed copies are asked for, with no request at all
+        with mock.patch.object(recrudo, 'Fetcher', side_effect=AssertionError('no network')):
+            self.assertEqual(pg.main(['--base', 'main', '--sha', sha, '--data', str(self.tmp / 'p'), '--out', str(out),
+                                      '--repo', str(self.repo), '--pedir']), 0)
+        key = lambda body, url: f'{hashlib.sha256(body).hexdigest()}.{hashlib.sha256(url.encode()).hexdigest()}'  # R2's
+        self.assertEqual(out.read_text().split(), sorted([key(PAGE, 'https://a.gob.mx/nota'), key(CLOSED_BODY, 'https://b.example.org/cerrado.json')]))
+        with mock.patch.object(pg, 'MAX_ARTIFACTS', 1):  # T29's cap per packet holds here too
+            pg.main(['--base', 'main', '--sha', sha, '--data', str(self.tmp / 'p'), '--out', str(out), '--repo', str(self.repo), '--pedir'])
+        self.assertEqual(len(out.read_text().split()), 1)
+        sealed = self.tmp / 'sellados' / 'sha256' / PAGE_SHA[:2] / PAGE_SHA / hashlib.sha256(b'https://a.gob.mx/nota').hexdigest()
+        sealed.mkdir(parents=True)
+        (sealed / f'{PAGE_SHA}.html').write_bytes(PAGE)
+        (sealed / f'{PAGE_SHA}.url').write_text('https://a.gob.mx/nota')
+        routes = {**ROUTES, 'https://a.gob.mx/nota': (200, PAGE + b'!', {'Content-Type': 'text/html'})}  # the page changed
+        with mock.patch.object(recrudo, 'Fetcher', partial(recrudo.Fetcher, opener=FakeOpener(routes), sleep=lambda s: None)):
+            [packet] = pg.gate('main', sha, Path(tempfile.mkdtemp(dir=self.tmp)), self.repo, self.tmp / 'sellados')['packets']
+        self.assertEqual(packet['stats']['citas'], {'verificada': 2})
 
     def test_a_tampered_raw_fails_and_lists_no_raw(self):
         raw = next((self.repo / 'research-packets' / RP / 'raw').rglob('*.html'))
