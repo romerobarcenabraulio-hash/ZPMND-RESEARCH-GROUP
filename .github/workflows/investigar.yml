@@ -9,9 +9,9 @@ name: investigar
 #   request per second per host, 60 MB per body); texts from rg.text in isolated processes. Seals with the public key.
 # - guardar: the R2 keys only, in one step; uploads the per-raw envelopes, opens nothing, runs no repository code.
 # - analyze: the owner's credentials through scripts/turno.sh, one per call: the heavy calls (the researcher, the model
-#   with every text) his Claude subscription (CLAUDE_CODE_OAUTH_TOKEN) alone, unless the variable RG_ORDEN_INVESTIGAR
-#   is "api"; the light one (the reviewer) his Anthropic API key (ANTHROPIC_API_KEY) first and the subscription if it
-#   fails. A subscription call never falls back to the paid key. The Claude Code CLI, pinned by version and by
+#   with every text) and the light ones (the reviewer, the reconciler) alike, his Claude subscription
+#   (CLAUDE_CODE_OAUTH_TOKEN) alone, unless the variable RG_ORDEN_INVESTIGAR is "api" (owner, 2026-11-19: no money,
+#   so the paid key ANTHROPIC_API_KEY is tried only when he sends it there). A subscription call never falls back to it. The Claude Code CLI, pinned by version and by
 #   the npm integrity of its Linux build, runs with no tools at all (--tools "") from an empty folder; the texts are
 #   inside its prompt. It cannot read a file, run a command or open a URL, so it cannot reach the credential; it can
 #   only answer, through the JSON Schema (--json-schema, structured output). No GitHub token reaches it. Then the
@@ -294,8 +294,8 @@ jobs:
       - name: The reviewer (the same CLI, no tools, an empty folder of its own; it sees claims and quotes only)
         env:
           RG_SUSCRIPCION: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          RG_API: ${{ secrets.ANTHROPIC_API_KEY }}
-          RG_ORDEN: api  # light (claims beside their quotes, 3 turns): the API first, the subscription if it fails
+          RG_API: ${{ vars.RG_ORDEN_INVESTIGAR == 'api' && secrets.ANTHROPIC_API_KEY || '' }}  # the reviewer: no key unless sent
+          RG_ORDEN: ${{ vars.RG_ORDEN_INVESTIGAR }}  # the reviewer, as the heavy calls (owner, 2026-11-19: cero gasto)
           CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
           DISABLE_AUTOUPDATER: '1'
         run: |
@@ -317,8 +317,8 @@ jobs:
       - name: The reconciler (the same CLI, no tools, an empty folder of its own; it can only drop the model's texts)
         env:
           RG_SUSCRIPCION: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          RG_API: ${{ secrets.ANTHROPIC_API_KEY }}
-          RG_ORDEN: api  # as the reviewer's: the API first, the subscription if it fails
+          RG_API: ${{ vars.RG_ORDEN_INVESTIGAR == 'api' && secrets.ANTHROPIC_API_KEY || '' }}  # the reconciler: no key unless sent
+          RG_ORDEN: ${{ vars.RG_ORDEN_INVESTIGAR }}  # the reconciler, as the reviewer's
           CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: '1'
           DISABLE_AUTOUPDATER: '1'
         run: |

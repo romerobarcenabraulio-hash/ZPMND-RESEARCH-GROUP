@@ -1405,18 +1405,16 @@ class Workflow(unittest.TestCase):
         self.assertIn('python -m rg.investigar fetch --request "requests/$RID.json" --plan plan/plan.json --out work', run)
         self.assertNotIn('requests/plans', run)  # the fetch job reads the checked plan, never the repo's directly
 
-    def test_heavy_calls_on_the_subscription_light_ones_on_the_api_one_credential_each(self):
-        # Braulio, 2026-10-28: "lo más pesado aquí y lo menos allá, que si no será un gastadero"
+    def test_every_call_on_the_subscription_unless_the_owner_sends_it_to_the_api_one_credential_each(self):
+        # Braulio, 2026-10-28: "lo más pesado aquí y lo menos allá"; 2026-11-19: no money, so the light calls too
         calls = {s['name']: s for j in ('plan', 'analyze') for s in self.jobs[j]['steps'] if 'scripts/turno.sh' in s.get('run', '')}
         self.assertEqual(len(calls), 5)  # the researcher, the model, the parts, the reviewer, the reconciler
         heavy = [s for s in calls.values() if 'vacio-revision' not in s['run'] and 'vacio-conciliacion' not in s['run']]
         light = [s for s in calls.values() if s not in heavy]
-        for step in heavy:  # the researcher and the model: the key reaches them only when sent there on purpose
+        self.assertEqual((len(heavy), len(light)), (3, 2))
+        for step in calls.values():  # every call: the key reaches it only when the owner sends it there on purpose
             self.assertEqual(step['env']['RG_API'], "${{ vars.RG_ORDEN_INVESTIGAR == 'api' && secrets.ANTHROPIC_API_KEY || '' }}")
             self.assertEqual(step['env']['RG_ORDEN'], '${{ vars.RG_ORDEN_INVESTIGAR }}')
-        self.assertEqual(len(light), 2)
-        for review in light:
-            self.assertEqual((review['env']['RG_API'], review['env']['RG_ORDEN']), ('${{ secrets.ANTHROPIC_API_KEY }}', 'api'))
         for step in calls.values():
             self.assertEqual(step['env']['RG_SUSCRIPCION'], '${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}')
             self.assertNotIn('ANTHROPIC_API_KEY', step['env'])  # the CLI gets its one credential from turno, never from the step
