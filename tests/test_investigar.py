@@ -13,8 +13,10 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 import tarfile
 import tempfile
+import time
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -1923,6 +1925,137 @@ class SellarCrudos(unittest.TestCase):
                 rc, out = self.sellar()
                 self.assertEqual((rc, (out / 'sellados.txt').read_text()), (3, ''))
 
+
+@unittest.skipUnless(shutil.which('openssl') and shutil.which('sha256sum'), 'needs openssl and sha256sum')
+class AbrirSellados(unittest.TestCase):
+    """scripts/abrir_sellados.sh (SECURITY T31): R2's sealed copies opened by sha256, against a fake aws and python3 on
+    PATH that fail if a secret reaches them that is not theirs."""
+    setUp, run_ok, sobre, raw = Sobre.setUp, Sobre.run_ok, Sobre.sobre, SellarCrudos.raw
+
+    def abrir(self, shas, key=True, cap=None, **mas):
+        r2, bin_ = self.tmp / 'r2', self.tmp / 'bin'; bin_.mkdir(exist_ok=True)
+        (bin_ / 'aws').write_text('#!/bin/bash\n[ -z "${RG_ARTIFACT_KEY:-}" ] || exit 9  # the private key never reaches aws\n'
+                                  'r=; while [ $# -gt 1 ]; do [ "$1" = --key ] && k=$2; [ "$1" = --range ] && r=${2#bytes=0-}; shift; done\n'
+                                  'echo "$k" >> "$FAKE_R2.log"; case $k in */cccc*) sleep 30;; esac\n'
+                                  'if [ -n "$r" ]; then head -c $((r + 1)) "$FAKE_R2/$k" > "$1"; else cat "$FAKE_R2/$k" > "$1"; fi || exit 1\n'
+                                  'wc -c < "$1" >> "$FAKE_R2.bytes"\n')  # what R2 served: a range is all it sends
+        no_secret = ('#!/bin/bash\n[ -z "${R2_LECTURA_ACCESS_KEY_ID:-}${R2_LECTURA_SECRET_ACCESS_KEY:-}${R2_ENDPOINT:-}'
+                     '${RG_ARTIFACT_KEY:-}" ] || exit 9  # it gets no secret at all\n')
+        lento = 'case " $* " in *" ${FAKE_LENTO:-@@} "*) echo $$ > "$FAKE_LENTO_PID"; exec sleep 30;; esac\n'  # a reader that never ends
+        (bin_ / 'python3').write_text(no_secret + lento + f'exec {sys.executable} "$@"\n')  # the envelope's reader
+        [(bin_ / b).chmod(0o755) for b in ('aws', 'python3')]
+        (self.tmp / 'shas.txt').write_text(''.join(f'{x}\n' for x in shas))
+        env = {**os.environ, 'PATH': f"{bin_}:{os.environ['PATH']}", 'FAKE_R2': str(r2), 'R2_ENDPOINT': 'https://r2.invalid',
+               **({'R2_LECTURA_ACCESS_KEY_ID': 'a', 'R2_LECTURA_SECRET_ACCESS_KEY': 'b', 'RG_ARTIFACT_KEY': self.priv.read_text()} if key else {}),
+               **({'RG_SELLADOS_MAX_BYTES': str(cap)} if cap is not None else {}), **mas}
+        out = self.tmp / 'abiertos'
+        r = subprocess.run(['bash', str(ROOT / 'scripts' / 'abrir_sellados.sh'), str(self.tmp / 'shas.txt'), str(out)],
+                           env=env, capture_output=True, text=True, timeout=300)
+        return r, out
+
+    def test_acota_gives_the_least_of_its_own_time_and_the_steps_and_runs_nothing_past_it(self):  # GPT on e9ef1e1
+        def acota(fin, s, *cmd):
+            t0 = time.monotonic()
+            r = subprocess.run(['bash', '-c', f'S=$1; shift; source "$S"; fin=$((SECONDS + {fin})); acota {s} "$@"; echo "rc=$?"',
+                                'prueba', str(ROOT / 'scripts' / 'abrir_sellados.sh'), *cmd], capture_output=True, text=True, timeout=60)
+            return r.stdout.split()[-1], round(time.monotonic() - t0)
+        marca = self.tmp / 'corrio'
+        self.assertEqual(acota(0, 0, 'touch', str(marca)), ('rc=124', 0))  # the step's time is over: nothing runs, not timeout 0
+        self.assertFalse(marca.exists())
+        self.assertEqual(acota(100, 1, 'sleep', '20'), ('rc=124', 1))  # its own second, the step has more
+        self.assertEqual(acota(100, 0, 'sleep', '0'), ('rc=0', 0))
+        self.assertIn(acota(2, 100, 'sleep', '20'), (('rc=124', 1), ('rc=124', 2)))  # the step's end, before its own 100 s
+
+    def test_the_step_deadline_bounds_the_object_in_course_and_leaves_no_process_alive(self):  # GPT on e9ef1e1
+        good = self.raw(CLOSED_BODY)
+        uh = hashlib.sha256(f'https://a.gob.mx/{good[:8]}'.encode()).hexdigest()
+        subprocess.run(['bash', str(ROOT / 'scripts' / 'sellar_crudos.sh'), str(self.src), str(self.tmp / 's'), str(self.pub)],
+                       check=True, capture_output=True, timeout=300)
+        for sha in (good, 'c' * 64):  # cccc…: R2 never answers
+            self.put(sha, uh, self.tmp / 's' / f'{good}.{uh}.sobre')
+        pid = self.tmp / 'lento.pid'
+        for pide, lento in (([f'{"c" * 64}.{uh}', f'{good}.{uh}'], ''), ([f'{good}.{uh}'] * 2, 'externo'),
+                            ([f'{good}.{uh}'] * 2, 'interno')):  # R2, sobre_partes.py externo, sobre.sh open: each never ends
+            pid.unlink(missing_ok=True)
+            t0 = time.monotonic()
+            r, out = self.abrir(pide, RG_SELLADO_SEGUNDOS='100', RG_SELLADOS_SEGUNDOS='3', FAKE_LENTO=lento, FAKE_LENTO_PID=str(pid))
+            self.assertLess(time.monotonic() - t0, 10, lento)  # cut where the step's 3 s end, not at its own 100 or the 30 it hangs
+            self.assertEqual(('out of time' in r.stdout, 'R2: 0 sealed raws opened' in r.stdout), (True, True), (lento, r.stdout))
+            if lento:
+                with self.assertRaises(ProcessLookupError):
+                    os.kill(int(pid.read_text()), 0)  # the reader is gone with its group, not left running
+            shutil.rmtree(out, ignore_errors=True)
+
+    def put(self, sha, uh, sobre):
+        d = self.tmp / 'r2' / 'sealed' / 'sha256' / sha[:2] / sha
+        d.mkdir(parents=True, exist_ok=True)
+        shutil.copy(sobre, d / f'{uh}.sobre')
+
+    def test_a_sealed_copy_opens_only_to_bytes_of_its_sha256_with_its_url_and_a_missing_one_is_skipped(self):
+        good, other = self.raw(CLOSED_BODY), self.raw(b'<p>otra pagina</p>')
+        uh = lambda sha: hashlib.sha256(f'https://a.gob.mx/{sha[:8]}'.encode()).hexdigest()  # each raw's URL, as raw() wrote it
+        subprocess.run(['bash', str(ROOT / 'scripts' / 'sellar_crudos.sh'), str(self.src), str(self.tmp / 's'), str(self.pub)],
+                       check=True, capture_output=True, timeout=300)
+        (forged := self.tmp / 'falso' / 'sha256' / other[:2]).mkdir(parents=True)  # anyone with the public key: right name, other bytes
+        (forged / f'{other}.html').write_bytes(b'otros bytes')
+        (forged / f'{other}.url').write_text(f'https://a.gob.mx/{other[:8]}')
+        self.assertEqual(self.sobre('seal', str(self.tmp / 'falso'), str(self.tmp / 'fe'), str(self.pub)).returncode, 0)
+        self.run_ok('tar', '-C', str(self.tmp / 'fe'), '-cf', str(self.tmp / 'falso.sobre'), 'datos.enc', 'datos.mac', 'llave.enc')
+        self.put(good, uh(good), self.tmp / 's' / f'{good}.{uh(good)}.sobre')
+        self.put(other, uh(other), self.tmp / 'falso.sobre')
+        nourl = hashlib.sha256(b'<p>tercera</p>').hexdigest()  # its own bytes, no URL: it could back any packet's url
+        (bare := self.tmp / 'sin-url' / 'sha256' / nourl[:2]).mkdir(parents=True)
+        (bare / f'{nourl}.html').write_bytes(b'<p>tercera</p>')
+        self.assertEqual(self.sobre('seal', str(self.tmp / 'sin-url'), str(self.tmp / 'se'), str(self.pub)).returncode, 0)
+        self.run_ok('tar', '-C', str(self.tmp / 'se'), '-cf', str(self.tmp / 'sin-url.sobre'), 'datos.enc', 'datos.mac', 'llave.enc')
+        self.put(nourl, uh(nourl), self.tmp / 'sin-url.sobre')
+        moved = 'e' * 64  # good's own envelope under another URL's key: its URL file does not hash to that key
+        self.put(good, moved, self.tmp / 's' / f'{good}.{uh(good)}.sobre')
+        asked = [(good, uh(good)), (other, uh(other)), (nourl, uh(nourl)), (good, moved), ('f' * 64, 'f' * 64)]
+        r, out = self.abrir([f'{x}.{y}' for x, y in asked] + [good, '../no-es-un-sha.' + 'f' * 64])
+        self.assertIn('R2: 1 sealed raws opened', r.stdout)
+        where = f'sha256/{good[:2]}/{good}/{uh(good)}'
+        self.assertEqual(sorted((p.relative_to(out).as_posix(), p.read_bytes()) for p in out.rglob('*') if p.is_file()),
+                         [(f'{where}/{good}.html', CLOSED_BODY), (f'{where}/{good}.url', f'https://a.gob.mx/{good[:8]}'.encode())])
+        self.assertEqual((self.tmp / 'r2.log').read_text().split(), [f'sealed/sha256/{x[:2]}/{x}/{y}.sobre' for x, y in asked])
+        r, out = (shutil.rmtree(out), self.abrir([f'{good}.{uh(good)}'], cap=len(CLOSED_BODY) - 1))[1]  # T29's bytes: past them, nothing more
+        self.assertEqual([p for p in out.rglob('*') if p.is_file()], [])
+        r, out = (shutil.rmtree(out), self.abrir([f'{good}.{uh(good)}'], key=False))[1]
+        self.assertEqual((r.returncode, 'no read key' in r.stdout, [p for p in out.rglob('*') if p.is_file()]), (0, True, []))
+
+    def test_each_object_is_bounded_timed_and_read_strictly_and_a_bad_one_never_stops_the_rest(self):
+        good, otra = self.raw(CLOSED_BODY), self.raw(b'<p>otra pagina</p>')
+        uh, uo = (hashlib.sha256(f'https://a.gob.mx/{x[:8]}'.encode()).hexdigest() for x in (good, otra))
+        subprocess.run(['bash', str(ROOT / 'scripts' / 'sellar_crudos.sh'), str(self.src), str(self.tmp / 's'), str(self.pub)],
+                       check=True, capture_output=True, timeout=300)
+        sobre = self.tmp / 's' / f'{good}.{uh}.sobre'
+        for nombre, desde, tipo in (('fifo', sobre, tarfile.FIFOTYPE), ('hueco', sobre, tarfile.GNUTYPE_SPARSE),
+                                    ('extra', self.tmp / 's' / f'{otra}.{uo}.sobre', None)):  # datos.enc a FIFO or sparse, or one more
+            with tarfile.open(desde) as a, tarfile.open(self.tmp / f'{nombre}.sobre', 'w', format=tarfile.GNU_FORMAT) as b:
+                for m in a.getmembers():
+                    f = a.extractfile(m)
+                    if m.name == 'datos.enc' and tipo:
+                        m.type, m.size, f = (tipo, 0, None) if tipo == tarfile.FIFOTYPE else (tipo, m.size, f)
+                    b.addfile(m, f)
+                b.addfile(tarfile.TarInfo('otro')) if not tipo else None
+        objetos = [('a' * 64, uh, 'fifo'), ('b' * 64, uh, 'hueco'), ('c' * 64, uh, None), (otra, uo, 'extra'), (good, uh, None)]
+        for sha, u, f in objetos:  # cccc…: R2 never answers
+            self.put(sha, u, self.tmp / f'{f}.sobre' if f else sobre)
+        t0 = time.monotonic()
+        r, out = self.abrir([f'{sha}.{u}' for sha, u, _ in objetos], RG_SELLADO_SEGUNDOS='2')
+        self.assertLess(time.monotonic() - t0, 20)  # the one that never answers is dropped at its 2 s
+        self.assertIn('R2: 1 sealed raws opened', r.stdout)  # FIFO, sparse, one more: refused (tar took them: GPT on 1a8b369)
+        for uno in (1000, sobre.stat().st_size - 1):  # too big for one object: cut at one byte more, never opened
+            r, out = (shutil.rmtree(out), self.abrir([f'{good}.{uh}'], RG_SELLADO_MAX_BYTES=str(uno)))[1]
+            self.assertIn('R2: 0 sealed raws opened', r.stdout)
+            self.assertLessEqual(int((self.tmp / 'r2.bytes').read_text().split()[-1]), uno + 1)  # all R2 sent
+        r, out = (shutil.rmtree(out), self.abrir([f'{"c" * 64}.{uh}', f'{good}.{uh}'], RG_SELLADO_SEGUNDOS='2',
+                                                  RG_SELLADOS_SEGUNDOS='1'))[1]
+        self.assertIn('out of time', r.stdout)  # past the step's own time, no more objects are asked
+        self.assertIn('R2: 0 sealed raws opened', r.stdout)
+        malos, cap = [f'{d * 64}.{uh}' for d in '0123456789'], 5 * sobre.stat().st_size // 2  # ten copies none opens: T29 counts what R2 sent, the last range only what is left (GPT on 7b649b1)
+        r, out = ([self.put(m[:64], uh, sobre) for m in malos], (self.tmp / 'r2.bytes').unlink(), shutil.rmtree(out), self.abrir(malos, cap=cap))[3]
+        self.assertEqual(('out of bytes' in r.stdout, sum(map(int, (self.tmp / 'r2.bytes').read_text().split())) <= cap), (True, True))
 
 if __name__ == '__main__':
     unittest.main()
