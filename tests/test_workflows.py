@@ -46,6 +46,43 @@ class Workflows(unittest.TestCase):
                     self.assertNotIn('${{', step.get('run', ''), f'{wf.name}:{name}')
 
 
+class AdvisoryGate(unittest.TestCase):
+    """The live OpenClaw advisory gate runs on the weekly schedule and on PRs that change substrate/, and fails closed."""
+
+    def setUp(self):
+        ci = Path(__file__).resolve().parents[1] / '.github' / 'workflows' / 'ci.yml'
+        self.doc = yaml.safe_load(ci.read_text(encoding='utf-8'))
+        self.steps = self.doc['jobs']['checks']['steps']
+        self.decide = next(s for s in self.steps if s.get('id') == 'substrate')['run']
+
+    def _gate(self, event, touch_substrate, parent=True):
+        with tempfile.TemporaryDirectory() as d:
+            git = lambda *a: subprocess.run(['git', '-C', d, *a], check=True, capture_output=True)
+            git('init', '-q'); git('config', 'user.email', 't@invalid'); git('config', 'user.name', 't')
+            Path(d, 'README').write_text('a'); git('add', '-A'); git('commit', '-qm', 'base')
+            if parent:
+                f = Path(d, 'substrate', 'x') if touch_substrate else Path(d, 'other')
+                f.parent.mkdir(exist_ok=True); f.write_text('b'); git('add', '-A'); git('commit', '-qm', 'pr')
+            out = Path(d, 'out')
+            subprocess.run(['bash', '-c', self.decide], cwd=d, check=True,
+                           env={**os.environ, 'EVENT': event, 'GITHUB_OUTPUT': str(out)})
+            return out.read_text().strip()
+
+    def test_it_runs_weekly_and_on_a_pr_that_changes_substrate(self):
+        self.assertIn('schedule', self.doc.get('on') or self.doc[True])
+        self.assertEqual(self._gate('schedule', False), 'gate=yes')
+        self.assertEqual(self._gate('pull_request', True), 'gate=yes')
+        self.assertEqual(self._gate('pull_request', False), 'gate=no')
+
+    def test_a_diff_it_cannot_read_runs_the_gate(self):
+        self.assertEqual(self._gate('pull_request', False, parent=False), 'gate=yes')
+
+    def test_the_gate_step_obeys_the_decision_and_still_fetches_live(self):
+        gate = next(s for s in self.steps if s.get('name') == 'OpenClaw advisory gate (live)')
+        self.assertEqual(gate['if'], "steps.substrate.outputs.gate == 'yes'")
+        self.assertIn('--fetch', gate['run'])
+
+
 class AuditorGpt(unittest.TestCase):
     """The second auditor never has PR code next to its key, and never speaks with the Claude auditor's voice."""
 
