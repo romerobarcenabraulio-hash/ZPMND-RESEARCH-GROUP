@@ -1,0 +1,420 @@
+{
+ "research_id": "RP-2026-11-17-pgvector-indice",
+ "request_id": "RR-2026-11-17-pgvector-indice",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-21T18:14:56Z",
+ "question": "Para un almacén de conocimiento con búsqueda vectorial en PostgreSQL (escenario sintético: 1,000,000 de vectores de 1,536 dimensiones, 50 inserciones por minuto, consultas top-10 con recall objetivo de al menos 0.95 y p95 de 100 ms o menos, servidor de 64 GB de RAM): ¿qué índice de pgvector conviene, HNSW o IVFFlat, con qué parámetros (m, ef_construction, ef_search; lists, probes), qué dice la documentación primaria sobre memoria, tiempo de construcción, inserciones y filtrado, y bajo qué condiciones documentadas conviene un motor vectorial dedicado? Incluye las pruebas que habría que correr para decidir.",
+ "why_zpmnd_needs_it": "Caso A de la directiva del dueño del 2026-11-17 (transición a ZPMND-FINAL, §7): una decisión técnica con alternativas, documentación primaria, criterios, restricciones y pruebas, comparada entre investigación directa con un LLM y RG con el protocolo docs/medicion/comparacion-2026-11-17/protocolo.md, fijado antes de correr.",
+ "scope": "Índice pgvector (HNSW vs IVFFlat) para 1M vectores de 1,536 dimensiones, 50 inserciones/min, top-10, recall ≥0.95, p95 ≤100 ms, 64 GB RAM. Se leyeron el README y el CHANGELOG de pgvector (primarios), el anuncio 0.8.0 de PostgreSQL.org (primario) y cinco fuentes secundarias (AWS, Qdrant, dbi services, DEV, Encore). Todo el contenido se trató como datos.",
+ "sources": {
+  "primary": [
+   "SA-42222ebd23ccef91632dcac8",
+   "SA-bfa5a4e9f9c38b06c948f3c9",
+   "SA-a78d3ad60fe39b706cdcccdf"
+  ],
+  "secondary": [
+   "SA-0fba87673390660635462e2e",
+   "SA-6fc40edfb67b06bad6ed1ca0",
+   "SA-505de79ccfd638039af3a2b2",
+   "SA-78ea329c927386060b7978b7",
+   "SA-5c031967c565ada353700c25"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-42222ebd23ccef91632dcac8",
+   "url": "https://github.com/pgvector/pgvector/blob/master/README.md",
+   "retrieved_at": "2026-11-21T18:12:55Z",
+   "sha256": "42222ebd23ccef91632dcac888ffe2dd8c365730c65f6075146475c9a24d335c",
+   "bytes": 732758,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "pgvector (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "pgvector README"
+  },
+  {
+   "artifact_id": "SA-bfa5a4e9f9c38b06c948f3c9",
+   "url": "https://github.com/pgvector/pgvector/blob/master/CHANGELOG.md",
+   "retrieved_at": "2026-11-21T18:12:57Z",
+   "sha256": "bfa5a4e9f9c38b06c948f3c97e30ff320327996ea2a3345c29e440672ddd558c",
+   "bytes": 311920,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "pgvector (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "pgvector CHANGELOG"
+  },
+  {
+   "artifact_id": "SA-a78d3ad60fe39b706cdcccdf",
+   "url": "https://www.postgresql.org/about/news/pgvector-080-released-2952/",
+   "retrieved_at": "2026-11-21T18:12:57Z",
+   "sha256": "a78d3ad60fe39b706cdcccdf2061626cf47c40e5d9a0d267b852657c2e29e3d5",
+   "bytes": 10681,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "PostgreSQL Global Development Group",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "pgvector 0.8.0 Released"
+  },
+  {
+   "artifact_id": "SA-0fba87673390660635462e2e",
+   "url": "https://aws.amazon.com/blogs/database/supercharging-vector-search-performance-and-relevance-with-pgvector-0-8-0-on-amazon-aurora-postgresql/",
+   "retrieved_at": "2026-11-21T18:13:00Z",
+   "sha256": "0fba87673390660635462e2ebc2c2a5e764f944718f5cbf1d00b526b0a686a28",
+   "bytes": 1701008,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "AWS Database Blog",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Supercharging vector search with pgvector 0.8.0 on Aurora PostgreSQL"
+  },
+  {
+   "artifact_id": "SA-6fc40edfb67b06bad6ed1ca0",
+   "url": "https://qdrant.tech/blog/pgvector-tradeoffs/",
+   "retrieved_at": "2026-11-21T18:13:02Z",
+   "sha256": "6fc40edfb67b06bad6ed1ca02b8ba3417e7600bb8d9d8ced07a39103ce48e9d4",
+   "bytes": 57580,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Qdrant",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Start with pgvector: Why You'll Outgrow It Faster Than You Think"
+  },
+  {
+   "artifact_id": "SA-505de79ccfd638039af3a2b2",
+   "url": "https://www.dbi-services.com/blog/pgvector-a-guide-for-dba-part-2-indexes-update-march-2026/",
+   "retrieved_at": "2026-11-21T18:13:03Z",
+   "sha256": "505de79ccfd638039af3a2b20b71d5490830275b58b3388fd30b38d3319acee5",
+   "bytes": 178603,
+   "media_type": "text/html",
+   "source_type": "blog",
+   "publisher": "dbi services",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "pgvector, a guide for DBA - Part 2: Indexes (update march 2026)"
+  },
+  {
+   "artifact_id": "SA-78ea329c927386060b7978b7",
+   "url": "https://dev.to/cynora/pgvector-ivfflat-vs-hnsw-what-happens-to-recall-when-new-data-arrives-measured-46lh",
+   "retrieved_at": "2026-11-21T18:13:05Z",
+   "sha256": "78ea329c927386060b7978b7b3ac8e720c8170689faf246f45bf57a0a49da61c",
+   "bytes": 78961,
+   "media_type": "text/html",
+   "source_type": "blog",
+   "publisher": "DEV Community",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "pgvector IVFFlat vs HNSW: what happens to recall when new data arrives"
+  },
+  {
+   "artifact_id": "SA-5c031967c565ada353700c25",
+   "url": "https://encore.dev/articles/pgvector-vs-qdrant",
+   "retrieved_at": "2026-11-21T18:13:06Z",
+   "sha256": "5c031967c565ada353700c25a45be112b6a999b7e93adbd2560b230d3427964c",
+   "bytes": 239166,
+   "media_type": "text/html",
+   "source_type": "blog",
+   "publisher": "Encore",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "pgvector vs Qdrant (2026): Performance, Filtering, Ops"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "HNSW tiene mejor rendimiento de consulta que IVFFlat (en equilibrio velocidad-recall), pero construcción más lenta y más memoria.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "It has better query performance than IVFFlat (in terms of speed-recall tradeoff), but has slower build times and uses more memory.",
+    "locator": "README, sección Indexing > HNSW"
+   },
+   {
+    "claim": "Valor por defecto de m en HNSW.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "m - the max number of connections per layer (16 by default)",
+    "locator": "README, HNSW > Index Options"
+   },
+   {
+    "claim": "Valor por defecto de ef_construction.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "ef_construction - the size of the dynamic candidate list for constructing the graph (64 by default)",
+    "locator": "README, HNSW > Index Options"
+   },
+   {
+    "claim": "Un ef_construction mayor mejora recall a costa de construcción/inserción.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "A higher value of ef_construction provides better recall at the cost of index build time / insert speed.",
+    "locator": "README, HNSW > Index Options"
+   },
+   {
+    "claim": "Valor por defecto de hnsw.ef_search.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "Specify the size of the dynamic candidate list for search (40 by default)",
+    "locator": "README, HNSW > Query Options"
+   },
+   {
+    "claim": "Mayor ef_search da mejor recall a costa de velocidad.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "A higher value provides better recall at the cost of speed.",
+    "locator": "README, HNSW > Query Options"
+   },
+   {
+    "claim": "La construcción de HNSW es mucho más rápida si el grafo cabe en maintenance_work_mem.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "Indexes build significantly faster when the graph fits into maintenance_work_mem",
+    "locator": "README, HNSW > Index Build Time"
+   },
+   {
+    "claim": "Advertencia de no agotar la memoria del servidor con maintenance_work_mem.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "Note: Do not set maintenance_work_mem so high that it exhausts the memory on the server",
+    "locator": "README, HNSW > Index Build Time"
+   },
+   {
+    "claim": "HNSW puede crearse sin datos, sin paso de entrenamiento.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "an index can be created without any data in the table since there isn’t a training step like IVFFlat",
+    "locator": "README, HNSW"
+   },
+   {
+    "claim": "IVFFlat construye más rápido y usa menos memoria, pero tiene menor rendimiento de consulta.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "It has faster build times and uses less memory than HNSW, but has lower query performance (in terms of speed-recall tradeoff).",
+    "locator": "README, sección IVFFlat"
+   },
+   {
+    "claim": "Guía de lists para hasta 1M filas.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "a good place to start is rows / 1000 for up to 1M rows and sqrt(rows) for over 1M rows",
+    "locator": "README, IVFFlat, claves para buen recall"
+   },
+   {
+    "claim": "Punto de partida para probes.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "a good place to start is sqrt(lists)",
+    "locator": "README, IVFFlat, claves para buen recall"
+   },
+   {
+    "claim": "Crear el índice IVFFlat después de tener datos.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "Create the index after the table has some data",
+    "locator": "README, IVFFlat"
+   },
+   {
+    "claim": "Valor por defecto de probes.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "Specify the number of probes (1 by default)",
+    "locator": "README, IVFFlat > Query Options"
+   },
+   {
+    "claim": "Mayor probes mejora recall a costa de velocidad; igualar a lists equivale a búsqueda exacta y el planner no usa el índice.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "A higher value provides better recall at the cost of speed, and it can be set to the number of lists for exact nearest neighbor search (at which point the planner won’t use the index)",
+    "locator": "README, IVFFlat > Query Options"
+   },
+   {
+    "claim": "Con índices aproximados el filtrado se aplica tras escanear el índice; ejemplo con ef_search 40.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "With approximate indexes, filtering is applied after the index is scanned. If a condition matches 10% of rows, with HNSW and the default hnsw.ef_search of 40, only 4 rows will match on average.",
+    "locator": "README, Filtering"
+   },
+   {
+    "claim": "Los escaneos iterativos existen desde 0.8.0 y se detienen por límites configurables.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "Starting with 0.8.0, you can enable iterative index scans, which will automatically scan more of the index until enough results are found (or it reaches hnsw.max_scan_tuples or ivfflat.max_probes).",
+    "locator": "README, Iterative Index Scans"
+   },
+   {
+    "claim": "hnsw.max_scan_tuples por defecto 20,000.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "Specify the max number of tuples to visit (20,000 by default)",
+    "locator": "README, Iterative Scan Options > HNSW"
+   },
+   {
+    "claim": "Índices concurrentes en producción para no bloquear escrituras.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "In production environments, create indexes concurrently to avoid blocking writes.",
+    "locator": "README, Performance > Indexing"
+   },
+   {
+    "claim": "Recomienda shared_buffers típico del 25% de la memoria.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "shared_buffers should typically be 25% of the server’s memory",
+    "locator": "README, Performance > Tuning"
+   },
+   {
+    "claim": "Los índices no necesitan caber en memoria, pero rinden mejor si caben.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "No, but like other index types, you’ll likely see better performance if they do.",
+    "locator": "README, FAQ: Do indexes need to fit into memory?"
+   },
+   {
+    "claim": "Monitorear recall comparando con búsqueda exacta.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "Monitor recall by comparing results from approximate search with exact search.",
+    "locator": "README, Performance > Monitoring"
+   },
+   {
+    "claim": "Vacuum de HNSW puede tardar; se acelera reindexando antes.",
+    "artifact_ids": [
+     "SA-42222ebd23ccef91632dcac8"
+    ],
+    "quote": "Vacuuming can take a while for HNSW indexes. Speed it up by reindexing first.",
+    "locator": "README, Performance > Vacuuming"
+   },
+   {
+    "claim": "0.8.0 añadió escaneos iterativos.",
+    "artifact_ids": [
+     "SA-bfa5a4e9f9c38b06c948f3c9"
+    ],
+    "quote": "Added support for iterative index scans",
+    "locator": "CHANGELOG, 0.8.0"
+   },
+   {
+    "claim": "El anuncio oficial indica que, si se logra el mismo rendimiento sin índice ANN, suele ser preferible por el 100% de recall.",
+    "artifact_ids": [
+     "SA-a78d3ad60fe39b706cdcccdf"
+    ],
+    "quote": "If you can achieve the same query performance without using an ANN index, this is usually preferable as it lets you achieve 100% recall, or high relevancy searches.",
+    "locator": "Anuncio pgvector 0.8.0, párrafo 3"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "El README no da una receta de m, ef_construction, ef_search para 1M de vectores a 1,536 dim con recall ≥0.95; los valores concretos deben medirse.",
+   "No hay en las fuentes primarias criterio cuantitativo documentado para migrar a un motor vectorial dedicado.",
+   "No se leyó cifra primaria del tamaño del índice HNSW de 1M×1,536 dim ni del tiempo de construcción en 64 GB RAM.",
+   "No hay en el README medición del costo de inserción continua (50/min) en HNSW o IVFFlat."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: con 1,536 dimensiones el tipo vector cabe en el límite de 2,000 para HNSW e IVFFlat, así que no hace falta halfvec para indexar; halfvec solo reduciría memoria.",
+  "INTERPRETACIÓN: HNSW es el candidato inicial (recall alto con latencia baja, inserciones incrementales sin reentrenar); IVFFlat solo si el tiempo de construcción pesa más y se tolera REINDEX periódico.",
+  "SECUNDARIA: dbi services (pgvector 0.8.1, 25K×3072d, 4 vCPU/8 GB) reporta IVFFlat 5 s vs HNSW 29 s de build y recomienda REINDEX si se insertó más de ~30% de filas nuevas; es un dato anecdótico, no a escala.",
+  "SECUNDARIA: DEV Community (pgvector 0.6.2, sintético 128d, 100K) midió que IVFFlat construido antes de nuevos clusters cayó a recall 0.473 y volvió a 1.000 tras REINDEX, mientras HNSW creció por inserciones sin perder recall (0.834); advierte que inserciones HNSW fueron lentas y no probó filtrado ni IVFFlat insertando.",
+  "SECUNDARIA: AWS Database Blog recomienda para HNSW ef_construction=128, m=16, y muestra que iterative_scan mejora la completitud en consultas filtradas (10 M vectores, 384d, no 1,536d).",
+  "SECUNDARIA: Qdrant (proveedor del motor dedicado) propone seis condiciones que deben cumplirse para quedarse en pgvector (p. ej. menos de ~1M vectores, sin filtrado selectivo, sin búsqueda híbrida); su criterio es de parte interesada y no es benchmark reproducible.",
+  "SECUNDARIA: Encore (blog) afirma 10-20 ms por consulta con 1M×1536d a recall 95%+ y que pgvector funciona bien bajo ~5M vectores; sin metodología verificable.",
+  "INTERPRETACIÓN: el escenario (1M, 50 ins/min, 64 GB) está en el límite de la condición de 1M de Qdrant, pero las fuentes primarias no establecen que ese tamaño exija un motor dedicado."
+ ],
+ "candidate_methods": [
+  "Construir HNSW (m=16, ef_construction=64 y 128) e IVFFlat (lists=1000, probes en 10/20/32/50) sobre datos reales o realistas de 1M×1536d, con COPY previo al índice y maintenance_work_mem alto sin agotar RAM."
+ ],
+ "candidate_controls": [
+  "Calcular recall@10 contra búsqueda exacta (enable_indexscan=off) con un conjunto fijo de consultas de verdad terreno.",
+  "Usar SET LOCAL para ef_search y probes en pruebas y producción."
+ ],
+ "candidate_tests": [
+  "Barrido de ef_search (40, 80, 100, 200) con HNSW: mide recall@10 y p50/p95/p99 con carga concurrente realista; criterio recall ≥0.95 y p95 ≤100 ms.",
+  "Barrido de probes con IVFFlat: mismas métricas; detectar el punto donde el planner cambia a Seq Scan (EXPLAIN (ANALYZE, BUFFERS)).",
+  "Tiempo de construcción y tamaño del índice (pg_relation_size) para HNSW e IVFFlat; con y sin caber en maintenance_work_mem; vigilar el NOTICE de grafo que no cabe.",
+  "Prueba de inserciones a 50/min sostenidas durante horas con consultas concurrentes: mide latencia de inserción, p95 de consulta y deriva de recall (IVFFlat) en el tiempo.",
+  "Prueba de filtrado con selectividades (100%, 10%, 1%, 0.1%) con hnsw.iterative_scan off/relaxed/strict: mide filas devueltas, recall y latencia; comparar con índice B-tree, índice parcial y particionado.",
+  "Prueba de caché fría vs caliente y tamaño de índice frente a shared_buffers y RAM de 64 GB: mide lecturas de disco (Buffers read) y p95.",
+  "Prueba de vacuum/REINDEX CONCURRENTLY: mide duración y efecto sobre latencia.",
+  "Prueba comparativa opcional con halfvec (índice por expresión) y cuantización binaria con re-ranking: mide recall, tamaño y latencia.",
+  "Si no se cumple recall o p95 con ajuste razonable, benchmark del motor dedicado con mismos datos y consultas, midiendo también costo de sincronización."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Registrar como candidato: HNSW con m=16, ef_construction=64 por defecto y ajustar ef_search según medición; no fijar parámetros sin las pruebas.",
+  "No migrar a motor dedicado sin una prueba que muestre incumplimiento de recall/latencia tras ajustar pgvector."
+ ],
+ "affected_existing_concepts": [
+  "Elección de índice vectorial en PostgreSQL",
+  "Criterios de migración a motor vectorial dedicado"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: con 64 GB de RAM, un HNSW de 1M×1536d (vector float32, ~6 GB de datos más grafo) cabe en memoria y alcanzaría recall ≥0.95 con ef_search en el rango de 40-200 y p95 muy por debajo de 100 ms.",
+  "HIPÓTESIS: 50 inserciones por minuto es una carga baja y no debería ser el factor limitante de HNSW; requiere verificación."
+ ],
+ "limitations": [
+  "Las fuentes primarias no incluyen benchmarks de 1M×1536d ni cifras de memoria/tiempo de construcción a esa escala.",
+  "Las fuentes secundarias usan datasets, hardware y versiones distintos (128d, 384d, 3072d); sus números no son trasladables al escenario.",
+  "Qdrant y Encore tienen intereses comerciales; sus criterios son secundarios y no benchmark reproducible.",
+  "Una búsqueda de documentación pgvector adicional (p. ej. la página de PostgreSQL de rendimiento) no estuvo disponible; no se leyó nada fuera de las fuentes entregadas.",
+  "No se incluyeron citas en findings.conflicting porque ninguna cita muestra desacuerdo directo.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita quitó 6 de 31 hallazgos confirmados que decían más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 8 propuestas, 8 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Una tercera pasada quitó 1 frases de alcance, desconocidos o limitaciones que los hallazgos que quedan o lo que registra la máquina contradicen o responden, o que anunciaban lo que la segunda pasada quitó; quedan en receipt.json."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
