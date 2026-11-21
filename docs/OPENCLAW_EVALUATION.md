@@ -3,6 +3,24 @@
 Status: **candidate substrate**, not a dependency. Stages (handoff section 15): install ✔ · understand ✔ (security
 surface) · isolate ✔ · small pilot ☐ · observe ☐ · measure ☐ · decide ☐.
 
+## Pin moved to 2026.10.33 (2026-11-21)
+
+- Why: GHSA-pw3x-g8v8-fvj2 (high, published 2026-11-19, "delegation could skip approval for restricted agents",
+  CWE-863) affects `>= 2026.9.2, < 2026.10.33`, so the CI advisory gate failed closed on 2026.10.5 for every PR.
+- Tag `v2026.10.33` (object `521a3e02`) has a verified signature, tagger RomneyDa, 2026-11-18; commit `5196fbbf`.
+- The npm tarball's sha256 (`bf458407…`) equals the entry in the signed release manifest, whose `sourceSha` is that
+  commit. The manifest's sha256 (`2b3cb549…`) matches the published `.sha256`; the tarball's sha512 equals the npm
+  registry integrity.
+- 585 packages pinned, lockfile regenerated with npm 11.21.1 and `--package-lock-only --ignore-scripts` (nothing
+  installed, nothing run). Four dependencies ship install scripts now (esbuild, protobufjs, @google/genai, openclaw;
+  koffi left the tree); the rule is the same: only OpenClaw's own postinstall runs, explicitly.
+- Base image: `node:24.22.1-bookworm-slim`, the digest OpenClaw 2026.10.33 pins; its `engines` asks node >= 24.16.
+- `docs/gateway/config-tools/tool-policy.md`, which the profile check models, differs from 2026.10.5 in one word
+  (line 246, "canonical" → "standard"); the tool groups and profiles are the same.
+- Of 723 published advisories, none affect 2026.10.33.
+- Not re-run: the Docker checks of `substrate/runtime/` (`verify.sh`, `verify_config.sh`, `verify_e2e.sh`). The
+  substrate stays a candidate, not a dependency; they run again before any pilot.
+
 ## Version and supply chain (2026-10-19)
 
 - Pinned: 2026.10.5, the latest stable release (released 2026-10-18). Tag `v2026.10.5` has a verified signature
