@@ -29,7 +29,14 @@ GH = {'active': None, 'disabled_manually': 'apagado', 'disabled_inactivity': 'ap
       'deleted': 'apagado'}
 # The workflows the owner paused on purpose, with the date and the reason: only these are pausado, which never alerts.
 # Disabling a workflow takes only a token with actions write; changing this list takes a reviewed PR (GPT on 328b336).
-PAUSADOS = {'descubrir.yml': ('2026-11-03', 'decisión del dueño; reabre cuando un pedido de requests/ lo necesite')}
+PAUSADOS = {
+    'catalog-mx.yml': ('2026-11-17', 'transición a ZPMND-FINAL (directiva del dueño): su consumidor era ZPPMND; reabre con un pedido de ZPMND-FINAL que lo necesite'),
+    'descubrir.yml': ('2026-11-17', 'transición a ZPMND-FINAL: el explorador queda diferido; reabre cuando un pedido de requests/ lo necesite'),
+    'indicadores-mx.yml': ('2026-11-17', 'transición a ZPMND-FINAL (directiva del dueño): su consumidor era ZPPMND; reabre con un pedido de ZPMND-FINAL que lo necesite'),
+    'sondeo-inegi.yml': ('2026-11-17', 'transición a ZPMND-FINAL (directiva del dueño): su consumidor era ZPPMND; reabre con un pedido de ZPMND-FINAL que lo necesite'),
+    'sondeo.yml': ('2026-11-17', 'transición a ZPMND-FINAL (directiva del dueño): su consumidor era ZPPMND; reabre con un pedido de ZPMND-FINAL que lo necesite'),
+    'texto-mx.yml': ('2026-11-17', 'transición a ZPMND-FINAL (directiva del dueño): su consumidor era ZPPMND; reabre con un pedido de ZPMND-FINAL que lo necesite'),
+}
 REPO = re.compile(r'[A-Za-z0-9-]{1,39}/[A-Za-z0-9._-]{1,100}')
 
 

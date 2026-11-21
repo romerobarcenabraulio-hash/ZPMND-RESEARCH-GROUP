@@ -31,6 +31,11 @@ H, D = timedelta(hours=1), timedelta(days=1)
 ACTIVO = {'state': 'active'}
 
 
+# The mechanism is tested against a fixed list of its own, so the owner's list (Workflow below) can change without
+# touching these cases (2026-11-17: the transition paused every Mexican workflow; the cases still need one listed).
+PAUSADOS_PRUEBA = {'descubrir.yml': ('2026-11-03', 'decisión del dueño; reabre cuando un pedido de requests/ lo necesite')}
+
+
 def run(i, conclusion='success', hace=H, status='completed', ahora=AHORA, **kw):
     t = (ahora - hace).strftime('%Y-%m-%dT%H:%M:%SZ')
     return {'id': i, 'run_number': i, 'status': status, 'conclusion': conclusion if status == 'completed' else None,
@@ -46,6 +51,11 @@ def estado(*runs, tope=2, gh='active', nombre='catalog-mx.yml'):
 
 
 class Decision(unittest.TestCase):
+    def setUp(self):
+        patcher = mock.patch.object(vigia, 'PAUSADOS', PAUSADOS_PRUEBA)
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
     def test_a_last_finished_run_that_did_not_succeed_is_red(self):
         for c in ('failure', 'cancelled', 'timed_out', 'startup_failure', 'skipped', None, 'algo nuevo'):
             self.assertEqual(estado(run(1, hace=D), run(2, c)), 'rojo', c)
@@ -104,6 +114,11 @@ class Decision(unittest.TestCase):
 
 
 class Texto(unittest.TestCase):
+    def setUp(self):
+        patcher = mock.patch.object(vigia, 'PAUSADOS', PAUSADOS_PRUEBA)
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
     def todos(self, **cambios):
         return {n: {'workflow_runs': cambios.get(n, [run(1)])} for n, _ in vigia.VIGILADOS}
 
@@ -210,7 +225,9 @@ class Workflow(unittest.TestCase):
             self.assertLessEqual(set(doc.get('on') or doc[True]), set(vigia.EVENTOS), n)
 
     def test_only_the_owners_list_in_the_script_pauses_a_workflow_and_each_entry_says_when_and_why(self):
-        self.assertEqual(vigia.PAUSADOS, {'descubrir.yml': ('2026-11-03', 'decisión del dueño; reabre cuando un pedido de requests/ lo necesite')})
+        self.assertEqual(set(vigia.PAUSADOS), {'catalog-mx.yml', 'descubrir.yml', 'indicadores-mx.yml', 'sondeo-inegi.yml',
+                                               'sondeo.yml', 'texto-mx.yml'})  # 2026-11-17: all but mutacion-noche.yml
+        self.assertEqual({f for f, _ in vigia.PAUSADOS.values()}, {'2026-11-17'})
         for n, (fecha, motivo) in vigia.PAUSADOS.items():
             self.assertIn(n, dict(vigia.VIGILADOS))
             self.assertEqual((datetime.strptime(fecha, '%Y-%m-%d').strftime('%Y-%m-%d'), bool(motivo.strip())), (fecha, True))
@@ -309,9 +326,9 @@ class Pasos(unittest.TestCase):
         self.assertEqual(self.correr({'catalog-mx.yml'}), [('POST', 'repos/o/r/issues', {'title': vigia.TITULO, 'body': mock.ANY})])
         self.assertEqual(self.lecturas, RUNS + [PAGINA.format(1)])
         self.poner([issue(3, 'alguien'), issue(7)])
-        escritas = self.correr({'texto-mx.yml'})
+        escritas = self.correr({'mutacion-noche.yml'})  # the one workflow the owner's list leaves unpaused (2026-11-17)
         self.assertEqual(escritas, [('PATCH', 'repos/o/r/issues/7', {'body': mock.ANY})])
-        self.assertIn('| `texto-mx.yml` | rojo |', escritas[0][2]['body'])
+        self.assertIn('| `mutacion-noche.yml` | rojo |', escritas[0][2]['body'])
 
     def test_all_well_closes_ours_with_a_comment_and_an_undecided_run_writes_nothing(self):
         self.assertEqual(self.correr(set()), [])
@@ -336,11 +353,11 @@ class Pasos(unittest.TestCase):
         escritas = self.correr({'descubrir.yml'}, estados=pausa)
         self.assertEqual([(m, u) for m, u, _ in escritas], [('POST', 'repos/o/r/issues/7/comments'), ('PATCH', 'repos/o/r/issues/7')])
         self.assertIn('| `descubrir.yml` | pausado |', escritas[0][2]['body'])
-        for s in ('disabled_manually', 'disabled_inactivity'):  # texto-mx failed and was disabled, by hand or by GitHub
+        for s in ('disabled_manually', 'disabled_inactivity'):  # mutacion-noche, off the list, failed and was disabled
             self.poner([])
-            escritas = self.correr({'texto-mx.yml'}, estados={**pausa, 'texto-mx.yml': s})
+            escritas = self.correr({'mutacion-noche.yml'}, estados={**pausa, 'mutacion-noche.yml': s})
             self.assertEqual(escritas, [('POST', 'repos/o/r/issues', {'title': vigia.TITULO, 'body': mock.ANY})], s)
-            self.assertIn('| `texto-mx.yml` | apagado |', escritas[0][2]['body'])
+            self.assertIn('| `mutacion-noche.yml` | apagado |', escritas[0][2]['body'])
 
     def test_every_page_of_open_issues_is_read_first_and_an_unreadable_page_writes_nothing(self):
         otras = [issue(n, title=f'otra {n}') for n in range(8, 160)]  # 152 newer issues of the bot: ours is on page 2
