@@ -1,0 +1,407 @@
+{
+ "request_id": "RR-2026-11-08-familia-f-economia",
+ "fetched": [
+  {
+   "url": "https://openstax.org/details/books/principles-economics-3e",
+   "status": 200,
+   "error": null,
+   "sha256": "122a7b58174184305f56c8c5c86c995abd6060bc1920fae9a3cec195c07fcf18",
+   "bytes": 12343,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:56:35Z",
+   "text_status": "ok",
+   "text_chars": 63
+  },
+  {
+   "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/preface",
+   "status": 200,
+   "error": null,
+   "sha256": "56de9eabaeab83c3d99abd91c95eff8db6a1d849ae4cd3b3282698570311c460",
+   "bytes": 315706,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:56:36Z",
+   "text_status": "ok",
+   "text_chars": 24168
+  },
+  {
+   "url": "https://www.loc.gov/item/2021387735/",
+   "status": 403,
+   "error": null,
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T16:56:37Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://open.umn.edu/opentextbooks/subjects/economics",
+   "status": 200,
+   "error": null,
+   "sha256": "2263fc8f71c072ba15ed508677c334afca2bc514869fd742a392059c732d1dc6",
+   "bytes": 86890,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:56:42Z",
+   "text_status": "ok",
+   "text_chars": 9617
+  },
+  {
+   "url": "https://open.umn.edu/opentextbooks/textbooks/international-economics-theory-and-policy",
+   "status": 200,
+   "error": null,
+   "sha256": "40326ac800f67c2751234d45b33b19c52ee6aaa0e96a51c392503fa839ec6fef",
+   "bytes": 80010,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T16:58:42Z",
+   "text_status": "ok",
+   "text_chars": 13263
+  },
+  {
+   "url": "https://www.core-econ.org/terms-of-use/",
+   "status": 200,
+   "error": null,
+   "sha256": "42eb0e3701931bdb048a153fe81b7aac0ba01da31a4282f93c86bc261bf02e82",
+   "bytes": 155099,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T17:00:42Z",
+   "text_status": "ok",
+   "text_chars": 7145
+  },
+  {
+   "url": "https://www.econometrics-with-r.org/",
+   "status": 200,
+   "error": null,
+   "sha256": "2fe45dea12d9fe35babd827c1e4c70d1e4f7a9907e0061f3a814e9e88d6b1ee5",
+   "bytes": 55467,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T17:00:44Z",
+   "text_status": "ok",
+   "text_chars": 10783
+  },
+  {
+   "url": "https://repec.org/docs/RePEcDataUse.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://repec.org/docs/RePEcDataUse.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T17:00:45Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://ideas.repec.org/getdata.html",
+   "status": 200,
+   "error": null,
+   "sha256": "cfc9a79d916ffb6cba2c10abc6e4a77c906cffc74b66c5fd5292853ee4f6e4ff",
+   "bytes": 23524,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T17:00:50Z",
+   "text_status": "ok",
+   "text_chars": 6336
+  },
+  {
+   "url": "https://ideas.repec.org/stats.html",
+   "status": 200,
+   "error": null,
+   "sha256": "a05cf61e9b54e7e4d15c752d022a489df9859d2ea31cd07aa6ed201b9e3f8697",
+   "bytes": 19584,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T17:00:51Z",
+   "text_status": "ok",
+   "text_chars": 2534
+  },
+  {
+   "url": "https://www.nber.org/research/data/nber-working-papers-and-chapters-metadata",
+   "status": 200,
+   "error": null,
+   "sha256": "aabc05fe20d650a873f9cb8dd5de156f7d9ef87335bcd5f2afff9330eabadb5e",
+   "bytes": 84890,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T17:00:52Z",
+   "text_status": "ok",
+   "text_chars": 8498
+  },
+  {
+   "url": "https://www.nber.org/subscribe/information-libraries",
+   "status": 200,
+   "error": null,
+   "sha256": "3abfb9488c733139adf6be77a72b351e51fabba4d80f2128bcb3d48cf6d22717",
+   "bytes": 80175,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T17:00:53Z",
+   "text_status": "ok",
+   "text_chars": 8231
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43062998669",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[3]",
+    "claim": "OpenStax Macro 3e: fecha de publicación de la 3.ª edición y organización en siete partes.",
+    "now": "OpenStax Macro 3e: fecha de publicación 14 de diciembre de 2022.",
+    "cut": "organización en siete partes"
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "OpenStax Macro 3e cubre capítulos 1 a 21 en siete partes (la última, Economía Internacional, capítulos 19 a 21).",
+    "now": "En OpenStax Macro 3e, la parte final del texto es Economía Internacional, capítulos 19 a 21.",
+    "cut": "cubre capítulos 1 a 21 en siete partes"
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "OpenStax Macro 3e usa datos de FRED, en ocasiones con gráficos interactivos embebidos.",
+    "now": "OpenStax Macro 3e incluye y referencia datos de FRED (Federal Reserve Economic Data).",
+    "cut": "en ocasiones con gráficos interactivos embebidos"
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "La ficha del Open Textbook Library de Principles of Economics 3e (OpenStax) indica licencia CC BY, discrepante con el prefacio de Macro 3e (CC BY-NC-SA).",
+    "now": "El Open Textbook Library lista Principles of Macroeconomics - 3e (Greenlaw, Shapiro y Taylor; OpenStax; año de copyright 2017) con licencia CC BY.",
+    "cut": "título erróneo 'Principles of Economics 3e'; discrepancia con el prefacio de Macro 3e (CC BY-NC-SA)"
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "La ficha de International Economics: Theory and Policy muestra 24 capítulos (el último es Fixed versus Floating Exchange Rates).",
+    "now": "La ficha de International Economics: Theory and Policy incluye el Capítulo 24: Fixed versus Floating Exchange Rates.",
+    "cut": "que tenga 24 capítulos en total y que este sea el último"
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "CORE Econ licencia su contenido bajo CC BY-NC-ND 4.0, salvo indicación contraria.",
+    "now": "Según los términos de uso de CORE, el contenido está bajo licencia Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (BY-NC-ND 4.0).",
+    "cut": "salvo indicación contraria"
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "CORE Econ prohíbe traducir sus ebooks sin acuerdo escrito previo.",
+    "now": "Los términos de uso de CORE mencionan traducir los ebooks de CORE Econ sin acuerdo escrito previo de CORE Econ.",
+    "cut": "prohíbe (el fragmento citado no contiene la prohibición)"
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "RePEc ofrece datos agregados en ReDIF, AMF, OAI/PMH y Rsync, sin garantía de exactitud.",
+    "now": "RePEc lista los formatos ReDIF, AMF, OAI/PMH (a veces inestable) y Rsync.",
+    "cut": "datos agregados; sin garantía de exactitud"
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "RePEc indica que existe una API pensada para trozos pequeños, no para descarga masiva.",
+    "now": "RePEc indica que una API no sirve para descargar todos los datos, sino porciones específicas a intervalos regulares o llamadas rápidas repetidas para pequeños fragmentos.",
+    "cut": "que existe una API"
+   },
+   {
+    "id": "confirmed[20]",
+    "claim": "IDEAS declara 1,335,303 ítems de working papers en 5,937 series (tabla de holdings, sin fecha de corte visible).",
+    "now": "IDEAS declara 1,335,303 ítems de working papers en 5,937 series.",
+    "cut": "(tabla de holdings, sin fecha de corte visible)"
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "IDEAS declara 336,264 capítulos y 74,888 libros.",
+    "now": "IDEAS declara 336,264 capítulos en 364 series.",
+    "cut": "74,888 libros"
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "NBER ofrece un extracto alternativo con tablas volcadas de su base canónica con información privada redactada.",
+    "now": "NBER ofrece volcados de su base canónica de seguimiento de working papers y capítulos, con cierta información privada redactada.",
+    "cut": "extracto alternativo"
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "NBER ofrece RIS, XML por serie y MARC para toda la colección.",
+    "now": "NBER ofrece un archivo MARC con todos sus working papers (all_nber_working_papers.marc).",
+    "cut": "RIS; XML por serie"
+   },
+   {
+    "id": "conflicting[0]",
+    "claim": "Discrepancia de licencia sobre OpenStax: la ficha del Open Textbook Library dice CC BY; el prefacio de OpenStax Macro 3e dice CC BY-NC-SA.",
+    "now": "La ficha del Open Textbook Library indica, para un libro del editor OpenStax, licencia CC BY.",
+    "cut": "la discrepancia con el prefacio de OpenStax Macro 3e (CC BY-NC-SA)"
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Libros de licencia abierta (OpenStax, CORE Econ, Open Textbook Library, textos de econometría)",
+   "Metadatos de literatura económica: RePEc/IDEAS",
+   "Metadatos NBER (archivo de datos de uso público)",
+   "Índice bibliográfico abierto general (OpenAlex, CC0)",
+   "Cobertura por subárea y vacíos (conductual, pública, regional y urbana)"
+  ],
+  "searches": [
+   {
+    "query": "OpenStax Principles of Economics 3e CC BY 4.0 download",
+    "intent": "official"
+   },
+   {
+    "query": "RePEc data access terms of use bulk download metadata OAI-PMH",
+    "intent": "official"
+   },
+   {
+    "query": "NBER working papers metadata bulk download terms of use API",
+    "intent": "official"
+   },
+   {
+    "query": "OpenAlex API economics concept works count CC0 data snapshot",
+    "intent": "support"
+   },
+   {
+    "query": "Open textbook library economics Principles of Microeconomics open license Econometrics open textbook CC BY-SA",
+    "intent": "support"
+   },
+   {
+    "query": "NBER Working Papers metadata public use data archive",
+    "intent": "official"
+   },
+   {
+    "query": "Introduction to Econometrics with R open book license",
+    "intent": "support"
+   },
+   {
+    "query": "OpenStax Principles of Macroeconomics 3e license CC BY 4.0 chapters",
+    "intent": "contradict"
+   },
+   {
+    "query": "Open Textbook Library economics subject number of textbooks behavioral economics international trade public finance",
+    "intent": "limitations"
+   },
+   {
+    "query": "RePEc number of items working papers articles ideas.repec.org stats",
+    "intent": "official"
+   },
+   {
+    "query": "CORE Econ The Economy license CC BY-NC-ND download",
+    "intent": "limitations"
+   },
+   {
+    "query": "OpenAlex rate limits API key terms of use snapshot CC0 docs",
+    "intent": "limitations"
+   },
+   {
+    "query": "Use of RePEc data repec.org/docs/RePEcDataUse.html",
+    "intent": "official"
+   },
+   {
+    "query": "open textbook urban economics regional economics public economics CC BY open access book",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "sha256 de los archivos descargados: la búsqueda web no permite descargar ni calcular hashes; pendiente.",
+   "Licencia de Principles of Macroeconomics 3e: prefacio indica CC BY-NC-SA y LoC indica CC BY; falta cita literal verificada.",
+   "Libro abierto dedicado a F05 Economía pública, F06 Economía conductual (salvo A Practicum in Behavioral Economics, sin verificar), F08 regional y urbana y F04 organización industrial: solo hallé ítems NC-SA en OER Commons; sin fuente base clara.",
+   "robots.txt de RePEc, NBER y OpenAlex: no consultado.",
+   "Recuento de obras por libro y totales de Open Textbook Library: solo una guía secundaria (25 libros); sin verificar.",
+   "Texto literal de licencia/términos de NBER para los metadatos: la página no apareció completa.",
+   "Total de OpenAlex para economía por tema/campo: no hallado; los conceptos están obsoletos."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 13,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://openstax.org/details/books/principles-economics-3e",
+    "family": "Libros de licencia abierta",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Edición oficial para F01/F02 con descarga web y PDF. La licencia es contradictoria entre fuentes (CC BY 4.0 vs CC BY-NC-SA); verificar la cita literal aquí."
+   },
+   {
+    "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/preface",
+    "family": "Libros de licencia abierta",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Prefacio oficial: 21 capítulos y licencia declarada; la búsqueda indica CC BY-NC-SA 4.0, distinta de CC BY. Afecta a la reutilización."
+   },
+   {
+    "url": "https://www.loc.gov/item/2021387735/",
+    "family": "Libros de licencia abierta",
+    "stance": "contradicts",
+    "role": "secondary",
+    "why": "Registro que declara CC BY 4.0, en contradicción con el prefacio; sirve para detectar el conflicto de licencia."
+   },
+   {
+    "url": "https://open.umn.edu/opentextbooks/subjects/economics",
+    "family": "Libros de licencia abierta",
+    "stance": "context",
+    "role": "primary",
+    "why": "Catálogo con licencia por libro y total de la materia (una guía secundaria dice 25, sin verificar). Ayuda para comercio internacional (Suranovic, NC-SA) y conductual."
+   },
+   {
+    "url": "https://open.umn.edu/opentextbooks/textbooks/international-economics-theory-and-policy",
+    "family": "Libros de licencia abierta",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Cubre F07 Comercio internacional; licencia declarada CC BY-NC-SA, con restricción comercial."
+   },
+   {
+    "url": "https://www.core-econ.org/terms-of-use/",
+    "family": "Libros de licencia abierta",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Términos de The Economy 2.0 (micro, macro, también conductual y política pública): CC BY-NC-ND 4.0, sin derivados. Limita el uso en un corpus transformado."
+   },
+   {
+    "url": "https://www.econometrics-with-r.org/",
+    "family": "Libros de licencia abierta",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Candidato abierto para F03; licencia CC BY-NC-SA 4.0, fuente en GitHub (mca91/EconometricsWithR), formato web y PDF."
+   },
+   {
+    "url": "https://repec.org/docs/RePEcDataUse.html",
+    "family": "Metadatos RePEc",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Términos oficiales de los metadatos de RePEc (uso libre salvo restricciones de cada archivo; se pide atribución). Base para F09."
+   },
+   {
+    "url": "https://ideas.repec.org/getdata.html",
+    "family": "Metadatos RePEc",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Cómo obtener datos en volumen (recolección por archivo, ReDIF, protocolo Guilford, FTP). Excluye el uso comercial sin contacto; OAI-PMH 'a veces inestable'."
+   },
+   {
+    "url": "https://ideas.repec.org/stats.html",
+    "family": "Metadatos RePEc",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Totales declarados: 1.335.303 documentos de trabajo, 3.893.684 artículos, 74.888 libros, 336.264 capítulos. Registrar fecha de corte."
+   },
+   {
+    "url": "https://www.nber.org/research/data/nber-working-papers-and-chapters-metadata",
+    "family": "Metadatos NBER",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Archivo oficial de metadatos en csv/dta/tsv, actualización semanal, incluye capítulos de libros. Verificar términos en la página."
+   },
+   {
+    "url": "https://www.nber.org/subscribe/information-libraries",
+    "family": "Metadatos NBER",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Prohíbe descargar en masa y volver a publicar los documentos (PDF); lista feeds XML y registros MARC. Límite para los textos, no para los metadatos."
+   },
+   {
+    "url": "https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication",
+    "family": "Índice bibliográfico abierto",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Límites de tasa y clave de API (cifras cambian entre versiones de la documentación). Datos CC0 con snapshot masivo; los conceptos están obsoletos y se usan temas."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
