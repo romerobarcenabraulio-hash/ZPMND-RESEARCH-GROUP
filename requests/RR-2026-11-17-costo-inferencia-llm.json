@@ -1,0 +1,18 @@
+{
+  "request_id": "RR-2026-11-17-costo-inferencia-llm",
+  "issued_by": "OWNER",
+  "issued_at": "2026-11-17T23:30:00Z",
+  "question": "Con una carga sintética de 20,000 solicitudes por día durante 30 días, cada una con 6,000 tokens de entrada (4,000 de ellos un prefijo idéntico que admite caché de prompt) y 800 tokens de salida: ¿cuánto cuesta al mes con los precios oficiales publicados por Anthropic, OpenAI y Google, para el modelo de gama media y el más económico que cada uno lista hoy, sin caché, con caché de prompt y con procesamiento por lotes donde exista? Reconstruye cada cálculo con el precio citado, su fecha y sus supuestos.",
+  "why_needed": "Caso B de la directiva del dueño del 2026-11-17 (transición a ZPMND-FINAL, §7): una decisión de operación con datos cuantitativos, fuentes comparables, supuestos y reconstrucción de cálculos, comparada entre investigación directa con un LLM y RG con el protocolo docs/medicion/comparacion-2026-11-17/protocolo.md, fijado antes de correr.",
+  "affected_component": "presupuesto de inferencia del núcleo nuevo (abstracto)",
+  "desired_evidence": [
+    "página oficial de precios de cada proveedor, con su fecha de consulta y cita literal de 300 caracteres o menos por precio",
+    "por modelo: precio de entrada, de salida, de lectura y escritura de caché y descuento por lotes, o que no existe",
+    "qué modelos se eligieron como gama media y económico y por qué son comparables",
+    "el cálculo mensual de cada escenario, con sus supuestos escritos para poder rehacerlo",
+    "lo que las páginas no dicen (por ejemplo, mínimos o vigencia de la caché), marcado como desconocido"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Se presupuestaría la inferencia con precios viejos, mal leídos o mal multiplicados, o se elegiría proveedor por un descuento que no aplica a esta carga.",
+  "privacy_class": "PUBLIC"
+}

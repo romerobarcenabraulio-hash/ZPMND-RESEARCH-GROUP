@@ -1,0 +1,18 @@
+{
+  "request_id": "RR-2026-11-17-pgvector-indice",
+  "issued_by": "OWNER",
+  "issued_at": "2026-11-17T23:30:00Z",
+  "question": "Para un almacén de conocimiento con búsqueda vectorial en PostgreSQL (escenario sintético: 1,000,000 de vectores de 1,536 dimensiones, 50 inserciones por minuto, consultas top-10 con recall objetivo de al menos 0.95 y p95 de 100 ms o menos, servidor de 64 GB de RAM): ¿qué índice de pgvector conviene, HNSW o IVFFlat, con qué parámetros (m, ef_construction, ef_search; lists, probes), qué dice la documentación primaria sobre memoria, tiempo de construcción, inserciones y filtrado, y bajo qué condiciones documentadas conviene un motor vectorial dedicado? Incluye las pruebas que habría que correr para decidir.",
+  "why_needed": "Caso A de la directiva del dueño del 2026-11-17 (transición a ZPMND-FINAL, §7): una decisión técnica con alternativas, documentación primaria, criterios, restricciones y pruebas, comparada entre investigación directa con un LLM y RG con el protocolo docs/medicion/comparacion-2026-11-17/protocolo.md, fijado antes de correr.",
+  "affected_component": "almacén de conocimiento con búsqueda vectorial del núcleo nuevo (abstracto)",
+  "desired_evidence": [
+    "documentación primaria de pgvector de la versión vigente, con cita literal de 300 caracteres o menos por afirmación",
+    "parámetros de HNSW e IVFFlat, sus valores por defecto y su efecto según esa documentación",
+    "limitaciones documentadas: memoria y construcción, inserciones, filtrado, dimensiones máximas y tipos",
+    "criterio documentado o benchmark reproducible para pasar a un motor dedicado; lo que diga un proveedor de ese motor, como secundario",
+    "pruebas necesarias para decidir, cada una con la métrica que mide"
+  ],
+  "priority": "P1",
+  "risk_if_wrong": "Se elegiría un índice que no alcanza el recall o la latencia, o se migraría a un motor dedicado sin necesidad.",
+  "privacy_class": "PUBLIC"
+}
