@@ -19,11 +19,12 @@ check loopback_ip              403 http_code    http://127.0.0.1/ $P
 check ipv4_mapped_loopback    403 http_code    'http://[::ffff:127.0.0.1]/' $P
 check private_10               403 http_code    http://10.0.0.1/ $P
 check private_192              403 http_code    http://192.168.65.254/ $P
-# Docker Desktop resolves this name to the host and squid's dst rule answers 403; on Linux it does not resolve and squid
-# answers its DNS error. Both block; anything else fails, and the line shows the code and squid's error kind.
-h=$(docker compose exec -T probe curl -s -o /dev/null -D - --max-time 15 -x $P http://host.docker.internal/ 2>/dev/null | tr -d '\r')
-code=$(echo "$h" | awk 'NR==1{print $2}'); kind=$(echo "$h" | sed -n 's/^[Xx]-[Ss]quid-[Ee]rror: \([A-Z_]*\).*/\1/p')
-if [ "$code" = 403 ] || [ "$kind" = ERR_DNS_FAIL ]; then echo "PASS docker_host_name ($code $kind)"; else echo "FAIL docker_host_name got=$code $kind"; fails=$((fails+1)); fi
+# The Docker host: always by the gateway of the compose network; by name only where the name is the host (Docker Desktop).
+gw=$(docker network inspect rg_outside -f '{{(index .IPAM.Config 0).Gateway}}' 2>/dev/null)
+check docker_host_ip           403 http_code    "http://$gw/" $P
+hn=$(docker compose exec -T egress getent hosts host.docker.internal 2>/dev/null | awk '{print $1}')
+case "$hn" in 10.*|172.1[6-9].*|172.2[0-9].*|172.3[01].*|192.168.*) check docker_host_name 403 http_code http://host.docker.internal/ $P;;
+  *) echo "SKIP docker_host_name (not the host here: ${hn:-unresolved})";; esac
 check rebind_name_to_loopback  403 http_code    http://localtest.me/ $P
 check rebind_name_to_metadata  403 http_code    http://169.254.169.254.nip.io/ $P
 check clawhub_marketplace     403 http_connect https://clawhub.ai/ $P
