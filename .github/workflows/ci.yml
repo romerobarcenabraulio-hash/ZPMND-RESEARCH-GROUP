@@ -65,3 +65,26 @@ jobs:
         env:  # index/total come from the matrix itself, so no shard can be skipped or run twice
           RG_SHARD: '${{ strategy.job-index }}/${{ strategy.job-total }}'
           RG_MUT_BASE: 'origin/${{ github.base_ref }}'
+  substrate:
+    # SECURITY T5/T6: OpenClaw is judged by its effective result, not by its docs. When a PR changes substrate/, build
+    # the pinned image and run its config, egress and end-to-end checks (GPT on #176 592be4f). No model, no key, no secret.
+    if: "github.event_name == 'pull_request'"  # quoted: the bare line is a main mutant's anchor (mutation job)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: { persist-credentials: false, fetch-depth: 0 }  # the base, to know whether substrate/ changed
+      - id: changed
+        env: { BASE: '${{ github.event.pull_request.base.sha }}' }
+        run: if git diff --quiet "$BASE" HEAD -- substrate/; then echo run=no >> "$GITHUB_OUTPUT"; else echo run=yes >> "$GITHUB_OUTPUT"; fi
+      - if: steps.changed.outputs.run == 'yes'
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with: { python-version: '3.12' }
+      - if: steps.changed.outputs.run == 'yes'
+        run: python -m venv .venv && .venv/bin/pip install -q -r requirements-dev.txt  # verify_config.sh runs .venv/bin/python
+      - if: steps.changed.outputs.run == 'yes'
+        run: sh substrate/runtime/verify_config.sh
+      - if: steps.changed.outputs.run == 'yes'
+        run: sh substrate/runtime/verify.sh
+      - if: steps.changed.outputs.run == 'yes'
+        run: sh substrate/runtime/verify_e2e.sh

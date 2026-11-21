@@ -46,6 +46,19 @@ class Workflows(unittest.TestCase):
                     self.assertNotIn('${{', step.get('run', ''), f'{wf.name}:{name}')
 
 
+class Substrate(unittest.TestCase):
+    """SECURITY T5/T6: a PR that changes substrate/ builds the image and runs its three Docker checks, with no secret."""
+
+    def test_a_substrate_change_runs_the_docker_checks_without_secrets(self):
+        raw = (Path(__file__).resolve().parents[1] / '.github' / 'workflows' / 'ci.yml').read_text(encoding='utf-8')
+        job = yaml.safe_load(raw)['jobs']['substrate']
+        runs = [s.get('run', '') for s in job['steps']]
+        for script in ('verify_config.sh', 'verify.sh', 'verify_e2e.sh'):
+            self.assertIn(f'sh substrate/runtime/{script}', runs)
+        self.assertIn('git diff --quiet "$BASE" HEAD -- substrate/', runs[1])
+        self.assertNotIn('secrets.', yaml.safe_dump(job))
+
+
 class AuditorGpt(unittest.TestCase):
     """The second auditor never has PR code next to its key, and never speaks with the Claude auditor's voice."""
 

@@ -18,8 +18,8 @@ surface) · isolate ✔ · small pilot ☐ · observe ☐ · measure ☐ · deci
 - `docs/gateway/config-tools/tool-policy.md`, which the profile check models, differs from 2026.10.5 in one word
   (line 246, "canonical" → "standard"); the tool groups and profiles are the same.
 - Of 723 published advisories, none affect 2026.10.33.
-- Not re-run: the Docker checks of `substrate/runtime/` (`verify.sh`, `verify_config.sh`, `verify_e2e.sh`). The
-  substrate stays a candidate, not a dependency; they run again before any pilot.
+- The Docker checks of `substrate/runtime/` (`verify_config.sh`, `verify.sh`, `verify_e2e.sh`) now run in CI, job
+  `substrate` of `ci.yml`, on every PR that changes `substrate/`; their receipt for this pin is that job's run on #176.
 
 ## Version and supply chain (2026-10-19)
 

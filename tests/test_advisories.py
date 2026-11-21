@@ -44,6 +44,7 @@ class Gate(unittest.TestCase):
         rows = [adv('>= 2026.9.2, < 2026.10.33', ghsa='GHSA-pw3x-g8v8-fvj2'), adv('>= 2026.11.1, < 2026.11.4')]
         pinned = json.loads(LOCK.read_text(encoding='utf-8'))['version']
         self.assertEqual(evaluate(rows, pinned, ['openclaw']), ([], []))
+        self.assertGreaterEqual(v(pinned), v('2026.10.33'))  # past the fix, not merely before the range (GPT on #176)
         self.assertEqual(len(evaluate(rows, '2026.10.5', ['openclaw'])[0]), 1)
 
     def _run(self, rows):
