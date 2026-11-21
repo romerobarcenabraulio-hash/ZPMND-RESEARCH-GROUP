@@ -1,0 +1,278 @@
+{
+ "research_id": "RP-2026-11-17-costo-inferencia-llm",
+ "request_id": "RR-2026-11-17-costo-inferencia-llm",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-21T18:15:32Z",
+ "question": "Con una carga sintética de 20,000 solicitudes por día durante 30 días, cada una con 6,000 tokens de entrada (4,000 de ellos un prefijo idéntico que admite caché de prompt) y 800 tokens de salida: ¿cuánto cuesta al mes con los precios oficiales publicados por Anthropic, OpenAI y Google, para el modelo de gama media y el más económico que cada uno lista hoy, sin caché, con caché de prompt y con procesamiento por lotes donde exista? Reconstruye cada cálculo con el precio citado, su fecha y sus supuestos.",
+ "why_zpmnd_needs_it": "Caso B de la directiva del dueño del 2026-11-17 (transición a ZPMND-FINAL, §7): una decisión de operación con datos cuantitativos, fuentes comparables, supuestos y reconstrucción de cálculos, comparada entre investigación directa con un LLM y RG con el protocolo docs/medicion/comparacion-2026-11-17/protocolo.md, fijado antes de correr.",
+ "scope": "Costo mensual de 600,000 solicitudes (20,000/día × 30 días; 6,000 tokens de entrada, 4,000 de ellos prefijo cacheable; 800 de salida) con Anthropic, OpenAI y Google. Fuentes leídas: precios y caché de prompt de Anthropic (docs y tarifario del 2026-11-09), precios y caché de prompt de OpenAI (primarias), y dos blogs secundarios (BenchLM para OpenAI, Morph para Google). No hay fuente primaria de Google, así que Google queda solo como cifras SECUNDARIAS. Fecha de consulta: 2026-11-21.",
+ "sources": {
+  "primary": [
+   "SA-c2e763e19cbb686b72b08fc5",
+   "SA-6e1c4764e91deb0318cecce9",
+   "SA-3be6bb029e315b8f72f5500f",
+   "SA-4f476727c762d50dcc801e72",
+   "SA-966e5c5146ce04f30a695781"
+  ],
+  "secondary": [
+   "SA-c7a0d3a2c11642112b242ea9",
+   "SA-3e927394d78d4e6dd99fec37"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-c2e763e19cbb686b72b08fc5",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "retrieved_at": "2026-11-21T18:12:48Z",
+   "sha256": "c2e763e19cbb686b72b08fc54c8979c9b67031f83e93dba0a02248d1e4472c64",
+   "bytes": 789666,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Anthropic",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Pricing - Claude Platform Docs"
+  },
+  {
+   "artifact_id": "SA-6e1c4764e91deb0318cecce9",
+   "url": "https://assets.claude.com/a04aca860a54b7323e33f449706e9b43680e1346.pdf",
+   "retrieved_at": "2026-11-21T18:12:49Z",
+   "sha256": "6e1c4764e91deb0318cecce96d8c5eb492c854b2f5f624060b0163db68a49511",
+   "bytes": 999384,
+   "media_type": "application/pdf",
+   "source_type": "primary_official",
+   "publisher": "Anthropic",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Anthropic List Prices — 2026-11-09"
+  },
+  {
+   "artifact_id": "SA-3be6bb029e315b8f72f5500f",
+   "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+   "retrieved_at": "2026-11-21T18:12:50Z",
+   "sha256": "3be6bb029e315b8f72f5500f9505a7550614a2a61e0657c4e6e2a0b040b9e585",
+   "bytes": 1919245,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Anthropic",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Prompt caching - Claude Platform Docs"
+  },
+  {
+   "artifact_id": "SA-4f476727c762d50dcc801e72",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "retrieved_at": "2026-11-21T18:12:50Z",
+   "sha256": "4f476727c762d50dcc801e7200b191c7799728ac979181a5445c1490092880ae",
+   "bytes": 639400,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenAI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Pricing"
+  },
+  {
+   "artifact_id": "SA-966e5c5146ce04f30a695781",
+   "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+   "retrieved_at": "2026-11-21T18:12:51Z",
+   "sha256": "966e5c5146ce04f30a695781f108668c5d7b43c7dde899531e225c45882ec606",
+   "bytes": 846281,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenAI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Prompt caching"
+  },
+  {
+   "artifact_id": "SA-c7a0d3a2c11642112b242ea9",
+   "url": "https://benchlm.ai/openai/api-pricing",
+   "retrieved_at": "2026-11-21T18:12:54Z",
+   "sha256": "c7a0d3a2c11642112b242ea96a9308f7daf27775d6d65540506d47649d7916b4",
+   "bytes": 209162,
+   "media_type": "text/html",
+   "source_type": "blog",
+   "publisher": "BenchLM",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "OpenAI API Pricing (November 2026)"
+  },
+  {
+   "artifact_id": "SA-3e927394d78d4e6dd99fec37",
+   "url": "https://www.morphllm.com/gemini-api-pricing",
+   "retrieved_at": "2026-11-21T18:12:55Z",
+   "sha256": "3e927394d78d4e6dd99fec375a957d99edc9c371789dd1be49164a89412530bb",
+   "bytes": 249864,
+   "media_type": "text/html",
+   "source_type": "blog",
+   "publisher": "Morph",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Gemini API Pricing (November 2026)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El tarifario de Anthropic declara fecha de vigencia de precios.",
+    "artifact_ids": [
+     "SA-6e1c4764e91deb0318cecce9"
+    ],
+    "quote": "Prices Effective: November 9, 2026 (2026-11-09)",
+    "locator": "Tarifario Anthropic, p. 1"
+   },
+   {
+    "claim": "Anthropic: el Batch API da 50 % de descuento en entrada y salida.",
+    "artifact_ids": [
+     "SA-c2e763e19cbb686b72b08fc5"
+    ],
+    "quote": "The Batch API allows asynchronous processing of large volumes of requests with a 50 percent discount on both input and output tokens.",
+    "locator": "Pricing, sección Batch processing"
+   },
+   {
+    "claim": "Anthropic: los descuentos de caché y de lotes se acumulan.",
+    "artifact_ids": [
+     "SA-c2e763e19cbb686b72b08fc5"
+    ],
+    "quote": "These multipliers stack with other pricing modifiers, including the Batch API discount and data residency.",
+    "locator": "Pricing, sección Prompt caching"
+   },
+   {
+    "claim": "Anthropic: la caché dura 5 minutos por defecto y se refresca sin costo adicional con cada uso.",
+    "artifact_ids": [
+     "SA-3be6bb029e315b8f72f5500f"
+    ],
+    "quote": "By default, the cache has a 5-minute lifetime. The cache is refreshed for no additional cost each time the cached content is used.",
+    "locator": "Prompt caching, «How prompt caching works»"
+   },
+   {
+    "claim": "Anthropic: con lotes, los aciertos de caché son de mejor esfuerzo.",
+    "artifact_ids": [
+     "SA-3be6bb029e315b8f72f5500f"
+    ],
+    "quote": "because asynchronous batch requests can be processed concurrently and in any order, cache hits are provided on a best-effort basis.",
+    "locator": "Prompt caching, FAQ «Can I use prompt caching with the Message Batches API?»"
+   },
+   {
+    "claim": "OpenAI: la caché de prompt está activada por defecto en los modelos compatibles.",
+    "artifact_ids": [
+     "SA-966e5c5146ce04f30a695781"
+    ],
+    "quote": "Prompt caching is enabled by default for supported OpenAI models.",
+    "locator": "Prompt caching, «Why prompt caching matters»"
+   },
+   {
+    "claim": "OpenAI (GPT-5.6 y posteriores): la escritura de caché cuesta 1.25× la tarifa de entrada para la vida útil por defecto de 30 minutos.",
+    "artifact_ids": [
+     "SA-966e5c5146ce04f30a695781"
+    ],
+    "quote": "For GPT-5.6 and later, cache writes cost 1.25× the standard, uncached input-token rate for the default 30-minute lifetime.",
+    "locator": "Prompt caching, «GPT-5.6 and later»"
+   },
+   {
+    "claim": "OpenAI: la lectura de caché cuesta 0.05× en GPT-6.2 Sol (y otros listados), sin importar la vida útil elegida.",
+    "artifact_ids": [
+     "SA-966e5c5146ce04f30a695781"
+    ],
+    "quote": "Subsequent reads cost 0.1× the ordinary input rate on most of these models and 0.05× on GPT-6.2 Astra, GPT-6.2 Sol, GPT-6.1 Sol, and GPT-6.1 Terra, regardless of the selected lifetime.",
+    "locator": "Prompt caching, «GPT-5.6 and later»"
+   },
+   {
+    "claim": "OpenAI: el mínimo cacheable es 1,024 tokens para GPT-5.6 y posteriores.",
+    "artifact_ids": [
+     "SA-966e5c5146ce04f30a695781"
+    ],
+    "quote": "The minimum cacheable prompt length is 1,024 tokens for GPT-5.6 and later and varies by request settings for earlier models.",
+    "locator": "Prompt caching, «How caching works»"
+   },
+   {
+    "claim": "OpenAI: Flex sigue disponible en los modelos listados mientras se retira la beta.",
+    "artifact_ids": [
+     "SA-4f476727c762d50dcc801e72"
+    ],
+    "quote": "Flex remains available on the models listed here as we wind down the beta.",
+    "locator": "Pricing, nota bajo la tabla Flex"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Google: no hay página oficial de precios en las fuentes dadas (solo el blog secundario de Morph); ningún precio de Google está confirmado con fuente primaria.",
+   "Google: no se sabe cómo se factura el almacenamiento de caché ($/hora) por el prefijo de 4,000 tokens; no se calculó. El blog no da el costo de caché implícita por solicitud ni el mínimo de tokens ni la vigencia de caché.",
+   "Google: no se sabe si Batch y caché se combinan ni a qué precio.",
+   "OpenAI: los precios por fila de las tablas (Sol, Luna) no se citaron literalmente porque las filas vienen con tabuladores; constan en el texto de la página (ver candidate_claims). El precio estándar de gpt-6-luna no aparece en la página primaria: solo aparece en Flex ($0.05/$0.25).",
+   "OpenAI: no se confirma cómo se factura la escritura de caché dentro de Batch ni su tasa de aciertos.",
+   "Anthropic: la página no dice cuántas escrituras de caché ocurrirán a 20,000 solicitudes/día; se asumió caché tibia.",
+   "No se sabe si la tokenización de cada proveedor cuenta igual los 6,000/800 tokens (Anthropic indica un tokenizador ~30 % más verboso en 4.7+). Los cálculos usan los tokens dados sin ajuste.",
+   "Vigencia: el tarifario de Anthropic es del 2026-11-09; la fecha exacta de la página de OpenAI no consta (consulta 2026-11-21)."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Volumen: 20,000×30 = 600,000 solicitudes → 3,600 MTok de entrada (de ellos 2,400 MTok de prefijo y 1,200 MTok no cacheables) y 480 MTok de salida. Precios en USD/MTok; tokens × precio.",
+  "INTERPRETACIÓN: Elección de modelos. Gama media = Claude Sonnet 5.5 ($2/$10) y GPT-6.2 Sol ($2/$10), mismo precio de lista y rol de nivel intermedio; Económico = Claude Haiku 5.5 ($0.10/$0.50, contexto ≤100K) y GPT-6 Luna ($0.10/$0.50 según BenchLM; en la página oficial solo figura en Flex $0.05/$0.25). Comparabilidad por precio y rol, no por calidad medida; no se evaluó calidad.",
+  "INTERPRETACIÓN: Anthropic Sonnet 5.5 sin caché: 3,600×$2 = $7,200 + 480×$10 = $4,800 → $12,000/mes. Con caché 5m (caso ideal, prefijo siempre leído, escritura inicial despreciable): 2,400×$0.10 = $240 + 1,200×$2 = $2,400 + $4,800 → $7,440. Caso peor (cada solicitud escribe el prefijo): 2,400×$2.50 = $6,000 + $2,400 + $4,800 → $13,200. Batch sin caché: 3,600×$1 + 480×$5 = $3,600 + $2,400 → $6,000. Batch con caché (ideal, y los aciertos son de mejor esfuerzo): 2,400×$0.05 = $120 + 1,200×$1 = $1,200 + $2,400 → $3,720.",
+  "INTERPRETACIÓN: Anthropic Haiku 5.5 (prompt 6,000 < 100K): sin caché 3,600×$0.10 = $360 + 480×$0.50 = $240 → $600. Caché ideal: 2,400×$0.01 = $24 + 1,200×$0.10 = $120 + $240 → $384; caso peor (todo escritura 5m $0.125): $300 + $120 + $240 → $660. Batch: 3,600×$0.05 + 480×$0.25 = $180 + $120 → $300. Batch + caché ideal: 2,400×$0.005 = $12 + 1,200×$0.05 = $60 + $120 → $192.",
+  "INTERPRETACIÓN: OpenAI GPT-6.2 Sol (filas de la página de precios: Standard $2.00/$10.00, caché leída $0.10, escritura 30m $2.50; Batch $1.00/$5.00, caché leída $0.05, escritura $1.25): sin caché $12,000; con caché explícita (breakpoint tras el prefijo; 2,400×$0.10 + 1,200×$2 + $4,800) $7,440; con modo implícito por defecto el prefijo no se reutiliza si la parte dinámica cambia y cada solicitud escribe 6,000 tokens (3,600×$2.50 = $9,000 + $4,800) ≈ $13,800 (o más si no hay lecturas); Batch sin caché $6,000; Batch con caché explícita ideal $3,720. Es decir, igual que Sonnet 5.5 pero con riesgo de configuración.",
+  "INTERPRETACIÓN: OpenAI GPT-6 Luna (precio estándar solo SECUNDARIO, BenchLM: $0.10/$0.50, caché $0.01, batch $0.05/$0.25, caché batch $0.005 por derivación): sin caché $600; caché ideal $384; Batch $300; Batch + caché ideal $192. Cifras idénticas a Haiku 5.5. Flex (primaria, $0.05/$0.25, caché $0.005) daría la mitad del estándar: $300 sin caché, ≈$192 con caché ideal.",
+  "SECUNDARIA (Morph, comprobado según el blog el 2026-10-25): gemini-3.8-flash $0.75/$3.75, caché $0.075/M más $0.50/h de almacenamiento, Batch mitad; sus precios se duplican el 2027-01-01. gemini-2.5-flash-lite $0.10/$0.40, caché $0.01 más $1.00/h, Batch $0.05/$0.20. gemini-3.1-pro-preview $2/$12 hasta 200k.",
+  "INTERPRETACIÓN (con cifras SECUNDARIAS de Morph, no verificadas): gemini-3.8-flash como gama media: sin caché 3,600×0.75 + 480×3.75 = $2,700 + $1,800 → $4,500; caché (sin almacenamiento): 2,400×0.075 + 1,200×0.75 + $1,800 = $2,880; Batch (mitad) $2,250. gemini-2.5-flash-lite como económico: sin caché $360 + $192 = $552; caché (sin almacenamiento) $24 + $120 + $192 = $336; Batch $276. Que 3.8-flash sea 'gama media' y 2.5-flash-lite el más barato es juicio mío; el blog lista también 3.1-flash-lite ($0.25/$1.50) y 3.5-flash-lite.",
+  "INTERPRETACIÓN: Con estos supuestos el descuento por lotes (50 %) y la caché ideal se combinan en Anthropic/OpenAI, pero el beneficio de la caché es modesto (~38 % en gama media) porque la salida (4,800 de 12,000) no se cachea; el prefijo es 2/3 de la entrada."
+ ],
+ "candidate_methods": [
+  "Fórmula: costo = Σ(MTok × precio por rubro), MTok = 600,000 × tokens por solicitud / 1,000,000. Escenario caché: lecturas = 2,400 MTok × precio de lectura; resto de entrada = 1,200 MTok × precio de entrada; más salida; más escrituras (≈0 si la caché se mantiene tibia)."
+ ],
+ "candidate_controls": [
+  "Medir en producción cache_read_input_tokens / cache_creation_input_tokens (Anthropic) y cached_tokens / cache_write_tokens (OpenAI) para sustituir el supuesto de caché ideal por la tasa real."
+ ],
+ "candidate_tests": [
+  "Enviar ~100 solicitudes con el prefijo de 4,000 tokens a cada API y comprobar que la 2.ª en adelante muestra lectura de caché; en OpenAI probar modo explícito frente a implícito.",
+  "Repetir el cálculo en una hoja con la página oficial de Google (ai.google.dev) para sustituir las cifras secundarias."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Cualquier presupuesto debe registrar proveedor, modelo, fecha de vigencia y supuesto de tasa de aciertos de caché como campos explícitos, y marcar las cifras sin fuente primaria como no confirmadas."
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: a 20,000 solicitudes/día (~una cada 4 s) la caché de 5 minutos de Anthropic se mantiene tibia, por lo que casi todas las solicitudes serían lecturas; no verificado.",
+  "HIPÓTESIS: el punto de decisión será la calidad del modelo económico para esta tarea, no el precio: las diferencias de precio de lista entre Anthropic y OpenAI son nulas en ambos niveles."
+ ],
+ "limitations": [
+  "Google no tiene fuente primaria entre las dadas; sus cifras proceden de un blog de terceros (Morph) cuya fecha de comprobación (2026-10-25) es anterior a hoy y que internamente muestra fechas inconsistentes (cabecera 2026-06-18 / 2026-11-10).",
+  "Los precios por fila de OpenAI no se citaron literalmente (por riesgo de formato con tabuladores); aparecen solo como INTERPRETACIÓN a partir de la página de precios, y el precio estándar de Luna solo viene de BenchLM (secundaria).",
+  "Los escenarios de caché asumen caché ideal (todas lecturas) y un caso peor; la tasa real de aciertos es desconocida.",
+  "No se verificó la tokenización real; se usaron los 6,000/800 tokens dados. Se ignoran recargos opcionales (residencia de datos +10 %, modo rápido, cargos por herramientas) y descuentos negociados.",
+  "No se evaluó la calidad de los modelos; 'comparable' se basa en precio y descripción de rol, no en benchmarks.",
+  "El texto de las páginas es una conversión a texto: tablas con celdas separadas, por lo que algunas asociaciones modelo-fila se leen por el encabezado de sección.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita quitó 7 de 17 hallazgos confirmados que decían más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 8 propuestas, 8 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://ai.google.dev/gemini-api/docs/pricing (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
