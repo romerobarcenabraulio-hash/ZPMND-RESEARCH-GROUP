@@ -39,6 +39,14 @@ class Gate(unittest.TestCase):
         affected, unparsed = evaluate([adv('< 2027.1.1', pkg='@openclaw/feishu'), adv('< 2027.1.1', pkg='')], '2026.10.5', ['openclaw'])
         self.assertEqual(len(affected), 1)
 
+    def test_the_pin_is_past_the_advisory_that_moved_it(self):
+        # 2026-11-21: GHSA-pw3x-g8v8-fvj2 failed the gate on 2026.10.5; the pin moved to the fixed version.
+        rows = [adv('>= 2026.9.2, < 2026.10.33', ghsa='GHSA-pw3x-g8v8-fvj2'), adv('>= 2026.11.1, < 2026.11.4')]
+        pinned = json.loads(LOCK.read_text(encoding='utf-8'))['version']
+        self.assertEqual(evaluate(rows, pinned, ['openclaw']), ([], []))
+        self.assertGreaterEqual(v(pinned), v('2026.10.33'))  # past the fix, not merely before the range (GPT on #176)
+        self.assertEqual(len(evaluate(rows, '2026.10.5', ['openclaw'])[0]), 1)
+
     def _run(self, rows):
         with tempfile.TemporaryDirectory() as d:
             f = Path(d) / 'adv.jsonl'

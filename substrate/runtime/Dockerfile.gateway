@@ -1,10 +1,10 @@
-# OpenClaw gateway for RESEARCH GROUP. Same base image and digest that OpenClaw v2026.10.5 pins in its own Dockerfile.
+# OpenClaw gateway for RESEARCH GROUP. Same base image and digest that OpenClaw v2026.10.33 pins in its own Dockerfile.
 # Build context: substrate/ (see compose.yml).
-FROM docker.io/library/node:24-bookworm-slim@sha256:0e0ff40c39bc087845bfb27465a0df4ea419520094bc35842ff83dd8cbe6f9b6
+FROM docker.io/library/node:24.22.1-bookworm-slim@sha256:55fb5f5a527ea2c5c4a95f963e48ef90aa38c7b346054fdc8ee9957a2b55d205
 WORKDIR /opt/rg
 COPY runtime/package.json runtime/package-lock.json ./
-# npm ci enforces the lockfile integrity of all 564 packages; dependency install scripts never run.
-# Only OpenClaw's own postinstall (source = signed tag 1b58cb9a) runs, explicitly.
+# npm ci enforces the lockfile integrity of all 585 packages; dependency install scripts never run.
+# Only OpenClaw's own postinstall (source = signed tag 5196fbbf) runs, explicitly.
 RUN npm ci --ignore-scripts --no-audit --no-fund \
  && cd node_modules/openclaw && node scripts/postinstall-bundled-plugins.mjs \
  && mkdir -p /workspace /state /etc/openclaw && chown node:node /workspace /state && chmod 700 /state
