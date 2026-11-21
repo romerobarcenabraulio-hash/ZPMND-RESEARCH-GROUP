@@ -23,13 +23,19 @@ jobs:
       RG_REQUIRE_DB_TESTS: '1'  # tests/test_postgres.py fails instead of skipping when the Postgres is missing
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
-        with: { persist-credentials: false }
+        with: { persist-credentials: false, fetch-depth: 2 }  # a PR's merge commit and its base, HEAD^1
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with: { python-version: '3.12' }
       - run: pip install -r requirements-dev.txt
       - run: python -m unittest discover -s tests -t . -v
       - run: python -m rg.openclaw_policy substrate/openclaw.json
+      # The live advisory gate runs weekly and on PRs that change substrate/ (SECURITY: "weekly and before every pilot").
+      # On every PR it turned all of them red on 2026-11-19 for a substrate nothing runs; an unreadable diff runs it.
+      - id: substrate
+        env: { EVENT: '${{ github.event_name }}' }
+        run: if [ "$EVENT" = schedule ] || ! git diff --quiet HEAD^1 HEAD -- substrate/; then echo gate=yes >> "$GITHUB_OUTPUT"; else echo gate=no >> "$GITHUB_OUTPUT"; fi
       - name: OpenClaw advisory gate (live)
+        if: steps.substrate.outputs.gate == 'yes'
         env: { GH_TOKEN: '${{ github.token }}' }
         run: python -m rg.advisories --lock substrate/openclaw.lock.json --fetch
   mutation:
