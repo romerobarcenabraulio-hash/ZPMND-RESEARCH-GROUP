@@ -1,0 +1,367 @@
+{
+ "research_id": "RP-2026-11-02-arte-previo-ocr-ojn",
+ "request_id": "RR-2026-11-02-arte-previo-ocr-ojn",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-08T00:04:57Z",
+ "question": "Para extraer texto con posición de página de los documentos del Orden Jurídico Nacional que no tienen capa de texto (archivos .doc antiguos y PDF escaneados de legislación estatal y municipal), ¿qué extractores y modelos de OCR y layout existen con licencia que permita uso en producción, versión fijable, salida con confianza por página y ejecución local en un servidor sin GPU dedicada o con una GPU de consumo, y cuál es su precisión y costo por página medidos sobre documentos reales de esa fuente?",
+ "why_zpmnd_needs_it": "La compuerta de RG exige cita literal en el texto del crudo; sin texto, ninguna obligación estatal o municipal puede llegar confirmada (ZPPMND G06, G07, G09). La medición de #93 compara Tesseract, nemotron-parse y LibreOffice; falta el panorama completo con licencias y arte previo antes de fijar uno.",
+ "scope": "Revisión de las fuentes entregadas (licencias de Tesseract, PaddleOCR, docTR y Docling; documentación de modelos Tesseract, OCRmyPDF, Nemotron 3.5 Parse y Surya) para elegir OCR/layout local, con licencia de producción, versión fijable y confianza, aplicable a documentos del OJN sin capa de texto. No hay mediciones sobre documentos del OJN ni sha256 de las licencias.",
+ "sources": {
+  "primary": [
+   "SA-af76c2f1ddb71514e2779f27",
+   "SA-1f377afaf683305c41d49ae2",
+   "SA-1ba36ec533db5b4ff9344405",
+   "SA-5a2b5d9188ae66746e7f71b8",
+   "SA-a4ce10024512a89932191631",
+   "SA-74090b473ae77108ece3e1a6",
+   "SA-f13fc661d5f78da9bc98e9c2",
+   "SA-c6f7802c165a281f6634dadb"
+  ],
+  "secondary": [
+   "SA-e41c23b35d409560b96813cd",
+   "SA-613d5c889be4d412462ae439",
+   "SA-be37511c242c7490ac97d7f8",
+   "SA-c65338a40ec65ca91e60d750"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-af76c2f1ddb71514e2779f27",
+   "url": "https://github.com/tesseract-ocr/tesseract/blob/main/LICENSE",
+   "retrieved_at": "2026-11-08T00:02:34Z",
+   "sha256": "af76c2f1ddb71514e2779f27da7bf561539ff3b5149c46693ac02b4c48d8d3ef",
+   "bytes": 260579,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "tesseract-ocr (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "tesseract/LICENSE (main)"
+  },
+  {
+   "artifact_id": "SA-1f377afaf683305c41d49ae2",
+   "url": "https://tesseract-ocr.github.io/tessdoc/Data-Files.html",
+   "retrieved_at": "2026-11-08T00:02:36Z",
+   "sha256": "1f377afaf683305c41d49ae28f9351b5e8e8506777678f0c8bbb522247e1545b",
+   "bytes": 39202,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Tesseract documentation",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Traineddata Files for Version 4.00+"
+  },
+  {
+   "artifact_id": "SA-1ba36ec533db5b4ff9344405",
+   "url": "https://github.com/tesseract-ocr/tessdata_best",
+   "retrieved_at": "2026-11-08T00:02:37Z",
+   "sha256": "1ba36ec533db5b4ff9344405110fab0f1239ece3dc54e03a2d46a81edc75a802",
+   "bytes": 440279,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "tesseract-ocr (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "tessdata_best"
+  },
+  {
+   "artifact_id": "SA-e41c23b35d409560b96813cd",
+   "url": "https://tesseract-ocr.github.io/tessdoc/",
+   "retrieved_at": "2026-11-08T00:02:38Z",
+   "sha256": "e41c23b35d409560b96813cded260055f6f9b55bed8f666fbd444bae2fb775f9",
+   "bytes": 16189,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Tesseract documentation",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Tesseract User Manual"
+  },
+  {
+   "artifact_id": "SA-613d5c889be4d412462ae439",
+   "url": "https://github.com/ocrmypdf/ocrmypdf",
+   "retrieved_at": "2026-11-08T00:02:38Z",
+   "sha256": "613d5c889be4d412462ae439912ad3e99b31c7b118e07988c6a9d3ca3de2557d",
+   "bytes": 311922,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "ocrmypdf (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "OCRmyPDF"
+  },
+  {
+   "artifact_id": "SA-5a2b5d9188ae66746e7f71b8",
+   "url": "https://github.com/PaddlePaddle/PaddleOCR/blob/main/LICENSE",
+   "retrieved_at": "2026-11-08T00:02:39Z",
+   "sha256": "5a2b5d9188ae66746e7f71b8d06baa43a3f3560d89d202459f5110b871b9554b",
+   "bytes": 260968,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "PaddlePaddle (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "PaddleOCR/LICENSE"
+  },
+  {
+   "artifact_id": "SA-a4ce10024512a89932191631",
+   "url": "https://github.com/mindee/doctr/blob/main/LICENSE",
+   "retrieved_at": "2026-11-08T00:02:39Z",
+   "sha256": "a4ce10024512a89932191631a195df13b437dc579e14d9b880049b9f0dbfbe26",
+   "bytes": 260068,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "mindee (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "doctr/LICENSE"
+  },
+  {
+   "artifact_id": "SA-74090b473ae77108ece3e1a6",
+   "url": "https://github.com/docling-project/docling/blob/main/LICENSE",
+   "retrieved_at": "2026-11-08T00:02:41Z",
+   "sha256": "74090b473ae77108ece3e1a62070b42fde6964583370d0f0d4b780c7bcd63d62",
+   "bytes": 179731,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "docling-project (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "docling/LICENSE"
+  },
+  {
+   "artifact_id": "SA-be37511c242c7490ac97d7f8",
+   "url": "https://docling-project.github.io/docling/getting_started/installation/",
+   "retrieved_at": "2026-11-08T00:02:41Z",
+   "sha256": "be37511c242c7490ac97d7f8fa5742139ba65b93a0dd67dc01fddee42b6b6cce",
+   "bytes": 99300,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Docling project",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Installation - Docling"
+  },
+  {
+   "artifact_id": "SA-f13fc661d5f78da9bc98e9c2",
+   "url": "https://huggingface.co/nvidia/Nemotron-3.5-Parse",
+   "retrieved_at": "2026-11-08T00:02:43Z",
+   "sha256": "f13fc661d5f78da9bc98e9c29465900ffbfef8ae7564608fce6f5a22e2e7882c",
+   "bytes": 340588,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "NVIDIA (Hugging Face)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "nvidia/Nemotron-3.5-Parse"
+  },
+  {
+   "artifact_id": "SA-c6f7802c165a281f6634dadb",
+   "url": "https://docs.nvidia.com/nim/ingestion/parse/latest/support-matrix.html",
+   "retrieved_at": "2026-11-08T00:02:44Z",
+   "sha256": "c6f7802c165a281f6634dadbb4943a38298525214bc7b79e2656b8a07caa2de6",
+   "bytes": 24299,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "NVIDIA",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Support Matrix for NVIDIA NIM for Nemotron Parse"
+  },
+  {
+   "artifact_id": "SA-c65338a40ec65ca91e60d750",
+   "url": "https://github.com/datalab-to/surya",
+   "retrieved_at": "2026-11-08T00:02:45Z",
+   "sha256": "c65338a40ec65ca91e60d750abc5e3f6fd94cde226f2ed27638b5759bf85feb5",
+   "bytes": 446503,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "datalab-to (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "datalab-to/surya"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El texto de licencia de Tesseract es Apache License, Version 2.0.",
+    "artifact_ids": [
+     "SA-af76c2f1ddb71514e2779f27"
+    ],
+    "quote": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+    "locator": "tesseract/LICENSE, apéndice final"
+   },
+   {
+    "claim": "La licencia de Tesseract concede un derecho mundial, no exclusivo, sin cargo, sin regalías e irrevocable.",
+    "artifact_ids": [
+     "SA-af76c2f1ddb71514e2779f27"
+    ],
+    "quote": "worldwide, non-exclusive, no-charge, royalty-free, irrevocable",
+    "locator": "tesseract/LICENSE, sección 2 (Grant of Copyright License)"
+   },
+   {
+    "claim": "Los modelos tessdata_best están bajo Apache-2.0.",
+    "artifact_ids": [
+     "SA-1ba36ec533db5b4ff9344405"
+    ],
+    "quote": "All data in the repository are licensed under the Apache-2.0 License, see file LICENSE.",
+    "locator": "tessdata_best README"
+   },
+   {
+    "claim": "Solo se admite el nuevo motor OCR basado en LSTM (--oem 1).",
+    "artifact_ids": [
+     "SA-1f377afaf683305c41d49ae2"
+    ],
+    "quote": "only the new LSTM-based OCR engine (–oem 1) is supported.",
+    "locator": "Traineddata Files for Version 4.00+, introducción"
+   },
+   {
+    "claim": "tessdata_best sacrifica velocidad por algo más de precisión.",
+    "artifact_ids": [
+     "SA-1f377afaf683305c41d49ae2"
+    ],
+    "quote": "tessdata_best is for people willing to trade a lot of speed for slightly better accuracy.",
+    "locator": "Updated Data Files (September 15, 2017)"
+   },
+   {
+    "claim": "Existe el modelo spa (español; castellano), archivo spa.traineddata, en el listado de traineddata de Tesseract.",
+    "artifact_ids": [
+     "SA-1f377afaf683305c41d49ae2"
+    ],
+    "quote": "spa \tSpanish; Castilian \tspa.traineddata",
+    "locator": "Data Files for Version 4.00 (November 29, 2016), tabla"
+   },
+   {
+    "claim": "PaddleOCR publica su LICENSE como Apache 2.0.",
+    "artifact_ids": [
+     "SA-5a2b5d9188ae66746e7f71b8"
+    ],
+    "quote": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+    "locator": "PaddleOCR/LICENSE, apéndice final"
+   },
+   {
+    "claim": "docTR (Mindee) publica su LICENSE como Apache 2.0.",
+    "artifact_ids": [
+     "SA-a4ce10024512a89932191631"
+    ],
+    "quote": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+    "locator": "doctr/LICENSE, apéndice final"
+   },
+   {
+    "claim": "La LICENSE de Docling concede permiso, sin cargo, a cualquier persona que obtenga una copia.",
+    "artifact_ids": [
+     "SA-74090b473ae77108ece3e1a6"
+    ],
+    "quote": "Permission is hereby granted, free of charge, to any person obtaining a copy",
+    "locator": "docling/LICENSE, MIT License"
+   },
+   {
+    "claim": "Nemotron 3.5 Parse se rige por la licencia OpenMDW 1.1.",
+    "artifact_ids": [
+     "SA-f13fc661d5f78da9bc98e9c2"
+    ],
+    "quote": "Governing Terms: Your use of this model is governed by the OpenMDW License Agreement, version 1.1.",
+    "locator": "Nemotron 3.5 Parse, License/Terms of Use"
+   },
+   {
+    "claim": "Nemotron 3.5 Parse tiene como hardware de referencia GPU H100 y H200.",
+    "artifact_ids": [
+     "SA-f13fc661d5f78da9bc98e9c2"
+    ],
+    "quote": "Reference Hardware: NVIDIA H100 and H200, BF16.",
+    "locator": "Nemotron 3.5 Parse, Software Integration"
+   },
+   {
+    "claim": "Nemotron 3.5 Parse devuelve una cadena que codifica el texto del documento, clases semánticas de elementos y cajas delimitadoras normalizadas al contenido.",
+    "artifact_ids": [
+     "SA-f13fc661d5f78da9bc98e9c2"
+    ],
+    "quote": "Nemotron 3.5 Parse returns a string encoding document text, semantic element classes, and content-normalized bounding boxes.",
+    "locator": "Nemotron 3.5 Parse, Output(s)"
+   },
+   {
+    "claim": "Nemotron advierte que la cobertura de un idioma/escritura no garantiza calidad equivalente en escaneos complejos, manuscritos o documentos degradados.",
+    "artifact_ids": [
+     "SA-f13fc661d5f78da9bc98e9c2"
+    ],
+    "quote": "Coverage of a language/script entry does not guarantee equivalent quality on complex scans, handwriting, or degraded documents.",
+    "locator": "Nemotron 3.5 Parse, Evaluation Results / Multilingual OCR"
+   },
+   {
+    "claim": "El NIM de Nemotron Parse exige un sistema con GPU NVIDIA soportada.",
+    "artifact_ids": [
+     "SA-c6f7802c165a281f6634dadb"
+    ],
+    "quote": "Use a supported NVIDIA GPU system with a current NVIDIA driver and NVIDIA Container Toolkit.",
+    "locator": "Support Matrix NIM Nemotron Parse, System Requirements"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Hash sha256 de cada documento de licencia: las fuentes son texto extraído, sin hash calculable.",
+   "Versiones fijables concretas (tags, releases) de Tesseract, docTR y PaddleOCR: no aparecen en los textos leídos.",
+   "Confianza por página/palabra de Tesseract (hOCR/TSV), docTR y PaddleOCR: las fuentes entregadas no la documentan.",
+   "Precisión en español legal o escaneos similares a los del OJN para todos los candidatos: no publicada en las fuentes leídas.",
+   "Costo por página publicado por algún proveedor: no hay cifras de precio; solo páginas/s de Surya y Nemotron.",
+   "Extracción de archivos .doc antiguos: ninguna fuente entregada la cubre.",
+   "Requisitos de hardware de docTR y PaddleOCR: solo se leyó su LICENSE.",
+   "Precisión medida sobre documentos del OJN: no existe en las fuentes."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Tesseract (Apache 2.0, CPU, modelo spa) es el candidato mejor respaldado en licencia y ejecución sin GPU; falta confirmar confianza (hOCR/TSV) y versión fijable en documentación no entregada.",
+  "INTERPRETACIÓN: OCRmyPDF (MPL-2.0) agrega capa de texto a PDF usando Tesseract; la confianza por palabra no está documentada en las fuentes leídas.",
+  "INTERPRETACIÓN: Nemotron 3.5 Parse requiere GPU NVIDIA de centro de datos y no documenta confianza; encaja mal con 'sin GPU o GPU de consumo'.",
+  "INTERPRETACIÓN: Surya expone confianza por bloque, pero la licencia de los pesos limita el uso comercial y en CPU/Apple Silicon es lento (0.19 páginas/s); riesgo de licencia para producción.",
+  "INTERPRETACIÓN: Docling (MIT) es orquestador; su licencia no cubre los modelos OCR que carga, que tienen licencias propias.",
+  "SECUNDARIA: según el README de OCRmyPDF, existen plugins EasyOCR (GPU recomendada) y PaddleOCR (acelerado por GPU); no verificado en fuente primaria."
+ ],
+ "candidate_tests": [
+  "Muestrear páginas reales del OJN (.doc convertido y PDF escaneados estatales/municipales) con transcripción de referencia, y medir CER/WER y segundos por página con Tesseract fast/best spa, docTR y PaddleOCR en CPU.",
+  "Verificar por candidato que la salida incluya confianza por palabra y por página en formato estructurado antes de registrar cualquier confianza."
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: el costo por página en servidor propio es solo cómputo (segundos/página × costo/hora); ningún proveedor lo publica.",
+  "HIPÓTESIS: tessdata_best con spa mejorará algo la precisión en escaneos pobres a costa de velocidad; hay que medirlo en OJN."
+ ],
+ "limitations": [
+  "Las fuentes de licencia son páginas HTML de GitHub convertidas a texto: no hay sha256 verificable y la licencia leída es la de la rama main, no la de una versión fijada.",
+  "No se entregaron fuentes de docTR, PaddleOCR ni Tesseract sobre confianza, hardware o benchmarks; solo licencias.",
+  "Las cifras de Nemotron y Surya vienen de benchmarks de sus proveedores, no de documentos legales mexicanos; el benchmark interno de Surya no es auditable.",
+  "Fechas y versiones de las fuentes (2026) no se contrastaron con otras fuentes.",
+  "Ninguna fuente aborda archivos .doc antiguos ni mide costo por página.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 14 de 26 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 12 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Se descartaron 12 hallazgos confirmados cuya cita no está en una fuente primaria (T2; detalle en receipt.json)."
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
