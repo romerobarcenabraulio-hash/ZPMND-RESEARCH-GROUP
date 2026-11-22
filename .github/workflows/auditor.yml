@@ -417,7 +417,9 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     permissions: { contents: read }
-    outputs: { ok: '${{ steps.ok.outputs.ok }}' }  # the only sign packet-gate trusts: an artifact name is taken once per run
+    # ok and the id of this job's own upload, the only artifact packet-gate opens: any job of the run can overwrite a name
+    # (upload-artifact's overwrite deletes it and makes another), never an id (GPT on 6d890f6)
+    outputs: { ok: '${{ steps.ok.outputs.ok }}', id: '${{ steps.ok.outputs.id }}' }
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: { ref: main, persist-credentials: false }
@@ -441,11 +443,12 @@ jobs:
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         id: subir
         if: steps.sellar.outcome == 'success'
-        continue-on-error: true  # pedir runs on the head and could take the name first: then this fails and ok stays unset
+        continue-on-error: true  # another job of the run could take the name first: then this fails and ok stays unset
         with: { name: sellados, path: '${{ runner.temp }}/sellados-enc/', retention-days: 1, if-no-files-found: error }
       - id: ok
         if: steps.subir.outcome == 'success'
-        run: echo "ok=true" >> "$GITHUB_OUTPUT"
+        env: { ID: '${{ steps.subir.outputs.artifact-id }}' }
+        run: if [[ "$ID" =~ ^[1-9][0-9]{0,18}$ ]]; then printf 'ok=true\nid=%s\n' "$ID" >> "$GITHUB_OUTPUT"; fi  # one id, never a list
   packet-gate:
     # Main's rg.packets on the packet folders the head changes, read as data: each blob is written from the head's
     # objects with git cat-file, byte for byte (never git archive, which applies the head's export attributes); no PR
@@ -477,11 +480,13 @@ jobs:
       - name: The extractor's own user (it parses hostile raws and owns nothing here; SECURITY T12)
         run: sudo useradd --system --no-create-home --shell /usr/sbin/nologin rgparse
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        id: bajar
         if: needs.sellados.outputs.ok == 'true'
-        continue-on-error: true
-        with: { name: sellados, path: '${{ runner.temp }}/sellados-enc' }
+        continue-on-error: true  # by the id sellados' upload returned, never by name: one replaced or deleted since is not
+        # in the run's list any more, this fails, nothing is opened and those raws are downloaded again (GPT on 6d890f6)
+        with: { artifact-ids: '${{ needs.sellados.outputs.id }}', path: '${{ runner.temp }}/sellados-enc' }
       - name: R2's sealed copies, opened with this job's own private key (its one secret; before anything parses)
-        if: needs.sellados.outputs.ok == 'true'
+        if: steps.bajar.outcome == 'success'
         continue-on-error: true  # a bad or missing envelope opens nothing: those raws are downloaded again
         env: { RG_ARTIFACT_KEY: '${{ secrets.RG_SELLADOS_KEY }}' }
         run: mkdir -p "$RUNNER_TEMP/packet-gate" && bash scripts/sobre.sh open "$RUNNER_TEMP/sellados-enc" "$RUNNER_TEMP/packet-gate/sellados"
