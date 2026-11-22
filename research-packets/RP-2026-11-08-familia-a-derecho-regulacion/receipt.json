@@ -1,0 +1,353 @@
+{
+ "request_id": "RR-2026-11-08-familia-a-derecho-regulacion",
+ "fetched": [
+  {
+   "url": "https://catalogomexicanodenormas.economia.gob.mx/",
+   "status": "refused",
+   "error": "robots.txt disallows https://catalogomexicanodenormas.economia.gob.mx/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T15:20:15Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://github.com/imco/dof-api",
+   "status": 200,
+   "error": null,
+   "sha256": "b66d416fa6e8186ce2e34d790dd7d609a9339c7267a551b3db55fd8e82a0d36f",
+   "bytes": 278030,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:20Z",
+   "text_status": "ok",
+   "text_chars": 10638
+  },
+  {
+   "url": "https://bicentenario.scjn.gob.mx/manual-usuario-descarga",
+   "status": "refused",
+   "error": "robots.txt disallows https://bicentenario.scjn.gob.mx/manual-usuario-descarga",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T15:20:22Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://sjf2.scjn.gob.mx/",
+   "status": "refused",
+   "error": "robots.txt disallows https://sjf2.scjn.gob.mx/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T15:20:22Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://cja.sre.gob.mx/tratadosmexico/info",
+   "status": 200,
+   "error": null,
+   "sha256": "e79a79438275e5b379a03a2be7ecf2fb176e744f072aab5eb4e5a73a2e0d636a",
+   "bytes": 96304,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:23Z",
+   "text_status": "ok",
+   "text_chars": 4267
+  },
+  {
+   "url": "https://conamer.gob.mx/transparencia/Default.aspx?id=17",
+   "status": "refused",
+   "error": "robots.txt disallows https://conamer.gob.mx/transparencia/Default.aspx?id=17",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T15:20:26Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.diputados.gob.mx/LeyesBiblio/index.htm",
+   "status": 200,
+   "error": null,
+   "sha256": "a23aa11556c3e0202192213df2dd1a5355d3522406f43b43a35817eb4a587bca",
+   "bytes": 629398,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:31Z",
+   "text_status": "ok",
+   "text_chars": 32706
+  },
+  {
+   "url": "https://www.boe.es/informacion/aviso_legal/index.php",
+   "status": 200,
+   "error": null,
+   "sha256": "744fcb66dc62e4d438e4b406d3e2efd829f74b855f8a685d1f6bf90e31429989",
+   "bytes": 36293,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:33Z",
+   "text_status": "ok",
+   "text_chars": 19269
+  },
+  {
+   "url": "https://www.boe.es/datosabiertos/faq/consolidada.php",
+   "status": 200,
+   "error": null,
+   "sha256": "24d3e2f0a4b0a8115bf227251e3f0ec82628d2d8b4edaca18ce5ea72165f5453",
+   "bytes": 22990,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:35Z",
+   "text_status": "ok",
+   "text_chars": 9041
+  },
+  {
+   "url": "https://op.europa.eu/en/web/cellar/cellar-data",
+   "status": 200,
+   "error": null,
+   "sha256": "4a177436ca4bdf1ee2b31803aed20a748fc1c44f23453c9dd7781b4dc006a88e",
+   "bytes": 336900,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:35Z",
+   "text_status": "ok",
+   "text_chars": 14531
+  },
+  {
+   "url": "https://www.bcn.cl/leychile/api/condiciones-de-uso",
+   "status": 200,
+   "error": null,
+   "sha256": "4ff75cdc3dade5550d6eee84a015e513a646a920e50ffce12cdea8cf379e9131",
+   "bytes": 9602,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:38Z",
+   "text_status": "ok",
+   "text_chars": 235
+  },
+  {
+   "url": "https://legislation.github.io/data-documentation/reuse-licence.html",
+   "status": 200,
+   "error": null,
+   "sha256": "da02a4fec1de8ed635245057a3560d07a64803a2cc9c77292e2900101cfa4658",
+   "bytes": 12245,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T15:20:40Z",
+   "text_status": "ok",
+   "text_chars": 7216
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43047091766",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "BOE: las condiciones de reutilización permiten el uso comercial y no comercial de los documentos de la sede electrónica.",
+    "now": "BOE: las condiciones de reutilización permiten reutilizar los documentos sometidos a ellas para fines comerciales y no comerciales.",
+    "cut": "\"de la sede electrónica\": el texto citado solo habla de los documentos sometidos a las condiciones."
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "BOE: exige citar la fuente al reutilizar, con una fórmula textual.",
+    "now": "BOE: fórmula de cita de la fuente: \"Fuente de los datos: Agencia Estatal Boletín Oficial del Estado\".",
+    "cut": "Que sea una exigencia (\"exige citar la fuente al reutilizar\"): el texto citado solo da la fórmula, no dice que sea obligatoria."
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "BOE: solo la edición electrónica del BOE tiene carácter oficial y auténtico.",
+    "now": "BOE: únicamente tienen la consideración de oficiales y auténticos los textos publicados en la edición electrónica de los diarios oficiales.",
+    "cut": "\"del BOE\": el texto citado habla de los diarios oficiales en general, no del BOE en concreto."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Diario oficial y catálogo de normas federales de México (DOF, Sistema Mexicano de Normas)",
+   "SCJN: Semanario Judicial y repositorio de descarga en formatos abiertos",
+   "Portales de datos abiertos de México (CONAMER, datos.gob.mx) y lineamientos",
+   "SRE: Biblioteca Virtual de Tratados",
+   "Cámara de Diputados: leyes federales",
+   "EE. UU.: OLRC, govinfo y Federal Register",
+   "UE: EUR-Lex y Cellar (SPARQL)",
+   "España: BOE datos abiertos",
+   "LATAM: BCN Chile y LexML Brasil",
+   "Reino Unido y Canadá: legislation.gov.uk y Justice Laws",
+   "Inventario de diarios oficiales: Law Library of Congress"
+  ],
+  "searches": [
+   {
+    "query": "Diario Oficial de la Federación datos abiertos API licencia reutilización",
+    "intent": "official"
+   },
+   {
+    "query": "Semanario Judicial de la Federación datos abiertos tesis jurisprudencia descarga",
+    "intent": "official"
+   },
+   {
+    "query": "govinfo bulk data USCODE Federal Register API terms of use",
+    "intent": "official"
+   },
+   {
+    "query": "EUR-Lex SPARQL Cellar licence reuse policy open data",
+    "intent": "official"
+   },
+   {
+    "query": "BOE API datos abiertos legislación consolidada aviso legal reutilización",
+    "intent": "official"
+   },
+   {
+    "query": "CONAMER Catálogo Nacional de Regulaciones, Trámites y Servicios datos abiertos",
+    "intent": "official"
+   },
+   {
+    "query": "legislation.gov.uk API bulk data Open Government Licence; Justice Laws Website Canada XML open data",
+    "intent": "official"
+   },
+   {
+    "query": "Treaty collection México tratados SRE base de datos; UN Treaty Collection terms of use",
+    "intent": "official"
+   },
+   {
+    "query": "uscode.house.gov download XML USLM Office of the Law Revision Counsel copyright public domain",
+    "intent": "support"
+   },
+   {
+    "query": "Federal Register API documentation developer rate limit documents public domain",
+    "intent": "limitations"
+   },
+   {
+    "query": "Biblioteca del Congreso Nacional Chile datos abiertos Ley Chile API licencia",
+    "intent": "limitations"
+   },
+   {
+    "query": "LexML Brasil dados abertos API SRU licença",
+    "intent": "official"
+   },
+   {
+    "query": "Normas Oficiales Mexicanas catálogo DOF Secretaría de Economía NOM vigentes",
+    "intent": "official"
+   },
+   {
+    "query": "Global inventory of official gazettes all countries Law Library of Congress",
+    "intent": "official"
+   },
+   {
+    "query": "Cámara de Diputados leyes federales vigentes datos abiertos descarga",
+    "intent": "official"
+   }
+  ],
+  "not_found": [
+   "Documentación oficial de la API SIDOF del DOF, con licencia, límites de tasa y total de documentos: no hallada. Los resultados solo traen el DOF y terceros.",
+   "Fuentes oficiales para A10 (reglamentos municipales), A11 (32 periódicos estatales), A12 (congresos locales) y A18 (poderes judiciales estatales): no se buscaron ni hallaron.",
+   "A14 SAT, A15 disposiciones financieras (CNBV, Banxico), A16 (CRE, COFEPRIS, IFT/CRT, SEMARNAT) y A17 (CJF, TFJA, TEPJF): no se buscaron.",
+   "govinfo y eCFR: términos de uso y estado del bulk USCODE sin confirmar. Hay fuentes contradictorias de terceros. Federal Register: no se halló la página oficial de documentación, solo agregadores.",
+   "Colombia, Argentina y Perú: sin fuente oficial hallada. Brasil: solo el sitio LexML y fuentes secundarias de licencia.",
+   "Tratados multilaterales y organismos internacionales (A25, A26): no se halló la página oficial de términos de la UN Treaty Collection.",
+   "A27: no existe un inventario único de los 193 países. Solo se halló la colección de gacetas de la Law Library of Congress, que es secundaria y no cubre todo el mundo.",
+   "Ningún sha256 de archivos descargados, ningún total declarado con fecha de corte, ningún robots.txt y ningún límite de tasa verificados. La herramienta es solo de búsqueda y no descarga.",
+   "Licencia de datos.gob.mx (Términos de Libre Uso MX): solo se halló una referencia de 2015 en el DOF. No consta que siga vigente."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 13,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://open.canada.ca/data/en/dataset/ff56de85-f8b9-4719-8dff-ecf362adf0af",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://catalogomexicanodenormas.economia.gob.mx/",
+    "family": "A05 NOM",
+    "stance": "context",
+    "role": "primary",
+    "why": "Catálogo oficial de NOM/NMX vigentes y canceladas, actualizado con el DOF. Las NMX de los ONN tienen derecho de autor. Falta confirmar total, licencia y robots."
+   },
+   {
+    "url": "https://github.com/imco/dof-api",
+    "family": "A05 NOM / DOF",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Copia de tercero del DOF con linaje de NOM/NMX. Solo candidate_claim. Su licencia MIT cubre el código, no el contenido del DOF."
+   },
+   {
+    "url": "https://bicentenario.scjn.gob.mx/manual-usuario-descarga",
+    "family": "A08 Semanario Judicial",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Canal oficial de descarga masiva de tesis, precedentes, votos y acuerdos del SJF. Falta la licencia y el total declarado."
+   },
+   {
+    "url": "https://sjf2.scjn.gob.mx/",
+    "family": "A08 Semanario Judicial",
+    "stance": "context",
+    "role": "primary",
+    "why": "Portal web oficial, de 1917 a la fecha. Sirve para buscar el contador de tesis y los términos de uso."
+   },
+   {
+    "url": "https://cja.sre.gob.mx/tratadosmexico/info",
+    "family": "A06 Tratados",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Cubre los tratados vigentes de 1836 a la fecha. Declara que solo es informativa y sin efecto legal, así que la procedencia oficial debe reforzarse con el DOF."
+   },
+   {
+    "url": "https://conamer.gob.mx/transparencia/Default.aspx?id=17",
+    "family": "A13 CONAMER",
+    "stance": "context",
+    "role": "primary",
+    "why": "Punto de acceso a los datos abiertos de CONAMER (RFTS, SIMIR). El catálogo nacional estatal y municipal completo no está confirmado como descargable."
+   },
+   {
+    "url": "https://www.diputados.gob.mx/LeyesBiblio/index.htm",
+    "family": "Leyes federales (contexto A14-A16)",
+    "stance": "context",
+    "role": "primary",
+    "why": "Catálogo oficial de leyes vigentes en PDF, Word y ZIP, con compilación LEYFED. Su sección de datos abiertos aparece en proceso de actualización."
+   },
+   {
+    "url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "family": "A22 España",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto de la licencia de reutilización, con condiciones de atribución y de texto consolidado meramente informativo. Para la cita literal, leer la página."
+   },
+   {
+    "url": "https://www.boe.es/datosabiertos/faq/consolidada.php",
+    "family": "A22 España",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Describe la API REST de legislación consolidada y su retraso de 1 a 3 días. Falta el total declarado."
+   },
+   {
+    "url": "https://op.europa.eu/en/web/cellar/cellar-data",
+    "family": "A21 UE",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Describe el acceso a Cellar por REST, SPARQL y RSS. Es un canal oficial sin clave."
+   },
+   {
+    "url": "https://www.bcn.cl/leychile/api/condiciones-de-uso",
+    "family": "A23 LATAM (Chile)",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Exige atribución. El uso para entrenar IA requiere autorización expresa de la BCN. La BCN no tiene derechos de autor sobre los textos. Es una restricción clave para ZPMND."
+   },
+   {
+    "url": "https://legislation.github.io/data-documentation/reuse-licence.html",
+    "family": "A24 Reino Unido",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "OGL v3.0 con excepciones de doble licencia, como los datos derivados de EUR-Lex."
+   },
+   {
+    "url": "https://open.canada.ca/data/en/dataset/ff56de85-f8b9-4719-8dff-ecf362adf0af",
+    "family": "A24 Canadá",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Volcado XML oficial bajo Open Government Licence – Canada. Se actualiza cada dos semanas."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
