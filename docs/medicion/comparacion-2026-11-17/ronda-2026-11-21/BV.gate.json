@@ -1,0 +1,134 @@
+{
+ "hosts": [
+  "aistudio.google.com",
+  "developers.openai.com",
+  "platform.claude.com"
+ ],
+ "rows": [
+  {
+   "claim": "Anthropic lista Claude Sonnet 5.5 a $2/MTok de entrada y $10/MTok de salida. Escribir en caché 5 min cuesta $2.50 y leer de caché $0.10 por MTok. Consulta: 2026-11-21.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "http": 200,
+   "sha256": "9aeec5a1f266cab286ddd56e8866ad118116a437d6fa1faaa66f19e347e6a2f1",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  },
+  {
+   "claim": "Anthropic lista Claude Haiku 5.5 (prompts de hasta 100,000 tokens) a $0.10 de entrada y $0.50 de salida por MTok. Escritura de caché 5 min $0.125 y lectura $0.01. Es la gama económica.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "http": 200,
+   "sha256": "9aeec5a1f266cab286ddd56e8866ad118116a437d6fa1faaa66f19e347e6a2f1",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  },
+  {
+   "claim": "El Batch API de Anthropic da 50% de descuento en entrada y salida. Sonnet 5.5 en lotes cuesta $1 de entrada y $5 de salida por MTok.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "http": 200,
+   "sha256": "9aeec5a1f266cab286ddd56e8866ad118116a437d6fa1faaa66f19e347e6a2f1",
+   "media": "text/html",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "Haiku 5.5 en lotes (prompts hasta 100k tokens) cuesta $0.05 de entrada y $0.25 de salida por MTok.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "http": 200,
+   "sha256": "9aeec5a1f266cab286ddd56e8866ad118116a437d6fa1faaa66f19e347e6a2f1",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  },
+  {
+   "claim": "Anthropic dice que los descuentos de lotes y de caché se pueden combinar y que los multiplicadores se acumulan.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "http": 200,
+   "sha256": "9aeec5a1f266cab286ddd56e8866ad118116a437d6fa1faaa66f19e347e6a2f1",
+   "media": "text/html",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "Anthropic fija en 512 tokens el mínimo cacheable para Sonnet 5.5 y Haiku 5.5. La caché dura 5 min por defecto y se refresca con cada uso. Una entrada de caché solo está disponible cuando empieza la primera respuesta.",
+   "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+   "http": 200,
+   "sha256": "6a4eda8c9c835e774418de42de78190800284101d99dae250eea4a9be3c123e5",
+   "media": "text/html",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "OpenAI lista gpt-6.2-sol a $2.00 de entrada, $0.10 de entrada en caché y $10.00 de salida por 1M tokens (tabla Standard). Es la contraparte de precio de Sonnet 5.5.",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "http": 200,
+   "sha256": "069633722bc7d3083d3e47e6e9db3b3c1e4e3e44a981f628177a3177e958a486",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  },
+  {
+   "claim": "OpenAI lista gpt-6-luna a $0.10 de entrada, $0.50 de salida y $0.01 de entrada en caché por 1M tokens. Iguala a Haiku 5.5.",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "http": 200,
+   "sha256": "069633722bc7d3083d3e47e6e9db3b3c1e4e3e44a981f628177a3177e958a486",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  },
+  {
+   "claim": "gpt-5-nano ($0.05 entrada, $0.40 salida, $0.005 en caché) es un modelo más barato en la misma página de OpenAI, pero de una generación anterior.",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "http": 200,
+   "sha256": "069633722bc7d3083d3e47e6e9db3b3c1e4e3e44a981f628177a3177e958a486",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  },
+  {
+   "claim": "La página de OpenAI no declara un porcentaje de descuento de lotes en texto. Los precios Batch de la tabla (gpt-6.2-sol $1.00 entrada / $5.00 salida; gpt-6-luna $0.05 / $0.25) salen de una lectura anterior de la tabla, no de una cita literal, y equivalen a ~50%.",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "http": 200,
+   "sha256": "069633722bc7d3083d3e47e6e9db3b3c1e4e3e44a981f628177a3177e958a486",
+   "media": "text/html",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "Google lista Gemini 3.8 Flash a $0.75 de entrada y $3.75 de salida hasta el 31-dic-2026. Caché $0.075 y almacenamiento $0.50 por 1M tokens/hora. Desde el 1-ene-2027 los precios se duplican.",
+   "url": "https://aistudio.google.com/docs/pricing",
+   "http": 200,
+   "sha256": "88e3136731ce62faa6ba4e275d92d3ff8dac85140a79c3e7f2c26977936a8b27",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  },
+  {
+   "claim": "Gemini 3.8 Flash en lotes cuesta $0.375 de entrada y $1.875 de salida, con caché en lotes de $0.0375.",
+   "url": "https://aistudio.google.com/docs/pricing",
+   "http": 200,
+   "sha256": "88e3136731ce62faa6ba4e275d92d3ff8dac85140a79c3e7f2c26977936a8b27",
+   "media": "text/html",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "Gemini 3.5 Flash-Lite (gama económica) cuesta $0.30 de entrada, $2.50 de salida y $0.03 de caché, con almacenamiento de $1.00 por 1M tokens/hora. En lotes: $0.15 / $1.25 / $0.015.",
+   "url": "https://aistudio.google.com/docs/pricing",
+   "http": 200,
+   "sha256": "88e3136731ce62faa6ba4e275d92d3ff8dac85140a79c3e7f2c26977936a8b27",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  }
+ ],
+ "resumen": {
+  "afirmaciones": 13,
+  "compuerta": 5,
+  "por_resultado": {
+   "cita_ausente": 8,
+   "verificada": 5
+  }
+ }
+}

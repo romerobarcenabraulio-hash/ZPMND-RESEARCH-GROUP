@@ -1,0 +1,281 @@
+{
+ "claims": [
+  {
+   "claim": "Anthropic lista Claude Sonnet 5.5 a $2/MTok de entrada y $10/MTok de salida. Escribir en caché 5 min cuesta $2.50 y leer de caché $0.10 por MTok. Consulta: 2026-11-21.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "quote": "| Claude Sonnet 5.5 | $2 / MTok | $2.50 / MTok | $4 / MTok | $0.10 / MTok<sup>2</sup> | $10 / MTok |"
+  },
+  {
+   "claim": "Anthropic lista Claude Haiku 5.5 (prompts de hasta 100,000 tokens) a $0.10 de entrada y $0.50 de salida por MTok. Escritura de caché 5 min $0.125 y lectura $0.01. Es la gama económica.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "quote": "| Claude Haiku 5.5 (for prompts up to 100,000 tokens) | $0.10 / MTok | $0.125 / MTok | $0.20 / MTok | $0.01 / MTok | $0.50 / MTok |"
+  },
+  {
+   "claim": "El Batch API de Anthropic da 50% de descuento en entrada y salida. Sonnet 5.5 en lotes cuesta $1 de entrada y $5 de salida por MTok.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "quote": "The Batch API allows asynchronous processing of large volumes of requests with a 50 percent discount on both input and output tokens."
+  },
+  {
+   "claim": "Haiku 5.5 en lotes (prompts hasta 100k tokens) cuesta $0.05 de entrada y $0.25 de salida por MTok.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "quote": "| Claude Haiku 5.5 (for prompts up to 100,000 tokens) | $0.05 / MTok | $0.25 / MTok |"
+  },
+  {
+   "claim": "Anthropic dice que los descuentos de lotes y de caché se pueden combinar y que los multiplicadores se acumulan.",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "quote": "These multipliers stack with other pricing modifiers, including the Batch API discount and data residency."
+  },
+  {
+   "claim": "Anthropic fija en 512 tokens el mínimo cacheable para Sonnet 5.5 y Haiku 5.5. La caché dura 5 min por defecto y se refresca con cada uso. Una entrada de caché solo está disponible cuando empieza la primera respuesta.",
+   "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+   "quote": "By default, the cache has a 5-minute lifetime. The cache is refreshed for no additional cost each time the cached content is used."
+  },
+  {
+   "claim": "OpenAI lista gpt-6.2-sol a $2.00 de entrada, $0.10 de entrada en caché y $10.00 de salida por 1M tokens (tabla Standard). Es la contraparte de precio de Sonnet 5.5.",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "quote": "| gpt-6.2-sol | $2.00 | $10.00 | $0.10 | $2.50 | $5.00 | $4.00 | $15.00 | $0.20 | $5.00 | $10.00 |"
+  },
+  {
+   "claim": "OpenAI lista gpt-6-luna a $0.10 de entrada, $0.50 de salida y $0.01 de entrada en caché por 1M tokens. Iguala a Haiku 5.5.",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "quote": "| gpt-6-luna | $0.10 | $0.50 | $0.01 | $0.125 | $0.25 | $0.20 | $0.75 | $0.02 | $0.25 | $0.50 |"
+  },
+  {
+   "claim": "gpt-5-nano ($0.05 entrada, $0.40 salida, $0.005 en caché) es un modelo más barato en la misma página de OpenAI, pero de una generación anterior.",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "quote": "| gpt-5-nano | $0.05 | $0.40 | $0.005 |"
+  },
+  {
+   "claim": "La página de OpenAI no declara un porcentaje de descuento de lotes en texto. Los precios Batch de la tabla (gpt-6.2-sol $1.00 entrada / $5.00 salida; gpt-6-luna $0.05 / $0.25) salen de una lectura anterior de la tabla, no de una cita literal, y equivalen a ~50%.",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "quote": "model token rates for eligible background requests are 30% below Standard for the 2‑hour completion window"
+  },
+  {
+   "claim": "Google lista Gemini 3.8 Flash a $0.75 de entrada y $3.75 de salida hasta el 31-dic-2026. Caché $0.075 y almacenamiento $0.50 por 1M tokens/hora. Desde el 1-ene-2027 los precios se duplican.",
+   "url": "https://aistudio.google.com/docs/pricing",
+   "quote": "Input: \"$0.75 through December 31, 2026.\" then \"$1.50 starting January 1, 2027.\""
+  },
+  {
+   "claim": "Gemini 3.8 Flash en lotes cuesta $0.375 de entrada y $1.875 de salida, con caché en lotes de $0.0375.",
+   "url": "https://aistudio.google.com/docs/pricing",
+   "quote": "Batch API (50% cost reduction)"
+  },
+  {
+   "claim": "Gemini 3.5 Flash-Lite (gama económica) cuesta $0.30 de entrada, $2.50 de salida y $0.03 de caché, con almacenamiento de $1.00 por 1M tokens/hora. En lotes: $0.15 / $1.25 / $0.015.",
+   "url": "https://aistudio.google.com/docs/pricing",
+   "quote": "Input: \"$0.15 (text / image / video / audio).\""
+  }
+ ],
+ "calculations": [
+  {
+   "provider": "Anthropic",
+   "model": "Claude Sonnet 5.5",
+   "scenario": "sin caché",
+   "assumptions": "600,000 solicitudes/mes (20,000 x 30). Entrada total 3,600 MTok, salida total 480 MTok. Mismo conteo de tokens para todos los proveedores (tokenizadores distintos no modelados). Tarifa estándar global.",
+   "formula": "3,600 x $2 + 480 x $10 = 7,200 + 4,800",
+   "monthly_usd": 12000
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Sonnet 5.5",
+   "scenario": "con caché",
+   "assumptions": "Caché de 5 min. Se asume un tráfico de ~0.23 solicitudes/s que mantiene viva la caché. Peor caso: una escritura cada 5 min = 8,640 escrituras/mes, el resto lecturas (591,360). Prefijo 4,000 tokens, sufijo 2,000.",
+   "formula": "escrituras 34.56 MTok x $2.50 = 86.40; lecturas 2,365.44 x $0.10 = 236.544; sufijo 1,200 x $2 = 2,400; salida 480 x $10 = 4,800",
+   "monthly_usd": 7522.94
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Sonnet 5.5",
+   "scenario": "lotes",
+   "assumptions": "Batch API, 50% sobre entrada y salida, sin caché.",
+   "formula": "3,600 x $1 + 480 x $5 = 3,600 + 2,400",
+   "monthly_usd": 6000
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Sonnet 5.5",
+   "scenario": "lotes",
+   "assumptions": "Lotes + caché 5 min, multiplicadores acumulados según la página (escritura 1.25x del precio de lotes, lectura 0.05x del precio de lotes). Que la caché funcione bien en lotes asíncronos no está garantizado en las páginas leídas. Mismas 8,640 escrituras.",
+   "formula": "escrituras 34.56 x $1.25 = 43.20; lecturas 2,365.44 x $0.05 = 118.272; sufijo 1,200 x $1 = 1,200; salida 480 x $5 = 2,400",
+   "monthly_usd": 3761.47
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Haiku 5.5",
+   "scenario": "sin caché",
+   "assumptions": "Mismos 600,000 solicitudes. Prompt de 6,000 tokens < 100k, por lo que aplica la tarifa baja.",
+   "formula": "3,600 x $0.10 + 480 x $0.50 = 360 + 240",
+   "monthly_usd": 600
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Haiku 5.5",
+   "scenario": "con caché",
+   "assumptions": "Igual que Sonnet 5.5: 8,640 escrituras y 591,360 lecturas.",
+   "formula": "escrituras 34.56 x $0.125 = 4.32; lecturas 2,365.44 x $0.01 = 23.654; sufijo 1,200 x $0.10 = 120; salida 480 x $0.50 = 240",
+   "monthly_usd": 387.97
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Haiku 5.5",
+   "scenario": "lotes",
+   "assumptions": "Batch API sin caché, precios de lotes de la página.",
+   "formula": "3,600 x $0.05 + 480 x $0.25 = 180 + 120",
+   "monthly_usd": 300
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Haiku 5.5",
+   "scenario": "lotes",
+   "assumptions": "Lotes + caché, multiplicadores acumulados (escritura 1.25 x 0.05 = $0.0625; lectura 0.1 x 0.05 = $0.005).",
+   "formula": "escrituras 34.56 x $0.0625 = 2.16; lecturas 2,365.44 x $0.005 = 11.827; sufijo 1,200 x $0.05 = 60; salida 480 x $0.25 = 120",
+   "monthly_usd": 193.99
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6.2-sol",
+   "scenario": "sin caché",
+   "assumptions": "600,000 solicitudes; 3,600 MTok entrada, 480 MTok salida; tabla Standard; contexto corto.",
+   "formula": "3,600 x $2.00 + 480 x $10.00 = 7,200 + 4,800",
+   "monthly_usd": 12000
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6.2-sol",
+   "scenario": "con caché",
+   "assumptions": "La página no lista tarifa de escritura de caché. Se asume que el primer pase del prefijo cuesta entrada normal. Se asume la misma tasa de aciertos que en Anthropic (8,640 fallos, 591,360 aciertos). Retención y mínimo desconocidos.",
+   "formula": "fallos 34.56 x $2.00 = 69.12; aciertos 2,365.44 x $0.10 = 236.544; sufijo 1,200 x $2.00 = 2,400; salida 480 x $10 = 4,800",
+   "monthly_usd": 7505.66
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6.2-sol",
+   "scenario": "lotes",
+   "assumptions": "Batch input $1.00 y output $5.00 (descuento ~50%, deducido de la tabla, no declarado como texto en la página). Sin caché.",
+   "formula": "3,600 x $1.00 + 480 x $5.00 = 3,600 + 2,400",
+   "monthly_usd": 6000
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6.2-sol",
+   "scenario": "lotes",
+   "assumptions": "Lotes + caché: entrada en caché en lotes $0.05, según la lectura de la tabla (no citada literalmente). Mismos fallos y aciertos.",
+   "formula": "fallos 34.56 x $1.00 = 34.56; aciertos 2,365.44 x $0.05 = 118.272; sufijo 1,200 x $1.00 = 1,200; salida 480 x $5.00 = 2,400",
+   "monthly_usd": 3752.83
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6-luna",
+   "scenario": "sin caché",
+   "assumptions": "Mismos 600,000 solicitudes.",
+   "formula": "3,600 x $0.10 + 480 x $0.50 = 360 + 240",
+   "monthly_usd": 600
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6-luna",
+   "scenario": "con caché",
+   "assumptions": "Igual que gpt-6.2-sol: fallo = entrada normal; 8,640 fallos y 591,360 aciertos.",
+   "formula": "fallos 34.56 x $0.10 = 3.456; aciertos 2,365.44 x $0.01 = 23.654; sufijo 1,200 x $0.10 = 120; salida 480 x $0.50 = 240",
+   "monthly_usd": 387.11
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6-luna",
+   "scenario": "lotes",
+   "assumptions": "Batch $0.05 entrada / $0.25 salida (lectura de la tabla, no citada literalmente). Sin caché.",
+   "formula": "3,600 x $0.05 + 480 x $0.25 = 180 + 120",
+   "monthly_usd": 300
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6-luna",
+   "scenario": "lotes",
+   "assumptions": "Lotes + caché ($0.005 en caché, lectura de la tabla no citada literalmente).",
+   "formula": "fallos 34.56 x $0.05 = 1.728; aciertos 2,365.44 x $0.005 = 11.827; sufijo 1,200 x $0.05 = 60; salida 480 x $0.25 = 120",
+   "monthly_usd": 193.56
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.8 Flash",
+   "scenario": "sin caché",
+   "assumptions": "Precios vigentes hasta el 31-dic-2026 ($0.75/$3.75). Desde el 1-ene-2027 se duplican. Salida incluye tokens de razonamiento (no modelados).",
+   "formula": "3,600 x $0.75 + 480 x $3.75 = 2,700 + 1,800",
+   "monthly_usd": 4500
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.8 Flash",
+   "scenario": "con caché",
+   "assumptions": "Caché explícita mantenida todo el mes. Se asume que el prefijo se crea una sola vez y que cada solicitud lee la caché. Almacenamiento de 4,000 tokens durante 720 h = 2.88 MTok-h. La creación se cobra como entrada normal (supuesto, no confirmado por la página).",
+   "formula": "creación 4,000 tokens x $0.75/M = 0.003; lecturas 600,000 x 4,000 = 2,400 MTok x $0.075 = 180; almacenamiento 2.88 x $0.50 = 1.44; sufijo 1,200 x $0.75 = 900; salida 480 x $3.75 = 1,800",
+   "monthly_usd": 2881.44
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.8 Flash",
+   "scenario": "lotes",
+   "assumptions": "Batch $0.375 / $1.875 (50% menos). Sin caché.",
+   "formula": "3,600 x $0.375 + 480 x $1.875 = 1,350 + 900",
+   "monthly_usd": 2250
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.8 Flash",
+   "scenario": "lotes",
+   "assumptions": "Lotes + caché ($0.0375 en caché de lotes, almacenamiento $0.50/MTok-h). Se asume que la caché aplica a lotes.",
+   "formula": "lecturas 2,400 x $0.0375 = 90; almacenamiento 2.88 x $0.50 = 1.44; sufijo 1,200 x $0.375 = 450; salida 480 x $1.875 = 900",
+   "monthly_usd": 1441.44
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.5 Flash-Lite",
+   "scenario": "sin caché",
+   "assumptions": "Precios $0.30 / $2.50.",
+   "formula": "3,600 x $0.30 + 480 x $2.50 = 1,080 + 1,200",
+   "monthly_usd": 2280
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.5 Flash-Lite",
+   "scenario": "con caché",
+   "assumptions": "Mismos supuestos que 3.8 Flash. Almacenamiento $1.00/MTok-h.",
+   "formula": "lecturas 2,400 x $0.03 = 72; almacenamiento 2.88 x $1.00 = 2.88; creación 0.0012; sufijo 1,200 x $0.30 = 360; salida 480 x $2.50 = 1,200",
+   "monthly_usd": 1634.88
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.5 Flash-Lite",
+   "scenario": "lotes",
+   "assumptions": "Batch $0.15 / $1.25. Sin caché.",
+   "formula": "3,600 x $0.15 + 480 x $1.25 = 540 + 600",
+   "monthly_usd": 1140
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.5 Flash-Lite",
+   "scenario": "lotes",
+   "assumptions": "Lotes + caché ($0.015 en caché de lotes, almacenamiento $1.00/MTok-h).",
+   "formula": "lecturas 2,400 x $0.015 = 36; almacenamiento 2.88 x $1.00 = 2.88; sufijo 1,200 x $0.15 = 180; salida 480 x $1.25 = 600",
+   "monthly_usd": 818.88
+  }
+ ],
+ "models_chosen": "Gama media: Claude Sonnet 5.5 ($2/$10), gpt-6.2-sol ($2/$10) y Gemini 3.8 Flash ($0.75/$3.75). Gama económica: Claude Haiku 5.5 ($0.10/$0.50), gpt-6-luna ($0.10/$0.50) y Gemini 3.5 Flash-Lite ($0.30/$2.50). Criterio: ninguna página etiqueta niveles, así que agrupé por precio y por nombre. Sonnet 5.5 y gpt-6.2-sol tienen precio idéntico y Haiku 5.5 y gpt-6-luna también, lo que hace comparables esos pares. Gemini 3.8 Flash es la Flash vigente de uso general, y Flash-Lite es su escalón económico. Elección discutible: gpt-6.1-terra ($1/$5) también podría ser gama media en OpenAI. Quedaron fuera los modelos de gama alta (Fable, Opus, gpt-6.2-astra, Gemini Pro).",
+ "unknowns": [
+  "Qué escalón considera cada proveedor 'medio' o 'económico': las páginas no lo declaran.",
+  "Tasa real de aciertos de caché y reparto temporal de las 20,000 solicitudes diarias: se asumió tráfico continuo con una escritura cada 5 min para Anthropic.",
+  "OpenAI: las páginas leídas no dicen mínimo de tokens, retención ni tarifa de escritura de caché. Asumí que el prefijo fallido se cobra como entrada normal.",
+  "OpenAI: el texto de la página no declara el % de descuento de lotes. Hay una frase sobre 'background requests' 30% por debajo de Standard con ventana de 2 horas, cuya relación con Batch no está clara. Usé los precios Batch de la tabla (~50%).",
+  "Google: mínimo de tokens para caché y TTL por defecto no figuran en el texto leído. Que el 50% de lotes se combine con caché explícita se asumió a partir de que la tabla lista una caché de lotes.",
+  "Anthropic: si la caché surte efecto de forma fiable en el Batch API (procesamiento asíncrono) no se confirmó en el texto leído. La página dice que los descuentos se pueden combinar.",
+  "Los tokenizadores difieren por proveedor: 6,000 tokens de un proveedor no son 6,000 de otro. Anthropic indica que sus modelos 4.7 y posteriores generan ~30% más tokens para el mismo texto.",
+  "Si los tokens de razonamiento de Gemini ('Output incl. thinking') o de OpenAI aumentan la salida real: no se modelaron."
+ ],
+ "limitations": [
+  "Consulta del 2026-11-21 vía lectura automática de páginas. Las páginas de OpenAI y Google son largas, y el resumidor solo leyó parte de la de Google (caracteres 0-100,000 de ~118,000). Las citas de OpenAI y Google vienen de las filas que el lector devolvió como textuales, y los precios Batch y de caché en lotes de OpenAI vienen de una lectura previa no citada literalmente.",
+  "Los dos precios de Gemini 3.8 Flash y Flash-Lite cambian: Flash sube al doble el 1-ene-2027. Los costos de Gemini mostrados valen solo para diciembre de 2026.",
+  "Gemini 3.1 Flash-Lite ($0.25 / $1.50 según una lectura previa) podría ser más barato que 3.5 Flash-Lite. Con él, sin caché costaría 3,600 x 0.25 + 480 x 1.50 = $1,620/mes. OpenAI gpt-5-nano ($0.05/$0.40/$0.005) costaría sin caché 3,600 x 0.05 + 480 x 0.40 = $372/mes. Se excluyeron por ser más viejos, no por precio.",
+  "Se ignoran impuestos, descuentos por volumen, nivel de servicio prioritario, flex y residencia de datos (Anthropic aplica 1.1x en inference_geo 'us'). Se usó tarifa global estándar.",
+  "Cálculos aritméticos hechos a mano, sin ejecutar código. Redondeados a dos decimales."
+ ]
+}

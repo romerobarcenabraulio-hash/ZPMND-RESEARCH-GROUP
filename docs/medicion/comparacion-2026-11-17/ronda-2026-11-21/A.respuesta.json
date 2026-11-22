@@ -1,0 +1,114 @@
+{
+ "claims": [
+  {
+   "claim": "HNSW en pgvector: m por defecto es 16 (máximo de conexiones por capa).",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "`m` - the max number of connections per layer (16 by default)"
+  },
+  {
+   "claim": "HNSW: ef_construction por defecto es 64, y subirlo mejora el recall a costa de tiempo de construcción e inserción.",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "A higher value of `ef_construction` provides better recall at the cost of index build time / insert speed."
+  },
+  {
+   "claim": "HNSW: hnsw.ef_search por defecto es 40; es la palanca de consulta para recall contra latencia.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "quote": "Specify the size of the dynamic candidate list for search (40 by default)"
+  },
+  {
+   "claim": "IVFFlat: regla inicial de lists según el número de filas (para 1M filas, 1000).",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "quote": "a good place to start is `rows / 1000` for up to 1M rows and `sqrt(rows)` for over 1M rows"
+  },
+  {
+   "claim": "IVFFlat: ivfflat.probes por defecto es 1; subirlo favorece el recall sobre la velocidad.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "quote": "Specify the number of probes (1 by default)"
+  },
+  {
+   "claim": "IVFFlat debe crearse con datos ya cargados, porque los centroides se calculan al construir; esto condiciona un flujo de inserciones continuo.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "quote": "Create the index *after* the table has some data"
+  },
+  {
+   "claim": "Memoria y construcción: IVFFlat construye más rápido y usa menos memoria que HNSW, a cambio de peor rendimiento de consulta.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "quote": "It has faster build times and uses less memory than HNSW"
+  },
+  {
+   "claim": "La construcción de HNSW es mucho más rápida si el grafo cabe en maintenance_work_mem; se puede paralelizar (2 workers por defecto).",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "Indexes build significantly faster when the graph fits into `maintenance_work_mem`"
+  },
+  {
+   "claim": "Aviso de construcción: pgvector avisa cuando el grafo deja de caber en memoria.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "quote": "A notice is shown when the graph no longer fits"
+  },
+  {
+   "claim": "Sin índice, la búsqueda es exacta con recall perfecto; el índice aproximado cambia recall por velocidad.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "quote": "You can add an index to use approximate nearest neighbor search, which trades some recall for speed."
+  },
+  {
+   "claim": "Filtrado: los índices aproximados filtran después del escaneo, así que un filtro selectivo devuelve pocas filas con ef_search=40.",
+   "url": "https://github.com/pgvector/pgvector",
+   "quote": "If a condition matches 10% of rows, with HNSW and the default `hnsw.ef_search` of 40, only 4 rows will match on average."
+  },
+  {
+   "claim": "Los escaneos iterativos continúan el escaneo hasta tener suficientes resultados (strict o relaxed); hay topes hnsw.max_scan_tuples (20,000 por defecto) y scan_mem_multiplier.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "quote": "Specify the max number of tuples to visit (20,000 by default)"
+  },
+  {
+   "claim": "Límite de dimensiones indexables: vector hasta 2,000; los 1,536 del escenario caben en vector sin reducción.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "quote": "`vector` - up to 2,000 dimensions"
+  },
+  {
+   "claim": "halfvec permite indexar hasta 4,000 dimensiones, con la mitad de almacenamiento (media precisión).",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "quote": "`halfvec` - up to 4,000 dimensions"
+  },
+  {
+   "claim": "Versión vigente referenciada en el README: v0.8.7.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "quote": "git clone --branch v0.8.7 https://github.com/pgvector/pgvector.git"
+  },
+  {
+   "claim": "Secundario (proveedor, Timescale/Tiger Data): admite que un motor dedicado como Qdrant puede convenir con escalado horizontal nativo en muchos nodos.",
+   "url": "https://www.tigerdata.com/blog/pgvector-vs-qdrant",
+   "quote": "certain use cases may benefit from Qdrant's strengths"
+  },
+  {
+   "claim": "Secundario (benchmark de proveedor, 50M vectores, pgvectorscale): ambos con latencia menor a 100 ms; Qdrant construyó el índice en unas 3.3 horas.",
+   "url": "https://www.tigerdata.com/blog/pgvector-vs-qdrant",
+   "quote": "Query latencies are sub-100 ms in both systems"
+  }
+ ],
+ "recommendation": "HNSW (tipo vector de 1,536 dimensiones, dentro del límite de 2,000; evaluar halfvec si la RAM aprieta). Es la opción para recall >= 0.95 con p95 <= 100 ms, y con 50 inserciones/min no hay que recalcular centroides como en IVFFlat. Punto de partida: m=16, ef_construction=64 (subir a m=24-32 y ef_construction=128-200 solo si el recall no alcanza), ef_search=40 y subir en pasos (80, 100, 200) hasta recall >= 0.95 con p95 <= 100 ms. Construir con maintenance_work_mem alto y más workers (p. ej. 4-8 en vez de 2), sin agotar la RAM del servidor. Con filtros, usar hnsw.iterative_scan (relaxed_order si el recall pesa más que el orden estricto) e índices parciales o particionado por tenant. IVFFlat solo si la memoria de construcción o el tiempo fueran un problema medido (lists≈1000, probes≈sqrt(lists)≈32, subiendo hasta el recall), asumiendo reconstruir el índice periódicamente. Supuestos: el índice HNSW de 1M x 1536 (unos 6 GB de vectores en float32, más el grafo) cabe cómodamente en 64 GB de RAM y en shared_buffers/caché de SO; consultas con poca concurrencia; filtros moderados. Pasar a un motor dedicado solo si las pruebas fallan tras afinar, o si se requiere escalado horizontal en varios nodos, mucho mayor volumen, o alto rendimiento con filtros muy selectivos; el único criterio documentado que encontré es de proveedor (secundario). No hay umbral oficial de pgvector.",
+ "tests": [
+  "Recall@10 contra búsqueda exacta (sin índice) sobre 1,000-5,000 consultas representativas, barriendo ef_search (40-400) para HNSW y probes (1-100) para IVFFlat: mide recall@10 por configuración.",
+  "Latencia p50/p95/p99 por consulta top-10 a concurrencia 1, 8 y 32 con pgbench o un arnés propio, con índice caliente y en frío: mide si p95 <= 100 ms con recall >= 0.95.",
+  "Tiempo de construcción y pico de memoria de HNSW (varios m/ef_construction, maintenance_work_mem, max_parallel_maintenance_workers) frente a IVFFlat con lists=1000: mide segundos, RAM, tamaño del índice (pg_relation_size) y si el grafo cabe en memoria (aviso de pgvector).",
+  "Inserciones sostenidas de 50/min (y ráfagas 10x) mientras se consulta: mide p95 de latencia de inserción y de consulta, degradación del recall y bloat de vacuum; para IVFFlat, recall tras N inserciones sin reconstruir.",
+  "Consultas filtradas con selectividad 50%, 10%, 1% y 0.1%, con y sin hnsw.iterative_scan (strict/relaxed), con índices parciales o particionado: mide filas devueltas (¿llegan a 10?), recall y p95.",
+  "Prueba de memoria y caché: dimensionar shared_buffers/effective_cache_size, comparar vector con halfvec: mide tasa de aciertos de caché, tamaño y recall perdido con halfvec.",
+  "Reconstrucción/REINDEX CONCURRENTLY y recuperación tras reinicio con el índice en frío: mide tiempo de indisponibilidad y calentamiento hasta recuperar el p95.",
+  "Comparación de control con un motor dedicado (p. ej. Qdrant) sobre los mismos datos, consultas y filtros, solo si fallan las pruebas anteriores: mide recall@10, p95, QPS, coste operativo y complejidad de sincronización."
+ ],
+ "unknowns": [
+  "No hay en la documentación de pgvector una fórmula oficial de memoria del índice HNSW ni cifras de tiempo de construcción para 1M x 1536.",
+  "La documentación primaria no da un umbral de vectores, QPS o latencia a partir del cual migrar a un motor dedicado.",
+  "El comportamiento de inserción bajo 50/min con HNSW no está cuantificado en la documentación (solo la relación cualitativa con ef_construction).",
+  "El recall real depende de la distribución de los embeddings y de la métrica; no se puede inferir de la documentación.",
+  "No verifiqué la documentación de Qdrant ni de otro motor como fuente primaria."
+ ],
+ "limitations": [
+  "Los textos de la página se obtuvieron mediante WebFetch (un modelo pequeño que extrae del markdown); las citas pueden diferir en formato (comillas invertidas, énfasis) del original y conviene verificarlas literalmente.",
+  "Solo leí el README de pgvector (GitHub), no el changelog ni los issues; la versión 0.8.7 se infiere del comando de clonación.",
+  "El benchmark de Tiger Data/Timescale es de un proveedor con interés (vende pgvectorscale) y usa 50M de vectores, no el escenario de 1M.",
+  "Los parámetros recomendados (m, ef_construction, probes) son puntos de partida basados en defaults y heurísticas del README, no resultados medidos; las cifras de RAM (aprox. 6 GB de vectores) son un cálculo mío (1M x 1536 x 4 bytes).",
+  "Solo se leyó una ronda de búsqueda web; no se revisaron benchmarks independientes."
+ ]
+}
