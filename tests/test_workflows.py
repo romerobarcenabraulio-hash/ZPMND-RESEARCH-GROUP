@@ -136,10 +136,18 @@ class AuditorGpt(unittest.TestCase):
     def test_the_packet_gate_runs_mains_code_on_the_heads_packets_as_data(self):
         job = self.jobs['packet-gate']
         self.assertEqual((job['needs'], job['if'], job['permissions']),
-                         ('gate', "needs.gate.outputs.run == 'true'", {'contents': 'read'}))
-        self.assertNotIn('secrets.', yaml.safe_dump(job))  # hostile raws are parsed here
+                         (['gate', 'sellados'], "${{ !cancelled() && needs.gate.outputs.run == 'true' }}", {'contents': 'read'}))
+        keys = [i for i, s in enumerate(job['steps']) if 'secrets.' in yaml.safe_dump(s)]  # hostile raws are parsed here
+        gate_at = next(i for i, s in enumerate(job['steps']) if '--sellados "$d/sellados"' in s.get('run', ''))
+        self.assertEqual((len(keys), keys[0] < gate_at), (1, True))  # one secret, in one step, before anything parses
+        self.assertEqual((job['steps'][keys[0]]['env'], job['steps'][keys[0]]['run']), ({'RG_ARTIFACT_KEY': '${{ secrets.RG_SELLADOS_KEY }}'},
+                         'mkdir -p "$RUNNER_TEMP/packet-gate" && bash scripts/sobre.sh open "$RUNNER_TEMP/sellados-enc" "$RUNNER_TEMP/packet-gate/sellados"'))
+        for s in job['steps'][keys[0] - 1:keys[0] + 1]:  # the download and the opening: a missing envelope never stops the gate
+            self.assertEqual((s['if'], s['continue-on-error']), ("needs.sellados.outputs.ok == 'true'", True))
         checkout = next(s for s in job['steps'] if s.get('uses', '').startswith('actions/checkout@'))
         self.assertEqual((checkout['with']['ref'], checkout['with']['persist-credentials']), ('main', False))
+        gate_run = job['steps'][gate_at]['run']  # the copies opened a step before stay where the gate reads them
+        self.assertEqual(('mkdir -p "$d/data" "$d/sellados"' in gate_run, 'rm -rf' in gate_run), (True, False))
         run = '\n'.join(s.get('run', '') for s in job['steps'])
         self.assertNotRegex(run, r'\bgit\b[^\n;|&]*\b(checkout|switch|worktree|restore|reset|read-tree|checkout-index|'
                                  r'stash|merge|rebase|cherry-pick|pull|apply|am)\b')
@@ -156,6 +164,28 @@ class AuditorGpt(unittest.TestCase):
         self.assertLess(user, job['steps'].index(gate_step))
         upload = next(s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/upload-artifact@'))
         self.assertEqual(upload['name'], 'packet-gate')
+
+    def test_r2_keys_live_in_a_job_that_never_holds_the_head_and_pedir_holds_no_secret(self):  # SECURITY T31
+        pedir, sellados = self.jobs['pedir'], self.jobs['sellados']
+        self.assertNotIn('secrets.', yaml.safe_dump(pedir))
+        self.assertIn('grep -E \'^[0-9a-f]{64}\\.[0-9a-f]{64}$\' "$RUNNER_TEMP/shas.txt" | head -n 400', pedir['steps'][-1]['run'])
+        dump = yaml.safe_dump(sellados, width=10**6)
+        [self.assertNotIn(absent, dump) for absent in ('github.token', 'git fetch', 'packet_gate.py', 'GH_TOKEN', 'secrets.R2_ACCESS_KEY_ID',
+                                                       'needs.gate.outputs.sha', 'github.event.pull_request', 'github.head_ref')]
+        for job in (pedir, sellados):  # main's code, never the head's, and no credential left in .git (auditor on e9ef1e1)
+            co = [s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/checkout@')]
+            self.assertEqual([(c['ref'], c['persist-credentials']) for c in co], [('main', False)])
+        holders = [s for s in sellados['steps'] if 'secrets.' in yaml.safe_dump(s)]
+        self.assertEqual([sorted(h['env']) for h in holders], [['BUCKET', 'R2_ENDPOINT', 'R2_LECTURA_ACCESS_KEY_ID', 'R2_LECTURA_SECRET_ACCESS_KEY', 'RG_ARTIFACT_KEY', 'SHAS']])
+        self.assertIn("set -euo pipefail -f  # -f: no glob in what pedir sent", holders[0]['run'])
+        self.assertIn("printf '%s\\n' $SHAS | grep -E '^[0-9a-f]{64}\\.[0-9a-f]{64}$' | head -n 400", holders[0]['run'])  # pedir's list checked again
+        seal = next(s for s in sellados['steps'] if 'sobre.sh seal' in s.get('run', ''))
+        self.assertTrue(seal['run'].endswith('keys/rg-sellados.pub.pem') and 'env' not in seal)  # a key pair of its own
+        self.assertEqual(next((u['with']['name'], u['with']['retention-days'], u['id']) for u in sellados['steps'] if u.get('uses', '').startswith('actions/upload-artifact@')), ('sellados', 1, 'subir'))
+        # automerge needs every job green: no step of pedir or sellados may fail it; ok only once the upload is in
+        self.assertTrue(all(s.get('continue-on-error') for s in sellados['steps'] + pedir['steps']
+                            if s.get('id') in ('pedir', 'sellar', 'subir') or 'abrir_sellados' in s.get('run', '')))
+        self.assertEqual((sellados['outputs']['ok'], sellados['steps'][-1]['if']), ('${{ steps.ok.outputs.ok }}', "steps.subir.outcome == 'success'"))
 
     def test_the_result_travels_as_a_file_never_as_a_job_output(self):
         # GitHub drops a job output it suspects of holding a secret: three GPT REVISE were lost so (#73, #89, #91)
