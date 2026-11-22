@@ -84,7 +84,7 @@ def dato(x):
 
 
 data = json.load(open(sys.argv[1], encoding='utf-8'))
-calcs = data.get('calculations', []) if isinstance(data, dict) else None
+calcs = data.get('calculations') if isinstance(data, dict) else None  # sin la clave no hay lista: error, nunca cero cálculos (GPT en 3bd73c0)
 if not isinstance(calcs, list):
     sys.exit('rehacer_calculos.py: se espera un objeto JSON con una lista calculations')
 rows = []

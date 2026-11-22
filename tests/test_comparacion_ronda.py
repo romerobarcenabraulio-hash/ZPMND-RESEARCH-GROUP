@@ -179,10 +179,13 @@ class RehacerCalculos(unittest.TestCase):
                 self.assertFalse({'sin_interpretar', 'igualdad_falsa', 'desbordan', 'motivo'} & set(r))
             if r['cuadra'] is False:
                 self.assertFalse({'sin_interpretar', 'desbordan', 'motivo'} & set(r) and 'igualdad_falsa' not in r)
-        for raw in ('[]', '{"calculations": 7}', '{"calculations": {"a": 1}}'):  # not an object with a list: an error, never rows
+        for raw in ('[]', '{"calculations": 7}', '{"calculations": {"a": 1}}', '{}', '{"calculation": [{"formula": "100 x $2", "monthly_usd": 200}]}',
+                    '{"calculations": null}'):  # not an object with a list: an error, never rows (the last three: GPT on 3bd73c0)
             rc, out, err = self.texto(raw)
-            self.assertEqual((rc, out), (1, ''))
+            self.assertEqual((rc, out), (1, ''), raw)
             self.assertIn('se espera un objeto JSON con una lista calculations', err)
+        rc, out, err = self.texto('{"calculations": []}')  # a list that says it is empty is read as such
+        self.assertEqual((rc, self.estricto(out)), (0, {'rows': [], 'resumen': {'calculos': 0, 'cuadran': 0, 'no_cuadran': 0, 'no_comprobables': 0}}))
 
 
 if __name__ == '__main__':
