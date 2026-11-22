@@ -1943,6 +1943,9 @@ class AbrirSellados(unittest.TestCase):
                      '${RG_ARTIFACT_KEY:-}" ] || exit 9  # it gets no secret at all\n')
         lento = 'case " $* " in *" ${FAKE_LENTO:-@@} "*) echo $$ > "$FAKE_LENTO_PID"; exec sleep 30;; esac\n'  # a reader that never ends
         (bin_ / 'python3').write_text(no_secret + lento + f'exec {sys.executable} "$@"\n')  # the envelope's reader
+        (bin_ / 'sha256sum').write_text('#!/bin/bash\n[ "${FAKE_LENTO:-}" != sha256sum ] || { echo $$ > "$FAKE_LENTO_PID"; exec sleep 30; }\n'
+                                        f'exec {shutil.which("sha256sum")} "$@"\n')  # the check after opening, made to never end
+        (bin_ / 'sha256sum').chmod(0o755)
         [(bin_ / b).chmod(0o755) for b in ('aws', 'python3')]
         (self.tmp / 'shas.txt').write_text(''.join(f'{x}\n' for x in shas))
         env = {**os.environ, 'PATH': f"{bin_}:{os.environ['PATH']}", 'FAKE_R2': str(r2), 'R2_ENDPOINT': 'https://r2.invalid',
@@ -1954,14 +1957,23 @@ class AbrirSellados(unittest.TestCase):
         return r, out
 
     def test_acota_gives_the_least_of_its_own_time_and_the_steps_and_runs_nothing_past_it(self):  # GPT on e9ef1e1
+        bin_, lanzados = self.tmp / 'bin-acota', self.tmp / 'lanzados'
+        bin_.mkdir()
+        (bin_ / 'setsid').write_text(f'#!/bin/bash\necho "$1" >> {lanzados}\nexec {shutil.which("setsid")} "$@"\n')  # each launch, before it runs
+        (bin_ / 'setsid').chmod(0o755)
+        env = {**os.environ, 'PATH': f"{bin_}:{os.environ['PATH']}"}
+
         def acota(fin, s, *cmd):
             t0 = time.monotonic()
             r = subprocess.run(['bash', '-c', f'S=$1; shift; source "$S"; fin=$((SECONDS + {fin})); acota {s} "$@"; echo "rc=$?"',
-                                'prueba', str(ROOT / 'scripts' / 'abrir_sellados.sh'), *cmd], capture_output=True, text=True, timeout=30)
+                                'prueba', str(ROOT / 'scripts' / 'abrir_sellados.sh'), *cmd], capture_output=True, text=True,
+                               timeout=30, env=env)
             return r.stdout.split()[-1], round(time.monotonic() - t0)
-        marca = self.tmp / 'corrio'
-        self.assertEqual(acota(0, 0, 'touch', str(marca)), ('rc=124', 0))  # the step's time is over: nothing runs, not timeout 0
-        self.assertFalse(marca.exists())
+        for fin in (0, -5):  # the step's time is over, or long over: nothing is launched at all (GPT and auditor on 6bdcc38)
+            self.assertEqual(acota(fin, 0, 'true'), ('rc=124', 0))
+        self.assertFalse(lanzados.exists())
+        self.assertEqual(acota(100, 0, 'true'), ('rc=0', 0))
+        self.assertEqual(lanzados.read_text().split(), ['true'])  # the fake does see a launch: its silence above is no launch
         self.assertEqual(acota(100, 1, 'sleep', '20'), ('rc=124', 1))  # its own second, the step has more
         self.assertEqual(acota(100, 0, 'sleep', '0'), ('rc=0', 0))
         self.assertIn(acota(2, 100, 'sleep', '20'), (('rc=124', 1), ('rc=124', 2)))  # the step's end, before its own 100 s
@@ -1989,7 +2001,7 @@ class AbrirSellados(unittest.TestCase):
             self.put(sha, uh, self.tmp / 's' / f'{good}.{uh}.sobre')
         pid = self.tmp / 'lento.pid'
         for pide, lento in (([f'{"c" * 64}.{uh}', f'{good}.{uh}'], ''), ([f'{good}.{uh}'] * 2, 'externo'),
-                            ([f'{good}.{uh}'] * 2, 'interno')):  # R2, sobre_partes.py externo, sobre.sh open: each never ends
+                            ([f'{good}.{uh}'] * 2, 'interno'), ([f'{good}.{uh}'] * 2, 'sha256sum')):  # R2, the two readers, the check
             pid.unlink(missing_ok=True)
             t0 = time.monotonic()
             r, out = self.abrir(pide, RG_SELLADO_SEGUNDOS='100', RG_SELLADOS_SEGUNDOS='3', FAKE_LENTO=lento, FAKE_LENTO_PID=str(pid))

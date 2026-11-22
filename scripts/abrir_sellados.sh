@@ -36,9 +36,11 @@ while read -r p; do
      && acota 0 python3 -I "$D/sobre_partes.py" externo "$t/s.tar" "$t/env" "$uno" >/dev/null 2>&1 \
      && RG_ARTIFACT_KEY="$pk" acota 0 bash "$D/sobre.sh" open "$t/env" "$t/out" >/dev/null 2>&1; then
     f=$(find "$t/out/sha256/${sha:0:2}" -maxdepth 1 -type f -name "$sha.*" ! -name "$sha.url" 2>/dev/null | head -1); u="$t/out/sha256/${sha:0:2}/$sha.url"
-    if [ -n "$f" ] && [ "$(sha256sum "$f" | cut -d' ' -f1)" = "$sha" ] \
-       && [ "$(sha256sum < "$u" | cut -d' ' -f1)" = "$uh" ]; then  # its URL is the one its key names ($u is regular or missing: sobre.sh open writes no other, T31)
-      mkdir -p "$O/sha256/${sha:0:2}/$sha/$uh" && mv "$f" "$u" "$O/sha256/${sha:0:2}/$sha/$uh/" && n=$((n+1))
+    # its bytes and its URL checked, then moved, within the step's time like the rest (GPT on 6bdcc38); its URL is the one its key
+    # names ($u is regular or missing: sobre.sh open writes no other, T31)
+    if [ -n "$f" ] && acota 0 bash -c 'read -r h _ < <(sha256sum "$1") && [ "$h" = "$2" ] && read -r h _ < <(sha256sum < "$3") && [ "$h" = "$4" ] && mkdir -p "$5" && mv "$1" "$3" "$5/"' \
+         guardar "$f" "$sha" "$u" "$uh" "$O/sha256/${sha:0:2}/$sha/$uh"; then
+      n=$((n+1))
     fi
   fi
   rm -rf "${t:?}"
