@@ -1,0 +1,235 @@
+{
+ "request_id": "RR-2026-11-17-costo-inferencia-llm",
+ "fetched": [
+  {
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "status": 200,
+   "error": null,
+   "sha256": "c2e763e19cbb686b72b08fc54c8979c9b67031f83e93dba0a02248d1e4472c64",
+   "bytes": 789666,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:12:48Z",
+   "text_status": "ok",
+   "text_chars": 31173
+  },
+  {
+   "url": "https://assets.claude.com/a04aca860a54b7323e33f449706e9b43680e1346.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "6e1c4764e91deb0318cecce96d8c5eb492c854b2f5f624060b0163db68a49511",
+   "bytes": 999384,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-21T18:12:49Z",
+   "text_status": "ok",
+   "text_chars": 28259
+  },
+  {
+   "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+   "status": 200,
+   "error": null,
+   "sha256": "3be6bb029e315b8f72f5500f9505a7550614a2a61e0657c4e6e2a0b040b9e585",
+   "bytes": 1919245,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:12:50Z",
+   "text_status": "ok",
+   "text_chars": 63730
+  },
+  {
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "status": 200,
+   "error": null,
+   "sha256": "4f476727c762d50dcc801e7200b191c7799728ac979181a5445c1490092880ae",
+   "bytes": 639400,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:12:50Z",
+   "text_status": "ok",
+   "text_chars": 21516
+  },
+  {
+   "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+   "status": 200,
+   "error": null,
+   "sha256": "966e5c5146ce04f30a695781f108668c5d7b43c7dde899531e225c45882ec606",
+   "bytes": 846281,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:12:51Z",
+   "text_status": "ok",
+   "text_chars": 62888
+  },
+  {
+   "url": "https://ai.google.dev/gemini-api/docs/pricing",
+   "status": "refused",
+   "error": "host not in allowlist: aistudio.google.com",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-21T18:12:52Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://benchlm.ai/openai/api-pricing",
+   "status": 200,
+   "error": null,
+   "sha256": "c7a0d3a2c11642112b242ea96a9308f7daf27775d6d65540506d47649d7916b4",
+   "bytes": 209162,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:12:54Z",
+   "text_status": "ok",
+   "text_chars": 18162
+  },
+  {
+   "url": "https://www.morphllm.com/gemini-api-pricing",
+   "status": 200,
+   "error": null,
+   "sha256": "3e927394d78d4e6dd99fec375a957d99edc9c371789dd1be49164a89412530bb",
+   "bytes": 249864,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:12:55Z",
+   "text_status": "ok",
+   "text_chars": 27069
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/44934166090",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "taken_out": [
+   {
+    "id": "confirmed[1]",
+    "claim": "Claude Sonnet 5.5 (Claude API, Standard, Global, todos los contextos): entrada $2.00, salida $10.00, escritura de caché 5m $2.50, escritura 1h $4.00, lectura $0.10 por MTok.",
+    "why": "The quote is only a row of values and does not name Claude Sonnet 5.5, Claude API or which figure is input, output, cache write or read."
+   },
+   {
+    "id": "confirmed[2]",
+    "claim": "Claude Sonnet 5.5, Batch, Global: entrada $1.00, salida $5.00, escritura 5m $1.25, escritura 1h $2.00, lectura $0.05 por MTok.",
+    "why": "The quote is a fragment of values that names neither Claude Sonnet 5.5 nor Batch nor the price columns."
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "Claude Haiku 5.5, Standard, Global, contexto hasta 100K: entrada $0.10, salida $0.50, escritura 5m $0.125, escritura 1h $0.20, lectura $0.01 por MTok.",
+    "why": "The quote does not name Claude Haiku 5.5 or the price columns, only a row of values."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "Claude Haiku 5.5, Batch, Global, contexto hasta 100K: entrada $0.05, salida $0.25, escritura 5m $0.0625, escritura 1h $0.10, lectura $0.005 por MTok.",
+    "why": "The quote is a fragment of values that names neither Claude Haiku 5.5 nor Batch nor the price columns."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "Anthropic: el mínimo cacheable es 512 tokens para Sonnet 5.5 y Haiku 5.5 (entre otros) en Claude API; el prefijo de 4,000 tokens lo supera.",
+    "why": "The claim adds a 4,000-token prefix and a Claude API scope that the quote does not contain."
+   },
+   {
+    "id": "confirmed[13]",
+    "claim": "OpenAI: en modo explícito, el contenido posterior al último punto de corte se cobra a tarifa de entrada sin cargo de escritura.",
+    "why": "The claim attributes this to an explicit mode, which the quote never names."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "OpenAI: sin punto de corte tras el contenido estático (modo implícito), la solicitud escribe en caché también el contenido dinámico.",
+    "why": "The claim adds the condition of no breakpoint after static content and an implicit mode, which the quote does not state."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Páginas oficiales de precios (Anthropic, OpenAI, Google)",
+   "Documentación oficial de caché de prompt (mínimos, TTL)",
+   "Lista de precios oficial fechada (PDF Anthropic)",
+   "Agregadores de terceros (solo contraste)"
+  ],
+  "searches": [
+   {
+    "query": "Anthropic Claude API pricing prompt caching batch",
+    "intent": "official"
+   },
+   {
+    "query": "OpenAI API pricing models batch cached input",
+    "intent": "official"
+   },
+   {
+    "query": "Gemini API pricing context caching batch",
+    "intent": "official"
+   },
+   {
+    "query": "Anthropic pricing docs platform.claude.com pricing model pricing table cache hits",
+    "intent": "official"
+   },
+   {
+    "query": "OpenAI prompt caching guide minimum 1024 tokens retention",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "No leí el contenido completo de las páginas oficiales, solo fragmentos de búsqueda; las cifras exactas por modelo deben extraerse de las páginas.",
+   "Cuál es el modelo medio y el económico de OpenAI y Google hoy: las fuentes de terceros discrepan (GPT-6.x, Gemini 3.8/4).",
+   "Si Gemini permite combinar caché y lotes: sin confirmar oficialmente.",
+   "Vigencia de precios de Gemini tras el 1 dic 2026: hay cambios programados.",
+   "Costo de escritura de caché para Gemini y su almacenamiento por hora: no verificado en la fuente oficial."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 8,
+  "accepted": 8,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "family": "Páginas oficiales de precios",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Precios oficiales de Anthropic: entrada, salida, escritura/lectura de caché y lotes. Ahí se leen Sonnet 5.5 (medio) y Haiku 5.5 (económico); hay que citar literal y fechar."
+   },
+   {
+    "url": "https://assets.claude.com/a04aca860a54b7323e33f449706e9b43680e1346.pdf",
+    "family": "Lista de precios oficial fechada",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Lista de precios con fecha explícita (2026-11-09), útil para fijar vigencia y contrastar con la página viva."
+   },
+   {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+    "family": "Documentación de caché",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Mínimos de tokens cacheables, TTL de 5 min/1 h y reglas de prefijo; determina si el prefijo de 4,000 tokens califica."
+   },
+   {
+    "url": "https://developers.openai.com/api/docs/pricing",
+    "family": "Páginas oficiales de precios",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Precios oficiales de OpenAI (entrada, entrada en caché, salida, Batch). Ahí se eligen modelo medio y económico; las cifras de terceros son contradictorias."
+   },
+   {
+    "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+    "family": "Documentación de caché",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Mínimo de 1,024 tokens, TTL (30m/12h), multiplicadores de escritura 1.25x y lectura; define si hay costo de escritura."
+   },
+   {
+    "url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "family": "Páginas oficiales de precios",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Precios oficiales de Gemini: entrada, salida, caché de contexto (más almacenamiento por hora), Batch 50%; avisos de cambios de precio el 1 dic 2026 y 1 ene 2027."
+   },
+   {
+    "url": "https://benchlm.ai/openai/api-pricing",
+    "family": "Agregadores de terceros",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Contraste secundario con precios OpenAI de noviembre 2026; no es autoridad."
+   },
+   {
+    "url": "https://www.morphllm.com/gemini-api-pricing",
+    "family": "Agregadores de terceros",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Contraste secundario de Gemini; señala cambios de precio programados y que caché y lotes pueden ser excluyentes (desacuerdo entre fuentes)."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
