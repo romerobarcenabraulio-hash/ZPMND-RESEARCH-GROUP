@@ -1,0 +1,237 @@
+{
+ "request_id": "RR-2026-11-17-pgvector-indice",
+ "fetched": [
+  {
+   "url": "https://github.com/pgvector/pgvector/blob/master/README.md",
+   "status": 200,
+   "error": null,
+   "sha256": "42222ebd23ccef91632dcac888ffe2dd8c365730c65f6075146475c9a24d335c",
+   "bytes": 732758,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:12:55Z",
+   "text_status": "ok",
+   "text_chars": 36264
+  },
+  {
+   "url": "https://github.com/pgvector/pgvector/blob/master/CHANGELOG.md",
+   "status": 200,
+   "error": null,
+   "sha256": "bfa5a4e9f9c38b06c948f3c97e30ff320327996ea2a3345c29e440672ddd558c",
+   "bytes": 311920,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:12:57Z",
+   "text_status": "ok",
+   "text_chars": 9956
+  },
+  {
+   "url": "https://www.postgresql.org/about/news/pgvector-080-released-2952",
+   "status": 200,
+   "error": null,
+   "sha256": "a78d3ad60fe39b706cdcccdf2061626cf47c40e5d9a0d267b852657c2e29e3d5",
+   "bytes": 10681,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:12:57Z",
+   "text_status": "ok",
+   "text_chars": 2153
+  },
+  {
+   "url": "https://aws.amazon.com/blogs/database/supercharging-vector-search-performance-and-relevance-with-pgvector-0-8-0-on-amazon-aurora-postgresql",
+   "status": 200,
+   "error": null,
+   "sha256": "0fba87673390660635462e2ebc2c2a5e764f944718f5cbf1d00b526b0a686a28",
+   "bytes": 1701008,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:13:00Z",
+   "text_status": "ok",
+   "text_chars": 40346
+  },
+  {
+   "url": "https://qdrant.tech/blog/pgvector-tradeoffs/",
+   "status": 200,
+   "error": null,
+   "sha256": "6fc40edfb67b06bad6ed1ca02b8ba3417e7600bb8d9d8ced07a39103ce48e9d4",
+   "bytes": 57580,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:13:02Z",
+   "text_status": "ok",
+   "text_chars": 9381
+  },
+  {
+   "url": "https://www.dbi-services.com/blog/pgvector-a-guide-for-dba-part-2-indexes-update-march-2026/",
+   "status": 200,
+   "error": null,
+   "sha256": "505de79ccfd638039af3a2b20b71d5490830275b58b3388fd30b38d3319acee5",
+   "bytes": 178603,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:13:03Z",
+   "text_status": "ok",
+   "text_chars": 46773
+  },
+  {
+   "url": "https://dev.to/cynora/pgvector-ivfflat-vs-hnsw-what-happens-to-recall-when-new-data-arrives-measured-46lh",
+   "status": 200,
+   "error": null,
+   "sha256": "78ea329c927386060b7978b7b3ac8e720c8170689faf246f45bf57a0a49da61c",
+   "bytes": 78961,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:13:05Z",
+   "text_status": "ok",
+   "text_chars": 4811
+  },
+  {
+   "url": "https://encore.dev/articles/pgvector-vs-qdrant",
+   "status": 200,
+   "error": null,
+   "sha256": "5c031967c565ada353700c25a45be112b6a999b7e93adbd2560b230d3427964c",
+   "bytes": 239166,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-21T18:13:06Z",
+   "text_status": "ok",
+   "text_chars": 19913
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/44934163081",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "taken_out": [
+   {
+    "id": "confirmed[8]",
+    "claim": "Los workers paralelos de mantenimiento son 2 por defecto.",
+    "why": "The quote speaks only of parallel workers, not that they are maintenance workers."
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "Límite de dimensiones del tipo vector indexable (vale para HNSW; 1,536 cabe).",
+    "why": "The quote says nothing about HNSW, indexability, or 1,536 dimensions."
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "halfvec indexable hasta 4,000 dimensiones.",
+    "why": "The quote gives only 'up to 4,000 dimensions' and does not say it concerns indexing."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "Los índices exactos sobre la columna de filtro funcionan bien con condiciones de bajo porcentaje de filas.",
+    "why": "The quote does not say these exact indexes are on the filter column."
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "Tamaño de almacenamiento de un vector (aplica a 1,536 dim).",
+    "why": "The quote does not mention 1,536 dimensions."
+   },
+   {
+    "id": "confirmed[28]",
+    "claim": "El README aparece como versión 0.8.7 y el CHANGELOG lista 0.9.0 como no publicada.",
+    "why": "The quote only says 0.9.0 is unreleased; the README version 0.8.7 is not in it."
+   }
+  ]
+ },
+ "reconcile": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "dropped": [
+   {
+    "id": "limitations[1]",
+    "text": "El README leído es de la rama master (muestra 0.8.7 y un CHANGELOG con 0.9.0 sin publicar); la 'versión vigente' no está confirmada más allá de eso. Las fechas del CHANGELOG parecen sintéticas y no se usaron.",
+    "por": "taken[5]"
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Documentación primaria de pgvector (README, CHANGELOG)",
+   "Anuncio oficial PostgreSQL de la versión 0.8.0",
+   "Blog técnico de proveedor cloud (AWS) sobre pgvector 0.8.0",
+   "Proveedor de motor dedicado (Qdrant), secundario",
+   "Benchmarks independientes y blogs (secundarios, de calidad variable)"
+  ],
+  "searches": [
+   {
+    "query": "pgvector README HNSW IVFFlat ef_search probes lists github",
+    "intent": "official"
+   },
+   {
+    "query": "pgvector 0.8.0 iterative index scans filtering release notes",
+    "intent": "official"
+   },
+   {
+    "query": "pgvector HNSW vs IVFFlat benchmark 1536 dimensions recall latency build time",
+    "intent": "support"
+   },
+   {
+    "query": "pgvector limitations when to use dedicated vector database Qdrant benchmark pgvector",
+    "intent": "limitations"
+   }
+  ],
+  "not_found": [
+   "No abrí el README completo: las cifras sobre memoria, maintenance_work_mem, m (16 por defecto) y ef_construction (64 por defecto) salen de resúmenes de búsqueda y hay que verificarlas con cita literal.",
+   "No confirmé cuál es la versión vigente de pgvector en noviembre de 2026; solo vi 0.8.0 (2024-10-30) en el changelog resumido.",
+   "No hallé un criterio documentado por pgvector para pasar a un motor dedicado; solo posturas de proveedores y blogs.",
+   "No hallé un benchmark independiente y reproducible con 1M vectores de 1536 dimensiones y recall ≥0.95 con p95 ≤100 ms en 64 GB; hay que medirlo (por ejemplo con ann-benchmarks o VSB).",
+   "No verifiqué los preprints de arXiv que aparecieron en los resultados; sus URLs y fechas me parecen dudosas, así que no los propongo."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 8,
+  "accepted": 8,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://github.com/pgvector/pgvector/blob/master/README.md",
+    "family": "Documentación primaria de pgvector",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Fuente principal: valores por defecto (ef_search 40, probes 1), guía de lists (rows/1000 hasta 1M), m y ef_construction, memoria/maintenance_work_mem, filtrado, límites de dimensiones. Citar literal ≤300 caracteres tras leerla."
+   },
+   {
+    "url": "https://github.com/pgvector/pgvector/blob/master/CHANGELOG.md",
+    "family": "Documentación primaria de pgvector",
+    "stance": "context",
+    "role": "primary",
+    "why": "Fija la versión vigente y los cambios relevantes (iterative scans, mejoras de inserción y construcción HNSW, coste de planificación). Verificar la última versión aquí."
+   },
+   {
+    "url": "https://www.postgresql.org/about/news/pgvector-080-released-2952",
+    "family": "Anuncio oficial PostgreSQL de la versión 0.8.0",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Anuncio oficial de iterative scans y de la estimación de coste, relevante para el filtrado y la elección del índice."
+   },
+   {
+    "url": "https://aws.amazon.com/blogs/database/supercharging-vector-search-performance-and-relevance-with-pgvector-0-8-0-on-amazon-aurora-postgresql",
+    "family": "Blog técnico de proveedor cloud (AWS) sobre pgvector 0.8.0",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Medidas de filtrado con iterative scan en 0.8.0; es de un proveedor y usa otro hardware, sirve como contraste."
+   },
+   {
+    "url": "https://qdrant.tech/blog/pgvector-tradeoffs/",
+    "family": "Proveedor de motor dedicado (Qdrant), secundario",
+    "stance": "contradicts",
+    "role": "secondary",
+    "why": "Postura del proveedor sobre cuándo migrar (filtrado, memoria, escala, híbrido). Tiene conflicto de interés y debe tratarse como secundario."
+   },
+   {
+    "url": "https://www.dbi-services.com/blog/pgvector-a-guide-for-dba-part-2-indexes-update-march-2026/",
+    "family": "Benchmarks independientes y blogs (secundarios, de calidad variable)",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Guía de DBA reciente sobre índices, con medidas de construcción y tamaño. Es independiente de un motor dedicado."
+   },
+   {
+    "url": "https://dev.to/cynora/pgvector-ivfflat-vs-hnsw-what-happens-to-recall-when-new-data-arrives-measured-46lh",
+    "family": "Benchmarks independientes y blogs (secundarios, de calidad variable)",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Mide la degradación de recall de IVFFlat con inserciones tras la construcción, a favor de HNSW con 50 inserciones por minuto. Usa 128 dimensiones, así que no se transfiere directamente."
+   },
+   {
+    "url": "https://encore.dev/articles/pgvector-vs-qdrant",
+    "family": "Benchmarks independientes y blogs (secundarios, de calidad variable)",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Comparación con cifras a 2M de vectores y criterios de cambio. Fuente no primaria."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
