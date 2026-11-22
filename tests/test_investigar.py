@@ -1957,7 +1957,7 @@ class AbrirSellados(unittest.TestCase):
         def acota(fin, s, *cmd):
             t0 = time.monotonic()
             r = subprocess.run(['bash', '-c', f'S=$1; shift; source "$S"; fin=$((SECONDS + {fin})); acota {s} "$@"; echo "rc=$?"',
-                                'prueba', str(ROOT / 'scripts' / 'abrir_sellados.sh'), *cmd], capture_output=True, text=True, timeout=60)
+                                'prueba', str(ROOT / 'scripts' / 'abrir_sellados.sh'), *cmd], capture_output=True, text=True, timeout=30)
             return r.stdout.split()[-1], round(time.monotonic() - t0)
         marca = self.tmp / 'corrio'
         self.assertEqual(acota(0, 0, 'touch', str(marca)), ('rc=124', 0))  # the step's time is over: nothing runs, not timeout 0
@@ -1965,6 +1965,20 @@ class AbrirSellados(unittest.TestCase):
         self.assertEqual(acota(100, 1, 'sleep', '20'), ('rc=124', 1))  # its own second, the step has more
         self.assertEqual(acota(100, 0, 'sleep', '0'), ('rc=0', 0))
         self.assertIn(acota(2, 100, 'sleep', '20'), (('rc=124', 1), ('rc=124', 2)))  # the step's end, before its own 100 s
+        pids = self.tmp / 'pids'  # a program and its child that both ignore TERM end with their group (GPT on e706b0e)
+        sordo = (f'exec >/dev/null 2>&1; trap "" TERM; (trap "" TERM; echo $BASHPID >> {pids}; while :; do sleep 1; done) & '
+                 f'echo $$ >> {pids}; while :; do sleep 1; done')  # no pipe of the test held: a surviving one only fails the test
+
+        def matar():
+            for pid in (pids.read_text().split() if pids.exists() else []):
+                with contextlib.suppress(ProcessLookupError):
+                    os.kill(int(pid), 9)
+        self.addCleanup(matar)
+        self.assertEqual(acota(100, 2, 'bash', '-c', sordo), ('rc=124', 2))
+        self.assertEqual(len(pids.read_text().split()), 2)
+        for pid in pids.read_text().split():
+            with self.assertRaises(ProcessLookupError):
+                os.kill(int(pid), 0)
 
     def test_the_step_deadline_bounds_the_object_in_course_and_leaves_no_process_alive(self):  # GPT on e9ef1e1
         good = self.raw(CLOSED_BODY)

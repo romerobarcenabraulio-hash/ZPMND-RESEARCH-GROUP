@@ -5,11 +5,16 @@
 # skipped: the gate then downloads that raw again, as before. The R2 read key and endpoint reach aws alone and the private key sobre.sh alone; nothing
 # here parses a raw. Without the read key it opens nothing. Each object R2 holds may be a hostile fetch job's (T31; GPT on 1a8b369): a range of RG_SELLADO_MAX_BYTES
 # and one more, RG_SELLADO_SEGUNDOS each, sobre_partes.py externo; RG_SELLADOS_SEGUNDOS and T29's bytes in all, counted as R2 sends them (GPT on 7b649b1).
-# Each program, aws and the two readers, gets only the time the step has left (acota).
+# Each program, aws and the two readers, gets only the time the step has left, then KILL to its whole group (acota).
 set -uo pipefail
 acota() {  # acota <s> <program...>: at most <s> seconds (0: no limit of its own) and never past the step's end ($fin); nothing
-  local s=$((fin - SECONDS)); [ "$s" -gt 0 ] || return 124  # once that has passed, since timeout 0 means no limit (GPT on e9ef1e1)
-  [ "$1" -gt 0 ] && [ "$1" -lt "$s" ] && s=$1; shift; timeout "$s" "$@"  # timeout signals the program's whole group
+  local s=$((fin - SECONDS)) p w quien rc; [ "$s" -gt 0 ] || return 124  # once that has passed (GPT on e9ef1e1)
+  [ "$1" -gt 0 ] && [ "$1" -lt "$s" ] && s=$1; shift
+  setsid "$@" & p=$!  # its own session and group, whatever timeout the runner has (uutils signals no group): GPT on e706b0e
+  sleep "$s" & w=$!
+  wait -n -p quien "$p" "$w"; rc=$?
+  kill -KILL -- -"$p" 2>/dev/null; kill "$w" 2>/dev/null; wait "$p" "$w" 2>/dev/null  # the whole group, children that ignore TERM too
+  [ "$quien" = "$p" ] && return "$rc"; return 124
 }
 [ "${BASH_SOURCE[0]}" = "$0" ] || return 0  # sourced by its tests: the function only
 L=$1; O=$2; D=$(dirname "$0")
