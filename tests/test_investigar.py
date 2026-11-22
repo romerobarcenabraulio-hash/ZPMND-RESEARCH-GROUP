@@ -1834,6 +1834,13 @@ class Sobre(unittest.TestCase):
         self.run_ok('openssl', 'pkey', '-pubin', '-in', str(ROOT / 'keys' / 'rg-artifacts.pub.pem'), '-noout')
 
 
+    def test_sellados_seals_to_a_public_key_of_its_own(self):  # SECURITY T31
+        pem = (ROOT / 'keys' / 'rg-sellados.pub.pem').read_text(encoding='utf-8')
+        self.assertNotIn('PRIVATE', pem)
+        self.assertNotEqual(pem, (ROOT / 'keys' / 'rg-artifacts.pub.pem').read_text(encoding='utf-8'))
+        self.run_ok('openssl', 'pkey', '-pubin', '-in', str(ROOT / 'keys' / 'rg-sellados.pub.pem'), '-noout')
+
+
 class RepoPackets(unittest.TestCase):
     def test_every_packet_in_the_repo_passes_the_gate(self):
         # Checked on every PR: only declared files, each raw against its sha256, each quote against the text of a raw it
@@ -1955,6 +1962,14 @@ class AbrirSellados(unittest.TestCase):
         r = subprocess.run(['bash', str(ROOT / 'scripts' / 'abrir_sellados.sh'), str(self.tmp / 'shas.txt'), str(out)],
                            env=env, capture_output=True, text=True, timeout=300)
         return r, out
+
+    def test_on_a_clean_runner_the_workflow_opens_the_envelope_into_the_folder_its_gate_reads(self):  # GPT on 8b2b7ad
+        job = yaml.safe_load((ROOT / '.github' / 'workflows' / 'auditor.yml').read_text(encoding='utf-8'))['jobs']['packet-gate']
+        abre, rt = next(s['run'] for s in job['steps'] if 'RG_SELLADOS_KEY' in str(s.get('env'))), self.tmp / 'runner'
+        self.assertEqual((rt.mkdir(), self.sobre('seal', str(self.src), str(rt / 'sellados-enc'), str(self.pub)).returncode), (None, 0))
+        r = subprocess.run(['bash', '-c', abre], cwd=ROOT, capture_output=True, text=True, timeout=120,
+                           env={**os.environ, 'RUNNER_TEMP': str(rt), 'RG_ARTIFACT_KEY': self.priv.read_text()})
+        self.assertEqual((r.returncode, (rt / 'packet-gate' / 'sellados' / 'texto' / 'SA-x.txt').read_bytes()), (0, CLOSED_BODY), r.stderr)
 
     def test_acota_gives_the_least_of_its_own_time_and_the_steps_and_runs_nothing_past_it(self):  # GPT on e9ef1e1
         bin_, lanzados = self.tmp / 'bin-acota', self.tmp / 'lanzados'

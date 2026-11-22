@@ -136,10 +136,22 @@ class AuditorGpt(unittest.TestCase):
     def test_the_packet_gate_runs_mains_code_on_the_heads_packets_as_data(self):
         job = self.jobs['packet-gate']
         self.assertEqual((job['needs'], job['if'], job['permissions']),
-                         ('gate', "needs.gate.outputs.run == 'true'", {'contents': 'read'}))
-        self.assertNotIn('secrets.', yaml.safe_dump(job))  # hostile raws are parsed here
+                         (['gate', 'sellados'], "${{ !cancelled() && needs.gate.outputs.run == 'true' }}", {'contents': 'read'}))
+        keys = [i for i, s in enumerate(job['steps']) if 'secrets.' in yaml.safe_dump(s)]  # hostile raws are parsed here
+        gate_at = next(i for i, s in enumerate(job['steps']) if '--sellados "$d/sellados"' in s.get('run', ''))
+        self.assertEqual((len(keys), keys[0] < gate_at), (1, True))  # one secret, in one step, before anything parses
+        self.assertEqual((job['steps'][keys[0]]['env'], job['steps'][keys[0]]['run']), ({'RG_ARTIFACT_KEY': '${{ secrets.RG_SELLADOS_KEY }}'},
+                         'mkdir -p "$RUNNER_TEMP/packet-gate" && bash scripts/sobre.sh open "$RUNNER_TEMP/sellados-enc" "$RUNNER_TEMP/packet-gate/sellados"'))
+        down, opening = job['steps'][keys[0] - 1:keys[0] + 1]  # a missing envelope never stops the gate
+        self.assertEqual((down['id'], down['if'], down['continue-on-error'], down['with']),
+                         ('bajar', "needs.sellados.outputs.ok == 'true'", True,
+                          {'artifact-ids': '${{ needs.sellados.outputs.id }}', 'path': '${{ runner.temp }}/sellados-enc'}))
+        self.assertEqual((opening['if'], opening['continue-on-error']), ("steps.bajar.outcome == 'success'", True))  # only what it got
+        self.assertEqual([s for s in job['steps'] if s.get('uses', '').startswith('actions/download-artifact@')], [down])
         checkout = next(s for s in job['steps'] if s.get('uses', '').startswith('actions/checkout@'))
         self.assertEqual((checkout['with']['ref'], checkout['with']['persist-credentials']), ('main', False))
+        gate_run = job['steps'][gate_at]['run']  # the copies opened a step before stay where the gate reads them
+        self.assertEqual(('mkdir -p "$d/data" "$d/sellados"' in gate_run, 'rm -rf' in gate_run), (True, False))
         run = '\n'.join(s.get('run', '') for s in job['steps'])
         self.assertNotRegex(run, r'\bgit\b[^\n;|&]*\b(checkout|switch|worktree|restore|reset|read-tree|checkout-index|'
                                  r'stash|merge|rebase|cherry-pick|pull|apply|am)\b')
@@ -156,6 +168,88 @@ class AuditorGpt(unittest.TestCase):
         self.assertLess(user, job['steps'].index(gate_step))
         upload = next(s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/upload-artifact@'))
         self.assertEqual(upload['name'], 'packet-gate')
+
+    def test_r2_keys_live_in_a_job_that_never_holds_the_head_and_pedir_holds_no_secret(self):  # SECURITY T31
+        pedir, sellados = self.jobs['pedir'], self.jobs['sellados']
+        self.assertNotIn('secrets.', yaml.safe_dump(pedir))
+        self.assertIn('grep -E \'^[0-9a-f]{64}\\.[0-9a-f]{64}$\' "$RUNNER_TEMP/shas.txt" | head -n 400', pedir['steps'][-1]['run'])
+        dump = yaml.safe_dump(sellados, width=10**6)
+        [self.assertNotIn(absent, dump) for absent in ('github.token', 'git fetch', 'packet_gate.py', 'GH_TOKEN', 'secrets.R2_ACCESS_KEY_ID',
+                                                       'needs.gate.outputs.sha', 'github.event.pull_request', 'github.head_ref')]
+        for job in (pedir, sellados):  # main's code, never the head's, and no credential left in .git (auditor on e9ef1e1)
+            co = [s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/checkout@')]
+            self.assertEqual([(c['ref'], c['persist-credentials']) for c in co], [('main', False)])
+        holders = [s for s in sellados['steps'] if 'secrets.' in yaml.safe_dump(s)]
+        self.assertEqual([sorted(h['env']) for h in holders], [['BUCKET', 'R2_ENDPOINT', 'R2_LECTURA_ACCESS_KEY_ID', 'R2_LECTURA_SECRET_ACCESS_KEY', 'RG_ARTIFACT_KEY', 'SHAS']])
+        self.assertIn("set -euo pipefail -f  # -f: no glob in what pedir sent", holders[0]['run'])
+        self.assertIn("printf '%s\\n' $SHAS | grep -E '^[0-9a-f]{64}\\.[0-9a-f]{64}$' | head -n 400", holders[0]['run'])  # pedir's list checked again
+        seal = next(s for s in sellados['steps'] if 'sobre.sh seal' in s.get('run', ''))
+        self.assertTrue(seal['run'].endswith('keys/rg-sellados.pub.pem') and 'env' not in seal)  # a key pair of its own
+        self.assertEqual(next((u['with']['name'], u['with']['retention-days'], u['id']) for u in sellados['steps'] if u.get('uses', '').startswith('actions/upload-artifact@')), ('sellados', 1, 'subir'))
+        # automerge needs every job green: no step of pedir or sellados may fail it; ok only once the upload is in
+        self.assertTrue(all(s.get('continue-on-error') for s in sellados['steps'] + pedir['steps']
+                            if s.get('id') in ('pedir', 'sellar', 'subir') or 'abrir_sellados' in s.get('run', '')))
+        self.assertEqual((sellados['outputs'], sellados['steps'][-1]['if'], sellados['steps'][-1]['env']),
+                         ({'ok': '${{ steps.ok.outputs.ok }}', 'id': '${{ steps.ok.outputs.id }}'}, "steps.subir.outcome == 'success'",
+                          {'ID': '${{ steps.subir.outputs.artifact-id }}'}))
+
+    def test_a_sellados_artifact_replaced_or_deleted_after_its_upload_is_never_opened(self):  # SECURITY T31, GPT on 6d890f6
+        # Any job of the run (the evidence job runs the head's code) can upload under a name; with overwrite, upload-artifact
+        # deletes that name's artifact and makes another. packet-gate downloads the id sellados' own upload returned; the
+        # pinned download-artifact (v8.0.1, src/download-artifact.ts) lists the run's artifacts, keeps those ids and fails
+        # when none is left, so the opening step (steps.bajar.outcome == 'success') is skipped and the raws are downloaded again.
+        job, sellados = self.jobs['packet-gate'], self.jobs['sellados']
+        down = next(s['with'] for s in job['steps'] if s.get('uses', '').startswith('actions/download-artifact@'))
+        ok_run = sellados['steps'][-1]['run']
+
+        def ok(artifact_id):  # the ok step's own bash on what upload-artifact printed as artifact-id
+            with tempfile.NamedTemporaryFile('r') as out:
+                subprocess.run(['bash', '-c', ok_run], env={'ID': artifact_id, 'GITHUB_OUTPUT': out.name, 'PATH': os.environ['PATH']},
+                               check=True)
+                return dict(line.split('=', 1) for line in out.read().splitlines())
+
+        class Run:  # one run's artifacts as the pinned actions keep them: one per name, overwrite deletes it, an id never returns
+            def __init__(self):
+                self.ids, self.last = {}, 0
+
+            def upload(self, name, data, overwrite=False):
+                old = [i for i, (n, _) in self.ids.items() if n == name]
+                if old and not overwrite:
+                    raise FileExistsError(name)
+                for i in old:
+                    del self.ids[i]
+                self.last += 1
+                self.ids[self.last] = (name, data)
+                return str(self.last)
+
+            def download(self, w, outputs):
+                if 'name' in w:
+                    hits = [d for n, d in self.ids.values() if n == w['name']]
+                else:
+                    hits = [self.ids[int(outputs[x.strip()])][1] for x in w['artifact-ids'].split(',') if int(outputs[x.strip()]) in self.ids]
+                if not hits:
+                    raise LookupError('none of the artifacts found')
+                return hits[-1]
+
+        for later in ('nothing', 'overwrite', 'delete'):
+            run = Run()
+            out = ok(run.upload('sellados', 'R2'))
+            self.assertEqual(out['ok'], 'true')
+            if later == 'overwrite':
+                run.upload('sellados', 'forged', overwrite=True)  # sealed to the public key, with bytes and a URL of its own
+            elif later == 'delete':
+                run.ids.clear()
+            outputs = {'${{ needs.sellados.outputs.id }}': out['id']}
+            if later == 'nothing':
+                self.assertEqual(run.download(down, outputs), 'R2')
+            else:
+                self.assertRaises(LookupError, run.download, down, outputs)  # never the replacement: the gate downloads again
+        first = Run()
+        first.upload('sellados', 'forged')  # taken before sellados uploads: its upload fails, so the ok step never runs
+        self.assertRaises(FileExistsError, first.upload, 'sellados', 'R2')
+        for bad in ('', '0', '12,13', '12 ', '1' * 20, '12\nok=true'):  # one artifact id or nothing: never a list, never a second line
+            self.assertEqual(ok(bad), {}, bad)
+        self.assertEqual(ok('4815162342'), {'ok': 'true', 'id': '4815162342'})
 
     def test_the_result_travels_as_a_file_never_as_a_job_output(self):
         # GitHub drops a job output it suspects of holding a secret: three GPT REVISE were lost so (#73, #89, #91)
