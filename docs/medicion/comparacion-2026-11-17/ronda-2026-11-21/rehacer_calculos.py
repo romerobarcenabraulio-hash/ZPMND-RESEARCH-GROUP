@@ -8,8 +8,16 @@ palabra suelta, un número sin '$' en lo que cuesta), que no tiene '$' o que tra
 (una conversión de cantidades que esta lectura no comprueba) deja el cálculo como no comprobable (cuadra: null) y lo
 nombra (GPT en 9ce44ea y 815764a). Sin ningún tramo, o con un monthly_usd que no es un número, tampoco es comprobable
 (GPT en 269352a). Si todo se lee, no cuadra cuando la suma de los tramos difiere más de 1 % de monthly_usd (protocolo,
-M3). Comprueba la aritmética escrita, no que el precio o la cantidad sean los correctos."""
+M3). Comprueba la aritmética escrita, no que el precio o la cantidad sean los correctos.
+
+Lo que garantiza para cualquier JSON (GPT en 9ce44ea, 815764a, a522331, 269352a y 0459898, un caso suelto cada vez): la
+salida es JSON estricto, sin NaN ni Infinity, y cada cálculo sale con cuadra true, false o null. true solo si cada tramo
+se lee entero, sus igualdades se cumplen, cada suma es un número finito (un número, producto o suma que no cabe en un
+float desborda) y el total está a 1 % de un monthly_usd finito; false solo por una igualdad falsa o un total fuera del
+1 %; lo demás es null y nombra por qué (motivo sin_tramos, sin_monto, desborda o no_es_objeto, o los tramos en
+sin_interpretar o desbordan). Un archivo que no es un objeto con una lista calculations termina con error."""
 import json
+import math
 import re
 import sys
 
@@ -47,25 +55,56 @@ def tramo(s):
     i = next((k for k, p in enumerate(vals) if any(d for d, _ in p)), None)
     if i is None or i > 0 or not all(d for d, _ in vals[i]):
         return None, 'sin_interpretar'  # sin '$', una cantidad antes del costo, o un sumando sin dólares en él
-    costo = sum(v for _, v in vals[i])
-    if any(abs(sum(v for _, v in p) - costo) > max(0.01, 0.001 * abs(costo)) for p in vals[i + 1:]):
+    sumas = [sum(v for _, v in p) for p in vals]  # i == 0: lo que cuesta, y lo que debe valer lo mismo
+    if not all(map(math.isfinite, sumas)):
+        return None, 'desborda'  # un infinito, o un 0 por un infinito: nada que comparar
+    costo = sumas[0]
+    if any(abs(s - costo) > max(0.01, 0.001 * abs(costo)) for s in sumas[1:]):
         return None, 'igualdad_falsa'
     return costo, None
 
 
+def finito(x):
+    """x es un número (nunca un booleano) que cabe en un float finito."""
+    if isinstance(x, bool) or not isinstance(x, (int, float)):
+        return False
+    try:
+        return math.isfinite(x)
+    except OverflowError:  # un entero mayor que cualquier float
+        return False
+
+
+def dato(x):
+    """Un valor de la respuesta tal cual, o como texto si no es JSON estricto (un NaN o un infinito que leyó json.load)."""
+    try:
+        json.dumps(x, allow_nan=False)
+        return x
+    except ValueError:
+        return str(x)
+
+
+data = json.load(open(sys.argv[1], encoding='utf-8'))
+calcs = data.get('calculations', []) if isinstance(data, dict) else None
+if not isinstance(calcs, list):
+    sys.exit('rehacer_calculos.py: se espera un objeto JSON con una lista calculations')
 rows = []
-for c in json.load(open(sys.argv[1], encoding='utf-8')).get('calculations', []):
+for c in calcs:
+    if not isinstance(c, dict):
+        rows.append({'cuadra': None, 'motivo': 'no_es_objeto'})
+        continue
     formula, usd = c.get('formula'), c.get('monthly_usd')
     partes = [p for p in formula.split(';') if p.strip()] if isinstance(formula, str) else []
     vals = [tramo(p) for p in partes]
-    motivo = 'sin_tramos' if not partes else 'sin_monto' if isinstance(usd, bool) or not isinstance(usd, (int, float)) else None
     sueltos = [p.strip() for p, (_, e) in zip(partes, vals) if e == 'sin_interpretar']
     falsas = [p.strip() for p, (_, e) in zip(partes, vals) if e == 'igualdad_falsa']
+    desbordan = [p.strip() for p, (_, e) in zip(partes, vals) if e == 'desborda']
     total = sum(v for v, _ in vals if v is not None)
-    ok = False if falsas else None if sueltos or motivo else abs(total - usd) <= 0.01 * max(abs(usd), 1e-9)
-    rows.append({'provider': c.get('provider'), 'model': c.get('model'), 'scenario': c.get('scenario'), 'dice': usd,
-                 'rehecho': round(total, 4), 'cuadra': ok, **({'sin_interpretar': sueltos} if sueltos else {}),
-                 **({'igualdad_falsa': falsas} if falsas else {}), **({'motivo': motivo} if motivo else {})})
+    motivo = 'sin_tramos' if not partes else 'sin_monto' if not finito(usd) else 'desborda' if not math.isfinite(total) else None
+    ok = False if falsas else None if sueltos or desbordan or motivo else abs(total - usd) <= 0.01 * max(abs(usd), 1e-9)
+    rows.append({'provider': dato(c.get('provider')), 'model': dato(c.get('model')), 'scenario': dato(c.get('scenario')),
+                 'dice': dato(usd), 'rehecho': round(total, 4) if math.isfinite(total) else None, 'cuadra': ok,
+                 **({'sin_interpretar': sueltos} if sueltos else {}), **({'igualdad_falsa': falsas} if falsas else {}),
+                 **({'desbordan': desbordan} if desbordan else {}), **({'motivo': motivo} if motivo else {})})
 print(json.dumps({'rows': rows, 'resumen': {'calculos': len(rows), 'cuadran': sum(r['cuadra'] is True for r in rows),
                                             'no_cuadran': sum(r['cuadra'] is False for r in rows),
                                             'no_comprobables': sum(r['cuadra'] is None for r in rows)}}, ensure_ascii=False, indent=1))

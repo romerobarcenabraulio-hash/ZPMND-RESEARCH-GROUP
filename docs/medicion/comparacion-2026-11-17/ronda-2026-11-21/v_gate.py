@@ -3,7 +3,9 @@ Baja cada URL de la respuesta una vez con rg.investigar.fetch (el Fetcher de RG:
 https, robots.txt, direcciones públicas, redirecciones revisadas, pausa por host y presupuesto) y comprueba cada cita
 como la compuerta (rg.packets: texto de rg.text, espacios plegados, al menos MIN_QUOTE caracteres, solo un cuerpo 200).
 Cada afirmación sale con su resultado: verificada, cita_corta, rechazada, http_<código>, sin_cuerpo, sin_texto o
-cita_ausente. Los crudos quedan en <out dir>/raw por sha256 y no se redistribuyen. Corre dentro de una copia de main."""
+cita_ausente. «verificada» dice que la cita está en el cuerpo que se bajó, no que respalde la afirmación, sus precios o sus
+condiciones: eso lo juzga el juez (M3; GPT en 0459898). Los crudos quedan en <out dir>/raw por sha256 y no se redistribuyen.
+Corre dentro de una copia de main."""
 import collections
 import json
 import sys

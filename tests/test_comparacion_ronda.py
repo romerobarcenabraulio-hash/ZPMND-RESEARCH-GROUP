@@ -4,7 +4,9 @@ redoes the arm's arithmetic and never passes a dollar amount it did not read. Bu
 served by a fake opener, one URL whose host is a loopback address for the real opener, and formulas. No network."""
 import importlib.util
 import json
+import math
 import os
+import random
 import subprocess
 import sys
 import tempfile
@@ -123,6 +125,65 @@ class RehacerCalculos(unittest.TestCase):
         out = self.rehacer(*[(x, 200) for x in f], ('creación 0.0012; salida 480 x $3.75 = 1,800', 1800.0012))
         self.assertEqual([(r['cuadra'], r['sin_interpretar']) for r in out['rows']], [(None, [x]) for x in f] + [(None, ['creación 0.0012'])])
         self.assertEqual(out['resumen'], {'calculos': 8, 'cuadran': 0, 'no_cuadran': 0, 'no_comprobables': 8})
+
+    def texto(self, raw):  # the script on a file written by hand: JSON's own numbers, json.load's NaN and Infinity, anything
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d) / 'a.json'
+            f.write_text(raw, encoding='utf-8')
+            r = subprocess.run([sys.executable, '-I', str(RONDA / 'rehacer_calculos.py'), str(f)], capture_output=True, text=True, timeout=60)
+        return r.returncode, r.stdout, r.stderr
+
+    def estricto(self, out):  # JSON that any reader takes: json.loads alone accepts NaN and Infinity
+        return json.loads(out, parse_constant=lambda c: self.fail(f'not strict JSON: {c}'))
+
+    def test_an_amount_or_a_sum_past_a_float_is_never_checked(self):  # GPT on 0459898
+        big = '9' * 400
+        rows = {'1e309': '{"calculations":[{"formula":"100 x $2","monthly_usd":1e309}]}',  # GPT's own input
+                'nan': '{"calculations":[{"formula":"100 x $2","monthly_usd":NaN}]}',
+                'int': '{"calculations":[{"formula":"100 x $2","monthly_usd":' + '1' * 400 + '}]}'}
+        for k, raw in rows.items():
+            rc, out, err = self.texto(raw)
+            self.assertEqual(rc, 0, err)
+            self.assertEqual([(r['cuadra'], r['motivo']) for r in self.estricto(out)['rows']], [(None, 'sin_monto')], k)
+        calcs = [('$' + big, 1), ('$' + '9' * 200 + ' x ' + '9' * 200, 1), ('$' + big + ' x 0', 0), ('$' + big + '; 100 x $2', 200),
+                 ('100 x $2 = ' + big, 200)]
+        out = self.estricto(self.texto(json.dumps({'calculations': [{'formula': f, 'monthly_usd': u} for f, u in calcs]}))[1])
+        self.assertEqual([(r['cuadra'], r['desbordan']) for r in out['rows']], [(None, [f]) for f, _ in calcs[:3]]
+                         + [(None, ['$' + big]), (None, ['100 x $2 = ' + big])])
+        two = '$' + '9' * 308  # each a float, their sum not
+        rc, out, err = self.texto(json.dumps({'calculations': [{'formula': two + '; ' + two, 'monthly_usd': 1}]}))
+        self.assertEqual([(r['cuadra'], r['motivo'], r['rehecho']) for r in self.estricto(out)['rows']], [(None, 'desborda', None)])
+
+    def test_any_json_gives_strict_json_and_squares_only_what_it_redid(self):  # the property, over hostile inputs
+        rng = random.Random(20261122)
+        piezas = ['100', '2', '0', '$2', '$0.005', '3,600', '9' * 309, '0.0012', 'x', '×', '*', '+', '=', ';', '/', '-', 'MTok',
+                  'lecturas', 'é', '٣', '1,00', '1.', ' ']
+        montos = ['200', '0', '-1', '1e-300', '1e308', '1e309', '-1e309', 'NaN', 'Infinity', '-Infinity', '1' * 400, 'true', 'null',
+                  '"200"', '[]', '{}', '12000', '0.003']
+        items = []
+        for _ in range(400):
+            f = ' '.join(rng.choice(piezas) for _ in range(rng.randint(0, 9)))
+            items.append('{"provider":%s,"formula":%s,"monthly_usd":%s}' % (rng.choice(montos), json.dumps(f), rng.choice(montos)))
+        items += ['[]', '7', '"x"', 'null', '{"formula":"100 x $2","monthly_usd":200}']
+        rc, out, err = self.texto('{"calculations":[' + ','.join(items) + ']}')
+        self.assertEqual(rc, 0, err)
+        rows = self.estricto(out)['rows']
+        self.assertEqual(len(rows), len(items))
+        self.assertEqual([r['motivo'] for r in rows[400:404]], ['no_es_objeto'] * 4)
+        self.assertIs(rows[-1]['cuadra'], True)
+        for r in rows:
+            self.assertIn(r['cuadra'], (True, False, None))
+            if r['cuadra'] is True:  # only a finite amount within 1 % of what it redid, everything read
+                self.assertTrue(isinstance(r['dice'], (int, float)) and not isinstance(r['dice'], bool) and math.isfinite(r['dice']))
+                self.assertLessEqual(abs(r['rehecho'] - r['dice']), 0.01 * max(abs(r['dice']), 1e-9) + 1e-4)
+                self.assertFalse({'sin_interpretar', 'igualdad_falsa', 'desbordan', 'motivo'} & set(r))
+            if r['cuadra'] is False:
+                self.assertFalse({'sin_interpretar', 'desbordan', 'motivo'} & set(r) and 'igualdad_falsa' not in r)
+        for raw in ('[]', '{"calculations": 7}', '{"calculations": {"a": 1}}'):  # not an object with a list: an error, never rows
+            rc, out, err = self.texto(raw)
+            self.assertEqual((rc, out), (1, ''))
+            self.assertIn('se espera un objeto JSON con una lista calculations', err)
+
 
 if __name__ == '__main__':
     unittest.main()
