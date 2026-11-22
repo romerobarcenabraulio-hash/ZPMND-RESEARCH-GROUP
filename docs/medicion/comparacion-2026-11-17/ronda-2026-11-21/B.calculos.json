@@ -1,0 +1,209 @@
+{
+ "rows": [
+  {
+   "provider": "Anthropic",
+   "model": "Claude Sonnet 5.5",
+   "scenario": "sin caché",
+   "dice": 12000,
+   "rehecho": 12000.0,
+   "cuadra": true
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Sonnet 5.5",
+   "scenario": "con caché",
+   "dice": 7522.94,
+   "rehecho": 7522.944,
+   "cuadra": true
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Sonnet 5.5",
+   "scenario": "lotes",
+   "dice": 6000,
+   "rehecho": 6000.0,
+   "cuadra": true
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Sonnet 5.5",
+   "scenario": "lotes",
+   "dice": 3761.47,
+   "rehecho": 3761.472,
+   "cuadra": true
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Haiku 5.5",
+   "scenario": "sin caché",
+   "dice": 600,
+   "rehecho": 600.0,
+   "cuadra": true
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Haiku 5.5",
+   "scenario": "con caché",
+   "dice": 387.97,
+   "rehecho": 387.9744,
+   "cuadra": true
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Haiku 5.5",
+   "scenario": "lotes",
+   "dice": 300,
+   "rehecho": 300.0,
+   "cuadra": true
+  },
+  {
+   "provider": "Anthropic",
+   "model": "Claude Haiku 5.5",
+   "scenario": "lotes",
+   "dice": 193.99,
+   "rehecho": 193.9872,
+   "cuadra": true
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6.2-sol",
+   "scenario": "sin caché",
+   "dice": 12000,
+   "rehecho": 12000.0,
+   "cuadra": true
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6.2-sol",
+   "scenario": "con caché",
+   "dice": 7505.66,
+   "rehecho": 7505.664,
+   "cuadra": true
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6.2-sol",
+   "scenario": "lotes",
+   "dice": 6000,
+   "rehecho": 6000.0,
+   "cuadra": true
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6.2-sol",
+   "scenario": "lotes",
+   "dice": 3752.83,
+   "rehecho": 3752.832,
+   "cuadra": true
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6-luna",
+   "scenario": "sin caché",
+   "dice": 600,
+   "rehecho": 600.0,
+   "cuadra": true
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6-luna",
+   "scenario": "con caché",
+   "dice": 387.11,
+   "rehecho": 387.1104,
+   "cuadra": true
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6-luna",
+   "scenario": "lotes",
+   "dice": 300,
+   "rehecho": 300.0,
+   "cuadra": true
+  },
+  {
+   "provider": "OpenAI",
+   "model": "gpt-6-luna",
+   "scenario": "lotes",
+   "dice": 193.56,
+   "rehecho": 193.5552,
+   "cuadra": true
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.8 Flash",
+   "scenario": "sin caché",
+   "dice": 4500,
+   "rehecho": 4500.0,
+   "cuadra": true
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.8 Flash",
+   "scenario": "con caché",
+   "dice": 2881.44,
+   "rehecho": 2701.44,
+   "cuadra": null,
+   "sin_interpretar": [
+    "creación 4,000 tokens x $0.75/M = 0.003",
+    "lecturas 600,000 x 4,000 = 2,400 MTok x $0.075 = 180"
+   ]
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.8 Flash",
+   "scenario": "lotes",
+   "dice": 2250,
+   "rehecho": 2250.0,
+   "cuadra": true
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.8 Flash",
+   "scenario": "lotes",
+   "dice": 1441.44,
+   "rehecho": 1441.44,
+   "cuadra": true
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.5 Flash-Lite",
+   "scenario": "sin caché",
+   "dice": 2280,
+   "rehecho": 2280.0,
+   "cuadra": true
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.5 Flash-Lite",
+   "scenario": "con caché",
+   "dice": 1634.88,
+   "rehecho": 1634.88,
+   "cuadra": null,
+   "sin_interpretar": [
+    "creación 0.0012"
+   ]
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.5 Flash-Lite",
+   "scenario": "lotes",
+   "dice": 1140,
+   "rehecho": 1140.0,
+   "cuadra": true
+  },
+  {
+   "provider": "Google",
+   "model": "Gemini 3.5 Flash-Lite",
+   "scenario": "lotes",
+   "dice": 818.88,
+   "rehecho": 818.88,
+   "cuadra": true
+  }
+ ],
+ "resumen": {
+  "calculos": 24,
+  "cuadran": 22,
+  "no_cuadran": 0,
+  "no_comprobables": 2
+ }
+}

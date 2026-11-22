@@ -1,0 +1,170 @@
+{
+ "hosts": [
+  "github.com",
+  "raw.githubusercontent.com",
+  "www.tigerdata.com"
+ ],
+ "rows": [
+  {
+   "claim": "HNSW en pgvector: m por defecto es 16 (máximo de conexiones por capa).",
+   "url": "https://github.com/pgvector/pgvector",
+   "http": 200,
+   "sha256": "3991457d60614031d52f824c815f2074b37c159ca44abe851f618144ad329d01",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  },
+  {
+   "claim": "HNSW: ef_construction por defecto es 64, y subirlo mejora el recall a costa de tiempo de construcción e inserción.",
+   "url": "https://github.com/pgvector/pgvector",
+   "http": 200,
+   "sha256": "3991457d60614031d52f824c815f2074b37c159ca44abe851f618144ad329d01",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  },
+  {
+   "claim": "HNSW: hnsw.ef_search por defecto es 40; es la palanca de consulta para recall contra latencia.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "http": 200,
+   "sha256": "de8c6b0529b0d67324385dde6f6f651aa5eb071bbdadf59f80877d6ae26be128",
+   "media": "text/plain",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "IVFFlat: regla inicial de lists según el número de filas (para 1M filas, 1000).",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "http": 200,
+   "sha256": "de8c6b0529b0d67324385dde6f6f651aa5eb071bbdadf59f80877d6ae26be128",
+   "media": "text/plain",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "IVFFlat: ivfflat.probes por defecto es 1; subirlo favorece el recall sobre la velocidad.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "http": 200,
+   "sha256": "de8c6b0529b0d67324385dde6f6f651aa5eb071bbdadf59f80877d6ae26be128",
+   "media": "text/plain",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "IVFFlat debe crearse con datos ya cargados, porque los centroides se calculan al construir; esto condiciona un flujo de inserciones continuo.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "http": 200,
+   "sha256": "de8c6b0529b0d67324385dde6f6f651aa5eb071bbdadf59f80877d6ae26be128",
+   "media": "text/plain",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "Memoria y construcción: IVFFlat construye más rápido y usa menos memoria que HNSW, a cambio de peor rendimiento de consulta.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "http": 200,
+   "sha256": "de8c6b0529b0d67324385dde6f6f651aa5eb071bbdadf59f80877d6ae26be128",
+   "media": "text/plain",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "La construcción de HNSW es mucho más rápida si el grafo cabe en maintenance_work_mem; se puede paralelizar (2 workers por defecto).",
+   "url": "https://github.com/pgvector/pgvector",
+   "http": 200,
+   "sha256": "3991457d60614031d52f824c815f2074b37c159ca44abe851f618144ad329d01",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  },
+  {
+   "claim": "Aviso de construcción: pgvector avisa cuando el grafo deja de caber en memoria.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "http": 200,
+   "sha256": "de8c6b0529b0d67324385dde6f6f651aa5eb071bbdadf59f80877d6ae26be128",
+   "media": "text/plain",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "Sin índice, la búsqueda es exacta con recall perfecto; el índice aproximado cambia recall por velocidad.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "http": 200,
+   "sha256": "de8c6b0529b0d67324385dde6f6f651aa5eb071bbdadf59f80877d6ae26be128",
+   "media": "text/plain",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "Filtrado: los índices aproximados filtran después del escaneo, así que un filtro selectivo devuelve pocas filas con ef_search=40.",
+   "url": "https://github.com/pgvector/pgvector",
+   "http": 200,
+   "sha256": "3991457d60614031d52f824c815f2074b37c159ca44abe851f618144ad329d01",
+   "media": "text/html",
+   "resultado": "cita_ausente",
+   "compuerta": false
+  },
+  {
+   "claim": "Los escaneos iterativos continúan el escaneo hasta tener suficientes resultados (strict o relaxed); hay topes hnsw.max_scan_tuples (20,000 por defecto) y scan_mem_multiplier.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "http": 200,
+   "sha256": "de8c6b0529b0d67324385dde6f6f651aa5eb071bbdadf59f80877d6ae26be128",
+   "media": "text/plain",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "Límite de dimensiones indexables: vector hasta 2,000; los 1,536 del escenario caben en vector sin reducción.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "http": 200,
+   "sha256": "de8c6b0529b0d67324385dde6f6f651aa5eb071bbdadf59f80877d6ae26be128",
+   "media": "text/plain",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "halfvec permite indexar hasta 4,000 dimensiones, con la mitad de almacenamiento (media precisión).",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "http": 200,
+   "sha256": "de8c6b0529b0d67324385dde6f6f651aa5eb071bbdadf59f80877d6ae26be128",
+   "media": "text/plain",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "Versión vigente referenciada en el README: v0.8.7.",
+   "url": "https://raw.githubusercontent.com/pgvector/pgvector/master/README.md",
+   "http": 200,
+   "sha256": "de8c6b0529b0d67324385dde6f6f651aa5eb071bbdadf59f80877d6ae26be128",
+   "media": "text/plain",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "Secundario (proveedor, Timescale/Tiger Data): admite que un motor dedicado como Qdrant puede convenir con escalado horizontal nativo en muchos nodos.",
+   "url": "https://www.tigerdata.com/blog/pgvector-vs-qdrant",
+   "http": 200,
+   "sha256": "5aef12cb4640b87299cccac8c99e46bd159403fc66323e1b28e60d3631241c40",
+   "media": "text/html",
+   "resultado": "verificada",
+   "compuerta": true
+  },
+  {
+   "claim": "Secundario (benchmark de proveedor, 50M vectores, pgvectorscale): ambos con latencia menor a 100 ms; Qdrant construyó el índice en unas 3.3 horas.",
+   "url": "https://www.tigerdata.com/blog/pgvector-vs-qdrant",
+   "http": 200,
+   "sha256": "5aef12cb4640b87299cccac8c99e46bd159403fc66323e1b28e60d3631241c40",
+   "media": "text/html",
+   "resultado": "verificada",
+   "compuerta": true
+  }
+ ],
+ "resumen": {
+  "afirmaciones": 17,
+  "compuerta": 13,
+  "por_resultado": {
+   "cita_ausente": 4,
+   "verificada": 13
+  }
+ }
+}
