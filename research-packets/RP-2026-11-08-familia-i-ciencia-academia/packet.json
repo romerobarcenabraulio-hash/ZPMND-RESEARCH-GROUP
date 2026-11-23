@@ -1,0 +1,541 @@
+{
+ "research_id": "RP-2026-11-08-familia-i-ciencia-academia",
+ "request_id": "RR-2026-11-08-familia-i-ciencia-academia",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T22:16:14Z",
+ "question": "Para cada fuente académica listada en why_needed: ¿cuál es su canal masivo oficial (snapshot, volcado, OAI-PMH o API), cuántas obras declara a qué fecha, qué licencia rige los metadatos y cuál el texto completo, con qué cadencia se actualiza y qué registro o límite de tasa exige?",
+ "why_zpmnd_needs_it": "Subáreas: I01 Metadatos de toda la literatura (OpenAlex) (Mundo); I02 Crossref (Mundo); I03 PubMed y PubMed Central (acceso abierto) (Mundo); I04 arXiv (Mundo); I05 Semantic Scholar (Mundo); I06 Repositorios abiertos (CORE, BASE) (Mundo); I07 Revistas abiertas (DOAJ) (Mundo); I08 Datasets académicos (DataCite, Zenodo) (Mundo); I09 Revisiones sistemáticas y metaanálisis (Mundo); I10 Libros académicos abiertos (Mundo); I11 Ciencia en México e Iberoamérica (México y LATAM); I12 Tesis universitarias de México (México); I13 Patentes como conocimiento técnico (Mundo y México). ZPMND necesita identificadores nativos y licencia por obra.",
+ "scope": "Canales masivos, licencias, cadencia y límites de OpenAlex, Crossref, PubMed, arXiv, CORE, BASE, DOAJ, DataCite y DOAB, según 9 páginas oficiales de documentación. No se descargó ningún archivo, así que no hay sha256. La pregunta pedía también el total declarado por fuente. Solo se leyeron las páginas de documentación.",
+ "sources": {
+  "primary": [
+   "SA-e0a2cc4257d3edbb82dba086",
+   "SA-a113abeff8586e8373faebe0",
+   "SA-f90569d6f8f7d8c22a75c080",
+   "SA-d2f0a0d686fb6e4616dc3823",
+   "SA-60238900883de438085753af",
+   "SA-715e79c41ea9dbbe3fe109fa",
+   "SA-4710c877bfa22b24b9bcad71",
+   "SA-a9041e598e99c1474d3efd65",
+   "SA-fb57cdc00420469e7ebad540",
+   "SA-880e0b1515613046715fa083"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-e0a2cc4257d3edbb82dba086",
+   "url": "https://help.openalex.org/access/sync/",
+   "retrieved_at": "2026-11-11T22:13:37Z",
+   "sha256": "e0a2cc4257d3edbb82dba08655357116eac3215eea3dc1b822aefa685ebab908",
+   "bytes": 53453,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenAlex",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Sync (calendario de snapshot OpenAlex)"
+  },
+  {
+   "artifact_id": "SA-a113abeff8586e8373faebe0",
+   "url": "https://help.openalex.org/access/snapshot/",
+   "retrieved_at": "2026-11-11T22:13:38Z",
+   "sha256": "a113abeff8586e8373faebe065e46ffe104ea7d9df0dc67e9be799bd238e8269",
+   "bytes": 51982,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenAlex",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Snapshot data format"
+  },
+  {
+   "artifact_id": "SA-f90569d6f8f7d8c22a75c080",
+   "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/",
+   "retrieved_at": "2026-11-11T22:13:41Z",
+   "sha256": "f90569d6f8f7d8c22a75c080157cde41a423ddfe8c60abe9c3a3152a4a3857d7",
+   "bytes": 68765,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Crossref",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Access and authentication"
+  },
+  {
+   "artifact_id": "SA-d2f0a0d686fb6e4616dc3823",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/download/",
+   "retrieved_at": "2026-11-11T22:13:42Z",
+   "sha256": "d2f0a0d686fb6e4616dc3823ecfda2122c7e2f958c5ae2985801170c742c3dd3",
+   "bytes": 38286,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "NLM/NIH",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Download PubMed Data"
+  },
+  {
+   "artifact_id": "SA-60238900883de438085753af",
+   "url": "https://info.arxiv.org/help/bulk_data.html",
+   "retrieved_at": "2026-11-11T22:13:44Z",
+   "sha256": "60238900883de438085753afd08759c4b3b49bf62b6107fb5b0078d8f72eadad",
+   "bytes": 84497,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "arXiv",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "arXiv Bulk Data Access"
+  },
+  {
+   "artifact_id": "SA-715e79c41ea9dbbe3fe109fa",
+   "url": "https://api.core.ac.uk/docs/v3",
+   "retrieved_at": "2026-11-11T22:13:45Z",
+   "sha256": "715e79c41ea9dbbe3fe109fac8c98fabc5b1ffbeaa78d75c6ca9ba41fee5434c",
+   "bytes": 148261,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "CORE",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "CORE API Documentation v3"
+  },
+  {
+   "artifact_id": "SA-4710c877bfa22b24b9bcad71",
+   "url": "https://oai.base-search.net/",
+   "retrieved_at": "2026-11-11T22:13:46Z",
+   "sha256": "4710c877bfa22b24b9bcad71b859c1810f9b266939f0c73fc3a072be23443ec5",
+   "bytes": 65566,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Bielefeld University Library",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "BASE OAI Interface documentation"
+  },
+  {
+   "artifact_id": "SA-a9041e598e99c1474d3efd65",
+   "url": "https://doaj.org/docs/oai-pmh/",
+   "retrieved_at": "2026-11-11T22:13:49Z",
+   "sha256": "a9041e598e99c1474d3efd6586b4b9f91066f8d2406423573d6a449866e7c0ca",
+   "bytes": 80171,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "DOAJ",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "DOAJ OAI-PMH"
+  },
+  {
+   "artifact_id": "SA-fb57cdc00420469e7ebad540",
+   "url": "https://support.datacite.org/docs/datacite-public-data-file",
+   "retrieved_at": "2026-11-11T22:13:50Z",
+   "sha256": "fb57cdc00420469e7ebad540b5dc637d8bd9bf8800cf6bab781a8964ffd6f403",
+   "bytes": 358487,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "DataCite",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "DataCite Public Data File"
+  },
+  {
+   "artifact_id": "SA-880e0b1515613046715fa083",
+   "url": "https://doabooks.org/en/librarians/doab-metadata",
+   "retrieved_at": "2026-11-11T22:13:52Z",
+   "sha256": "880e0b1515613046715fa083cc16224aa0845e0bd55ba056cb43c13222acafc7",
+   "bytes": 44051,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "DOAB",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "DOAB metadata"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "OpenAlex: el snapshot se publica cada trimestre, el segundo miércoles de enero, abril, julio y octubre (UTC).",
+    "artifact_ids": [
+     "SA-e0a2cc4257d3edbb82dba086"
+    ],
+    "quote": "released quarterly on the second Wednesday of January, April, July and October (UTC)",
+    "locator": "Sync, Release cadence"
+   },
+   {
+    "claim": "OpenAlex: el snapshot se aloja en el bucket S3 'openalex' y es de descarga gratuita sin cuenta AWS.",
+    "artifact_ids": [
+     "SA-a113abeff8586e8373faebe0"
+    ],
+    "quote": "It’s stored in Amazon S3 in the openalex bucket, under the data/ prefix — free to download, no AWS account needed",
+    "locator": "Snapshot, intro"
+   },
+   {
+    "claim": "OpenAlex: el snapshot se publica en dos formatos, cada uno copia completa de los mismos datos.",
+    "artifact_ids": [
+     "SA-a113abeff8586e8373faebe0"
+    ],
+    "quote": "The snapshot is published in two formats, each a complete copy of the same data",
+    "locator": "Snapshot, Two formats"
+   },
+   {
+    "claim": "OpenAlex: cada formato declara unos 626 millones de registros en la versión de septiembre de 2026.",
+    "artifact_ids": [
+     "SA-a113abeff8586e8373faebe0"
+    ],
+    "quote": "As of the September 2026 release, each format holds about 626 million records",
+    "locator": "Snapshot, Size"
+   },
+   {
+    "claim": "OpenAlex: los metadatos son CC0.",
+    "artifact_ids": [
+     "SA-e0a2cc4257d3edbb82dba086"
+    ],
+    "quote": "All OpenAlex data is CC0 and free",
+    "locator": "Sync, Free data, paid services"
+   },
+   {
+    "claim": "OpenAlex: sin plan, la API responde 429 con \"Plan upgrade required\".",
+    "artifact_ids": [
+     "SA-e0a2cc4257d3edbb82dba086"
+    ],
+    "quote": "Without a plan, the API answers 429 with \"Plan upgrade required\".",
+    "locator": "Sync, API sync filters"
+   },
+   {
+    "claim": "OpenAlex: el bucket público solo conserva la versión vigente; al publicarse una nueva, el estado anterior desaparece.",
+    "artifact_ids": [
+     "SA-e0a2cc4257d3edbb82dba086"
+    ],
+    "quote": "The public bucket holds only the current release: once a release lands, the previous state is gone",
+    "locator": "Sync, Point-in-time"
+   },
+   {
+    "claim": "OpenAlex: el comando de ejemplo para descargar el bucket (aws s3 sync de s3://openalex/data/jsonl) usa --no-sign-request.",
+    "artifact_ids": [
+     "SA-a113abeff8586e8373faebe0"
+    ],
+    "quote": "aws s3 sync \"s3://openalex/data/jsonl\" \"openalex-snapshot/data/jsonl\" --no-sign-request",
+    "locator": "Snapshot, Access & authentication"
+   },
+   {
+    "claim": "Crossref: cualquiera puede acceder a la API REST, sin alta ni registro.",
+    "artifact_ids": [
+     "SA-f90569d6f8f7d8c22a75c080"
+    ],
+    "quote": "Anyone can access the REST API, no signup or registration is required.",
+    "locator": "Access and authentication"
+   },
+   {
+    "claim": "Crossref: se incluye la dirección de correo en el parámetro mailto o en la cabecera agent.",
+    "artifact_ids": [
+     "SA-f90569d6f8f7d8c22a75c080"
+    ],
+    "quote": "Include your email address in the mailto parameter or agent header.",
+    "locator": "Access and authentication, tabla de opciones"
+   },
+   {
+    "claim": "Crossref: se responde 429 si se superan los límites de tasa.",
+    "artifact_ids": [
+     "SA-f90569d6f8f7d8c22a75c080"
+    ],
+    "quote": "If you exceed the rate limits, you will receive a 429 HTTP response.",
+    "locator": "Access and authentication, Request limits"
+   },
+   {
+    "claim": "Crossref: el contenido del sitio de documentación está bajo CC BY 4.0.",
+    "artifact_ids": [
+     "SA-f90569d6f8f7d8c22a75c080"
+    ],
+    "quote": "The content of this site is licensed under a Creative Commons Attribution 4.0 International License",
+    "locator": "Pie de página"
+   },
+   {
+    "claim": "PubMed: el archivo de línea base es una instantánea completa de los datos de PubMed.",
+    "artifact_ids": [
+     "SA-d2f0a0d686fb6e4616dc3823"
+    ],
+    "quote": "the baseline file is a complete snapshot of PubMed data",
+    "locator": "Get PubMed data via FTP, Annual baseline"
+   },
+   {
+    "claim": "PubMed: los archivos de actualización diarios incluyen citas nuevas, revisadas y eliminadas.",
+    "artifact_ids": [
+     "SA-d2f0a0d686fb6e4616dc3823"
+    ],
+    "quote": "Each day, NLM produces update files that include new, revised, and deleted citations.",
+    "locator": "Daily update files"
+   },
+   {
+    "claim": "PubMed: descargar datos de sus servidores FTP implica aceptar los términos y condiciones.",
+    "artifact_ids": [
+     "SA-d2f0a0d686fb6e4616dc3823"
+    ],
+    "quote": "Downloading data from our FTP servers indicates your acceptance of these Terms and Conditions.",
+    "locator": "Use PubMed data, Terms and conditions"
+   },
+   {
+    "claim": "arXiv: es la vía preferida para descargar en bloque o mantener una copia actualizada de los metadatos de arXiv.",
+    "artifact_ids": [
+     "SA-60238900883de438085753af"
+    ],
+    "quote": "This is the preferred way to bulk-download or keep an up-to-date copy of arXiv metadata.",
+    "locator": "Bulk Metadata Access, OAI-PMH"
+   },
+   {
+    "claim": "arXiv: no puede conceder a otros el derecho a distribuir artículos de arXiv.",
+    "artifact_ids": [
+     "SA-60238900883de438085753af"
+    ],
+    "quote": "We are thus unable to grant others the right to distribute arXiv articles.",
+    "locator": "Bulk Full-Text Access, nota"
+   },
+   {
+    "claim": "arXiv: una pequeña fracción de envíos tiene otras licencias, que figuran en los metadatos OAI-PMH.",
+    "artifact_ids": [
+     "SA-60238900883de438085753af"
+    ],
+    "quote": "A small fraction of submissions are made with other licenses and this information is available in the OAI-PMH metadata.",
+    "locator": "Bulk Full-Text Access, nota"
+   },
+   {
+    "claim": "arXiv: para todos los artículos disponibles, el PDF procesado y los archivos fuente están en Amazon S3.",
+    "artifact_ids": [
+     "SA-60238900883de438085753af"
+    ],
+    "quote": "For all available articles the processed PDF and source files are available from Amazon S3.",
+    "locator": "Amazon S3 - Full Text"
+   },
+   {
+    "claim": "arXiv: se considera razonable recolectar a ráfagas de 4 peticiones por segundo con 1 s de pausa por ráfaga.",
+    "artifact_ids": [
+     "SA-60238900883de438085753af"
+    ],
+    "quote": "a reasonable rate to be bursts at 4 requests per second with a 1 second sleep, per burst",
+    "locator": "Play nice"
+   },
+   {
+    "claim": "BASE: el acceso a OAI-PMH está restringido por IP y los proyectos no comerciales deben solicitarlo.",
+    "artifact_ids": [
+     "SA-4710c877bfa22b24b9bcad71"
+    ],
+    "quote": "Access to the BASE OAI-PMH interface is IP-restricted. Non-commercial projects may apply for access",
+    "locator": "How to get Access"
+   },
+   {
+    "claim": "BASE: un volcado completo para proyectos no comerciales se pide por contacto.",
+    "artifact_ids": [
+     "SA-4710c877bfa22b24b9bcad71"
+    ],
+    "quote": "If you need a complete dump of the BASE data for your non-commercial project, please contact us for an initial load.",
+    "locator": "Alternatives"
+   },
+   {
+    "claim": "BASE: un resumptionToken muestra completeListSize=41398100.",
+    "artifact_ids": [
+     "SA-4710c877bfa22b24b9bcad71"
+    ],
+    "quote": "<resumptionToken completeListSize=\"41398100\" cursor=\"0\">",
+    "locator": "Harvesting Records"
+   },
+   {
+    "claim": "BASE: la interfaz OAI no registra los registros borrados.",
+    "artifact_ids": [
+     "SA-4710c877bfa22b24b9bcad71"
+    ],
+    "quote": "This OAI-PMH interface does not keep track of deleted records.",
+    "locator": "Deleted Records"
+   },
+   {
+    "claim": "BASE: el datestamp de la cabecera del registro contiene la fecha de recolección en BASE.",
+    "artifact_ids": [
+     "SA-4710c877bfa22b24b9bcad71"
+    ],
+    "quote": "The datestamp element in the record header contains the date of harvesting into BASE.",
+    "locator": "Record Headers, datestamp"
+   },
+   {
+    "claim": "BASE: asigna los valores que reconoce a una lista de códigos de licencia.",
+    "artifact_ids": [
+     "SA-4710c877bfa22b24b9bcad71"
+    ],
+    "quote": "BASE maps those values it can recognise onto the following list of license codes.",
+    "locator": "Licensing Information"
+   },
+   {
+    "claim": "DOAJ: el feed OAI-PMH está actualizado con un margen de hasta 30 días respecto a los datos del sistema.",
+    "artifact_ids": [
+     "SA-a9041e598e99c1474d3efd65"
+    ],
+    "quote": "the OAI-PMH feed is up-to-date to within 30 days of the current data in the system",
+    "locator": "OAI-PMH, All users"
+   },
+   {
+    "claim": "DOAJ: un feed se actualiza de inmediato al añadirse o retirarse registros.",
+    "artifact_ids": [
+     "SA-a9041e598e99c1474d3efd65"
+    ],
+    "quote": "updates immediately as records are added or withdrawn",
+    "locator": "OAI-PMH, Premium metadata service users"
+   },
+   {
+    "claim": "DOAJ: los derechos de los metadatos de artículos se renuncian con CC0.",
+    "artifact_ids": [
+     "SA-a9041e598e99c1474d3efd65"
+    ],
+    "quote": "Copyrights and related rights for article metadata waived via CC0 1.0 Universal (CC0) Public Domain Dedication.",
+    "locator": "Pie de página"
+   },
+   {
+    "claim": "DOAJ: el OAI de artículos incluye enlaces a recursos relacionados: la URL del texto completo.",
+    "artifact_ids": [
+     "SA-a9041e598e99c1474d3efd65"
+    ],
+    "quote": "Links to related resources: the full-text url",
+    "locator": "Article feed, OAI_DC"
+   },
+   {
+    "claim": "DataCite: el archivo de datos público se publica una vez al año.",
+    "artifact_ids": [
+     "SA-fb57cdc00420469e7ebad540"
+    ],
+    "quote": "We release an updated version of the public data file annually.",
+    "locator": "DataCite Public Data File"
+   },
+   {
+    "claim": "DataCite: los metadatos del archivo público están bajo renuncia CC0.",
+    "artifact_ids": [
+     "SA-fb57cdc00420469e7ebad540"
+    ],
+    "quote": "All metadata contained in the file is freely available under a CC0 waiver.",
+    "locator": "DataCite Public Data File"
+   },
+   {
+    "claim": "DataCite: el archivo se generó el 6 de enero de 2026.",
+    "artifact_ids": [
+     "SA-fb57cdc00420469e7ebad540"
+    ],
+    "quote": "The file was generated on January 6, 2026.",
+    "locator": "Contents of the Public Data Files"
+   },
+   {
+    "claim": "DataCite: los archivos se acceden en datafiles.datacite.org.",
+    "artifact_ids": [
+     "SA-fb57cdc00420469e7ebad540"
+    ],
+    "quote": "All available public data files are accessible through https://datafiles.datacite.org/.",
+    "locator": "Access the Public Data Files"
+   },
+   {
+    "claim": "DataCite: para DOI nuevos y actualizaciones de metadatos se puede usar la API REST para obtener una lista de DOI.",
+    "artifact_ids": [
+     "SA-fb57cdc00420469e7ebad540"
+    ],
+    "quote": "For newly registered DOIs and updates to existing DOI metadata, the DataCite REST API can be used to retrieve a list of DOIs.",
+    "locator": "Using the Public Data Files"
+   },
+   {
+    "claim": "DOAB: todos los metadatos están disponibles bajo licencia CC0 en varios formatos.",
+    "artifact_ids": [
+     "SA-880e0b1515613046715fa083"
+    ],
+    "quote": "All metadata is openly available under a CC0 license in the following formats:",
+    "locator": "Metadata feeds"
+   },
+   {
+    "claim": "DOAB: ofrece OAI-PMH con URL base https://directory.doabooks.org/oai/.",
+    "artifact_ids": [
+     "SA-880e0b1515613046715fa083"
+    ],
+    "quote": "Base URL: https://directory.doabooks.org/oai/.",
+    "locator": "OAI-PMH harvesting"
+   },
+   {
+    "claim": "DOAB: el formato xoai da el conjunto completo de campos de metadatos.",
+    "artifact_ids": [
+     "SA-880e0b1515613046715fa083"
+    ],
+    "quote": "The xoai format provides the full set of metadata fields available in DOAB.",
+    "locator": "OAI-PMH harvesting"
+   },
+   {
+    "claim": "DOAB: un archivo se actualiza a diario e incluye metadatos de libros de DOAB junto con campos de revisión por pares PRISM.",
+    "artifact_ids": [
+     "SA-880e0b1515613046715fa083"
+    ],
+    "quote": "The file is updated daily and includes DOAB book metadata together with related PRISM peer review fields",
+    "locator": "PRISM peer review metadata, Downloadable CSV"
+   },
+   {
+    "claim": "DOAB: el contenido del sitio, salvo indicación contraria, está bajo CC BY 4.0.",
+    "artifact_ids": [
+     "SA-880e0b1515613046715fa083"
+    ],
+    "quote": "If not noted otherwise all contents are available under Attribution 4.0 International",
+    "locator": "Pie de página, Licence"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "CORE: la fuente SA-715e79c41ea9dbbe3fe109fa solo contiene el título 'CORE API Documentation'. No hay canal masivo, licencia, cadencia, total ni límites de tasa.",
+   "Sha256 de lo bajado, para todas las fuentes: no se bajó ningún archivo.",
+   "Total de obras declarado y fecha de corte para Crossref, PubMed, arXiv, DOAJ, DataCite y DOAB: no figuran en estas páginas. Para OpenAlex, ~626 millones de registros en septiembre de 2026 (todas las entidades); el total de works no se leyó como cifra de la página.",
+   "Licencia de los metadatos de Crossref, PubMed y arXiv con cita literal: no figura en estas páginas. Las condiciones de PubMed están en un README.txt no leído.",
+   "Licencia del texto completo de OpenAlex, Crossref, PubMed, DataCite, DOAJ y DOAB: no figura como texto de obra individual. En BASE, DOAJ y arXiv depende de la licencia de cada obra.",
+   "Cadencia de Crossref (volcado anual en Metadata Plus no descrito aquí), arXiv S3, BASE y PubMed (fecha de la línea base): no figura en las páginas leídas. Tampoco el límite de tasa de PubMed, DataCite y DOAB.",
+   "Canal masivo de Crossref (snapshot de Metadata Plus, OAI-PMH): solo se nombran en el menú, sin detalle."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: OpenAlex indica que el texto completo no es CC0 por defecto: el CC0 cubre sus datos, y el texto de cada obra depende de la licencia del propio trabajo. La página no lo dice así literalmente, por lo que hay que verificarlo en la licencia por obra (por ejemplo, el campo locations).",
+  "INTERPRETACIÓN: arXiv, BASE y DOAJ separan los metadatos (reutilizables) del texto completo (sujeto a la licencia de cada obra o de arXiv). Esto coincide con el riesgo de copiar texto no permitido.",
+  "INTERPRETACIÓN: los snapshots de OpenAlex anteriores al 27 de octubre de 2026 traen ids de ubicación sin espacio de nombres. Esto afecta a la cita por copia sin identificador nativo.",
+  "INTERPRETACIÓN: el total de 41.398.100 de BASE es un ejemplo de resumptionToken y no equivale a un total declarado con fecha de corte."
+ ],
+ "candidate_controls": [
+  "Antes de reutilizar texto completo, comprobar la licencia por obra (rightsnorm en BASE, license en OpenAlex, metadatos OAI de arXiv). Si no hay licencia, tratar el texto como no redistribuible.",
+  "Registrar el date del manifiesto de OpenAlex y la fecha de generación de DataCite para poder reproducir el corte."
+ ],
+ "candidate_tests": [
+  "Consultar el manifest.json de OpenAlex (works) y registrar record_count y date, con sha256 de lo bajado.",
+  "Comprobar con curl -I la cabecera x-rate-limit-limit de Crossref en los grupos público y polite."
+ ],
+ "limitations": [
+  "Solo se leyeron páginas de documentación; no se ejecutó ninguna descarga, así que no hay sha256 ni se comprobó ningún total real.",
+  "La fuente CORE llegó prácticamente vacía, solo con el título.",
+  "La página de OpenAlex dice 'Last updated November 7, 2026' y menciona versiones futuras. Se tomó tal como está, sin verificarla.",
+  "Para Crossref, PubMed, DOAJ y DOAB no se vio la licencia de las obras individuales.",
+  "Las cuotas de tasa son las de las páginas, sin comprobación empírica.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 24 de 40 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 12 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://semanticscholar.org/product/api/license (refused); https://repositorionacionalcti.mx/directory (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}
