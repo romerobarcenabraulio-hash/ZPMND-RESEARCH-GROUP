@@ -1,0 +1,322 @@
+{
+ "research_id": "RP-2026-11-08-openclaw-arte-previo",
+ "request_id": "RR-2026-11-08-openclaw-arte-previo",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-13T05:04:33Z",
+ "question": "Para OpenClaw (el agente externo candidato del paso 1), ¿cuál es el repositorio oficial, la versión estable más reciente, su licencia, el modelo de aislamiento por gateway (frontera de confianza, tools.elevated) y qué controles documenta OpenShell para archivos, red, procesos y credenciales?",
+ "why_zpmnd_needs_it": "El paso 3 pone al agente externo en SHADOW bajo el contrato de 14 dimensiones; ORDENES y ESTADO piden fijar repositorio, versión y aislamiento antes de incorporarlo (decisión del dueño 2026-11-08: OpenClaw).",
+ "scope": "Evidencia sobre OpenClaw: repositorio oficial, última versión estable, licencia, límite de confianza por gateway y controles de OpenShell. Se leyeron README, releases, LICENSE, SECURITY.md, páginas de seguridad del gateway y tres páginas de OpenShell (la de políticas es v0.0.116).",
+ "sources": {
+  "primary": [
+   "SA-640e957db194f86688de8d24",
+   "SA-76dbefa1dc511581cf2f7781",
+   "SA-b09e44119d832928c8228b80",
+   "SA-73ceb0064f711ac76df5bce7",
+   "SA-2c96377028d448a5167594fc",
+   "SA-45ca9af4e87cb6b6cb4ff7d4",
+   "SA-cbfff904d5c301ef27b4bb4a",
+   "SA-0d3cee3285e387b4558a4ee4",
+   "SA-55ba635c974a610d04825d57"
+  ],
+  "secondary": [
+   "SA-c6cba439eebcd75b35bd6d61",
+   "SA-1babce16cec69adfbe8746da"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-640e957db194f86688de8d24",
+   "url": "https://github.com/openclaw/openclaw",
+   "retrieved_at": "2026-11-13T05:01:58Z",
+   "sha256": "640e957db194f86688de8d241020b3a9da8ac59c3610acf26ed01af5456f49ef",
+   "bytes": 958092,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenClaw Foundation (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "openclaw/openclaw"
+  },
+  {
+   "artifact_id": "SA-76dbefa1dc511581cf2f7781",
+   "url": "https://github.com/openclaw/openclaw/releases",
+   "retrieved_at": "2026-11-13T05:01:59Z",
+   "sha256": "76dbefa1dc511581cf2f7781a40b7b9e9e84d434c9cf6f5527c6a235bcaff92b",
+   "bytes": 1358522,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenClaw Foundation (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Releases · openclaw/openclaw"
+  },
+  {
+   "artifact_id": "SA-b09e44119d832928c8228b80",
+   "url": "https://github.com/openclaw/openclaw/blob/main/LICENSE",
+   "retrieved_at": "2026-11-13T05:02:01Z",
+   "sha256": "b09e44119d832928c8228b80c780f60d3b0d113864cbcc5a58b769a478036091",
+   "bytes": 182845,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenClaw Foundation (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "openclaw/LICENSE"
+  },
+  {
+   "artifact_id": "SA-73ceb0064f711ac76df5bce7",
+   "url": "https://docs.openclaw.ai/gateway/security",
+   "retrieved_at": "2026-11-13T05:02:02Z",
+   "sha256": "73ceb0064f711ac76df5bce74545a83de1cbbfd165affabd03b1b5e82485ccad",
+   "bytes": 261907,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenClaw docs",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Security · OpenClaw"
+  },
+  {
+   "artifact_id": "SA-2c96377028d448a5167594fc",
+   "url": "https://docs.openclaw.ai/gateway/security/trust-model",
+   "retrieved_at": "2026-11-13T05:02:03Z",
+   "sha256": "2c96377028d448a5167594fce3d154f06be48e2b4e9a184b139f85ade510733b",
+   "bytes": 252638,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenClaw docs",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Security trust model · OpenClaw"
+  },
+  {
+   "artifact_id": "SA-45ca9af4e87cb6b6cb4ff7d4",
+   "url": "https://github.com/openclaw/openclaw/blob/main/SECURITY.md",
+   "retrieved_at": "2026-11-13T05:02:04Z",
+   "sha256": "45ca9af4e87cb6b6cb4ff7d4bea8497da44e0e697fe20fae292e2603aec57596",
+   "bytes": 411649,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenClaw Foundation (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "openclaw/SECURITY.md"
+  },
+  {
+   "artifact_id": "SA-cbfff904d5c301ef27b4bb4a",
+   "url": "https://github.com/openclaw/openclaw/blob/main/docs/gateway/security/index.md",
+   "retrieved_at": "2026-11-13T05:02:05Z",
+   "sha256": "cbfff904d5c301ef27b4bb4af71c28e91a0551732fcbf6fcb40fb49fc5df7649",
+   "bytes": 272076,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "OpenClaw Foundation (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "docs/gateway/security/index.md"
+  },
+  {
+   "artifact_id": "SA-0d3cee3285e387b4558a4ee4",
+   "url": "https://github.com/NVIDIA/openshell",
+   "retrieved_at": "2026-11-13T05:02:06Z",
+   "sha256": "0d3cee3285e387b4558a4ee415d8c54bb7ef19b84668adc1e77ab76f1a893eb8",
+   "bytes": 397098,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "NVIDIA",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "NVIDIA/OpenShell"
+  },
+  {
+   "artifact_id": "SA-55ba635c974a610d04825d57",
+   "url": "https://docs.nvidia.com/openshell/v0.0.116/sandboxes/policies",
+   "retrieved_at": "2026-11-13T05:02:07Z",
+   "sha256": "55ba635c974a610d04825d5726c90defcabb74c6ecbc76beedd0a552271b60f9",
+   "bytes": 472739,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "NVIDIA",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Customize Sandbox Policies"
+  },
+  {
+   "artifact_id": "SA-c6cba439eebcd75b35bd6d61",
+   "url": "https://docs.nvidia.com/openshell/about/architecture",
+   "retrieved_at": "2026-11-13T05:02:08Z",
+   "sha256": "c6cba439eebcd75b35bd6d6119c408d7fcd2fa6a80bd48f95b4182f3e989ec91",
+   "bytes": 219593,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "NVIDIA",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Architecture"
+  },
+  {
+   "artifact_id": "SA-1babce16cec69adfbe8746da",
+   "url": "https://docs.nvidia.com/nemoclaw/latest/user-guide/openclaw/reference/network-policies",
+   "retrieved_at": "2026-11-13T05:02:09Z",
+   "sha256": "1babce16cec69adfbe8746da282d4934514ce66806f507508ca3103d0cb3f1ff",
+   "bytes": 270252,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "NVIDIA",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Network Policies (NemoClaw)"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "La licencia declarada del repositorio es MIT, con copyright de la OpenClaw Foundation.",
+    "artifact_ids": [
+     "SA-640e957db194f86688de8d24"
+    ],
+    "quote": "MIT © OpenClaw Foundation. See THIRD_PARTY_NOTICES.md for incorporated or adapted code.",
+    "locator": "README, License"
+   },
+   {
+    "claim": "El archivo LICENSE lleva copyright 2026 de la OpenClaw Foundation.",
+    "artifact_ids": [
+     "SA-b09e44119d832928c8228b80"
+    ],
+    "quote": "Copyright (c) 2026 OpenClaw Foundation",
+    "locator": "LICENSE, línea 3"
+   },
+   {
+    "claim": "La página de releases marca como Latest la versión 2026.11.3.",
+    "artifact_ids": [
+     "SA-76dbefa1dc511581cf2f7781"
+    ],
+    "quote": "openclaw 2026.11.3  Latest",
+    "locator": "Releases, 2026.11.3"
+   },
+   {
+    "claim": "La release 2026.11.3 publica su SHA de release.",
+    "artifact_ids": [
+     "SA-76dbefa1dc511581cf2f7781"
+    ],
+    "quote": "release SHA: 847611dcaa3bf0e2783335f961dd1fd0580e4d9f",
+    "locator": "Releases, 2026.11.3, Release verification"
+   },
+   {
+    "claim": "2026.11.5-beta.2 es una pre-release, no la estable.",
+    "artifact_ids": [
+     "SA-76dbefa1dc511581cf2f7781"
+    ],
+    "quote": "openclaw 2026.11.5-beta.2  Pre-release",
+    "locator": "Releases, primera entrada"
+   },
+   {
+    "claim": "La documentación asume un límite de confianza por gateway.",
+    "artifact_ids": [
+     "SA-73ceb0064f711ac76df5bce7"
+    ],
+    "quote": "This guidance assumes one trusted boundary per gateway: a single operator, or a team whose members trust each other.",
+    "locator": "Security, nota"
+   },
+   {
+    "claim": "Gateway y nodo son un único dominio de confianza del operador.",
+    "artifact_ids": [
+     "SA-2c96377028d448a5167594fc"
+    ],
+    "quote": "Treat Gateway and node as one operator trust domain with different roles",
+    "locator": "Security trust model, Gateway and node trust"
+   },
+   {
+    "claim": "El sandbox está apagado por defecto.",
+    "artifact_ids": [
+     "SA-45ca9af4e87cb6b6cb4ff7d4"
+    ],
+    "quote": "Exec behavior is host-first by default: agents.defaults.sandbox.mode defaults to off.",
+    "locator": "SECURITY.md, Operator Trust Model"
+   },
+   {
+    "claim": "Los plugins corren en proceso como código confiable.",
+    "artifact_ids": [
+     "SA-45ca9af4e87cb6b6cb4ff7d4"
+    ],
+    "quote": "Plugins/extensions are loaded in-process with the Gateway and are treated as trusted code.",
+    "locator": "SECURITY.md, Plugin Trust Boundary"
+   },
+   {
+    "claim": "OpenShell declara Apache-2.0.",
+    "artifact_ids": [
+     "SA-0d3cee3285e387b4558a4ee4"
+    ],
+    "quote": "This project is licensed under the Apache License 2.0.",
+    "locator": "README OpenShell, License"
+   },
+   {
+    "claim": "OpenShell deniega la red sin endpoint coincidente.",
+    "artifact_ids": [
+     "SA-55ba635c974a610d04825d57"
+    ],
+    "quote": "If no endpoint matches, the connection is denied.",
+    "locator": "Customize Sandbox Policies (v0.0.116), network_policies"
+   },
+   {
+    "claim": "Los endpoints con credenciales rechazan L4-only y tls: skip por defecto.",
+    "artifact_ids": [
+     "SA-55ba635c974a610d04825d57"
+    ],
+    "quote": "Provider-credentialed endpoints reject L4-only and tls: skip modes by default.",
+    "locator": "Customize Sandbox Policies (v0.0.116), Policy Structure"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Contenido de tools.elevated: solo aparece como título en el índice de navegación; no se leyó la página.",
+   "No se leyó la documentación de OpenClaw sobre el backend OpenShell.",
+   "No se verificó el contenido de los assets de la release."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: La versión estable más reciente según la página consultada es 2026.11.3.",
+  "INTERPRETACIÓN: El aislamiento no viene por defecto en OpenClaw; exige configurar sandboxing o separar hosts/gateways."
+ ],
+ "limitations": [
+  "Páginas con mucho ruido de navegación; la de releases es solo la primera de 29.",
+  "La página de políticas de OpenShell es v0.0.116, no la última v0.1.8.",
+  "Todo es documentación del proyecto o proveedor, sin auditoría independiente.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita quitó 4 de 16 hallazgos confirmados que decían más que su cita o dejaban fuera lo que la limita; no se reescribió ninguno y lo quitado queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 12 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.npmjs.com/package/openclaw?activeTab=versions (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
