@@ -1,0 +1,467 @@
+{
+ "request_id": "RR-2026-11-12-entregable-modificacion-software",
+ "fetched": [
+  {
+   "url": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-218.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "617746e553a9e2da49bfbd4eef0dfc3094758a39b869314e4173ac36605cde22",
+   "bytes": 739891,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:17:09Z",
+   "text_status": "ok",
+   "text_chars": 105347
+  },
+  {
+   "url": "https://csrc.nist.gov/projects/ssdf",
+   "status": 200,
+   "error": null,
+   "sha256": "bc08cedeb9ec2a482f28fbef9eb9accbf2df4ed3ad0939c3ff2a3f77d2ca7f80",
+   "bytes": 58803,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:11Z",
+   "text_status": "ok",
+   "text_chars": 13300
+  },
+  {
+   "url": "https://asvs.owasp.org/",
+   "status": 200,
+   "error": null,
+   "sha256": "47af8a63b622878d9b84d9366c0123cc41d06b48445130f2e535c4cfd56dee76",
+   "bytes": 25827,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:12Z",
+   "text_status": "ok",
+   "text_chars": 5689
+  },
+  {
+   "url": "https://github.com/OWASP/ASVS",
+   "status": 200,
+   "error": null,
+   "sha256": "0a6ed20895637f65a540c3be1bff2be4727ac38791274559a804bd44da897896",
+   "bytes": 289333,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:14Z",
+   "text_status": "ok",
+   "text_chars": 10432
+  },
+  {
+   "url": "https://owasp.github.io/www-project-samm/",
+   "status": 200,
+   "error": null,
+   "sha256": "e80c874c3a4275272fa1467f9cc4e393e07ebe884ccdb5fd716b2421d0a871cf",
+   "bytes": 42017,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:15Z",
+   "text_status": "ok",
+   "text_chars": 4981
+  },
+  {
+   "url": "https://slsa.dev/spec/v1.2/build-requirements",
+   "status": 200,
+   "error": null,
+   "sha256": "d6ec1ba426ad973464cbc29962d1f9b523a661ab04865a26c7a6b47c3566f476",
+   "bytes": 32953,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:16Z",
+   "text_status": "ok",
+   "text_chars": 13574
+  },
+  {
+   "url": "https://slsa.dev/spec/v1.0/levels",
+   "status": 200,
+   "error": null,
+   "sha256": "dab3f054bd9ab048c2283cc8f233970c13a16ceeed62a8eb0c353b2a132a0b21",
+   "bytes": 25626,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:18Z",
+   "text_status": "ok",
+   "text_chars": 7834
+  },
+  {
+   "url": "https://github.com/ossf/scorecard/blob/main/docs/checks.md",
+   "status": 200,
+   "error": null,
+   "sha256": "75583c999f70f7dddb4c9ad9154b952bcac9bfcac46ca7a3762caa3f25cca9f4",
+   "bytes": 404809,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:19Z",
+   "text_status": "ok",
+   "text_chars": 42083
+  },
+  {
+   "url": "https://semver.org/",
+   "status": 200,
+   "error": null,
+   "sha256": "1d282f7eb59a4e4d0199f30431e333d43181149cac41f77a0b46ab7229089c25",
+   "bytes": 31102,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:19Z",
+   "text_status": "ok",
+   "text_chars": 17047
+  },
+  {
+   "url": "https://google.github.io/eng-practices/review/reviewer/looking-for.html",
+   "status": 200,
+   "error": null,
+   "sha256": "5946a2fa713dbafed9a2846e187be7705e3f3240c2b925f13d45530791c0e4af",
+   "bytes": 15075,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:20Z",
+   "text_status": "ok",
+   "text_chars": 11007
+  },
+  {
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02024R2847-20241120",
+   "status": 200,
+   "error": null,
+   "sha256": "a6f9869b2f2311177dbf5747e8501c71be3d27a6ffdcd84817ad4574d4113e6b",
+   "bytes": 251732,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:21Z",
+   "text_status": "ok",
+   "text_chars": 7454
+  },
+  {
+   "url": "https://www.iso.org/standard/90219.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.iso.org/standard/90219.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:17:32Z",
+   "text_status": null,
+   "text_chars": null
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43308465688",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[0]",
+    "claim": "El SSDF no prescribe cómo implementar cada práctica; se centra en resultados, no en herramientas.",
+    "now": "El SSDF no prescribe cómo implementar cada práctica.",
+    "cut": "se centra en resultados, no en herramientas"
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "El SSDF indica que el desarrollador revise su propio código como complemento, no sustituto, de la revisión por otros o por herramientas.",
+    "now": "El SSDF indica que algo debe complementar (no sustituir) la revisión de código realizada por otras personas o herramientas.",
+    "cut": "que sea el desarrollador quien revise su propio código (el quote no lo dice)"
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "El SSDF plantea documentar el alcance, diseño y resultados de las pruebas y registrar los problemas en el sistema de seguimiento.",
+    "now": "El SSDF plantea definir el alcance de las pruebas, diseñarlas, realizarlas y documentar los resultados.",
+    "cut": "registrar los problemas en el sistema de seguimiento"
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "El SSDF pide poner a disposición de los adquirentes información de verificación de integridad de la versión.",
+    "now": "El SSDF pide poner a disposición de los adquirentes de software información de verificación de integridad del software.",
+    "cut": "de la versión"
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "El SSDF sugiere que el dueño del código revise y apruebe los cambios de otros y que se firmen los commits.",
+    "now": "El SSDF sugiere que el dueño del código revise y apruebe todos los cambios hechos al código por otros.",
+    "cut": "que se firmen los commits"
+   },
+   {
+    "id": "confirmed[11]",
+    "claim": "El SSDF presenta el uso de linters y formateadores para estandarizar estilo como ejemplo, no como requisito.",
+    "now": "El SSDF da como ejemplo usar herramientas (p. ej., linters, formateadores) para estandarizar el estilo y formato del código fuente.",
+    "cut": "que sea ejemplo y no requisito (no está en el quote)"
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "El SSDF es voluntario para organizaciones no gubernamentales y no altera la autoridad de normas obligatorias para agencias federales.",
+    "now": "Esta publicación puede ser usada por organizaciones no gubernamentales de forma voluntaria.",
+    "cut": "que no altera la autoridad de normas obligatorias para agencias federales"
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "SLSA v1.2 declara que sus palabras clave se interpretan según RFC 2119.",
+    "now": "Las palabras clave se interpretan como se describe en RFC 2119.",
+    "cut": "que sea SLSA v1.2 (el quote no lo dice)"
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "SLSA exige un entorno de build efímero para cada build en el nivel aislado (L3).",
+    "now": "Se DEBE aprovisionar un entorno de build efímero para cada build.",
+    "cut": "nivel aislado (L3)"
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "La página de niveles SLSA v1.0 figura como retirada y remite a v1.2 como vigente.",
+    "now": "La página indica que la versión 1.2 es la versión vigente.",
+    "cut": "que figure como retirada"
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "SemVer aclara que 'v1.2.3' no es una versión semántica, sino un nombre de etiqueta usual.",
+    "now": "SemVer aclara que \"v1.2.3\" no es una versión semántica.",
+    "cut": "que sea un nombre de etiqueta usual"
+   },
+   {
+    "id": "confirmed[25]",
+    "claim": "SemVer publica expresiones regulares sugeridas para validar cadenas SemVer.",
+    "now": "SemVer plantea la pregunta de si existe una expresión regular sugerida para comprobar una cadena SemVer.",
+    "cut": "que publique expresiones regulares"
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "La guía de Google establece que no se debe bloquear un CL por preferencias personales de estilo; el comentario 'Nit:' marca lo no obligatorio.",
+    "now": "La guía de Google dice que no se debe bloquear el envío de un CL basándose solo en preferencias personales de estilo.",
+    "cut": "el comentario 'Nit:'"
+   },
+   {
+    "id": "confirmed[28]",
+    "claim": "La guía de Google pide actualizar la documentación cuando un cambio altera cómo se construye, prueba o libera el código.",
+    "now": "La guía de Google pide comprobar que se actualice la documentación asociada si un CL cambia cómo los usuarios construyen, prueban, interactúan con o liberan el código.",
+    "cut": "que se aplique a la documentación cuando cambia cómo se construye, prueba o libera (reformulado); se omite 'interactúan'"
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "Scorecard: Code-Review comprueba si se exige revisión humana antes de fusionar y las revisiones de bots no cuentan.",
+    "now": "Scorecard: las revisiones hechas por bots, incluidos los basados en IA/ML, no cuentan como revisión de código.",
+    "cut": "que Code-Review compruebe si se exige revisión humana antes de fusionar"
+   },
+   {
+    "id": "confirmed[31]",
+    "claim": "Scorecard advierte que una puntuación baja de CI-Tests no es indicación definitiva de riesgo.",
+    "now": "Scorecard indica que una puntuación baja no es una indicación definitiva de que el proyecto esté en riesgo.",
+    "cut": "que se refiera a CI-Tests"
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "Scorecard: Signed-Releases no verifica las firmas.",
+    "now": "Scorecard señala que el check no verifica las firmas.",
+    "cut": "que sea Signed-Releases"
+   },
+   {
+    "id": "confirmed[33]",
+    "claim": "Scorecard: Token-Permissions premia permisos de solo lectura a nivel superior en los workflows.",
+    "now": "Scorecard menciona permisos establecidos como solo lectura a nivel superior y permisos de escritura necesarios declarados a nivel de ejecución.",
+    "cut": "que sea Token-Permissions y que premie workflows"
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "Scorecard: Vulnerabilities usa OSV para detectar vulnerabilidades abiertas.",
+    "now": "Scorecard usa el servicio OSV (Open Source Vulnerabilities).",
+    "cut": "que sea el check Vulnerabilities y que detecte vulnerabilidades abiertas"
+   },
+   {
+    "id": "confirmed[35]",
+    "claim": "ASVS 5.0.0 se publicó el 30 de mayo de 2025.",
+    "now": "Se publicó el 30 de mayo de 2025.",
+    "cut": "que sea ASVS 5.0.0"
+   },
+   {
+    "id": "confirmed[37]",
+    "claim": "ASVS recomienda citar requisitos con prefijo de versión.",
+    "now": "ASVS muestra el formato v<version>-<chapter>.<section>.<requirement>.",
+    "cut": "que recomiende citar requisitos con prefijo de versión"
+   },
+   {
+    "id": "confirmed[38]",
+    "claim": "OWASP SAMM se declara agnóstico de tecnología y proceso y basado en riesgo.",
+    "now": "SAMM da soporte al ciclo de vida completo del software y es agnóstico de tecnología y proceso.",
+    "cut": "que esté basado en riesgo"
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "id": "confirmed[19]",
+   "claim": "La página indica que la versión 1.2 es la versión vigente.",
+   "quote": "Version 1.2 is the current version.",
+   "artifact_ids": [
+    "SA-dab3f054bd9ab048c2283cc8"
+   ],
+   "reason": "solo fuentes secundarias"
+  }
+ ],
+ "discovery": {
+  "families": [
+   "Marco legal/regulatorio (UE Cyber Resilience Act) – obligatorio solo si aplica",
+   "Marcos de proceso seguro (NIST SSDF SP 800-218, OWASP SAMM)",
+   "Estándar de verificación de seguridad (OWASP ASVS 5.0)",
+   "Cadena de suministro (SLSA, OpenSSF Scorecard)",
+   "Modelo de calidad y ciclo de vida (ISO/IEC 25010, ISO/IEC/IEEE 12207, 29119) – de pago, solo metadatos",
+   "Especificación de versionado (SemVer 2.0.0)",
+   "Guías públicas de revisión de código (Google eng-practices) – convención",
+   "Herramientas con licencia verificable (CodeQL, PIT)",
+   "Evidencia empírica y límites de pruebas de mutación"
+  ],
+  "searches": [
+   {
+    "query": "NIST SP 800-218 Secure Software Development Framework SSDF version 1.1",
+    "intent": "official"
+   },
+   {
+    "query": "SLSA specification build provenance levels slsa.dev",
+    "intent": "official"
+   },
+   {
+    "query": "OWASP ASVS 5.0 Application Security Verification Standard",
+    "intent": "official"
+   },
+   {
+    "query": "ISO/IEC 25010 product quality model characteristics",
+    "intent": "official"
+   },
+   {
+    "query": "Semantic Versioning 2.0.0 specification",
+    "intent": "official"
+   },
+   {
+    "query": "Google Engineering Practices code review standard of code review",
+    "intent": "support"
+   },
+   {
+    "query": "OpenSSF Scorecard checks documentation",
+    "intent": "support"
+   },
+   {
+    "query": "mutation testing limitations coupling effect empirical study peer reviewed",
+    "intent": "limitations"
+   },
+   {
+    "query": "OWASP SAMM v2 model software assurance maturity",
+    "intent": "official"
+   },
+   {
+    "query": "Regulation (EU) 2024/2847 Cyber Resilience Act Annex I essential requirements EUR-Lex",
+    "intent": "official"
+   },
+   {
+    "query": "ISO/IEC/IEEE 29119 software testing standard OR ISO/IEC 12207 software life cycle processes",
+    "intent": "official"
+   },
+   {
+    "query": "GitHub CodeQL license terms open source code scanning",
+    "intent": "limitations"
+   },
+   {
+    "query": "PIT mutation testing pitest Apache 2.0 OR Stryker mutator license",
+    "intent": "other"
+   }
+  ],
+  "not_found": [
+   "Texto oficial de ISO/IEC 25010:2023 (de pago; solo hallados resúmenes secundarios: arc42, Sonar, Perforce) – no se propone como fuente primaria.",
+   "ISO/IEC/IEEE 29119 texto (de pago; solo metadatos secundarios).",
+   "sha256 de los archivos: no se descargó nada; hay que calcularlo al bajar.",
+   "Licencia y versión verificadas de Stryker, Semgrep, SonarQube, linters: no confirmadas en esta ronda. PIT (Apache-2.0) solo por fuentes secundarias.",
+   "Licencia CodeQL: resumen secundario; leer github/codeql-cli-binaries LICENSE.md para el texto exacto (CLI restringido a código abierto/investigación).",
+   "Ejemplo oficial de artefacto de referencia (p. ej. attestation SSDF CISA) no buscado.",
+   "Evidencia contraria específica sobre que la revisión independiente mejora la calidad: no buscada.",
+   "Fechas de aplicación exactas del CRA no verificadas contra el texto (fuente secundaria dice 11-sep-2026 y 11-dic-2027)."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 13,
+  "accepted": 12,
+  "rejected": [
+   {
+    "url": "https://homes.cs.washington.edu/~rjust/publ/mutants_real_faults_fse_2014.pdf",
+    "reason": "over 12 sources"
+   }
+  ],
+  "sources": [
+   {
+    "url": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-218.pdf",
+    "family": "Marcos de proceso seguro",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Prácticas de desarrollo seguro (feb. 2022). Es marco voluntario; solo es obligatorio si un contrato o el EO 14028/atestación lo exige. Fuente de prácticas citables."
+   },
+   {
+    "url": "https://csrc.nist.gov/projects/ssdf",
+    "family": "Marcos de proceso seguro",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Página de proyecto: estado vigente, tabla Excel y posibles actualizaciones para revalidar."
+   },
+   {
+    "url": "https://asvs.owasp.org/",
+    "family": "Estándar de verificación de seguridad",
+    "stance": "supports",
+    "role": "primary",
+    "why": "ASVS 5.0.0 (30 may 2025): requisitos verificables con niveles L1–L3; ID con versión. Solo web apps/APIs; no obligatorio salvo contrato."
+   },
+   {
+    "url": "https://github.com/OWASP/ASVS",
+    "family": "Estándar de verificación de seguridad",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "CSV/JSON descargables y mapeo 4.0.3→5.0 para candidate_tests y sha256; licencia CC BY-SA 4.0."
+   },
+   {
+    "url": "https://owasp.github.io/www-project-samm/",
+    "family": "Marcos de proceso seguro",
+    "stance": "context",
+    "role": "primary",
+    "why": "Modelo de madurez organizacional (v2.0.3), no criterio de aceptación de un cambio concreto; evita confundir madurez con corrección."
+   },
+   {
+    "url": "https://slsa.dev/spec/v1.2/build-requirements",
+    "family": "Cadena de suministro",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Requisitos de procedencia de build L1–L3; mide integridad del build, no seguridad del código."
+   },
+   {
+    "url": "https://slsa.dev/spec/v1.0/levels",
+    "family": "Cadena de suministro",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Niveles y alcance (solo track Build); la v0.1 con 4 niveles fue reemplazada: ojo con la versión citada."
+   },
+   {
+    "url": "https://github.com/ossf/scorecard/blob/main/docs/checks.md",
+    "family": "Cadena de suministro",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Define Code-Review, Branch-Protection, Dangerous-Workflow, etc.; herramienta que comprueba prácticas de repo. Heurística, no norma."
+   },
+   {
+    "url": "https://semver.org/",
+    "family": "Especificación de versionado",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Especificación de compatibilidad/versionado (MAJOR incompatible); obligatoria solo si el proyecto declara adoptar SemVer."
+   },
+   {
+    "url": "https://google.github.io/eng-practices/review/reviewer/looking-for.html",
+    "family": "Guías de revisión de código",
+    "stance": "context",
+    "role": "primary",
+    "why": "Guía pública de revisión (diseño, pruebas, docs). Es convención de una empresa, no norma; también hay página 'standard' del mismo repo."
+   },
+   {
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02024R2847-20241120",
+    "family": "Marco legal",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Anexo I: requisitos legalmente obligatorios (SBOM, gestión de vulnerabilidades, actualizaciones) para productos con elementos digitales en el mercado UE; verificar fechas de aplicación y exenciones."
+   },
+   {
+    "url": "https://www.iso.org/standard/90219.html",
+    "family": "Modelo de calidad y ciclo de vida",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Procesos del ciclo de vida; de pago, solo metadatos (edición 2026 sustituye a 2017). Obligatorio únicamente por contrato."
+   },
+   {
+    "url": "https://homes.cs.washington.edu/~rjust/publ/mutants_real_faults_fse_2014.pdf",
+    "family": "Evidencia empírica de pruebas de mutación",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Evidencia de que ~73% de fallos reales están acoplados a mutantes: la puntuación de mutación es útil pero incompleta."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
