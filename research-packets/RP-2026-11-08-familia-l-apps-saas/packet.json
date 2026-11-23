@@ -1,0 +1,415 @@
+{
+ "research_id": "RP-2026-11-08-familia-l-apps-saas",
+ "request_id": "RR-2026-11-08-familia-l-apps-saas",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-11T22:16:06Z",
+ "question": "Para cada categoría de apps listada en why_needed: ¿qué apps relevantes en el mundo y en México publican referencia de API u OpenAPI oficial, qué objetos y operaciones exponen, en qué formato exportan los datos del cliente, qué precio publican y con qué fecha, y qué términos de uso de la API declaran? Páginas de venta no cuentan como evidencia.",
+ "why_zpmnd_needs_it": "Subáreas: L01 ERP (Mundo y México); L02 CRM (Mundo y México); L03 Contabilidad (incluye CONTPAQi, Aspel, Alegra y otros de México) (Mundo y México); L04 Correo y calendario (Mundo y México); L05 Gestión de proyectos (Mundo y México); L06 CAD (Mundo y México); L07 BI y analítica (Mundo y México); L08 Inventario y almacén (Mundo y México); L09 Recursos humanos y nómina (Mundo y México); L10 Banca y pagos (APIs) (Mundo y México); L11 Automatización (catálogos de conectores) (Mundo y México); L12 Comunicación (Mundo y México); L13 Frontend y constructores de apps (Mundo y México). ZPMND necesita saber qué capacidad de cada app puede usar y qué datos puede sacar (§34-36).",
+ "scope": "Se revisaron 8 fuentes oficiales primarias: Alegra (información general y términos de API), Microsoft (términos de las APIs y descripción de Graph), HubSpot (APIs del CRM), Stripe (repositorio openapi), Odoo 19 (API JSON-2), Belvo (documentación de API), Zapier (términos de plataforma) y CONTPAQi (solo portada del manual del SDK). La cobertura es parcial. La lista why_needed de categorías no venía en la solicitud. No se calculó ningún sha256 porque no hay acceso a los archivos descargados.",
+ "sources": {
+  "primary": [
+   "SA-75cf3f3d39233fae58aa7ac6",
+   "SA-510df2ad7ba6bd8aee3172a9",
+   "SA-5a489aabe7671567dc0ca2ad",
+   "SA-18668df9dc45f94fbdc93b63",
+   "SA-4dd90c73b421190b42d82908",
+   "SA-21594e65daa3518e0a21a84a",
+   "SA-ceeea9113d80dbf200a2b972",
+   "SA-6c326a39f95c8edb61903312",
+   "SA-8e89dad95adcb1fc185ab848",
+   "SA-8247615260940feb1e09b13b"
+  ],
+  "secondary": []
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-75cf3f3d39233fae58aa7ac6",
+   "url": "https://developer.alegra.com/docs/informaci%C3%B3n-general",
+   "retrieved_at": "2026-11-11T22:13:46Z",
+   "sha256": "75cf3f3d39233fae58aa7ac677a797e84b59b24f146a02af956027224089254b",
+   "bytes": 130814,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Alegra",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Información General – API Alegra"
+  },
+  {
+   "artifact_id": "SA-510df2ad7ba6bd8aee3172a9",
+   "url": "https://developer.alegra.com/docs/t%C3%A9rminos-y-condiciones-api-alegra",
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "sha256": "510df2ad7ba6bd8aee3172a9a8cd37d86d80899fb7eceeee59f42ffe22caea7a",
+   "bytes": 138922,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Alegra",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Términos y Condiciones API Alegra"
+  },
+  {
+   "artifact_id": "SA-5a489aabe7671567dc0ca2ad",
+   "url": "https://learn.microsoft.com/en-us/legal/microsoft-apis/terms-of-use",
+   "retrieved_at": "2026-11-11T22:13:48Z",
+   "sha256": "5a489aabe7671567dc0ca2ad91e46ece8e8fc8252264ec32ed03865396462af9",
+   "bytes": 67696,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Microsoft",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Terms of Use - Microsoft APIs"
+  },
+  {
+   "artifact_id": "SA-18668df9dc45f94fbdc93b63",
+   "url": "https://learn.microsoft.com/en-us/graph/overview",
+   "retrieved_at": "2026-11-11T22:13:50Z",
+   "sha256": "18668df9dc45f94fbdc93b63c19ed493721c76b3eeb92bebe27b60549c4b6275",
+   "bytes": 63958,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Microsoft",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Microsoft Graph overview"
+  },
+  {
+   "artifact_id": "SA-4dd90c73b421190b42d82908",
+   "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/understanding-the-crm",
+   "retrieved_at": "2026-11-11T22:13:56Z",
+   "sha256": "4dd90c73b421190b42d829083d5b3cc9bfa47876cd0b1ea32702f34f98a2adbf",
+   "bytes": 1204019,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "HubSpot",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Understanding the CRM APIs"
+  },
+  {
+   "artifact_id": "SA-21594e65daa3518e0a21a84a",
+   "url": "https://github.com/stripe/openapi",
+   "retrieved_at": "2026-11-11T22:13:57Z",
+   "sha256": "21594e65daa3518e0a21a84a2a727d6af0f691388c1af2924d526b04bf1e5dae",
+   "bytes": 258113,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "Stripe",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "stripe/openapi"
+  },
+  {
+   "artifact_id": "SA-ceeea9113d80dbf200a2b972",
+   "url": "https://www.odoo.com/documentation/19.0/developer/reference/external_api.html",
+   "retrieved_at": "2026-11-11T22:13:58Z",
+   "sha256": "ceeea9113d80dbf200a2b972a4dd3cb2d3888c8553c861a61b2b5b5f8c80c37f",
+   "bytes": 514560,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Odoo",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "External JSON-2 API — Odoo 19.0"
+  },
+  {
+   "artifact_id": "SA-6c326a39f95c8edb61903312",
+   "url": "https://developers.belvo.com/apis/belvoopenapispec",
+   "retrieved_at": "2026-11-11T22:14:00Z",
+   "sha256": "6c326a39f95c8edb61903312aa5056fdceffd2472b99879fd7c9a3f55d774df8",
+   "bytes": 1468561,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Belvo",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Belvo API Docs"
+  },
+  {
+   "artifact_id": "SA-8e89dad95adcb1fc185ab848",
+   "url": "https://zapier.com/developer-platform/tos",
+   "retrieved_at": "2026-11-11T22:14:01Z",
+   "sha256": "8e89dad95adcb1fc185ab848963dfabd4895840c1d0f1fb6435825f3bd085faa",
+   "bytes": 211151,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "Zapier",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Zapier Developer Platform Terms"
+  },
+  {
+   "artifact_id": "SA-8247615260940feb1e09b13b",
+   "url": "https://conocimiento.blob.core.windows.net/conocimiento/Manuales/MR_SDK/portada.html",
+   "retrieved_at": "2026-11-11T22:14:02Z",
+   "sha256": "8247615260940feb1e09b13b6e4afe78c01de2d4709708026d7156f7ed371451",
+   "bytes": 20740,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "CONTPAQi",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Manual de Referencia del SDK de los sistemas CONTPAQi"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "Alegra describe su API como basada en principios REST, con métodos HTTP GET, POST, PUT y PATCH.",
+    "artifact_ids": [
+     "SA-75cf3f3d39233fae58aa7ac6"
+    ],
+    "quote": "Nuestra API está basada en principios REST que harán más fácil tu conexión y desarrollo; métodos HTTP (GET, POST, PUT y PATCH) son utilizados para acceder a los recursos.",
+    "locator": "Información General"
+   },
+   {
+    "claim": "El formato de las respuestas de la API de Alegra es JSON.",
+    "artifact_ids": [
+     "SA-75cf3f3d39233fae58aa7ac6"
+    ],
+    "quote": "El formato de transferencia de datos soportado por la aplicación es JSON.",
+    "locator": "Información General"
+   },
+   {
+    "claim": "La API de Alegra no tiene costo adicional al del plan en el que el usuario esté inscrito.",
+    "artifact_ids": [
+     "SA-510df2ad7ba6bd8aee3172a9"
+    ],
+    "quote": "El uso de Alegra API no tiene ningún costo adicional al valor del plan en el que estés inscrito.",
+    "locator": "Términos Alegra API"
+   },
+   {
+    "claim": "Los términos de Alegra mencionan desarrollar una Implementación Alegra API, producto o servicio que en consideración de Alegra represente competencia.",
+    "artifact_ids": [
+     "SA-510df2ad7ba6bd8aee3172a9"
+    ],
+    "quote": "Desarrollar una Implementación Alegra API, producto o servicio que en consideración de Alegra represente competencia.",
+    "locator": "Términos Alegra API, restricciones"
+   },
+   {
+    "claim": "Alegra exige autorización previa para distribuir o comercializar productos desarrollados con su API.",
+    "artifact_ids": [
+     "SA-510df2ad7ba6bd8aee3172a9"
+    ],
+    "quote": "Toda distribución o comercialización de cualquier producto o servicio desarrollado a través de Alegra API, debe ser autorizada previamente por Alegra",
+    "locator": "Términos Alegra API"
+   },
+   {
+    "claim": "Alegra puede modificar sus términos sin previo aviso.",
+    "artifact_ids": [
+     "SA-510df2ad7ba6bd8aee3172a9"
+    ],
+    "quote": "Alegra puede modificar sin previo aviso estos términos.",
+    "locator": "Términos Alegra API"
+   },
+   {
+    "claim": "Los términos de las APIs de Microsoft permiten cambiar o descontinuar las APIs en cualquier momento, con o sin aviso.",
+    "artifact_ids": [
+     "SA-5a489aabe7671567dc0ca2ad"
+    ],
+    "quote": "WE MAY CHANGE OR DISCONTINUE THE AVAILABILITY OF SOME OR ALL OF THE MICROSOFT APIs AT ANY TIME FOR ANY REASON WITH OR WITHOUT NOTICE.",
+    "locator": "Microsoft APIs Terms of Use, sección 6"
+   },
+   {
+    "claim": "Los términos de las APIs de Microsoft mencionan redistribuir, revender o sublicenciar el acceso a las APIs de Microsoft, a los datos obtenidos con ellas o a otras ofertas de Microsoft a las que se accede a través de ellas.",
+    "artifact_ids": [
+     "SA-5a489aabe7671567dc0ca2ad"
+    ],
+    "quote": "Redistribute or resell, or sublicense access to, the Microsoft APIs, any data obtained using the Microsoft APIs, or any other Microsoft Offering accessed through the Microsoft APIs",
+    "locator": "Sección 3.b"
+   },
+   {
+    "claim": "Los términos de Microsoft mencionan extraer, crear bases de datos o hacer copias de los datos obtenidos con las APIs de Microsoft, salvo lo necesario para un escenario de uso previsto de la aplicación.",
+    "artifact_ids": [
+     "SA-5a489aabe7671567dc0ca2ad"
+    ],
+    "quote": "Scrape, build databases or otherwise create copies of any data accessed or obtained using the Microsoft APIs, except as necessary to enable an intended usage scenario for your Application;",
+    "locator": "Sección 3.b"
+   },
+   {
+    "claim": "Microsoft Graph ofrece un único endpoint.",
+    "artifact_ids": [
+     "SA-18668df9dc45f94fbdc93b63"
+    ],
+    "quote": "The Microsoft Graph API offers a single endpoint, https://graph.microsoft.com",
+    "locator": "Graph overview"
+   },
+   {
+    "claim": "Microsoft Graph declara que usarlo implica aceptar los términos de las APIs de Microsoft.",
+    "artifact_ids": [
+     "SA-18668df9dc45f94fbdc93b63"
+    ],
+    "quote": "When you use Microsoft Graph APIs, you agree to the Microsoft APIs Terms of Use and the Microsoft Privacy Statement.",
+    "locator": "Graph overview, Note"
+   },
+   {
+    "claim": "HubSpot lista contactos como objeto del CRM con ID de tipo 0-1.",
+    "artifact_ids": [
+     "SA-4dd90c73b421190b42d82908"
+    ],
+    "quote": "Contacts\t0-1\tStores information about an individual person.",
+    "locator": "Understanding the CRM APIs, tabla de Object type IDs"
+   },
+   {
+    "claim": "HubSpot expone facturas (Invoices) como objeto del CRM.",
+    "artifact_ids": [
+     "SA-4dd90c73b421190b42d82908"
+    ],
+    "quote": "Invoices\t0-53\tRepresent the invoices sent for sales transactions.",
+    "locator": "Tabla de Object type IDs"
+   },
+   {
+    "claim": "El repositorio de Stripe publica especificaciones OpenAPI en JSON y YAML.",
+    "artifact_ids": [
+     "SA-21594e65daa3518e0a21a84a"
+    ],
+    "quote": "All specification files are available in both JSON and YAML formats.",
+    "locator": "README, File Formats"
+   },
+   {
+    "claim": "El repositorio de Stripe recomienda la última versión GA, con endpoints de API v1 y v2.",
+    "artifact_ids": [
+     "SA-21594e65daa3518e0a21a84a"
+    ],
+    "quote": "Recommended. Latest GA release with v1 and v2 API endpoints",
+    "locator": "README, Directory Structure"
+   },
+   {
+    "claim": "En Odoo, el acceso a datos mediante la API externa solo está disponible en los planes de precios Custom.",
+    "artifact_ids": [
+     "SA-ceeea9113d80dbf200a2b972"
+    ],
+    "quote": "Access to data via the external API is only available on Custom Odoo pricing plans.",
+    "locator": "External JSON-2 API, Note"
+   },
+   {
+    "claim": "Odoo JSON-2 se invoca con POST en /json/2/<model>/<method>.",
+    "artifact_ids": [
+     "SA-ceeea9113d80dbf200a2b972"
+    ],
+    "quote": "Post a JSON object at the /json/2/<model>/<method> URL.",
+    "locator": "API > Request"
+   },
+   {
+    "claim": "Según la documentación de Odoo, algo está programado para eliminarse en Odoo 22 (otoño de 2028) / Odoo Online 21.1 (invierno de 2027).",
+    "artifact_ids": [
+     "SA-ceeea9113d80dbf200a2b972"
+    ],
+    "quote": "are scheduled for removal in Odoo 22 (fall 2028) / Odoo Online 21.1 (winter 2027)",
+    "locator": "Migrating from XML-RPC / JSON-RPC"
+   },
+   {
+    "claim": "Una parte de la página External JSON-2 API de Odoo figura como en construcción.",
+    "artifact_ids": [
+     "SA-ceeea9113d80dbf200a2b972"
+    ],
+    "quote": "Under construction",
+    "locator": "Dynamic Documentation"
+   },
+   {
+    "claim": "Belvo ofrece la documentación de respuestas en formato Excel o CSV, que se descarga desde su repositorio público de GitHub.",
+    "artifact_ids": [
+     "SA-6c326a39f95c8edb61903312"
+    ],
+    "quote": "If you woud like the response documentation in Excel or CSV form, please download them from our public GitHub Reposiitory",
+    "locator": "Introduction, Data Dictionaries"
+   },
+   {
+    "claim": "Belvo publica su descripción OpenAPI como archivo JSON.",
+    "artifact_ids": [
+     "SA-6c326a39f95c8edb61903312"
+    ],
+    "quote": "BelvoOpenApiSpec.json",
+    "locator": "Introduction, Download OpenAPI description"
+   },
+   {
+    "claim": "La versión mostrada de la documentación de Belvo es 1.224.0.",
+    "artifact_ids": [
+     "SA-6c326a39f95c8edb61903312"
+    ],
+    "quote": "Belvo API Docs (1.224.0)",
+    "locator": "Introduction"
+   },
+   {
+    "claim": "Los términos de Zapier mencionan usar o distribuir Connectors para algo distinto de facilitar la conexión de las Apps con los Servicios.",
+    "artifact_ids": [
+     "SA-8e89dad95adcb1fc185ab848"
+    ],
+    "quote": "use or distribute Connectors other than to facilitate the connection of Apps with the Services",
+    "locator": "Sección 2.c"
+   },
+   {
+    "claim": "Zapier exige procesar los datos de usuario solo para funciones de cara al usuario.",
+    "artifact_ids": [
+     "SA-8e89dad95adcb1fc185ab848"
+    ],
+    "quote": "Process User Data only to provide user-facing features, and not transfer or sell it for other purposes",
+    "locator": "Sección 3.a(ii)"
+   },
+   {
+    "claim": "El Manual de Referencia del SDK de CONTPAQi indica como última modificación el 30 de junio de 2026.",
+    "artifact_ids": [
+     "SA-8247615260940feb1e09b13b"
+    ],
+    "quote": "Última modificación: 30 de junio de 2026",
+    "locator": "Portada"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Precios publicados con fecha para todas las apps: ninguna fuente leída trae una tabla de precios con fecha; Odoo solo indica que la API requiere plan Custom.",
+   "Formato de exportación de datos del cliente para Alegra, Odoo, CONTPAQi y Stripe: no figura en las fuentes leídas.",
+   "Operaciones y objetos de CONTPAQi: el manual del SDK solo mostró la portada.",
+   "Términos de uso de API para HubSpot, Stripe, Odoo y CONTPAQi: no estaban en las fuentes.",
+   "Categorías de apps (why_needed) y listado de apps de México: no estaban en la solicitud; no se buscó fuera de las fuentes dadas.",
+   "sha256 y versión de cada archivo bajado: no disponibles."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: Solo Belvo, entre las fuentes leídas, documenta recursos fiscales de México (facturas, retenciones) en su API.",
+  "INTERPRETACIÓN: Los términos de Alegra (no competir) y de Microsoft (no revender ni copiar datos) limitan productos que repliquen o migren datos; conviene revisarlos antes de prometer integraciones."
+ ],
+ "possible_implications_for_zpmnd": [
+  "No prometer exportación ni precio de ninguna app hasta tener fuentes oficiales de precios y exportación con fecha.",
+  "Registrar la restricción de plan de Odoo (JSON-2 solo en Custom) como condición de integración."
+ ],
+ "limitations": [
+  "No hay herramientas de búsqueda ni acceso a los archivos, así que no se calcularon sha256.",
+  "La fuente de CONTPAQi está recortada a la portada; operaciones, objetos y términos pueden estar en la parte no leída.",
+  "De la página de Odoo se leyó solo la sección de la API JSON-2.",
+  "Las fuentes de Stripe y HubSpot son documentación o repositorio; no se descargaron las especificaciones completas.",
+  "La página de Microsoft muestra dos fechas ('Last Updated: October 2025' y 'Last updated on 2022-09-26'); no se resolvió cuál es la vigente.",
+  "No se evaluó ninguna página de precios, por lo que no hay precios fechados.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 10 de 25 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 12 propuestas, 12 aceptadas, 0 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/openapi_beta.htm (refused); https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/api_rest.pdf (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  }
+ ]
+}

@@ -1,0 +1,363 @@
+{
+ "request_id": "RR-2026-11-08-familia-l-apps-saas",
+ "fetched": [
+  {
+   "url": "https://developer.alegra.com/docs/informaci%C3%B3n-general",
+   "status": 200,
+   "error": null,
+   "sha256": "75cf3f3d39233fae58aa7ac677a797e84b59b24f146a02af956027224089254b",
+   "bytes": 130814,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:46Z",
+   "text_status": "ok",
+   "text_chars": 2916
+  },
+  {
+   "url": "https://developer.alegra.com/docs/t%C3%A9rminos-y-condiciones-api-alegra",
+   "status": 200,
+   "error": null,
+   "sha256": "510df2ad7ba6bd8aee3172a9a8cd37d86d80899fb7eceeee59f42ffe22caea7a",
+   "bytes": 138922,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:47Z",
+   "text_status": "ok",
+   "text_chars": 6485
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/legal/microsoft-apis/terms-of-use",
+   "status": 200,
+   "error": null,
+   "sha256": "5a489aabe7671567dc0ca2ad91e46ece8e8fc8252264ec32ed03865396462af9",
+   "bytes": 67696,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:48Z",
+   "text_status": "ok",
+   "text_chars": 29673
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/graph/overview",
+   "status": 200,
+   "error": null,
+   "sha256": "18668df9dc45f94fbdc93b63c19ed493721c76b3eeb92bebe27b60549c4b6275",
+   "bytes": 63958,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:50Z",
+   "text_status": "ok",
+   "text_chars": 10259
+  },
+  {
+   "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/openapi_beta.htm",
+   "status": "refused",
+   "error": "robots.txt disallows https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/openapi_beta.htm",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T22:13:50Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/api_rest.pdf",
+   "status": "refused",
+   "error": "robots.txt disallows https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/api_rest.pdf",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-11T22:13:51Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/understanding-the-crm",
+   "status": 200,
+   "error": null,
+   "sha256": "4dd90c73b421190b42d829083d5b3cc9bfa47876cd0b1ea32702f34f98a2adbf",
+   "bytes": 1204019,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:56Z",
+   "text_status": "ok",
+   "text_chars": 13865
+  },
+  {
+   "url": "https://github.com/stripe/openapi",
+   "status": 200,
+   "error": null,
+   "sha256": "21594e65daa3518e0a21a84a2a727d6af0f691388c1af2924d526b04bf1e5dae",
+   "bytes": 258113,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:57Z",
+   "text_status": "ok",
+   "text_chars": 6848
+  },
+  {
+   "url": "https://www.odoo.com/documentation/19.0/developer/reference/external_api.html",
+   "status": 200,
+   "error": null,
+   "sha256": "ceeea9113d80dbf200a2b972a4dd3cb2d3888c8553c861a61b2b5b5f8c80c37f",
+   "bytes": 514560,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:13:58Z",
+   "text_status": "ok",
+   "text_chars": 61772
+  },
+  {
+   "url": "https://developers.belvo.com/apis/belvoopenapispec",
+   "status": 200,
+   "error": null,
+   "sha256": "6c326a39f95c8edb61903312aa5056fdceffd2472b99879fd7c9a3f55d774df8",
+   "bytes": 1468561,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:14:00Z",
+   "text_status": "ok",
+   "text_chars": 35389
+  },
+  {
+   "url": "https://zapier.com/developer-platform/tos",
+   "status": 200,
+   "error": null,
+   "sha256": "8e89dad95adcb1fc185ab848963dfabd4895840c1d0f1fb6435825f3bd085faa",
+   "bytes": 211151,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:14:01Z",
+   "text_status": "ok",
+   "text_chars": 25477
+  },
+  {
+   "url": "https://conocimiento.blob.core.windows.net/conocimiento/Manuales/MR_SDK/portada.html",
+   "status": 200,
+   "error": null,
+   "sha256": "8247615260940feb1e09b13b6e4afe78c01de2d4709708026d7156f7ed371451",
+   "bytes": 20740,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-11T22:14:02Z",
+   "text_status": "ok",
+   "text_chars": 556
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43109719865",
+ "review": {
+  "model": "claude (claude-opus-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[3]",
+    "claim": "Los términos de Alegra prohíben desarrollar una implementación que Alegra considere competencia.",
+    "now": "Los términos de Alegra mencionan desarrollar una Implementación Alegra API, producto o servicio que en consideración de Alegra represente competencia.",
+    "cut": "Que los términos lo prohíben: la cita no contiene ninguna prohibición."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "Los términos de las APIs de Microsoft prohíben redistribuir o revender las APIs y los datos obtenidos con ellas.",
+    "now": "Los términos de las APIs de Microsoft mencionan redistribuir, revender o sublicenciar el acceso a las APIs de Microsoft, a los datos obtenidos con ellas o a otras ofertas de Microsoft a las que se accede a través de ellas.",
+    "cut": "Que los términos lo prohíben: la cita no contiene ninguna prohibición."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "Los términos de Microsoft prohíben copiar o crear bases de datos con los datos de la API, salvo lo necesario para el escenario de uso previsto.",
+    "now": "Los términos de Microsoft mencionan extraer, crear bases de datos o hacer copias de los datos obtenidos con las APIs de Microsoft, salvo lo necesario para un escenario de uso previsto de la aplicación.",
+    "cut": "Que los términos lo prohíben: la cita no contiene ninguna prohibición."
+   },
+   {
+    "id": "confirmed[14]",
+    "claim": "El repositorio de Stripe recomienda /latest/ como especificación GA con endpoints v1 y v2.",
+    "now": "El repositorio de Stripe recomienda la última versión GA, con endpoints de API v1 y v2.",
+    "cut": "La ruta /latest/"
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "En Odoo 19 la API JSON-2 está disponible solo en planes Custom.",
+    "now": "En Odoo, el acceso a datos mediante la API externa solo está disponible en los planes de precios Custom.",
+    "cut": "Odoo 19 y JSON-2 (la versión viene del título, no de la cita)"
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "Los endpoints RPC antiguos de Odoo están programados para eliminarse en Odoo 22.",
+    "now": "Según la documentación de Odoo, algo está programado para eliminarse en Odoo 22 (otoño de 2028) / Odoo Online 21.1 (invierno de 2027).",
+    "cut": "Que se trata de los endpoints RPC antiguos"
+   },
+   {
+    "id": "confirmed[18]",
+    "claim": "La documentación dinámica de Odoo JSON-2 figura como en construcción.",
+    "now": "Una parte de la página External JSON-2 API de Odoo figura como en construcción.",
+    "cut": "Que se trata de la documentación dinámica"
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "Belvo ofrece diccionarios de datos en Excel o CSV.",
+    "now": "Belvo ofrece la documentación de respuestas en formato Excel o CSV, que se descarga desde su repositorio público de GitHub.",
+    "cut": "Diccionarios de datos"
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "Los términos de Zapier restringen el uso de Connectors a conectar las Apps con el Servicio.",
+    "now": "Los términos de Zapier mencionan usar o distribuir Connectors para algo distinto de facilitar la conexión de las Apps con los Servicios.",
+    "cut": "Que los términos lo restringen: la cita no contiene ninguna restricción."
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "La fuente de CONTPAQi solo muestra la fecha de última modificación del manual del SDK.",
+    "now": "El Manual de Referencia del SDK de CONTPAQi indica como última modificación el 30 de junio de 2026.",
+    "cut": "\"Solo\": la cita no muestra que la fuente no tenga nada más."
+   }
+  ]
+ },
+ "discovery": {
+  "families": [
+   "Referencia de API/OpenAPI oficial del proveedor",
+   "Términos de uso de API (legales del proveedor)",
+   "Planes y precios oficiales con fecha",
+   "Exportación de datos del cliente",
+   "Catálogos de conectores (Zapier/Make) y términos de plataforma",
+   "SDK/COM de apps de escritorio mexicanas (CONTPAQi, Aspel)",
+   "APIs de banca/pagos en México (Belvo, STP/Banxico)",
+   "Repos GitHub oficiales con OpenAPI",
+   "Terceros/comunidad (solo candidate_claim)"
+  ],
+  "searches": [
+   {
+    "query": "Alegra API documentación oficial developer",
+    "intent": "official"
+   },
+   {
+    "query": "CONTPAQi API desarrolladores documentación",
+    "intent": "official"
+   },
+   {
+    "query": "Salesforce REST API developer guide OpenAPI",
+    "intent": "official"
+   },
+   {
+    "query": "Microsoft Graph API terms of use mail calendar reference",
+    "intent": "official"
+   },
+   {
+    "query": "Stripe OpenAPI spec GitHub",
+    "intent": "official"
+   },
+   {
+    "query": "Aspel API desarrolladores SAE documentación",
+    "intent": "limitations"
+   },
+   {
+    "query": "Microsoft APIs Terms of Use learn.microsoft.com legal",
+    "intent": "official"
+   },
+   {
+    "query": "Odoo external API documentation JSON-2 pricing",
+    "intent": "limitations"
+   },
+   {
+    "query": "HubSpot API developer terms CRM objects reference",
+    "intent": "official"
+   },
+   {
+    "query": "Belvo API México open finance docs OR STP API documentación SPEI",
+    "intent": "official"
+   },
+   {
+    "query": "Zapier OR Make app connectors catalog developer platform terms",
+    "intent": "official"
+   }
+  ],
+  "not_found": [
+   "Cobertura casi nula: solo se buscaron ~11 consultas; faltan ERP (SAP, Oracle, Odoo MX, Bind), CRM (Zoho), correo (Google Workspace), proyectos (Asana, Jira), CAD (Autodesk APS, Onshape), BI (Power BI, Tableau), RRHH/nómina (Workday, Runa, Worky), inventario, comunicación (Slack, Twilio, WhatsApp), frontend (Retool, Bubble).",
+   "Aspel SAE: no hallada API pública oficial; solo manuales y acceso Firebird. Siigo API (otro producto) en siigonubeportaldeclientes.aspel.com.mx, no verificado.",
+   "STP/SPEI: documentación oficial de STP no hallada (solo terceros: Mercado Pago, Nuvei, Bamboo).",
+   "Términos de API de HubSpot, Salesforce, Odoo, Belvo y Stripe: no hallados aún.",
+   "Precios publicados con fecha y formatos de exportación de datos: no hallados en páginas de documentación para ninguna app; se necesitan páginas de precios oficiales y de ayuda de exportación.",
+   "sha256 de lo bajado: no se pudo descargar archivos con solo búsqueda web.",
+   "CONTPAQi: no hay REST/OpenAPI oficial; los repos de AndresRamos y Enlazatte son de terceros (solo candidate_claim)."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://developer.alegra.com/docs/informaci%C3%B3n-general",
+    "family": "Referencia de API/OpenAPI oficial del proveedor",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Referencia REST oficial de Alegra (MX): ítems, bodegas, cuentas, vendedores; menciona llms.txt con endpoints OpenAPI. Falta bajar y calcular sha256."
+   },
+   {
+    "url": "https://developer.alegra.com/docs/t%C3%A9rminos-y-condiciones-api-alegra",
+    "family": "Términos de uso de API (legales del proveedor)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Términos de uso de la API de Alegra; permite cita literal ≤300 caracteres."
+   },
+   {
+    "url": "https://learn.microsoft.com/en-us/legal/microsoft-apis/terms-of-use",
+    "family": "Términos de uso de API (legales del proveedor)",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Términos oficiales aplicables a Microsoft Graph (correo/calendario); incluye prohibiciones y obligaciones sobre datos."
+   },
+   {
+    "url": "https://learn.microsoft.com/en-us/graph/overview",
+    "family": "Referencia de API/OpenAPI oficial del proveedor",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Describe Graph, endpoints me/messages y me/events, y remite a los términos de uso (L04)."
+   },
+   {
+    "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/openapi_beta.htm",
+    "family": "Referencia de API/OpenAPI oficial del proveedor",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "OpenAPI de sObjects en beta: Salesforce advierte no usarlo en producción; límite relevante para CRM (L02)."
+   },
+   {
+    "url": "https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/api_rest.pdf",
+    "family": "Referencia de API/OpenAPI oficial del proveedor",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Guía oficial con versión y fecha (9-oct-2026) para objetos y operaciones; PDF largo, preferible el HTML."
+   },
+   {
+    "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/understanding-the-crm",
+    "family": "Referencia de API/OpenAPI oficial del proveedor",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Objetos CRM (contactos, empresas, deals, tickets…), CRUD, búsqueda, versiones por fecha. Términos de desarrollador no hallados."
+   },
+   {
+    "url": "https://github.com/stripe/openapi",
+    "family": "Repos GitHub oficiales con OpenAPI",
+    "stance": "supports",
+    "role": "primary",
+    "why": "OpenAPI 3.0 oficial de Stripe (spec3.json) con releases etiquetadas; permite sha256 y versión (L10 pagos)."
+   },
+   {
+    "url": "https://www.odoo.com/documentation/19.0/developer/reference/external_api.html",
+    "family": "Referencia de API/OpenAPI oficial del proveedor",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "API externa de ERP; acceso solo en plan Custom en Odoo Online y retiro de XML-RPC/JSON-RPC programado (L01)."
+   },
+   {
+    "url": "https://developers.belvo.com/apis/belvoopenapispec",
+    "family": "APIs de banca/pagos en México",
+    "stance": "supports",
+    "role": "primary",
+    "why": "OpenAPI de open finance con recursos para México (facturas SAT, empleo, fiscal) y pagos (L10)."
+   },
+   {
+    "url": "https://zapier.com/developer-platform/tos",
+    "family": "Catálogos de conectores y términos",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Términos de plataforma de conectores (L11); licencia limitada y revocable."
+   },
+   {
+    "url": "https://conocimiento.blob.core.windows.net/conocimiento/Manuales/MR_SDK/portada.html",
+    "family": "SDK/COM de apps de escritorio mexicanas",
+    "stance": "limitation",
+    "role": "primary",
+    "why": "Referencia oficial del SDK (no REST/OpenAPI) para Factura electrónica y Comercial Premium; condiciona qué se puede sacar."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ }
+}
