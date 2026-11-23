@@ -1,0 +1,774 @@
+{
+ "research_id": "RP-2026-11-12-entregable-frontend-html",
+ "request_id": "RR-2026-11-12-entregable-frontend-html",
+ "status": "CANDIDATE",
+ "produced_at": "2026-11-12T21:21:28Z",
+ "question": "¿Qué hace correcto un frontend HTML o una visualización interactiva (semántica, accesibilidad, rendimiento, diseño responsivo, legibilidad de gráficas), qué es obligatorio (estándar, ley de accesibilidad) y qué es buena práctica, y con qué validadores y herramientas se produce y se comprueba?",
+ "why_zpmnd_needs_it": "Familia de entregable: HTML, sitios web, experiencias interactivas, dashboards y visualización. ZPMND necesita criterios profesionales citables para producir y verificar este tipo de resultado, sin inventar obligaciones. Quinto entregable de prueba real. Pistas, no verdades: HTML Living Standard (WHATWG), WCAG 2.2 y ARIA APG (W3C), EN 301 549, Section 508, leyes de accesibilidad web nacionales, métricas de rendimiento (Core Web Vitals), validadores (Nu HTML Checker, axe-core, Lighthouse, Pa11y), guías de visualización de datos de organismos estadísticos.",
+ "scope": "Parte 1 de 2. Se leyeron completos: HTML Standard §4.3 Sections (WHATWG, Living Standard, última actualización 12 nov 2026), APG \"Read Me First\" (W3C WAI) y la Directiva (UE) 2019/882 (Acta Europea de Accesibilidad, 17 abril 2019). Cubre semántica de secciones/encabezados, advertencia sobre ARIA y requisitos legales de accesibilidad de la UE. No cubre WCAG, EN 301 549, rendimiento, diseño responsivo, legibilidad de gráficas ni validadores concretos. / Parte 2 de 2. Se leyeron completos: EN 301 549 V3.2.1 (2021-03), Section508.gov (Applicability & Conformance), Web Vitals (web.dev), README de Nu Html Checker (vnu), README de axe-core, informe de cobertura de Deque (secundaria) y Lighthouse accessibility score. Tema: qué es obligatorio y qué es buena práctica en frontend HTML y visualizaciones, y con qué herramientas se comprueba.",
+ "sources": {
+  "primary": [
+   "SA-5f0532a0eb46aa750d069cff",
+   "SA-a4cd3dece76b5fc7aaada167",
+   "SA-f4970001ad091d2751804606",
+   "SA-1eee3a1841a94567da8e59f3",
+   "SA-6d75afa30e0c9f7203fcae07",
+   "SA-b4c63d0a0b9a1a8b1378fc8d",
+   "SA-6bffcdd1228ed7ab1dba64b2",
+   "SA-85ca85a02194144fbd8deeea",
+   "SA-633ba1d0c3b1b685ed3ac249"
+  ],
+  "secondary": [
+   "SA-dcbd7b4969282e21baf95faf",
+   "SA-b3a31c91eb34c231e6c1eecb"
+  ]
+ },
+ "artifacts": [
+  {
+   "artifact_id": "SA-5f0532a0eb46aa750d069cff",
+   "url": "https://html.spec.whatwg.org/multipage/sections.html",
+   "retrieved_at": "2026-11-12T21:17:17Z",
+   "sha256": "5f0532a0eb46aa750d069cffbbd7b03e5e27e3458a44cd2548b0cc2f8dbe275c",
+   "bytes": 181662,
+   "media_type": "text/html",
+   "source_type": "standard",
+   "publisher": "WHATWG",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "HTML Standard (multipage, sections)"
+  },
+  {
+   "artifact_id": "SA-a4cd3dece76b5fc7aaada167",
+   "url": "https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/",
+   "retrieved_at": "2026-11-12T21:17:19Z",
+   "sha256": "a4cd3dece76b5fc7aaada1677b06f1cf28c04c52bbbf77ccc06f717131ac7f82",
+   "bytes": 38024,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "W3C WAI",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "APG Read Me First (No ARIA is better than bad ARIA)"
+  },
+  {
+   "artifact_id": "SA-f4970001ad091d2751804606",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019L0882",
+   "retrieved_at": "2026-11-12T21:17:19Z",
+   "sha256": "f4970001ad091d275180460621afc125fd5755283234f15dd1c41f757f77ed84",
+   "bytes": 485315,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "EUR-Lex / Unión Europea",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Directive (EU) 2019/882 (European Accessibility Act)"
+  },
+  {
+   "artifact_id": "SA-1eee3a1841a94567da8e59f3",
+   "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf",
+   "retrieved_at": "2026-11-12T21:17:30Z",
+   "sha256": "1eee3a1841a94567da8e59f3b19a782ce9ab081c386b6a2a763b8cde13ff5b49",
+   "bytes": 2285361,
+   "media_type": "application/pdf",
+   "source_type": "standard",
+   "publisher": "ETSI/CEN/CENELEC",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "EN 301 549 V3.2.1 (2021-03)"
+  },
+  {
+   "artifact_id": "SA-6d75afa30e0c9f7203fcae07",
+   "url": "https://www.section508.gov/develop/applicability-conformance/",
+   "retrieved_at": "2026-11-12T21:17:31Z",
+   "sha256": "6d75afa30e0c9f7203fcae07d3b06ca2216c095c7097c96da095821d43b5dd89",
+   "bytes": 31339,
+   "media_type": "text/html",
+   "source_type": "primary_official",
+   "publisher": "GSA Section508.gov",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Applicability & Conformance Requirements"
+  },
+  {
+   "artifact_id": "SA-dcbd7b4969282e21baf95faf",
+   "url": "https://titleii.org/web-accessibility-rule",
+   "retrieved_at": "2026-11-12T21:17:32Z",
+   "sha256": "dcbd7b4969282e21baf95faf33f96b4c612199a3cc104b47a6f4b566b71ff9ed",
+   "bytes": 32103,
+   "media_type": "text/html",
+   "source_type": "other",
+   "publisher": "titleii.org",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "ADA Web Accessibility Rule: WCAG 2.1 AA Deadlines"
+  },
+  {
+   "artifact_id": "SA-b4c63d0a0b9a1a8b1378fc8d",
+   "url": "https://web.dev/articles/vitals",
+   "retrieved_at": "2026-11-12T21:17:33Z",
+   "sha256": "b4c63d0a0b9a1a8b1378fc8d65e1f9684c6f26b54e693dbddfa5ac94d1c20a14",
+   "bytes": 145964,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Google web.dev",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Web Vitals"
+  },
+  {
+   "artifact_id": "SA-6bffcdd1228ed7ab1dba64b2",
+   "url": "https://github.com/validator/validator",
+   "retrieved_at": "2026-11-12T21:17:34Z",
+   "sha256": "6bffcdd1228ed7ab1dba64b2bb7a7ed41956c6c100a6f61f4f4ef3cabc6cb35d",
+   "bytes": 381611,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "validator/validator (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "The Nu Html Checker (vnu)"
+  },
+  {
+   "artifact_id": "SA-85ca85a02194144fbd8deeea",
+   "url": "https://github.com/dequelabs/axe-core",
+   "retrieved_at": "2026-11-12T21:17:36Z",
+   "sha256": "85ca85a02194144fbd8deeeafc443398d107c3f7d01c7a54d8d11a57dc4567ba",
+   "bytes": 368217,
+   "media_type": "text/html",
+   "source_type": "code",
+   "publisher": "Deque Systems (GitHub)",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "axe-core"
+  },
+  {
+   "artifact_id": "SA-b3a31c91eb34c231e6c1eecb",
+   "url": "https://www.deque.com/automated-accessibility-coverage-report/",
+   "retrieved_at": "2026-11-12T21:17:37Z",
+   "sha256": "b3a31c91eb34c231e6c1eecb3207dafa8e9facec519e5c849625e4aaf54c4007",
+   "bytes": 411195,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Deque",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "The Automated Accessibility Coverage Report"
+  },
+  {
+   "artifact_id": "SA-633ba1d0c3b1b685ed3ac249",
+   "url": "https://developer.chrome.com/docs/lighthouse/accessibility/scoring",
+   "retrieved_at": "2026-11-12T21:17:38Z",
+   "sha256": "633ba1d0c3b1b685ed3ac249b5d6fbd93fc9f4a5012f0cdcadff1af1720ff1eb",
+   "bytes": 123774,
+   "media_type": "text/html",
+   "source_type": "vendor_doc",
+   "publisher": "Chrome for Developers",
+   "license": "no verificada: fuente descubierta, solo se cita",
+   "redistribution": "metadata_only",
+   "stored_at": "none",
+   "title": "Lighthouse accessibility score"
+  }
+ ],
+ "findings": {
+  "confirmed": [
+   {
+    "claim": "El HTML Standard exige (must) que cada encabezado que sigue a otro tenga un nivel menor, igual o 1 mayor que el anterior; saltar niveles es no conforme.",
+    "artifact_ids": [
+     "SA-5f0532a0eb46aa750d069cff"
+    ],
+    "quote": "Each heading following another heading lead in the outline must have a heading level that is less than, equal to, or 1 greater than lead's heading level.",
+    "locator": "HTML Standard §4.3.11 Headings and outlines"
+   },
+   {
+    "claim": "El HTML Standard indica que, si un documento tiene uno o más encabezados, al menos un encabezado del esquema debería tener nivel 1.",
+    "artifact_ids": [
+     "SA-5f0532a0eb46aa750d069cff"
+    ],
+    "quote": "If a document has one or more headings, at least a single heading within the outline should have a heading level of 1.",
+    "locator": "§4.3.11"
+   },
+   {
+    "claim": "Cuál es mejor es puramente una cuestión de estilo de autoría preferido.",
+    "artifact_ids": [
+     "SA-5f0532a0eb46aa750d069cff"
+    ],
+    "quote": "Which is best is purely an issue of preferred authoring style.",
+    "locator": "§4.3.6"
+   },
+   {
+    "claim": "El elemento section no es contenedor genérico; para estilo o scripting se recomienda div.",
+    "artifact_ids": [
+     "SA-5f0532a0eb46aa750d069cff"
+    ],
+    "quote": "The section element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the div element instead.",
+    "locator": "§4.3.3"
+   },
+   {
+    "claim": "En un documento conforme solo hay un elemento body.",
+    "artifact_ids": [
+     "SA-5f0532a0eb46aa750d069cff"
+    ],
+    "quote": "In conforming documents, there is only one body element.",
+    "locator": "§4.3.1"
+   },
+   {
+    "claim": "El elemento address no debe contener información distinta de contacto.",
+    "artifact_ids": [
+     "SA-5f0532a0eb46aa750d069cff"
+    ],
+    "quote": "The address element must not contain information other than contact information.",
+    "locator": "§4.3.10"
+   },
+   {
+    "claim": "No todos los grupos de enlaces de una página necesitan estar en un elemento nav; el elemento está pensado principalmente para secciones que consisten en bloques de navegación principales.",
+    "artifact_ids": [
+     "SA-5f0532a0eb46aa750d069cff"
+    ],
+    "quote": "Not all groups of links on a page need to be in a nav element — the element is primarily intended for sections that consist of major navigation blocks.",
+    "locator": "§4.3.4"
+   },
+   {
+    "claim": "Se alienta a los agentes de usuario a exponer el esquema de encabezados para navegación, sobre todo en medios no visuales.",
+    "artifact_ids": [
+     "SA-5f0532a0eb46aa750d069cff"
+    ],
+    "quote": "User agents are encouraged to expose page outlines to users to aid in navigation. This is especially true for non-visual media, e.g. screen readers.",
+    "locator": "§4.3.11.3"
+   },
+   {
+    "claim": "Un ejemplo del estándar usa una imagen con alt vacío (alt=\"\").",
+    "artifact_ids": [
+     "SA-5f0532a0eb46aa750d069cff"
+    ],
+    "quote": "<img src=\"/tumblr_m9tf6wSr6W1rzfqbpo1_500.jpg\" alt=\"\">",
+    "locator": "§4.3.12 Usage summary (non-normative)"
+   },
+   {
+    "claim": "A diferencia de los elementos input de HTML, los roles ARIA no hacen que los navegadores proporcionen comportamientos de teclado ni estilos.",
+    "artifact_ids": [
+     "SA-a4cd3dece76b5fc7aaada167"
+    ],
+    "quote": "Unlike HTML input elements, ARIA roles do not cause browsers to provide keyboard behaviors or styling.",
+    "locator": "APG Read Me First, Principle 1"
+   },
+   {
+    "claim": "APG recomienda probar la interoperabilidad con tecnologías de asistencia antes de producción.",
+    "artifact_ids": [
+     "SA-a4cd3dece76b5fc7aaada167"
+    ],
+    "quote": "Testing assistive technology interoperability is essential before using code from this guide in production.",
+    "locator": "APG Read Me First, Browser and Assistive Technology Support"
+   },
+   {
+    "claim": "El ARIA incorrecto representa mal las experiencias visuales, con efectos potencialmente devastadores en las experiencias no visuales correspondientes.",
+    "artifact_ids": [
+     "SA-a4cd3dece76b5fc7aaada167"
+    ],
+    "quote": "Incorrect ARIA misrepresents visual experiences, with potentially devastating effects on their corresponding non-visual experiences.",
+    "locator": "APG Read Me First, intro"
+   },
+   {
+    "claim": "La Directiva, sin perjuicio del artículo 32, se aplica a los siguientes servicios prestados a consumidores después del 28 de junio de 2025.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "2. Without prejudice to Article 32, this Directive applies to the following services provided to consumers after 28 June 2025:",
+    "locator": "Directive 2019/882, Art. 2(2)"
+   },
+   {
+    "claim": "Entre los servicios cubiertos figuran los servicios de comercio electrónico.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "(f)\n\ne-commerce services.",
+    "locator": "Art. 2(2)(f)"
+   },
+   {
+    "claim": "La Directiva exige que los sitios web y aplicaciones móviles de los servicios cubiertos sean perceptibles, operables, comprensibles y robustos.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "making websites, including the related online applications, and mobile device-based services, including mobile applications, accessible in a consistent and adequate way by making them perceivable, operable, understandable and robust;",
+    "locator": "Annex I, Section III (c)"
+   },
+   {
+    "claim": "Las microempresas que prestan servicios están exentas de cumplir los requisitos de accesibilidad a que se refiere el apartado 3 de este artículo.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "Microenterprises providing services shall be exempt from complying with the accessibility requirements referred to in paragraph 3 of this Article",
+    "locator": "Art. 4(5)"
+   },
+   {
+    "claim": "Definición de microempresa: menos de 10 personas y facturación o balance no superior a 2 millones EUR.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "‘microenterprise’ means an enterprise which employs fewer than 10 persons and which has an annual turnover not exceeding EUR 2 million or an annual balance sheet total not exceeding EUR 2 million;",
+    "locator": "Art. 3(23)"
+   },
+   {
+    "claim": "La Directiva excluye de su aplicación los mapas en línea si la información esencial para navegación se da de forma accesible.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "online maps and mapping services, if essential information is provided in an accessible digital manner for maps intended for navigational use;",
+    "locator": "Art. 2(4)(c)"
+   },
+   {
+    "claim": "Excluye contenido archivado no actualizado tras el 28 de junio de 2025.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "content of websites and mobile applications qualifying as archives, meaning that they only contain content that is not updated or edited after 28 June 2025.",
+    "locator": "Art. 2(4)(e)"
+   },
+   {
+    "claim": "Excluye contenido de terceros no financiado, desarrollado ni controlado por el operador.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "third-party content that is neither funded, developed by, or under the control of, the economic operator concerned;",
+    "locator": "Art. 2(4)(d)"
+   },
+   {
+    "claim": "Se presumirá que son conformes con los requisitos de accesibilidad de la Directiva, en la medida en que esas normas o partes de ellas cubran dichos requisitos.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "shall be presumed to be in conformity with the accessibility requirements of this Directive in so far as those standards or parts thereof cover those requirements.",
+    "locator": "Art. 15(1)"
+   },
+   {
+    "claim": "Los requisitos se aplican en la medida en que no suponga una carga desproporcionada para los operadores económicos afectados.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "does not result in the imposition of a disproportionate burden on the economic operators concerned.",
+    "locator": "Art. 14(1)(b)"
+   },
+   {
+    "claim": "La Directiva exige evitar desencadenar crisis fotosensibles.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "the product shall avoid triggering photosensitive seizures;",
+    "locator": "Annex I, Section I, point 2(j)"
+   },
+   {
+    "claim": "Cuando el producto usa el color para transmitir información, indicar una acción, requerir una respuesta o identificar elementos, debe ofrecer una alternativa al color.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "when the product uses colour to convey information, indicate an action, require a response or identify elements, it shall provide an alternative to colour;",
+    "locator": "Annex I, Section I, point 2(d)"
+   },
+   {
+    "claim": "La información debe presentarse con fuentes de tamaño y forma adecuados, contraste suficiente y espaciado ajustable.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "presented in fonts of adequate size and suitable shape, taking into account foreseeable conditions of use, and using sufficient contrast, as well as adjustable spacing between letters, lines and paragraphs;",
+    "locator": "Annex I, Section I, point 1(a)(iv)"
+   },
+   {
+    "claim": "Los servicios deben aportar alternativa a contenido no textual.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "supplementing any non-textual content with an alternative presentation of that content; and",
+    "locator": "Annex I, Section III (b)(vi)"
+   },
+   {
+    "claim": "El Anexo II contiene ejemplos indicativos no vinculantes de posibles soluciones que contribuyen a cumplir los requisitos de accesibilidad del Anexo I.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "INDICATIVE NON-BINDING EXAMPLES OF POSSIBLE SOLUTIONS THAT CONTRIBUTE TO MEETING THE ACCESSIBILITY REQUIREMENTS IN ANNEX I",
+    "locator": "Annex II title"
+   },
+   {
+    "claim": "Ejemplos: proporcionar descripción textual de imágenes, hacer toda la funcionalidad disponible desde el teclado, dar a los usuarios tiempo suficiente para leer, hacer que el contenido aparezca y funcione de forma predecible.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "Providing text description of pictures, making all functionality available from a keyboard, giving users enough time to read, making content appear and operate in a predictable way",
+    "locator": "Annex II, Section III (c)"
+   },
+   {
+    "claim": "Los Estados miembros deben aplicar las medidas de transposición desde el 28 de junio de 2025.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "They shall apply those measures from 28 June 2025.",
+    "locator": "Art. 31(2)"
+   },
+   {
+    "claim": "En cualquier caso, al menos cada cinco años.",
+    "artifact_ids": [
+     "SA-f4970001ad091d2751804606"
+    ],
+    "quote": "in any event, at least every five years.",
+    "locator": "Art. 14(5)(c)"
+   },
+   {
+    "claim": "Las cláusulas que contienen la palabra «should» son recomendaciones y no se exigen para la conformidad.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Those clauses containing the word \"should\" are recommendations and are not required for conformance.",
+    "locator": "Cláusula 14 Conformance"
+   },
+   {
+    "claim": "Cuando una de las precondiciones es falsa, el requisito no es aplicable.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "When one of the pre-conditions is false the requirement is not applicable.",
+    "locator": "Cláusula 14"
+   },
+   {
+    "claim": "La cláusula 9.1.4.3 exige que una página web satisfaga el criterio WCAG 2.1 1.4.3 Contraste (mínimo).",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Where ICT is a web page, it shall satisfy WCAG 2.1 Success Criterion 1.4.3 Contrast (Minimum).",
+    "locator": "Cláusula 9.1.4.3"
+   },
+   {
+    "claim": "La cláusula 9.1.4.10 exige Reflow de WCAG 2.1 en páginas web.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Where ICT is a web page, it shall satisfy WCAG 2.1 Success Criterion 1.4.10 Reflow.",
+    "locator": "Cláusula 9.1.4.10"
+   },
+   {
+    "claim": "La conformidad con WCAG 2.1 nivel AA equivale a cumplir todas las cláusulas 9.1 a 9.4.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Conformance with W3C Web Content Accessibility Guidelines (WCAG 2.1) [5] Level AA is equivalent to\nconforming with all of clauses 9.1 to 9.4",
+    "locator": "Cláusula 9.0"
+   },
+   {
+    "claim": "Los criterios WCAG AAA se presentan como algo a considerar, no como requisito.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Web authors and procurement accessibility specialists are encouraged to consider the WCAG 2.1 Level AAA success criteria",
+    "locator": "Cláusula 9.5"
+   },
+   {
+    "claim": "No se recomienda exigir la conformidad de nivel AAA como política general.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "It is not recommended that Level AAA conformance be required as a general policy",
+    "locator": "Cláusula 9.0 NOTE 4 y 9.5 NOTE"
+   },
+   {
+    "claim": "Las aplicaciones web, incluidas las móviles, caen bajo la definición de página web.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Web applications, including mobile web applications, are covered under the definition of web page",
+    "locator": "Cláusula 9.0 NOTE 1"
+   },
+   {
+    "claim": "La norma confiere, dentro de los límites de su alcance, una presunción de conformidad con los requisitos esenciales correspondientes de esa Directiva.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "confers, within the limits of the scope of the present document, a presumption of conformity with the corresponding essential requirements of that Directive",
+    "locator": "Prólogo y Anexo A"
+   },
+   {
+    "claim": "Cada país puede ir más allá de los mínimos de la Directiva en requisitos y alcance.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Each country can choose to go beyond these requirements in their national legislation when it comes to both requirements and scope.",
+    "locator": "Anexo E.5"
+   },
+   {
+    "claim": "El criterio de Reflow se define con 320 píxeles CSS de ancho para contenido de desplazamiento vertical.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Vertical scrolling content at a width equivalent to 320 CSS pixels.",
+    "locator": "Tabla 10.2 (cláusula 10.1.4.10)"
+   },
+   {
+    "claim": "Ejemplos de contenido que requiere diseño bidimensional son imágenes, mapas, diagramas, vídeo, juegos, etc.",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "Examples of content which require two-dimensional layout are images, maps, diagrams, video, games,",
+    "locator": "Cláusula 10.1.4.10 NOTE 2"
+   },
+   {
+    "claim": "Una página web o aplicación con una estructura semántica bien formada puede permitir a los usuarios sin visión...",
+    "artifact_ids": [
+     "SA-1eee3a1841a94567da8e59f3"
+    ],
+    "quote": "A web page or application with a well formed semantic structure can allow users without vision to",
+    "locator": "Cláusula 4.2.1 NOTE 1"
+   },
+   {
+    "claim": "Section508.gov: los Revised 508 Standards incorporan por referencia WCAG 2.0 nivel AA.",
+    "artifact_ids": [
+     "SA-6d75afa30e0c9f7203fcae07"
+    ],
+    "quote": "The Revised 508 Standards incorporate by reference the WCAG 2.0 Level AA Success Criteria",
+    "locator": "Sección Applicability"
+   },
+   {
+    "claim": "Section508.gov: una página que incumple un solo criterio aplicable no es conforme.",
+    "artifact_ids": [
+     "SA-6d75afa30e0c9f7203fcae07"
+    ],
+    "quote": "A page that fails to meet even one of the 38 applicable WCAG success criteria does not conform to the standards.",
+    "locator": "Sección Conformance Requirements"
+   },
+   {
+    "claim": "Web Vitals: el LCP debería ocurrir dentro de 2,5 s del inicio de carga.",
+    "artifact_ids": [
+     "SA-b4c63d0a0b9a1a8b1378fc8d"
+    ],
+    "quote": "LCP should occur within 2.5 seconds of when the page first starts loading.",
+    "locator": "Sección Core Web Vitals"
+   },
+   {
+    "claim": "Web Vitals: el INP debería ser de 200 ms o menos.",
+    "artifact_ids": [
+     "SA-b4c63d0a0b9a1a8b1378fc8d"
+    ],
+    "quote": "pages should have a INP of 200 milliseconds or less.",
+    "locator": "Sección Core Web Vitals"
+   },
+   {
+    "claim": "Web Vitals: una página pasa si cumple los tres objetivos en el percentil 75.",
+    "artifact_ids": [
+     "SA-b4c63d0a0b9a1a8b1378fc8d"
+    ],
+    "quote": "consider a page passing if it meets the recommended targets at the 75th percentile for all three of the Core Web Vitals metrics.",
+    "locator": "Sección Core Web Vitals"
+   },
+   {
+    "claim": "No se puede medir INP, ya que no hay entrada del usuario.",
+    "artifact_ids": [
+     "SA-b4c63d0a0b9a1a8b1378fc8d"
+    ],
+    "quote": "cannot measure INP, as there is no user input.",
+    "locator": "Sección Lab tools"
+   },
+   {
+    "claim": "No es un sustituto de la medición de campo.",
+    "artifact_ids": [
+     "SA-b4c63d0a0b9a1a8b1378fc8d"
+    ],
+    "quote": "it is not a substitute for field measurement.",
+    "locator": "Sección Lab tools"
+   },
+   {
+    "claim": "Web Vitals: una métrica estable puede retirarse y sustituirse.",
+    "artifact_ids": [
+     "SA-b4c63d0a0b9a1a8b1378fc8d"
+    ],
+    "quote": "A stable metric can be retired and replaced by another metric that addresses the problem area more effectively.",
+    "locator": "Sección Lifecycle"
+   },
+   {
+    "claim": "vnu detecta errores en HTML, CSS y SVG.",
+    "artifact_ids": [
+     "SA-6bffcdd1228ed7ab1dba64b2"
+    ],
+    "quote": "catch unintended mistakes in your HTML, CSS, and SVG",
+    "locator": "README"
+   },
+   {
+    "claim": "vnu: solo la versión «latest» es la recomendada.",
+    "artifact_ids": [
+     "SA-6bffcdd1228ed7ab1dba64b2"
+    ],
+    "quote": "The release named “latest” is “production-ready” and is the only release you want to use.",
+    "locator": "README, Releases"
+   },
+   {
+    "claim": "vnu.jar requiere Java 17 o superior.",
+    "artifact_ids": [
+     "SA-6bffcdd1228ed7ab1dba64b2"
+    ],
+    "quote": "vnu.jar — a portable version you can use on any system that has Java 17 or above installed",
+    "locator": "README, Binaries and packages"
+   },
+   {
+    "claim": "vnu: invocación de línea de comandos documentada.",
+    "artifact_ids": [
+     "SA-6bffcdd1228ed7ab1dba64b2"
+    ],
+    "quote": "java -jar ~/vnu.jar [OPTIONS]... FILES|DIRECTORY|URL...",
+    "locator": "README, Usage"
+   },
+   {
+    "claim": "axe-core es un motor de pruebas de accesibilidad para webs e interfaces basadas en HTML.",
+    "artifact_ids": [
+     "SA-85ca85a02194144fbd8deeea"
+    ],
+    "quote": "Axe is an accessibility testing engine for websites and other HTML-based user interfaces.",
+    "locator": "README"
+   },
+   {
+    "claim": "axe-core incluye reglas WCAG 2.0, 2.1 y 2.2 y reglas de buenas prácticas.",
+    "artifact_ids": [
+     "SA-85ca85a02194144fbd8deeea"
+    ],
+    "quote": "Axe-core has different types of rules, for WCAG 2.0, 2.1, 2.2 on level A, AA and AAA as well as a number of best practices",
+    "locator": "README, The Accessibility Rules"
+   },
+   {
+    "claim": "axe-core declara hallar de media el 57 % de los problemas WCAG automáticamente.",
+    "artifact_ids": [
+     "SA-85ca85a02194144fbd8deeea"
+    ],
+    "quote": "With axe-core, you can find on average 57% of WCAG issues automatically.",
+    "locator": "README, The Accessibility Rules"
+   },
+   {
+    "claim": "axe-core: la regla color-contrast no funciona con JSDOM.",
+    "artifact_ids": [
+     "SA-85ca85a02194144fbd8deeea"
+    ],
+    "quote": "Currently the color-contrast rule is known not to work with JSDOM.",
+    "locator": "README, Supported Browsers"
+   },
+   {
+    "claim": "axe-core publica una versión menor cada 3 a 5 meses.",
+    "artifact_ids": [
+     "SA-85ca85a02194144fbd8deeea"
+    ],
+    "quote": "Axe-core has a new minor release every 3 to 5 months",
+    "locator": "README, Updates & Security"
+   }
+  ],
+  "conflicting": [],
+  "unknown": [
+   "Criterios de éxito concretos de WCAG, EN 301 549 y su estado como norma armonizada: no figuran en estas fuentes.",
+   "Rendimiento web (Core Web Vitals, etc.), diseño responsivo (viewport, media queries) y legibilidad de gráficas: no tratados en estas fuentes.",
+   "Validadores y herramientas (Nu HTML Checker, axe-core, Lighthouse, pa11y, etc.): nombre, licencia y versión no aparecen en estas fuentes.",
+   "Leyes nacionales de transposición (p. ej. España, Francia, Alemania) y alcance fuera de la UE (ADA, Section 508): no cubierto.",
+   "Sha256 y URL de las fuentes: no visibles para mí.",
+   "Esta parte no contiene el texto de WCAG 2.1/2.2, HTML Living Standard, WAI-ARIA ni WCAG Techniques; los criterios WCAG se conocen solo por cómo los cita EN 301 549.",
+   "No se leyó la Directiva 2016/2102 ni la 2019/882 (Acta Europea de Accesibilidad), ni el texto de 28 CFR Part 35 Subpart H.",
+   "No hay guía específica sobre legibilidad de gráficas; solo referencias generales a 1.1.1, 1.4.1, 1.4.11 y a la nota de diseño bidimensional.",
+   "No se halló ejemplo oficial de referencia del emisor, ni versiones exactas de las herramientas."
+  ]
+ },
+ "candidate_claims": [
+  "INTERPRETACIÓN: La Directiva 2019/882 exige resultados funcionales (perceptible, operable, comprensible, robusto) sin nombrar WCAG; la conformidad técnica concreta se presume vía normas armonizadas, no vía el texto de la Directiva.",
+  "INTERPRETACIÓN: Una visualización interactiva dentro de un servicio de comercio electrónico, transporte o banca de consumo en la UE caería en el ámbito obligatorio (con excepción de microempresas de servicios); un sitio fuera de esos servicios no queda cubierto por esta Directiva.",
+  "INTERPRETACIÓN: En HTML Standard, la jerarquía de encabezados es requisito de conformidad (must), mientras que usar section vs. encabezados planos, o header vs. footer en comentarios, es preferencia del autor.",
+  "INTERPRETACIÓN: El requisito de 'alternativa al color' y 'contraste suficiente' de la Directiva sustenta que una gráfica no dependa solo del color, pero los umbrales numéricos de contraste no aparecen en esta fuente.",
+  "INTERPRETACIÓN: APG es guía de buenas prácticas (no norma): 'No ARIA is better than bad ARIA' respalda preferir HTML nativo antes que roles ARIA.",
+  "SECUNDARIA: titleii.org afirma que la regla ADA Título II de 2024 (28 CFR Parte 35, Subparte H) exige WCAG 2.1 AA a webs y apps de gobiernos estatales y locales, con plazos del 26 de abril de 2027 (50.000 habitantes o más) y del 26 de abril de 2028 (menos de 50.000 y distritos especiales), tras una ampliación de 2026. Hay que verificarlo en el eCFR.",
+  "SECUNDARIA: titleii.org indica cinco excepciones (contenido archivado, documentos convencionales preexistentes, contenido de terceros, documentos individualizados protegidos por contraseña y publicaciones preexistentes en redes sociales). Sin confirmar en fuente primaria.",
+  "SECUNDARIA: Deque (informe de cobertura) dice que axe-core halló el 57,38 % de los problemas en más de 13.000 páginas y unos 300.000 problemas, y que solo 16 de 50 criterios AA tienen problemas automáticos. Son datos de proveedor.",
+  "INTERPRETACIÓN: lo obligatorio son los requisitos con «shall» (criterios WCAG A/AA vía EN 301 549 cláusula 9 o la ley aplicable). AAA, Web Vitals, reglas de buenas prácticas de axe y las puntuaciones de Lighthouse son guías o heurísticas.",
+  "INTERPRETACIÓN: Section 508 cita WCAG 2.0 AA y EN 301 549 V3.2.1 cita WCAG 2.1 AA; el nivel aplicable depende de la jurisdicción.",
+  "INTERPRETACIÓN: la verificación automática (axe-core, Lighthouse) no basta para declarar conformidad; axe-core marca como «incomplete» lo que requiere revisión manual."
+ ],
+ "candidate_methods": [
+  "Validar el marcado con vnu (java -jar vnu.jar) o su servicio web.",
+  "Ejecutar axe-core sobre cada vista y estado de la interfaz y revisar a mano los resultados «incomplete».",
+  "Medir Core Web Vitals en campo con web-vitals y en laboratorio con Lighthouse o DevTools (TBT como sustituto de INP).",
+  "Completar con pruebas manuales de teclado, foco, lector de pantalla, zoom al 200 % y reflow a 320 px CSS."
+ ],
+ "candidate_tests": [
+  "Validar el HTML con un comprobador de conformidad (p. ej. Nu HTML Checker) y verificar que no haya saltos de nivel de encabezado (h1→h3) ni más de un body.",
+  "Verificar que toda funcionalidad sea operable solo con teclado y que cada control con role ARIA implemente el comportamiento de teclado esperado.",
+  "Comprobar que la información en gráficas no dependa solo del color (alternativa textual, patrón o etiqueta) y que haya descripción textual del contenido no textual.",
+  "Revisar que no existan parpadeos que puedan provocar crisis fotosensibles.",
+  "Probar con al menos una combinación navegador + lector de pantalla relevante para la audiencia objetivo.",
+  "vnu sin errores sobre todos los HTML.",
+  "axe.run() sin violaciones WCAG 2.1 A/AA por vista y estado.",
+  "Contraste según 1.4.3 (texto) y 1.4.11 (elementos gráficos de las gráficas).",
+  "A 320 px CSS sin desplazamiento en dos dimensiones, salvo contenido bidimensional (mapas, diagramas, tablas de datos).",
+  "Funcionalidad interactiva operable solo con teclado, sin trampa y con foco visible.",
+  "LCP ≤ 2,5 s, INP ≤ 200 ms y CLS ≤ 0,1 en el percentil 75 (guía, no obligatorio).",
+  "La información no se transmite solo por color y las imágenes tienen alternativa textual."
+ ],
+ "possible_implications_for_zpmnd": [
+  "Clasificar cada requisito con su clase: 'must' del HTML Standard y artículos/anexos de la Directiva = obligatorio en su ámbito; 'should', 'encouraged' y APG = buena práctica; elección section/encabezados = preferencia.",
+  "Registrar el ámbito de aplicación (UE, servicios a consumidores, exención de microempresas de servicios) como condición de cada requisito legal.",
+  "Fecha de revalidación: cambio del Living Standard (se actualiza continuamente), publicación de normas armonizadas, y revisión de la Comisión a 28 junio 2030.",
+  "Etiquetar cada requisito como obligatorio (shall/ley/contrato), buena práctica (should, AAA, nota best practice) o preferencia (umbral de proveedor).",
+  "Registrar jurisdicción y tipo de entidad como condición de aplicabilidad antes de declarar obligatorio un requisito.",
+  "Revalidar cuando cambie EN 301 549, WCAG, la regla del DOJ o las herramientas."
+ ],
+ "affected_existing_concepts": [
+  "Conformidad HTML (semántica de secciones y encabezados)",
+  "Accesibilidad web obligatoria vs. buena práctica",
+  "ARIA y HTML nativo",
+  "Entregable frontend HTML",
+  "Visualización interactiva",
+  "Accesibilidad web (WCAG)",
+  "Rendimiento web (Core Web Vitals)",
+  "Validadores de HTML"
+ ],
+ "hypotheses_generated": [
+  "HIPÓTESIS: Los umbrales numéricos (contraste, tamaños de objetivo) y los validadores concretos se encontrarán en WCAG/EN 301 549 y en la documentación de herramientas, que podrían estar en la parte 2.",
+  "HIPÓTESIS: en una visualización interactiva los fallos más frecuentes serían contraste, nombre/rol/valor, información y relaciones y teclado (según la tabla de Deque, de proveedor).",
+  "HIPÓTESIS: una alternativa textual más una tabla de datos equivalente cubriría las necesidades sin visión en gráficas; estas fuentes no lo establecen."
+ ],
+ "limitations": [
+  "Las fuentes se leyeron completas en 2 partes, una llamada por parte; un \"unknown\" de una parte puede estar respondido en otra.",
+  "Al unir las partes no cupo en el esquema: 4 confirmed; está completo en receipt.json (partes_fuera).",
+  "El HTML Standard se leyó solo en la sección 4.3; no incluye atributos alt, lang, viewport ni validación completa. El estándar es un documento vivo y cambia.",
+  "La Directiva es texto del año 2019; no se evaluó si se modificó después ni las leyes nacionales de transposición. Su aplicación depende de cada Estado miembro.",
+  "La guía APG es de W3C WAI, informativa y no normativa; sus advertencias son buena práctica, no obligación legal.",
+  "Ninguna fuente de esta parte describe herramientas con licencia y versión; no se ofrece lista de herramientas verificada.",
+  "La cita de ejemplo de img alt vacío proviene de ejemplos no normativos; no prueba una regla obligatoria.",
+  "EN 301 549 V3.2.1 refleja WCAG 2.1; no se sabe con estas fuentes si hay una versión posterior vigente en noviembre de 2026. Hay que revalidar.",
+  "El Anexo A de EN 301 549 es informativo y la presunción de conformidad depende de la cita en el DOUE, que esta fuente no confirma.",
+  "Section508.gov, Web Vitals, vnu, axe-core y Lighthouse son páginas de un momento dado: Section508 «Reviewed/Updated July 2026», Web Vitals actualizado 2024-10-31, Lighthouse actualizado 2025-10-22.",
+  "La cifra del 57 % de axe-core y los datos de Deque son de proveedor, no verificación independiente.",
+  "Los umbrales de Web Vitals son recomendaciones de Google, no norma ni ley.",
+  "titleii.org es secundaria, independiente y declara no ser asesoría legal; no sustituye al texto del 28 CFR.",
+  "Una segunda pasada que solo ve cada afirmación junto a su cita recortó 23 de 60 hallazgos confirmados a lo que su cita dice; lo recortado no tiene cita y queda en receipt.json, fuera de los hallazgos.",
+  "Las fuentes las propuso una búsqueda autónoma, sin URLs dadas: 14 propuestas, 12 aceptadas, 2 rechazadas; terminó en STOPPED_WITH_GAPS. Ninguna se revisó a mano antes de bajarla y todas se citan sin republicarse (detalle en receipt.json).",
+  "Fuentes del plan que el modelo no leyó (detalle en receipt.json): https://www.w3.org/TR/WCAG22/ (refused)"
+ ],
+ "researcher_agents": [
+  {
+   "agent": "rg-investigar",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-investigar-revision",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  },
+  {
+   "agent": "rg-descubrir",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml (CLI con WebSearch como única herramienta)"
+  },
+  {
+   "agent": "rg-investigar-conciliacion",
+   "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+   "substrate": "GitHub Actions: investigar.yml"
+  }
+ ]
+}
