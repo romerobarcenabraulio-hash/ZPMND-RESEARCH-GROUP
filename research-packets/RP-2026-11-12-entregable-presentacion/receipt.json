@@ -1,0 +1,835 @@
+{
+ "request_id": "RR-2026-11-12-entregable-presentacion",
+ "fetched": [
+  {
+   "url": "https://www.section508.gov/create/presentations/",
+   "status": 200,
+   "error": null,
+   "sha256": "7d5ff9382ad589d78566d279d8e498d5d5752901df59b22ca4f14ac6c80eeafc",
+   "bytes": 30580,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:16Z",
+   "text_status": "ok",
+   "text_chars": 3829
+  },
+  {
+   "url": "https://www.section508.gov/~assets/files/ms-powerpoint-365-basic-authoring-and-testing-guide.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "e32274474e5ba373d6bd2e883eb93eaa3f476aab257b2cc9014f44f6d77210c3",
+   "bytes": 1746478,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:17:17Z",
+   "text_status": "ok",
+   "text_chars": 19824
+  },
+  {
+   "url": "https://www.access-board.gov/ict/",
+   "status": 200,
+   "error": null,
+   "sha256": "b79682785687f0c6b2188fee355cc1d2a464e37befe4d6233b4fa0b67c9e9e08",
+   "bytes": 493062,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:18Z",
+   "text_status": "ok",
+   "text_chars": 397541
+  },
+  {
+   "url": "https://www.w3.org/TR/WCAG22/",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.w3.org/TR/WCAG22/",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:17:20Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf",
+   "status": 200,
+   "error": null,
+   "sha256": "1eee3a1841a94567da8e59f3b19a782ce9ab081c386b6a2a763b8cde13ff5b49",
+   "bytes": 2285361,
+   "media_type": "application/pdf",
+   "retrieved_at": "2026-11-12T21:17:20Z",
+   "text_status": "ok",
+   "text_chars": 477596
+  },
+  {
+   "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-243",
+   "status": "refused",
+   "error": "host not in allowlist: unblock.federalregister.gov",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:17:21Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-244/section-244.100",
+   "status": "refused",
+   "error": "host not in allowlist: unblock.federalregister.gov",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:17:22Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://www.sec.gov/rules-regulations/2003/03/conditions-use-non-gaap-financial-measures",
+   "status": 200,
+   "error": null,
+   "sha256": "9f82dfbe9d71b8a3baa2ad717ef1ae82e98ad1cfc976ac79b7c669d092b7cdc1",
+   "bytes": 188811,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:23Z",
+   "text_status": "ok",
+   "text_chars": 110041
+  },
+  {
+   "url": "https://www.iso.org/standard/71691.html",
+   "status": "refused",
+   "error": "robots.txt disallows https://www.iso.org/standard/71691.html",
+   "sha256": null,
+   "bytes": null,
+   "media_type": null,
+   "retrieved_at": "2026-11-12T21:17:24Z",
+   "text_status": null,
+   "text_chars": null
+  },
+  {
+   "url": "https://support.microsoft.com/en-us/accessibility/powerpoint/make-your-powerpoint-presentations-accessible-to-people-with-disabilities",
+   "status": 200,
+   "error": null,
+   "sha256": "8e3764136da2a1f9bbc492a756c232e58ad5799cec152a1d1f55f98766bdf3d0",
+   "bytes": 260597,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:24Z",
+   "text_status": "ok",
+   "text_chars": 99230
+  },
+  {
+   "url": "https://www.w3.org/WAI/teach-advocate/accessible-presentations/",
+   "status": 200,
+   "error": null,
+   "sha256": "633bec533afcd7b035c512de32c2ed3aeeb7ad15347e183f30c9cba8e3025dd9",
+   "bytes": 63784,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:26Z",
+   "text_status": "ok",
+   "text_chars": 19853
+  },
+  {
+   "url": "https://www.ismrm.org/25m/guidelines/",
+   "status": 200,
+   "error": null,
+   "sha256": "e60f922df8a3b53b5a15ff1b3c8c3d7a825efc8b8791a0f9319425db0e81d237",
+   "bytes": 262279,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-12T21:17:26Z",
+   "text_status": "ok",
+   "text_chars": 45333
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/43308483606",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "cuts": [
+   {
+    "id": "confirmed[5]",
+    "claim": "El contenido no público debe cumplir E205.4 cuando es asunto oficial comunicado por la agencia por ciertas vías, entre ellas los materiales educativos o de capacitación.",
+    "now": "El contenido electrónico no público debe cumplir los requisitos de accesibilidad de E205.4 cuando constituye asunto oficial.",
+    "cut": "Las vías de comunicación y los materiales educativos o de capacitación."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "Las herramientas de autoría deben ofrecer un modo de crear contenido conforme a WCAG 2.0 AA y permitir que el autor sobrescriba la información de accesibilidad.",
+    "now": "Las herramientas de autoría deben permitir que el autor sobrescriba la información requerida para la accesibilidad.",
+    "cut": "Ofrecer un modo de crear contenido conforme a WCAG 2.0 AA."
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "Las herramientas de autoría que exportan PDF 1.7 deben poder exportar también PDF/UA-1.",
+    "now": "Las herramientas de autoría deben poder exportar también archivos PDF conformes a PDF/UA-1.",
+    "cut": "La referencia a que exportan PDF 1.7."
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "Existe una excepción de contenido heredado (safe harbor) para ICT existente no alterado.",
+    "now": "Las TIC que no han sido alteradas el 18 de enero de 2018 o después no tienen que modificarse para cumplir los Revised 508 Standards.",
+    "cut": "La etiqueta 'safe harbor' y 'contenido heredado'."
+   },
+   {
+    "id": "confirmed[9]",
+    "claim": "La norma permite la carga excesiva (undue burden) como excepción, pero exige documentarla y dar un medio alternativo.",
+    "now": "La agencia debe dar a las personas con discapacidad acceso y uso de la información y los datos por un medio alternativo que satisfaga las necesidades identificadas.",
+    "cut": "La carga excesiva (undue burden) como excepción y la exigencia de documentarla."
+   },
+   {
+    "id": "confirmed[10]",
+    "claim": "Las normas que son contenidas por contratistas incidentales a un contrato quedan exceptuadas.",
+    "now": "Las TIC adquiridas por un contratista de forma incidental a un contrato no tienen que cumplir los Revised 508 Standards.",
+    "cut": "La formulación errónea sobre normas contenidas por contratistas."
+   },
+   {
+    "id": "confirmed[12]",
+    "claim": "El Access Board retiró PDF/UA-1 como estándar alternativo de conformidad para documentos PDF y fijó WCAG 2.0 como único estándar.",
+    "now": "La Junta considera que WCAG 2.0 es apropiado como único estándar para archivos PDF.",
+    "cut": "El retiro de PDF/UA-1 como estándar alternativo."
+   },
+   {
+    "id": "confirmed[15]",
+    "claim": "La guía de prueba exige que el orden de lectura coincida con el orden previsto, usando el panel Reading Order.",
+    "now": "La guía de prueba exige que la selección de cada objeto coincida con el orden de lectura previsto de la diapositiva.",
+    "cut": "El uso del panel Reading Order."
+   },
+   {
+    "id": "confirmed[17]",
+    "claim": "La guía fija relaciones de contraste de 4.5:1 para texto estándar y 3:1 para texto grande, y usa Colour Contrast Analyser.",
+    "now": "La guía fija una relación de contraste de 4.5:1 para texto estándar (12 pt regular).",
+    "cut": "La relación 3:1 para texto grande y el uso de Colour Contrast Analyser."
+   },
+   {
+    "id": "confirmed[19]",
+    "claim": "La guía exige subtítulos sincronizados y audiodescripción para medios sincronizados incrustados.",
+    "now": "La guía indica que los archivos de medios sincronizados (audio y video) deberían tener subtítulos sincronizados precisos y completos y audiodescripciones.",
+    "cut": "El carácter de exigencia (dice 'should') y que sean medios incrustados."
+   },
+   {
+    "id": "confirmed[21]",
+    "claim": "La página Section508.gov enlaza guías de autoría para PowerPoint 365 y 2016, y aparece con revisión de julio de 2026.",
+    "now": "La página Section508.gov aparece con revisión/actualización de julio de 2026.",
+    "cut": "Que enlace guías de autoría para PowerPoint 365 y 2016."
+   },
+   {
+    "id": "confirmed[22]",
+    "claim": "La página oficial advierte que gran parte de la guía de agencias es anterior a los estándares revisados.",
+    "now": "Gran parte de esta guía es anterior a los Revised 508 Standards.",
+    "cut": "La referencia a guía de agencias y a la página como oficial."
+   },
+   {
+    "id": "confirmed[24]",
+    "claim": "La cláusula 10 de la EN 301 549 aplica a documentos que no son páginas web, incluidos los descargables.",
+    "now": "La cláusula se aplica a los documentos descargables.",
+    "cut": "Que se trate de documentos que no son páginas web y el número de cláusula 10."
+   },
+   {
+    "id": "confirmed[26]",
+    "claim": "Los requisitos son autoalcanzables: si la precondición es falsa, el requisito no aplica.",
+    "now": "Cuando una de las precondiciones es falsa, el requisito no es aplicable.",
+    "cut": "La calificación de los requisitos como 'autoalcanzables'."
+   },
+   {
+    "id": "confirmed[29]",
+    "claim": "Los documentos deben tener títulos que describan tema o propósito (Tabla 10.7).",
+    "now": "Los documentos tienen títulos que describen el tema o propósito.",
+    "cut": "La referencia a la Tabla 10.7."
+   },
+   {
+    "id": "confirmed[30]",
+    "claim": "El idioma por defecto de cada documento debe poder determinarse por programa (Tabla 10.11).",
+    "now": "El idioma humano por defecto de cada documento puede determinarse por programa.",
+    "cut": "La referencia a la Tabla 10.11."
+   },
+   {
+    "id": "confirmed[32]",
+    "claim": "Los documentos no deben contener nada que destelle más de tres veces por segundo, salvo bajo el umbral.",
+    "now": "Los documentos no contienen nada que destelle más de tres veces en cualquier período de un segundo.",
+    "cut": "La excepción 'salvo bajo el umbral'."
+   },
+   {
+    "id": "confirmed[33]",
+    "claim": "Evitar bloques repetidos en documentos se declara buena práctica, no requisito.",
+    "now": "Aunque no es un requisito, la capacidad de saltar bloques de contenido repetidos dentro de los documentos se menciona.",
+    "cut": "Que se declare buena práctica (la cita termina en 'is')."
+   },
+   {
+    "id": "confirmed[34]",
+    "claim": "Los metadatos de accesibilidad con WebSchemas/Accessibility 2.0 son buena práctica.",
+    "now": "Es buena práctica proporcionar metadatos sobre la accesibilidad del documento.",
+    "cut": "WebSchemas/Accessibility 2.0."
+   },
+   {
+    "id": "confirmed[35]",
+    "claim": "Usar fuentes escalables es buena práctica, no requisito.",
+    "now": "Es buena práctica usar solo fuentes que permitan escalar sin pérdida de calidad.",
+    "cut": "Que no sea requisito."
+   },
+   {
+    "id": "confirmed[36]",
+    "claim": "La norma da presunción de conformidad con la Directiva 2016/2102 una vez citada en el Diario Oficial.",
+    "now": "La norma confiere, dentro de los límites de su alcance, una presunción de conformidad.",
+    "cut": "La Directiva 2016/2102 y la cita en el Diario Oficial."
+   },
+   {
+    "id": "confirmed[38]",
+    "claim": "El Anexo C no es una metodología de prueba.",
+    "now": "No proporciona una metodología de prueba.",
+    "cut": "La identificación del Anexo C."
+   },
+   {
+    "id": "confirmed[39]",
+    "claim": "Las herramientas de autoría deben ofrecer sugerencias de reparación cuando detectan incumplimientos.",
+    "now": "La herramienta de autoría debe proporcionar sugerencias de reparación.",
+    "cut": "La condición de que detecte incumplimientos."
+   },
+   {
+    "id": "confirmed[41]",
+    "claim": "La Regulation G exige acompañar la medida no-GAAP con la medida GAAP comparable y una conciliación.",
+    "now": "El registrante debe acompañar la medida financiera no-GAAP con ciertos elementos.",
+    "cut": "La medida GAAP comparable y la conciliación."
+   },
+   {
+    "id": "confirmed[43]",
+    "claim": "Se prohíbe divulgar una medida no-GAAP engañosa por declaración falsa u omisión de hechos materiales.",
+    "now": "No se debe hacer pública una medida financiera no-GAAP que, junto con la información que la acompaña, (la cita se corta aquí).",
+    "cut": "Que sea engañosa por declaración falsa u omisión de hechos materiales."
+   },
+   {
+    "id": "confirmed[44]",
+    "claim": "En divulgaciones orales, telefónicas o webcast, la ubicación del sitio web con la información debe hacerse pública en la misma presentación.",
+    "now": "La ubicación del sitio web se hace pública en la misma presentación en que se hace pública la medida no-GAAP.",
+    "cut": "La referencia a divulgaciones orales, telefónicas o webcast."
+   },
+   {
+    "id": "confirmed[45]",
+    "claim": "En documentos presentados a la SEC, la medida GAAP comparable debe tener igual o mayor prominencia.",
+    "now": "Se exige una presentación, con igual o mayor prominencia, de la medida financiera más directamente comparable.",
+    "cut": "La referencia a documentos presentados a la SEC y a que sea GAAP."
+   },
+   {
+    "id": "confirmed[46]",
+    "claim": "En documentos presentados a la SEC, debe explicarse por qué la medida es útil a los inversionistas.",
+    "now": "Se exige una declaración de las razones por las que la gerencia del registrante cree que presentar la medida no-GAAP brinda información útil.",
+    "cut": "La referencia a documentos presentados a la SEC y a los inversionistas."
+   },
+   {
+    "id": "confirmed[47]",
+    "claim": "Se prohíben títulos de medidas no-GAAP iguales o confusamente similares a los GAAP en documentos presentados a la SEC.",
+    "now": "Se prohíbe usar títulos o descripciones de medidas no-GAAP que sean iguales o confusamente similares a (la cita se corta aquí).",
+    "cut": "La referencia a medidas GAAP y a documentos presentados a la SEC."
+   },
+   {
+    "id": "confirmed[50]",
+    "claim": "Hay excepción para emisores privados extranjeros cuyos valores cotizan fuera de EE. UU. (una de varias condiciones).",
+    "now": "Una condición es que los valores del registrante estén listados o cotizados en una bolsa o sistema de cotización entre intermediarios fuera de Estados Unidos.",
+    "cut": "Que sea una excepción para emisores privados extranjeros y que sea una de varias condiciones."
+   },
+   {
+    "id": "confirmed[51]",
+    "claim": "Hay excepción para medidas en comunicaciones de combinaciones de negocios sujetas a reglas de comunicación aplicables.",
+    "now": "Esta sección no se aplica a una medida no-GAAP incluida en una divulgación relativa a una combinación de negocios propuesta.",
+    "cut": "La referencia a reglas de comunicación aplicables."
+   },
+   {
+    "id": "confirmed[54]",
+    "claim": "Las declaraciones sobre utilidad de la medida no deben ser boilerplate.",
+    "now": "Algo no debería ser boilerplate (texto genérico).",
+    "cut": "Que se trate de las declaraciones sobre la utilidad de la medida."
+   },
+   {
+    "id": "confirmed[55]",
+    "claim": "W3C WAI recomienda (no como norma vinculante) limitar el texto por diapositiva; se presenta como lista de verificación de buenas prácticas.",
+    "now": "W3C WAI indica limitar la cantidad de texto en cada diapositiva.",
+    "cut": "Que no sea norma vinculante y que se presente como lista de verificación de buenas prácticas."
+   },
+   {
+    "id": "confirmed[58]",
+    "claim": "W3C WAI sugiere usar el contraste de las pautas web como referencia para diapositivas.",
+    "now": "Hay pautas para páginas web que se pueden usar para ayudar a determinar un contraste suficiente, aunque el medio sea diferente.",
+    "cut": "La referencia a diapositivas."
+   }
+  ]
+ },
+ "dropped": [
+  {
+   "id": "confirmed[41]",
+   "claim": "El registrante debe acompañar la medida financiera no-GAAP con ciertos elementos.",
+   "quote": "the registrant must accompany that non-GAAP financial measure with:",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[42]",
+   "claim": "La conciliación es cuantitativa para medidas históricas y, para las prospectivas, hasta donde sea disponible sin esfuerzos irrazonables.",
+   "quote": "which shall be quantitative for historical non-GAAP measures presented, and quantitative, to the extent available without unreasonable efforts",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[43]",
+   "claim": "No se debe hacer pública una medida financiera no-GAAP que, junto con la información que la acompaña, (la cita se corta aquí).",
+   "quote": "shall not make public a non-GAAP financial measure that, taken together with the information accompanying that measure",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[44]",
+   "claim": "La ubicación del sitio web se hace pública en la misma presentación en que se hace pública la medida no-GAAP.",
+   "quote": "The location of the web site is made public in the same presentation in which the non-GAAP financial measure is made public.",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[45]",
+   "claim": "Se exige una presentación, con igual o mayor prominencia, de la medida financiera más directamente comparable.",
+   "quote": "A presentation, with equal or greater prominence, of the most directly comparable financial measure",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[46]",
+   "claim": "Se exige una declaración de las razones por las que la gerencia del registrante cree que presentar la medida no-GAAP brinda información útil.",
+   "quote": "A statement disclosing the reasons why the registrant's management believes that presentation of the non-GAAP financial measure provides useful information",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[47]",
+   "claim": "Se prohíbe usar títulos o descripciones de medidas no-GAAP que sean iguales o confusamente similares a (la cita se corta aquí).",
+   "quote": "Use titles or descriptions of non-GAAP financial measures that are the same as, or confusingly similar to",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[48]",
+   "claim": "El reporte del Item 12 del Form 8-K debe entregarse en 5 días hábiles.",
+   "quote": "A report of an event specified in Item 12 is to be furnished within 5 business days after the occurrence of the event",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[49]",
+   "claim": "La Regulation G aplica a quien deba presentar informes según las Secciones 13(a) o 15(d).",
+   "quote": "Regulation G applies to any entity that is required to file reports pursuant to Sections 13(a) or 15(d) of the Exchange Act",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[50]",
+   "claim": "Una condición es que los valores del registrante estén listados o cotizados en una bolsa o sistema de cotización entre intermediarios fuera de Estados Unidos.",
+   "quote": "The securities of the registrant are listed or quoted on a securities exchange or inter-dealer quotation system outside the United States",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[51]",
+   "claim": "Esta sección no se aplica a una medida no-GAAP incluida en una divulgación relativa a una combinación de negocios propuesta.",
+   "quote": "This section shall not apply to a non-GAAP financial measure included in disclosure relating to a proposed business combination",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[52]",
+   "claim": "El Item 12 no obliga a emitir comunicados de resultados.",
+   "quote": "New Item 12 does not require that companies issue earnings releases or similar announcements.",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[53]",
+   "claim": "La SEC sugiere, sin imponerlo, mantener la información en el sitio web al menos 12 meses.",
+   "quote": "we suggest that companies provide web site access to this information for at least a 12-month period",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  },
+  {
+   "id": "confirmed[54]",
+   "claim": "Algo no debería ser boilerplate (texto genérico).",
+   "quote": "should not be boilerplate.",
+   "artifact_ids": [
+    "SA-9f82dfbe9d71b8a3baa2ad71"
+   ],
+   "reason": "solo fuentes secundarias"
+  }
+ ],
+ "discovery": {
+  "families": [
+   "Accesibilidad: normas (WCAG 2.2, Section 508/E205, EN 301 549, ADA Título II)",
+   "Divulgación a inversionistas: Reg FD y Reg G (eCFR/SEC)",
+   "Lineamientos de congresos y sociedades (requisitos por evento)",
+   "Guías de accesibilidad de presentaciones (W3C WAI, Section508.gov)",
+   "Formatos abiertos (ISO/IEC 29500, ODF/OASIS)",
+   "Herramientas de producción y verificación (PowerPoint Accessibility Checker, PAC, veraPDF)",
+   "Secundarias/proveedor (solo candidate_claim)"
+  ],
+  "searches": [
+   {
+    "query": "Section 508 PowerPoint accessibility testing guide",
+    "intent": "official"
+   },
+   {
+    "query": "SEC Regulation FD 17 CFR 243.100 eCFR",
+    "intent": "official"
+   },
+   {
+    "query": "WCAG 2.2 W3C Recommendation",
+    "intent": "official"
+   },
+   {
+    "query": "EN 301 549 V3.2.1 accessibility requirements ICT ETSI",
+    "intent": "official"
+   },
+   {
+    "query": "Microsoft Accessibility Checker PowerPoint make presentations accessible",
+    "intent": "other"
+   },
+   {
+    "query": "SEC Regulation G non-GAAP investor presentation forward-looking statements safe harbor",
+    "intent": "limitations"
+   },
+   {
+    "query": "ISO/IEC 29500 OOXML ODF ISO/IEC 26300 OASIS OpenDocument 1.3",
+    "intent": "official"
+   },
+   {
+    "query": "conference oral presentation guidelines slides poster requirements speaker instructions accessibility",
+    "intent": "limitations"
+   },
+   {
+    "query": "ADA Title II web rule WCAG 2.1 AA compliance dates slides documents",
+    "intent": "official"
+   },
+   {
+    "query": "17 CFR 244.100 Regulation G eCFR",
+    "intent": "official"
+   },
+   {
+    "query": "ISO/IEC 29500-1:2016 iso.org",
+    "intent": "official"
+   },
+   {
+    "query": "PDF/UA ISO 14289 PAC veraPDF validation",
+    "intent": "other"
+   },
+   {
+    "query": "European Accessibility Act scope documents presentations microenterprise exemption",
+    "intent": "contradict"
+   },
+   {
+    "query": "Section 508 revised ICT standards E205 WCAG 2.0 Access Board",
+    "intent": "official"
+   }
+  ],
+  "not_found": [
+   "Texto primario de ADA Título II (ada.gov, regla 2024 e IFR abril 2026): solo vistos vía sitios secundarios; las URL de ada.gov no aparecieron en resultados, no se proponen.",
+   "Texto oficial de la Directiva (UE) 2019/882 en EUR-Lex: no apareció; solo comentarios de proveedores.",
+   "Norma ODF oficial (OASIS OpenDocument 1.3/1.4 e ISO/IEC 26300): solo vista vía Wikipedia, no fuente primaria.",
+   "Reglas de bolsas (Nasdaq/NYSE) o avisos de mercado fuera de EE.UU. (CNMV, FCA, ESMA MAR): no buscado a fondo.",
+   "Safe harbor PSLRA (Sección 21E) en fuente primaria: solo secundarias (Mayer Brown).",
+   "Lineamientos universitarios de tesis/defensa y estilo de diapositivas académicas: no hallados como norma; todo es convención.",
+   "Versiones/licencias/sha256 de herramientas (PAC, veraPDF, Accessibility Checker): no verificados; sha256 requiere descarga que no puedo hacer.",
+   "Estado de EN 301 549 V4.1.1 (2026-09): sin confirmar en ETSI.",
+   "Ejemplo oficial de presentación para inversionistas publicado por un regulador: no hallado."
+  ],
+  "stop": "STOPPED_WITH_GAPS",
+  "proposed": 12,
+  "accepted": 12,
+  "rejected": [],
+  "sources": [
+   {
+    "url": "https://www.section508.gov/create/presentations/",
+    "family": "Guías de accesibilidad de presentaciones",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Guía oficial federal EE.UU. con pruebas de conformidad para PowerPoint; base de candidate_tests. Obligatoriedad solo para agencias federales."
+   },
+   {
+    "url": "https://www.section508.gov/~assets/files/ms-powerpoint-365-basic-authoring-and-testing-guide.pdf",
+    "family": "Guías de accesibilidad de presentaciones",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Pruebas numeradas verificables (p. ej. .pptx, orden de lectura); notas que tablas complejas no son accesibles en PowerPoint. PDF: bajar y calcular sha256."
+   },
+   {
+    "url": "https://www.access-board.gov/ict/",
+    "family": "Accesibilidad: normas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto oficial Section 508 refrescado: E205.4 exige WCAG 2.0 A/AA para contenido electrónico de agencias federales; no exige PDF/UA."
+   },
+   {
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "family": "Accesibilidad: normas",
+    "stance": "context",
+    "role": "primary",
+    "why": "Especificación base (Rec. 5-oct-2023, act. 12-dic-2024); no es ley por sí misma, la obligación viene de normas que la incorporan. URL citada en resultado de búsqueda."
+   },
+   {
+    "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf",
+    "family": "Accesibilidad: normas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Cláusula 10 (documentos no web) y WCAG 2.1 AA; presunción de conformidad UE. Verificar si V4.1.1 (2026-09) la reemplaza."
+   },
+   {
+    "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-243",
+    "family": "Divulgación a inversionistas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Texto vigente: divulgación selectiva; la divulgación pública se logra vía Form 8-K u otros medios razonables; aplica a emisores de EE.UU. con valores registrados."
+   },
+   {
+    "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-244/section-244.100",
+    "family": "Divulgación a inversionistas",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Exige medida GAAP comparable y conciliación en presentaciones con medidas no-GAAP; Nota 1 regula divulgación oral/webcast con publicación en sitio web."
+   },
+   {
+    "url": "https://www.sec.gov/rules-regulations/2003/03/conditions-use-non-gaap-financial-measures",
+    "family": "Divulgación a inversionistas",
+    "stance": "context",
+    "role": "secondary",
+    "why": "Contexto de adopción de Reg G; útil para alcance y excepciones (emisores extranjeros privados, etc.)."
+   },
+   {
+    "url": "https://www.iso.org/standard/71691.html",
+    "family": "Formatos abiertos",
+    "stance": "context",
+    "role": "primary",
+    "why": "Metadatos oficiales (de pago): edición 4, 2016, revisada 2022; hay una 5ª edición en trámite según terceros. El estándar no exige formato para presentaciones; solo define PPTX."
+   },
+   {
+    "url": "https://support.microsoft.com/en-us/accessibility/powerpoint/make-your-powerpoint-presentations-accessible-to-people-with-disabilities",
+    "family": "Herramientas de producción y verificación",
+    "stance": "supports",
+    "role": "secondary",
+    "why": "Documentación de proveedor del Accessibility Checker (Revisar > Comprobar accesibilidad); tamaño 24 pt es recomendación, no norma. Solo candidate_claim."
+   },
+   {
+    "url": "https://www.w3.org/WAI/teach-advocate/accessible-presentations/",
+    "family": "Lineamientos de congresos y guías",
+    "stance": "supports",
+    "role": "primary",
+    "why": "Lista de verificación de eventos y presentaciones (texto limitado en diapositivas, describir visuales); guía de buenas prácticas, no norma obligatoria."
+   },
+   {
+    "url": "https://www.ismrm.org/25m/guidelines/",
+    "family": "Lineamientos de congresos",
+    "stance": "limitation",
+    "role": "secondary",
+    "why": "Ejemplo de requisitos específicos del evento (16:9, diapositiva de declaración obligatoria, tiempo): obligatorio solo para ese congreso, no general."
+   }
+  ],
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)"
+ },
+ "partes": [
+  [
+   [
+    "SA-7d5ff9382ad589d78566d279",
+    0,
+    3829
+   ],
+   [
+    "SA-e32274474e5ba373d6bd2e88",
+    0,
+    19824
+   ],
+   [
+    "SA-b79682785687f0c6b2188fee",
+    0,
+    397541
+   ]
+  ],
+  [
+   [
+    "SA-1eee3a1841a94567da8e59f3",
+    0,
+    477596
+   ],
+   [
+    "SA-9f82dfbe9d71b8a3baa2ad71",
+    0,
+    110041
+   ]
+  ],
+  [
+   [
+    "SA-8e3764136da2a1f9bbc492a7",
+    0,
+    99230
+   ],
+   [
+    "SA-633bec533afcd7b035c512de",
+    0,
+    19853
+   ],
+   [
+    "SA-e60f922df8a3b53b5a15ff1b",
+    0,
+    45333
+   ]
+  ]
+ ],
+ "partes_fuera": {
+  "confirmed": [
+   {
+    "claim": "W3C WAI sugiere que los organizadores consideren incluir requisitos de accesibilidad en los contratos con oradores.",
+    "artifact_ids": [
+     "SA-633bec533afcd7b035c512de"
+    ],
+    "quote": "Consider including accessibility requirements in any contracts.",
+    "locator": "Organizers: Event Setup"
+   },
+   {
+    "claim": "La página W3C WAI fue actualizada el 31 de agosto de 2022.",
+    "artifact_ids": [
+     "SA-633bec533afcd7b035c512de"
+    ],
+    "quote": "Updated: 31 August 2022.",
+    "locator": "Pie de página"
+   },
+   {
+    "claim": "ISMRM exige diapositivas de declaración de intereses financieros en presentaciones orales, aun sin conflictos; es un requisito de la organización del congreso.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "Declaration slides are MANDATORY for oral and educational presentations, even if you have nothing relevant to declare.",
+    "locator": "Declaration Slides"
+   },
+   {
+    "claim": "ISMRM atribuye la divulgación a reglas del Accreditation Council.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "Accreditation Council rules require that every oral presentation begin with the speaker making a disclosure of relevant financial interests or relationships.",
+    "locator": "Declaration Slides"
+   },
+   {
+    "claim": "ISMRM exige que la divulgación se haga tanto en diapositiva como oralmente.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "This disclosure must be done both via a slide and orally during the presentation",
+    "locator": "Declaration Slides"
+   },
+   {
+    "claim": "ISMRM asigna 8 minutos para una presentación oral científica más 3 de discusión.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "Eight (8) minutes are allotted for your oral presentation followed by 3 minutes for discussions.",
+    "locator": "Scientific Oral Sessions"
+   },
+   {
+    "claim": "ISMRM indica el orden: título con autores y luego la declaración.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "Begin with your title slide and include authors. Your next slide should be your declaration of financial interests or relationships.",
+    "locator": "Scientific Oral Sessions"
+   },
+   {
+    "claim": "ISMRM indica que todas las pantallas de las salas son 16:9.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "All screens in the meeting rooms will be 16:9 widescreen format.",
+    "locator": "Scientific Oral Sessions - Speaker Ready Room"
+   },
+   {
+    "claim": "ISMRM pide quitar los hipervínculos de las presentaciones orales.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "All hyperlinks (usually blue and underlined with a link to a website, e-mail address or document) should be removed.",
+    "locator": "Scientific Oral Sessions - Speaker Ready Room"
+   },
+   {
+    "claim": "ISMRM recomienda incrustar fuentes y verificar audio/video.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "Please make sure all fonts display as expected (use the EMBED FONTS feature in PowerPoint) and all audio/video clips play properly.",
+    "locator": "Speaker Ready Room"
+   },
+   {
+    "claim": "ISMRM indica que la presentación debe funcionar solo con mouse en las salas.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "There will be NO keyboards at the session room computers. A presentation must function only with a mouse.",
+    "locator": "Speaker Ready Room"
+   },
+   {
+    "claim": "ISMRM exige proteger la confidencialidad del paciente en imágenes.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "No names or fully exposed faces should appear in illustrations or images.",
+    "locator": "How To Upload"
+   },
+   {
+    "claim": "ISMRM da como regla de diseño no más de 7 líneas con 7 palabras o menos.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "Message slides should contain no more than 7 lines, with 7 or fewer words per line.",
+    "locator": "Slide Design"
+   },
+   {
+    "claim": "ISMRM limita a una diapositiva por minuto de exposición.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "Limit the number of slides to no more than one (1) for each minute of your presentation.",
+    "locator": "Slide Design"
+   },
+   {
+    "claim": "ISMRM recomienda el logo institucional solo en la primera diapositiva.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "A logo or institutional identification should appear only on the first title slide.",
+    "locator": "Slide Design"
+   },
+   {
+    "claim": "ISMRM sugiere pósters con fuente de al menos 24 puntos; es una sugerencia.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "It is suggested that font size should be at least 24-point.",
+    "locator": "Traditional Posters - Design"
+   },
+   {
+    "claim": "ISMRM limita los pósters tradicionales a 36 x 36 pulgadas.",
+    "artifact_ids": [
+     "SA-e60f922df8a3b53b5a15ff1b"
+    ],
+    "quote": "Each presenter is assigned a square space with maximum dimensions of 36 x 36 inches (approx. 92 x 92 cm).",
+    "locator": "Traditional Posters - Measurements"
+   }
+  ]
+ }
+}
