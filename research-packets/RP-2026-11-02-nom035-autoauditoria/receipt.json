@@ -1,0 +1,74 @@
+{
+ "request_id": "RR-2026-11-02-nom035-autoauditoria",
+ "fetched": [
+  {
+   "url": "https://sidof.segob.gob.mx/notas/docFuente/5541828",
+   "status": 200,
+   "error": null,
+   "sha256": "75b62246f311f4451094bb20eb3b7528ed6c317390530cf4ca8eae62e04548cc",
+   "bytes": 1133731,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-17T22:22:52Z",
+   "text_status": "ok",
+   "text_chars": 119139
+  },
+  {
+   "url": "https://sidof.segob.gob.mx/notas/5541828",
+   "status": 200,
+   "error": null,
+   "sha256": "a098da62f4974e821611545a4807fae1a45338a883b927e7f7f10f5e06124827",
+   "bytes": 68181,
+   "media_type": "text/html",
+   "retrieved_at": "2026-11-17T22:22:57Z",
+   "text_status": "ok",
+   "text_chars": 3223
+  }
+ ],
+ "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+ "run": "https://github.com/romerobarcenabraulio-hash/ZPMND-RESEARCH-GROUP/actions/runs/44189299140",
+ "review": {
+  "model": "claude (claude-sonnet-5-5; Claude Code CLI sin herramientas; suscripción del dueño)",
+  "taken_out": [
+   {
+    "id": "confirmed[0]",
+    "claim": "Para centros de trabajo con hasta quince trabajadores, el campo de aplicación fija los numerales 5.1, 5.4, 5.5, 5.7, 8.1 y 8.2.",
+    "why": "a limit of its quote the claim does not say in its words: Para centros de trabajo en los que laboren hasta quince trabajadores"
+   },
+   {
+    "id": "confirmed[1]",
+    "claim": "Para centros de trabajo con más de 50 trabajadores aplican 5.1, 5.3 a 5.8, 7.1 inciso b), 7.2 a 7.9 y el Capítulo 8.",
+    "why": "a limit of its quote the claim does not say in its words: Para centros de trabajo en los que laboren más de 50 trabajadores"
+   },
+   {
+    "id": "confirmed[3]",
+    "claim": "El numeral 5.2 aplica a centros de trabajo de entre 16 y 50 trabajadores (identificar y analizar factores de riesgo psicosocial).",
+    "why": "The claim says 5.2 identifies and analyzes psychosocial risk factors and names numeral 5.2, but the quote has neither the numeral nor that content."
+   },
+   {
+    "id": "confirmed[4]",
+    "claim": "El numeral 5.3 aplica a centros de trabajo con más de 50 trabajadores (identificar, analizar y evaluar el entorno organizacional).",
+    "why": "The claim names numeral 5.3 and says it covers identifying, analyzing and evaluating the organizational environment, none of which is in the quote."
+   },
+   {
+    "id": "confirmed[5]",
+    "claim": "El numeral 10.4 permite exhibir las evidencias impresas o en medios electrónicos y exige conservarlas al menos un año desde su elaboración.",
+    "why": "The claim says numeral 10.4 allows evidence to be shown printed or in electronic media, which the quote does not state."
+   },
+   {
+    "id": "confirmed[6]",
+    "claim": "El Transitorio Primero fija la entrada en vigor de la Norma al año siguiente de su publicación.",
+    "why": "a limit of its quote the claim does not say in its words: entrará en vigor al año siguiente de su publicación en el Diario Oficial de la Federación"
+   },
+   {
+    "id": "confirmed[7]",
+    "claim": "El Transitorio Segundo difiere a dos años los numerales 5.2, 5.3, 5.6, 5.8, 8.3, 8.4, 8.5 y el Capítulo 7.",
+    "why": "a limit of its quote the claim does not say in its words: entrará en vigor a los dos años siguientes a su publicación"
+   },
+   {
+    "id": "confirmed[8]",
+    "claim": "La ficha del DOF indica que la norma se publicó el 23-10-2018, sección segunda, edición matutina.",
+    "why": "The claim adds sección segunda and edición matutina, which the quote does not contain."
+   }
+  ]
+ }
+}
