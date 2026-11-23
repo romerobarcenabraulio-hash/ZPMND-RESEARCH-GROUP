@@ -1942,8 +1942,9 @@ class AbrirSellados(unittest.TestCase):
     def abrir(self, shas, key=True, cap=None, **mas):
         r2, bin_ = self.tmp / 'r2', self.tmp / 'bin'; bin_.mkdir(exist_ok=True)
         (bin_ / 'aws').write_text('#!/bin/bash\n[ -z "${RG_ARTIFACT_KEY:-}" ] || exit 9  # the private key never reaches aws\n'
-                                  'r=; while [ $# -gt 1 ]; do [ "$1" = --key ] && k=$2; [ "$1" = --range ] && r=${2#bytes=0-}; shift; done\n'
-                                  'echo "$k" >> "$FAKE_R2.log"; case $k in */cccc*) sleep 30;; esac\n'
+                                  'r=; e=; while [ $# -gt 1 ]; do [ "$1" = --key ] && k=$2; [ "$1" = --range ] && r=${2#bytes=0-}; [ "$1" = --endpoint-url ] && e=$2; shift; done\n'
+                                  'echo "$k" >> "$FAKE_R2.log"; case $k in */cccc*) sleep 30;; */9a9a*) echo "Could not connect to the endpoint URL: \\"$e/$k\\"" >&2; exit 255;; esac\n'
+                                  '[ -f "$FAKE_R2/$k" ] || { echo "An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist. ($e)" >&2; exit 254; }\n'
                                   'if [ -n "$r" ]; then head -c $((r + 1)) "$FAKE_R2/$k" > "$1"; else cat "$FAKE_R2/$k" > "$1"; fi || exit 1\n'
                                   'wc -c < "$1" >> "$FAKE_R2.bytes"\n')  # what R2 served: a range is all it sends
         no_secret = ('#!/bin/bash\n[ -z "${R2_LECTURA_ACCESS_KEY_ID:-}${R2_LECTURA_SECRET_ACCESS_KEY:-}${R2_ENDPOINT:-}'
@@ -2021,7 +2022,9 @@ class AbrirSellados(unittest.TestCase):
             t0 = time.monotonic()
             r, out = self.abrir(pide, RG_SELLADO_SEGUNDOS='100', RG_SELLADOS_SEGUNDOS='3', FAKE_LENTO=lento, FAKE_LENTO_PID=str(pid))
             self.assertLess(time.monotonic() - t0, 10, lento)  # cut where the step's 3 s end, not at its own 100 or the 30 it hangs
-            self.assertEqual(('out of time' in r.stdout, 'R2: 0 sealed raws opened' in r.stdout), (True, True), (lento, r.stdout))
+            self.assertEqual(('R2: out of time, the rest are downloaded again' in r.stdout, 'R2: 0 sealed raws opened' in r.stdout), (True, True), (lento, r.stdout))
+            if not lento:  # R2 itself is the slow one: that object is named, with no code (aws was killed)
+                self.assertIn(f'R2: {"c" * 12} not opened: get-object: out of time', r.stdout)
             if lento:
                 with self.assertRaises(ProcessLookupError):
                     os.kill(int(pid.read_text()), 0)  # the reader is gone with its group, not left running
@@ -2055,6 +2058,11 @@ class AbrirSellados(unittest.TestCase):
         asked = [(good, uh(good)), (other, uh(other)), (nourl, uh(nourl)), (good, moved), ('f' * 64, 'f' * 64)]
         r, out = self.abrir([f'{x}.{y}' for x, y in asked] + [good, '../no-es-un-sha.' + 'f' * 64])
         self.assertIn('R2: 1 sealed raws opened', r.stdout)
+        no_es = "its bytes or its URL are not its key's"  # each unopened copy named, with its stage (#178, #179 opened 0 with no reason)
+        self.assertEqual([x for x in r.stdout.splitlines() if 'not opened' in x],
+                         [f'R2: {other[:12]} not opened: {no_es}', f'R2: {nourl[:12]} not opened: {no_es}', f'R2: {good[:12]} not opened: {no_es}',
+                          f'R2: {"f" * 12} not opened: get-object: NoSuchKey'])
+        self.assertNotIn('r2.invalid', r.stdout + r.stderr)  # the endpoint aws printed never reaches the log
         where = f'sha256/{good[:2]}/{good}/{uh(good)}'
         self.assertEqual(sorted((p.relative_to(out).as_posix(), p.read_bytes()) for p in out.rglob('*') if p.is_file()),
                          [(f'{where}/{good}.html', CLOSED_BODY), (f'{where}/{good}.url', f'https://a.gob.mx/{good[:8]}'.encode())])
@@ -2063,6 +2071,25 @@ class AbrirSellados(unittest.TestCase):
         self.assertEqual([p for p in out.rglob('*') if p.is_file()], [])
         r, out = (shutil.rmtree(out), self.abrir([f'{good}.{uh(good)}'], key=False))[1]
         self.assertEqual((r.returncode, 'no read key' in r.stdout, [p for p in out.rglob('*') if p.is_file()]), (0, True, []))
+
+    def test_each_copy_it_does_not_open_says_its_stage_and_only_the_code_aws_printed(self):
+        good = self.raw(CLOSED_BODY)
+        u = hashlib.sha256(f'https://a.gob.mx/{good[:8]}'.encode()).hexdigest()
+        subprocess.run(['bash', str(ROOT / 'scripts' / 'sellar_crudos.sh'), str(self.src), str(self.tmp / 's'), str(self.pub)],
+                       check=True, capture_output=True, timeout=300)
+        (self.tmp / 'basura.sobre').write_bytes(b'no es un tar')
+        self.put('a' * 64, u, self.tmp / 'basura.sobre')
+        (e := self.tmp / 'alterado').mkdir()
+        self.run_ok('tar', '-C', str(e), '-xf', str(self.tmp / 's' / f'{good}.{u}.sobre'))
+        (e / 'datos.mac').write_bytes(bytes(b ^ 1 for b in (e / 'datos.mac').read_bytes()))  # one bit off: its MAC no longer holds
+        self.run_ok('tar', '-C', str(e), '-cf', str(self.tmp / 'alterado.sobre'), 'datos.enc', 'datos.mac', 'llave.enc')
+        self.put('b' * 64, u, self.tmp / 'alterado.sobre')
+        r, out = self.abrir([f'{"a" * 64}.{u}', f'{"b" * 64}.{u}', f'{"d" * 64}.{u}', f'{"9a" * 32}.{u}'])
+        self.assertEqual([x for x in r.stdout.splitlines() if 'not opened' in x],
+                         [f'R2: {"a" * 12} not opened: not an envelope', f'R2: {"b" * 12} not opened: does not open (another key, or altered)',
+                          f'R2: {"d" * 12} not opened: get-object: NoSuchKey', f'R2: {"9a" * 6} not opened: get-object: no error code'])
+        self.assertNotIn('r2.invalid', r.stdout + r.stderr)  # what aws printed, its endpoint included, stays out of the log
+        self.assertIn('R2: 0 sealed raws opened', r.stdout)
 
     def test_each_object_is_bounded_timed_and_read_strictly_and_a_bad_one_never_stops_the_rest(self):
         good, otra = self.raw(CLOSED_BODY), self.raw(b'<p>otra pagina</p>')
@@ -2092,7 +2119,7 @@ class AbrirSellados(unittest.TestCase):
             self.assertLessEqual(int((self.tmp / 'r2.bytes').read_text().split()[-1]), uno + 1)  # all R2 sent
         r, out = (shutil.rmtree(out), self.abrir([f'{"c" * 64}.{uh}', f'{good}.{uh}'], RG_SELLADO_SEGUNDOS='2',
                                                   RG_SELLADOS_SEGUNDOS='1'))[1]
-        self.assertIn('out of time', r.stdout)  # past the step's own time, no more objects are asked
+        self.assertIn('R2: out of time, the rest are downloaded again', r.stdout)  # past the step's own time, no more objects are asked
         self.assertIn('R2: 0 sealed raws opened', r.stdout)
         malos, cap = [f'{d * 64}.{uh}' for d in '0123456789'], 5 * sobre.stat().st_size // 2  # ten copies none opens: T29 counts what R2 sent, the last range only what is left (GPT on 7b649b1)
         r, out = ([self.put(m[:64], uh, sobre) for m in malos], (self.tmp / 'r2.bytes').unlink(), shutil.rmtree(out), self.abrir(malos, cap=cap))[3]
